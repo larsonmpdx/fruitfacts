@@ -1,0 +1,83 @@
+[
+    {
+        "name": "Satsuma",
+        "description": "red flesh and red/purple skin.  One of Luther Burbank's original introductions",
+        "default_maturity_start": "July 30",
+        "default_maturity_end": "August 21"
+    },
+    {
+        "name": "Burbank",
+        "description": "One of Luther Burbank's original introductions"
+    },
+    {
+        "name": "Methley"
+    },
+    {
+        "name": "Shiro"
+    },
+    {
+        "name": "Early Golden"
+    },
+    {
+        "name": "Emerald Beaut",
+        "patent": "https://patents.google.com/patent/USPP9162P/en expired 2014",
+        "description": "Zaiger Variety"
+    },
+    {
+        "name": "Hollywood"
+    },
+    {
+        "name": "Howard Miracle"
+    },
+    {
+        "name": "Red Ace"
+    },
+    {
+        "name": "Beauty"
+    },
+    {
+        "name": "Santa Rosa"
+    },
+    {
+        "name": "Weeping Santa Rosa"
+    },
+    {
+        "name": "Wickson"
+    },
+    {
+        "name": "Burgundy"
+    },
+    {
+        "name": "Nubiana"
+    },
+    {
+        "name": "Mariposa"
+    },
+    {
+        "name": "Laroda"
+    },
+    {
+        "name": "Green Gage"
+    },
+    {
+        "name": "Late Santa Rosa"
+    },
+    {
+        "name": "Kelsey"
+    },
+    {
+        "name": "Golden Nectar"
+    },
+    {
+        "name": "Elephant Heart"
+    },
+    {
+        "name": "Black Ice",
+        "AKA": ["Lydecker"],
+        "patent": "https://patents.google.com/patent/USPP14583 expires april 2023",
+        "description": "japanese-american hybrid"
+    },
+    {
+        "name": "AU Producer"
+    }
+]

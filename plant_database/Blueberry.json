@@ -1,0 +1,192 @@
+[
+    {
+        "name": "Bluetta",
+        "default_maturity_start": "June 22",
+        "default_maturity_end": "July 1",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Duke",
+        "default_maturity_start": "June 21",
+        "default_maturity_end": "July 10",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Earliblue",
+        "default_maturity_start": "June 21",
+        "default_maturity_end": "July 11",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Chippewa",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Bountiful Blue",
+        "AKA": "FLX-2",
+        "patent": "https://patents.google.com/patent/USPP19381 expires 2027",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Northland",
+        "default_maturity_start": "June 19",
+        "default_maturity_end": "July 14",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Bluegold",
+        "default_maturity_start": "June 21",
+        "default_maturity_end": "July 15",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Spartan",
+        "default_maturity_start": "June 22",
+        "default_maturity_end": "July 17",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Draper",
+        "default_maturity_start": "July 2",
+        "default_maturity_end": "July 14",
+        "patent": "https://patents.google.com/patent/USPP15103P3/en expires 2023",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Reka",
+        "default_maturity_start": "June 25",
+        "default_maturity_end": "July 15",
+        "patent": "https://patents.google.com/patent/USPP6700P/en expired 2007",
+        "tags": [ "northern highbush" ],
+        "description": "from New Zealand"
+    },
+    {
+        "name": "Bluejay",
+        "default_maturity_start": "June 23",
+        "default_maturity_end": "July 16",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Toro",
+        "default_maturity_start": "June 27",
+        "default_maturity_end": "July 20",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Olympia",
+        "default_maturity_start": "June 30",
+        "default_maturity_end": "July 13",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Berkeley",
+        "default_maturity_start": "June 28",
+        "default_maturity_end": "July 21",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Bluecrop",
+        "default_maturity_start": "July 5",
+        "default_maturity_end": "August 1",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Rubel",
+        "default_maturity_start": "July 6",
+        "default_maturity_end": "July 28",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Jersey",
+        "default_maturity_start": "June 30",
+        "default_maturity_end": "July 25",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "1613-A",
+        "default_maturity_start": "July 9",
+        "default_maturity_end": "July 24",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Legacy",
+        "default_maturity_start": "July 5",
+        "default_maturity_end": "August 2",
+        "description": "almost evergreen. fast growing",
+        "tags": [ "southern highbush", "northern highbush", "northern-southern highbush hybrid" ]
+    },
+    {
+        "name": "Liberty",
+        "default_maturity_start": "July 13",
+        "default_maturity_end": "July 31",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Brigitta Blue",
+        "default_maturity_start": "July 14",
+        "default_maturity_end": "August 3",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Darrow",
+        "default_maturity_start": "July 18",
+        "default_maturity_end": "August 13",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Chandler",
+        "default_maturity_start": "July 20",
+        "default_maturity_end": "August 10",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Ozarkblue",
+        "default_maturity_start": "July 26",
+        "default_maturity_end": "August 17",
+        "tags": [ "southern highbush", "northern highbush", "northern-southern highbush hybrid" ]
+    },
+    {
+        "name": "Elliott",
+        "default_maturity_start": "July 26",
+        "default_maturity_end": "August 25",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Aurora",
+        "default_maturity_start": "July 29",
+        "default_maturity_end": "August 29",
+        "description": "latest ripening northern highbush",
+        "patent": "https://patents.google.com/patent/USPP15185P3/en expires jan 2023",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Mini Blues",
+        "description": "specially adapted for automated harvesting. small berries with excellent flavor and heavy yield",
+        "patent": "https://patents.google.com/patent/USPP28233P3/en expires 2035",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Pink Popcorn",
+        "description": "white-pink berries",
+        "patent": "https://patents.google.com/patent/USPP25792/en expires 2034",
+        "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Ochlockonee",
+        "default_maturity_start": "August 6",
+        "default_maturity_end": "September 3",
+        "tags": [ "rabbiteye" ]
+    },
+    {
+        "name": "Tifblue",
+        "default_maturity_start": "August 14",
+        "default_maturity_end": "September 14",
+        "tags": [ "rabbiteye" ]
+    },
+    {
+        "name": "Powderblue",
+        "default_maturity_start": "August 13",
+        "default_maturity_end": "September 12",
+        "tags": [ "rabbiteye" ]
+    }
+]

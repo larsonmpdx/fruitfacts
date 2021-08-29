@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Early Laxton",
+        "description": "One of the earliest euro plums"
+    },
+    {
+        "name": "Italian",
+        "description": "the classic commericially planted euro plum"
+    },
+    {
+        "name": "Late Italian",
+        "description": "Italian+7"
+    }
+    {
+        "name": "Stanley"
+    },
+    {
+        "name": "President",
+        "description": "Italian+5"
+    },
+    {
+        "name": "Sugar"
+    },
+    {
+        "name": "French Improved"
+    },
+    {
+        "name": "Moyer",
+        "AKA": "Moyer Perfecto",
+        "description": "Italian+7-10"
+    },
+    {
+        "name": "Valor"
+    },
+    {
+        "name": "Empress"
+    }
+]

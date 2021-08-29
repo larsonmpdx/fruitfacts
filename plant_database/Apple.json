@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Modi",
+        "patent": "https://patents.google.com/patent/USPP18730P3/en expires 2026"
+    },
+    {
+        "name": "Baker's Delight",
+        "description": "MAIA release",
+        "patent": "https://patents.google.com/patent/USPP29147 expires 2036"
+    },
+    {
+        "name": "Crunch-a-Bunch",
+        "description": "MAIA release",
+        "patent": "https://patents.google.com/patent/USPP29126/en expires 2036"
+    },
+    {
+        "name": "Cosmic Crisp",
+        "description": "WSU release for WA state growers only",
+        "patent": "https://patents.google.com/patent/USPP24210 2032 expiration"
+    },
+    {
+        "name": "Scarlet Sentinel",
+        "patent": "no US patent. Canada PBR expired 2020 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00001216e.shtml",
+        "tags": [ "columnar apple" ]
+    },
+    {
+        "name": "Pristine",
+        "patent": "https://patents.google.com/patent/USPP9881P/en expired 2014",
+        "description": "PRI release. early season"
+    },
+    {
+        "name": "Belmac",
+        "patent": "no US patent. Canada PBR expired 2015 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00000569e.shtml"
+    }
+]

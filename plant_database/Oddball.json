@@ -1,0 +1,64 @@
+[
+    {
+        "type": "Cherry Plum",
+        "name": "Sprite",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Cherry Plum",
+        "name": "Delight",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Cherry Plum",
+        "name": "Nadia",
+        "patent": "https://patents.google.com/patent/USPP19842 expires 2027"
+    },
+    {
+        "type": "Pluerry",
+        "name": "Candy Heart",
+        "patent": "https://patents.google.com/patent/USPP28308P3/en expires 2036",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Pluerry",
+        "name": "Sugar Twist",
+        "patent": "assumed PPAF, likely ~2026 along with candy heart",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Pluerry",
+        "name": "Sweet Treat",
+        "patent": "https://patents.google.com/patent/USPP23796P3/en expires 2032",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Peacotum",
+        "name": "Bella Gold",
+        "patent": "https://patents.google.com/patent/USPP17826 expires 2026",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Nectaplum",
+        "name": "Spice Zee",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Aprium",
+        "name": "Flavor Delight",
+        "patent": "https://patents.google.com/patent/USPP7090 expired 2009",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Aprium",
+        "name": "Cot-n-Candy",
+        "patent": "https://patents.google.com/patent/USPP17827P2/en expires 2026",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Aprium",
+        "name": "Summer Delight",
+        "patent": "assumed PPAF, unknown",
+        "description": "Zaiger Variety"
+    }
+]

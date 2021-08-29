@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Springcrest"
+    },
+    {
+        "name": "Early Redhaven"
+    },
+    {
+        "name": "Redhaven"
+    },
+    {
+        "name": "Suncrest"
+    },
+    {
+        "name": "Frost",
+        "description": "peach leaf curl resistant",
+        "tags": [ "peach leaf curl resistant" ]
+    },
+    {
+        "name": "Nanaimo",
+        "description": "peach leaf curl resistant",
+        "tags": [ "peach leaf curl resistant" ]
+    }
+]

@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Flavor Grenade",
+        "patent": "https://patents.google.com/patent/USPP12097P2/en expired 2020",
+        "description": "Zaiger Variety"
+    },
+    {
+        "name": "Flavor Supreme",
+        "patent": "https://patents.google.com/patent/USPP6763P/en expired 2007",
+        "description": "Zaiger Variety. relatively early and good taste but has widely-reported fruit set issues"
+    },
+    {
+        "name": "Dapple Dandy",
+        "patent": "https://patents.google.com/patent/USPP9254P/en expired 2014",
+        "description": "Zaiger Variety. one of these original pluot releases"
+    },
+    {
+        "name": "Flavor King",
+        "patent": "https://patents.google.com/patent/USPP8026P/en expired 2012",
+        "description": "Zaiger Variety"
+    },
+    {
+        "name": "Flavor Queen",
+        "patent": "https://patents.google.com/patent/USPP7420 expired 2010",
+        "description": "Zaiger Variety"
+    },
+    {
+        "name": "Splash",
+        "patent": "https://patents.google.com/patent/USPP14583 expires april 2023",
+        "description": "Zaiger Variety. yellow skin"
+    },
+    {
+        "name": "Geo Pride",
+        "patent": "https://patents.google.com/patent/USPP10386 expired 2017",
+        "description": "Zaiger Variety"
+    },
+    {
+        "name": "Emerald Drop",
+        "description": "Zaiger Variety"
+    },
+    {
+        "name": "Flavor Finale",
+        "description": "Zaiger Variety"
+    },
+    {
+        "name": "Spring Satin. \"plumcot\""
+    },
+    {
+        "name": "Flavorella",
+        "description": "Zaiger Variety. \"plumcot\"",
+        "patent": "https://patents.google.com/patent/USPP8470P expired 2012"
+    }
+]

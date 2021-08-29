@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Montmorency",
+        "description": "the classic sour cherry for commercial production, by far the most planted in the US"
+    },
+    {
+        "name": "Surefire",
+        "patent": "https://patents.google.com/patent/USPP11108P/en expired 2013"
+    },
+    {
+        "name": "North Star",
+        "AKA": "Northstar"
+    },
+    {
+        "name": "Evans"
+    },
+    {
+        "name": "Early Richmond"
+    },
+    {
+        "name": "English Morello"
+    },
+    {
+        "name": "Meteor"
+    },
+    {
+        "name": "Carmine Jewel",
+        "description":"USask bush cherry, their first release"
+    },
+    {
+        "name": "Romeo",
+        "description": "USask bush cherry"
+    },
+    {
+        "name": "Juliet",
+        "description": "USask bush cherry"
+    },
+    {
+        "name": "Crimson Passion",
+        "description": "USask bush cherry. considered a low yielding variety"
+    },
+    {
+        "name": "Jubileum",
+        "AKA": "M-136",
+        "description": "early: Montmorency-7"
+    }
+]
