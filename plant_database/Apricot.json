@@ -1,9 +1,21 @@
 [
     {
-        "name": "Royal Rosa"
+        "name": "Royal Rosa",
+        "description": "Zaiger variety",
+        "patent": "DWN claims patented but no number"
     },
     {
         "name": "Katy"
+    },
+    {
+        "name": "Flavor Giant",
+        "description": "Zaiger variety",
+        "patent": "https://patents.google.com/patent/USPP5308 expired 2003"
+    },
+    {
+        "name": "Gold Kist",
+        "description": "Zaiger variety",
+        "patent": "https://patents.google.com/patent/USPP2826 expired"
     },
     {
         "name": "Flora Gold"
@@ -19,6 +31,9 @@
         "name": "Harcot"
     },
     {
+        "name": "Goldcot"
+    },
+    {
         "name": "Chinese",
         "AKA": "Mormon"
     },
@@ -26,10 +41,27 @@
         "name": "Tomcot"
     },
     {
+        "name": "Perfection"
+    },
+    {
+        "name": "Wenatchee Moorpark"
+    },
+    {
+        "name": "Nugget"
+    },
+    {
+        "name": "Rival"
+    },
+    {
+        "name": "Harglow"
+    },
+    {
         "name": "Golden Sweet"
     },
     {
-        "name": "Golden Amber"
+        "name": "Golden Amber",
+        "description":"L.E. Cooke Variety. https://www.lecooke.com/le-cooke-blog/golden-amber-apricot-history.html",
+        "patent": "https://patents.google.com/patent/USPP3067 expired"
     },
     {
         "name": "Bongo"
@@ -41,6 +73,9 @@
         "name": "Royal"
     },
     {
+        "name": "Tropic Gold"
+    },
+    {
         "name": "Blenheim"
     },
     {
@@ -50,7 +85,27 @@
         "name": "Moorpark"
     },
     {
+        "name": "Montrose"
+    },
+    {
         "name": "Puget Gold",
         "description": "One of the only apricots that's at least marginal in the maritime PNW"
+    },
+    {
+        "name": "Hunza"
+    },
+    {
+        "name": "Earli-Autumn",
+        "description": "Zaiger variety",
+        "patent": "https://patents.google.com/patent/USPP9937 expired 2015"
+    },
+    {
+        "name": "Autumn Glo",
+        "description": "Zaiger variety"
+    },
+    {
+        "name": "Autumn Royal",
+        "description": "L.E. Cooke Variety. https://www.lecooke.com/le-cooke-blog/autumn-royal-apricot-history.html",
+        "patent":"https://patents.google.com/patent/USPP2906 expired"
     }
 ]

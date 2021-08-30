@@ -41,6 +41,7 @@
     {
         "type": "Nectaplum",
         "name": "Spice Zee",
+        "patent": "https://patents.google.com/patent/USPP13503P2/en expires 2022",
         "description": "Zaiger Variety"
     },
     {
@@ -59,6 +60,12 @@
         "type": "Aprium",
         "name": "Summer Delight",
         "patent": "assumed PPAF, unknown",
+        "description": "Zaiger Variety"
+    },
+    {
+        "type": "Aprium",
+        "name": "Leah-Cot",
+        "patent": "https://patents.google.com/patent/USPP21863P2/en expires 2029",
         "description": "Zaiger Variety"
     }
 ]

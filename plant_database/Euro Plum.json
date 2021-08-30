@@ -4,6 +4,13 @@
         "description": "One of the earliest euro plums"
     },
     {
+        "name": "Bavay's Green Gage",
+        "AKA": "Green Gage"
+    },
+    {
+        "name": "Early Italian"
+    },
+    {
         "name": "Italian",
         "description": "the classic commericially planted euro plum"
     },
@@ -34,5 +41,8 @@
     },
     {
         "name": "Empress"
+    },
+    {
+        "name": "Blue Damson"
     }
 ]

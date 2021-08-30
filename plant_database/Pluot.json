@@ -1,5 +1,10 @@
 [
     {
+        "name": "Flavorosa",
+        "patent": "https://patents.google.com/patent/USPP10285 expired 2017",
+        "description": "Zaiger Variety. a very early pluot"
+    },
+    {
         "name": "Flavor Grenade",
         "patent": "https://patents.google.com/patent/USPP12097P2/en expired 2020",
         "description": "Zaiger Variety"
@@ -12,6 +17,11 @@
     {
         "name": "Dapple Dandy",
         "patent": "https://patents.google.com/patent/USPP9254P/en expired 2014",
+        "description": "Zaiger Variety. one of these original pluot releases"
+    },
+    {
+        "name": "Dapple Supreme",
+        "patent": "https://patents.google.com/patent/USPP16412 expires 2025",
         "description": "Zaiger Variety. one of these original pluot releases"
     },
     {
@@ -36,10 +46,12 @@
     },
     {
         "name": "Emerald Drop",
+        "patent": "https://patents.google.com/patent/USPP14599 expires 2023",
         "description": "Zaiger Variety"
     },
     {
         "name": "Flavor Finale",
+        "patent": "https://patents.google.com/patent/USPP16590 expires 2025",
         "description": "Zaiger Variety"
     },
     {

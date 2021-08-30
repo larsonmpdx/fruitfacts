@@ -4,18 +4,38 @@
         "tags": "asian persimmon"
     },
     {
-        "name": "Fuyu",
+        "name": "Fuyu (Jiro)",
         "AKA": "Jiro",
         "tags": "asian persimmon"
     },
     {
+        "name": "Fuyu (Imoto)",
+        "AKA": "Imoto",
+        "tags": "asian persimmon"
+    },
+    {
         "name": "Chocolate",
-        "AKA": "Maru",
         "tags": "asian persimmon"
     },
     {
         "name": "Coffee Cake",
         "AKA": "Nishimura Wase",
+        "tags": "asian persimmon"
+    },
+    {
+        "name": "Izu",
+        "tags": "asian persimmon"
+    },
+    {
+        "name": "Maru",
+        "tags": "asian persimmon"
+    },
+    {
+        "name": "Saijo",
+        "tags": "asian persimmon"
+    },
+    {
+        "name": "Tamopan",
         "tags": "asian persimmon"
     },
     {

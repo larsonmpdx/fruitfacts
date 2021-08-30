@@ -12,7 +12,8 @@
         "AKA": "Northstar"
     },
     {
-        "name": "Evans"
+        "name": "Evans",
+        "AKA": "Bali"
     },
     {
         "name": "Early Richmond"
@@ -38,6 +39,10 @@
     {
         "name": "Crimson Passion",
         "description": "USask bush cherry. considered a low yielding variety"
+    },
+    {
+        "name": "Kansas Sweet",
+        "tags": "sweet-sour cherry cross"
     },
     {
         "name": "Jubileum",

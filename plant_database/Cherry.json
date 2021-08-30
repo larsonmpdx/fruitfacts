@@ -30,6 +30,7 @@
     },
     {
         "name": "Craig's Crimson",
+        "description": "Zaiger variety",
         "patent": "https://patents.google.com/patent/USPP7320P/en expired 2009"
     },
     {
@@ -52,10 +53,36 @@
         "patent": "https://patents.google.com/patent/USPP15847 expires 2023"
     },
     {
+        "name": "Minnie Royal",
+        "description": "Zaiger variety. early, Bing-11-14",
+        "patent": "https://patents.google.com/patent/USPP12942 expired 2020"
+    },
+    {
         "name": "Royal Rainier",
         "description": "Zaiger variety",
         "patent": "https://patents.google.com/patent/USPP10790P/en expired 2017"
     },
+    {
+        "name": "Royal Lee",
+        "description": "Zaiger variety",
+        "patent": "https://patents.google.com/patent/USPP12417 expired 2020"
+    },
+    {
+        "name": "Royal Lynn",
+        "description": "Zaiger variety. very early, Bing-16-18",
+        "patent": "https://patents.google.com/patent/USPP19589 expires 2027"
+    },
+    {
+        "name": "Royal Hazel",
+        "description": "Zaiger variety",
+        "patent": "https://patents.google.com/patent/USPP19920 expires 2027"
+    },
+    {
+        "name": "Royal Crimson",
+        "AKA": ["6GM25","Royal Fran"],
+        "description": "Zaiger variety. self fruitful",
+        "patent": "PPAF"
+    }
     {
         "name": "Utah Giant"
     },
@@ -64,6 +91,9 @@
     },
     {
         "name": "Bing"
+    },
+    {
+        "name": "Lambert"
     },
     {
         "name": "Royal Ann",
@@ -76,11 +106,17 @@
         "name": "Stella"
     },
     {
+        "name": "Compact Stella"
+    },
+    {
         "name": "Lapins"
     },
     {
         "name": "Sweetheart",
         "description": "summerland release. very late"
+    },
+    {
+        "name": "Mona"
     },
     {
         "name": "Ulster"
