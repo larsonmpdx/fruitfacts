@@ -8,12 +8,12 @@
     {
         "name": "Coral Champagne",
         "AKA": "Coral",
-        "description": "Unreleased UC variety. Bing-10"
+        "description": "\"Unreleased\" UC variety. Bing-10"
     },
     {
         "name": "Chelan",
         "AKA": "PC7146­-23",
-        "description": "similar to Bing but 10-12 days earlier. WSU release. https://www.canr.msu.edu/hrt/uploads/534/82106/Chelan_Sweet_Cherry.pdf",
+        "description": "similar to Bing but 10-12 days earlier. WSU variety. https://www.canr.msu.edu/hrt/uploads/534/82106/Chelan_Sweet_Cherry.pdf",
         "patent": "https://patents.google.com/patent/USPP8545P/en expired 2012"
     },
     {
@@ -38,13 +38,13 @@
         "patent": "https://patents.google.com/patent/USPP8051 expired 2011"
     },
     {
-        "name": "Black Gold",
-        "AKA": "Blackgold",
+        "name": "Blackgold",
+        "AKA": ["Black Gold", "Ridgewood"],
         "patent": "https://patents.google.com/patent/USPP17301 expires 2021"
     },
     {
-        "name": "White Gold",
-        "AKA": ["Whitegold", "Newfane"],
+        "name": "Whitegold",
+        "AKA": ["White Gold", "Newfane"],
         "patent": "https://patents.google.com/patent/USPP18892 expires 2022"
     },
     {
@@ -82,7 +82,10 @@
         "AKA": ["6GM25","Royal Fran"],
         "description": "Zaiger variety. self fruitful",
         "patent": "PPAF"
-    }
+    },
+    {
+        "name": "Hedelfingen"
+    },
     {
         "name": "Utah Giant"
     },
@@ -100,20 +103,51 @@
         "AKA": "Napoleon"
     },
     {
+        "name": "Royalton",
+        "AKA": "NY 11390",
+        "patent": "https://patents.google.com/patent/USPP11107P/en expired 2011",
+        "description": "https://ecommons.cornell.edu/bitstream/handle/1813/5204/FLS-140.pdf?sequence=1&isAllowed=y"
+    },
+    {
         "name": "Van"
+    },
+    {
+        "name": "Attika",
+        "AKA": "Kordia"
+    },
+    {
+        "name": "Regina",
+        "AKA": "Jork 57/201",
+        "description": "late, Bing+10-14"
+    },
+    {
+        "name": "Kristin"
+    },
+    {
+        "name": "Summit"
+    },
+    {
+        "name": "Schmidt"
     },
     {
         "name": "Stella"
     },
     {
+        "name": "Skeena",
+        "AKA": "13S-43-48",
+        "description": "Summerland variety. late, Bing+14"
+    },
+    {
         "name": "Compact Stella"
     },
     {
-        "name": "Lapins"
+        "name": "Lapins",
+        "AKA": "13S-28-26"
     },
     {
         "name": "Sweetheart",
-        "description": "summerland release. very late"
+        "AKA": "13S-22-08",
+        "description": "Summerland variety. very late"
     },
     {
         "name": "Mona"
@@ -125,7 +159,14 @@
         "name": "Emperor Francis"
     },
     {
+        "name": "Hartland"
+    },
+    {
         "name": "Black York"
+    },
+    {
+        "name": "Sandra Rose",
+        "description": "Summerland variety https://www.summerlandvarieties.com/varieties/product/29/Sandra_Rose/"
     },
     {
         "name": "Gabriel",
@@ -141,7 +182,7 @@
     {
         "name": "Tieton",
         "AKA": "PC7144-6",
-        "description": "WSU release",
+        "description": "WSU variety",
         "patent": "https://patents.google.com/patent/USPP11385 expired 2018"
     },
     {
@@ -153,11 +194,27 @@
     {
         "name": "Santina",
         "AKA": "13S-5-22",
-        "description": "Summerland release. Bing-8"
+        "description": "Summerland variety. Bing-8"
     },
     {
         "name": "BlackPearl",
         "AKA": "NY 8139",
-        "description": "Cornell release. Bing-10"
+        "description": "Cornell variety. Bing-10"
+    },
+    {
+        "name": "BurgundyPearl",
+        "AKA": "NY 38L",
+        "description": "Cornell variety. Bing-10"
+    },
+    {
+        "name": "EbonyPearl"
+    },
+    {
+        "name": "BlushingGold",
+        "AKA": ["NY 8182", "Pendleton"],
+        "patent": "https://patents.google.com/patent/US20050273892P1/en patent application abandoned 2005"
+    },
+    {
+        "name": "Gold"
     }
 ]

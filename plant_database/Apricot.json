@@ -28,7 +28,8 @@
         "name": "Brittany Gold"
     },
     {
-        "name": "Harcot"
+        "name": "Harcot",
+        "description": "Harrow variety"
     },
     {
         "name": "Goldcot"
@@ -53,7 +54,8 @@
         "name": "Rival"
     },
     {
-        "name": "Harglow"
+        "name": "Harglow",
+        "description": "Harrow vareity"
     },
     {
         "name": "Golden Sweet"

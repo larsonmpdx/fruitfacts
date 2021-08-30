@@ -5,17 +5,17 @@
     },
     {
         "name": "Baker's Delight",
-        "description": "MAIA release",
+        "description": "MAIA variety",
         "patent": "https://patents.google.com/patent/USPP29147 expires 2036"
     },
     {
         "name": "Crunch-a-Bunch",
-        "description": "MAIA release",
+        "description": "MAIA variety",
         "patent": "https://patents.google.com/patent/USPP29126/en expires 2036"
     },
     {
         "name": "Cosmic Crisp",
-        "description": "WSU release for WA state growers only",
+        "description": "WSU variety for WA state growers only",
         "patent": "https://patents.google.com/patent/USPP24210 2032 expiration"
     },
     {
@@ -26,7 +26,7 @@
     {
         "name": "Pristine",
         "patent": "https://patents.google.com/patent/USPP9881P/en expired 2014",
-        "description": "PRI release. early season"
+        "description": "PRI variety. early season"
     },
     {
         "name": "Belmac",

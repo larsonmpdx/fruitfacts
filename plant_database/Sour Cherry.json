@@ -26,7 +26,7 @@
     },
     {
         "name": "Carmine Jewel",
-        "description":"USask bush cherry, their first release"
+        "description":"USask bush cherry, their first variety"
     },
     {
         "name": "Romeo",
@@ -48,5 +48,13 @@
         "name": "Jubileum",
         "AKA": "M-136",
         "description": "early: Montmorency-7"
+    },
+    {
+        "name": "Danube",
+        "description": "early: Montmorency-7",
+        "AKA": "Erdi Botermo"
+    },
+    {
+        "name": "Balaton"
     }
 ]
