@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "debug with lldb",
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "program": "${workspaceFolder}/harvest-chart-server/target/debug/harvest-chart-server",
+            "windows": {
+                "program": "${workspaceFolder}/harvest-chart-server/target/debug/harvest-chart-server.exe",
+            },
+            "cwd": "${workspaceFolder}/harvest-chart-server/",
+            "stopOnEntry": false,
+            "sourceLanguages": ["rust"]
+        },
+        {
+            "name": "debug with cppvsdbg",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/harvest-chart-server/target/debug/harvest-chart-server",
+            "windows": {
+                "program": "${workspaceFolder}/harvest-chart-server/target/debug/harvest-chart-server.exe",
+            },
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/harvest-chart-server/",
+            "environment": [],
+            "console": "integratedTerminal",
+        }
+    ]
+}

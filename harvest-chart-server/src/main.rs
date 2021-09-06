@@ -59,21 +59,26 @@ fn main() {
 
                     for file_path in file_paths {
                         let path_ = file_path.unwrap().path();
-
+                        
                         if fs::metadata(path_.clone()).unwrap().is_file() {
                             if path_.extension().unwrap().to_str().unwrap() == "json" {
                                 println!("found: {}", path_.display());
 
-                                let contents = fs::read_to_string(path_).unwrap();
+                                let contents = fs::read_to_string(path_.clone()).unwrap();
 
                                 let plants: Vec<PlantJson> = serde_json::from_str(&contents).unwrap();
 
-                                for plant in &plants {
-                                    let _ = diesel::insert_into(base_plants)
-                                    .values((name.eq(&plant.name), type_.eq(&plant.type_.as_ref().unwrap())))
-                                    .execute(&conn);
+                                let filename = path_.as_path().file_name().unwrap().to_str().unwrap();
+                                if filename.starts_with("Oddball")
+                                {
+                                    for plant in &plants {
+                                        let _ = diesel::insert_into(base_plants)
+                                        .values((name.eq(&plant.name), type_.eq(&plant.type_.as_ref().unwrap())))
+                                        .execute(&conn);
+                                    }
+                                } else {
+                                    
                                 }
-
                             }
                         }
                     }

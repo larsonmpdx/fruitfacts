@@ -6,6 +6,10 @@
 * `cargo outdated` after installing `cargo install --locked cargo-outdated`
 * `cargo fmt` after installing `rustup component add rustfmt`
 
+# debugging in vs code
+* 2021: on windows vs code, `codelldb+rust-analyzer` debugger works slightly better than cppvsdbg or the official "rust" extension. see launch.json
+* `install codelldb extension` and `rust-analyzer extension`
+
 # diesel things
 * https://vcpkg.io/en/getting-started.html
 * `diesel migration run`
