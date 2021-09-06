@@ -12,9 +12,12 @@ use dotenv::dotenv;
 use std::env;
 use std::fs;
 
+#[macro_use]
+extern crate diesel_migrations;
+embed_migrations!();
 
 use serde::{Deserialize, Serialize};
-use serde_json::Result;
+//use serde_json::Result;
 
 #[derive(Serialize, Deserialize)]
 struct PlantJson {
@@ -25,9 +28,8 @@ struct PlantJson {
     patent: Option<String>,
     relative_harvest: Option<String>,
     harvest_start: Option<i16>,
-    harvest_end: Option<i16>
+    harvest_end: Option<i16>,
 }
-
 
 pub fn establish_connection() -> SqliteConnection {
     dotenv().ok();
@@ -37,8 +39,18 @@ pub fn establish_connection() -> SqliteConnection {
         .expect(&format!("Error connecting to {}", database_url))
 }
 
+fn rem_last_n(value: &str, n: isize) -> &str {
+    let mut chars = value.chars();
+    for _ in 0..n {
+        chars.next_back();
+    }
+    chars.as_str()
+}
+
 fn main() {
-    let conn = establish_connection();
+    let db_conn = establish_connection();
+    let _ = diesel::delete(base_plants).execute(&db_conn);
+    embedded_migrations::run(&db_conn).unwrap();
 
     // look for a dir "plant_database/" up to three levels up so users can mess this up a little
     let max_up_traversal_levels = 3;
@@ -59,25 +71,40 @@ fn main() {
 
                     for file_path in file_paths {
                         let path_ = file_path.unwrap().path();
-                        
+
                         if fs::metadata(path_.clone()).unwrap().is_file() {
                             if path_.extension().unwrap().to_str().unwrap() == "json" {
                                 println!("found: {}", path_.display());
 
                                 let contents = fs::read_to_string(path_.clone()).unwrap();
 
-                                let plants: Vec<PlantJson> = serde_json::from_str(&contents).unwrap();
+                                let plants: Vec<PlantJson> =
+                                    serde_json::from_str(&contents).unwrap();
 
-                                let filename = path_.as_path().file_name().unwrap().to_str().unwrap();
-                                if filename.starts_with("Oddball")
-                                {
-                                    for plant in &plants {
-                                        let _ = diesel::insert_into(base_plants)
-                                        .values((name.eq(&plant.name), type_.eq(&plant.type_.as_ref().unwrap())))
-                                        .execute(&conn);
+                                let filename = rem_last_n(
+                                    path_.as_path().file_name().unwrap().to_str().unwrap(),
+                                    5,
+                                ); // 5: ".json"
+
+                                for plant in &plants {
+                                    let plant_type;
+                                    if filename.starts_with("Oddball") {
+                                        plant_type = plant.type_.clone().unwrap();
+                                    } else {
+                                        plant_type = filename.to_string();
                                     }
-                                } else {
-                                    
+
+                                    println!("inserting");
+                                    let rows_inserted = diesel::insert_into(base_plants)
+                                        .values((
+                                            name.eq(&plant.name),
+                                            type_.eq(&plant_type),
+                                            description.eq(&plant.description),
+                                            patent.eq(&plant.patent),
+                                            relative_harvest.eq(&plant.relative_harvest), // todo harvest start+end
+                                        ))
+                                        .execute(&db_conn);
+                                    assert_eq!(Ok(1), rows_inserted);
                                 }
                             }
                         }
