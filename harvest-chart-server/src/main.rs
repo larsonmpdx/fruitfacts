@@ -12,6 +12,23 @@ use dotenv::dotenv;
 use std::env;
 use std::fs;
 
+
+use serde::{Deserialize, Serialize};
+use serde_json::Result;
+
+#[derive(Serialize, Deserialize)]
+struct PlantJson {
+    name: String,
+    #[serde(alias = "type")]
+    type_: Option<String>,
+    description: Option<String>,
+    patent: Option<String>,
+    relative_harvest: Option<String>,
+    harvest_start: Option<i16>,
+    harvest_end: Option<i16>
+}
+
+
 pub fn establish_connection() -> SqliteConnection {
     dotenv().ok();
 
@@ -21,6 +38,8 @@ pub fn establish_connection() -> SqliteConnection {
 }
 
 fn main() {
+    let conn = establish_connection();
+
     // look for a dir "plant_database/" up to three levels up so users can mess this up a little
     let max_up_traversal_levels = 3;
     let mut plant_database_found = false;
@@ -34,18 +53,35 @@ fn main() {
         println!("dir: {}", path.display());
         match fs::metadata(path.clone()) {
             Ok(md) => {
-                plant_database_found = true;
-                let paths = fs::read_dir(path).unwrap();
+                if md.is_dir() {
+                    plant_database_found = true;
+                    let file_paths = fs::read_dir(path).unwrap();
 
-                for path in paths {
-                    println!("Name: {}", path.unwrap().path().display())
+                    for file_path in file_paths {
+                        let path_ = file_path.unwrap().path();
+
+                        if fs::metadata(path_.clone()).unwrap().is_file() {
+                            if path_.extension().unwrap().to_str().unwrap() == "json" {
+                                println!("found: {}", path_.display());
+
+                                let contents = fs::read_to_string(path_).unwrap();
+
+                                let plants: Vec<PlantJson> = serde_json::from_str(&contents).unwrap();
+
+                                for plant in &plants {
+                                    let _ = diesel::insert_into(base_plants)
+                                    .values((name.eq(&plant.name), type_.eq(&plant.type_.as_ref().unwrap())))
+                                    .execute(&conn);
+                                }
+
+                            }
+                        }
+                    }
+                    break;
                 }
-
-                println!("is dir: {}", md.is_dir());
-                break;
             }
             Err(_) => {
-                println!("not dir")
+                println!("not a dir")
             }
         }
 
@@ -56,10 +92,4 @@ fn main() {
         println!("directory plant_database/ not found");
         std::process::exit(1);
     }
-
-    let conn = establish_connection();
-
-    let _ = diesel::insert_into(base_plants)
-        .values((name.eq("Pristine"), type_.eq("Apple")))
-        .execute(&conn);
 }
