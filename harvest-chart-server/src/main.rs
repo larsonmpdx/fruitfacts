@@ -33,6 +33,7 @@ struct PlantJson {
     relative_harvest: Option<String>,
     harvest_start: Option<String>,
     harvest_end: Option<String>,
+    harvest_time_reference: Option<String>,
 }
 
 pub fn establish_connection() -> SqliteConnection {
@@ -107,11 +108,30 @@ fn main() {
                                 ); // 5: ".json"
 
                                 for plant in &plants {
+                                    // for the "Oddball.json" file, get type from each item's json
+                                    // all others get type from the filename
                                     let plant_type;
                                     if filename.starts_with("Oddball") {
                                         plant_type = plant.type_.clone().unwrap();
                                     } else {
                                         plant_type = filename.to_string();
+                                    }
+
+                                    let harvest_start_day;
+                                    let harvest_end_day;
+                                    if plant.harvest_start.is_some() {
+                                        harvest_start_day = string_to_day_number(
+                                            plant.harvest_start.as_ref().unwrap(),
+                                        );
+                                    } else {
+                                        harvest_start_day = 0;
+                                    }
+                                    if plant.harvest_end.is_some() {
+                                        harvest_end_day = string_to_day_number(
+                                            plant.harvest_end.as_ref().unwrap(),
+                                        );
+                                    } else {
+                                        harvest_end_day = 0;
                                     }
 
                                     println!("inserting");
@@ -122,6 +142,10 @@ fn main() {
                                             description.eq(&plant.description),
                                             patent.eq(&plant.patent),
                                             relative_harvest.eq(&plant.relative_harvest), // todo harvest start+end
+                                            harvest_start.eq(harvest_start_day as i32),
+                                            harvest_end.eq(harvest_end_day as i32),
+                                            harvest_time_reference
+                                                .eq(&plant.harvest_time_reference),
                                         ))
                                         .execute(&db_conn);
                                     assert_eq!(Ok(1), rows_inserted);

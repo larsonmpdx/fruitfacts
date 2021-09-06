@@ -9,5 +9,6 @@ table! {
         relative_harvest -> Nullable<Text>,
         harvest_start -> Nullable<Integer>,
         harvest_end -> Nullable<Integer>,
+        harvest_time_reference -> Nullable<Text>,
     }
 }

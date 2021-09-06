@@ -7,5 +7,6 @@ CREATE TABLE base_plants (
   relative_harvest TEXT, --used for things like "redhaven+5"
   harvest_start INTEGER, --integer type stores dates as unix times
   harvest_end INTEGER,
+  harvest_time_reference TEXT,
   UNIQUE(name, type) --combo of these columns must be unique.  example: name "Pristine" type "Apple"
 )
