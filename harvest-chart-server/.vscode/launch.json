@@ -9,25 +9,42 @@
             "type": "lldb",
             "request": "launch",
             "args": [],
-            "program": "${workspaceFolder}/harvest-chart-server/target/debug/harvest-chart-server",
+            "program": "${workspaceFolder}/target/debug/harvest-chart-server",
             "windows": {
-                "program": "${workspaceFolder}/harvest-chart-server/target/debug/harvest-chart-server.exe",
+                "program": "${workspaceFolder}/target/debug/harvest-chart-server.exe",
             },
             "cwd": "${workspaceFolder}/harvest-chart-server/",
             "stopOnEntry": false,
             "sourceLanguages": ["rust"]
         },
         {
+            "name": "Debug selected unit test",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                ],
+                "filter": {
+                    "name": "libthat",
+                    "kind": "lib"
+                }
+            },
+            "args": ["${selectedText}"],
+            "cwd": "${workspaceFolder}",
+        },
+        {
             "name": "debug with cppvsdbg",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/harvest-chart-server/target/debug/harvest-chart-server",
+            "program": "${workspaceFolder}target/debug/harvest-chart-server",
             "windows": {
-                "program": "${workspaceFolder}/harvest-chart-server/target/debug/harvest-chart-server.exe",
+                "program": "${workspaceFolder}target/debug/harvest-chart-server.exe",
             },
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/harvest-chart-server/",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "console": "integratedTerminal",
         }

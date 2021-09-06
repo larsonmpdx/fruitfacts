@@ -1,20 +1,23 @@
 [
     {
         "name": "Bluetta",
-        "default_maturity_start": "June 22",
-        "default_maturity_end": "July 1",
+        "harvest_start": "June 22",
+        "harvest_end": "July 1",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Duke",
-        "default_maturity_start": "June 21",
-        "default_maturity_end": "July 10",
+        "harvest_start": "June 21",
+        "harvest_end": "July 10",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Earliblue",
-        "default_maturity_start": "June 21",
-        "default_maturity_end": "July 11",
+        "harvest_start": "June 21",
+        "harvest_end": "July 11",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
@@ -29,132 +32,153 @@
     },
     {
         "name": "Northland",
-        "default_maturity_start": "June 19",
-        "default_maturity_end": "July 14",
+        "harvest_start": "June 19",
+        "harvest_end": "July 14",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Bluegold",
-        "default_maturity_start": "June 21",
-        "default_maturity_end": "July 15",
+        "harvest_start": "June 21",
+        "harvest_end": "July 15",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Spartan",
-        "default_maturity_start": "June 22",
-        "default_maturity_end": "July 17",
+        "harvest_start": "June 22",
+        "harvest_end": "July 17",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Draper",
-        "default_maturity_start": "July 2",
-        "default_maturity_end": "July 14",
+        "harvest_start": "July 2",
+        "harvest_end": "July 14",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "patent": "https://patents.google.com/patent/USPP15103P3/en expires 2023",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Reka",
-        "default_maturity_start": "June 25",
-        "default_maturity_end": "July 15",
+        "harvest_start": "June 25",
+        "harvest_end": "July 15",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "patent": "https://patents.google.com/patent/USPP6700P/en expired 2007",
         "tags": [ "northern highbush" ],
         "description": "from New Zealand"
     },
     {
         "name": "Bluejay",
-        "default_maturity_start": "June 23",
-        "default_maturity_end": "July 16",
+        "harvest_start": "June 23",
+        "harvest_end": "July 16",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Toro",
-        "default_maturity_start": "June 27",
-        "default_maturity_end": "July 20",
+        "harvest_start": "June 27",
+        "harvest_end": "July 20",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Olympia",
-        "default_maturity_start": "June 30",
-        "default_maturity_end": "July 13",
+        "harvest_start": "June 30",
+        "harvest_end": "July 13",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Berkeley",
-        "default_maturity_start": "June 28",
-        "default_maturity_end": "July 21",
+        "harvest_start": "June 28",
+        "harvest_end": "July 21",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Bluecrop",
-        "default_maturity_start": "July 5",
-        "default_maturity_end": "August 1",
+        "harvest_start": "July 5",
+        "harvest_end": "August 1",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Rubel",
-        "default_maturity_start": "July 6",
-        "default_maturity_end": "July 28",
+        "harvest_start": "July 6",
+        "harvest_end": "July 28",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Jersey",
-        "default_maturity_start": "June 30",
-        "default_maturity_end": "July 25",
+        "harvest_start": "June 30",
+        "harvest_end": "July 25",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "1613-A",
-        "default_maturity_start": "July 9",
-        "default_maturity_end": "July 24",
+        "harvest_start": "July 9",
+        "harvest_end": "July 24",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Legacy",
-        "default_maturity_start": "July 5",
-        "default_maturity_end": "August 2",
+        "harvest_start": "July 5",
+        "harvest_end": "August 2",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "description": "almost evergreen. fast growing",
         "tags": [ "southern highbush", "northern highbush", "northern-southern highbush hybrid" ]
     },
     {
         "name": "Liberty",
-        "default_maturity_start": "July 13",
-        "default_maturity_end": "July 31",
+        "harvest_start": "July 13",
+        "harvest_end": "July 31",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Brigitta Blue",
-        "default_maturity_start": "July 14",
-        "default_maturity_end": "August 3",
+        "harvest_start": "July 14",
+        "harvest_end": "August 3",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Darrow",
-        "default_maturity_start": "July 18",
-        "default_maturity_end": "August 13",
+        "harvest_start": "July 18",
+        "harvest_end": "August 13",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Chandler",
-        "default_maturity_start": "July 20",
-        "default_maturity_end": "August 10",
+        "harvest_start": "July 20",
+        "harvest_end": "August 10",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Ozarkblue",
-        "default_maturity_start": "July 26",
-        "default_maturity_end": "August 17",
+        "harvest_start": "July 26",
+        "harvest_end": "August 17",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "southern highbush", "northern highbush", "northern-southern highbush hybrid" ]
     },
     {
         "name": "Elliott",
-        "default_maturity_start": "July 26",
-        "default_maturity_end": "August 25",
+        "harvest_start": "July 26",
+        "harvest_end": "August 25",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Aurora",
-        "default_maturity_start": "July 29",
-        "default_maturity_end": "August 29",
+        "harvest_start": "July 29",
+        "harvest_end": "August 29",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "description": "latest ripening northern highbush",
         "patent": "https://patents.google.com/patent/USPP15185P3/en expires jan 2023",
         "tags": [ "northern highbush" ]
@@ -173,20 +197,23 @@
     },
     {
         "name": "Ochlockonee",
-        "default_maturity_start": "August 6",
-        "default_maturity_end": "September 3",
+        "harvest_start": "August 6",
+        "harvest_end": "September 3",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "rabbiteye" ]
     },
     {
         "name": "Tifblue",
-        "default_maturity_start": "August 14",
-        "default_maturity_end": "September 14",
+        "harvest_start": "August 14",
+        "harvest_end": "September 14",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "rabbiteye" ]
     },
     {
         "name": "Powderblue",
-        "default_maturity_start": "August 13",
-        "default_maturity_end": "September 12",
+        "harvest_start": "August 13",
+        "harvest_end": "September 12",
+        "harvest_time_reference": "OSU PNW 656, Corvallis OR",
         "tags": [ "rabbiteye" ]
     }
 ]

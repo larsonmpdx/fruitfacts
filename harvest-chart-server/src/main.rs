@@ -2,8 +2,12 @@
 extern crate diesel;
 mod schema;
 
+#[cfg(test)]
+mod test;
+
 extern crate dotenv;
 
+use chrono::prelude::*;
 use diesel::prelude::*;
 use schema::base_plants::dsl::*;
 // use diesel::sqlite;
@@ -27,8 +31,8 @@ struct PlantJson {
     description: Option<String>,
     patent: Option<String>,
     relative_harvest: Option<String>,
-    harvest_start: Option<i16>,
-    harvest_end: Option<i16>,
+    harvest_start: Option<String>,
+    harvest_end: Option<String>,
 }
 
 pub fn establish_connection() -> SqliteConnection {
@@ -37,6 +41,22 @@ pub fn establish_connection() -> SqliteConnection {
     let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
     SqliteConnection::establish(&database_url)
         .expect(&format!("Error connecting to {}", database_url))
+}
+
+fn string_to_day_number(input: &str) -> u32 {
+    // wrap this with a year and time of day so we can parse it, then get the day of the year back out.  2020 was a leap year
+    match NaiveDateTime::parse_from_str(
+        &("2020 ".to_owned() + input + " 12:01:01"),
+        "%Y %B %d %H:%M:%S",
+    ) {
+        Ok(parsed) => {
+            return parsed.ordinal();
+        }
+        Err(e) => {
+            eprintln!("date parsing: {}", e);
+            return 0;
+        }
+    }
 }
 
 fn rem_last_n(value: &str, n: isize) -> &str {
