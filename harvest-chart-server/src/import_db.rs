@@ -23,6 +23,12 @@ struct PlantJson {
     harvest_time_reference: Option<String>,
 }
 
+#[derive(Serialize, Deserialize)]
+struct TypeJson {
+    name: String,
+    latin_name: Option<String>,
+}
+
 fn rem_last_n(value: &str, n: isize) -> &str {
     let mut chars = value.chars();
     for _ in 0..n {
@@ -47,10 +53,10 @@ fn string_to_day_number(input: &str) -> u32 {
     }
 }
 
-pub fn load_base_plants(db_conn: &SqliteConnection) -> bool {
+pub fn load_base_plants(db_conn: &SqliteConnection) -> isize {
     // look for a dir "plant_database/" up to three levels up so users can mess this up a little
     let max_up_traversal_levels = 3;
-    let mut plant_database_found = false;
+    let mut plants_found = 0;
     let mut i = 0;
     while i <= max_up_traversal_levels {
         let mut path = std::path::PathBuf::from(".");
@@ -62,8 +68,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection) -> bool {
         match fs::metadata(path.clone()) {
             Ok(md) => {
                 if md.is_dir() {
-                    plant_database_found = true;
-                    let file_paths = fs::read_dir(path).unwrap();
+                    let file_paths = fs::read_dir(path.clone().join("plants")).unwrap();
 
                     for file_path in file_paths {
                         let path_ = file_path.unwrap().path();
@@ -124,10 +129,26 @@ pub fn load_base_plants(db_conn: &SqliteConnection) -> bool {
                                         ))
                                         .execute(db_conn);
                                     assert_eq!(Ok(1), rows_inserted);
+                                    plants_found += 1;
                                 }
                             }
                         }
                     }
+
+                    // todo: load types, figure out an error value if types don't work out
+                    let types_path = path.join("types.json");
+                    if !fs::metadata(types_path.clone()).unwrap().is_file() {
+                        // error
+                    }
+
+                    let contents = fs::read_to_string(types_path.clone()).unwrap();
+
+                    let types: Vec<PlantJson> = serde_json::from_str(&contents).unwrap();
+
+                    for type_element in &types {
+                        // todo - create table schema, do insert
+                    }
+
                     break;
                 }
             }
@@ -138,5 +159,9 @@ pub fn load_base_plants(db_conn: &SqliteConnection) -> bool {
 
         i += 1;
     }
-    return plant_database_found;
+
+    // find all types and make sure each is in the types table
+    let distinct_types = base_plants.select(type_).distinct().load::<String>(db_conn);
+
+    return plants_found;
 }

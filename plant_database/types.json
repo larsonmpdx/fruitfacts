@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Apple",
+        "latin_name": "Malus spp."
+    },
+    {
+        "name": "Apricot",
+        "latin_name": "Prunus armeniaca"
+    },
+    {
+        "name": "Asian Pear",
+        "latin_name": "Pyrus pyrifolia"
+    },
+    {
+        "name": "Blueberry",
+        "latin_name": "Vaccinium spp."
+    },
+    {
+        "name": "Euro Pear",
+        "latin_name": "Pyrus communis"
+    },
+    {
+        "name": "Euro Plum",
+        "latin_name": "Prunus domestica"
+    },
+    {
+        "name": "Japanese Plum",
+        "latin_name": "Prunus salicina"
+    },
+    {
+        "name": "Jujube",
+        "latin_name": "Ziziphus jujuba"
+    },
+    {
+        "name": "Persimmon",
+        "latin_name": "Diospyros spp."
+    },
+    {
+        "name": "Pluot",
+        "latin_name": "Prunus salicina X"
+    },
+    {
+        "name": "Sour Cherry",
+        "latin_name": "Prunus cerasus"
+    },
+    {
+        "name": "Sweet Cherry",
+        "latin_name": "Prunus avium"
+    },
+    {
+        "name": "Yellow Nectarine",
+        "latin_name": "Prunus persica"
+    },
+    {
+        "name": "Yellow Peach",
+        "latin_name": "Prunus persica"
+    },
+    {
+        "name": "White Nectarine",
+        "latin_name": "Prunus persica"
+    },
+    {
+        "name": "White Peach",
+        "latin_name": "Prunus persica"
+    }
+]
