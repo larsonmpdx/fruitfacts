@@ -3,7 +3,7 @@ mod test;
 
 use super::schema::base_plants;
 use super::schema::plant_types;
-use super::schemaTypes::*;
+use super::schema_types::*;
 use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
@@ -211,9 +211,12 @@ fn check_database(db_conn: &SqliteConnection) {
         .load::<String>(db_conn);
 
     for type_from_plants in &types_from_plants.unwrap() {
-        let results = plant_types::dsl::plant_types
+        let _ = plant_types::dsl::plant_types
             .filter(plant_types::name.eq(type_from_plants))
             .first::<PlantType>(db_conn)
-            .expect(&format!("imported a plant with a category not in types.json: {}", type_from_plants));
+            .expect(&format!(
+                "imported a plant with a category not in types.json: {}",
+                type_from_plants
+            ));
     }
 }

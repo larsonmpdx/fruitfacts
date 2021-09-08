@@ -12,12 +12,11 @@ extern crate dotenv;
 
 mod import_db;
 mod schema;
-mod schemaTypes;
+mod schema_types;
 
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
 use dotenv::dotenv;
-use schema::base_plants::dsl::*;
 use std::env;
 
 pub fn establish_connection() -> SqliteConnection {

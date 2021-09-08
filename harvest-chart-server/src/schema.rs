@@ -21,7 +21,4 @@ table! {
     }
 }
 
-allow_tables_to_appear_in_same_query!(
-    base_plants,
-    plant_types,
-);
+allow_tables_to_appear_in_same_query!(base_plants, plant_types,);
