@@ -1,7 +1,9 @@
 #[cfg(test)]
 mod test;
 
-use super::schema::base_plants::dsl::*;
+use super::schema::base_plants;
+use super::schema::plant_types;
+use super::schemaTypes::*;
 use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
@@ -53,11 +55,35 @@ fn string_to_day_number(input: &str) -> u32 {
     }
 }
 
-pub fn load_base_plants(db_conn: &SqliteConnection) -> isize {
-    // look for a dir "plant_database/" up to three levels up so users can mess this up a little
+pub struct LoadAllReturn {
+    pub plants_found: isize,
+    pub types_found: isize,
+}
+
+pub fn reset_database(db_conn: &SqliteConnection) {
+    let _ = diesel::delete(base_plants::dsl::base_plants).execute(db_conn);
+    let _ = diesel::delete(plant_types::dsl::plant_types).execute(db_conn);
+    super::embedded_migrations::run(db_conn).unwrap();
+}
+
+pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
+    let database_dir = get_database_dir().unwrap();
+
+    let plants_found = load_base_plants(db_conn, database_dir.clone());
+    let types_found = load_types(db_conn, database_dir);
+
+    check_database(db_conn);
+
+    return LoadAllReturn {
+        plants_found: plants_found,
+        types_found: types_found,
+    };
+}
+
+fn get_database_dir() -> Option<std::path::PathBuf> {
     let max_up_traversal_levels = 3;
-    let mut plants_found = 0;
     let mut i = 0;
+
     while i <= max_up_traversal_levels {
         let mut path = std::path::PathBuf::from(".");
         for _ in 0..i {
@@ -68,100 +94,126 @@ pub fn load_base_plants(db_conn: &SqliteConnection) -> isize {
         match fs::metadata(path.clone()) {
             Ok(md) => {
                 if md.is_dir() {
-                    let file_paths = fs::read_dir(path.clone().join("plants")).unwrap();
-
-                    for file_path in file_paths {
-                        let path_ = file_path.unwrap().path();
-
-                        if fs::metadata(path_.clone()).unwrap().is_file() {
-                            if path_.extension().unwrap().to_str().unwrap() == "json" {
-                                println!("found: {}", path_.display());
-
-                                let contents = fs::read_to_string(path_.clone()).unwrap();
-
-                                let plants: Vec<PlantJson> =
-                                    serde_json::from_str(&contents).unwrap();
-
-                                let filename = rem_last_n(
-                                    path_.as_path().file_name().unwrap().to_str().unwrap(),
-                                    5,
-                                ); // 5: ".json"
-
-                                for plant in &plants {
-                                    // for the "Oddball.json" file, get type from each item's json
-                                    // all others get type from the filename
-                                    let plant_type;
-                                    if filename.starts_with("Oddball") {
-                                        plant_type = plant.type_.clone().unwrap();
-                                    } else {
-                                        plant_type = filename.to_string();
-                                    }
-
-                                    let harvest_start_day;
-                                    let harvest_end_day;
-                                    if plant.harvest_start.is_some() {
-                                        harvest_start_day = string_to_day_number(
-                                            plant.harvest_start.as_ref().unwrap(),
-                                        );
-                                    } else {
-                                        harvest_start_day = 0;
-                                    }
-                                    if plant.harvest_end.is_some() {
-                                        harvest_end_day = string_to_day_number(
-                                            plant.harvest_end.as_ref().unwrap(),
-                                        );
-                                    } else {
-                                        harvest_end_day = 0;
-                                    }
-
-                                    println!("inserting");
-                                    let rows_inserted = diesel::insert_into(base_plants)
-                                        .values((
-                                            name.eq(&plant.name),
-                                            type_.eq(&plant_type),
-                                            description.eq(&plant.description),
-                                            patent.eq(&plant.patent),
-                                            relative_harvest.eq(&plant.relative_harvest), // todo harvest start+end
-                                            harvest_start.eq(harvest_start_day as i32),
-                                            harvest_end.eq(harvest_end_day as i32),
-                                            harvest_time_reference
-                                                .eq(&plant.harvest_time_reference),
-                                        ))
-                                        .execute(db_conn);
-                                    assert_eq!(Ok(1), rows_inserted);
-                                    plants_found += 1;
-                                }
-                            }
-                        }
-                    }
-
-                    // todo: load types, figure out an error value if types don't work out
-                    let types_path = path.join("types.json");
-                    if !fs::metadata(types_path.clone()).unwrap().is_file() {
-                        // error
-                    }
-
-                    let contents = fs::read_to_string(types_path.clone()).unwrap();
-
-                    let types: Vec<PlantJson> = serde_json::from_str(&contents).unwrap();
-
-                    for type_element in &types {
-                        // todo - create table schema, do insert
-                    }
-
-                    break;
+                    return Some(path);
                 }
             }
             Err(_) => {
                 println!("not a dir")
             }
         }
-
         i += 1;
     }
 
-    // find all types and make sure each is in the types table
-    let distinct_types = base_plants.select(type_).distinct().load::<String>(db_conn);
+    return None;
+}
+
+pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
+    // look for a dir "plant_database/" up to three levels up so users can mess this up a little
+
+    let mut plants_found = 0;
+
+    let file_paths = fs::read_dir(database_dir.clone().join("plants")).unwrap();
+
+    for file_path in file_paths {
+        let path_ = file_path.unwrap().path();
+
+        if fs::metadata(path_.clone()).unwrap().is_file() {
+            if path_.extension().unwrap().to_str().unwrap() == "json" {
+                println!("found: {}", path_.display());
+
+                let contents = fs::read_to_string(path_.clone()).unwrap();
+
+                let plants: Vec<PlantJson> = serde_json::from_str(&contents).unwrap();
+
+                let filename =
+                    rem_last_n(path_.as_path().file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
+
+                for plant in &plants {
+                    // for the "Oddball.json" file, get type from each item's json
+                    // all others get type from the filename
+                    let plant_type;
+                    if filename.starts_with("Oddball") {
+                        plant_type = plant.type_.clone().unwrap();
+                    } else {
+                        plant_type = filename.to_string();
+                    }
+
+                    let harvest_start_day;
+                    let harvest_end_day;
+                    if plant.harvest_start.is_some() {
+                        harvest_start_day =
+                            string_to_day_number(plant.harvest_start.as_ref().unwrap());
+                    } else {
+                        harvest_start_day = 0;
+                    }
+                    if plant.harvest_end.is_some() {
+                        harvest_end_day = string_to_day_number(plant.harvest_end.as_ref().unwrap());
+                    } else {
+                        harvest_end_day = 0;
+                    }
+
+                    println!("inserting");
+                    let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
+                        .values((
+                            base_plants::name.eq(&plant.name),
+                            base_plants::type_.eq(&plant_type),
+                            base_plants::description.eq(&plant.description),
+                            base_plants::patent.eq(&plant.patent),
+                            base_plants::relative_harvest.eq(&plant.relative_harvest), // todo harvest start+end
+                            base_plants::harvest_start.eq(harvest_start_day as i32),
+                            base_plants::harvest_end.eq(harvest_end_day as i32),
+                            base_plants::harvest_time_reference.eq(&plant.harvest_time_reference),
+                        ))
+                        .execute(db_conn);
+                    assert_eq!(Ok(1), rows_inserted);
+                    plants_found += 1;
+                }
+            }
+        }
+    }
 
     return plants_found;
+}
+
+fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
+    let mut types_found = 0;
+
+    // todo: load types, figure out an error value if types don't work out
+    let types_path = database_dir.join("types.json");
+    if !fs::metadata(types_path.clone()).unwrap().is_file() {
+        panic!("didn't find types.json");
+    }
+
+    let contents = fs::read_to_string(types_path.clone()).unwrap();
+
+    let types_parsed: Vec<TypeJson> = serde_json::from_str(&contents).unwrap();
+
+    for type_element in &types_parsed {
+        // todo - create table schema, do insert
+
+        let rows_inserted = diesel::insert_into(plant_types::dsl::plant_types)
+            .values((
+                plant_types::name.eq(&type_element.name),
+                plant_types::latin_name.eq(&type_element.latin_name),
+            ))
+            .execute(db_conn);
+        assert_eq!(Ok(1), rows_inserted);
+        types_found += 1;
+    }
+    return types_found;
+}
+
+fn check_database(db_conn: &SqliteConnection) {
+    // find all types and make sure each is in the types table
+    let types_from_plants = base_plants::dsl::base_plants
+        .select(base_plants::type_)
+        .distinct()
+        .load::<String>(db_conn);
+
+    for type_from_plants in &types_from_plants.unwrap() {
+        let results = plant_types::dsl::plant_types
+            .filter(plant_types::name.eq(type_from_plants))
+            .first::<PlantType>(db_conn)
+            .expect(&format!("imported a plant with a category not in types.json: {}", type_from_plants));
+    }
 }

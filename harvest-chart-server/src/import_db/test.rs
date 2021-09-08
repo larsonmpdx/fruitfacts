@@ -13,8 +13,9 @@ fn test_dates() {
 #[test]
 fn test_database_loading() {
     let db_conn = super::super::establish_connection();
-    super::super::reset_database(&db_conn);
+    super::reset_database(&db_conn);
 
-    let plants_found = super::load_base_plants(&db_conn);
-    assert_gt!(plants_found, 200);
+    let items_loaded = super::load_all(&db_conn);
+    assert_gt!(items_loaded.plants_found, 200);
+    assert_gt!(items_loaded.types_found, 15);
 }

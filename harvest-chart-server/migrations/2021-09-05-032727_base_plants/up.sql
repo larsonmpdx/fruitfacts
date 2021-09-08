@@ -9,4 +9,11 @@ CREATE TABLE base_plants (
   harvest_end INTEGER,
   harvest_time_reference TEXT,
   UNIQUE(name, type) --combo of these columns must be unique.  example: name "Pristine" type "Apple"
-)
+);
+
+CREATE TABLE plant_types (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  latin_name TEXT,
+  UNIQUE(name)
+);
