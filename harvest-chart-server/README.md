@@ -4,6 +4,7 @@
 # goals
 * able to reproduce all of the common charts like DWN, ACN, and charts in university extension publications
 * an extensive plant database with default harvest dates and references that users can start with, pull into their own charts and then modify
+* users shouldn't need to stick to the existing plant database
 * the plant database should be in a simple text format and hosted on github so it can be shared and extended
 * a map interface to see what nearby u-picks or public gardens are growing so users can find proven varieties to fill in harvest windows
 * web UI should be simple enough to be used by typical retiree gardeners
