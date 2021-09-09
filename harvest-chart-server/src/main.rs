@@ -12,7 +12,7 @@ embed_migrations!();
 extern crate dotenv;
 
 mod import_db;
-mod schema;
+mod schema_generated;
 mod schema_types;
 
 fn main() {

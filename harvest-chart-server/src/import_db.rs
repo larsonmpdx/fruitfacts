@@ -1,8 +1,8 @@
 #[cfg(test)]
 mod test;
 
-use super::schema::base_plants;
-use super::schema::plant_types;
+use super::schema_generated::base_plants;
+use super::schema_generated::plant_types;
 use super::schema_types::*;
 use chrono::prelude::*;
 use diesel::prelude::*;
