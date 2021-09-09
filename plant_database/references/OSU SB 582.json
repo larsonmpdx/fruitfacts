@@ -4,8 +4,8 @@
     "published": "1961",
     "accessed": "Sept 2021",
     "location": "Corvallis, OR",
-    "latitude": 44.56565079280618,
-    "longitude": -123.27720977865437,
+    "latitude": 44.54820212695868,
+    "longitude": -123.21537145957399,
     "plants": [
         {
             "name": "Peach Plum",
@@ -215,7 +215,128 @@
                 "type": "day range",
                 "start": "October 1"
             }
+        },
+        {
+            "name": "Methley",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 1"
+            }
+        },
+        {
+            "name": "Beauty",
+            "harvest_data": {
+                "type": "day range",
+                "start": "September x",
+                "end": "August 5"
+            }
+        },
+        {
+            "name": "Formosa",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 5"
+            }
+        },
+        {
+            "name": "Burmosa",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 5"
+            }
+        },
+        {
+            "name": "Marvel",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 7"
+            }
+        },
+        {
+            "name": "Santa Rosa",
+            "not_recommended_reason": "not well adapted to the Willamette Valley and it is difficult to obtain satisfactory fruit set",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 15"
+            }
+        },
+        {
+            "name": "Abundance",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 15"
+            }
+        },
+        {
+            "name": "Shiro",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 15"
+            }
+        },
+        {
+            "name": "Red Heart",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 20"
+            }
+        },
+        {
+            "name": "Burbank",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 20",
+                "end": "August 25"
+            }
+        },
+        {
+            "name": "Howard Miracle",
+            "harvest_data": {
+                "type": "day range",
+                "start": "August 25"
+            }
+        },
+        {
+            "name": "Mariposa",
+            "harvest_data": {
+                "type": "day range",
+                "start": "September 1"
+            }
+        },
+        {
+            "name": "Elephant Heart",
+            "harvest_data": {
+                "type": "day range",
+                "start": "September 1"
+            }
+        },
+        {
+            "name": "Satsuma",
+            "harvest_data": {
+                "type": "day range",
+                "start": "September 5"
+            }
+        },
+        {
+            "name": "Duarte",
+            "harvest_data": {
+                "type": "day range",
+                "start": "September 15"
+            }
+        },
+        {
+            "name": "Red Ace",
+            "harvest_data": {
+                "type": "day range",
+                "start": "September 15"
+            }
+        },
+        {
+            "name": "Kelsey",
+            "harvest_data": {
+                "type": "day range",
+                "start": "October 1"
+            }
         }
-        todo japanese
     ]
 }

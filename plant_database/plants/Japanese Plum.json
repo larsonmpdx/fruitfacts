@@ -8,7 +8,8 @@
         "description": "One of Luther Burbank's original introductions"
     },
     {
-        "name": "Methley"
+        "name": "Methley",
+        "AKA": "P.I. 31652"
     },
     {
         "name": "Shiro"
@@ -25,7 +26,8 @@
         "name": "Hollywood"
     },
     {
-        "name": "Howard Miracle"
+        "name": "Howard Miracle",
+        "patent": "https://patents.google.com/patent/USPP721 expired"
     },
     {
         "name": "Red Ace"
@@ -55,13 +57,11 @@
         "name": "Nubiana"
     },
     {
-        "name": "Mariposa"
+        "name": "Mariposa",
+        "patent": "https://patents.google.com/patent/USPP111 expired"
     },
     {
         "name": "Laroda"
-    },
-    {
-        "name": "Green Gage"
     },
     {
         "name": "Late Santa Rosa"
