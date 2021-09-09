@@ -8,6 +8,8 @@ use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
 use std::fs;
+use dotenv::dotenv;
+use std::env;
 
 use serde::{Deserialize, Serialize};
 //use serde_json::Result;
@@ -58,6 +60,14 @@ fn string_to_day_number(input: &str) -> u32 {
 pub struct LoadAllReturn {
     pub plants_found: isize,
     pub types_found: isize,
+}
+
+pub fn establish_connection() -> SqliteConnection {
+    dotenv().ok();
+
+    let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
+    SqliteConnection::establish(&database_url)
+        .expect(&format!("Error connecting to {}", database_url))
 }
 
 pub fn reset_database(db_conn: &SqliteConnection) {

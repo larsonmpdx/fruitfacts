@@ -1,0 +1,16 @@
+{
+    "location": "Eugene, OR",
+    "latitude": 44.015757398811566,
+    "longitude": -122.97866205759834,
+    "plants": [
+        {
+            "name": "Satsuma",
+            "type": "Japanese Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "July 30",
+                "end": "August 21"
+            }
+        }
+    ]
+}

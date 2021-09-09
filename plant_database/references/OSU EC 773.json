@@ -1,0 +1,60 @@
+{
+    "title": "Growing Prunes",
+    "url": "https://ir.library.oregonstate.edu/downloads/8p58pd15t",
+    "published": "1993",
+    "accessed": "Sept 2021",
+    "location": "Corvallis, OR",
+    "latitude": 44.56565079280618,
+    "longitude": -123.27720977865437,
+    "plants": [
+        {
+            "name": "Italian",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "range": "last half of September"
+            }
+        },
+        {
+            "name": "Early Italian",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "relative",
+                "relative": "Italian-7-14"
+            }
+        },
+        {
+            "name": "Brooks",
+            "type": "Euro Plum"
+        },
+        {
+            "name": "Parsons",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "range": "early September"
+            }
+        },
+        {
+            "name": "Moyer Perfecto",
+            "type": "Euro Plum",
+            "not_recommended_reason": "ripens too late in the Willamette Valley",
+            "harvest_data": {
+                "type": "relative",
+                "relative": "Italian+10"
+            }
+        },
+        {
+            "name": "Stanley",
+            "type": "Euro Plum"
+        },
+        {
+            "name": "President",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "range": "late September"
+            }
+        }
+    ]
+}

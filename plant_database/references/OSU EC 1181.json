@@ -1,0 +1,187 @@
+{
+    "title": "Selecting Peach and Nectarine Varieties for the for the for the Willamette Valley",
+    "url": "https://catalog.extension.oregonstate.edu/ec1181",
+    "published": "2002",
+    "accessed": "Sept 2021",
+    "location": "Corvallis, OR",
+    "latitude": 44.56565079280618,
+    "longitude": -123.27720977865437,
+    "plants": [
+        {
+            "name": "Springcrest",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July"
+            }
+        },
+        {
+            "name": "Gemfree",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late July"
+            }
+        },
+        {
+            "name": "Early Redhaven",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late July"
+            }
+        },
+        {
+            "name": "Harbelle",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late July"
+            }
+        },
+        {
+            "name": "Sunhaven",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August"
+            }
+        },
+        {
+            "name": "Redhaven",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August"
+            }
+        },
+        {
+            "name": "Harken",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August"
+            }
+        },
+        {
+            "name": "Redtop",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August"
+            }
+        },
+        {
+            "name": "July Elberta",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid August"
+            }
+        },
+        {
+            "name": "Fairhaven",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid August"
+            }
+        },
+        {
+            "name": "Canadian Harmony",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid-late August"
+            }
+        },
+        {
+            "name": "Earlihale",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid-late August"
+            }
+        },
+        {
+            "name": "Suncrest",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid-late August"
+            }
+        },
+        {
+            "name": "Loring",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid-late August"
+            }
+        },
+        {
+            "name": "Glohaven",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid-late August"
+            }
+        },
+        {
+            "name": "Veteran",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late August"
+            }
+        },
+        {
+            "name": "Biscoe",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Improved Elberta",
+            "type": "Yellow Peach",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Juneglo",
+            "type": "Yellow Nectarine",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July"
+            }
+        },
+        {
+            "name": "Harko",
+            "type": "Yellow Nectarine",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late July"
+            }
+        },
+        {
+            "name": "Redgold",
+            "type": "Yellow Nectarine",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August"
+            }
+        },
+        {
+            "name": "Fantasia",
+            "type": "Yellow Nectarine",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid August"
+            }
+        }
+    ]
+}

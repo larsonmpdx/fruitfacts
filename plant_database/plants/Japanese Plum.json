@@ -1,9 +1,7 @@
 [
     {
         "name": "Satsuma",
-        "description": "red flesh and red/purple skin.  One of Luther Burbank's original introductions",
-        "harvest_start": "July 30",
-        "harvest_end": "August 21"
+        "description": "red flesh and red/purple skin.  One of Luther Burbank's original introductions"
     },
     {
         "name": "Burbank",

@@ -1,4 +1,5 @@
 # todo
+* script to beautify json
 * import script error detection:
   * all files should be valid json
   * no duplicate names (when considering name+category)

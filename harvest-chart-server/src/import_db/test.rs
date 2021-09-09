@@ -12,7 +12,7 @@ fn test_dates() {
 
 #[test]
 fn test_database_loading() {
-    let db_conn = super::super::establish_connection();
+    let db_conn = super::establish_connection();
     super::reset_database(&db_conn);
 
     let items_loaded = super::load_all(&db_conn);
