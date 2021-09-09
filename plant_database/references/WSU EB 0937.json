@@ -8,7 +8,113 @@
     "longitude": -122.38861565365134,
     "plants": [
         {
-            todo
+            "name": "Sunrise",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August",
+                "end": "late August"
+            }
+        },
+        {
+            "name": "Gala",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Sansa",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late August",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Tsugaru Homei",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Beni Shogun",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "early October"
+            }
+        },
+        {
+            "name": "September Wonder",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "early October"
+            }
+        },
+        {
+            "name": "Honeycrisp",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "early October"
+            }
+        },
+        {
+            "name": "Jonagold",
+            "type": "Apple",
+            "note": "and Jonagold strains",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late September",
+                "end": "early October"
+            }
+        },
+        {
+            "name": "Melrose",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid October"
+            }
+        },
+        {
+            "name": "Akane",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Shizuka",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early October",
+                "end": "mid October"
+            }
+        },
+        {
+            "name": "Mutsu",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late October",
+                "end": "early November"
+            }
         }
+
+        ...
     ]
 }
