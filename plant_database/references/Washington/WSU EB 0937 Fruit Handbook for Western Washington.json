@@ -147,6 +147,23 @@
                 "start": "mid September",
                 "end": "late September"
             }
+        },
+        {
+            "name": "Redcort",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early October"
+            }
+        },
+        {
+            "name": "Empire",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid October",
+                "end": "late October"
+            }
         }
 
         ...

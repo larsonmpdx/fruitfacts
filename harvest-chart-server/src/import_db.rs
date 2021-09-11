@@ -7,9 +7,12 @@ use super::schema_types::*;
 use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
-use std::fs;
 use dotenv::dotenv;
 use std::env;
+use std::fs;
+
+extern crate regex;
+use regex::Regex;
 
 use serde::{Deserialize, Serialize};
 //use serde_json::Result;
@@ -41,10 +44,37 @@ fn rem_last_n(value: &str, n: isize) -> &str {
     chars.as_str()
 }
 
+// "Sept 25"
+// "late September"
+// "early-mid October"
 fn string_to_day_number(input: &str) -> u32 {
-    // wrap this with a year and time of day so we can parse it, then get the day of the year back out.  2020 was a leap year
+    let input_regex =
+        Regex::new(r#"(early to mid|mid to late|early-mid|mid-late|early|mid|late) (.*)"#).unwrap();
+
+    let mut month_and_day_string = input.to_string();
+    match input_regex.captures(&input.to_lowercase()) {
+        Some(matches) => {
+            let day_of_month;
+            if matches.len() >= 3 {
+                match &matches[1] {
+                    "early" => day_of_month = 5,
+                    "early to mid" | "early-mid" => day_of_month = 10,
+                    "mid" => day_of_month = 15,
+                    "mid to late" | "mid-late" => day_of_month = 20,
+                    "late" => day_of_month = 25,
+                    _ => panic!("matched a date prefix not in this match statement"),
+                }
+
+                month_and_day_string = format!("{} {}", &matches[2], day_of_month.to_string());
+            }
+        }
+        None => (),
+    }
+
+    // wrap this with a year and time of day so we can parse it, then get the day of the year back out
+    // 2020 was a leap year
     match NaiveDateTime::parse_from_str(
-        &("2020 ".to_owned() + input + " 12:01:01"),
+        &("2020 ".to_owned() + &month_and_day_string + " 12:01:01"),
         "%Y %B %d %H:%M:%S",
     ) {
         Ok(parsed) => {
