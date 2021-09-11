@@ -113,6 +113,40 @@
                 "start": "late October",
                 "end": "early November"
             }
+        },
+        {
+            "name": "Alkmene",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Rubinette",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early October"
+            }
+        },
+        {
+            "name": "Jonamac",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Spartan",
+            "type": "Apple",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "late September"
+            }
         }
 
         ...
