@@ -52,23 +52,31 @@ fn string_to_day_number(input: &str) -> u32 {
         Regex::new(r#"(early to mid|mid to late|early-mid|mid-late|early|mid|late) (.*)"#).unwrap();
 
     let mut month_and_day_string = input.to_string();
-    match input_regex.captures(&input.to_lowercase()) {
-        Some(matches) => {
-            let day_of_month;
-            if matches.len() >= 3 {
-                match &matches[1] {
-                    "early" => day_of_month = 5,
-                    "early to mid" | "early-mid" => day_of_month = 10,
-                    "mid" => day_of_month = 15,
-                    "mid to late" | "mid-late" => day_of_month = 20,
-                    "late" => day_of_month = 25,
-                    _ => panic!("matched a date prefix not in this match statement"),
-                }
 
-                month_and_day_string = format!("{} {}", &matches[2], day_of_month.to_string());
+    if !(input).contains(char::is_whitespace) {
+        // assume this is a bare month name if there's no whitespace
+        // pick a day that's in the middle of the month somewhere but with a one weeks span will be about centered
+        // in the future I want to be able to set a span for the whole month when given a single month like this
+        month_and_day_string = format!("{} 12", input);
+    } else {
+        match input_regex.captures(&input.to_lowercase()) {
+            Some(matches) => {
+                let day_of_month;
+                if matches.len() >= 3 {
+                    match &matches[1] {
+                        "early" => day_of_month = 5,
+                        "early to mid" | "early-mid" => day_of_month = 10,
+                        "mid" => day_of_month = 15,
+                        "mid to late" | "mid-late" => day_of_month = 20,
+                        "late" => day_of_month = 25,
+                        _ => panic!("matched a date prefix not in this match statement"),
+                    }
+
+                    month_and_day_string = format!("{} {}", &matches[2], day_of_month.to_string());
+                }
             }
+            None => (),
         }
-        None => (),
     }
 
     // wrap this with a year and time of day so we can parse it, then get the day of the year back out
