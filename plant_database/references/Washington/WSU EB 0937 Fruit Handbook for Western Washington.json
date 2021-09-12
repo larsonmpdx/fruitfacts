@@ -570,6 +570,325 @@
                 "start": "mid September",
                 "end": "late September"
             }
+        },
+        {
+            "name": "Methley",
+            "type": "Japanese Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July",
+                "end": "late July"
+            }
+        },
+        {
+            "name": "Beauty",
+            "type": "Japanese Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July",
+                "end": "early August"
+            }
+        },
+        {
+            "name": "Shiro",
+            "type": "Japanese Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late July",
+                "end": "early August"
+            }
+        },
+        {
+            "name": "Hollywood",
+            "type": "Japanese Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid August",
+                "end": "late August"
+            }
+        },
+        {
+            "name": "Early Laxton",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July",
+                "end": "late July"
+            }
+        },
+        {
+            "name": "Imperial Epineuse",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late July",
+                "end": "early August"
+            }
+        },
+        {
+            "name": "Early Italian",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid August",
+                "end": "late August"
+            }
+        },
+        {
+            "name": "Mirabelle",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late August",
+                "end": "early September"
+            }
+        },
+        {
+            "name": "Seneca",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid August",
+                "end": "early September"
+            }
+        },
+        {
+            "name": "Victory",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late August",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Victoria",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Valor",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Stanley",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Obilnaja",
+            "type": "Japanese Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid August",
+                "end": "late August"
+            }
+        },
+        {
+            "name": "Purple Gage",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late August"
+            }
+        },
+        {
+            "name": "Longjohn",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Silver Prune",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Schoolhouse",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Vision",
+            "type": "Euro Plum",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "late September"
+            }
+        },
+        {
+            "name": "Black Gold",
+            "type": "Sweet Cherry",
+            "category": "self fruitful",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early July",
+                "end": "mid July"
+            }
+        },
+        {
+            "name": "White Gold",
+            "type": "Sweet Cherry",
+            "category": "self fruitful",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early July",
+                "end": "mid July"
+            }
+        },
+        {
+            "name": "Lapins",
+            "type": "Sweet Cherry",
+            "category": "self fruitful",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July",
+                "end": "late July"
+            }
+        },
+        {
+            "name": "Sweetheart",
+            "type": "Sweet Cherry",
+            "category": "self fruitful",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late July",
+                "end": "early August"
+            }
+        },
+        {
+            "name": "Early Burlat",
+            "type": "Sweet Cherry",
+            "category": "needs pollinizer",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid June",
+                "end": "late June"
+            }
+        },
+        {
+            "name": "Hartland",
+            "type": "Sweet Cherry",
+            "category": "needs pollinizer",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early July"
+            }
+        },
+        {
+            "name": "Kristin",
+            "type": "Sweet Cherry",
+            "category": "needs pollinizer",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July"
+            }
+        },
+        {
+            "name": "Bing",
+            "type": "Sweet Cherry",
+            "category": "needs pollinizer",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July"
+            }
+        },
+        {
+            "name": "Rainier",
+            "type": "Sweet Cherry",
+            "category": "needs pollinizer",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July"
+            }
+        },
+        {
+            "name": "Angela",
+            "type": "Sweet Cherry",
+            "category": "needs pollinizer",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July"
+            }
+        },
+        {
+            "name": "Hudson",
+            "type": "Sweet Cherry",
+            "category": "needs pollinizer",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August"
+            }
+        },
+        {
+            "name": "Vandalay",
+            "type": "Sweet Cherry",
+            "category": "self fruitful, recent introduction",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early July"
+            }
+        },
+        {
+            "name": "Tehranivee",
+            "type": "Sweet Cherry",
+            "category": "self fruitful, recent introduction",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July",
+                "end": "late July"
+            }
+        },
+        {
+            "name": "Surefire",
+            "type": "Sour Cherry",
+            "category": "morello",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early July",
+                "end": "mid July"
+            }
+        },
+        {
+            "name": "Montmorency",
+            "type": "Sour Cherry",
+            "category": "standard, amorelle",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid July"
+            }
+        },
+        {
+            "name": "Balaton",
+            "type": "Sour Cherry",
+            "category": "morello"
+        },
+        {
+            "name": "Danube",
+            "type": "Sour Cherry",
+            "category": "morello"
         }
 
         ...

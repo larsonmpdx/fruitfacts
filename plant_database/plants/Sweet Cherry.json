@@ -142,12 +142,17 @@
     },
     {
         "name": "Lapins",
-        "AKA": "13S-28-26"
+        "AKA": "13S-28-26",
+        "description": "Summerland variety. late"
     },
     {
         "name": "Sweetheart",
         "AKA": "13S-22-08",
         "description": "Summerland variety. very late"
+    },
+    {
+        "name": "Tehranivee",
+        "description": "Vineland variety"
     },
     {
         "name": "Mona"
