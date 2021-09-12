@@ -16,8 +16,8 @@ fn test_dates() {
     assert_eq!(string_to_day_number("mid-late jan"), 20);
     assert_eq!(string_to_day_number("late February"), 56);
 
-    assert_eq!(string_to_day_number("mar"), 72);
-    assert_eq!(string_to_day_number("April"), 103);
+    assert_eq!(string_to_day_number("mar"), 75);
+    assert_eq!(string_to_day_number("April"), 106);
 }
 
 #[test]

@@ -10,6 +10,7 @@
         {
             "name": "Sunrise",
             "type": "Apple",
+            "category": "Sweet—low to moderate in acid, moderate to high in sugar",
             "harvest_data": {
                 "type": "day range",
                 "start": "early August",
@@ -19,6 +20,7 @@
         {
             "name": "Gala",
             "type": "Apple",
+            "category": "Sweet—low to moderate in acid, moderate to high in sugar",
             "harvest_data": {
                 "type": "day range",
                 "start": "mid September"
@@ -27,6 +29,7 @@
         {
             "name": "Sansa",
             "type": "Apple",
+            "category": "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
             "harvest_data": {
                 "type": "day range",
                 "start": "late August",
@@ -36,6 +39,7 @@
         {
             "name": "Tsugaru Homei",
             "type": "Apple",
+            "category": "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
             "harvest_data": {
                 "type": "day range",
                 "start": "early September",
@@ -45,6 +49,7 @@
         {
             "name": "Beni Shogun",
             "type": "Apple",
+            "category": "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
             "harvest_data": {
                 "type": "day range",
                 "start": "mid September",
@@ -54,6 +59,7 @@
         {
             "name": "September Wonder",
             "type": "Apple",
+            "category": "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
             "harvest_data": {
                 "type": "day range",
                 "start": "mid September",
@@ -63,6 +69,7 @@
         {
             "name": "Honeycrisp",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
             "harvest_data": {
                 "type": "day range",
                 "start": "mid September",
@@ -72,6 +79,7 @@
         {
             "name": "Jonagold",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
             "note": "and Jonagold strains",
             "harvest_data": {
                 "type": "day range",
@@ -82,6 +90,7 @@
         {
             "name": "Melrose",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
             "harvest_data": {
                 "type": "day range",
                 "start": "mid October"
@@ -90,6 +99,7 @@
         {
             "name": "Akane",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar (Japanese)",
             "harvest_data": {
                 "type": "day range",
                 "start": "early September",
@@ -99,6 +109,7 @@
         {
             "name": "Shizuka",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar (Japanese)",
             "harvest_data": {
                 "type": "day range",
                 "start": "early October",
@@ -108,6 +119,7 @@
         {
             "name": "Mutsu",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar (Japanese)",
             "harvest_data": {
                 "type": "day range",
                 "start": "late October",
@@ -117,6 +129,8 @@
         {
             "name": "Alkmene",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
+            "note": "Cox-type",
             "harvest_data": {
                 "type": "day range",
                 "start": "early September",
@@ -126,14 +140,28 @@
         {
             "name": "Rubinette",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
+            "note": "Cox-type",
             "harvest_data": {
                 "type": "day range",
                 "start": "early October"
             }
         },
         {
+            "name": "McIntosh",
+            "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
+            "note": "and McIntosh sports",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
             "name": "Jonamac",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
+            "note": "McIntosh-type",
             "harvest_data": {
                 "type": "day range",
                 "start": "mid September"
@@ -142,6 +170,8 @@
         {
             "name": "Spartan",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
+            "note": "McIntosh-type",
             "harvest_data": {
                 "type": "day range",
                 "start": "mid September",
@@ -151,6 +181,8 @@
         {
             "name": "Redcort",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
+            "note": "McIntosh-type",
             "harvest_data": {
                 "type": "day range",
                 "start": "early October"
@@ -159,10 +191,384 @@
         {
             "name": "Empire",
             "type": "Apple",
+            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
+            "note": "McIntosh-type",
             "harvest_data": {
                 "type": "day range",
                 "start": "mid October",
                 "end": "late October"
+            }
+        },
+        {
+            "name": "Elstar",
+            "type": "Apple",
+            "category": "Tart—moderate to high in acid, moderate to high in sugar",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "late September"
+            }
+        },
+        {
+            "name": "Karmijn de Sonnaville",
+            "type": "Apple",
+            "category": "Tart—moderate to high in acid, moderate to high in sugar",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early October",
+                "end": "mid October"
+            }
+        },
+        {
+            "name": "Braeburn",
+            "type": "Apple",
+            "category": "Tart—moderate to high in acid, moderate to high in sugar",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late October",
+                "end": "early November"
+            }
+        },
+        {
+            "name": "Gravenstein",
+            "type": "Apple",
+            "category": "Culinary varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September"
+            }
+        },
+        {
+            "name": "Bramley’s Seedling",
+            "type": "Apple",
+            "category": "Culinary varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early October"
+            }
+        },
+        {
+            "name": "Ashmead’s Kernel",
+            "type": "Apple",
+            "category": "Culinary varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early October",
+                "end": "mid October"
+            }
+        },
+        {
+            "name": "Belle de Boskoop",
+            "type": "Apple",
+            "category": "Culinary varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid October",
+                "end": "late October"
+            }
+        },
+        {
+            "name": "Pristine",
+            "type": "Apple",
+            "category": "Disease resistant varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August",
+                "end": "mid August"
+            }
+        },
+        {
+            "name": "Williams' Pride",
+            "type": "Apple",
+            "category": "Disease resistant varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August",
+                "end": "mid August"
+            }
+        },
+        {
+            "name": "Chehalis",
+            "type": "Apple",
+            "category": "Disease resistant varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Prima",
+            "type": "Apple",
+            "category": "Disease resistant varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Dayton",
+            "type": "Apple",
+            "category": "Disease resistant varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Liberty",
+            "type": "Apple",
+            "category": "Disease resistant varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early October",
+                "end": "mid October"
+            }
+        },
+        {
+            "name": "Enterprise",
+            "type": "Apple",
+            "category": "Disease resistant varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid October",
+                "end": "late October"
+            }
+        },
+        {
+            "name": "Belmac",
+            "type": "Apple",
+            "category": "Disease resistant varieties",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late October"
+            }
+        },
+        {
+            "name": "Zestar",
+            "type": "Apple",
+            "category": "Recent apple introductions",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August",
+                "end": "mid August"
+            }
+        },
+        {
+            "name": "Silken",
+            "type": "Apple",
+            "category": "Recent apple introductions",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid August",
+                "end": "early September"
+            }
+        },
+        {
+            "name": "NY 75414-1",
+            "type": "Apple",
+            "category": "Recent apple introductions",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Rajka",
+            "type": "Apple",
+            "category": "Recent apple introductions",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late September",
+                "end": "October"
+            }
+        },
+        {
+            "name": "Millenium",
+            "type": "Apple",
+            "category": "Recent apple introductions",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid October",
+                "end": "late October"
+            }
+        },
+        {
+            "name": "Red Clapp's Favorite",
+            "type": "Euro Pear",
+            "category": "Fall pears—pick in August–September, store for 4–6 weeks",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late August"
+            }
+        },
+        {
+            "name": "Orcas",
+            "type": "Euro Pear",
+            "category": "Fall pears—pick in August–September, store for 4–6 weeks",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September"
+            }
+        },
+        {
+            "name": "Rescue",
+            "type": "Euro Pear",
+            "category": "Fall pears—pick in August–September, store for 4–6 weeks",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Bartlett",
+            "type": "Euro Pear",
+            "category": "Fall pears—pick in August–September, store for 4–6 weeks",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Seckel",
+            "type": "Euro Pear",
+            "category": "Winter pears—pick in September–October, store for 3–4 months",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Concorde",
+            "type": "Euro Pear",
+            "category": "Winter pears—pick in September–October, store for 3–4 months",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September"
+            }
+        },
+        {
+            "name": "Comice",
+            "type": "Euro Pear",
+            "category": "Winter pears—pick in September–October, store for 3–4 months",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "late September"
+            }
+        },
+        {
+            "name": "Conference",
+            "type": "Euro Pear",
+            "category": "Winter pears—pick in September–October, store for 3–4 months",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "late September"
+            }
+        },
+        {
+            "name": "Bosc",
+            "type": "Euro Pear",
+            "category": "Winter pears—pick in September–October, store for 3–4 months",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late September"
+            }
+        },
+        {
+            "name": "Stutgarter Gieshirltle",
+            "type": "Euro Pear",
+            "category": "Recent pear introductions",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August",
+                "end": "mid August"
+            }
+        },
+        {
+            "name": "Blake’s Pride—Pick",
+            "type": "Euro Pear",
+            "category": "Recent pear introductions",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Honeysweet",
+            "type": "Euro Pear",
+            "category": "Recent pear introductions",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early October"
+            }
+        },
+        {
+            "name": "Hamese",
+            "type": "Asian Pear",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early August"
+            }
+        },
+        {
+            "name": "Shinseiki",
+            "type": "Asian Pear",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Kosui",
+            "type": "Asian Pear",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Kosui",
+            "type": "Asian Pear",
+            "harvest_data": {
+                "type": "day range",
+                "start": "early September",
+                "end": "mid September"
+            }
+        },
+        {
+            "name": "Mishirasu",
+            "type": "Asian Pear",
+            "harvest_data": {
+                "type": "day range",
+                "start": "late September",
+                "end": "early October"
+            }
+        },
+        {
+            "name": "Chojuro",
+            "type": "Asian Pear",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "late September"
+            }
+        },
+        {
+            "name": "Atago",
+            "type": "Asian Pear",
+            "harvest_data": {
+                "type": "day range",
+                "start": "mid September",
+                "end": "late September"
             }
         }
 

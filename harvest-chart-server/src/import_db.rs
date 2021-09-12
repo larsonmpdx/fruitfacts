@@ -44,22 +44,23 @@ fn rem_last_n(value: &str, n: isize) -> &str {
     chars.as_str()
 }
 
-// "Sept 25"
+// "September"
 // "late September"
 // "early-mid October"
+// "Sept 25"
 fn string_to_day_number(input: &str) -> u32 {
-    let input_regex =
-        Regex::new(r#"(early to mid|mid to late|early-mid|mid-late|early|mid|late) (.*)"#).unwrap();
-
     let mut month_and_day_string = input.to_string();
 
     if !(input).contains(char::is_whitespace) {
-        // assume this is a bare month name if there's no whitespace
-        // pick a day that's in the middle of the month somewhere but with a one weeks span will be about centered
-        // in the future I want to be able to set a span for the whole month when given a single month like this
-        month_and_day_string = format!("{} 12", input);
+        // for bare month names
+        month_and_day_string = format!("{} 15", input);
     } else {
-        match input_regex.captures(&input.to_lowercase()) {
+        // for inputs like "early March"
+        let text_and_month_regex =
+            Regex::new(r#"(early to mid|mid to late|early-mid|mid-late|early|mid|late) (.*)"#)
+                .unwrap();
+
+        match text_and_month_regex.captures(&input.to_lowercase()) {
             Some(matches) => {
                 let day_of_month;
                 if matches.len() >= 3 {
@@ -75,6 +76,7 @@ fn string_to_day_number(input: &str) -> u32 {
                     month_and_day_string = format!("{} {}", &matches[2], day_of_month.to_string());
                 }
             }
+            // default: parse the input as it came, for dates that already look like like "September 25"
             None => (),
         }
     }

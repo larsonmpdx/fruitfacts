@@ -35,5 +35,19 @@
     {
         "name": "September Wonder",
         "AKA": "Jubilee"
+    },
+    {
+        "name": "Zestar",
+        "AKA": ["Zestar!", "Minnewashta"],
+        "patent": "https://patents.google.com/patent/USPP11367 expired 2017"
+    },
+    {
+        "name": "Silken",
+        "description": "Summerland variety",
+        "patent": "https://patents.google.com/patent/USPP10740P/en expired 2017"
+    },
+    {
+        "name": "Millenium",
+        "AKA": "NY 460"
     }
 ]
