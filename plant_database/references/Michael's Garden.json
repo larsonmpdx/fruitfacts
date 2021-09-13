@@ -6,11 +6,7 @@
         {
             "name": "Satsuma",
             "type": "Japanese Plum",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 30",
-                "end": "August 21"
-            }
+            "harvest_time": "July 30 to August 21"
         }
     ]
 }

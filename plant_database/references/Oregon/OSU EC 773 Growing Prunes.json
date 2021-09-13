@@ -10,7 +10,7 @@
         {
             "name": "Italian",
             "type": "Euro Plum",
-            "harvest_data": {
+            "harvest_time": {
                 "type": "day range",
                 "range": "last half of September"
             }
@@ -18,7 +18,7 @@
         {
             "name": "Early Italian",
             "type": "Euro Plum",
-            "harvest_data": {
+            "harvest_time": {
                 "type": "relative",
                 "relative": "Italian-7-14"
             }
@@ -30,7 +30,7 @@
         {
             "name": "Parsons",
             "type": "Euro Plum",
-            "harvest_data": {
+            "harvest_time": {
                 "type": "day range",
                 "range": "early September"
             }
@@ -39,7 +39,7 @@
             "name": "Moyer",
             "type": "Euro Plum",
             "not_recommended_reason": "ripens too late in the Willamette Valley",
-            "harvest_data": {
+            "harvest_time": {
                 "type": "relative",
                 "relative": "Italian+10"
             }
@@ -51,7 +51,7 @@
         {
             "name": "President",
             "type": "Euro Plum",
-            "harvest_data": {
+            "harvest_time": {
                 "type": "day range",
                 "range": "late September"
             }

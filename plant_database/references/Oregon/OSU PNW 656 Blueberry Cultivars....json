@@ -10,245 +10,137 @@
         {
             "name": "Bluetta",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 22",
-                "end": "July 1"
-            }
+            "harvest_time": "June 22 to July 1"
         },
         {
             "name": "Duke",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 21",
-                "end": "July 10"
-            }
+            "harvest_time": "June 21 to July 10"
         },
         {
             "name": "Earliblue",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 21",
-                "end": "July 11"
-            }
+            "harvest_time": "June 21 to July 11"
         },
         {
             "name": "Northland",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 19",
-                "end": "July 14"
-            }
+            "harvest_time": "June 19 to July 14"
         },
         {
             "name": "Bluegold",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 21",
-                "end": "July 15"
-            }
+            "harvest_time": "June 21 to July 15"
         },
         {
             "name": "Spartan",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 22",
-                "end": "July 17"
-            }
+            "harvest_time": "June 22 to July 17"
         },
         {
             "name": "Draper",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 2",
-                "end": "July 14"
-            }
+            "harvest_time": "July 2 to July 14"
         },
         {
             "name": "Reka",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 25",
-                "end": "July 15"
-            }
+            "harvest_time": "June 25 to July 15"
         },
         {
             "name": "Bluejay",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 23",
-                "end": "July 16"
-            }
+            "harvest_time": "June 23 to July 16"
         },
         {
             "name": "Toro",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 27",
-                "end": "July 20"
-            }
+            "harvest_time": "June 27 to July 20"
         },
         {
             "name": "Olympia",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 30",
-                "end": "July 13"
-            }
+            "harvest_time": "June 30 to July 13"
         },
         {
             "name": "Berkeley",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 28",
-                "end": "July 21"
-            }
+            "harvest_time": "June 28 to July 21"
         },
         {
             "name": "Bluecrop",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 5",
-                "end": "August 1"
-            }
+            "harvest_time": "July 5 to August 1"
         },
         {
             "name": "Rubel",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 6",
-                "end": "July 28"
-            }
+            "harvest_time": "July 6 to July 28"
         },
         {
             "name": "Jersey",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "June 30",
-                "end": "July 25"
-            }
+            "harvest_time": "June 30 to July 25"
         },
         {
             "name": "1613-A",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 9",
-                "end": "July 24"
-            }
+            "harvest_time": "July 9 to July 24"
         },
         {
             "name": "Legacy",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 5",
-                "end": "August 2"
-            }
+            "harvest_time": "July 5 to August 2"
         },
         {
             "name": "Liberty",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 13",
-                "end": "July 31"
-            }
+            "harvest_time": "July 13 to July 31"
         },
         {
             "name": "Brigitta Blue",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 14",
-                "end": "August 3"
-            }
+            "harvest_time": "July 14 to August 3"
         },
         {
             "name": "Darrow",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 18",
-                "end": "August 13"
-            }
+            "harvest_time": "July 18 to August 13"
         },
         {
             "name": "Chandler",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 20",
-                "end": "August 10"
-            }
+            "harvest_time": "July 20 to August 10"
         },
         {
             "name": "Ozarkblue",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 26",
-                "end": "August 17"
-            }
+            "harvest_time": "July 26 to August 17"
         },
         {
             "name": "Elliott",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 26",
-                "end": "August 25"
-            }
+            "harvest_time": "July 26 to August 25"
         },
         {
             "name": "Aurora",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "July 29",
-                "end": "August 29"
-            }
+            "harvest_time": "July 29 to August 29"
         },
         {
             "name": "Ochlockonee",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "August 6",
-                "end": "September 3"
-            }
+            "harvest_time": "August 6 to September 3"
         },
         {
             "name": "Tifblue",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "August 14",
-                "end": "September 14"
-            }
+            "harvest_time": "August 14 to September 14"
         },
         {
             "name": "Powderblue",
             "type": "Blueberry",
-            "harvest_data": {
-                "type": "day range",
-                "start": "August 13",
-                "end": "September 12"
-            }
+            "harvest_time": "August 13 to September 12"
         }
     ]
 }

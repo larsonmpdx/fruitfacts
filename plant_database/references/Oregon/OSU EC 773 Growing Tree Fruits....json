@@ -1,0 +1,44 @@
+{
+    "title": "Growing Tree Fruits and Nuts in the Home Orchard",
+    "url": "https://ir.library.oregonstate.edu/downloads/8p58pd15t",
+    "published": "2009",
+    "accessed": "Sept 2021",
+    "locations": {
+        "I": {
+            "name": "Area I: The Willamette Valley and southern Oregon",
+            "latitude": 44.54820212695868,
+            "longitude": -123.21537145957399
+        },
+        "II": {
+            "name": "Area II: The mid-Columbia and eastern Oregon",
+            "latitude": 45.704919133064905,
+            "longitude": -121.52331207052876
+        },
+        "III": {
+            "name": "Area III: Mountain and high plateau",
+            "latitude": 44.36728083819834,
+            "longitude": -121.14213716576367
+        },
+        "IV": {
+            "name": "Area III: Coastal region",
+            "latitude": 45.217140016834854,
+            "longitude": -123.97955043832465
+        }
+    },
+    "plants": [
+        {
+            "name": "Lodi",
+            "type": "Apple",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "July 15-30",
+            "note": "Yellow, won’t keep"
+        },
+        {
+            "name": "Earligold",
+            "type": "Apple",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "August 1-15",
+            "note": "Yellow, crisp"
+        }
+    ]
+}

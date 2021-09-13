@@ -44,6 +44,16 @@ fn rem_last_n(value: &str, n: isize) -> &str {
     chars.as_str()
 }
 
+// "early to late August" -> "early August" and "late August"
+// "late August to mid September" -> "late August" and "mid September"
+// "August 1-15" -> "August 1" and "August 15"
+// others unchanged
+
+// report whether it was parsed as a start date (like peaches, "September 15", "early September"), midpoint ("September"), or two dates ("September 15-30")
+// single dates get a window put after them, midpoints get a window centered on them, two dates stay as they are
+
+// function todo
+
 // "September"
 // "late September"
 // "early-mid October"
