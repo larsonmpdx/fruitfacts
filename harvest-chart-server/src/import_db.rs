@@ -46,14 +46,21 @@ fn rem_last_n(value: &str, n: isize) -> &str {
 
 // "early to late August" -> "early August" and "late August"
 // "late August to mid September" -> "late August" and "mid September"
-// "August 1-15" -> "August 1" and "August 15"
-// others unchanged
+// "Sept 20-30" -> "Sept 20" and "Sept 30"
+// "Sept 25-Oct 5" -> "Sept 25" and "Oct 5"
+// if none of these match, maybe it's a single date, pass it through to string_to_day_number() unchanged
 
-// report whether it was parsed as a start date (like peaches, "September 15", "early September"), midpoint ("September"), or two dates ("September 15-30")
-// single dates get a window put after them, midpoints get a window centered on them, two dates stay as they are
+// report the way it was parsed:
+// * as a start date (like peaches, "September 15", "early September")
+// * midpoint ("September" or "mid September") where we'd like the graphed date range to also be centered
+// * two dates ("September 15-30")
+// single dates get a window put after them (window size configured outside this import), midpoints get a window centered on them, two dates stay as they are
+
+// also parse "early/mid/late" and "0%,50%,100%" relative ripening times (return a percentage)
 
 // function todo
 
+// parse a single date to a day of the year
 // "September"
 // "late September"
 // "early-mid October"

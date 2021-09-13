@@ -1,7 +1,8 @@
 {
     "title": "Growing Tree Fruits and Nuts in the Home Orchard",
-    "url": "https://ir.library.oregonstate.edu/downloads/8p58pd15t",
+    "url": "https://catalog.extension.oregonstate.edu/ec819",
     "published": "2009",
+    "reviewed": "2015",
     "accessed": "Sept 2021",
     "locations": {
         "I": {
@@ -20,7 +21,7 @@
             "longitude": -121.14213716576367
         },
         "IV": {
-            "name": "Area III: Coastal region",
+            "name": "Area IV: Coastal region",
             "latitude": 45.217140016834854,
             "longitude": -123.97955043832465
         }
@@ -37,8 +38,513 @@
             "name": "Earligold",
             "type": "Apple",
             "locations": ["I", "II", "III", "IV"],
-            "harvest_time": "August 1-15",
+            "harvest_time": "Aug 1-15",
             "note": "Yellow, crisp"
+        },
+        {
+            "name": "Akane",
+            "type": "Apple",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "Aug 15-30",
+            "note": "Red, early, won’t keep"
+        },
+        {
+            "name": "Gravenstein",
+            "type": "Apple",
+            "locations": ["I", "IV"],
+            "harvest_time": "Aug 15-30",
+            "note": "Pollinized by Lodi, not hardy, best sauce apple"
+        },
+        {
+            "name": "Elstar",
+            "type": "Apple",
+            "locations": ["I", "IV"],
+            "harvest_time": "Sept 10-20",
+            "note": "Tart, good flavor, cool climate"
+        },
+        {
+            "name": "Gala",
+            "type": "Apple",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "Sept 15-25",
+            "note": "Sweet, good flavor, heat-tolerant"
+        },
+        {
+            "name": "Jonagold",
+            "type": "Apple",
+            "locations": ["I", "IV"],
+            "harvest_time": "Sept 15-30",
+            "note": "Big, good flavor, cool climate, needs pollinizer"
+        },
+        {
+            "name": "Empire",
+            "type": "Apple",
+            "locations": ["I", "II"],
+            "harvest_time": "Sept 20-30",
+            "note": "Small, red, flavorful"
+        },
+        {
+            "name": "Delicious",
+            "type": "Apple",
+            "locations": ["I", "II"],
+            "harvest_time": "Sept 25-Oct 5",
+            "note": "Standard red, scabs badly"
+        },
+        {
+            "name": "Golden Delicious",
+            "type": "Apple",
+            "locations": ["I", "II"],
+            "harvest_time": "Oct 1-10",
+            "note": "Yellow, flavorful, very productive"
+        },
+        {
+            "name": "Braeburn",
+            "type": "Apple",
+            "locations": ["I", "II"],
+            "harvest_time": "Oct 5-15",
+            "note": "Flavorful, stores well, productive"
+        },
+        {
+            "name": "Newtown",
+            "type": "Apple",
+            "locations": ["I", "II"],
+            "harvest_time": "Oct 10-20",
+            "note": "Green, vigorous tree, slow to produce"
+        },
+        {
+            "name": "Fuji",
+            "type": "Apple",
+            "locations": ["I", "II"],
+            "harvest_time": "Oct 10-25",
+            "note": "Sweet, flavorful, stores well"
+        },
+        {
+            "name": "Granny Smith",
+            "type": "Apple",
+            "locations": ["I", "II"],
+            "harvest_time": "Oct 15-30",
+            "note": "Tart, stores well"
+        },
+        {
+            "name": "Chehalis",
+            "type": "Apple",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "Aug 15-25",
+            "note": "Yellow, big, long picking season"
+        },
+        {
+            "name": "Prima",
+            "type": "Apple",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "Sept 1-10",
+            "note": "Big, red, pits"
+        },
+        {
+            "name": "Liberty",
+            "type": "Apple",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "Sept 20-30",
+            "note": "Best flavor, red"
+        },
+        {
+            "name": "Puget Gold",
+            "type": "Apricot",
+            "locations": ["I", "II"],
+            "harvest_time": "July",
+            "note": "Produces west of Cascades"
+        },
+        {
+            "name": "Rival",
+            "type": "Apricot",
+            "locations": ["II"],
+            "harvest_time": "July",
+            "note": "Mild flavor"
+        },
+        {
+            "name": "Royal",
+            "type": "Apricot",
+            "locations": ["II"],
+            "harvest_time": "July",
+            "note": "Self-fruitful"
+        },
+        {
+            "name": "Moongold",
+            "type": "Apricot",
+            "locations": ["II", "III"],
+            "harvest_time": "July",
+            "note": "Cold-hardy, pollinized by Sungold"
+        },
+        {
+            "name": "Sungold",
+            "type": "Apricot",
+            "locations": ["II", "III"],
+            "harvest_time": "July",
+            "note": "Pollinized by Moongold, hardy"
+        },
+        {
+            "name": "Chinese",
+            "type": "Apricot",
+            "locations": ["I", "III"],
+            "harvest_time": "July",
+            "note": "Resists frost"
+        },
+        {
+            "name": "Balaton",
+            "type": "Sour Cherry",
+            "locations": ["I", "II"],
+            "harvest_time": "July",
+            "note": "Dark skin and flesh"
+        },
+        {
+            "name": "Montmorency",
+            "type": "Sour Cherry",
+            "locations": ["I", "II"],
+            "harvest_time": "July",
+            "note": "Michigan strain best"
+        },
+        {
+            "name": "North Star",
+            "type": "Sour Cherry",
+            "locations": ["I", "II"],
+            "harvest_time": "July",
+            "note": "Dwarf variety"
+        },
+        {
+            "name": "Van",
+            "type": "Sweet Cherry",
+            "locations": ["II"],
+            "harvest_time": "Early",
+            "note": "Black, pollinized by Bing, Lambert"
+        },
+        {
+            "name": "Van",
+            "type": "Sweet Cherry",
+            "locations": ["II"],
+            "harvest_time": "Early",
+            "note": "Black, pollinized by Bing, Lambert"
+        },
+        {
+            "name": "Royal Ann",
+            "type": "Sweet Cherry",
+            "locations": ["I", "II"],
+            "harvest_time": "Mid",
+            "note": "White, pollinized by Corum"
+        },
+        {
+            "name": "Bing",
+            "type": "Sweet Cherry",
+            "locations": ["II"],
+            "harvest_time": "Mid",
+            "note": "Black, pollinized by Van, Corum"
+        },
+        {
+            "name": "Lapins",
+            "type": "Sweet Cherry",
+            "locations": ["I", "II"],
+            "harvest_time": "Mid",
+            "note": "Black, self-fruitful"
+        },
+        {
+            "name": "Bada",
+            "type": "Sweet Cherry",
+            "locations": ["I", "II", "IV"],
+            "harvest_time": "Mid",
+            "note": "White, semidwarf, pollinized by Royal Ann, Bing, Lambert"
+        },
+        {
+            "name": "Stella",
+            "type": "Sweet Cherry",
+            "locations": ["I", "II", "IV"],
+            "harvest_time": "Mid",
+            "note": "Black, self-fruitful"
+        },
+        {
+            "name": "Compact Stella",
+            "type": "Sweet Cherry",
+            "locations": ["I", "II", "IV"],
+            "harvest_time": "Mid",
+            "note": "Smaller than Stella"
+        },
+        {
+            "name": "Sweetheart",
+            "type": "Sweet Cherry",
+            "locations": ["I", "II"],
+            "harvest_time": "Mid",
+            "note": "Black, self-fruitful"
+        },
+        {
+            "name": "Kordia",
+            "type": "Sweet Cherry",
+            "locations": ["I", "II"],
+            "harvest_time": "Late",
+            "note": "Black, pollinized by Regina"
+        },
+        {
+            "name": "Lambert",
+            "type": "Sweet Cherry",
+            "locations": ["I", "II", "IV"],
+            "harvest_time": "Late",
+            "note": "Black, pollinized by Van, Corum"
+        },
+        {
+            "name": "Regina",
+            "type": "Sweet Cherry",
+            "locations": ["I", "II"],
+            "harvest_time": "Late",
+            "note": "Black, pollinized by Kordia"
+        },
+        {
+            "name": "Chinese seedling",
+            "type": "Chestnut",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "September",
+            "note": "Pollinizer for Layeroka"
+        },
+        {
+            "name": "Colossal",
+            "type": "Chestnut",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "September",
+            "note": "Large nut"
+        },
+        {
+            "name": "Layeroka",
+            "type": "Chestnut",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "September",
+            "note": "Reliable producer"
+        },
+        {
+            "name": "Okei",
+            "type": "Chestnut",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "September",
+            "note": "Pollinizer for Colossal"
+        },
+        {
+            "name": "Brown Turkey",
+            "type": "Fig",
+            "locations": ["I"],
+            "harvest_time": "August",
+            "note": "Large, brown"
+        },
+        {
+            "name": "Desert King",
+            "type": "Fig",
+            "locations": ["I"],
+            "harvest_time": "August",
+            "note": "Green, large, sweet"
+        },
+        {
+            "name": "Lattarula",
+            "type": "Fig",
+            "locations": ["I"],
+            "harvest_time": "August",
+            "note": "Green, large, sweet"
+        },
+        {
+            "name": "Barcelona",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "Standard variety"
+        },
+        {
+            "name": "Clark",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "More resistant to Eastern filbert blight (EFB) than Barcelona"
+        },
+        {
+            "name": "Jefferson",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "Completely resistant to EFB. No blight sprays are required"
+        },
+        {
+            "name": "Lewis",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "More resistant to EFB than Barcelona"
+        },
+        {
+            "name": "Sacajawea",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "More resistant to EFB than Barcelona"
+        },
+        {
+            "name": "Santiam",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "Completely resistant to EFB. No blight sprays required"
+        },
+        {
+            "name": "Delta",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "Completely EFB-resistant pollinizer"
+        },
+        {
+            "name": "Zeta",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "Completely EFB-resistant pollinizer"
+        },
+        {
+            "name": "Epsilon",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "Completely EFB-resistant pollinizer"
+        },
+        {
+            "name": "Gamma",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "Completely EFB-resistant pollinizer"
+        },
+        {
+            "name": "Yamhill",
+            "type": "Hazelnut",
+            "locations": ["I", "IV"],
+            "harvest_time": "October",
+            "note": "Completely resistant to EFB. No blight sprays are required"
+        },
+        {
+            "name": "Fantasia",
+            "type": "Nectarine",
+            "locations": ["I"],
+            "harvest_time": "August",
+            "note": "Free-stone, quality fruit"
+        },
+        {
+            "name": "Harko",
+            "type": "Nectarine",
+            "locations": ["I", "II"],
+            "harvest_time": "August",
+            "note": "Better fruit set"
+        },
+        {
+            "name": "Redgold",
+            "type": "Nectarine",
+            "locations": ["I"],
+            "harvest_time": "August",
+            "note": "Free-stone, quality fruit"
+        },
+        {
+            "name": "Stark Red Gold",
+            "type": "Nectarine",
+            "locations": ["I", "II"],
+            "harvest_time": "August",
+            "note": "Southern and northeastern Oregon only"
+        },
+        {
+            "name": "Genetic Dwarf Nectarines",
+            "type": "Nectarine",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "August",
+            "note": "Grown in pots, take inside for winter"
+        },
+        {
+            "name": "Red Haven",
+            "type": "Peach",
+            "locations": ["I", "II"],
+            "harvest_time": "Aug 5-10",
+            "note": "Most popular, clingstone until fully ripe"
+        },
+        {
+            "name": "July Elberta",
+            "type": "Peach",
+            "locations": ["I", "II"],
+            "harvest_time": "Aug 15-20",
+            "note": "Old favorite"
+        },
+        {
+            "name": "Veteran",
+            "type": "Peach",
+            "locations": ["I", "II"],
+            "harvest_time": "Aug 20-25",
+            "note": "Regular bearer"
+        },
+        {
+            "name": "Early Elberta",
+            "type": "Peach",
+            "locations": ["I", "II"],
+            "harvest_time": "Aug 24-28",
+            "note": "Old favorite"
+        },
+        {
+            "name": "Rochester",
+            "type": "Peach",
+            "locations": ["I"],
+            "harvest_time": "Aug 24-30",
+            "note": "Old favorite"
+        },
+        {
+            "name": "Frost",
+            "type": "Peach",
+            "locations": ["I", "II"],
+            "harvest_time": "August",
+            "note": "Resists leaf curl"
+        },
+        {
+            "name": "Genetic Dwarf Peaches",
+            "type": "Peach",
+            "locations": ["I", "II", "III", "IV"],
+            "harvest_time": "Summer",
+            "note": "Very small trees, grow in pots, indoors in winter"
+        },
+        {
+            "name": "Bartlett",
+            "type": "Euro Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "Aug 15-30",
+            "note": "Pollinized by Anjou, Fall Butter"
+        },
+        {
+            "name": "Seckel",
+            "type": "Euro Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "Aug 20-Sept 10",
+            "note": "Pollinized by Anjou, Bosc, Comice"
+        },
+        {
+            "name": "Anjou",
+            "type": "Euro Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "Sept 5-20",
+            "note": "Pollinized by Bartlett, needs 45–60 days of cold storage before ripening"
+        },
+        {
+            "name": "Bosc",
+            "type": "Euro Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "Sept 10-30",
+            "note": "Pollinized by Comice, best in southern Oregon"
+        },
+        {
+            "name": "Cascade",
+            "type": "Euro Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "Sept 10-30",
+            "note": "Red blush, good flavor"
+        },
+        {
+            "name": "Comice",
+            "type": "Euro Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "Sept 20-30",
+            "note": "Pollinized by Bosc, best in southern Oregon, needs 45–60 days of cold storage before ripening"
         }
+        ...
     ]
 }
