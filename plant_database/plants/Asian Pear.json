@@ -9,8 +9,8 @@
         "name": "Hosui"
     },
     {
-        "name": "20th Century",
-        "description": "AKA Nijisseiki"
+        "name": "Nijisseiki",
+        "AKA": "20th Century"
     },
     {
         "name": "Shinko",
@@ -18,7 +18,8 @@
     },
     {
         "name": "Korean Giant",
-        "description": "large size. AKA Dan Bae or Olympic"
+        "AKA": ["Dan Bae", "Olympic"],
+        "description": "large size"
     },
     {
         "name": "Kikusui"

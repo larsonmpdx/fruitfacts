@@ -9,8 +9,8 @@
         "name": "Blake's Pride"
     },
     {
-        "name": "D'anjou",
-        "description": "AKA Anjou"
+        "name": "Anjou",
+        "AKA": "D'anjou"
     },
     {
         "name": "Flemish Beauty"
@@ -20,7 +20,7 @@
     },
     {
         "name": "Red Clapp's Favorite",
-        "AKA": ["Red Clapp's", "Kalle", "Super Red"]
+        "AKA": ["Red Clapp's", "Kalle", "Super Red", "Starkrimson"]
     },
     {
         "name": "Golden Russet Bosc",

@@ -544,7 +544,251 @@
             "locations": ["I", "II"],
             "harvest_time": "Sept 20-30",
             "note": "Pollinized by Bosc, best in southern Oregon, needs 45–60 days of cold storage before ripening"
+        },
+        {
+            "name": "Red Clapp's Favorite",
+            "type": "Euro Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "Aug 1-15",
+            "note": "Red, Pollinized by Bartlett"
+        },
+        {
+            "name": "Red Bartlet",
+            "type": "Euro Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "Aug 15-30",
+            "note": "Red, numerous strains, Pollinized by Anjou, Fall Butter"
+        },
+        {
+            "name": "Reimer Red",
+            "type": "Euro Pear",
+            "locations": ["I"],
+            "harvest_time": "September",
+            "note": "Pollinized by Bartlett"
+        },
+        {
+            "name": "Red Anjou",
+            "type": "Euro Pear",
+            "locations": ["I"],
+            "harvest_time": "September",
+            "note": "Pollinized by Bartlett"
+        },
+        {
+            "name": "Kosui",
+            "type": "Asian Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "August",
+            "note": "Yellow-bronze fruit with slight russet"
+        },
+        {
+            "name": "Shinseiki",
+            "type": "Asian Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "August",
+            "note": "Yellow fruit"
+        },
+        {
+            "name": "Chojuro",
+            "type": "Asian Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "September",
+            "note": "Brown russetted fruit"
+        },
+        {
+            "name": "Hosui",
+            "type": "Asian Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "September",
+            "note": "Brown russetted fruit"
+        },
+        {
+            "name": "Nijisseiki",
+            "type": "Asian Pear",
+            "locations": ["I", "II"],
+            "harvest_time": "September",
+            "note": "Yellow fruit"
+        },
+        {
+            "name": "Early Golden",
+            "type": "Persimmon",
+            "locations": ["I", "II"],
+            "harvest_time": "November",
+            "note": "American, small"
+        },
+        {
+            "name": "Fuyu",
+            "type": "Persimmon",
+            "locations": ["I", "II"],
+            "harvest_time": "November",
+            "note": "Japanese, seedless"
+        },
+        {
+            "name": "Garrettson",
+            "type": "Persimmon",
+            "locations": ["I", "II"],
+            "harvest_time": "November",
+            "note": "American, small"
+        },
+        {
+            "name": "Hachiya",
+            "type": "Persimmon",
+            "locations": ["I", "II"],
+            "harvest_time": "November",
+            "note": "Asian, large"
+        },
+        {
+            "name": "Mount Royal",
+            "type": "Euro Plum",
+            "locations": ["III"],
+            "harvest_time": "September",
+            "note": "cold resistant, Self-fruitful"
+        },
+        {
+            "name": "Superior",
+            "type": "Japanese Plum",
+            "locations": ["III"],
+            "harvest_time": "September",
+            "note": "japanese/american plum hybrid. Pollinized by Pipestone"
+        },
+        {
+            "name": "Ember",
+            "type": "Japanese Plum",
+            "locations": ["III"],
+            "harvest_time": "October",
+            "note": "japanese/american plum hybrid. Pollinized by Superior"
+        },
+        {
+            "name": "Parsons",
+            "type": "Euro Plum",
+            "locations": ["I"],
+            "harvest_time": "Sept 1-15",
+            "note": "Sweet, pollinized by Stanley"
+        },
+        {
+            "name": "Stanley",
+            "type": "Euro Plum",
+            "locations": ["I", "II"],
+            "harvest_time": "Sept 1-15",
+            "note": "Bears but brown rots"
+        },
+        {
+            "name": "Italian",
+            "type": "Euro Plum",
+            "locations": ["I", "II"],
+            "harvest_time": "Sept 10-30",
+            "note": "Tart, \"purple plum\""
+        },
+        {
+            "name": "Brooks",
+            "type": "Euro Plum",
+            "locations": ["I", "II"],
+            "harvest_time": "Sept 20-30",
+            "note": " Bears regularly, large"
+        },
+        {
+            "name": "President",
+            "type": "Euro Plum",
+            "locations": ["II"],
+            "harvest_time": "Sept 20-30",
+            "note": "Pollinized by Stanley"
+        },
+        {
+            "name": "Moyer",
+            "type": "Euro Plum",
+            "locations": ["I"],
+            "harvest_time": "Oct 1",
+            "note": "south only. Best dried, sweet"
+        },
+        {
+            "name": "Early Golden",
+            "type": "Japanese Plum",
+            "locations": ["I", "II"],
+            "harvest_time": "July",
+            "note": "Apricot-like flavor"
+        },
+        {
+            "name": "Shiro",
+            "type": "Japanese Plum",
+            "locations": ["I", "II"],
+            "harvest_time": "August",
+            "note": "Pollinized by Red Heart"
+        },
+        {
+            "name": "Burbank",
+            "type": "Japanese Plum",
+            "locations": ["I", "II"],
+            "harvest_time": "August",
+            "note": "Pollinized by Elephant Heart"
+        },
+        {
+            "name": "Red Heart",
+            "type": "Japanese Plum",
+            "locations": ["I", "II"],
+            "harvest_time": "September",
+            "note": "Pollinized by Shiro"
+        },
+        {
+            "name": "Thomas",
+            "type": "Walnut",
+            "locations": ["I", "II"],
+            "harvest_time": "October",
+            "note": "black walnut. seedlings inferior"
+        },
+        {
+            "name": "Ohio",
+            "type": "Walnut",
+            "locations": ["I", "II"],
+            "harvest_time": "October",
+            "note": "black walnut"
+        },
+        {
+            "name": "Myers",
+            "type": "Walnut",
+            "locations": ["I", "II"],
+            "harvest_time": "October",
+            "note": "black walnut"
+        },
+        {
+            "name": "Carpathian",
+            "type": "Walnut",
+            "locations": ["II", "III"],
+            "harvest_time": "Late October",
+            "note": "English walnut. Cold-hardy"
+        },
+        {
+            "name": "Chandler",
+            "type": "Walnut",
+            "locations": ["I"],
+            "harvest_time": "Late October",
+            "note": "English walnut. Pollinized by Franquette"
+        },
+        {
+            "name": "Franquette",
+            "type": "Walnut",
+            "locations": ["I"],
+            "harvest_time": "Late October",
+            "note": "English walnut. Standard variety, limited hardiness"
+        },
+        {
+            "name": "Hartley",
+            "type": "Walnut",
+            "locations": ["I"],
+            "harvest_time": "Late October",
+            "note": "English walnut. Harvest is 10–14 days before Franquette"
+        },
+        {
+            "name": "Howard",
+            "type": "Walnut",
+            "locations": ["I"],
+            "harvest_time": "Late October",
+            "note": "English walnut. Medium to large nuts"
+        },
+        {
+            "name": "Spurgeon",
+            "type": "Walnut",
+            "locations": ["I"],
+            "harvest_time": "Late October",
+            "note": "English walnut. Late bloomer, hardy"
         }
-        ...
     ]
 }
