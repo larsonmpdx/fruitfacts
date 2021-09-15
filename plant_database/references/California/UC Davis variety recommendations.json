@@ -2,8 +2,8 @@
     "title": "UC Davis variety recommendations",
     "url": "http://homeorchard.ucdavis.edu/varieties.pdf",
     "published": "2000",
-    "author":"Paul M. Vossen and Deborah Silva",
-    "note": "the same tables are reproduced in individual PDFs and also copied into the California Master Gardener Handbook, 2015",
+    "author": "Paul M. Vossen and Deborah Silva",
+    "note": "the same tables are reproduced in individual PDFs and also in the California Master Gardener Handbook (2015)",
     "accessed": "Sep 2021",
     "locations": {
         "San Joaquin Valley": {
@@ -49,6 +49,7 @@
         {
             "name": "Fuji",
             "type": "Apple",
+            "note": "Round to flat apple with very sweet yellow-orange flesh. Skin is red if given enough sunlight and cool temperatures. One of the best sweet eating apples. Stores well.",
             "locations": [
                 {"San Joaquin Valley": "Oct-Nov"},
                 {"Sacramento Valley": "late Oct-Nov"},
@@ -60,6 +61,7 @@
         {
             "name": "Gala",
             "type": "Apple",
+            "note": "Small to medium sized, conic red apple with excellent flavor and keeping qualities. The best cultivar for the early season.",
             "locations": [
                 {"San Joaquin Valley": "late Jun"},
                 {"Sacramento Valley": "late Jun"},
@@ -72,6 +74,7 @@
         {
             "name": "Gravenstein",
             "type": "Apple",
+            "note": "Medium-large fruit with short, fat stem. Skin is greenish yellow overlaid with red stripes. Excellent flavor when fully ripe. Crisp, subacid, and aromatic. A good sauce and pie apple. Stores and ships poorly. High percentage of windfalls. Sterile pollen.",
             "locations": [
                 {"San Joaquin Valley": "late Jun"},
                 {"Sacramento Valley": "late Jun"},
@@ -83,6 +86,7 @@
         {
             "name": "Golden Delicous",
             "type": "Apple",
+            "note": "Conic apple with a long stem, yellow to green skin, yellow flesh, and russet dots. Sweet, juicy, fine textured. Number one on the California North Coast for fresh eating quality and processing. Stores well but susceptible to bitter pit, bruising, russeting. Erratic in self-fruitfulness.",
             "locations": [
                 {"San Joaquin Valley": "late Aug"},
                 {"Sacramento Valley": "late Aug"},
@@ -94,6 +98,7 @@
         {
             "name": "Granny Smith",
             "type": "Apple",
+            "note": "Round, green to yellow-skinned apple that is quite firm. Keeps very well. Crisp flesh. If harvested early, it is green and tart. Late-harvested fruit are yellow and sweet.",
             "locations": [
                 {"San Joaquin Valley": "Oct-Nov"},
                 {"Sacramento Valley": "late Oct-Nov"},
@@ -105,6 +110,7 @@
         {
             "name": "Jonathan",
             "type": "Apple",
+            "note": "Round, red apple with pure white flesh. Crisp, juicy, and slightly subacid. Excellent for eating fresh, sauce, and juice. Highly susceptible to mildew, fire blight, and Jonathan spot.",
             "locations": [
                 {"San Joaquin Valley": "Aug"},
                 {"Sacramento Valley": "Aug"},
@@ -116,6 +122,7 @@
         {
             "name": "Red Delicious",
             "type": "Apple",
+            "note": "Conic apple with tapered base and five distinct lobes. Skin color varies from solid red to a mixture of red and green stripes. Crisp, sweet, mid-flavored yellow flesh. Many strains. Best used fresh. Stores well",
             "locations": [
                 {"San Joaquin Valley": "late Aug"},
                 {"Sacramento Valley": "late Aug"},
@@ -127,6 +134,7 @@
         {
             "name": "Rome Beauty",
             "type": "Apple",
+            "note": "Round fruit with a deep cavity, no lobes, and little russet. Several strains, including the old standard and several new strains with solid red skin, such as Taylor and Law. Stores moderately well. Tree leafs out late, flowers late, and produces flowers and fruit on long spur growth that requires modification in pruning. Good for baking.",
             "locations": [
                 {"San Joaquin Valley": "Oct-Nov"},
                 {"Sacramento Valley": "late Oct-Nov"},
@@ -159,100 +167,179 @@
             "category_note": "These cultivars do well in much of California if there is adequate chilling and summer heat is not too intense. They are hard to find because they lack commercial value. Many have excellent flavor and perform well in home gardens."
         },
         {
-            "name": ["Akane"],
+            "name": "Akane",
             "type": "Apple",
             "note": "Similar to Jonathan but earlier, good solid red color, white flesh, good for eating fresh and juice.",
             "category": "early summer"
         },
         {
-            "name": ["Jerseymac"],
+            "name": "Jerseymac",
             "type": "Apple",
             "note": "Large, good red color, excellent flavor, firmer than McIntosh, stores 4 to 8 weeks.",
             "category": "early summer"
         },
         {
-            "name": ["Jonamac"],
+            "name": "Jonamac",
             "type": "Apple",
             "note": "Similar to McIntosh but has better color, firmness, and storage life.",
             "category": "early summer"
         },
         {
-            "name": ["Paulared"],
+            "name": "Paulared",
             "type": "Apple",
             "note": "High-quality, white flesh, stores fairly well, tree requires thinning.",
             "category": "early summer"
         },
         {
-            "name": ["Vista Bell"],
+            "name": "Vista Bell",
             "type": "Apple",
             "note": "Terminal bearing habit, white-fleshed fruit, stores well.",
             "category": "early summer"
         },
         {
-            "name": ["Enterprise"],
+            "name": "Enterprise",
             "type": "Apple",
             "note": "A large-fruited, late-maturing, dense, crisp cultivar that has good keeping qualities. The skin is dark red over a yellow-green background. One of the best of the scab-resistant cultivars.",
             "category": "disease resistant"
         },
         {
-            "name": ["Florina"],
+            "name": "Florina",
             "type": "Apple",
             "note": "A promising scab-resistant selection from France, with large, round oblong, purple-red fruit; ripens late and has a mixed sweet tart flavor.",
             "category": "disease resistant"
         },
         {
-            "name": ["Freedom"],
+            "name": "Freedom",
             "type": "Apple",
             "note": "A late-season cultivar with large fruit and mild flavor; not completely immune to scab.",
             "category": "disease resistant"
         },
         {
-            "name": ["Goldrush"],
+            "name": "Goldrush",
             "type": "Apple",
             "note": "A scab-immune selection with Golden Delicious parentage; late maturing, large, firm textured, and tart with an excellent flavor; stores well.",
             "category": "disease resistant"
         },
         {
-            "name": ["Jonafree"],
+            "name": "Jonafree",
             "type": "Apple",
             "note": "A midseason apple that compares with Jonathan, with soft flesh and uneven coloring.",
             "category": "disease resistant"
         },
         {
-            "name": ["Liberty"],
+            "name": "Liberty",
             "type": "Apple",
             "note": "One of the best-quality apples of the disease-resistant cultivars; is very productive and requires heavy early thinning to achieve good size; ripens in midseason, has an attractive red color with some striping, and a good, sweet flavor.",
             "category": "disease resistant"
         },
         {
-            "name": ["Prima"],
+            "name": "Prima",
             "type": "Apple",
             "note": "An early-season, uneven-ripening, moderate-quality cultivar.",
             "category": "disease resistant"
         },
         {
-            "name": ["Priscilla"],
+            "name": "Priscilla",
             "type": "Apple",
             "note": "A late-season cultivar with small fruit, soft flesh, and mild flavor.",
             "category": "disease resistant"
         },
         {
-            "name": ["Pristine"],
+            "name": "Pristine",
             "type": "Apple",
             "note": "Moderate to large, tart, yellow apple immune to scab and resistant to fire blight and mildew.",
             "category": "disease resistant"
         },
         {
-            "name": ["Red Free"],
+            "name": "Red Free",
             "type": "Apple",
             "note": "Matures in early July, heat-sensitive, small fruited; susceptible to water core, sunburn, and russet.",
             "category": "disease resistant"
         },
         {
-            "name": ["Williams Pride"],
+            "name": "Williams Pride",
             "type": "Apple",
             "note": "Early maturing, scab immune; also resistant to fire blight and mildew; medium to large fruit with a round-oblique shape; attractive red striped color on a green-yellow background.",
             "category": "disease resistant"
+        },
+        {
+            "name": "Bartlett",
+            "type": "Euro Pear",
+            "note": "The best-quality pear fruit. Bell shaped with white flesh and excellent flavor. Tree is susceptible to fire blight. Fruit keep relatively well, up to 2 months after maturing in August. Sensation is a red Bartlett.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"}
+            ]
+        },
+        {
+            "name": "Bosc",
+            "type": "Euro Pear",
+            "note": "Midseason cultivar that bears heavy crops regularly. Fruit are long and tapering, with a long neck and stem. Skin is golden russet brown.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "Oct"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"}
+            ]
+        },
+        {
+            "name": "Comice",
+            "type": "Euro Pear",
+            "note": "Inconsistent bearer. Excellent fruit, green with red blush. Delicate skin, chubby shape. Very vigorous tree, does best on Quince rootstock. Late maturing.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "Oct"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"}
+            ]
+        },
+        {
+            "name": "D’Anjou",
+            "type": "Euro Pear",
+            "note": "Good winter pear with excellent keeping qualities. A large, vigorous tree. Egg-shaped fruit with a small shoulder. Light green to yellow-green color with white flesh. French origin. There is a red strain called Red Anjou.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"}
+            ]
+        },
+        {
+            "name": "Seckel",
+            "type": "Euro Pear",
+            "note": "The small fruit are reddish green, with very dense, sweet, flavorful flesh. Excellent quality for the home orchard. Resistant to fire blight and pear scab.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "late Sep"},
+                {"North Coast": "late Sep"},
+                {"Sierra Nevada Foothills": "Sep"}
+            ]
+        },
+        {
+            "name": "Winter Nellis",
+            "type": "Euro Pear",
+            "note": "Medium small, almost round fruit with light russeting over a green skin. Resistant to blight. Large tree. Regular producer, but late.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "Oct"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"}
+            ]
+        },
+        {
+            "names": ["Baldwin", "Carnes", "Fan Stil", "Florida Home", "Garber", "Hengsan", "Hood", "Kieffer",
+                "Orient", "Pineapple", "Seleta", "Spadona"],
+            "type": "Euro Pear",
+            "category": "low chill",
+            "category_note": "These pear cultivars are adapted to the low latitudes of southern California becuse they have low winter chilling requirements (< 300 hours)."
         }
     ]
 }
