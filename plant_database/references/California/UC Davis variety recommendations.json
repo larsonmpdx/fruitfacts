@@ -1,0 +1,258 @@
+{
+    "title": "UC Davis variety recommendations",
+    "url": "http://homeorchard.ucdavis.edu/varieties.pdf",
+    "published": "2000",
+    "author":"Paul M. Vossen and Deborah Silva",
+    "note": "the same tables are reproduced in individual PDFs and also copied into the California Master Gardener Handbook, 2015",
+    "accessed": "Sep 2021",
+    "locations": {
+        "San Joaquin Valley": {
+            "name": "San Joaquin Valley",
+            "latitude": 36.78123874060886,
+            "longitude": -120.05510695855796
+        },
+        "Sacramento Valley": {
+            "name": "Sacramento Valley",
+            "latitude": 39.020792606629016,
+            "longitude": -121.75593155709285
+        },
+        "Central Coast": {
+            "name": "Central Coast",
+            "latitude": 37.10344953101784,
+            "longitude": -121.60931751607572
+        },
+        "North Coast": {
+            "name": "North Coast",
+            "latitude": 40.571732693294436,
+            "longitude": -124.17533673658946
+        },
+        "Sierra Nevada Foothills": {
+            "name": "Sierra Nevada Foothills",
+            "latitude": 38.394887149982964,
+            "longitude": -120.80850149907246
+        },
+        "Southern California": {
+            "name": "Southern California",
+            "latitude": 33.264351960697425,
+            "longitude": -117.42103041427107
+        }
+    },
+    "categories": [{
+        "name": "early summer",
+        "note": "These cultivars do not have the high-quality characteristics of standard cultivars but ripen early when no other fresh apples are available. They are good for eating fresh and cooking."
+    },{
+        "name": "disease resistant",
+        "note": "Several scab-resistant apple cultivars have been developed in breeding programs for the eastern United States, where this disease is quite sever due to summer humidity and rain. Some have received limited testing under California growing conditions. In growing districts with extended spring rains, organic growers should experiment with these cultivars to see how they perform in their orchards."
+    }
+    ],
+    "plants": [
+        {
+            "name": "Fuji",
+            "type": "Apple",
+            "locations": [
+                {"San Joaquin Valley": "Oct-Nov"},
+                {"Sacramento Valley": "late Oct-Nov"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "late Oct-Nov"}
+            ]
+        },
+        {
+            "name": "Gala",
+            "type": "Apple",
+            "locations": [
+                {"San Joaquin Valley": "late Jun"},
+                {"Sacramento Valley": "late Jun"},
+                {"Central Coast": "early Jul"},
+                {"North Coast": "late Jul"},
+                {"Sierra Nevada Foothills": "early Jul"},
+                {"Southern California": "late Jun"}
+            ]
+        },
+        {
+            "name": "Gravenstein",
+            "type": "Apple",
+            "locations": [
+                {"San Joaquin Valley": "late Jun"},
+                {"Sacramento Valley": "late Jun"},
+                {"Central Coast": "early Jul"},
+                {"North Coast": "late Jul"},
+                {"Sierra Nevada Foothills": "early Jul"}
+            ]
+        },
+        {
+            "name": "Golden Delicous",
+            "type": "Apple",
+            "locations": [
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "late Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "late Aug-Sep"},
+                {"Sierra Nevada Foothills": "Sep"}
+            ]
+        },
+        {
+            "name": "Granny Smith",
+            "type": "Apple",
+            "locations": [
+                {"San Joaquin Valley": "Oct-Nov"},
+                {"Sacramento Valley": "late Oct-Nov"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "late Oct-Nov"}
+            ]
+        },
+        {
+            "name": "Jonathan",
+            "type": "Apple",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug-Sep"},
+                {"North Coast": "mid Aug-Sep"},
+                {"Sierra Nevada Foothills": "mid Aug"}
+            ]
+        },
+        {
+            "name": "Red Delicious",
+            "type": "Apple",
+            "locations": [
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "late Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "late Aug-Sep"},
+                {"Sierra Nevada Foothills": "Sep"}
+            ]
+        },
+        {
+            "name": "Rome Beauty",
+            "type": "Apple",
+            "locations": [
+                {"San Joaquin Valley": "Oct-Nov"},
+                {"Sacramento Valley": "late Oct-Nov"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "late Oct-Nov"}
+            ]
+        },
+        {
+            "names": ["Nugget Spur", "Goldspur", "Yelo Spur", "Starkspur", "Silverspur", "Crimson Spur", "Skyspur",
+                "Bisbee Spur", "Spured Royal", "Oregon Spur", "Wellspur", "Scarletspur", "Cascade Spur", "Starkspur",
+                "Spur McIntosh", "Granny Smith Spur", "Greenspur", "Granspur", "Rome Beauty Spur", "Law Spur",
+                "Spuree", "Winesap Spur", "Arkansas Black Spur"],
+            "type": "Apple",
+            "category": "spur type",
+            "category_note": "Strains (mutations) of the original cultivars that have shorter internodes and are naturally dwarfing. Best on seedling rootstock."
+        },
+        {
+            "names": ["Anna", "Beverly Hills", "Dorsett Golden", "Einshemer", "Gordon", "Tropical Beauty"],
+            "type": "Apple",
+            "category": "low chill",
+            "category_note": "These cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."
+        },
+        {
+            "names": ["Arkansas Black", "Baldwin", "Black Twig", "Cox’s Orange Pippin", "E. Spitzenburg", "McIntosh",
+                "Newtown Pippin", "Northern Spy", "Red Golden", "Rhode Island Greening", "Sierra Beauty", "Smith Cider",
+                "Staymen Winesap", "Wagner", "Winesap", "Winter Banana"],
+            "type": "Apple",
+            "category": "antique",
+            "category_note": "These cultivars do well in much of California if there is adequate chilling and summer heat is not too intense. They are hard to find because they lack commercial value. Many have excellent flavor and perform well in home gardens."
+        },
+        {
+            "name": ["Akane"],
+            "type": "Apple",
+            "note": "Similar to Jonathan but earlier, good solid red color, white flesh, good for eating fresh and juice.",
+            "category": "early summer"
+        },
+        {
+            "name": ["Jerseymac"],
+            "type": "Apple",
+            "note": "Large, good red color, excellent flavor, firmer than McIntosh, stores 4 to 8 weeks.",
+            "category": "early summer"
+        },
+        {
+            "name": ["Jonamac"],
+            "type": "Apple",
+            "note": "Similar to McIntosh but has better color, firmness, and storage life.",
+            "category": "early summer"
+        },
+        {
+            "name": ["Paulared"],
+            "type": "Apple",
+            "note": "High-quality, white flesh, stores fairly well, tree requires thinning.",
+            "category": "early summer"
+        },
+        {
+            "name": ["Vista Bell"],
+            "type": "Apple",
+            "note": "Terminal bearing habit, white-fleshed fruit, stores well.",
+            "category": "early summer"
+        },
+        {
+            "name": ["Enterprise"],
+            "type": "Apple",
+            "note": "A large-fruited, late-maturing, dense, crisp cultivar that has good keeping qualities. The skin is dark red over a yellow-green background. One of the best of the scab-resistant cultivars.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Florina"],
+            "type": "Apple",
+            "note": "A promising scab-resistant selection from France, with large, round oblong, purple-red fruit; ripens late and has a mixed sweet tart flavor.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Freedom"],
+            "type": "Apple",
+            "note": "A late-season cultivar with large fruit and mild flavor; not completely immune to scab.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Goldrush"],
+            "type": "Apple",
+            "note": "A scab-immune selection with Golden Delicious parentage; late maturing, large, firm textured, and tart with an excellent flavor; stores well.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Jonafree"],
+            "type": "Apple",
+            "note": "A midseason apple that compares with Jonathan, with soft flesh and uneven coloring.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Liberty"],
+            "type": "Apple",
+            "note": "One of the best-quality apples of the disease-resistant cultivars; is very productive and requires heavy early thinning to achieve good size; ripens in midseason, has an attractive red color with some striping, and a good, sweet flavor.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Prima"],
+            "type": "Apple",
+            "note": "An early-season, uneven-ripening, moderate-quality cultivar.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Priscilla"],
+            "type": "Apple",
+            "note": "A late-season cultivar with small fruit, soft flesh, and mild flavor.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Pristine"],
+            "type": "Apple",
+            "note": "Moderate to large, tart, yellow apple immune to scab and resistant to fire blight and mildew.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Red Free"],
+            "type": "Apple",
+            "note": "Matures in early July, heat-sensitive, small fruited; susceptible to water core, sunburn, and russet.",
+            "category": "disease resistant"
+        },
+        {
+            "name": ["Williams Pride"],
+            "type": "Apple",
+            "note": "Early maturing, scab immune; also resistant to fire blight and mildew; medium to large fruit with a round-oblique shape; attractive red striped color on a green-yellow background.",
+            "category": "disease resistant"
+        }
+    ]
+}

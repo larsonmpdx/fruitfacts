@@ -44,10 +44,89 @@ fn rem_last_n(value: &str, n: isize) -> &str {
     chars.as_str()
 }
 
+#[derive(Debug, PartialEq, Eq)]
+enum DateParseType {
+    Undefined,
+    StartOnly,
+    Midpoint,
+    TwoDates,
+}
+
+impl Default for DateParseType {
+    fn default() -> Self {
+        DateParseType::Undefined
+    }
+}
+
+#[derive(Default, Debug, PartialEq, Eq)]
+struct DayRangeOutput {
+    parse_type: DateParseType,
+    start: u32,
+    end: u32,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+enum MonthLocationType {
+    NoMonth,
+    MonthAtBeginning,
+    MonthAtEnd,
+}
+
+fn month_location(input: &str) -> MonthLocationType {
+    let month_at_beginning_regex =
+        Regex::new(r#"^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)"#).unwrap();
+
+    match month_at_beginning_regex.captures(&input.to_lowercase()) {
+        Some(_) => return MonthLocationType::MonthAtBeginning,
+        None => {
+            let month_at_end_regex =
+                Regex::new(r#"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[^0-9]*$"#).unwrap();
+
+            match month_at_end_regex.captures(&input.to_lowercase()) {
+                Some(_) => return MonthLocationType::MonthAtEnd,
+                None => return MonthLocationType::NoMonth,
+            }
+        }
+    }
+}
+
+fn get_month(input: &str) -> String {
+    let month_names_regex =
+        Regex::new(r#"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)"#).unwrap();
+
+    match month_names_regex.captures(&input.to_lowercase()) {
+        Some(matches) => return matches[1].to_owned(),
+        None => panic!("no month found in string {}", input),
+    }
+}
+
+// should this date string be treated as being centered on a single month?
+// we accept either "mid september" or "september" for this
+// we're looking to distinguish this from regular start dates which, when charted,
+// would have a window *after* the date instead of *centered on* the date
+fn is_a_midpoint(input: &str) -> bool {
+    let month: String;
+    let no_whitespace: String = input.chars().filter(|c| !c.is_whitespace()).collect();
+    if no_whitespace.to_lowercase().starts_with("mid") {
+        month = no_whitespace.chars().skip(3).collect();
+    } else {
+        month = input.to_string();
+    }
+
+    // month name abbreviations with any chars other than numbers after
+    let month_names_regex =
+        Regex::new(r#"^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[^0-9]*$"#).unwrap();
+
+    match month_names_regex.captures(&month.to_lowercase()) {
+        Some(_) => return true,
+        None => return false,
+    }
+}
+
 // "early to late August" -> "early August" and "late August"
 // "late August to mid September" -> "late August" and "mid September"
-// "Sept 20-30" -> "Sept 20" and "Sept 30"
-// "Sept 25-Oct 5" -> "Sept 25" and "Oct 5"
+// "Sep 20-30" -> "Sep 20" and "Sep 30"
+// "Sep 25-Oct 5" -> "Sep 25" and "Oct 5"
 // if none of these match, maybe it's a single date, pass it through to string_to_day_number() unchanged
 
 // report the way it was parsed:
@@ -58,13 +137,109 @@ fn rem_last_n(value: &str, n: isize) -> &str {
 
 // also parse "early/mid/late" and "0%,50%,100%" relative ripening times (return a percentage)
 
-// function todo
+fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
+    let mut output = DayRangeOutput::default();
+
+    // does it have "to" or "-" in it? if so, split on that and see if the right side is only a number
+    // if it is, it's something like sep 20-30, and we need to pull sep from the left side and give it to the right side
+    // if not, feed both sides
+
+    // could be: September 15-30, or mid-late September, or Oct 5 - Oct 30
+    if input.contains("-") || input.contains(" to ") {
+        let split;
+
+        if input.contains("-") {
+            split = input.split("-").collect::<Vec<&str>>();
+            assert_eq!(split.len(), 2, "date string had more than one '-'");
+        } else if input.contains(" to ") {
+            split = input.split(" to ").collect::<Vec<&str>>();
+            assert_eq!(split.len(), 2, "date string had more than one ' to '");
+        } else {
+            panic!("shouldn't get here, '-' or ' to ' match")
+        }
+
+        // first see if the whole thing parses ok, if so return that
+        // for mid-late September
+        if string_to_day_number(input) != 0 {
+            output.parse_type = DateParseType::StartOnly;
+            output.start = string_to_day_number(input);
+            return Some(output);
+        }
+
+        // if one part parses and not the other, then add the month from the parsing one to the not-parsing one
+        if (string_to_day_number(split[0]) == 0) && (string_to_day_number(split[1]) == 0) {
+            return None;
+        }
+
+        if (string_to_day_number(split[0]) != 0) && (string_to_day_number(split[1]) == 0) {
+            match month_location(split[0]) {
+                MonthLocationType::MonthAtBeginning => {
+                    output.parse_type = DateParseType::TwoDates;
+                    output.start = string_to_day_number(split[0]);
+                    output.end =
+                        string_to_day_number(&format!("{} {}", get_month(split[0]), split[1]));
+                    return Some(output);
+                }
+                MonthLocationType::MonthAtEnd => {
+                    output.parse_type = DateParseType::TwoDates;
+                    output.start = string_to_day_number(split[0]);
+                    output.end =
+                        string_to_day_number(&format!("{} {}", split[1], get_month(split[0])));
+                    return Some(output);
+                }
+                MonthLocationType::NoMonth => panic!("no month found in string {}", split[0]),
+            }
+        }
+
+        if (string_to_day_number(split[0]) == 0) && (string_to_day_number(split[1]) != 0) {
+            match month_location(split[1]) {
+                MonthLocationType::MonthAtBeginning => {
+                    output.parse_type = DateParseType::TwoDates;
+                    output.start =
+                        string_to_day_number(&format!("{} {}", get_month(split[1]), split[0]));
+                    output.end = string_to_day_number(split[1]);
+                    return Some(output);
+                }
+                MonthLocationType::MonthAtEnd => {
+                    output.parse_type = DateParseType::TwoDates;
+                    output.start =
+                        string_to_day_number(&format!("{} {}", split[0], get_month(split[1])));
+                    output.end = string_to_day_number(split[1]);
+                    return Some(output);
+                }
+                MonthLocationType::NoMonth => panic!("no month found in string {}", split[0]),
+            }
+        }
+
+        // finally see if the two halves both parse ok as-is, if so return that
+        // for Oct 5 - Oct 30 or mid September - mid October
+        if ((string_to_day_number(split[0])) != 0) && ((string_to_day_number(split[1])) != 0) {
+            output.parse_type = DateParseType::TwoDates;
+            output.start = string_to_day_number(split[0]);
+            output.end = string_to_day_number(split[1]);
+            return Some(output);
+        }
+
+        return None;
+    }
+
+    // if no "to" or "-" then it's a single date
+    // detect bare months or mid month to set the midpoint enum, otherwise it's a start only
+
+    if is_a_midpoint(input) {
+        output.parse_type = DateParseType::Midpoint;
+    } else {
+        output.parse_type = DateParseType::StartOnly;
+    }
+    output.start = string_to_day_number(input);
+    return Some(output);
+}
 
 // parse a single date to a day of the year
 // "September"
 // "late September"
 // "early-mid October"
-// "Sept 25"
+// "Sep 25"
 fn string_to_day_number(input: &str) -> u32 {
     let mut month_and_day_string = input.to_string();
 
@@ -108,7 +283,11 @@ fn string_to_day_number(input: &str) -> u32 {
             return parsed.ordinal();
         }
         Err(e) => {
-            eprintln!("date parsing: {}", e);
+            eprintln!(
+                "date parsing: {} with input {}",
+                e,
+                "2020 ".to_owned() + &month_and_day_string + " 12:01:01"
+            );
             return 0;
         }
     }

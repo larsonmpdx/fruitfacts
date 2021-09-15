@@ -3,7 +3,7 @@
     "url": "https://catalog.extension.oregonstate.edu/ec819",
     "published": "2009",
     "reviewed": "2015",
-    "accessed": "Sept 2021",
+    "accessed": "Sep 2021",
     "locations": {
         "I": {
             "name": "Area I: The Willamette Valley and southern Oregon",
@@ -59,35 +59,35 @@
             "name": "Elstar",
             "type": "Apple",
             "locations": ["I", "IV"],
-            "harvest_time": "Sept 10-20",
+            "harvest_time": "Sep 10-20",
             "note": "Tart, good flavor, cool climate"
         },
         {
             "name": "Gala",
             "type": "Apple",
             "locations": ["I", "II", "III", "IV"],
-            "harvest_time": "Sept 15-25",
+            "harvest_time": "Sep 15-25",
             "note": "Sweet, good flavor, heat-tolerant"
         },
         {
             "name": "Jonagold",
             "type": "Apple",
             "locations": ["I", "IV"],
-            "harvest_time": "Sept 15-30",
+            "harvest_time": "Sep 15-30",
             "note": "Big, good flavor, cool climate, needs pollinizer"
         },
         {
             "name": "Empire",
             "type": "Apple",
             "locations": ["I", "II"],
-            "harvest_time": "Sept 20-30",
+            "harvest_time": "Sep 20-30",
             "note": "Small, red, flavorful"
         },
         {
             "name": "Delicious",
             "type": "Apple",
             "locations": ["I", "II"],
-            "harvest_time": "Sept 25-Oct 5",
+            "harvest_time": "Sep 25-Oct 5",
             "note": "Standard red, scabs badly"
         },
         {
@@ -136,14 +136,14 @@
             "name": "Prima",
             "type": "Apple",
             "locations": ["I", "II", "III", "IV"],
-            "harvest_time": "Sept 1-10",
+            "harvest_time": "Sep 1-10",
             "note": "Big, red, pits"
         },
         {
             "name": "Liberty",
             "type": "Apple",
             "locations": ["I", "II", "III", "IV"],
-            "harvest_time": "Sept 20-30",
+            "harvest_time": "Sep 20-30",
             "note": "Best flavor, red"
         },
         {
@@ -514,35 +514,35 @@
             "name": "Seckel",
             "type": "Euro Pear",
             "locations": ["I", "II"],
-            "harvest_time": "Aug 20-Sept 10",
+            "harvest_time": "Aug 20-Sep 10",
             "note": "Pollinized by Anjou, Bosc, Comice"
         },
         {
             "name": "Anjou",
             "type": "Euro Pear",
             "locations": ["I", "II"],
-            "harvest_time": "Sept 5-20",
+            "harvest_time": "Sep 5-20",
             "note": "Pollinized by Bartlett, needs 45–60 days of cold storage before ripening"
         },
         {
             "name": "Bosc",
             "type": "Euro Pear",
             "locations": ["I", "II"],
-            "harvest_time": "Sept 10-30",
+            "harvest_time": "Sep 10-30",
             "note": "Pollinized by Comice, best in southern Oregon"
         },
         {
             "name": "Cascade",
             "type": "Euro Pear",
             "locations": ["I", "II"],
-            "harvest_time": "Sept 10-30",
+            "harvest_time": "Sep 10-30",
             "note": "Red blush, good flavor"
         },
         {
             "name": "Comice",
             "type": "Euro Pear",
             "locations": ["I", "II"],
-            "harvest_time": "Sept 20-30",
+            "harvest_time": "Sep 20-30",
             "note": "Pollinized by Bosc, best in southern Oregon, needs 45–60 days of cold storage before ripening"
         },
         {
@@ -661,35 +661,35 @@
             "name": "Parsons",
             "type": "Euro Plum",
             "locations": ["I"],
-            "harvest_time": "Sept 1-15",
+            "harvest_time": "Sep 1-15",
             "note": "Sweet, pollinized by Stanley"
         },
         {
             "name": "Stanley",
             "type": "Euro Plum",
             "locations": ["I", "II"],
-            "harvest_time": "Sept 1-15",
+            "harvest_time": "Sep 1-15",
             "note": "Bears but brown rots"
         },
         {
             "name": "Italian",
             "type": "Euro Plum",
             "locations": ["I", "II"],
-            "harvest_time": "Sept 10-30",
+            "harvest_time": "Sep 10-30",
             "note": "Tart, \"purple plum\""
         },
         {
             "name": "Brooks",
             "type": "Euro Plum",
             "locations": ["I", "II"],
-            "harvest_time": "Sept 20-30",
+            "harvest_time": "Sep 20-30",
             "note": " Bears regularly, large"
         },
         {
             "name": "President",
             "type": "Euro Plum",
             "locations": ["II"],
-            "harvest_time": "Sept 20-30",
+            "harvest_time": "Sep 20-30",
             "note": "Pollinized by Stanley"
         },
         {

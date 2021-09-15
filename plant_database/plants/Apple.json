@@ -49,5 +49,33 @@
     {
         "name": "Millenium",
         "AKA": "NY 460"
+    },
+    {
+        "name": "Nugget Spur",
+        "description": "Golden Delicious Spur"
+    },
+    {
+        "name": "Goldspur",
+        "description": "Golden Delicious Spur"
+    },
+    {
+        "name": "Yelo Spur",
+        "description": "Golden Delicious Spur"
+    },
+    {
+        "name": "Starkspur",
+        "description": "Golden Delicious Spur"
+    },
+    {
+        "name": "Silverspur",
+        "description": "Red Delicious Spur"
+    },
+    {
+        "name": "Crimson Spur",
+        "description": "Red Delicious Spur"
+    },
+    {
+        "name": "Skyspur",
+        "description": "Red Delicious Spur"
     }
 ]
