@@ -55,7 +55,8 @@
                 {"Sacramento Valley": "late Oct-Nov"},
                 {"Central Coast": "Nov"},
                 {"North Coast": "Nov"},
-                {"Sierra Nevada Foothills": "late Oct-Nov"}
+                {"Sierra Nevada Foothills": "late Oct-Nov"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -68,7 +69,8 @@
                 {"Central Coast": "early Jul"},
                 {"North Coast": "late Jul"},
                 {"Sierra Nevada Foothills": "early Jul"},
-                {"Southern California": "late Jun"}
+                {"Southern California": "late Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -80,7 +82,8 @@
                 {"Sacramento Valley": "late Jun"},
                 {"Central Coast": "early Jul"},
                 {"North Coast": "late Jul"},
-                {"Sierra Nevada Foothills": "early Jul"}
+                {"Sierra Nevada Foothills": "early Jul"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -92,7 +95,8 @@
                 {"Sacramento Valley": "late Aug"},
                 {"Central Coast": "Sep"},
                 {"North Coast": "late Aug-Sep"},
-                {"Sierra Nevada Foothills": "Sep"}
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -104,7 +108,8 @@
                 {"Sacramento Valley": "late Oct-Nov"},
                 {"Central Coast": "Nov"},
                 {"North Coast": "Nov"},
-                {"Sierra Nevada Foothills": "late Oct-Nov"}
+                {"Sierra Nevada Foothills": "late Oct-Nov"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -116,7 +121,8 @@
                 {"Sacramento Valley": "Aug"},
                 {"Central Coast": "late Aug-Sep"},
                 {"North Coast": "mid Aug-Sep"},
-                {"Sierra Nevada Foothills": "mid Aug"}
+                {"Sierra Nevada Foothills": "mid Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -128,7 +134,8 @@
                 {"Sacramento Valley": "late Aug"},
                 {"Central Coast": "Sep"},
                 {"North Coast": "late Aug-Sep"},
-                {"Sierra Nevada Foothills": "Sep"}
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -140,7 +147,8 @@
                 {"Sacramento Valley": "late Oct-Nov"},
                 {"Central Coast": "Nov"},
                 {"North Coast": "Nov"},
-                {"Sierra Nevada Foothills": "late Oct-Nov"}
+                {"Sierra Nevada Foothills": "late Oct-Nov"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -271,7 +279,8 @@
                 {"Sacramento Valley": "Aug"},
                 {"Central Coast": "late Aug"},
                 {"North Coast": "late Aug"},
-                {"Sierra Nevada Foothills": "Aug"}
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -283,7 +292,8 @@
                 {"Sacramento Valley": "Oct"},
                 {"Central Coast": "Oct"},
                 {"North Coast": "Oct"},
-                {"Sierra Nevada Foothills": "Oct"}
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -295,7 +305,8 @@
                 {"Sacramento Valley": "Oct"},
                 {"Central Coast": "Oct"},
                 {"North Coast": "Oct"},
-                {"Sierra Nevada Foothills": "Oct"}
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -307,7 +318,8 @@
                 {"Sacramento Valley": "Sep"},
                 {"Central Coast": "Sep"},
                 {"North Coast": "Sep"},
-                {"Sierra Nevada Foothills": "Sep"}
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -319,7 +331,8 @@
                 {"Sacramento Valley": "Sep"},
                 {"Central Coast": "late Sep"},
                 {"North Coast": "late Sep"},
-                {"Sierra Nevada Foothills": "Sep"}
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -331,7 +344,8 @@
                 {"Sacramento Valley": "Oct"},
                 {"Central Coast": "Oct"},
                 {"North Coast": "Oct"},
-                {"Sierra Nevada Foothills": "Oct"}
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -340,6 +354,123 @@
             "type": "Euro Pear",
             "category": "low chill",
             "category_note": "These pear cultivars are adapted to the low latitudes of southern California becuse they have low winter chilling requirements (< 300 hours)."
+        },
+        {
+            "name": "Chojuro",
+            "type": "Asian Pear",
+            "note": "Greenish brown to brown russet skin. Coarse, tasty flesh.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "Aug"},
+                {"North Coast": "early Aug"},
+                {"Sierra Nevada Foothills": "early Aug"},
+                {"Southern California": "Aug"}
+            ]
+        },
+        {
+            "name": "Hosui",
+            "type": "Asian Pear",
+            "note": "Brown skin, juicy white flesh with a sweet aromatic flavor.",
+            "locations": [
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "late Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "early Sep"},
+                {"Sierra Nevada Foothills": "late Sep"},
+                {"Southern California": "early Sep"}
+            ]
+        },
+        {
+            "name": "Kikusui",
+            "type": "Asian Pear",
+            "note": "Yellow-green skin. White flesh, excellent flavor. Fruit drop from tree when ripe.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "mid Sep"},
+                {"Sierra Nevada Foothills": "late Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Niiataka",
+            "type": "Asian Pear",
+            "note": "Very large, juicy fruit with an aromatic flavor.",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "late Sep"},
+                {"Central Coast": "mid Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "late Sep"}
+            ]
+        },
+        {
+            "name": "Nijisseiki",
+            "type": "Asian Pear",
+            "note": "Also known as Twentieth Century. Excellent quality. Very popular cultivar, yellow-green skin.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "mid Sep"},
+                {"Sierra Nevada Foothills": "late Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Shinko",
+            "type": "Asian Pear",
+            "note": "Brown russet skin; firm, crisp flesh; very aromatic flavor.",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "late Sep"},
+                {"Central Coast": "mid Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "late Sep"}
+            ]
+        },
+        {
+            "name": "Shinseiki",
+            "type": "Asian Pear",
+            "note": "Amber yellow skin; White flesh is crisp but softens rapidly; less flavor than other cultivars.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "mid Sep"},
+                {"Sierra Nevada Foothills": "late Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Tsu Li",
+            "type": "Asian Pear",
+            "note": "Blooms early. Use Ya Li as pollenizer. Chinese type (pear shape). Light green color, crisp, tasty flesh.",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "late Sep"},
+                {"Central Coast": "mid Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "late Sep"}
+            ]
+        },
+        {
+            "name": "Ya Li",
+            "type": "Asian Pear",
+            "note": "Blooms early. Use Tsu Li as pollenizer. Chinese type (pear shape). Light, shiny yellow color, crisp, tasty flesh.",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "late Sep"},
+                {"Central Coast": "mid Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "late Sep"}
+            ]
         }
     ]
 }

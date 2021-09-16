@@ -10,7 +10,7 @@
     },
     {
         "name": "Nijisseiki",
-        "AKA": "20th Century"
+        "AKA": ["20th Century", "Twentieth Century"]
     },
     {
         "name": "Shinko",
@@ -18,10 +18,15 @@
     },
     {
         "name": "Korean Giant",
-        "AKA": ["Dan Bae", "Olympic"],
+        "AKA": ["Dan Bae", "Olympic", "A-Ri-Rang"],
         "description": "large size"
     },
     {
         "name": "Kikusui"
+    },
+    {
+        "name": "Peggy",
+        "description": "bud sport of Korean Giant. stark bros",
+        "patent": "https://patents.google.com/patent/USPP29880 expires 2036"
     }
 ]
