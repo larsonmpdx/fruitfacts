@@ -471,6 +471,351 @@
                 {"Sierra Nevada Foothills": "Oct"},
                 {"Southern California": "late Sep"}
             ]
+        },
+        {
+            "name": "Ambrosia",
+            "type": "Pomegranate",
+            "note": "Huge fruit, pale pink skin; similar to Wonderful",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "Sep"}
+            ]
+        },
+        {
+            "name": "Eversweet",
+            "type": "Pomegranate",
+            "note": "Very sweet, almost seedless fruit. Red skin, clear juice. Good for coastal areas.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "early Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "early sep"},
+                {"Southern California": "early Sep"}
+            ]
+        },
+        {
+            "name": "Granada",
+            "type": "Pomegranate",
+            "note": "Deep crimson fruit color. Matures early but needs heat",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "early Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "early Sep"},
+                {"Southern California": "early Sep"}
+            ]
+        },
+        {
+            "name": "Ruby Red",
+            "type": "Pomegranate",
+            "note": "Matures late (with Wondeful) but not as sweet or colorful as Wonderful. All fruit matures at once.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "Sep"}
+            ]
+        },
+        {
+            "name": "Wonderful",
+            "type": "Pomegranate",
+            "note": "Large, deep red fruit. Large, juicy, red kernels. Small seed. Matures late. Juice is made into grenadine syrup.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "Sep"}
+            ]
+        },
+        {
+            "name": "Champion",
+            "type": "Quince",
+            "note": "Green-yellow flesh. Pear-shaped fruit.",
+            "locations": [
+                {"San Joaquin Valley": "early Oct"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "early Oct"}
+            ]
+        },
+        {
+            "name": "Orange",
+            "type": "Quince",
+            "note": "Orange-yellow flesh. Golden skin. Rich flavor. Low-chill cultivar.",
+            "locations": [
+                {"San Joaquin Valley": "early Sep"},
+                {"Sacramento Valley": "early Sep"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "early Sep"}
+            ]
+        },
+        {
+            "name": "Pineapple",
+            "type": "Quince",
+            "note": "The preferred cultivar. Pineapple flavor. White flesh. Golden skin. Low-chill fruit.",
+            "locations": [
+                {"San Joaquin Valley": "early Oct"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "early Oct"}
+            ]
+        },
+        {
+            "name": "Smyrna",
+            "type": "Quince",
+            "note": "Large fruit with brown pubescence. Light, tender flesh. Yellow skin. Low-chill fruit.",
+            "locations": [
+                {"San Joaquin Valley": "early Oct"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "early Oct"}
+            ]
+        },
+        {
+            "name": "Van Deman",
+            "type": "Quince",
+            "note": "Pale yellow, coarse flesh. Orange skin turns red when cooked.",
+            "locations": [
+                {"San Joaquin Valley": "early Sep"},
+                {"Sacramento Valley": "early Sep"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "early Sep"}
+            ]
+        },
+        {
+            "name": "Autumn Royal",
+            "type": "Apricot",
+            "note": "Blenheim sport (mutation). Ripens in late summer to fall.",
+            "locations": [
+                {"San Joaquin Valley": "Jun"},
+                {"Sacramento Valley": "Jun"},
+                {"Central Coast": "early Jul"},
+                {"North Coast": "late Jun"},
+                {"Sierra Nevada Foothills": "late Jun"},
+                {"Southern California": "Jun"}
+            ]
+        },
+        {
+            "name": "Moorpark",
+            "type": "Apricot",
+            "note": "Excellent flavor, ripens unevenly, highly colored.",
+            "locations": [
+                {"San Joaquin Valley": "Jun"},
+                {"Sacramento Valley": "Jun"},
+                {"Central Coast": "early Jul"},
+                {"North Coast": "late Jun"},
+                {"Sierra Nevada Foothills": "late Jun"},
+                {"Southern California": "Jun"}
+            ]
+        },
+        {
+            "name": "Royal",
+            "type": "Apricot",
+            "note": "Large, very flavorful, used for eating fresh and drying.",
+            "locations": [
+                {"San Joaquin Valley": "Jun"},
+                {"Sacramento Valley": "Jun"},
+                {"Central Coast": "early Jul"},
+                {"North Coast": "late Jun"},
+                {"Sierra Nevada Foothills": "late Jun"},
+                {"Southern California": "Jun"}
+            ]
+        },
+        {
+            "name": "Tilton",
+            "type": "Apricot",
+            "note": "Large fruit, heavy producer. Mild flavor. Used for canning.",
+            "locations": [
+                {"San Joaquin Valley": "early Jul"},
+                {"Sacramento Valley": "Jul"},
+                {"Central Coast": "late Jul"},
+                {"North Coast": "late Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "Jul"}
+            ]
+        },
+        {
+            "names": ["Early Gold", "Goldkist", "Newcastle"],
+            "type": "Apricot",
+            "category": "low chill",
+            "category_note": "These apricot cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."
+        },
+        {
+            "names": ["Castlebright", "Earl Golden", "Golden Amber", "Goldrich",
+                "Improved Flaming Gold", "King", "Pomo", "Riland", "Rosa", "Royalty", "Sun Glo"],
+            "type": "Apricot",
+            "category": "newer cultivars",
+            "category_note": "These cultivars are newer and should be evaluated for your climate zone and site before being selected."
+        },
+        {
+            "name": "Bing",
+            "type": "Sweet Cherry",
+            "note": "Industry standard. Deep mahogany red fruit. Produces very heavily. Very susceptible to bacterial canker. Pollenized by Van, Black tartarian, or Sam. Bing, Lambert, and Royal Ann will not pollinate each other (they are intrasterile).",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Black Tartarian",
+            "type": "Sweet Cherry",
+            "note": "Small, black fruit. A good pollenizer for Bing and most other cultivars.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Brooks",
+            "type": "Sweet Cherry",
+            "note": "A large, dark red fruit with good flavor. Produces few doubles even in hot climates.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Early Burlat",
+            "type": "Sweet Cherry",
+            "note": "Moderate-sized fruit. Ripens 2 weeks before Bing. Soft flesh. Pollenized by Bing and B. Tartarian.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Early Ruby",
+            "type": "Sweet Cherry",
+            "note": "Early season. Large, dark fred fruit. Prolific. Fruit hold on tree.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Lambert",
+            "type": "Sweet Cherry",
+            "note": "Dark, large, firm fruit. Pollenized by Van. Late season. Lambert, Bing, and Royal Ann do not pollinate each other.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Rainier",
+            "type": "Sweet Cherry",
+            "note": "Yellow-red blush. Large, crack-resistant fruit.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Royal Ann",
+            "type": "Sweet Cherry",
+            "note": "Yellow fruit with a red blush. Pollenized by Van. Late season, Royal Ann, Lambert, and Bing will not pollinate each other.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Stella",
+            "type": "Sweet Cherry",
+            "note": "Dark-fleshed fruit. Matures just after Bing. Self-fruitful.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Van",
+            "type": "Sweet Cherry",
+            "note": "Large, dark fruit. Pollenized by Bing or Lambert.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        }
+
+
+
+
+
+
+        ,
+        {
+            "name": "",
+            "type": "",
+            "note": "",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
         }
     ]
 }
