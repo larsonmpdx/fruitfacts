@@ -349,7 +349,7 @@
             ]
         },
         {
-            "names": ["Baldwin", "Carnes", "Fan Stil", "Florida Home", "Garber", "Hengsan", "Hood", "Kieffer",
+            "names": ["Baldwin", "Carnes", "Fan Stil", "Flordahome", "Garber", "Hengsan", "Hood", "Kieffer",
                 "Orient", "Pineapple", "Seleta", "Spadona"],
             "type": "Euro Pear",
             "category": "low chill",
@@ -672,12 +672,12 @@
             "type": "Sweet Cherry",
             "note": "Industry standard. Deep mahogany red fruit. Produces very heavily. Very susceptible to bacterial canker. Pollenized by Van, Black tartarian, or Sam. Bing, Lambert, and Royal Ann will not pollinate each other (they are intrasterile).",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Jun"},
+                {"Sacramento Valley": "Jun"},
+                {"Central Coast": "late Jun"},
+                {"North Coast": "late Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -685,12 +685,12 @@
             "type": "Sweet Cherry",
             "note": "Small, black fruit. A good pollenizer for Bing and most other cultivars.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Jun"},
+                {"Sacramento Valley": "Jun"},
+                {"Central Coast": "late Jun"},
+                {"North Coast": "late Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -698,12 +698,12 @@
             "type": "Sweet Cherry",
             "note": "A large, dark red fruit with good flavor. Produces few doubles even in hot climates.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "mid Jun"},
+                {"Sacramento Valley": "mid Jun"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -711,12 +711,12 @@
             "type": "Sweet Cherry",
             "note": "Moderate-sized fruit. Ripens 2 weeks before Bing. Soft flesh. Pollenized by Bing and B. Tartarian.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Jun"},
+                {"Sacramento Valley": "early Jun"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -724,12 +724,12 @@
             "type": "Sweet Cherry",
             "note": "Early season. Large, dark fred fruit. Prolific. Fruit hold on tree.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Jun"},
+                {"Sacramento Valley": "early Jun"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -737,12 +737,12 @@
             "type": "Sweet Cherry",
             "note": "Dark, large, firm fruit. Pollenized by Van. Late season. Lambert, Bing, and Royal Ann do not pollinate each other.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "late Jun"},
+                {"Sacramento Valley": "late Jun"},
+                {"Central Coast": "Jul"},
+                {"North Coast": "Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -750,12 +750,12 @@
             "type": "Sweet Cherry",
             "note": "Yellow-red blush. Large, crack-resistant fruit.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Jun"},
+                {"Sacramento Valley": "Jun"},
+                {"Central Coast": "late Jun"},
+                {"North Coast": "late Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -763,12 +763,12 @@
             "type": "Sweet Cherry",
             "note": "Yellow fruit with a red blush. Pollenized by Van. Late season, Royal Ann, Lambert, and Bing will not pollinate each other.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Jun"},
+                {"Sacramento Valley": "early Jun"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -776,6 +776,474 @@
             "type": "Sweet Cherry",
             "note": "Dark-fleshed fruit. Matures just after Bing. Self-fruitful.",
             "locations": [
+                {"San Joaquin Valley": "late Jun"},
+                {"Sacramento Valley": "late Jun"},
+                {"Central Coast": "Jul"},
+                {"North Coast": "Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Van",
+            "type": "Sweet Cherry",
+            "note": "Large, dark fruit. Pollenized by Bing or Lambert.",
+            "locations": [
+                {"San Joaquin Valley": "Jun"},
+                {"Sacramento Valley": "Jun"},
+                {"Central Coast": "late Jun"},
+                {"North Coast": "late Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Early Richmond",
+            "type": "Sour Cherry",
+            "note": "Very early in season. Bright red fruit.",
+            "locations": [
+                {"San Joaquin Valley": "eary Jun"},
+                {"Sacramento Valley": "early Jun"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Meteor",
+            "type": "Sour Cherry",
+            "note": "Semidwarf.",
+            "locations": [
+                {"San Joaquin Valley": "eary Jun"},
+                {"Sacramento Valley": "early Jun"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Montmorency",
+            "type": "Sour Cherry",
+            "note": "The leadign sour cultivar. Medium-sized, dark red fruit.",
+            "locations": [
+                {"San Joaquin Valley": "eary Jun"},
+                {"Sacramento Valley": "early Jun"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "North Star",
+            "type": "Sour Cherry",
+            "note": "Semidwarf. Self-fruitful.",
+            "locations": [
+                {"San Joaquin Valley": "eary Jun"},
+                {"Sacramento Valley": "early Jun"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Arctic Glo",
+            "type": "Nectarine",
+            "note": "Small, fantastic flavor. White flesh. Early.",
+            "locations": [
+                {"San Joaquin Valley": "mid Jun"},
+                {"Sacramento Valley": "mid Jun"},
+                {"Central Coast": "early Jul"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Fantasia",
+            "type": "Nectarine",
+            "note": "Large, brightly-colored yellow freestone. Late.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "mid Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
+            ]
+        },
+        {
+            "name": "Flamekist",
+            "type": "Nectarine",
+            "note": "Excellent quality. Large, firm, yellow, clingstone.",
+            "locations": [
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "early Sep"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "Sep"}
+            ]
+        },
+        {
+            "name": "Flavortop",
+            "type": "Nectarine",
+            "note": "Large, excellent flavor. Yellow, freestone. Midseason.",
+            "locations": [
+                {"San Joaquin Valley": "mid Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "Aug"},
+                {"North Coast": "Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "late Jul"}
+            ]
+        },
+        {
+            "name": "Goldmine",
+            "type": "Nectarine",
+            "note": "Large, great flavor. White flesh. Freestone.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "late Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "Sep"}
+            ]
+        },
+        {
+            "name": "Heavenly White",
+            "type": "Nectarine",
+            "note": "Large, excellent flavor. White flesh.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "mid Aug"},
+                {"North Coast": "early Aug"},
+                {"Sierra Nevada Foothills": "early Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "May Grand",
+            "type": "Nectarine",
+            "note": "Large, yellow fruited, freestone. Early.",
+            "locations": [
+                {"San Joaquin Valley": "early Jun"},
+                {"Sacramento Valley": "mid Jun"},
+                {"Central Coast": "late Jun"},
+                {"North Coast": "late Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "Jun"}
+            ]
+        },
+        {
+            "name": "Panamint",
+            "type": "Nectarine",
+            "note": "Medium-sized fruit. Red skin, golden flesh. Freestone, low-chill cultivar.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "early Aug"},
+                {"Central Coast": "Aug"},
+                {"North Coast": "Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
+            ]
+        },
+        {
+            "name": "Red Gold",
+            "type": "Nectarine",
+            "note": "Large, excellent flavor. Stores well. Late.",
+            "locations": [
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "early Sep"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "Sep"}
+            ]
+        },
+        {
+            "name": "Rose",
+            "type": "Nectarine",
+            "note": "Old favorite white freestone with excellent flavor and low-chilling requirement.",
+            "locations": [
+                {"San Joaquin Valley": "mid Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "Aug"},
+                {"North Coast": "Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "late Jul"}
+            ]
+        },
+        {
+            "name": "September Red",
+            "type": "Nectarine",
+            "note": "Large, yellow. Very late.",
+            "locations": [
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "early Sep"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "Sep"}
+            ]
+        },
+        {
+            "name": "Snow Queen",
+            "type": "Nectarine",
+            "note": "Early-season white freestone, juicy and tasty.",
+            "locations": [
+                {"San Joaquin Valley": "late Jun"},
+                {"Sacramento Valley": "Jul"},
+                {"Central Coast": "late Jul"},
+                {"North Coast": "late Jul"},
+                {"Sierra Nevada Foothills": "late Jul"},
+                {"Southern California": "Jul"}
+            ]
+        },
+        {
+            "name": "Summer Grand",
+            "type": "Nectarine",
+            "note": "One of the best. Large, yellow, freestone.",
+            "locations": [
+                {"San Joaquin Valley": "mid Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "Aug"},
+                {"North Coast": "Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "late Jul"}
+            ]
+        },
+        {
+            "names": ["Desert Dawn", "Desert Delight", "Panamint", "Pioneer", "Rose", "Silver Lode"],
+            "type": "Nectarine",
+            "category": "low chill",
+            "category_note": "These nectarine cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements."
+        },
+        {
+            "name": "Autumn Gold",
+            "type": "Peach",
+            "note": "Medium-large fruit. Yellow flesh. Keeps well.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Babcock",
+            "type": "Peach",
+            "note": "Medium sized. White flesh. Freestone, low-chill cultivar.",
+            "locations": [
+                {"San Joaquin Valley": "late Jun"},
+                {"Sacramento Valley": "Jul"},
+                {"Central Coast": "Jul"},
+                {"North Coast": "late Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "late Jun"}
+            ]
+        },
+        {
+            "name": "Earligrande",
+            "type": "Peach",
+            "note": "Excellent flavor. Yellow-red blush. Semifreestone, low-chill cultivar.",
+            "locations": [
+                {"San Joaquin Valley": "May"},
+                {"Sacramento Valley": "late May"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "May"}
+            ]
+        },
+        {
+            "name": "Fairtime",
+            "type": "Peach",
+            "note": "Large fruit. Yellow, firm flesh. Excellent flavor.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Fay Elberta",
+            "type": "Peach",
+            "note": "Large fruit. Yellow flesh. Freestone.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "mid Aug"},
+                {"North Coast": "early Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Forty-Niner",
+            "type": "Peach",
+            "note": "Large fruit. Yellow flesh. Freestone.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "mid Aug"},
+                {"North Coast": "early Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Indian Blood",
+            "type": "Peach",
+            "note": "Cling. Red skin and flesh. Tart. Prolific.",
+            "locations": [
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "late Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "La Feliciana",
+            "type": "Peach",
+            "note": "Medium sized. Firm, red. Excellent flavor. Somewhat more disease resistant.",
+            "locations": [
+                {"San Joaquin Valley": "mid Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "Aug"},
+                {"North Coast": "Aug"},
+                {"Sierra Nevada Foothills": "late Jul"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Loring",
+            "type": "Peach",
+            "note": "Very large fruit. Red skin. Yellow flesh. Freestone. Somewhat more disease resistant.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Nectar",
+            "type": "Peach",
+            "note": "White flesh. Pink skin. Excellent flavor.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "mid Aug"},
+                {"North Coast": "early Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "O’Henry",
+            "type": "Peach",
+            "note": "One of the best. Large fruit. Yellow flesh. Freestone.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "late Jul"},
+                {"Central Coast": "mid Aug"},
+                {"North Coast": "early Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Redhaven",
+            "type": "Peach",
+            "note": "Yellow. Semifreestone. Needs heavy thinning.",
+            "locations": [
+                {"San Joaquin Valley": "early Jul"},
+                {"Sacramento Valley": "Jul"},
+                {"Central Coast": "late Jul"},
+                {"North Coast": "late Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Rio Oso Gem",
+            "type": "Peach",
+            "note": "Very large fruit. Yellow flesh. Freestone.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "late Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "Sep"}
+            ]
+        },
+        {
+            "name": "Springcrest",
+            "type": "Peach",
+            "note": "Medium sized. Yellow flesh. Semi-freestone.",
+            "locations": [
+                {"San Joaquin Valley": "early Jun"},
+                {"Sacramento Valley": "mid Jun"},
+                {"Central Coast": "late Jun"},
+                {"North Coast": "late Jun"},
+                {"Sierra Nevada Foothills": "late Jun"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Suncrest",
+            "type": "Peach",
+            "note": "Large fruit. Yellow flesh. Freestone. Midseason.",
+            "locations": [
+                {"San Joaquin Valley": "early Jul"},
+                {"Sacramento Valley": "Jul"},
+                {"Central Coast": "late Jul"},
+                {"North Coast": "late Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Veteran",
+            "type": "Peach",
+            "note": "Red blush. Elberta-type. Freestone. Dependable, heavy producer, excellent flavor. Somewhat more disease resistant.",
+            "locations": [
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "names": ["August Pride", "Babcock", "Bonita", "Desertgold", "Early Amber", "Earligrande",
+            "Flordagrande", "Flordaprince", "Midpride", "Tropic-Berta", "TopicSweet"],
+            "type": "Peach",
+            "category": "low chill",
+            "category_note": "These peach cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."
+        },
+        {
+            "name": "Autumn Rosa",
+            "type": "Japanese Plum",
+            "note": "Large. Purple skin. Self-fertile. Japanese plum.",
+            "locations": [
                 {"San Joaquin Valley": ""},
                 {"Sacramento Valley": ""},
                 {"Central Coast": ""},
@@ -785,9 +1253,9 @@
             ]
         },
         {
-            "name": "Van",
-            "type": "Sweet Cherry",
-            "note": "Large, dark fruit. Pollenized by Bing or Lambert.",
+            "name": "Beauty",
+            "type": "Japanese Plum",
+            "note": "Green skin, amber flesh, heart shaped. Poor keeper. Japanese plum.",
             "locations": [
                 {"San Joaquin Valley": ""},
                 {"Sacramento Valley": ""},
@@ -795,6 +1263,468 @@
                 {"North Coast": ""},
                 {"Sierra Nevada Foothills": ""},
                 {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Burgundy",
+            "type": "Japanese Plum",
+            "note": "Red skin and flesh. Self-fertile. Holds well.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "El Dorado",
+            "type": "Japanese Plum",
+            "note": "Purple skin. Amber flesh. Large, oblong.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Elephant Heart",
+            "type": "Japanese Plum",
+            "note": "Purple skin. Large, heart shaped. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Friar",
+            "type": "Japanese Plum",
+            "note": "Purple skin. Large, heart shaped. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Golden Nectar",
+            "type": "Japanese Plum",
+            "note": "Large. Yellow flesh. Tender skin. Great flavor. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Howard Wonder",
+            "type": "Japanese Plum",
+            "note": "Large, pink skin. Yellow flesh. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Kelsey",
+            "type": "Japanese Plum",
+            "note": "Green-yellow skin and flesh. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Laroda",
+            "type": "Japanese Plum",
+            "note": "Red-purple skin. Yellow flesh.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Mariposa",
+            "type": "Japanese Plum",
+            "note": "Green-yellow skin. Red flesh. Large, heart shaped. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Nubiana",
+            "type": "Japanese Plum",
+            "note": "Purple-black skin. Yellow flesh. Oblong. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "President",
+            "type": "Euro Plum",
+            "note": "Large. Blue skin. Yellow flesh. European plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Red Beauty",
+            "type": "Japanese Plum",
+            "note": "Red skin, yellow flesh, excellent flavor.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Roysum",
+            "type": "Japanese Plum",
+            "note": "Light purple skin. Yellow flesh.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Santa Rosa",
+            "type": "Japanese Plum",
+            "note": "Purple skin. Amber flesh. Excellent flavor. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Satsuma",
+            "type": "Japanese Plum",
+            "note": "Red skin and flesh. Small, round. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Shiro",
+            "type": "Japanese Plum",
+            "note": "Light green–yellow skin. Yellow flesh.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Simka",
+            "type": "Japanese Plum",
+            "note": "Dark black skin. Yellow flesh. Oblong.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Sprite Cherry Plum",
+            "type": "Japanese Plum",
+            "note": "Black, sweet skin. Exotic flavor. Small.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Wickson",
+            "type": "Japanese Plum",
+            "note": "Green-yellow skin. Yellow flesh. Large, heart shaped. Japanese plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "names": ["Beauty", "Burgundy", "Delight", "Howard Miracle", "Kelsey",
+                "Mariposa", "Meredith", "Methley", "Santa Rosa", "Satsuma", "Sprite"],
+            "type": "Japanese Plum",
+            "category": "low chill",
+            "category_note": "These plum cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements."
+        },
+        {
+            "name": "French",
+            "type": "Euro Plum",
+            "note": "Medium-sized fruit. Self-fertile. Late maturing. European plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Green Gage",
+            "type": "Euro Plum",
+            "note": "Greenish yellow skin. Amber flesh. Old, European plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Imperial",
+            "type": "Euro Plum",
+            "note": "Large fruit. Requires cross pollination. Late maturing. European plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Italian",
+            "type": "Euro Plum",
+            "note": "Large fruit. Purple skin. Yellow flesh. European plum.",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Flavor Supreme",
+            "type": "Pluot",
+            "note": "",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Flavor King",
+            "type": "Pluot",
+            "note": "low chill",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Flavor Queen",
+            "type": "Pluot",
+            "note": "",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Flavor Grenade",
+            "type": "Pluot",
+            "note": "low chill",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Flavorella",
+            "type": "Plumcot",
+            "note": "",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Flavor Ann",
+            "type": "Aprium",
+            "note": "",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Flavor Delight",
+            "type": "Aprium",
+            "note": "low chill",
+            "locations": [
+                {"San Joaquin Valley": ""},
+                {"Sacramento Valley": ""},
+                {"Central Coast": ""},
+                {"North Coast": ""},
+                {"Sierra Nevada Foothills": ""},
+                {"Southern California": ""}
+            ]
+        },
+        {
+            "name": "Carmel",
+            "type": "Almond",
+            "note": "Excellent quality. Nut well sealed in the shell. Excellent pollinzer.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
+            ]
+        },
+        {
+            "name": "Mission",
+            "type": "Almond",
+            "note": "Late-blooming; productive tree. Hard shell, short kernel.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
+            ]
+        },
+        {
+            "name": "Neplus Ultra",
+            "type": "Almond",
+            "note": "Large, soft-shelled nut. Long, flat kernel. Good pollenizer.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
+            ]
+        },
+        {
+            "name": "Nonpareil",
+            "type": "Almond",
+            "note": "The most popular paper-shelled cultivar. Interfruitful with Price, Mission, Carmel.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
+            ]
+        },
+        {
+            "name": "Price",
+            "type": "Almond",
+            "note": "Very similar to Nonpareil. A good pollenizer.",
+            "locations": [
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
             ]
         }
 

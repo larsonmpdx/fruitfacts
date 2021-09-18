@@ -14,5 +14,17 @@
         "name": "Nanaimo",
         "description": "peach leaf curl resistant",
         "tags": [ "peach leaf curl resistant" ]
+    },
+    {
+        "name": "Flordagrande",
+        "AKA": ["Floridagrand", "Flordagrand", "Florida grand"]
+    },
+    {
+        "name": "Indian Blood",
+        "AKA": "Indian Blood Cling"
+    },
+    {
+        "name": "Indian Free",
+        "AKA": "Indian Blood Free"
     }
 ]
