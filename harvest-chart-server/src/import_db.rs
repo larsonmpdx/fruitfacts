@@ -293,6 +293,56 @@ fn string_to_day_number(input: &str) -> u32 {
     }
 }
 
+#[derive(Debug, PartialEq, Eq)]
+struct PatentInfo {
+    uspp_number: u32,
+    uspp_expiration: Date<Utc>,
+}
+
+fn string_to_patent_info(input: &str) -> PatentInfo {
+    let mut output = PatentInfo {
+        uspp_number: 0,
+        uspp_expiration: Utc.ymd(1970, 01, 01),
+    };
+
+    let uspp_regex = Regex::new(r#"USPP([0-9]+)"#).unwrap();
+    let google_format_date_regex =
+        Regex::new(r#"(?:expires|expired) ([0-9]{4})-([0-9]{2})-([0-9]{2})"#).unwrap();
+    let plain_year_date_regex = Regex::new(r#"(?:expires|expired) ([0-9]{4})"#).unwrap();
+
+    match uspp_regex.captures(&input) {
+        Some(matches) => {
+            if matches.len() >= 2 {
+                output.uspp_number = matches[1].parse::<u32>().unwrap()
+            }
+        }
+        None => (),
+    }
+
+    // date can be either "2017-01-02" or "2017" and we presume Jan 1.  year-only dates should be used for past dates only
+    match google_format_date_regex.captures(&input) {
+        Some(matches) => {
+            if matches.len() >= 4 {
+                output.uspp_expiration = Utc.ymd(
+                    matches[1].parse::<i32>().unwrap(),
+                    matches[2].parse::<u32>().unwrap(),
+                    matches[3].parse::<u32>().unwrap(),
+                );
+            }
+        }
+        None => match plain_year_date_regex.captures(&input) {
+            Some(matches) => {
+                if matches.len() >= 2 {
+                    output.uspp_expiration = Utc.ymd(matches[1].parse::<i32>().unwrap(), 01, 01);
+                }
+            }
+            None => (),
+        },
+    }
+
+    return output;
+}
+
 pub struct LoadAllReturn {
     pub plants_found: isize,
     pub types_found: isize,

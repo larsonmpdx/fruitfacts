@@ -15,13 +15,14 @@
         "type": "Japanese Plum",
         "display_type": "Cherry Plum",
         "name": "Nadia",
-        "patent": "https://patents.google.com/patent/USPP19842 expires 2027"
+        "patent": "https://patents.google.com/patent/USPP19842 expires 2027-08-07"
     },
     {
         "type": "Japanese Plum",
         "display_type": "Pluerry",
         "name": "Candy Heart",
-        "patent": "https://patents.google.com/patent/USPP28308P3/en expires 2036",
+        "AKA": "Sweet Pixie 5",
+        "patent": "https://patents.google.com/patent/USPP28308 expires 2036-03-30",
         "description": "Zaiger Variety"
     },
     {
@@ -35,21 +36,22 @@
         "type": "Japanese Plum",
         "display_type": "Pluerry",
         "name": "Sweet Treat",
-        "patent": "https://patents.google.com/patent/USPP23796P3/en expires 2032",
+        "AKA": "Sweet Pixzee 2",
+        "patent": "https://patents.google.com/patent/USPP23796 expires 2032-03-06",
         "description": "Zaiger Variety"
     },
     {
         "type": "Apricot",
         "display_type": "Peacotum",
         "name": "Bella Gold",
-        "patent": "https://patents.google.com/patent/USPP17826 expires 2026",
+        "patent": "https://patents.google.com/patent/USPP17826 expires 2026-01-25",
         "description": "Zaiger Variety"
     },
     {
         "type": "White Nectarine",
         "display_type": "Nectaplum",
         "name": "Spice Zee",
-        "patent": "https://patents.google.com/patent/USPP13503P2/en expires 2022",
+        "patent": "https://patents.google.com/patent/USPP13503 expires 2022-01-07",
         "description": "Zaiger Variety"
     },
     {
@@ -63,7 +65,7 @@
         "type": "Apricot",
         "display_type": "Aprium",
         "name": "Cot-n-Candy",
-        "patent": "https://patents.google.com/patent/USPP17827P2/en expires 2026",
+        "patent": "https://patents.google.com/patent/USPP17827 expires 2026-01-18",
         "description": "Zaiger Variety"
     },
     {
@@ -76,8 +78,9 @@
     {       
         "type": "Apricot",
         "display_type": "Aprium",
-        "name": "Leah-Cot",
-        "patent": "https://patents.google.com/patent/USPP21863P2/en expires 2029",
+        "name": "Leah Cot",
+        "AKA": "Leah-Cot",
+        "patent": "https://patents.google.com/patent/USPP21863 expires 2029-12-24",
         "description": "Zaiger Variety"
     }
 ]

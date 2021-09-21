@@ -18,7 +18,7 @@
     {
         "name": "Bountiful Blue",
         "AKA": "FLX-2",
-        "patent": "https://patents.google.com/patent/USPP19381 expires 2027",
+        "patent": "https://patents.google.com/patent/USPP19381 expires 2027-10-25",
         "tags": [ "northern highbush" ]
     },
     {
@@ -35,12 +35,12 @@
     },
     {
         "name": "Draper",
-        "patent": "https://patents.google.com/patent/USPP15103P3/en expires 2023",
+        "patent": "https://patents.google.com/patent/USPP15103 expires 2023-01-23",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Reka",
-        "patent": "https://patents.google.com/patent/USPP6700P/en expired 2007",
+        "patent": "https://patents.google.com/patent/USPP6700 expired 2007",
         "tags": [ "northern highbush" ],
         "description": "from New Zealand"
     },
@@ -108,19 +108,20 @@
     {
         "name": "Aurora",
         "description": "latest ripening northern highbush",
-        "patent": "https://patents.google.com/patent/USPP15185P3/en expires jan 2023",
+        "patent": "https://patents.google.com/patent/USPP15185 expires 2023-01-23",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Mini Blues",
         "description": "specially adapted for automated harvesting. small berries with excellent flavor and heavy yield",
-        "patent": "https://patents.google.com/patent/USPP28233P3/en expires 2035",
+        "patent": "https://patents.google.com/patent/USPP28233 expires 2035-05-21",
         "tags": [ "northern highbush" ]
     },
     {
         "name": "Pink Popcorn",
         "description": "white-pink berries",
-        "patent": "https://patents.google.com/patent/USPP25792/en expires 2034",
+        "AKA": "MNPink1",
+        "patent": "https://patents.google.com/patent/USPP25792 expires 2034-03-21",
         "tags": [ "northern highbush" ]
     }
 ]

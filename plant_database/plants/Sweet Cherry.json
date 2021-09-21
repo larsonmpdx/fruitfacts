@@ -14,7 +14,7 @@
         "name": "Chelan",
         "AKA": "PC7146­-23",
         "description": "similar to Bing but 10-12 days earlier. WSU variety. https://www.canr.msu.edu/hrt/uploads/534/82106/Chelan_Sweet_Cherry.pdf",
-        "patent": "https://patents.google.com/patent/USPP8545P/en expired 2012"
+        "patent": "https://patents.google.com/patent/USPP8545 expired 2012"
     },
     {
         "name": "Black Republican"
@@ -22,16 +22,16 @@
     {
         "name": "Brooks",
         "description": "UC Variety",
-        "patent": "https://patents.google.com/patent/USPP6676P/en expired 2007"
+        "patent": "https://patents.google.com/patent/USPP6676 expired 2007"
     },
     {
         "name": "Tulare",
-        "patent": "https://patents.google.com/patent/USPP6407P/en expired 2007"
+        "patent": "https://patents.google.com/patent/USPP6407 expired 2007"
     },
     {
         "name": "Craig's Crimson",
         "description": "Zaiger variety",
-        "patent": "https://patents.google.com/patent/USPP7320P/en expired 2009"
+        "patent": "https://patents.google.com/patent/USPP7320 expired 2009"
     },
     {
         "name": "Glacier",
@@ -40,17 +40,17 @@
     {
         "name": "Blackgold",
         "AKA": ["Black Gold", "Ridgewood"],
-        "patent": "https://patents.google.com/patent/USPP17301 expires 2021"
+        "patent": "https://patents.google.com/patent/USPP17301 expires 2021-09-24"
     },
     {
         "name": "Whitegold",
         "AKA": ["White Gold", "Newfane"],
-        "patent": "https://patents.google.com/patent/USPP18892 expires 2022"
+        "patent": "https://patents.google.com/patent/USPP18892 expires 2022-03-21"
     },
     {
         "name": "Benton",
         "AKA": "PC7146-8",
-        "patent": "https://patents.google.com/patent/USPP15847 expires 2023"
+        "patent": "https://patents.google.com/patent/USPP15847 expires 2023-04-28"
     },
     {
         "name": "Minnie Royal",
@@ -60,7 +60,7 @@
     {
         "name": "Royal Rainier",
         "description": "Zaiger variety",
-        "patent": "https://patents.google.com/patent/USPP10790P/en expired 2017"
+        "patent": "https://patents.google.com/patent/USPP10790 expired 2017"
     },
     {
         "name": "Royal Lee",
@@ -70,12 +70,12 @@
     {
         "name": "Royal Lynn",
         "description": "Zaiger variety. very early, Bing-16-18",
-        "patent": "https://patents.google.com/patent/USPP19589 expires 2027"
+        "patent": "https://patents.google.com/patent/USPP19589 expires 2027-07-14"
     },
     {
         "name": "Royal Hazel",
         "description": "Zaiger variety",
-        "patent": "https://patents.google.com/patent/USPP19920 expires 2027"
+        "patent": "https://patents.google.com/patent/USPP19920 expires 2027-12-26"
     },
     {
         "name": "Royal Crimson",
@@ -105,7 +105,7 @@
     {
         "name": "Royalton",
         "AKA": "NY 11390",
-        "patent": "https://patents.google.com/patent/USPP11107P/en expired 2011",
+        "patent": "https://patents.google.com/patent/USPP11107 expired 2011",
         "description": "https://ecommons.cornell.edu/bitstream/handle/1813/5204/FLS-140.pdf?sequence=1&isAllowed=y"
     },
     {

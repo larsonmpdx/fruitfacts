@@ -157,6 +157,33 @@ fn test_day_range() {
 }
 
 #[test]
+fn test_patent_parsing() {
+    assert_eq!(
+        string_to_patent_info(""),
+        PatentInfo {
+            uspp_number: 0,
+            uspp_expiration: Utc.ymd(1970, 01, 01)
+        }
+    );
+
+    assert_eq!(
+        string_to_patent_info("https://patents.google.com/patent/USPP9881 expired 2014"),
+        PatentInfo {
+            uspp_number: 9881,
+            uspp_expiration: Utc.ymd(2014, 01, 01)
+        }
+    );
+
+    assert_eq!(
+        string_to_patent_info("https://patents.google.com/patent/USPP17827 expires 2026-01-18"),
+        PatentInfo {
+            uspp_number: 17827,
+            uspp_expiration: Utc.ymd(2026, 01, 18)
+        }
+    );
+}
+
+#[test]
 fn test_database_loading() {
     let db_conn = super::establish_connection();
     super::reset_database(&db_conn);

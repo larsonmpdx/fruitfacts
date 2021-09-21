@@ -6,27 +6,27 @@
     },
     {
         "name": "Flavor Grenade",
-        "patent": "https://patents.google.com/patent/USPP12097P2/en expired 2020",
+        "patent": "https://patents.google.com/patent/USPP12097 expired 2020",
         "description": "Zaiger Variety"
     },
     {
         "name": "Flavor Supreme",
-        "patent": "https://patents.google.com/patent/USPP6763P/en expired 2007",
+        "patent": "https://patents.google.com/patent/USPP6763 expired 2007",
         "description": "Zaiger Variety. relatively early and good taste but has widely-reported fruit set issues"
     },
     {
         "name": "Dapple Dandy",
-        "patent": "https://patents.google.com/patent/USPP9254P/en expired 2014",
+        "patent": "https://patents.google.com/patent/USPP9254 expired 2014",
         "description": "Zaiger Variety"
     },
     {
         "name": "Dapple Supreme",
-        "patent": "https://patents.google.com/patent/USPP16412 expires 2025",
+        "patent": "https://patents.google.com/patent/USPP16412 expires 2025-04-19",
         "description": "Zaiger Variety"
     },
     {
         "name": "Flavor King",
-        "patent": "https://patents.google.com/patent/USPP8026P/en expired 2012",
+        "patent": "https://patents.google.com/patent/USPP8026 expired 2012",
         "description": "Zaiger Variety"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "name": "Splash",
-        "patent": "https://patents.google.com/patent/USPP14583 expires april 2023",
+        "patent": "https://patents.google.com/patent/USPP14583 expires 2023-04-25",
         "description": "Zaiger Variety. yellow skin"
     },
     {
@@ -46,12 +46,13 @@
     },
     {
         "name": "Emerald Drop",
-        "patent": "https://patents.google.com/patent/USPP14599 expires 2023",
+        "AKA": "Emerald Gem",
+        "patent": "https://patents.google.com/patent/USPP14599 expires 2023-06-16",
         "description": "Zaiger Variety"
     },
     {
         "name": "Flavor Finale",
-        "patent": "https://patents.google.com/patent/USPP16590 expires 2025",
+        "patent": "https://patents.google.com/patent/USPP16590 expires 2025-04-14",
         "description": "Zaiger Variety"
     },
     {
