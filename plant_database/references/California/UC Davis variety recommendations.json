@@ -1244,12 +1244,12 @@
             "type": "Japanese Plum",
             "note": "Large. Purple skin. Self-fertile. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "late Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1257,12 +1257,12 @@
             "type": "Japanese Plum",
             "note": "Green skin, amber flesh, heart shaped. Poor keeper. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Jun"},
+                {"Sacramento Valley": "Jun"},
+                {"Central Coast": "Jul"},
+                {"North Coast": "Jul"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "Jun"}
             ]
         },
         {
@@ -1270,12 +1270,12 @@
             "type": "Japanese Plum",
             "note": "Red skin and flesh. Self-fertile. Holds well.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "early Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
             ]
         },
         {
@@ -1283,12 +1283,12 @@
             "type": "Japanese Plum",
             "note": "Purple skin. Amber flesh. Large, oblong.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Jul"},
+                {"Sacramento Valley": "mid Jul"},
+                {"Central Coast": "Aug"},
+                {"North Coast": "Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "Jul"}
             ]
         },
         {
@@ -1296,25 +1296,25 @@
             "type": "Japanese Plum",
             "note": "Purple skin. Large, heart shaped. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "early Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
             "name": "Friar",
             "type": "Japanese Plum",
-            "note": "Purple skin. Large, heart shaped. Japanese plum.",
+            "note": "Black skin. Firm, amber flesh. Mild flavor. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "mid Aug"},
+                {"Sacramento Valley": "mid Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
             ]
         },
         {
@@ -1322,12 +1322,12 @@
             "type": "Japanese Plum",
             "note": "Large. Yellow flesh. Tender skin. Great flavor. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "late Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1335,12 +1335,12 @@
             "type": "Japanese Plum",
             "note": "Large, pink skin. Yellow flesh. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "early Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1348,12 +1348,12 @@
             "type": "Japanese Plum",
             "note": "Green-yellow skin and flesh. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "early Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
             ]
         },
         {
@@ -1361,12 +1361,12 @@
             "type": "Japanese Plum",
             "note": "Red-purple skin. Yellow flesh.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "mid Aug"},
+                {"Sacramento Valley": "mid Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
             ]
         },
         {
@@ -1374,12 +1374,12 @@
             "type": "Japanese Plum",
             "note": "Green-yellow skin. Red flesh. Large, heart shaped. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Aug"}
             ]
         },
         {
@@ -1387,12 +1387,12 @@
             "type": "Japanese Plum",
             "note": "Purple-black skin. Yellow flesh. Oblong. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "early AUg"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1400,12 +1400,12 @@
             "type": "Euro Plum",
             "note": "Large. Blue skin. Yellow flesh. European plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "late Aug"},
+                {"Sacramento Valley": "late Aug"},
+                {"Central Coast": "Sep"},
+                {"North Coast": "Sep"},
+                {"Sierra Nevada Foothills": "Sep"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1413,12 +1413,12 @@
             "type": "Japanese Plum",
             "note": "Red skin, yellow flesh, excellent flavor.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Jun"},
+                {"Sacramento Valley": "early Jun"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "mid Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "Jun"}
             ]
         },
         {
@@ -1426,12 +1426,12 @@
             "type": "Japanese Plum",
             "note": "Light purple skin. Yellow flesh.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1439,12 +1439,12 @@
             "type": "Japanese Plum",
             "note": "Purple skin. Amber flesh. Excellent flavor. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Jul"},
+                {"Sacramento Valley": "early Jul"},
+                {"Central Coast": "late Jul"},
+                {"North Coast": "mid Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "Jul"}
             ]
         },
         {
@@ -1452,12 +1452,12 @@
             "type": "Japanese Plum",
             "note": "Red skin and flesh. Small, round. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "early Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "Jul"}
             ]
         },
         {
@@ -1465,12 +1465,12 @@
             "type": "Japanese Plum",
             "note": "Light green–yellow skin. Yellow flesh.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Jul"},
+                {"Sacramento Valley": "early Jul"},
+                {"Central Coast": "late Jul"},
+                {"North Coast": "mid Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1478,12 +1478,12 @@
             "type": "Japanese Plum",
             "note": "Dark black skin. Yellow flesh. Oblong.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "early Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1491,12 +1491,12 @@
             "type": "Japanese Plum",
             "note": "Black, sweet skin. Exotic flavor. Small.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "early Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1504,12 +1504,12 @@
             "type": "Japanese Plum",
             "note": "Green-yellow skin. Yellow flesh. Large, heart shaped. Japanese plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Jul"},
+                {"Sacramento Valley": "Jul"},
+                {"Central Coast": "Aug"},
+                {"North Coast": "Aug"},
+                {"Sierra Nevada Foothills": "late Jul"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1524,12 +1524,12 @@
             "type": "Euro Plum",
             "note": "Medium-sized fruit. Self-fertile. Late maturing. European plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1537,12 +1537,12 @@
             "type": "Euro Plum",
             "note": "Greenish yellow skin. Amber flesh. Old, European plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1550,12 +1550,12 @@
             "type": "Euro Plum",
             "note": "Large fruit. Requires cross pollination. Late maturing. European plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1563,12 +1563,12 @@
             "type": "Euro Plum",
             "note": "Large fruit. Purple skin. Yellow flesh. European plum.",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Aug"},
+                {"Sacramento Valley": "Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1576,12 +1576,12 @@
             "type": "Pluot",
             "note": "",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Jun"},
+                {"Sacramento Valley": "mid Jun"},
+                {"Central Coast": "Jul"},
+                {"North Coast": "Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1589,12 +1589,12 @@
             "type": "Pluot",
             "note": "low chill",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "mid Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "blank cell in the original chart"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1602,12 +1602,12 @@
             "type": "Pluot",
             "note": "",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "late Jul"},
+                {"Sacramento Valley": "mid Jul"},
+                {"Central Coast": "Aug"},
+                {"North Coast": "Aug"},
+                {"Sierra Nevada Foothills": "Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1615,12 +1615,12 @@
             "type": "Pluot",
             "note": "low chill",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Aug"},
+                {"Sacramento Valley": "mid Aug"},
+                {"Central Coast": "late Aug"},
+                {"North Coast": "late Aug"},
+                {"Sierra Nevada Foothills": "late Aug"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1628,12 +1628,12 @@
             "type": "Plumcot",
             "note": "",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "early Jun"},
+                {"Sacramento Valley": "mid Jun"},
+                {"Central Coast": "Jul"},
+                {"North Coast": "Jul"},
+                {"Sierra Nevada Foothills": "Jul"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1641,12 +1641,12 @@
             "type": "Aprium",
             "note": "",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "mid May"},
+                {"Sacramento Valley": "mid May"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
@@ -1654,12 +1654,12 @@
             "type": "Aprium",
             "note": "low chill",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "mid May"},
+                {"Sacramento Valley": "late May"},
+                {"Central Coast": "Jun"},
+                {"North Coast": "Jun"},
+                {"Sierra Nevada Foothills": "Jun"},
+                {"Southern California": "NA"}
             ]
         },
         {
