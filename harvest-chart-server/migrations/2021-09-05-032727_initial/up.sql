@@ -1,5 +1,5 @@
 CREATE TABLE base_plants (
-  id INTEGER PRIMARY KEY,
+  plant_id INTEGER PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
   type TEXT NOT NULL,
 
@@ -9,36 +9,49 @@ CREATE TABLE base_plants (
   relative_harvest TEXT, --used for things like "redhaven+5"
   harvest_start INTEGER, --ordinal (day of the year)
   harvest_end INTEGER,
-  harvest_time_reference TEXT, -- which publication or organization gave the harvest time?
 
   UNIQUE(name, type) --combo of these columns must be unique.  example: name "Pristine" type "Apple"
 );
 
 CREATE TABLE plant_types (
-  id INTEGER PRIMARY KEY,
+  plant_type_id INTEGER PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
   latin_name TEXT,
   UNIQUE(name)
 );
 
 CREATE TABLE users (
-  id INTEGER PRIMARY KEY,
+  user_id INTEGER PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
   UNIQUE(name)
 );
 
 CREATE TABLE collections (
-  id INTEGER PRIMARY KEY,
+  collection_id INTEGER PRIMARY KEY NOT NULL,
   user_id INTEGER NOT NULL,
   name TEXT NOT NULL,
+
+  -- for extension guides
+  path TEXT, -- directory that we found this in, like "Oregon" or "Oregon/Willamette Valley"
+  title TEXT,
+  author TEXT,
+  note TEXT,
+  url TEXT,
+  published TEXT,
+  reviewed TEXT,
+  accessed TEXT,
+
+  location TEXT,
+  latitude REAL,
+  longitude REAL,
   UNIQUE(name)
 );
 
 CREATE TABLE collection_items (
-  id INTEGER PRIMARY KEY,
-  collection_id TEXT NOT NULL,
+  collection_item_id INTEGER PRIMARY KEY NOT NULL,
+  collection_id INTEGER NOT NULL,
 
-  notes TEXT, -- for user notes
+  note TEXT, -- for user notes
 
   -- name+type don't have to exist in base plants so this could be a wholly user-created plant
   name TEXT NOT NULL,
@@ -51,7 +64,9 @@ CREATE TABLE collection_items (
   relative_harvest TEXT, --used for things like "redhaven+5"
   harvest_start INTEGER, --ordinal (day of the year)
   harvest_end INTEGER,
-  harvest_time_reference TEXT,
+
+  FOREIGN KEY (collection_id)
+      REFERENCES collections (collection_id),
 
   UNIQUE(collection_id, name, type) --combo of these columns must be unique
 );

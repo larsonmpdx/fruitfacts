@@ -27,7 +27,6 @@ struct PlantJson {
     relative_harvest: Option<String>,
     harvest_start: Option<String>,
     harvest_end: Option<String>,
-    harvest_time_reference: Option<String>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -346,6 +345,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
 pub struct LoadAllReturn {
     pub plants_found: isize,
     pub types_found: isize,
+    pub references_found: isize,
 }
 
 pub fn establish_connection() -> SqliteConnection {
@@ -366,13 +366,15 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     let database_dir = get_database_dir().unwrap();
 
     let plants_found = load_base_plants(db_conn, database_dir.clone());
-    let types_found = load_types(db_conn, database_dir);
+    let types_found = load_types(db_conn, database_dir.clone());
+    let references_found = load_references(db_conn, database_dir);
 
     check_database(db_conn);
 
     return LoadAllReturn {
         plants_found: plants_found,
         types_found: types_found,
+        references_found: references_found,
     };
 }
 
@@ -458,7 +460,6 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                             base_plants::relative_harvest.eq(&plant.relative_harvest), // todo harvest start+end
                             base_plants::harvest_start.eq(harvest_start_day as i32),
                             base_plants::harvest_end.eq(harvest_end_day as i32),
-                            base_plants::harvest_time_reference.eq(&plant.harvest_time_reference),
                         ))
                         .execute(db_conn);
                     assert_eq!(Ok(1), rows_inserted);
@@ -497,6 +498,22 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
         types_found += 1;
     }
     return types_found;
+}
+
+fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
+    // todo
+
+    // traverse /plant_database/references/
+    // for each file found, save the relative directory (the directory under /references/)
+
+    // create a collections table entry for each location in this reference, or only one if there's only one location
+
+    // for each plant, see if there's a plant in the base database already. if not, create it
+
+    // plant category existince is checked later in check_database()
+
+    // for each plant, create an entry in the collection_items database for each location, with a foreign key to that location's collections table entry
+    return 0;
 }
 
 fn check_database(db_conn: &SqliteConnection) {

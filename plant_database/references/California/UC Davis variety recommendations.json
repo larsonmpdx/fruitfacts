@@ -3,7 +3,7 @@
     "url": "http://homeorchard.ucdavis.edu/varieties.pdf",
     "published": "2000",
     "author": "Paul M. Vossen and Deborah Silva",
-    "note": "the same tables are reproduced in individual PDFs and also in the California Master Gardener Handbook (2015)",
+    "note": "the same tables are reproduced as individual PDFs and also in the California Master Gardener Handbook (2015)",
     "accessed": "Sep 2021",
     "locations": {
         "San Joaquin Valley": {
@@ -1726,25 +1726,891 @@
                 {"Sierra Nevada Foothills": "Aug"},
                 {"Southern California": "Aug"}
             ]
-        }
-
-
-
-
-
-
-        ,
+        },
         {
-            "name": "",
-            "type": "",
+            "name": "Colossal",
+            "type": "Chestnut",
+            "note": "The industry standard and the overall best choice. Large fruited. Excellent quality. Parentage unknown.",
+            "locations": [
+                {"San Joaquin Valley": "early Oct"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "mid Oct"},
+                {"Southern California": "early Oct"}
+            ]
+        },
+        {
+            "name": "Dunstan",
+            "type": "Chestnut",
+            "note": "A cross of American and Chinese cultivars. Medium-small nuts. Sweet, and blight resistant. Late flowering.",
+            "locations": [
+                {"San Joaquin Valley": "early Oct"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "mid Oct"},
+                {"Southern California": "early Oct"}
+            ]
+        },
+        {
+            "name": "Eurobella",
+            "type": "Chestnut",
+            "note": "Large nut. Good pollenizer for Colossal.",
+            "locations": [
+                {"San Joaquin Valley": "early Oct"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "mid Oct"},
+                {"Southern California": "early Oct"}
+            ]
+        },
+        {
+            "name": "Seedling",
+            "type": "Chestnut",
+            "note": "Not a named cultivar. Each tree is genetically different. Unknown fruit quality. Unknown tree shape and fruit size. Only known rootstock.",
+            "locations": [
+                {"San Joaquin Valley": "early Oct"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "mid Oct"},
+                {"Southern California": "early Oct"}
+            ]
+        },
+        {
+            "name": "Silverleaf",
+            "type": "Chestnut",
+            "note": "Medium-sized nut. Good pollenizer for colossal, but shell splits are a problem.",
+            "locations": [
+                {"San Joaquin Valley": "early Oct"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "mid Oct"},
+                {"Southern California": "early Oct"}
+            ]
+        },
+        {
+            "names": ["Castel del Rio", "Fowler", "Marrone di Maradi", "Montesol"],
+            "type": "Chestnut",
+            "category": "others",
+            "category_note": "These cultivars are available for trial."
+        },
+        {
+            "name": "Barcelona",
+            "type": "Filbert",
+            "note": "The old industry standard. Use Davianna or Du Chilly as a pollenizer.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "late Sep"},
+                {"Sierra Nevada Foothills": "late Sep"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Brixnut",
+            "type": "Filbert",
+            "note": "A secondary main production nut. Use Davianna or Du Chilly as a pollenizer.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "late Sep"},
+                {"Sierra Nevada Foothills": "late Sep"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Butler",
+            "type": "Filbert",
+            "note": "Pollenizer for Ennis.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "late Sep"},
+                {"Sierra Nevada Foothills": "late Sep"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Davianna",
+            "type": "Filbert",
+            "note": "Use Barcelona or Du Chilly as a pollenizer.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "late Sep"},
+                {"Sierra Nevada Foothills": "late Sep"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Du Chilly",
+            "type": "Filbert",
+            "note": "Use Barcelona or Davianna as a pollenizer.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "late Sep"},
+                {"Sierra Nevada Foothills": "late Sep"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Ennis",
+            "type": "Filbert",
+            "note": "A new cultivar that has better quality than Barcelona. Use Butler as a pollenizer.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "late Sep"},
+                {"Sierra Nevada Foothills": "late Sep"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "White Aveline",
+            "type": "Filbert",
+            "note": "General pollenizer.",
+            "locations": [
+                {"San Joaquin Valley": "Sep"},
+                {"Sacramento Valley": "Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "late Sep"},
+                {"Sierra Nevada Foothills": "late Sep"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Apache",
+            "type": "Pecan",
+            "note": "Late pollen shed. Early receptivity.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Barton",
+            "type": "Pecan",
+            "note": "Early pollen shed and receptivity.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Bradley",
+            "type": "Pecan",
+            "note": "Excellent pollenizer for Western Schley.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Choctaw",
+            "type": "Pecan",
+            "note": "Late pollen shed. Early receptivity.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Comanche",
+            "type": "Pecan",
+            "note": "Late pollen shed. Early receptivity.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Shawnee",
+            "type": "Pecan",
+            "note": "Early pollen shed. Midseason receptivity.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Sioux",
+            "type": "Pecan",
+            "note": "Early pollen shed and receptivity.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Western Schley",
+            "type": "Pecan",
+            "note": "Early pollen shed and receptivity.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Wichita",
+            "type": "Pecan",
+            "note": "Late pollen shed. Early receptivity.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Joley",
+            "type": "Pistachio",
+            "note": "Female. Smaller nuts. Fewer blanks. More splits. Pistachio may not produce well in most areas of southern California.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Kerman",
+            "type": "Pistachio",
+            "note": "Female. Best nut-producing cultivar. Pistachio may not produce well in most areas of southern California.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Peters",
+            "type": "Pistachio",
+            "note": "Male. Good for pollination. Pistachio may not produce well in most areas of southern California.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Sfax",
+            "type": "Pistachio",
+            "note": "Smaller, good-quality nuts. Pistachio may not produce well in most areas of southern California.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "NA"},
+                {"North Coast": "NA"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Chandler",
+            "type": "Walnut",
+            "note": "Best choice for coastal California. New cultivar. 80% fruitful lateral buds. Produces a smaller tree that requires careful pruning and training. Blooms late. Leafs out late.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Hartley",
+            "type": "Walnut",
+            "note": "The main cultivar grown in California. Excellent-quality nuts. Huge tree but requires little pruning. 5% fruitful lateral buds. Leafs out late, blooms late. Good choice.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Howard",
+            "type": "Walnut",
+            "note": "Good choice. New cultivar. 80% fruitful lateral buds. Produces a smaller tree that requires careful pruning and training. Blooms late. Leafs out late.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Mayette",
+            "type": "Walnut",
+            "note": "Old-time cultivar. PLant as a pollenizer for late-blooming cultivars. Poor producer. Leafs out late. Blooms late. Large tree.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "S. Franquette",
+            "type": "Walnut",
+            "note": "Old-time cultivar. Should be planted as a pollenizer for the late-blooming cultivars. Poor producer. Leafs out late. Blooms late. Large tree, but requires little pruning.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Tehama",
+            "type": "Walnut",
+            "note": "Good choice. New cultivar. 80% fruitful lateral buds. Produces a smaller tree that requires careful pruning and training. Blooms late. Leafs out late.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Black Walnut Seedling",
+            "type": "Walnut",
+            "note": "Not a true cultivar. Seedlings of Northern California Black Walnut trees.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Thomas",
+            "type": "Walnut",
+            "note": "Eastern Black Walnut cultivar that may be worthy of consideration.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Ohio",
+            "type": "Walnut",
+            "note": "Eastern Black Walnut cultivar that may be worthy of consideration.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Meyers",
+            "type": "Walnut",
+            "note": "Eastern Black Walnut cultivar that may be worthy of consideration.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Oct"},
+                {"North Coast": "late Oct"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Chico",
+            "type": "Fuzzy Kiwi",
+            "note": "Male vine used to pollinate Hayward, 8:1 ratio.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Nov"},
+                {"North Coast": "early Nov"},
+                {"Sierra Nevada Foothills": "Nov"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Hayward",
+            "type": "Fuzzy Kiwi",
+            "note": "The commercial female cultivar grown in California. Large fruit. Excellent flavor. Will ripen on the vine but can be picked when still hard, placed in cold storage (32°F), and removed to room temperature for final ripening. Will keep for up to 6 months.",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Nov"},
+                {"North Coast": "early Nov"},
+                {"Sierra Nevada Foothills": "Nov"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Matua",
+            "type": "Fuzzy Kiwi",
             "note": "",
             "locations": [
-                {"San Joaquin Valley": ""},
-                {"Sacramento Valley": ""},
-                {"Central Coast": ""},
-                {"North Coast": ""},
-                {"Sierra Nevada Foothills": ""},
-                {"Southern California": ""}
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Nov"},
+                {"North Coast": "early Nov"},
+                {"Sierra Nevada Foothills": "Nov"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Tamori",
+            "type": "Fuzzy Kiwi",
+            "note": "",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "late Nov"},
+                {"North Coast": "early Nov"},
+                {"Sierra Nevada Foothills": "Nov"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Anna",
+            "type": "Hardy Kiwi",
+            "note": "Nickel-sized fruit. Unique flavor. Very productive.",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "late Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "early Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Issai",
+            "type": "Hardy Kiwi",
+            "note": "Dime-sized fruit that requires no cross-pollination.",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "late Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "early Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "name": "Ken's Red",
+            "type": "Hardy Kiwi",
+            "note": "Dime-sized fruit. Red flesh and skin. Excellent flavor.",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "late Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "early Oct"},
+                {"Sierra Nevada Foothills": "Oct"},
+                {"Southern California": "NA"}
+            ]
+        },
+        {
+            "names": ["Abbott", "Allison", "Blake", "Bruno", "Elmwood", "Tewi", "Vincent"],
+            "type": "Fuzzy Kiwi",
+            "category": "others",
+            "category_note": "These kiwi cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (50–250 hours)."
+        },
+        {
+            "name": "Adriatic",
+            "type": "Fig",
+            "note": "Good fresh but especially good for drying. Yellow skin and amber flesh.",
+            "locations": [
+                {"San Joaquin Valley": "Jun/Sep"},
+                {"Sacramento Valley": "Jun/Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Jun/Sep"},
+                {"Southern California": "Jun/Sep"}
+            ]
+        },
+        {
+            "name": "Black Mission",
+            "type": "Fig",
+            "note": "The most dependable cultivar for the home orchard. Purple-black skin with red flesh.",
+            "locations": [
+                {"San Joaquin Valley": "Jun/Sep"},
+                {"Sacramento Valley": "Jun/Sep"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "Jun/Sep"},
+                {"Southern California": "Jun/Sep"}
+            ]
+        },
+        {
+            "name": "Brown Turkey",
+            "type": "Fig",
+            "note": "Large fruit. Excellent quality. Purple-green skin. Red flesh.",
+            "locations": [
+                {"San Joaquin Valley": "Jun/Sep"},
+                {"Sacramento Valley": "Jun/Sep"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "Jun/Sep"},
+                {"Southern California": "Jun/Sep"}
+            ]
+        },
+        {
+            "name": "Italian Everbearing",
+            "type": "Fig",
+            "note": "Brown. Turkey type. Very prolific.",
+            "locations": [
+                {"San Joaquin Valley": "Jun/Sep"},
+                {"Sacramento Valley": "Jun/Sep"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "Jun/Sep"},
+                {"Southern California": "Jun/Sep"}
+            ]
+        },
+        {
+            "name": "Kadota",
+            "type": "Fig",
+            "note": "Requires high temperatures and a long growing season to perform well. Yellow-green fruit with amber flesh. Produces both a breba and a second crop with moderate pruning.",
+            "locations": [
+                {"San Joaquin Valley": "Jun/Sep"},
+                {"Sacramento Valley": "Jun/Sep"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "Jun/Sep"},
+                {"Southern California": "Jun/Sep"}
+            ]
+        },
+        {
+            "name": "Osborn",
+            "type": "Fig",
+            "note": "Performs well only in cool coastal areas. Purple-bronze fruit with amber flesh. Very prolific.",
+            "locations": [
+                {"San Joaquin Valley": "Jun/Sep"},
+                {"Sacramento Valley": "Jun/Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Jun/Sep"},
+                {"Southern California": "Jun/Sep"}
+            ]
+        },
+        {
+            "name": "Smyrna-type",
+            "type": "Fig",
+            "note": "Requires cross-pollination by the Capri fig female wasp to produce a crop. Capri figs containing female wasps may be difficult to locate for backyard tree fruit producers.",
+            "locations": [
+                {"San Joaquin Valley": "Jun/Sep"},
+                {"Sacramento Valley": "Jun/Sep"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "Jun/Sep"},
+                {"Southern California": "Jun/Sep"}
+            ]
+        },
+        {
+            "name": "White Genoa",
+            "type": "Fig",
+            "note": "Good for coastal locations. Large fruit. Yellow-green, thin skin. Strawberry flesh. Ripens when others won't.",
+            "locations": [
+                {"San Joaquin Valley": "Jun/Sep"},
+                {"Sacramento Valley": "Jun/Sep"},
+                {"Central Coast": "Oct"},
+                {"North Coast": "Oct"},
+                {"Sierra Nevada Foothills": "Jun/Sep"},
+                {"Southern California": "Jun/Sep"}
+            ]
+        },
+        {
+            "name": "Ascolano",
+            "type": "Olive",
+            "note": "Large-fruited cultivar, the most cold-hardy of all table cultivars in California. Large fruit, Oil is very aromatic.",
+            "tags": "Table Olive",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "mid Oct"},
+                {"North Coast": "mid Oct"},
+                {"Sierra Nevada Foothills": "mid Oct"},
+                {"Southern California": "Oct"}
+            ]
+        },
+        {
+            "name": "Manzanillo",
+            "type": "Olive",
+            "note": "The main cultivar used for the black California-style olive. Low, spreading, medium-sized tree, early-maturing fruit with a medium oil content. Trees are susceptible to cold injury, peacock spot, and olive knot.",
+            "tags": "Table Olive",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "mid Oct"},
+                {"North Coast": "mid Oct"},
+                {"Sierra Nevada Foothills": "mid Oct"},
+                {"Southern California": "Oct"}
+            ]
+        },
+        {
+            "name": "Mission",
+            "type": "Olive",
+            "note": "Medium-sized fruit, high oil content, cold-hardy, susceptible to foliar diseases.",
+            "tags": "Table Olive",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "mid Oct"},
+                {"North Coast": "mid Oct"},
+                {"Sierra Nevada Foothills": "mid Oct"},
+                {"Southern California": "Oct"}
+            ]
+        },
+        {
+            "name": "Sevillano",
+            "type": "Olive",
+            "note": "Largest fruit. Very susceptible to olive fly. Produces an interesting, herbal-flavored oil.",
+            "tags": "Table Olive",
+            "locations": [
+                {"San Joaquin Valley": "late Sep"},
+                {"Sacramento Valley": "early Oct"},
+                {"Central Coast": "mid Oct"},
+                {"North Coast": "mid Oct"},
+                {"Sierra Nevada Foothills": "mid Oct"},
+                {"Southern California": "Oct"}
+            ]
+        },
+        {
+            "name": "Arbequina",
+            "type": "Olive",
+            "note": "A cultivar from northern Spain that produces a very high quality fruity oil. Fruit is small. Very fruitful. One of the most cold tolerant.",
+            "tags": "Oil Olive",
+            "locations": [
+                {"San Joaquin Valley": "mid Nov"},
+                {"Sacramento Valley": "late Nov"},
+                {"Central Coast": "early Dec"},
+                {"North Coast": "early Dec"},
+                {"Sierra Nevada Foothills": "late Nov"},
+                {"Southern California": "late Nov"}
+            ]
+        },
+        {
+            "name": "Coratina",
+            "type": "Olive",
+            "note": "A cultivar from southern Italy that ripens very late. Very high oil content and very high in poly-phenols. Regular bearing but sensitive to cold.",
+            "tags": "Oil Olive",
+            "locations": [
+                {"San Joaquin Valley": "Nov-Dec"},
+                {"Sacramento Valley": "Nov-Dec"},
+                {"Central Coast": "Dec-Jan"},
+                {"North Coast": "Dec-Jan"},
+                {"Sierra Nevada Foothills": "Dec"},
+                {"Southern California": "Nov-early Dec"}
+            ]
+        },
+        {
+            "name": "Frantoio",
+            "type": "Olive",
+            "note": "Italian cultivar with a high oil content that is very aromatic, floral, and grassy. Not adapted to hot desert areas. Cold-sensitive.",
+            "tags": "Oil Olive",
+            "locations": [
+                {"San Joaquin Valley": "mid Nov"},
+                {"Sacramento Valley": "late Nov"},
+                {"Central Coast": "Dec"},
+                {"North Coast": "early Dec"},
+                {"Sierra Nevada Foothills": "late Nov"},
+                {"Southern California": "late Nov"}
+            ]
+        },
+        {
+            "name": "Leccino",
+            "type": "Olive",
+            "note": "Italian cultivar used in olive oil blends with Frantoio. Ripens a little earlier than other cultivars. Cold-hardy.",
+            "tags": "Oil Olive",
+            "locations": [
+                {"San Joaquin Valley": "mid Nov"},
+                {"Sacramento Valley": "late Nov"},
+                {"Central Coast": "Dec"},
+                {"North Coast": "early Dec"},
+                {"Sierra Nevada Foothills": "late Nov"},
+                {"Southern California": "late Nov"}
+            ]
+        },
+        {
+            "name": "Maurino",
+            "type": "Olive",
+            "note": "Italian cultivar used in olive oil blends. Very flavorful, spicy oil.",
+            "tags": "Oil Olive",
+            "locations": [
+                {"San Joaquin Valley": "mid Nov"},
+                {"Sacramento Valley": "late Nov"},
+                {"Central Coast": "Dec"},
+                {"North Coast": "early Dec"},
+                {"Sierra Nevada Foothills": "late Nov"},
+                {"Southern California": "late Nov"}
+            ]
+        },
+        {
+            "name": "Pendolino",
+            "type": "Olive",
+            "note": "Italian cultivar used in olive oil blends. Also used as a pollenizer. Cold-hardy.",
+            "tags": "Oil Olive",
+            "locations": [
+                {"San Joaquin Valley": "mid Nov"},
+                {"Sacramento Valley": "late Nov"},
+                {"Central Coast": "Dec"},
+                {"North Coast": "early Dec"},
+                {"Sierra Nevada Foothills": "late Nov"},
+                {"Southern California": "late Nov"}
+            ]
+        },
+        {
+            "name": "Picual",
+            "type": "Olive",
+            "note": "Spanish cultivar used for oil and table fruit. Very high in polyphenols and oil. Very fruity. Ripens early, easy to harvest. Cold-hardy.",
+            "tags": "Oil Olive",
+            "locations": [
+                {"San Joaquin Valley": "Nov"},
+                {"Sacramento Valley": "Nov"},
+                {"Central Coast": "early Dec"},
+                {"North Coast": "early Dec"},
+                {"Sierra Nevada Foothills": "late Nov"},
+                {"Southern California": "Nov"}
+            ]
+        },
+        {
+            "name": "Baru",
+            "type": "Persimmon",
+            "note": "Round; orange skin. Sweet brown flesh.",
+            "tags": "asian persimmon",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Diospyros virginiana",
+            "type": "Persimmon",
+            "note": "Native species, not a cultivar. Very small, very flavorful fruit. Must be eaten when soft.",
+            "tags": "american persimmon",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Fuyu",
+            "type": "Persimmon",
+            "note": "Large, flat; orange-red color. Flesh is firm like an apple and nonastringent when ripe. Cross-pollination is no required, but when present, fruit will have seed. Trees are smaller, requiring 14-16ft. Fruit loses astringency at maturity while still firm and crunchy.",
+            "tags": "asian persimmon",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Hachiya",
+            "type": "Persimmon",
+            "note": "Large, deep orange-red, acorn-shaped fruit. Flesh turns brown around the seed and must be very soft to eat. Does not need cross-pollination. Trees get large and require 20 ft. Fruit is astringent until very ripe and soft.",
+            "tags": "asian persimmon",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
+            ]
+        },
+        {
+            "name": "Hyakume",
+            "type": "Persimmon",
+            "note": "Cinnamon-chocolate-colored flesh.",
+            "tags": "asian persimmon",
+            "locations": [
+                {"San Joaquin Valley": "Oct"},
+                {"Sacramento Valley": "late Oct"},
+                {"Central Coast": "Nov"},
+                {"North Coast": "Nov"},
+                {"Sierra Nevada Foothills": "late Oct"},
+                {"Southern California": "late Oct"}
             ]
         }
     ]
