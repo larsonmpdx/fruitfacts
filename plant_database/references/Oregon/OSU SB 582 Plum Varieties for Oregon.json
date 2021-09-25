@@ -137,71 +137,88 @@
         },
         {
             "name": "Methley",
+            "type": "Japanese Plum",
             "harvest_time": "August 1"
         },
         {
             "name": "Beauty",
+            "type": "Japanese Plum",
             "harvest_time": "August 5"
         },
         {
             "name": "Formosa",
+            "type": "Japanese Plum",
             "harvest_time": "August 5"
         },
         {
             "name": "Burmosa",
+            "type": "Japanese Plum",
             "harvest_time": "August 5"
         },
         {
             "name": "Marvel",
+            "type": "Japanese Plum",
             "harvest_time": "August 7"
         },
         {
             "name": "Santa Rosa",
+            "type": "Japanese Plum",
             "not_recommended_reason": "not well adapted to the Willamette Valley and it is difficult to obtain satisfactory fruit set",
             "harvest_time": "August 15"
         },
         {
             "name": "Abundance",
+            "type": "Japanese Plum",
             "harvest_time": "August 15"
         },
         {
             "name": "Shiro",
+            "type": "Japanese Plum",
             "harvest_time": "August 15"
         },
         {
             "name": "Red Heart",
+            "type": "Japanese Plum",
             "harvest_time": "August 20"
         },
         {
             "name": "Burbank",
+            "type": "Japanese Plum",
             "harvest_time": "August 20 to August 25"
         },
         {
             "name": "Howard Miracle",
+            "type": "Japanese Plum",
             "harvest_time": "August 25"
         },
         {
             "name": "Mariposa",
+            "type": "Japanese Plum",
             "harvest_time": "September 1"
         },
         {
             "name": "Elephant Heart",
+            "type": "Japanese Plum",
             "harvest_time": "September 1"
         },
         {
             "name": "Satsuma",
+            "type": "Japanese Plum",
             "harvest_time": "September 5"
         },
         {
             "name": "Duarte",
+            "type": "Japanese Plum",
             "harvest_time": "September 15"
         },
         {
             "name": "Red Ace",
+            "type": "Japanese Plum",
             "harvest_time": "September 15"
         },
         {
             "name": "Kelsey",
+            "type": "Japanese Plum",
             "harvest_time": "October 1"
         }
     ]

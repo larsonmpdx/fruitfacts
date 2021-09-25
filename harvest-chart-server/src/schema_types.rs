@@ -15,7 +15,7 @@ pub struct BasePlant {
     pub plant_id: i32,
     pub name: String,
     pub type_: String,
-    pub aka: String,
+    pub aka: Option<String>,
     pub description: Option<String>,
     pub patent: Option<String>,
 }

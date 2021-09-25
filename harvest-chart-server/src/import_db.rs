@@ -22,10 +22,10 @@ use serde::{Deserialize, Serialize};
 //use serde_json::Result;
 
 #[derive(Serialize, Deserialize)]
-struct PlantJson {
+struct BasePlantJson {
     name: String,
     #[serde(alias = "type")]
-    type_: Option<String>,
+    type_: Option<String>, // optional because we can get type from the filename
     description: Option<String>,
     aka: Option<Vec<String>>,
     patent: Option<String>,
@@ -60,16 +60,16 @@ struct CollectionCategoryJson {
     description: Option<String>,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 struct CollectionPlantJson {
     // only for lists of names like we see in some guides for "here's a list of scab-resistant apples"
     names: Option<Vec<String>>,
     category: Option<String>,
     category_description: Option<String>,
 
-    name: Option<String>,
+    name: Option<String>, // optional because we can get "names" or "name"
     #[serde(alias = "type")]
-    type_: Option<String>,
+    type_: String,
     description: Option<String>,
     relative_harvest: Option<String>,
     harvest_start: Option<String>,
@@ -486,7 +486,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
 
                 let contents = fs::read_to_string(path_.clone()).unwrap();
 
-                let plants: Vec<PlantJson> = serde_json::from_str(&contents).unwrap();
+                let plants: Vec<BasePlantJson> = serde_json::from_str(&contents).unwrap();
 
                 let filename =
                     rem_last_n(path_.as_path().file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
@@ -496,16 +496,16 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                     // all others get type from the filename
                     let plant_type;
                     if filename.starts_with("Oddball") {
-                        plant_type = plant.type_.clone().unwrap();
+                        plant_type = plant.type_.clone();
                     } else {
-                        plant_type = filename.to_string();
+                        plant_type = Some(filename.to_string());
                     }
 
                     println!("inserting");
                     let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
                         .values((
                             base_plants::name.eq(&plant.name),
-                            base_plants::type_.eq(&plant_type),
+                            base_plants::type_.eq(&plant_type.unwrap()),
                             base_plants::description.eq(&plant.description),
                             base_plants::patent.eq(&plant.patent),
                         ))
@@ -604,6 +604,28 @@ fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf)
                 }
 
                 for plant in collection.plants {
+                    if plant.names.is_none() && plant.name.is_none() {
+                        panic!(r#"plant missing both "name" and "names" {:?}"#, plant)
+                    }
+                    if plant.names.is_some() && plant.name.is_some() {
+                        panic!(r#"plant has both "name" and "names" {:?}"#, plant)
+                    }
+
+                    if plant.names.is_some() {
+                        // todo
+                    }
+
+                    if plant.name.is_some() {
+                        let _ = base_plants::dsl::base_plants
+                            .filter(base_plants::name.eq(&plant.name.unwrap()))
+                            .filter(base_plants::type_.eq(&plant.type_))
+                            .first::<BasePlant>(db_conn);
+                    }
+
+                    // first handle multi-name collections (key: "names" with an array)
+
+                    // then single-name collections (key: "name")
+
                     // add this plant to the base database, if it isn't already there
                     // add any of these fields to the base database plant. the existing field must be either empty or an exact match
                     // - patent
