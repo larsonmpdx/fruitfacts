@@ -192,3 +192,10 @@ fn test_database_loading() {
     assert_gt!(items_loaded.plants_found, 275);
     assert_gt!(items_loaded.types_found, 15);
 }
+
+#[test]
+fn test_simplify_path() {
+    assert_eq!(simplify_path(r#".\..\plant_database\references"#), "");
+    assert_eq!(simplify_path("./../plant_database/references/Oregon"), "Oregon");
+    assert_eq!(simplify_path("./../plant_database/references/Oregon/Willamette Valley"), "Oregon/Willamette Valley");
+}

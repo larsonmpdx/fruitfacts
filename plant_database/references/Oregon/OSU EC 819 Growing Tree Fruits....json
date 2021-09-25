@@ -4,28 +4,32 @@
     "published": "2009",
     "reviewed": "2015",
     "accessed": "Sep 2021",
-    "locations": {
-        "I": {
+    "locations": [
+        {
+            "short_name": "I",
             "name": "Area I: The Willamette Valley and southern Oregon",
             "latitude": 44.54820212695868,
             "longitude": -123.21537145957399
         },
-        "II": {
+        {
+            "short_name": "II",
             "name": "Area II: The mid-Columbia and eastern Oregon",
             "latitude": 45.704919133064905,
             "longitude": -121.52331207052876
         },
-        "III": {
+        {
+            "short_name": "III",
             "name": "Area III: Mountain and high plateau",
             "latitude": 44.36728083819834,
             "longitude": -121.14213716576367
         },
-        "IV": {
+        {
+            "short_name": "IV",
             "name": "Area IV: Coastal region",
             "latitude": 45.217140016834854,
             "longitude": -123.97955043832465
         }
-    },
+    ],
     "plants": [
         {
             "name": "Lodi",

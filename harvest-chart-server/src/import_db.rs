@@ -41,13 +41,14 @@ struct CollectionJson {
     reviewed: Option<String>,
     accessed: Option<String>,
 
-    locations: Option<HashMap<String, CollectionLocationJson>>,
+    locations: Option<Vec<CollectionLocationJson>>,
     categories: Option<Vec<CollectionCategoryJson>>,
     plants: Vec<CollectionPlantJson>,
 }
 
 #[derive(Serialize, Deserialize)]
 struct CollectionLocationJson {
+    short_name: Option<String>,
     name: String,
     latitude: f64,
     longitude: f64,
@@ -86,6 +87,12 @@ fn rem_last_n(value: &str, n: isize) -> &str {
     for _ in 0..n {
         chars.next_back();
     }
+    chars.as_str()
+}
+
+fn rem_first(value: &str) -> &str{
+    let mut chars = value.chars();
+    chars.next();
     chars.as_str()
 }
 
@@ -391,7 +398,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
 pub struct LoadAllReturn {
     pub plants_found: isize,
     pub types_found: isize,
-    pub references_found: isize,
+    pub reference_locations_found: isize,
 }
 
 pub fn establish_connection() -> SqliteConnection {
@@ -405,6 +412,8 @@ pub fn establish_connection() -> SqliteConnection {
 pub fn reset_database(db_conn: &SqliteConnection) {
     let _ = diesel::delete(base_plants::dsl::base_plants).execute(db_conn);
     let _ = diesel::delete(plant_types::dsl::plant_types).execute(db_conn);
+    let _ = diesel::delete(collections::dsl::collections).execute(db_conn);
+    let _ = diesel::delete(collection_items::dsl::collection_items).execute(db_conn);
     super::embedded_migrations::run(db_conn).unwrap();
 }
 
@@ -413,14 +422,14 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
 
     let plants_found = load_base_plants(db_conn, database_dir.clone());
     let types_found = load_types(db_conn, database_dir.clone());
-    let references_found = load_references(db_conn, database_dir);
+    let reference_locations_found = load_references(db_conn, database_dir);
 
     check_database(db_conn);
 
     return LoadAllReturn {
         plants_found: plants_found,
         types_found: types_found,
-        references_found: references_found,
+        reference_locations_found: reference_locations_found,
     };
 }
 
@@ -449,6 +458,24 @@ fn get_database_dir() -> Option<std::path::PathBuf> {
     }
 
     return None;
+}
+
+fn simplify_path(input: &str) -> &str {
+    let v: Vec<&str> = input.split("references").collect();
+
+    let after_references = v.last().unwrap();
+    println!("split result: {}", after_references);
+
+    if after_references.len() == 0
+    {
+        return after_references;
+    }
+    
+    match after_references.chars().next().unwrap() {
+        '/' => return rem_first(after_references),
+        '\\' => return rem_first(after_references),
+        _ => return after_references
+    } 
 }
 
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
@@ -530,7 +557,7 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
 }
 
 fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
-    let mut references_found = 0;
+    let mut reference_locations_found = 0;
     // todo
 
     // traverse /plant_database/references/
@@ -545,7 +572,7 @@ fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf)
 
         if fs::metadata(path_.clone()).unwrap().is_file() {
             if path_.extension().unwrap().to_str().unwrap() == "json" {
-                println!("found: {}", path_.display());
+                println!("found reference: {}", path_.display());
 
                 let contents = fs::read_to_string(path_.clone()).unwrap();
 
@@ -553,28 +580,45 @@ fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf)
 
                 let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
 
-                let path = path_.parent().unwrap().to_str().unwrap();
+                let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
 
-                println!("inserting");
-                let rows_inserted = diesel::insert_into(collections::dsl::collections)
-                    .values((
-                        collections::user_id.eq(0), // todo - codify this as the root/fake user
-                        collections::path.eq(&path),
-                        collections::filename.eq(&filename),
-                        collections::title.eq(&collection.title),
-                        collections::author.eq(&collection.author),
-                        collections::description.eq(&collection.description),
-                        collections::url.eq(&collection.url),
-                        collections::published.eq(&collection.published),
-                        collections::reviewed.eq(&collection.reviewed),
-                        collections::accessed.eq(&collection.accessed),
-                        collections::location.eq(&collection.location),
-                        collections::latitude.eq(&collection.latitude),
-                        collections::longitude.eq(&collection.longitude),
-                    ))
-                    .execute(db_conn);
-                assert_eq!(Ok(1), rows_inserted);
-                references_found += 1;
+                for location in collection.locations.unwrap() {
+                    println!("inserting");
+                    let rows_inserted = diesel::insert_into(collections::dsl::collections)
+                        .values((
+                            collections::user_id.eq(0), // todo - codify this as the root/fake user
+                            collections::path.eq(&path),
+                            collections::filename.eq(&filename),
+                            collections::title.eq(&collection.title),
+                            collections::author.eq(&collection.author),
+                            collections::description.eq(&collection.description),
+                            collections::url.eq(&collection.url),
+                            collections::published.eq(&collection.published),
+                            collections::reviewed.eq(&collection.reviewed),
+                            collections::accessed.eq(&collection.accessed),
+                            collections::location.eq(&location.name),
+                            collections::latitude.eq(&location.latitude),
+                            collections::longitude.eq(&location.longitude),
+                        ))
+                        .execute(db_conn);
+                        assert_eq!(Ok(1), rows_inserted);
+                        reference_locations_found += 1;
+                }
+
+                for category in collection.categories.unwrap() {
+                    // todo: create a list of categories before we load in any plants so we can add the category description
+                }
+
+                for plant in collection.plants.unwrap() {
+                    // add this plant to the base database, if it isn't already there
+                    // add any of these fields to the base database plant. the existing field must be either empty or an exact match
+                    // - patent
+                    // add any AKA entries as well, they can be add-ons
+
+                    // then add this plant to the collection plants list
+                    // if we have exactly one location then the location doesn't need to be specified
+                    // if we have more than one location then the "locations" array on the plant needs to name one of our top-level locations either by name or by short_name
+                }
             }
         }
     }
@@ -584,7 +628,7 @@ fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf)
     // plant category existince is checked later in check_database()
 
     // for each plant, create an entry in the collection_items database for each location, with a foreign key to that location's collections table entry
-    return references_found;
+    return reference_locations_found;
 }
 
 fn check_database(db_conn: &SqliteConnection) {
