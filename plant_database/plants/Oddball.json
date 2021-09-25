@@ -21,7 +21,7 @@
         "type": "Japanese Plum",
         "display_type": "Pluerry",
         "name": "Candy Heart",
-        "AKA": "Sweet Pixie 5",
+        "AKA": ["Sweet Pixie 5"],
         "patent": "https://patents.google.com/patent/USPP28308 expires 2036-03-30",
         "description": "Zaiger Variety"
     },
@@ -36,7 +36,7 @@
         "type": "Japanese Plum",
         "display_type": "Pluerry",
         "name": "Sweet Treat",
-        "AKA": "Sweet Pixzee 2",
+        "AKA": ["Sweet Pixzee 2"],
         "patent": "https://patents.google.com/patent/USPP23796 expires 2032-03-06",
         "description": "Zaiger Variety"
     },
@@ -79,7 +79,7 @@
         "type": "Apricot",
         "display_type": "Aprium",
         "name": "Leah Cot",
-        "AKA": "Leah-Cot",
+        "AKA": ["Leah-Cot"],
         "patent": "https://patents.google.com/patent/USPP21863 expires 2029-12-24",
         "description": "Zaiger Variety"
     }

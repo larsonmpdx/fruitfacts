@@ -6,13 +6,13 @@
     {
         "name": "Baker's Delight",
         "description": "MAIA variety",
-        "AKA": "MAIA8",
+        "AKA": ["MAIA8"],
         "patent": "https://patents.google.com/patent/USPP29147 expires 2036-09-12"
     },
     {
         "name": "Crunch-a-Bunch",
         "description": "MAIA variety",
-        "AKA": "MAIA7",
+        "AKA": ["MAIA7"],
         "patent": "https://patents.google.com/patent/USPP29126 expires 2036-09-12"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "name": "September Wonder",
-        "AKA": "Jubilee"
+        "AKA": ["Jubilee"]
     },
     {
         "name": "Zestar",
@@ -50,7 +50,7 @@
     },
     {
         "name": "Millenium",
-        "AKA": "NY 460"
+        "AKA": ["NY 460"]
     },
     {
         "name": "Nugget Spur",
@@ -95,17 +95,17 @@
     {
         "name": "Franklin Cider",
         "description": "stark variety",
-        "AKA": "Mayo",
+        "AKA": ["Mayo"],
         "patent": "https://patents.google.com/patent/USPP28791 expires 2036-03-01"
     },
     {
         "name": "Suncrisp",
-        "AKA": "NJ 55",
+        "AKA": ["NJ 55"],
         "patent": "https://patents.google.com/patent/USPP8648 expired 2012"
     },
     {
         "name": "Winecrisp",
-        "AKA": "Co-op 31",
+        "AKA": ["Co-op 31"],
         "description": "PRI release. https://hort.purdue.edu/newcrop/pri/coop31.html",
         "patent": "https://patents.google.com/patent/USPP20437 expires 2028-04-11"
     }

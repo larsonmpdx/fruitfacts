@@ -10,11 +10,11 @@
     },
     {
         "name": "North Star",
-        "AKA": "Northstar"
+        "AKA": ["Northstar"]
     },
     {
         "name": "Evans",
-        "AKA": "Bali"
+        "AKA": ["Bali"]
     },
     {
         "name": "Early Richmond"
@@ -47,13 +47,13 @@
     },
     {
         "name": "Jubileum",
-        "AKA": "M-136",
+        "AKA": ["M-136"],
         "description": "early: Montmorency-7"
     },
     {
         "name": "Danube",
         "description": "early: Montmorency-7",
-        "AKA": "Erdi Botermo"
+        "AKA": ["Erdi Botermo"]
     },
     {
         "name": "Balaton"

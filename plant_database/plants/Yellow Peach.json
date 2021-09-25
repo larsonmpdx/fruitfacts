@@ -21,10 +21,10 @@
     },
     {
         "name": "Indian Blood",
-        "AKA": "Indian Blood Cling"
+        "AKA": ["Indian Blood Cling"]
     },
     {
         "name": "Indian Free",
-        "AKA": "Indian Blood Free"
+        "AKA": ["Indian Blood Free"]
     }
 ]

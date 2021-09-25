@@ -9,11 +9,11 @@
     },
     {
         "name": "Purple Gage",
-        "AKA": "Reine Claude Violette"
+        "AKA": ["Reine Claude Violette"]
     },
     {
         "name": "Longjohn",
-        "AKA": "Long John"
+        "AKA": ["Long John"]
     },
     {
         "name": "Early Italian"
@@ -34,7 +34,7 @@
     },
     {
         "name": "Sugar",
-        "AKA": "Improved Sugar",
+        "AKA": ["Improved Sugar"],
         "description": "Burbank variety, 1899"
     },
     {
@@ -52,7 +52,7 @@
     },
     {
         "name": "Date Prune",
-        "AKA": "Coates 1418"
+        "AKA": ["Coates 1418"]
     },
     {
         "name": "Weatherspoon",
@@ -75,7 +75,7 @@
     },
     {
         "name": "Moyer",
-        "AKA": "Moyer Perfecto",
+        "AKA": ["Moyer Perfecto"],
         "description": "seedling found at Roseburg, Oregon about 1925"
     },
     {

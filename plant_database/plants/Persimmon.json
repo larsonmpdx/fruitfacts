@@ -5,12 +5,12 @@
     },
     {
         "name": "Fuyu (Jiro)",
-        "AKA": "Jiro",
+        "AKA": ["Jiro"],
         "tags": "asian persimmon"
     },
     {
         "name": "Fuyu (Imoto)",
-        "AKA": "Imoto",
+        "AKA": ["Imoto"],
         "tags": "asian persimmon"
     },
     {
@@ -19,7 +19,7 @@
     },
     {
         "name": "Coffee Cake",
-        "AKA": "Nishimura Wase",
+        "AKA": ["Nishimura Wase"],
         "tags": "asian persimmon"
     },
     {
@@ -48,7 +48,7 @@
     },
     {
         "name": "Early Jewel",
-        "AKA": "H-118",
+        "AKA": ["H-118"],
         "tags": "american persimmon"
     }
 ]

@@ -17,7 +17,7 @@
     },
     {
         "name": "Bountiful Blue",
-        "AKA": "FLX-2",
+        "AKA": ["FLX-2"],
         "patent": "https://patents.google.com/patent/USPP19381 expires 2027-10-25",
         "tags": [ "northern highbush" ]
     },
@@ -120,7 +120,7 @@
     {
         "name": "Pink Popcorn",
         "description": "white-pink berries",
-        "AKA": "MNPink1",
+        "AKA": ["MNPink1"],
         "patent": "https://patents.google.com/patent/USPP25792 expires 2034-03-21",
         "tags": [ "northern highbush" ]
     }

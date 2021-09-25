@@ -46,7 +46,7 @@
     },
     {
         "name": "Emerald Drop",
-        "AKA": "Emerald Gem",
+        "AKA": ["Emerald Gem"],
         "patent": "https://patents.google.com/patent/USPP14599 expires 2023-06-16",
         "description": "Zaiger Variety"
     },

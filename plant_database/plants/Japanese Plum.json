@@ -9,7 +9,7 @@
     },
     {
         "name": "Methley",
-        "AKA": "P.I. 31652"
+        "AKA": ["P.I. 31652"]
     },
     {
         "name": "Shiro"
@@ -27,7 +27,7 @@
     },
     {
         "name": "Howard Miracle",
-        "AKA": "Howarard Wonder",
+        "AKA": ["Howard Wonder"],
         "patent": "https://patents.google.com/patent/USPP721 expired"
     },
     {

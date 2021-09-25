@@ -3,9 +3,11 @@
     "url": "https://pubs.extension.wsu.edu/fruit-handbook-for-western-washingtonpdf",
     "published": "2008",
     "accessed": "Sep 2021",
-    "location": "Mt. Vernon, WA",
-    "latitude": 48.439906165067555,
-    "longitude": -122.38861565365134,
+    "locations": [{
+        "name": "Mt. Vernon, WA",
+        "latitude": 48.439906165067555,
+        "longitude": -122.38861565365134
+    }],
     "plants": [
         {
             "name": "Sunrise",
@@ -53,7 +55,7 @@
             "name": "Jonagold",
             "type": "Apple",
             "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "note": "and Jonagold strains",
+            "description": "and Jonagold strains",
             "harvest_time": "late September to early October"
         },
         {
@@ -84,49 +86,49 @@
             "name": "Alkmene",
             "type": "Apple",
             "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "note": "Cox-type",
+            "description": "Cox-type",
             "harvest_time": "early to mid September"
         },
         {
             "name": "Rubinette",
             "type": "Apple",
             "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "note": "Cox-type",
+            "description": "Cox-type",
             "harvest_time": "early October"
         },
         {
             "name": "McIntosh",
             "type": "Apple",
             "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "note": "and McIntosh sports",
+            "description": "and McIntosh sports",
             "harvest_time": "mid September"
         },
         {
             "name": "Jonamac",
             "type": "Apple",
             "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "note": "McIntosh-type",
+            "description": "McIntosh-type",
             "harvest_time": "mid September"
         },
         {
             "name": "Spartan",
             "type": "Apple",
             "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "note": "McIntosh-type",
+            "description": "McIntosh-type",
             "harvest_time": "mid to late September"
         },
         {
             "name": "Redcort",
             "type": "Apple",
             "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "note": "McIntosh-type",
+            "description": "McIntosh-type",
             "harvest_time": "early October"
         },
         {
             "name": "Empire",
             "type": "Apple",
             "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "note": "McIntosh-type",
+            "description": "McIntosh-type",
             "harvest_time": "mid to late October"
         },
         {

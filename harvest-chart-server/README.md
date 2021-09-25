@@ -36,4 +36,5 @@
 * see https://vcpkg.io/en/getting-started.html
 * `.\vcpkg\vcpkg --triplet x64-windows-static-md install sqlite3`
 * copy vcpkg libs from `\vcpkg\installed\x64-windows-static-md\lib` to `C:\Users\user\.rustup\toolchains\stable-x86_64-pc-windows-msvc\lib\rustlib\x86_64-pc-windows-msvc\lib`
+  * needed Sep 2021, may improve in the future
 * `cargo install diesel_cli --no-default-features --features "sqlite"` helper tool

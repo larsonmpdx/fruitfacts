@@ -3,9 +3,11 @@
     "url": "https://ir.library.oregonstate.edu/concern/administrative_report_or_publications/kh04dq12c",
     "published": "1961",
     "accessed": "Sep 2021",
-    "location": "Corvallis, OR",
-    "latitude": 44.54820212695868,
-    "longitude": -123.21537145957399,
+    "locations": [{
+        "name": "Corvallis, OR",
+        "latitude": 44.54820212695868,
+        "longitude": -123.21537145957399
+    }],
     "plants": [
         {
             "name": "Peach Plum",

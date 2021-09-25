@@ -3,9 +3,11 @@
     "url": "https://catalog.extension.oregonstate.edu/pnw656",
     "published": "2014",
     "accessed": "Sep 2021",
-    "location": "Corvallis, OR",
-    "latitude": 44.54820212695868,
-    "longitude": -123.21537145957399,
+    "locations": [{
+        "name": "Corvallis, OR",
+        "latitude": 44.54820212695868,
+        "longitude": -123.21537145957399
+    }],
     "plants": [
         {
             "name": "Bluetta",

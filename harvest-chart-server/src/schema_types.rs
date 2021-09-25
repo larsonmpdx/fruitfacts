@@ -15,22 +15,19 @@ pub struct BasePlant {
     pub plant_id: i32,
     pub name: String,
     pub type_: String,
+    pub aka: String,
     pub description: Option<String>,
     pub patent: Option<String>,
-    pub relative_harvest: Option<String>,
-    pub harvest_start: Option<i32>,
-    pub harvest_end: Option<i32>,
 }
 
 #[derive(Queryable)]
 pub struct CollectionItems {
     pub collection_item_id: i32,
     pub collection_id: String,
-    pub note: Option<String>,
     pub name: String,
     pub type_: String,
+    pub patent: String,
     pub description: Option<String>,
-    pub patent: Option<String>,
     pub relative_harvest: Option<String>,
     pub harvest_start: Option<i32>,
     pub harvest_end: Option<i32>,
@@ -40,11 +37,11 @@ pub struct CollectionItems {
 pub struct Collections {
     pub collection_id: i32,
     pub user_id: i32,
-    pub name: String,
     pub path: Option<String>,
+    pub filename: Option<String>,
     pub title: Option<String>,
     pub author: Option<String>,
-    pub note: Option<String>,
+    pub description: Option<String>,
     pub url: Option<String>,
     pub published: Option<String>,
     pub reviewed: Option<String>,

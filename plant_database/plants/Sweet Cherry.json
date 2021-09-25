@@ -7,12 +7,12 @@
     },
     {
         "name": "Coral Champagne",
-        "AKA": "Coral",
+        "AKA": ["Coral"],
         "description": "\"Unreleased\" UC variety. Bing-10"
     },
     {
         "name": "Chelan",
-        "AKA": "PC7146­-23",
+        "AKA": ["PC7146­-23"],
         "description": "similar to Bing but 10-12 days earlier. WSU variety. https://www.canr.msu.edu/hrt/uploads/534/82106/Chelan_Sweet_Cherry.pdf",
         "patent": "https://patents.google.com/patent/USPP8545 expired 2012"
     },
@@ -49,7 +49,7 @@
     },
     {
         "name": "Benton",
-        "AKA": "PC7146-8",
+        "AKA": ["PC7146-8"],
         "patent": "https://patents.google.com/patent/USPP15847 expires 2023-04-28"
     },
     {
@@ -100,11 +100,11 @@
     },
     {
         "name": "Royal Ann",
-        "AKA": "Napoleon"
+        "AKA": ["Napoleon"]
     },
     {
         "name": "Royalton",
-        "AKA": "NY 11390",
+        "AKA": ["NY 11390"],
         "patent": "https://patents.google.com/patent/USPP11107 expired 2011",
         "description": "https://ecommons.cornell.edu/bitstream/handle/1813/5204/FLS-140.pdf?sequence=1&isAllowed=y"
     },
@@ -113,11 +113,11 @@
     },
     {
         "name": "Kordia",
-        "AKA": "Attika"
+        "AKA": ["Attika"]
     },
     {
         "name": "Regina",
-        "AKA": "Jork 57/201",
+        "AKA": ["Jork 57/201"],
         "description": "late, Bing+10-14"
     },
     {
@@ -134,7 +134,7 @@
     },
     {
         "name": "Skeena",
-        "AKA": "13S-43-48",
+        "AKA": ["13S-43-48"],
         "description": "Summerland variety. late, Bing+14"
     },
     {
@@ -142,12 +142,12 @@
     },
     {
         "name": "Lapins",
-        "AKA": "13S-28-26",
+        "AKA": ["13S-28-26"],
         "description": "Summerland variety. late"
     },
     {
         "name": "Sweetheart",
-        "AKA": "13S-22-08",
+        "AKA": ["13S-22-08"],
         "description": "Summerland variety. very late"
     },
     {
@@ -175,40 +175,40 @@
     },
     {
         "name": "Gabriel",
-        "AKA": "Vieyra",
+        "AKA": ["Vieyra"],
         "patent": "pending",
         "description": "Rainier-7-10"
     },
     {
         "name": "Cristalina",
-        "AKA": "PC2C-61-22",
+        "AKA": ["PC2C-61-22"],
         "description": "Bing-5"
     },
     {
         "name": "Tieton",
-        "AKA": "PC7144-6",
+        "AKA": ["PC7144-6"],
         "description": "WSU variety",
         "patent": "https://patents.google.com/patent/USPP11385 expired 2018"
     },
     {
         "name": "Index",
-        "AKA": "PC 7222-1",
+        "AKA": ["PC 7222-1"],
         "description": "Bing-3-5",
         "patent": "https://patents.google.com/patent/USPP10459 expired 2017"
     },
     {
         "name": "Santina",
-        "AKA": "13S-5-22",
+        "AKA": ["13S-5-22"],
         "description": "Summerland variety. Bing-8"
     },
     {
         "name": "BlackPearl",
-        "AKA": "NY 8139",
+        "AKA": ["NY 8139"],
         "description": "Cornell variety. Bing-10"
     },
     {
         "name": "BurgundyPearl",
-        "AKA": "NY 38L",
+        "AKA": ["NY 38L"],
         "description": "Cornell variety. Bing-10"
     },
     {

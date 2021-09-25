@@ -2,14 +2,18 @@
 mod test;
 
 use super::schema_generated::base_plants;
+use super::schema_generated::collection_items;
+use super::schema_generated::collections;
 use super::schema_generated::plant_types;
 use super::schema_types::*;
 use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
 use dotenv::dotenv;
+use std::collections::HashMap;
 use std::env;
 use std::fs;
+use walkdir::WalkDir;
 
 extern crate regex;
 use regex::Regex;
@@ -23,7 +27,49 @@ struct PlantJson {
     #[serde(alias = "type")]
     type_: Option<String>,
     description: Option<String>,
+    aka: Option<Vec<String>>,
     patent: Option<String>,
+}
+
+#[derive(Serialize, Deserialize)]
+struct CollectionJson {
+    title: String,
+    author: Option<String>,
+    description: Option<String>,
+    url: Option<String>,
+    published: Option<String>,
+    reviewed: Option<String>,
+    accessed: Option<String>,
+
+    locations: Option<HashMap<String, CollectionLocationJson>>,
+    categories: Option<Vec<CollectionCategoryJson>>,
+    plants: Vec<CollectionPlantJson>,
+}
+
+#[derive(Serialize, Deserialize)]
+struct CollectionLocationJson {
+    name: String,
+    latitude: f64,
+    longitude: f64,
+}
+
+#[derive(Serialize, Deserialize)]
+struct CollectionCategoryJson {
+    name: String,
+    description: Option<String>,
+}
+
+#[derive(Serialize, Deserialize)]
+struct CollectionPlantJson {
+    // only for lists of names like we see in some guides for "here's a list of scab-resistant apples"
+    names: Option<Vec<String>>,
+    category: Option<String>,
+    category_description: Option<String>,
+
+    name: Option<String>,
+    #[serde(alias = "type")]
+    type_: Option<String>,
+    description: Option<String>,
     relative_harvest: Option<String>,
     harvest_start: Option<String>,
     harvest_end: Option<String>,
@@ -436,20 +482,6 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                         plant_type = filename.to_string();
                     }
 
-                    let harvest_start_day;
-                    let harvest_end_day;
-                    if plant.harvest_start.is_some() {
-                        harvest_start_day =
-                            string_to_day_number(plant.harvest_start.as_ref().unwrap());
-                    } else {
-                        harvest_start_day = 0;
-                    }
-                    if plant.harvest_end.is_some() {
-                        harvest_end_day = string_to_day_number(plant.harvest_end.as_ref().unwrap());
-                    } else {
-                        harvest_end_day = 0;
-                    }
-
                     println!("inserting");
                     let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
                         .values((
@@ -457,9 +489,6 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                             base_plants::type_.eq(&plant_type),
                             base_plants::description.eq(&plant.description),
                             base_plants::patent.eq(&plant.patent),
-                            base_plants::relative_harvest.eq(&plant.relative_harvest), // todo harvest start+end
-                            base_plants::harvest_start.eq(harvest_start_day as i32),
-                            base_plants::harvest_end.eq(harvest_end_day as i32),
                         ))
                         .execute(db_conn);
                     assert_eq!(Ok(1), rows_inserted);
@@ -501,19 +530,61 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
 }
 
 fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
+    let mut references_found = 0;
     // todo
 
     // traverse /plant_database/references/
-    // for each file found, save the relative directory (the directory under /references/)
-
     // create a collections table entry for each location in this reference, or only one if there's only one location
+
+    for entry in WalkDir::new(std::path::PathBuf::from(database_dir).join("references"))
+        .max_depth(5)
+        .into_iter()
+        .filter_map(|e| e.ok())
+    {
+        let path_ = entry.path();
+
+        if fs::metadata(path_.clone()).unwrap().is_file() {
+            if path_.extension().unwrap().to_str().unwrap() == "json" {
+                println!("found: {}", path_.display());
+
+                let contents = fs::read_to_string(path_.clone()).unwrap();
+
+                let collection: CollectionJson = serde_json::from_str(&contents).unwrap();
+
+                let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
+
+                let path = path_.parent().unwrap().to_str().unwrap();
+
+                println!("inserting");
+                let rows_inserted = diesel::insert_into(collections::dsl::collections)
+                    .values((
+                        collections::user_id.eq(0), // todo - codify this as the root/fake user
+                        collections::path.eq(&path),
+                        collections::filename.eq(&filename),
+                        collections::title.eq(&collection.title),
+                        collections::author.eq(&collection.author),
+                        collections::description.eq(&collection.description),
+                        collections::url.eq(&collection.url),
+                        collections::published.eq(&collection.published),
+                        collections::reviewed.eq(&collection.reviewed),
+                        collections::accessed.eq(&collection.accessed),
+                        collections::location.eq(&collection.location),
+                        collections::latitude.eq(&collection.latitude),
+                        collections::longitude.eq(&collection.longitude),
+                    ))
+                    .execute(db_conn);
+                assert_eq!(Ok(1), rows_inserted);
+                references_found += 1;
+            }
+        }
+    }
 
     // for each plant, see if there's a plant in the base database already. if not, create it
 
     // plant category existince is checked later in check_database()
 
     // for each plant, create an entry in the collection_items database for each location, with a foreign key to that location's collections table entry
-    return 0;
+    return references_found;
 }
 
 fn check_database(db_conn: &SqliteConnection) {

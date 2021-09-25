@@ -3,51 +3,53 @@
     "url": "https://extension.okstate.edu/fact-sheets/apple-and-peach-varieties-for-oklahoma.html",
     "published": "Oct 2016",
     "accessed": "Sep 2021",
-    "location": "Perkins, OK",
-    "latitude": 35.99404369910738,
-    "longitude": -97.03680432074745,
+    "locations": [{
+        "name": "Perkins, OK",
+        "latitude": 35.99404369910738,
+        "longitude": -97.03680432074745
+    }],
     "plants": [
         {
             "name": "Gala",
             "type": "Apple",
-            "note": "High-colorsports preferred.",
+            "description": "High-colorsports preferred.",
             "harvest_time": "Aug 10-20"
         },
         {
             "name": "Jonathan",
             "type": "Apple",
-            "note": "Very susceptible to fireblight and cedar-apple rust.",
+            "description": "Very susceptible to fireblight and cedar-apple rust.",
             "harvest_time": "Aug 25 to Sep 10"
         },
         {
             "name": "Red Delicious",
             "type": "Apple",
-            "note": "Very upright growing. needs branch spreading for good tree structure.",
+            "description": "Very upright growing. needs branch spreading for good tree structure.",
             "harvest_time": "Sep 1-10"
         },
         {
             "name": "Golden Delicious",
             "type": "Apple",
-            "note": "Very well adapted. Smoothee tends to russet less.",
+            "description": "Very well adapted. Smoothee tends to russet less.",
             "harvest_time": "Sep 10-20"
         },
         {
             "name": "Fuji",
             "type": "Apple",
-            "note": "Disease susceptible. Very sweet.",
+            "description": "Disease susceptible. Very sweet.",
             "harvest_time": "Oct 10-20"
         },
         {
             "names": ["William’s Pride", "Pristine", "Enterprise", "Gold Rush"],
             "type": "Apple",
             "category": "others",
-            "category_note": "For homeowner production in central and northern Arkansas, the University of Arkansas recommends these"
+            "category_description": "For homeowner production in central and northern Arkansas, the University of Arkansas recommends these"
         },
         {
             "names": ["White County", "White River", "White Rock", "Bellaire", "Contender"],
             "type": "Peach",
             "category": "others",
-            "category_note": "Arkansas releases that haven't been tested at OSU"
+            "category_description": "Arkansas releases that haven't been tested at OSU"
         },
         {
             "name": "Candor",
@@ -58,7 +60,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: semi-cling Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
+            "description": "Flesh Adherence: semi-cling Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
             "name": "Earliglo",
@@ -69,7 +71,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: not rated"
+            "description": "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: not rated"
         },
         {
             "name": "Garnet Beauty",
@@ -80,7 +82,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: semi-free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Fair"
+            "description": "Flesh Adherence: semi-free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Fair"
         },
         {
             "name": "Rubired",
@@ -91,7 +93,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: cling Fruit Quality: 3/5 Fruit Size: Fair Cold Tolerance: Good"
+            "description": "Flesh Adherence: cling Fruit Quality: 3/5 Fruit Size: Fair Cold Tolerance: Good"
         },
         {
             "name": "Sweethaven",
@@ -102,7 +104,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: semi-free Fruit Quality: 4/5 Fruit Size: Fair Cold Tolerance: Good"
+            "description": "Flesh Adherence: semi-free Fruit Quality: 4/5 Fruit Size: Fair Cold Tolerance: Good"
         },
         {
             "name": "Erly-red-fre",
@@ -113,7 +115,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Fair"
+            "description": "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Fair"
         },
         {
             "name": "Sentinel",
@@ -124,7 +126,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
             "name": "Clayton",
@@ -135,7 +137,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
             "name": "Cullinan",
@@ -146,7 +148,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Fair"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Fair"
         },
         {
             "name": "Redhaven",
@@ -157,7 +159,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Fair Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Fair Cold Tolerance: Good"
         },
         {
             "name": "Newhaven",
@@ -168,7 +170,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Fair Cold Tolerance: Excellent"
+            "description": "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Fair Cold Tolerance: Excellent"
         },
         {
             "name": "Ranger",
@@ -179,7 +181,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
             "name": "Summer Pearl",
@@ -190,7 +192,7 @@
                 "BLS": "susceptible",
                 "BLS_note": "susceptible (requires spraying most years)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
             "name": "Glohaven",
@@ -201,7 +203,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
             "name": "Bounty",
@@ -212,7 +214,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: not rated"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: not rated"
         },
         {
             "name": "Nectar",
@@ -223,7 +225,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
             "name": "Jayhaven",
@@ -234,7 +236,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
             "name": "Loring",
@@ -245,7 +247,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Fair"
+            "description": "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
             "name": "Biscoe",
@@ -256,7 +258,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Excellent"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Excellent"
         },
         {
             "name": "Cresthaven",
@@ -267,7 +269,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
             "name": "Jefferson",
@@ -278,7 +280,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Fair"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
             "name": "Autumnglo",
@@ -289,7 +291,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Excellent"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Excellent"
         },
         {
             "name": "Ouachita Gold",
@@ -300,7 +302,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Fair"
+            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
             "name": "White Hale",
@@ -311,7 +313,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Fair"
+            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
             "name": "Stark Encore",
@@ -322,7 +324,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
             "name": "Parade",
@@ -333,7 +335,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
             "name": "Flameprince",
@@ -344,7 +346,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: not rated"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: not rated"
         },
         {
             "name": "Fairtime",
@@ -355,7 +357,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Excellent"
+            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Excellent"
         },
         {
             "name": "Earliblaze",
@@ -366,7 +368,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: semi-free"
+            "description": "Flesh Adherence: semi-free"
         },
         {
             "name": "Redchief",
@@ -377,7 +379,7 @@
                 "BLS": "resistant",
                 "BLS_note": "resistant (little or no defoliation)"
             },
-            "note": "Flesh Adherence: free"
+            "description": "Flesh Adherence: free"
         },
         {
             "name": "Cavalier",
@@ -388,7 +390,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free"
+            "description": "Flesh Adherence: free"
         },
         {
             "name": "Sunglo",
@@ -399,7 +401,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free"
+            "description": "Flesh Adherence: free"
         },
         {
             "name": "Redglo",
@@ -410,7 +412,7 @@
                 "BLS": "tolerant",
                 "BLS_note": "tolerant (some defoliation, but not severe)"
             },
-            "note": "Flesh Adherence: free"
+            "description": "Flesh Adherence: free"
         }
     ]
 }

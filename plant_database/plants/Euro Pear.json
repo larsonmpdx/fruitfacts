@@ -10,7 +10,7 @@
     },
     {
         "name": "Anjou",
-        "AKA": "D'anjou"
+        "AKA": ["D'anjou"]
     },
     {
         "name": "Flemish Beauty"
@@ -44,7 +44,7 @@
     },
     {
         "name": "Bronze Beauty",
-        "AKA": "Wimmer",
+        "AKA": ["Wimmer"],
         "patent": "https://patents.google.com/patent/USPP7485 expired 2009"
     },
     {
@@ -53,6 +53,6 @@
     },
     {
         "name": "Flordahome",
-        "AKA": "Florida Home"
+        "AKA": ["Florida Home"]
     }
 ]
