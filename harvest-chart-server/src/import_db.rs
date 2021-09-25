@@ -41,7 +41,7 @@ struct CollectionJson {
     reviewed: Option<String>,
     accessed: Option<String>,
 
-    locations: Option<Vec<CollectionLocationJson>>,
+    locations: Vec<CollectionLocationJson>,
     categories: Option<Vec<CollectionCategoryJson>>,
     plants: Vec<CollectionPlantJson>,
 }
@@ -90,7 +90,7 @@ fn rem_last_n(value: &str, n: isize) -> &str {
     chars.as_str()
 }
 
-fn rem_first(value: &str) -> &str{
+fn rem_first(value: &str) -> &str {
     let mut chars = value.chars();
     chars.next();
     chars.as_str()
@@ -304,25 +304,22 @@ fn string_to_day_number(input: &str) -> u32 {
             Regex::new(r#"(early to mid|mid to late|early-mid|mid-late|early|mid|late) (.*)"#)
                 .unwrap();
 
-        match text_and_month_regex.captures(&input.to_lowercase()) {
-            Some(matches) => {
-                let day_of_month;
-                if matches.len() >= 3 {
-                    match &matches[1] {
-                        "early" => day_of_month = 5,
-                        "early to mid" | "early-mid" => day_of_month = 10,
-                        "mid" => day_of_month = 15,
-                        "mid to late" | "mid-late" => day_of_month = 20,
-                        "late" => day_of_month = 25,
-                        _ => panic!("matched a date prefix not in this match statement"),
-                    }
-
-                    month_and_day_string = format!("{} {}", &matches[2], day_of_month.to_string());
+        if let Some(matches) = text_and_month_regex.captures(&input.to_lowercase()) {
+            let day_of_month;
+            if matches.len() >= 3 {
+                match &matches[1] {
+                    "early" => day_of_month = 5,
+                    "early to mid" | "early-mid" => day_of_month = 10,
+                    "mid" => day_of_month = 15,
+                    "mid to late" | "mid-late" => day_of_month = 20,
+                    "late" => day_of_month = 25,
+                    _ => panic!("matched a date prefix not in this match statement"),
                 }
+
+                month_and_day_string = format!("{} {}", &matches[2], day_of_month.to_string());
             }
-            // default: parse the input as it came, for dates that already look like like "September 25"
-            None => (),
         }
+        // default: parse the input as it came, for dates that already look like like "September 25"
     }
 
     // wrap this with a year and time of day so we can parse it, then get the day of the year back out
@@ -362,13 +359,10 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
         Regex::new(r#"(?:expires|expired) ([0-9]{4})-([0-9]{2})-([0-9]{2})"#).unwrap();
     let plain_year_date_regex = Regex::new(r#"(?:expires|expired) ([0-9]{4})"#).unwrap();
 
-    match uspp_regex.captures(&input) {
-        Some(matches) => {
-            if matches.len() >= 2 {
-                output.uspp_number = matches[1].parse::<u32>().unwrap()
-            }
+    if let Some(matches) = uspp_regex.captures(&input) {
+        if matches.len() >= 2 {
+            output.uspp_number = matches[1].parse::<u32>().unwrap()
         }
-        None => (),
     }
 
     // date can be either "2017-01-02" or "2017" and we presume Jan 1.  year-only dates should be used for past dates only
@@ -382,14 +376,13 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
                 );
             }
         }
-        None => match plain_year_date_regex.captures(&input) {
-            Some(matches) => {
+        None => {
+            if let Some(matches) = plain_year_date_regex.captures(&input) {
                 if matches.len() >= 2 {
                     output.uspp_expiration = Utc.ymd(matches[1].parse::<i32>().unwrap(), 01, 01);
                 }
             }
-            None => (),
-        },
+        }
     }
 
     return output;
@@ -466,16 +459,15 @@ fn simplify_path(input: &str) -> &str {
     let after_references = v.last().unwrap();
     println!("split result: {}", after_references);
 
-    if after_references.len() == 0
-    {
+    if after_references.len() == 0 {
         return after_references;
     }
-    
+
     match after_references.chars().next().unwrap() {
         '/' => return rem_first(after_references),
         '\\' => return rem_first(after_references),
-        _ => return after_references
-    } 
+        _ => return after_references,
+    }
 }
 
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
@@ -582,7 +574,7 @@ fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf)
 
                 let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
 
-                for location in collection.locations.unwrap() {
+                for location in collection.locations {
                     println!("inserting");
                     let rows_inserted = diesel::insert_into(collections::dsl::collections)
                         .values((
@@ -601,15 +593,17 @@ fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf)
                             collections::longitude.eq(&location.longitude),
                         ))
                         .execute(db_conn);
-                        assert_eq!(Ok(1), rows_inserted);
-                        reference_locations_found += 1;
+                    assert_eq!(Ok(1), rows_inserted);
+                    reference_locations_found += 1;
                 }
 
-                for category in collection.categories.unwrap() {
-                    // todo: create a list of categories before we load in any plants so we can add the category description
+                if let Some(categories) = collection.categories {
+                    for category in categories {
+                        // todo: create a list of categories before we load in any plants so we can add the category description
+                    }
                 }
 
-                for plant in collection.plants.unwrap() {
+                for plant in collection.plants {
                     // add this plant to the base database, if it isn't already there
                     // add any of these fields to the base database plant. the existing field must be either empty or an exact match
                     // - patent
