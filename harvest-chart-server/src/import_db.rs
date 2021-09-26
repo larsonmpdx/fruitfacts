@@ -70,6 +70,18 @@ struct CollectionPlantJson {
     name: Option<String>, // optional because we can get "names" or "name"
     #[serde(alias = "type")]
     type_: String,
+
+    locations: Option<Vec<serde_json::Value>>, // this will be either a bare string or CollectionPlantLocationsJson if it includes ripening times
+
+    // type 1: each element is a string
+    //     "locations": ["I", "II", "III", "IV"],
+
+    // type 2: each element is an object
+    //     "locations": [
+    //         {"San Joaquin Valley": "Oct-Nov"},
+    //         {"Sacramento Valley": "late Oct-Nov"},
+    //         ...
+    //     ]
     description: Option<String>,
     relative_harvest: Option<String>,
     harvest_start: Option<String>,
@@ -391,8 +403,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
 pub struct LoadAllReturn {
     pub plants_found: isize,
     pub types_found: isize,
-    pub reference_locations_found: isize,
-    pub reference_plants_added: isize,
+    pub reference_items: LoadReferencesReturn,
 }
 
 pub fn establish_connection() -> SqliteConnection {
@@ -424,8 +435,7 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     return LoadAllReturn {
         plants_found: plants_found,
         types_found: types_found,
-        reference_locations_found: load_references_return.reference_locations_found,
-        reference_plants_added: load_references_return.reference_plants_added,
+        reference_items: load_references_return,
     };
 }
 
@@ -553,6 +563,7 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
 
 pub struct LoadReferencesReturn {
     pub reference_locations_found: isize,
+    pub reference_base_plants_added: isize,
     pub reference_plants_added: isize,
 }
 
@@ -561,6 +572,7 @@ fn load_references(
     database_dir: std::path::PathBuf,
 ) -> LoadReferencesReturn {
     let mut reference_locations_found = 0;
+    let mut reference_base_plants_added = 0;
     let mut reference_plants_added = 0;
     // todo
 
@@ -636,19 +648,6 @@ fn load_references(
                         if base_plant_result.is_err() {
                             // need to add this
 
-                            // todo: if category is specified but we lack category_description,
-                            // look up the description from the categories[] array and add that
-                            //     category: Option<String>,
-                            //     category_description: Option<String>,
-
-                            // todo:
-                            //     description: Option<String>,
-
-                            // todo: add ripening time
-                            //     relative_harvest: Option<String>,
-                            //     harvest_start: Option<String>,
-                            //     harvest_end: Option<String>,
-
                             let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
                                 .values((
                                     base_plants::name.eq(&plant.name.unwrap()),
@@ -656,22 +655,53 @@ fn load_references(
                                 ))
                                 .execute(db_conn);
                             assert_eq!(Ok(1), rows_inserted);
-                            reference_plants_added += 1;
+                            reference_base_plants_added += 1;
                         }
                     }
 
-                    // first handle multi-name collections (key: "names" with an array)
+                    // see if plant.locations exists
 
-                    // then single-name collections (key: "name")
+                    if plant.locations.is_some() {
+                        for location in plant.locations.unwrap() {
+                            if location.is_string() {
+                                // type 1: "locations": ["I", "II", "III", "IV"] - this type has the same ripening time for all locations
+                                // (which is surely inaccurate, but it's what we get with some extension publications)
 
-                    // add this plant to the base database, if it isn't already there
-                    // add any of these fields to the base database plant. the existing field must be either empty or an exact match
-                    // - patent
-                    // add any AKA entries as well, they can be add-ons
+                                // todo
+                            } else {
+                                // deserialize to type II like
+                                //     "locations": [
+                                //         {"San Joaquin Valley": "Oct-Nov"},
+                                //         {"Sacramento Valley": "late Oct-Nov"},
+                                //         ...
+                                //     ]
 
-                    // then add this plant to the collection plants list
-                    // if we have exactly one location then the location doesn't need to be specified
-                    // if we have more than one location then the "locations" array on the plant needs to name one of our top-level locations either by name or by short_name
+                                let x: HashMap<String, String> =
+                                    serde_json::from_value(location).unwrap();
+
+                                // todo
+                            }
+                        }
+
+                        // the plant needs to match one of our locations, either name or short_name
+                    } else {
+                        // todo
+                        // if we have a single location, add it to that location
+                        // if we have multiple locations but we weren't given a location here, add it without a location
+                    }
+
+                    // todo: if category is specified but we lack category_description,
+                    // look up the description from the categories[] array and add that
+                    //     category: Option<String>,
+                    //     category_description: Option<String>,
+
+                    // todo:
+                    //     description: Option<String>,
+
+                    // todo: add ripening time
+                    //     relative_harvest: Option<String>,
+                    //     harvest_start: Option<String>,
+                    //     harvest_end: Option<String>,
                 }
             }
         }
@@ -684,6 +714,7 @@ fn load_references(
     // for each plant, create an entry in the collection_items database for each location, with a foreign key to that location's collections table entry
     return LoadReferencesReturn {
         reference_locations_found: reference_locations_found,
+        reference_base_plants_added: reference_base_plants_added,
         reference_plants_added: reference_plants_added,
     };
 }
