@@ -1800,7 +1800,7 @@
         },
         {
             "name": "Barcelona",
-            "type": "Filbert",
+            "type": "Hazelnut",
             "description": "The old industry standard. Use Davianna or Du Chilly as a pollenizer.",
             "locations": [
                 {"San Joaquin Valley": "Sep"},
@@ -1813,7 +1813,7 @@
         },
         {
             "name": "Brixnut",
-            "type": "Filbert",
+            "type": "Hazelnut",
             "description": "A secondary main production nut. Use Davianna or Du Chilly as a pollenizer.",
             "locations": [
                 {"San Joaquin Valley": "Sep"},
@@ -1826,7 +1826,7 @@
         },
         {
             "name": "Butler",
-            "type": "Filbert",
+            "type": "Hazelnut",
             "description": "Pollenizer for Ennis.",
             "locations": [
                 {"San Joaquin Valley": "Sep"},
@@ -1839,7 +1839,7 @@
         },
         {
             "name": "Davianna",
-            "type": "Filbert",
+            "type": "Hazelnut",
             "description": "Use Barcelona or Du Chilly as a pollenizer.",
             "locations": [
                 {"San Joaquin Valley": "Sep"},
@@ -1852,7 +1852,7 @@
         },
         {
             "name": "Du Chilly",
-            "type": "Filbert",
+            "type": "Hazelnut",
             "description": "Use Barcelona or Davianna as a pollenizer.",
             "locations": [
                 {"San Joaquin Valley": "Sep"},
@@ -1865,7 +1865,7 @@
         },
         {
             "name": "Ennis",
-            "type": "Filbert",
+            "type": "Hazelnut",
             "description": "A new cultivar that has better quality than Barcelona. Use Butler as a pollenizer.",
             "locations": [
                 {"San Joaquin Valley": "Sep"},
@@ -1878,7 +1878,7 @@
         },
         {
             "name": "White Aveline",
-            "type": "Filbert",
+            "type": "Hazelnut",
             "description": "General pollenizer.",
             "locations": [
                 {"San Joaquin Valley": "Sep"},

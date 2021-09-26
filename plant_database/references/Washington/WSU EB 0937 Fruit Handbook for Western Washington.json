@@ -555,80 +555,94 @@
         },
         {
             "name": "Harbelle",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "early August"
         },
         {
             "name": "Harken",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "early August"
         },
         {
             "name": "Starfire",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "early to mid August"
         },
         {
             "name": "Frost",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "early August"
         },
         {
             "name": "Redhaven",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid August"
         },
         {
             "name": "Scarley Pearl",
-            "type": "White Peach",
+            "type": "Peach",
+            "tags": ["White Peach"],
             "category": "Recent peach introductions",
             "harvest_time": "mid July"
         },
         {
             "name": "Juneprince",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",
             "harvest_time": "mid to late July"
         },
         {
             "name": "Avalon Pride",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",
             "harvest_time": "mid to late July"
         },
         {
             "name": "Risingstar",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",
             "harvest_time": "late July"
         },
         {
             "name": "HW 272",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",
             "harvest_time": "early August"
         },
         {
             "name": "Blazingstar",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",
             "harvest_time": "early August"
         },
         {
             "name": "Redstar",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",
             "harvest_time": "early to mid August"
         },
         {
             "name": "Contender",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",
             "harvest_time": "mid August"
         },
         {
             "name": "Hardired",
-            "type": "Yellow Nectarine"
+            "type": "Nectarine",
+            "tags": ["Yellow Nectarine"]
         },
         {
             "name": "Puget Gold",

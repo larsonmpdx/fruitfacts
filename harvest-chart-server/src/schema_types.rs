@@ -10,7 +10,7 @@ pub struct PlantType {
     pub latin_name: Option<String>,
 }
 
-#[derive(Queryable)]
+#[derive(Debug, Queryable)]
 pub struct BasePlant {
     pub plant_id: i32,
     pub name: String,

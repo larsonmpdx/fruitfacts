@@ -2,9 +2,9 @@ CREATE TABLE base_plants (
   plant_id INTEGER PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
   type TEXT NOT NULL,
-  aka TEXT,
 
-  -- remaining columns are copied into collection_items
+  -- these fields don't go into collections because they're part of our ground truth
+  aka TEXT,
   description TEXT,
   patent TEXT,
 

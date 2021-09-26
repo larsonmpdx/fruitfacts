@@ -48,7 +48,8 @@
         "description": "Zaiger Variety"
     },
     {
-        "type": "White Nectarine",
+        "type": "Nectarine",
+        "tags": ["White Nectarine"],
         "display_type": "Nectaplum",
         "name": "Spice Zee",
         "patent": "https://patents.google.com/patent/USPP13503 expires 2022-01-07",

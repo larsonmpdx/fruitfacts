@@ -36,10 +36,6 @@
         "latin_name": "Diospyros spp."
     },
     {
-        "name": "Pluot",
-        "latin_name": "Prunus salicina X"
-    },
-    {
         "name": "Sour Cherry",
         "latin_name": "Prunus cerasus"
     },
@@ -48,19 +44,72 @@
         "latin_name": "Prunus avium"
     },
     {
-        "name": "Yellow Nectarine",
+        "name": "Nectarine",
         "latin_name": "Prunus persica"
     },
     {
-        "name": "Yellow Peach",
+        "name": "Peach",
         "latin_name": "Prunus persica"
     },
     {
-        "name": "White Nectarine",
-        "latin_name": "Prunus persica"
+        "name": "Fig",
+        "latin_name": "Ficus carica"
     },
     {
-        "name": "White Peach",
-        "latin_name": "Prunus persica"
+        "name": "Pomegranate",
+        "latin_name": "Punica granatum"
+    },
+    {
+        "name": "Hardy Kiwi",
+        "latin_name": "Actinidia arguta"
+    },
+    {
+        "name": "Fuzzy Kiwi",
+        "latin_name": "Actinidia deliciosa"
+    },
+    {
+        "name": "Pecan",
+        "latin_name": "Carya illinoinensis"
+    },
+    {
+        "name": "Olive",
+        "latin_name": "Olea europaea"
+    },
+    {
+        "name": "Hazelnut",
+        "AKA": ["Filbert"],
+        "latin_name": "Corylus spp."
+    },
+    {
+        "name": "Walnut",
+        "latin_name": "Juglans spp."
+    },
+    {
+        "name": "Almond",
+        "latin_name": "Prunus amygdalus"
+    },
+    {
+        "name": "Quince",
+        "latin_name": "Cydonia oblonga"
+    },
+    {
+        "name": "Chestnut",
+        "latin_name": "Castanea spp."
+    },
+    {
+        "name": "Pistachio",
+        "latin_name": "Pistacia vera"
+    },
+    {
+        "name": "Aprium",
+        "latin_name": "Prunus hybrid"
+    },
+    {
+        "name": "Plumcot",
+        "latin_name": "Prunus hybrid"
+    },
+    {
+        "name": "Pluot",
+        "latin_name": "Prunus hybrid"
     }
 ]

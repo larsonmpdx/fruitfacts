@@ -191,6 +191,8 @@ fn test_database_loading() {
     let items_loaded = super::load_all(&db_conn);
     assert_gt!(items_loaded.plants_found, 275);
     assert_gt!(items_loaded.types_found, 15);
+    assert_gt!(items_loaded.reference_locations_found, 15);
+    assert_gt!(items_loaded.reference_plants_added, 300);
 }
 
 #[test]

@@ -392,6 +392,7 @@ pub struct LoadAllReturn {
     pub plants_found: isize,
     pub types_found: isize,
     pub reference_locations_found: isize,
+    pub reference_plants_added: isize,
 }
 
 pub fn establish_connection() -> SqliteConnection {
@@ -415,14 +416,16 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
 
     let plants_found = load_base_plants(db_conn, database_dir.clone());
     let types_found = load_types(db_conn, database_dir.clone());
-    let reference_locations_found = load_references(db_conn, database_dir);
+    let load_references_return = load_references(db_conn, database_dir);
 
+    calculate_ripening_times(db_conn);
     check_database(db_conn);
 
     return LoadAllReturn {
         plants_found: plants_found,
         types_found: types_found,
-        reference_locations_found: reference_locations_found,
+        reference_locations_found: load_references_return.reference_locations_found,
+        reference_plants_added: load_references_return.reference_plants_added,
     };
 }
 
@@ -548,8 +551,17 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
     return types_found;
 }
 
-fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
+pub struct LoadReferencesReturn {
+    pub reference_locations_found: isize,
+    pub reference_plants_added: isize,
+}
+
+fn load_references(
+    db_conn: &SqliteConnection,
+    database_dir: std::path::PathBuf,
+) -> LoadReferencesReturn {
     let mut reference_locations_found = 0;
+    let mut reference_plants_added = 0;
     // todo
 
     // traverse /plant_database/references/
@@ -612,14 +624,40 @@ fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf)
                     }
 
                     if plant.names.is_some() {
-                        // todo
-                    }
-
-                    if plant.name.is_some() {
-                        let _ = base_plants::dsl::base_plants
-                            .filter(base_plants::name.eq(&plant.name.unwrap()))
+                        for plant in plant.names.unwrap() {
+                            // todo - same stuff as for "plant" keys but lacking some things maybe
+                        }
+                    } else if plant.name.is_some() {
+                        let base_plant_result = base_plants::dsl::base_plants
+                            .filter(base_plants::name.eq(&plant.name.as_ref().unwrap()))
                             .filter(base_plants::type_.eq(&plant.type_))
                             .first::<BasePlant>(db_conn);
+
+                        if base_plant_result.is_err() {
+                            // need to add this
+
+                            // todo: if category is specified but we lack category_description,
+                            // look up the description from the categories[] array and add that
+                            //     category: Option<String>,
+                            //     category_description: Option<String>,
+
+                            // todo:
+                            //     description: Option<String>,
+
+                            // todo: add ripening time
+                            //     relative_harvest: Option<String>,
+                            //     harvest_start: Option<String>,
+                            //     harvest_end: Option<String>,
+
+                            let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
+                                .values((
+                                    base_plants::name.eq(&plant.name.unwrap()),
+                                    base_plants::type_.eq(&plant.type_),
+                                ))
+                                .execute(db_conn);
+                            assert_eq!(Ok(1), rows_inserted);
+                            reference_plants_added += 1;
+                        }
                     }
 
                     // first handle multi-name collections (key: "names" with an array)
@@ -644,7 +682,16 @@ fn load_references(db_conn: &SqliteConnection, database_dir: std::path::PathBuf)
     // plant category existince is checked later in check_database()
 
     // for each plant, create an entry in the collection_items database for each location, with a foreign key to that location's collections table entry
-    return reference_locations_found;
+    return LoadReferencesReturn {
+        reference_locations_found: reference_locations_found,
+        reference_plants_added: reference_plants_added,
+    };
+}
+
+fn calculate_ripening_times(db_conn: &SqliteConnection) {
+    // todo: look for all plants with only a relative ripening time and try to fill in their absolute times
+    // example is an extension publication listing peaches as redhaven+5 or whatever,
+    // but also giving an absolute time for redhaven in the same pub
 }
 
 fn check_database(db_conn: &SqliteConnection) {

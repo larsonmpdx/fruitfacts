@@ -11,112 +11,134 @@
     "plants": [
         {
             "name": "Springcrest",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid July"
         },
         {
             "name": "Gemfree",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "late July"
         },
         {
             "name": "Early Redhaven",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "late July"
         },
         {
             "name": "Harbelle",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "late July"
         },
         {
             "name": "Sunhaven",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "early August"
         },
         {
             "name": "Redhaven",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "early August"
         },
         {
             "name": "Harken",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "early August"
         },
         {
             "name": "Redtop",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "early August"
         },
         {
             "name": "July Elberta",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid August"
         },
         {
             "name": "Fairhaven",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid August"
         },
         {
             "name": "Canadian Harmony",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid-late August"
         },
         {
             "name": "Earlihale",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid-late August"
         },
         {
             "name": "Suncrest",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid-late August"
         },
         {
             "name": "Loring",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid-late August"
         },
         {
             "name": "Glohaven",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid-late August"
         },
         {
             "name": "Veteran",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "late August"
         },
         {
             "name": "Biscoe",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid September"
         },
         {
             "name": "Improved Elberta",
-            "type": "Yellow Peach",
+            "type": "Peach",
+            "tags": ["Yellow Peach"],
             "harvest_time": "mid September"
         },
         {
             "name": "Juneglo",
-            "type": "Yellow Nectarine",
+            "type": "Nectarine",
+            "tags": ["Yellow Nectarine"],
             "harvest_time": "mid July"
         },
         {
             "name": "Harko",
-            "type": "Yellow Nectarine",
+            "type": "Nectarine",
+            "tags": ["Yellow Nectarine"],
             "harvest_time": "late July"
         },
         {
             "name": "Redgold",
-            "type": "Yellow Nectarine",
+            "type": "Nectarine",
+            "tags": ["Yellow Nectarine"],
             "harvest_time": "early August"
         },
         {
             "name": "Fantasia",
-            "type": "Yellow Nectarine",
+            "type": "Nectarine",
+            "tags": ["Yellow Nectarine"],
             "harvest_time": "mid August"
         }
     ]
