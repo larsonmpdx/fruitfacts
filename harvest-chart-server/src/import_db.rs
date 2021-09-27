@@ -84,8 +84,7 @@ struct CollectionPlantJson {
     //     ]
     description: Option<String>,
     relative_harvest: Option<String>,
-    harvest_start: Option<String>,
-    harvest_end: Option<String>,
+    harvest_time: Option<String>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -561,6 +560,127 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
     return types_found;
 }
 
+fn get_category_description(
+    category: &Option<String>,
+    category_description: &Option<String>,
+    categories: &Option<Vec<CollectionCategoryJson>>,
+) -> Option<String> {
+    // if category_description is empty, see if we can get it from the top-level list of categories
+
+    // todo
+    return Some("".to_string());
+}
+
+fn add_reference_plant(
+    location_name: &str,
+    harvest_time: &Option<String>,
+    plant_name: &String,
+    plant: &CollectionPlantJson,
+    category_description: &Option<String>,
+    db_conn: &SqliteConnection,
+) {
+    // todo:
+    //     description: Option<String>,
+
+    // todo: add ripening time
+    //     relative_harvest: Option<String>,
+    //     harvest_time: Option<String>,
+
+    return;
+}
+
+fn get_location_name(location_name: &str, locations: &Vec<CollectionLocationJson>) -> String {
+    return "".to_string();
+}
+
+fn maybe_add_base_plant(
+    plant_name: &str,
+    plant: &CollectionPlantJson,
+    db_conn: &SqliteConnection,
+) -> isize {
+    let base_plant_result = base_plants::dsl::base_plants
+        .filter(base_plants::name.eq(&plant_name))
+        .filter(base_plants::type_.eq(&plant.type_))
+        .first::<BasePlant>(db_conn);
+
+    if base_plant_result.is_err() {
+        // need to add this
+
+        let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
+            .values((
+                base_plants::name.eq(&plant_name),
+                base_plants::type_.eq(&plant.type_),
+            ))
+            .execute(db_conn);
+        assert_eq!(Ok(1), rows_inserted);
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+fn add_reference_plant_by_location(
+    plant_name: &String,
+    plant: &CollectionPlantJson,
+    category_description: &Option<String>,
+    collection_locations: &Vec<CollectionLocationJson>,
+    db_conn: &SqliteConnection,
+) -> isize {
+    // see if plant.locations exists
+
+    let plants_added: isize = 0;
+    if plant.locations.is_some() {
+        for location in plant.locations.clone().unwrap() {
+            if location.is_string() {
+                // type 1: "locations": ["I", "II", "III", "IV"] - this type has the same ripening time for all locations
+                // (which is surely inaccurate, but it's what we get with some extension publications)
+
+                // we get harvest time for each location from the base harvest time values
+
+                add_reference_plant(
+                    &get_location_name(&location.to_string(), &collection_locations),
+                    &plant.harvest_time,
+                    plant_name,
+                    &plant,
+                    &category_description,
+                    db_conn,
+                );
+            } else {
+                // deserialize to type II like
+                //     "locations": [
+                //         {"San Joaquin Valley": "Oct-Nov"},
+                //         {"Sacramento Valley": "late Oct-Nov"},
+                //         ...
+                //     ]
+
+                // we get harvest time from the locations array (and it's absolute only, not relative)
+
+                let location_objects: HashMap<String, String> =
+                    serde_json::from_value(location).unwrap();
+
+                for (location_name, harvest_time) in location_objects {
+                    add_reference_plant(
+                        &get_location_name(&location_name, &collection_locations),
+                        &Some(harvest_time),
+                        plant_name,
+                        &plant,
+                        &category_description,
+                        db_conn,
+                    );
+                }
+            }
+        }
+
+        // the plant needs to match one of our locations, either name or short_name
+    } else {
+        // todo
+        // if we have a single location, add it to that location
+        // if we have multiple locations but we weren't given a location here, add it without a location
+    }
+
+    return plants_added;
+}
+
 pub struct LoadReferencesReturn {
     pub reference_locations_found: isize,
     pub reference_base_plants_added: isize,
@@ -598,7 +718,7 @@ fn load_references(
 
                 let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
 
-                for location in collection.locations {
+                for location in &collection.locations {
                     println!("inserting");
                     let rows_inserted = diesel::insert_into(collections::dsl::collections)
                         .values((
@@ -621,12 +741,6 @@ fn load_references(
                     reference_locations_found += 1;
                 }
 
-                if let Some(categories) = collection.categories {
-                    for category in categories {
-                        // todo: create a list of categories before we load in any plants so we can add the category description
-                    }
-                }
-
                 for plant in collection.plants {
                     if plant.names.is_none() && plant.name.is_none() {
                         panic!(r#"plant missing both "name" and "names" {:?}"#, plant)
@@ -635,79 +749,45 @@ fn load_references(
                         panic!(r#"plant has both "name" and "names" {:?}"#, plant)
                     }
 
+                    let category_description = get_category_description(
+                        &plant.category,
+                        &plant.category_description,
+                        &collection.categories,
+                    );
+
                     if plant.names.is_some() {
-                        for plant in plant.names.unwrap() {
-                            // todo - same stuff as for "plant" keys but lacking some things maybe
+                        for plant_name in plant.names.clone().unwrap() {
+                            // todo - multi-plant lists are used for extension guides that give, for example,
+                            // a list of "all of the scab resistant apples" but don't tie that to one location
+                            // or give descriptions for each apple
+                            // we want to preserve the list so it can be displayed off in a corner or whatever
+                            reference_base_plants_added +=
+                                maybe_add_base_plant(&plant_name, &plant, db_conn);
+
+                            reference_plants_added += add_reference_plant_by_location(
+                                &plant_name,
+                                &plant,
+                                &category_description,
+                                &collection.locations,
+                                db_conn,
+                            );
                         }
                     } else if plant.name.is_some() {
-                        let base_plant_result = base_plants::dsl::base_plants
-                            .filter(base_plants::name.eq(&plant.name.as_ref().unwrap()))
-                            .filter(base_plants::type_.eq(&plant.type_))
-                            .first::<BasePlant>(db_conn);
+                        reference_base_plants_added +=
+                            maybe_add_base_plant(plant.name.as_ref().unwrap(), &plant, db_conn);
 
-                        if base_plant_result.is_err() {
-                            // need to add this
-
-                            let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
-                                .values((
-                                    base_plants::name.eq(&plant.name.unwrap()),
-                                    base_plants::type_.eq(&plant.type_),
-                                ))
-                                .execute(db_conn);
-                            assert_eq!(Ok(1), rows_inserted);
-                            reference_base_plants_added += 1;
-                        }
+                        reference_plants_added += add_reference_plant_by_location(
+                            plant.name.as_ref().unwrap(),
+                            &plant,
+                            &category_description,
+                            &collection.locations,
+                            db_conn,
+                        );
                     }
-
-                    // see if plant.locations exists
-
-                    if plant.locations.is_some() {
-                        for location in plant.locations.unwrap() {
-                            if location.is_string() {
-                                // type 1: "locations": ["I", "II", "III", "IV"] - this type has the same ripening time for all locations
-                                // (which is surely inaccurate, but it's what we get with some extension publications)
-
-                                // todo
-                            } else {
-                                // deserialize to type II like
-                                //     "locations": [
-                                //         {"San Joaquin Valley": "Oct-Nov"},
-                                //         {"Sacramento Valley": "late Oct-Nov"},
-                                //         ...
-                                //     ]
-
-                                let x: HashMap<String, String> =
-                                    serde_json::from_value(location).unwrap();
-
-                                // todo
-                            }
-                        }
-
-                        // the plant needs to match one of our locations, either name or short_name
-                    } else {
-                        // todo
-                        // if we have a single location, add it to that location
-                        // if we have multiple locations but we weren't given a location here, add it without a location
-                    }
-
-                    // todo: if category is specified but we lack category_description,
-                    // look up the description from the categories[] array and add that
-                    //     category: Option<String>,
-                    //     category_description: Option<String>,
-
-                    // todo:
-                    //     description: Option<String>,
-
-                    // todo: add ripening time
-                    //     relative_harvest: Option<String>,
-                    //     harvest_start: Option<String>,
-                    //     harvest_end: Option<String>,
                 }
             }
         }
     }
-
-    // for each plant, see if there's a plant in the base database already. if not, create it
 
     // plant category existince is checked later in check_database()
 
