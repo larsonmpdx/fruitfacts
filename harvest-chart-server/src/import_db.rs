@@ -566,9 +566,16 @@ fn get_category_description(
     categories: &Option<Vec<CollectionCategoryJson>>,
 ) -> Option<String> {
     // if category_description is empty, see if we can get it from the top-level list of categories
+    // this is supported to save typing out the same category description a bunch of times
+    if category.is_some() && category_description.is_none() && categories.is_some() {
+        for category_top_level in categories.as_ref().unwrap() {
+            if &category_top_level.name == category.as_ref().unwrap() {
+                return category_top_level.description.clone();
+            }
+        }
+    }
 
-    // todo
-    return Some("".to_string());
+    return category_description.clone();
 }
 
 fn add_reference_plant(
@@ -578,7 +585,7 @@ fn add_reference_plant(
     plant: &CollectionPlantJson,
     category_description: &Option<String>,
     db_conn: &SqliteConnection,
-) {
+) -> isize {
     // todo:
     //     description: Option<String>,
 
@@ -586,11 +593,22 @@ fn add_reference_plant(
     //     relative_harvest: Option<String>,
     //     harvest_time: Option<String>,
 
-    return;
+    return 1;
 }
 
+// if we're given a location like "I" and we have "short_name" matching "I" in our top-level locations list,
+// return "name" from the top level
 fn get_location_name(location_name: &str, locations: &Vec<CollectionLocationJson>) -> String {
-    return "".to_string();
+    for location_top_level in locations {
+        if let Some(short_name) = &location_top_level.short_name {
+            if short_name == location_name {
+                return location_top_level.name.clone();
+            }
+        }
+    }
+
+    // no translation (this will be most of the time)
+    return location_name.to_string();
 }
 
 fn maybe_add_base_plant(
@@ -628,7 +646,7 @@ fn add_reference_plant_by_location(
 ) -> isize {
     // see if plant.locations exists
 
-    let plants_added: isize = 0;
+    let mut plants_added: isize = 0;
     if plant.locations.is_some() {
         for location in plant.locations.clone().unwrap() {
             if location.is_string() {
@@ -637,7 +655,7 @@ fn add_reference_plant_by_location(
 
                 // we get harvest time for each location from the base harvest time values
 
-                add_reference_plant(
+                plants_added += add_reference_plant(
                     &get_location_name(&location.to_string(), &collection_locations),
                     &plant.harvest_time,
                     plant_name,
@@ -659,7 +677,7 @@ fn add_reference_plant_by_location(
                     serde_json::from_value(location).unwrap();
 
                 for (location_name, harvest_time) in location_objects {
-                    add_reference_plant(
+                    plants_added += add_reference_plant(
                         &get_location_name(&location_name, &collection_locations),
                         &Some(harvest_time),
                         plant_name,

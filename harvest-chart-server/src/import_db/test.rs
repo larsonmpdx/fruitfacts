@@ -196,7 +196,7 @@ fn test_database_loading() {
         items_loaded.reference_items.reference_base_plants_added,
         400
     );
-    assert_gt!(items_loaded.reference_items.reference_plants_added, 400);
+    assert_gt!(items_loaded.reference_items.reference_plants_added, 1300);
 }
 
 #[test]
