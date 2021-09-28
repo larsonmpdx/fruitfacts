@@ -16,6 +16,7 @@ pub struct BasePlant {
     pub name: String,
     pub type_: String,
     pub aka: Option<String>,
+    pub aka_fts: Option<String>,
     pub description: Option<String>,
     pub uspp_number: Option<i32>,
     pub uspp_expiration: Option<String>,

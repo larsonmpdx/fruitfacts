@@ -4,7 +4,8 @@ CREATE TABLE base_plants (
   type TEXT NOT NULL,
 
   -- these fields don't go into collections because they're part of our ground truth
-  aka TEXT,
+  aka TEXT, -- comma separated
+  aka_fts TEXT, -- for full text search, like aka but with characters like dashes and spaces removed. comma separated
   description TEXT,
   uspp_number INTEGER,
   uspp_expiration TEXT,

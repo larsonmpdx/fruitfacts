@@ -19,6 +19,7 @@
 * `cargo fetch` install packages
 * `cargo outdated` after installing `cargo install --locked cargo-outdated`
 * `cargo fmt` after installing `rustup component add rustfmt`
+* `cargo fix`
 
 # debugging in vs code
 * 2021: vs code rust plugins work best when the folder opened has cargo.toml in its root (don't open the whole repo).  hopefully this gets better over time

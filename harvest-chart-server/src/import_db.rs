@@ -515,6 +515,21 @@ fn simplify_path(input: &str) -> &str {
     }
 }
 
+pub struct AkaFormatted {
+    pub aka: Option<String>,
+    pub aka_fts: Option<String>,
+}
+
+fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
+    let aka_string: Option<String> = None;
+    let aka_fts_string: Option<String> = None;
+
+    return AkaFormatted {
+        aka: aka_string,
+        aka_fts: aka_fts_string,
+    };
+}
+
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     // look for a dir "plant_database/" up to three levels up so users can mess this up a little
 
@@ -546,6 +561,12 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                         plant_type = Some(filename.to_string());
                     }
 
+                    // aka: turn the array like ["20th Century", "Twentieth Century"] into
+                    // aka:      comma-separated list (remove commas in names)
+                    // aka_fts:  same, but without characters like '-' and ' ' to make full text search work better
+
+                    let aka_formatted = format_aka_strings(&plant.aka);
+
                     let mut patent_info = Default::default();
                     if let Some(patent_string) = &plant.patent {
                         patent_info = string_to_patent_info(&patent_string);
@@ -561,6 +582,8 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                         .values((
                             base_plants::name.eq(&plant.name),
                             base_plants::type_.eq(&plant_type.unwrap()),
+                            base_plants::aka.eq(&aka_formatted.aka),
+                            base_plants::aka_fts.eq(&aka_formatted.aka_fts),
                             base_plants::description.eq(&plant.description),
                             base_plants::uspp_number.eq(patent_info.uspp_number),
                             base_plants::uspp_expiration.eq(uspp_expiration_string),

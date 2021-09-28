@@ -5,6 +5,7 @@ table! {
         #[sql_name = "type"]
         type_ -> Text,
         aka -> Nullable<Text>,
+        aka_fts -> Nullable<Text>,
         description -> Nullable<Text>,
         uspp_number -> Nullable<Integer>,
         uspp_expiration -> Nullable<Text>,
