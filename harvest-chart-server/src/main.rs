@@ -20,7 +20,7 @@ fn main() {
     import_db::reset_database(&db_conn);
     let items_loaded = import_db::load_all(&db_conn);
 
-    if items_loaded.plants_found == 0 {
+    if items_loaded.base_plants_found == 0 {
         println!("directory \"plant_database\" not found");
         std::process::exit(1);
     }

@@ -6,27 +6,34 @@ table! {
         type_ -> Text,
         aka -> Nullable<Text>,
         description -> Nullable<Text>,
-        patent -> Nullable<Text>,
+        uspp_number -> Nullable<Integer>,
+        uspp_expiration -> Nullable<Text>,
     }
 }
 
 table! {
     collection_items (collection_item_id) {
         collection_item_id -> Integer,
+        location_name -> Nullable<Text>,
         collection_id -> Integer,
         name -> Text,
         #[sql_name = "type"]
         type_ -> Text,
-        patent -> Nullable<Text>,
+        category -> Nullable<Text>,
+        category_description -> Nullable<Text>,
         description -> Nullable<Text>,
-        relative_harvest -> Nullable<Text>,
+        harvest_relative -> Nullable<Text>,
+        harvest_text -> Nullable<Text>,
         harvest_start -> Nullable<Integer>,
         harvest_end -> Nullable<Integer>,
+        harvest_start_2 -> Nullable<Integer>,
+        harvest_end_2 -> Nullable<Integer>,
     }
 }
 
 table! {
-    collections (collection_id) {
+    collections (location_id) {
+        location_id -> Integer,
         collection_id -> Integer,
         user_id -> Integer,
         path -> Nullable<Text>,
@@ -58,8 +65,6 @@ table! {
         name -> Text,
     }
 }
-
-joinable!(collection_items -> collections (collection_id));
 
 allow_tables_to_appear_in_same_query!(
     base_plants,

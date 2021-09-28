@@ -69,8 +69,7 @@
                 {"Central Coast": "early Jul"},
                 {"North Coast": "late Jul"},
                 {"Sierra Nevada Foothills": "early Jul"},
-                {"Southern California": "late Jun"},
-                {"Southern California": "NA"}
+                {"Southern California": "late Jun"}
             ]
         },
         {
@@ -802,7 +801,7 @@
             "type": "Sour Cherry",
             "description": "Very early in season. Bright red fruit.",
             "locations": [
-                {"San Joaquin Valley": "eary Jun"},
+                {"San Joaquin Valley": "early Jun"},
                 {"Sacramento Valley": "early Jun"},
                 {"Central Coast": "Jun"},
                 {"North Coast": "Jun"},
@@ -815,7 +814,7 @@
             "type": "Sour Cherry",
             "description": "Semidwarf.",
             "locations": [
-                {"San Joaquin Valley": "eary Jun"},
+                {"San Joaquin Valley": "early Jun"},
                 {"Sacramento Valley": "early Jun"},
                 {"Central Coast": "Jun"},
                 {"North Coast": "Jun"},
@@ -828,7 +827,7 @@
             "type": "Sour Cherry",
             "description": "The leadign sour cultivar. Medium-sized, dark red fruit.",
             "locations": [
-                {"San Joaquin Valley": "eary Jun"},
+                {"San Joaquin Valley": "early Jun"},
                 {"Sacramento Valley": "early Jun"},
                 {"Central Coast": "Jun"},
                 {"North Coast": "Jun"},
@@ -841,7 +840,7 @@
             "type": "Sour Cherry",
             "description": "Semidwarf. Self-fruitful.",
             "locations": [
-                {"San Joaquin Valley": "eary Jun"},
+                {"San Joaquin Valley": "early Jun"},
                 {"Sacramento Valley": "early Jun"},
                 {"Central Coast": "Jun"},
                 {"North Coast": "Jun"},
@@ -1593,7 +1592,7 @@
                 {"Sacramento Valley": "mid Aug"},
                 {"Central Coast": "late Aug"},
                 {"North Coast": "late Aug"},
-                {"Sierra Nevada Foothills": "blank cell in the original chart"},
+                {"Sierra Nevada Foothills": "late Aug"},
                 {"Southern California": "NA"}
             ]
         },

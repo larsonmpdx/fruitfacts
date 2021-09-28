@@ -221,13 +221,6 @@
             "description": "Black, pollinized by Bing, Lambert"
         },
         {
-            "name": "Van",
-            "type": "Sweet Cherry",
-            "locations": ["II"],
-            "harvest_time": "Early",
-            "description": "Black, pollinized by Bing, Lambert"
-        },
-        {
             "name": "Royal Ann",
             "type": "Sweet Cherry",
             "locations": ["I", "II"],

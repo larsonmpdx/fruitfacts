@@ -17,28 +17,36 @@ pub struct BasePlant {
     pub type_: String,
     pub aka: Option<String>,
     pub description: Option<String>,
-    pub patent: Option<String>,
+    pub uspp_number: Option<i32>,
+    pub uspp_expiration: Option<String>,
 }
 
 #[derive(Queryable)]
 pub struct CollectionItems {
     pub collection_item_id: i32,
-    pub collection_id: String,
+    pub location_name: Option<String>,
+    pub collection_id: i32,
     pub name: String,
     pub type_: String,
-    pub patent: String,
+
+    pub category: Option<String>,
+    pub category_descripton: Option<String>,
+
     pub description: Option<String>,
-    pub relative_harvest: Option<String>,
+    pub harvest_relative: Option<String>,
     pub harvest_start: Option<i32>,
     pub harvest_end: Option<i32>,
 }
 
 #[derive(Queryable)]
 pub struct Collections {
+    pub location_id: i32,
     pub collection_id: i32,
     pub user_id: i32,
+
     pub path: Option<String>,
     pub filename: Option<String>,
+
     pub title: Option<String>,
     pub author: Option<String>,
     pub description: Option<String>,
@@ -46,6 +54,7 @@ pub struct Collections {
     pub published: Option<String>,
     pub reviewed: Option<String>,
     pub accessed: Option<String>,
+
     pub location: Option<String>,
     pub latitude: Option<f64>,
     pub longitude: Option<f64>,
