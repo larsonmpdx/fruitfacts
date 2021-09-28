@@ -38,6 +38,11 @@ pub struct CollectionItems {
     pub harvest_relative: Option<String>,
     pub harvest_start: Option<i32>,
     pub harvest_end: Option<i32>,
+    pub harvest_start_is_midpoint: Option<i32>,
+
+    pub harvest_start_2: Option<i32>,
+    pub harvest_end_2: Option<i32>,
+    pub harvest_2_start_is_midpoint: Option<i32>,
 }
 
 #[derive(Queryable)]

@@ -66,10 +66,12 @@ CREATE TABLE collection_items (
   harvest_text TEXT, -- to store the original text like "Sep 25" before parsing
   harvest_start INTEGER, --ordinal (day of the year)
   harvest_end INTEGER,
+  harvest_start_is_midpoint INTEGER, -- bool: if this is a start-only harvest window, should the window be treated as a midpoint instead of a start when building a window around it?
 
   -- pretty much only for figs with breba+main crop
   harvest_start_2 INTEGER,
   harvest_end_2 INTEGER,
+  harvest_2_start_is_midpoint INTEGER,
 
   UNIQUE(location_name, collection_id, name, type) --combo of these columns must be unique
 );

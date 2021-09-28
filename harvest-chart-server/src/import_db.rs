@@ -686,8 +686,10 @@ fn add_collection_plant(
 ) -> isize {
     let mut harvest_start = None;
     let mut harvest_end = None;
+    let mut harvest_start_is_midpoint = None;
     let mut harvest_start_2 = None; // fig breba+main
     let mut harvest_end_2 = None; // fig breba+main
+    let mut harvest_2_start_is_midpoint = None; // fig breba+main
     if let Some(harvest_time) = harvest_time {
         // for harvest times like "Jun/Sep" which are for fig breba+main crops
         if harvest_time.contains("/") {
@@ -708,6 +710,9 @@ fn add_collection_plant(
                     if let Some(end) = day_range.end {
                         harvest_end = Some(i32::try_from(end).unwrap());
                     }
+                    if day_range.parse_type == DateParseType::Midpoint {
+                        harvest_start_is_midpoint = Some(1);
+                    }
                 }
                 None => {
                     panic!(r#"couldn't parse date for {:?}: {}"#, plant, harvest_time);
@@ -720,6 +725,9 @@ fn add_collection_plant(
                     }
                     if let Some(end) = day_range.end {
                         harvest_end_2 = Some(i32::try_from(end).unwrap());
+                    }
+                    if day_range.parse_type == DateParseType::Midpoint {
+                        harvest_2_start_is_midpoint = Some(1);
                     }
                 }
                 None => {
@@ -734,6 +742,9 @@ fn add_collection_plant(
                     }
                     if let Some(end) = day_range.end {
                         harvest_end = Some(i32::try_from(end).unwrap());
+                    }
+                    if day_range.parse_type == DateParseType::Midpoint {
+                        harvest_start_is_midpoint = Some(1);
                     }
                 }
                 None => {
@@ -756,8 +767,10 @@ fn add_collection_plant(
             collection_items::harvest_text.eq(harvest_time),
             collection_items::harvest_start.eq(harvest_start),
             collection_items::harvest_end.eq(harvest_end),
+            collection_items::harvest_start_is_midpoint.eq(harvest_start_is_midpoint),
             collection_items::harvest_start_2.eq(harvest_start_2),
             collection_items::harvest_end_2.eq(harvest_end_2),
+            collection_items::harvest_2_start_is_midpoint.eq(harvest_2_start_is_midpoint),
         ))
         .execute(db_conn);
     assert_eq!(

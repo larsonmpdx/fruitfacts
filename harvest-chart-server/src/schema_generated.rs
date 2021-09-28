@@ -28,8 +28,10 @@ table! {
         harvest_text -> Nullable<Text>,
         harvest_start -> Nullable<Integer>,
         harvest_end -> Nullable<Integer>,
+        harvest_start_is_midpoint -> Nullable<Integer>,
         harvest_start_2 -> Nullable<Integer>,
         harvest_end_2 -> Nullable<Integer>,
+        harvest_2_start_is_midpoint -> Nullable<Integer>,
     }
 }
 
