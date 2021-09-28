@@ -156,13 +156,13 @@
             "harvest_time": "early September"
         },
         {
-            "name": "Bramley’s Seedling",
+            "name": "Bramley's Seedling",
             "type": "Apple",
             "category": "Culinary varieties",
             "harvest_time": "early October"
         },
         {
-            "name": "Ashmead’s Kernel",
+            "name": "Ashmead's Kernel",
             "type": "Apple",
             "category": "Culinary varieties",
             "harvest_time": "early to mid October"
@@ -312,7 +312,7 @@
             "harvest_time": "early to mid August"
         },
         {
-            "name": "Blake’s Pride—Pick",
+            "name": "Blake's Pride",
             "type": "Euro Pear",
             "category": "Recent pear introductions",
             "harvest_time": "early to mid September"

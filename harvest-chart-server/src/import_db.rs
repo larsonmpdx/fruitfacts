@@ -10,6 +10,7 @@ use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
 use dotenv::dotenv;
+use lazy_static::lazy_static;
 use std::collections::HashMap;
 use std::convert::TryFrom;
 use std::env;
@@ -28,6 +29,7 @@ struct BasePlantJson {
     #[serde(alias = "type")]
     type_: Option<String>, // optional because we can get type from the filename
     description: Option<String>,
+    #[serde(alias = "AKA")]
     aka: Option<Vec<String>>,
     patent: Option<String>,
 }
@@ -520,14 +522,48 @@ pub struct AkaFormatted {
     pub aka_fts: Option<String>,
 }
 
-fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
-    let aka_string: Option<String> = None;
-    let aka_fts_string: Option<String> = None;
+lazy_static! {
+    static ref SPECIAL_CHARACTERS_REGEX: Regex = Regex::new(r#"["’'.!#,\-— ]"#).unwrap();
+}
 
-    return AkaFormatted {
-        aka: aka_string,
-        aka_fts: aka_fts_string,
-    };
+fn format_name_fts_string(name: &String) -> String {
+    return SPECIAL_CHARACTERS_REGEX.replace_all(&name, "").to_string();
+}
+
+// turn an array like ["20th Century", "Twentieth Century"] into "aka" and "aka_fts" strings
+// aka:      comma-separated list (remove commas in names)
+// aka_fts:  same, but without characters like '-' and ' ' to make full text search work better
+fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
+    if let Some(aka_array) = aka_array {
+        let mut aka_string_builder = "".to_string();
+        let mut aka_fts_string_builder = "".to_string();
+
+        let mut first_element = true;
+        for aka_element in aka_array {
+            let commas_regex = Regex::new(r",").unwrap();
+            let without_commas = commas_regex.replace_all(aka_element, "");
+            let without_special_characters = SPECIAL_CHARACTERS_REGEX.replace_all(aka_element, "");
+
+            if first_element {
+                first_element = false;
+            } else {
+                aka_string_builder += ",";
+                aka_fts_string_builder += ",";
+            }
+
+            aka_string_builder += &without_commas;
+            aka_fts_string_builder += &without_special_characters;
+        }
+        return AkaFormatted {
+            aka: Some(aka_string_builder),
+            aka_fts: Some(aka_fts_string_builder),
+        };
+    } else {
+        return AkaFormatted {
+            aka: None,
+            aka_fts: None,
+        };
+    }
 }
 
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
@@ -561,10 +597,6 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                         plant_type = Some(filename.to_string());
                     }
 
-                    // aka: turn the array like ["20th Century", "Twentieth Century"] into
-                    // aka:      comma-separated list (remove commas in names)
-                    // aka_fts:  same, but without characters like '-' and ' ' to make full text search work better
-
                     let aka_formatted = format_aka_strings(&plant.aka);
 
                     let mut patent_info = Default::default();
@@ -581,6 +613,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                     let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
                         .values((
                             base_plants::name.eq(&plant.name),
+                            base_plants::name_fts.eq(format_name_fts_string(&plant.name)),
                             base_plants::type_.eq(&plant_type.unwrap()),
                             base_plants::aka.eq(&aka_formatted.aka),
                             base_plants::aka_fts.eq(&aka_formatted.aka_fts),
@@ -780,11 +813,12 @@ fn maybe_add_base_plant(
         .first::<BasePlant>(db_conn);
 
     if base_plant_result.is_err() {
-        // need to add this
+        // a plant in a reference that isn't already in base_plants - need to add
 
         let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
             .values((
                 base_plants::name.eq(&plant_name),
+                base_plants::name_fts.eq(format_name_fts_string(&plant_name.to_string())),
                 base_plants::type_.eq(&plant.type_),
             ))
             .execute(db_conn);

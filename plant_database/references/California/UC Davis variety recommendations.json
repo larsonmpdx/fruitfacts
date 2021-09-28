@@ -166,7 +166,7 @@
             "category_description": "These cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."
         },
         {
-            "names": ["Arkansas Black", "Baldwin", "Black Twig", "Cox’s Orange Pippin", "E. Spitzenburg", "McIntosh",
+            "names": ["Arkansas Black", "Baldwin", "Black Twig", "Cox's Orange Pippin", "E. Spitzenburg", "McIntosh",
                 "Newtown Pippin", "Northern Spy", "Red Golden", "Rhode Island Greening", "Sierra Beauty", "Smith Cider",
                 "Staymen Winesap", "Wagner", "Winesap", "Winter Banana"],
             "type": "Apple",
@@ -309,7 +309,7 @@
             ]
         },
         {
-            "name": "D’Anjou",
+            "name": "D'Anjou",
             "type": "Euro Pear",
             "description": "Good winter pear with excellent keeping qualities. A large, vigorous tree. Egg-shaped fruit with a small shoulder. Light green to yellow-green color with white flesh. French origin. There is a red strain called Red Anjou.",
             "locations": [
@@ -1154,7 +1154,7 @@
             ]
         },
         {
-            "name": "O’Henry",
+            "name": "O'Henry",
             "type": "Peach",
             "description": "One of the best. Large fruit. Yellow flesh. Freestone.",
             "locations": [

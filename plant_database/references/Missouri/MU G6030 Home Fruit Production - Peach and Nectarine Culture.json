@@ -10,7 +10,7 @@
     }],
     "plants": [
         {
-            "name": "Flamin’ Fury PF-1",
+            "name": "Flamin' Fury PF-1",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -28",
             "disease_resistance": {
@@ -64,7 +64,7 @@
             "description": "Bud sport of Garnet Beauty, highly colored, semifreestone."
         },
         {
-            "name": "Flamin’ Fury PF-9A-007",
+            "name": "Flamin' Fury PF-9A-007",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -7",
             "disease_resistance": {
@@ -82,7 +82,7 @@
             "description": "The standard of all peaches, low-browning, freestone, requires aggressive thinning to maintain fruit size."
         },
         {
-            "name": "Flamin’ Fury PF-11",
+            "name": "Flamin' Fury PF-11",
             "type": "Peach",
             "harvest_time_relative": "Redhaven +0",
             "disease_resistance": {
@@ -181,7 +181,7 @@
             "description": "Medium-size, freestone, nonbrowning."
         },
         {
-            "name": "Flamin’ Fury PF-24-007",
+            "name": "Flamin' Fury PF-24-007",
             "type": "Peach",
             "harvest_time_relative": "Redhaven +20",
             "disease_resistance": {
@@ -227,7 +227,7 @@
             "category_description": "Fair resistance to Bacterial Leaf Spot"
         },
         {
-            "names": ["Elberta, Fayette, Flavorcrest, Halehaven, Laurol, Spring Flame, and Suncrest"],
+            "names": ["Elberta", "Fayette", "Flavorcrest", "Halehaven", "Laurol", "Spring Flame", "Suncrest"],
             "type": "Peach",
             "tags": ["Yellow Peach"],
             "category": "disease resistance note (not recommendations)",
@@ -237,7 +237,7 @@
             "category_description": "Poor resistance to Bacterial Leaf Spot"
         },
         {
-            "names": ["Flavortop, Summer Beaut, Sunglo, Redgold, Eastern Glo, Arctic Sweet, ArcticGlo, and Crimson Snow"],
+            "names": ["Flavortop", "Summer Beaut", "Sunglo", "Redgold", "Eastern Glo", "Arctic Sweet", "ArcticGlo", "Crimson Snow"],
             "type": "Nectarine",
             "category": "disease resistance note (not recommendations)",
             "disease_resistance": {

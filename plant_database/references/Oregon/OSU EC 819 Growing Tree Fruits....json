@@ -36,7 +36,7 @@
             "type": "Apple",
             "locations": ["I", "II", "III", "IV"],
             "harvest_time": "July 15-30",
-            "description": "Yellow, won’t keep"
+            "description": "Yellow, won't keep"
         },
         {
             "name": "Earligold",
@@ -50,7 +50,7 @@
             "type": "Apple",
             "locations": ["I", "II", "III", "IV"],
             "harvest_time": "Aug 15-30",
-            "description": "Red, early, won’t keep"
+            "description": "Red, early, won't keep"
         },
         {
             "name": "Gravenstein",

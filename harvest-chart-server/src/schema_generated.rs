@@ -2,6 +2,7 @@ table! {
     base_plants (plant_id) {
         plant_id -> Integer,
         name -> Text,
+        name_fts -> Nullable<Text>,
         #[sql_name = "type"]
         type_ -> Text,
         aka -> Nullable<Text>,
