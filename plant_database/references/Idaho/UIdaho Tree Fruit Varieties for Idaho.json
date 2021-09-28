@@ -1,0 +1,182 @@
+{
+    "title": "Tree Fruit Varieties for Idaho",
+    "url": "https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/county/Bonner/horticulture/nifrc-tree-fruit-varieties.pdf",
+    "accessed": "Sep 2021",
+    "locations": [{
+        "short_name": "N/Central/SE",
+        "name": "Northern, Central, and Southeastern Idaho",
+        "latitude": 44.07985210283775,
+        "longitude": -111.45484249940903
+    },{
+        "short_name": "SW",
+        "name": "Southwestern Idaho and the Lower Clearwater River drainage near Lewiston",
+        "latitude": 43.507836689964805,
+        "longitude": -116.80001576591238
+    }],
+    "plants": [
+        {
+            "names": ["Antonovka", "Cortland", "Duchess of Oldenburg", "Earligold", "Empire", "Fameuse or Snow Apple",
+                "Fireside", "Freedom", "Golden Delicious", "Haralred", "Haralson", "Hazen", "Honey Crisp", "Honeygold",
+                "Jonathon", "Liberty", "Lodi", "MacFree", "Macoun", "McIntosh Mor-Spur", "McIntosh", "McIntosh Spur",
+                "Northern Lights", "Paulared", "Rambo Red Summer", "Red Fireside", "Redwell", "Regent", "Spartan",
+                "State Fair", "Summer Rambo", "Summerred", "Wealthy", "Wolf River", "Yellow Transparent"],
+            "type": "Apple",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "names": ["September Wonder", "Auvil Fuji", "Beni Shogun"],
+            "type": "Apple",
+            "category": "varieties popular with commercial growers: early season Fuji strains",
+            "locations": ["SW"]
+        },
+        {
+            "names": ["Buckeye Gala", "Gale Gala", "Pacific Gala"],
+            "type": "Apple",
+            "category": "varieties popular with commercial growers: Gala strains",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Harcot",
+            "type": "Apricot",
+            "description": "Produces medium-large fruits that have a slight red blush. The flesh is smooth, fine-grained, sweet, and has good flavor. Reportedly has good resistance to perennial canker, bacterial spot, and brown rot. Developed in Canada.",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Hargrand",
+            "type": "Apricot",
+            "description": "Produces large fruits to 2.5\" in diameter. The orange flesh is smooth and contains a freestone pit. Suitable for fresh or processing uses. Reportedly tolerant of perennial canker, bacterial spot, and brown rot. Developed in Canada.",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Harlayne",
+            "type": "Apricot",
+            "description": "Produces medium-sized fruits with that have a red blush. Firm, orange flesh with good flavor and a freestone pit.Suitable for fresh or processing uses. Reportedly resistant to perennial canker and brown rot and moderately resistant to bacterial spot. Developed in Canada.",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Harogem",
+            "type": "Apricot",
+            "description": "Produces small to medium-sized fruits with a red blush. Firm, orange flesh with good flavor and a freestone pit. Developed for the fresh market. Reportedly resistant to perennial canker and brown rot and moderately resistant to bacterial canker. Developed in Canada.",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Moongold",
+            "type": "Apricot",
+            "description": "Produces medium-sized fruits with yellowish-orange flesh, sweet and slightly acid flavor, and freestone pit. Suitable for fresh and processing uses. Reportedly vigorous and disease-free. Fruits may ripen unevenly and fruit cracking and premature fruit drop have been reported. Needs 'Sungold' as a pollinator. Developed at the University of Minnesota.",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Sungold",
+            "type": "Apricot",
+            "description": "Produces medium-sized fruits with orange flesh, sweet and mild flavor, and freestone pit. Suitable for fresh or processing uses. Heavy bearer. Pollinate with 'Moongold.' Developed at the University of Minnesota.",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Goldrich",
+            "type": "Apricot",
+            "description": "Large, firm, fine-textured fruits with deep orange flesh. Vigorous, hardy, and productive but blooms early and is sensitive to apricot ring pox disease. Introduced by Washington State University.",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Orange Royal",
+            "type": "Apricot",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Perfection",
+            "type": "Apricot",
+            "description": "Large fruits have yellowish to deep orange skins and flesh. Good fruit quality and flavor. Very hardy and productive.",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Plumcot",
+            "type": "Apricot",
+            "description": "Several named varieties are available. An interspecific cross of 50% apricot and 50% plum. Resembles a plum in appearance and has fine flesh.",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Riland",
+            "type": "Apricot",
+            "description": "One of the earliest-ripening commercial varieties. Fruits color up before fully ripening, have good quality, and ship well. A good pollinator for Perfection.",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Tilton",
+            "type": "Apricot",
+            "description": "A leading variety for commercial freezing, drying, and canning. The fruits have a sweet-tart flavor. The trees are vigorous and productive. Blooms very early.",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Wenatchee Moorpark",
+            "type": "Apricot",
+            "description": "Large fruits with yellow skins and flesh. Flavor is good and the fruits are excellent for home fresh, dried, or canned uses. Compatible with Perfection and Tilton for cross pollination. Introduced in Washington State in 1908.",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Hartland",
+            "type": "Sweet Cherry",
+            "description": "",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Hedelfingen",
+            "type": "Sweet Cherry",
+            "description": "",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Hudson",
+            "type": "Sweet Cherry",
+            "description": "",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Royal Ann",
+            "type": "Sweet Cherry",
+            "description": "The fruits are pale yellow with a bright red blush. The flesh is firm, fine-textured, and very sweet. Trees are vigorous and productive. Pollinate with any sweet cherry except Bing or Lambert. III.",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Sam",
+            "type": "Sweet Cherry",
+            "description": "",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Stark Gold",
+            "type": "Sweet Cherry",
+            "description": "",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Starkrimson",
+            "type": "Sweet Cherry",
+            "description": "",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Van",
+            "type": "Sweet Cherry",
+            "description": "",
+            "locations": ["N/Central/SE","SW"]
+        },
+        {
+            "name": "Bing",
+            "type": "Sweet Cherry",
+            "description": "",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Chelan",
+            "type": "Sweet Cherry",
+            "description": "",
+            "locations": ["SW"]
+        },
+        {
+            "name": "Rainier",
+            "type": "Sweet Cherry",
+            "description": "A large, yellow fruit best suited for fresh use. Vigorous and very productive. Resistant to cracking. Pollinate with Bing, Montmorancy, Napoleon, Sam, or Stella. Stella - Self fruitful. Popular with home gardeners. Dark red fruits with sweet, rich flavor. Vigorous and productive.",
+            "locations": ["SW"]
+        }
+    ]
+}
