@@ -1071,4 +1071,6 @@ fn check_database(db_conn: &SqliteConnection) {
                 type_from_plants
             ));
     }
+
+    // todo: for all base plants, ensure none of the names match an "AKA" name which would be a duplicate
 }
