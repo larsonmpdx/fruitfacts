@@ -236,14 +236,14 @@ fn test_database_loading() {
 
     let items_loaded = super::load_all(&db_conn);
 
-    assert_gt!(items_loaded.base_plants_found, 275);
-    assert_gt!(items_loaded.base_types_found, 15);
-    assert_gt!(items_loaded.reference_items.reference_locations_found, 15);
-    assert_gt!(
+    assert_ge!(items_loaded.base_plants_found, 275);
+    assert_ge!(items_loaded.base_types_found, 15);
+    assert_ge!(items_loaded.reference_items.reference_locations_found, 24);
+    assert_ge!(
         items_loaded.reference_items.reference_base_plants_added,
-        400
+        535
     );
-    assert_gt!(items_loaded.reference_items.reference_plants_added, 1600);
+    assert_ge!(items_loaded.reference_items.reference_plants_added, 1953);
 }
 
 #[test]
