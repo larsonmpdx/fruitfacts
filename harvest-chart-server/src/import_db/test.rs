@@ -1,13 +1,13 @@
 use super::*;
 #[test]
 fn test_is_a_midpoint() {
-    assert_eq!(is_a_midpoint(""), false);
-    assert_eq!(is_a_midpoint("mid"), false);
-    assert_eq!(is_a_midpoint("Sep 15-30"), false);
-    assert_eq!(is_a_midpoint("Sep 15"), false);
+    assert!(!is_a_midpoint(""));
+    assert!(!is_a_midpoint("mid"));
+    assert!(!is_a_midpoint("Sep 15-30"));
+    assert!(!is_a_midpoint("Sep 15"));
 
-    assert_eq!(is_a_midpoint("sep"), true);
-    assert_eq!(is_a_midpoint("mid October"), true);
+    assert!(is_a_midpoint("sep"));
+    assert!(is_a_midpoint("mid October"));
 }
 
 #[test]

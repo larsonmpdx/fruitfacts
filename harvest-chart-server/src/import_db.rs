@@ -189,7 +189,7 @@ fn is_a_midpoint(input: &str) -> bool {
     month_names_regex.captures(&month.to_lowercase()).is_some()
 }
 
-fn average(numbers: &Vec<u32>) -> u32 {
+fn average(numbers: &[u32]) -> u32 {
     numbers.iter().sum::<u32>() / numbers.len() as u32
 }
 
@@ -219,7 +219,10 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
         Regex::new(r#"^(early-mid|mid-late|early|mid|late|early season|mid season|late season)$"#)
             .unwrap();
 
-    if let Some(_) = time_within_season_regex.captures(&input.to_lowercase()) {
+    if time_within_season_regex
+        .captures(&input.to_lowercase())
+        .is_some()
+    {
         output.parse_type = DateParseType::Unparsed;
         return Some(output);
     }
@@ -227,7 +230,10 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
     // escape hatch for some kinda indefinite time ranges in some extension pubs
     let indefinite_times_regex = Regex::new(r#"^(summer)$"#).unwrap();
 
-    if let Some(_) = indefinite_times_regex.captures(&input.to_lowercase()) {
+    if indefinite_times_regex
+        .captures(&input.to_lowercase())
+        .is_some()
+    {
         output.parse_type = DateParseType::Unparsed;
         return Some(output);
     }
@@ -555,7 +561,8 @@ lazy_static! {
     static ref SPECIAL_CHARACTERS_REGEX: Regex = Regex::new(r#"["’'.!#,\-— ]"#).unwrap();
 }
 
-fn format_name_fts_string(name: &String) -> String {
+// fts: full text search
+fn format_name_fts_string(name: &str) -> String {
     return SPECIAL_CHARACTERS_REGEX.replace_all(name, "").to_string();
 }
 
@@ -707,7 +714,7 @@ fn add_collection_plant(
     collection_id: i32,
     location_name: &Option<String>,
     harvest_time: &Option<String>,
-    plant_name: &String,
+    plant_name: &str,
     plant: &CollectionPlantJson,
     category_description: &Option<String>,
     db_conn: &SqliteConnection,
@@ -823,7 +830,7 @@ fn add_collection_plant(
 // return "name" from the top level
 fn get_location_name(
     plant_location_name: Option<String>,
-    locations: &Vec<CollectionLocationJson>,
+    locations: &[CollectionLocationJson],
 ) -> Option<String> {
     match plant_location_name {
         Some(plant_location_name) => {
@@ -879,10 +886,10 @@ fn maybe_add_base_plant(
 
 fn add_collection_plant_by_location(
     collection_number: i32,
-    plant_name: &String,
+    plant_name: &str,
     plant: &CollectionPlantJson,
     category_description: &Option<String>,
-    collection_locations: &Vec<CollectionLocationJson>,
+    collection_locations: &[CollectionLocationJson],
     db_conn: &SqliteConnection,
 ) -> isize {
     // see if plant.locations exists
@@ -986,12 +993,12 @@ fn load_references(
     {
         let path_ = entry.path();
 
-        if fs::metadata(path_.clone()).unwrap().is_file()
+        if fs::metadata(path_).unwrap().is_file()
             && path_.extension().unwrap().to_str().unwrap() == "json"
         {
             println!("found reference: {}", path_.display());
 
-            let contents = fs::read_to_string(path_.clone()).unwrap();
+            let contents = fs::read_to_string(path_).unwrap();
 
             let collection: CollectionJson = serde_json::from_str(&contents).unwrap();
 
