@@ -216,7 +216,8 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
     }
 
     // escape hatch for some kinda indefinite time ranges in some extension pubs
-    let indefinite_times_regex = Regex::new(r#"^(summer)$"#).unwrap();
+    let indefinite_times_regex =
+        Regex::new(r#"^(summer|early season|mid season|late season)$"#).unwrap();
 
     if let Some(_) = indefinite_times_regex.captures(&input.to_lowercase()) {
         output.parse_type = DateParseType::Unparsed;

@@ -1,0 +1,213 @@
+{
+    "title": "Growing Tree Fruit in the Uintah Basin",
+    "author": "Boyd Kitchen, Uintah County Extension Agent",
+    "url": "https://digitalcommons.usu.edu/cgi/viewcontent.cgi?article=2059&context=extension_curall",
+    "published": "JUne 2006",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "Uintah Basin, UT",
+        "latitude": 40.3110294530026,
+        "longitude": -109.98028689003826
+    }],
+    "disease_notes": "Apples: S=susceptible, MS= moderately susceptible, LS= low susceptibility, MR=moderately resistance, R=resistant",
+    "plants": [
+        {
+            "name": "Cortland",
+            "type": "Apple",
+            "harvest_time": "Oct",
+            "disease_resistance": {
+                "FB": "Susceptible",
+                "PM": "Susceptible"
+            },
+            "description": ""
+        },
+        {
+            "name": "Empire",
+            "type": "Apple",
+            "harvest_time": "Oct",
+            "disease_resistance": {
+                "FB": "Moderately Susceptible",
+                "PM": "Susceptible"
+            },
+            "description": "Good pollinator. McIntosh type with better color, less bruising and stores better than McIntosh."
+        },
+        {
+            "name": "Fuji",
+            "type": "Apple",
+            "harvest_time": "Late Oct",
+            "disease_resistance": {
+                "FB": "Susceptible",
+                "PM": "Susceptible"
+            },
+            "description": "Ripens too late for many areas in the Basin, but has been successfully grown in Lapoint. Stores well. Very high quality fruit. May require detailed pruning."
+        },
+        {
+            "name": "Gala",
+            "type": "Apple",
+            "harvest_time": "Early Sep",
+            "disease_resistance": {
+                "FB": "Susceptible",
+                "PM": "Susceptible"
+            },
+            "description": "Excellent flavor, excellent for applesauce or drying. May require heavy thinning."
+        },
+        {
+            "name": "Golden Supreme",
+            "type": "Apple",
+            "harvest_time": "Early Oct",
+            "description": "Similar to Golden Delicious, but ripens 1 – 2 weeks earlier, annual bearing habit, less likely to russet. Uneven ripening."
+        },
+        {
+            "name": "Honeycrisp",
+            "type": "Apple",
+            "harvest_time": "Late Sep",
+            "disease_resistance": {
+                "FB": "Susceptible"
+            },
+            "description": "Large dappled red fruit with good flavor, crispness and juiciness. Hardy in Zone 4. Stores well."
+        },
+        {
+            "name": "Jonagold",
+            "type": "Apple",
+            "harvest_time": "Mid Sep - Early Oct",
+            "disease_resistance": {
+                "FB": "Susceptible",
+                "PM": "Low Susceptibility"
+            },
+            "description": "Very high quality fruit. Not a good pollinator, short storage."
+        },
+        {
+            "name": "Jonafree",
+            "type": "Apple",
+            "harvest_time": "Mid Sep - Early Oct",
+            "disease_resistance": {
+                "FB": "Moderately Susceptible"
+            },
+            "description": "Very firm. Fruit tends to be small, careful pruning to avoid small fruit."
+        },
+        {
+            "name": "Prima",
+            "type": "Apple",
+            "harvest_time": "Mid Sep",
+            "disease_resistance": {
+                "FB": "Moderately Resistant",
+                "PM": "Resistant"
+            },
+            "description": "Blooms later and may avoid late spring frosts. Short storage."
+        },
+        {
+            "name": "Spartan",
+            "type": "Apple",
+            "harvest_time": "Mid Oct",
+            "disease_resistance": {
+                "FB": "Moderately Resistant",
+                "PM": "Susceptible"
+            },
+            "description": "Crisp, firmer than McIntosh. Small fruit, may drop prematurely, difficult to thin."
+        },
+        {
+            "name": "Zestar",
+            "type": "Apple",
+            "harvest_time": "Late Aug - Early Sep",
+            "description": "Large, crunchy, juicy red fruit with sweet-tart flavor. Excellent for both fresh eating and cooking. Tree is vigorous, upright, but susceptible to apple scab."
+        },
+        {
+            "name": "Harglow",
+            "type": "Apricot",
+            "description": "Blooms slightly later than most commercial apricots. The fruit is medium in size and bright solid orange in color; flesh is firm and flavorful. This variety is best suited for fresh eating."
+        },
+        {
+            "name": "Hargrand",
+            "type": "Apricot",
+            "harvest_time": "mid season",
+            "description": "Ripens in mid season. The fruit is a dull orange, but the size is excellent when the crop has been thinned. The flesh is juicy and tasty. Suitable for fresh eating."
+        },
+        {
+            "name": "Harlayne",
+            "type": "Apricot",
+            "harvest_time": "late season",
+            "description": "Trees bloom late. Fruit production is heavy and fruit ripens late. Very hardy. The fruit has a red blush and is bright and attractive. Requires careful thinning to attain size. Suited for fresh eating but also suitable for home processing. The flesh is firm and fairly dry, and the mild flavor is fair to good."
+        },
+        {
+            "name": "Manchurian",
+            "type": "Apricot",
+            "description": "This is the hardiest of the fruiting apricots."
+        },
+        {
+            "name": "Moongold",
+            "type": "Apricot",
+            "description": "The golden fruits are medium size, sweet, juicy, ripen unevenly, prone to splitting, freestone."
+        },
+        {
+            "name": "Sungold",
+            "type": "Apricot",
+            "description": "Fruits are small, mild, sweet."
+        },
+        {
+            "name": "Perfection",
+            "type": "Apricot",
+            "description": "Trees are hardy and heavy bearing. Fruit is large, oval to oblong and flavorful. Flesh and skin are colored a bright yellow-orange with no blush. Good quality, firm-textured with early developing color. Needs cross pollination."
+        },
+        {
+            "name": "Anjou",
+            "type": "Euro Pear",
+            "disease_resistance": {
+                "FB": "Moderately Resistant"
+            },
+            "description": "About as hardy as Bartlett. Moderately resistant to fire blight."
+        },
+        {
+            "name": "Bartlett",
+            "type": "Euro Pear",
+            "disease_resistance": {
+                "FB": "Susceptible"
+            },
+            "description": "Leading commercial variety in the west. May be partially self fertile. Susceptible to fire blight."
+        },
+        {
+            "name": "Clapp's Favorite",
+            "type": "Euro Pear",
+            "disease_resistance": {
+                "FB": "Susceptible"
+            },
+            "description": "Hardy, fruit has sweet, fine flesh. Susceptible to fire blight."
+        },
+        {
+            "name": "Flemish Beauty",
+            "type": "Euro Pear",
+            "disease_resistance": {
+                "FB": "Susceptible"
+            },
+            "description": "Hardy, fruit is firm and melting. Susceptible to fire blight. "
+        },
+        {
+            "name": "Harrow Delight",
+            "type": "Euro Pear",
+            "disease_resistance": {
+                "FB": "Resistant"
+            },
+            "description": "Fire blight resistant."
+        },
+        {
+            "name": "Luscious",
+            "type": "Euro Pear",
+            "disease_resistance": {
+                "FB": "Resistant"
+            },
+            "description": "Fire blight resistant. Sweet, juicy fruit."
+        },
+        {
+            "name": "John",
+            "type": "Euro Pear",
+            "disease_resistance": {
+                "FB": "Resistant"
+            },
+            "description": "Fire blight resistant. Juicy fruit."
+        },
+        {
+            "name": "Summercrisp",
+            "type": "Euro Pear",
+            "description": "Sweet flavored, crisp fruit. Fruit harvested when crisp, green with red blush, may be stored up to 2 months. One of the hardiest pear varieties."
+        }
+    ]
+}
