@@ -459,7 +459,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
             if let Some(matches) = plain_year_date_regex.captures(&input) {
                 if matches.len() >= 2 {
                     output.uspp_expiration =
-                        Some(Utc.ymd(matches[1].parse::<i32>().unwrap(), 01, 01));
+                        Some(Utc.ymd(matches[1].parse::<i32>().unwrap(), 1, 1));
                 }
             }
         }
