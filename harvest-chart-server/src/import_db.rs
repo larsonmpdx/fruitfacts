@@ -146,14 +146,14 @@ fn month_location(input: &str) -> MonthLocationType {
         Regex::new(r#"^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)"#).unwrap();
 
     match month_at_beginning_regex.captures(&input.to_lowercase()) {
-        Some(_) => return MonthLocationType::MonthAtBeginning,
+        Some(_) => MonthLocationType::MonthAtBeginning,
         None => {
             let month_at_end_regex =
                 Regex::new(r#"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[^0-9]*$"#).unwrap();
 
             match month_at_end_regex.captures(&input.to_lowercase()) {
-                Some(_) => return MonthLocationType::MonthAtEnd,
-                None => return MonthLocationType::NoMonth,
+                Some(_) => MonthLocationType::MonthAtEnd,
+                None => MonthLocationType::NoMonth,
             }
         }
     }
@@ -164,7 +164,7 @@ fn get_month(input: &str) -> String {
         Regex::new(r#"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)"#).unwrap();
 
     match month_names_regex.captures(&input.to_lowercase()) {
-        Some(matches) => return matches[1].to_owned(),
+        Some(matches) => matches[1].to_owned(),
         None => panic!("no month found in string {}", input),
     }
 }
@@ -187,8 +187,8 @@ fn is_a_midpoint(input: &str) -> bool {
         Regex::new(r#"^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[^0-9]*$"#).unwrap();
 
     match month_names_regex.captures(&month.to_lowercase()) {
-        Some(_) => return true,
-        None => return false,
+        Some(_) => true,
+        None => false,
     }
 }
 
@@ -239,7 +239,7 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
     let average_of_start = "average of: ";
     if input.starts_with("average of: ") {
         let list = rem_first_n(input, average_of_start.len());
-        let split = list.split(",").collect::<Vec<&str>>();
+        let split = list.split(',').collect::<Vec<&str>>();
 
         let mut parsed_days = Vec::new();
         for item in split {
@@ -260,11 +260,11 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
     // if not, feed both sides
 
     // could be: September 15-30, or mid-late September, or Oct 5 - Oct 30
-    if input.contains("-") || input.contains(" to ") {
+    if input.contains('-') || input.contains(" to ") {
         let split;
 
-        if input.contains("-") {
-            split = input.split("-").collect::<Vec<&str>>();
+        if input.contains('-') {
+            split = input.split('-').collect::<Vec<&str>>();
             assert_eq!(split.len(), 2, "date string had more than one '-'");
         } else if input.contains(" to ") {
             split = input.split(" to ").collect::<Vec<&str>>();
@@ -360,9 +360,9 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
     match string_to_day_number(input) {
         Some(start) => {
             output.start = Some(start);
-            return Some(output);
+            Some(output)
         }
-        None => return None,
+        None => None,
     }
 }
 
@@ -408,7 +408,7 @@ fn string_to_day_number(input: &str) -> Option<u32> {
         "%Y %B %d %H:%M:%S",
     ) {
         Ok(parsed) => {
-            return Some(parsed.ordinal());
+            Some(parsed.ordinal())
         }
         Err(_) => {
             //    eprintln!(
@@ -416,7 +416,7 @@ fn string_to_day_number(input: &str) -> Option<u32> {
             //        e,
             //        "2020 ".to_owned() + &month_and_day_string + " 12:01:01"
             //    );
-            return None;
+            None
         }
     }
 }
@@ -438,14 +438,14 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
         Regex::new(r#"(?:expires|expired) ([0-9]{4})-([0-9]{2})-([0-9]{2})"#).unwrap();
     let plain_year_date_regex = Regex::new(r#"(?:expires|expired) ([0-9]{4})"#).unwrap();
 
-    if let Some(matches) = uspp_regex.captures(&input) {
+    if let Some(matches) = uspp_regex.captures(input) {
         if matches.len() >= 2 {
             output.uspp_number = Some(matches[1].parse::<i32>().unwrap());
         }
     }
 
     // date can be either "2017-01-02" or "2017" and we presume Jan 1.  year-only dates should be used for past dates only
-    match google_format_date_regex.captures(&input) {
+    match google_format_date_regex.captures(input) {
         Some(matches) => {
             if matches.len() >= 4 {
                 output.uspp_expiration = Some(Utc.ymd(
@@ -456,7 +456,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
             }
         }
         None => {
-            if let Some(matches) = plain_year_date_regex.captures(&input) {
+            if let Some(matches) = plain_year_date_regex.captures(input) {
                 if matches.len() >= 2 {
                     output.uspp_expiration =
                         Some(Utc.ymd(matches[1].parse::<i32>().unwrap(), 1, 1));
@@ -465,7 +465,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
         }
     }
 
-    return output;
+    output
 }
 
 pub struct LoadAllReturn {
@@ -479,7 +479,7 @@ pub fn establish_connection() -> SqliteConnection {
 
     let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
     SqliteConnection::establish(&database_url)
-        .expect(&format!("Error connecting to {}", database_url))
+        .unwrap_or_else(|_| panic!("Error connecting to {}", database_url))
 }
 
 pub fn reset_database(db_conn: &SqliteConnection) {
@@ -500,11 +500,11 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     calculate_ripening_times(db_conn);
     check_database(db_conn);
 
-    return LoadAllReturn {
-        base_plants_found: base_plants_found,
-        base_types_found: base_types_found,
+    LoadAllReturn {
+        base_plants_found,
+        base_types_found,
         reference_items: load_references_return,
-    };
+    }
 }
 
 fn get_database_dir() -> Option<std::path::PathBuf> {
@@ -531,7 +531,7 @@ fn get_database_dir() -> Option<std::path::PathBuf> {
         i += 1;
     }
 
-    return None;
+    None
 }
 
 fn simplify_path(input: &str) -> &str {
@@ -540,14 +540,14 @@ fn simplify_path(input: &str) -> &str {
     let after_references = v.last().unwrap();
     println!("split result: {}", after_references);
 
-    if after_references.len() == 0 {
+    if after_references.is_empty() {
         return after_references;
     }
 
     match after_references.chars().next().unwrap() {
-        '/' => return rem_first_n(after_references, 1),
-        '\\' => return rem_first_n(after_references, 1),
-        _ => return after_references,
+        '/' => rem_first_n(after_references, 1),
+        '\\' => rem_first_n(after_references, 1),
+        _ => after_references,
     }
 }
 
@@ -561,7 +561,7 @@ lazy_static! {
 }
 
 fn format_name_fts_string(name: &String) -> String {
-    return SPECIAL_CHARACTERS_REGEX.replace_all(&name, "").to_string();
+    return SPECIAL_CHARACTERS_REGEX.replace_all(name, "").to_string();
 }
 
 // turn an array like ["20th Century", "Twentieth Century"] into "aka" and "aka_fts" strings
@@ -588,15 +588,15 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
             aka_string_builder += &without_commas;
             aka_fts_string_builder += &without_special_characters;
         }
-        return AkaFormatted {
+        AkaFormatted {
             aka: Some(aka_string_builder),
             aka_fts: Some(aka_fts_string_builder),
-        };
+        }
     } else {
-        return AkaFormatted {
+        AkaFormatted {
             aka: None,
             aka_fts: None,
-        };
+        }
     }
 }
 
@@ -605,65 +605,63 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
 
     let mut plants_found = 0;
 
-    let file_paths = fs::read_dir(database_dir.clone().join("plants")).unwrap();
+    let file_paths = fs::read_dir(database_dir.join("plants")).unwrap();
 
     for file_path in file_paths {
         let path_ = file_path.unwrap().path();
 
-        if fs::metadata(path_.clone()).unwrap().is_file() {
-            if path_.extension().unwrap().to_str().unwrap() == "json" {
-                println!("found: {}", path_.display());
+        if fs::metadata(path_.clone()).unwrap().is_file() && path_.extension().unwrap().to_str().unwrap() == "json" {
+            println!("found: {}", path_.display());
 
-                let contents = fs::read_to_string(path_.clone()).unwrap();
+            let contents = fs::read_to_string(path_.clone()).unwrap();
 
-                let plants: Vec<BasePlantJson> = serde_json::from_str(&contents).unwrap();
+            let plants: Vec<BasePlantJson> = serde_json::from_str(&contents).unwrap();
 
-                let filename =
-                    rem_last_n(path_.as_path().file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
+            let filename =
+                rem_last_n(path_.as_path().file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
 
-                for plant in &plants {
-                    // for the "Oddball.json" file, get type from each item's json
-                    // all others get type from the filename
-                    let plant_type;
-                    if filename.starts_with("Oddball") {
-                        plant_type = plant.type_.clone();
-                    } else {
-                        plant_type = Some(filename.to_string());
-                    }
-
-                    let aka_formatted = format_aka_strings(&plant.aka);
-
-                    let mut patent_info = Default::default();
-                    if let Some(patent_string) = &plant.patent {
-                        patent_info = string_to_patent_info(&patent_string);
-                    }
-
-                    let mut uspp_expiration_string = None;
-                    if let Some(uspp_expiration) = patent_info.uspp_expiration {
-                        uspp_expiration_string = Some(uspp_expiration.to_string());
-                    }
-
-                    println!("inserting");
-                    let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
-                        .values((
-                            base_plants::name.eq(&plant.name),
-                            base_plants::name_fts.eq(format_name_fts_string(&plant.name)),
-                            base_plants::type_.eq(&plant_type.unwrap()),
-                            base_plants::aka.eq(&aka_formatted.aka),
-                            base_plants::aka_fts.eq(&aka_formatted.aka_fts),
-                            base_plants::description.eq(&plant.description),
-                            base_plants::uspp_number.eq(patent_info.uspp_number),
-                            base_plants::uspp_expiration.eq(uspp_expiration_string),
-                        ))
-                        .execute(db_conn);
-                    assert_eq!(Ok(1), rows_inserted);
-                    plants_found += 1;
+            for plant in &plants {
+                // for the "Oddball.json" file, get type from each item's json
+                // all others get type from the filename
+                let plant_type;
+                if filename.starts_with("Oddball") {
+                    plant_type = plant.type_.clone();
+                } else {
+                    plant_type = Some(filename.to_string());
                 }
+
+                let aka_formatted = format_aka_strings(&plant.aka);
+
+                let mut patent_info = Default::default();
+                if let Some(patent_string) = &plant.patent {
+                    patent_info = string_to_patent_info(patent_string);
+                }
+
+                let mut uspp_expiration_string = None;
+                if let Some(uspp_expiration) = patent_info.uspp_expiration {
+                    uspp_expiration_string = Some(uspp_expiration.to_string());
+                }
+
+                println!("inserting");
+                let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
+                    .values((
+                        base_plants::name.eq(&plant.name),
+                        base_plants::name_fts.eq(format_name_fts_string(&plant.name)),
+                        base_plants::type_.eq(&plant_type.unwrap()),
+                        base_plants::aka.eq(&aka_formatted.aka),
+                        base_plants::aka_fts.eq(&aka_formatted.aka_fts),
+                        base_plants::description.eq(&plant.description),
+                        base_plants::uspp_number.eq(patent_info.uspp_number),
+                        base_plants::uspp_expiration.eq(uspp_expiration_string),
+                    ))
+                    .execute(db_conn);
+                assert_eq!(Ok(1), rows_inserted);
+                plants_found += 1;
             }
         }
     }
 
-    return plants_found;
+    plants_found
 }
 
 fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
@@ -674,7 +672,7 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
         panic!("didn't find types.json");
     }
 
-    let contents = fs::read_to_string(types_path.clone()).unwrap();
+    let contents = fs::read_to_string(types_path).unwrap();
 
     let types_parsed: Vec<TypeJson> = serde_json::from_str(&contents).unwrap();
 
@@ -688,7 +686,7 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
         assert_eq!(Ok(1), rows_inserted);
         types_found += 1;
     }
-    return types_found;
+    types_found
 }
 
 fn get_category_description(
@@ -706,7 +704,7 @@ fn get_category_description(
         }
     }
 
-    return category_description.clone();
+    category_description.clone()
 }
 
 fn add_collection_plant(
@@ -733,8 +731,8 @@ fn add_collection_plant(
         }
 
         // for harvest times like "Jun/Sep" which are for fig breba+main crops
-        if harvest_time.contains("/") {
-            let split = harvest_time.split("/").collect::<Vec<&str>>();
+        if harvest_time.contains('/') {
+            let split = harvest_time.split('/').collect::<Vec<&str>>();
             assert_eq!(
                 split.len(),
                 2,
@@ -822,7 +820,7 @@ fn add_collection_plant(
         rows_inserted
     );
 
-    return 1;
+    1
 }
 
 // if we're given a location like "I" and we have "short_name" matching "I" in our top-level locations list,
@@ -842,15 +840,15 @@ fn get_location_name(
             }
 
             // no translation (this will be most of the time)
-            return Some(plant_location_name.to_string());
+            Some(plant_location_name)
         }
         None => {
             // no name given: if we have a single top-level location, return that
             if locations.len() == 1 {
-                return Some(locations[0].name.clone());
+                Some(locations[0].name.clone())
             } else {
                 // if we have multiple top-level locations, return none
-                return None;
+                None
             }
         }
     }
@@ -877,9 +875,9 @@ fn maybe_add_base_plant(
             ))
             .execute(db_conn);
         assert_eq!(Ok(1), rows_inserted);
-        return 1;
+        1
     } else {
-        return 0;
+        0
     }
 }
 
@@ -908,12 +906,12 @@ fn add_collection_plant_by_location(
                     collection_number,
                     &get_location_name(
                         Some(location.as_str().unwrap().to_string()),
-                        &collection_locations,
+                        collection_locations,
                     ), // the .as_str()... nastiness is because serde wants to carry the "it's a json string" idea to the point of printing it a certain way in rust. as_str() tells it not to
                     &plant.harvest_time,
                     plant_name,
-                    &plant,
-                    &category_description,
+                    plant,
+                    category_description,
                     db_conn,
                 );
             } else {
@@ -937,11 +935,11 @@ fn add_collection_plant_by_location(
 
                     plants_added += add_collection_plant(
                         collection_number,
-                        &get_location_name(Some(location_name), &collection_locations),
+                        &get_location_name(Some(location_name), collection_locations),
                         &Some(harvest_time),
                         plant_name,
-                        &plant,
-                        &category_description,
+                        plant,
+                        category_description,
                         db_conn,
                     );
                 }
@@ -954,16 +952,16 @@ fn add_collection_plant_by_location(
 
         plants_added += add_collection_plant(
             collection_number,
-            &get_location_name(None, &collection_locations),
+            &get_location_name(None, collection_locations),
             &plant.harvest_time,
             plant_name,
-            &plant,
-            &category_description,
+            plant,
+            category_description,
             db_conn,
         );
     }
 
-    return plants_added;
+    plants_added
 }
 
 pub struct LoadReferencesReturn {
@@ -985,95 +983,93 @@ fn load_references(
     // traverse /plant_database/references/
     // create a collections table entry for each location in this reference, or only one if there's only one location
 
-    for entry in WalkDir::new(std::path::PathBuf::from(database_dir).join("references"))
+    for entry in WalkDir::new(database_dir.join("references"))
         .max_depth(5)
         .into_iter()
         .filter_map(|e| e.ok())
     {
         let path_ = entry.path();
 
-        if fs::metadata(path_.clone()).unwrap().is_file() {
-            if path_.extension().unwrap().to_str().unwrap() == "json" {
-                println!("found reference: {}", path_.display());
+        if fs::metadata(path_.clone()).unwrap().is_file() && path_.extension().unwrap().to_str().unwrap() == "json" {
+            println!("found reference: {}", path_.display());
 
-                let contents = fs::read_to_string(path_.clone()).unwrap();
+            let contents = fs::read_to_string(path_.clone()).unwrap();
 
-                let collection: CollectionJson = serde_json::from_str(&contents).unwrap();
+            let collection: CollectionJson = serde_json::from_str(&contents).unwrap();
 
-                let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
+            let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
 
-                let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
+            let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
 
-                collection_number += 1;
-                for location in &collection.locations {
-                    println!("inserting");
-                    let rows_inserted = diesel::insert_into(collections::dsl::collections)
-                        .values((
-                            collections::collection_id.eq(collection_number),
-                            collections::user_id.eq(0), // todo - codify this as the root/fake user
-                            collections::path.eq(&path),
-                            collections::filename.eq(&filename),
-                            collections::title.eq(&collection.title),
-                            collections::author.eq(&collection.author),
-                            collections::description.eq(&collection.description),
-                            collections::url.eq(&collection.url),
-                            collections::published.eq(&collection.published),
-                            collections::reviewed.eq(&collection.reviewed),
-                            collections::accessed.eq(&collection.accessed),
-                            collections::location.eq(&location.name),
-                            collections::latitude.eq(&location.latitude),
-                            collections::longitude.eq(&location.longitude),
-                        ))
-                        .execute(db_conn);
-                    assert_eq!(Ok(1), rows_inserted);
-                    reference_locations_found += 1;
+            collection_number += 1;
+            for location in &collection.locations {
+                println!("inserting");
+                let rows_inserted = diesel::insert_into(collections::dsl::collections)
+                    .values((
+                        collections::collection_id.eq(collection_number),
+                        collections::user_id.eq(0), // todo - codify this as the root/fake user
+                        collections::path.eq(&path),
+                        collections::filename.eq(&filename),
+                        collections::title.eq(&collection.title),
+                        collections::author.eq(&collection.author),
+                        collections::description.eq(&collection.description),
+                        collections::url.eq(&collection.url),
+                        collections::published.eq(&collection.published),
+                        collections::reviewed.eq(&collection.reviewed),
+                        collections::accessed.eq(&collection.accessed),
+                        collections::location.eq(&location.name),
+                        collections::latitude.eq(&location.latitude),
+                        collections::longitude.eq(&location.longitude),
+                    ))
+                    .execute(db_conn);
+                assert_eq!(Ok(1), rows_inserted);
+                reference_locations_found += 1;
+            }
+
+            for plant in collection.plants {
+                if plant.names.is_none() && plant.name.is_none() {
+                    panic!(r#"plant missing both "name" and "names" {:?}"#, plant)
+                }
+                if plant.names.is_some() && plant.name.is_some() {
+                    panic!(r#"plant has both "name" and "names" {:?}"#, plant)
                 }
 
-                for plant in collection.plants {
-                    if plant.names.is_none() && plant.name.is_none() {
-                        panic!(r#"plant missing both "name" and "names" {:?}"#, plant)
-                    }
-                    if plant.names.is_some() && plant.name.is_some() {
-                        panic!(r#"plant has both "name" and "names" {:?}"#, plant)
-                    }
+                let category_description = get_category_description(
+                    &plant.category,
+                    &plant.category_description,
+                    &collection.categories,
+                );
 
-                    let category_description = get_category_description(
-                        &plant.category,
-                        &plant.category_description,
-                        &collection.categories,
-                    );
-
-                    if plant.names.is_some() {
-                        for plant_name in plant.names.clone().unwrap() {
-                            // multi-plant lists are used for extension guides that give, for example,
-                            // a list of "all of the scab resistant apples" but don't tie that to one location
-                            // or give descriptions for each apple
-                            // we want to preserve the list so it can be displayed off in a corner or whatever
-                            reference_base_plants_added +=
-                                maybe_add_base_plant(&plant_name, &plant, db_conn);
-
-                            reference_plants_added += add_collection_plant_by_location(
-                                collection_number,
-                                &plant_name,
-                                &plant,
-                                &category_description,
-                                &collection.locations,
-                                db_conn,
-                            );
-                        }
-                    } else if plant.name.is_some() {
+                if plant.names.is_some() {
+                    for plant_name in plant.names.clone().unwrap() {
+                        // multi-plant lists are used for extension guides that give, for example,
+                        // a list of "all of the scab resistant apples" but don't tie that to one location
+                        // or give descriptions for each apple
+                        // we want to preserve the list so it can be displayed off in a corner or whatever
                         reference_base_plants_added +=
-                            maybe_add_base_plant(plant.name.as_ref().unwrap(), &plant, db_conn);
+                            maybe_add_base_plant(&plant_name, &plant, db_conn);
 
                         reference_plants_added += add_collection_plant_by_location(
                             collection_number,
-                            plant.name.as_ref().unwrap(),
+                            &plant_name,
                             &plant,
                             &category_description,
                             &collection.locations,
                             db_conn,
                         );
                     }
+                } else if plant.name.is_some() {
+                    reference_base_plants_added +=
+                        maybe_add_base_plant(plant.name.as_ref().unwrap(), &plant, db_conn);
+
+                    reference_plants_added += add_collection_plant_by_location(
+                        collection_number,
+                        plant.name.as_ref().unwrap(),
+                        &plant,
+                        &category_description,
+                        &collection.locations,
+                        db_conn,
+                    );
                 }
             }
         }
@@ -1082,14 +1078,14 @@ fn load_references(
     // plant category existince is checked later in check_database()
 
     // for each plant, create an entry in the collection_items database for each location, with a foreign key to that location's collections table entry
-    return LoadReferencesReturn {
-        reference_locations_found: reference_locations_found,
-        reference_base_plants_added: reference_base_plants_added,
-        reference_plants_added: reference_plants_added,
-    };
+    LoadReferencesReturn {
+        reference_locations_found,
+        reference_base_plants_added,
+        reference_plants_added,
+    }
 }
 
-fn calculate_ripening_times(db_conn: &SqliteConnection) {
+fn calculate_ripening_times(_db_conn: &SqliteConnection) {
     // todo: 2nd procesing pass:
     // look for all plants with only a relative ripening time and try to fill in their absolute times
     // example is an extension publication listing peaches as redhaven+5 or whatever,
@@ -1107,10 +1103,8 @@ fn check_database(db_conn: &SqliteConnection) {
         let _ = plant_types::dsl::plant_types
             .filter(plant_types::name.eq(type_from_plants))
             .first::<PlantType>(db_conn)
-            .expect(&format!(
-                "imported a plant with a category not in types.json: {}",
-                type_from_plants
-            ));
+            .unwrap_or_else(|_| panic!("imported a plant with a category not in types.json: {}",
+                type_from_plants));
     }
 
     // todo: for all base plants, ensure none of the names match an "AKA" name which would be a duplicate
