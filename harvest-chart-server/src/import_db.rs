@@ -186,10 +186,7 @@ fn is_a_midpoint(input: &str) -> bool {
     let month_names_regex =
         Regex::new(r#"^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[^0-9]*$"#).unwrap();
 
-    match month_names_regex.captures(&month.to_lowercase()) {
-        Some(_) => true,
-        None => false,
-    }
+    month_names_regex.captures(&month.to_lowercase()).is_some()
 }
 
 fn average(numbers: &Vec<u32>) -> u32 {
@@ -407,9 +404,7 @@ fn string_to_day_number(input: &str) -> Option<u32> {
         &("2020 ".to_owned() + &month_and_day_string + " 12:01:01"),
         "%Y %B %d %H:%M:%S",
     ) {
-        Ok(parsed) => {
-            Some(parsed.ordinal())
-        }
+        Ok(parsed) => Some(parsed.ordinal()),
         Err(_) => {
             //    eprintln!(
             //        "date parsing: {} with input {}",
@@ -610,15 +605,16 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
     for file_path in file_paths {
         let path_ = file_path.unwrap().path();
 
-        if fs::metadata(path_.clone()).unwrap().is_file() && path_.extension().unwrap().to_str().unwrap() == "json" {
+        if fs::metadata(path_.clone()).unwrap().is_file()
+            && path_.extension().unwrap().to_str().unwrap() == "json"
+        {
             println!("found: {}", path_.display());
 
             let contents = fs::read_to_string(path_.clone()).unwrap();
 
             let plants: Vec<BasePlantJson> = serde_json::from_str(&contents).unwrap();
 
-            let filename =
-                rem_last_n(path_.as_path().file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
+            let filename = rem_last_n(path_.as_path().file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
 
             for plant in &plants {
                 // for the "Oddball.json" file, get type from each item's json
@@ -990,7 +986,9 @@ fn load_references(
     {
         let path_ = entry.path();
 
-        if fs::metadata(path_.clone()).unwrap().is_file() && path_.extension().unwrap().to_str().unwrap() == "json" {
+        if fs::metadata(path_.clone()).unwrap().is_file()
+            && path_.extension().unwrap().to_str().unwrap() == "json"
+        {
             println!("found reference: {}", path_.display());
 
             let contents = fs::read_to_string(path_.clone()).unwrap();
@@ -1103,8 +1101,12 @@ fn check_database(db_conn: &SqliteConnection) {
         let _ = plant_types::dsl::plant_types
             .filter(plant_types::name.eq(type_from_plants))
             .first::<PlantType>(db_conn)
-            .unwrap_or_else(|_| panic!("imported a plant with a category not in types.json: {}",
-                type_from_plants));
+            .unwrap_or_else(|_| {
+                panic!(
+                    "imported a plant with a category not in types.json: {}",
+                    type_from_plants
+                )
+            });
     }
 
     // todo: for all base plants, ensure none of the names match an "AKA" name which would be a duplicate
