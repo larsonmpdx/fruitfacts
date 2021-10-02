@@ -1,0 +1,306 @@
+{
+    "title": "Growing tree fruits in short-season gardens",
+    "author": "Stephen L. Love, Esmaeil Fallahi, Kathy Noble",
+    "url": "https://www.extension.uidaho.edu/publishing/pdf/BUL/BUL0867.pdf",
+    "published": "Apr 2009",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "Northern, Central, and Southeastern Idaho",
+        "latitude": 44.07985210283775,
+        "longitude": -111.45484249940903
+    }],
+    "plants": [
+        {
+            "type": "Apple",
+            "name": "Earligold",
+            "description": "Color: Yellow, Uses and quality: Fresh, cooking; high quality",
+            "harvest_time": "August"
+        },
+        {
+            "type": "Apple",
+            "name": "Haralred",
+            "description": "Color: Red, Uses and quality: Fresh, cooking, cider",
+            "harvest_time": "Late September"
+        },
+        {
+            "type": "Apple",
+            "name": "Haralson",
+            "description": "Color: Red-striped, Uses and quality: Cooking; tart",
+            "harvest_time": "Late September"
+        },
+        {
+            "type": "Apple",
+            "name": "Hazen",
+            "description": "Color: Red, Uses and quality: Fresh, cooking; mild flavor",
+            "harvest_time": "September"
+        },
+        {
+            "type": "Apple",
+            "name": "Honeycrisp",
+            "description": "Color: Red striped, Uses and quality: All-around; stores well",
+            "harvest_time": "September",
+            "import_note": "in the guide as \"late fall\""
+        },
+        {
+            "type": "Apple",
+            "name": "Honeygold",
+            "description": "Color: Yellow, Uses and quality: Fresh, cooking",
+            "harvest_time": "Early October"
+        },
+        {
+            "type": "Apple",
+            "name": "Liberty",
+            "description": "Color: Dark red, Uses and quality: Scab resistant; good fresh, fair for cooking",
+            "harvest_time": "September"
+        },
+        {
+            "type": "Apple",
+            "name": "Lodi",
+            "description": "Color: Yellow, Uses and quality: Cooking; fair quality",
+            "harvest_time": "July"
+        },
+        {
+            "type": "Apple",
+            "name": "McIntosh",
+            "description": "Color: Red blush, Uses and quality: All-around; tart",
+            "harvest_time": "September"
+        },
+        {
+            "type": "Apple",
+            "name": "Northern Spy",
+            "description": "Color: Yellow-striped red, Uses and quality: All-around; high quality",
+            "harvest_time": "Early October"
+        },
+        {
+            "type": "Apple",
+            "name": "Spartan",
+            "description": "Color: Red, Uses and quality: All-around; high quality",
+            "harvest_time": "Early October"
+        },
+        {
+            "type": "Apple",
+            "name": "State Fair",
+            "description": "Color: Red striped, Uses and quality: Fresh; excellent quality",
+            "harvest_time": "August"
+        },
+        {
+            "type": "Apple",
+            "name": "Sweet Sixteen",
+            "description": "Color: Red striped, Uses and quality: Fresh, cooking; high quality",
+            "harvest_time": "September"
+        },
+        {
+            "type": "Apple",
+            "name": "Wealthy",
+            "description": "Color: Red striped, Uses and quality: Cooking; high quality",
+            "harvest_time": "September"
+        },
+        {
+            "type": "Apricot",
+            "name": "Chinese",
+            "description": "Fruit size: Small-medium, Notes: Good for frost-prone areas",
+            "harvest_time": "Early July"
+        },
+        {
+            "type": "Apricot",
+            "name": "Debbie’s Gold",
+            "description": "Fruit size: Medium, Notes: Consistent producer in Alberta",
+            "harvest_time": "Late July"
+        },
+        {
+            "type": "Apricot",
+            "name": "Harcot",
+            "description": "Fruit size: Medium-large, Notes: Late blooming and frost hardy",
+            "harvest_time": "July"
+        },
+        {
+            "type": "Apricot",
+            "name": "Harlayne",
+            "description": "Fruit size: Medium, Notes: Late blooming, hardy",
+            "harvest_time": "Late July"
+        },
+        {
+            "type": "Apricot",
+            "name": "Moongold",
+            "description": "Fruit size: Large, Notes: Frost-resistant bloom, hardy",
+            "harvest_time": "Late July"
+        },
+        {
+            "type": "Apricot",
+            "name": "Perfection",
+            "description": "Fruit size: Large, Notes: Late bloom, hardy",
+            "harvest_time": "July"
+        },
+        {
+            "type": "Apricot",
+            "name": "Sungold",
+            "description": "Fruit size: Large, Notes: Late bloom, hardy",
+            "harvest_time": "Late July"
+        },
+        {
+            "type": "Apricot",
+            "name": "Westcot",
+            "description": "Fruit size: Large, Notes: Dependable cold-climate producer",
+            "harvest_time": "July"
+        },
+        {
+            "type": "Sour Cherry",
+            "name": "Meteor",
+            "description": "Fruit size: Medium-large, Notes: Small tree, very hardy (-50°F)",
+            "harvest_time": "July",
+            "import_note": "in the guide as \"Early Summer\""
+        },
+        {
+            "type": "Sour Cherry",
+            "name": "Montmorency",
+            "description": "Fruit size: Medium-large, Notes: Small tree, hardy (-40°F)",
+            "harvest_time": "July",
+            "import_note": "in the guide as \"Early Summer\""
+        },
+        {
+            "type": "Sour Cherry",
+            "name": "Northstar",
+            "description": "Fruit size: Large, Notes: Small tree, very hardy (-40°F)",
+            "harvest_time": "July",
+            "import_note": "in the guide as \"Early Summer\""
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Clapp’s Favorite",
+            "description": "Color: Red blush, Notes: Not suitable for storage",
+            "harvest_time": "August"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Flemish Beauty",
+            "description": "Color: Red blush, Notes: Medium-size, good-quality fruit; very hardy",
+            "harvest_time": "Late September"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Gourmet",
+            "description": "Color: Green, Notes: Round, crisp, and sweet fruit; hardy",
+            "harvest_time": "Late September"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Honeysweet",
+            "description": "Color: Tan, Notes: Rich flavor, partially self-fertile",
+            "harvest_time": "Late August"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "John",
+            "description": "Color: Yellow, Notes: Small fruit, fair quality, extremely hardy",
+            "harvest_time": "September"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Luscious",
+            "description": "Color: Yellow, Notes: Large, sweet, and juicy fruit; hardy",
+            "harvest_time": "Late September"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Moonglow",
+            "description": "Color: Red blush, Notes: Bartlett type, very hardy",
+            "harvest_time": "Late August"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Parker",
+            "description": "Color: Yellow/red blush, Notes: Large fruit, moderately hardy",
+            "harvest_time": "Mid September"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Sauvignac",
+            "description": "Color: Yellow, Notes: Medium-size, juicy fruit; one of the hardiest",
+            "harvest_time": "September"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Summercrisp",
+            "description": "Color: Yellow blushed red, Notes: Good storability, good pollenizer",
+            "harvest_time": "August"
+        },
+        {
+            "type": "Euro Pear",
+            "name": "Ure",
+            "description": "Color: Red blush, Notes: Small, good-quality fruit; extremely hardy",
+            "harvest_time": "September"
+        },
+        {
+            "type": "Euro Plum",
+            "name": "Mount Royal",
+            "description": "Color: Purple skin, yellow flesh, Notes: Self-fertile, very hardy",
+            "harvest_time": "Late August"
+        },
+        {
+            "type": "Euro Plum",
+            "name": "Stanley",
+            "description": "Color: Purple skin, yellow flesh, Notes: Self-fertile, hardy",
+            "harvest_time": "Late September"
+        },
+        {
+            "type": "Euro Plum",
+            "name": "Italian",
+            "description": "Color: Purple skin, yellow flesh, Notes: Productive, hardy",
+            "harvest_time": "September"
+        },
+        {
+            "type": "Euro Plum",
+            "name": "Ember",
+            "description": "Color: Yellow skin with reddish blush, Notes: Medium-sized fruit",
+            "harvest_time": "August"
+        },
+        {
+            "type": "Euro Plum",
+            "name": "Underwood",
+            "description": "Color: Red skin, yellow flesh, Notes: Hardy, vigorous tree with large fruits",
+            "harvest_time": "August"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Methley",
+            "description": "Color: Purple skin, red flesh, Notes: Sweet, hardy",
+            "harvest_time": "August"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Satsuma",
+            "description": "Color: Red skin, red flesh, Notes: Sweet, hardy",
+            "harvest_time": "Early September"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Alderman",
+            "description": "japanese-american hybrid. Color: Burgundy skin, yellow flesh, Notes: Sweet, hardy",
+            "harvest_time": "Late August"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Pembina",
+            "description": "japanese-american hybrid. Color: Red skin, yellow flesh, Notes: Large fruit, sweet, hardy",
+            "harvest_time": "Late August"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Sapalta",
+            "description": "japanese-american hybrid. Color: Purple skin, red flesh, Notes: Excellent quality, very hardy",
+            "harvest_time": "Late August"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Tecumseth",
+            "description": "japanese-american hybrid. Color: Red skin, yellow flesh, Notes: Good quality, hardy",
+            "harvest_time": "Mid August"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Toka",
+            "description": "japanese-american hybrid. Color: Reddish-orange skin, yellow flesh, Notes: Very hardy",
+            "harvest_time": "August"
+        }
+    ]
+}

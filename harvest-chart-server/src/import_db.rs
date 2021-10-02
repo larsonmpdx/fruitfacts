@@ -282,19 +282,21 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
             match month_location(split[1]) {
                 MonthLocationType::MonthAtBeginning => {
                     output.parse_type = DateParseType::TwoDates;
-                    output.start = Some(
-                        string_to_day_number(&format!("{} {}", get_month(split[1]), split[0]))
-                            .unwrap(),
-                    );
+                    output.start =
+                        string_to_day_number(&format!("{} {}", get_month(split[1]), split[0]));
+                    if output.start.is_none() {
+                        panic!(r#"couldn't parse date: {:}"#, input);
+                    }
                     output.end = Some(string_to_day_number(split[1]).unwrap());
                     return Some(output);
                 }
                 MonthLocationType::MonthAtEnd => {
                     output.parse_type = DateParseType::TwoDates;
-                    output.start = Some(
-                        string_to_day_number(&format!("{} {}", split[0], get_month(split[1])))
-                            .unwrap(),
-                    );
+                    output.start =
+                        string_to_day_number(&format!("{} {}", split[0], get_month(split[1])));
+                    if output.start.is_none() {
+                        panic!(r#"couldn't parse date: {:}"#, input);
+                    }
                     output.end = Some(string_to_day_number(split[1]).unwrap());
                     return Some(output);
                 }
@@ -691,6 +693,13 @@ fn add_collection_plant(
     let mut harvest_end_2 = None; // fig breba+main
     let mut harvest_2_start_is_midpoint = None; // fig breba+main
     if let Some(harvest_time) = harvest_time {
+        if harvest_time.is_empty() {
+            panic!(
+                r#"harvest time was an empty string for {:?}: {}"#,
+                plant, harvest_time
+            );
+        }
+
         // for harvest times like "Jun/Sep" which are for fig breba+main crops
         if harvest_time.contains("/") {
             let split = harvest_time.split("/").collect::<Vec<&str>>();

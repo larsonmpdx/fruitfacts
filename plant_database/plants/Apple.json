@@ -108,5 +108,13 @@
         "AKA": ["Co-op 31"],
         "description": "PRI release. https://hort.purdue.edu/newcrop/pri/coop31.html",
         "patent": "https://patents.google.com/patent/USPP20437 expires 2028-04-11"
+    },
+    {
+        "name": "Goldrush",
+        "patent": "https://patents.google.com/patent/USPP9392P expired 2013"
+    },
+    {
+        "name": "Lodi",
+        "AKA": ["Transparent"]
     }
 ]

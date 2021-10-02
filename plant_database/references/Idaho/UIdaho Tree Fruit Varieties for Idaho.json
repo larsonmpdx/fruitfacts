@@ -1,5 +1,6 @@
 {
     "title": "Tree Fruit Varieties for Idaho",
+    "author": "Danny L. Barney, Ph.D.",
     "url": "https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/county/Bonner/horticulture/nifrc-tree-fruit-varieties.pdf",
     "accessed": "Sep 2021",
     "locations": [{
@@ -425,7 +426,7 @@
                 "Ozark Premier",
                 "Starking Delicious"
             ],
-            "type": "Asian Plum",
+            "type": "Japanese Plum",
             "locations": ["N/Central/SE","SW"]
         },
         {
