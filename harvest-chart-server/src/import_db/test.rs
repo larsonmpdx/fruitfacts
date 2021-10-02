@@ -86,6 +86,14 @@ fn test_day_range() {
         }
     );
     assert_eq!(
+        string_to_day_range("August 15").unwrap(), // not midpoint, even though it's mid month, because it's an exact date
+        DayRangeOutput {
+            parse_type: DateParseType::StartOnly,
+            start: Some(228),
+            end: None
+        }
+    );
+    assert_eq!(
         string_to_day_range("mid-late August").unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
@@ -166,6 +174,30 @@ fn test_day_range() {
             parse_type: DateParseType::TwoDates,
             start: Some(299),
             end: Some(320)
+        }
+    );
+    assert_eq!(
+        string_to_day_range("July 6").unwrap(),
+        DayRangeOutput {
+            parse_type: DateParseType::StartOnly,
+            start: Some(188),
+            end: None
+        }
+    );
+    assert_eq!(
+        string_to_day_range("June 29").unwrap(),
+        DayRangeOutput {
+            parse_type: DateParseType::StartOnly,
+            start: Some(181),
+            end: None
+        }
+    );
+    assert_eq!(
+        string_to_day_range("average of: July 6, June 29").unwrap(),
+        DayRangeOutput {
+            parse_type: DateParseType::StartOnly,
+            start: Some(184),
+            end: None
         }
     );
 }

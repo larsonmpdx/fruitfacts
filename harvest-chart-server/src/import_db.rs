@@ -96,7 +96,7 @@ struct TypeJson {
     latin_name: Option<String>,
 }
 
-fn rem_last_n(value: &str, n: isize) -> &str {
+fn rem_last_n(value: &str, n: usize) -> &str {
     let mut chars = value.chars();
     for _ in 0..n {
         chars.next_back();
@@ -104,9 +104,11 @@ fn rem_last_n(value: &str, n: isize) -> &str {
     chars.as_str()
 }
 
-fn rem_first(value: &str) -> &str {
+fn rem_first_n(value: &str, n: usize) -> &str {
     let mut chars = value.chars();
-    chars.next();
+    for _ in 0..n {
+        chars.next();
+    }
     chars.as_str()
 }
 
@@ -190,11 +192,19 @@ fn is_a_midpoint(input: &str) -> bool {
     }
 }
 
+fn average(numbers: &Vec<u32>) -> u32 {
+    numbers.iter().sum::<u32>() / numbers.len() as u32
+}
+
 // "early to late August" -> "early August" and "late August"
 // "late August to mid September" -> "late August" and "mid September"
 // "Sep 20-30" -> "Sep 20" and "Sep 30"
 // "Sep 25-Oct 5" -> "Sep 25" and "Oct 5"
 // if none of these match, maybe it's a single date, pass it through to string_to_day_number() unchanged
+
+// special case: "average of: July 6, June 29"
+// this is for extension pubs that give a set of dates based on measurements in multiple years
+// break it apart on the commas then parse each and average the start dates, and return a start only date
 
 // report the way it was parsed:
 // * as a start date (like peaches, "September 15", "early September")
@@ -208,7 +218,9 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
     let mut output = DayRangeOutput::default();
 
     // escape hatch for "time within season" strings which we aren't parsing for now
-    let time_within_season_regex = Regex::new(r#"^(early-mid|mid-late|early|mid|late)$"#).unwrap();
+    let time_within_season_regex =
+        Regex::new(r#"^(early-mid|mid-late|early|mid|late|early season|mid season|late season)$"#)
+            .unwrap();
 
     if let Some(_) = time_within_season_regex.captures(&input.to_lowercase()) {
         output.parse_type = DateParseType::Unparsed;
@@ -216,11 +228,30 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
     }
 
     // escape hatch for some kinda indefinite time ranges in some extension pubs
-    let indefinite_times_regex =
-        Regex::new(r#"^(summer|early season|mid season|late season)$"#).unwrap();
+    let indefinite_times_regex = Regex::new(r#"^(summer)$"#).unwrap();
 
     if let Some(_) = indefinite_times_regex.captures(&input.to_lowercase()) {
         output.parse_type = DateParseType::Unparsed;
+        return Some(output);
+    }
+
+    // special case for a list of days
+    let average_of_start = "average of: ";
+    if input.starts_with("average of: ") {
+        let list = rem_first_n(input, average_of_start.len());
+        let split = list.split(",").collect::<Vec<&str>>();
+
+        let mut parsed_days = Vec::new();
+        for item in split {
+            if let Some(parsed_day) = string_to_day_number(item) {
+                parsed_days.push(parsed_day);
+            } else {
+                panic!(r#"error parsing average date from {}"#, input);
+            }
+        }
+
+        output.parse_type = DateParseType::StartOnly;
+        output.start = Some(average(&parsed_days));
         return Some(output);
     }
 
@@ -514,8 +545,8 @@ fn simplify_path(input: &str) -> &str {
     }
 
     match after_references.chars().next().unwrap() {
-        '/' => return rem_first(after_references),
-        '\\' => return rem_first(after_references),
+        '/' => return rem_first_n(after_references, 1),
+        '\\' => return rem_first_n(after_references, 1),
         _ => return after_references,
     }
 }
