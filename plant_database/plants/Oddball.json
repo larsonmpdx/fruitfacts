@@ -56,29 +56,25 @@
         "description": "Zaiger Variety"
     },
     {
-        "type": "Apricot",
-        "display_type": "Aprium",
+        "type": "Aprium",
         "name": "Flavor Delight",
         "patent": "https://patents.google.com/patent/USPP7090 expired 2009",
         "description": "Zaiger Variety"
     },
     {
-        "type": "Apricot",
-        "display_type": "Aprium",
+        "type": "Aprium",
         "name": "Cot-n-Candy",
         "patent": "https://patents.google.com/patent/USPP17827 expires 2026-01-18",
         "description": "Zaiger Variety"
     },
     {
-        "type": "Apricot",
-        "display_type": "Aprium",
+        "type": "Aprium",
         "name": "Summer Delight",
         "patent": "assumed PPAF, unknown",
         "description": "Zaiger Variety"
     },
     {       
-        "type": "Apricot",
-        "display_type": "Aprium",
+        "type": "Aprium",
         "name": "Leah Cot",
         "AKA": ["Leah-Cot"],
         "patent": "https://patents.google.com/patent/USPP21863 expires 2029-12-24",

@@ -1,0 +1,474 @@
+{
+    "title": "Disease Susceptibility of Common Apple Cultivars",
+    "author": "Janna Beckerman, Department of Botany and Plant Pathology, Purdue University",
+    "url": "https://www.extension.purdue.edu/extmedia/BP/BP-132-W.pdf",
+    "published": "1993",
+    "accessed": "Sep 2021",
+    "locations": [{
+        "name": "Corvallis, OR",
+        "latitude": 40.44043598397219,
+        "longitude": -86.93564277629406
+    }],
+    "plants": [
+        {
+            "type": "Apple",
+            "name": "Adam's Permain",
+            "disease_resistance": { "scab": "MR", "FB": "MR", "rust": "R", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Akane",
+            "disease_resistance": {"scab": "R", "FB": "MR", "rust": "MR", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Ambrosia",
+            "disease_resistance": {"scab": "VS", "FB": "S", "rust": "S", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Ashmead's Kernel",
+            "disease_resistance": {"scab": "MR", "FB": "MR", "rust": "R", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Baldwin",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "VR", "PM": "VS"}
+        },
+        {
+            "type": "Apple",
+            "name": "Beacon",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "S", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Belmac",
+            "disease_resistance": {"scab": "R", "FB": "N/A", "rust": "R", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Braeburn",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Britegold",
+            "disease_resistance": {"scab": "R", "FB": "R", "rust": "S", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Cameo",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "S", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Cortland",
+            "disease_resistance": {"scab": "VS", "FB": "S", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "CrimsonCrisp",
+            "disease_resistance": {"scab": "VR", "FB": "MR", "rust": "S", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Red Delicious",
+            "disease_resistance": {"scab": "S" , "FB":"R", "rust": "VR", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Dayton",
+            "disease_resistance": {"scab": "VR", "FB": "R", "rust": "MR", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Early McIntosh",
+            "disease_resistance": {"scab": "S", "FB": "R", "rust": "R", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Empire",
+            "disease_resistance": {"scab": "VS", "FB": "R", "rust": "R", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Enterprise",
+            "disease_resistance": {"scab": "VR", "FB": "R", "rust": "R", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Florina",
+            "disease_resistance": {"scab": "R" , "FB":"MR", "rust": "VS", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Freedom",
+            "disease_resistance": {"scab": "VR", "FB": "VR", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Fuji",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "R--VS", "PM": "R"} 
+        },
+        {
+            "type": "Apple",
+            "name": "Gala",
+            "disease_resistance": {"scab": "VS", "FB": "VS", "rust": "R--S", "PM": "MS"} 
+        },
+        {
+            "type": "Apple",
+            "name": "Ginger Gold",
+            "disease_resistance": {"scab": "VS", "FB": "VS", "rust": "VS", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Golden Delicious",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "S", "PM": "VS"}
+        },
+        {
+            "type": "Apple",
+            "name": "GoldRush",
+            "disease_resistance": {"scab": "VR", "FB": "MR", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Granny Smith",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "R", "PM": "VS"}
+        },
+        {
+            "type": "Apple",
+            "name": "Gravenstein",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "VR-VS", "PM": "VS"} 
+        },
+        {
+            "type": "Apple",
+            "name": "Grimes Golden",
+            "disease_resistance": {"scab": "R", "FB": "S", "rust": "R", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Haralson",
+            "disease_resistance": {"scab": "MR", "FB": "R", "rust": "MR", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Honey Crisp",
+            "disease_resistance": {"scab": "MR", "FB": "R", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Honey Gold",
+            "disease_resistance": {"scab": "R", "FB": "VS", "rust": "S", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Idared",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "VS", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Jerseymac",
+            "disease_resistance": {"scab": "VS", "FB": "S", "rust": "VR", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Jonagold",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "R", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Jonamac",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "R", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Jonathan",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "S", "PM": "VS"}
+        },
+        {
+            "type": "Apple",
+            "name": "Julyred",
+            "disease_resistance": {"scab": "VS", "FB": "S", "rust": "S", "PM": "VS"}
+        },
+        {
+            "type": "Apple",
+            "name": "Liberty",
+            "disease_resistance": {"scab": "VR", "FB": "R", "rust": "VR", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Lodi",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "MS", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Macfree",
+            "disease_resistance": {"scab": "R", "FB": "MR", "rust": "R", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Macoun",
+            "disease_resistance": {"scab": "VS", "FB": "S", "rust": "R", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "McIntosh",
+            "disease_resistance": {"scab": "VS", "FB": "S", "rust": "VR", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Melrose",
+            "disease_resistance": {"scab": "VS", "FB": "MR", "rust": "R", "PM": "N/A"}
+        },
+        {
+            "type": "Apple",
+            "name": "Milton",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "VR", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Moira",
+            "disease_resistance": {"scab": "R", "FB": "S", "rust": "R", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Mollies Delicious",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "VR", "PM": "N/A"}
+        },
+        {
+            "type": "Apple",
+            "name": "Murray",
+            "disease_resistance": {"scab": "R", "FB": "MR", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Mutsu",
+            "disease_resistance": {"scab": "VS" , "FB":"VS", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Newtown Pippon",
+            "disease_resistance": {"scab": "S", "FB": "MS", "rust": "R", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "NJ90",
+            "disease_resistance": {"scab": "MR", "FB": "S", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Northern Spy",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Nova Easygrow",
+            "disease_resistance": {"scab": "VR", "FB": "MR", "rust": "S", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Novamac",
+            "disease_resistance": {"scab": "VR", "FB": "VR", "rust": "VR", "PM": "VR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Nova Spy",
+            "disease_resistance": {"scab": "R", "FB": "N/A", "rust": "S", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Paulared",
+            "disease_resistance": {"scab": "R", "FB": "VS", "rust": "R", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Pink Lady",
+            "disease_resistance": {"scab": "VS", "FB": "VS", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Pinova",
+            "disease_resistance": {"scab": "R", "FB": "MR", "rust": "S", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Prima",
+            "disease_resistance": {"scab": "VR", "FB": "MS", "rust": "VS", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Priscilla",
+            "disease_resistance": {"scab": "VR", "FB": "R", "rust": "R", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Pristine",
+            "disease_resistance": {"scab": "VR", "FB": "R", "rust": "S", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Puritan",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Redfree",
+            "disease_resistance": {"scab": "R", "FB": "MR", "rust": "VR", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "R.I. Greening",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Rome Beauty",
+            "disease_resistance": {"scab": "VS", "FB": "VS", "rust": "VS", "PM": "VS"}
+        },
+        {
+            "type": "Apple",
+            "name": "Roxbury Russet",
+            "disease_resistance": {"scab": "S", "FB": "R", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Runkel",
+            "disease_resistance": {"scab": "R", "FB": "R", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Scarlet O'Hara",
+            "disease_resistance": {"scab": "VR", "FB": "S", "rust": "R", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Silken",
+            "disease_resistance": {"scab": "VS", "FB": "N/A", "rust": "VS", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Sir Prize",
+            "disease_resistance": {"scab": "VR", "FB": "S", "rust": "S", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Spijon",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Stark Bounty",
+            "disease_resistance": {"scab": "S", "FB": "R", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Stark Splendor",
+            "disease_resistance": {"scab": "S", "FB": "R", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Starkspur Earliblaze",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "MR", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Stayman",
+            "disease_resistance": {"scab": "VS", "FB": "S", "rust": "S", "PM": "VS"}
+        },
+        {
+            "type": "Apple",
+            "name": "Summerred",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Suncrisp",
+            "disease_resistance": {"scab": "MS", "FB": "VS", "rust": "MS", "PM": "MS"}
+        },
+        {
+            "type": "Apple",
+            "name": "Sundance",
+            "disease_resistance": {"scab": "VR", "FB": "R", "rust": "R", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "Trent",
+            "disease_resistance": {"scab": "VR", "FB": "MR", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Viking",
+            "disease_resistance": {"scab": "S", "FB": "R", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Wayne",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Wealthy",
+            "disease_resistance": {"scab": "S", "FB": "S", "rust": "VS", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Wellington",
+            "disease_resistance": {"scab": "S", "FB": "R", "rust": "R", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "William's Pride",
+            "disease_resistance": {"scab": "VR", "FB": "R", "rust": "VR", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Winesap",
+            "disease_resistance": {"scab": "VS", "FB": "S", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Winter Banana",
+            "disease_resistance": {"scab": "VS", "FB": "S", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Wolf River",
+            "disease_resistance": {"scab": "R", "FB": "MS", "rust": "MR", "PM": "R"}
+        },
+        {
+            "type": "Apple",
+            "name": "Yellow Transparent",
+            "disease_resistance": {"scab": "MR", "FB": "VS", "rust": "MR", "PM": "MR"}
+        },
+        {
+            "type": "Apple",
+            "name": "York Imperial",
+            "disease_resistance": {"scab": "S", "FB": "VS", "rust": "S", "PM": "S"}
+        },
+        {
+            "type": "Apple",
+            "name": "Zestar",
+            "disease_resistance": {"scab": "MS", "FB": "MS", "rust": "S", "PM": "R"}
+        },
+        {
+            "type": "Crabapple",
+            "name": "Chestnut",
+            "disease_resistance": {"scab": "MR", "FB": "R", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Crabapple",
+            "name": "Dolgo",
+            "disease_resistance": {"scab": "S-R", "FB": "R", "rust": "MR", "PM": "R"}
+        },
+        {
+            "type": "Crabapple",
+            "name": "Firecracker",
+            "disease_resistance": {"scab": "MR", "FB": "R", "rust": "R", "PM": "R"}
+        },
+        {
+            "type": "Crabapple",
+            "name": "Whitney",
+            "disease_resistance": {"scab": "R", "FB": "MR", "rust": "MR", "PM": "R"}
+        }
+    ]
+}
