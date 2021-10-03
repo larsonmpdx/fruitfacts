@@ -1,0 +1,129 @@
+{
+    "title": "Management of bacterial spot on peaches and nectarines",
+    "author": "Bill Shane, Michigan State University Extension, and George Sundin, Michigan State University Extension, Department of Plant Pathology",
+    "url": "https://www.canr.msu.edu/news/management_of_bacterial_spot_on_peaches_and_nectarines",
+    "published": "Apr 2011",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "East Lansing, MI (MSU Hort)",
+        "latitude": 42.719844733495485,
+        "longitude": -84.47474227805654
+    }],
+    "import_note": "PF24-007 and PF27 are in both excellent and moderate categories in the original. PF23 is listed twice",
+    "plants": [
+        {
+            "type": "Peach",
+            "category": "Yellow melting flesh peach",
+            "names": ["Biscoe", "Blazing Star", "Candor", "Contender", "Harrow Beauty", "Harrow Diamond", "PF1", "PF12A", "Starfire"],
+            "disease_resistance": { "BLS": "Excellent"}
+        },
+        {
+            "type": "Peach",
+            "category": "Yellow melting flesh peach",
+            "names": ["Blaze Prince", "Desiree", "Encore", "Garnet Beauty", "Gloria", "Glowingstar", "John Boy", "Messina", "PF5B", "PF14 Jersey", "PF24-007", "PF19-007", "PF28-007", "Redkist", "Redstar", "Summer Serenade", "Victoria", "PF 11 Peach", "PF9A-007"],
+            "disease_resistance": { "BLS": "Good"}
+        },
+        {
+            "type": "Peach",
+            "category": "Yellow melting flesh peach",
+            "names": ["Allstar", "Autumn Star", "Beaumont", "Canadian Harmony", "Coral Star", "Early Loring", "Glenglo", "Harbinger", "Harrow Dawn", "Harrow Fair", "Loring", "Madison", "PF20-007", "PF23", "PF25", "PF15A", "PF17", "Redhaven", "PF27A", "Early Star", "Risingstar", "PF5D-Big", "PF24C Cold Hardy"],
+            "disease_resistance": { "BLS": "Moderate"}
+        },
+        {
+            "type": "Peach",
+            "category": "Yellow melting flesh peach",
+            "names": ["Bounty", "Cresthaven", "GaLa", "Jerseyqueen"],
+            "disease_resistance": { "BLS": "Fair"}
+        },
+        {
+            "type": "Peach",
+            "category": "Yellow melting flesh peach",
+            "names": ["Elberta", "Fayette", "Flavorcrest", "Halehaven", "Laurol", "Spring Flame", "Suncrest"],
+            "disease_resistance": { "BLS": "Poor"}
+        },
+        {
+            "type": "Peach",
+            "category": "Yellow non-melting flesh peach",
+            "names": ["Goldnine", "Vulcan", "Venture", "Vinegold", "Virgil", "Allgold", "GoldJim"],
+            "disease_resistance": { "BLS": "Good"}
+        },
+        {
+            "type": "Peach",
+            "category": "Yellow non-melting flesh peach",
+            "names": ["Veecling", "Catherina"],
+            "disease_resistance": { "BLS": "Moderate"}
+        },
+        {
+            "type": "Peach",
+            "category": "Yellow non-melting flesh peach",
+            "names": ["Babygold 5", "Babygold 7"],
+            "disease_resistance": { "BLS": "Fair"}
+        },
+        {
+            "type": "Peach",
+            "category": "White flesh peach",
+            "names": ["Manon", "Saturn*", "Scarlet Pearl", "Southern Pearl"],
+            "disease_resistance": { "BLS": "Good"}
+        },
+        {
+            "type": "Peach",
+            "category": "White flesh peach",
+            "names": ["Blushingstar", "Carolina Belle", "Raritan Rose Spring Snow", "Sugar May"],
+            "disease_resistance": { "BLS": "Moderate"}
+        },
+        {
+            "type": "Peach",
+            "category": "White flesh peach",
+            "names": ["Benedicte", "Klondike White", "Lady Nancy", "White Lady"],
+            "disease_resistance": { "BLS": "Fair"}
+        },
+        {
+            "type": "Peach",
+            "category": "White flesh peach",
+            "names": ["Opale", "Snow Bride", "Snow Beauty", "Snow Giant", "Snow King", "Snow Prince", "Snowfire", "Yukon King"],
+            "disease_resistance": { "BLS": "Poor"}
+        },
+        {
+            "type": "Nectarine",
+            "category": "Yellow nectarine",
+            "names": ["Fantasia", "Firebrite", "Harblaze", "Harflame", "Mayfire", "Mericrest", "PF11 Nectarine", "Stark Ovation", "Sunbright"],
+            "disease_resistance": { "BLS": "Moderate"}
+        },
+        {
+            "type": "Nectarine",
+            "category": "Yellow nectarine",
+            "names": ["Flavortop", "Summer Beaut", "Sunglo", "Redgold", "Eastern Glo"],
+            "disease_resistance": { "BLS": "Fair"}
+        },
+        {
+            "type": "Nectarine",
+            "category": "Yellow nectarine",
+            "names": ["June Glo", "Honey Royale", "Honeyblaze", "Honeykist"],
+            "disease_resistance": { "BLS": "Poor"}
+        },
+        {
+            "type": "Nectarine",
+            "category": "White nectarine",
+            "names": ["Emeraude"],
+            "disease_resistance": { "BLS": "Good"}
+        },
+        {
+            "type": "Nectarine",
+            "category": "White nectarine",
+            "names": ["Jade"],
+            "disease_resistance": { "BLS": "Moderate"}
+        },
+        {
+            "type": "Nectarine",
+            "category": "White nectarine",
+            "names": ["Arctic Sweet", "ArcticGlo", "Crimson Snow"],
+            "disease_resistance": { "BLS": "Fair"}
+        },
+        {
+            "type": "Nectarine",
+            "category": "White nectarine",
+            "names": ["Scarlet Pearl", "Arctic Belle", "Arctic Jay", "Arctic Gold", "Zephyr", "Arctic Pride"],
+            "disease_resistance": { "BLS": "Poor"}
+        }
+    ]
+}
