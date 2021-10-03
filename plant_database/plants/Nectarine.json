@@ -1,5 +1,25 @@
 [
     {
         "name": "Fantasia"
+    },
+    {
+        "name": "Sunbest",
+        "patent": "https://patents.google.com/patent/USPP15062 expires 2021-12-25",
+        "description": "http://www.ffsp.net/varieties/nectarine/sunbest/"
+    },
+    {
+        "name": "Sunmist",
+        "patent": "https://patents.google.com/patent/USPP9871 expired 2014-08-22",
+        "description": "http://www.ffsp.net/varieties/nectarine/sunmist/"
+    },
+    {
+        "name": "UFQueen",
+        "patent": "https://patents.google.com/patent/USPP11587 expired 2018-07-20",
+        "description": "http://www.ffsp.net/varieties/nectarine/ufqueen/"
+    },
+    {
+        "name": "UFRoyal",
+        "patent": "https://patents.google.com/patent/USPP20314 expires 2028-05-09",
+        "description": "http://www.ffsp.net/varieties/nectarine/ufroyal/"
     }
 ]

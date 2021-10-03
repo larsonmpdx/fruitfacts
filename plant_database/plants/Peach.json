@@ -16,15 +16,100 @@
         "tags": [ "peach leaf curl resistant" ]
     },
     {
-        "name": "Flordagrande",
-        "AKA": ["Floridagrand", "Flordagrand", "Florida grand"]
-    },
-    {
         "name": "Indian Blood",
         "AKA": ["Indian Blood Cling"]
     },
     {
         "name": "Indian Free",
         "AKA": ["Indian Blood Free"]
+    },
+    {
+        "name": "UFSun",
+        "patent": "https://patents.google.com/patent/USPP14764 expires 2023-07-27",
+        "description": "http://www.ffsp.net/varieties/peach/ufsun/"
+    },
+    {
+        "name": "Flordagrande",
+        "AKA": ["Floridagrand", "Flordagrand", "Florida grand"]
+    },
+    {
+        "name": "UFBest",
+        "patent": "https://patents.google.com/patent/USPP25129 expires 2032-04-13",
+        "description": "http://www.ffsp.net/varieties/peach/ufbest/"
+    },
+    {
+        "name": "UFGem",
+        "patent": "https://patents.google.com/patent/USPP26057 expires 2034-02-08",
+        "description": "http://www.ffsp.net/varieties/peach/ufgem/"
+    },
+    {
+        "name": "UFBeauty",
+        "patent": "https://patents.google.com/patent/USPP14784 expires 2023-03-18",
+        "description": "http://www.ffsp.net/varieties/peach/ufbeauty/"
+    },
+    {
+        "name": "UFGold",
+        "patent": "https://patents.google.com/patent/USPP10315 expired 2016-09-10",
+        "description": "http://www.ffsp.net/varieties/peach/ufgold/"
+    },
+    {
+        "name": "UFOne",
+        "patent": "https://patents.google.com/patent/USPP21607 expires 2028-12-30",
+        "description": "http://www.ffsp.net/varieties/peach/ufone/"
+    },
+    {
+        "name": "UFO",
+        "patent": "https://patents.google.com/patent/USPP13352 expired 2020-07-19",
+        "description": "http://www.ffsp.net/varieties/peach/ufo/"
+    },
+    {
+        "name": "Flordabest",
+        "patent": "https://patents.google.com/patent/USPP20294 expires 2028-05-25",
+        "description": "http://www.ffsp.net/varieties/peach/flordabest/"
+    },
+    {
+        "name": "UF2000",
+        "patent": "https://patents.google.com/patent/USPP12019 expired 2019-08-18",
+        "description": "http://www.ffsp.net/varieties/peach/uf2000/"
+    },
+    {
+        "name": "UFBlaze",
+        "patent": "https://patents.google.com/patent/USPP14898 expires 2023-04-15",
+        "description": "http://www.ffsp.net/varieties/peach/ufblaze/"
+    },
+    {
+        "name": "UFSharp",
+        "patent": "https://patents.google.com/patent/USPP22294 expires 2030-02-19",
+        "description": "http://www.ffsp.net/varieties/peach/ufsharp/"
+    },
+    {
+        "name": "Gulfking",
+        "patent": "https://patents.google.com/patent/USPP14483 expires 2022-12-26",
+        "description": "http://www.ffsp.net/varieties/peach/gulfking/"
+    },
+    {
+        "name": "Gulfprince",
+        "patent": "https://patents.google.com/patent/USPP12686 expired 2020-03-06",
+        "description": "http://www.ffsp.net/varieties/peach/gulfprince/"
+    },
+    {
+        "name": "Gulfcrimson",
+        "patent": "https://patents.google.com/patent/USPP20174 expires 2028-05-02",
+        "description": "http://www.ffsp.net/varieties/peach/gulfcrimson/"
+    },
+    {
+        "name": "Gulfsnow",
+        "patent": "https://patents.google.com/patent/USPP25299 expires 2032-10-27",
+        "description": "http://www.ffsp.net/varieties/peach/gulfsnow/"
+    },
+    {
+        "name": "UFGlo",
+        "patent": "https://patents.google.com/patent/USPP21837 expires 2030-01-05",
+        "description": "http://www.ffsp.net/varieties/peach/ufglo/"
+    },
+    {
+        "name": "Gulfcrest",
+        "patent": "https://patents.google.com/patent/USPP14685 expires 2023-03-10",
+        "description": "http://www.ffsp.net/varieties/peach/gulfcrest/"
     }
 ]

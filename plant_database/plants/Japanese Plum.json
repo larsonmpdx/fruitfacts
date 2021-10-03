@@ -87,5 +87,20 @@
     },
     {
         "name": "AU Producer"
+    },
+    {
+        "name": "Gulfbeauty",
+        "patent": "https://patents.google.com/patent/USPP11224 expired 2017-09-02",
+        "description": "http://www.ffsp.net/varieties/plum/gulfbeauty/"
+    },
+    {
+        "name": "Gulfblaze",
+        "patent": "https://patents.google.com/patent/USPP10880 expired 2017-08-05",
+        "description": "http://www.ffsp.net/varieties/plum/gulfblaze/"
+    },
+    {
+        "name": "Gulfrose",
+        "patent": "https://patents.google.com/patent/USPP12833 expired 2020-07-12",
+        "description": "http://www.ffsp.net/varieties/plum/gulfrose/"
     }
 ]
