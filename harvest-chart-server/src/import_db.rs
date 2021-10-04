@@ -304,19 +304,19 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
                 MonthLocationType::MonthAtBeginning => {
                     output.parse_type = DateParseType::TwoDates;
                     output.start = Some(string_to_day_number(split[0]).unwrap());
-                    output.end = Some(
-                        string_to_day_number(&format!("{} {}", get_month(split[0]), split[1]))
-                            .unwrap(),
-                    );
+                    output.end = string_to_day_number(&format!("{} {}", get_month(split[0]), split[1]));
+                    if output.end.is_none() {
+                        panic!("couldn't parse {} as a shared-month, month at the beginning", input)
+                    }
                     return Some(output);
                 }
                 MonthLocationType::MonthAtEnd => {
                     output.parse_type = DateParseType::TwoDates;
                     output.start = Some(string_to_day_number(split[0]).unwrap());
-                    output.end = Some(
-                        string_to_day_number(&format!("{} {}", split[1], get_month(split[0])))
-                            .unwrap(),
-                    );
+                    output.end = string_to_day_number(&format!("{} {}", split[1], get_month(split[0])));
+                    if output.end.is_none() {
+                        panic!("couldn't parse {} as a shared-month, month at the end", input)
+                    }
                     return Some(output);
                 }
                 MonthLocationType::NoMonth => panic!("no month found in string {}", split[0]),
