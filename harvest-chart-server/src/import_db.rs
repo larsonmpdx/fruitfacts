@@ -268,10 +268,20 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
 
         if input.contains('-') {
             split = input.split('-').collect::<Vec<&str>>();
-            assert_eq!(split.len(), 2, "date string had more than one '-'");
+            assert_eq!(
+                split.len(),
+                2,
+                "date string had more than one '-': {}",
+                input
+            );
         } else if input.contains(" to ") {
             split = input.split(" to ").collect::<Vec<&str>>();
-            assert_eq!(split.len(), 2, "date string had more than one ' to '");
+            assert_eq!(
+                split.len(),
+                2,
+                "date string had more than one ' to ': {}",
+                input
+            );
         } else {
             panic!("shouldn't get here, '-' or ' to ' match")
         }

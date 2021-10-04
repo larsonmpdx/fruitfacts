@@ -1,0 +1,153 @@
+{
+    "title": "Growing Plums in Florida",
+    "author": "A. Sarkhosh, M. Olmstead, E. P. Miller, P. C. Andersen, and J. G. Williamson",
+    "url": "https://edis.ifas.ufl.edu/publication/hs250",
+    "published": "2018-09-13",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "Florida (various locations)",
+        "latitude": 29.6465645490967,
+        "longitude": -82.34424313539307
+    }],
+    "plants": [
+        {
+            "name": "Gulfbeauty",
+            "chill": 225,
+            "type": "Japanese Plum",
+            "harvest_time_unparsed": "5 days before Gulfruby, 8–12 days before 'Gulfblaze",
+            "fruit_development_period": "75 days",
+            "disease_resistance": {
+                "canker": "very resistant",
+                "plum_leaf_scald": "moderately resistant"
+            }
+        },
+        {
+            "name": "Gulfblaze",
+            "chill": 250,
+            "type": "Japanese Plum",
+            "harvest_time_unparsed": "8 to 14 days after Gulfbeauty",
+            "fruit_development_period": "95 days",
+            "disease_resistance": {
+                "canker": "very resistant",
+                "plum_leaf_scald": "moderately resistant"
+            }
+        },
+        {
+            "name": "Gulfrose",
+            "chill": 275,
+            "type": "Japanese Plum",
+            "harvest_time_unparsed": "one week later than Gulfblaze",
+            "fruit_development_period": "95 days",
+            "disease_resistance": {
+                "canker": "very resistant",
+                "plum_leaf_scald": "less tolerant"
+            }
+        },
+        {
+            "name": "Gulfruby",
+            "chill": 250,
+            "type": "Japanese Plum",
+            "harvest_time_unparsed": "7–10 days before Gulfblaze",
+            "disease_resistance": {
+                "canker": "susceptible"
+            },
+            "not_recommended_reason": "canker suceptibility"
+        },
+        {
+            "name": "Gulfgold",
+            "type": "Japanese Plum",
+            "harvest_time": "late May to mid June",
+            "disease_resistance": {
+                "plum_leaf_scald": "susceptible"
+            },
+            "not_recommended_reason": "leaf scald suceptibility"
+        },
+        {
+            "name": "Au-Homeside",
+            "type": "Japanese Plum",
+            "harvest_time": "mid June",
+            "disease_resistance": {
+                "plum_leaf_scald": "tolerant"
+            }
+        },
+        {
+            "name": "Au-Producer",
+            "type": "Japanese Plum",
+            "harvest_time": "mid June",
+            "chill": 750,
+            "disease_resistance": {
+                "plum_leaf_scald": "tolerant"
+            }
+        },
+        {
+            "name": "Au-Roadside",
+            "type": "Japanese Plum",
+            "harvest_time": "mid June",
+            "chill": 750,
+            "disease_resistance": {
+                "plum_leaf_scald": "tolerant"
+            }
+        },
+        {
+            "name": "Au-Rosa",
+            "type": "Japanese Plum",
+            "chill": 750,
+            "disease_resistance": {
+                "plum_leaf_scald": "resistant"
+            }
+        },
+        {
+            "name": "Au-Rubrum",
+            "type": "Japanese Plum",
+            "harvest_time": "mid June",
+            "chill": 750,
+            "disease_resistance": {
+                "plum_leaf_scald": "tolerant"
+            }
+        },
+        {
+            "name": "Byrongold",
+            "type": "Japanese Plum",
+            "chill": 450,
+            "disease_resistance": {
+                "plum_leaf_scald": "may have some problems"
+            }
+        },
+        {
+            "name": "Excelsior",
+            "type": "Japanese Plum",
+            "chill": 400
+        },
+        {
+            "name": "Methley",
+            "type": "Japanese Plum",
+            "chill": 650,
+            "self_fertile": true,
+            "disease_resistance": {
+                "plum_leaf_scald": "susceptible"
+            },
+            "not_recommended_reason": "small fruit size, lack of firmness, and susceptibility to plum leaf scald and other diseases of bacterial origin"
+        },
+        {
+            "name": "Robusto",
+            "type": "Japanese Plum",
+            "harvest_time": "early June",
+            "chill": "400-500"
+        },
+        {
+            "name": "Santa Rosa",
+            "type": "Japanese Plum",
+            "chill": 650,
+            "disease_resistance": {
+                "plum_leaf_scald": "susceptible"
+            },
+            "not_recommended_reason": "susceptibility to plum leaf scald and other diseases of bacterial origin"
+        },
+        {
+            "name": "Segundo",
+            "type": "Japanese Plum",
+            "harvest_time": "mid to late June",
+            "chill": "400-500"
+        }
+    ]
+}
