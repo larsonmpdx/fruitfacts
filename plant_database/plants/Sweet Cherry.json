@@ -38,13 +38,13 @@
         "patent": "https://patents.google.com/patent/USPP8051 expired 2011"
     },
     {
-        "name": "Blackgold",
-        "AKA": ["Black Gold", "Ridgewood"],
+        "name": "Ridgewood",
+        "AKA": ["Blackgold (tm)", "Black Gold"],
         "patent": "https://patents.google.com/patent/USPP17301 expires 2021-09-24"
     },
     {
-        "name": "Whitegold",
-        "AKA": ["White Gold", "Newfane"],
+        "name": "Newfane",
+        "AKA": ["Whitegold (tm)", "White Gold"],
         "patent": "https://patents.google.com/patent/USPP18892 expires 2022-03-21"
     },
     {
@@ -79,7 +79,7 @@
     },
     {
         "name": "Royal Crimson",
-        "AKA": ["6GM25","Royal Fran"],
+        "AKA": ["6GM25", "Royal Fran"],
         "description": "Zaiger variety. self fruitful",
         "patent": "PPAF"
     },
@@ -103,8 +103,8 @@
         "AKA": ["Napoleon"]
     },
     {
-        "name": "Royalton",
-        "AKA": ["NY 11390"],
+        "name": "NY 11390",
+        "AKA": ["Royalton (tm)"],
         "patent": "https://patents.google.com/patent/USPP11107 expired 2011",
         "description": "https://ecommons.cornell.edu/bitstream/handle/1813/5204/FLS-140.pdf?sequence=1&isAllowed=y"
     },
@@ -116,8 +116,8 @@
         "AKA": ["Attika"]
     },
     {
-        "name": "Regina",
-        "AKA": ["Jork 57/201"],
+        "name": "Jork 57/201",
+        "AKA": ["Regina (tm)"],
         "description": "late, Bing+10-14"
     },
     {
@@ -191,8 +191,8 @@
         "patent": "https://patents.google.com/patent/USPP11385 expired 2018"
     },
     {
-        "name": "Index",
-        "AKA": ["PC 7222-1"],
+        "name": "PC 7222-1",
+        "AKA": ["Index (tm)"],
         "description": "Bing-3-5",
         "patent": "https://patents.google.com/patent/USPP10459 expired 2017"
     },
@@ -202,21 +202,21 @@
         "description": "Summerland variety. Bing-8"
     },
     {
-        "name": "BlackPearl",
-        "AKA": ["NY 8139"],
+        "name": "NY 8139",
+        "AKA": ["BlackPearl (tm)"],
         "description": "Cornell variety. Bing-10"
     },
     {
-        "name": "BurgundyPearl",
-        "AKA": ["NY 38L"],
+        "name": "NY 38L",
+        "AKA": ["BurgundyPearl (tm)"],
         "description": "Cornell variety. Bing-10"
     },
     {
         "name": "EbonyPearl"
     },
     {
-        "name": "BlushingGold",
-        "AKA": ["NY 8182", "Pendleton"],
+        "name": "Pendleton",
+        "AKA": ["BlushingGold (tm)", "NY 8182"],
         "patent": "https://patents.google.com/patent/US20050273892P1/en patent application abandoned 2005"
     },
     {

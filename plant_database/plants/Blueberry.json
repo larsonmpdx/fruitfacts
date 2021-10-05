@@ -78,7 +78,6 @@
     },
     {
         "name": "Legacy",
-        "description": "almost evergreen. fast growing",
         "tags": [ "southern highbush", "northern highbush", "northern-southern highbush hybrid" ]
     },
     {
@@ -113,15 +112,241 @@
     },
     {
         "name": "Mini Blues",
-        "description": "specially adapted for automated harvesting. small berries with excellent flavor and heavy yield",
         "patent": "https://patents.google.com/patent/USPP28233 expires 2035-05-21",
         "tags": [ "northern highbush" ]
     },
     {
-        "name": "Pink Popcorn",
-        "description": "white-pink berries",
-        "AKA": ["MNPink1"],
+        "name": "MNPink1",
+        "AKA": ["Pink Popcorn (tm)"],
         "patent": "https://patents.google.com/patent/USPP25792 expires 2034-03-21",
         "tags": [ "northern highbush" ]
+    },
+    {
+        "name": "Abundance",
+        "description": "FFSP variety",
+        "patent": "16,476",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL07-399",
+        "description": "FFSP variety",
+        "AKA": ["Arcadia (tm)"],
+        "patent": "26,313",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL06-203",
+        "description": "FFSP variety",
+        "AKA": ["Avanti (tm)"],
+        "patent": "26,312",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Bluecrisp",
+        "description": "FFSP variety",
+        "patent": "11,033",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL03-291",
+        "description": "FFSP variety",
+        "AKA": ["Bobolink"],
+        "patent": "",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL04-235",
+        "description": "FFSP variety",
+        "AKA": ["Chickadee"],
+        "patent": "21,376",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Emerald",
+        "description": "FFSP variety",
+        "patent": "12,165",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL06-377",
+        "description": "FFSP variety",
+        "AKA": ["Endura"],
+        "patent": "26,679",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Farthing",
+        "description": "FFSP variety",
+        "patent": "19,341",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL96-43",
+        "description": "FFSP variety",
+        "AKA": ["Flicker (tm)"],
+        "patent": "21,554",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Florida Rose",
+        "description": "FFSP variety",
+        "patent": "14,485",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL98-325",
+        "description": "FFSP variety",
+        "AKA": ["Indigocrisp (tm)"],
+        "patent": "26,523",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Jewel",
+        "description": "FFSP variety",
+        "patent": "11,807",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL06-556",
+        "description": "FFSP variety",
+        "AKA": ["Keecrisp (tm)"],
+        "patent": "27,771",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL02-40",
+        "description": "FFSP variety",
+        "AKA": ["Kestrel (tm)"],
+        "patent": "21,719",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Magnus",
+        "description": "FFSP variety",
+        "patent": "https://patents.google.com/patent/USPP32181 expires 2039-01-15",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "FL01-173",
+        "description": "FFSP variety",
+        "AKA": ["Meadowlark (tm)"],
+        "patent": "21,553",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Millennia",
+        "description": "FFSP variety",
+        "patent": "12,816",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Optimus",
+        "description": "FFSP variety",
+        "patent": "https://patents.google.com/patent/US20190281738 expires 2039-01-29",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Patrecia",
+        "description": "FFSP variety",
+        "patent": "27,740",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Primadonna",
+        "description": "FFSP variety",
+        "patent": "20,181",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Raven",
+        "description": "FFSP variety",
+        "AKA": ["FL05-627"],
+        "patent": "21,374",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "San Joaquin",
+        "description": "FFSP variety",
+        "AKA": ["FLX-1"],
+        "patent": "19,342",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Santa Fe",
+        "description": "FFSP variety",
+        "patent": "10,788",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Sapphire",
+        "description": "FFSP variety",
+        "patent": "11,829",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Savory",
+        "description": "FFSP variety",
+        "patent": "15,109",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Scintilla",
+        "description": "FFSP variety",
+        "patent": "19,233",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Sebring",
+        "description": "FFSP variety",
+        "patent": "13,683",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Snowchaser",
+        "description": "FFSP variety",
+        "patent": "19,503",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Southern Belle",
+        "description": "FFSP variety",
+        "patent": "13,931",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Southmoon",
+        "description": "FFSP variety",
+        "patent": "9,834",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Springhigh",
+        "description": "FFSP variety",
+        "patent": "16,404",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Springwide",
+        "description": "FFSP variety",
+        "patent": "16,333",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Star",
+        "description": "FFSP variety",
+        "patent": "10,675",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Sweetcrisp",
+        "description": "FFSP variety",
+        "patent": "20,027",
+        "tags": [ "southern highbush" ]
+    },
+    {
+        "name": "Windsor",
+        "description": "FFSP variety",
+        "patent": "12,783",
+        "tags": [ "southern highbush" ]
     }
 ]

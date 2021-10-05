@@ -10,6 +10,26 @@
             "name": "Satsuma",
             "type": "Japanese Plum",
             "harvest_time": "July 30 to August 21"
+        },
+        {
+            "name": "Legacy",
+            "type": "Blueberry",
+            "description": "almost evergreen. fast growing"
+        },
+        {
+            "name": "Aurora",
+            "type": "Blueberry",
+            "description": "latest ripening northern highbush"
+        },
+        {
+            "name": "Mini Blues",
+            "type": "Blueberry",
+            "description": "specially adapted for automated harvesting. small berries with excellent flavor and heavy yield"
+        },
+        {
+            "name": "Puget Gold",
+            "type": "Apricot",
+            "description": "One of the only apricots that's at least marginal in the maritime PNW"
         }
     ]
 }

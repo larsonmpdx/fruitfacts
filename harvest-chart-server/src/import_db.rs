@@ -1010,7 +1010,8 @@ fn load_references(
 
             let contents = fs::read_to_string(path_).unwrap();
 
-            let collection: CollectionJson = serde_json::from_str(&contents).unwrap();
+            let collection: CollectionJson = serde_json::from_str(&contents).expect(
+                &format!("couldn't parse json in file {}", path_.display()));
 
             let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
 

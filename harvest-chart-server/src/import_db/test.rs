@@ -238,12 +238,12 @@ fn test_database_loading() {
 
     assert_ge!(items_loaded.base_plants_found, 275);
     assert_ge!(items_loaded.base_types_found, 15);
-    assert_ge!(items_loaded.reference_items.reference_locations_found, 24);
+    assert_ge!(items_loaded.reference_items.reference_locations_found, 32);
     assert_ge!(
         items_loaded.reference_items.reference_base_plants_added,
-        535
+        728
     );
-    assert_ge!(items_loaded.reference_items.reference_plants_added, 1953);
+    assert_ge!(items_loaded.reference_items.reference_plants_added, 2340);
 }
 
 #[test]

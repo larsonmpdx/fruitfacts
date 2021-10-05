@@ -1,0 +1,17 @@
+{
+    "title": "FFSP Plants",
+    "author": "",
+    "url": "http://www.ffsp.net/varieties/",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "Florida (various locations)",
+        "latitude": 29.6465645490967,
+        "longitude": -82.34424313539307
+    }],
+    "plants": [
+        {
+            "name": "Fla. 90-3",
+            "type": "Apple"
+        }
+    ]
+}
