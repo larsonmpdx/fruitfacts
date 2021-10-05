@@ -8,10 +8,491 @@
         "latitude": 29.6465645490967,
         "longitude": -82.34424313539307
     }],
+    "import_note": "rootstocks such as MP-29 omitted",
     "plants": [
         {
             "name": "Fla. 90-3",
             "type": "Apple"
+        },
+        {
+            "name": "Abundance",
+            "type": "Blueberry",
+            "chill": "300 hours",
+            "harvest_time": "First Harvest: Around April 30, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/abundance/"
+        },
+        {
+            "name": "FL07-399",
+            "type": "Blueberry",
+            "chill": "Less than 200 Hours",
+            "harvest_time": "50% Harvest: Around April 25 (Gainesville, FL)",
+            "description": "http://www.ffsp.net/varieties/blueberry/arcadia-fl07-399/"
+        },
+        {
+            "name": "FL06-203",
+            "type": "Blueberry",
+            "chill": "100 hours",
+            "harvest_time": "50% Harvest: Around April 10 (Gainesville, FL)",
+            "description": "http://www.ffsp.net/varieties/blueberry/avanti-fl06-203/"
+        },
+        {
+            "name": "Bluecrisp",
+            "type": "Blueberry",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around April 15, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/bluecrisp/"
+        },
+        {
+            "name": "FL03-291",
+            "type": "Blueberry",
+            "chill": "200 hours",
+            "harvest_time": "First Harvest: Around April 16 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/bobolink-fl03-291/"
+        },
+        {
+            "name": "FL04-235",
+            "type": "Blueberry",
+            "chill": "100 hours",
+            "harvest_time": "First Harvest: Around April 5 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/chickadee-fl04-235/"
+        },
+        {
+            "name": "Emerald",
+            "type": "Blueberry",
+            "harvest_time": "First Harvest: Around April 22, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/emerald/"
+        },
+        {
+            "name": "FL06-377",
+            "type": "Blueberry",
+            "chill": "150 Hours",
+            "harvest_time": "50% Harvest: Around April 25 (Gainesville, FL)",
+            "description": "http://www.ffsp.net/varieties/blueberry/endura-fl06-377/"
+        },
+        {
+            "name": "Farthing",
+            "type": "Blueberry",
+            "chill": "300 hours",
+            "harvest_time": "First Harvest: Around April 20, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/farthing/"
+        },
+        {
+            "name": "FL96-43",
+            "type": "Blueberry",
+            "chill": "200 hours below 7 degrees C",
+            "harvest_time": "First Harvest: Around April 14 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/flicker-fl96-43/"
+        },
+        {
+            "name": "Florida Rose",
+            "type": "Blueberry",
+            "chill": "300 hours",
+            "harvest_time": "First Harvest: Around May 25, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/florida-rose/"
+        },
+        {
+            "name": "FL98-325",
+            "type": "Blueberry",
+            "chill": "300 hours",
+            "harvest_time": "First Harvest: Around April 15 (Gainesville, FL)",
+            "description": "http://www.ffsp.net/varieties/blueberry/indigocrisp-fl98-325/"
+        },
+        {
+            "name": "Jewel",
+            "type": "Blueberry",
+            "chill": "250 hours",
+            "harvest_time": "First Harvest: Around April 15, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/jewel/"
+        },
+        {
+            "name": "FL06-556",
+            "type": "Blueberry",
+            "chill": "300 hours",
+            "harvest_time": "50% Harvest: Around May 4 (Gainesville, FL)",
+            "description": "http://www.ffsp.net/varieties/blueberry/keecrisp-fl06-556/"
+        },
+        {
+            "name": "FL02-40",
+            "type": "Blueberry",
+            "chill": "200 hours",
+            "harvest_time": "First Harvest: Around April 5 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/kestrel-fl02-40/"
+        },
+        {
+            "name": "Magnus",
+            "type": "Blueberry",
+            "chill": "100-150 hours",
+            "description": "http://www.ffsp.net/varieties/blueberry/magnus/"
+        },
+        {
+            "name": "FL01-173",
+            "type": "Blueberry",
+            "chill": "200 hours",
+            "harvest_time": "First Harvest: Around April 10 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/meadowlark-fl01-173/"
+        },
+        {
+            "name": "Millennia",
+            "type": "Blueberry",
+            "chill": "350 hours",
+            "harvest_time": "First Harvest: Around April 28, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/millennia/"
+        },
+        {
+            "name": "Optimus",
+            "type": "Blueberry",
+            "chill": "150-200 hours",
+            "description": "http://www.ffsp.net/varieties/blueberry/optimus/"
+        },
+        {
+            "name": "Patrecia",
+            "type": "Blueberry",
+            "description": "http://www.ffsp.net/varieties/blueberry/patrecia/"
+        },
+        {
+            "name": "Primadonna",
+            "type": "Blueberry",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around April 12, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/primadonna/"
+        },
+        {
+            "name": "FL05-627",
+            "type": "Blueberry",
+            "chill": "300 hours",
+            "harvest_time": "First Harvest: Around April 20, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/raven-fl05-627/"
+        },
+        {
+            "name": "San Joaquin",
+            "type": "Blueberry",
+            "chill": "400-500 hours",
+            "harvest_time": "First Harvest: Around April 20 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/san-joaquin-flx-1/"
+        },
+        {
+            "name": "Santa Fe",
+            "type": "Blueberry",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around May 3, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/santa-fe/"
+        },
+        {
+            "name": "Sapphire",
+            "type": "Blueberry",
+            "chill": "400 hours",
+            "description": "http://www.ffsp.net/varieties/blueberry/sapphire/"
+        },
+        {
+            "name": "Savory",
+            "type": "Blueberry",
+            "chill": "300 hours",
+            "harvest_time": "First Harvest: Around May 22, near Homerville, GA",
+            "description": "http://www.ffsp.net/varieties/blueberry/savory/"
+        },
+        {
+            "name": "Scintilla",
+            "type": "Blueberry",
+            "chill": "200-300 hours",
+            "harvest_time": "First Harvest: Around April 20, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/scintilla/"
+        },
+        {
+            "name": "Sebring",
+            "type": "Blueberry",
+            "chill": "200 hours",
+            "harvest_time": "First Harvest: Around May 1, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/sebring/"
+        },
+        {
+            "name": "Snowchaser",
+            "type": "Blueberry",
+            "chill": "100-200 hours",
+            "harvest_time": "First Harvest: Around April 5, near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/snowchaser/"
+        },
+        {
+            "name": "Southern Belle",
+            "type": "Blueberry",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around April 28, in Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/southern-belle/"
+        },
+        {
+            "name": "Southmoon",
+            "type": "Blueberry",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around April 28, in Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/southmoon/"
+        },
+        {
+            "name": "Springhigh",
+            "type": "Blueberry",
+            "chill": "200-300 hours",
+            "harvest_time": "First Harvest: Around April 16, in Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/springhigh/"
+        },
+        {
+            "name": "Springwide",
+            "type": "Blueberry",
+            "chill": "200 hours",
+            "harvest_time": "First Harvest: Around April 22, in Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/springwide/"
+        },
+        {
+            "name": "Star",
+            "type": "Blueberry",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around May 1, in Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/star/"
+        },
+        {
+            "name": "Sweetcrisp",
+            "type": "Blueberry",
+            "chill": "200-300 hours",
+            "harvest_time": "First Harvest: Around April 26, in Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/sweetcrisp/"
+        },
+        {
+            "name": "Windsor",
+            "type": "Blueberry",
+            "chill": "300 hours",
+            "harvest_time": "First Harvest: Around April 22, in Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/blueberry/windsor/"
+        },
+        {
+            "name": "914",
+            "type": "Grapefruit",
+            "harvest_time": "First Harvest: Around October through April in some seasons",
+            "description": "http://www.ffsp.net/varieties/citrus/914-2/"
+        },
+        {
+            "name": "950",
+            "type": "Mandarin",
+            "harvest_time": "First Harvest: Early-to-Mid-December, through January",
+            "description": "http://www.ffsp.net/varieties/citrus/950-2/"
+        },
+        {
+            "name": "LB8-9",
+            "type": "Mandarin",
+            "harvest_time": "First Harvest: Mid-November to late December, depending on season",
+            "description": "http://www.ffsp.net/varieties/citrus/sugar-belle-lb8-9/"
+        },
+        {
+            "name": "B9-65",
+            "description": "http://www.ffsp.net/varieties/citrus/b9-65/"
+        },
+        {
+            "name": "Florida EV1",
+            "harvest_time": "8-12 weeks earlier than Valencia",
+            "description": "http://www.ffsp.net/varieties/citrus/florida-ev1/"
+        },
+        {
+            "name": "Florida EV2",
+            "harvest_time": "8-12 weeks earlier than Valencia",
+            "description": "http://www.ffsp.net/varieties/citrus/florida-ev2/"
+        },
+        {
+            "name": "N7-3",
+            "harvest_time": "Fruit holds its quality into the summer, allowing an April-June harvest",
+            "description": "http://www.ffsp.net/varieties/citrus/valenfresh-n7-3/"
+        },
+        {
+            "name": "N13-32",
+            "description": "http://www.ffsp.net/varieties/citrus/n13-32/"
+        },
+        {
+            "name": "OLL-4",
+            "description": "http://www.ffsp.net/varieties/citrus/oll-4/"
+        },
+        {
+            "name": "OLL-8",
+            "harvest_time": "with Valencia",
+            "description": "http://www.ffsp.net/varieties/citrus/oll-8/"
+        },
+        {
+            "name": "SF14W-62",
+            "harvest_time": "roughly 4‐8 weeks earlier than Valencia",
+            "description": "http://www.ffsp.net/varieties/citrus/valquarius-sf14w-62/"
+        },
+        {
+            "name": "UF 11-1-24",
+            "harvest_time": "midseason",
+            "description": "http://www.ffsp.net/varieties/citrus/uf-11-1-24/"
+        },
+        {
+            "name": "Southern Home",
+            "type": "Muscadine",
+            "harvest_time": "through October or November",
+            "description": "http://www.ffsp.net/varieties/grape/southernhome/"
+        },
+        {
+            "name": "Sunbest",
+            "type": "Nectarine",
+            "chill": "225 hours",
+            "harvest_time": "First Harvest: Around May 1 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/nectarine/sunbest/"
+        },
+        {
+            "name": "Sunmist",
+            "type": "Nectarine",
+            "chill": "300 hours",
+            "harvest_time": "",
+            "description": "http://www.ffsp.net/varieties/nectarine/sunmist/"
+        },
+        {
+            "name": "UFQueen",
+            "type": "Nectarine",
+            "chill": "250 hours",
+            "harvest_time": "First Harvest: Around May 10 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/nectarine/ufqueen/"
+        },
+        {
+            "name": "UFRoyal",
+            "type": "Nectarine",
+            "chill": " 250 hours",
+            "harvest_time": "First Harvest: Around May 5 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/nectarine/ufroyal/"
+        },
+        {
+            "name": "Flordabest",
+            "type": "Peach",
+            "chill": "250 hours",
+            "harvest_time": "First Harvest: Around April 26 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/flordabest/"
+        },
+        {
+            "name": "Gulfcrest",
+            "type": "Peach",
+            "chill": "525 hours",
+            "harvest_time": "Around May 13 near Attapulgus, GA",
+            "description": "http://www.ffsp.net/varieties/peach/gulfcrest/"
+        },
+        {
+            "name": "Gulfcrimson",
+            "type": "Peach",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around May 18 near Attapulgus, GA",
+            "description": "http://www.ffsp.net/varieties/peach/gulfcrimson/"
+        },
+        {
+            "name": "Gulfking",
+            "type": "Peach",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around May 18 near Attapulgus, GA",
+            "description": "http://www.ffsp.net/varieties/peach/gulfking/"
+        },
+        {
+            "name": "Gulfprince",
+            "type": "Peach",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around June 1 near Attapulgus, GA",
+            "description": "http://www.ffsp.net/varieties/peach/gulfprince/"
+        },
+        {
+            "name": "Gulfsnow",
+            "type": "Peach",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around June 15 near Attapulgus, GA",
+            "description": "http://www.ffsp.net/varieties/peach/gulfsnow/"
+        },
+        {
+            "name": "UF2000",
+            "type": "Peach",
+            "chill": "300 hours",
+            "harvest_time": "First Harvest: Around May 18 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/uf2000/"
+        },
+        {
+            "name": "UFBeauty",
+            "type": "Peach",
+            "chill": "200 hours",
+            "harvest_time": "First Harvest: Around April 29 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/ufbeauty/"
+        },
+        {
+            "name": "UFBest",
+            "type": "Peach",
+            "chill": "100 hours",
+            "harvest_time": "First Harvest: Around April 20 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/ufbest/"
+        },
+        {
+            "name": "UFBlaze",
+            "type": "Peach",
+            "chill": "300 hours",
+            "harvest_time": "First Harvest: Around May 3 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/ufblaze/"
+        },
+        {
+            "name": "UFGem",
+            "type": "Peach",
+            "chill": "175 hours",
+            "harvest_time": "First Harvest: Around April 19 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/ufgem/"
+        },
+        {
+            "name": "UFGlo",
+            "type": "Peach",
+            "chill": "400 hours",
+            "harvest_time": "First Harvest: Around May 11 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/ufglo/"
+        },
+        {
+            "name": "UFGold",
+            "type": "Peach",
+            "chill": "200 hours",
+            "harvest_time": "",
+            "description": "http://www.ffsp.net/varieties/peach/ufgold/"
+        },
+        {
+            "name": "UFO",
+            "type": "Peach",
+            "chill": "250 hours",
+            "harvest_time": "First Harvest: Around May 20 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/ufo/"
+        },
+        {
+            "name": "UFOne",
+            "type": "Peach",
+            "chill": "150 hours",
+            "harvest_time": "First Harvest: Around April 10 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/ufone/"
+        },
+        {
+            "name": "UFSharp",
+            "type": "Peach",
+            "chill": "325 hours",
+            "harvest_time": "First Harvest: Around May 20 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/peach/ufsharp/"
+        },
+        {
+            "name": "UFSun",
+            "type": "Peach",
+            "chill": "100-150 hours",
+            "harvest_time": "First Harvest: Around April 22 near Gainesville",
+            "description": "http://www.ffsp.net/varieties/peach/ufsun/"
+        },
+        {
+            "name": "Gulfbeauty",
+            "type": "Plum",
+            "chill": "250 hours",
+            "harvest_time": "First Harvest: Around May 5 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/plum/gulfbeauty/"
+        },
+        {
+            "name": "Gulfblaze",
+            "type": "Plum",
+            "chill": "250 hours",
+            "harvest_time": "First Harvest: Around May 22 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/plum/gulfblaze/"
+        },
+        {
+            "name": "Gulfrose",
+            "type": "Plum",
+            "chill": "275 hours",
+            "harvest_time": "First Harvest: Around May 15 near Gainesville, FL",
+            "description": "http://www.ffsp.net/varieties/plum/gulfrose/"
         }
     ]
 }
