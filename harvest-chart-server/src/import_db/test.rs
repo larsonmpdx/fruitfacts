@@ -216,7 +216,7 @@ fn test_patent_parsing() {
         string_to_patent_info("https://patents.google.com/patent/USPP9881 expired 2014"),
         PatentInfo {
             uspp_number: Some(9881),
-            uspp_expiration: Some(Utc.ymd(2014, 1, 01))
+            uspp_expiration: Some(Utc.ymd(2014, 1, 1))
         }
     );
 
