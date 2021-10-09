@@ -287,12 +287,12 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
         }
 
         // first see if the whole thing parses ok, if so return that
-        // for mid-late September
-        if string_to_day_number(input).is_some() {
-            output.parse_type = DateParseType::StartOnly;
-            output.start = Some(string_to_day_number(input).unwrap());
-            return Some(output);
-        }
+        // for "mid-late September"
+        //   if string_to_day_number(input).is_some() {
+        //      output.parse_type = DateParseType::StartOnly;
+        //     output.start = Some(string_to_day_number(input).unwrap());
+        //    return Some(output);
+        // }
 
         // if one part parses and not the other, then add the month from the parsing one to the not-parsing one
         if string_to_day_number(split[0]).is_none() && string_to_day_number(split[1]).is_none() {
@@ -304,18 +304,26 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
                 MonthLocationType::MonthAtBeginning => {
                     output.parse_type = DateParseType::TwoDates;
                     output.start = Some(string_to_day_number(split[0]).unwrap());
-                    output.end = string_to_day_number(&format!("{} {}", get_month(split[0]), split[1]));
+                    output.end =
+                        string_to_day_number(&format!("{} {}", get_month(split[0]), split[1]));
                     if output.end.is_none() {
-                        panic!("couldn't parse {} as a shared-month, month at the beginning", input)
+                        panic!(
+                            "couldn't parse {} as a shared-month, month at the beginning",
+                            input
+                        )
                     }
                     return Some(output);
                 }
                 MonthLocationType::MonthAtEnd => {
                     output.parse_type = DateParseType::TwoDates;
                     output.start = Some(string_to_day_number(split[0]).unwrap());
-                    output.end = string_to_day_number(&format!("{} {}", split[1], get_month(split[0])));
+                    output.end =
+                        string_to_day_number(&format!("{} {}", split[1], get_month(split[0])));
                     if output.end.is_none() {
-                        panic!("couldn't parse {} as a shared-month, month at the end", input)
+                        panic!(
+                            "couldn't parse {} as a shared-month, month at the end",
+                            input
+                        )
                     }
                     return Some(output);
                 }
@@ -384,6 +392,7 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
 // "late September"
 // "early-mid October"
 // "Sep 25"
+// "Around May 4 (Gainesville, FL)" - should pull out "May 4" with a regex and parse that
 fn string_to_day_number(input: &str) -> Option<u32> {
     let mut month_and_day_string = input.to_string();
 
@@ -410,7 +419,17 @@ fn string_to_day_number(input: &str) -> Option<u32> {
 
                 month_and_day_string = format!("{} {}", &matches[2], day_of_month.to_string());
             }
+        } else {
+            // try to pull a month+day string out of the middle of a bunch of text. helps us parse things that were left in some original sentence format
+            let month_and_day_regex =
+                Regex::new(r#"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[^0-9]*([0-9]+)"#)
+                    .unwrap();
+
+            if let Some(matches) = month_and_day_regex.captures(&input.to_lowercase()) {
+                month_and_day_string = format!("{} {}", &matches[1], &matches[2]);
+            }
         }
+
         // default: parse the input as it came, for dates that already look like like "September 25"
     }
 
@@ -655,7 +674,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                     uspp_expiration_string = Some(uspp_expiration.to_string());
                 }
 
-                println!("inserting");
+                // println!("inserting");
                 let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
                     .values((
                         base_plants::name.eq(&plant.name),
@@ -1010,7 +1029,10 @@ fn load_references(
 
             let contents = fs::read_to_string(path_).unwrap();
 
-            let collection: CollectionJson = serde_json::from_str(&contents).unwrap_or_else(|_| panic!("couldn't parse json in file {}", path_.display()));
+            let collection: CollectionJson =
+                serde_json::from_str(&contents).unwrap_or_else(|error| {
+                    panic!("couldn't parse json in file {} {}", path_.display(), error)
+                });
 
             let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
 
@@ -1018,7 +1040,7 @@ fn load_references(
 
             collection_number += 1;
             for location in &collection.locations {
-                println!("inserting");
+                //    println!("inserting");
                 let rows_inserted = diesel::insert_into(collections::dsl::collections)
                     .values((
                         collections::collection_id.eq(collection_number),

@@ -53,6 +53,15 @@ fn test_dates() {
     assert_eq!(string_to_day_number("April"), Some(106));
 
     assert_eq!(string_to_day_number("eary Jun"), None);
+
+    assert_eq!(
+        string_to_day_number(" Around April 16 (Gainesville, FL)"),
+        Some(107)
+    );
+    assert_eq!(
+        string_to_day_number("Around May 4 (Gainesville, FL)"),
+        Some(125)
+    );
 }
 
 #[test]
@@ -94,14 +103,21 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("mid-late August").unwrap(),
+        string_to_day_range("mid-late August").unwrap(), // not a recommended format
         DayRangeOutput {
-            parse_type: DateParseType::StartOnly,
-            start: Some(233),
-            end: None
+            parse_type: DateParseType::TwoDates,
+            start: Some(228),
+            end: Some(238)
         }
     );
-
+    assert_eq!(
+        string_to_day_range("mid to late August").unwrap(), // same
+        DayRangeOutput {
+            parse_type: DateParseType::TwoDates,
+            start: Some(228),
+            end: Some(238)
+        }
+    );
     assert_eq!(
         string_to_day_range("August").unwrap(),
         DayRangeOutput {
@@ -136,6 +152,7 @@ fn test_day_range() {
             end: Some(259)
         }
     );
+
     assert_eq!(
         string_to_day_range("Sep 20-30").unwrap(),
         DayRangeOutput {
@@ -197,6 +214,22 @@ fn test_day_range() {
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(184),
+            end: None
+        }
+    );
+    assert_eq!(
+        string_to_day_range("First Harvest: Around April 30 (Gainesville, FL)").unwrap(),
+        DayRangeOutput {
+            parse_type: DateParseType::StartOnly,
+            start: Some(121),
+            end: None
+        }
+    );
+    assert_eq!(
+        string_to_day_range("50% Harvest: Around April 25 (Gainesville, FL)").unwrap(),
+        DayRangeOutput {
+            parse_type: DateParseType::Midpoint,
+            start: Some(116),
             end: None
         }
     );
