@@ -103,7 +103,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("mid-late August").unwrap(), // not a recommended format
+        string_to_day_range("mid-late August").unwrap(), // not a recommended format because the '-' gets it parsed as two dates
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(228),

@@ -240,7 +240,7 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
 
     // special case for a list of days
     let average_of_start = "average of: ";
-    if input.starts_with("average of: ") {
+    if input.to_lowercase().starts_with("average of: ") {
         let list = rem_first_n(input, average_of_start.len());
         let split = list.split(',').collect::<Vec<&str>>();
 
@@ -256,6 +256,23 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
         output.parse_type = DateParseType::StartOnly;
         output.start = Some(average(&parsed_days));
         return Some(output);
+    }
+
+    // special case for "first harvest:" or "50% harvest" which should have only one date
+    if input.to_lowercase().starts_with("first harvest:") {
+        if let Some(parsed) = string_to_day_number(input) {
+            output.parse_type = DateParseType::StartOnly;
+            output.start = Some(parsed);
+            return Some(output);
+        }
+    }
+
+    if input.to_lowercase().starts_with("50% harvest:") {
+        if let Some(parsed) = string_to_day_number(input) {
+            output.parse_type = DateParseType::Midpoint;
+            output.start = Some(parsed);
+            return Some(output);
+        }
     }
 
     // does it have "to" or "-" in it? if so, split on that and see if the right side is only a number
@@ -285,14 +302,6 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
         } else {
             panic!("shouldn't get here, '-' or ' to ' match")
         }
-
-        // first see if the whole thing parses ok, if so return that
-        // for "mid-late September"
-        //   if string_to_day_number(input).is_some() {
-        //      output.parse_type = DateParseType::StartOnly;
-        //     output.start = Some(string_to_day_number(input).unwrap());
-        //    return Some(output);
-        // }
 
         // if one part parses and not the other, then add the month from the parsing one to the not-parsing one
         if string_to_day_number(split[0]).is_none() && string_to_day_number(split[1]).is_none() {
@@ -932,7 +941,7 @@ fn add_collection_plant_by_location(
 
                 // we get harvest time for each location from the base harvest time values
 
-                println!("location: {} {}", location, location.to_string());
+                //  println!("location: {} {}", location, location.to_string());
 
                 plants_added += add_collection_plant(
                     collection_number,

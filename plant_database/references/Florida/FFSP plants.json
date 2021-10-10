@@ -263,19 +263,19 @@
         {
             "name": "914",
             "type": "Grapefruit",
-            "harvest_time": "First Harvest: Around October through April in some seasons",
+            "harvest_time_unparsed": "First Harvest: Around October through April in some seasons",
             "description": "http://www.ffsp.net/varieties/citrus/914-2/"
         },
         {
             "name": "950",
             "type": "Mandarin",
-            "harvest_time": "First Harvest: Early-to-Mid-December, through January",
+            "harvest_time_unparsed": "First Harvest: Early-to-Mid-December, through January",
             "description": "http://www.ffsp.net/varieties/citrus/950-2/"
         },
         {
             "name": "LB8-9",
             "type": "Mandarin",
-            "harvest_time": "First Harvest: Mid-November to late December, depending on season",
+            "harvest_time_unparsed": "First Harvest: Mid-November to late December, depending on season",
             "description": "http://www.ffsp.net/varieties/citrus/sugar-belle-lb8-9/"
         },
         {
@@ -286,19 +286,19 @@
         {
             "name": "Florida EV1",
             "type": "Orange",
-            "harvest_time": "8-12 weeks earlier than Valencia",
+            "harvest_time_unparsed": "8-12 weeks earlier than Valencia",
             "description": "http://www.ffsp.net/varieties/citrus/florida-ev1/"
         },
         {
             "name": "Florida EV2",
             "type": "Orange",
-            "harvest_time": "8-12 weeks earlier than Valencia",
+            "harvest_time_unparsed": "8-12 weeks earlier than Valencia",
             "description": "http://www.ffsp.net/varieties/citrus/florida-ev2/"
         },
         {
             "name": "N7-3",
             "type": "Orange",
-            "harvest_time": "Fruit holds its quality into the summer, allowing an April-June harvest",
+            "harvest_time_unparsed": "Fruit holds its quality into the summer, allowing an April-June harvest",
             "description": "http://www.ffsp.net/varieties/citrus/valenfresh-n7-3/"
         },
         {
@@ -314,25 +314,25 @@
         {
             "name": "OLL-8",
             "type": "Orange",
-            "harvest_time": "with Valencia",
+            "harvest_time_unparsed": "with Valencia",
             "description": "http://www.ffsp.net/varieties/citrus/oll-8/"
         },
         {
             "name": "SF14W-62",
             "type": "Orange",
-            "harvest_time": "roughly 4‐8 weeks earlier than Valencia",
+            "harvest_time_unparsed": "roughly 4-8 weeks earlier than Valencia",
             "description": "http://www.ffsp.net/varieties/citrus/valquarius-sf14w-62/"
         },
         {
             "name": "UF 11-1-24",
             "type": "Orange",
-            "harvest_time": "midseason",
+            "harvest_time_unparsed": "midseason",
             "description": "http://www.ffsp.net/varieties/citrus/uf-11-1-24/"
         },
         {
             "name": "Southern Home",
             "type": "Muscadine",
-            "harvest_time": "through October or November",
+            "harvest_time_unparsed": "through October or November",
             "description": "http://www.ffsp.net/varieties/grape/southernhome/"
         },
         {
@@ -346,7 +346,7 @@
             "name": "Sunmist",
             "type": "Nectarine",
             "chill": "300 hours",
-            "harvest_time": "",
+            "harvest_time": "First Harvest: Around April 22 (Gainesville, FL)",
             "description": "http://www.ffsp.net/varieties/nectarine/sunmist/"
         },
         {
@@ -451,7 +451,7 @@
             "name": "UFGold",
             "type": "Peach",
             "chill": "200 hours",
-            "harvest_time": "",
+            "harvest_time": "First Harvest: Around May 1 (Gainesville, FL)",
             "description": "http://www.ffsp.net/varieties/peach/ufgold/"
         },
         {
@@ -484,21 +484,21 @@
         },
         {
             "name": "Gulfbeauty",
-            "type": "Plum",
+            "type": "Japanese Plum",
             "chill": "250 hours",
             "harvest_time": "First Harvest: Around May 5 (Gainesville, FL)",
             "description": "http://www.ffsp.net/varieties/plum/gulfbeauty/"
         },
         {
             "name": "Gulfblaze",
-            "type": "Plum",
+            "type": "Japanese Plum",
             "chill": "250 hours",
             "harvest_time": "First Harvest: Around May 22 (Gainesville, FL)",
             "description": "http://www.ffsp.net/varieties/plum/gulfblaze/"
         },
         {
             "name": "Gulfrose",
-            "type": "Plum",
+            "type": "Japanese Plum",
             "chill": "275 hours",
             "harvest_time": "First Harvest: Around May 15 (Gainesville, FL)",
             "description": "http://www.ffsp.net/varieties/plum/gulfrose/"

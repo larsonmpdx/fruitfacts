@@ -115,5 +115,21 @@
     {
         "name": "Pluot",
         "latin_name": "Prunus hybrid"
+    },
+    {
+        "name": "Orange",
+        "latin_name": "Citrus × sinensis"
+    },
+    {
+        "name": "Grapefruit",
+        "latin_name": "Citrus × paradisi"
+    },
+    {
+        "name": "Mandarin",
+        "latin_name": "Citrus reticulata"
+    },
+    {
+        "name": "Muscadine",
+        "latin_name": "Vitis rotundifolia"
     }
 ]
