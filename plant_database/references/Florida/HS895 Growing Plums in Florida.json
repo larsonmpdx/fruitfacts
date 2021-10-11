@@ -14,7 +14,7 @@
             "name": "Gulfbeauty",
             "chill": 225,
             "type": "Japanese Plum",
-            "harvest_time_unparsed": "5 days before Gulfruby, 8–12 days before 'Gulfblaze",
+            "harvest_time_unparsed": "5 days before Gulfruby, 8-12 days before 'Gulfblaze",
             "fruit_development_period": "75 days",
             "disease_resistance": {
                 "canker": "very resistant",
@@ -47,7 +47,7 @@
             "name": "Gulfruby",
             "chill": 250,
             "type": "Japanese Plum",
-            "harvest_time_unparsed": "7–10 days before Gulfblaze",
+            "harvest_time_unparsed": "7-10 days before Gulfblaze",
             "disease_resistance": {
                 "canker": "susceptible"
             },

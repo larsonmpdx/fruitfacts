@@ -1462,7 +1462,7 @@
         {
             "name": "Shiro",
             "type": "Japanese Plum",
-            "description": "Light green–yellow skin. Yellow flesh.",
+            "description": "Light green-yellow skin. Yellow flesh.",
             "locations": [
                 {"San Joaquin Valley": "early Jul"},
                 {"Sacramento Valley": "early Jul"},
@@ -2282,7 +2282,7 @@
             "names": ["Abbott", "Allison", "Blake", "Bruno", "Elmwood", "Tewi", "Vincent"],
             "type": "Fuzzy Kiwi",
             "category": "others",
-            "category_description": "These kiwi cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (50–250 hours)."
+            "category_description": "These kiwi cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (50-250 hours)."
         },
         {
             "name": "Adriatic",
