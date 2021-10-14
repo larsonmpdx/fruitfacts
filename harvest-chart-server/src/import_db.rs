@@ -14,13 +14,13 @@ use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
 use dotenv::dotenv;
+use itertools::Itertools;
 use lazy_static::lazy_static;
 use std::collections::HashMap;
 use std::convert::TryFrom;
 use std::env;
 use std::fs;
 use walkdir::WalkDir;
-use itertools::Itertools;
 
 extern crate regex;
 use regex::Regex;
@@ -1010,11 +1010,11 @@ fn add_collection_plant_by_location(
     plants_added
 }
 
-// this is a very simplified comment remover - 
+// this is a very simplified comment remover -
 // it only looks for leading "//" and will mess up if they're embedded in strings or placed after things
-fn remove_json_comments(input: &str) -> String
-{
-    input.lines()
+fn remove_json_comments(input: &str) -> String {
+    input
+        .lines()
         .filter(|line| !line.trim_start().starts_with("//"))
         .join("\n")
 }
