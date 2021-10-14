@@ -1,3 +1,7 @@
+// import_db.rs: ETL for a set of json files that comprise all of the built-in reference plants, bringing them into the database
+// this is useful because now the database's files can be viewed on github and edited by hand as text files,
+// allowing a wider audience of contributors and easier maintenance
+
 #[cfg(test)]
 mod test;
 
