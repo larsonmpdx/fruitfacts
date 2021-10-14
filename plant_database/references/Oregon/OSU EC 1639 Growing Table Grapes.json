@@ -18,10 +18,10 @@
             "harvest_time_unparsed": "Very early (~ 6 weeks before Concord)",
             "subtype": "European",
             "seedless": true,
-            Small; compact
-            Small Excellent;
-            foxy flavor; sweet; aromatic
-            Cane
+            "clusters": "Small; compact",
+            "berry_size": "Small",
+            "flavor": "Excellent; foxy flavor; sweet; aromatic",
+            "pruning": "Cane",
             "description": "Moderate cold hardiness (some injury at -5°F); tender skin; berries crisp texture; good for raisins; fruit hangs well on vine to sweeten further; reliable high yields; also adapted to cooler coastal areas"
         },
         {
@@ -31,10 +31,10 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": true,
-            Large; compact
-            Small
-            Mild
-            Spur
+            "clusters": "Large; compact",
+            "berry_size": "Small",
+            "flavor": "Mild",
+            "pruning": "Spur",
             "description": "Moderately cold hardy to -10°F; firm fruit"
         },
         {
@@ -44,10 +44,10 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": true,
-            Long; loose
-            Small
-            Good, honey-like
-            Cane; cluster thin to improve compactness of remaining clusters
+            "clusters": "Long; loose",
+            "berry_size": "Small",
+            "flavor": "Good, honey-like",
+            "pruning": "Cane; cluster thin to improve compactness of remaining clusters",
             "description": "Moderately cold hardy (-10°F); tender skin; good for raisins; brittle cluster and berry stems; berries fall off cluster when stored; medium yield on very vigorous vines"
         },
         {
@@ -57,10 +57,9 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": false,
-            Medium; compact
-            Medium to large
-            Mild foxy flavor
-            -
+            "clusters": "Medium; compact",
+            "berry_size": "Medium to large",
+            "flavor": "Mild foxy flavor",
             "description": "Cold hardy (-20°F); slip skin; productive on lighter, fertile soil"
         },
         {
@@ -70,10 +69,9 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": false,
-            Medium; loose
-            Small; oval
-            Sweet, spicy, aromatic
-            -
+            "clusters": "Medium; loose",
+            "berry_size": "Small; oval",
+            "flavor": "Sweet, spicy, aromatic",
             "description": "Moderately cold hardy (-5 to -10°F); not suited for coldest regions; firmtextured berries; susceptible to powdery mildew; vigorous"
         },
         {
@@ -83,10 +81,10 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": false,
-            Medium; loose
-            Medium to large
-            Mild foxy flavor that intensifies as fruit hangs on vine
-            Cane
+            "clusters": "Medium; loose",
+            "berry_size": "Medium to large",
+            "flavor": "Mild foxy flavor that intensifies as fruit hangs on vine",
+            "pruning": "Cane",
             "description": "Cold hardy (-30°F); slip skin; nice alternative to Niagara (more disease resistant)"
         },
         {
@@ -96,10 +94,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": true,
-            Very large; compact
-            Small to medium
-            Mild and acid
-            Cane; cluster thin
+            "clusters": "Very large; compact",
+            "berry_size": "Small to medium",
+            "flavor": "Mild and acid",
+            "pruning": "Cane; cluster thin",
             "description": "Moderate cold hardiness (-10°F); susceptible to botrytis; high yield"
         },
         {
@@ -109,10 +107,10 @@
             "harvest_time_unparsed": "Mid-Late Season",
             "subtype": "American",
             "seedless": true,
-            Very large
-            Large; oval
-            Sweet when ripe; mildly fruity
-            Cane; cluster thin
+            "clusters": "Very large",
+            "berry_size": "Large; oval",
+            "flavor": "Sweet when ripe; mildly fruity",
+            "pruning": "Cane; cluster thin",
             "description": "Vigorous plants; susceptible to powdery mildew; fruit may “bronze” in sun; needs warm fall to develop sweet fruit"
         },
         {
@@ -122,10 +120,10 @@
             "harvest_time_unparsed": "Mid-Late Season",
             "subtype": "American",
             "seedless": true,
-            Very large
-            Medium to large
-            Mild
-            Spur; cluster thin
+            "clusters": "Very large",
+            "berry_size": "Medium to large",
+            "flavor": "Mild",
+            "pruning": "Spur; cluster thin",
             "description": "Cold hardy; well tested in Idaho but not in Oregon; extremely susceptible to powdery mildew and sunburn"
         },
         {
@@ -135,23 +133,22 @@
             "harvest_time_unparsed": "Mid-Late Season",
             "subtype": "American",
             "seedless": false,
-            Large
-            Large; oval
-            Great sweet flavor
-            Spur
+            "clusters": "Large",
+            "berry_size": "Large; oval",
+            "flavor": "Great sweet flavor",
+            "pruning": "Spur",
             "description": "Cold hardy; fruit turns yellow in sun; berries hang well on vine; fruit stores well; well-tested in Idaho but not in Oregon"
         },
         {
             "type": "Table Grape",
             "name": "Niagara",
-            Green",
+            "color": "Green",
             "harvest_time_unparsed": "Mid-Late Season",
             "subtype": "American",
             "seedless": false,
-            Large; compact
-            Large
-            Strong foxy flavor; not very sweet
-            -
+            "clusters": "Large; compact",
+            "berry_size": "Large",
+            "flavor": "Strong foxy flavor; not very sweet",
             "description": "Cold hardy (-15 to -20°F); slip skin; for fresh or wine; does not consistently ripen in Willamette Valley unless pruned well; susceptible to powdery mildew in wet years; very vigorous"
         },
         {
@@ -161,10 +158,10 @@
             "harvest_time_unparsed": "Late (~ mid October; ripens with Concord)",
             "subtype": "American",
             "seedless": true,
-            Large; compact
-            Large; oval
-            Mild and fruity
-            Spur
+            "clusters": "Large; compact",
+            "berry_size": "Large; oval",
+            "flavor": "Mild and fruity",
+            "pruning": "Spur",
             "description": "Cold hardy; firm berries with thick skin; milder European-type flavor; low yield; resistant to cracking"
         },
         {
@@ -174,10 +171,9 @@
             "harvest_time_unparsed": "Very late",
             "subtype": "American",
             "seedless": false,
-            Large
-            Medium to large; oval
-            Muscat type; sweet; aromatic
-            -
+            "clusters": "Large",
+            "berry_size": "Medium to large; oval",
+            "flavor": "Muscat type; sweet; aromatic",
             "description": "Moderately cold hardy (-10 to -15°F); slip skin is slightly tough; juicy, soft berries; will not ripen in most locations in Oregon; rain near harvest will cause berries to crack"
         },
         {
@@ -187,10 +183,10 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "European",
             "seedless": true,
-            Large
-            Medium
-            Mild, sweet
-            Cane or spur
+            "clusters": "Large",
+            "berry_size": "Medium",
+            "flavor": "Mild, sweet",
+            "pruning": "Cane or spur",
             "description": "Not cold hardy enough for eastern Oregon (injury at 0 to 10°F); crisp texture; vine susceptible to powdery mildew"
         },
         {
@@ -200,10 +196,10 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": true,
-            Medium to large
-            Medium
-            Sweet, foxy, fruity
-            Spur
+            "clusters": "Medium to large",
+            "berry_size": "Medium",
+            "flavor": "Sweet, foxy, fruity",
+            "pruning": "Spur",
             "description": "Cold hardy (-20°F); slip skin; fruit may not develop good red color in some years and may crack in wet fall; tender skin; good for raisins, fresh, jellies, and juice"
         },
         {
@@ -213,10 +209,10 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": true,
-            Medium; very compact
-            Small
-            Medium foxy flavor; sweet
-            Spur (2-3 buds per spur); cluster thin if needed to limit yield
+            "clusters": "Medium; very compact",
+            "berry_size": "Small",
+            "flavor": "Medium foxy flavor; sweet",
+            "pruning": "Spur (2-3 buds per spur); cluster thin if needed to limit yield",
             "description": "Cold hardy (-25°F; only in well-pruned vine); adapted to cooler coastal climates as well as other regions; high yield; tender skin; slip skin; good for raisins"
         },
         {
@@ -226,10 +222,10 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": true,
-            Medium; compact
-            Medium
-            Mild; fruity
-            Cane prune if high vigor; spur if low vigor
+            "clusters": "Medium; compact",
+            "berry_size": "Medium",
+            "flavor": "Mild; fruity",
+            "pruning": "Cane prune if high vigor; spur if low vigor",
             "description": "Cold hardy (-20°F); may have remnants of undeveloped seeds; stores well; firm berries; a favorite variety of many; a good alternative to Flame Seedless in cool climates"
         },
         {
@@ -239,10 +235,10 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": true,
-            Medium; moderately loose
-            Medium; oval
-            Flavor mild foxy, fruity, strawberry-like
-            Cane
+            "clusters": "Medium; moderately loose",
+            "berry_size": "Medium; oval",
+            "flavor": "Flavor mild foxy, fruity, strawberry-like",
+            "pruning": "Cane",
             "description": "Moderately cold hardy (-10°F); skin is slightly tough; small, undeveloped seeds may be noticeable; firm fruit stores fresh very well; overly fertilized or vigorous vines set little fruit"
         },
         {
@@ -252,10 +248,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": false,
-            Small
-            Small
-            Almost no foxy flavor; sweet
-            Cane
+            "clusters": "Small",
+            "berry_size": "Small",
+            "flavor": "Almost no foxy flavor; sweet",
+            "pruning": "Cane",
             "description": "Susceptible to powdery mildew; fruit better for juice than fresh eating"
         },
         {
@@ -265,10 +261,9 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": false,
-            Medium; compact
-            Medium to large
-            Nice foxy flavor; sweet; aromatic
-            -
+            "clusters": "Medium; compact",
+            "berry_size": "Medium to large",
+            "flavor": "Nice foxy flavor; sweet; aromatic",
             "description": "Cold hardy (to -30°F); berries have firm texture; vine has low vigor when young; not well adapted to coast, as set is reduced in fog"
         },
         {
@@ -278,10 +273,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": true,
-            Medium to large
-            Large
-            Nice, sweet
-            Cane or spur
+            "clusters": "Medium to large",
+            "berry_size": "Large",
+            "flavor": "Nice, sweet",
+            "pruning": "Cane or spur",
             "description": "Moderate cold hardiness (-15°F); texture and flavor similar to European types; can have small berries in cool season; traces of seed remnants found in warm seasons; well tested in Idaho"
         },
         {
@@ -291,10 +286,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": true,
-            Medium; loose
-            Medium
-            Mild foxy flavor; sweet
-            Cane or spur
+            "clusters": "Medium; loose",
+            "berry_size": "Medium",
+            "flavor": "Mild foxy flavor; sweet",
+            "pruning": "Cane or spur",
             "description": "Moderate cold hardiness (to zone 5); berries may be more pink than red; fruit set (berries/cluster) can be poor in some years; low yield"
         },
         {
@@ -304,10 +299,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": true,
-            Large
-            Medium
-            Nice, crispy fruit
-            Spur
+            "clusters": "Large",
+            "berry_size": "Medium",
+            "flavor": "Nice, crispy fruit",
+            "pruning": "Spur",
             "description": "Cold hardy; well tested in Idaho but not in Oregon"
         },
         {
@@ -317,10 +312,9 @@
             "harvest_time_unparsed": "Very early (~ 6 weeks before Concord)",
             "subtype": "American",
             "seedless": false,
-            Medium
-            Medium
-            Foxy; juicy; sweet; low acid
-            -
+            "clusters": "Medium",
+            "berry_size": "Medium",
+            "flavor": "Foxy; juicy; sweet; low acid",
             "description": "Cold hardy; slip skin; juice similar to Concord; berries prone to splitting; fresh fruit doesn’t store well; not ideal for juice; vine does best in light, fertile soil"
         },
         {
@@ -330,10 +324,9 @@
             "harvest_time_unparsed": "Very early (~ 6 weeks before Concord)",
             "subtype": "American",
             "seedless": false,
-            Medium
-            Medium
-            Foxy
-            -
+            "clusters": "Medium",
+            "berry_size": "Medium",
+            "flavor": "Foxy",
             "description": "Cold hardy; thought by some to be the same cultivar as Van Buren"
         },
         {
@@ -343,10 +336,9 @@
             "harvest_time_unparsed": "Very early (~ 6 weeks before Concord)",
             "subtype": "American",
             "seedless": false,
-            Small; compact
-            Large
-            Nice foxy flavor; very sweet
-            -
+            "clusters": "Small; compact",
+            "berry_size": "Large",
+            "flavor": "Nice foxy flavor; very sweet",
             "description": "Cold hardy (-25°F); good disease resistance; slip skin is tender; thinner skin than Concord; makes great juice; most adapted to cool coastal regions as well as warmer areas"
         },
         {
@@ -356,10 +348,10 @@
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
             "subtype": "American",
             "seedless": false,
-            Small; compact
-            Medium
-            Nice foxy flavor; sweet
-            Spur (3-4 buds)
+            "clusters": "Small; compact",
+            "berry_size": "Medium",
+            "flavor": "Nice foxy flavor; sweet",
+            "pruning": "Spur (3-4 buds)",
             "description": "Cold hardy (-35°F); excellent for juice or jelly; do not let vines produce too much fruit when young"
         },
         {
@@ -369,10 +361,10 @@
             "harvest_time_unparsed": "Early to Mid Season",
             "subtype": "American",
             "seedless": false,
-            Medium; loose
-            Medium
-            Pleasant, sweet flavor
-            Cane or spur
+            "clusters": "Medium; loose",
+            "berry_size": "Medium",
+            "flavor": "Pleasant, sweet flavor",
+            "pruning": "Cane or spur",
             "description": "Moderate hardiness (-10°F); slip skin; tough, astringent skin; pulp can be stringy; best for juice"
         },
         {
@@ -382,10 +374,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": true,
-            Medium; compact
-            Medium to large
-            Slight foxy flavor
-            Cane
+            "clusters": "Medium; compact",
+            "berry_size": "Medium to large",
+            "flavor": "Slight foxy flavor",
+            "pruning": "Cane",
             "description": "Moderate cold hardiness (-15°F); slip skin; skin may be tough and astringent; remnants of undeveloped seeds can be quite noticeable"
         },
         {
@@ -395,10 +387,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": true,
-            Large
-            Large; oval
-            Mild Muscat flavor
-            Spur (3-4 buds)
+            "clusters": "Large",
+            "berry_size": "Large; oval",
+            "flavor": "Mild Muscat flavor",
+            "pruning": "Spur (3-4 buds)",
             "description": "Cold hardy (-20°F); firm reddish-blue fruit; resistant to cracking; sweet, late fruit makes good raisins"
         },
         {
@@ -408,10 +400,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": true,
-            Large
-            Medium to large
-            Slight foxy flavor
-            Cane
+            "clusters": "Large",
+            "berry_size": "Medium to large",
+            "flavor": "Slight foxy flavor",
+            "pruning": "Cane",
             "description": "Moderate cold hardiness (-15°F); tip berries may not ripen well; berries do not store well"
         },
         {
@@ -421,10 +413,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": false,
-            Medium
-            Medium
-            Fruity; rich Muscat flavor
-            Spur
+            "clusters": "Medium",
+            "berry_size": "Medium",
+            "flavor": "Fruity; rich Muscat flavor",
+            "pruning": "Spur",
             "description": "Cold hardy (-15°F); slip skin; susceptible to powdery mildew; fruit are reddish blue"
         },
         {
@@ -434,10 +426,10 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": false,
-            Large
-            Large
-            Sweet; strong foxy flavor
-            Spur (2-3 buds)
+            "clusters": "Large",
+            "berry_size": "Large",
+            "flavor": "Sweet; strong foxy flavor",
+            "pruning": "Spur (2-3 buds)",
             "description": "Cold hardy (-20°F); fruit color well before they are ripe—let fruit hang to get better flavor; can have powdery mildew in wet years"
         },
         {
@@ -447,10 +439,9 @@
             "harvest_time_unparsed": "Mid-season",
             "subtype": "American",
             "seedless": true,
-            Small to medium
-            Medium to large
-            Mild foxy
-            -
+            "clusters": "Small to medium",
+            "berry_size": "Medium to large",
+            "flavor": "Mild foxy",
             "description": "Moderately cold hardy (-10°F); slip skin; prevent overproduction on young vines; can have powdery mildew in wet years"
         },
         {
@@ -458,12 +449,12 @@
             "name": "Black Corinth",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-season",
-            European",
+            "subtype": "European",
             "seedless": true,
-            Large
-            Very small
-            Mild
-            Cane
+            "clusters": "Large",
+            "berry_size": "Very small",
+            "flavor": "Mild",
+            "pruning": "Cane",
             "description": "Also called “Zante Currant”; used to make dried “currants”; very susceptible to powdery mildew; difficult to grow without disease on a small scale"
         },
         {
@@ -473,10 +464,9 @@
             "harvest_time_unparsed": "Mid-Late Season",
             "subtype": "American",
             "seedless": true,
-            Small
-            Small
-            Foxy; juicy; sweet
-            -
+            "clusters": "Small",
+            "berry_size": "Small",
+            "flavor": "Foxy; juicy; sweet",
             "description": "Cold hardy (-20°F); slip skin; berries and clusters are much smaller than Concord; yield is erratic from year to year; may develop seeds in warm years"
         },
         {
@@ -486,23 +476,22 @@
             "harvest_time_unparsed": "Mid-Late Season",
             "subtype": "American",
             "seedless": false,
-            Medium; compact
-            Large
-            Mild, European-like, low acid
-            Spur (2-3 buds)
+            "clusters": "Medium; compact",
+            "berry_size": "Large",
+            "flavor": "Mild, European-like, low acid",
+            "pruning": "Spur (2-3 buds)",
             "description": "Moderately cold hardy (-15°F); very productive; berries can crack"
         },
         {
             "type": "Table Grape",
             "name": "Autumn Royal",
             "color": "Blue",
-            "harvest_time_unparsed": "Mid-Late Season
+            "harvest_time_unparsed": "Mid-Late Season",
             "subtype": "American",
             "seedless": true,
-            Large; compact
-            Large
-            Nice flavor
-            -
+            "clusters": "Large; compact",
+            "berry_size": "Large",
+            "flavor": "Nice flavor",
             "description": "Cold hardy; firm fruit; susceptible to sunburn; well tested in Idaho but not in Oregon"
         },
         {
@@ -512,10 +501,10 @@
             "harvest_time_unparsed": "Late (~ mid October; ripens with Concord)",
             "subtype": "American",
             "seedless": false,
-            Medium; compact
-            Large
-            Sweet; spicy
-            Spur; cluster thin
+            "clusters": "Medium; compact",
+            "berry_size": "Large",
+            "flavor": "Sweet; spicy",
+            "pruning": "Spur; cluster thin",
             "description": "Moderately cold hardy (-10°F); slip skin; vigorous"
         },
         {
@@ -525,10 +514,10 @@
             "harvest_time_unparsed": "Late (~ mid October; ripens with Concord)",
             "subtype": "American",
             "seedless": false,
-            Large
-            Medium to large
-            Strong foxy flavor
-            Cane or to longer spurs (at least 6 buds)
+            "clusters": "Large",
+            "berry_size": "Medium to large",
+            "flavor": "Strong foxy flavor",
+            "pruning": "Cane or to longer spurs (at least 6 buds)",
             "description": "Cold hardy (-20°F); slip skin; susceptible to powdery mildew in wet years; may not ripen in western Oregon if not pruned well"
         }
     ]
