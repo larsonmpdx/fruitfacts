@@ -16,6 +16,7 @@ use std::convert::TryFrom;
 use std::env;
 use std::fs;
 use walkdir::WalkDir;
+use itertools::Itertools;
 
 extern crate regex;
 use regex::Regex;
@@ -1005,6 +1006,15 @@ fn add_collection_plant_by_location(
     plants_added
 }
 
+// this is a very simplified comment remover - 
+// it only looks for leading "//" and will mess up if they're embedded in strings or placed after things
+fn remove_json_comments(input: &str) -> String
+{
+    input.lines()
+        .filter(|line| !line.trim_start().starts_with("//"))
+        .join("\n")
+}
+
 pub struct LoadReferencesReturn {
     pub reference_locations_found: isize,
     pub reference_base_plants_added: isize,
@@ -1038,8 +1048,10 @@ fn load_references(
 
             let contents = fs::read_to_string(path_).unwrap();
 
+            let without_commets = remove_json_comments(&contents);
+
             let collection: CollectionJson =
-                serde_json::from_str(&contents).unwrap_or_else(|error| {
+                serde_json::from_str(&without_commets).unwrap_or_else(|error| {
                     panic!("couldn't parse json in file {} {}", path_.display(), error)
                 });
 

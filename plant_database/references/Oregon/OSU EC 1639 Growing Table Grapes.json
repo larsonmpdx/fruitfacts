@@ -16,6 +16,7 @@
             "name": "Interlaken",
             "color": "Green",
             "harvest_time_unparsed": "Very early (~ 6 weeks before Concord)",
+            "harvest_time_relative": "Concord-42",
             "subtype": "European",
             "seedless": true,
             "clusters": "Small; compact",
@@ -29,6 +30,7 @@
             "name": "Spartan",
             "color": "Green",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": true,
             "clusters": "Large; compact",
@@ -42,6 +44,7 @@
             "name": "Himrod",
             "color": "Green",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": true,
             "clusters": "Long; loose",
@@ -55,6 +58,7 @@
             "name": "Ontario",
             "color": "Green",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium; compact",
@@ -67,6 +71,7 @@
             "name": "Seneca",
             "color": "Green",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium; loose",
@@ -79,6 +84,7 @@
             "name": "Edelweiss",
             "color": "Green",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium; loose",
@@ -92,6 +98,7 @@
             "name": "Lakemont",
             "color": "Green",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": true,
             "clusters": "Very large; compact",
@@ -105,6 +112,7 @@
             "name": "Remaily Seedless",
             "color": "Green",
             "harvest_time_unparsed": "Mid-Late Season",
+            "harvest_time_relative": "Concord-10",
             "subtype": "American",
             "seedless": true,
             "clusters": "Very large",
@@ -118,6 +126,7 @@
             "name": "Emerald",
             "color": "Green",
             "harvest_time_unparsed": "Mid-Late Season",
+            "harvest_time_relative": "Concord-10",
             "subtype": "American",
             "seedless": true,
             "clusters": "Very large",
@@ -131,6 +140,7 @@
             "name": "Italia",
             "color": "Green",
             "harvest_time_unparsed": "Mid-Late Season",
+            "harvest_time_relative": "Concord-10",
             "subtype": "American",
             "seedless": false,
             "clusters": "Large",
@@ -144,6 +154,7 @@
             "name": "Niagara",
             "color": "Green",
             "harvest_time_unparsed": "Mid-Late Season",
+            "harvest_time_relative": "Concord-10",
             "subtype": "American",
             "seedless": false,
             "clusters": "Large; compact",
@@ -156,6 +167,7 @@
             "name": "Neptune",
             "color": "Green",
             "harvest_time_unparsed": "Late (~ mid October; ripens with Concord)",
+            "harvest_time_relative": "Concord+0",
             "subtype": "American",
             "seedless": true,
             "clusters": "Large; compact",
@@ -169,6 +181,7 @@
             "name": "Golden Muscat",
             "color": "Green",
             "harvest_time_unparsed": "Very late",
+            "harvest_time_relative": "Concord + 10 days",
             "subtype": "American",
             "seedless": false,
             "clusters": "Large",
@@ -181,6 +194,7 @@
             "name": "Flame Seedless",
             "color": "Red",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "European",
             "seedless": true,
             "clusters": "Large",
@@ -194,6 +208,7 @@
             "name": "Reliance",
             "color": "Red",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": true,
             "clusters": "Medium to large",
@@ -207,6 +222,7 @@
             "name": "Canadice",
             "color": "Red",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": true,
             "clusters": "Medium; very compact",
@@ -220,6 +236,7 @@
             "name": "Vanessa",
             "color": "Red",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": true,
             "clusters": "Medium; compact",
@@ -233,6 +250,7 @@
             "name": "Einset Seedless",
             "color": "Red",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": true,
             "clusters": "Medium; moderately loose",
@@ -246,6 +264,7 @@
             "name": "Delaware",
             "color": "Red",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": false,
             "clusters": "Small",
@@ -259,6 +278,7 @@
             "name": "Swenson Red",
             "color": "Red",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium; compact",
@@ -271,6 +291,7 @@
             "name": "Saturn",
             "color": "Red",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": true,
             "clusters": "Medium to large",
@@ -284,6 +305,7 @@
             "name": "Suffolk Red",
             "color": "Red",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": true,
             "clusters": "Medium; loose",
@@ -297,6 +319,7 @@
             "name": "Alborz",
             "color": "Red",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": true,
             "clusters": "Large",
@@ -310,6 +333,7 @@
             "name": "Van Buren",
             "color": "Blue",
             "harvest_time_unparsed": "Very early (~ 6 weeks before Concord)",
+            "harvest_time_relative": "Concord-42",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium",
@@ -322,6 +346,7 @@
             "name": "Elizabeth",
             "color": "Blue",
             "harvest_time_unparsed": "Very early (~ 6 weeks before Concord)",
+            "harvest_time_relative": "Concord-42",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium",
@@ -334,6 +359,7 @@
             "name": "Price",
             "color": "Blue",
             "harvest_time_unparsed": "Very early (~ 6 weeks before Concord)",
+            "harvest_time_relative": "Concord-42",
             "subtype": "American",
             "seedless": false,
             "clusters": "Small; compact",
@@ -346,6 +372,7 @@
             "name": "Valiant",
             "color": "Blue",
             "harvest_time_unparsed": "Early (about 4–5 weeks before Concord)",
+            "harvest_time_relative": "Concord-32",
             "subtype": "American",
             "seedless": false,
             "clusters": "Small; compact",
@@ -358,7 +385,8 @@
             "type": "Table Grape",
             "name": "Buffalo",
             "color": "Blue",
-            "harvest_time_unparsed": "Early to Mid Season",
+            "harvest_time_unparsed": "Early-Mid Season",
+            "harvest_time_relative": "Concord-25",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium; loose",
@@ -372,6 +400,7 @@
             "name": "Venus",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": true,
             "clusters": "Medium; compact",
@@ -385,6 +414,7 @@
             "name": "Jupiter",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": true,
             "clusters": "Large",
@@ -398,6 +428,7 @@
             "name": "Glenora",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": true,
             "clusters": "Large",
@@ -411,6 +442,7 @@
             "name": "NY Muscat",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium",
@@ -424,6 +456,7 @@
             "name": "Campbell Early",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": false,
             "clusters": "Large",
@@ -437,6 +470,7 @@
             "name": "Mars",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "American",
             "seedless": true,
             "clusters": "Small to medium",
@@ -449,6 +483,7 @@
             "name": "Black Corinth",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-season",
+            "harvest_time_relative": "Concord-18",
             "subtype": "European",
             "seedless": true,
             "clusters": "Large",
@@ -462,6 +497,7 @@
             "name": "Concord Seedless",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-Late Season",
+            "harvest_time_relative": "Concord-10",
             "subtype": "American",
             "seedless": true,
             "clusters": "Small",
@@ -474,6 +510,7 @@
             "name": "Alden",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-Late Season",
+            "harvest_time_relative": "Concord-10",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium; compact",
@@ -487,6 +524,7 @@
             "name": "Autumn Royal",
             "color": "Blue",
             "harvest_time_unparsed": "Mid-Late Season",
+            "harvest_time_relative": "Concord-10",
             "subtype": "American",
             "seedless": true,
             "clusters": "Large; compact",
@@ -499,6 +537,7 @@
             "name": "Steuben",
             "color": "Blue",
             "harvest_time_unparsed": "Late (~ mid October; ripens with Concord)",
+            "harvest_time_relative": "Concord+0",
             "subtype": "American",
             "seedless": false,
             "clusters": "Medium; compact",
@@ -512,6 +551,7 @@
             "name": "Concord",
             "color": "Blue",
             "harvest_time_unparsed": "Late (~ mid October; ripens with Concord)",
+            "harvest_time_relative": "Concord+0",
             "subtype": "American",
             "seedless": false,
             "clusters": "Large",
@@ -523,11 +563,26 @@
     ]
 }
 
+// import notes
+// a few fields are extra, I didn't want to put them into the description field
 
-VE = Very early (~ 6 weeks before Concord)
-E = Early (about 4–5 weeks before Concord)
-E-M = Early to Mid
-M = Mid-season
-M-L = Mid to Late
-L = Late (~ mid October; ripens with Concord)
-VL = Very late
+// VE = Very early (~ 6 weeks before Concord)
+// Concord-42
+
+// E = Early (about 4–5 weeks before Concord)
+// Concord-32
+
+// E-M = Early-Mid (ed: 3-4 weeks before concord)
+// Concord-25
+
+// M = Mid-season (ed: 2-3 weeks before Concord)
+// Concord-18
+
+// M-L = Mid-Late (ed: 1-2 weeks before Concord)
+// Concord-10
+
+// L = Late (~ mid October; ripens with Concord)
+// Concord+0
+
+// VL = Very late (ed: 1-2 weeks after Concord)
+// Concord+10
