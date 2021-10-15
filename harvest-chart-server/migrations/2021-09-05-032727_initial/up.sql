@@ -51,6 +51,7 @@ CREATE TABLE collections (
 CREATE TABLE collection_items (
   collection_item_id INTEGER PRIMARY KEY NOT NULL,
   location_name TEXT,
+  location_id INTEGER NOT NULL,
   collection_id INTEGER NOT NULL,
 
   -- name+type don't have to exist in base plants so this could be a wholly user-created plant
@@ -73,5 +74,5 @@ CREATE TABLE collection_items (
   harvest_end_2 INTEGER,
   harvest_2_start_is_midpoint INTEGER,
 
-  UNIQUE(location_name, collection_id, name, type) --combo of these columns must be unique
+  UNIQUE(collection_id, location_name, type, name) --combo of these columns must be unique
 );

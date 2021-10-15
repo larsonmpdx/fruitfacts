@@ -91,8 +91,9 @@ struct CollectionPlantJson {
     //         ...
     //     ]
     description: Option<String>,
-    harvest_time_relative: Option<String>,
     harvest_time: Option<String>,
+    harvest_time_relative: Option<String>,
+    harvest_time_unparsed: Option<String>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -541,7 +542,7 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     let base_types_found = load_types(db_conn, database_dir.clone());
     let load_references_return = load_references(db_conn, database_dir);
 
-    calculate_ripening_times(db_conn);
+    calculate_relative_harvest_times(db_conn);
     check_database(db_conn);
 
     LoadAllReturn {
@@ -839,6 +840,14 @@ fn add_collection_plant(
         }
     }
 
+    let harvest_time_helper_text;
+    // we may get "harvest_time_unparsed" in some cases with no "harvest_time". save "harvest_time_unparsed" for the helper text
+    if harvest_time.is_none() && plant.harvest_time_unparsed.is_some() {
+        harvest_time_helper_text = Some(plant.harvest_time_unparsed.as_ref().unwrap());
+    } else {
+        harvest_time_helper_text = harvest_time.as_ref().clone();
+    }
+
     let rows_inserted = diesel::insert_into(collection_items::dsl::collection_items)
         .values((
             collection_items::collection_id.eq(collection_id),
@@ -849,7 +858,7 @@ fn add_collection_plant(
             collection_items::category_description.eq(category_description),
             collection_items::description.eq(&plant.description),
             collection_items::harvest_relative.eq(&plant.harvest_time_relative),
-            collection_items::harvest_text.eq(harvest_time),
+            collection_items::harvest_text.eq(harvest_time_helper_text),
             collection_items::harvest_start.eq(harvest_start),
             collection_items::harvest_end.eq(harvest_end),
             collection_items::harvest_start_is_midpoint.eq(harvest_start_is_midpoint),
@@ -1147,12 +1156,118 @@ fn load_references(
     }
 }
 
-fn calculate_ripening_times(_db_conn: &SqliteConnection) {
+#[derive(Default, Debug, PartialEq, Eq)]
+pub struct HarvestRelativeParsed {
+    pub name: String,
+    pub relative_days: i32,
+}
+
+fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
+    let relative_harvest_regex = Regex::new(r#"(.+)([-+])([0-9.]+)(.*(?:week|Week))?"#).unwrap();
+
+    if let Some(matches) = relative_harvest_regex.captures(&input) {
+        let weeks;
+        if matches.len() >= 5 {
+            if let Some(week_match) = matches.get(4) {
+                if week_match.as_str().to_lowercase().trim() == "week" {
+                    weeks = true;
+                } else {
+                    weeks = false;
+                }
+            } else {
+                weeks = false;
+            }
+
+            let mut output: HarvestRelativeParsed = Default::default();
+            output.name = matches[1].trim().to_string();
+
+            let plus_or_minus = &matches[2];
+            let number = matches[3].parse::<f32>();
+
+            if let Ok(number) = number {
+                match plus_or_minus {
+                    "+" => {
+                        if weeks {
+                            output.relative_days = (number * 7.0).round() as i32;
+                        } else {
+                            output.relative_days = number.round() as i32;
+                        }
+                        return Some(output);
+                    }
+                    "-" => {
+                        if weeks {
+                            output.relative_days = (number * -7.0).round() as i32;
+                        } else {
+                            output.relative_days = (number * -1.0).round() as i32;
+                        }
+                        return Some(output);
+                    }
+                    _ => (),
+                }
+            }
+        }
+    }
+
+    None
+}
+
+#[derive(Queryable)]
+pub struct CollectionItemRelative {
+    pub collection_item_id: i32,
+    pub location_id: i32,
+    pub type_: String,
+
+    pub harvest_relative: Option<String>,
+    pub harvest_start: Option<i32>,
+}
+
+fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
     // todo: 2nd procesing pass:
-    // look for all plants with only a relative ripening time and try to fill in their absolute times
+    // look for all plants with only a relative harvest time and try to fill in their absolute times
     // example is an extension publication listing peaches as redhaven+5 or whatever,
     // but also giving an absolute time for redhaven in the same pub
+
+    let all_plants = collection_items::dsl::collection_items
+        .select((
+            collection_items::collection_item_id,
+            collection_items::location_id,
+            collection_items::type_,
+            collection_items::harvest_relative,
+            collection_items::harvest_start,
+        ))
+        .load::<CollectionItemRelative>(db_conn);
+
+    // if harvest_start is unset and harvest_relative is set, parse harvest_relative
+    // and see if it refers to another plant in the same location. if so, create offset dates from the base plant
+    // and store those
+
+    for plant in all_plants.unwrap() {
+        if plant.harvest_relative.is_some() && plant.harvest_start.is_none() {
+            if let Some(parsed) = parse_relative_harvest(&plant.harvest_relative.unwrap()) {
+                // look for this variety name in the same location
+
+
+                let _ = collection_items::dsl::collection_items
+                .filter(collection_items::location_id.eq(plant.location_id))
+                .filter(collection_items::name.eq(parsed.name))
+                .filter(collection_items::type_.eq(plant.type_))
+                .first::<CollectionItems>(db_conn)
+                .unwrap_or_else(|_| {
+                    panic!(
+                        "todo {}",
+                        type_from_plants
+                    )
+                });
+
+
+            }
+        }
+    }
 }
+
+// todo - add location id to each collection item
+
+// if we find a matching relative time base, see if it has what we need and put in the absolute time for the found one
 
 fn check_database(db_conn: &SqliteConnection) {
     // find all types and make sure each is in the types table

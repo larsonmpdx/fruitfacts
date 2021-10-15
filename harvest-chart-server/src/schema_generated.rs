@@ -17,6 +17,7 @@ table! {
     collection_items (collection_item_id) {
         collection_item_id -> Integer,
         location_name -> Nullable<Text>,
+        location_id -> Integer,
         collection_id -> Integer,
         name -> Text,
         #[sql_name = "type"]

@@ -181,7 +181,7 @@
             "name": "Golden Muscat",
             "color": "Green",
             "harvest_time_unparsed": "Very late",
-            "harvest_time_relative": "Concord + 10 days",
+            "harvest_time_relative": "Concord+10",
             "subtype": "American",
             "seedless": false,
             "clusters": "Large",

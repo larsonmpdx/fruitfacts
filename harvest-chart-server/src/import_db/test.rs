@@ -65,6 +65,67 @@ fn test_dates() {
 }
 
 #[test]
+fn test_parse_relative_harvest() {
+    assert_eq!(parse_relative_harvest("hi"), None);
+    assert_eq!(
+        parse_relative_harvest("Redhaven -32"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: -32
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven +0"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: 0
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven +45"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: 45
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven -2 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: -14
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven +0.5 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: 4
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven -1.5 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: -11
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven +9 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: 63
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest(" with spaces-42"),
+        Some(HarvestRelativeParsed {
+            name: "with spaces".to_string(),
+            relative_days: -42
+        })
+    );
+}
+
+#[test]
 fn test_day_range() {
     assert_eq!(
         string_to_day_range("eary Jun"), // misspelled - parse error

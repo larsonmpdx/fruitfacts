@@ -27,6 +27,7 @@ pub struct BasePlant {
 pub struct CollectionItems {
     pub collection_item_id: i32,
     pub location_name: Option<String>,
+    pub location_id: i32,
     pub collection_id: i32,
     pub name: String,
     pub type_: String,
