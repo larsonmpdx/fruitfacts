@@ -909,7 +909,7 @@ fn get_location_name(
     }
 }
 
-fn get_location_id(location_name: Option<String>) -> i32 {
+fn get_location_id(_location_name: Option<String>) -> i32 {
     // either look up this location ID by (collection ID + name) or look it up with only collection ID and expect only one result
 
     0 // todo
