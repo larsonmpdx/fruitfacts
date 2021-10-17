@@ -845,7 +845,7 @@ fn add_collection_plant(
     if harvest_time.is_none() && plant.harvest_time_unparsed.is_some() {
         harvest_time_helper_text = Some(plant.harvest_time_unparsed.as_ref().unwrap());
     } else {
-        harvest_time_helper_text = harvest_time.as_ref().clone();
+        harvest_time_helper_text = harvest_time.as_ref();
     }
 
     let rows_inserted = diesel::insert_into(collection_items::dsl::collection_items)
@@ -1174,7 +1174,7 @@ pub struct HarvestRelativeParsed {
 fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
     let relative_harvest_regex = Regex::new(r#"(.+)([-+])([0-9.]+)(.*(?:week|Week))?"#).unwrap();
 
-    if let Some(matches) = relative_harvest_regex.captures(&input) {
+    if let Some(matches) = relative_harvest_regex.captures(input) {
         let weeks;
         if matches.len() >= 5 {
             if let Some(week_match) = matches.get(4) {
@@ -1187,8 +1187,10 @@ fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
                 weeks = false;
             }
 
-            let mut output: HarvestRelativeParsed = Default::default();
-            output.name = matches[1].trim().to_string();
+            let mut output = HarvestRelativeParsed {
+                name: matches[1].trim().to_string(),
+                ..Default::default()
+            };
 
             let plus_or_minus = &matches[2];
             let number = matches[3].parse::<f32>();
