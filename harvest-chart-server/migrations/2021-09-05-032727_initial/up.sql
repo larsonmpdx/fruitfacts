@@ -50,7 +50,8 @@ CREATE TABLE collections (
 
 CREATE TABLE collection_items (
   collection_item_id INTEGER PRIMARY KEY NOT NULL,
-  location_name TEXT,
+  
+  collection_title TEXT,
   location_id INTEGER NOT NULL,
   collection_id INTEGER NOT NULL,
 
@@ -63,8 +64,8 @@ CREATE TABLE collection_items (
 
   -- the actual unique data from the imported guide
   description TEXT,
-  harvest_relative TEXT, --used for things like "redhaven+5"
   harvest_text TEXT, -- to store the original text like "Sep 25" before parsing
+  harvest_relative TEXT, --used for things like "redhaven+5"
   harvest_start INTEGER, --ordinal (day of the year)
   harvest_end INTEGER,
   harvest_start_is_midpoint INTEGER, -- bool: if this is a start-only harvest window, should the window be treated as a midpoint instead of a start when building a window around it?
@@ -74,5 +75,5 @@ CREATE TABLE collection_items (
   harvest_end_2 INTEGER,
   harvest_2_start_is_midpoint INTEGER,
 
-  UNIQUE(collection_id, location_name, type, name) --combo of these columns must be unique
+  UNIQUE(collection_id, location_id, type, name) --combo of these columns must be unique
 );

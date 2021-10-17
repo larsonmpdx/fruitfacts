@@ -756,7 +756,7 @@ fn get_category_description(
 
 fn add_collection_plant(
     collection_id: i32,
-    location_name: &Option<String>,
+    location_id: i32,
     harvest_time: &Option<String>,
     plant_name: &str,
     plant: &CollectionPlantJson,
@@ -851,7 +851,7 @@ fn add_collection_plant(
     let rows_inserted = diesel::insert_into(collection_items::dsl::collection_items)
         .values((
             collection_items::collection_id.eq(collection_id),
-            collection_items::location_name.eq(location_name),
+            collection_items::location_id.eq(location_id),
             collection_items::name.eq(plant_name),
             collection_items::type_.eq(&plant.type_),
             collection_items::category.eq(&plant.category),
@@ -909,6 +909,12 @@ fn get_location_name(
     }
 }
 
+fn get_location_id(location_name: Option<String>) -> i32 {
+    // either look up this location ID by (collection ID + name) or look it up with only collection ID and expect only one result
+
+    0 // todo
+}
+
 fn maybe_add_base_plant(
     plant_name: &str,
     plant: &CollectionPlantJson,
@@ -959,10 +965,10 @@ fn add_collection_plant_by_location(
 
                 plants_added += add_collection_plant(
                     collection_number,
-                    &get_location_name(
+                    get_location_id(get_location_name(
                         Some(location.as_str().unwrap().to_string()),
                         collection_locations,
-                    ), // the .as_str()... nastiness is because serde wants to carry the "it's a json string" idea to the point of printing it a certain way in rust. as_str() tells it not to
+                    )), // the .as_str()... nastiness is because serde wants to carry the "it's a json string" idea to the point of printing it a certain way in rust. as_str() tells it not to
                     &plant.harvest_time,
                     plant_name,
                     plant,
@@ -990,7 +996,10 @@ fn add_collection_plant_by_location(
 
                     plants_added += add_collection_plant(
                         collection_number,
-                        &get_location_name(Some(location_name), collection_locations),
+                        get_location_id(get_location_name(
+                            Some(location_name),
+                            collection_locations,
+                        )),
                         &Some(harvest_time),
                         plant_name,
                         plant,
@@ -1007,7 +1016,7 @@ fn add_collection_plant_by_location(
 
         plants_added += add_collection_plant(
             collection_number,
-            &get_location_name(None, collection_locations),
+            get_location_id(get_location_name(None, collection_locations)),
             &plant.harvest_time,
             plant_name,
             plant,
@@ -1246,20 +1255,12 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             if let Some(parsed) = parse_relative_harvest(&plant.harvest_relative.unwrap()) {
                 // look for this variety name in the same location
 
-
                 let _ = collection_items::dsl::collection_items
-                .filter(collection_items::location_id.eq(plant.location_id))
-                .filter(collection_items::name.eq(parsed.name))
-                .filter(collection_items::type_.eq(plant.type_))
-                .first::<CollectionItems>(db_conn)
-                .unwrap_or_else(|_| {
-                    panic!(
-                        "todo {}",
-                        type_from_plants
-                    )
-                });
-
-
+                    .filter(collection_items::location_id.eq(plant.location_id))
+                    .filter(collection_items::name.eq(parsed.name))
+                    .filter(collection_items::type_.eq(plant.type_))
+                    .first::<CollectionItems>(db_conn)
+                    .unwrap_or_else(|_| panic!("todo"));
             }
         }
     }

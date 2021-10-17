@@ -16,7 +16,7 @@ table! {
 table! {
     collection_items (collection_item_id) {
         collection_item_id -> Integer,
-        location_name -> Nullable<Text>,
+        collection_title -> Nullable<Text>,
         location_id -> Integer,
         collection_id -> Integer,
         name -> Text,
@@ -25,8 +25,8 @@ table! {
         category -> Nullable<Text>,
         category_description -> Nullable<Text>,
         description -> Nullable<Text>,
-        harvest_relative -> Nullable<Text>,
         harvest_text -> Nullable<Text>,
+        harvest_relative -> Nullable<Text>,
         harvest_start -> Nullable<Integer>,
         harvest_end -> Nullable<Integer>,
         harvest_start_is_midpoint -> Nullable<Integer>,

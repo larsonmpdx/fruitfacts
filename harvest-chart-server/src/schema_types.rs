@@ -26,9 +26,11 @@ pub struct BasePlant {
 #[derive(Queryable)]
 pub struct CollectionItems {
     pub collection_item_id: i32,
-    pub location_name: Option<String>,
+
+    pub collection_title: Option<String>,
     pub location_id: i32,
     pub collection_id: i32,
+
     pub name: String,
     pub type_: String,
 
@@ -36,6 +38,7 @@ pub struct CollectionItems {
     pub category_descripton: Option<String>,
 
     pub description: Option<String>,
+    pub harvest_text: Option<String>,
     pub harvest_relative: Option<String>,
     pub harvest_start: Option<i32>,
     pub harvest_end: Option<i32>,
