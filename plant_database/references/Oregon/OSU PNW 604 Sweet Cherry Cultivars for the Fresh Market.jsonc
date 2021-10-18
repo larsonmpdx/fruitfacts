@@ -55,8 +55,8 @@
         {
             "name": "Bing",
             "type": "Sweet Cherry",
-            "harvest_time": "todo",
-            // harvest time not originally in the chart
+            "harvest_time": "June 13",
+            // harvest time not originally in the chart - this is a typical upper Willamette valley time
             "description": "S3S4"
         },
         {
@@ -129,8 +129,8 @@
         {
             "name": "Rainier",
             "type": "Sweet Cherry",
-            "harvest_time": "todo",
-            // harvest time not originally in the chart
+            "harvest_time": "June 19",
+            // harvest time not originally in the chart - this is a typical upper Willamette valley time
             "description": "blush"
         }
     ]
