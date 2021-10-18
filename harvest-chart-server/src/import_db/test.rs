@@ -123,6 +123,34 @@ fn test_parse_relative_harvest() {
             relative_days: -42
         })
     );
+    assert_eq!(
+        parse_relative_harvest("Bing -10 to -12"),
+        Some(HarvestRelativeParsed {
+            name: "Bing".to_string(),
+            relative_days: -11
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Bing +14 to +15"),
+        Some(HarvestRelativeParsed {
+            name: "Bing".to_string(),
+            relative_days: 15
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Concord -6 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Concord".to_string(),
+            relative_days: -42
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Concord -4 to -5 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Concord".to_string(),
+            relative_days: -32
+        })
+    );
 }
 
 #[test]
