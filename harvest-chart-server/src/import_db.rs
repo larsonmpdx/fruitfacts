@@ -921,7 +921,7 @@ fn get_location_id(
     // either look up this location ID by (collection ID + name) or look it up with only collection ID and expect only one result
     let locations = collections::dsl::collections
         .filter(collections::collection_id.eq(collection_id))
-        .filter(collections::location_name.eq(location_name.clone()))
+        .filter(collections::location_name.eq(location_name))
         .load::<Collections>(db_conn);
 
     if let Ok(locations) = locations {
