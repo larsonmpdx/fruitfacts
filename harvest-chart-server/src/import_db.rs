@@ -659,7 +659,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
         let path_ = file_path.unwrap().path();
 
         if fs::metadata(path_.clone()).unwrap().is_file()
-            && path_.extension().unwrap().to_str().unwrap() == "json"
+            && path_.extension().unwrap().to_str().unwrap() == "jsonc"
         {
             println!("found: {}", path_.display());
 
@@ -667,10 +667,13 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
 
             let plants: Vec<BasePlantJson> = serde_json::from_str(&contents).unwrap();
 
-            let filename = rem_last_n(path_.as_path().file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
+            let filename = rem_last_n(
+                path_.as_path().file_name().unwrap().to_str().unwrap(),
+                ".jsonc".len(),
+            );
 
             for plant in &plants {
-                // for the "Oddball.json" file, get type from each item's json
+                // for the "Oddball.jsonc" file, get type from each item's json
                 // all others get type from the filename
                 let plant_type;
                 if filename.starts_with("Oddball") {
@@ -716,9 +719,9 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
 fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     let mut types_found = 0;
 
-    let types_path = database_dir.join("types.json");
+    let types_path = database_dir.join("types.jsonc");
     if !fs::metadata(types_path.clone()).unwrap().is_file() {
-        panic!("didn't find types.json");
+        panic!("didn't find types.jsonc");
     }
 
     let contents = fs::read_to_string(types_path).unwrap();
@@ -1095,7 +1098,7 @@ fn load_references(
         let path_ = entry.path();
 
         if fs::metadata(path_).unwrap().is_file()
-            && path_.extension().unwrap().to_str().unwrap() == "json"
+            && path_.extension().unwrap().to_str().unwrap() == "jsonc"
         {
             println!("found reference: {}", path_.display());
 
@@ -1108,7 +1111,7 @@ fn load_references(
                     panic!("couldn't parse json in file {} {}", path_.display(), error)
                 });
 
-            let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), 5); // 5: ".json"
+            let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), ".jsonc".len());
 
             let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
 
