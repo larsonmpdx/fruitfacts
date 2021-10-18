@@ -1220,9 +1220,10 @@ fn get_relative_days(
                     return Some((number * -1.0).round() as i32);
                 }
             }
+            _ => return None,
         }
     }
-    None
+    return None;
 }
 
 #[derive(Default, Debug, PartialEq, Eq)]
