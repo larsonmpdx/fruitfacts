@@ -1,0 +1,80 @@
+{
+    "title": "Sweet Cherry Cultivars for Brining, Freezing, and Canning in Oregon",
+    "author": "Lynn Long and Jeff Olsen",
+    "url": "https://catalog.extension.oregonstate.edu/em9056",
+    "published": "February 2013",
+    "reviewed": "March 2021",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "Corvallis, OR",
+        "latitude": 44.54820212695868,
+        "longitude": -123.21537145957399
+    }],
+    "plants": [
+        {
+            "name": "Bada",
+            "type": "Sweet Cherry",
+            "description": "Moderate suitability for brining. Used for brining. Harvest between 16 and 18 Brix. Susceptible to bacterial canker and rain cracking. Pollenizers: Royal Ann"
+        },
+        {
+            "name": "Benton",
+            "type": "Sweet Cherry",
+            "description": "Moderate suitability for brining. Useful for brining if 10 1/2 row or smaller in size. Harvest below 16 Brix. Self-fertile"
+        },
+        {
+            "name": "Bing",
+            "type": "Sweet Cherry",
+            "description": "Low suitability for brining, unless harvested between 16 and 18 Brix. Useful for brining if overset and 10 1/2 row or smaller in size. If rain cracked, made into low-grade brine as pieces and used in ice cream, yogurt, and baking. With high Brix, also used for canning. Pollenizers: Van, Black Republican, Rainier"
+        },
+        {
+            "name": "Black Republican",
+            "type": "Sweet Cherry",
+            "description": "Low suitability for brining. Too small for brine at proper brining stage. Normally marketed as a freezer. Pollenizer: Bing"
+        },
+        {
+            "name": "Chelan",
+            "type": "Sweet Cherry",
+            "description": "Low suitability for brining. Aborted cherries on tree tend not to drop until crop is fully mature. Pits in aborted cherries tend to shatter. Pollenizer: Bing"
+        },
+        {
+            "name": "Corum",
+            "type": "Sweet Cherry",
+            "description": "Moderate suitability for brining. Harvest between 16 and 18 Brix. Susceptible to bacterial canker and rain cracking. Normally harvested as a briner in western Oregon. Pollenizer: Royal Ann"
+        },        
+        {
+            "name": "Lapins",
+            "type": "Sweet Cherry",
+            "description": "Low suitability for brining. When overset, fruit can be soft and cherries can exhibit low pedicel-fruit retention force. Self-fertile"
+        },
+        {
+            "name": "Rainier",
+            "type": "Sweet Cherry",
+            "description": "High suitability for brining. Useful for brining if overset and 10 1/2 row or smaller in size. Also used for canning. Pollenizer: Bing"
+        },
+        {
+            "name": "Regina",
+            "type": "Sweet Cherry",
+            "description": "Moderate suitability for brining. Useful for brining if 10 1/2 row or smaller in size. Harvest between 16 and 18 Brix. Pollenizers: Attika, Sam, Starks Gold"
+        },
+        {
+            "name": "Royal Ann",
+            "type": "Sweet Cherry",
+            "description": "High suitability for brining. Most common brining cherry grown in Oregon. Harvest between 14 and 18 Brix. Susceptible to bacterial canker. Also used for canning. Pollenizers: Bada, Corum, Van, Black Republican"
+        },
+        {
+            "name": "Skeena",
+            "type": "Sweet Cherry",
+            "description": "Moderate suitability for brining. Useful for brining if overset and 10 1/2 row or smaller in size. Harvest between 16 and 18 Brix. Self-fertile"
+        },
+        {
+            "name": "Sweetheart",
+            "type": "Sweet Cherry",
+            "description": "high suitability for brining. Harvest for brining between 16 and 18 Brix. Self-fertile"
+        },
+        {
+            "name": "Van",
+            "type": "Sweet Cherry",
+            "description": "moderate suitability for brining. Useful for brining if 10 1/2 row or smaller in size. Normally marketed as a freezer. Pollenizer: Bing"
+        }
+    ]
+}
