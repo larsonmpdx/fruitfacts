@@ -1,0 +1,126 @@
+{
+    "title": "Selecting Berry Crop Varieties for Central Oregon",
+    "author": "Amy Jo Detweiler and Bernadine Strik",
+    "url": "https://catalog.extension.oregonstate.edu/ec1621",
+    "published": "May 2008",
+    "reviewed": "April 2017",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "Central Oregon",
+        "latitude": 44.36728083819834,
+        "longitude": -121.14213716576367
+    }],
+    "plants": [
+        {
+            "type": "Strawberry",
+            "names": ["Allstar", "Clancy", "Earliglow", "Jewel", "Honeoye", "Lateglow"],
+            "description": "June-bearing (1 crop)"
+        },
+        {
+            "type": "Strawberry",
+            "names": ["Fort Laramie", "Quinault"],
+            "description": "Everbearing (2 crops, less yield)"
+        },
+        {
+            "type": "Strawberry",
+            "names": ["Fern", "Hecker", "Selva", "Tribute", "Tristar"],
+            "description": "Day-neutral (continual crop)"
+        },
+        {
+            "type": "Raspberry",
+            "names": ["Algonquin", "Boyne", "Canby", "Encore", "Haida", "Killarney", "Latham", "Nova", "Skeena", "Titan"],
+            "color": "Red",
+            "description": "Summer-bearing"
+        },
+        {
+            "type": "Raspberry",
+            "names": ["Amity", "Autumn Bliss", "Caroline", "Heritage", "Summit"],
+            "color": "Red",
+            "description": "Primocane-fruiting (bears on new canes in late summer)"
+        },
+        {
+            "type": "Raspberry",
+            "names": ["Anne", "Fallgold"],
+            "color": "Yellow",
+            "description": "Primocane-fruiting (bears on new canes in late summer)"
+        },
+        {
+            "type": "Raspberry",
+            "names": ["Bristol", "Cumberland", "Jewel"],
+            "color": "Black"
+        },
+        {
+            "type": "Raspberry",
+            "names": ["Brandywine", "Royalty"],
+            "color": "Purple"
+        },
+        {
+            "type": "Blackberry",
+            "names": ["Chester (thornless)", "Illini Hardy (thorny)", "Triple Crown (thornless)"]
+        },
+        {
+            "type": "Gooseberry",
+            "names": ["Captivator", "Hinomaki Red", "Pixwell", "Poorman", "Welcome"],
+            "color": "Red"
+        },
+        {
+            "type": "Gooseberry",
+            "names": ["Malling Invicta", "Hinomaki Yellow", "Oregon Champion"],
+            "color": "White/Yellow"
+        },
+        {
+            "type": "Currant",
+            "names": ["Ben Sarek", "Titania"],
+            "color": "Black"
+        },
+        {
+            "type": "Currant",
+            "names": ["Cherry Red", "Jonkeer Van Tets", "Perfection", "Red Lake", "Rovada", "Wilder"],
+            "color": "Red"
+        },
+        {
+            "type": "Currant",
+            "names": ["Primus", "White Imperial"],
+            "color": "White",
+            "description": ""
+        },
+        {
+            "type": "Saskatoon",
+            "names": ["Honeywood", "Northline", "Pembina", "Smokey", "Thiessen"],
+            "description": ""
+        },
+        {
+            "type": "Blueberry",
+            "names": ["Bluecrop", "Blueray", "Jersey", "Patriot"],
+            "description": "Highbush"
+        },
+        {
+            "type": "Blueberry",
+            "names": ["Northblue", "Northcountry", "Northland", "Northsky"],
+            "description": "Half-high"
+        },
+        {
+            "type": "Table Grape",
+            "names": ["Fredonia", "Valient", "Venus (seedless)"],
+            "color": "Blue/Black",
+            "subtype": "American or Hybrid"
+        }, 
+        {
+            "type": "Table Grape",
+            "names": ["Canadice (seedless)", "Reliance (seedless)", "Vanessa (seedless)"],
+            "color": "Red",
+            "subtype": "American or Hybrid"
+        },
+        {
+            "type": "Table Grape",
+            "names": ["Himrod (seedless)", "Lakemont (seedless)", "Niagara"],
+            "color": "White/Yellow",
+            "subtype": "American or Hybrid"
+        }
+    ]
+}
+
+
+
+
+

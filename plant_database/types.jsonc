@@ -135,5 +135,29 @@
     {
         "name": "Table Grape",
         "latin_name": "Vitis vinifera"
+    },
+    {
+        "name": "Strawberry",
+        "latin_name": "Fragaria × ananassa"
+    },
+    {
+        "name": "Raspberry",
+        "latin_name": "Rubus spp."
+    },
+    {
+        "name": "Blackberry",
+        "latin_name": "Rubus spp."
+    },
+    {
+        "name": "Gooseberry",
+        "latin_name": "Ribes spp."
+    },
+    {
+        "name": "Currant",
+        "latin_name": "Ribes spp."
+    },
+    {
+        "name": "Saskatoon",
+        "latin_name": "Amelanchier alnifolia"
     }
 ]
