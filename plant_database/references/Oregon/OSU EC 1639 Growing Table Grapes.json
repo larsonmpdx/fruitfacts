@@ -550,8 +550,7 @@
             "type": "Table Grape",
             "name": "Concord",
             "color": "Blue",
-            "harvest_time_unparsed": "Late (~ mid October; ripens with Concord)",
-            "harvest_time_relative": "Concord+0",
+            "harvest_time": "mid October",
             "subtype": "American",
             "seedless": false,
             "clusters": "Large",
@@ -564,6 +563,7 @@
 }
 
 // import notes
+// concord set to "mid October" from the pub. the pub is careful to not get too specific
 // a few fields are extra, I didn't want to put them into the description field
 
 // VE = Very early (~ 6 weeks before Concord)
