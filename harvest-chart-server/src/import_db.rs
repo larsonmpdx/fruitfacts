@@ -1199,6 +1199,32 @@ fn load_references(
     }
 }
 
+fn get_relative_days(
+    plus_or_minus: &str,
+    number: Result<f32, std::num::ParseFloatError>,
+    weeks: bool,
+) -> Option<i32> {
+    if let Ok(number) = number {
+        match plus_or_minus {
+            "+" => {
+                if weeks {
+                    return Some((number * 7.0).round() as i32);
+                } else {
+                    return Some(number.round() as i32);
+                }
+            }
+            "-" => {
+                if weeks {
+                    return Some((number * -7.0).round() as i32);
+                } else {
+                    return Some((number * -1.0).round() as i32);
+                }
+            }
+        }
+    }
+    None
+}
+
 #[derive(Default, Debug, PartialEq, Eq)]
 pub struct HarvestRelativeParsed {
     pub name: String,
@@ -1206,7 +1232,46 @@ pub struct HarvestRelativeParsed {
 }
 
 fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
+    let relative_harvest_x_to_y_regex =
+        Regex::new(r#"(.+)([-+])([0-9.]+)(?: to )([-+])([0-9.]+)(.*(?:week|Week))?"#).unwrap();
     let relative_harvest_regex = Regex::new(r#"(.+)([-+])([0-9.]+)(.*(?:week|Week))?"#).unwrap();
+
+    if let Some(matches) = relative_harvest_x_to_y_regex.captures(input) {
+        let weeks;
+        if matches.len() >= 7 {
+            if let Some(week_match) = matches.get(6) {
+                if week_match.as_str().to_lowercase().trim() == "week" {
+                    weeks = true;
+                } else {
+                    weeks = false;
+                }
+            } else {
+                weeks = false;
+            }
+
+            let mut output = HarvestRelativeParsed {
+                name: matches[1].trim().to_string(),
+                ..Default::default()
+            };
+
+            let plus_or_minus_1 = &matches[2];
+            let number_1 = matches[3].parse::<f32>();
+            let plus_or_minus_2 = &matches[4];
+            let number_2 = matches[5].parse::<f32>();
+
+            let relative_days_1 = get_relative_days(plus_or_minus_1, number_1, weeks);
+            let relative_days_2 = get_relative_days(plus_or_minus_2, number_2, weeks);
+
+            // todo
+
+            if let (Some(relative_days_1), Some(relative_days_2)) =
+                (relative_days_1, relative_days_2)
+            {
+                output.relative_days = (relative_days_1 + relative_days_2) / 2;
+                return Some(output);
+            }
+        }
+    }
 
     if let Some(matches) = relative_harvest_regex.captures(input) {
         let weeks;
@@ -1229,26 +1294,10 @@ fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
             let plus_or_minus = &matches[2];
             let number = matches[3].parse::<f32>();
 
-            if let Ok(number) = number {
-                match plus_or_minus {
-                    "+" => {
-                        if weeks {
-                            output.relative_days = (number * 7.0).round() as i32;
-                        } else {
-                            output.relative_days = number.round() as i32;
-                        }
-                        return Some(output);
-                    }
-                    "-" => {
-                        if weeks {
-                            output.relative_days = (number * -7.0).round() as i32;
-                        } else {
-                            output.relative_days = (number * -1.0).round() as i32;
-                        }
-                        return Some(output);
-                    }
-                    _ => (),
-                }
+            let relative_days = get_relative_days(plus_or_minus, number, weeks);
+            if let Some(relative_days) = relative_days {
+                output.relative_days = relative_days;
+                return Some(output);
             }
         }
     }
