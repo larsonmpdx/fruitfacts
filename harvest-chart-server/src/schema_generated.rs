@@ -17,8 +17,8 @@ table! {
     collection_items (collection_item_id) {
         collection_item_id -> Integer,
         collection_title -> Nullable<Text>,
-        location_id -> Integer,
         collection_id -> Integer,
+        location_id -> Nullable<Integer>,
         name -> Text,
         #[sql_name = "type"]
         type_ -> Text,
@@ -32,7 +32,7 @@ table! {
         harvest_start_is_midpoint -> Nullable<Integer>,
         harvest_start_2 -> Nullable<Integer>,
         harvest_end_2 -> Nullable<Integer>,
-        harvest_2_start_is_midpoint -> Nullable<Integer>,
+        harvest_start_2_is_midpoint -> Nullable<Integer>,
     }
 }
 
@@ -50,7 +50,7 @@ table! {
         published -> Nullable<Text>,
         reviewed -> Nullable<Text>,
         accessed -> Nullable<Text>,
-        location -> Nullable<Text>,
+        location_name -> Nullable<Text>,
         latitude -> Nullable<Double>,
         longitude -> Nullable<Double>,
     }

@@ -1,6 +1,8 @@
 // import_db.rs: ETL for a set of json files that comprise all of the built-in reference plants, bringing them into the database
-// this is useful because now the database's files can be viewed on github and edited by hand as text files,
-// allowing a wider audience of contributors and easier maintenance
+// this allows the database's files to be viewed on github and edited by hand as text files,
+// bringing a wider audience of contributors and easier maintenance
+// the ETL rules get complex in a few places, the goal is to allow the json references to be as
+// simple and close to plain copy-paste imports as possible, with this file doing fancy interpretation such as parsing a wide range of date formats
 
 #[cfg(test)]
 mod test;
@@ -54,7 +56,7 @@ struct CollectionJson {
     plants: Vec<CollectionPlantJson>,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 struct CollectionLocationJson {
     short_name: Option<String>,
     name: String,
@@ -756,7 +758,7 @@ fn get_category_description(
 
 fn add_collection_plant(
     collection_id: i32,
-    location_id: i32,
+    location_id: Option<i32>,
     harvest_time: &Option<String>,
     plant_name: &str,
     plant: &CollectionPlantJson,
@@ -768,7 +770,7 @@ fn add_collection_plant(
     let mut harvest_start_is_midpoint = None;
     let mut harvest_start_2 = None; // fig breba+main
     let mut harvest_end_2 = None; // fig breba+main
-    let mut harvest_2_start_is_midpoint = None; // fig breba+main
+    let mut harvest_start_2_is_midpoint = None; // fig breba+main
     if let Some(harvest_time) = harvest_time {
         if harvest_time.is_empty() {
             panic!(
@@ -813,7 +815,7 @@ fn add_collection_plant(
                         harvest_end_2 = Some(i32::try_from(end).unwrap());
                     }
                     if day_range.parse_type == DateParseType::Midpoint {
-                        harvest_2_start_is_midpoint = Some(1);
+                        harvest_start_2_is_midpoint = Some(1);
                     }
                 }
                 None => {
@@ -864,7 +866,7 @@ fn add_collection_plant(
             collection_items::harvest_start_is_midpoint.eq(harvest_start_is_midpoint),
             collection_items::harvest_start_2.eq(harvest_start_2),
             collection_items::harvest_end_2.eq(harvest_end_2),
-            collection_items::harvest_2_start_is_midpoint.eq(harvest_2_start_is_midpoint),
+            collection_items::harvest_start_2_is_midpoint.eq(harvest_start_2_is_midpoint),
         ))
         .execute(db_conn);
     assert_eq!(
@@ -884,6 +886,8 @@ fn get_location_name(
     plant_location_name: Option<String>,
     locations: &[CollectionLocationJson],
 ) -> Option<String> {
+    // println!("getting location name: {:?} {:?}", plant_location_name, locations); // todo remove
+
     match plant_location_name {
         Some(plant_location_name) => {
             for location_top_level in locations {
@@ -909,10 +913,24 @@ fn get_location_name(
     }
 }
 
-fn get_location_id(_location_name: Option<String>) -> i32 {
+fn get_location_id(
+    collection_id: i32,
+    location_name: Option<String>,
+    db_conn: &SqliteConnection,
+) -> Option<i32> {
     // either look up this location ID by (collection ID + name) or look it up with only collection ID and expect only one result
+    let locations = collections::dsl::collections
+        .filter(collections::collection_id.eq(collection_id))
+        .filter(collections::location_name.eq(location_name.clone()))
+        .load::<Collections>(db_conn);
 
-    0 // todo
+    if let Ok(locations) = locations {
+        if locations.len() == 1 {
+            return Some(locations[0].location_id);
+        }
+    }
+
+    None
 }
 
 fn maybe_add_base_plant(
@@ -943,7 +961,7 @@ fn maybe_add_base_plant(
 }
 
 fn add_collection_plant_by_location(
-    collection_number: i32,
+    collection_id: i32,
     plant_name: &str,
     plant: &CollectionPlantJson,
     category_description: &Option<String>,
@@ -961,14 +979,18 @@ fn add_collection_plant_by_location(
 
                 // we get harvest time for each location from the base harvest time values
 
-                //  println!("location: {} {}", location, location.to_string());
+                // println!("plant: {}", plant_name); // todo remove
 
                 plants_added += add_collection_plant(
-                    collection_number,
-                    get_location_id(get_location_name(
-                        Some(location.as_str().unwrap().to_string()),
-                        collection_locations,
-                    )), // the .as_str()... nastiness is because serde wants to carry the "it's a json string" idea to the point of printing it a certain way in rust. as_str() tells it not to
+                    collection_id,
+                    get_location_id(
+                        collection_id,
+                        get_location_name(
+                            Some(location.as_str().unwrap().to_string()),
+                            collection_locations,
+                        ),
+                        db_conn,
+                    ), // the .as_str()... nastiness is because serde wants to carry the "it's a json string!!" idea to the point of printing it a certain way in rust. as_str() tells it not to
                     &plant.harvest_time,
                     plant_name,
                     plant,
@@ -994,12 +1016,15 @@ fn add_collection_plant_by_location(
                         continue;
                     }
 
+                    // println!("plant: {}", plant_name); // todo remove
+
                     plants_added += add_collection_plant(
-                        collection_number,
-                        get_location_id(get_location_name(
-                            Some(location_name),
-                            collection_locations,
-                        )),
+                        collection_id,
+                        get_location_id(
+                            collection_id,
+                            get_location_name(Some(location_name), collection_locations),
+                            db_conn,
+                        ),
                         &Some(harvest_time),
                         plant_name,
                         plant,
@@ -1014,9 +1039,15 @@ fn add_collection_plant_by_location(
     } else {
         // no location given in the plant json
 
+        // println!("plant: {}", plant_name); // todo remove
+
         plants_added += add_collection_plant(
-            collection_number,
-            get_location_id(get_location_name(None, collection_locations)),
+            collection_id,
+            get_location_id(
+                collection_id,
+                get_location_name(None, collection_locations),
+                db_conn,
+            ),
             &plant.harvest_time,
             plant_name,
             plant,
@@ -1047,7 +1078,7 @@ fn load_references(
     db_conn: &SqliteConnection,
     database_dir: std::path::PathBuf,
 ) -> LoadReferencesReturn {
-    let mut collection_number = 0;
+    let mut collection_id = 0;
 
     let mut reference_locations_found = 0;
     let mut reference_base_plants_added = 0;
@@ -1081,12 +1112,12 @@ fn load_references(
 
             let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
 
-            collection_number += 1;
+            collection_id += 1;
             for location in &collection.locations {
                 //    println!("inserting");
                 let rows_inserted = diesel::insert_into(collections::dsl::collections)
                     .values((
-                        collections::collection_id.eq(collection_number),
+                        collections::collection_id.eq(collection_id),
                         collections::user_id.eq(0), // todo - codify this as the root/fake user
                         collections::path.eq(&path),
                         collections::filename.eq(&filename),
@@ -1097,7 +1128,7 @@ fn load_references(
                         collections::published.eq(&collection.published),
                         collections::reviewed.eq(&collection.reviewed),
                         collections::accessed.eq(&collection.accessed),
-                        collections::location.eq(&location.name),
+                        collections::location_name.eq(&location.name),
                         collections::latitude.eq(&location.latitude),
                         collections::longitude.eq(&location.longitude),
                     ))
@@ -1130,7 +1161,7 @@ fn load_references(
                             maybe_add_base_plant(&plant_name, &plant, db_conn);
 
                         reference_plants_added += add_collection_plant_by_location(
-                            collection_number,
+                            collection_id,
                             &plant_name,
                             &plant,
                             &category_description,
@@ -1143,7 +1174,7 @@ fn load_references(
                         maybe_add_base_plant(plant.name.as_ref().unwrap(), &plant, db_conn);
 
                     reference_plants_added += add_collection_plant_by_location(
-                        collection_number,
+                        collection_id,
                         plant.name.as_ref().unwrap(),
                         &plant,
                         &category_description,
@@ -1222,10 +1253,17 @@ fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
     None
 }
 
+fn add_relative_value(base_value: Option<i32>, adjustment: i32) -> Option<i32> {
+    if let Some(base_value) = base_value {
+        return Some(base_value + adjustment);
+    }
+    None
+}
+
 #[derive(Queryable)]
 pub struct CollectionItemRelative {
     pub collection_item_id: i32,
-    pub location_id: i32,
+    pub location_id: Option<i32>,
     pub type_: String,
 
     pub harvest_relative: Option<String>,
@@ -1254,15 +1292,49 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
 
     for plant in all_plants.unwrap() {
         if plant.harvest_relative.is_some() && plant.harvest_start.is_none() {
-            if let Some(parsed) = parse_relative_harvest(&plant.harvest_relative.unwrap()) {
+            if let Some(harvest_relative) = parse_relative_harvest(&plant.harvest_relative.unwrap())
+            {
                 // look for this variety name in the same location
 
-                let _ = collection_items::dsl::collection_items
+                if let Ok(relative_plant) = collection_items::dsl::collection_items
                     .filter(collection_items::location_id.eq(plant.location_id))
-                    .filter(collection_items::name.eq(parsed.name))
+                    .filter(collection_items::name.eq(harvest_relative.name))
                     .filter(collection_items::type_.eq(plant.type_))
                     .first::<CollectionItems>(db_conn)
-                    .unwrap_or_else(|_| panic!("todo"));
+                {
+                    let harvest_start = add_relative_value(
+                        relative_plant.harvest_start,
+                        harvest_relative.relative_days,
+                    );
+                    let harvest_end = add_relative_value(
+                        relative_plant.harvest_end,
+                        harvest_relative.relative_days,
+                    );
+                    let harvest_start_2 = add_relative_value(
+                        relative_plant.harvest_start_2,
+                        harvest_relative.relative_days,
+                    );
+                    let harvest_end_2 = add_relative_value(
+                        relative_plant.harvest_end_2,
+                        harvest_relative.relative_days,
+                    );
+
+                    let _updated_row =
+                        diesel::update(collection_items::dsl::collection_items.filter(
+                            collection_items::collection_item_id.eq(plant.collection_item_id),
+                        ))
+                        .set((
+                            collection_items::harvest_start.eq(harvest_start),
+                            collection_items::harvest_end.eq(harvest_end),
+                            collection_items::harvest_start_is_midpoint
+                                .eq(relative_plant.harvest_start_is_midpoint),
+                            collection_items::harvest_start_2.eq(harvest_start_2),
+                            collection_items::harvest_end_2.eq(harvest_end_2),
+                            collection_items::harvest_start_is_midpoint
+                                .eq(relative_plant.harvest_start_2_is_midpoint),
+                        ))
+                        .execute(db_conn);
+                }
             }
         }
     }

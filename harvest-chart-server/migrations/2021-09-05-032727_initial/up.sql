@@ -43,7 +43,7 @@ CREATE TABLE collections (
   reviewed TEXT,
   accessed TEXT,
 
-  location TEXT,
+  location_name TEXT,
   latitude DOUBLE,
   longitude DOUBLE
 );
@@ -52,8 +52,8 @@ CREATE TABLE collection_items (
   collection_item_id INTEGER PRIMARY KEY NOT NULL,
   
   collection_title TEXT,
-  location_id INTEGER NOT NULL,
   collection_id INTEGER NOT NULL,
+  location_id INTEGER, -- this can be unset for cases where there's a random list of varieties not attached to a location
 
   -- name+type don't have to exist in base plants so this could be a wholly user-created plant
   name TEXT NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE collection_items (
   -- pretty much only for figs with breba+main crop
   harvest_start_2 INTEGER,
   harvest_end_2 INTEGER,
-  harvest_2_start_is_midpoint INTEGER,
+  harvest_start_2_is_midpoint INTEGER,
 
   UNIQUE(collection_id, location_id, type, name) --combo of these columns must be unique
 );

@@ -28,8 +28,8 @@ pub struct CollectionItems {
     pub collection_item_id: i32,
 
     pub collection_title: Option<String>,
-    pub location_id: i32,
     pub collection_id: i32,
+    pub location_id: Option<i32>,
 
     pub name: String,
     pub type_: String,
@@ -46,7 +46,7 @@ pub struct CollectionItems {
 
     pub harvest_start_2: Option<i32>,
     pub harvest_end_2: Option<i32>,
-    pub harvest_2_start_is_midpoint: Option<i32>,
+    pub harvest_start_2_is_midpoint: Option<i32>,
 }
 
 #[derive(Queryable)]
@@ -66,7 +66,7 @@ pub struct Collections {
     pub reviewed: Option<String>,
     pub accessed: Option<String>,
 
-    pub location: Option<String>,
+    pub location_name: Option<String>,
     pub latitude: Option<f64>,
     pub longitude: Option<f64>,
 }
