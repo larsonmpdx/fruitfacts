@@ -1223,7 +1223,7 @@ fn get_relative_days(
             _ => return None,
         }
     }
-    return None;
+    None
 }
 
 #[derive(Default, Debug, PartialEq, Eq)]
