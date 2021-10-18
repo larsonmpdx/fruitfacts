@@ -134,7 +134,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Bing +14 to +15"),
         Some(HarvestRelativeParsed {
             name: "Bing".to_string(),
-            relative_days: 15
+            relative_days: 14
         })
     );
     assert_eq!(
@@ -148,7 +148,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Concord -4 to -5 weeks"),
         Some(HarvestRelativeParsed {
             name: "Concord".to_string(),
-            relative_days: -32
+            relative_days: -31
         })
     );
 }
@@ -351,7 +351,7 @@ fn test_patent_parsing() {
     );
 }
 
-#[test]
+#[test] #[ignore] // it is too expensive
 fn test_database_loading() {
     let db_conn = super::establish_connection();
     super::reset_database(&db_conn);

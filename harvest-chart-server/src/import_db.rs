@@ -1263,8 +1263,6 @@ fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
             let relative_days_1 = get_relative_days(plus_or_minus_1, number_1, weeks);
             let relative_days_2 = get_relative_days(plus_or_minus_2, number_2, weeks);
 
-            // todo
-
             if let (Some(relative_days_1), Some(relative_days_2)) =
                 (relative_days_1, relative_days_2)
             {

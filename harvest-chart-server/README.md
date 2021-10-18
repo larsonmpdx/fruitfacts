@@ -15,6 +15,7 @@
 # hints
 * `cargo build`
 * `cargo run`
+* `cargo test` and `cargo test -- --include-ignored` (include long tests)
 * `rustup update stable`
 * `cargo fetch` install packages
 * `cargo outdated` after installing `cargo install --locked cargo-outdated`
