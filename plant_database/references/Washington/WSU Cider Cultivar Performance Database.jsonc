@@ -1,0 +1,477 @@
+{
+    "title": "WSU Cider Cultivar Performance Database",
+    "author": "WSU Cider",
+    "url": "https://cider.wsu.edu/ciderweb/",
+    "published": "unknown",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "Mt. Vernon, WA",
+        "latitude": 48.439906165067555,
+        "longitude": -122.38861565365134
+    }],
+    "description": "this data is from a new web presentation; a previously-released table with some notes is here https://s3.wp.wsu.edu/uploads/sites/2167/2018/07/VarietyDataSummary-6-14-2018.pdf",
+    "plants": [
+        {
+            "name": "Amere de Berthcourt",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/25"
+        },
+        {
+            "name": "Amere Forestier",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/18"
+        },
+        {
+            "name": "Ashmead's Kernel",
+            "type": "Apple",
+            "description": "cider apple"
+            // harvest time not evaluated
+        },
+        {
+            "name": "Bedan de Parts",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/1"
+        },
+        {
+            "name": "Blanc Mollet",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/4"
+        },
+        {
+            "name": "Bouteville",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/11"
+        },
+        {
+            "name": "Bramley's Seedling",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/24"
+        },
+        {
+            "name": "Bramtot",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/15"
+        },
+        {
+            "name": "Breakwell Seedling",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/6"
+        },
+        {
+            "name": "Brown Snout",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/18"
+        },
+        {
+            "name": "Brown Thorn",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/8"
+        },
+        {
+            "name": "Bulmer's Norman",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/12"
+        },
+        {
+            "name": "Campfield",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/21"
+        },
+        {
+            "name": "Cap of Liberty",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/7"
+        },
+        {
+            "name": "Chisel Jersey",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/29"
+        },
+        {
+            "name": "Cimitiere",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/9"
+        },
+        {
+            "name": "Cort Pendu Rose",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/11"
+        },
+        {
+            "name": "Dabinett",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/14"
+        },
+        {
+            "name": "Domaines",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/29"
+        },
+        {
+            "name": "Doux Normandie",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/6"
+        },
+        {
+            "name": "Ellis Bitter",
+            "type": "Apple",
+            "description": "cider apple"
+            // harvest time not evaluated
+        },
+        {
+            "name": "Fillbarrel",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/8"
+        },
+        {
+            "name": "Finkenwerder Herbstprinz",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/22"
+        },
+        {
+            "name": "Foxwhelp",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/4"
+        },
+        {
+            "name": "Frequin Rouge",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/2"
+        },
+        {
+            "name": "Golden Harvey",
+            "type": "Apple",
+            "description": "cider apple"
+            // harvest time not evaluated
+        },
+        {
+            "name": "Golden Russet",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/3"
+        },
+        {
+            "name": "Granniwinkle",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/2"
+        },
+        {
+            "name": "Gravenstein, Red (Worthen cv.)",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "8/28"
+        },
+        {
+            "name": "Grimes Golden",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/14"
+        },
+        {
+            "name": "Grindstone",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/25"
+        },
+        {
+            "name": "Harrison",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/9"
+        },
+        {
+            "name": "Harry Master's Jersey",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/9"
+        },
+        {
+            "name": "Isle of Wight Pippin",
+            "type": "Apple",
+            "description": "cider apple"
+            // harvest time not evaluated
+        },
+        {
+            "name": "Jouveaux",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/25"
+        },
+        {
+            "name": "Kermerrien",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/1"
+        },
+        {
+            "name": "Kingston Black",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/30"
+        },
+        {
+            "name": "Lambrook Pippin",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/16"
+        },
+        {
+            "name": "Major",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/7"
+        },
+        {
+            "name": "Margil",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/24"
+        },
+        {
+            "name": "Marie Menard",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/24"
+        },
+        {
+            "name": "Marin Onfroy",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/6"
+        },
+        {
+            "name": "Maude",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/7"
+        },
+        {
+            "name": "Medaille D'Or",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/15"
+        },
+        {
+            "name": "Mettais",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/23"
+        },
+        {
+            "name": "Michelin",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/12"
+        },
+        {
+            "name": "Mott Pink",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/6"
+        },
+        {
+            "name": "Muscadet de Dieppe",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/13"
+        },
+        {
+            "name": "Muscat de Bernay",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/16"
+        },
+        {
+            "name": "Nehou",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/17"
+        },
+        {
+            "name": "Peau de Vache",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/1"
+        },
+        {
+            "name": "Porter's Perfection",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/26"
+        },
+        {
+            "name": "Puget Spice",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/15"
+        },
+        {
+            "name": "Redstreak",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/7"
+        },
+        {
+            "name": "Reine des Hatives",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/29"
+        },
+        {
+            "name": "Reine des Pommes",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/1"
+        },
+        {
+            "name": "Ribston Pippin",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/13"
+        },
+        {
+            "name": "Rosemary Russet",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/24"
+        },
+        {
+            "name": "Ross Nonpareil",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/28"
+        },
+        {
+            "name": "Roxbury Russet",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/21"
+        },
+        {
+            "name": "Royal Jersey",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/25"
+        },
+        {
+            "name": "Russet King",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/26"
+        },
+        {
+            "name": "Smith's Cider",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/1"
+        },
+        {
+            "name": "Stembridge Jersey",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/30"
+        },
+        {
+            "name": "Stoke Red",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/30"
+        },
+        {
+            "name": "Sweet Alford",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/7"
+        },
+        {
+            "name": "Sweet Coppin",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/10"
+        },
+        {
+            "name": "Taliaferro (Colaw)",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/30"
+        },
+        {
+            "name": "Taylor's",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/22"
+        },
+        {
+            "name": "Tom Putt",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "8/31"
+        },
+        {
+            "name": "Track Zero",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/9"
+        },
+        {
+            "name": "Tramlett's, Geneva",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/30"
+        },
+        {
+            "name": "Vilberie",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "10/19"
+        },
+        {
+            "name": "Virginia Crab, Hewes",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "8/31"
+        },
+        {
+            "name": "Whidbey",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/18"
+        },
+        {
+            "name": "Yarlington Mill",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/26"
+        },
+        {
+            "name": "Zabergau Reinette",
+            "type": "Apple",
+            "description": "cider apple",
+            "harvest_time": "9/25"
+        }
+    ]
+}

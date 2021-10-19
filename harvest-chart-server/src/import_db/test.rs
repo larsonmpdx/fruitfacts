@@ -62,94 +62,14 @@ fn test_dates() {
         string_to_day_number("Around May 4 (Gainesville, FL)"),
         Some(125)
     );
-}
 
-#[test]
-fn test_parse_relative_harvest() {
-    assert_eq!(parse_relative_harvest("hi"), None);
     assert_eq!(
-        parse_relative_harvest("Redhaven -32"),
-        Some(HarvestRelativeParsed {
-            name: "Redhaven".to_string(),
-            relative_days: -32
-        })
+        string_to_day_number("9/25"),
+        string_to_day_number("September 25")
     );
     assert_eq!(
-        parse_relative_harvest("Redhaven +0"),
-        Some(HarvestRelativeParsed {
-            name: "Redhaven".to_string(),
-            relative_days: 0
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest("Redhaven +45"),
-        Some(HarvestRelativeParsed {
-            name: "Redhaven".to_string(),
-            relative_days: 45
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest("Redhaven -2 weeks"),
-        Some(HarvestRelativeParsed {
-            name: "Redhaven".to_string(),
-            relative_days: -14
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest("Redhaven +0.5 weeks"),
-        Some(HarvestRelativeParsed {
-            name: "Redhaven".to_string(),
-            relative_days: 4
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest("Redhaven -1.5 weeks"),
-        Some(HarvestRelativeParsed {
-            name: "Redhaven".to_string(),
-            relative_days: -11
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest("Redhaven +9 weeks"),
-        Some(HarvestRelativeParsed {
-            name: "Redhaven".to_string(),
-            relative_days: 63
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest(" with spaces-42"),
-        Some(HarvestRelativeParsed {
-            name: "with spaces".to_string(),
-            relative_days: -42
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest("Bing -10 to -12"),
-        Some(HarvestRelativeParsed {
-            name: "Bing".to_string(),
-            relative_days: -11
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest("Bing +14 to +15"),
-        Some(HarvestRelativeParsed {
-            name: "Bing".to_string(),
-            relative_days: 14
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest("Concord -6 weeks"),
-        Some(HarvestRelativeParsed {
-            name: "Concord".to_string(),
-            relative_days: -42
-        })
-    );
-    assert_eq!(
-        parse_relative_harvest("Concord -4 to -5 weeks"),
-        Some(HarvestRelativeParsed {
-            name: "Concord".to_string(),
-            relative_days: -31
-        })
+        string_to_day_number("10/15"),
+        string_to_day_number("October 15")
     );
 }
 
@@ -299,6 +219,14 @@ fn test_day_range() {
         }
     );
     assert_eq!(
+        string_to_day_range("10/15").unwrap(),
+        DayRangeOutput {
+            parse_type: DateParseType::StartOnly,
+            start: Some(289),
+            end: None
+        }
+    );
+    assert_eq!(
         string_to_day_range("average of: July 6, June 29").unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
@@ -321,6 +249,95 @@ fn test_day_range() {
             start: Some(116),
             end: None
         }
+    );
+}
+
+#[test]
+fn test_parse_relative_harvest() {
+    assert_eq!(parse_relative_harvest("hi"), None);
+    assert_eq!(
+        parse_relative_harvest("Redhaven -32"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: -32
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven +0"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: 0
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven +45"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: 45
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven -2 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: -14
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven +0.5 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: 4
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven -1.5 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: -11
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Redhaven +9 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            relative_days: 63
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest(" with spaces-42"),
+        Some(HarvestRelativeParsed {
+            name: "with spaces".to_string(),
+            relative_days: -42
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Bing -10 to -12"),
+        Some(HarvestRelativeParsed {
+            name: "Bing".to_string(),
+            relative_days: -11
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Bing +14 to +15"),
+        Some(HarvestRelativeParsed {
+            name: "Bing".to_string(),
+            relative_days: 14
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Concord -6 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Concord".to_string(),
+            relative_days: -42
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Concord -4 to -5 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Concord".to_string(),
+            relative_days: -31
+        })
     );
 }
 
@@ -351,7 +368,8 @@ fn test_patent_parsing() {
     );
 }
 
-#[test] #[ignore] // it is too expensive
+#[test]
+#[ignore] // it is too expensive
 fn test_database_loading() {
     let db_conn = super::establish_connection();
     super::reset_database(&db_conn);
@@ -361,13 +379,10 @@ fn test_database_loading() {
     assert_ge!(items_loaded.base_plants_found, 359);
     assert_ge!(items_loaded.base_types_found, 34);
     assert_ge!(items_loaded.reference_items.reference_locations_found, 37);
+    assert_ge!(items_loaded.reference_items.reference_plants_added, 2624);
     assert_ge!(
-        items_loaded.reference_items.reference_base_plants_added,
-        773
-    );
-    assert_ge!(
-        items_loaded.base_plants_found + items_loaded.reference_items.reference_plants_added,
-        2833
+        items_loaded.base_plants_found + items_loaded.reference_items.reference_base_plants_added,
+        1224
     );
 }
 

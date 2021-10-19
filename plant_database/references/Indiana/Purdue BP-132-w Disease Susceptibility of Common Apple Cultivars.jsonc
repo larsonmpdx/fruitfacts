@@ -418,7 +418,7 @@
         },
         {
             "type": "Apple",
-            "name": "William's Pride",
+            "name": "Williams' Pride",
             "disease_resistance": {"scab": "VR", "FB": "R", "rust": "VR", "PM": "R"}
         },
         {

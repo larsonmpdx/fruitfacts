@@ -1,0 +1,249 @@
+{
+    "title": "Picking and Storing Apples and Pears",
+    "author": "Robert L. Stebbins, Jeff L. Olsen, Wilbur L. Bluhm",
+    "url": "https://catalog.extension.oregonstate.edu/pnw604",
+    "published": "October 1997",
+    "reviewed": "June 2017",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "Corvallis, OR",
+        "latitude": 44.54820212695868,
+        "longitude": -123.21537145957399
+    }],
+    "plants": [
+        {
+            "name": "Yellow Transparent",
+            "type": "Apple",
+            "harvest_time": "July 10-25",
+            "description": "Color when mature: Creamy yellow"
+        },
+        {
+            "name": "Lodi",
+            "type": "Apple",
+            "harvest_time": "July 15-30",
+            "description": "Color when mature: Creamy yellow"
+        },
+        {
+            "name": "Chehalis",
+            "type": "Apple",
+            "harvest_time": "Aug 20-30",
+            "description": "Color when mature: Yellow"
+        },
+        {
+            "name": "Gravenstein",
+            "type": "Apple",
+            "harvest_time": "Aug 20-25",
+            "description": "Color when mature: Yellow with red"
+        },
+        {
+            "name": "Tydeman's Red",
+            "type": "Apple",
+            "harvest_time": "Aug 25-30",
+            "description": "Color when mature: Red"
+        },
+        {
+            "name": "Prime Red",
+            "type": "Apple",
+            "harvest_time": "Aug 20-30",
+            "description": "Color when mature: Red"
+        },
+        {
+            "name": "Gala",
+            "type": "Apple",
+            "harvest_time": "Sep 1-15",
+            "description": "Color when mature: Yellow with red stripes"
+        },
+        {
+            "name": "Red Wealthy",
+            "type": "Apple",
+            "harvest_time": "Sep 10-20",
+            "description": "Color when mature: Yellow with red"
+        },
+        {
+            "name": "Jonagold",
+            "type": "Apple",
+            "harvest_time": "Sep 15 - Oct 7",
+            "description": "Color when mature: Yellow with red stripes"
+        },
+        {
+            "name": "Elstar",
+            "type": "Apple",
+            "harvest_time": "Sep 17-24",
+            "description": "Color when mature: Yellow with red stripes"
+        },
+        {
+            "name": "Arlet",
+            "type": "Apple",
+            "harvest_time": "Sep 17-30",
+            "description": "Color when mature: Red"
+        },
+        {
+            "name": "McIntosh",
+            "type": "Apple",
+            "harvest_time": "Sep 20-30",
+            "description": "Color when mature: Yellow with red blush"
+        },
+        {
+            "name": "King",
+            "type": "Apple",
+            "harvest_time": "Sep 15-25",
+            "description": "Color when mature: Yellow with red blush"
+        },
+        {
+            "name": "Jonathan",
+            "type": "Apple",
+            "harvest_time": "Sep 20-25",
+            "description": "Color when mature: Yellow with red blush"
+        },
+        {
+            "name": "Liberty",
+            "type": "Apple",
+            "harvest_time": "Sep 20-Oct 8",
+            "description": "Color when mature: Mostly red"
+        },
+        {
+            "name": "Grimes Golden",
+            "type": "Apple",
+            "harvest_time": "Sep 25-Oct 5",
+            "description": "Color when mature: Yellow"
+        },
+        {
+            "name": "Empire",
+            "type": "Apple",
+            "harvest_time": "Sep 27-Oct 7",
+            "description": "Color when mature: Red stripes"
+        },
+        {
+            "name": "Golden Delicious",
+            "type": "Apple",
+            "harvest_time": "Oct 1-15",
+            "description": "Color when mature: Yellow"
+        },
+        {
+            "name": "Spartan",
+            "type": "Apple",
+            "harvest_time": "Oct 1-10",
+            "description": "Color when mature: Red"
+        },
+        {
+            "name": "Red Delicious",
+            "type": "Apple",
+            "harvest_time": "Oct 1-15",
+            "description": "Color when mature: Red"
+        },
+        {
+            "name": "Spitzenburg",
+            "type": "Apple",
+            "harvest_time": "Oct 5-20",
+            "description": "Color when mature: Yellow with red stripes"
+        },
+        {
+            "name": "Winter Banana",
+            "type": "Apple",
+            "harvest_time": "Oct 5-20",
+            "description": "Color when mature: Yellow"
+        },
+        {
+            "name": "Braeburn",
+            "type": "Apple",
+            "harvest_time": "Oct 10-25",
+            "description": "Color when mature: Red stripes"
+        },
+        {
+            "name": "Melrose",
+            "type": "Apple",
+            "harvest_time": "Oct 15-30",
+            "description": "Color when mature: Red stripes"
+        },
+        {
+            "name": "Fuji",
+            "type": "Apple",
+            "harvest_time": "Oct 15 to Nov 1",
+            "description": "Color when mature: Red"
+        },
+        {
+            "name": "Winesap",
+            "type": "Apple",
+            "harvest_time": "Oct 20-25",
+            "description": "Color when mature: Red"
+        },
+        {
+            "name": "Rome Beauty",
+            "type": "Apple",
+            "harvest_time": "Oct 25-Nov 10",
+            "description": "(red strains) Color when mature: Red"
+        },
+        {
+            "name": "Northern Spy",
+            "type": "Apple",
+            "harvest_time": "Nov 5-15",
+            "description": "Color when mature: Yellow with red stripes"
+        },
+        {
+            "name": "Yellow Newtown",
+            "type": "Apple",
+            "harvest_time": "Nov 10-20",
+            "description": "Color when mature: Green"
+        },
+        {
+            "name": "Granny Smith",
+            "type": "Apple",
+            "harvest_time": "Nov 10-20",
+            "description": "Color when mature: Green"
+        },
+        {
+            "name": "Clapp's Favorite",
+            "type": "Euro Pear",
+            "harvest_time": "Early Aug",
+            "description": "summer pear: no cold storage necessary"
+        },
+        {
+            "name": "Bartlett",
+            "type": "Euro Pear",
+            "harvest_time": "Aug 10-20",
+            "description": "summer pear: no cold storage necessary"
+        },
+        {
+            "name": "Seckel",
+            "type": "Euro Pear",
+            "harvest_time": "Late Aug to Sep",
+            "description": "summer pear: no cold storage necessary"
+        },
+        {
+            "name": "Bosc",
+            "type": "Euro Pear",
+            "harvest_time": "Early to mid Sep",
+            "description": "summer pear: no cold storage necessary"
+        },
+        {
+            "name": "D'Anjou",
+            "type": "Euro Pear",
+            "harvest_time": "Early to mid Sep",
+            "description": "2 month cold storage before ready"
+        },
+        {
+            "name": "Comice",
+            "type": "Euro Pear",
+            "harvest_time": "Late Sep",
+            "description": "1 month cold storage before ready"
+        },
+        {
+            "name": "Packham's Triumph",
+            "type": "Euro Pear",
+            "harvest_time": "Late Sep to Oct",
+            "description": "1 month cold storage before ready"
+        },
+        {
+            "name": "Forelle",
+            "type": "Euro Pear",
+            "harvest_time": "Late Sep",
+            "description": "1 month cold storage before ready"
+        },
+        {
+            "name": "Winter Nellis",
+            "type": "Euro Pear",
+            "harvest_time": "Early Oct",
+            "description": "1 month cold storage before ready"
+        }
+    ]
+}

@@ -404,13 +404,45 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
     }
 }
 
+lazy_static! {
+    static ref SPECIAL_CHARACTERS_REGEX: Regex = Regex::new(r#"["’'.!#,\-— ]"#).unwrap();
+    static ref MONTH_SLASH_DAY_REGEX: Regex = Regex::new(r#"([0-9]+)/([0-9]+)"#).unwrap();
+}
+
+fn matches_month_slash_day(input: &str) -> bool {
+    if let Some(_) = MONTH_SLASH_DAY_REGEX.captures(&input.to_lowercase()) {
+        return true
+    }
+    false
+}
+
 // parse a single date to a day of the year
 // "September"
 // "late September"
 // "early-mid October"
 // "Sep 25"
+// "9/25" (month/day) = September 25
 // "Around May 4 (Gainesville, FL)" - should pull out "May 4" with a regex and parse that
 fn string_to_day_number(input: &str) -> Option<u32> {
+
+    if let Some(matches) = MONTH_SLASH_DAY_REGEX.captures(&input.to_lowercase()) {
+        if matches.len() >= 3 {
+            if let (Some(month_number), Some(day_number)) = (matches.get(1), matches.get(2)) {
+                match NaiveDateTime::parse_from_str(
+                    &("2020 ".to_owned()
+                        + month_number.as_str()
+                        + "/"
+                        + day_number.as_str()
+                        + " 12:01:01"),
+                    "%Y %m/%d %H:%M:%S",
+                ) {
+                    Ok(parsed) => return Some(parsed.ordinal()),
+                    Err(_) => {}
+                }
+            }
+        }
+    }
+
     let mut month_and_day_string = input.to_string();
 
     if !(input).contains(char::is_whitespace) {
@@ -603,10 +635,6 @@ pub struct AkaFormatted {
     pub aka_fts: Option<String>,
 }
 
-lazy_static! {
-    static ref SPECIAL_CHARACTERS_REGEX: Regex = Regex::new(r#"["’'.!#,\-— ]"#).unwrap();
-}
-
 // fts: full text search
 fn format_name_fts_string(name: &str) -> String {
     return SPECIAL_CHARACTERS_REGEX.replace_all(name, "").to_string();
@@ -783,7 +811,7 @@ fn add_collection_plant(
         }
 
         // for harvest times like "Jun/Sep" which are for fig breba+main crops
-        if harvest_time.contains('/') {
+        if harvest_time.contains('/') && !matches_month_slash_day(harvest_time) {
             let split = harvest_time.split('/').collect::<Vec<&str>>();
             assert_eq!(
                 split.len(),
