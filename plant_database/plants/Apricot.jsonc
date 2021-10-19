@@ -72,14 +72,11 @@
         "name": "Mokel"
     },
     {
-        "name": "Royal",
-        "AKA": ["Blenheim"]
+        "name": "Blenheim",
+        "AKA": ["Royal"]
     },
     {
         "name": "Tropic Gold"
-    },
-    {
-        "name": "Blenheim"
     },
     {
         "name": "Tilton"

@@ -450,13 +450,15 @@
             "harvest_time": "mid to late September"
         },
         {
-            "name": "Black Gold",
+            "name": "Ridgewood",
+            // "Blackgold" (tm)
             "type": "Sweet Cherry",
             "category": "self fruitful",
             "harvest_time": "early to mid July"
         },
         {
-            "name": "White Gold",
+            "name": "Newfane",
+            // "Whitegold" (tm)
             "type": "Sweet Cherry",
             "category": "self fruitful",
             "harvest_time": "early to mid July"

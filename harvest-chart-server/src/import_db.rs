@@ -19,6 +19,7 @@ use dotenv::dotenv;
 use itertools::Itertools;
 use lazy_static::lazy_static;
 use std::collections::HashMap;
+use std::collections::HashSet;
 use std::convert::TryFrom;
 use std::env;
 use std::fs;
@@ -673,6 +674,11 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
     }
 }
 
+// reverses a string like "20th Century,Twentieth Centry,..."
+fn decode_aka_string(input: &str) -> Vec<&str> {
+    input.split(",").collect::<Vec<_>>()
+}
+
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     // look for a dir "plant_database/" up to three levels up so users can mess this up a little
 
@@ -914,7 +920,7 @@ fn get_location_name(
     plant_location_name: Option<String>,
     locations: &[CollectionLocationJson],
 ) -> Option<String> {
-    // println!("getting location name: {:?} {:?}", plant_location_name, locations); // todo remove
+    // println!("getting location name: {:?} {:?}", plant_location_name, locations);
 
     match plant_location_name {
         Some(plant_location_name) => {
@@ -1007,8 +1013,6 @@ fn add_collection_plant_by_location(
 
                 // we get harvest time for each location from the base harvest time values
 
-                // println!("plant: {}", plant_name); // todo remove
-
                 plants_added += add_collection_plant(
                     collection_id,
                     get_location_id(
@@ -1044,8 +1048,6 @@ fn add_collection_plant_by_location(
                         continue;
                     }
 
-                    // println!("plant: {}", plant_name); // todo remove
-
                     plants_added += add_collection_plant(
                         collection_id,
                         get_location_id(
@@ -1066,8 +1068,6 @@ fn add_collection_plant_by_location(
         // the plant needs to match one of our locations, either name or short_name
     } else {
         // no location given in the plant json
-
-        // println!("plant: {}", plant_name); // todo remove
 
         plants_added += add_collection_plant(
             collection_id,
@@ -1347,7 +1347,6 @@ pub struct CollectionItemRelative {
 }
 
 fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
-    // todo: 2nd procesing pass:
     // look for all plants with only a relative harvest time and try to fill in their absolute times
     // example is an extension publication listing peaches as redhaven+5 or whatever,
     // but also giving an absolute time for redhaven in the same pub
@@ -1360,13 +1359,14 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             collection_items::harvest_relative,
             collection_items::harvest_start,
         ))
-        .load::<CollectionItemRelative>(db_conn);
+        .load::<CollectionItemRelative>(db_conn)
+        .unwrap();
 
     // if harvest_start is unset and harvest_relative is set, parse harvest_relative
     // and see if it refers to another plant in the same location. if so, create offset dates from the base plant
     // and store those
 
-    for plant in all_plants.unwrap() {
+    for plant in all_plants {
         if plant.harvest_relative.is_some() && plant.harvest_start.is_none() {
             if let Some(harvest_relative) = parse_relative_harvest(&plant.harvest_relative.unwrap())
             {
@@ -1416,9 +1416,52 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
     }
 }
 
-// todo - add location id to each collection item
+#[derive(Queryable, Debug)]
+pub struct CollectionItemForDedupe {
+    pub name: String,
+    pub type_: String,
+    pub aka: Option<String>,
+}
 
-// if we find a matching relative time base, see if it has what we need and put in the absolute time for the found one
+// for all base plants, ensure none of the names match an "AKA" name which would be a duplicate
+fn check_aka_duplicates(db_conn: &SqliteConnection) {
+    let all_plant_types = plant_types::dsl::plant_types
+        .load::<PlantType>(db_conn)
+        .unwrap();
+
+    let mut aka_map = HashMap::new();
+
+    for plant_type in all_plant_types {
+        aka_map.insert(plant_type.name, HashSet::<String>::new());
+    }
+
+    // read all AKA entries into a map of plant type -> set of AKA names
+    let all_plants = base_plants::dsl::base_plants
+        .select((base_plants::name, base_plants::type_, base_plants::aka))
+        .load::<CollectionItemForDedupe>(db_conn)
+        .unwrap();
+
+    for plant in &all_plants {
+        if let Some(plant_aka) = plant.aka.clone() {
+            for aka in decode_aka_string(&plant_aka) {
+                if !aka_map
+                    .get_mut(&plant.type_)
+                    .unwrap()
+                    .insert(aka.to_string())
+                {
+                    panic!("found a duplicate AKA entry: {:?}", plant,)
+                }
+            }
+        }
+    }
+
+    // then for each base plant names make sure there isn't an AKA name in the set in that type
+    for plant in &all_plants {
+        if aka_map.get_mut(&plant.type_).unwrap().contains(&plant.name) {
+            panic!("found a plant named with an AKA entry: {:?}", plant)
+        }
+    }
+}
 
 fn check_database(db_conn: &SqliteConnection) {
     // find all types and make sure each is in the types table
@@ -1439,5 +1482,5 @@ fn check_database(db_conn: &SqliteConnection) {
             });
     }
 
-    // todo: for all base plants, ensure none of the names match an "AKA" name which would be a duplicate
+    check_aka_duplicates(db_conn);
 }
