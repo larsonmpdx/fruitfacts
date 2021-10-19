@@ -410,10 +410,9 @@ lazy_static! {
 }
 
 fn matches_month_slash_day(input: &str) -> bool {
-    if let Some(_) = MONTH_SLASH_DAY_REGEX.captures(&input.to_lowercase()) {
-        return true;
-    }
-    false
+    MONTH_SLASH_DAY_REGEX
+        .captures(&input.to_lowercase())
+        .is_some()
 }
 
 // parse a single date to a day of the year
