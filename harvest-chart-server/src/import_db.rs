@@ -1424,6 +1424,7 @@ pub struct CollectionItemForDedupe {
 }
 
 // for all base plants, ensure none of the names match an "AKA" name which would be a duplicate
+// a more stringent check could look at the full text search versions of the names (lower case without special characters)
 fn check_aka_duplicates(db_conn: &SqliteConnection) {
     let all_plant_types = plant_types::dsl::plant_types
         .load::<PlantType>(db_conn)
