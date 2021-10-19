@@ -1,8 +1,8 @@
 // import_db.rs: ETL for a set of json files that comprise all of the built-in reference plants, bringing them into the database
-// this allows the database's files to be viewed on github and edited by hand as text files,
-// bringing a wider audience of contributors and easier maintenance
-// the ETL rules get complex in a few places, the goal is to allow the json references to be as
-// simple and close to plain copy-paste imports as possible, with this file doing fancy interpretation such as parsing a wide range of date formats
+// this lets the database's files be viewed on github and edited by hand as text files,
+// allowing a wider audience of contributors and easier maintenance
+// the ETL rules get complex in a few places, the goal is to allow the json references to be as simple and close to plain
+// copy-paste imports as possible, with this file doing things like parsing a wide range of date formats
 
 #[cfg(test)]
 mod test;
@@ -676,7 +676,7 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
 
 // reverses a string like "20th Century,Twentieth Centry,..."
 fn decode_aka_string(input: &str) -> Vec<&str> {
-    input.split(",").collect::<Vec<_>>()
+    input.split(',').collect::<Vec<_>>()
 }
 
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
