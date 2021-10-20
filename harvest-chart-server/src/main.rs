@@ -21,26 +21,27 @@ mod schema_types;
 use actix_web::{App, HttpServer};
 
 extern crate clap;
-use clap::{crate_version, Arg, App as ClapApp};
+use clap::{crate_version, App as ClapApp, Arg};
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-
     let matches = ClapApp::new("")
-                          .version(crate_version!())
-                          .arg(Arg::with_name("reload_db")
-                               .short("r")
-                               .long("reload_db")
-                               .required(false)
-                               .takes_value(false)
-                               .help("reload db"))
-                          .get_matches();
+        .version(crate_version!())
+        .arg(
+            Arg::with_name("reload_db")
+                .short("r")
+                .long("reload_db")
+                .required(false)
+                .takes_value(false)
+                .help("reload db"),
+        )
+        .get_matches();
 
     if matches.is_present("reload_db") {
         let db_conn = import_db::establish_connection();
         import_db::reset_database(&db_conn);
         let items_loaded = import_db::load_all(&db_conn);
-    
+
         if items_loaded.base_plants_found == 0 {
             panic!("directory \"plant_database\" not found");
         }

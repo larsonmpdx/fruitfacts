@@ -1497,6 +1497,7 @@ fn check_database(db_conn: &SqliteConnection) {
 
 pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {
     base_plants::dsl::base_plants
-    .select(diesel::dsl::count(base_plants::name))
-    .first(db_conn).unwrap()
+        .select(diesel::dsl::count(base_plants::name))
+        .first(db_conn)
+        .unwrap()
 }
