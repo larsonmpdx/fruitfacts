@@ -4,8 +4,8 @@ extern crate more_asserts;
 
 #[macro_use]
 extern crate diesel;
-use diesel::r2d2::{self, ConnectionManager};
 use diesel::prelude::*;
+use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
 #[macro_use]
@@ -43,7 +43,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             // set up DB pool to be used with web::Data<Pool> extractor
             .data(pool.clone())
-       //    .wrap(middleware::Logger::default())
+            //    .wrap(middleware::Logger::default())
             .service(queries::get_recent_patents)
     })
     .bind(("127.0.0.1", 8080))?
