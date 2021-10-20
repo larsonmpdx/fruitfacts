@@ -37,8 +37,8 @@ async fn main() -> std::io::Result<()> {
         )
         .get_matches();
 
+    let db_conn = import_db::establish_connection();
     if matches.is_present("reload_db") {
-        let db_conn = import_db::establish_connection();
         import_db::reset_database(&db_conn);
         let items_loaded = import_db::load_all(&db_conn);
 
@@ -46,7 +46,6 @@ async fn main() -> std::io::Result<()> {
             panic!("directory \"plant_database\" not found");
         }
     } else {
-        let db_conn = import_db::establish_connection();
         if import_db::count_base_plants(&db_conn) == 0 {
             panic!(r#"no plants found in database, import the database first with "-r""#)
         }
