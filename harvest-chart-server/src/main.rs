@@ -45,10 +45,8 @@ async fn main() -> std::io::Result<()> {
         if items_loaded.base_plants_found == 0 {
             panic!("directory \"plant_database\" not found");
         }
-    } else {
-        if import_db::count_base_plants(&db_conn) == 0 {
-            panic!(r#"no plants found in database, import the database first with "-r""#)
-        }
+    } else if import_db::count_base_plants(&db_conn) == 0 {
+        panic!(r#"no plants found in database, import the database first with "-r""#)
     }
 
     let connspec = "database.sqlite3";
