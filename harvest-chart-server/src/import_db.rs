@@ -502,7 +502,7 @@ fn string_to_day_number(input: &str) -> Option<u32> {
 #[derive(Debug, Default, PartialEq, Eq)]
 struct PatentInfo {
     uspp_number: Option<i32>,
-    uspp_expiration: Option<Date<Utc>>,
+    uspp_expiration: Option<NaiveDateTime>,
 }
 
 fn string_to_patent_info(input: &str) -> PatentInfo {
@@ -526,18 +526,16 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
     match google_format_date_regex.captures(input) {
         Some(matches) => {
             if matches.len() >= 4 {
-                output.uspp_expiration = Some(Utc.ymd(
-                    matches[1].parse::<i32>().unwrap(),
-                    matches[2].parse::<u32>().unwrap(),
-                    matches[3].parse::<u32>().unwrap(),
-                ));
+
+                output.uspp_expiration = Some(NaiveDate::from_ymd(matches[1].parse::<i32>().unwrap(), 
+                matches[2].parse::<u32>().unwrap(), matches[3].parse::<u32>().unwrap()).and_hms(12, 0, 0));
             }
         }
         None => {
             if let Some(matches) = plain_year_date_regex.captures(input) {
                 if matches.len() >= 2 {
-                    output.uspp_expiration =
-                        Some(Utc.ymd(matches[1].parse::<i32>().unwrap(), 1, 1));
+                        output.uspp_expiration = Some(NaiveDate::from_ymd(matches[1].parse::<i32>().unwrap(), 
+                1, 1).and_hms(12, 0, 0));
                 }
             }
         }
@@ -724,9 +722,9 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                     patent_info = string_to_patent_info(patent_string);
                 }
 
-                let mut uspp_expiration_string = None;
+                let mut uspp_expiration_i64 = None;
                 if let Some(uspp_expiration) = patent_info.uspp_expiration {
-                    uspp_expiration_string = Some(uspp_expiration.to_string());
+                    uspp_expiration_i64 = Some(uspp_expiration.timestamp() as i64);
                 }
 
                 // println!("inserting");
@@ -739,7 +737,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                         base_plants::aka_fts.eq(&aka_formatted.aka_fts),
                         base_plants::description.eq(&plant.description),
                         base_plants::uspp_number.eq(patent_info.uspp_number),
-                        base_plants::uspp_expiration.eq(uspp_expiration_string),
+                        base_plants::uspp_expiration.eq(uspp_expiration_i64),
                     ))
                     .execute(db_conn);
                 assert_eq!(Ok(1), rows_inserted);

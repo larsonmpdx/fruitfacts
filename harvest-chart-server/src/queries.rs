@@ -3,22 +3,30 @@ use actix_web::{get, web, Error, HttpResponse};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
-use serde::{Serialize};
+use serde::Serialize;
 //use serde_json::Result;
 
 #[derive(Queryable, Debug, Serialize)]
 pub struct BasePlantsItemForPatents {
     pub name: String,
     pub type_: String,
-    pub aka: Option<String>,
+    pub uspp_number: Option<i32>,
+    pub uspp_expiration: Option<i64>,
 }
-
+// ORDER BY timestamp DESC
 pub fn get_recent_patents_db(
     // prevent collision with `name` column imported inside the function
     conn: &SqliteConnection,
 ) -> Result<Vec<BasePlantsItemForPatents>, diesel::result::Error> {
     base_plants::dsl::base_plants
-        .select((base_plants::name, base_plants::type_, base_plants::aka))
+        .select((
+            base_plants::name,
+            base_plants::type_,
+            base_plants::uspp_number,
+            base_plants::uspp_expiration,
+        ))
+        .filter(base_plants::uspp_expiration.is_not_null())
+        .order(base_plants::uspp_expiration.desc())
         .load::<BasePlantsItemForPatents>(conn)
 }
 

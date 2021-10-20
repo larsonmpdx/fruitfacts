@@ -9,7 +9,7 @@ CREATE TABLE base_plants (
   aka_fts TEXT, -- for full text search, without special characters. comma separated
   description TEXT,
   uspp_number INTEGER,
-  uspp_expiration TEXT,
+  uspp_expiration BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
 
   UNIQUE(name, type) --combo of these columns must be unique.  example: name "Pristine" type "Apple"
 );
