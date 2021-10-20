@@ -97,6 +97,7 @@ struct CollectionPlantJson {
     harvest_time: Option<String>,
     harvest_time_relative: Option<String>,
     harvest_time_unparsed: Option<String>,
+    disease_resistance: Option<HashMap<String, String>>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -574,8 +575,11 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     let base_types_found = load_types(db_conn, database_dir.clone());
     let load_references_return = load_references(db_conn, database_dir);
 
+    println!("calculating relative harvest times");
     calculate_relative_harvest_times(db_conn);
+    println!("checking database");
     check_database(db_conn);
+    println!("finished checking database");
 
     LoadAllReturn {
         base_plants_found,
@@ -615,7 +619,7 @@ fn simplify_path(input: &str) -> &str {
     let v: Vec<&str> = input.split("references").collect();
 
     let after_references = v.last().unwrap();
-    println!("split result: {}", after_references);
+    // println!("split result: {}", after_references);
 
     if after_references.is_empty() {
         return after_references;
@@ -692,7 +696,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
         if fs::metadata(path_.clone()).unwrap().is_file()
             && path_.extension().unwrap().to_str().unwrap() == "jsonc"
         {
-            println!("found: {}", path_.display());
+            println!("loading: {}", path_.display());
 
             let contents = fs::read_to_string(path_.clone()).unwrap();
 
@@ -892,6 +896,8 @@ fn add_collection_plant(
             collection_items::type_.eq(&plant.type_),
             collection_items::category.eq(&plant.category),
             collection_items::category_description.eq(category_description),
+            collection_items::disease_resistance
+                .eq(serde_json::to_string(&plant.disease_resistance).unwrap()),
             collection_items::description.eq(&plant.description),
             collection_items::harvest_relative.eq(&plant.harvest_time_relative),
             collection_items::harvest_text.eq(harvest_time_helper_text),
@@ -1125,7 +1131,7 @@ fn load_references(
         if fs::metadata(path_).unwrap().is_file()
             && path_.extension().unwrap().to_str().unwrap() == "jsonc"
         {
-            println!("found reference: {}", path_.display());
+            println!("loading reference: {}", path_.display());
 
             let contents = fs::read_to_string(path_).unwrap();
 

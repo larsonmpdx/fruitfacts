@@ -15,7 +15,15 @@ mod import_db;
 mod schema_generated;
 mod schema_types;
 
-fn main() {
+use actix_web::{web, App, HttpRequest, HttpServer, Responder};
+
+async fn greet(req: HttpRequest) -> impl Responder {
+    let name = req.match_info().get("name").unwrap_or("World");
+    format!("Hello {}!", &name)
+}
+
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
     let db_conn = import_db::establish_connection();
     import_db::reset_database(&db_conn);
     let items_loaded = import_db::load_all(&db_conn);
@@ -25,5 +33,12 @@ fn main() {
         std::process::exit(1);
     }
 
-    // todo
+    HttpServer::new(|| {
+        App::new()
+            .route("/", web::get().to(greet))
+            .route("/{name}", web::get().to(greet))
+    })
+    .bind(("127.0.0.1", 8080))?
+    .run()
+    .await
 }

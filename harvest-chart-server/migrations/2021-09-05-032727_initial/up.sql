@@ -62,6 +62,8 @@ CREATE TABLE collection_items (
   category TEXT, -- like "low chill"
   category_description TEXT,
 
+  disease_resistance TEXT, -- json string like "{"FB":"moderate","PM":"high"}"
+
   -- the actual unique data from the imported guide
   description TEXT,
   harvest_text TEXT, -- to store the original text like "Sep 25" before parsing

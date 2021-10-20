@@ -24,6 +24,7 @@ table! {
         type_ -> Text,
         category -> Nullable<Text>,
         category_description -> Nullable<Text>,
+        disease_resistance -> Nullable<Text>,
         description -> Nullable<Text>,
         harvest_text -> Nullable<Text>,
         harvest_relative -> Nullable<Text>,

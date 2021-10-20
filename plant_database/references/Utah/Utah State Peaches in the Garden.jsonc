@@ -1,0 +1,154 @@
+{
+    "title": "Peaches in the Garden",
+    "author": "Tiffany Maughan, Research Associate, Brent Black, Extension Fruit Specialist, Andrea Simondi, Student",
+    "url": "https://digitalcommons.usu.edu/extension_curall/1637/",
+    "published": "December 2016",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "College Ward, UT",
+        "latitude": 41.657241951602884,
+        "longitude": -111.90111060684318
+    }],
+    "plants": [
+        {
+            "name": "Early Redhaven",
+            "chill": "950 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Early",
+            "description": "Semicling. Ripens 10 to 14 days ahead of Redhaven. Very similar flavor"
+        },
+        {
+            "name": "Redhaven",
+            "chill": "950 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Early-mid ",
+            "description": "Freestone. Some fruit occasionally clingstone. May be suited to areas slightly colder than the Wasatch Front"
+        },
+        {
+            "name": "Reliance",
+            "chill": "1000 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Early-mid",
+            "description": "Freestone. May be suited to climates slightly colder than the Wasatch Front"
+        },
+        {
+            "name": "Veteran",
+            "chill": "900 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Mid-late",
+            "description": "Freestone. May be suited to climates colder than the Wasatch Front. Popular canning cultivar"
+        },
+        {
+            "name": "Contender",
+            "chill": "1050 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Mid-late",
+            "description": "Freestone. May be suited to climates colder than the Wasatch Front"
+        },
+        {
+            "name": "Flamin' Fury PF 1",
+            "chill": "600+ hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Early",
+            "description": "Semicling. In warmer years, will ripen in mid-July"
+        },
+        {
+            "name": "Red Globe",
+            "chill": "850 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Early-mid",
+            "description": "Freestone. Popular canning peach due to absence of red flesh color. Firm yellow flesh"
+        },
+        {
+            "name": "Flamin' Fury PF Lucky 13",
+            "chill": "700 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Early-mid",
+            "description": "Freestone. Has become popular in the East due to good flavor. Becoming more popular in Utah"
+        },
+        {
+            "name": "Glohaven",
+            "chill": "850 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Mid",
+            "description": "Freestone. A popular canning cultivar in areas of the West. Resists browning"
+        },
+        {
+            "name": "Flavor Top",
+            "chill": "650 hours",
+            "type": "Nectarine",
+            "harvest_time_unparsed": "Mid",
+            "description": "Freestone. Skin is mostly red with firm, yellow flesh. Slightly more cold-hardy than Fantasia"
+        },
+        {
+            "name": "Fantasia",
+            "chill": "550 hours",
+            "type": "Nectarine",
+            "harvest_time_unparsed": "Mid",
+            "description": "Freestone. Skin is mostly red with firm, yellow flesh. Should not be grown in areas colder than the Wasatch Front"
+        },
+        {
+            "name": "Early Elberta",
+            "chill": "800 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Mid",
+            "description": "Freestone. A popular canning cultivar in areas of the West"
+        },
+        {
+            "name": "Elberta",
+            "chill": "850 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Mid-late",
+            "description": "Freestone. A popular canning cultivar in areas of the West"
+        },
+        {
+            "name": "Madison",
+            "chill": "850 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Mid-late",
+            "description": "Freestone. May be suited to climates slightly colder than the Wasatch Front"
+        },
+        {
+            "name": "Canadian Harmony",
+            "chill": "800 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Mid-late",
+            "description": "Freestone. May be suited to climates slightly colder than the Wasatch Front"
+        },
+        {
+            "name": "Flamin' Fury PF 24C Cold Hardy",
+            "chill": "650 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Mid-late",
+            "description": "Freestone. May be suited to climates slightly colder than the Wasatch Front"
+        },
+        {
+            "name": "Suncrest",
+            "chill": "500 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Mid-late",
+            "description": "Freestone. Popular gardeners market and farm stand variety. Tender flesh"
+        },
+        {
+            "name": "J.H. Hale",
+            "chill": "850 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Late",
+            "description": "Freestone. Requires cross pollination from a different cultivar"
+        },
+        {
+            "name": "Angelus",
+            "chill": "800 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Late",
+            "description": "Freestone. Among the latest cultivars to reliably ripen along the Wasatch Front. Plant in warmer, protected areas"
+        },
+        {
+            "name": "O'Henry",
+            "chill": "750 hours",
+            "type": "Peach",
+            "harvest_time_unparsed": "Late",
+            "description": "Freestone. Among the latest cultivars to reliably ripen along the Wasatch Front. Plant in warmer, protected areas"
+        }
+    ]
+}
