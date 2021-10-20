@@ -6,7 +6,6 @@ extern crate more_asserts;
 extern crate diesel;
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
-type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
 #[macro_use]
 extern crate diesel_migrations;
@@ -21,24 +20,45 @@ mod schema_types;
 
 use actix_web::{App, HttpServer};
 
+extern crate clap;
+use clap::{crate_version, Arg, App as ClapApp};
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    let db_conn = import_db::establish_connection();
-    import_db::reset_database(&db_conn);
-    let items_loaded = import_db::load_all(&db_conn);
 
-    if items_loaded.base_plants_found == 0 {
-        println!("directory \"plant_database\" not found");
-        std::process::exit(1);
+    let matches = ClapApp::new("")
+                          .version(crate_version!())
+                          .arg(Arg::with_name("reload_db")
+                               .short("r")
+                               .long("reload_db")
+                               .required(false)
+                               .takes_value(false)
+                               .help("reload db"))
+                          .get_matches();
+
+    if matches.is_present("reload_db") {
+        let db_conn = import_db::establish_connection();
+        import_db::reset_database(&db_conn);
+        let items_loaded = import_db::load_all(&db_conn);
+    
+        if items_loaded.base_plants_found == 0 {
+            panic!("directory \"plant_database\" not found");
+        }
+    } else {
+        let db_conn = import_db::establish_connection();
+        if import_db::count_base_plants(&db_conn) == 0 {
+            panic!(r#"no plants found in database, import the database first with "-r""#)
+        }
     }
-    let connspec = std::env::var("DATABASE_URL").expect("DATABASE_URL");
+
+    let connspec = "database.sqlite3";
     let manager = ConnectionManager::<SqliteConnection>::new(connspec);
 
     let pool = r2d2::Pool::builder()
         .build(manager)
         .expect("Failed to create pool.");
 
-    // Start HTTP server
+    println!("starting http server");
     HttpServer::new(move || {
         App::new()
             // set up DB pool to be used with web::Data<Pool> extractor

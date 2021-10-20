@@ -4,16 +4,16 @@ use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use serde::Serialize;
-//use serde_json::Result;
 
 #[derive(Queryable, Debug, Serialize)]
 pub struct BasePlantsItemForPatents {
     pub name: String,
+    #[serde(rename = "type")]
     pub type_: String,
     pub uspp_number: Option<i32>,
     pub uspp_expiration: Option<i64>,
 }
-// ORDER BY timestamp DESC
+
 pub fn get_recent_patents_db(
     // prevent collision with `name` column imported inside the function
     conn: &SqliteConnection,

@@ -21,7 +21,6 @@ use lazy_static::lazy_static;
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::convert::TryFrom;
-use std::env;
 use std::fs;
 use walkdir::WalkDir;
 
@@ -34,10 +33,10 @@ use serde::{Deserialize, Serialize};
 #[derive(Serialize, Deserialize)]
 struct BasePlantJson {
     name: String,
-    #[serde(alias = "type")]
+    #[serde(rename = "type")]
     type_: Option<String>, // optional because we can get type from the filename
     description: Option<String>,
-    #[serde(alias = "AKA")]
+    #[serde(rename = "AKA")]
     aka: Option<Vec<String>>,
     patent: Option<String>,
 }
@@ -79,7 +78,7 @@ struct CollectionPlantJson {
     category_description: Option<String>,
 
     name: Option<String>, // optional because we can get "names" or "name"
-    #[serde(alias = "type")]
+    #[serde(rename = "type")]
     type_: String,
 
     locations: Option<Vec<serde_json::Value>>, // this will be either a bare string or CollectionPlantLocationsJson if it includes ripening times
@@ -560,7 +559,7 @@ pub struct LoadAllReturn {
 pub fn establish_connection() -> SqliteConnection {
     dotenv().ok();
 
-    let database_url = env::var("DATABASE_URL").expect("DATABASE_URL must be set");
+    let database_url = "database.sqlite3";
     SqliteConnection::establish(&database_url)
         .unwrap_or_else(|_| panic!("Error connecting to {}", database_url))
 }
@@ -584,7 +583,6 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     calculate_relative_harvest_times(db_conn);
     println!("checking database");
     check_database(db_conn);
-    println!("finished checking database");
 
     LoadAllReturn {
         base_plants_found,
@@ -594,7 +592,7 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
 }
 
 fn get_database_dir() -> Option<std::path::PathBuf> {
-    let max_up_traversal_levels = 3;
+    let max_up_traversal_levels = 4; // enough levels to work from the build dir on windows
     let mut i = 0;
 
     while i <= max_up_traversal_levels {
@@ -1448,12 +1446,12 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
     }
 
     // read all AKA entries into a map of plant type -> set of AKA names
-    let all_plants = base_plants::dsl::base_plants
+    let all_base_plants = base_plants::dsl::base_plants
         .select((base_plants::name, base_plants::type_, base_plants::aka))
         .load::<BasePlantsItemForDedupe>(db_conn)
         .unwrap();
 
-    for plant in &all_plants {
+    for plant in &all_base_plants {
         if let Some(plant_aka) = plant.aka.clone() {
             for aka in decode_aka_string(&plant_aka) {
                 if !aka_map
@@ -1468,7 +1466,7 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
     }
 
     // then for each base plant names make sure there isn't an AKA name in the set in that type
-    for plant in &all_plants {
+    for plant in &all_base_plants {
         if aka_map.get_mut(&plant.type_).unwrap().contains(&plant.name) {
             panic!("found a plant named with an AKA entry: {:?}", plant)
         }
@@ -1495,4 +1493,10 @@ fn check_database(db_conn: &SqliteConnection) {
     }
 
     check_aka_duplicates(db_conn);
+}
+
+pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {
+    base_plants::dsl::base_plants
+    .select(diesel::dsl::count(base_plants::name))
+    .first(db_conn).unwrap()
 }

@@ -1,0 +1,19 @@
+{
+    "title": "Zaiger Varieties",
+    "url": "https://www.davewilson.com/about/zaiger-genetics-partnership/",
+    "published": "unknown",
+    "accessed": "Oct 2021",
+    "locations": [{
+        "name": "Modesto, CA",
+        "latitude": 37.62508646719186, 
+        "longitude": -121.04700296905227
+    }],
+    "plants": [
+        // todo
+        {
+            "name": "todo",
+            "type": "Peach"
+        }
+    ]
+}
+
