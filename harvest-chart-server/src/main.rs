@@ -4,6 +4,9 @@ extern crate more_asserts;
 
 #[macro_use]
 extern crate diesel;
+use diesel::r2d2::{self, ConnectionManager};
+use diesel::prelude::*;
+type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
 #[macro_use]
 extern crate diesel_migrations;
@@ -12,15 +15,11 @@ embed_migrations!();
 extern crate dotenv;
 
 mod import_db;
+mod queries;
 mod schema_generated;
 mod schema_types;
 
-use actix_web::{web, App, HttpRequest, HttpServer, Responder};
-
-async fn greet(req: HttpRequest) -> impl Responder {
-    let name = req.match_info().get("name").unwrap_or("World");
-    format!("Hello {}!", &name)
-}
+use actix_web::{web, App, HttpServer};
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -32,11 +31,20 @@ async fn main() -> std::io::Result<()> {
         println!("directory \"plant_database\" not found");
         std::process::exit(1);
     }
+    let connspec = std::env::var("DATABASE_URL").expect("DATABASE_URL");
+    let manager = ConnectionManager::<SqliteConnection>::new(connspec);
 
-    HttpServer::new(|| {
+    let pool = r2d2::Pool::builder()
+        .build(manager)
+        .expect("Failed to create pool.");
+
+    // Start HTTP server
+    HttpServer::new(move || {
         App::new()
-            .route("/", web::get().to(greet))
-            .route("/{name}", web::get().to(greet))
+            // set up DB pool to be used with web::Data<Pool> extractor
+            .data(pool.clone())
+       //    .wrap(middleware::Logger::default())
+            .service(queries::get_recent_patents)
     })
     .bind(("127.0.0.1", 8080))?
     .run()

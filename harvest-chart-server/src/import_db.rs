@@ -1423,7 +1423,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
 }
 
 #[derive(Queryable, Debug)]
-pub struct CollectionItemForDedupe {
+pub struct BasePlantsItemForDedupe {
     pub name: String,
     pub type_: String,
     pub aka: Option<String>,
@@ -1445,7 +1445,7 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
     // read all AKA entries into a map of plant type -> set of AKA names
     let all_plants = base_plants::dsl::base_plants
         .select((base_plants::name, base_plants::type_, base_plants::aka))
-        .load::<CollectionItemForDedupe>(db_conn)
+        .load::<BasePlantsItemForDedupe>(db_conn)
         .unwrap();
 
     for plant in &all_plants {
