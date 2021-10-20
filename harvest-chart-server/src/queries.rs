@@ -1,9 +1,9 @@
 use super::schema_generated::base_plants;
-use actix_web::{get, middleware, post, web, App, Error, HttpResponse, HttpServer};
+use actix_web::{get, web, Error, HttpResponse};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
-use serde::{Deserialize, Serialize};
+use serde::{Serialize};
 //use serde_json::Result;
 
 #[derive(Queryable, Debug, Serialize)]

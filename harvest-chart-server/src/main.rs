@@ -19,7 +19,7 @@ mod queries;
 mod schema_generated;
 mod schema_types;
 
-use actix_web::{web, App, HttpServer};
+use actix_web::{App, HttpServer};
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
