@@ -1,8 +1,9 @@
 {
-    "title": "Zaiger Varieties",
-    "url": "https://www.davewilson.com/about/zaiger-genetics-partnership/",
+    "title": "Burchell Varieties",
+    "url": "https://burchellnursery.com/",
     "published": "unknown",
     "accessed": "Oct 2021",
+    "desription": "see also https://burchellnursery.com/pdf/bni_peach_ripening_page1.pdf https://burchellnursery.com/pdf/bni_peach_ripening_page2.pdf https://burchellnursery.com/pdf/bni_flame_series_peach_ripening.pdf",
     "locations": [
         {
             "name": "Modesto, CA",
@@ -372,13 +373,217 @@
             "type": "Peach",
             "harvest_time": "July 15–25"
         },
-
         {
             "name": "August Lady",
             "type": "Peach",
             "patent": "https://patents.google.com/patent/USPP8956 expired 2013",
             "harvest_time_unparsed": "late"
+        },
+        // peaches page 3
+        {
+            "name": "Autumn Flame",
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP9438 expired 2015",
+            "harvest_time_unparsed": "late"
+        },
+        {
+            "name": "Burpeacheight",
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP12834 expired 2020",
+            "harvest_time": "August 30–September 7"
+        },
+        {
+            "name": "Burpeachten",
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP13507 expires 2021-12-28",
+            "harvest_time": "June 24–July 10"
+        },
+        {
+            "name": "Burpeachtwenty",
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP15394 expires 2024-01-22",
+            "harvest_time": "August 9–16"
+        },
+        {
+            "name": "Burpeachtwentytwo",
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP17258 expires 2025-12-09",
+            "harvest_time": "April 28–May 5"
+        },
+        {
+            "name": "Burpeachtwentyseven",
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP23160 expires 2031-03-03",
+            "harvest_time": "June 12–19"
+        },
+        {
+            "name": "Burpeachthirtyfour",
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP25764 expires 2034-02-20",
+            "harvest_time": "August 16–23"
+        },
+        {
+            "name": "Burpeachthirtysix",
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP27423 expires 2035-05-07",
+            "harvest_time": "October 11–19"
+        },
+        {
+            "name": "Burpeachthirtynine",
+            "type": "Peach",
+            "patent": "PPAF (nlt 2021)",
+            "harvest_time": "May 25–June 2"
+        },
+        {
+            "name": "Burpeachtwo",
+            "AKA": ["Henry II"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP12157 expired 2019",
+            "harvest_time": "August 3–7"
+        },
+        {
+            "name": "Burpeachsix",
+            "AKA": ["June Flame®"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP13392 expired 2020-01-07",
+            "harvest_time": "June 15–22"
+        },
+        {
+            "name": "Burpeachfive",
+            "AKA": ["July Flame®"],
+            "type": "Peach",
+            // note: not on the website, but June flame had the patent listed for this so I looked it up separately
+            "patent": "https://patents.google.com/patent/USPP12505 expired 2019-12-06",
+            // harvest time from the patent application
+            "harvest_time": "June 27 to July 10"
+        },
+        {
+            "name": "Burpeachthree",
+            "AKA": ["September Flame®"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP12507 expired 2019-12-06",
+            "harvest_time": "August 20–September 3"
+        },
+        {
+            "name": "Burpeachtwentyfour",
+            "AKA": ["Snow Flame® 20"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP21737 expires 2029-12-14",
+            "harvest_time": "May 16–23"
+        },
+        {
+            "name": "Burpeachtwentynine",
+            "AKA": ["Snow Flame® 32"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP24810 expires 2033-01-08",
+            "harvest_time": "August 10–17"
+        },
+        // peaches page 4
+        {
+            "name": "Burpeachtwentythree",
+            "AKA": ["Spring Flame® 18"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP22780 expires 2030-08-06",
+            "harvest_time": "May 5–10"
+        },
+        {
+            "name": "Burpeachfourteen",
+            "AKA": ["Spring Flame® 20"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP14342 expires 2022-12-09",
+            "harvest_time": "May 10–18"
+        },
+        {
+            "name": "Burpeachtwentyeight",
+            "AKA": ["Spring Flame® 20.5"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP23689 expires 2031-12-30",
+            "harvest_time": "May 16–29"
+        },
+        {
+            "name": "Burpeachone",
+            "AKA": ["Spring Flame® 21"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP12156 expired 2019-12-13",
+            "harvest_time": "May 27–June 4"
+        },
+        {
+            "name": "Burpeachnineteen",
+            "AKA": ["Spring Flame® 22"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP15263 expires 2023-12-12",
+            // harvest time from the patent application
+            "harvest_time": "May 8th to May 16th"
+        },
+        {
+            "name": "Burpeachnine",
+            "AKA": ["Spring Flame® 24"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP13494 expires 2021-12-11",
+            "harvest_time": "June 8–15"
+        },
+        {
+            "name": "Burpeachsixteen",
+            "AKA": ["Spring Flame® 24.5"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP14364 expires 2023-01-13",
+            "harvest_time": "June 5–15"
+        },
+        {
+            "name": "Burpeachforty",
+            "AKA": ["Spring Flame® 35"],
+            "type": "Peach",
+            "patent": "PPAF (nlt 2021)",
+            "harvest_time": "June 15–30"
+        },
+        {
+            "name": "Burpeachthirtytwo",
+            "AKA": ["Summer Flame® 30"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP24580 expires 2032-12-27",
+            "harvest_time": "August 3–9"
+        },
+        {
+            "name": "Burpeachtwentysix",
+            "AKA": ["Summer Flame® 31"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP23161 expires 2031-02-17",
+            "harvest_time": "August 10–17"
+        },
+        {
+            "name": "Burpeachthirtythree",
+            "AKA": ["Summer Flame® 35"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP25725 expires 2034-02-20",
+            "harvest_time": "August 25–September 3"
+        },
+        {
+            "name": "Burpeachthirtyeight",
+            "AKA": ["Summer Flame® 36"],
+            "type": "Peach",
+            "patent": "PPAF (nlt 2021)",
+            "harvest_time": "September 18–23"
+        },
+        {
+            "name": "Burpeachthirtyseven",
+            "AKA": ["Summer Flame® 38"],
+            "type": "Peach",
+            "patent": "PPAF (nlt 2021)",
+            "harvest_time": "September 23–29"
+        },
+        {
+            "name": "Burpeachthirty",
+            "AKA": ["Summer Flame® 39"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP24836 expires 2033-03-07",
+            "harvest_time": "October 7–17"
+        },
+        {
+            "name": "Burpeacheleven",
+            "AKA": ["Sweet Flame® 32"],
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP13528 expires 2022-01-11",
+            "harvest_time": "August 21–31"
         }
-        // peaches page 3 todo
     ]
 }

@@ -1,0 +1,19 @@
+{
+    "title": "Stellar Peach Varieties",
+    "url": "https://www.fruitacresfarm.com/stellar-peaches",
+    "published": "unknown",
+    "accessed": "Oct 2021",
+    "locations": [
+        {
+            "name": "Coloma, MI",
+            "latitude": 42.167230023185745,
+            "longitude": -86.31383221776623
+        }
+    ],
+    "plants": [
+        {
+            "name": "todo",
+            "type": "Peach"
+        }
+    ]
+}
