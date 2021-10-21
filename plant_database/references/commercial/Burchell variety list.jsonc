@@ -1,0 +1,384 @@
+{
+    "title": "Zaiger Varieties",
+    "url": "https://www.davewilson.com/about/zaiger-genetics-partnership/",
+    "published": "unknown",
+    "accessed": "Oct 2021",
+    "locations": [
+        {
+            "name": "Modesto, CA",
+            "latitude": 37.771953508436425,
+            "longitude": -120.77216539018261
+        }
+    ],
+    "plants": [
+        // peaches page 1
+        {
+            "name": "Angelus",
+            "type": "Peach",
+            "harvest_time": "July 18–25"
+        },
+        {
+            "name": "Autumn Gem",
+            "type": "Peach",
+            "harvest_time": "September 23–30"
+        },
+        {
+            "name": "Babcock",
+            "type": "Peach",
+            "harvest_time": "June 27–July 4"
+        },
+        {
+            "name": "Belle of Georgia",
+            "type": "Peach",
+            "harvest_time_unparsed": "mid season"
+        },
+        {
+            "name": "Blushing Pearl",
+            "type": "Peach",
+            // harvest time not given
+            "description": "columnar"
+        },
+        {
+            "name": "Cal Red",
+            "type": "Peach",
+            "harvest_time": "August 8–15"
+        },
+        {
+            "name": "Carnival",
+            "type": "Peach",
+            "harvest_time": "September 8–15"
+        },
+        {
+            "name": "Cassie",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Contender",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Cresthaven",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Crimson Lady",
+            "type": "Peach",
+            "harvest_time": "June 1–7"
+        },
+        {
+            "name": "Diamond Princess",
+            "type": "Peach",
+            "harvest_time": "June 28–July 7"
+        },
+        {
+            "name": "Early Elberta",
+            "type": "Peach",
+            "harvest_time": "early July",
+            "chill": "750 hours"
+        },
+        {
+            "name": "Elberta",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Elegant Lady",
+            "type": "Peach",
+            "harvest_time": "July 8–15"
+        },
+        {
+            "name": "Fairtime",
+            "type": "Peach",
+            "harvest_time": "August 28–September 5"
+        },
+        {
+            "name": "Fancy Lady",
+            "type": "Peach",
+            "harvest_time": "June 17–27"
+        },
+        {
+            "name": "Fay Elberta",
+            // on the page as "Fay Alberta"
+            "type": "Peach",
+            "harvest_time": "July 18–25"
+        },
+        {
+            "name": "Fayette",
+            "type": "Peach",
+            "harvest_time": "September 25–October 2"
+        },
+        {
+            "name": "Flavorcrest",
+            "type": "Peach",
+            "harvest_time": "June 8–15"
+        },
+        {
+            "name": "Flordagrande",
+            "type": "Peach",
+            // harvest time not given
+            "chill": "<100 hours"
+        },
+        {
+            "name": "Flordaprince",
+            "type": "Peach",
+            // harvest time not given
+            "chill": "150 hours"
+        },
+        {
+            "name": "Frost",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Galaxy",
+            "type": "Peach",
+            "harvest_time": "June 19-27",
+            "description": "peento"
+        },
+        {
+            "name": "Gold Dust",
+            "type": "Peach"
+            // harvest time not given
+        },
+        // peaches page 2
+        {
+            "name": "Hale Haven",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Harken",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            // on the page as "Improved Lemon Elbert"
+            "name": "Improved Elberta",
+            "AKA": ["Lemon Elberta"],
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "J.H. Hale",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "John Henry",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Juliet’s Prize",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "July Snow",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "June Lady",
+            "type": "Peach",
+            "harvest_time": "June 8–15"
+        },
+        {
+            "name": "June Snow",
+            "type": "Peach"
+            // harvest time not given
+        },
+        // improved/lemon elberta repeated - see above
+        {
+            "name": "Maycrest",
+            "type": "Peach",
+            "harvest_time": "May 20-27"
+        },
+        {
+            "name": "Marbled Ginger",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "O'Henry",
+            "type": "Peach",
+            "harvest_time": "August 3–7"
+        },
+        {
+            "name": "Parade",
+            "type": "Peach",
+            "harvest_time": "August 20–27"
+        },
+        {
+            "name": "Pink Diamond",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Pink Halo",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Polly White",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Pumpkin Spice",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Queencrest",
+            "type": "Peach",
+            "harvest_time": "May 15–22"
+        },
+        {
+            "name": "Red Globe",
+            "type": "Peach",
+            "harvest_time": "early to mid August"
+        },
+        {
+            "name": "Red Haven",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Red Top",
+            "type": "Peach",
+            "harvest_time": "June 11–26"
+        },
+        {
+            "name": "Regina",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Reliance",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Rich Lady",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Rio Oso Gem",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Ryan Sun",
+            "type": "Peach",
+            "harvest_time": "August 1–8"
+        },
+        {
+            "name": "Santa Barbara",
+            "type": "Peach",
+            // harvest time not given
+            "description": "low chill"
+        },
+        {
+            "name": "Scarlet Halo",
+            "type": "Peach",
+            "description": "peento"
+        },
+        {
+            "name": "September Sun",
+            "type": "Peach",
+            "harvest_time": "August 29–September 5"
+        },
+        {
+            "name": "Sierra Rich",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Springcrest",
+            "type": "Peach",
+            "harvest_time": "May 22–29"
+        },
+        {
+            "name": "Spring Lady",
+            "type": "Peach",
+            "harvest_time": "May 27–June 4"
+        },
+        {
+            "name": "Sugar Tiger",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Summerset",
+            "type": "Peach",
+            "harvest_time": "August 20–25"
+        },
+        {
+            "name": "Summer Lady",
+            "type": "Peach",
+            "harvest_time": "July 23–30"
+        },
+        {
+            "name": "Summer Sweet",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Suncrest",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Sweet Dream",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Sweet Sensation",
+            "type": "Peach",
+            "description": "columnar"
+        },
+        {
+            "name": "Tropic Beauty",
+            "AKA": ["82-10"],
+            "type": "Peach",
+            "harvest_time": "June 15–25",
+            "chill": "150 hours"
+        },
+        {
+            "name": "Tropic Prince",
+            "type": "Peach",
+            "harvest_time": "May",
+            "chill": "<150 hours"
+        },
+        {
+            "name": "Tropic Snow",
+            "type": "Peach"
+            // harvest time not given
+        },
+        {
+            "name": "Tropic Sweet",
+            "type": "Peach",
+            "harvest_time": "June",
+            "chill": "<175 hours"
+        },
+        {
+            "name": "Zee Lady",
+            "type": "Peach",
+            "harvest_time": "July 15–25"
+        },
+
+        {
+            "name": "August Lady",
+            "type": "Peach",
+            "patent": "https://patents.google.com/patent/USPP8956 expired 2013",
+            "harvest_time_unparsed": "late"
+        }
+        // peaches page 3 todo
+    ]
+}

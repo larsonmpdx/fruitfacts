@@ -12,7 +12,7 @@
     "plants": [
         {
             "name": "Gulfbeauty",
-            "chill": 225,
+            "chill": "225 hours",
             "type": "Japanese Plum",
             "harvest_time_unparsed": "5 days before Gulfruby, 8-12 days before 'Gulfblaze",
             "fruit_development_period": "75 days",
@@ -23,7 +23,7 @@
         },
         {
             "name": "Gulfblaze",
-            "chill": 250,
+            "chill": "250 hours",
             "type": "Japanese Plum",
             "harvest_time_unparsed": "8 to 14 days after Gulfbeauty",
             "fruit_development_period": "95 days",
@@ -34,7 +34,7 @@
         },
         {
             "name": "Gulfrose",
-            "chill": 275,
+            "chill": "275 hours",
             "type": "Japanese Plum",
             "harvest_time_unparsed": "one week later than Gulfblaze",
             "fruit_development_period": "95 days",
@@ -45,7 +45,7 @@
         },
         {
             "name": "Gulfruby",
-            "chill": 250,
+            "chill": "250 hours",
             "type": "Japanese Plum",
             "harvest_time_unparsed": "7-10 days before Gulfblaze",
             "disease_resistance": {
@@ -74,7 +74,7 @@
             "name": "Au-Producer",
             "type": "Japanese Plum",
             "harvest_time": "mid June",
-            "chill": 750,
+            "chill": "750 hours",
             "disease_resistance": {
                 "plum_leaf_scald": "tolerant"
             }
@@ -83,7 +83,7 @@
             "name": "Au-Roadside",
             "type": "Japanese Plum",
             "harvest_time": "mid June",
-            "chill": 750,
+            "chill": "750 hours",
             "disease_resistance": {
                 "plum_leaf_scald": "tolerant"
             }
@@ -91,7 +91,7 @@
         {
             "name": "Au-Rosa",
             "type": "Japanese Plum",
-            "chill": 750,
+            "chill": "750 hours",
             "disease_resistance": {
                 "plum_leaf_scald": "resistant"
             }
@@ -100,7 +100,7 @@
             "name": "Au-Rubrum",
             "type": "Japanese Plum",
             "harvest_time": "mid June",
-            "chill": 750,
+            "chill": "750 hours",
             "disease_resistance": {
                 "plum_leaf_scald": "tolerant"
             }
@@ -108,7 +108,7 @@
         {
             "name": "Byrongold",
             "type": "Japanese Plum",
-            "chill": 450,
+            "chill": "450 hours",
             "disease_resistance": {
                 "plum_leaf_scald": "may have some problems"
             }
@@ -116,12 +116,12 @@
         {
             "name": "Excelsior",
             "type": "Japanese Plum",
-            "chill": 400
+            "chill": "400 hours"
         },
         {
             "name": "Methley",
             "type": "Japanese Plum",
-            "chill": 650,
+            "chill": "650 hours",
             "self_fertile": true,
             "disease_resistance": {
                 "plum_leaf_scald": "susceptible"
@@ -132,12 +132,12 @@
             "name": "Robusto",
             "type": "Japanese Plum",
             "harvest_time": "early June",
-            "chill": "400-500"
+            "chill": "400-500 hours"
         },
         {
             "name": "Santa Rosa",
             "type": "Japanese Plum",
-            "chill": 650,
+            "chill": "650 hours",
             "disease_resistance": {
                 "plum_leaf_scald": "susceptible"
             },
@@ -147,7 +147,7 @@
             "name": "Segundo",
             "type": "Japanese Plum",
             "harvest_time": "mid to late June",
-            "chill": "400-500"
+            "chill": "400-500 hours"
         }
     ]
 }

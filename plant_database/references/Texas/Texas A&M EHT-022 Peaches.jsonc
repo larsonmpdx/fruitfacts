@@ -13,147 +13,147 @@
         {
             "name": "Flavorich",
             "type": "Peach",
-            "chill": 700,
+            "chill": "700 hours",
             "description": "Cling",
             "harvest_time_relative": "Elberta -64"
         },
         {
             "name": "Regal",
             "type": "Peach",
-            "chill": 700,
+            "chill": "700 hours",
             "description": "Semi-cling",
             "harvest_time_relative": "Elberta -54"
         },
         {
             "name": "Junegold",
             "type": "Peach",
-            "chill": 650,
+            "chill": "650 hours",
             "description": "Cling. listed for both high and medium chill areas",
             "harvest_time_relative": "Elberta -46"
         },
         {
             "name": "Surecrop",
             "type": "Peach",
-            "chill": 1000,
+            "chill": "1000 hours",
             "description": "Semi-free",
             "harvest_time_relative": "Elberta -42"
         },
         {
             "name": "Juneprince",
             "type": "Peach",
-            "chill": 650,
+            "chill": "650 hours",
             "description": "Semi-free. listed for both high and medium chill areas",
             "harvest_time_relative": "Elberta -35"
         },
         {
             "name": "Sentinel",
             "type": "Peach",
-            "chill": 850,
+            "chill": "850 hours",
             "description": "Semi-free",
             "harvest_time_relative": "Elberta -34"
         },
         {
             "name": "GaLa",
             "type": "Peach",
-            "chill": 750,
+            "chill": "750 hours",
             "description": "Semi-free",
             "harvest_time_relative": "Elberta -34"
         },
         {
             "name": "Harvester",
             "type": "Peach",
-            "chill": 750,
+            "chill": "750 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -26"
         },
         {
             "name": "Ranger",
             "type": "Peach",
-            "chill": 1000,
+            "chill": "1000 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -24"
         },
         {
             "name": "Fireprince",
             "type": "Peach",
-            "chill": 850,
+            "chill": "850 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -20"
         },
         {
             "name": "Cary Mac",
             "type": "Peach",
-            "chill": 750,
+            "chill": "750 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -20"
         },
         {
             "name": "Topaz",
             "type": "Peach",
-            "chill": 850,
+            "chill": "850 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -18"
         },
         {
             "name": "Majestic",
             "type": "Peach",
-            "chill": 850,
+            "chill": "850 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -16"
         },
         {
             "name": "Redglobe",
             "type": "Peach",
-            "chill": 850,
+            "chill": "850 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -13"
         },
         {
             "name": "Cresthaven",
             "type": "Peach",
-            "chill": 850,
+            "chill": "850 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -3"
         },
         {
             "name": "Dixiland",
             "type": "Peach",
-            "chill": 750,
+            "chill": "750 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -3"
         },
         {
             "name": "Redskin",
             "type": "Peach",
-            "chill": 750,
+            "chill": "750 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -2"
         },
         {
             "name": "Flameprince",
             "type": "Peach",
-            "chill": 850,
+            "chill": "850 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta +14"
         },
         {
             "name": "Parade",
             "type": "Peach",
-            "chill": 850,
+            "chill": "850 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta +30"
         },
         {
             "name": "Fairtime",
             "type": "Peach",
-            "chill": 750,
+            "chill": "750 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta +35"
         },
         {
             "name": "Flordacrest",
             "type": "Peach",
-            "chill": 425,
+            "chill": "425 hours",
             "description": "Semi-cling. listed in both medium and low chill tables",
             "harvest_time_relative": "Elberta -55",
             "import_note": "data given in the low chill table is inconsistent (medium chill gives 425 chill, flordaking -4, low chill gives 375 chill, flordaking +4)"
@@ -161,63 +161,63 @@
         {
             "name": "Flordaking",
             "type": "Peach",
-            "chill": 450,
+            "chill": "450 hours",
             "description": "Cling",
             "harvest_time_relative": "Elberta -51"
         },
         {
             "name": "TexKing",
             "type": "Peach",
-            "chill": 450,
+            "chill": "450 hours",
             "description": "Cling",
             "harvest_time_relative": "Elberta -42"
         },
         {
             "name": "Texstar",
             "type": "Peach",
-            "chill": 450,
+            "chill": "450 hours",
             "description": "Semi-free",
             "harvest_time_relative": "Elberta -32"
         },
         {
             "name": "Southern Pearl",
             "type": "Peach",
-            "chill": 650,
+            "chill": "650 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -28"
         },
         {
             "name": "TexRoyal",
             "type": "Peach",
-            "chill": 600,
+            "chill": "600 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -25"
         },
         {
             "name": "Suwanee",
             "type": "Peach",
-            "chill": 650,
+            "chill": "650 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -22"
         },
         {
             "name": "TexPrince",
             "type": "Peach",
-            "chill": 550,
+            "chill": "550 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -20"
         },
         {
             "name": "La Feliciana",
             "type": "Peach",
-            "chill": 600,
+            "chill": "600 hours",
             "description": "Free",
             "harvest_time_relative": "Elberta -18"
         },
         {
             "name": "Gulfking",
             "type": "Peach",
-            "chill": 350,
+            "chill": "350 hours",
             "description": "Cling",
             "harvest_time_relative": "Elberta -57",
             "import_note": "table gave Flordaking -6, converted to elberta+"
@@ -225,7 +225,7 @@
         {
             "name": "Gulfprince",
             "type": "Peach",
-            "chill": 400,
+            "chill": "400 hours",
             "description": "Semi-free",
             "harvest_time_relative": "Elberta -26",
             "import_note": "table gave Flordaking +25, converted to +elberta"
@@ -233,7 +233,7 @@
         {
             "name": "FlordaPrince",
             "type": "Peach",
-            "chill": 150,
+            "chill": "150 hours",
             "description": "Cling",
             "harvest_time_relative": "Flordaprince +0",
             "import_note": "no typical ripening time for flordaprince given"
@@ -241,7 +241,7 @@
         {
             "name": "TropicPrince",
             "type": "Peach",
-            "chill": 150,
+            "chill": "150 hours",
             "description": "Cling",
             "harvest_time_relative": "Flordaprince +7",
             "import_note": "no typical ripening time for flordaprince given"
@@ -249,7 +249,7 @@
         {
             "name": "TropicBeauty",
             "type": "Peach",
-            "chill": 150,
+            "chill": "150 hours",
             "description": "Semi-free",
             "harvest_time_relative": "Flordaprince +14",
             "import_note": "no typical ripening time for flordaprince given"

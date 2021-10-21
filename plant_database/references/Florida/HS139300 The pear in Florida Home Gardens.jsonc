@@ -19,7 +19,7 @@
         {
             "name": "Baldwin",
             "locations": ["North", "Central"],
-            "chill": 150,
+            "chill": "150 hours",
             "type": "Euro Pear",
             "harvest_time": "Late Aug to Sep",
             "description": "Fresh and canning",
@@ -42,7 +42,7 @@
         {
             "name": "Flordahome",
             "locations": ["North", "Central"],
-            "chill": 150,
+            "chill": "150 hours",
             "type": "Euro Pear",
             "harvest_time": "July-Aug",
             "description": "Fresh and canning",
@@ -54,7 +54,7 @@
         {
             "name": "Hood",
             "locations": ["North", "Central"],
-            "chill": "160-260",
+            "chill": "160-260 hours",
             "type": "Euro Pear",
             "harvest_time": "mid July",
             "description": "parent of Flordahome. Fresh and canning",
@@ -66,7 +66,7 @@
         {
             "name": "Kieffer",
             "locations": ["North"],
-            "chill": "350-400",
+            "chill": "350-400 hours",
             "type": "Euro Pear",
             "harvest_time": "mid Aug to Sep",
             "description": "Canning",
@@ -78,7 +78,7 @@
         {
             "name": "Le Conte",
             "locations": ["North", "Central"],
-            "chill": "250-300",
+            "chill": "250-300 hours",
             "type": "Euro Pear",
             "harvest_time": "July-Aug",
             "description": "Fresh",
@@ -121,7 +121,7 @@
         {
             "name": "Tenn",
             "locations": ["North"],
-            "chill": "350-400",
+            "chill": "350-400 hours",
             "type": "Euro Pear",
             "harvest_time": "early Sep",
             "description": "Fresh (small fruit)",
