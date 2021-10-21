@@ -16,6 +16,12 @@
         "tags": [ "peach leaf curl resistant" ]
     },
     {
+        "name": "Autumn Snow",
+        "AKA": ["Yukon King (tm)"],
+        "description": "zaiger variety",
+        "patent": "https://patents.google.com/patent/USPP9872 expired 2016"
+    },
+    {
         "name": "Indian Blood",
         "AKA": ["Indian Blood Cling"]
     },

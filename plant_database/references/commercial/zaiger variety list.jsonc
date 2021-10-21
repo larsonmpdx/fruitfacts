@@ -3,17 +3,1329 @@
     "url": "https://www.davewilson.com/about/zaiger-genetics-partnership/",
     "published": "unknown",
     "accessed": "Oct 2021",
-    "locations": [{
-        "name": "Modesto, CA",
-        "latitude": 37.62508646719186, 
-        "longitude": -121.04700296905227
-    }],
-    "plants": [
-        // todo
+    "locations": [
         {
-            "name": "todo",
-            "type": "Peach"
+            "name": "Modesto, CA",
+            "latitude": 37.62508646719186,
+            "longitude": -121.04700296905227
+        }
+    ],
+    "plants": [
+        {
+            "type": "Almond",
+            "name": "Garden Prince",
+            "description": "genetic dwarf. retail"
+        },
+        {
+            "type": "Almond",
+            "name": "All-in-One",
+            "description": "genetic semi-dwarf. retail"
+        },
+        {
+            "type": "Almond",
+            "name": "Alm-21",
+            "description": "commercial"
+        },
+        {
+            "type": "Apple",
+            "name": "Apple Babe",
+            "description": "genetic dwarf. retail"
+        },
+        {
+            "type": "Apple",
+            "name": "Garden Delicious",
+            "description": "genetic dwarf. retail"
+        },
+        {
+            "type": "Apple",
+            "name": "Ghost",
+            "description": "retail"
+        },
+        {
+            "type": "Apricot",
+            "name": "Autumn Glo",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Apricot",
+            "name": "Bonny",
+            "description": "commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Brittany Gold",
+            "description": "commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Earli Autumn",
+            "description": "retail"
+        },
+        {
+            "type": "Apricot",
+            "name": "Earlicot",
+            "description": "commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Flavor Giant",
+            "description": "retail"
+        },
+        {
+            "type": "Apricot",
+            "name": "Flora Gold",
+            "description": "retail"
+        },
+        {
+            "type": "Apricot",
+            "name": "Katy",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Apricot",
+            "name": "Pixie-Cot (tm)",
+            "description": "no variety name known. genetic dwarf. retail"
+        },
+        {
+            "type": "Apricot",
+            "name": "Poppy",
+            "description": "commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Royal Rosa",
+            "description": "retail"
+        },
+        {
+            "type": "Apricot",
+            "name": "Summer Cot",
+            "description": "commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Tri Gems",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Autumn Sprite",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Betty Cot",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Cot-N-Candy",
+            "description": "retail"
+        },
+        {
+            "type": "Aprium",
+            "name": "Coral Cot",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Country Cot",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Escort",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Flavor Delight",
+            "description": "retail"
+        },
+        {
+            "type": "Aprium",
+            "name": "Hermosa",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Honey Rich",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Huntington",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Kylese-Cot",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Late Brittney",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Leah Cot",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Macy Cot",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Summer Delight",
+            "description": "retail"
+        },
+        {
+            "type": "Aprium",
+            "name": "Tasty Rich",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Trinidad",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Wescot",
+            "description": "commercial"
+        },
+        {
+            "type": "Aprium",
+            "name": "Weston",
+            "description": "commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Bella Cerise",
+            "description": "dwn \"Color-Cot (tm)\" commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Bella Gold",
+            "description": "dwn \"Color-Cot (tm)\" commercial. retail as \"peacotum (tm)\""
+        },
+        {
+            "type": "Apricot",
+            "name": "Bella Jean",
+            "description": "dwn \"Color-Cot (tm)\" commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Bella Jewel",
+            "description": "dwn \"Color-Cot (tm)\" commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Bella Rose",
+            "description": "dwn \"Color-Cot (tm)\" commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Bella Royale",
+            "description": "dwn \"Color-Cot (tm)\" commercial"
+        },
+        {
+            "type": "Apricot",
+            "name": "Bella Sun",
+            "description": "dwn \"Color-Cot (tm)\" commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Craig's Crimson",
+            "description": "retail"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Minnie Royal",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Rosie Rainier",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Ansel",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Brynn",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Crimson",
+            "description": "retail"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Edie",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Elaine",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Hazel",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Helen",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Lee",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Lynn",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Rainier",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Sonia",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Tenaya",
+            "description": "commercial"
+        },
+        {
+            "type": "Sweet Cherry",
+            "name": "Royal Tioga",
+            "description": "commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Sprite",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Garden Delight",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Nectar Babe",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Necta Zee",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Sol Dorado",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Belle",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Blaze",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Glo",
+            "description": "White. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Jay",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Mist",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Pride",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Queen",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Rose",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Snow",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Star",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Arctic Sweet",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Atomic Red",
+            "description": "White. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Heavenly White",
+            "description": "White. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Polar Gem",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Polar Kist",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Polar Light",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Polar Magic",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Polar Snow",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Polar Zee",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Sauzee King",
+            "description": "White. peento. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "April Glo",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "August Glo",
+            "description": "Yellow. commercial and retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Autumn Blaze",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Desert Dawn",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Desert Delight",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Double Delight",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Earliglo",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Flame Glo",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Blaze",
+            "description": "Yellow. commercial and retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Diva",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Fire",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Gem",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Haven",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Kist",
+            "description": "Yellow. commercial and retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Lite",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey May",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Royale",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Spring",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honey Sweet",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Honeylicious",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Jolly Red Giant",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Juneglo",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Kay Glo",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Liz's Late",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Mayglo",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Red Roy",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Red Ryan",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Royal Giant",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Royal Glo",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Royal Ruby",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Spring Fire",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Zee Fire",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Zee Glo",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Zee Grand",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Nectarine",
+            "name": "Spice Zee",
+            "description": "marketed as \"nectaplum (tm)\" commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Garden Gold",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Garden Sun",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Honey Babe",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Pix Zee",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow Babe",
+            "description": "Genetic Dwarf. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Arctic Supreme",
+            "description": "White. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Aspen",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Glacier",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Klondike",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Rich Snow",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sauzee Giant",
+            "description": "White. peento. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sauzee Jewel",
+            "description": "White. peento. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sauzee Lady",
+            "description": "White. peento. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sauzee Queen",
+            "description": "White. peento. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sauzee Swirl",
+            "description": "White. peento. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "September Snow",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sierra Snow",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow Angel",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow Beauty",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow Fall",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow Fire",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow Fox",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow Gem",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow Giant",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow King",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Snow Lady",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Spring Snow",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sugar Giant",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sugar Lady",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Sugar May",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Summer Sweet",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "White Lady",
+            "description": "White. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Autumn Snow",
+            "description": "White. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "August Pride",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Brittney Lane",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Country Sweet",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Double Jewel",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Earlirich",
+            "description": "Yellow. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Earlitreat",
+            "description": "Yellow. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Eva's Pride",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Fiesta Gem",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "June Honey",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "June Pride",
+            "description": "Yellow. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Kaweah",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Krista",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "May Pride",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "May Sweet",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Mazee",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Mid-Pride",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Octoberfest",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Rich Magic",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Rich Pride",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Royal Gold",
+            "description": "Yellow. retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Sauzee Pride",
+            "description": "Yellow. peento. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sierra Rich",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Spring Treat",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sugar Time",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Summer Amelia",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Summer Gold",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Summer Zee",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sunnirich",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Super Lady",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Super Rich",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Super Zee",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sweet Blaze",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sweet Crest",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sweet Dream",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sweet Henry",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sweet Juana",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sweet Scarlet",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sweet September",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Sweet Shasta",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Tra-Zee",
+            "description": "Yellow. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Valley Sweet",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Vista",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Zee Diamond",
+            "description": "Yellow. commercial and retail"
+        },
+        {
+            "type": "Peach",
+            "name": "Zee Lady",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Zee Pride",
+            "description": "Yellow. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "American",
+            "description": "Canning Clingstone. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Calaveras",
+            "description": "Canning Clingstone. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Klamath",
+            "description": "Canning Clingstone. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Stanislaus",
+            "description": "Canning Clingstone. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Tuolumne",
+            "description": "Canning Clingstone. commercial"
+        },
+        {
+            "type": "Peach",
+            "name": "Tri-Lite",
+            "description": "marketed as \"peach-plum\". retail"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Betty Anne",
+            "description": "commercial"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Crimson Glo",
+            "description": "commercial"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Earliqueen",
+            "description": "commercial"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Emerald Beaut",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Hiromi Red",
+            "description": "commercial"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Joanna Red",
+            "description": "commercial"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Rubirosa",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavorella",
+            "description": "marketed as \"plumcot\". retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Plum Parfait",
+            "description": "marketed as \"plumcot\". retail"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Delight",
+            "description": "marketed as \"cherry-plum\". retail"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Sprite",
+            "description": "marketed as \"cherry-plum\". retail"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Candy Heart",
+            "description": "marketed as \"pluerry\". retail"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Flavor Punch",
+            "description": "marketed as \"pluerry\". retail"
+        },
+        {
+            "type": "Japanese Plum",
+            "name": "Sweet Treat",
+            "description": "marketed as \"pluerry\". retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Amigo 1",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Amigo 2",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Black Kat",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Candy Stripe",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Coparose",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Crimson Heart",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Crimson Rose",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Crimson Royale",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Dapple Dandy",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Dapple Fire",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Dapple Jack",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Dapple Supreme",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Early Dapple",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Ebony Rose",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Emerald Drop",
+            "description": "retail"
+            // emerald drop is aka emerald gem
+        },
+        {
+            "type": "Pluot",
+            "name": "Fall Fiesta",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Festival Red",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Blast",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Crisp",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Fall",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Finale",
+            "description": "retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Fusion",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Gem",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Gold",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Grenade",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Heart",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Jewel",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor King",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Queen",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Rouge",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Royale",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Supreme",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavor Treat",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavorich",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Flavorosa",
+            "description": "commercial and retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Geo Pride",
+            "description": "retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Gypzee",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Honey Punch",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Royal Treat",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Ruby Kat",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Sierra Rose",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Splash",
+            "description": "retail"
+        },
+        {
+            "type": "Pluot",
+            "name": "Spring Flavor",
+            "description": "commercial"
+        },
+        {
+            "type": "Pluot",
+            "name": "Sunset Delight",
+            "description": "commercial"
         }
     ]
 }
-

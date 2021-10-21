@@ -46,7 +46,7 @@
     },
     {
         "name": "Emerald Drop",
-        "AKA": ["Emerald Gem"],
+        "AKA": ["Emerald Gem", "7HC165"],
         "patent": "https://patents.google.com/patent/USPP14599 expires 2023-06-16",
         "description": "Zaiger Variety"
     },
@@ -61,6 +61,11 @@
     {
         "name": "Flavorella",
         "description": "Zaiger Variety. \"plumcot\"",
-        "patent": "https://patents.google.com/patent/USPP8470P expired 2012"
+        "patent": "https://patents.google.com/patent/USPP8470 expired 2012"
+    },
+    {
+        "name": "Plum Parfait",
+        "description": "Zaiger Variety. \"plumcot\"",
+        "patent": "https://patents.google.com/patent/USPP4338 expired 1997"
     }
 ]
