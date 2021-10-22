@@ -110,7 +110,7 @@
             "description": "Medium-size, brilliant red, freestone, requires several harvests."
         },
         {
-            "name": "Blazing Star",
+            "name": "Blazingstar",
             "type": "Peach",
             "harvest_time_relative": "Redhaven +2",
             "disease_resistance": {

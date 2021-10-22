@@ -14,7 +14,7 @@
         {
             "type": "Peach",
             "category": "Yellow melting flesh peach",
-            "names": ["Biscoe", "Blazing Star", "Candor", "Contender", "Harrow Beauty", "Harrow Diamond", "PF1", "PF12A", "Starfire"],
+            "names": ["Biscoe", "Blazingstar", "Candor", "Contender", "Harrow Beauty", "Harrow Diamond", "PF1", "PF12A", "Starfire"],
             "disease_resistance": { "BLS": "Excellent"}
         },
         {
@@ -26,7 +26,7 @@
         {
             "type": "Peach",
             "category": "Yellow melting flesh peach",
-            "names": ["Allstar", "Autumn Star", "Beaumont", "Canadian Harmony", "Coral Star", "Early Loring", "Glenglo", "Harbinger", "Harrow Dawn", "Harrow Fair", "Loring", "Madison", "PF20-007", "PF23", "PF25", "PF15A", "PF17", "Redhaven", "PF27A", "Early Star", "Risingstar", "PF5D-Big", "PF24C Cold Hardy"],
+            "names": ["Allstar", "Autumnstar", "Beaumont", "Canadian Harmony", "Coralstar", "Early Loring", "Glenglo", "Harbinger", "Harrow Dawn", "Harrow Fair", "Loring", "Madison", "PF20-007", "PF23", "PF25", "PF15A", "PF17", "Redhaven", "PF27A", "Earlystar", "Risingstar", "PF5D-Big", "PF24C Cold Hardy"],
             "disease_resistance": { "BLS": "Moderate"}
         },
         {
