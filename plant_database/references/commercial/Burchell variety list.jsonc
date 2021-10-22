@@ -232,6 +232,115 @@
             "type": "Walnut",
             "harvest_time_unparsed": "Harvests early to mid"
         },
+        // apples
+        {
+            "name": "Anna",
+            "type": "Apple"
+        },
+        {
+            "name": "Arkansas Black",
+            "type": "Apple"
+        },
+        {
+            "name": "Red Fuji",
+            "type": "Apple",
+            "harvest_time_unparsed": "1–2 weeks later than Fuji",
+            "chill": "350-400 hours"
+        },
+        {
+            "name": "Braeburn",
+            "type": "Apple"
+        },
+        {
+            "name": "Cox Orange Pippin",
+            "type": "Apple"
+        },
+        {
+            "name": "Cripps Pink",
+            "type": "Apple"
+        },
+        {
+            "name": "Dorsett Golden",
+            "type": "Apple",
+            "chill": "<100 hours"
+        },
+        {
+            "name": "Granny Smith",
+            "type": "Apple",
+            "harvest_time": "late August to early September"
+        },
+        {
+            "name": "Empire",
+            "type": "Apple"
+        },
+        {
+            "name": "Golden Delicious",
+            "type": "Apple"
+        },
+        {
+            "name": "Gravenstein",
+            "type": "Apple"
+        },
+        {
+            "name": "Honeycrisp",
+            "type": "Apple",
+            "harvest_time_unparsed": "2 weeks earlier than Red Delicious",
+            "chill": "800 hours",
+            "patent": "https://patents.google.com/patent/USPP7197 expired 2008-11-07"
+        },
+        {
+            "name": "Hudson's Golden Gem",
+            "type": "Apple"
+        },
+        {
+            "name": "Jonathan",
+            "type": "Apple"
+        },
+        {
+            "name": "King David",
+            "type": "Apple"
+        },
+        {
+            "name": "Mutsu",
+            "type": "Apple"
+        },
+        {
+            "name": "Pink Pearl",
+            "type": "Apple",
+            "harvest_time": "late July to August"
+        },
+        {
+            "name": "Red Delicious",
+            "type": "Apple"
+        },
+        {
+            "name": "Red McIntosh",
+            "type": "Apple"
+        },
+        {
+            "name": "Rome Beauty",
+            "type": "Apple"
+        },
+        {
+            "name": "Scarlet Gala",
+            "type": "Apple",
+            "harvest_time": "July 1-July 20",
+            "description": "website claims registered trademark on \"Scarlet Gala\". note that trademarks can't be variety names. variety name unknown"
+        },
+        {
+            "name": "Winesap",
+            "harvest_time": "September",
+            "type": "Apple"
+        },
+        {
+            "name": "Yellow Newton Pippen",
+            "type": "Apple"
+        },
+        {
+            "name": "Imperial Gala",
+            "type": "Apple",
+            "harvest_time": "mid to late July"
+        },
         // peaches page 1
         {
             "name": "Angelus",
