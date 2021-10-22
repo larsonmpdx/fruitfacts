@@ -12,6 +12,226 @@
         }
     ],
     "plants": [
+        // almonds page 1
+        {
+            "name": "Aldrich",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +14"
+        },
+        {
+            "name": "Avalon",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +8",
+            "patent": "https://patents.google.com/patent/USPP11096 expired 2017-12-17"
+        },
+        {
+            "name": "Butte",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +15"
+        },
+        {
+            "name": "Capitola",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +3",
+            "patent": "https://patents.google.com/patent/USPP19369 expires 2028-01-14"
+        },
+        {
+            "name": "Carmel",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +5"
+        },
+        {
+            "name": "Kester",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +7"
+        },
+        {
+            "name": "Fritz",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +40"
+        },
+        {
+            "name": "Livingston",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +8"
+        },
+        {
+            "name": "Marcona",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +7"
+        },
+        {
+            "name": "Buralmondthree",
+            "AKA": ["Pyrenees R Self-fertile Almond", "BA3"],
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +14",
+            "patent": "https://patents.google.com/patent/USPP32301 expires 2039-03-29"
+        },
+        {
+            "name": "Mission",
+            "AKA": ["Texas"],
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +30"
+        },
+        {
+            "name": "Monterey",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +30"
+        },
+        {
+            "name": "NePlus",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +14"
+        },
+        {
+            "name": "Nonpareil",
+            "type": "Almond"
+        },
+        {
+            "name": "Padre",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +25"
+        },
+        // almonds page 2
+        {
+            "name": "Peerless",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +20"
+        },
+        {
+            "name": "Price",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +7"
+        },
+        {
+            "name": "Ruby",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +35"
+        },
+        {
+            "name": "Buralmondtwo",
+            "AKA": ["Shasta® Self-fertile Almond", "BA2"],
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil -3 to -5",
+            "patent": "https://patents.google.com/patent/USPP28466 expires 2035-11-17"
+        },
+        {
+            "name": "Sonora",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +7"
+        },
+        {
+            "name": "Supareil",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +7",
+            "patent": "https://patents.google.com/patent/USPP21934 expires 2029-11-05"
+        },
+        {
+            "name": "Winters",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +15",
+            "patent": "https://patents.google.com/patent/USPP13286 expired 2021-04-20"
+        },
+        {
+            "name": "Wood Colony",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +7"
+        },
+        {
+            "name": "Yorizane",
+            "type": "Almond",
+            "harvest_time_relative": "Nonpareil +0"
+        },
+        // walnuts page 1
+        {
+            "name": "Chandler",
+            "type": "Walnut",
+            "harvest_time_unparsed": "harvests late"
+        },
+        {
+            "name": "Cisco",
+            "type": "Walnut"
+        },
+        {
+            "name": "Durham (PPAF)",
+            "type": "Walnut",
+            "harvest_time_relative": "Chandler-10",
+            "patent": "PPAF (nlt 2021)"
+        },
+        {
+            "name": "Eureka",
+            "type": "Walnut",
+            "harvest_time_unparsed": "harvests early to mid"
+        },
+        {
+            "name": "Forde",
+            "type": "Walnut",
+            "harvest_time_relative": "Chandler-5",
+            "patent": "https://patents.google.com/patent/USPP16495 expired 2024-10-24"
+        },
+        {
+            "name": "Fredrick",
+            "type": "Walnut",
+            "harvest_time_unparsed": "early, just before Serr",
+            "patent": "https://patents.google.com/patent/USPP14236 expires 2022-11-06"
+        },
+        {
+            "name": "Hartley",
+            "type": "Walnut",
+            "harvest_time_unparsed": "Harvests mid to late"
+        },
+        {
+            "name": "Howard",
+            "type": "Walnut",
+            "harvest_time_unparsed": "mid season"
+        },
+        {
+            "name": "Ivanhoe",
+            "type": "Walnut",
+            "patent": "https://patents.google.com/patent/USPP21718 expires 2029-12-08",
+            // "harvest date similar to Payne or Serr and about a month earlier than Chandler"
+            "harvest_time_relative": "Chandler-30"
+        },
+        {
+            "name": "Payne",
+            "type": "Walnut",
+            "harvest_time_unparsed": "Harvests early"
+        },
+        {
+            "name": "Robert Livermore",
+            "type": "Walnut",
+            "patent": "https://patents.google.com/patent/USPP12264 expired 2019-12-30",
+            // "first week of October"
+            "harvest_time": "Oct 1-7"
+        },
+        {
+            "name": "Scharsch Franquette",
+            "type": "Walnut",
+            "harvest_time_unparsed": "Harvests late"
+        },
+        {
+            "name": "Serr",
+            "type": "Walnut",
+            "harvest_time_unparsed": "Harvests early to mid"
+        },
+        // walnuts page 2
+        {
+            "name": "Solano",
+            "type": "Walnut",
+            "patent": "https://patents.google.com/patent/USPP25466 expires 2033-05-28",
+            "harvest_time_unparsed": "Harvests early to mid"
+        },
+        {
+            "name": "Tulare",
+            "type": "Walnut",
+            "patent": "https://patents.google.com/patent/USPP8268 expired 2011-09-12",
+            "harvest_time_unparsed": "Harvests mid to late"
+        },
+        {
+            "name": "Vina",
+            "type": "Walnut",
+            "harvest_time_unparsed": "Harvests early to mid"
+        },
         // peaches page 1
         {
             "name": "Angelus",
