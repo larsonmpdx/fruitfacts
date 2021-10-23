@@ -223,7 +223,8 @@
             "harvest_time": "late October"
         },
         {
-            "name": "Zestar",
+            // "Zestar"
+            "name": "Minnewashta",
             "type": "Apple",
             "category": "Recent apple introductions",
             "harvest_time": "early to mid August"

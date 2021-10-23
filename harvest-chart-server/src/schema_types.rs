@@ -14,7 +14,7 @@ pub struct PlantType {
 pub struct BasePlant {
     pub plant_id: i32,
     pub name: String,
-    pub name_fts: Option<String>,
+    pub name_fts: String,
     pub type_: String,
     pub aka: Option<String>,
     pub aka_fts: Option<String>,

@@ -383,7 +383,8 @@
         },
         {
             "type": "Apple",
-            "name": "Suncrisp",
+            // "Suncrisp"
+            "name": "NJ 55",
             "disease_resistance": {"scab": "MS", "FB": "VS", "rust": "MS", "PM": "MS"}
         },
         {
@@ -448,7 +449,8 @@
         },
         {
             "type": "Apple",
-            "name": "Zestar",
+            // "Zestar"
+            "name": "Minnewashta",
             "disease_resistance": {"scab": "MS", "FB": "MS", "rust": "S", "PM": "R"}
         },
         {

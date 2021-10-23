@@ -48,8 +48,8 @@
         "patent": "https://patents.google.com/patent/USPP18892 expires 2022-03-21"
     },
     {
-        "name": "Benton",
-        "AKA": ["PC7146-8"],
+        "name": "PC7146-8",
+        "AKA": ["Benton (r)", "Columbia"],
         "patent": "https://patents.google.com/patent/USPP15847 expires 2023-04-28"
     },
     {
@@ -197,9 +197,10 @@
         "patent": "https://patents.google.com/patent/USPP10459 expired 2017"
     },
     {
-        "name": "Santina",
-        "AKA": ["13S-5-22"],
-        "description": "Summerland variety. Bing-8"
+        "name": "13S-5-22",
+        "AKA": ["Santina"],
+        "description": "Summerland variety. Bing-8",
+        "patent": "PPAF nlt 2019"
     },
     {
         "name": "NY 8139",

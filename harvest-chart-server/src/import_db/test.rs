@@ -387,6 +387,12 @@ fn test_database_loading() {
 }
 
 #[test]
+fn test_format_name_fts_string() {
+    assert_eq!(format_name_fts_string(r#"tulare! (tm)"#), "tulare");
+    assert_eq!(format_name_fts_string(r#"santina ®"#), "santina");
+}
+
+#[test]
 fn test_simplify_path() {
     assert_eq!(simplify_path(r#".\..\plant_database\references"#), "");
     assert_eq!(

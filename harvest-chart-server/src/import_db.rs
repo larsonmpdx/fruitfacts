@@ -406,7 +406,8 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
 }
 
 lazy_static! {
-    static ref SPECIAL_CHARACTERS_REGEX: Regex = Regex::new(r#"["’'.!#,\-— ]"#).unwrap();
+    static ref SPECIAL_CHARACTERS_REGEX: Regex = Regex::new(r#"[^a-zA-Z0-9]"#).unwrap();
+    static ref TM_ENDING_REGEX: Regex = Regex::new(r#"\(tm\)|\(r\)|™|®$"#).unwrap();
     static ref MONTH_SLASH_DAY_REGEX: Regex = Regex::new(r#"([0-9]+)/([0-9]+)"#).unwrap();
 }
 
@@ -642,8 +643,10 @@ pub struct AkaFormatted {
 
 // fts: full text search
 fn format_name_fts_string(name: &str) -> String {
-    return SPECIAL_CHARACTERS_REGEX.replace_all(name, "").to_string();
+    let without_tm_ending = TM_ENDING_REGEX.replace_all(name, "");
+    SPECIAL_CHARACTERS_REGEX.replace_all(&without_tm_ending, "").to_string()
 }
+
 
 // turn an array like ["20th Century", "Twentieth Century"] into "aka" and "aka_fts" strings
 // aka:      comma-separated list (remove commas in names)
@@ -656,8 +659,8 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
         let mut first_element = true;
         for aka_element in aka_array {
             let commas_regex = Regex::new(r",").unwrap();
-            let without_commas = commas_regex.replace_all(aka_element, "");
-            let without_special_characters = SPECIAL_CHARACTERS_REGEX.replace_all(aka_element, "");
+            let without_commas = commas_regex.replace_all(aka_element, ""); // note - commas are also removed by format_name_fts_string() in is current version
+            let fts_formatted = format_name_fts_string(aka_element);
 
             if first_element {
                 first_element = false;
@@ -667,7 +670,7 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
             }
 
             aka_string_builder += &without_commas;
-            aka_fts_string_builder += &without_special_characters;
+            aka_fts_string_builder += &fts_formatted;
         }
         AkaFormatted {
             aka: Some(aka_string_builder),
@@ -1427,9 +1430,9 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
 
 #[derive(Queryable, Debug)]
 pub struct BasePlantsItemForDedupe {
-    pub name: String,
+    pub name_fts: String,
     pub type_: String,
-    pub aka: Option<String>,
+    pub aka_fts: Option<String>,
 }
 
 // for all base plants, ensure none of the names match an "AKA" name which would be a duplicate
@@ -1447,19 +1450,19 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
 
     // read all AKA entries into a map of plant type -> set of AKA names
     let all_base_plants = base_plants::dsl::base_plants
-        .select((base_plants::name, base_plants::type_, base_plants::aka))
+        .select((base_plants::name_fts, base_plants::type_, base_plants::aka_fts))
         .load::<BasePlantsItemForDedupe>(db_conn)
         .unwrap();
 
     for plant in &all_base_plants {
-        if let Some(plant_aka) = plant.aka.clone() {
-            for aka in decode_aka_string(&plant_aka) {
+        if let Some(plant_aka_fts) = plant.aka_fts.clone() {
+            for aka in decode_aka_string(&plant_aka_fts) {
                 if !aka_map
                     .get_mut(&plant.type_)
                     .unwrap()
                     .insert(aka.to_string())
                 {
-                    panic!("found a duplicate AKA entry: {:?}", plant,)
+                    panic!("found a duplicate AKA entry: {:?}", plant)
                 }
             }
         }
@@ -1467,7 +1470,7 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
 
     // then for each base plant names make sure there isn't an AKA name in the set in that type
     for plant in &all_base_plants {
-        if aka_map.get_mut(&plant.type_).unwrap().contains(&plant.name) {
+        if aka_map.get_mut(&plant.type_).unwrap().contains(&plant.name_fts) {
             panic!("found a plant named with an AKA entry: {:?}", plant)
         }
     }
@@ -1486,7 +1489,7 @@ fn check_database(db_conn: &SqliteConnection) {
             .first::<PlantType>(db_conn)
             .unwrap_or_else(|_| {
                 panic!(
-                    "imported a plant with a category not in types.json: {}",
+                    r#"imported a plant with a category not in types.json: "{}""#,
                     type_from_plants
                 )
             });

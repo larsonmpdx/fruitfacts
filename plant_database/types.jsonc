@@ -117,8 +117,32 @@
         "latin_name": "Prunus hybrid"
     },
     {
-        "name": "Orange",
+        "name": "Citrus",
+        "latin_name": "Citrus spp."
+    },
+    {
+        "name": "Sweet Orange",
         "latin_name": "Citrus × sinensis"
+    },
+    {
+        "name": "Lemon",
+        "latin_name": "Citrus limon"
+    },
+    {
+        "name": "Lime",
+        "latin_name": "Citrus spp."
+    },
+    {
+        "name": "Kumquat",
+        "latin_name": "Citrus japonica"
+    },
+    {
+        "name": "Tangelo",
+        "latin_name": "Citrus × tangelo"
+    },
+    {
+        "name": "Clementine",
+        "latin_name": "Citrus × clementina"
     },
     {
         "name": "Grapefruit",

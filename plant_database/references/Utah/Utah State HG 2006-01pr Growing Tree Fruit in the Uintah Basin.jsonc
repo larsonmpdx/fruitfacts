@@ -106,7 +106,8 @@
             "description": "Crisp, firmer than McIntosh. Small fruit, may drop prematurely, difficult to thin."
         },
         {
-            "name": "Zestar",
+            // "Zestar"
+            "name": "Minnewashta",
             "type": "Apple",
             "harvest_time": "Late Aug - Early Sep",
             "description": "Large, crunchy, juicy red fruit with sweet-tart flavor. Excellent for both fresh eating and cooking. Tree is vigorous, upright, but susceptible to apple scab."

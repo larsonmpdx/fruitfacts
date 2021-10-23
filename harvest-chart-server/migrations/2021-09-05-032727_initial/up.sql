@@ -1,7 +1,7 @@
 CREATE TABLE base_plants (
   plant_id INTEGER PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
-  name_fts TEXT, -- for full text search, without special characters
+  name_fts TEXT NOT NULL, -- for full text search, without special characters
   type TEXT NOT NULL,
 
   -- these fields don't go into collections because they're part of our ground truth

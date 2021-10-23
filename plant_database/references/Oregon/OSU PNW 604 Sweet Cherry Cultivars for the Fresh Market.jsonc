@@ -23,13 +23,15 @@
             "description": "S4S6"
         },
         {
-            "name": "Black Pearl",
+            // "Blackpearl"
+            "name": "NY 8139",
             "type": "Sweet Cherry",
             "harvest_time_relative": "Bing -7 to -9",
             "description": "S4S13"
         },
         {
-            "name": "Santina",
+            // "Santina"
+            "name": "13S-5-22",
             "type": "Sweet Cherry",
             "harvest_time_relative": "Bing -5 to -7",
             "description": "Self-fertile"
@@ -41,13 +43,15 @@
             "description": "S1S3"
         },
         {
-            "name": "Burgundy Pearl",
+            // "Burgundypearl"
+            "name": "NY 38L",
             "type": "Sweet Cherry",
             "harvest_time_relative": "Bing -3 to -5",
             "description": "S3S4"
         },
         {
-            "name": "Benton",
+            // "Benton"
+            "name": "PC7146-8",
             "type": "Sweet Cherry",
             "harvest_time_relative": "Bing -2 to -3",
             "description": "Self-fertile"
@@ -103,7 +107,8 @@
             "description": "Self-fertile"
         },
         {
-            "name": "Regina",
+            // "Regina"
+            "name": "Jork 57/201",
             "type": "Sweet Cherry",
             "harvest_time_relative": "Bing +14 to +15",
             "description": "S1S3"

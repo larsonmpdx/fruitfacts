@@ -17,7 +17,8 @@
             "description": "Moderate suitability for brining. Used for brining. Harvest between 16 and 18 Brix. Susceptible to bacterial canker and rain cracking. Pollenizers: Royal Ann"
         },
         {
-            "name": "Benton",
+            // "Benton"
+            "name": "PC7146-8",
             "type": "Sweet Cherry",
             "description": "Moderate suitability for brining. Useful for brining if 10 1/2 row or smaller in size. Harvest below 16 Brix. Self-fertile"
         },
@@ -52,7 +53,8 @@
             "description": "High suitability for brining. Useful for brining if overset and 10 1/2 row or smaller in size. Also used for canning. Pollenizer: Bing"
         },
         {
-            "name": "Regina",
+            // "Regina"
+            "name": "Jork 57/201",
             "type": "Sweet Cherry",
             "description": "Moderate suitability for brining. Useful for brining if 10 1/2 row or smaller in size. Harvest between 16 and 18 Brix. Pollenizers: Attika, Sam, Starks Gold"
         },

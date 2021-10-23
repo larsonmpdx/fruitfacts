@@ -285,7 +285,8 @@
             "description": "Black, pollinized by Van, Corum"
         },
         {
-            "name": "Regina",
+            // "Regina"
+            "name": "Jork 57/201",
             "type": "Sweet Cherry",
             "locations": ["I", "II"],
             "harvest_time": "Late",
