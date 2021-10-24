@@ -9,24 +9,24 @@
         "latitude": 42.719844733495485,
         "longitude": -84.47474227805654
     }],
-    // PF24-007 and PF27 are in both "excellent" and "moderate" categories in the original. PF23 is listed twice
+    // PF 24-007 and PF 27 are in both "excellent" and "moderate" categories in the original. PF 23 is listed twice
     "plants": [
         {
             "type": "Peach",
             "category": "Yellow melting flesh peach",
-            "names": ["Biscoe", "Blazingstar", "Candor", "Contender", "Harrow Beauty", "Harrow Diamond", "PF1", "PF12A", "Starfire"],
+            "names": ["Biscoe", "FA 12" /*"Blazingstar"*/, "Candor", "Contender", "Harrow Beauty", "Harrow Diamond", "PF 1", "PF 12A", "Starfire"],
             "disease_resistance": { "BLS": "Excellent"}
         },
         {
             "type": "Peach",
             "category": "Yellow melting flesh peach",
-            "names": ["Blaze Prince", "Desiree", "Encore", "Garnet Beauty", "Gloria", "Glowingstar", "John Boy", "Messina", "PF5B", "PF14 Jersey", "PF24-007", "PF19-007", "PF28-007", "Redkist", "Redstar", "Summer Serenade", "Victoria", "PF 11 Peach", "PF9A-007"],
+            "names": ["Blaze Prince", "Desiree", "Encore", "Garnet Beauty", "Gloria", "Glowingstar", "John Boy", "Messina", "PF 5B", "PF 14 Jersey", "PF 24-007", "PF 19-007", "PF 28-007", "Redkist", "FA 52" /*"redstar"*/, "Summer Serenade", "Victoria", "PF 11 Peach", "PF 9A-007"],
             "disease_resistance": { "BLS": "Good"}
         },
         {
             "type": "Peach",
             "category": "Yellow melting flesh peach",
-            "names": ["Allstar", "Autumnstar", "Beaumont", "Canadian Harmony", "Coralstar", "Early Loring", "Glenglo", "Harbinger", "Harrow Dawn", "Harrow Fair", "Loring", "Madison", "PF20-007", "PF23", "PF25", "PF15A", "PF17", "Redhaven", "PF27A", "Earlystar", "Risingstar", "PF5D-Big", "PF24C Cold Hardy"],
+            "names": ["Allstar", "FA 42" /*"Autumnstar"*/, "Beaumont", "Canadian Harmony", "Coralstar", "Early Loring", "GW115" /*"Glenglo"*/, "Harbinger", "Harrow Dawn", "Harrow Fair", "Loring", "Madison", "PF 20-007", "PF 23", "PF 25", "PF 15A", "PF 17", "Redhaven", "PF 27A", "Earlystar", "FA 47" /*"Risingstar"*/, "PF 5D Big", "PF 24C Cold Hardy"],
             "disease_resistance": { "BLS": "Moderate"}
         },
         {
@@ -38,7 +38,7 @@
         {
             "type": "Peach",
             "category": "Yellow melting flesh peach",
-            "names": ["Elberta", "Fayette", "Flavorcrest", "Halehaven", "Laurol", "Spring Flame", "Suncrest"],
+            "names": ["Elberta", "Fayette", "Flavorcrest", "Hale Haven", "Laurol", "Spring Flame", "Suncrest"],
             "disease_resistance": { "BLS": "Poor"}
         },
         {
@@ -62,7 +62,7 @@
         {
             "type": "Peach",
             "category": "White flesh peach",
-            "names": ["Manon", "Saturn*", "Scarlet Pearl", "Southern Pearl"],
+            "names": ["Manon", "Saturn", "Scarlet Pearl", "Southern Pearl"],
             "disease_resistance": { "BLS": "Good"}
         },
         {
@@ -81,25 +81,25 @@
             "type": "Peach",
             "category": "White flesh peach",
             // "Yukon King" = Autumn Snow
-            "names": ["Opale", "Snow Bride", "Snow Beauty", "Snow Giant", "Snow King", "Snow Prince", "Snowfire", "Autumn Snow"],
+            "names": ["Opale", "Snow Bride", "Snow Beauty", "Snow Giant", "Snow King", "Snow Prince", "Snow Fire", "Autumn Snow"],
             "disease_resistance": { "BLS": "Poor"}
         },
         {
             "type": "Nectarine",
             "category": "Yellow nectarine",
-            "names": ["Fantasia", "Firebrite", "Harblaze", "Harflame", "Mayfire", "Mericrest", "PF11 Nectarine", "Stark Ovation", "Sunbright"],
+            "names": ["Fantasia", "Firebrite", "Harblaze", "Harflame", "Mayfire", "Mericrest", "PF 11 Nectarine", "Stark Ovation", "Sunbright"],
             "disease_resistance": { "BLS": "Moderate"}
         },
         {
             "type": "Nectarine",
             "category": "Yellow nectarine",
-            "names": ["Flavortop", "Summer Beaut", "Sunglo", "Redgold", "Eastern Glo"],
+            "names": ["Flavortop", "Summer Beaut", "Sunglo", "Redg Gld", "Eastern Glo"],
             "disease_resistance": { "BLS": "Fair"}
         },
         {
             "type": "Nectarine",
             "category": "Yellow nectarine",
-            "names": ["June Glo", "Honey Royale", "Honeyblaze", "Honeykist"],
+            "names": ["Juneglo", "Honey Royale", "Honey Blaze", "Honey Kist"],
             "disease_resistance": { "BLS": "Poor"}
         },
         {
@@ -117,7 +117,7 @@
         {
             "type": "Nectarine",
             "category": "White nectarine",
-            "names": ["Arctic Sweet", "ArcticGlo", "Crimson Snow"],
+            "names": ["Arctic Sweet", "Arctic Glo", "Crimson Snow"],
             "disease_resistance": { "BLS": "Fair"}
         },
         {

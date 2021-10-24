@@ -41,7 +41,7 @@
             "harvest_time": "Oct 10-20"
         },
         {
-            "names": ["Williams' Pride", "Pristine", "Enterprise", "Gold Rush"],
+            "names": ["Williams' Pride", "Pristine", "Enterprise", "GoldRush"],
             "type": "Apple",
             "category": "others",
             "category_description": "For homeowner production in central and northern Arkansas, the University of Arkansas recommends these"
@@ -284,7 +284,7 @@
             "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
-            "name": "Autumnglo",
+            "name": "Autumn Glo",
             "type": "Peach",
             "harvest_time_relative": "Redhaven +5 weeks",
             "tags": ["Yellow Peach"],
@@ -339,7 +339,7 @@
             "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
-            "name": "Flameprince",
+            "name": "Flame Prince",
             "type": "Peach",
             "harvest_time_relative": "Redhaven +8 weeks",
             "tags": ["Yellow Peach"],

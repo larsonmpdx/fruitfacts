@@ -102,7 +102,7 @@
             "harvest_time_relative": "Elberta -16"
         },
         {
-            "name": "Redglobe",
+            "name": "Red Globe",
             "type": "Peach",
             "chill": "850 hours",
             "description": "Free",
@@ -130,7 +130,7 @@
             "harvest_time_relative": "Elberta -2"
         },
         {
-            "name": "Flameprince",
+            "name": "Flame Prince",
             "type": "Peach",
             "chill": "850 hours",
             "description": "Free",
@@ -231,7 +231,7 @@
             // table gave Flordaking +25, converted to +elberta
         },
         {
-            "name": "FlordaPrince",
+            "name": "Flordaprince",
             "type": "Peach",
             "chill": "150 hours",
             "description": "Cling",

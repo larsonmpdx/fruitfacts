@@ -404,7 +404,7 @@
             "harvest_time": "June 10-15"
         },
         {
-            "name": "MoorPark",
+            "name": "Moorpark",
             "type": "Apricot"
             // no harvest time given
         },
@@ -427,7 +427,7 @@
             "harvest_time": "June 25-July 5"
         },
         {
-            "name": "TomCot",
+            "name": "Tomcot",
             "type": "Apricot",
             "harvest_time_unparsed": "early"
         },
@@ -1008,7 +1008,7 @@
             "harvest_time": "early to mid August"
         },
         {
-            "name": "Red Haven",
+            "name": "Redhaven",
             "type": "Peach"
             // harvest time not given
         },
@@ -1109,25 +1109,25 @@
             "description": "columnar"
         },
         {
-            "name": "Tropic Beauty",
+            "name": "TropicBeauty",
             "AKA": ["82-10"],
             "type": "Peach",
             "harvest_time": "June 15-25",
             "chill": "150 hours"
         },
         {
-            "name": "Tropic Prince",
+            "name": "TropicPrince",
             "type": "Peach",
             "harvest_time": "May",
             "chill": "<150 hours"
         },
         {
-            "name": "Tropic Snow",
+            "name": "TropicSnow",
             "type": "Peach"
             // harvest time not given
         },
         {
-            "name": "Tropic Sweet",
+            "name": "TropicSweet",
             "type": "Peach",
             "harvest_time": "June",
             "chill": "<175 hours"

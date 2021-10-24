@@ -433,7 +433,7 @@
             "description": "Better fruit set"
         },
         {
-            "name": "Redgold",
+            "name": "Red Gold",
             "type": "Nectarine",
             "locations": ["I"],
             "harvest_time": "August",
@@ -454,7 +454,7 @@
             "description": "Grown in pots, take inside for winter"
         },
         {
-            "name": "Red Haven",
+            "name": "Redhaven",
             "type": "Peach",
             "locations": ["I", "II"],
             "harvest_time": "Aug 5-10",
@@ -507,17 +507,17 @@
             "type": "Euro Pear",
             "locations": ["I", "II"],
             "harvest_time": "Aug 15-30",
-            "description": "Pollinized by Anjou, Fall Butter"
+            "description": "Pollinized by D'Anjou, Fall Butter"
         },
         {
             "name": "Seckel",
             "type": "Euro Pear",
             "locations": ["I", "II"],
             "harvest_time": "Aug 20-Sep 10",
-            "description": "Pollinized by Anjou, Bosc, Comice"
+            "description": "Pollinized by D'Anjou, Bosc, Comice"
         },
         {
-            "name": "Anjou",
+            "name": "D'Anjou",
             "type": "Euro Pear",
             "locations": ["I", "II"],
             "harvest_time": "Sep 5-20",
@@ -556,7 +556,7 @@
             "type": "Euro Pear",
             "locations": ["I", "II"],
             "harvest_time": "Aug 15-30",
-            "description": "Red, numerous strains, Pollinized by Anjou, Fall Butter"
+            "description": "Red, numerous strains, Pollinized by D'Anjou, Fall Butter"
         },
         {
             "name": "Reimer Red",

@@ -160,7 +160,7 @@
             "category_description": "Strains (mutations) of the original cultivars that have shorter internodes and are naturally dwarfing. Best on seedling rootstock."
         },
         {
-            "names": ["Anna", "Beverly Hills", "Dorsett Golden", "Einshemer", "Gordon", "Tropical Beauty"],
+            "names": ["Anna", "Beverly Hills", "Dorsett Golden", "Ein Shemer", "Gordon", "Tropical Beauty"],
             "type": "Apple",
             "category": "low chill",
             "category_description": "These cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."
@@ -222,7 +222,7 @@
             "category": "disease resistant"
         },
         {
-            "name": "Goldrush",
+            "name": "GoldRush",
             "type": "Apple",
             "description": "A scab-immune selection with Golden Delicious parentage; late maturing, large, firm textured, and tart with an excellent flavor; stores well.",
             "category": "disease resistant"
@@ -258,13 +258,13 @@
             "category": "disease resistant"
         },
         {
-            "name": "Red Free",
+            "name": "Redfree",
             "type": "Apple",
             "description": "Matures in early July, heat-sensitive, small fruited; susceptible to water core, sunburn, and russet.",
             "category": "disease resistant"
         },
         {
-            "name": "Williams Pride",
+            "name": "Williams' Pride",
             "type": "Apple",
             "description": "Early maturing, scab immune; also resistant to fire blight and mildew; medium to large fruit with a round-oblique shape; attractive red striped color on a green-yellow background.",
             "category": "disease resistant"
@@ -654,7 +654,7 @@
             ]
         },
         {
-            "names": ["Early Gold", "Goldkist", "Newcastle"],
+            "names": ["Early Gold", "Gold Kist", "Newcastle"],
             "type": "Apricot",
             "category": "low chill",
             "category_description": "These apricot cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."
@@ -1233,7 +1233,7 @@
         },
         {
             "names": ["August Pride", "Babcock", "Bonita", "Desertgold", "Early Amber", "Earligrande",
-            "Flordagrande", "Flordaprince", "Midpride", "Tropic-Berta", "TopicSweet"],
+            "Flordagrande", "Flordaprince", "Mid-Pride", "Tropic-Berta", "TopicSweet"],
             "type": "Peach",
             "category": "low chill",
             "category_description": "These peach cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."

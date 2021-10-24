@@ -58,7 +58,7 @@
         },
         {
             "type": "Apricot",
-            "name": "Earli Autumn",
+            "name": "Earli-Autumn",
             "description": "retail"
         },
         {
@@ -149,7 +149,8 @@
         {
             "type": "Aprium",
             "name": "Honey Rich",
-            "description": "commercial"
+            "description": "commercial",
+            "patent": "https://patents.google.com/patent/USPP10292 expired 2017-02-04"
         },
         {
             "type": "Aprium",
@@ -344,12 +345,14 @@
         {
             "type": "Nectarine",
             "name": "Arctic Belle",
-            "description": "White. commercial"
+            "description": "White. commercial",
+            "patent": "https://patents.google.com/patent/USPP10479 expired 2017-04-21"
         },
         {
             "type": "Nectarine",
             "name": "Arctic Blaze",
-            "description": "White. commercial and retail"
+            "description": "White. commercial and retail",
+            "patent": "https://patents.google.com/patent/USPP10174 expired 2016-09-20"
         },
         {
             "type": "Nectarine",
@@ -359,7 +362,8 @@
         {
             "type": "Nectarine",
             "name": "Arctic Jay",
-            "description": "White. commercial and retail"
+            "description": "White. commercial and retail",
+            "patent": "https://patents.google.com/patent/USPP9908 expired 2016-03-11"
         },
         {
             "type": "Nectarine",
@@ -484,7 +488,8 @@
         {
             "type": "Nectarine",
             "name": "Honey Blaze",
-            "description": "Yellow. commercial and retail"
+            "description": "Yellow. commercial and retail",
+            "patent": "https://patents.google.com/patent/USPP10250 expired 2016-12-27"
         },
         {
             "type": "Nectarine",
@@ -709,7 +714,8 @@
         {
             "type": "Peach",
             "name": "Snow Beauty",
-            "description": "White. commercial and retail"
+            "description": "White. commercial and retail",
+            "patent": "https://patents.google.com/patent/USPP10175 expired 2016-08-30"
         },
         {
             "type": "Peach",
@@ -834,7 +840,8 @@
         {
             "type": "Peach",
             "name": "Kaweah",
-            "description": "Yellow. commercial"
+            "description": "Yellow. commercial",
+            "patent": "https://patents.google.com/patent/USPP10177 expired 2016-11-07"
         },
         {
             "type": "Peach",
@@ -969,7 +976,8 @@
         {
             "type": "Peach",
             "name": "Sweet September",
-            "description": "Yellow. commercial"
+            "description": "Yellow. commercial",
+            "patent": "https://patents.google.com/patent/USPP9964 expired 2016-04-25"
         },
         {
             "type": "Peach",

@@ -648,6 +648,7 @@ fn format_name_fts_string(name: &str) -> String {
     SPECIAL_CHARACTERS_REGEX
         .replace_all(&without_tm, "")
         .to_string()
+        .to_lowercase()
 }
 
 fn does_name_contain_tm(name: &str) -> bool {
@@ -1021,7 +1022,13 @@ fn maybe_add_base_plant(
                 base_plants::type_.eq(&plant.type_),
             ))
             .execute(db_conn);
-        assert_eq!(Ok(1), rows_inserted);
+        assert_eq!(
+            Ok(1),
+            rows_inserted,
+            "inserting base plant {} {}",
+            plant_name,
+            plant.type_
+        );
         1
     } else {
         0

@@ -40,12 +40,12 @@
     },
     {
         "name": "Ridgewood",
-        "AKA": ["Blackgold (tm)", "Black Gold"],
+        "AKA": ["Blackgold (tm)"],
         "patent": "https://patents.google.com/patent/USPP17301 expires 2021-09-24"
     },
     {
         "name": "Newfane",
-        "AKA": ["Whitegold (tm)", "White Gold"],
+        "AKA": ["Whitegold (tm)"],
         "patent": "https://patents.google.com/patent/USPP18892 expires 2022-03-21"
     },
     {
@@ -107,7 +107,7 @@
     {
         "name": "NY 11390",
         "AKA": ["Royalton (tm)"],
-        "patent": "https://patents.google.com/patent/USPP11107 expired 2011",
+        "patent": "https://patents.google.com/patent/USPP11107 expired 2011-09-18",
         "description": "https://ecommons.cornell.edu/bitstream/handle/1813/5204/FLS-140.pdf?sequence=1&isAllowed=y"
     },
     {
@@ -215,7 +215,8 @@
         "description": "Cornell variety. Bing-10"
     },
     {
-        "name": "EbonyPearl"
+        "name": "NY32",
+        "AKA": ["EbonyPearl (r)"]
     },
     {
         "name": "Pendleton",

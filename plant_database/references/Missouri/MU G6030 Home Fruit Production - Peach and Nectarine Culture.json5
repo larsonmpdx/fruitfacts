@@ -11,7 +11,8 @@
     }],
     "plants": [
         {
-            "name": "Flamin' Fury PF-1",
+            "name": "PF 1",
+            "AKA": ["Flamin' Fury (r) PF 1"],
             "type": "Peach",
             "harvest_time_relative": "Redhaven -28",
             "disease_resistance": {
@@ -65,7 +66,8 @@
             "description": "Bud sport of Garnet Beauty, highly colored, semifreestone."
         },
         {
-            "name": "Flamin' Fury PF-9A-007",
+            "name": "PF 9A-007",
+            "AKA": ["Flamin' Fury (r) PF 9A-007"],
             "type": "Peach",
             "harvest_time_relative": "Redhaven -7",
             "disease_resistance": {
@@ -83,7 +85,8 @@
             "description": "The standard of all peaches, low-browning, freestone, requires aggressive thinning to maintain fruit size."
         },
         {
-            "name": "Flamin' Fury PF-11",
+            "name": "PF 11",
+            "AKA": ["Flamin' Fury (r) PF 11"],
             "type": "Peach",
             "harvest_time_relative": "Redhaven +0",
             "disease_resistance": {
@@ -92,7 +95,7 @@
             "description": "Very large, highly colored freestone, fewer split pits than Redhaven."
         },
         {
-            "name": "Redstar",
+            "name": "FA 52", // "redstar"
             "type": "Peach",
             "harvest_time_relative": "Redhaven +0",
             "disease_resistance": {
@@ -110,7 +113,7 @@
             "description": "Medium-size, brilliant red, freestone, requires several harvests."
         },
         {
-            "name": "Blazingstar",
+            "name": "FA 12", //"Blazingstar"
             "type": "Peach",
             "harvest_time_relative": "Redhaven +2",
             "disease_resistance": {
@@ -182,7 +185,8 @@
             "description": "Medium-size, freestone, nonbrowning."
         },
         {
-            "name": "Flamin' Fury PF-24-007",
+            "name": "PF 24-007",
+            "AKA": ["Flamin' Fury (r) PF 24-007"],
             "type": "Peach",
             "harvest_time_relative": "Redhaven +20",
             "disease_resistance": {
@@ -228,7 +232,7 @@
             "category_description": "Fair resistance to Bacterial Leaf Spot"
         },
         {
-            "names": ["Elberta", "Fayette", "Flavorcrest", "Halehaven", "Laurol", "Spring Flame", "Suncrest"],
+            "names": ["Elberta", "Fayette", "Flavorcrest", "Hale Haven", "Laurol", "Spring Flame", "Suncrest"],
             "type": "Peach",
             "tags": ["Yellow Peach"],
             "category": "disease resistance note (not recommendations)",
@@ -238,7 +242,7 @@
             "category_description": "Poor resistance to Bacterial Leaf Spot"
         },
         {
-            "names": ["Flavortop", "Summer Beaut", "Sunglo", "Redgold", "Eastern Glo", "Arctic Sweet", "ArcticGlo", "Crimson Snow"],
+            "names": ["Flavortop", "Summer Beaut", "Sunglo", "Red Gold", "Eastern Glo", "Arctic Sweet", "Arctic Glo", "Crimson Snow"],
             "type": "Nectarine",
             "category": "disease resistance note (not recommendations)",
             "disease_resistance": {
@@ -247,7 +251,7 @@
             "category_description": "Fair resistance to Bacterial Leaf Spot"
         },
         {
-            "names": ["June Glo", "Hone Royale", "Honeyblaze", "Honeykist", "Scarlet Pearl", "Arctic Belle", "Arctic Jay", "Arctic Gold", "Arctic Pride", "Zephyr"],
+            "names": ["Juneglo", "Hone Royale", "Honey Blaze", "Honey Kist", "Scarlet Pearl", "Arctic Belle", "Arctic Jay", "Arctic Gold", "Arctic Pride", "Zephyr"],
             "type": "Nectarine",
             "category": "disease resistance note (not recommendations)",
             "disease_resistance": {

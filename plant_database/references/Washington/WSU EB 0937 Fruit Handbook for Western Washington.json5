@@ -604,7 +604,7 @@
             "harvest_time": "mid to late July"
         },
         {
-            "name": "Risingstar",
+            "name": "FA 47", // "Risingstar"
             "type": "Peach",
             "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",
@@ -618,14 +618,14 @@
             "harvest_time": "early August"
         },
         {
-            "name": "Blazingstar",
+            "name": "FA 12", //"Blazingstar"
             "type": "Peach",
             "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",
             "harvest_time": "early August"
         },
         {
-            "name": "Redstar",
+            "name": "FA 52", // "redstar"
             "type": "Peach",
             "tags": ["Yellow Peach"],
             "category": "Recent peach introductions",

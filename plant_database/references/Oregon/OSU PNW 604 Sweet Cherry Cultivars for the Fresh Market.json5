@@ -64,7 +64,8 @@
             "description": "S3S4"
         },
         {
-            "name": "Ebony Pearl",
+            "name": "NY32",
+            "AKA": ["EbonyPearl (r)"],
             "type": "Sweet Cherry",
             "harvest_time_relative": "Bing -3 to +2",
             "description": "S1S4"

@@ -382,14 +382,14 @@ fn test_database_loading() {
     assert_ge!(items_loaded.reference_items.reference_plants_added, 2721);
     assert_ge!(
         items_loaded.base_plants_found + items_loaded.reference_items.reference_base_plants_added,
-        1682
+        1620
     );
 }
 
 #[test]
 fn test_format_name_fts_string() {
     assert_eq!(format_name_fts_string(r#"tulare! (tm)"#), "tulare");
-    assert_eq!(format_name_fts_string(r#"santina ®"#), "santina");
+    assert_eq!(format_name_fts_string(r#"Santina ®"#), "santina");
 }
 
 #[test]

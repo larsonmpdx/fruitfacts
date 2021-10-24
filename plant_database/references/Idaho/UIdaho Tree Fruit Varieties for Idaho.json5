@@ -17,7 +17,7 @@
     "plants": [
         {
             "names": ["Antonovka", "Cortland", "Duchess of Oldenburg", "Earligold", "Empire", "Fameuse or Snow Apple",
-                "Fireside", "Freedom", "Golden Delicious", "Haralred", "Haralson", "Hazen", "Honey Crisp", "Honeygold",
+                "Fireside", "Freedom", "Golden Delicious", "Haralred", "Haralson", "Hazen", "Honeycrisp", "Honeygold",
                 "Jonathon", "Liberty", "Lodi", "MacFree", "Macoun", "McIntosh Mor-Spur", "McIntosh", "McIntosh Spur",
                 "Northern Lights", "Paulared", "Rambo Red Summer", "Red Fireside", "Redwell", "Regent", "Spartan",
                 "State Fair", "Summer Rambo", "Summerred", "Wealthy", "Wolf River", "Yellow Transparent"],
@@ -344,7 +344,7 @@
         {
             "name": "Harrow Delight",
             "type": "Euro Pear",
-            "description": "The medium-sized fruits have a red blush over yellow background. The flesh is very smooth with few grit cells. Similar to Bartlett but ripens 14 to 28 days earlier. Pollinate with Bartlett, Anjou, Moonglow, or Starking Delicious. Trees are vigorous and hardy in Plant Hardiness Zone 5. Developed in Ontario, Canada.",
+            "description": "The medium-sized fruits have a red blush over yellow background. The flesh is very smooth with few grit cells. Similar to Bartlett but ripens 14 to 28 days earlier. Pollinate with Bartlett, D'Anjou, Moonglow, or Starking Delicious. Trees are vigorous and hardy in Plant Hardiness Zone 5. Developed in Ontario, Canada.",
             "locations": ["N/Central/SE","SW"]
         },
         {

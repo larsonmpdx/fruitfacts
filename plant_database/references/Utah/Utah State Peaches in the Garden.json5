@@ -46,7 +46,8 @@
             "description": "Freestone. May be suited to climates colder than the Wasatch Front"
         },
         {
-            "name": "Flamin' Fury PF 1",
+            "name": "PF 1",
+            "AKA": ["Flamin' Fury (r) PF 1"],
             "chill": "600+ hours",
             "type": "Peach",
             "harvest_time_unparsed": "Early",
@@ -60,7 +61,8 @@
             "description": "Freestone. Popular canning peach due to absence of red flesh color. Firm yellow flesh"
         },
         {
-            "name": "Flamin' Fury PF Lucky 13",
+            "name": "PF Lucky 13",
+            "AKA": ["Flamin' Fury (r) PF Lucky 13"],
             "chill": "700 hours",
             "type": "Peach",
             "harvest_time_unparsed": "Early-mid",
@@ -74,7 +76,7 @@
             "description": "Freestone. A popular canning cultivar in areas of the West. Resists browning"
         },
         {
-            "name": "Flavor Top",
+            "name": "Flavortop",
             "chill": "650 hours",
             "type": "Nectarine",
             "harvest_time_unparsed": "Mid",
@@ -116,7 +118,8 @@
             "description": "Freestone. May be suited to climates slightly colder than the Wasatch Front"
         },
         {
-            "name": "Flamin' Fury PF 24C Cold Hardy",
+            "name": "PF 24C Cold Hardy",
+            "AKA": ["Flamin' Fury (r) PF 24C Cold Hardy"],
             "chill": "650 hours",
             "type": "Peach",
             "harvest_time_unparsed": "Mid-late",

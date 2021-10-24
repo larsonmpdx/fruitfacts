@@ -153,12 +153,12 @@
         },
         {
             "type": "Apple",
-            "name": "Honey Crisp",
+            "name": "Honeycrisp",
             "disease_resistance": {"scab": "MR", "FB": "R", "rust": "S", "PM": "S"}
         },
         {
             "type": "Apple",
-            "name": "Honey Gold",
+            "name": "Honeygold",
             "disease_resistance": {"scab": "R", "FB": "VS", "rust": "S", "PM": "R"}
         },
         {
@@ -203,7 +203,7 @@
         },
         {
             "type": "Apple",
-            "name": "Macfree",
+            "name": "MacFree",
             "disease_resistance": {"scab": "R", "FB": "MR", "rust": "R", "PM": "MR"}
         },
         {

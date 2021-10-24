@@ -16,7 +16,7 @@
             "harvest_time_relative": "Redhaven -32"
         },
         {
-            "name": "PF-1",
+            "name": "PF 1",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -30"
         },
@@ -31,7 +31,7 @@
             "harvest_time_relative": "Redhaven -26"
         },
         {
-            "name": "PF-5B",
+            "name": "PF 5B",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -25"
         },
@@ -41,7 +41,7 @@
             "harvest_time_relative": "Redhaven -24"
         },
         {
-            "name": "PF-5D Big",
+            "name": "PF 5D Big",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -22"
         },
@@ -56,9 +56,11 @@
             "harvest_time_relative": "Redhaven -17"
         },
         {
-            "name": "Glenglo",
+            "name": "GW115",
+            "AKA": ["Glenglo (tm)"],
             "type": "Peach",
-            "harvest_time_relative": "Redhaven -13"
+            "harvest_time_relative": "Redhaven -13",
+            "patent": "https://patents.google.com/patent/USPP10652 expired 2017-02-18"
         },
         {
             "name": "Brightstar",
@@ -76,12 +78,12 @@
             "harvest_time_relative": "Redhaven -10"
         },
         {
-            "name": "Early Red Haven",
+            "name": "Early Redhaven",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -10"
         },
         {
-            "name": "PF-7A Freestone",
+            "name": "PF 7A Freestone",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -10"
         },
@@ -91,7 +93,7 @@
             "harvest_time_relative": "Redhaven -10"
         },
         {
-            "name": "PF-7",
+            "name": "PF 7",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -10"
         },
@@ -106,7 +108,7 @@
             "harvest_time_relative": "Redhaven -8"
         },
         {
-            "name": "Rising Star",
+            "name": "FA 47", // "Rising Star"
             "type": "Peach",
             "harvest_time_relative": "Redhaven -8"
         },
@@ -116,12 +118,12 @@
             "harvest_time_relative": "Redhaven -5"
         },
         {
-            "name": "PF 11 Peach",
+            "name": "PF 11",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -2"
         },
         {
-            "name": "PF9A-007",
+            "name": "PF 9A-007",
             "type": "Peach",
             "harvest_time_relative": "Redhaven -2"
         },
@@ -151,7 +153,7 @@
             "harvest_time_relative": "Redhaven +3"
         },
         {
-            "name": "Redstar",
+            "name": "FA 52", // "redstar"
             "type": "Peach",
             "harvest_time_relative": "Redhaven +3"
         },
@@ -166,7 +168,7 @@
             "harvest_time_relative": "Redhaven +3"
         },
         {
-            "name": "PF-12A",
+            "name": "PF 12A",
             "type": "Peach",
             "harvest_time_relative": "Redhaven +3"
         },
@@ -231,7 +233,7 @@
             "harvest_time_relative": "Redhaven +12"
         },
         {
-            "name": "SweetStar",
+            "name": "Sweetstar",
             "type": "Peach",
             "harvest_time_relative": "Redhaven +14"
         },
@@ -351,7 +353,7 @@
             "harvest_time_relative": "Redhaven +32"
         },
         {
-            "name": "Autumn Star",
+            "name": "FA 42", //"Autumnstar"
             "type": "Peach",
             "harvest_time_relative": "Redhaven +37"
         },
