@@ -16,7 +16,7 @@ use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
 use dotenv::dotenv;
-use json5;
+
 use lazy_static::lazy_static;
 use std::collections::HashMap;
 use std::collections::HashSet;
@@ -694,7 +694,7 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
         AkaFormatted {
             aka: Some(aka_string_builder),
             aka_fts: Some(aka_fts_string_builder),
-            marketing_name: marketing_name,
+            marketing_name,
         }
     } else {
         AkaFormatted {
