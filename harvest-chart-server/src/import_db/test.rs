@@ -382,7 +382,7 @@ fn test_database_loading() {
     assert_ge!(items_loaded.reference_items.reference_plants_added, 2721);
     assert_ge!(
         items_loaded.base_plants_found + items_loaded.reference_items.reference_base_plants_added,
-        1548
+        1682
     );
 }
 
