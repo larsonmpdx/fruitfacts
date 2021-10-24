@@ -23,6 +23,7 @@ use std::collections::HashSet;
 use std::convert::TryFrom;
 use std::fs;
 use walkdir::WalkDir;
+use json5;
 
 extern crate regex;
 use regex::Regex;
@@ -407,7 +408,7 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
 
 lazy_static! {
     static ref SPECIAL_CHARACTERS_REGEX: Regex = Regex::new(r#"[^a-zA-Z0-9]"#).unwrap();
-    static ref TM_ENDING_REGEX: Regex = Regex::new(r#"\(tm\)|\(r\)|™|®$"#).unwrap();
+    static ref TM_REGEX: Regex = Regex::new(r#"\(tm\)|\(r\)|™|®"#).unwrap();
     static ref MONTH_SLASH_DAY_REGEX: Regex = Regex::new(r#"([0-9]+)/([0-9]+)"#).unwrap();
 }
 
@@ -643,8 +644,8 @@ pub struct AkaFormatted {
 
 // fts: full text search
 fn format_name_fts_string(name: &str) -> String {
-    let without_tm_ending = TM_ENDING_REGEX.replace_all(name, "");
-    SPECIAL_CHARACTERS_REGEX.replace_all(&without_tm_ending, "").to_string()
+    let without_tm = TM_REGEX.replace_all(name, "");
+    SPECIAL_CHARACTERS_REGEX.replace_all(&without_tm, "").to_string()
 }
 
 
@@ -700,21 +701,21 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
         let path_ = file_path.unwrap().path();
 
         if fs::metadata(path_.clone()).unwrap().is_file()
-            && path_.extension().unwrap().to_str().unwrap() == "jsonc"
+            && path_.extension().unwrap().to_str().unwrap() == "json5"
         {
             println!("loading: {}", path_.display());
 
             let contents = fs::read_to_string(path_.clone()).unwrap();
 
-            let plants: Vec<BasePlantJson> = serde_json::from_str(&contents).unwrap();
+            let plants: Vec<BasePlantJson> = json5::from_str(&contents).unwrap();
 
             let filename = rem_last_n(
                 path_.as_path().file_name().unwrap().to_str().unwrap(),
-                ".jsonc".len(),
+                ".json5".len(),
             );
 
             for plant in &plants {
-                // for the "Oddball.jsonc" file, get type from each item's json
+                // for the "Oddball.json5" file, get type from each item's json
                 // all others get type from the filename
                 let plant_type;
                 if filename.starts_with("Oddball") {
@@ -760,14 +761,14 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
 fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     let mut types_found = 0;
 
-    let types_path = database_dir.join("types.jsonc");
+    let types_path = database_dir.join("types.json5");
     if !fs::metadata(types_path.clone()).unwrap().is_file() {
-        panic!("didn't find types.jsonc");
+        panic!("didn't find types.json5");
     }
 
     let contents = fs::read_to_string(types_path).unwrap();
 
-    let types_parsed: Vec<TypeJson> = serde_json::from_str(&contents).unwrap();
+    let types_parsed: Vec<TypeJson> = json5::from_str(&contents).unwrap();
 
     for type_element in &types_parsed {
         let rows_inserted = diesel::insert_into(plant_types::dsl::plant_types)
@@ -1099,15 +1100,6 @@ fn add_collection_plant_by_location(
     plants_added
 }
 
-// this is a very simplified comment remover -
-// it only looks for leading "//" and will mess up if they're embedded in strings or placed after things
-fn remove_json_comments(input: &str) -> String {
-    input
-        .lines()
-        .filter(|line| !line.trim_start().starts_with("//"))
-        .join("\n")
-}
-
 pub struct LoadReferencesReturn {
     pub reference_locations_found: isize,
     pub reference_base_plants_added: isize,
@@ -1135,21 +1127,18 @@ fn load_references(
         let path_ = entry.path();
 
         if fs::metadata(path_).unwrap().is_file()
-            && path_.extension().unwrap().to_str().unwrap() == "jsonc"
+            && path_.extension().unwrap().to_str().unwrap() == "json5"
         {
             println!("loading reference: {}", path_.display());
 
             let contents = fs::read_to_string(path_).unwrap();
 
-            let without_commets = remove_json_comments(&contents);
-
             let collection: CollectionJson =
-                serde_json::from_str(&without_commets).unwrap_or_else(|error| {
+                json5::from_str(&contents).unwrap_or_else(|error| {
                     panic!("couldn't parse json in file {} {}", path_.display(), error)
                 });
 
-            let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), ".jsonc".len());
-
+            let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), ".json5".len());
             let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
 
             collection_id += 1;

@@ -35,6 +35,7 @@
     },
     {
         "name": "Glacier",
+        "AKA": ["PC 7144-7"],
         "patent": "https://patents.google.com/patent/USPP8051 expired 2011"
     },
     {
@@ -64,6 +65,7 @@
     },
     {
         "name": "Royal Lee",
+        "AKA": ["Regal Lee"],
         "description": "Zaiger variety",
         "patent": "https://patents.google.com/patent/USPP12417 expired 2020"
     },

@@ -474,9 +474,8 @@
             "harvest_time_unparsed": "very early"
         },
         {
-            // "Index". aka and patent fields at top level
-            "name": "index",
-         //   "name": "PC 7222-1",
+            // "Index"
+            "name": "PC 7222-1",
             "type": "Sweet Cherry"
             // no harvest time given
         },
