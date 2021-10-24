@@ -4,7 +4,7 @@
     "url": "https://edis.ifas.ufl.edu/publication/MG368",
     "published": "2019-05-29",
     "accessed": "Oct 2021",
-    "import_note": "not-recommended varieties excluded",
+    // not-recommended varieties excluded. todo: maybe include them with not_recommended_reason
     "locations": [{
         "short_name": "G",
         "name": "Gainesville, FL",

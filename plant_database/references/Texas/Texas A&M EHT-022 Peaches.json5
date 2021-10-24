@@ -156,7 +156,7 @@
             "chill": "425 hours",
             "description": "Semi-cling. listed in both medium and low chill tables",
             "harvest_time_relative": "Elberta -55",
-            "import_note": "data given in the low chill table is inconsistent (medium chill gives 425 chill, flordaking -4, low chill gives 375 chill, flordaking +4)"
+            // data given in the low chill table is inconsistent (medium chill gives 425 chill, flordaking -4, low chill gives 375 chill, flordaking +4)
         },
         {
             "name": "Flordaking",
@@ -220,7 +220,7 @@
             "chill": "350 hours",
             "description": "Cling",
             "harvest_time_relative": "Elberta -57",
-            "import_note": "table gave Flordaking -6, converted to elberta+"
+            // table gave Flordaking -6, converted to elberta+
         },
         {
             "name": "Gulfprince",
@@ -228,7 +228,7 @@
             "chill": "400 hours",
             "description": "Semi-free",
             "harvest_time_relative": "Elberta -26",
-            "import_note": "table gave Flordaking +25, converted to +elberta"
+            // table gave Flordaking +25, converted to +elberta
         },
         {
             "name": "FlordaPrince",
@@ -236,7 +236,7 @@
             "chill": "150 hours",
             "description": "Cling",
             "harvest_time_relative": "Flordaprince +0",
-            "import_note": "no typical ripening time for flordaprince given"
+            // no typical ripening time for flordaprince given
         },
         {
             "name": "TropicPrince",
@@ -244,7 +244,7 @@
             "chill": "150 hours",
             "description": "Cling",
             "harvest_time_relative": "Flordaprince +7",
-            "import_note": "no typical ripening time for flordaprince given"
+            // no typical ripening time for flordaprince given
         },
         {
             "name": "TropicBeauty",
@@ -252,7 +252,7 @@
             "chill": "150 hours",
             "description": "Semi-free",
             "harvest_time_relative": "Flordaprince +14",
-            "import_note": "no typical ripening time for flordaprince given"
+            // no typical ripening time for flordaprince given
         }
     ]
 }

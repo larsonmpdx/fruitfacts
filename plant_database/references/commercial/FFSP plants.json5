@@ -8,7 +8,7 @@
         "latitude": 29.6465645490967,
         "longitude": -82.34424313539307
     }],
-    "import_note": "rootstocks such as MP-29 omitted",
+    // rootstocks such as MP-29 omitted
     "plants": [
         {
             "name": "Fla. 90-3",

@@ -89,13 +89,13 @@
     {
         "name": "Cherry Parfait #19",
         "description": "stark variety, honeycrisp/pink lady cross",
-        "AKA": ["Stark Scarlet Crush (tm)", "Scarlet Crush (tm)"],
+        "AKA": ["Scarlet Crush (tm)"],
         "patent": "https://patents.google.com/patent/USPP30925 expires 2038-03-07"
     },
     {
         "name": "Honeysuckle Rose #1-6",
         "description": "stark variety, Honeycrisp/Gala cross",
-        "AKA": ["Stark Ruby Darling (tm)", "Ruby Darling (tm)"],
+        "AKA": ["Ruby Darling (tm)"],
         "patent": "https://patents.google.com/patent/USPP30978 expires 2038-03-07"
     },
     {

@@ -38,8 +38,8 @@
             "type": "Apple",
             "name": "Honeycrisp",
             "description": "Color: Red striped, Uses and quality: All-around; stores well",
-            "harvest_time": "September",
-            "import_note": "in the guide as \"late fall\""
+            "harvest_time_unparsed": "late fall",
+            // in the guide as "late fall"
         },
         {
             "type": "Apple",
@@ -148,21 +148,21 @@
             "name": "Meteor",
             "description": "Fruit size: Medium-large, Notes: Small tree, very hardy (-50°F)",
             "harvest_time": "July",
-            "import_note": "in the guide as \"Early Summer\""
+            // in the guide as "Early Summer"
         },
         {
             "type": "Sour Cherry",
             "name": "Montmorency",
             "description": "Fruit size: Medium-large, Notes: Small tree, hardy (-40°F)",
             "harvest_time": "July",
-            "import_note": "in the guide as \"Early Summer\""
+            // in the guide as "Early Summer"
         },
         {
             "type": "Sour Cherry",
             "name": "North Star",
             "description": "Fruit size: Large, Notes: Small tree, very hardy (-40°F)",
             "harvest_time": "July",
-            "import_note": "in the guide as \"Early Summer\""
+            // in the guide as "Early Summer"
         },
         {
             "type": "Euro Pear",

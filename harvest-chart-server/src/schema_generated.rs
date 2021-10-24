@@ -7,6 +7,7 @@ table! {
         type_ -> Text,
         aka -> Nullable<Text>,
         aka_fts -> Nullable<Text>,
+        marketing_name -> Nullable<Text>,
         description -> Nullable<Text>,
         uspp_number -> Nullable<Integer>,
         uspp_expiration -> Nullable<BigInt>,

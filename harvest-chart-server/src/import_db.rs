@@ -16,14 +16,13 @@ use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
 use dotenv::dotenv;
-use itertools::Itertools;
+use json5;
 use lazy_static::lazy_static;
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::convert::TryFrom;
 use std::fs;
 use walkdir::WalkDir;
-use json5;
 
 extern crate regex;
 use regex::Regex;
@@ -640,14 +639,20 @@ fn simplify_path(input: &str) -> &str {
 pub struct AkaFormatted {
     pub aka: Option<String>,
     pub aka_fts: Option<String>,
+    pub marketing_name: Option<String>,
 }
 
 // fts: full text search
 fn format_name_fts_string(name: &str) -> String {
     let without_tm = TM_REGEX.replace_all(name, "");
-    SPECIAL_CHARACTERS_REGEX.replace_all(&without_tm, "").to_string()
+    SPECIAL_CHARACTERS_REGEX
+        .replace_all(&without_tm, "")
+        .to_string()
 }
 
+fn does_name_contain_tm(name: &str) -> bool {
+    TM_REGEX.is_match(name)
+}
 
 // turn an array like ["20th Century", "Twentieth Century"] into "aka" and "aka_fts" strings
 // aka:      comma-separated list (remove commas in names)
@@ -656,6 +661,7 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
     if let Some(aka_array) = aka_array {
         let mut aka_string_builder = "".to_string();
         let mut aka_fts_string_builder = "".to_string();
+        let mut marketing_name: Option<String> = None;
 
         let mut first_element = true;
         for aka_element in aka_array {
@@ -672,15 +678,29 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
 
             aka_string_builder += &without_commas;
             aka_fts_string_builder += &fts_formatted;
+
+            if does_name_contain_tm(aka_element) {
+                if marketing_name.is_none() {
+                    marketing_name = Some(aka_element.to_string());
+                } else {
+                    panic!(
+                        "plant had multiple marketing names: {} {}",
+                        marketing_name.unwrap(),
+                        aka_element
+                    );
+                }
+            }
         }
         AkaFormatted {
             aka: Some(aka_string_builder),
             aka_fts: Some(aka_fts_string_builder),
+            marketing_name: marketing_name,
         }
     } else {
         AkaFormatted {
             aka: None,
             aka_fts: None,
+            marketing_name: None,
         }
     }
 }
@@ -744,6 +764,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                         base_plants::type_.eq(&plant_type.unwrap()),
                         base_plants::aka.eq(&aka_formatted.aka),
                         base_plants::aka_fts.eq(&aka_formatted.aka_fts),
+                        base_plants::marketing_name.eq(&aka_formatted.marketing_name),
                         base_plants::description.eq(&plant.description),
                         base_plants::uspp_number.eq(patent_info.uspp_number),
                         base_plants::uspp_expiration.eq(uspp_expiration_i64),
@@ -1133,10 +1154,9 @@ fn load_references(
 
             let contents = fs::read_to_string(path_).unwrap();
 
-            let collection: CollectionJson =
-                json5::from_str(&contents).unwrap_or_else(|error| {
-                    panic!("couldn't parse json in file {} {}", path_.display(), error)
-                });
+            let collection: CollectionJson = json5::from_str(&contents).unwrap_or_else(|error| {
+                panic!("couldn't parse json in file {} {}", path_.display(), error)
+            });
 
             let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), ".json5".len());
             let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
@@ -1439,7 +1459,11 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
 
     // read all AKA entries into a map of plant type -> set of AKA names
     let all_base_plants = base_plants::dsl::base_plants
-        .select((base_plants::name_fts, base_plants::type_, base_plants::aka_fts))
+        .select((
+            base_plants::name_fts,
+            base_plants::type_,
+            base_plants::aka_fts,
+        ))
         .load::<BasePlantsItemForDedupe>(db_conn)
         .unwrap();
 
@@ -1459,7 +1483,11 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
 
     // then for each base plant names make sure there isn't an AKA name in the set in that type
     for plant in &all_base_plants {
-        if aka_map.get_mut(&plant.type_).unwrap().contains(&plant.name_fts) {
+        if aka_map
+            .get_mut(&plant.type_)
+            .unwrap()
+            .contains(&plant.name_fts)
+        {
             panic!("found a plant named with an AKA entry: {:?}", plant)
         }
     }

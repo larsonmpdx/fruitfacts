@@ -9,7 +9,7 @@
         "latitude": 42.719844733495485,
         "longitude": -84.47474227805654
     }],
-    "import_note": "PF24-007 and PF27 are in both excellent and moderate categories in the original. PF23 is listed twice",
+    // PF24-007 and PF27 are in both "excellent" and "moderate" categories in the original. PF23 is listed twice
     "plants": [
         {
             "type": "Peach",
