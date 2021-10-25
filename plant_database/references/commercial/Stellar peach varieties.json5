@@ -78,11 +78,11 @@
             "description": "note: the name \"Sweetstar\" can't be trademarked because it's listed as the cultivar name in the patent"
         },
         {
-            "name": "Meihurge",
+            "name": "FA 18",
             "AKA": ["Blushingstar (tm)"],
             "type": "Peach",
             "harvest_time_relative": "Redhaven+21",
-            "patent": "https://patents.google.com/patent/USPP10544 expired 2017-02-06"  
+            "patent": "https://patents.google.com/patent/USPP10554 expired 2016-10-28"  
         },
         {
             "name": "FA 17",

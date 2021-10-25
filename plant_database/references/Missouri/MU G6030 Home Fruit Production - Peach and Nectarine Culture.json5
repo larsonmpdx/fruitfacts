@@ -104,7 +104,7 @@
             "description": "Large, semifreestone, 80 percent red blush."
         },
         {
-            "name": "Starfire",
+            "name": "FA 11", // "Starfire"
             "type": "Peach",
             "harvest_time_relative": "Redhaven +1",
             "disease_resistance": {
@@ -195,7 +195,7 @@
             "description": "Very large, freestone, well-colored fruit, less cold hardy than Redhaven."
         },
         {
-            "name": "Blushingstar",
+            "name": "FA 18", // "Blushingstar"
             "type": "Peach",
             "harvest_time_relative": "Redhaven +25",
             "disease_resistance": {

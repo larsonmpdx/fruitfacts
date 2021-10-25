@@ -12,19 +12,19 @@
     "plants": [
         {
             "name": "AC Harrow Fair",
-            "AKA": ["AC (tm) Harrow Fair", "HW 259"],
+            "AKA": ["HW 259"],
             "type": "Peach",
             "harvest_time": "September 2",
             "patent": "https://patents.google.com/patent/USPP11455 expires 2018-02-18",
-            "description": "patent lists variety name as \"AC Harrow Fair\".  Patent variety names can't be trademarked"
+            "description": "US patent lists variety name as \"AC Harrow Fair\".  Patent variety names can't be trademarked"
         },
         {
             "name": "AC Harrow Dawn",
-            "AKA": ["AC (tm) Harrow Dawn", "HW 254"],
+            "AKA": ["HW 254"],
             "type": "Peach",
             "harvest_time": "August 2",
             "patent": "https://patents.google.com/patent/USPP11449 expires 2018-02-18",
-            "description": "patent lists variety name as \"AC Harrow Dawn\".  Patent variety names can't be trademarked"
+            "description": "US patent lists variety name as \"AC Harrow Dawn\".  Patent variety names can't be trademarked"
         }
         // todo
     ]

@@ -234,7 +234,7 @@
             "locations": ["SW"]
         },
         {
-            "name": "July Flame",
+            "name": "Burpeachfive", //"July Flame"
             "type": "Peach",
             "description": "The fruits have a deep orange blush and firm, yellow flesh. The flavor is very good. A commercial variety grown in southwestern Idaho.",
             "locations": ["SW"]
@@ -252,7 +252,7 @@
             "locations": ["SW"]
         },
         {
-            "name": "Red Star",
+            "name": "FA 52", //"Red Star"
             "type": "Peach",
             "description": "A yellow fleshed peach. A commercial variety grown in southwestern Idaho.",
             "locations": ["SW"]

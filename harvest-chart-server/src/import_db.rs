@@ -30,7 +30,7 @@ use regex::Regex;
 use serde::{Deserialize, Serialize};
 //use serde_json::Result;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize)]
 struct BasePlantJson {
     name: String,
     #[serde(rename = "type")]
@@ -97,6 +97,11 @@ struct CollectionPlantJson {
     harvest_time_relative: Option<String>,
     harvest_time_unparsed: Option<String>,
     disease_resistance: Option<HashMap<String, String>>,
+
+    // top-level fields that may be lifted into base plants if they aren't already set
+    #[serde(rename = "AKA")]
+    aka: Option<Vec<String>>,
+    patent: Option<String>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -711,6 +716,77 @@ fn decode_aka_string(input: &str) -> Vec<&str> {
     input.split(',').collect::<Vec<_>>()
 }
 
+// we allow references to set some top-level fields, as long as they're either previously unset or an exact match
+fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, plant_type: String) {
+    let aka_formatted = format_aka_strings(&plant.aka);
+
+    let mut patent_info = Default::default();
+    if let Some(patent_string) = &plant.patent {
+        patent_info = string_to_patent_info(patent_string);
+    }
+
+    let mut uspp_expiration_i64 = None;
+    if let Some(uspp_expiration) = patent_info.uspp_expiration {
+        uspp_expiration_i64 = Some(uspp_expiration.timestamp() as i64);
+    }
+
+    // base_plants::name.eq(&plant.name),
+    // base_plants::type_.eq(&plant_type.unwrap()),
+
+    // find existing base plant (must exist)
+    let existing_base_plant = base_plants::dsl::base_plants
+        .filter(base_plants::name.eq(&plant.name))
+        .filter(base_plants::type_.eq(plant_type.clone()))
+        .first::<BasePlant>(db_conn)
+        .unwrap_or_else(|_| {
+            panic!(
+                r#"couldn't find existing base plant to apply top level fields to: {:?}"#,
+                plant
+            )
+        });
+
+    // check existing values: either an exact match, or not yet set in the database
+
+    let aka;
+    if let Some(existing_aka) = &existing_base_plant.aka {
+        if let Some(new_aka) = aka_formatted.aka {
+            assert_eq!(
+                existing_aka, &new_aka,
+                "tried to update aka field for plant but it was already set {:?}",
+                plant
+            );
+        }
+        aka = existing_base_plant.aka;
+    } else {
+        aka = aka_formatted.aka;
+    }
+
+    // let aka_fts;
+    // aka_fts
+
+    // marketing_name
+    // let marketing_name;
+
+    // uspp_number
+    // let uspp_number;
+
+    // uspp_expiration
+    // let uspp_expiration;
+
+    // update
+    let _updated_row =
+        diesel::update(base_plants::dsl::base_plants.filter(base_plants::name.eq(&plant.name)))
+            .filter(base_plants::type_.eq(plant_type))
+            .set((
+                base_plants::aka.eq(&aka),
+                base_plants::aka_fts.eq(&aka_formatted.aka_fts),
+                base_plants::marketing_name.eq(&aka_formatted.marketing_name),
+                base_plants::uspp_number.eq(patent_info.uspp_number),
+                base_plants::uspp_expiration.eq(uspp_expiration_i64),
+            ))
+            .execute(db_conn);
+}
+
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     // look for a dir "plant_database/" up to three levels up so users can mess this up a little
 
@@ -745,34 +821,19 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                     plant_type = Some(filename.to_string());
                 }
 
-                let aka_formatted = format_aka_strings(&plant.aka);
-
-                let mut patent_info = Default::default();
-                if let Some(patent_string) = &plant.patent {
-                    patent_info = string_to_patent_info(patent_string);
-                }
-
-                let mut uspp_expiration_i64 = None;
-                if let Some(uspp_expiration) = patent_info.uspp_expiration {
-                    uspp_expiration_i64 = Some(uspp_expiration.timestamp() as i64);
-                }
-
                 // println!("inserting");
                 let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
                     .values((
                         base_plants::name.eq(&plant.name),
                         base_plants::name_fts.eq(format_name_fts_string(&plant.name)),
-                        base_plants::type_.eq(&plant_type.unwrap()),
-                        base_plants::aka.eq(&aka_formatted.aka),
-                        base_plants::aka_fts.eq(&aka_formatted.aka_fts),
-                        base_plants::marketing_name.eq(&aka_formatted.marketing_name),
+                        base_plants::type_.eq(&plant_type.clone().unwrap()),
                         base_plants::description.eq(&plant.description),
-                        base_plants::uspp_number.eq(patent_info.uspp_number),
-                        base_plants::uspp_expiration.eq(uspp_expiration_i64),
                     ))
                     .execute(db_conn);
                 assert_eq!(Ok(1), rows_inserted);
                 plants_found += 1;
+
+                apply_top_level_fields(db_conn, plant, plant_type.clone().unwrap());
             }
         }
     }
@@ -1029,6 +1090,14 @@ fn maybe_add_base_plant(
             plant_name,
             plant.type_
         );
+
+        let mut base_plant: BasePlantJson = Default::default();
+        base_plant.name = plant_name.to_string();
+        base_plant.type_ = Some(plant.type_.clone());
+        base_plant.aka = plant.aka.clone();
+        base_plant.patent = plant.patent.clone();
+        apply_top_level_fields(db_conn, &base_plant, plant.type_.clone());
+
         1
     } else {
         0
