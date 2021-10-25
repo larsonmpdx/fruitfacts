@@ -748,10 +748,10 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
     // check existing values: either an exact match, or not yet set in the database
 
     let aka;
-    if let Some(existing_aka) = &existing_base_plant.aka {
+    if let Some(existing_aka) = existing_base_plant.aka.clone() {
         if let Some(new_aka) = aka_formatted.aka {
             assert_eq!(
-                existing_aka, &new_aka,
+                existing_aka, new_aka,
                 "tried to update aka field for plant but it was already set {:?}",
                 plant
             );

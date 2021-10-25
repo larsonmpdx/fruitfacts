@@ -8,6 +8,7 @@
     "plants": [
         {
             "name": "Satsuma",
+            "AKA": ["todo1"],
             "type": "Japanese Plum",
             "harvest_time": "July 30 to August 21"
         },

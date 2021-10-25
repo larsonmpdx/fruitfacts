@@ -369,7 +369,7 @@ fn test_patent_parsing() {
 }
 
 #[test]
-#[ignore] // it is too expensive
+#[ignore] // long runtime
 fn test_database_loading() {
     let db_conn = super::establish_connection();
     super::reset_database(&db_conn);
