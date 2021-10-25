@@ -1091,11 +1091,14 @@ fn maybe_add_base_plant(
             plant.type_
         );
 
-        let mut base_plant: BasePlantJson = Default::default();
-        base_plant.name = plant_name.to_string();
-        base_plant.type_ = Some(plant.type_.clone());
-        base_plant.aka = plant.aka.clone();
-        base_plant.patent = plant.patent.clone();
+        let base_plant = BasePlantJson {
+            name: plant_name.to_string(),
+            type_: Some(plant.type_.clone()),
+            description: None,
+            aka: plant.aka.clone(),
+            patent: plant.patent.clone(),
+        };
+
         apply_top_level_fields(db_conn, &base_plant, plant.type_.clone());
 
         1
