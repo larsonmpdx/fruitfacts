@@ -716,6 +716,28 @@ fn decode_aka_string(input: &str) -> Vec<&str> {
     input.split(',').collect::<Vec<_>>()
 }
 
+// check a new value from a collection item against something already in the database
+// the new value should be either an exact match for the database value, or it should be brand new
+fn new_or_old<T: std::cmp::PartialEq + std::fmt::Debug>(
+    old: Option<T>,
+    new: Option<T>,
+    plant: &BasePlantJson,
+    field_name: &str,
+) -> Option<T> {
+    if let Some(old) = old {
+        if let Some(new) = new {
+            assert_eq!(
+                old, new,
+                "tried to update field {} for plant but it was already set {:?}",
+                field_name, plant
+            );
+        }
+        Some(old)
+    } else {
+        new
+    }
+}
+
 // we allow references to set some top-level fields, as long as they're either previously unset or an exact match
 fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, plant_type: String) {
     let aka_formatted = format_aka_strings(&plant.aka);
@@ -730,9 +752,6 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
         uspp_expiration_i64 = Some(uspp_expiration.timestamp() as i64);
     }
 
-    // base_plants::name.eq(&plant.name),
-    // base_plants::type_.eq(&plant_type.unwrap()),
-
     // find existing base plant (must exist)
     let existing_base_plant = base_plants::dsl::base_plants
         .filter(base_plants::name.eq(&plant.name))
@@ -745,33 +764,36 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
             )
         });
 
-    // check existing values: either an exact match, or not yet set in the database
+    // check existing values: new value should be either an exact match, or not yet set in the database
+    let aka = new_or_old(existing_base_plant.aka, aka_formatted.aka, plant, "aka");
 
-    let aka;
-    if let Some(existing_aka) = existing_base_plant.aka.clone() {
-        if let Some(new_aka) = aka_formatted.aka {
-            assert_eq!(
-                existing_aka, new_aka,
-                "tried to update aka field for plant but it was already set {:?}",
-                plant
-            );
-        }
-        aka = existing_base_plant.aka;
-    } else {
-        aka = aka_formatted.aka;
-    }
+    let aka_fts = new_or_old(
+        existing_base_plant.aka_fts,
+        aka_formatted.aka_fts,
+        plant,
+        "aka_fts",
+    );
 
-    // let aka_fts;
-    // aka_fts
+    let marketing_name = new_or_old(
+        existing_base_plant.marketing_name,
+        aka_formatted.marketing_name,
+        plant,
+        "marketing_name",
+    );
 
-    // marketing_name
-    // let marketing_name;
+    let uspp_number = new_or_old(
+        existing_base_plant.uspp_number,
+        patent_info.uspp_number,
+        plant,
+        "uspp_number",
+    );
 
-    // uspp_number
-    // let uspp_number;
-
-    // uspp_expiration
-    // let uspp_expiration;
+    let uspp_expiration = new_or_old(
+        existing_base_plant.uspp_expiration,
+        uspp_expiration_i64,
+        plant,
+        "uspp_expiration",
+    );
 
     // update
     let _updated_row =
@@ -779,10 +801,10 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
             .filter(base_plants::type_.eq(plant_type))
             .set((
                 base_plants::aka.eq(&aka),
-                base_plants::aka_fts.eq(&aka_formatted.aka_fts),
-                base_plants::marketing_name.eq(&aka_formatted.marketing_name),
-                base_plants::uspp_number.eq(patent_info.uspp_number),
-                base_plants::uspp_expiration.eq(uspp_expiration_i64),
+                base_plants::aka_fts.eq(&aka_fts),
+                base_plants::marketing_name.eq(&marketing_name),
+                base_plants::uspp_number.eq(uspp_number),
+                base_plants::uspp_expiration.eq(uspp_expiration),
             ))
             .execute(db_conn);
 }
@@ -1068,12 +1090,14 @@ fn maybe_add_base_plant(
     plant: &CollectionPlantJson,
     db_conn: &SqliteConnection,
 ) -> isize {
-    let base_plant_result = base_plants::dsl::base_plants
+    let num_added;
+
+    let existing_base_plant = base_plants::dsl::base_plants
         .filter(base_plants::name.eq(&plant_name))
         .filter(base_plants::type_.eq(&plant.type_))
         .first::<BasePlant>(db_conn);
 
-    if base_plant_result.is_err() {
+    if existing_base_plant.is_err() {
         // a plant in a reference that isn't already in base_plants - need to add
 
         let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
@@ -1091,20 +1115,20 @@ fn maybe_add_base_plant(
             plant.type_
         );
 
-        let base_plant = BasePlantJson {
-            name: plant_name.to_string(),
-            type_: Some(plant.type_.clone()),
-            description: None,
-            aka: plant.aka.clone(),
-            patent: plant.patent.clone(),
-        };
-
-        apply_top_level_fields(db_conn, &base_plant, plant.type_.clone());
-
-        1
+        num_added = 1
     } else {
-        0
+        num_added = 0
     }
+
+    let base_plant = BasePlantJson {
+        name: plant_name.to_string(),
+        type_: Some(plant.type_.clone()),
+        description: None,
+        aka: plant.aka.clone(),
+        patent: plant.patent.clone(),
+    };
+    apply_top_level_fields(db_conn, &base_plant, plant.type_.clone());
+    num_added
 }
 
 fn add_collection_plant_by_location(
