@@ -20,7 +20,7 @@ pub struct BasePlant {
     pub aka_fts: Option<String>,
     pub marketing_name: Option<String>,
     pub description: Option<String>,
-    pub uspp_number: Option<i32>,
+    pub uspp_number: Option<String>,
     pub uspp_expiration: Option<i64>,
 }
 

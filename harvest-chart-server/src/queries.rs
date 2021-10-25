@@ -10,12 +10,11 @@ pub struct BasePlantsItemForPatents {
     pub name: String,
     #[serde(rename = "type")]
     pub type_: String,
-    pub uspp_number: Option<i32>,
+    pub uspp_number: Option<String>,
     pub uspp_expiration: Option<i64>,
 }
 
 pub fn get_recent_patents_db(
-    // prevent collision with `name` column imported inside the function
     conn: &SqliteConnection,
 ) -> Result<Vec<BasePlantsItemForPatents>, diesel::result::Error> {
     base_plants::dsl::base_plants

@@ -506,7 +506,7 @@ fn string_to_day_number(input: &str) -> Option<u32> {
 
 #[derive(Debug, Default, PartialEq, Eq)]
 struct PatentInfo {
-    uspp_number: Option<i32>,
+    uspp_number: Option<String>,
     uspp_expiration: Option<NaiveDateTime>,
 }
 
@@ -523,7 +523,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
 
     if let Some(matches) = uspp_regex.captures(input) {
         if matches.len() >= 2 {
-            output.uspp_number = Some(matches[1].parse::<i32>().unwrap());
+            output.uspp_number = Some(matches[1].to_string());
         }
     }
 
@@ -795,7 +795,6 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
         "uspp_expiration",
     );
 
-    // update
     let _updated_row =
         diesel::update(base_plants::dsl::base_plants.filter(base_plants::name.eq(&plant.name)))
             .filter(base_plants::type_.eq(plant_type))

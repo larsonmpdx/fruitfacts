@@ -9,7 +9,7 @@ table! {
         aka_fts -> Nullable<Text>,
         marketing_name -> Nullable<Text>,
         description -> Nullable<Text>,
-        uspp_number -> Nullable<Integer>,
+        uspp_number -> Nullable<Text>,
         uspp_expiration -> Nullable<BigInt>,
     }
 }
