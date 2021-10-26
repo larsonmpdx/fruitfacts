@@ -715,142 +715,141 @@
         {
             "type": "Nectarine",
             "name": "August Glo",
-            "description": "zaiger. Yellow. commercial and retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial and retail https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/august_glo/",
+            "patent": "https://patents.google.com/patent/USPP8039 expired 2011-06-04",
+            "chill": "850-950 hours",
+            "harvest_time": "August 7 to August 22"
         },
         {
             "type": "Nectarine",
             "name": "Autumn Blaze",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/autumn_blaze/",
+            "patent": "https://patents.google.com/patent/USPP12392 expired 2021-05-07",
+            "chill": "900-1,000 hours",
+            "harvest_time": "August 21 to September 6"
         },
         {
             "type": "Nectarine",
             "name": "Desert Dawn",
-            "description": "zaiger. Yellow. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. retail https://www.davewilson.com/nurseries/products/fruit-trees/nectarine-yellow/desert_dawn/",
+            "patent": "unknown",
+            "chill": "250 hours",
+            "harvest_time": "May 15 to May 30"
         },
         {
             "type": "Nectarine",
             "name": "Desert Delight",
-            "description": "zaiger. Yellow. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. retail https://www.davewilson.com/nurseries/products/fruit-trees/nectarine-yellow/desert_delight/",
+            "patent": "https://patents.google.com/patent/USPP7891 expired 2010-12-14",
+            "chill": "100-200 hours",
+            "harvest_time": "June 4 to June 24"
         },
         {
             "type": "Nectarine",
             "name": "Double Delight",
-            "description": "zaiger. Yellow. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. retail https://www.davewilson.com/nurseries/products/fruit-trees/nectarine-yellow/double_delight/",
+            "patent": "unknown, introduced \"late 80s\" according to one source. likely off patent",
+            "chill": "300 hours",
+            "harvest_time": "July 3 to July 21"
         },
         {
             "type": "Nectarine",
             "name": "Earliglo",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/earliglo/",
+            "patent": "https://patents.google.com/patent/USPP7402 expired 2009-12-18",
+            "chill": "150-250 hours",
+            "harvest_time": "May 24 to June 8"
         },
         {
             "type": "Nectarine",
             "name": "Flame Glo",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/flame_glo/",
+            "patent": "https://patents.google.com/patent/USPP8441 expired 2013-01-15",
+            "chill": "900-1,000 hours",
+            "harvest_time": "July 3 to July 18"
         },
         {
             "type": "Nectarine",
             "name": "Honey Blaze",
-            "description": "zaiger. Yellow. commercial and retail",
+            "description": "zaiger. Yellow. commercial and retail https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_blaze/",
             "patent": "https://patents.google.com/patent/USPP10250 expired 2016-12-27"
         },
         {
             "type": "Nectarine",
             "name": "Honey Diva",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_diva/",
+            "patent": "https://patents.google.com/patent/USPP15291 expires 2023-12-29",
+            "chill": "800-900 hours",
+            "harvest_time": "August 10 to August 25"
         },
         {
             "type": "Nectarine",
             "name": "Honey Fire",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_fire/",
+            "patent": "https://patents.google.com/patent/USPP12418 expired 2021-05-02",
+            "chill": "550-650 hours",
+            "harvest_time": "June 10 to June 25"
         },
         {
             "type": "Nectarine",
             "name": "Honey Gem",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_gem/",
+            "patent": "https://patents.google.com/patent/USPP21836 expires 2030-01-15",
+            "chill": "600 or more hours",
+            "harvest_time": "August 3 to August 18"
         },
         {
             "type": "Nectarine",
             "name": "Honey Haven",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP12393 expired 2021-04-03"
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_haven/",
+            "patent": "https://patents.google.com/patent/USPP12393 expired 2021-04-03",
+            "chill": "900-1,000 hours",
+            "harvest_time": "June 5 to June 20"
         },
         {
             "type": "Nectarine",
             "name": "Honey Kist",
-            "description": "zaiger. Yellow. commercial and retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/nectarine-yellow/honey_kist/",
+            "patent": "https://patents.google.com/patent/USPP9333 expired 2014-12-22",
+            "chill": "500 hours",
+            "harvest_time": "June 28 to July 14"
         },
         {
             "type": "Nectarine",
             "name": "Honey Lite",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_lite/",
+            "patent": "https://patents.google.com/patent/USPP18400 expires 2026-04-09",
+            "chill": "350-400 hours",
+            "harvest_time": "June 5 to June 20"
         },
         {
             "type": "Nectarine",
             "name": "Honey May",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_may/",
+            "patent": "https://patents.google.com/patent/USPP19363 expires 2027-02-01",
+            "chill": "200 hours",
+            "harvest_time": "May 5 to May 20"
         },
         {
             "type": "Nectarine",
             "name": "Honey Royale",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_royale/",
+            "patent": "https://patents.google.com/patent/USPP12008 expired 2020-01-10",
+            "chill": "900-1,000 hours",
+            "harvest_time": "July 15 to July 30"
         },
         {
             "type": "Nectarine",
             "name": "Honey Spring",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_spring/",
+            "patent": "https://patents.google.com/patent/USPP25983 expires 2034-05-15",
+            "chill": "250 hours",
+            "harvest_time": "May 26 to June 11"
         },
         {
             "type": "Nectarine",
             "name": "Honey Sweet",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial. no product page"
         },
         {
             "type": "Nectarine",
@@ -863,122 +862,123 @@
         {
             "type": "Nectarine",
             "name": "Jolly Red Giant",
-            "description": "zaiger. Yellow. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. retail https://www.davewilson.com/nurseries/products/fruit-trees/nectarine-yellow/jolly_red_giant/",
+            "patent": "https://patents.google.com/patent/USPP7947 expired 2011-01-14",
+            "chill": "400-500 hours",
+            "harvest_time": "July 14 to July 30"
         },
         {
             "type": "Nectarine",
             "name": "Juneglo",
-            "description": "zaiger. Yellow. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "AKA": ["2w68c"], // patent name
+            "description": "zaiger. Yellow. retail https://www.davewilson.com/nurseries/products/fruit-trees/nectarine-yellow/juneglo/",
+            "patent": "https://patents.google.com/patent/USPP5228 expired 2002-12-13",
+            "chill": "700 hours",
+            "harvest_time": "June 18 to July 5"
         },
         {
             "type": "Nectarine",
             "name": "Kay Glo",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/kay_glo/",
+            "patent": "https://patents.google.com/patent/USPP10241 expired 2016-12-24",
+            "chill": "900-1,000 hours",
+            "harvest_time": "May 27 to June 12"
         },
         {
             "type": "Nectarine",
             "name": "Liz's Late",
-            "description": "zaiger. Yellow. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. retail https://www.davewilson.com/nurseries/products/fruit-trees/nectarine-yellow/liz_s_late/",
+            "patent": "https://patents.google.com/patent/USPP9437 expired 2014-12-12",
+            "chill": "600-700 hours",
+            "harvest_time": "August 25 to September 10"
         },
         {
             "type": "Nectarine",
             "name": "Mayglo",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/mayglo/",
+            "patent": "https://patents.google.com/patent/USPP5245 expired 2002-12-14",
+            "chill": "200-300 hours",
+            "harvest_time": "May 25 to June 10"
         },
         {
             "type": "Nectarine",
             "name": "Red Roy",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/red_roy/",
+            "patent": "https://patents.google.com/patent/USPP12057 expired 2020-02-07",
+            "chill": "350-450 hours",
+            "harvest_time": "May 23 to June 8"
         },
         {
             "type": "Nectarine",
             "name": "Red Ryan",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/red_ryan/",
+            "patent": "https://patents.google.com/patent/USPP19588 expires 2027-01-12",
+            "chill": "300 hours",
+            "harvest_time": "May 20 to June 5"
         },
         {
             "type": "Nectarine",
             "name": "Royal Giant",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/royal_giant/",
+            "patent": "https://patents.google.com/patent/USPP4107 expired 1994-09-20",
+            "chill": "900-1,000 hours",
+            "harvest_time": "July 29 to August 14"
         },
         {
             "type": "Nectarine",
             "name": "Royal Glo",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/royal_glo/",
+            "patent": "https://patents.google.com/patent/USPP8281 expired 2012-05-06",
+            "chill": "300-400 hours",
+            "harvest_time": "May 28 to June 13"
         },
         {
             "type": "Nectarine",
             "name": "Royal Ruby",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/royal_ruby/",
+            "patent": "https://patents.google.com/patent/USPP18734 expires 2026-11-21",
+            "chill": "300 hours",
+            "harvest_time": "May 15 to May 30"
         },
         {
             "type": "Nectarine",
             "name": "Spring Fire",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/spring_fire/",
+            "patent": "https://patents.google.com/patent/USPP22278 expires 2030-06-21",
+            "chill": "300 hours",
+            "harvest_time": "May 10 to May 25"
         },
         {
             "type": "Nectarine",
             "name": "Zee Fire",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/zee_fire/",
+            "patent": "https://patents.google.com/patent/USPP13501 expires 2022-01-15",
+            "chill": "200-300 hours",
+            "harvest_time": "May 12 to May 27"
         },
         {
             "type": "Nectarine",
             "name": "Zee Glo",
-            "description": "zaiger. Yellow. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. retail https://www.davewilson.com/nurseries/products/fruit-trees/nectarine-yellow/zee_glo/",
+            "patent": "https://patents.google.com/patent/USPP6408 expired 2006-12-12",
+            "chill": "600-700 hours",
+            "harvest_time": "August 5 to August 25"
         },
         {
             "type": "Nectarine",
             "name": "Zee Grand",
-            "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/zee_grand/",
+            "patent": "https://patents.google.com/patent/USPP7475 expired 2010-07-22",
+            "chill": "800-900 hours",
+            "harvest_time": "June 16 to July 1"
         },
         {
             "type": "Nectarine",
             "name": "Spice Zee",
-            "description": "zaiger. marketed as \"nectaplum (tm)\" commercial and retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. marketed as \"nectaplum (tm)\" commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/nectaplum-interspecific/spice_zee/",
+            "patent": "https://patents.google.com/patent/USPP13503 expires 2022-01-07",
+            "chill": "200-300 hours",
+            "harvest_time": "July 16 to August 7"
         },
         {
             "type": "Peach",
@@ -1621,7 +1621,7 @@
             "type": "Peach",
             "name": "Klamath",
             "description": "zaiger. Canning Clingstone. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
+            "patent": "https://patents.google.com/patent/USPP15557 expires 2023-12-15",
             "chill": " hours",
             "harvest_time": ""
         },
