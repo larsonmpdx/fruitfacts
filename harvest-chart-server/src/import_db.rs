@@ -97,6 +97,7 @@ struct CollectionPlantJson {
     harvest_time_relative: Option<String>,
     harvest_time_unparsed: Option<String>,
     disease_resistance: Option<HashMap<String, String>>,
+    chill: Option<String>,
 
     // top-level fields that may be lifted into base plants if they aren't already set
     #[serde(rename = "AKA")]
@@ -1009,6 +1010,8 @@ fn add_collection_plant(
             collection_items::category_description.eq(category_description),
             collection_items::disease_resistance
                 .eq(serde_json::to_string(&plant.disease_resistance).unwrap()),
+            collection_items::disease_resistance
+                .eq(&plant.chill),
             collection_items::description.eq(&plant.description),
             collection_items::harvest_relative.eq(&plant.harvest_time_relative),
             collection_items::harvest_text.eq(harvest_time_helper_text),

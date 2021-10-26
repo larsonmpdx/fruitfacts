@@ -39,6 +39,7 @@ pub struct CollectionItems {
     pub category_descripton: Option<String>,
 
     pub disease_resistance: Option<String>,
+    pub chill: Option<String>,
 
     pub description: Option<String>,
     pub harvest_text: Option<String>,

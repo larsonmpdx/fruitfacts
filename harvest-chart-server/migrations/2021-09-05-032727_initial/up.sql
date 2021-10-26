@@ -9,7 +9,7 @@ CREATE TABLE base_plants (
   aka_fts TEXT, -- for full text search, without special characters. comma separated
   marketing_name TEXT, -- for any AKA entries that have (tm) or (r) in them, flag them and fill this column. they need special handing because of the confusion around variety name vs. marketing name
   description TEXT,
-  uspp_number TEXT,
+  uspp_number TEXT, -- text so we can store odd patent numbers - sometimes plants get non-plant patents
   uspp_expiration BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
 
   UNIQUE(name_fts, type) --combo of these columns must be unique.  example: name "Pristine" type "Apple"
@@ -65,6 +65,7 @@ CREATE TABLE collection_items (
   category_description TEXT,
 
   disease_resistance TEXT, -- json string like "{"FB":"moderate","PM":"high"}"
+  chill TEXT,
 
   -- the actual unique data from the imported guide
   description TEXT,
