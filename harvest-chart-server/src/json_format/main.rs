@@ -13,7 +13,7 @@ fn write_to_file(filename: &str, bytes: &[u8]) -> Result<(), io::Error> {
         .truncate(true)
         .write(true)
         .open(filename)?
-        .write_all(&bytes)
+        .write_all(bytes)
 }
 
 fn main() -> Result<(), std::io::Error> {
