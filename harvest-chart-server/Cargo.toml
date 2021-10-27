@@ -22,8 +22,3 @@ walkdir = "2"
 lazy_static = "1.4.0"
 itertools = "0.10.1"
 dotenv = "0.15"
-json5format = "0.2.0"
-
-[[bin]]
-name = "json-format"
-path = "src/json_format/main.rs"

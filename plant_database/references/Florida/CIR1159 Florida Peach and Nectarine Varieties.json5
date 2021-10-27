@@ -1,304 +1,306 @@
 {
-    "title": "Growing Plums in Florida",
-    "author": "A. Sarkhosh, M. Olmstead, E. P. Miller, P. C. Andersen, and J. G. Williamson",
-    "url": "https://edis.ifas.ufl.edu/publication/hs250",
-    "published": "2018-09-13",
-    "accessed": "Oct 2021",
-    "locations": [{
-        "name": "Florida (various locations)",
-        "latitude": 29.6465645490967,
-        "longitude": -82.34424313539307
-    }],
-    "plants": [
+    title: "Growing Plums in Florida",
+    author: "A. Sarkhosh, M. Olmstead, E. P. Miller, P. C. Andersen, and J. G. Williamson",
+    url: "https://edis.ifas.ufl.edu/publication/hs250",
+    published: "2018-09-13",
+    accessed: "Oct 2021",
+    locations: [
         {
-            "name": "UFSun",
-            "type": "Peach",
-            "chill": "100 hours",
-            "disease_resistance": {
-                "bacterial_spot": "7/10"
+            name: "Florida (various locations)",
+            latitude: 29.6465645490967,
+            longitude: -82.34424313539307
+        }
+    ],
+    plants: [
+        {
+            name: "UFSun",
+            type: "Peach",
+            chill: "100 hours",
+            disease_resistance: {
+                bacterial_spot: "7/10"
             },
-            "fruit_development_period": "90 days",
-            "description": "Released 2004. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
+            fruit_development_period: "90 days",
+            description: "Released 2004. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
         },
         {
-            "name": "UFBest",
-            "type": "Peach",
-            "chill": "100 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            name: "UFBest",
+            type: "Peach",
+            chill: "100 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "85 days",
-            "description": "Released 2012. Uses: Commercial. clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "UFOne",
-            "type": "Peach",
-            "chill": "150 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "85 days",
+            description: "Released 2012. Uses: Commercial. clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "UFOne",
+            type: "Peach",
+            chill: "150 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "95 days",
-            "description": "Released 2008. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "TropicBeauty",
-            "type": "Peach",
-            "chill": "150 hours",
-            "disease_resistance": {
-                "bacterial_spot": "5/10"
+            fruit_development_period: "95 days",
+            description: "Released 2008. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "TropicBeauty",
+            type: "Peach",
+            chill: "150 hours",
+            disease_resistance: {
+                bacterial_spot: "5/10"
             },
-            "fruit_development_period": "89 days",
-            "description": "Released 1988. Uses: Commercial/Backyard/U-Pick. semi-clingstone, melting, yellow flesh"
-       },
-       {
-            "name": "Flordaprince",
-            "type": "Peach",
-            "chill": "150 hours",
-            "disease_resistance": {
-                "bacterial_spot": "4/10"
+            fruit_development_period: "89 days",
+            description: "Released 1988. Uses: Commercial/Backyard/U-Pick. semi-clingstone, melting, yellow flesh"
+        },
+        {
+            name: "Flordaprince",
+            type: "Peach",
+            chill: "150 hours",
+            disease_resistance: {
+                bacterial_spot: "4/10"
             },
-            "fruit_development_period": "78 days",
-            "description": "Released 1982. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
-       },
-       {
-            "name": "Flordaglo",
-            "type": "Peach",
-            "chill": "150 hours",
-            "disease_resistance": {
-                "bacterial_spot": "8/10"
+            fruit_development_period: "78 days",
+            description: "Released 1982. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
+        },
+        {
+            name: "Flordaglo",
+            type: "Peach",
+            chill: "150 hours",
+            disease_resistance: {
+                bacterial_spot: "8/10"
             },
-            "fruit_development_period": "78 days",
-            "description": "Released 1988. Uses: Backyard/U-pick. semi-clingstone, melting, white flesh"
-       },
-       {
-            "name": "UFBeauty",
-            "type": "Peach",
-            "chill": "150 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "78 days",
+            description: "Released 1988. Uses: Backyard/U-pick. semi-clingstone, melting, white flesh"
+        },
+        {
+            name: "UFBeauty",
+            type: "Peach",
+            chill: "150 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "83 days",
-            "description": "Released 2002. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "UFGold",
-            "type": "Peach",
-            "chill": "200 hours",
-            "disease_resistance": {
-                "bacterial_spot": "9/10"
+            fruit_development_period: "83 days",
+            description: "Released 2002. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "UFGold",
+            type: "Peach",
+            chill: "200 hours",
+            disease_resistance: {
+                bacterial_spot: "9/10"
             },
-            "fruit_development_period": "80 days",
-            "description": "Released 1995. Uses: Backyard/U-pick. clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "TropicSnow",
-            "type": "Peach",
-            "chill": "225 hours",
-            "disease_resistance": {
-                "bacterial_spot": "8/10"
+            fruit_development_period: "80 days",
+            description: "Released 1995. Uses: Backyard/U-pick. clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "TropicSnow",
+            type: "Peach",
+            chill: "225 hours",
+            disease_resistance: {
+                bacterial_spot: "8/10"
             },
-            "fruit_development_period": "84 days",
-            "description": "Released 1989. Uses: Backyard/U-pick. semi-freestone, melting, white flesh"
-       },
-       {
-            "name": "UFO",
-            "type": "Peach",
-            "chill": "250 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "84 days",
+            description: "Released 1989. Uses: Backyard/U-pick. semi-freestone, melting, white flesh"
+        },
+        {
+            name: "UFO",
+            type: "Peach",
+            chill: "250 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "95 days",
-            "description": "Released 2002. Uses: Commercial/Backyard/U-Pick. semi-freestone, non-melting, yellow flesh"
-       },
-       {
-            "name": "Flordabest",
-            "type": "Peach",
-            "chill": "250 hours",
-            "disease_resistance": {
-                "bacterial_spot": "9/10"
+            fruit_development_period: "95 days",
+            description: "Released 2002. Uses: Commercial/Backyard/U-Pick. semi-freestone, non-melting, yellow flesh"
+        },
+        {
+            name: "Flordabest",
+            type: "Peach",
+            chill: "250 hours",
+            disease_resistance: {
+                bacterial_spot: "9/10"
             },
-            "fruit_development_period": "82 days",
-            "description": "Released 2009. Uses: Commercial. clingstone, melting, yellow flesh"
-       },
-       {
-            "name": "UF2000",
-            "type": "Peach",
-            "chill": "300 hours",
-            "disease_resistance": {
-                "bacterial_spot": "9/10"
+            fruit_development_period: "82 days",
+            description: "Released 2009. Uses: Commercial. clingstone, melting, yellow flesh"
+        },
+        {
+            name: "UF2000",
+            type: "Peach",
+            chill: "300 hours",
+            disease_resistance: {
+                bacterial_spot: "9/10"
             },
-            "fruit_development_period": "95 days",
-            "description": "Released 2000. Uses: Backyard/U-pick. semi-clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "UFBlaze",
-            "type": "Peach",
-            "chill": "300 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "95 days",
+            description: "Released 2000. Uses: Backyard/U-pick. semi-clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "UFBlaze",
+            type: "Peach",
+            chill: "300 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "83 days",
-            "description": "Released 2002. Uses: Backyard/U-pick. semi-clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "Flordadawn",
-            "type": "Peach",
-            "chill": "200 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "83 days",
+            description: "Released 2002. Uses: Backyard/U-pick. semi-clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "Flordadawn",
+            type: "Peach",
+            chill: "200 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "60 days",
-            "description": "Released 1989. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
-       },
-       {
-            "name": "UFSharp",
-            "type": "Peach",
-            "chill": "325 hours",
-            "disease_resistance": {
-                "bacterial_spot": "9/10"
+            fruit_development_period: "60 days",
+            description: "Released 1989. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
+        },
+        {
+            name: "UFSharp",
+            type: "Peach",
+            chill: "325 hours",
+            disease_resistance: {
+                bacterial_spot: "9/10"
             },
-            "fruit_development_period": "102 days",
-            "description": "Released 2006. Uses: Backyard/U-pick. semi-clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "Flordacrest",
-            "type": "Peach",
-            "chill": "350 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "102 days",
+            description: "Released 2006. Uses: Backyard/U-pick. semi-clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "Flordacrest",
+            type: "Peach",
+            chill: "350 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "75 days",
-            "description": "Released 1988. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
-       },
-       {
-            "name": "Gulfking",
-            "type": "Peach",
-            "chill": "350 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "75 days",
+            description: "Released 1988. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
+        },
+        {
+            name: "Gulfking",
+            type: "Peach",
+            chill: "350 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "75 days",
-            "description": "Released 2004. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "Gulfsnow",
-            "type": "Peach",
-            "chill": "400 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "75 days",
+            description: "Released 2004. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "Gulfsnow",
+            type: "Peach",
+            chill: "400 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "110 days",
-            "description": "Released 2012. Uses: Commercialsemi-clingstone, non-melting, white flesh"
-       },
-       {
-            "name": "UFGlo",
-            "type": "Peach",
-            "chill": "400 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "110 days",
+            description: "Released 2012. Uses: Commercialsemi-clingstone, non-melting, white flesh"
+        },
+        {
+            name: "UFGlo",
+            type: "Peach",
+            chill: "400 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "78 days",
-            "description": "Released 2009. Uses: Commercial. semi-clingstone, non-melting, white flesh"
-       },
-       {
-            "name": "Gulfprince",
-            "type": "Peach",
-            "chill": "400 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "78 days",
+            description: "Released 2009. Uses: Commercial. semi-clingstone, non-melting, white flesh"
+        },
+        {
+            name: "Gulfprince",
+            type: "Peach",
+            chill: "400 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "110 days",
-            "description": "Released 2002. Uses: Backyard/U-pick. clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "Gulfcrimson",
-            "type": "Peach",
-            "chill": "400 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "110 days",
+            description: "Released 2002. Uses: Backyard/U-pick. clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "Gulfcrimson",
+            type: "Peach",
+            chill: "400 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "92 days",
-            "description": "Released 2009. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "Flordaking",
-            "type": "Peach",
-            "chill": "450 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "92 days",
+            description: "Released 2009. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "Flordaking",
+            type: "Peach",
+            chill: "450 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "68 days",
-            "description": "Released 1978. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
-       },
-       {
-            "name": "Gulfcrest",
-            "type": "Peach",
-            "chill": "525 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "68 days",
+            description: "Released 1978. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
+        },
+        {
+            name: "Gulfcrest",
+            type: "Peach",
+            chill: "525 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "78 days",
-            "description": "Released 2004. Uses: Commercial. semi-clingstone, non-melting, white flesh"
-       },
-       {
-            "name": "Sunbest",
-            "type": "Nectarine",
-            "chill": "225 hours",
-            "disease_resistance": {
-                "bacterial_spot": "9/10"
+            fruit_development_period: "78 days",
+            description: "Released 2004. Uses: Commercial. semi-clingstone, non-melting, white flesh"
+        },
+        {
+            name: "Sunbest",
+            type: "Nectarine",
+            chill: "225 hours",
+            disease_resistance: {
+                bacterial_spot: "9/10"
             },
-            "fruit_development_period": "83 days",
-            "description": "Released 2001. Uses: Commercial. semi-freestone, melting, yellow flesh"
-       },
-       {
-            "name": "UFQueen",
-            "type": "Nectarine",
-            "chill": "250 hours",
-            "disease_resistance": {
-                "bacterial_spot": "8/10"
+            fruit_development_period: "83 days",
+            description: "Released 2001. Uses: Commercial. semi-freestone, melting, yellow flesh"
+        },
+        {
+            name: "UFQueen",
+            type: "Nectarine",
+            chill: "250 hours",
+            disease_resistance: {
+                bacterial_spot: "8/10"
             },
-            "fruit_development_period": "95 days",
-            "description": "Released 1998. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "Sunraycer",
-            "type": "Nectarine",
-            "chill": "250 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "95 days",
+            description: "Released 1998. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "Sunraycer",
+            type: "Nectarine",
+            chill: "250 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "85 days",
-            "description": "Released 1993. Uses: Commercial/Backyard/U-Pick. semi-clingstone, melting, yellow flesh"
-       },
-       {
-            "name": "UFRoyal",
-            "type": "Nectarine",
-            "chill": "250 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "85 days",
+            description: "Released 1993. Uses: Commercial/Backyard/U-Pick. semi-clingstone, melting, yellow flesh"
+        },
+        {
+            name: "UFRoyal",
+            type: "Nectarine",
+            chill: "250 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "85 days",
-            "description": "Released 2009. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
-       },
-       {
-            "name": "Sunmist",
-            "type": "Nectarine",
-            "chill": "300 hours",
-            "disease_resistance": {
-                "bacterial_spot": "8/10"
+            fruit_development_period: "85 days",
+            description: "Released 2009. Uses: Commercial. semi-clingstone, non-melting, yellow flesh"
+        },
+        {
+            name: "Sunmist",
+            type: "Nectarine",
+            chill: "300 hours",
+            disease_resistance: {
+                bacterial_spot: "8/10"
             },
-            "fruit_development_period": "80 days",
-            "description": "Released 1994. Uses: Backyard/U-pick. semi-clingstone, melting, white flesh"
-       },
-       {
-            "name": "Suncoast",
-            "type": "Nectarine",
-            "chill": "375 hours",
-            "disease_resistance": {
-                "bacterial_spot": "10/10"
+            fruit_development_period: "80 days",
+            description: "Released 1994. Uses: Backyard/U-pick. semi-clingstone, melting, white flesh"
+        },
+        {
+            name: "Suncoast",
+            type: "Nectarine",
+            chill: "375 hours",
+            disease_resistance: {
+                bacterial_spot: "10/10"
             },
-            "fruit_development_period": "77 days",
-            "description": "Released 1993. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
+            fruit_development_period: "77 days",
+            description: "Released 1993. Uses: Backyard/U-pick. semi-clingstone, melting, yellow flesh"
         }
     ]
 }

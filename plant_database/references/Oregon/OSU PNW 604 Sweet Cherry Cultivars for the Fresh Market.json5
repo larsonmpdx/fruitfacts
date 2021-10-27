@@ -1,143 +1,145 @@
 {
-    "title": "Sweet Cherry Cultivars for the Fresh Market",
-    "author": "Ashley Thompson, Matthew Whiting, Lynn E. Long",
-    "url": "https://catalog.extension.oregonstate.edu/pnw604",
-    "published": "January 2021",
-    "accessed": "Oct 2021",
-    "locations": [{
-        "name": "Corvallis, OR",
-        "latitude": 44.54820212695868,
-        "longitude": -123.21537145957399
-    }],
-    "plants": [
+    title: "Sweet Cherry Cultivars for the Fresh Market",
+    author: "Ashley Thompson, Matthew Whiting, Lynn E. Long",
+    url: "https://catalog.extension.oregonstate.edu/pnw604",
+    published: "January 2021",
+    accessed: "Oct 2021",
+    locations: [
         {
-            "name": "Chelan",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -10 to -12",
-            "description": "S3S9"
+            name: "Corvallis, OR",
+            latitude: 44.54820212695868,
+            longitude: -123.21537145957399
+        }
+    ],
+    plants: [
+        {
+            name: "Chelan",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -10 to -12",
+            description: "S3S9"
         },
         {
-            "name": "Royal Hazel",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -9 to -10",
-            "description": "S4S6"
+            name: "Royal Hazel",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -9 to -10",
+            description: "S4S6"
         },
         {
             // "Blackpearl"
-            "name": "NY 8139",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -7 to -9",
-            "description": "S4S13"
+            name: "NY 8139",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -7 to -9",
+            description: "S4S13"
         },
         {
             // "Santina"
-            "name": "13S-5-22",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -5 to -7",
-            "description": "Self-fertile"
+            name: "13S-5-22",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -5 to -7",
+            description: "Self-fertile"
         },
         {
-            "name": "Coral Champagne",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -4 to -6",
-            "description": "S1S3"
+            name: "Coral Champagne",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -4 to -6",
+            description: "S1S3"
         },
         {
             // "Burgundypearl"
-            "name": "NY 38L",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -3 to -5",
-            "description": "S3S4"
+            name: "NY 38L",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -3 to -5",
+            description: "S3S4"
         },
         {
             // "Benton"
-            "name": "PC7146-8",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -2 to -3",
-            "description": "Self-fertile"
+            name: "PC7146-8",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -2 to -3",
+            description: "Self-fertile"
         },
         {
-            "name": "Bing",
-            "type": "Sweet Cherry",
-            "harvest_time": "June 13",
+            name: "Bing",
+            type: "Sweet Cherry",
+            harvest_time: "June 13",
             // harvest time not originally in the chart - this is a typical upper Willamette valley time
-            "description": "S3S4"
+            description: "S3S4"
         },
         {
-            "name": "NY32",
-            "AKA": ["EbonyPearl (r)"],
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -3 to +2",
-            "description": "S1S4"
+            name: "NY32",
+            AKA: ["EbonyPearl (r)"],
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -3 to +2",
+            description: "S1S4"
         },
         {
-            "name": "Tamara",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing +4 to +7",
-            "description": "S1S9"
+            name: "Tamara",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing +4 to +7",
+            description: "S1S9"
         },
         {
-            "name": "Kordia",
+            name: "Kordia",
             // in the table as: Attika (Kordia)
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing +6 to +7",
-            "description": "S3S6"
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing +6 to +7",
+            description: "S3S6"
         },
         {
-            "name": "Royal Edie",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing +9 to +12",
-            "description": "Self-fertile"
+            name: "Royal Edie",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing +9 to +12",
+            description: "Self-fertile"
         },
         {
-            "name": "Royal Helen",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing +9 to +12",
-            "description": "Self-fertile"
+            name: "Royal Helen",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing +9 to +12",
+            description: "Self-fertile"
         },
         {
-            "name": "Lapins",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing +10 to +14",
-            "description": "Self-fertile"
+            name: "Lapins",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing +10 to +14",
+            description: "Self-fertile"
         },
         {
-            "name": "Skeena",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing +12 to +14",
-            "description": "Self-fertile"
+            name: "Skeena",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing +12 to +14",
+            description: "Self-fertile"
         },
         {
             // "Regina"
-            "name": "Jork 57/201",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing +14 to +15",
-            "description": "S1S3"
+            name: "Jork 57/201",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing +14 to +15",
+            description: "S1S3"
         },
         {
-            "name": "Sweetheart",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing +18 to +20",
-            "description": "Self-fertile"
+            name: "Sweetheart",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing +18 to +20",
+            description: "Self-fertile"
         },
         {
-            "name": "Early Robin",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Rainier -10 to -14",
-            "description": "blush. S1S3"
+            name: "Early Robin",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Rainier -10 to -14",
+            description: "blush. S1S3"
         },
         {
-            "name": "Radiance Pearl",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Rainier -4 to -7",
-            "description": "blush. S1S13"
+            name: "Radiance Pearl",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Rainier -4 to -7",
+            description: "blush. S1S13"
         },
         {
-            "name": "Rainier",
-            "type": "Sweet Cherry",
-            "harvest_time": "June 19",
+            name: "Rainier",
+            type: "Sweet Cherry",
+            harvest_time: "June 19",
             // harvest time not originally in the chart - this is a typical upper Willamette valley time
-            "description": "blush"
+            description: "blush"
         }
     ]
 }

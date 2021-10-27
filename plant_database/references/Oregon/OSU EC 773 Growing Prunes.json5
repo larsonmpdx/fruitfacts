@@ -1,49 +1,51 @@
 {
-    "title": "Growing Prunes",
-    "author": "R.L. Stebbins",
-    "url": "https://ir.library.oregonstate.edu/downloads/8p58pd15t",
-    "published": "1993",
-    "accessed": "Sep 2021",
-    "locations": [{
-        "name": "Corvallis, OR",
-        "latitude": 44.54820212695868,
-        "longitude": -123.21537145957399
-    }],
-    "plants": [
+    title: "Growing Prunes",
+    author: "R.L. Stebbins",
+    url: "https://ir.library.oregonstate.edu/downloads/8p58pd15t",
+    published: "1993",
+    accessed: "Sep 2021",
+    locations: [
         {
-            "name": "Italian",
-            "type": "Euro Plum",
-            "harvest_time": "September 15-30"
+            name: "Corvallis, OR",
+            latitude: 44.54820212695868,
+            longitude: -123.21537145957399
+        }
+    ],
+    plants: [
+        {
+            name: "Italian",
+            type: "Euro Plum",
+            harvest_time: "September 15-30"
         },
         {
-            "name": "Early Italian",
-            "type": "Euro Plum",
+            name: "Early Italian",
+            type: "Euro Plum",
             // note: was "Italian - 7-14" in the pub
-            "harvest_time_relative": "Italian -11"
+            harvest_time_relative: "Italian -11"
         },
         {
-            "name": "Brooks",
-            "type": "Euro Plum"
+            name: "Brooks",
+            type: "Euro Plum"
         },
         {
-            "name": "Parsons",
-            "type": "Euro Plum",
-            "harvest_time": "early September"
+            name: "Parsons",
+            type: "Euro Plum",
+            harvest_time: "early September"
         },
         {
-            "name": "Moyer",
-            "type": "Euro Plum",
-            "not_recommended_reason": "ripens too late in the Willamette Valley",
-            "harvest_time_relative": "Italian +10"
+            name: "Moyer",
+            type: "Euro Plum",
+            not_recommended_reason: "ripens too late in the Willamette Valley",
+            harvest_time_relative: "Italian +10"
         },
         {
-            "name": "Stanley",
-            "type": "Euro Plum"
+            name: "Stanley",
+            type: "Euro Plum"
         },
         {
-            "name": "President",
-            "type": "Euro Plum",
-            "harvest_time": "late September"
+            name: "President",
+            type: "Euro Plum",
+            harvest_time: "late September"
         }
     ]
 }

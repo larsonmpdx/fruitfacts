@@ -1,397 +1,398 @@
 {
-    "title": "MSU Enviro-weather Peach Ripening Dates",
-    "author": "MSU Extension",
-    "url": "https://www.canr.msu.edu/news/peach_harvest_dates_available_on_msu_enviro_weather",
-    "published": "2021",
-    "accessed": "Oct 2021",
-    "locations": [{
-        "name": "East Lansing, MI (MSU Hort)",
-        "latitude": 42.719844733495485,
-        "longitude": -84.47474227805654
-    }],
-    "plants": [
+    title: "MSU Enviro-weather Peach Ripening Dates",
+    author: "MSU Extension",
+    url: "https://www.canr.msu.edu/news/peach_harvest_dates_available_on_msu_enviro_weather",
+    published: "2021",
+    accessed: "Oct 2021",
+    locations: [
         {
-            "name": "Harbinger",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -32"
+            name: "East Lansing, MI (MSU Hort)",
+            latitude: 42.719844733495485,
+            longitude: -84.47474227805654
+        }
+    ],
+    plants: [
+        {
+            name: "Harbinger",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -32"
         },
         {
-            "name": "PF 1",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -30"
+            name: "PF 1",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -30"
         },
         {
-            "name": "Rich May",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -28"
+            name: "Rich May",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -28"
         },
         {
-            "name": "Desiree",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -26"
+            name: "Desiree",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -26"
         },
         {
-            "name": "PF 5B",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -25"
+            name: "PF 5B",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -25"
         },
         {
-            "name": "Harrow Diamond",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -24"
+            name: "Harrow Diamond",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -24"
         },
         {
-            "name": "PF 5D Big",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -22"
+            name: "PF 5D Big",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -22"
         },
         {
-            "name": "FA 102", // "Earlystar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -18"
+            name: "FA 102", // "Earlystar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven -18"
         },
         {
-            "name": "PF Early 8 Ball",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -17"
+            name: "PF Early 8 Ball",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -17"
         },
         {
-            "name": "GW115",
-            "AKA": ["Glenglo (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -13",
-            "patent": "https://patents.google.com/patent/USPP10652 expired 2017-02-18"
+            name: "GW115",
+            AKA: ["Glenglo (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven -13",
+            patent: "https://patents.google.com/patent/USPP10652 expired 2017-02-18"
         },
         {
-            "name": "FA 101", // "Brightstar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -12"
+            name: "FA 101", // "Brightstar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven -12"
         },
         {
-            "name": "Summer Serenade",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -10"
+            name: "Summer Serenade",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -10"
         },
         {
-            "name": "PF 8 Ball",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -10"
+            name: "PF 8 Ball",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -10"
         },
         {
-            "name": "Early Redhaven",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -10"
+            name: "Early Redhaven",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -10"
         },
         {
-            "name": "PF 7A Freestone",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -10"
+            name: "PF 7A Freestone",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -10"
         },
         {
-            "name": "Garnet Beauty",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -10"
+            name: "Garnet Beauty",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -10"
         },
         {
-            "name": "PF 7",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -10"
+            name: "PF 7",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -10"
         },
         {
-            "name": "GaLa",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -8"
+            name: "GaLa",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -8"
         },
         {
-            "name": "Sentry",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -8"
+            name: "Sentry",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -8"
         },
         {
-            "name": "FA 47", // "Rising Star"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -8"
+            name: "FA 47", // "Rising Star"
+            type: "Peach",
+            harvest_time_relative: "Redhaven -8"
         },
         {
-            "name": "PF Late 8 Ball",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -5"
+            name: "PF Late 8 Ball",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -5"
         },
         {
-            "name": "PF 11",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -2"
+            name: "PF 11",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -2"
         },
         {
-            "name": "PF 9A-007",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -2"
+            name: "PF 9A-007",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -2"
         },
         {
-            "name": "Redhaven",
-            "type": "Peach",
-            "harvest_time": "August 2"
+            name: "Redhaven",
+            type: "Peach",
+            harvest_time: "August 2"
         },
         {
-            "name": "Reliance",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +0"
+            name: "Reliance",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +0"
         },
         {
-            "name": "Vivid",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +2"
+            name: "Vivid",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +2"
         },
         {
-            "name": "FA 12", // "Blazing Star"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +2"
+            name: "FA 12", // "Blazing Star"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +2"
         },
         {
-            "name": "FA 11", // "Starfire"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +3"
+            name: "FA 11", // "Starfire"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +3"
         },
         {
-            "name": "FA 52", // "redstar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +3"
+            name: "FA 52", // "redstar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +3"
         },
         {
-            "name": "John Boy",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +3"
+            name: "John Boy",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +3"
         },
         {
-            "name": "Bellaire",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +3"
+            name: "Bellaire",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +3"
         },
         {
-            "name": "PF 12A",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +3"
+            name: "PF 12A",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +3"
         },
         {
-            "name": "PF 14 New Jersey",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +4"
+            name: "PF 14 New Jersey",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +4"
         },
         {
-            "name": "PF 15A",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +6"
+            name: "PF 15A",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +6"
         },
         {
-            "name": "PF Lucky 13",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +6"
+            name: "PF Lucky 13",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +6"
         },
         {
-            "name": "John Boy II",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +8"
+            name: "John Boy II",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +8"
         },
         {
-            "name": "Glohaven",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +8"
+            name: "Glohaven",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +8"
         },
         {
-            "name": "Blaze Prince",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +8"
+            name: "Blaze Prince",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +8"
         },
         {
-            "name": "PF Super Duper",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +8"
+            name: "PF Super Duper",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +8"
         },
         {
-            "name": "Bounty",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +10"
+            name: "Bounty",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +10"
         },
         {
-            "name": "Canadian Harmony",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +10"
+            name: "Canadian Harmony",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +10"
         },
         {
-            "name": "Suncrest",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +12"
+            name: "Suncrest",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +12"
         },
         {
-            "name": "Loring",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +12"
+            name: "Loring",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +12"
         },
         {
-            "name": "PF 17",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +12"
+            name: "PF 17",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +12"
         },
         {
-            "name": "Sweetstar",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +14"
+            name: "Sweetstar",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +14"
         },
         {
-            "name": "PF 19-007",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +16"
+            name: "PF 19-007",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +16"
         },
         {
-            "name": "FA 80", //"Allstar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +16"
+            name: "FA 80", //"Allstar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +16"
         },
         {
-            "name": "Messina",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +17"
+            name: "Messina",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +17"
         },
         {
-            "name": "Contender",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +18"
+            name: "Contender",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +18"
         },
         {
-            "name": "FA 59", // "Coralstar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +18"
+            name: "FA 59", // "Coralstar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +18"
         },
         {
-            "name": "Beaumont",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +18"
+            name: "Beaumont",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +18"
         },
         {
-            "name": "PF 22-007",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +20"
+            name: "PF 22-007",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +20"
         },
         {
-            "name": "PF 23",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +20"
+            name: "PF 23",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +20"
         },
         {
-            "name": "PF 24-007",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +22"
+            name: "PF 24-007",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +22"
         },
         {
-            "name": "Cresthaven",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +24"
+            name: "Cresthaven",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +24"
         },
         {
-            "name": "PF 24C Cold Hardy",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +24"
+            name: "PF 24C Cold Hardy",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +24"
         },
         {
-            "name": "PF Paramount",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +24"
+            name: "PF Paramount",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +24"
         },
         {
-            "name": "FA 17", // "Glowingstar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +24"
+            name: "FA 17", // "Glowingstar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +24"
         },
         {
-            "name": "July Prince",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +24"
+            name: "July Prince",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +24"
         },
         {
-            "name": "Redskin",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +26"
+            name: "Redskin",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +26"
         },
         {
-            "name": "Gloria (LA)",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +26"
+            name: "Gloria (LA)",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +26"
         },
         {
-            "name": "PF 25",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +26"
+            name: "PF 25",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +26"
         },
         {
-            "name": "Fayette",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +28"
+            name: "Fayette",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +28"
         },
         {
-            "name": "Harcrest",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +28"
+            name: "Harcrest",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +28"
         },
         {
-            "name": "Madison",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +28"
+            name: "Madison",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +28"
         },
         {
-            "name": "PF 27A",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +30"
+            name: "PF 27A",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +30"
         },
         {
-            "name": "Encore",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +31"
+            name: "Encore",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +31"
         },
         {
-            "name": "PF 28-007",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +32"
+            name: "PF 28-007",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +32"
         },
         {
-            "name": "FA 42", //"Autumnstar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +37"
+            name: "FA 42", //"Autumnstar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +37"
         },
         {
-            "name": "Flame Prince",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +38"
+            name: "Flame Prince",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +38"
         },
         {
-            "name": "PF 35-007 Fat Lady",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +40"
+            name: "PF 35-007 Fat Lady",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +40"
         },
         {
-            "name": "PF Legendary",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +41"
+            name: "PF Legendary",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +41"
         },
         {
-            "name": "Laurol",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +41"
+            name: "Laurol",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +41"
         },
         {
-            "name": "Victoria",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +47"
+            name: "Victoria",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +47"
         },
         {
-            "name": "PF Big George",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +50"
+            name: "PF Big George",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +50"
         },
         {
-            "name": "PF Fashionably Late",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +54"
+            name: "PF Fashionably Late",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +54"
         }
     ]
 }
-

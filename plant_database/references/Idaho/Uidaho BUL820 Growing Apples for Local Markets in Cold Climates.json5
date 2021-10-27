@@ -1,176 +1,178 @@
 {
-    "title": "Growing tree fruits in short-season gardens",
-    "author": "Brian F. Finnigan, W. Michael Colt, Esmaeil Fallah",
-    "url": "https://www.lib.uidaho.edu/digital/uiext/items/uiext25361.html",
-    "published": "Feb 2000",
-    "accessed": "Oct 2021",
-    "locations": [{
-        "name": "Idaho > 4500ft elevation, or USDA zone 4 or lower, or growing season 110 days or less",
-        "latitude": 44.07985210283775,
-        "longitude": -111.45484249940903
-    }],
-    "plants": [
+    title: "Growing tree fruits in short-season gardens",
+    author: "Brian F. Finnigan, W. Michael Colt, Esmaeil Fallah",
+    url: "https://www.lib.uidaho.edu/digital/uiext/items/uiext25361.html",
+    published: "Feb 2000",
+    accessed: "Oct 2021",
+    locations: [
         {
-            "type": "Apple",
-            "name": "Cortland",
-            "description": "red. fresh, cooking, cider, tart",
-            "harvest_time": "late September"
+            name: "Idaho > 4500ft elevation, or USDA zone 4 or lower, or growing season 110 days or less",
+            latitude: 44.07985210283775,
+            longitude: -111.45484249940903
+        }
+    ],
+    plants: [
+        {
+            type: "Apple",
+            name: "Cortland",
+            description: "red. fresh, cooking, cider, tart",
+            harvest_time: "late September"
         },
         {
-            "type": "Apple",
-            "name": "Earligold",
-            "description": "yellow. fresh, cooking, high quality",
-            "disease_resistance": {
-                "FB": "moderately resistant"
+            type: "Apple",
+            name: "Earligold",
+            description: "yellow. fresh, cooking, high quality",
+            disease_resistance: {
+                FB: "moderately resistant"
             },
-            "harvest_time": "August"
+            harvest_time: "August"
         },
         {
-            "type": "Apple",
-            "name": "Regent",
-            "description": "red. fresh, cooking, stores well",
-            "disease_resistance": {
-                "rust": "resistant"
+            type: "Apple",
+            name: "Regent",
+            description: "red. fresh, cooking, stores well",
+            disease_resistance: {
+                rust: "resistant"
             },
-            "harvest_time": "October"
+            harvest_time: "October"
         },
         {
-            "type": "Apple",
-            "name": "Haralred",
-            "description": "red. fresh, cooking, cider",
-            "disease_resistance": {
-                "FB": "resistant"
+            type: "Apple",
+            name: "Haralred",
+            description: "red. fresh, cooking, cider",
+            disease_resistance: {
+                FB: "resistant"
             },
-            "harvest_time": "late September"
+            harvest_time: "late September"
         },
         {
-            "type": "Apple",
-            "name": "Haralson",
-            "description": "red striped. fresh, cider, tart",
-            "disease_resistance": {
-                "FB": "moderately resistant",
-                "rust": "resistant"
+            type: "Apple",
+            name: "Haralson",
+            description: "red striped. fresh, cider, tart",
+            disease_resistance: {
+                FB: "moderately resistant",
+                rust: "resistant"
             },
-            "harvest_time": "late September"
+            harvest_time: "late September"
         },
         {
-            "type": "Apple",
-            "name": "Hazen",
-            "description": "red. fresh, cooking, firm, mild",
-            "disease_resistance": {
-                "FB": "resistant"
+            type: "Apple",
+            name: "Hazen",
+            description: "red. fresh, cooking, firm, mild",
+            disease_resistance: {
+                FB: "resistant"
             },
-            "harvest_time": "September"
+            harvest_time: "September"
         },
         {
-            "type": "Apple",
-            "name": "Honeycrisp",
-            "description": "red over yellow. fresh, crisp, stores wel",
-            "harvest_time": "late September"
+            type: "Apple",
+            name: "Honeycrisp",
+            description: "red over yellow. fresh, crisp, stores wel",
+            harvest_time: "late September"
         },
         {
-            "type": "Apple",
-            "name": "Honeygold",
-            "description": "yellow. fresh, cooking, sweet",
-            "harvest_time": "October"
+            type: "Apple",
+            name: "Honeygold",
+            description: "yellow. fresh, cooking, sweet",
+            harvest_time: "October"
         },
         {
-            "type": "Apple",
-            "name": "Liberty",
-            "disease_resistance": {
-                "FB": "resistant",
-                "scab": "resistant",
-                "PM": "resistant",
-                "rust": "resistant"
+            type: "Apple",
+            name: "Liberty",
+            disease_resistance: {
+                FB: "resistant",
+                scab: "resistant",
+                PM: "resistant",
+                rust: "resistant"
             },
-            "description": "red. all-purpose, stores well",
-            "harvest_time": "October"
+            description: "red. all-purpose, stores well",
+            harvest_time: "October"
         },
         {
-            "type": "Apple",
-            "name": "Lodi",
-            "disease_resistance": {
-                "scab": "resistant"
+            type: "Apple",
+            name: "Lodi",
+            disease_resistance: {
+                scab: "resistant"
             },
-            "description": "yellow. cooking, fair quality",
-            "harvest_time": "July"
+            description: "yellow. cooking, fair quality",
+            harvest_time: "July"
         },
         {
-            "type": "Apple",
-            "name": "Mantet",
-            "description": "red. fresh, high quality",
-            "harvest_time": "late July"
+            type: "Apple",
+            name: "Mantet",
+            description: "red. fresh, high quality",
+            harvest_time: "late July"
         },
         {
-            "type": "Apple",
-            "name": "McIntosh",
-            "description": "red. fresh, cooking, tart",
-            "harvest_time": "September"
+            type: "Apple",
+            name: "McIntosh",
+            description: "red. fresh, cooking, tart",
+            harvest_time: "September"
         },
         {
-            "type": "Apple",
-            "name": "Paulared",
-            "description": "red. all-purpose, good quality",
-            "harvest_time": "October"
+            type: "Apple",
+            name: "Paulared",
+            description: "red. all-purpose, good quality",
+            harvest_time: "October"
         },
         {
-            "type": "Apple",
-            "name": "Redwell",
-            "description": "red. fresh, cooking, mild",
-            "harvest_time": "October"
+            type: "Apple",
+            name: "Redwell",
+            description: "red. fresh, cooking, mild",
+            harvest_time: "October"
         },
         {
-            "type": "Apple",
-            "name": "Spartan",
-            "disease_resistance": {
-                "FB": "resistant",
-                "scab": "resistant",
-                "PM": "resistant"
+            type: "Apple",
+            name: "Spartan",
+            disease_resistance: {
+                FB: "resistant",
+                scab: "resistant",
+                PM: "resistant"
             },
-            "description": "red. all purpose, good quality",
-            "harvest_time": "October"
+            description: "red. all purpose, good quality",
+            harvest_time: "October"
         },
         {
-            "type": "Apple",
-            "name": "State Fair",
-            "description": "red striped. fresh, high quality for a summer apple",
-            "harvest_time": "August"
+            type: "Apple",
+            name: "State Fair",
+            description: "red striped. fresh, high quality for a summer apple",
+            harvest_time: "August"
         },
         {
-            "type": "Apple",
-            "name": "Summerred",
-            "description": "red. fresh, makes pink sauce",
-            "harvest_time": "August"
+            type: "Apple",
+            name: "Summerred",
+            description: "red. fresh, makes pink sauce",
+            harvest_time: "August"
         },
         {
-            "type": "Apple",
-            "name": "Sweet Sixteen",
-            "disease_resistance": {
-                "FB": "resistant",
-                "scab": "resistant"
+            type: "Apple",
+            name: "Sweet Sixteen",
+            disease_resistance: {
+                FB: "resistant",
+                scab: "resistant"
             },
-            "description": "red striped. resh, cooking, excellent quality",
-            "harvest_time": "September"
+            description: "red striped. resh, cooking, excellent quality",
+            harvest_time: "September"
         },
         {
-            "type": "Apple",
-            "name": "Wealthy",
-            "disease_resistance": {
-                "FB": "resistant",
-                "scab": "resistant",
-                "rust": "resistant"
+            type: "Apple",
+            name: "Wealthy",
+            disease_resistance: {
+                FB: "resistant",
+                scab: "resistant",
+                rust: "resistant"
             },
-            "description": "red striped. all-purpose, good quality",
-            "harvest_time": "September"
+            description: "red striped. all-purpose, good quality",
+            harvest_time: "September"
         },
         {
-            "type": "Apple",
-            "name": "Yellow Transparent",
-            "disease_resistance": {
-                "scab": "resistant"
+            type: "Apple",
+            name: "Yellow Transparent",
+            disease_resistance: {
+                scab: "resistant"
             },
-            "description": "yellow. cooking, poor-fair quality",
-            "harvest_time": "July"
+            description: "yellow. cooking, poor-fair quality",
+            harvest_time: "July"
         }
     ]
 }

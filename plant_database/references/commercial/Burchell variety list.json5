@@ -1,1353 +1,1350 @@
 {
-    "title": "Burchell Varieties",
-    "url": "https://burchellnursery.com/",
-    "published": "unknown",
-    "accessed": "Oct 2021",
-    "desription": "see also https://burchellnursery.com/pdf/bni_peach_ripening_page1.pdf https://burchellnursery.com/pdf/bni_peach_ripening_page2.pdf https://burchellnursery.com/pdf/bni_flame_series_peach_ripening.pdf https://burchellnursery.com/pdf/bni_nectarines_ripening.pdf https://burchellnursery.com/pdf/bni_flare_series_nectarine_ripening.pdf",
-    "locations": [
+    title: "Burchell Varieties",
+    url: "https://burchellnursery.com/",
+    published: "unknown",
+    accessed: "Oct 2021",
+    desription: "see also https://burchellnursery.com/pdf/bni_peach_ripening_page1.pdf https://burchellnursery.com/pdf/bni_peach_ripening_page2.pdf https://burchellnursery.com/pdf/bni_flame_series_peach_ripening.pdf https://burchellnursery.com/pdf/bni_nectarines_ripening.pdf https://burchellnursery.com/pdf/bni_flare_series_nectarine_ripening.pdf",
+    locations: [
         {
-            "name": "Modesto, CA",
-            "latitude": 37.771953508436425,
-            "longitude": -120.77216539018261
+            name: "Modesto, CA",
+            latitude: 37.771953508436425,
+            longitude: -120.77216539018261
         }
     ],
-    "plants": [
+    plants: [
         // almonds page 1
         {
-            "name": "Aldrich",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +14"
+            name: "Aldrich",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +14"
         },
         {
-            "name": "Avalon",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +8",
-            "patent": "https://patents.google.com/patent/USPP11096 expired 2017-12-17"
+            name: "Avalon",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +8",
+            patent: "https://patents.google.com/patent/USPP11096 expired 2017-12-17"
         },
         {
-            "name": "Butte",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +15"
+            name: "Butte",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +15"
         },
         {
-            "name": "Capitola",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +3",
-            "patent": "https://patents.google.com/patent/USPP19369 expires 2028-01-14"
+            name: "Capitola",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +3",
+            patent: "https://patents.google.com/patent/USPP19369 expires 2028-01-14"
         },
         {
-            "name": "Carmel",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +5"
+            name: "Carmel",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +5"
         },
         {
-            "name": "Kester",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +7"
+            name: "Kester",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +7"
         },
         {
-            "name": "Fritz",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +40"
+            name: "Fritz",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +40"
         },
         {
-            "name": "Livingston",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +8"
+            name: "Livingston",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +8"
         },
         {
-            "name": "Marcona",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +7"
+            name: "Marcona",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +7"
         },
         {
-            "name": "Buralmondthree",
-            "AKA": ["Pyrenees R Self-fertile Almond", "BA3"],
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +14",
-            "patent": "https://patents.google.com/patent/USPP32301 expires 2039-03-29"
+            name: "Buralmondthree",
+            AKA: ["Pyrenees R Self-fertile Almond", "BA3"],
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +14",
+            patent: "https://patents.google.com/patent/USPP32301 expires 2039-03-29"
         },
         {
-            "name": "Mission",
-            "AKA": ["Texas"],
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +30"
+            name: "Mission",
+            AKA: ["Texas"],
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +30"
         },
         {
-            "name": "Monterey",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +30"
+            name: "Monterey",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +30"
         },
         {
-            "name": "NePlus",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +14"
+            name: "NePlus",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +14"
         },
         {
-            "name": "Nonpareil",
-            "type": "Almond"
+            name: "Nonpareil",
+            type: "Almond"
         },
         {
-            "name": "Padre",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +25"
+            name: "Padre",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +25"
         },
         // almonds page 2
         {
-            "name": "Peerless",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +20"
+            name: "Peerless",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +20"
         },
         {
-            "name": "Price",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +7"
+            name: "Price",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +7"
         },
         {
-            "name": "Ruby",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +35"
+            name: "Ruby",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +35"
         },
         {
-            "name": "Buralmondtwo",
-            "AKA": ["Shasta® Self-fertile Almond", "BA2"],
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil -3 to -5",
-            "patent": "https://patents.google.com/patent/USPP28466 expires 2035-11-17"
+            name: "Buralmondtwo",
+            AKA: ["Shasta® Self-fertile Almond", "BA2"],
+            type: "Almond",
+            harvest_time_relative: "Nonpareil -3 to -5",
+            patent: "https://patents.google.com/patent/USPP28466 expires 2035-11-17"
         },
         {
-            "name": "Sonora",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +7"
+            name: "Sonora",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +7"
         },
         {
-            "name": "Supareil",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +7",
-            "patent": "https://patents.google.com/patent/USPP21934 expires 2029-11-05"
+            name: "Supareil",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +7",
+            patent: "https://patents.google.com/patent/USPP21934 expires 2029-11-05"
         },
         {
-            "name": "Winters",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +15",
-            "patent": "https://patents.google.com/patent/USPP13286 expired 2021-04-20"
+            name: "Winters",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +15",
+            patent: "https://patents.google.com/patent/USPP13286 expired 2021-04-20"
         },
         {
-            "name": "Wood Colony",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +7"
+            name: "Wood Colony",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +7"
         },
         {
-            "name": "Yorizane",
-            "type": "Almond",
-            "harvest_time_relative": "Nonpareil +0"
+            name: "Yorizane",
+            type: "Almond",
+            harvest_time_relative: "Nonpareil +0"
         },
         // walnuts page 1
         {
-            "name": "Chandler",
-            "type": "Walnut",
-            "harvest_time_unparsed": "harvests late"
+            name: "Chandler",
+            type: "Walnut",
+            harvest_time_unparsed: "harvests late"
         },
         {
-            "name": "Cisco",
-            "type": "Walnut"
+            name: "Cisco",
+            type: "Walnut"
         },
         {
-            "name": "Durham (PPAF)",
-            "type": "Walnut",
-            "harvest_time_relative": "Chandler-10",
-            "patent": "PPAF (nlt 2021)"
+            name: "Durham (PPAF)",
+            type: "Walnut",
+            harvest_time_relative: "Chandler-10",
+            patent: "PPAF (nlt 2021)"
         },
         {
-            "name": "Eureka",
-            "type": "Walnut",
-            "harvest_time_unparsed": "harvests early to mid"
+            name: "Eureka",
+            type: "Walnut",
+            harvest_time_unparsed: "harvests early to mid"
         },
         {
-            "name": "Forde",
-            "type": "Walnut",
-            "harvest_time_relative": "Chandler-5",
-            "patent": "https://patents.google.com/patent/USPP16495 expired 2024-10-24"
+            name: "Forde",
+            type: "Walnut",
+            harvest_time_relative: "Chandler-5",
+            patent: "https://patents.google.com/patent/USPP16495 expired 2024-10-24"
         },
         {
-            "name": "Fredrick",
-            "type": "Walnut",
-            "harvest_time_unparsed": "early, just before Serr",
-            "patent": "https://patents.google.com/patent/USPP14236 expires 2022-11-06"
+            name: "Fredrick",
+            type: "Walnut",
+            harvest_time_unparsed: "early, just before Serr",
+            patent: "https://patents.google.com/patent/USPP14236 expires 2022-11-06"
         },
         {
-            "name": "Hartley",
-            "type": "Walnut",
-            "harvest_time_unparsed": "Harvests mid to late"
+            name: "Hartley",
+            type: "Walnut",
+            harvest_time_unparsed: "Harvests mid to late"
         },
         {
-            "name": "Howard",
-            "type": "Walnut",
-            "harvest_time_unparsed": "mid season"
+            name: "Howard",
+            type: "Walnut",
+            harvest_time_unparsed: "mid season"
         },
         {
-            "name": "Ivanhoe",
-            "type": "Walnut",
-            "patent": "https://patents.google.com/patent/USPP21718 expires 2029-12-08",
+            name: "Ivanhoe",
+            type: "Walnut",
+            patent: "https://patents.google.com/patent/USPP21718 expires 2029-12-08",
             // "harvest date similar to Payne or Serr and about a month earlier than Chandler"
-            "harvest_time_relative": "Chandler-30"
+            harvest_time_relative: "Chandler-30"
         },
         {
-            "name": "Payne",
-            "type": "Walnut",
-            "harvest_time_unparsed": "Harvests early"
+            name: "Payne",
+            type: "Walnut",
+            harvest_time_unparsed: "Harvests early"
         },
         {
-            "name": "Robert Livermore",
-            "type": "Walnut",
-            "patent": "https://patents.google.com/patent/USPP12264 expired 2019-12-30",
+            name: "Robert Livermore",
+            type: "Walnut",
+            patent: "https://patents.google.com/patent/USPP12264 expired 2019-12-30",
             // "first week of October"
-            "harvest_time": "Oct 1-7"
+            harvest_time: "Oct 1-7"
         },
         {
-            "name": "Scharsch Franquette",
-            "type": "Walnut",
-            "harvest_time_unparsed": "Harvests late"
+            name: "Scharsch Franquette",
+            type: "Walnut",
+            harvest_time_unparsed: "Harvests late"
         },
         {
-            "name": "Serr",
-            "type": "Walnut",
-            "harvest_time_unparsed": "Harvests early to mid"
+            name: "Serr",
+            type: "Walnut",
+            harvest_time_unparsed: "Harvests early to mid"
         },
         // walnuts page 2
         {
-            "name": "Solano",
-            "type": "Walnut",
-            "patent": "https://patents.google.com/patent/USPP25466 expires 2033-05-28",
-            "harvest_time_unparsed": "Harvests early to mid"
+            name: "Solano",
+            type: "Walnut",
+            patent: "https://patents.google.com/patent/USPP25466 expires 2033-05-28",
+            harvest_time_unparsed: "Harvests early to mid"
         },
         {
-            "name": "Tulare",
-            "type": "Walnut",
-            "patent": "https://patents.google.com/patent/USPP8268 expired 2011-09-12",
-            "harvest_time_unparsed": "Harvests mid to late"
+            name: "Tulare",
+            type: "Walnut",
+            patent: "https://patents.google.com/patent/USPP8268 expired 2011-09-12",
+            harvest_time_unparsed: "Harvests mid to late"
         },
         {
-            "name": "Vina",
-            "type": "Walnut",
-            "harvest_time_unparsed": "Harvests early to mid"
+            name: "Vina",
+            type: "Walnut",
+            harvest_time_unparsed: "Harvests early to mid"
         },
         // apples
         {
-            "name": "Anna",
-            "type": "Apple"
+            name: "Anna",
+            type: "Apple"
         },
         {
-            "name": "Arkansas Black",
-            "type": "Apple"
+            name: "Arkansas Black",
+            type: "Apple"
         },
         {
-            "name": "Red Fuji",
-            "type": "Apple",
-            "harvest_time_unparsed": "1-2 weeks later than Fuji",
-            "chill": "350-400 hours"
+            name: "Red Fuji",
+            type: "Apple",
+            harvest_time_unparsed: "1-2 weeks later than Fuji",
+            chill: "350-400 hours"
         },
         {
-            "name": "Braeburn",
-            "type": "Apple"
+            name: "Braeburn",
+            type: "Apple"
         },
         {
-            "name": "Cox Orange Pippin",
-            "type": "Apple"
+            name: "Cox Orange Pippin",
+            type: "Apple"
         },
         {
-            "name": "Cripps Pink",
-            "type": "Apple"
+            name: "Cripps Pink",
+            type: "Apple"
         },
         {
-            "name": "Dorsett Golden",
-            "type": "Apple",
-            "chill": "<100 hours"
+            name: "Dorsett Golden",
+            type: "Apple",
+            chill: "<100 hours"
         },
         {
-            "name": "Granny Smith",
-            "type": "Apple",
-            "harvest_time": "late August to early September"
+            name: "Granny Smith",
+            type: "Apple",
+            harvest_time: "late August to early September"
         },
         {
-            "name": "Empire",
-            "type": "Apple"
+            name: "Empire",
+            type: "Apple"
         },
         {
-            "name": "Golden Delicious",
-            "type": "Apple"
+            name: "Golden Delicious",
+            type: "Apple"
         },
         {
-            "name": "Gravenstein",
-            "type": "Apple"
+            name: "Gravenstein",
+            type: "Apple"
         },
         {
-            "name": "Honeycrisp",
-            "type": "Apple",
-            "harvest_time_unparsed": "2 weeks earlier than Red Delicious",
-            "chill": "800 hours",
-            "patent": "https://patents.google.com/patent/USPP7197 expired 2008-11-07"
+            name: "Honeycrisp",
+            type: "Apple",
+            harvest_time_unparsed: "2 weeks earlier than Red Delicious",
+            chill: "800 hours",
+            patent: "https://patents.google.com/patent/USPP7197 expired 2008-11-07"
         },
         {
-            "name": "Hudson's Golden Gem",
-            "type": "Apple"
+            name: "Hudson's Golden Gem",
+            type: "Apple"
         },
         {
-            "name": "Jonathan",
-            "type": "Apple"
+            name: "Jonathan",
+            type: "Apple"
         },
         {
-            "name": "King David",
-            "type": "Apple"
+            name: "King David",
+            type: "Apple"
         },
         {
-            "name": "Mutsu",
-            "type": "Apple"
+            name: "Mutsu",
+            type: "Apple"
         },
         {
-            "name": "Pink Pearl",
-            "type": "Apple",
-            "harvest_time": "late July to August"
+            name: "Pink Pearl",
+            type: "Apple",
+            harvest_time: "late July to August"
         },
         {
-            "name": "Red Delicious",
-            "type": "Apple"
+            name: "Red Delicious",
+            type: "Apple"
         },
         {
-            "name": "Red McIntosh",
-            "type": "Apple"
+            name: "Red McIntosh",
+            type: "Apple"
         },
         {
-            "name": "Rome Beauty",
-            "type": "Apple"
+            name: "Rome Beauty",
+            type: "Apple"
         },
         {
-            "name": "Scarlet Gala",
-            "type": "Apple",
-            "harvest_time": "July 1-July 20",
-            "description": "website claims registered trademark on \"Scarlet Gala\". note that trademarks can't be variety names. variety name unknown"
+            name: "Scarlet Gala",
+            type: "Apple",
+            harvest_time: "July 1-July 20",
+            description: 'website claims registered trademark on "Scarlet Gala". note that trademarks can\'t be variety names. variety name unknown'
         },
         {
-            "name": "Winesap",
-            "harvest_time": "September",
-            "type": "Apple"
+            name: "Winesap",
+            harvest_time: "September",
+            type: "Apple"
         },
         {
-            "name": "Yellow Newton Pippen",
-            "type": "Apple"
+            name: "Yellow Newton Pippen",
+            type: "Apple"
         },
         {
-            "name": "Imperial Gala",
-            "type": "Apple",
-            "harvest_time": "mid to late July"
+            name: "Imperial Gala",
+            type: "Apple",
+            harvest_time: "mid to late July"
         },
         // apricots
         {
-            "name": "Apache",
-            "type": "Apricot",
-            "harvest_time_unparsed": "first week in May"
+            name: "Apache",
+            type: "Apricot",
+            harvest_time_unparsed: "first week in May"
         },
         {
-            "name": "Blenheim",
-            "type": "Apricot"
+            name: "Blenheim",
+            type: "Apricot"
             // no harvest time given
         },
         {
-            "name": "Castlebrite",
-            "type": "Apricot",
+            name: "Castlebrite",
+            type: "Apricot",
             // pulled from the chart. text gives "early June"
-            "harvest_time": "May 20-25"
+            harvest_time: "May 20-25"
         },
         {
-            "name": "Chinese",
-            "type": "Apricot"
+            name: "Chinese",
+            type: "Apricot"
             // no harvest time given
         },
         {
-            "name": "Golden Sweet",
-            "type": "Apricot",
+            name: "Golden Sweet",
+            type: "Apricot",
             // pulled from the chart. text gives "just ahead of Patterson"
-            "harvest_time_unparsed": "June 10-15",
-            "patent": "https://patents.google.com/patent/USPP8932 expired 2014-01-24"
+            harvest_time_unparsed: "June 10-15",
+            patent: "https://patents.google.com/patent/USPP8932 expired 2014-01-24"
         },
         {
-            "name": "Harcot",
-            "type": "Apricot"
+            name: "Harcot",
+            type: "Apricot"
             // no harvest time given
         },
         {
-            "name": "Harglow",
-            "type": "Apricot"
+            name: "Harglow",
+            type: "Apricot"
             // no harvest time given
         },
         {
-            "name": "Helena",
-            "type": "Apricot",
-            "harvest_time": "June 20"
+            name: "Helena",
+            type: "Apricot",
+            harvest_time: "June 20"
         },
         {
-            "name": "Katy",
-            "type": "Apricot",
-            "harvest_time": "May 28"
+            name: "Katy",
+            type: "Apricot",
+            harvest_time: "May 28"
         },
         {
-            "name": "Lorna",
-            "type": "Apricot",
+            name: "Lorna",
+            type: "Apricot",
             // pulled from the chart. text gives "between Castlebrite and Helena"
-            "harvest_time_unparsed": "June 1-10",
-            "chill": "400-450 hours"
+            harvest_time_unparsed: "June 1-10",
+            chill: "400-450 hours"
         },
         {
-            "name": "Modesto",
-            "type": "Apricot",
+            name: "Modesto",
+            type: "Apricot",
             // pulled from the chart. text gives "June 15"
-            "harvest_time": "June 10-15"
+            harvest_time: "June 10-15"
         },
         {
-            "name": "Moorpark",
-            "type": "Apricot"
+            name: "Moorpark",
+            type: "Apricot"
             // no harvest time given
         },
         {
-            "name": "Patterson",
-            "type": "Apricot",
+            name: "Patterson",
+            type: "Apricot",
             // from the chart
-            "harvest_time": "June 20-25"
+            harvest_time: "June 20-25"
         },
         {
-            "name": "Robada",
-            "type": "Apricot",
-            "harvest_time": "June 15-20",
-            "patent": "https://patents.google.com/patent/USPP9890 expired 2015-07-14"
+            name: "Robada",
+            type: "Apricot",
+            harvest_time: "June 15-20",
+            patent: "https://patents.google.com/patent/USPP9890 expired 2015-07-14"
         },
         {
-            "name": "Tilton",
-            "type": "Apricot",
+            name: "Tilton",
+            type: "Apricot",
             // pulled from the chart. text gives "July 1"
-            "harvest_time": "June 25-July 5"
+            harvest_time: "June 25-July 5"
         },
         {
-            "name": "Tomcot",
-            "type": "Apricot",
-            "harvest_time_unparsed": "early"
+            name: "Tomcot",
+            type: "Apricot",
+            harvest_time_unparsed: "early"
         },
         {
-            "name": "Westley",
-            "type": "Apricot",
-            "harvest_time": "July 7"
+            name: "Westley",
+            type: "Apricot",
+            harvest_time: "July 7"
         },
         {
-            "name": "White Knockout",
-            "type": "Apricot"
+            name: "White Knockout",
+            type: "Apricot"
             // no harvest time given
         },
         // cherries
         {
             // "Benton"
-            "name": "PC7146-8",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -2 to -3"
+            name: "PC7146-8",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -2 to -3"
         },
         {
-            "name": "Black Tartarian",
-            "type": "Sweet Cherry"
+            name: "Black Tartarian",
+            type: "Sweet Cherry"
             // no harvest time given
         },
         {
-            "name": "Brooks",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -10 to -14"
+            name: "Brooks",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -10 to -14"
         },
         {
-            "name": "Chelan",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -14"
+            name: "Chelan",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -14"
         },
         {
-            "name": "Coral Champagne",
-            "type": "Sweet Cherry",
-            "harvest_time_unparsed": "early season"
+            name: "Coral Champagne",
+            type: "Sweet Cherry",
+            harvest_time_unparsed: "early season"
         },
         {
-            "name": "Early Burlat",
-            "type": "Sweet Cherry",
-            "harvest_time_unparsed": "very early"
+            name: "Early Burlat",
+            type: "Sweet Cherry",
+            harvest_time_unparsed: "very early"
         },
         {
             // "Index"
-            "name": "PC 7222-1",
-            "type": "Sweet Cherry"
+            name: "PC 7222-1",
+            type: "Sweet Cherry"
             // no harvest time given
         },
         {
-            "name": "Lapins",
-            "type": "Sweet Cherry",
-            "harvest_time": "late June to mid July"
+            name: "Lapins",
+            type: "Sweet Cherry",
+            harvest_time: "late June to mid July"
         },
         {
-            "name": "Rainier",
-            "type": "Sweet Cherry",
-            "harvest_time_unparsed": "just after Bing"
+            name: "Rainier",
+            type: "Sweet Cherry",
+            harvest_time_unparsed: "just after Bing"
         },
         {
             // "Regina"
-            "name": "Jork 57/201",
-            "type": "Sweet Cherry",
-            "harvest_time_unparsed": "late season"
+            name: "Jork 57/201",
+            type: "Sweet Cherry",
+            harvest_time_unparsed: "late season"
         },
         {
             // "Santina"
-            "name": "13S-5-22",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -8"
+            name: "13S-5-22",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -8"
         },
         {
             // Burchell text applies "(tm)" but summerland doesn't claim trademark on Skeena on their website
-            "name": "Skeena",
-            "type": "Sweet Cherry",
-            "harvest_time_unparsed": "Ripens at about the same time or slightly later than Lapins"
+            name: "Skeena",
+            type: "Sweet Cherry",
+            harvest_time_unparsed: "Ripens at about the same time or slightly later than Lapins"
         },
         {
-            "name": "Sweetheart",
-            "type": "Sweet Cherry",
-            "harvest_time": "mid July"
+            name: "Sweetheart",
+            type: "Sweet Cherry",
+            harvest_time: "mid July"
         },
         {
-            "name": "Tulare",
-            "type": "Sweet Cherry",
-            "harvest_time_relative": "Bing -10"
+            name: "Tulare",
+            type: "Sweet Cherry",
+            harvest_time_relative: "Bing -10"
         },
         {
-            "name": "Utah Giant",
-            "type": "Sweet Cherry"
+            name: "Utah Giant",
+            type: "Sweet Cherry"
             // no harvest time given
         },
         {
-            "name": "Van",
-            "type": "Sweet Cherry"
+            name: "Van",
+            type: "Sweet Cherry"
             // no harvest time given
         },
         // citrus
         {
-            "name": "Australian Finger Lime",
-            "type": "Citrus"
+            name: "Australian Finger Lime",
+            type: "Citrus"
         },
         {
-            "name": "Bearrs",
-            "type": "Lime",
-            "harvest_time": "March to June"
+            name: "Bearrs",
+            type: "Lime",
+            harvest_time: "March to June"
         },
         {
-            "name": "Calamondin",
-            "AKA": ["Calamansi"],
-            "type": "Citrus"
+            name: "Calamondin",
+            AKA: ["Calamansi"],
+            type: "Citrus"
         },
         {
-            "name": "Cara Cara",
-            "type": "Sweet Orange",
-            "harvest_time": "November to February"
+            name: "Cara Cara",
+            type: "Sweet Orange",
+            harvest_time: "November to February"
         },
         {
-            "name": "Clementine de Nules",
-            "type": "Clementine",
-            "harvest_time": "October-December"
+            name: "Clementine de Nules",
+            type: "Clementine",
+            harvest_time: "October-December"
         },
         {
-            "name": "Cocktail",
-            "type": "Grapefruit",
-            "harvest_time": "March to May"
+            name: "Cocktail",
+            type: "Grapefruit",
+            harvest_time: "March to May"
         },
         {
-            "name": "Eureka",
-            "type": "Lemon",
-            "harvest_time": "December to March"
+            name: "Eureka",
+            type: "Lemon",
+            harvest_time: "December to March"
         },
         {
-            "name": "Fukumoto",
-            "type": "Sweet Orange",
-            "harvest_time": "Mid October"
+            name: "Fukumoto",
+            type: "Sweet Orange",
+            harvest_time: "Mid October"
         },
         {
-            "name": "Genoa",
-            "type": "Lemon",
-            "harvest_time": "January to May"
+            name: "Genoa",
+            type: "Lemon",
+            harvest_time: "January to May"
         },
         {
-            "name": "Gold Nugget",
-            "type": "Mandarin",
-            "harvest_time": "February to June",
-            "patent": "claimed PPAF, but I can't find any info and it was released before 2000 - so any patent should be expired by now. for example, see patents for TDE3 and TDE4 circa 2000 which reference gold nugget as unpatented, and the UC tech transfer case number ends in -1999"
+            name: "Gold Nugget",
+            type: "Mandarin",
+            harvest_time: "February to June",
+            patent: "claimed PPAF, but I can't find any info and it was released before 2000 - so any patent should be expired by now. for example, see patents for TDE3 and TDE4 circa 2000 which reference gold nugget as unpatented, and the UC tech transfer case number ends in -1999"
         },
         {
-            "name": "Lane Late",
-            "type": "Sweet Orange",
-            "harvest_time": "January to April"
+            name: "Lane Late",
+            type: "Sweet Orange",
+            harvest_time: "January to April"
         },
         {
-            "name": "Lee X Nova",
-            "AKA": ["Superna", "Super Nova", "USDA 88-2"],
-            "type": "Mandarin",
-            "harvest_time": "January to April"
+            name: "Lee X Nova",
+            AKA: ["Superna", "Super Nova", "USDA 88-2"],
+            type: "Mandarin",
+            harvest_time: "January to April"
         },
         {
-            "name": "Lisbon",
-            "type": "Lemon",
-            "harvest_time": "March to May"
+            name: "Lisbon",
+            type: "Lemon",
+            harvest_time: "March to May"
         },
         {
-            "name": "Mexican Key",
-            "type": "Lime",
-            "harvest_time": "November to January"
+            name: "Mexican Key",
+            type: "Lime",
+            harvest_time: "November to January"
         },
         {
-            "name": "Improved Meyer",
-            "type": "Lemon",
-            "harvest_time": "October to February"
+            name: "Improved Meyer",
+            type: "Lemon",
+            harvest_time: "October to February"
         },
         {
-            "name": "Minneola",
-            "type": "Tangelo",
-            "harvest_time": "March to June"
+            name: "Minneola",
+            type: "Tangelo",
+            harvest_time: "March to June"
         },
         {
-            "name": "Moro Blood Orange",
-            "type": "Sweet Orange",
-            "harvest_time": "January to February"
+            name: "Moro Blood Orange",
+            type: "Sweet Orange",
+            harvest_time: "January to February"
         },
         {
-            "name": "Nagami",
-            "type": "Kumquat",
-            "harvest_time": "January to March"
+            name: "Nagami",
+            type: "Kumquat",
+            harvest_time: "January to March"
         },
         {
-            "name": "Oro Blanco",
-            "type": "Grapefruit",
-            "harvest_time": "January to March"
+            name: "Oro Blanco",
+            type: "Grapefruit",
+            harvest_time: "January to March"
         },
         {
-            "name": "Owari Satsuma",
-            "type": "Mandarin",
-            "harvest_time": "December to January"
+            name: "Owari Satsuma",
+            type: "Mandarin",
+            harvest_time: "December to January"
         },
         {
-            "name": "Page",
-            "type": "Mandarin",
-            "harvest_time": "January to March"
+            name: "Page",
+            type: "Mandarin",
+            harvest_time: "January to March"
         },
         {
-            "name": "Washington Navel",
-            "AKA": ["Parent Washington Navel"],
-            "type": "Sweet Orange",
-            "harvest_time": "January to March"
+            name: "Washington Navel",
+            AKA: ["Parent Washington Navel"],
+            type: "Sweet Orange",
+            harvest_time: "January to March"
         },
         {
-            "name": "Pixie Mandarin",
-            "type": "Citrus",
-            "harvest_time": "January to March"
+            name: "Pixie Mandarin",
+            type: "Citrus",
+            harvest_time: "January to March"
         },
         {
-            "name": "Rio Red",
-            "type": "Grapefruit",
-            "harvest_time": "January to March"
+            name: "Rio Red",
+            type: "Grapefruit",
+            harvest_time: "January to March"
         },
         {
-            "name": "Sanguinelli Blood Orange",
-            "type": "Sweet Orange",
-            "harvest_time": "December to February"
+            name: "Sanguinelli Blood Orange",
+            type: "Sweet Orange",
+            harvest_time: "December to February"
         },
         {
-            "name": "Star Ruby",
-            "type": "Grapefruit",
-            "harvest_time_unparsed": "Winter to late spring ripening"
+            name: "Star Ruby",
+            type: "Grapefruit",
+            harvest_time_unparsed: "Winter to late spring ripening"
         },
         {
-            "name": "Tango",
-            "type": "Mandarin",
-            "harvest_time": "January to March",
-            "patent": "https://patents.google.com/patent/USPP17863 expires 2025-09-06",
-            "description": "Seedless"
+            name: "Tango",
+            type: "Mandarin",
+            harvest_time: "January to March",
+            patent: "https://patents.google.com/patent/USPP17863 expires 2025-09-06",
+            description: "Seedless"
         },
         {
-            "name": "Trovita",
-            "type": "Sweet Orange",
-            "harvest_time": "March to June"
+            name: "Trovita",
+            type: "Sweet Orange",
+            harvest_time: "March to June"
         },
         {
-            "name": "Valencia",
-            "type": "Sweet Orange",
-            "harvest_time": "July to September"
+            name: "Valencia",
+            type: "Sweet Orange",
+            harvest_time: "July to September"
         },
         // nectarines page 1
         {
-            "name": "Arctic Jay",
-            "type": "Nectarine",
-            "harvest_time_unparsed": "mid season"
+            name: "Arctic Jay",
+            type: "Nectarine",
+            harvest_time_unparsed: "mid season"
         },
         {
-            "name": "Arctic Rose",
-            "type": "Nectarine"
+            name: "Arctic Rose",
+            type: "Nectarine"
             // no harvest time given
         },
         {
-            "name": "Candy Sprinkles",
-            "type": "Nectarine",
-            "harvest_time": "July 1-10"
+            name: "Candy Sprinkles",
+            type: "Nectarine",
+            harvest_time: "July 1-10"
         },
         {
-            "name": "Double Delight",
-            "type": "Nectarine"
+            name: "Double Delight",
+            type: "Nectarine"
             // no harvest time given
         },
         {
-            "name": "Fairlane",
-            "type": "Nectarine",
-            "harvest_time": "July 10-15"
+            name: "Fairlane",
+            type: "Nectarine",
+            harvest_time: "July 10-15"
         },
         {
-            "name": "Fantasia",
-            "type": "Nectarine",
-            "harvest_time": "July 10-15",
-            "chill": "750 hours"
+            name: "Fantasia",
+            type: "Nectarine",
+            harvest_time: "July 10-15",
+            chill: "750 hours"
         },
         {
-            "name": "Firebrite",
-            "type": "Nectarine",
-            "harvest_time": "June 15-20",
-            "chill": "850 hours"
+            name: "Firebrite",
+            type: "Nectarine",
+            harvest_time: "June 15-20",
+            chill: "850 hours"
         },
         {
-            "name": "Flamekist",
-            "type": "Nectarine",
-            "harvest_time": "August 10-15"
+            name: "Flamekist",
+            type: "Nectarine",
+            harvest_time: "August 10-15"
         },
         {
-            "name": "Flavor Gold",
-            "type": "Nectarine"
+            name: "Flavor Gold",
+            type: "Nectarine"
             // no harvest time given
         },
         {
-            "name": "Flavortop",
-            "type": "Nectarine",
-            "harvest_time": "June 28-July 3",
-            "chill": "750 hours"
+            name: "Flavortop",
+            type: "Nectarine",
+            harvest_time: "June 28-July 3",
+            chill: "750 hours"
         },
         {
-            "name": "Freckle Face",
-            "type": "Nectarine"
+            name: "Freckle Face",
+            type: "Nectarine"
             // no harvest time given
         },
         {
-            "name": "Harko",
-            "type": "Nectarine"
+            name: "Harko",
+            type: "Nectarine"
             // no harvest time given
         },
         {
-            "name": "Honey Halo",
-            "type": "Nectarine"
+            name: "Honey Halo",
+            type: "Nectarine"
             // no harvest time given
         },
         {
-            "name": "Independence",
-            "type": "Nectarine",
-            "harvest_time_unparsed": "Late Summer through Fall"
+            name: "Independence",
+            type: "Nectarine",
+            harvest_time_unparsed: "Late Summer through Fall"
         },
         {
-            "name": "Mayfire",
-            "type": "Nectarine",
-            "harvest_time": "May 10–15",
-            "chill": "550 hours"
+            name: "Mayfire",
+            type: "Nectarine",
+            harvest_time: "May 10–15",
+            chill: "550 hours"
         },
         {
-            "name": "Mayglo",
-            "type": "Nectarine",
-            "harvest_time": "May 20–25",
-            "chill": "150 hours"
+            name: "Mayglo",
+            type: "Nectarine",
+            harvest_time: "May 20–25",
+            chill: "150 hours"
         },
         // todo starting with "October Snow"
 
-
         // nectarines page 2 - todo
-        
+
         // nectarines page 3
-        
+
         // nectarines page 4
-        
 
-// todo
-
+        // todo
 
         // peaches page 1
         {
-            "name": "Angelus",
-            "type": "Peach",
-            "harvest_time": "July 18-25"
+            name: "Angelus",
+            type: "Peach",
+            harvest_time: "July 18-25"
         },
         {
-            "name": "Autumn Gem",
-            "type": "Peach",
-            "harvest_time": "September 23-30"
+            name: "Autumn Gem",
+            type: "Peach",
+            harvest_time: "September 23-30"
         },
         {
-            "name": "Babcock",
-            "type": "Peach",
-            "harvest_time": "June 27-July 4"
+            name: "Babcock",
+            type: "Peach",
+            harvest_time: "June 27-July 4"
         },
         {
-            "name": "Belle of Georgia",
-            "type": "Peach",
-            "harvest_time_unparsed": "mid season"
+            name: "Belle of Georgia",
+            type: "Peach",
+            harvest_time_unparsed: "mid season"
         },
         {
-            "name": "Blushing Pearl",
-            "type": "Peach",
+            name: "Blushing Pearl",
+            type: "Peach",
             // harvest time not given
-            "description": "columnar"
+            description: "columnar"
         },
         {
-            "name": "Cal Red",
-            "type": "Peach",
-            "harvest_time": "August 8-15"
+            name: "Cal Red",
+            type: "Peach",
+            harvest_time: "August 8-15"
         },
         {
-            "name": "Carnival",
-            "type": "Peach",
-            "harvest_time": "September 8-15"
+            name: "Carnival",
+            type: "Peach",
+            harvest_time: "September 8-15"
         },
         {
-            "name": "Cassie",
-            "type": "Peach"
-            // harvest time not given
-        },
-        {
-            "name": "Contender",
-            "type": "Peach"
+            name: "Cassie",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Cresthaven",
-            "type": "Peach"
+            name: "Contender",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Crimson Lady",
-            "type": "Peach",
-            "harvest_time": "June 1-7"
-        },
-        {
-            "name": "Diamond Princess",
-            "type": "Peach",
-            "harvest_time": "June 28-July 7"
-        },
-        {
-            "name": "Early Elberta",
-            "type": "Peach",
-            "harvest_time": "early July",
-            "chill": "750 hours"
-        },
-        {
-            "name": "Elberta",
-            "type": "Peach"
+            name: "Cresthaven",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Elegant Lady",
-            "type": "Peach",
-            "harvest_time": "July 8-15"
+            name: "Crimson Lady",
+            type: "Peach",
+            harvest_time: "June 1-7"
         },
         {
-            "name": "Fairtime",
-            "type": "Peach",
-            "harvest_time": "August 28-September 5"
+            name: "Diamond Princess",
+            type: "Peach",
+            harvest_time: "June 28-July 7"
         },
         {
-            "name": "Fancy Lady",
-            "type": "Peach",
-            "harvest_time": "June 17-27"
+            name: "Early Elberta",
+            type: "Peach",
+            harvest_time: "early July",
+            chill: "750 hours"
         },
         {
-            "name": "Fay Elberta",
+            name: "Elberta",
+            type: "Peach"
+            // harvest time not given
+        },
+        {
+            name: "Elegant Lady",
+            type: "Peach",
+            harvest_time: "July 8-15"
+        },
+        {
+            name: "Fairtime",
+            type: "Peach",
+            harvest_time: "August 28-September 5"
+        },
+        {
+            name: "Fancy Lady",
+            type: "Peach",
+            harvest_time: "June 17-27"
+        },
+        {
+            name: "Fay Elberta",
             // on the page as "Fay Alberta"
-            "type": "Peach",
-            "harvest_time": "July 18-25"
+            type: "Peach",
+            harvest_time: "July 18-25"
         },
         {
-            "name": "Fayette",
-            "type": "Peach",
-            "harvest_time": "September 25-October 2"
+            name: "Fayette",
+            type: "Peach",
+            harvest_time: "September 25-October 2"
         },
         {
-            "name": "Flavorcrest",
-            "type": "Peach",
-            "harvest_time": "June 8-15"
+            name: "Flavorcrest",
+            type: "Peach",
+            harvest_time: "June 8-15"
         },
         {
-            "name": "Flordagrande",
-            "type": "Peach",
+            name: "Flordagrande",
+            type: "Peach",
             // harvest time not given
-            "chill": "<100 hours"
+            chill: "<100 hours"
         },
         {
-            "name": "Flordaprince",
-            "type": "Peach",
+            name: "Flordaprince",
+            type: "Peach",
             // harvest time not given
-            "chill": "150 hours"
+            chill: "150 hours"
         },
         {
-            "name": "Frost",
-            "type": "Peach"
+            name: "Frost",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Galaxy",
-            "type": "Peach",
-            "harvest_time": "June 19-27",
-            "description": "peento"
+            name: "Galaxy",
+            type: "Peach",
+            harvest_time: "June 19-27",
+            description: "peento"
         },
         {
-            "name": "Gold Dust",
-            "type": "Peach"
+            name: "Gold Dust",
+            type: "Peach"
             // harvest time not given
         },
         // peaches page 2
         {
-            "name": "Hale Haven",
-            "type": "Peach"
+            name: "Hale Haven",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Harken",
-            "type": "Peach"
+            name: "Harken",
+            type: "Peach"
             // harvest time not given
         },
         {
             // on the page as "Improved Lemon Elbert"
-            "name": "Improved Elberta",
-            "AKA": ["Lemon Elberta"],
-            "type": "Peach"
+            name: "Improved Elberta",
+            AKA: ["Lemon Elberta"],
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "J.H. Hale",
-            "type": "Peach"
+            name: "J.H. Hale",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "John Henry",
-            "type": "Peach"
+            name: "John Henry",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Juliet’s Prize",
-            "type": "Peach"
+            name: "Juliet’s Prize",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "July Snow",
-            "type": "Peach"
+            name: "July Snow",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "June Lady",
-            "type": "Peach",
-            "harvest_time": "June 8-15"
+            name: "June Lady",
+            type: "Peach",
+            harvest_time: "June 8-15"
         },
         {
-            "name": "June Snow",
-            "type": "Peach"
+            name: "June Snow",
+            type: "Peach"
             // harvest time not given
         },
         // improved/lemon elberta repeated - see above
         {
-            "name": "Maycrest",
-            "type": "Peach",
-            "harvest_time": "May 20-27"
+            name: "Maycrest",
+            type: "Peach",
+            harvest_time: "May 20-27"
         },
         {
-            "name": "Marbled Ginger",
-            "type": "Peach"
+            name: "Marbled Ginger",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "O'Henry",
-            "type": "Peach",
-            "harvest_time": "August 3-7"
+            name: "O'Henry",
+            type: "Peach",
+            harvest_time: "August 3-7"
         },
         {
-            "name": "Parade",
-            "type": "Peach",
-            "harvest_time": "August 20-27"
+            name: "Parade",
+            type: "Peach",
+            harvest_time: "August 20-27"
         },
         {
-            "name": "Pink Diamond",
-            "type": "Peach"
+            name: "Pink Diamond",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Pink Halo",
-            "type": "Peach"
+            name: "Pink Halo",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Polly White",
-            "type": "Peach"
+            name: "Polly White",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Pumpkin Spice",
-            "type": "Peach"
+            name: "Pumpkin Spice",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Queencrest",
-            "type": "Peach",
-            "harvest_time": "May 15-22"
+            name: "Queencrest",
+            type: "Peach",
+            harvest_time: "May 15-22"
         },
         {
-            "name": "Red Globe",
-            "type": "Peach",
-            "harvest_time": "early to mid August"
+            name: "Red Globe",
+            type: "Peach",
+            harvest_time: "early to mid August"
         },
         {
-            "name": "Redhaven",
-            "type": "Peach"
+            name: "Redhaven",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Red Top",
-            "type": "Peach",
-            "harvest_time": "June 11-26"
+            name: "Red Top",
+            type: "Peach",
+            harvest_time: "June 11-26"
         },
         {
-            "name": "Regina",
-            "type": "Peach"
+            name: "Regina",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Reliance",
-            "type": "Peach"
+            name: "Reliance",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Rich Lady",
-            "type": "Peach"
+            name: "Rich Lady",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Rio Oso Gem",
-            "type": "Peach"
+            name: "Rio Oso Gem",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Ryan Sun",
-            "type": "Peach",
-            "harvest_time": "August 1-8"
+            name: "Ryan Sun",
+            type: "Peach",
+            harvest_time: "August 1-8"
         },
         {
-            "name": "Santa Barbara",
-            "type": "Peach",
+            name: "Santa Barbara",
+            type: "Peach",
             // harvest time not given
-            "description": "low chill"
+            description: "low chill"
         },
         {
-            "name": "Scarlet Halo",
-            "type": "Peach",
-            "description": "peento"
+            name: "Scarlet Halo",
+            type: "Peach",
+            description: "peento"
         },
         {
-            "name": "September Sun",
-            "type": "Peach",
-            "harvest_time": "August 29-September 5"
+            name: "September Sun",
+            type: "Peach",
+            harvest_time: "August 29-September 5"
         },
         {
-            "name": "Sierra Rich",
-            "type": "Peach"
-            // harvest time not given
-        },
-        {
-            "name": "Springcrest",
-            "type": "Peach",
-            "harvest_time": "May 22-29"
-        },
-        {
-            "name": "Spring Lady",
-            "type": "Peach",
-            "harvest_time": "May 27-June 4"
-        },
-        {
-            "name": "Sugar Tiger",
-            "type": "Peach"
+            name: "Sierra Rich",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Summerset",
-            "type": "Peach",
-            "harvest_time": "August 20-25"
+            name: "Springcrest",
+            type: "Peach",
+            harvest_time: "May 22-29"
         },
         {
-            "name": "Summer Lady",
-            "type": "Peach",
-            "harvest_time": "July 23-30"
+            name: "Spring Lady",
+            type: "Peach",
+            harvest_time: "May 27-June 4"
         },
         {
-            "name": "Summer Sweet",
-            "type": "Peach"
+            name: "Sugar Tiger",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Suncrest",
-            "type": "Peach"
+            name: "Summerset",
+            type: "Peach",
+            harvest_time: "August 20-25"
+        },
+        {
+            name: "Summer Lady",
+            type: "Peach",
+            harvest_time: "July 23-30"
+        },
+        {
+            name: "Summer Sweet",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Sweet Dream",
-            "type": "Peach"
+            name: "Suncrest",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "Sweet Sensation",
-            "type": "Peach",
-            "description": "columnar"
-        },
-        {
-            "name": "TropicBeauty",
-            "AKA": ["82-10"],
-            "type": "Peach",
-            "harvest_time": "June 15-25",
-            "chill": "150 hours"
-        },
-        {
-            "name": "TropicPrince",
-            "type": "Peach",
-            "harvest_time": "May",
-            "chill": "<150 hours"
-        },
-        {
-            "name": "TropicSnow",
-            "type": "Peach"
+            name: "Sweet Dream",
+            type: "Peach"
             // harvest time not given
         },
         {
-            "name": "TropicSweet",
-            "type": "Peach",
-            "harvest_time": "June",
-            "chill": "<175 hours"
+            name: "Sweet Sensation",
+            type: "Peach",
+            description: "columnar"
         },
         {
-            "name": "Zee Lady",
-            "type": "Peach",
-            "harvest_time": "July 15-25"
+            name: "TropicBeauty",
+            AKA: ["82-10"],
+            type: "Peach",
+            harvest_time: "June 15-25",
+            chill: "150 hours"
         },
         {
-            "name": "August Lady",
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP8956 expired 2013",
-            "harvest_time_unparsed": "late"
+            name: "TropicPrince",
+            type: "Peach",
+            harvest_time: "May",
+            chill: "<150 hours"
+        },
+        {
+            name: "TropicSnow",
+            type: "Peach"
+            // harvest time not given
+        },
+        {
+            name: "TropicSweet",
+            type: "Peach",
+            harvest_time: "June",
+            chill: "<175 hours"
+        },
+        {
+            name: "Zee Lady",
+            type: "Peach",
+            harvest_time: "July 15-25"
+        },
+        {
+            name: "August Lady",
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP8956 expired 2013",
+            harvest_time_unparsed: "late"
         },
         // peaches page 3
         {
-            "name": "Autumn Flame",
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP9438 expired 2015",
-            "harvest_time_unparsed": "late"
+            name: "Autumn Flame",
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP9438 expired 2015",
+            harvest_time_unparsed: "late"
         },
         {
-            "name": "Burpeacheight",
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP12834 expired 2020",
-            "harvest_time": "August 30-September 7"
+            name: "Burpeacheight",
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP12834 expired 2020",
+            harvest_time: "August 30-September 7"
         },
         {
-            "name": "Burpeachten",
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP13507 expires 2021-12-28",
-            "harvest_time": "June 24-July 10"
+            name: "Burpeachten",
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP13507 expires 2021-12-28",
+            harvest_time: "June 24-July 10"
         },
         {
-            "name": "Burpeachtwenty",
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP15394 expires 2024-01-22",
-            "harvest_time": "August 9-16"
+            name: "Burpeachtwenty",
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP15394 expires 2024-01-22",
+            harvest_time: "August 9-16"
         },
         {
-            "name": "Burpeachtwentytwo",
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP17258 expires 2025-12-09",
-            "harvest_time": "April 28-May 5"
+            name: "Burpeachtwentytwo",
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP17258 expires 2025-12-09",
+            harvest_time: "April 28-May 5"
         },
         {
-            "name": "Burpeachtwentyseven",
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP23160 expires 2031-03-03",
-            "harvest_time": "June 12-19"
+            name: "Burpeachtwentyseven",
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP23160 expires 2031-03-03",
+            harvest_time: "June 12-19"
         },
         {
-            "name": "Burpeachthirtyfour",
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP25764 expires 2034-02-20",
-            "harvest_time": "August 16-23"
+            name: "Burpeachthirtyfour",
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP25764 expires 2034-02-20",
+            harvest_time: "August 16-23"
         },
         {
-            "name": "Burpeachthirtysix",
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP27423 expires 2035-05-07",
-            "harvest_time": "October 11-19"
+            name: "Burpeachthirtysix",
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP27423 expires 2035-05-07",
+            harvest_time: "October 11-19"
         },
         {
-            "name": "Burpeachthirtynine",
-            "type": "Peach",
-            "patent": "PPAF (nlt 2021)",
-            "harvest_time": "May 25-June 2"
+            name: "Burpeachthirtynine",
+            type: "Peach",
+            patent: "PPAF (nlt 2021)",
+            harvest_time: "May 25-June 2"
         },
         {
-            "name": "Burpeachtwo",
-            "AKA": ["Henry II"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP12157 expired 2019",
-            "harvest_time": "August 3-7"
+            name: "Burpeachtwo",
+            AKA: ["Henry II"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP12157 expired 2019",
+            harvest_time: "August 3-7"
         },
         {
-            "name": "Burpeachsix",
-            "AKA": ["June Flame®"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP13392 expired 2020-01-07",
-            "harvest_time": "June 15-22"
+            name: "Burpeachsix",
+            AKA: ["June Flame®"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP13392 expired 2020-01-07",
+            harvest_time: "June 15-22"
         },
         {
-            "name": "Burpeachfive",
-            "AKA": ["July Flame®"],
-            "type": "Peach",
+            name: "Burpeachfive",
+            AKA: ["July Flame®"],
+            type: "Peach",
             // note: not on the website, but June flame had the patent listed for this so I looked it up separately
-            "patent": "https://patents.google.com/patent/USPP12505 expired 2019-12-06",
+            patent: "https://patents.google.com/patent/USPP12505 expired 2019-12-06",
             // harvest time from the patent application
-            "harvest_time": "June 27 to July 10"
+            harvest_time: "June 27 to July 10"
         },
         {
-            "name": "Burpeachthree",
-            "AKA": ["September Flame®"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP12507 expired 2019-12-06",
-            "harvest_time": "August 20-September 3"
+            name: "Burpeachthree",
+            AKA: ["September Flame®"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP12507 expired 2019-12-06",
+            harvest_time: "August 20-September 3"
         },
         {
-            "name": "Burpeachtwentyfour",
-            "AKA": ["Snow Flame® 20"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP21737 expires 2029-12-14",
-            "harvest_time": "May 16-23"
+            name: "Burpeachtwentyfour",
+            AKA: ["Snow Flame® 20"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP21737 expires 2029-12-14",
+            harvest_time: "May 16-23"
         },
         {
-            "name": "Burpeachtwentynine",
-            "AKA": ["Snow Flame® 32"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP24810 expires 2033-01-08",
-            "harvest_time": "August 10-17"
+            name: "Burpeachtwentynine",
+            AKA: ["Snow Flame® 32"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP24810 expires 2033-01-08",
+            harvest_time: "August 10-17"
         },
         // peaches page 4
         {
-            "name": "Burpeachtwentythree",
-            "AKA": ["Spring Flame® 18"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP22780 expires 2030-08-06",
-            "harvest_time": "May 5-10"
+            name: "Burpeachtwentythree",
+            AKA: ["Spring Flame® 18"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP22780 expires 2030-08-06",
+            harvest_time: "May 5-10"
         },
         {
-            "name": "Burpeachfourteen",
-            "AKA": ["Spring Flame® 20"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP14342 expires 2022-12-09",
-            "harvest_time": "May 10-18"
+            name: "Burpeachfourteen",
+            AKA: ["Spring Flame® 20"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP14342 expires 2022-12-09",
+            harvest_time: "May 10-18"
         },
         {
-            "name": "Burpeachtwentyeight",
-            "AKA": ["Spring Flame® 20.5"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP23689 expires 2031-12-30",
-            "harvest_time": "May 16-29"
+            name: "Burpeachtwentyeight",
+            AKA: ["Spring Flame® 20.5"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP23689 expires 2031-12-30",
+            harvest_time: "May 16-29"
         },
         {
-            "name": "Burpeachone",
-            "AKA": ["Spring Flame® 21"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP12156 expired 2019-12-13",
-            "harvest_time": "May 27-June 4"
+            name: "Burpeachone",
+            AKA: ["Spring Flame® 21"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP12156 expired 2019-12-13",
+            harvest_time: "May 27-June 4"
         },
         {
-            "name": "Burpeachnineteen",
-            "AKA": ["Spring Flame® 22"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP15263 expires 2023-12-12",
+            name: "Burpeachnineteen",
+            AKA: ["Spring Flame® 22"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP15263 expires 2023-12-12",
             // harvest time from the patent application
-            "harvest_time": "May 8th to May 16th"
+            harvest_time: "May 8th to May 16th"
         },
         {
-            "name": "Burpeachnine",
-            "AKA": ["Spring Flame® 24"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP13494 expires 2021-12-11",
-            "harvest_time": "June 8-15"
+            name: "Burpeachnine",
+            AKA: ["Spring Flame® 24"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP13494 expires 2021-12-11",
+            harvest_time: "June 8-15"
         },
         {
-            "name": "Burpeachsixteen",
-            "AKA": ["Spring Flame® 24.5"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP14364 expires 2023-01-13",
-            "harvest_time": "June 5-15"
+            name: "Burpeachsixteen",
+            AKA: ["Spring Flame® 24.5"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP14364 expires 2023-01-13",
+            harvest_time: "June 5-15"
         },
         {
-            "name": "Burpeachforty",
-            "AKA": ["Spring Flame® 35"],
-            "type": "Peach",
-            "patent": "PPAF (nlt 2021)",
-            "harvest_time": "June 15-30"
+            name: "Burpeachforty",
+            AKA: ["Spring Flame® 35"],
+            type: "Peach",
+            patent: "PPAF (nlt 2021)",
+            harvest_time: "June 15-30"
         },
         {
-            "name": "Burpeachthirtytwo",
-            "AKA": ["Summer Flame® 30"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP24580 expires 2032-12-27",
-            "harvest_time": "August 3-9"
+            name: "Burpeachthirtytwo",
+            AKA: ["Summer Flame® 30"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP24580 expires 2032-12-27",
+            harvest_time: "August 3-9"
         },
         {
-            "name": "Burpeachtwentysix",
-            "AKA": ["Summer Flame® 31"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP23161 expires 2031-02-17",
-            "harvest_time": "August 10-17"
+            name: "Burpeachtwentysix",
+            AKA: ["Summer Flame® 31"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP23161 expires 2031-02-17",
+            harvest_time: "August 10-17"
         },
         {
-            "name": "Burpeachthirtythree",
-            "AKA": ["Summer Flame® 35"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP25725 expires 2034-02-20",
-            "harvest_time": "August 25-September 3"
+            name: "Burpeachthirtythree",
+            AKA: ["Summer Flame® 35"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP25725 expires 2034-02-20",
+            harvest_time: "August 25-September 3"
         },
         {
-            "name": "Burpeachthirtyeight",
-            "AKA": ["Summer Flame® 36"],
-            "type": "Peach",
-            "patent": "PPAF (nlt 2021)",
-            "harvest_time": "September 18-23"
+            name: "Burpeachthirtyeight",
+            AKA: ["Summer Flame® 36"],
+            type: "Peach",
+            patent: "PPAF (nlt 2021)",
+            harvest_time: "September 18-23"
         },
         {
-            "name": "Burpeachthirtyseven",
-            "AKA": ["Summer Flame® 38"],
-            "type": "Peach",
-            "patent": "PPAF (nlt 2021)",
-            "harvest_time": "September 23-29"
+            name: "Burpeachthirtyseven",
+            AKA: ["Summer Flame® 38"],
+            type: "Peach",
+            patent: "PPAF (nlt 2021)",
+            harvest_time: "September 23-29"
         },
         {
-            "name": "Burpeachthirty",
-            "AKA": ["Summer Flame® 39"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP24836 expires 2033-03-07",
-            "harvest_time": "October 7-17"
+            name: "Burpeachthirty",
+            AKA: ["Summer Flame® 39"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP24836 expires 2033-03-07",
+            harvest_time: "October 7-17"
         },
         {
-            "name": "Burpeacheleven",
-            "AKA": ["Sweet Flame® 32"],
-            "type": "Peach",
-            "patent": "https://patents.google.com/patent/USPP13528 expires 2022-01-11",
-            "harvest_time": "August 21-31"
+            name: "Burpeacheleven",
+            AKA: ["Sweet Flame® 32"],
+            type: "Peach",
+            patent: "https://patents.google.com/patent/USPP13528 expires 2022-01-11",
+            harvest_time: "August 21-31"
         }
     ]
 }

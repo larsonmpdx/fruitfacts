@@ -1,48 +1,50 @@
 {
-    "title": "Vineland apple varieties",
-    "author": "unknown",
-    "url": "https://www.vinelandresearch.com/wp-content/uploads/2020/02/apple_varieties_fact_sheet.pdf",
-    "published": "Feb 2020", // date from url
-    "accessed": "Oct 2021",
-    "locations": [{
-        "name": "Vineland, ON",
-        "latitude": 43.19273108384379,
-        "longitude": -79.39908516758658
-    }],
-    "plants": [
+    title: "Vineland apple varieties",
+    author: "unknown",
+    url: "https://www.vinelandresearch.com/wp-content/uploads/2020/02/apple_varieties_fact_sheet.pdf",
+    published: "Feb 2020", // date from url
+    accessed: "Oct 2021",
+    locations: [
         {
-            "name": "Alvina",
-            "AKA": ["Crimson (tm) Gala"],
-            "type": "Apple",
-            "harvest_time_unparsed": "Approximately one to two weeks earlier harvest than Royal Gala",
-            "patent": "https://patents.google.com/patent/USPP19604 expires 2027-07-16"
+            name: "Vineland, ON",
+            latitude: 43.19273108384379,
+            longitude: -79.39908516758658
+        }
+    ],
+    plants: [
+        {
+            name: "Alvina",
+            AKA: ["Crimson (tm) Gala"],
+            type: "Apple",
+            harvest_time_unparsed: "Approximately one to two weeks earlier harvest than Royal Gala",
+            patent: "https://patents.google.com/patent/USPP19604 expires 2027-07-16"
         },
         {
-            "name": "CABp Fuji",
-            "AKA": ["Fuji Supreme™"],
-            "type": "Apple",
-            "patent": "https://patents.google.com/patent/USPP17914 expires 2025-06-05"
+            name: "CABp Fuji",
+            AKA: ["Fuji Supreme™"],
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP17914 expires 2025-06-05"
         },
         {
-            "name": "Fugachee",
-            "AKA": ["Morning Mist™"],
-            "type": "Apple",
-            "harvest_time_unparsed": "ripens at least two weeks ahead of the standard Fuji",
-            "patent": "https://patents.google.com/patent/USPP20190 expires 2028-02-26"
+            name: "Fugachee",
+            AKA: ["Morning Mist™"],
+            type: "Apple",
+            harvest_time_unparsed: "ripens at least two weeks ahead of the standard Fuji",
+            patent: "https://patents.google.com/patent/USPP20190 expires 2028-02-26"
         },
         {
-            "name": "Maslin",
-            "AKA": ["Wild Pink™ Maslin", "PLMAS98"],
-            "type": "Apple",
-            "harvest_time_unparsed": "matures three to four weeks earlier than Cripps Pink",
-            "patent": "https://patents.google.com/patent/USPP21412 expires 2028-04-19"
+            name: "Maslin",
+            AKA: ["Wild Pink™ Maslin", "PLMAS98"],
+            type: "Apple",
+            harvest_time_unparsed: "matures three to four weeks earlier than Cripps Pink",
+            patent: "https://patents.google.com/patent/USPP21412 expires 2028-04-19"
         },
         {
-            "name": "Barnsby",
-            "AKA": ["Wild Pink™ Barnsby", "PLBARB1"],
-            "type": "Apple",
-            "harvest_time_unparsed": "matures three to four weeks earlier than Cripps Pink",
-            "patent": "https://patents.google.com/patent/USPP21606 expires 2028-07-31"
+            name: "Barnsby",
+            AKA: ["Wild Pink™ Barnsby", "PLBARB1"],
+            type: "Apple",
+            harvest_time_unparsed: "matures three to four weeks earlier than Cripps Pink",
+            patent: "https://patents.google.com/patent/USPP21606 expires 2028-07-31"
         }
     ]
 }

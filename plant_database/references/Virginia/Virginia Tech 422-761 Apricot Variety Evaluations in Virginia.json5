@@ -1,103 +1,105 @@
 {
-    "title": "Apricot Variety Evaluations in Virginia",
-    "author": "Richard P. Marini",
-    "url": "https://vtechworks.lib.vt.edu/handle/10919/55301",
-    "published": "2009",
-    "accessed": "Oct 2021",
-    "locations": [{
-        "name": "Virginia Tech's College of Agriculture, Kentland-Whitethorn Farm near Blacksburg",
-        "latitude": 37.20248218528102,
-        "longitude": -80.5631271567992
-    }],
-    "plants": [
+    title: "Apricot Variety Evaluations in Virginia",
+    author: "Richard P. Marini",
+    url: "https://vtechworks.lib.vt.edu/handle/10919/55301",
+    published: "2009",
+    accessed: "Oct 2021",
+    locations: [
         {
-            "name": "Blenheim",
-            "type": "Apricot",
-            "harvest_time": "average of: July 7, July 15",
-            "description": "Early season; 1.3oz; Somewhat flat; Excellent flavor; recommended fresh or dried"
+            name: "Virginia Tech's College of Agriculture, Kentland-Whitethorn Farm near Blacksburg",
+            latitude: 37.20248218528102,
+            longitude: -80.5631271567992
+        }
+    ],
+    plants: [
+        {
+            name: "Blenheim",
+            type: "Apricot",
+            harvest_time: "average of: July 7, July 15",
+            description: "Early season; 1.3oz; Somewhat flat; Excellent flavor; recommended fresh or dried"
         },
         {
-            "name": "Chinese",
-            "type": "Apricot",
-            "harvest_time": "average of: July 6, July 4",
-            "description": "Very Early season; 1.8oz; round; Unattractive; not recommended",
-            "not_recommended_reason": "Unattractive"
+            name: "Chinese",
+            type: "Apricot",
+            harvest_time: "average of: July 6, July 4",
+            description: "Very Early season; 1.8oz; round; Unattractive; not recommended",
+            not_recommended_reason: "Unattractive"
         },
         {
-            "name": "Goldrich",
-            "type": "Apricot",
-            "harvest_time": "average of: July 6, June 30",
-            "description": "Very Early season; 2.4oz; Flat and oblong; Attractive; recommended fresh"
+            name: "Goldrich",
+            type: "Apricot",
+            harvest_time: "average of: July 6, June 30",
+            description: "Very Early season; 2.4oz; Flat and oblong; Attractive; recommended fresh"
         },
         {
-            "name": "Perfection",
-            "type": "Apricot",
-            "harvest_time": "average of: July 7, July 4",
-            "description": "Very Early season; 2.6oz; Flat; Poor yields; not recommended",
-            "not_recommended_reason": "Poor yields"
+            name: "Perfection",
+            type: "Apricot",
+            harvest_time: "average of: July 7, July 4",
+            description: "Very Early season; 2.6oz; Flat; Poor yields; not recommended",
+            not_recommended_reason: "Poor yields"
         },
         {
-            "name": "Harogem",
-            "type": "Apricot",
-            "harvest_time": "average of: July 10, July 6",
-            "description": "Mid season; 1.8oz; Flat; Very attractive; recommended fresh"
+            name: "Harogem",
+            type: "Apricot",
+            harvest_time: "average of: July 10, July 6",
+            description: "Mid season; 1.8oz; Flat; Very attractive; recommended fresh"
         },
         {
-            "name": "Veecot",
-            "type": "Apricot",
-            "harvest_time": "average of: July 7, July 4",
-            "description": "Very Early season; 1.8oz; Flat; Poor yields; not recommended",
-            "not_recommended_reason": "Poor yields"
+            name: "Veecot",
+            type: "Apricot",
+            harvest_time: "average of: July 7, July 4",
+            description: "Very Early season; 1.8oz; Flat; Poor yields; not recommended",
+            not_recommended_reason: "Poor yields"
         },
         {
-            "name": "Hungarian Rose",
-            "type": "Apricot",
-            "harvest_time": "average of: July 6, July 11",
-            "description": "Early season; 1.9oz; Round; Poor yields; not recommended",
-            "not_recommended_reason": "Poor yields"
+            name: "Hungarian Rose",
+            type: "Apricot",
+            harvest_time: "average of: July 6, July 11",
+            description: "Early season; 1.9oz; Round; Poor yields; not recommended",
+            not_recommended_reason: "Poor yields"
         },
         {
-            "name": "Wilson Delicious",
-            "type": "Apricot",
-            "harvest_time": "average of: July 9, July 6",
-            "description": "Mid season; 2.3oz; Somewhat flat; Poor yields; not recommended",
-            "not_recommended_reason": "Poor yields"
+            name: "Wilson Delicious",
+            type: "Apricot",
+            harvest_time: "average of: July 9, July 6",
+            description: "Mid season; 2.3oz; Somewhat flat; Poor yields; not recommended",
+            not_recommended_reason: "Poor yields"
         },
         {
-            "name": "Rival",
-            "type": "Apricot",
-            "harvest_time": "average of: July 8, July 6",
-            "description": "Very Early season; 1.8oz; Round; Good flavor; recommended fresh"
+            name: "Rival",
+            type: "Apricot",
+            harvest_time: "average of: July 8, July 6",
+            description: "Very Early season; 1.8oz; Round; Good flavor; recommended fresh"
         },
         {
-            "name": "Tilton",
-            "type": "Apricot",
-            "harvest_time": "average of: July 14, July 20",
-            "description": "Late season; 2.1oz; Flat & oblong; Good flavor; recommended fresh or dried"
+            name: "Tilton",
+            type: "Apricot",
+            harvest_time: "average of: July 14, July 20",
+            description: "Late season; 2.1oz; Flat & oblong; Good flavor; recommended fresh or dried"
         },
         {
-            "name": "Harlayne",
-            "type": "Apricot",
-            "harvest_time": "average of: July 16, July 25",
-            "description": "Late season; 1.2oz; somewhat flat; Good flavor; recommended fresh"
+            name: "Harlayne",
+            type: "Apricot",
+            harvest_time: "average of: July 16, July 25",
+            description: "Late season; 1.2oz; somewhat flat; Good flavor; recommended fresh"
         },
         {
-            "name": "Hargrand",
-            "type": "Apricot",
-            "harvest_time": "average of: July 18, July 17",
-            "description": "Late season; 1.9oz; Round; Good flavor; recommended fresh"
+            name: "Hargrand",
+            type: "Apricot",
+            harvest_time: "average of: July 18, July 17",
+            description: "Late season; 1.9oz; Round; Good flavor; recommended fresh"
         },
         {
-            "name": "Goldcot",
-            "type": "Apricot",
-            "harvest_time": "average of: July 9, July 14",
-            "description": "Mid season; 1.0oz; Somewhat flat; Soft flesh; not recommended",
-            "not_recommended_reason": "Soft flesh"
+            name: "Goldcot",
+            type: "Apricot",
+            harvest_time: "average of: July 9, July 14",
+            description: "Mid season; 1.0oz; Somewhat flat; Soft flesh; not recommended",
+            not_recommended_reason: "Soft flesh"
         },
         {
-            "name": "Harcot",
-            "type": "Apricot",
-            "harvest_time": "average of: July 6, June 29"
+            name: "Harcot",
+            type: "Apricot",
+            harvest_time: "average of: July 6, June 29"
         }
     ]
 }

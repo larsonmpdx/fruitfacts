@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+        "rust-lang.rust",
+        "matklad.rust-analyzer",
+		"katjanakosic.vscode-json5",
+		"jbockle.jbockle-format-files",
+		"numso.prettier-standard-vscode"
+	]
+}

@@ -1,263 +1,285 @@
 {
-    "title": "Missouri Home Fruit Production: Peach and Nectarine Culture",
-    "author": "Michele Warmund, Fruit State Specialist. Division of Plant Sciences",
-    "url": "https://extension.missouri.edu/publications/g6030",
-    "published": "Feb 2012",
-    "accessed": "Sep 2021",
-    "locations": [{
-        "name": "Columbia, MO",
-        "latitude": 38.94574985398446,
-        "longitude": -92.32523616762207
-    }],
-    "plants": [
+    title: "Missouri Home Fruit Production: Peach and Nectarine Culture",
+    author: "Michele Warmund, Fruit State Specialist. Division of Plant Sciences",
+    url: "https://extension.missouri.edu/publications/g6030",
+    published: "Feb 2012",
+    accessed: "Sep 2021",
+    locations: [
         {
-            "name": "PF 1",
-            "AKA": ["Flamin' Fury (r) PF 1"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -28",
-            "disease_resistance": {
-                "BLS": "Excellent"
+            name: "Columbia, MO",
+            latitude: 38.94574985398446,
+            longitude: -92.32523616762207
+        }
+    ],
+    plants: [
+        {
+            name: "PF 1",
+            AKA: ["Flamin' Fury (r) PF 1"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven -28",
+            disease_resistance: {
+                BLS: "Excellent"
             },
-            "description": "Small, semifreestone, very little split pit."
+            description: "Small, semifreestone, very little split pit."
         },
         {
-            "name": "Harrow Diamond",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -21",
-            "disease_resistance": {
-                "BLS": "Moderate"
+            name: "Harrow Diamond",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -21",
+            disease_resistance: {
+                BLS: "Moderate"
             },
-            "description": "Small, semifreestone, very little split pit."
+            description: "Small, semifreestone, very little split pit."
         },
         {
-            "name": "Candor",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -20",
-            "disease_resistance": {
-                "BLS": "Excellent"
+            name: "Candor",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -20",
+            disease_resistance: {
+                BLS: "Excellent"
             },
-            "description": "Small, freestone, less color and softer than later-ripening cultivars."
+            description: "Small, freestone, less color and softer than later-ripening cultivars."
         },
         {
-            "name": "Manon",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -18",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "Manon",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -18",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Highly colored, white flesh, semifreestone, low-acid flavor."
+            description: "Highly colored, white flesh, semifreestone, low-acid flavor."
         },
         {
-            "name": "Garnet Beauty",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -10",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "Garnet Beauty",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -10",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Bud sport of Redhaven, freestone when fully ripe, best for cooler areas."
+            description: "Bud sport of Redhaven, freestone when fully ripe, best for cooler areas."
         },
         {
-            "name": "Summer Serenade",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -10",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "Summer Serenade",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -10",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Bud sport of Garnet Beauty, highly colored, semifreestone."
+            description: "Bud sport of Garnet Beauty, highly colored, semifreestone."
         },
         {
-            "name": "PF 9A-007",
-            "AKA": ["Flamin' Fury (r) PF 9A-007"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -7",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "PF 9A-007",
+            AKA: ["Flamin' Fury (r) PF 9A-007"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven -7",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Large, highly colored freestone, very few split pits."
+            description: "Large, highly colored freestone, very few split pits."
         },
         {
-            "name": "Redhaven",
-            "type": "Peach",
-            "harvest_time": "July 7-14",
-            "disease_resistance": {
-                "BLS": "Moderate"
+            name: "Redhaven",
+            type: "Peach",
+            harvest_time: "July 7-14",
+            disease_resistance: {
+                BLS: "Moderate"
             },
-            "description": "The standard of all peaches, low-browning, freestone, requires aggressive thinning to maintain fruit size."
+            description: "The standard of all peaches, low-browning, freestone, requires aggressive thinning to maintain fruit size."
         },
         {
-            "name": "PF 11",
-            "AKA": ["Flamin' Fury (r) PF 11"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +0",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "PF 11",
+            AKA: ["Flamin' Fury (r) PF 11"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven +0",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Very large, highly colored freestone, fewer split pits than Redhaven."
+            description: "Very large, highly colored freestone, fewer split pits than Redhaven."
         },
         {
-            "name": "FA 52", // "redstar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +0",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "FA 52", // "redstar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +0",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Large, semifreestone, 80 percent red blush."
+            description: "Large, semifreestone, 80 percent red blush."
         },
         {
-            "name": "FA 11", // "Starfire"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +1",
-            "disease_resistance": {
-                "BLS": "Excellent"
+            name: "FA 11", // "Starfire"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +1",
+            disease_resistance: {
+                BLS: "Excellent"
             },
-            "description": "Medium-size, brilliant red, freestone, requires several harvests."
+            description: "Medium-size, brilliant red, freestone, requires several harvests."
         },
         {
-            "name": "FA 12", //"Blazingstar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +2",
-            "disease_resistance": {
-                "BLS": "Excellent"
+            name: "FA 12", //"Blazingstar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +2",
+            disease_resistance: {
+                BLS: "Excellent"
             },
-            "description": "Medium-size, freestone, softer than Redhaven."
+            description: "Medium-size, freestone, softer than Redhaven."
         },
         {
-            "name": "White Lady",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +4",
-            "disease_resistance": {
-                "BLS": "Fair"
+            name: "White Lady",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +4",
+            disease_resistance: {
+                BLS: "Fair"
             },
-            "description": "Firm white flesh, low-acid flavor"
+            description: "Firm white flesh, low-acid flavor"
         },
         {
-            "name": "Reliance",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +5",
-            "disease_resistance": {
-                "BLS": "Moderate"
+            name: "Reliance",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +5",
+            disease_resistance: {
+                BLS: "Moderate"
             },
-            "description": "Small and soft, yellow flesh, low-browning, freestone, one of the hardiest cultivars."
+            description: "Small and soft, yellow flesh, low-browning, freestone, one of the hardiest cultivars."
         },
         {
-            "name": "John Boy",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +5",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "John Boy",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +5",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Budsport of Loring, large, very firm, freestone."
+            description: "Budsport of Loring, large, very firm, freestone."
         },
         {
-            "name": "TangOs",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +5",
-            "disease_resistance": {
-                "BLS": "Excellent"
+            name: "TangOs",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +5",
+            disease_resistance: {
+                BLS: "Excellent"
             },
-            "description": "All yellow peel, yellow flesh, doughnut-shaped."
+            description: "All yellow peel, yellow flesh, doughnut-shaped."
         },
         {
-            "name": "Raritan Rose",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +6",
-            "disease_resistance": {
-                "BLS": "Moderate"
+            name: "Raritan Rose",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +6",
+            disease_resistance: {
+                BLS: "Moderate"
             },
-            "description": "Soft white flesh, acidic flavor, winter hardy."
+            description: "Soft white flesh, acidic flavor, winter hardy."
         },
         {
-            "name": "TangOs II",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +8",
-            "disease_resistance": {
-                "BLS": "Excellent"
+            name: "TangOs II",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +8",
+            disease_resistance: {
+                BLS: "Excellent"
             },
-            "description": "Doughnut-shaped, white flesh, harder to grow than yellow-fleshed TangOs."
+            description: "Doughnut-shaped, white flesh, harder to grow than yellow-fleshed TangOs."
         },
         {
-            "name": "Contender",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +18",
-            "disease_resistance": {
-                "BLS": "Excellent"
+            name: "Contender",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +18",
+            disease_resistance: {
+                BLS: "Excellent"
             },
-            "description": "Medium-size, freestone, nonbrowning."
+            description: "Medium-size, freestone, nonbrowning."
         },
         {
-            "name": "PF 24-007",
-            "AKA": ["Flamin' Fury (r) PF 24-007"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +20",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "PF 24-007",
+            AKA: ["Flamin' Fury (r) PF 24-007"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven +20",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Very large, freestone, well-colored fruit, less cold hardy than Redhaven."
+            description: "Very large, freestone, well-colored fruit, less cold hardy than Redhaven."
         },
         {
-            "name": "FA 18", // "Blushingstar"
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +25",
-            "disease_resistance": {
-                "BLS": "Moderate"
+            name: "FA 18", // "Blushingstar"
+            type: "Peach",
+            harvest_time_relative: "Redhaven +25",
+            disease_resistance: {
+                BLS: "Moderate"
             },
-            "description": "Medium-size, freestone, white flesh, nonbrowning."
+            description: "Medium-size, freestone, white flesh, nonbrowning."
         },
         {
-            "name": "Messina",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +28",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "Messina",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +28",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Large, freestone, highly colored fruit."
+            description: "Large, freestone, highly colored fruit."
         },
         {
-            "name": "Victoria",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +45",
-            "disease_resistance": {
-                "BLS": "Good"
+            name: "Victoria",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +45",
+            disease_resistance: {
+                BLS: "Good"
             },
-            "description": "Large, freestone, 40 percent red bush, maintains quality in cold storage."
+            description: "Large, freestone, 40 percent red bush, maintains quality in cold storage."
         },
         {
-            "names": ["Bounty", "Cresthaven", "GaLa", "Jerseyqueen"],
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "category": "disease resistance note (not recommendations)",
-            "disease_resistance": {
-                "BLS": "Fair"
+            names: ["Bounty", "Cresthaven", "GaLa", "Jerseyqueen"],
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            category: "disease resistance note (not recommendations)",
+            disease_resistance: {
+                BLS: "Fair"
             },
-            "category_description": "Fair resistance to Bacterial Leaf Spot"
+            category_description: "Fair resistance to Bacterial Leaf Spot"
         },
         {
-            "names": ["Elberta", "Fayette", "Flavorcrest", "Hale Haven", "Laurol", "Spring Flame", "Suncrest"],
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "category": "disease resistance note (not recommendations)",
-            "disease_resistance": {
-                "BLS": "Poor"
+            names: ["Elberta", "Fayette", "Flavorcrest", "Hale Haven", "Laurol", "Spring Flame", "Suncrest"],
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            category: "disease resistance note (not recommendations)",
+            disease_resistance: {
+                BLS: "Poor"
             },
-            "category_description": "Poor resistance to Bacterial Leaf Spot"
+            category_description: "Poor resistance to Bacterial Leaf Spot"
         },
         {
-            "names": ["Flavortop", "Summer Beaut", "Sunglo", "Red Gold", "Eastern Glo", "Arctic Sweet", "Arctic Glo", "Crimson Snow"],
-            "type": "Nectarine",
-            "category": "disease resistance note (not recommendations)",
-            "disease_resistance": {
-                "BLS": "Fair"
+            names: [
+                "Flavortop",
+                "Summer Beaut",
+                "Sunglo",
+                "Red Gold",
+                "Eastern Glo",
+                "Arctic Sweet",
+                "Arctic Glo",
+                "Crimson Snow"
+            ],
+            type: "Nectarine",
+            category: "disease resistance note (not recommendations)",
+            disease_resistance: {
+                BLS: "Fair"
             },
-            "category_description": "Fair resistance to Bacterial Leaf Spot"
+            category_description: "Fair resistance to Bacterial Leaf Spot"
         },
         {
-            "names": ["Juneglo", "Hone Royale", "Honey Blaze", "Honey Kist", "Scarlet Pearl", "Arctic Belle", "Arctic Jay", "Arctic Gold", "Arctic Pride", "Zephyr"],
-            "type": "Nectarine",
-            "category": "disease resistance note (not recommendations)",
-            "disease_resistance": {
-                "BLS": "Poor"
+            names: [
+                "Juneglo",
+                "Hone Royale",
+                "Honey Blaze",
+                "Honey Kist",
+                "Scarlet Pearl",
+                "Arctic Belle",
+                "Arctic Jay",
+                "Arctic Gold",
+                "Arctic Pride",
+                "Zephyr"
+            ],
+            type: "Nectarine",
+            category: "disease resistance note (not recommendations)",
+            disease_resistance: {
+                BLS: "Poor"
             },
-            "category_description": "Poor resistance to Bacterial Leaf Spot"
+            category_description: "Poor resistance to Bacterial Leaf Spot"
         }
     ]
 }

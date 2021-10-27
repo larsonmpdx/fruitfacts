@@ -1,120 +1,120 @@
 {
-    "title": "Stellar Peach Varieties",
-    "url": "https://www.fruitacresfarm.com/stellar-peaches",
-    "published": "unknown",
-    "accessed": "Oct 2021",
-    "locations": [
+    title: "Stellar Peach Varieties",
+    url: "https://www.fruitacresfarm.com/stellar-peaches",
+    published: "unknown",
+    accessed: "Oct 2021",
+    locations: [
         {
-            "name": "Coloma, MI",
-            "latitude": 42.167230023185745,
-            "longitude": -86.31383221776623
+            name: "Coloma, MI",
+            latitude: 42.167230023185745,
+            longitude: -86.31383221776623
         }
     ],
-    "plants": [
+    plants: [
         {
-            "name": "FA 102",
-            "AKA": ["Earlystar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven-16"
+            name: "FA 102",
+            AKA: ["Earlystar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven-16"
         },
         {
-            "name": "FA 101",
-            "AKA": ["Brightstar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven-12"
+            name: "FA 101",
+            AKA: ["Brightstar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven-12"
         },
         {
-            "name": "FA 47",
-            "AKA": ["Risingstar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven-7",
-            "patent": "https://patents.google.com/patent/USPP10545 expired 2016-10-28"
+            name: "FA 47",
+            AKA: ["Risingstar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven-7",
+            patent: "https://patents.google.com/patent/USPP10545 expired 2016-10-28"
         },
         {
-            "name": "Star 105",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven-3"
+            name: "Star 105",
+            type: "Peach",
+            harvest_time_relative: "Redhaven-3"
         },
         {
-            "name": "FA 52",
-            "AKA": ["Redstar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven+1",
-            "patent": "https://patents.google.com/patent/USPP10546 expired 2016-10-28"
+            name: "FA 52",
+            AKA: ["Redstar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven+1",
+            patent: "https://patents.google.com/patent/USPP10546 expired 2016-10-28"
         },
         {
-            "name": "FA 12",
-            "AKA": ["Blazingstar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven+3",
-            "patent": "https://patents.google.com/patent/USPP10555 expired 2016-10-28"
+            name: "FA 12",
+            AKA: ["Blazingstar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven+3",
+            patent: "https://patents.google.com/patent/USPP10555 expired 2016-10-28"
         },
         {
-            "name": "FA 11",
-            "AKA": ["Starfire (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven+3",
-            "patent": "https://patents.google.com/patent/USPP10548 expired 2016-10-28"  
+            name: "FA 11",
+            AKA: ["Starfire (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven+3",
+            patent: "https://patents.google.com/patent/USPP10548 expired 2016-10-28"
         },
         {
-            "name": "FA 59",
-            "AKA": ["Coralstar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven+12",
-            "patent": "https://patents.google.com/patent/USPP10547 expired 2016-10-28"  
+            name: "FA 59",
+            AKA: ["Coralstar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven+12",
+            patent: "https://patents.google.com/patent/USPP10547 expired 2016-10-28"
         },
         {
-            "name": "FA 80",
-            "AKA": ["Allstar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven+14",
-            "patent": "https://patents.google.com/patent/USPP10549 expired 2016-10-28"  
+            name: "FA 80",
+            AKA: ["Allstar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven+14",
+            patent: "https://patents.google.com/patent/USPP10549 expired 2016-10-28"
         },
         {
-            "name": "Sweetstar",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven+18",
-            "patent": "https://patents.google.com/patent/USPP21145 expires 2029-03-09",
-            "description": "note: the name \"Sweetstar\" can't be trademarked because it's listed as the cultivar name in the patent"
+            name: "Sweetstar",
+            type: "Peach",
+            harvest_time_relative: "Redhaven+18",
+            patent: "https://patents.google.com/patent/USPP21145 expires 2029-03-09",
+            description: "note: the name \"Sweetstar\" can't be trademarked because it's listed as the cultivar name in the patent"
         },
         {
-            "name": "FA 18",
-            "AKA": ["Blushingstar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven+21",
-            "patent": "https://patents.google.com/patent/USPP10554 expired 2016-10-28"  
+            name: "FA 18",
+            AKA: ["Blushingstar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven+21",
+            patent: "https://patents.google.com/patent/USPP10554 expired 2016-10-28"
         },
         {
-            "name": "FA 17",
-            "AKA": ["Glowingstar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven+25",
-            "patent": "https://patents.google.com/patent/USPP10556 expired 2016-10-28"  
+            name: "FA 17",
+            AKA: ["Glowingstar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven+25",
+            patent: "https://patents.google.com/patent/USPP10556 expired 2016-10-28"
         },
         {
-            "name": "Star 86",
-            "type": "Peach",
+            name: "Star 86",
+            type: "Peach",
             // harvest time not given, "Glowingstar replacement" so Glowingstar time used
-            "harvest_time_relative": "Redhaven+25"
+            harvest_time_relative: "Redhaven+25"
         },
         {
-            "name": "Star 34",
-            "type": "Peach",
+            name: "Star 34",
+            type: "Peach",
             // harvest time not given, assumed from the name
-            "harvest_time_relative": "Redhaven+34"
+            harvest_time_relative: "Redhaven+34"
         },
         {
-            "name": "Star 38",
-            "type": "Peach",
+            name: "Star 38",
+            type: "Peach",
             // harvest time not given, assumed from the name
-            "harvest_time_relative": "Redhaven+38"
+            harvest_time_relative: "Redhaven+38"
         },
         {
-            "name": "FA 42",
-            "AKA": ["Autumnstar (tm)"],
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven+42",
-            "patent": "https://patents.google.com/patent/USPP14439 expires 2022-04-03"  
+            name: "FA 42",
+            AKA: ["Autumnstar (tm)"],
+            type: "Peach",
+            harvest_time_relative: "Redhaven+42",
+            patent: "https://patents.google.com/patent/USPP14439 expires 2022-04-03"
         }
     ]
 }

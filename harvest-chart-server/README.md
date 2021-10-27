@@ -23,7 +23,6 @@
 * `cargo fix`
 * `cargo clippy` after installing `rustup component add clippy`
   * `cargo clippy --fix`
-* `cargo run --bin json-format`
 
 # debugging in vs code
 * 2021: vs code rust plugins work best when the folder opened has cargo.toml in its root (don't open the whole repo).  hopefully this gets better over time

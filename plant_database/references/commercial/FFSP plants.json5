@@ -1,591 +1,593 @@
 {
-    "title": "FFSP Plants",
-    "author": "",
-    "url": "http://www.ffsp.net/varieties/",
-    "accessed": "Oct 2021",
-    "locations": [{
-        "name": "Florida (various locations)",
-        "latitude": 29.6465645490967,
-        "longitude": -82.34424313539307
-    }],
+    title: "FFSP Plants",
+    author: "",
+    url: "http://www.ffsp.net/varieties/",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Florida (various locations)",
+            latitude: 29.6465645490967,
+            longitude: -82.34424313539307
+        }
+    ],
     // rootstocks such as MP-29 omitted
-    "plants": [
-        {
-            "name": "Fla. 90-3",
-            "type": "Apple"
+    plants: [
+        {
+            name: "Fla. 90-3",
+            type: "Apple"
         },
         {
-            "name": "Abundance",
-            "type": "Blueberry",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around April 30 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/abundance/",
-            "patent": "https://patents.google.com/patent/USPP16476 expires 2025-01-21"
+            name: "Abundance",
+            type: "Blueberry",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around April 30 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/abundance/",
+            patent: "https://patents.google.com/patent/USPP16476 expires 2025-01-21"
         },
         {
-            "name": "FL07-399",
-            "type": "Blueberry",
-            "chill": "Less than 200 Hours",
-            "harvest_time": "50% Harvest: Around April 25 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/arcadia-fl07-399/",
-            "patent": "https://patents.google.com/patent/USPP26313 expires 2035-02-12"
+            name: "FL07-399",
+            type: "Blueberry",
+            chill: "Less than 200 Hours",
+            harvest_time: "50% Harvest: Around April 25 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/arcadia-fl07-399/",
+            patent: "https://patents.google.com/patent/USPP26313 expires 2035-02-12"
         },
         {
-            "name": "FL06-203",
-            "type": "Blueberry",
-            "chill": "100 hours",
-            "harvest_time": "50% Harvest: Around April 10 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/avanti-fl06-203/",
-            "patent": "https://patents.google.com/patent/USPP26312 expires 2035-02-12"
-        },
-        {
-            "name": "Bluecrisp",
-            "type": "Blueberry",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around April 15 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/bluecrisp/",
-            "patent": "https://patents.google.com/patent/USPP11033 expired 2017-08-18"
-        },
-        {
-            "name": "FL03-291",
-            "type": "Blueberry",
-            "chill": "200 hours",
-            "harvest_time": "First Harvest: Around April 16 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/bobolink-fl03-291/",
-            "patent": "https://patents.google.com/patent/USPP21377 expires 2029-09-08"
-        },
-        {
-            "name": "FL04-235",
-            "AKA": ["Chickadee (tm)"],
-            "type": "Blueberry",
-            "chill": "100 hours",
-            "harvest_time": "First Harvest: Around April 5 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/chickadee-fl04-235/",
-            "patent": "https://patents.google.com/patent/USPP21376 expries 2029-09-08"
-        },
-        {
-            "name": "Emerald",
-            "type": "Blueberry",
-            "harvest_time": "First Harvest: Around April 22 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/emerald/",
-            "patent": "https://patents.google.com/patent/USPP12165 expired 2019-09-09"
-        },
-        {
-            "name": "FL06-377",
-            "type": "Blueberry",
-            "chill": "150 Hours",
-            "harvest_time": "50% Harvest: Around April 25 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/endura-fl06-377/",
-            "patent": "https://patents.google.com/patent/USPP26679 expires 2035-02-12"
+            name: "FL06-203",
+            type: "Blueberry",
+            chill: "100 hours",
+            harvest_time: "50% Harvest: Around April 10 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/avanti-fl06-203/",
+            patent: "https://patents.google.com/patent/USPP26312 expires 2035-02-12"
+        },
+        {
+            name: "Bluecrisp",
+            type: "Blueberry",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around April 15 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/bluecrisp/",
+            patent: "https://patents.google.com/patent/USPP11033 expired 2017-08-18"
+        },
+        {
+            name: "FL03-291",
+            type: "Blueberry",
+            chill: "200 hours",
+            harvest_time: "First Harvest: Around April 16 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/bobolink-fl03-291/",
+            patent: "https://patents.google.com/patent/USPP21377 expires 2029-09-08"
+        },
+        {
+            name: "FL04-235",
+            AKA: ["Chickadee (tm)"],
+            type: "Blueberry",
+            chill: "100 hours",
+            harvest_time: "First Harvest: Around April 5 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/chickadee-fl04-235/",
+            patent: "https://patents.google.com/patent/USPP21376 expries 2029-09-08"
+        },
+        {
+            name: "Emerald",
+            type: "Blueberry",
+            harvest_time: "First Harvest: Around April 22 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/emerald/",
+            patent: "https://patents.google.com/patent/USPP12165 expired 2019-09-09"
+        },
+        {
+            name: "FL06-377",
+            type: "Blueberry",
+            chill: "150 Hours",
+            harvest_time: "50% Harvest: Around April 25 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/endura-fl06-377/",
+            patent: "https://patents.google.com/patent/USPP26679 expires 2035-02-12"
         },
         {
-            "name": "Farthing",
-            "type": "Blueberry",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around April 20 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/farthing/",
-            "patent": "https://patents.google.com/patent/USPP19341 expires 2027-10-01"
+            name: "Farthing",
+            type: "Blueberry",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around April 20 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/farthing/",
+            patent: "https://patents.google.com/patent/USPP19341 expires 2027-10-01"
         },
         {
-            "name": "FL96-43",
-            "type": "Blueberry",
-            "chill": "200 hours below 7 degrees C",
-            "harvest_time": "First Harvest: Around April 14 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/flicker-fl96-43/",
-            "patent": "https://patents.google.com/patent/USPP21554 expires 2029-10-05"
-        },
-        {
-            "name": "Florida Rose",
-            "type": "Blueberry",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around May 25 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/florida-rose/",
-            "patent": "https://patents.google.com/patent/USPP14485 expires 2023-01-26"
-        },
-        {
-            "name": "FL98-325",
-            "AKA": ["Indigocrisp (tm)"],
-            "type": "Blueberry",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around April 15 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/indigocrisp-fl98-325/",
-            "patent": "https://patents.google.com/patent/USPP26523 expires 2034-05-09"
-        },
-        {
-            "name": "Jewel",
-            "type": "Blueberry",
-            "chill": "250 hours",
-            "harvest_time": "First Harvest: Around April 15 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/jewel/",
-            "patent": "https://patents.google.com/patent/USPP11807 expired 2018-10-19"
-        },
+            name: "FL96-43",
+            type: "Blueberry",
+            chill: "200 hours below 7 degrees C",
+            harvest_time: "First Harvest: Around April 14 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/flicker-fl96-43/",
+            patent: "https://patents.google.com/patent/USPP21554 expires 2029-10-05"
+        },
+        {
+            name: "Florida Rose",
+            type: "Blueberry",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around May 25 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/florida-rose/",
+            patent: "https://patents.google.com/patent/USPP14485 expires 2023-01-26"
+        },
+        {
+            name: "FL98-325",
+            AKA: ["Indigocrisp (tm)"],
+            type: "Blueberry",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around April 15 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/indigocrisp-fl98-325/",
+            patent: "https://patents.google.com/patent/USPP26523 expires 2034-05-09"
+        },
+        {
+            name: "Jewel",
+            type: "Blueberry",
+            chill: "250 hours",
+            harvest_time: "First Harvest: Around April 15 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/jewel/",
+            patent: "https://patents.google.com/patent/USPP11807 expired 2018-10-19"
+        },
         {
-            "name": "FL06-556",
-            "AKA": ["Keecrisp (tm)"],
-            "type": "Blueberry",
-            "chill": "300 hours",
-            "harvest_time": "50% Harvest: Around May 4 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/keecrisp-fl06-556/",
-            "patent": "https://patents.google.com/patent/USPP27771 expires 2036-03-07",
-            "tags": [ "southern highbush" ]
+            name: "FL06-556",
+            AKA: ["Keecrisp (tm)"],
+            type: "Blueberry",
+            chill: "300 hours",
+            harvest_time: "50% Harvest: Around May 4 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/keecrisp-fl06-556/",
+            patent: "https://patents.google.com/patent/USPP27771 expires 2036-03-07",
+            tags: ["southern highbush"]
         },
         {
-            "name": "FL02-40",
-            "AKA": ["Kestrel (tm)"],
-            "type": "Blueberry",
-            "chill": "200 hours",
-            "harvest_time": "First Harvest: Around April 5 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/kestrel-fl02-40/",
-            "patent": "https://patents.google.com/patent/USPP21719 expires 2029-10-05",
-            "tags": [ "southern highbush" ]
-        },
-        {
-            "name": "Magnus",
-            "type": "Blueberry",
-            "chill": "100-150 hours",
-            "description": "http://www.ffsp.net/varieties/blueberry/magnus/",
-            "patent": "https://patents.google.com/patent/USPP32181 expires 2039-01-15"
+            name: "FL02-40",
+            AKA: ["Kestrel (tm)"],
+            type: "Blueberry",
+            chill: "200 hours",
+            harvest_time: "First Harvest: Around April 5 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/kestrel-fl02-40/",
+            patent: "https://patents.google.com/patent/USPP21719 expires 2029-10-05",
+            tags: ["southern highbush"]
+        },
+        {
+            name: "Magnus",
+            type: "Blueberry",
+            chill: "100-150 hours",
+            description: "http://www.ffsp.net/varieties/blueberry/magnus/",
+            patent: "https://patents.google.com/patent/USPP32181 expires 2039-01-15"
         },
-        {
-            "name": "FL01-173",
-            "AKA": ["Meadowlark (tm"],
-            "type": "Blueberry",
-            "chill": "200 hours",
-            "harvest_time": "First Harvest: Around April 10 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/meadowlark-fl01-173/",
-            "patent": "https://patents.google.com/patent/USPP21553 expires 2029-10-05"
-        },
-        {
-            "name": "Millennia",
-            "type": "Blueberry",
-            "chill": "350 hours",
-            "harvest_time": "First Harvest: Around April 28 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/millennia/",
-            "patent": "https://patents.google.com/patent/USPP12816 expired 2020-10-10"
-        },
-        {
-            "name": "Optimus",
-            "type": "Blueberry",
-            "chill": "150-200 hours",
-            "description": "http://www.ffsp.net/varieties/blueberry/optimus/",
-            "patent": "https://patents.google.com/patent/USPP32028 expires 2039-01-29"
+        {
+            name: "FL01-173",
+            AKA: ["Meadowlark (tm"],
+            type: "Blueberry",
+            chill: "200 hours",
+            harvest_time: "First Harvest: Around April 10 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/meadowlark-fl01-173/",
+            patent: "https://patents.google.com/patent/USPP21553 expires 2029-10-05"
+        },
+        {
+            name: "Millennia",
+            type: "Blueberry",
+            chill: "350 hours",
+            harvest_time: "First Harvest: Around April 28 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/millennia/",
+            patent: "https://patents.google.com/patent/USPP12816 expired 2020-10-10"
+        },
+        {
+            name: "Optimus",
+            type: "Blueberry",
+            chill: "150-200 hours",
+            description: "http://www.ffsp.net/varieties/blueberry/optimus/",
+            patent: "https://patents.google.com/patent/USPP32028 expires 2039-01-29"
         },
-        {
-            "name": "Patrecia",
-            "type": "Blueberry",
-            "description": "http://www.ffsp.net/varieties/blueberry/patrecia/",
-            "patent": "https://patents.google.com/patent/USPP27740 expires 2036-03-07",
-            "tags": [ "southern highbush" ]
+        {
+            name: "Patrecia",
+            type: "Blueberry",
+            description: "http://www.ffsp.net/varieties/blueberry/patrecia/",
+            patent: "https://patents.google.com/patent/USPP27740 expires 2036-03-07",
+            tags: ["southern highbush"]
         },
         {
-            "name": "Primadonna",
-            "type": "Blueberry",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around April 12 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/primadonna/",
-            "patent": "https://patents.google.com/patent/USPP20181 expires 2027-11-01"
+            name: "Primadonna",
+            type: "Blueberry",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around April 12 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/primadonna/",
+            patent: "https://patents.google.com/patent/USPP20181 expires 2027-11-01"
         },
         {
-            "name": "FL05-627",
-            "AKA": ["Raven (tm)"],
-            "type": "Blueberry",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around April 20 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/raven-fl05-627/",
-            "patent": "https://patents.google.com/patent/USPP21374 expires 2029-09-08"
+            name: "FL05-627",
+            AKA: ["Raven (tm)"],
+            type: "Blueberry",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around April 20 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/raven-fl05-627/",
+            patent: "https://patents.google.com/patent/USPP21374 expires 2029-09-08"
         },
-        {
-            "name": "San Joaquin",
-            "AKA": ["FLX-1"],
-            "type": "Blueberry",
-            "chill": "400-500 hours",
-            "harvest_time": "First Harvest: Around April 20 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/san-joaquin-flx-1/",
-            "patent": "https://patents.google.com/patent/USPP19342 expires 2027-10-23"
-        },
-        {
-            "name": "Santa Fe",
-            "type": "Blueberry",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around May 3 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/santa-fe/",
-            "patent": "https://patents.google.com/patent/USPP10788 expired 2017-07-18"
-        },
-        {
-            "name": "Sapphire",
-            "type": "Blueberry",
-            "chill": "400 hours",
-            "description": "http://www.ffsp.net/varieties/blueberry/sapphire/",
-            "patent": "https://patents.google.com/patent/USPP11829 expired 2018-10-19"
+        {
+            name: "San Joaquin",
+            AKA: ["FLX-1"],
+            type: "Blueberry",
+            chill: "400-500 hours",
+            harvest_time: "First Harvest: Around April 20 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/san-joaquin-flx-1/",
+            patent: "https://patents.google.com/patent/USPP19342 expires 2027-10-23"
+        },
+        {
+            name: "Santa Fe",
+            type: "Blueberry",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around May 3 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/santa-fe/",
+            patent: "https://patents.google.com/patent/USPP10788 expired 2017-07-18"
+        },
+        {
+            name: "Sapphire",
+            type: "Blueberry",
+            chill: "400 hours",
+            description: "http://www.ffsp.net/varieties/blueberry/sapphire/",
+            patent: "https://patents.google.com/patent/USPP11829 expired 2018-10-19"
         },
-        {
-            "name": "Savory",
-            "type": "Blueberry",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around May 22, near Homerville, GA",
-            "description": "http://www.ffsp.net/varieties/blueberry/savory/",
-            "patent": "https://patents.google.com/patent/USPP15109 expires 2023-07-07"
+        {
+            name: "Savory",
+            type: "Blueberry",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around May 22, near Homerville, GA",
+            description: "http://www.ffsp.net/varieties/blueberry/savory/",
+            patent: "https://patents.google.com/patent/USPP15109 expires 2023-07-07"
         },
-        {
-            "name": "Scintilla",
-            "type": "Blueberry",
-            "chill": "200-300 hours",
-            "harvest_time": "First Harvest: Around April 20 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/scintilla/",
-            "patent": "https://patents.google.com/patent/USPP19233 expires 2027-10-09"
+        {
+            name: "Scintilla",
+            type: "Blueberry",
+            chill: "200-300 hours",
+            harvest_time: "First Harvest: Around April 20 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/scintilla/",
+            patent: "https://patents.google.com/patent/USPP19233 expires 2027-10-09"
         },
         {
-            "name": "Sebring",
-            "type": "Blueberry",
-            "chill": "200 hours",
-            "harvest_time": "First Harvest: Around May 1 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/sebring/",
-            "patent": "https://patents.google.com/patent/USPP13683 expired 2021-10-18"
+            name: "Sebring",
+            type: "Blueberry",
+            chill: "200 hours",
+            harvest_time: "First Harvest: Around May 1 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/sebring/",
+            patent: "https://patents.google.com/patent/USPP13683 expired 2021-10-18"
         },
         {
-            "name": "Snowchaser",
-            "type": "Blueberry",
-            "chill": "100-200 hours",
-            "harvest_time": "First Harvest: Around April 5 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/blueberry/snowchaser/",
-            "patent": "https://patents.google.com/patent/USPP19503 expires 2027-05-19"
+            name: "Snowchaser",
+            type: "Blueberry",
+            chill: "100-200 hours",
+            harvest_time: "First Harvest: Around April 5 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/blueberry/snowchaser/",
+            patent: "https://patents.google.com/patent/USPP19503 expires 2027-05-19"
         },
         {
-            "name": "Southern Belle",
-            "type": "Blueberry",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around April 28, in Gainesville, FL",
-            "description": "http://www.ffsp.net/varieties/blueberry/southern-belle/",
-            "patent": "https://patents.google.com/patent/USPP13931 expires 2022-01-11"
+            name: "Southern Belle",
+            type: "Blueberry",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around April 28, in Gainesville, FL",
+            description: "http://www.ffsp.net/varieties/blueberry/southern-belle/",
+            patent: "https://patents.google.com/patent/USPP13931 expires 2022-01-11"
         },
         {
-            "name": "Southmoon",
-            "type": "Blueberry",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around April 28, in Gainesville, FL",
-            "description": "http://www.ffsp.net/varieties/blueberry/southmoon/",
-            "patent": "https://patents.google.com/patent/USPP9834 expired 2015-09-11"
+            name: "Southmoon",
+            type: "Blueberry",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around April 28, in Gainesville, FL",
+            description: "http://www.ffsp.net/varieties/blueberry/southmoon/",
+            patent: "https://patents.google.com/patent/USPP9834 expired 2015-09-11"
         },
         {
-            "name": "Springhigh",
-            "type": "Blueberry",
-            "chill": "200-300 hours",
-            "harvest_time": "First Harvest: Around April 16, in Gainesville, FL",
-            "description": "http://www.ffsp.net/varieties/blueberry/springhigh/",
-            "patent": "https://patents.google.com/patent/USPP16404 expires 2024-12-31"
+            name: "Springhigh",
+            type: "Blueberry",
+            chill: "200-300 hours",
+            harvest_time: "First Harvest: Around April 16, in Gainesville, FL",
+            description: "http://www.ffsp.net/varieties/blueberry/springhigh/",
+            patent: "https://patents.google.com/patent/USPP16404 expires 2024-12-31"
         },
         {
-            "name": "Springwide",
-            "type": "Blueberry",
-            "chill": "200 hours",
-            "harvest_time": "First Harvest: Around April 22, in Gainesville, FL",
-            "description": "http://www.ffsp.net/varieties/blueberry/springwide/",
-            "patent": "https://patents.google.com/patent/USPP16333 expires 2024-12-10"
+            name: "Springwide",
+            type: "Blueberry",
+            chill: "200 hours",
+            harvest_time: "First Harvest: Around April 22, in Gainesville, FL",
+            description: "http://www.ffsp.net/varieties/blueberry/springwide/",
+            patent: "https://patents.google.com/patent/USPP16333 expires 2024-12-10"
         },
         {
-            "name": "Star",
-            "type": "Blueberry",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around May 1, in Gainesville, FL",
-            "description": "http://www.ffsp.net/varieties/blueberry/star/",
-            "patent": "https://patents.google.com/patent/USPP10675 expired 2016-02-05"
+            name: "Star",
+            type: "Blueberry",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around May 1, in Gainesville, FL",
+            description: "http://www.ffsp.net/varieties/blueberry/star/",
+            patent: "https://patents.google.com/patent/USPP10675 expired 2016-02-05"
         },
         {
-            "name": "Sweetcrisp",
-            "type": "Blueberry",
-            "chill": "200-300 hours",
-            "harvest_time": "First Harvest: Around April 26, in Gainesville, FL",
-            "description": "http://www.ffsp.net/varieties/blueberry/sweetcrisp/",
-            "patent": "https://patents.google.com/patent/USPP20027 expires 2026-05-26"
+            name: "Sweetcrisp",
+            type: "Blueberry",
+            chill: "200-300 hours",
+            harvest_time: "First Harvest: Around April 26, in Gainesville, FL",
+            description: "http://www.ffsp.net/varieties/blueberry/sweetcrisp/",
+            patent: "https://patents.google.com/patent/USPP20027 expires 2026-05-26"
         },
         {
-            "name": "Windsor",
-            "type": "Blueberry",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around April 22, in Gainesville, FL",
-            "description": "http://www.ffsp.net/varieties/blueberry/windsor/",
-            "patent": "https://patents.google.com/patent/USPP12783 expired 2020-10-30"
+            name: "Windsor",
+            type: "Blueberry",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around April 22, in Gainesville, FL",
+            description: "http://www.ffsp.net/varieties/blueberry/windsor/",
+            patent: "https://patents.google.com/patent/USPP12783 expired 2020-10-30"
         },
         {
-            "name": "914",
-            "type": "Grapefruit",
-            "harvest_time_unparsed": "First Harvest: Around October through April in some seasons",
-            "description": "http://www.ffsp.net/varieties/citrus/914-2/",
-            "patent": "https://patents.google.com/patent/USPP26177 expires 2034-06-19"
+            name: "914",
+            type: "Grapefruit",
+            harvest_time_unparsed: "First Harvest: Around October through April in some seasons",
+            description: "http://www.ffsp.net/varieties/citrus/914-2/",
+            patent: "https://patents.google.com/patent/USPP26177 expires 2034-06-19"
         },
         {
-            "name": "950",
-            "type": "Mandarin",
-            "harvest_time_unparsed": "First Harvest: Early-to-Mid-December, through January",
-            "description": "http://www.ffsp.net/varieties/citrus/950-2/",
-            "patent": "https://patents.google.com/patent/USPP23359 expires 2031-08-08"
+            name: "950",
+            type: "Mandarin",
+            harvest_time_unparsed: "First Harvest: Early-to-Mid-December, through January",
+            description: "http://www.ffsp.net/varieties/citrus/950-2/",
+            patent: "https://patents.google.com/patent/USPP23359 expires 2031-08-08"
         },
         {
-            "name": "LB8-9",
-            "type": "Mandarin",
-            "harvest_time_unparsed": "First Harvest: Mid-November to late December, depending on season",
-            "description": "http://www.ffsp.net/varieties/citrus/sugar-belle-lb8-9/",
-            "patent": "https://patents.google.com/patent/USPP21356 expires 2028-12-05"
+            name: "LB8-9",
+            type: "Mandarin",
+            harvest_time_unparsed: "First Harvest: Mid-November to late December, depending on season",
+            description: "http://www.ffsp.net/varieties/citrus/sugar-belle-lb8-9/",
+            patent: "https://patents.google.com/patent/USPP21356 expires 2028-12-05"
         },
         {
-            "name": "B9-65",
-            "type": "Sweet Orange",
-            "description": "http://www.ffsp.net/varieties/citrus/b9-65/",
-            "patent": "https://patents.google.com/patent/USPP27144 expires 2035-02-04"
+            name: "B9-65",
+            type: "Sweet Orange",
+            description: "http://www.ffsp.net/varieties/citrus/b9-65/",
+            patent: "https://patents.google.com/patent/USPP27144 expires 2035-02-04"
         },
         {
-            "name": "Florida EV1",
-            "type": "Sweet Orange",
-            "harvest_time_unparsed": "8-12 weeks earlier than Valencia",
-            "description": "http://www.ffsp.net/varieties/citrus/florida-ev1/",
-            "patent": "https://patents.google.com/patent/USPP27144 expired 2014-11-05"
+            name: "Florida EV1",
+            type: "Sweet Orange",
+            harvest_time_unparsed: "8-12 weeks earlier than Valencia",
+            description: "http://www.ffsp.net/varieties/citrus/florida-ev1/",
+            patent: "https://patents.google.com/patent/USPP27144 expired 2014-11-05"
         },
         {
-            "name": "Florida EV2",
-            "type": "Sweet Orange",
-            "harvest_time_unparsed": "8-12 weeks earlier than Valencia",
-            "description": "http://www.ffsp.net/varieties/citrus/florida-ev2/",
-            "patent": "https://patents.google.com/patent/USPP29824 expires 2036-10-14"
+            name: "Florida EV2",
+            type: "Sweet Orange",
+            harvest_time_unparsed: "8-12 weeks earlier than Valencia",
+            description: "http://www.ffsp.net/varieties/citrus/florida-ev2/",
+            patent: "https://patents.google.com/patent/USPP29824 expires 2036-10-14"
         },
         {
-            "name": "N7-3",
-            "type": "Sweet Orange",
-            "harvest_time_unparsed": "Fruit holds its quality into the summer, allowing an April-June harvest",
-            "description": "http://www.ffsp.net/varieties/citrus/valenfresh-n7-3/",
-            "patent": "https://patents.google.com/patent/USPP21224 expires 2029-05-27"
+            name: "N7-3",
+            type: "Sweet Orange",
+            harvest_time_unparsed: "Fruit holds its quality into the summer, allowing an April-June harvest",
+            description: "http://www.ffsp.net/varieties/citrus/valenfresh-n7-3/",
+            patent: "https://patents.google.com/patent/USPP21224 expires 2029-05-27"
         },
         {
-            "name": "N13-32",
-            "type": "Sweet Orange",
-            "description": "http://www.ffsp.net/varieties/citrus/n13-32/",
-            "patent": "https://patents.google.com/patent/USPP27145 expires 2035-02-06"
+            name: "N13-32",
+            type: "Sweet Orange",
+            description: "http://www.ffsp.net/varieties/citrus/n13-32/",
+            patent: "https://patents.google.com/patent/USPP27145 expires 2035-02-06"
         },
         {
-            "name": "OLL-4",
-            "type": "Sweet Orange",
-            "description": "http://www.ffsp.net/varieties/citrus/oll-4/",
-            "patent": "https://patents.google.com/patent/USPP27829 expires 2034-10-30"
+            name: "OLL-4",
+            type: "Sweet Orange",
+            description: "http://www.ffsp.net/varieties/citrus/oll-4/",
+            patent: "https://patents.google.com/patent/USPP27829 expires 2034-10-30"
         },
         {
-            "name": "OLL-8",
-            "type": "Sweet Orange",
-            "harvest_time_unparsed": "with Valencia",
-            "description": "http://www.ffsp.net/varieties/citrus/oll-8/",
-            "patent": "https://patents.google.com/patent/USPP26087 expires 2034-02-19"
+            name: "OLL-8",
+            type: "Sweet Orange",
+            harvest_time_unparsed: "with Valencia",
+            description: "http://www.ffsp.net/varieties/citrus/oll-8/",
+            patent: "https://patents.google.com/patent/USPP26087 expires 2034-02-19"
         },
         {
-            "name": "SF14W-62",
-            "AKA": ["Valquarius (tm)"],
-            "type": "Sweet Orange",
-            "harvest_time_unparsed": "roughly 4-8 weeks earlier than Valencia",
-            "description": "http://www.ffsp.net/varieties/citrus/valquarius-sf14w-62/",
-            "patent": "https://patents.google.com/patent/USPP21535 expires 2029-05-18"
+            name: "SF14W-62",
+            AKA: ["Valquarius (tm)"],
+            type: "Sweet Orange",
+            harvest_time_unparsed: "roughly 4-8 weeks earlier than Valencia",
+            description: "http://www.ffsp.net/varieties/citrus/valquarius-sf14w-62/",
+            patent: "https://patents.google.com/patent/USPP21535 expires 2029-05-18"
         },
         {
-            "name": "UF 11-1-24",
-            "type": "Sweet Orange",
-            "harvest_time_unparsed": "midseason",
-            "description": "http://www.ffsp.net/varieties/citrus/uf-11-1-24/",
-            "patent": "https://patents.google.com/patent/USPP27777 expires 2035-04-10"
+            name: "UF 11-1-24",
+            type: "Sweet Orange",
+            harvest_time_unparsed: "midseason",
+            description: "http://www.ffsp.net/varieties/citrus/uf-11-1-24/",
+            patent: "https://patents.google.com/patent/USPP27777 expires 2035-04-10"
         },
         {
-            "name": "Southern Home",
-            "type": "Muscadine",
-            "harvest_time_unparsed": "through October or November",
-            "description": "http://www.ffsp.net/varieties/grape/southernhome/",
-            "patent": "https://patents.google.com/patent/USPP9454 expired 2014-12-19"
+            name: "Southern Home",
+            type: "Muscadine",
+            harvest_time_unparsed: "through October or November",
+            description: "http://www.ffsp.net/varieties/grape/southernhome/",
+            patent: "https://patents.google.com/patent/USPP9454 expired 2014-12-19"
         },
         {
-            "name": "Sunbest",
-            "type": "Nectarine",
-            "chill": "225 hours",
-            "harvest_time": "First Harvest: Around May 1 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/nectarine/sunbest/",
-            "patent": "https://patents.google.com/patent/USPP15062 expires 2021-12-25"
+            name: "Sunbest",
+            type: "Nectarine",
+            chill: "225 hours",
+            harvest_time: "First Harvest: Around May 1 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/nectarine/sunbest/",
+            patent: "https://patents.google.com/patent/USPP15062 expires 2021-12-25"
         },
         {
-            "name": "Sunmist",
-            "type": "Nectarine",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around April 22 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/nectarine/sunmist/",
-            "patent": "https://patents.google.com/patent/USPP9871 expired 2014-08-22"
+            name: "Sunmist",
+            type: "Nectarine",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around April 22 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/nectarine/sunmist/",
+            patent: "https://patents.google.com/patent/USPP9871 expired 2014-08-22"
         },
         {
-            "name": "UFQueen",
-            "type": "Nectarine",
-            "chill": "250 hours",
-            "harvest_time": "First Harvest: Around May 10 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/nectarine/ufqueen/",
-            "patent": "https://patents.google.com/patent/USPP11587 expired 2018-07-20"
+            name: "UFQueen",
+            type: "Nectarine",
+            chill: "250 hours",
+            harvest_time: "First Harvest: Around May 10 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/nectarine/ufqueen/",
+            patent: "https://patents.google.com/patent/USPP11587 expired 2018-07-20"
         },
         {
-            "name": "UFRoyal",
-            "type": "Nectarine",
-            "chill": "250 hours",
-            "harvest_time": "First Harvest: Around May 5 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/nectarine/ufroyal/",
-            "patent": "https://patents.google.com/patent/USPP20314 expires 2028-05-09"
+            name: "UFRoyal",
+            type: "Nectarine",
+            chill: "250 hours",
+            harvest_time: "First Harvest: Around May 5 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/nectarine/ufroyal/",
+            patent: "https://patents.google.com/patent/USPP20314 expires 2028-05-09"
         },
         {
-            "name": "Flordabest",
-            "type": "Peach",
-            "chill": "250 hours",
-            "harvest_time": "First Harvest: Around April 26 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/flordabest/",
-            "patent": "https://patents.google.com/patent/USPP20294 expires 2028-05-25"
+            name: "Flordabest",
+            type: "Peach",
+            chill: "250 hours",
+            harvest_time: "First Harvest: Around April 26 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/flordabest/",
+            patent: "https://patents.google.com/patent/USPP20294 expires 2028-05-25"
         },
         {
-            "name": "Gulfcrest",
-            "type": "Peach",
-            "chill": "525 hours",
-            "harvest_time": "Around May 13 near Attapulgus, GA",
-            "description": "http://www.ffsp.net/varieties/peach/gulfcrest/",
-            "patent": "https://patents.google.com/patent/USPP14685 expires 2023-03-10"
+            name: "Gulfcrest",
+            type: "Peach",
+            chill: "525 hours",
+            harvest_time: "Around May 13 near Attapulgus, GA",
+            description: "http://www.ffsp.net/varieties/peach/gulfcrest/",
+            patent: "https://patents.google.com/patent/USPP14685 expires 2023-03-10"
         },
         {
-            "name": "Gulfcrimson",
-            "type": "Peach",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around May 18 near Attapulgus, GA",
-            "description": "http://www.ffsp.net/varieties/peach/gulfcrimson/",
-            "patent": "https://patents.google.com/patent/USPP20174 expires 2028-05-02"
+            name: "Gulfcrimson",
+            type: "Peach",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around May 18 near Attapulgus, GA",
+            description: "http://www.ffsp.net/varieties/peach/gulfcrimson/",
+            patent: "https://patents.google.com/patent/USPP20174 expires 2028-05-02"
         },
         {
-            "name": "Gulfking",
-            "type": "Peach",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around May 18 near Attapulgus, GA",
-            "description": "http://www.ffsp.net/varieties/peach/gulfking/",
-            "patent": "https://patents.google.com/patent/USPP14483 expires 2022-12-26"
+            name: "Gulfking",
+            type: "Peach",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around May 18 near Attapulgus, GA",
+            description: "http://www.ffsp.net/varieties/peach/gulfking/",
+            patent: "https://patents.google.com/patent/USPP14483 expires 2022-12-26"
         },
         {
-            "name": "Gulfprince",
-            "type": "Peach",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around June 1 near Attapulgus, GA",
-            "description": "http://www.ffsp.net/varieties/peach/gulfprince/",
-            "patent": "https://patents.google.com/patent/USPP12686 expires 2020-03-06"
+            name: "Gulfprince",
+            type: "Peach",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around June 1 near Attapulgus, GA",
+            description: "http://www.ffsp.net/varieties/peach/gulfprince/",
+            patent: "https://patents.google.com/patent/USPP12686 expires 2020-03-06"
         },
         {
-            "name": "Gulfsnow",
-            "type": "Peach",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around June 15 near Attapulgus, GA",
-            "description": "http://www.ffsp.net/varieties/peach/gulfsnow/",
-            "patent": "https://patents.google.com/patent/USPP25299 expires 2032-10-27"
+            name: "Gulfsnow",
+            type: "Peach",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around June 15 near Attapulgus, GA",
+            description: "http://www.ffsp.net/varieties/peach/gulfsnow/",
+            patent: "https://patents.google.com/patent/USPP25299 expires 2032-10-27"
         },
         {
-            "name": "UF2000",
-            "type": "Peach",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around May 18 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/uf2000/",
-            "patent": "https://patents.google.com/patent/USPP12019 expired 2019-08-18"
+            name: "UF2000",
+            type: "Peach",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around May 18 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/uf2000/",
+            patent: "https://patents.google.com/patent/USPP12019 expired 2019-08-18"
         },
         {
-            "name": "UFBeauty",
-            "type": "Peach",
-            "chill": "200 hours",
-            "harvest_time": "First Harvest: Around April 29 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/ufbeauty/",
-            "patent": "https://patents.google.com/patent/USPP14784 expires 2023-03-18"
+            name: "UFBeauty",
+            type: "Peach",
+            chill: "200 hours",
+            harvest_time: "First Harvest: Around April 29 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/ufbeauty/",
+            patent: "https://patents.google.com/patent/USPP14784 expires 2023-03-18"
         },
         {
-            "name": "UFBest",
-            "type": "Peach",
-            "chill": "100 hours",
-            "harvest_time": "First Harvest: Around April 20 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/ufbest/",
-            "patent": "https://patents.google.com/patent/USPP25129 expires 2032-04-13"
+            name: "UFBest",
+            type: "Peach",
+            chill: "100 hours",
+            harvest_time: "First Harvest: Around April 20 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/ufbest/",
+            patent: "https://patents.google.com/patent/USPP25129 expires 2032-04-13"
         },
         {
-            "name": "UFBlaze",
-            "type": "Peach",
-            "chill": "300 hours",
-            "harvest_time": "First Harvest: Around May 3 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/ufblaze/",
-            "patent": "https://patents.google.com/patent/USPP14898 expires 2023-04-15"
+            name: "UFBlaze",
+            type: "Peach",
+            chill: "300 hours",
+            harvest_time: "First Harvest: Around May 3 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/ufblaze/",
+            patent: "https://patents.google.com/patent/USPP14898 expires 2023-04-15"
         },
         {
-            "name": "UFGem",
-            "type": "Peach",
-            "chill": "175 hours",
-            "harvest_time": "First Harvest: Around April 19 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/ufgem/",
-            "patent": "https://patents.google.com/patent/USPP26057 expires 2034-02-08"
+            name: "UFGem",
+            type: "Peach",
+            chill: "175 hours",
+            harvest_time: "First Harvest: Around April 19 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/ufgem/",
+            patent: "https://patents.google.com/patent/USPP26057 expires 2034-02-08"
         },
         {
-            "name": "UFGlo",
-            "type": "Peach",
-            "chill": "400 hours",
-            "harvest_time": "First Harvest: Around May 11 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/ufglo/",
-            "patent": "https://patents.google.com/patent/USPP21837 expires 2030-01-05"
+            name: "UFGlo",
+            type: "Peach",
+            chill: "400 hours",
+            harvest_time: "First Harvest: Around May 11 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/ufglo/",
+            patent: "https://patents.google.com/patent/USPP21837 expires 2030-01-05"
         },
         {
-            "name": "UFGold",
-            "type": "Peach",
-            "chill": "200 hours",
-            "harvest_time": "First Harvest: Around May 1 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/ufgold/",
-            "patent": "https://patents.google.com/patent/USPP10315 expired 2016-09-10"
+            name: "UFGold",
+            type: "Peach",
+            chill: "200 hours",
+            harvest_time: "First Harvest: Around May 1 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/ufgold/",
+            patent: "https://patents.google.com/patent/USPP10315 expired 2016-09-10"
         },
         {
-            "name": "UFO",
-            "type": "Peach",
-            "chill": "250 hours",
-            "harvest_time": "First Harvest: Around May 20 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/ufo/",
-            "patent": "https://patents.google.com/patent/USPP13352 expired 2020-07-19"
+            name: "UFO",
+            type: "Peach",
+            chill: "250 hours",
+            harvest_time: "First Harvest: Around May 20 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/ufo/",
+            patent: "https://patents.google.com/patent/USPP13352 expired 2020-07-19"
         },
         {
-            "name": "UFOne",
-            "type": "Peach",
-            "chill": "150 hours",
-            "harvest_time": "First Harvest: Around April 10 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/ufone/",
-            "patent": "https://patents.google.com/patent/USPP21607 expires 2028-12-30"
+            name: "UFOne",
+            type: "Peach",
+            chill: "150 hours",
+            harvest_time: "First Harvest: Around April 10 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/ufone/",
+            patent: "https://patents.google.com/patent/USPP21607 expires 2028-12-30"
         },
         {
-            "name": "UFSharp",
-            "type": "Peach",
-            "chill": "325 hours",
-            "harvest_time": "First Harvest: Around May 20 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/peach/ufsharp/",
-            "patent": "https://patents.google.com/patent/USPP22294 expires 2030-02-19"
+            name: "UFSharp",
+            type: "Peach",
+            chill: "325 hours",
+            harvest_time: "First Harvest: Around May 20 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/peach/ufsharp/",
+            patent: "https://patents.google.com/patent/USPP22294 expires 2030-02-19"
         },
         {
-            "name": "UFSun",
-            "type": "Peach",
-            "chill": "100-150 hours",
-            "harvest_time": "First Harvest: Around April 22 near Gainesville",
-            "description": "http://www.ffsp.net/varieties/peach/ufsun/",
-            "patent": "https://patents.google.com/patent/USPP14764 expires 2023-07-27"
+            name: "UFSun",
+            type: "Peach",
+            chill: "100-150 hours",
+            harvest_time: "First Harvest: Around April 22 near Gainesville",
+            description: "http://www.ffsp.net/varieties/peach/ufsun/",
+            patent: "https://patents.google.com/patent/USPP14764 expires 2023-07-27"
         },
         {
-            "name": "Gulfbeauty",
-            "type": "Japanese Plum",
-            "chill": "250 hours",
-            "harvest_time": "First Harvest: Around May 5 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/plum/gulfbeauty/",
-            "patent": "https://patents.google.com/patent/USPP11224 expired 2017-08-05"
+            name: "Gulfbeauty",
+            type: "Japanese Plum",
+            chill: "250 hours",
+            harvest_time: "First Harvest: Around May 5 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/plum/gulfbeauty/",
+            patent: "https://patents.google.com/patent/USPP11224 expired 2017-08-05"
         },
         {
-            "name": "Gulfblaze",
-            "type": "Japanese Plum",
-            "chill": "250 hours",
-            "harvest_time": "First Harvest: Around May 22 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/plum/gulfblaze/",
-            "patent": "https://patents.google.com/patent/USPP10880 expired 2017-08-05"
+            name: "Gulfblaze",
+            type: "Japanese Plum",
+            chill: "250 hours",
+            harvest_time: "First Harvest: Around May 22 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/plum/gulfblaze/",
+            patent: "https://patents.google.com/patent/USPP10880 expired 2017-08-05"
         },
         {
-            "name": "Gulfrose",
-            "type": "Japanese Plum",
-            "chill": "275 hours",
-            "harvest_time": "First Harvest: Around May 15 (Gainesville, FL)",
-            "description": "http://www.ffsp.net/varieties/plum/gulfrose/",
-            "patent": "https://patents.google.com/patent/USPP12833 expired 2020-07-12"
+            name: "Gulfrose",
+            type: "Japanese Plum",
+            chill: "275 hours",
+            harvest_time: "First Harvest: Around May 15 (Gainesville, FL)",
+            description: "http://www.ffsp.net/varieties/plum/gulfrose/",
+            patent: "https://patents.google.com/patent/USPP12833 expired 2020-07-12"
         }
     ]
 }

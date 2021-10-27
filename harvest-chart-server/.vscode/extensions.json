@@ -1,7 +1,0 @@
-{
-	"recommendations": [
-        "rust-lang.rust",
-        "matklad.rust-analyzer",
-		"katjanakosic.vscode-json5"
-	]
-}

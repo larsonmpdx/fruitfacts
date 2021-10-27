@@ -1,226 +1,228 @@
 {
-    "title": "Plum Varieties for Oregon",
-    "author": "Quentin B. Zielinski, W. A. Sistrunk, T. P. Davidson",
-    "url": "https://ir.library.oregonstate.edu/concern/administrative_report_or_publications/kh04dq12c",
-    "published": "1961",
-    "accessed": "Sep 2021",
-    "locations": [{
-        "name": "Corvallis, OR",
-        "latitude": 44.54820212695868,
-        "longitude": -123.21537145957399
-    }],
-    "plants": [
+    title: "Plum Varieties for Oregon",
+    author: "Quentin B. Zielinski, W. A. Sistrunk, T. P. Davidson",
+    url: "https://ir.library.oregonstate.edu/concern/administrative_report_or_publications/kh04dq12c",
+    published: "1961",
+    accessed: "Sep 2021",
+    locations: [
         {
-            "name": "Peach Plum",
-            "type": "Euro Plum",
-            "harvest_time": "July 20 to July 25"
+            name: "Corvallis, OR",
+            latitude: 44.54820212695868,
+            longitude: -123.21537145957399
+        }
+    ],
+    plants: [
+        {
+            name: "Peach Plum",
+            type: "Euro Plum",
+            harvest_time: "July 20 to July 25"
         },
         {
-            "name": "California Blue",
-            "type": "Euro Plum",
-            "harvest_time": "July 20 to August 1"
+            name: "California Blue",
+            type: "Euro Plum",
+            harvest_time: "July 20 to August 1"
         },
         {
-            "name": "Sugar",
-            "type": "Euro Plum",
-            "harvest_time": "August 1"
+            name: "Sugar",
+            type: "Euro Plum",
+            harvest_time: "August 1"
         },
         {
-            "name": "Utility",
-            "type": "Euro Plum",
-            "harvest_time": "August 1"
+            name: "Utility",
+            type: "Euro Plum",
+            harvest_time: "August 1"
         },
         {
-            "name": "Timme Seedling",
-            "type": "Euro Plum",
-            "harvest_time": "August 20 to August 30"
+            name: "Timme Seedling",
+            type: "Euro Plum",
+            harvest_time: "August 20 to August 30"
         },
         {
-            "name": "Trail Blazer",
-            "type": "Euro Plum",
-            "harvest_time": "August 15"
+            name: "Trail Blazer",
+            type: "Euro Plum",
+            harvest_time: "August 15"
         },
         {
-            "name": "Merton",
-            "type": "Euro Plum",
-            "harvest_time": "September 1"
+            name: "Merton",
+            type: "Euro Plum",
+            harvest_time: "September 1"
         },
         {
-            "name": "Bradshaw",
-            "type": "Euro Plum",
-            "harvest_time": "September 1"
+            name: "Bradshaw",
+            type: "Euro Plum",
+            harvest_time: "September 1"
         },
         {
-            "name": "Edwards",
-            "type": "Euro Plum",
-            "harvest_time": "September 1"
+            name: "Edwards",
+            type: "Euro Plum",
+            harvest_time: "September 1"
         },
         {
-            "name": "Tragedy",
-            "type": "Euro Plum",
-            "harvest_time": "September 1"
+            name: "Tragedy",
+            type: "Euro Plum",
+            harvest_time: "September 1"
         },
         {
-            "name": "Early Italian",
-            "type": "Euro Plum",
-            "harvest_time": "September 1"
+            name: "Early Italian",
+            type: "Euro Plum",
+            harvest_time: "September 1"
         },
         {
-            "name": "Parson",
-            "type": "Euro Plum",
-            "harvest_time": "September 1 to September 15"
+            name: "Parson",
+            type: "Euro Plum",
+            harvest_time: "September 1 to September 15"
         },
         {
-            "name": "Miller Early Sweet",
-            "type": "Euro Plum",
-            "harvest_time": "September 5"
+            name: "Miller Early Sweet",
+            type: "Euro Plum",
+            harvest_time: "September 5"
         },
         {
-            "name": "Emily",
-            "type": "Euro Plum",
-            "not_recommended_reason": "does not appear to have commercial value in Oregon",
-            "harvest_time": "September 10 to September 15"
+            name: "Emily",
+            type: "Euro Plum",
+            not_recommended_reason: "does not appear to have commercial value in Oregon",
+            harvest_time: "September 10 to September 15"
         },
         {
-            "name": "Date Prune",
-            "type": "Euro Plum",
-            "harvest_time": "September 7 to September 15"
+            name: "Date Prune",
+            type: "Euro Plum",
+            harvest_time: "September 7 to September 15"
         },
         {
-            "name": "Stanley",
-            "type": "Euro Plum",
-            "harvest_time": "September 10"
+            name: "Stanley",
+            type: "Euro Plum",
+            harvest_time: "September 10"
         },
         {
-            "name": "Weatherspoon",
-            "type": "Euro Plum",
-            "harvest_time": "September 10"
+            name: "Weatherspoon",
+            type: "Euro Plum",
+            harvest_time: "September 10"
         },
         {
-            "name": "Noble French",
-            "type": "Euro Plum",
-            "harvest_time": "September 12"
+            name: "Noble French",
+            type: "Euro Plum",
+            harvest_time: "September 12"
         },
         {
-            "name": "Bavay's Green Gage",
-            "type": "Euro Plum",
-            "harvest_time": "September 10 to September 20"
+            name: "Bavay's Green Gage",
+            type: "Euro Plum",
+            harvest_time: "September 10 to September 20"
         },
         {
-            "name": "Brooks",
-            "type": "Euro Plum",
-            "harvest_time": "September 15"
+            name: "Brooks",
+            type: "Euro Plum",
+            harvest_time: "September 15"
         },
         {
-            "name": "Imperial Epineuse",
-            "type": "Euro Plum",
-            "harvest_time": "September 10 to September 20"
+            name: "Imperial Epineuse",
+            type: "Euro Plum",
+            harvest_time: "September 10 to September 20"
         },
         {
-            "name": "Italian",
-            "type": "Euro Plum",
-            "harvest_time": "September 20"
+            name: "Italian",
+            type: "Euro Plum",
+            harvest_time: "September 20"
         },
         {
-            "name": "Moyer",
-            "type": "Euro Plum",
-            "harvest_time": "September 30"
+            name: "Moyer",
+            type: "Euro Plum",
+            harvest_time: "September 30"
         },
         {
-            "name": "President",
-            "type": "Euro Plum",
-            "harvest_time": "September 25"
+            name: "President",
+            type: "Euro Plum",
+            harvest_time: "September 25"
         },
         {
-            "name": "Rich Pride",
-            "type": "Euro Plum",
-            "harvest_time": "October 1"
+            name: "Rich Pride",
+            type: "Euro Plum",
+            harvest_time: "October 1"
         },
         {
-            "name": "Methley",
-            "type": "Japanese Plum",
-            "harvest_time": "August 1"
+            name: "Methley",
+            type: "Japanese Plum",
+            harvest_time: "August 1"
         },
         {
-            "name": "Beauty",
-            "type": "Japanese Plum",
-            "harvest_time": "August 5"
+            name: "Beauty",
+            type: "Japanese Plum",
+            harvest_time: "August 5"
         },
         {
-            "name": "Formosa",
-            "type": "Japanese Plum",
-            "harvest_time": "August 5"
+            name: "Formosa",
+            type: "Japanese Plum",
+            harvest_time: "August 5"
         },
         {
-            "name": "Burmosa",
-            "type": "Japanese Plum",
-            "harvest_time": "August 5"
+            name: "Burmosa",
+            type: "Japanese Plum",
+            harvest_time: "August 5"
         },
         {
-            "name": "Marvel",
-            "type": "Japanese Plum",
-            "harvest_time": "August 7"
+            name: "Marvel",
+            type: "Japanese Plum",
+            harvest_time: "August 7"
         },
         {
-            "name": "Santa Rosa",
-            "type": "Japanese Plum",
-            "not_recommended_reason": "not well adapted to the Willamette Valley and it is difficult to obtain satisfactory fruit set",
-            "harvest_time": "August 15"
+            name: "Santa Rosa",
+            type: "Japanese Plum",
+            not_recommended_reason: "not well adapted to the Willamette Valley and it is difficult to obtain satisfactory fruit set",
+            harvest_time: "August 15"
         },
         {
-            "name": "Abundance",
-            "type": "Japanese Plum",
-            "harvest_time": "August 15"
+            name: "Abundance",
+            type: "Japanese Plum",
+            harvest_time: "August 15"
         },
         {
-            "name": "Shiro",
-            "type": "Japanese Plum",
-            "harvest_time": "August 15"
+            name: "Shiro",
+            type: "Japanese Plum",
+            harvest_time: "August 15"
         },
         {
-            "name": "Red Heart",
-            "type": "Japanese Plum",
-            "harvest_time": "August 20"
+            name: "Red Heart",
+            type: "Japanese Plum",
+            harvest_time: "August 20"
         },
         {
-            "name": "Burbank",
-            "type": "Japanese Plum",
-            "harvest_time": "August 20 to August 25"
+            name: "Burbank",
+            type: "Japanese Plum",
+            harvest_time: "August 20 to August 25"
         },
         {
-            "name": "Howard Miracle",
-            "type": "Japanese Plum",
-            "harvest_time": "August 25"
+            name: "Howard Miracle",
+            type: "Japanese Plum",
+            harvest_time: "August 25"
         },
         {
-            "name": "Mariposa",
-            "type": "Japanese Plum",
-            "harvest_time": "September 1"
+            name: "Mariposa",
+            type: "Japanese Plum",
+            harvest_time: "September 1"
         },
         {
-            "name": "Elephant Heart",
-            "type": "Japanese Plum",
-            "harvest_time": "September 1"
+            name: "Elephant Heart",
+            type: "Japanese Plum",
+            harvest_time: "September 1"
         },
         {
-            "name": "Satsuma",
-            "type": "Japanese Plum",
-            "harvest_time": "September 5"
+            name: "Satsuma",
+            type: "Japanese Plum",
+            harvest_time: "September 5"
         },
         {
-            "name": "Duarte",
-            "type": "Japanese Plum",
-            "harvest_time": "September 15"
+            name: "Duarte",
+            type: "Japanese Plum",
+            harvest_time: "September 15"
         },
         {
-            "name": "Red Ace",
-            "type": "Japanese Plum",
-            "harvest_time": "September 15"
+            name: "Red Ace",
+            type: "Japanese Plum",
+            harvest_time: "September 15"
         },
         {
-            "name": "Kelsey",
-            "type": "Japanese Plum",
-            "harvest_time": "October 1"
+            name: "Kelsey",
+            type: "Japanese Plum",
+            harvest_time: "October 1"
         }
     ]
 }

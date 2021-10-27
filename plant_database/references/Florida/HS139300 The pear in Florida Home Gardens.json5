@@ -1,153 +1,156 @@
 {
-    "title": "The Pear in Florida Home Gardens",
-    "author": "Juanita Popenoe, Ali Sarkhosh, and Dustin Huff2",
-    "url": "https://edis.ifas.ufl.edu/publication/HS1393",
-    "published": "Nov 2020",
-    "accessed": "Oct 2021",
-    "locations": [{
-        "short_name": "North",
-        "name": "North Florida",
-        "latitude": 29.648538535565265,
-        "longitude": -82.39546559114726
-    },{
-        "short_name": "Central",
-        "name": "Central Florida (not south of Orlando)",
-        "latitude": 28.927198187772976,
-        "longitude": -82.00400106699347
-    }],
-    "plants": [
+    title: "The Pear in Florida Home Gardens",
+    author: "Juanita Popenoe, Ali Sarkhosh, and Dustin Huff2",
+    url: "https://edis.ifas.ufl.edu/publication/HS1393",
+    published: "Nov 2020",
+    accessed: "Oct 2021",
+    locations: [
         {
-            "name": "Baldwin",
-            "locations": ["North", "Central"],
-            "chill": "150 hours",
-            "type": "Euro Pear",
-            "harvest_time": "Late Aug to Sep",
-            "description": "Fresh and canning",
-            "disease_resistance": {
-                "FB": "moderate resistance",
-                "leaf_spot": "moderate resistance"
+            short_name: "North",
+            name: "North Florida",
+            latitude: 29.648538535565265,
+            longitude: -82.39546559114726
+        },
+        {
+            short_name: "Central",
+            name: "Central Florida (not south of Orlando)",
+            latitude: 28.927198187772976,
+            longitude: -82.00400106699347
+        }
+    ],
+    plants: [
+        {
+            name: "Baldwin",
+            locations: ["North", "Central"],
+            chill: "150 hours",
+            type: "Euro Pear",
+            harvest_time: "Late Aug to Sep",
+            description: "Fresh and canning",
+            disease_resistance: {
+                FB: "moderate resistance",
+                leaf_spot: "moderate resistance"
             }
         },
         {
-            "name": "Carnes",
-            "locations": ["North"],
-            "type": "Euro Pear",
-            "harvest_time": "July",
-            "description": "Fresh and canning",
-            "disease_resistance": {
-                "FB": "moderate resistance",
-                "leaf_spot": "susceptible"
+            name: "Carnes",
+            locations: ["North"],
+            type: "Euro Pear",
+            harvest_time: "July",
+            description: "Fresh and canning",
+            disease_resistance: {
+                FB: "moderate resistance",
+                leaf_spot: "susceptible"
             }
         },
         {
-            "name": "Flordahome",
-            "locations": ["North", "Central"],
-            "chill": "150 hours",
-            "type": "Euro Pear",
-            "harvest_time": "July-Aug",
-            "description": "Fresh and canning",
-            "disease_resistance": {
-                "FB": "resistant",
-                "leaf_spot": "resistant"
+            name: "Flordahome",
+            locations: ["North", "Central"],
+            chill: "150 hours",
+            type: "Euro Pear",
+            harvest_time: "July-Aug",
+            description: "Fresh and canning",
+            disease_resistance: {
+                FB: "resistant",
+                leaf_spot: "resistant"
             }
         },
         {
-            "name": "Hood",
-            "locations": ["North", "Central"],
-            "chill": "160-260 hours",
-            "type": "Euro Pear",
-            "harvest_time": "mid July",
-            "description": "parent of Flordahome. Fresh and canning",
-            "disease_resistance": {
-                "FB": "moderate resistance",
-                "leaf_spot": "moderate resistance"
+            name: "Hood",
+            locations: ["North", "Central"],
+            chill: "160-260 hours",
+            type: "Euro Pear",
+            harvest_time: "mid July",
+            description: "parent of Flordahome. Fresh and canning",
+            disease_resistance: {
+                FB: "moderate resistance",
+                leaf_spot: "moderate resistance"
             }
         },
         {
-            "name": "Kieffer",
-            "locations": ["North"],
-            "chill": "350-400 hours",
-            "type": "Euro Pear",
-            "harvest_time": "mid Aug to Sep",
-            "description": "Canning",
-            "disease_resistance": {
-                "FB": "susceptible",
-                "leaf_spot": "fair resistance"
+            name: "Kieffer",
+            locations: ["North"],
+            chill: "350-400 hours",
+            type: "Euro Pear",
+            harvest_time: "mid Aug to Sep",
+            description: "Canning",
+            disease_resistance: {
+                FB: "susceptible",
+                leaf_spot: "fair resistance"
             }
         },
         {
-            "name": "Le Conte",
-            "locations": ["North", "Central"],
-            "chill": "250-300 hours",
-            "type": "Euro Pear",
-            "harvest_time": "July-Aug",
-            "description": "Fresh",
-            "disease_resistance": {
-                "FB": "somewhat susceptible"
+            name: "Le Conte",
+            locations: ["North", "Central"],
+            chill: "250-300 hours",
+            type: "Euro Pear",
+            harvest_time: "July-Aug",
+            description: "Fresh",
+            disease_resistance: {
+                FB: "somewhat susceptible"
             }
         },
         {
-            "name": "Orient",
-            "locations": ["North", "Central"],
-            "type": "Euro Pear",
-            "harvest_time": "late July to early Aug",
-            "description": "euro/asian pear hybrid. Canning",
-            "disease_resistance": {
-                "FB": "very resistant",
-                "leaf_spot": "resistant"
+            name: "Orient",
+            locations: ["North", "Central"],
+            type: "Euro Pear",
+            harvest_time: "late July to early Aug",
+            description: "euro/asian pear hybrid. Canning",
+            disease_resistance: {
+                FB: "very resistant",
+                leaf_spot: "resistant"
             }
         },
         {
-            "name": "Pineapple",
-            "locations": ["North", "Central"],
-            "type": "Euro Pear",
-            "harvest_time": "early Aug",
-            "description": "Canning",
-            "disease_resistance": {
-                "FB": "very resistant",
-                "leaf_spot": "moderate resistance"
+            name: "Pineapple",
+            locations: ["North", "Central"],
+            type: "Euro Pear",
+            harvest_time: "early Aug",
+            description: "Canning",
+            disease_resistance: {
+                FB: "very resistant",
+                leaf_spot: "moderate resistance"
             }
         },
         {
-            "name": "Shinseiki",
-            "locations": ["North"],
-            "type": "Asian Pear",
-            "harvest_time": "mid July to Aug",
-            "description": "Fresh",
-            "disease_resistance": {
-                "FB": "mpderate resistance"
+            name: "Shinseiki",
+            locations: ["North"],
+            type: "Asian Pear",
+            harvest_time: "mid July to Aug",
+            description: "Fresh",
+            disease_resistance: {
+                FB: "mpderate resistance"
             }
         },
         {
-            "name": "Tenn",
-            "locations": ["North"],
-            "chill": "350-400 hours",
-            "type": "Euro Pear",
-            "harvest_time": "early Sep",
-            "description": "Fresh (small fruit)",
-            "disease_resistance": {
-                "FB": "resistant",
-                "leaf_spot": "moderate resistance"
+            name: "Tenn",
+            locations: ["North"],
+            chill: "350-400 hours",
+            type: "Euro Pear",
+            harvest_time: "early Sep",
+            description: "Fresh (small fruit)",
+            disease_resistance: {
+                FB: "resistant",
+                leaf_spot: "moderate resistance"
             }
         },
         {
-            "name": "Ya Li",
-            "locations": ["North"],
-            "type": "Asian Pear",
-            "harvest_time": "Aug to mid Sep",
-            "description": "Fresh",
-            "disease_resistance": {
-                "FB": "susceptible"
+            name: "Ya Li",
+            locations: ["North"],
+            type: "Asian Pear",
+            harvest_time: "Aug to mid Sep",
+            description: "Fresh",
+            disease_resistance: {
+                FB: "susceptible"
             }
         },
         {
-            "name": "Nijisseiki",
-            "locations": ["North"],
-            "type": "Asian Pear",
-            "harvest_time": "August",
-            "description": "Fresh",
-            "disease_resistance": {
-                "FB": "moderate resistance"
+            name: "Nijisseiki",
+            locations: ["North"],
+            type: "Asian Pear",
+            harvest_time: "August",
+            description: "Fresh",
+            disease_resistance: {
+                FB: "moderate resistance"
             }
         }
     ]

@@ -1,419 +1,421 @@
 {
-    "title": "Apple and Peach Varieties for Oklahoma",
-    "author": "Becky Carroll",
-    "url": "https://extension.okstate.edu/fact-sheets/apple-and-peach-varieties-for-oklahoma.html",
-    "published": "Oct 2016",
-    "accessed": "Sep 2021",
-    "locations": [{
-        "name": "Perkins, OK",
-        "latitude": 35.99404369910738,
-        "longitude": -97.03680432074745
-    }],
-    "plants": [
+    title: "Apple and Peach Varieties for Oklahoma",
+    author: "Becky Carroll",
+    url: "https://extension.okstate.edu/fact-sheets/apple-and-peach-varieties-for-oklahoma.html",
+    published: "Oct 2016",
+    accessed: "Sep 2021",
+    locations: [
         {
-            "name": "Gala",
-            "type": "Apple",
-            "description": "High-color sports preferred.",
-            "harvest_time": "Aug 10-20"
+            name: "Perkins, OK",
+            latitude: 35.99404369910738,
+            longitude: -97.03680432074745
+        }
+    ],
+    plants: [
+        {
+            name: "Gala",
+            type: "Apple",
+            description: "High-color sports preferred.",
+            harvest_time: "Aug 10-20"
         },
         {
-            "name": "Jonathan",
-            "type": "Apple",
-            "description": "Very susceptible to fireblight and cedar-apple rust.",
-            "harvest_time": "Aug 25 to Sep 10"
+            name: "Jonathan",
+            type: "Apple",
+            description: "Very susceptible to fireblight and cedar-apple rust.",
+            harvest_time: "Aug 25 to Sep 10"
         },
         {
-            "name": "Red Delicious",
-            "type": "Apple",
-            "description": "Very upright growing. needs branch spreading for good tree structure.",
-            "harvest_time": "Sep 1-10"
+            name: "Red Delicious",
+            type: "Apple",
+            description: "Very upright growing. needs branch spreading for good tree structure.",
+            harvest_time: "Sep 1-10"
         },
         {
-            "name": "Golden Delicious",
-            "type": "Apple",
-            "description": "Very well adapted. Smoothee tends to russet less.",
-            "harvest_time": "Sep 10-20"
+            name: "Golden Delicious",
+            type: "Apple",
+            description: "Very well adapted. Smoothee tends to russet less.",
+            harvest_time: "Sep 10-20"
         },
         {
-            "name": "Fuji",
-            "type": "Apple",
-            "description": "Disease susceptible. Very sweet.",
-            "harvest_time": "Oct 10-20"
+            name: "Fuji",
+            type: "Apple",
+            description: "Disease susceptible. Very sweet.",
+            harvest_time: "Oct 10-20"
         },
         {
-            "names": ["Williams' Pride", "Pristine", "Enterprise", "GoldRush"],
-            "type": "Apple",
-            "category": "others",
-            "category_description": "For homeowner production in central and northern Arkansas, the University of Arkansas recommends these"
+            names: ["Williams' Pride", "Pristine", "Enterprise", "GoldRush"],
+            type: "Apple",
+            category: "others",
+            category_description: "For homeowner production in central and northern Arkansas, the University of Arkansas recommends these"
         },
         {
-            "names": ["White County", "White River", "White Rock", "Bellaire", "Contender"],
-            "type": "Peach",
-            "category": "others",
-            "category_description": "Arkansas releases that haven't been tested at OSU"
+            names: ["White County", "White River", "White Rock", "Bellaire", "Contender"],
+            type: "Peach",
+            category: "others",
+            category_description: "Arkansas releases that haven't been tested at OSU"
         },
         {
-            "name": "Candor",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -2 weeks",
-            "tags": ["Yellow Peach"],
+            name: "Candor",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -2 weeks",
+            tags: ["Yellow Peach"],
             "disease resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: semi-cling Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
+            description: "Flesh Adherence: semi-cling Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
-            "name": "Earliglo",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -1 week",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Earliglo",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -1 week",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: not rated"
+            description: "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: not rated"
         },
         {
-            "name": "Garnet Beauty",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -1 week",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Garnet Beauty",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -1 week",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: semi-free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Fair"
+            description: "Flesh Adherence: semi-free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Fair"
         },
         {
-            "name": "Rubired",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -1 week",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Rubired",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -1 week",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: cling Fruit Quality: 3/5 Fruit Size: Fair Cold Tolerance: Good"
+            description: "Flesh Adherence: cling Fruit Quality: 3/5 Fruit Size: Fair Cold Tolerance: Good"
         },
         {
-            "name": "Sweethaven",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -1 week",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Sweethaven",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -1 week",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: semi-free Fruit Quality: 4/5 Fruit Size: Fair Cold Tolerance: Good"
+            description: "Flesh Adherence: semi-free Fruit Quality: 4/5 Fruit Size: Fair Cold Tolerance: Good"
         },
         {
-            "name": "Erly-red-fre",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -1 week",
-            "tags": ["White Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Erly-red-fre",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -1 week",
+            tags: ["White Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Fair"
+            description: "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Fair"
         },
         {
-            "name": "Sentinel",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven -0.5 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Sentinel",
+            type: "Peach",
+            harvest_time_relative: "Redhaven -0.5 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
-            "name": "Clayton",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +0",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Clayton",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +0",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
-            "name": "Cullinan",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +0",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Cullinan",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +0",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Fair"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Fair"
         },
         {
-            "name": "Redhaven",
-            "type": "Peach",
-            "harvest_time": "July 12-16",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Redhaven",
+            type: "Peach",
+            harvest_time: "July 12-16",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Fair Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Fair Cold Tolerance: Good"
         },
         {
-            "name": "Newhaven",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +0.5 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Newhaven",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +0.5 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Fair Cold Tolerance: Excellent"
+            description: "Flesh Adherence: semi-free Fruit Quality: 3/5 Fruit Size: Fair Cold Tolerance: Excellent"
         },
         {
-            "name": "Ranger",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +1 week",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Ranger",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +1 week",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
-            "name": "Summer Pearl",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +1 week",
-            "tags": ["White Peach"],
-            "disease_resistance": {
-                "BLS": "susceptible",
-                "BLS_note": "susceptible (requires spraying most years)"
+            name: "Summer Pearl",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +1 week",
+            tags: ["White Peach"],
+            disease_resistance: {
+                BLS: "susceptible",
+                BLS_note: "susceptible (requires spraying most years)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
-            "name": "Glohaven",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +2 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Glohaven",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +2 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
-            "name": "Bounty",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +2 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Bounty",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +2 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: not rated"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: not rated"
         },
         {
-            "name": "Nectar",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +2 weeks",
-            "tags": ["White Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Nectar",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +2 weeks",
+            tags: ["White Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
-            "name": "Jayhaven",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +3 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Jayhaven",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +3 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
-            "name": "Loring",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +3 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Loring",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +3 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Fair"
+            description: "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
-            "name": "Biscoe",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +4 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Biscoe",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +4 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Excellent"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Excellent"
         },
         {
-            "name": "Cresthaven",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +4 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Cresthaven",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +4 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
-            "name": "Jefferson",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +4 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Jefferson",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +4 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Fair"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
-            "name": "Autumn Glo",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +5 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Autumn Glo",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +5 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Excellent"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: Excellent"
         },
         {
-            "name": "Ouachita Gold",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +6 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Ouachita Gold",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +6 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Fair"
+            description: "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
-            "name": "White Hale",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +6 weeks",
-            "tags": ["White Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "White Hale",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +6 weeks",
+            tags: ["White Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Fair"
+            description: "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
-            "name": "Stark Encore",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +7 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Stark Encore",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +7 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 5/5 Fruit Size: Excellent Cold Tolerance: Good"
         },
         {
-            "name": "Parade",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +8 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Parade",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +8 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
-            "name": "Flame Prince",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +8 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Flame Prince",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +8 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: not rated"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Excellent Cold Tolerance: not rated"
         },
         {
-            "name": "Fairtime",
-            "type": "Peach",
-            "harvest_time_relative": "Redhaven +9 weeks",
-            "tags": ["Yellow Peach"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Fairtime",
+            type: "Peach",
+            harvest_time_relative: "Redhaven +9 weeks",
+            tags: ["Yellow Peach"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Excellent"
+            description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Excellent"
         },
         {
-            "name": "Earliblaze",
-            "type": "Nectarine",
-            "harvest_time_relative": "Redhaven +0",
-            "tags": ["Yellow Nectarine"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Earliblaze",
+            type: "Nectarine",
+            harvest_time_relative: "Redhaven +0",
+            tags: ["Yellow Nectarine"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: semi-free"
+            description: "Flesh Adherence: semi-free"
         },
         {
-            "name": "Redchief",
-            "type": "Nectarine",
-            "harvest_time_relative": "Redhaven +2 weeks",
-            "tags": ["Yellow Nectarine"],
-            "disease_resistance": {
-                "BLS": "resistant",
-                "BLS_note": "resistant (little or no defoliation)"
+            name: "Redchief",
+            type: "Nectarine",
+            harvest_time_relative: "Redhaven +2 weeks",
+            tags: ["Yellow Nectarine"],
+            disease_resistance: {
+                BLS: "resistant",
+                BLS_note: "resistant (little or no defoliation)"
             },
-            "description": "Flesh Adherence: free"
+            description: "Flesh Adherence: free"
         },
         {
-            "name": "Cavalier",
-            "type": "Nectarine",
-            "harvest_time_relative": "Redhaven +3 weeks",
-            "tags": ["Yellow Nectarine"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Cavalier",
+            type: "Nectarine",
+            harvest_time_relative: "Redhaven +3 weeks",
+            tags: ["Yellow Nectarine"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free"
+            description: "Flesh Adherence: free"
         },
         {
-            "name": "Sunglo",
-            "type": "Nectarine",
-            "harvest_time_relative": "Redhaven +4 weeks",
-            "tags": ["Yellow Nectarine"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Sunglo",
+            type: "Nectarine",
+            harvest_time_relative: "Redhaven +4 weeks",
+            tags: ["Yellow Nectarine"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free"
+            description: "Flesh Adherence: free"
         },
         {
-            "name": "Redglo",
-            "type": "Nectarine",
-            "harvest_time_relative": "Redhaven +5 weeks",
-            "tags": ["Yellow Nectarine"],
-            "disease_resistance": {
-                "BLS": "tolerant",
-                "BLS_note": "tolerant (some defoliation, but not severe)"
+            name: "Redglo",
+            type: "Nectarine",
+            harvest_time_relative: "Redhaven +5 weeks",
+            tags: ["Yellow Nectarine"],
+            disease_resistance: {
+                BLS: "tolerant",
+                BLS_note: "tolerant (some defoliation, but not severe)"
             },
-            "description": "Flesh Adherence: free"
+            description: "Flesh Adherence: free"
         }
     ]
 }

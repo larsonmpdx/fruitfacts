@@ -1,84 +1,86 @@
 {
-    "title": "Low-Chill Apple Cultivars for North Florida and North Central Florida",
-    "author": "Peter C. Andersen",
-    "url": "https://edis.ifas.ufl.edu/publication/MG368",
-    "published": "2019-05-29",
-    "accessed": "Oct 2021",
+    title: "Low-Chill Apple Cultivars for North Florida and North Central Florida",
+    author: "Peter C. Andersen",
+    url: "https://edis.ifas.ufl.edu/publication/MG368",
+    published: "2019-05-29",
+    accessed: "Oct 2021",
     // not-recommended varieties excluded. todo: maybe include them with not_recommended_reason
-    "locations": [{
-        "short_name": "G",
-        "name": "Gainesville, FL",
-        "latitude": 29.655689959979124,
-        "longitude": -82.3701923984451
-    },
-    {
-        "short_name": "M",
-        "name": "Monticello, FL",
-        "latitude": 30.539994128301398,
-        "longitude": -83.85091296963893
-    },
-    {
-        "short_name": "Q",
-        "name": "Quincy, FL",
-        "latitude": 30.548223348845355,
-        "longitude": -84.59332788800363
-    }],
-    "plants": [
+    locations: [
         {
-            "name": "Anna",
-            "type": "Apple",
-            "chill": "300 hours",
-            "harvest_time": "late May to July",
-            "locations": ["G", "M", "Q"],
-            "description": "Recommended. Good quality. Developed in Israel"
+            short_name: "G",
+            name: "Gainesville, FL",
+            latitude: 29.655689959979124,
+            longitude: -82.3701923984451
         },
         {
-            "name": "Fla. 90-3",
-            "type": "Apple",
-            "chill": "300 hours",
-            "harvest_time": "late May to July",
-            "locations": ["G", "Q"],
-            "description": "Recommended. Good quality. Devevloped in Florida"
+            short_name: "M",
+            name: "Monticello, FL",
+            latitude: 30.539994128301398,
+            longitude: -83.85091296963893
         },
         {
-            "name": "Dorsett Golden",
-            "type": "Apple",
-            "chill": "250 hours",
-            "harvest_time": "late May to July",
-            "locations": ["G", "M", "Q"],
-            "description": "Recommended. Good quality. Devevloped in Bahamas"
+            short_name: "Q",
+            name: "Quincy, FL",
+            latitude: 30.548223348845355,
+            longitude: -84.59332788800363
+        }
+    ],
+    plants: [
+        {
+            name: "Anna",
+            type: "Apple",
+            chill: "300 hours",
+            harvest_time: "late May to July",
+            locations: ["G", "M", "Q"],
+            description: "Recommended. Good quality. Developed in Israel"
         },
         {
-            "name": "Ein Shemer",
-            "type": "Apple",
-            "chill": "450 hours",
-            "harvest_time": "July",
-            "locations": ["G", "M", "Q"],
-            "description": "Conditionally recommended. Fair quality. Devevloped in Israel"
+            name: "Fla. 90-3",
+            type: "Apple",
+            chill: "300 hours",
+            harvest_time: "late May to July",
+            locations: ["G", "Q"],
+            description: "Recommended. Good quality. Devevloped in Florida"
         },
         {
-            "name": "Maayan",
-            "type": "Apple",
-            "chill": "450 hours",
-            "harvest_time": "July",
-            "locations": ["M"],
-            "description": "Conditionally recommended. Good quality. Devevloped in Israel"
+            name: "Dorsett Golden",
+            type: "Apple",
+            chill: "250 hours",
+            harvest_time: "late May to July",
+            locations: ["G", "M", "Q"],
+            description: "Recommended. Good quality. Devevloped in Bahamas"
         },
         {
-            "name": "Michal",
-            "type": "Apple",
-            "chill": "425 hours",
-            "harvest_time": "July",
-            "locations": ["G", "M"],
-            "description": "Conditionally recommended. Good quality. Devevloped in Israel"
+            name: "Ein Shemer",
+            type: "Apple",
+            chill: "450 hours",
+            harvest_time: "July",
+            locations: ["G", "M", "Q"],
+            description: "Conditionally recommended. Fair quality. Devevloped in Israel"
         },
         {
-            "name": "Shlomit",
-            "type": "Apple",
-            "chill": "375 hours",
-            "harvest_time": "July",
-            "locations": ["G", "M"],
-            "description": "Conditionally recommended. Good quality. Devevloped in Israel"
+            name: "Maayan",
+            type: "Apple",
+            chill: "450 hours",
+            harvest_time: "July",
+            locations: ["M"],
+            description: "Conditionally recommended. Good quality. Devevloped in Israel"
+        },
+        {
+            name: "Michal",
+            type: "Apple",
+            chill: "425 hours",
+            harvest_time: "July",
+            locations: ["G", "M"],
+            description: "Conditionally recommended. Good quality. Devevloped in Israel"
+        },
+        {
+            name: "Shlomit",
+            type: "Apple",
+            chill: "375 hours",
+            harvest_time: "July",
+            locations: ["G", "M"],
+            description: "Conditionally recommended. Good quality. Devevloped in Israel"
         }
     ]
 }

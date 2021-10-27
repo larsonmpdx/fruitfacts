@@ -1,662 +1,664 @@
 {
-    "title": "Fruit Handbook for Western Washington",
-    "author": "Moulton, G.A., King, J.",
-    "url": "https://pubs.extension.wsu.edu/fruit-handbook-for-western-washingtonpdf",
-    "published": "2008",
-    "accessed": "Sep 2021",
-    "locations": [{
-        "name": "Mt. Vernon, WA",
-        "latitude": 48.439906165067555,
-        "longitude": -122.38861565365134
-    }],
-    "plants": [
+    title: "Fruit Handbook for Western Washington",
+    author: "Moulton, G.A., King, J.",
+    url: "https://pubs.extension.wsu.edu/fruit-handbook-for-western-washingtonpdf",
+    published: "2008",
+    accessed: "Sep 2021",
+    locations: [
         {
-            "name": "Sunrise",
-            "type": "Apple",
-            "category": "Sweet—low to moderate in acid, moderate to high in sugar",
-            "harvest_time": "early to late August"
+            name: "Mt. Vernon, WA",
+            latitude: 48.439906165067555,
+            longitude: -122.38861565365134
+        }
+    ],
+    plants: [
+        {
+            name: "Sunrise",
+            type: "Apple",
+            category: "Sweet—low to moderate in acid, moderate to high in sugar",
+            harvest_time: "early to late August"
         },
         {
-            "name": "Gala",
-            "type": "Apple",
-            "category": "Sweet—low to moderate in acid, moderate to high in sugar",
-            "harvest_time": "mid September"
+            name: "Gala",
+            type: "Apple",
+            category: "Sweet—low to moderate in acid, moderate to high in sugar",
+            harvest_time: "mid September"
         },
         {
-            "name": "Sansa",
-            "type": "Apple",
-            "category": "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
-            "harvest_time": "late August to mid September"
+            name: "Sansa",
+            type: "Apple",
+            category: "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
+            harvest_time: "late August to mid September"
         },
         {
-            "name": "Tsugaru Homei",
-            "type": "Apple",
-            "category": "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
-            "harvest_time": "early to mid September"
+            name: "Tsugaru Homei",
+            type: "Apple",
+            category: "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Beni Shogun",
-            "type": "Apple",
-            "category": "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
-            "harvest_time": "mid September to early October"
+            name: "Beni Shogun",
+            type: "Apple",
+            category: "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
+            harvest_time: "mid September to early October"
         },
         {
-            "name": "September Wonder",
-            "type": "Apple",
-            "category": "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
-            "harvest_time": "mid September to early October"
+            name: "September Wonder",
+            type: "Apple",
+            category: "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
+            harvest_time: "mid September to early October"
         },
         {
-            "name": "Honeycrisp",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "harvest_time": "mid September to early October"
+            name: "Honeycrisp",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            harvest_time: "mid September to early October"
         },
         {
-            "name": "Jonagold",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "description": "and Jonagold strains",
-            "harvest_time": "late September to early October"
+            name: "Jonagold",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            description: "and Jonagold strains",
+            harvest_time: "late September to early October"
         },
         {
-            "name": "Melrose",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "harvest_time": "mid October"
+            name: "Melrose",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            harvest_time: "mid October"
         },
         {
-            "name": "Akane",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar (Japanese)",
-            "harvest_time": "early to mid September"
+            name: "Akane",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar (Japanese)",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Shizuka",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar (Japanese)",
-            "harvest_time": "early to mid October"
+            name: "Shizuka",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar (Japanese)",
+            harvest_time: "early to mid October"
         },
         {
-            "name": "Mutsu",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar (Japanese)",
-            "harvest_time": "late October to early November"
+            name: "Mutsu",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar (Japanese)",
+            harvest_time: "late October to early November"
         },
         {
-            "name": "Alkmene",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "description": "Cox-type",
-            "harvest_time": "early to mid September"
+            name: "Alkmene",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            description: "Cox-type",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Rubinette",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "description": "Cox-type",
-            "harvest_time": "early October"
+            name: "Rubinette",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            description: "Cox-type",
+            harvest_time: "early October"
         },
         {
-            "name": "McIntosh",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "description": "and McIntosh sports",
-            "harvest_time": "mid September"
+            name: "McIntosh",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            description: "and McIntosh sports",
+            harvest_time: "mid September"
         },
         {
-            "name": "Jonamac",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "description": "McIntosh-type",
-            "harvest_time": "mid September"
+            name: "Jonamac",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            description: "McIntosh-type",
+            harvest_time: "mid September"
         },
         {
-            "name": "Spartan",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "description": "McIntosh-type",
-            "harvest_time": "mid to late September"
+            name: "Spartan",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            description: "McIntosh-type",
+            harvest_time: "mid to late September"
         },
         {
-            "name": "Redcort",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "description": "McIntosh-type",
-            "harvest_time": "early October"
+            name: "Redcort",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            description: "McIntosh-type",
+            harvest_time: "early October"
         },
         {
-            "name": "Empire",
-            "type": "Apple",
-            "category": "Sweet-tart—moderate in acid, moderate to high in sugar",
-            "description": "McIntosh-type",
-            "harvest_time": "mid to late October"
+            name: "Empire",
+            type: "Apple",
+            category: "Sweet-tart—moderate in acid, moderate to high in sugar",
+            description: "McIntosh-type",
+            harvest_time: "mid to late October"
         },
         {
-            "name": "Elstar",
-            "type": "Apple",
-            "category": "Tart—moderate to high in acid, moderate to high in sugar",
-            "harvest_time": "mid to late September"
+            name: "Elstar",
+            type: "Apple",
+            category: "Tart—moderate to high in acid, moderate to high in sugar",
+            harvest_time: "mid to late September"
         },
         {
-            "name": "Karmijn de Sonnaville",
-            "type": "Apple",
-            "category": "Tart—moderate to high in acid, moderate to high in sugar",
-            "harvest_time": "early to mid October"
+            name: "Karmijn de Sonnaville",
+            type: "Apple",
+            category: "Tart—moderate to high in acid, moderate to high in sugar",
+            harvest_time: "early to mid October"
         },
         {
-            "name": "Braeburn",
-            "type": "Apple",
-            "category": "Tart—moderate to high in acid, moderate to high in sugar",
-            "harvest_time": "late October to early November"
+            name: "Braeburn",
+            type: "Apple",
+            category: "Tart—moderate to high in acid, moderate to high in sugar",
+            harvest_time: "late October to early November"
         },
         {
-            "name": "Gravenstein",
-            "type": "Apple",
-            "category": "Culinary varieties",
-            "harvest_time": "early September"
+            name: "Gravenstein",
+            type: "Apple",
+            category: "Culinary varieties",
+            harvest_time: "early September"
         },
         {
-            "name": "Bramley's Seedling",
-            "type": "Apple",
-            "category": "Culinary varieties",
-            "harvest_time": "early October"
+            name: "Bramley's Seedling",
+            type: "Apple",
+            category: "Culinary varieties",
+            harvest_time: "early October"
         },
         {
-            "name": "Ashmead's Kernel",
-            "type": "Apple",
-            "category": "Culinary varieties",
-            "harvest_time": "early to mid October"
+            name: "Ashmead's Kernel",
+            type: "Apple",
+            category: "Culinary varieties",
+            harvest_time: "early to mid October"
         },
         {
-            "name": "Belle de Boskoop",
-            "type": "Apple",
-            "category": "Culinary varieties",
-            "harvest_time": "mid to late October"
+            name: "Belle de Boskoop",
+            type: "Apple",
+            category: "Culinary varieties",
+            harvest_time: "mid to late October"
         },
         {
-            "name": "Pristine",
-            "type": "Apple",
-            "category": "Disease resistant varieties",
-            "harvest_time": "early to mid August"
+            name: "Pristine",
+            type: "Apple",
+            category: "Disease resistant varieties",
+            harvest_time: "early to mid August"
         },
         {
-            "name": "Williams' Pride",
-            "type": "Apple",
-            "category": "Disease resistant varieties",
-            "harvest_time": "early to mid August"
+            name: "Williams' Pride",
+            type: "Apple",
+            category: "Disease resistant varieties",
+            harvest_time: "early to mid August"
         },
         {
-            "name": "Chehalis",
-            "type": "Apple",
-            "category": "Disease resistant varieties",
-            "harvest_time": "early to mid September"
+            name: "Chehalis",
+            type: "Apple",
+            category: "Disease resistant varieties",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Prima",
-            "type": "Apple",
-            "category": "Disease resistant varieties",
-            "harvest_time": "early to mid September"
+            name: "Prima",
+            type: "Apple",
+            category: "Disease resistant varieties",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Dayton",
-            "type": "Apple",
-            "category": "Disease resistant varieties",
-            "harvest_time": "early to mid September"
+            name: "Dayton",
+            type: "Apple",
+            category: "Disease resistant varieties",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Liberty",
-            "type": "Apple",
-            "category": "Disease resistant varieties",
-            "harvest_time": "early to mid October"
+            name: "Liberty",
+            type: "Apple",
+            category: "Disease resistant varieties",
+            harvest_time: "early to mid October"
         },
         {
-            "name": "Enterprise",
-            "type": "Apple",
-            "category": "Disease resistant varieties",
-            "harvest_time": "mid to late October"
+            name: "Enterprise",
+            type: "Apple",
+            category: "Disease resistant varieties",
+            harvest_time: "mid to late October"
         },
         {
-            "name": "Belmac",
-            "type": "Apple",
-            "category": "Disease resistant varieties",
-            "harvest_time": "late October"
+            name: "Belmac",
+            type: "Apple",
+            category: "Disease resistant varieties",
+            harvest_time: "late October"
         },
         {
             // "Zestar"
-            "name": "Minnewashta",
-            "type": "Apple",
-            "category": "Recent apple introductions",
-            "harvest_time": "early to mid August"
+            name: "Minnewashta",
+            type: "Apple",
+            category: "Recent apple introductions",
+            harvest_time: "early to mid August"
         },
         {
-            "name": "Silken",
-            "type": "Apple",
-            "category": "Recent apple introductions",
-            "harvest_time": "mid August to early September"
+            name: "Silken",
+            type: "Apple",
+            category: "Recent apple introductions",
+            harvest_time: "mid August to early September"
         },
         {
-            "name": "NY 75414-1",
-            "type": "Apple",
-            "category": "Recent apple introductions",
-            "harvest_time": "mid September"
+            name: "NY 75414-1",
+            type: "Apple",
+            category: "Recent apple introductions",
+            harvest_time: "mid September"
         },
         {
-            "name": "Rajka",
-            "type": "Apple",
-            "category": "Recent apple introductions",
-            "harvest_time": "late September to October"
+            name: "Rajka",
+            type: "Apple",
+            category: "Recent apple introductions",
+            harvest_time: "late September to October"
         },
         {
-            "name": "Millenium",
-            "type": "Apple",
-            "category": "Recent apple introductions",
-            "harvest_time": "mid to late October"
+            name: "Millenium",
+            type: "Apple",
+            category: "Recent apple introductions",
+            harvest_time: "mid to late October"
         },
         {
-            "name": "Red Clapp's Favorite",
-            "type": "Euro Pear",
-            "category": "Fall pears—pick in August-September, store for 4-6 weeks",
-            "harvest_time": "late August"
+            name: "Red Clapp's Favorite",
+            type: "Euro Pear",
+            category: "Fall pears—pick in August-September, store for 4-6 weeks",
+            harvest_time: "late August"
         },
         {
-            "name": "Orcas",
-            "type": "Euro Pear",
-            "category": "Fall pears—pick in August-September, store for 4-6 weeks",
-            "harvest_time": "early September"
+            name: "Orcas",
+            type: "Euro Pear",
+            category: "Fall pears—pick in August-September, store for 4-6 weeks",
+            harvest_time: "early September"
         },
         {
-            "name": "Rescue",
-            "type": "Euro Pear",
-            "category": "Fall pears—pick in August-September, store for 4-6 weeks",
-            "harvest_time": "early to mid September"
+            name: "Rescue",
+            type: "Euro Pear",
+            category: "Fall pears—pick in August-September, store for 4-6 weeks",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Bartlett",
-            "type": "Euro Pear",
-            "category": "Fall pears—pick in August-September, store for 4-6 weeks",
-            "harvest_time": "early to mid September"
+            name: "Bartlett",
+            type: "Euro Pear",
+            category: "Fall pears—pick in August-September, store for 4-6 weeks",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Seckel",
-            "type": "Euro Pear",
-            "category": "Winter pears—pick in September-October, store for 3-4 months",
-            "harvest_time": "mid September"
+            name: "Seckel",
+            type: "Euro Pear",
+            category: "Winter pears—pick in September-October, store for 3-4 months",
+            harvest_time: "mid September"
         },
         {
-            "name": "Concorde",
-            "type": "Euro Pear",
-            "category": "Winter pears—pick in September-October, store for 3-4 months",
-            "harvest_time": "mid September"
+            name: "Concorde",
+            type: "Euro Pear",
+            category: "Winter pears—pick in September-October, store for 3-4 months",
+            harvest_time: "mid September"
         },
         {
-            "name": "Comice",
-            "type": "Euro Pear",
-            "category": "Winter pears—pick in September-October, store for 3-4 months",
-            "harvest_time": "mid to late September"
+            name: "Comice",
+            type: "Euro Pear",
+            category: "Winter pears—pick in September-October, store for 3-4 months",
+            harvest_time: "mid to late September"
         },
         {
-            "name": "Conference",
-            "type": "Euro Pear",
-            "category": "Winter pears—pick in September-October, store for 3-4 months",
-            "harvest_time": "mid to late September"
+            name: "Conference",
+            type: "Euro Pear",
+            category: "Winter pears—pick in September-October, store for 3-4 months",
+            harvest_time: "mid to late September"
         },
         {
-            "name": "Bosc",
-            "type": "Euro Pear",
-            "category": "Winter pears—pick in September-October, store for 3-4 months",
-            "harvest_time": "late September"
+            name: "Bosc",
+            type: "Euro Pear",
+            category: "Winter pears—pick in September-October, store for 3-4 months",
+            harvest_time: "late September"
         },
         {
-            "name": "Stutgarter Gieshirltle",
-            "type": "Euro Pear",
-            "category": "Recent pear introductions",
-            "harvest_time": "early to mid August"
+            name: "Stutgarter Gieshirltle",
+            type: "Euro Pear",
+            category: "Recent pear introductions",
+            harvest_time: "early to mid August"
         },
         {
-            "name": "Blake's Pride",
-            "type": "Euro Pear",
-            "category": "Recent pear introductions",
-            "harvest_time": "early to mid September"
+            name: "Blake's Pride",
+            type: "Euro Pear",
+            category: "Recent pear introductions",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Honeysweet",
-            "type": "Euro Pear",
-            "category": "Recent pear introductions",
-            "harvest_time": "early October"
+            name: "Honeysweet",
+            type: "Euro Pear",
+            category: "Recent pear introductions",
+            harvest_time: "early October"
         },
         {
-            "name": "Hamese",
-            "type": "Asian Pear",
-            "harvest_time":  "early August"
+            name: "Hamese",
+            type: "Asian Pear",
+            harvest_time: "early August"
         },
         {
-            "name": "Shinseiki",
-            "type": "Asian Pear",
-            "harvest_time": "early to mid September"
+            name: "Shinseiki",
+            type: "Asian Pear",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Kosui",
-            "type": "Asian Pear",
-            "harvest_time": "early to mid September"
+            name: "Kosui",
+            type: "Asian Pear",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Mishirasu",
-            "type": "Asian Pear",
-            "harvest_time": "late September to early October"
+            name: "Mishirasu",
+            type: "Asian Pear",
+            harvest_time: "late September to early October"
         },
         {
-            "name": "Chojuro",
-            "type": "Asian Pear",
-            "harvest_time": "mid to late September"
+            name: "Chojuro",
+            type: "Asian Pear",
+            harvest_time: "mid to late September"
         },
         {
-            "name": "Atago",
-            "type": "Asian Pear",
-            "harvest_time": "mid to late September"
+            name: "Atago",
+            type: "Asian Pear",
+            harvest_time: "mid to late September"
         },
         {
-            "name": "Methley",
-            "type": "Japanese Plum",
-            "harvest_time": "mid to late July"
+            name: "Methley",
+            type: "Japanese Plum",
+            harvest_time: "mid to late July"
         },
         {
-            "name": "Beauty",
-            "type": "Japanese Plum",
-            "harvest_time": "mid July to early August"
+            name: "Beauty",
+            type: "Japanese Plum",
+            harvest_time: "mid July to early August"
         },
         {
-            "name": "Shiro",
-            "type": "Japanese Plum",
-            "harvest_time": "late July to early August"
+            name: "Shiro",
+            type: "Japanese Plum",
+            harvest_time: "late July to early August"
         },
         {
-            "name": "Hollywood",
-            "type": "Japanese Plum",
-            "harvest_time": "mid to late August"
+            name: "Hollywood",
+            type: "Japanese Plum",
+            harvest_time: "mid to late August"
         },
         {
-            "name": "Early Laxton",
-            "type": "Euro Plum",
-            "harvest_time": "mid to late July"
+            name: "Early Laxton",
+            type: "Euro Plum",
+            harvest_time: "mid to late July"
         },
         {
-            "name": "Imperial Epineuse",
-            "type": "Euro Plum",
-            "harvest_time": "late July to early August"
+            name: "Imperial Epineuse",
+            type: "Euro Plum",
+            harvest_time: "late July to early August"
         },
         {
-            "name": "Early Italian",
-            "type": "Euro Plum",
-            "harvest_time": "mid to late August"
+            name: "Early Italian",
+            type: "Euro Plum",
+            harvest_time: "mid to late August"
         },
         {
-            "name": "Mirabelle",
-            "type": "Euro Plum",
-            "harvest_time": "late August to early September"
+            name: "Mirabelle",
+            type: "Euro Plum",
+            harvest_time: "late August to early September"
         },
         {
-            "name": "Seneca",
-            "type": "Euro Plum",
-            "harvest_time": "mid August to early September"
+            name: "Seneca",
+            type: "Euro Plum",
+            harvest_time: "mid August to early September"
         },
         {
-            "name": "Victory",
-            "type": "Euro Plum",
-            "harvest_time": "late August to mid September"
+            name: "Victory",
+            type: "Euro Plum",
+            harvest_time: "late August to mid September"
         },
         {
-            "name": "Victoria",
-            "type": "Euro Plum",
-            "harvest_time": "early to mid September"
+            name: "Victoria",
+            type: "Euro Plum",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Valor",
-            "type": "Euro Plum",
-            "harvest_time": "mid September"
+            name: "Valor",
+            type: "Euro Plum",
+            harvest_time: "mid September"
         },
         {
-            "name": "Stanley",
-            "type": "Euro Plum",
-            "harvest_time": "mid September"
+            name: "Stanley",
+            type: "Euro Plum",
+            harvest_time: "mid September"
         },
         {
-            "name": "Obilnaja",
-            "type": "Japanese Plum",
-            "harvest_time": "mid to late August"
+            name: "Obilnaja",
+            type: "Japanese Plum",
+            harvest_time: "mid to late August"
         },
         {
-            "name": "Purple Gage",
-            "type": "Euro Plum",
-            "harvest_time": "late August"
+            name: "Purple Gage",
+            type: "Euro Plum",
+            harvest_time: "late August"
         },
         {
-            "name": "Longjohn",
-            "type": "Euro Plum",
-            "harvest_time": "early to mid September"
+            name: "Longjohn",
+            type: "Euro Plum",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Silver Prune",
-            "type": "Euro Plum",
-            "harvest_time": "early to mid September"
+            name: "Silver Prune",
+            type: "Euro Plum",
+            harvest_time: "early to mid September"
         },
         {
-            "name": "Schoolhouse",
-            "type": "Euro Plum",
-            "harvest_time": "mid September"
+            name: "Schoolhouse",
+            type: "Euro Plum",
+            harvest_time: "mid September"
         },
         {
-            "name": "Vision",
-            "type": "Euro Plum",
-            "harvest_time": "mid to late September"
+            name: "Vision",
+            type: "Euro Plum",
+            harvest_time: "mid to late September"
         },
         {
-            "name": "Ridgewood",
+            name: "Ridgewood",
             // "Blackgold" (tm)
-            "type": "Sweet Cherry",
-            "category": "self fruitful",
-            "harvest_time": "early to mid July"
+            type: "Sweet Cherry",
+            category: "self fruitful",
+            harvest_time: "early to mid July"
         },
         {
-            "name": "Newfane",
+            name: "Newfane",
             // "Whitegold" (tm)
-            "type": "Sweet Cherry",
-            "category": "self fruitful",
-            "harvest_time": "early to mid July"
+            type: "Sweet Cherry",
+            category: "self fruitful",
+            harvest_time: "early to mid July"
         },
         {
-            "name": "Lapins",
-            "type": "Sweet Cherry",
-            "category": "self fruitful",
-            "harvest_time": "mid to late July"
+            name: "Lapins",
+            type: "Sweet Cherry",
+            category: "self fruitful",
+            harvest_time: "mid to late July"
         },
         {
-            "name": "Sweetheart",
-            "type": "Sweet Cherry",
-            "category": "self fruitful",
-            "harvest_time": "late July to early August"
+            name: "Sweetheart",
+            type: "Sweet Cherry",
+            category: "self fruitful",
+            harvest_time: "late July to early August"
         },
         {
-            "name": "Early Burlat",
-            "type": "Sweet Cherry",
-            "category": "needs pollinizer",
-            "harvest_time": "mid to late June"
+            name: "Early Burlat",
+            type: "Sweet Cherry",
+            category: "needs pollinizer",
+            harvest_time: "mid to late June"
         },
         {
-            "name": "Hartland",
-            "type": "Sweet Cherry",
-            "category": "needs pollinizer",
-            "harvest_time": "early July"
+            name: "Hartland",
+            type: "Sweet Cherry",
+            category: "needs pollinizer",
+            harvest_time: "early July"
         },
         {
-            "name": "Kristin",
-            "type": "Sweet Cherry",
-            "category": "needs pollinizer",
-            "harvest_time": "mid July"
+            name: "Kristin",
+            type: "Sweet Cherry",
+            category: "needs pollinizer",
+            harvest_time: "mid July"
         },
         {
-            "name": "Bing",
-            "type": "Sweet Cherry",
-            "category": "needs pollinizer",
-            "harvest_time": "mid July"
+            name: "Bing",
+            type: "Sweet Cherry",
+            category: "needs pollinizer",
+            harvest_time: "mid July"
         },
         {
-            "name": "Rainier",
-            "type": "Sweet Cherry",
-            "category": "needs pollinizer",
-            "harvest_time": "mid July"
+            name: "Rainier",
+            type: "Sweet Cherry",
+            category: "needs pollinizer",
+            harvest_time: "mid July"
         },
         {
-            "name": "Angela",
-            "type": "Sweet Cherry",
-            "category": "needs pollinizer",
-            "harvest_time": "mid July"
+            name: "Angela",
+            type: "Sweet Cherry",
+            category: "needs pollinizer",
+            harvest_time: "mid July"
         },
         {
-            "name": "Hudson",
-            "type": "Sweet Cherry",
-            "category": "needs pollinizer",
-            "harvest_time": "early August"
+            name: "Hudson",
+            type: "Sweet Cherry",
+            category: "needs pollinizer",
+            harvest_time: "early August"
         },
         {
-            "name": "Vandalay",
-            "type": "Sweet Cherry",
-            "category": "self fruitful, recent introduction",
-            "harvest_time": "early July"
+            name: "Vandalay",
+            type: "Sweet Cherry",
+            category: "self fruitful, recent introduction",
+            harvest_time: "early July"
         },
         {
-            "name": "Tehranivee",
-            "type": "Sweet Cherry",
-            "category": "self fruitful, recent introduction",
-            "harvest_time": "mid to late July"
+            name: "Tehranivee",
+            type: "Sweet Cherry",
+            category: "self fruitful, recent introduction",
+            harvest_time: "mid to late July"
         },
         {
-            "name": "Surefire",
-            "type": "Sour Cherry",
-            "category": "morello",
-            "harvest_time": "early to mid July"
+            name: "Surefire",
+            type: "Sour Cherry",
+            category: "morello",
+            harvest_time: "early to mid July"
         },
         {
-            "name": "Montmorency",
-            "type": "Sour Cherry",
-            "category": "standard, amorelle",
-            "harvest_time": "mid July"
+            name: "Montmorency",
+            type: "Sour Cherry",
+            category: "standard, amorelle",
+            harvest_time: "mid July"
         },
         {
-            "name": "Balaton",
-            "type": "Sour Cherry",
-            "category": "morello"
+            name: "Balaton",
+            type: "Sour Cherry",
+            category: "morello"
         },
         {
-            "name": "Danube",
-            "type": "Sour Cherry",
-            "category": "morello"
+            name: "Danube",
+            type: "Sour Cherry",
+            category: "morello"
         },
         {
-            "name": "Harbelle",
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "harvest_time": "early August"
+            name: "Harbelle",
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            harvest_time: "early August"
         },
         {
-            "name": "Harken",
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "harvest_time": "early August"
+            name: "Harken",
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            harvest_time: "early August"
         },
         {
-            "name": "FA 11", // "Starfire"
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "harvest_time": "early to mid August"
+            name: "FA 11", // "Starfire"
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            harvest_time: "early to mid August"
         },
         {
-            "name": "Frost",
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "harvest_time": "early August"
+            name: "Frost",
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            harvest_time: "early August"
         },
         {
-            "name": "Redhaven",
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "harvest_time": "mid August"
+            name: "Redhaven",
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            harvest_time: "mid August"
         },
         {
-            "name": "Scarley Pearl",
-            "type": "Peach",
-            "tags": ["White Peach"],
-            "category": "Recent peach introductions",
-            "harvest_time": "mid July"
+            name: "Scarley Pearl",
+            type: "Peach",
+            tags: ["White Peach"],
+            category: "Recent peach introductions",
+            harvest_time: "mid July"
         },
         {
-            "name": "Juneprince",
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "category": "Recent peach introductions",
-            "harvest_time": "mid to late July"
+            name: "Juneprince",
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            category: "Recent peach introductions",
+            harvest_time: "mid to late July"
         },
         {
-            "name": "Avalon Pride",
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "category": "Recent peach introductions",
-            "harvest_time": "mid to late July"
+            name: "Avalon Pride",
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            category: "Recent peach introductions",
+            harvest_time: "mid to late July"
         },
         {
-            "name": "FA 47", // "Risingstar"
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "category": "Recent peach introductions",
-            "harvest_time": "late July"
+            name: "FA 47", // "Risingstar"
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            category: "Recent peach introductions",
+            harvest_time: "late July"
         },
         {
-            "name": "HW 272",
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "category": "Recent peach introductions",
-            "harvest_time": "early August"
+            name: "HW 272",
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            category: "Recent peach introductions",
+            harvest_time: "early August"
         },
         {
-            "name": "FA 12", //"Blazingstar"
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "category": "Recent peach introductions",
-            "harvest_time": "early August"
+            name: "FA 12", //"Blazingstar"
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            category: "Recent peach introductions",
+            harvest_time: "early August"
         },
         {
-            "name": "FA 52", // "redstar"
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "category": "Recent peach introductions",
-            "harvest_time": "early to mid August"
+            name: "FA 52", // "redstar"
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            category: "Recent peach introductions",
+            harvest_time: "early to mid August"
         },
         {
-            "name": "Contender",
-            "type": "Peach",
-            "tags": ["Yellow Peach"],
-            "category": "Recent peach introductions",
-            "harvest_time": "mid August"
+            name: "Contender",
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            category: "Recent peach introductions",
+            harvest_time: "mid August"
         },
         {
-            "name": "Hardired",
-            "type": "Nectarine",
-            "tags": ["Yellow Nectarine"]
+            name: "Hardired",
+            type: "Nectarine",
+            tags: ["Yellow Nectarine"]
         },
         {
-            "name": "Puget Gold",
-            "type": "Apricot",
-            "harvest_time": "late July to early August"
+            name: "Puget Gold",
+            type: "Apricot",
+            harvest_time: "late July to early August"
         },
         {
-            "name": "Harglow",
-            "type": "Apricot",
-            "harvest_time": "early to mid August"
+            name: "Harglow",
+            type: "Apricot",
+            harvest_time: "early to mid August"
         },
         {
-            "name": "Westley",
-            "type": "Apricot",
-            "harvest_time": "mid to late August"
+            name: "Westley",
+            type: "Apricot",
+            harvest_time: "mid to late August"
         }
     ]
 }
