@@ -14,7 +14,7 @@
     ],
     plants: [
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Interlaken",
             color: "Green",
             harvest_time_unparsed: "Very early (~ 6 weeks before Concord)",
@@ -28,7 +28,7 @@
             description: "Moderate cold hardiness (some injury at -5°F); tender skin; berries crisp texture; good for raisins; fruit hangs well on vine to sweeten further; reliable high yields; also adapted to cooler coastal areas"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Spartan",
             color: "Green",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -42,7 +42,7 @@
             description: "Moderately cold hardy to -10°F; firm fruit"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Himrod",
             color: "Green",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -56,7 +56,7 @@
             description: "Moderately cold hardy (-10°F); tender skin; good for raisins; brittle cluster and berry stems; berries fall off cluster when stored; medium yield on very vigorous vines"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Ontario",
             color: "Green",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -69,7 +69,7 @@
             description: "Cold hardy (-20°F); slip skin; productive on lighter, fertile soil"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Seneca",
             color: "Green",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -82,7 +82,7 @@
             description: "Moderately cold hardy (-5 to -10°F); not suited for coldest regions; firmtextured berries; susceptible to powdery mildew; vigorous"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Edelweiss",
             color: "Green",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -96,7 +96,7 @@
             description: "Cold hardy (-30°F); slip skin; nice alternative to Niagara (more disease resistant)"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Lakemont",
             color: "Green",
             harvest_time_unparsed: "Mid-season",
@@ -110,7 +110,7 @@
             description: "Moderate cold hardiness (-10°F); susceptible to botrytis; high yield"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Remaily Seedless",
             color: "Green",
             harvest_time_unparsed: "Mid-Late Season",
@@ -124,7 +124,7 @@
             description: "Vigorous plants; susceptible to powdery mildew; fruit may “bronze” in sun; needs warm fall to develop sweet fruit"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Emerald",
             color: "Green",
             harvest_time_unparsed: "Mid-Late Season",
@@ -138,7 +138,7 @@
             description: "Cold hardy; well tested in Idaho but not in Oregon; extremely susceptible to powdery mildew and sunburn"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Italia",
             color: "Green",
             harvest_time_unparsed: "Mid-Late Season",
@@ -152,7 +152,7 @@
             description: "Cold hardy; fruit turns yellow in sun; berries hang well on vine; fruit stores well; well-tested in Idaho but not in Oregon"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Niagara",
             color: "Green",
             harvest_time_unparsed: "Mid-Late Season",
@@ -165,7 +165,7 @@
             description: "Cold hardy (-15 to -20°F); slip skin; for fresh or wine; does not consistently ripen in Willamette Valley unless pruned well; susceptible to powdery mildew in wet years; very vigorous"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Neptune",
             color: "Green",
             harvest_time_unparsed: "Late (~ mid October; ripens with Concord)",
@@ -179,7 +179,7 @@
             description: "Cold hardy; firm berries with thick skin; milder European-type flavor; low yield; resistant to cracking"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Golden Muscat",
             color: "Green",
             harvest_time_unparsed: "Very late",
@@ -192,7 +192,7 @@
             description: "Moderately cold hardy (-10 to -15°F); slip skin is slightly tough; juicy, soft berries; will not ripen in most locations in Oregon; rain near harvest will cause berries to crack"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Flame Seedless",
             color: "Red",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -206,7 +206,7 @@
             description: "Not cold hardy enough for eastern Oregon (injury at 0 to 10°F); crisp texture; vine susceptible to powdery mildew"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Reliance",
             color: "Red",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -220,7 +220,7 @@
             description: "Cold hardy (-20°F); slip skin; fruit may not develop good red color in some years and may crack in wet fall; tender skin; good for raisins, fresh, jellies, and juice"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Canadice",
             color: "Red",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -234,7 +234,7 @@
             description: "Cold hardy (-25°F; only in well-pruned vine); adapted to cooler coastal climates as well as other regions; high yield; tender skin; slip skin; good for raisins"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Vanessa",
             color: "Red",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -248,7 +248,7 @@
             description: "Cold hardy (-20°F); may have remnants of undeveloped seeds; stores well; firm berries; a favorite variety of many; a good alternative to Flame Seedless in cool climates"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Einset Seedless",
             color: "Red",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -262,7 +262,7 @@
             description: "Moderately cold hardy (-10°F); skin is slightly tough; small, undeveloped seeds may be noticeable; firm fruit stores fresh very well; overly fertilized or vigorous vines set little fruit"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Delaware",
             color: "Red",
             harvest_time_unparsed: "Mid-season",
@@ -276,7 +276,7 @@
             description: "Susceptible to powdery mildew; fruit better for juice than fresh eating"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Swenson Red",
             color: "Red",
             harvest_time_unparsed: "Mid-season",
@@ -289,7 +289,7 @@
             description: "Cold hardy (to -30°F); berries have firm texture; vine has low vigor when young; not well adapted to coast, as set is reduced in fog"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Saturn",
             color: "Red",
             harvest_time_unparsed: "Mid-season",
@@ -303,7 +303,7 @@
             description: "Moderate cold hardiness (-15°F); texture and flavor similar to European types; can have small berries in cool season; traces of seed remnants found in warm seasons; well tested in Idaho"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Suffolk Red",
             color: "Red",
             harvest_time_unparsed: "Mid-season",
@@ -317,7 +317,7 @@
             description: "Moderate cold hardiness (to zone 5); berries may be more pink than red; fruit set (berries/cluster) can be poor in some years; low yield"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Alborz",
             color: "Red",
             harvest_time_unparsed: "Mid-season",
@@ -331,7 +331,7 @@
             description: "Cold hardy; well tested in Idaho but not in Oregon"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Van Buren",
             color: "Blue",
             harvest_time_unparsed: "Very early (~ 6 weeks before Concord)",
@@ -344,7 +344,7 @@
             description: "Cold hardy; slip skin; juice similar to Concord; berries prone to splitting; fresh fruit doesn’t store well; not ideal for juice; vine does best in light, fertile soil"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Elizabeth",
             color: "Blue",
             harvest_time_unparsed: "Very early (~ 6 weeks before Concord)",
@@ -357,7 +357,7 @@
             description: "Cold hardy; thought by some to be the same cultivar as Van Buren"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Price",
             color: "Blue",
             harvest_time_unparsed: "Very early (~ 6 weeks before Concord)",
@@ -370,7 +370,7 @@
             description: "Cold hardy (-25°F); good disease resistance; slip skin is tender; thinner skin than Concord; makes great juice; most adapted to cool coastal regions as well as warmer areas"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Valiant",
             color: "Blue",
             harvest_time_unparsed: "Early (about 4-5 weeks before Concord)",
@@ -384,7 +384,7 @@
             description: "Cold hardy (-35°F); excellent for juice or jelly; do not let vines produce too much fruit when young"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Buffalo",
             color: "Blue",
             harvest_time_unparsed: "Early-Mid Season",
@@ -398,7 +398,7 @@
             description: "Moderate hardiness (-10°F); slip skin; tough, astringent skin; pulp can be stringy; best for juice"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Venus",
             color: "Blue",
             harvest_time_unparsed: "Mid-season",
@@ -412,7 +412,7 @@
             description: "Moderate cold hardiness (-15°F); slip skin; skin may be tough and astringent; remnants of undeveloped seeds can be quite noticeable"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Jupiter",
             color: "Blue",
             harvest_time_unparsed: "Mid-season",
@@ -426,7 +426,7 @@
             description: "Cold hardy (-20°F); firm reddish-blue fruit; resistant to cracking; sweet, late fruit makes good raisins"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Glenora",
             color: "Blue",
             harvest_time_unparsed: "Mid-season",
@@ -440,7 +440,7 @@
             description: "Moderate cold hardiness (-15°F); tip berries may not ripen well; berries do not store well"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "NY Muscat",
             color: "Blue",
             harvest_time_unparsed: "Mid-season",
@@ -454,7 +454,7 @@
             description: "Cold hardy (-15°F); slip skin; susceptible to powdery mildew; fruit are reddish blue"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Campbell Early",
             color: "Blue",
             harvest_time_unparsed: "Mid-season",
@@ -468,7 +468,7 @@
             description: "Cold hardy (-20°F); fruit color well before they are ripe—let fruit hang to get better flavor; can have powdery mildew in wet years"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Mars",
             color: "Blue",
             harvest_time_unparsed: "Mid-season",
@@ -481,7 +481,7 @@
             description: "Moderately cold hardy (-10°F); slip skin; prevent overproduction on young vines; can have powdery mildew in wet years"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Black Corinth",
             color: "Blue",
             harvest_time_unparsed: "Mid-season",
@@ -495,7 +495,7 @@
             description: "Also called “Zante Currant”; used to make dried “currants”; very susceptible to powdery mildew; difficult to grow without disease on a small scale"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Concord Seedless",
             color: "Blue",
             harvest_time_unparsed: "Mid-Late Season",
@@ -508,7 +508,7 @@
             description: "Cold hardy (-20°F); slip skin; berries and clusters are much smaller than Concord; yield is erratic from year to year; may develop seeds in warm years"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Alden",
             color: "Blue",
             harvest_time_unparsed: "Mid-Late Season",
@@ -522,7 +522,7 @@
             description: "Moderately cold hardy (-15°F); very productive; berries can crack"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Autumn Royal",
             color: "Blue",
             harvest_time_unparsed: "Mid-Late Season",
@@ -535,7 +535,7 @@
             description: "Cold hardy; firm fruit; susceptible to sunburn; well tested in Idaho but not in Oregon"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Steuben",
             color: "Blue",
             harvest_time_unparsed: "Late (~ mid October; ripens with Concord)",
@@ -549,7 +549,7 @@
             description: "Moderately cold hardy (-10°F); slip skin; vigorous"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             name: "Concord",
             color: "Blue",
             harvest_time: "mid October",

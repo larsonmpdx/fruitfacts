@@ -1,0 +1,21 @@
+{
+    title: "UMN Pear Varieties",
+    author: "unknown",
+    url: "https://mnhardy.umn.edu/varieties/fruit/pears",
+    published: "unknown",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Minneapolis, MN",
+            latitude: 44.97452884917545,
+            longitude: -93.23155866017939
+        }
+    ],
+    plants: [
+        {
+            type: "",
+            name: "",
+            description: ""
+        }
+    ]
+}

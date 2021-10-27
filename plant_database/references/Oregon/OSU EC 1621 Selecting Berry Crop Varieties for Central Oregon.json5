@@ -102,19 +102,19 @@
             description: "Half-high"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             names: ["Fredonia", "Valient", "Venus (seedless)"],
             color: "Blue/Black",
             subtype: "American or Hybrid"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             names: ["Canadice (seedless)", "Reliance (seedless)", "Vanessa (seedless)"],
             color: "Red",
             subtype: "American or Hybrid"
         },
         {
-            type: "Table Grape",
+            type: "Grape",
             names: ["Himrod (seedless)", "Lakemont (seedless)", "Niagara"],
             color: "White/Yellow",
             subtype: "American or Hybrid"
