@@ -690,8 +690,8 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
                 if marketing_name.is_none() {
                     marketing_name = Some(aka_element.to_string());
                 } else {
-                    marketing_name = Some(marketing_name.unwrap() + "," + &aka_element.to_string());
-                    // allow multiples, separate by a comma
+                    // multiple marketing names are very rare, see rave/first kiss apple
+                    marketing_name = Some(marketing_name.unwrap() + " and " + &aka_element.to_string());
                 }
             }
         }

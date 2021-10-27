@@ -114,11 +114,5 @@
         "name": "Mini Blues",
         "patent": "https://patents.google.com/patent/USPP28233 expires 2035-05-21",
         "tags": [ "northern highbush" ]
-    },
-    {
-        "name": "MNPink1",
-        "AKA": ["Pink Popcorn (tm)"],
-        "patent": "https://patents.google.com/patent/USPP25792 expires 2034-03-21",
-        "tags": [ "northern highbush" ]
     }
 ]
