@@ -691,7 +691,8 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
                     marketing_name = Some(aka_element.to_string());
                 } else {
                     // multiple marketing names are very rare, see rave/first kiss apple
-                    marketing_name = Some(marketing_name.unwrap() + " and " + &aka_element.to_string());
+                    marketing_name =
+                        Some(marketing_name.unwrap() + " and " + &aka_element.to_string());
                 }
             }
         }

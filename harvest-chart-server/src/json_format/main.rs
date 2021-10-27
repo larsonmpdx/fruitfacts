@@ -1,8 +1,8 @@
 // format the json plant database
 // adapted from this example tool: https://github.com/google/json5format/blob/master/examples/formatjson5.rs
 
-use json5format::*;
 use harvest_chart_server::import_db;
+use json5format::*;
 use std::fs;
 use std::io;
 use std::io::{Read, Write};
@@ -44,7 +44,8 @@ fn main() -> Result<(), std::io::Error> {
 
             let mut buffer = String::new();
             fs::File::open(&path_)?.read_to_string(&mut buffer)?;
-            let parsed_document = ParsedDocument::from_string(buffer, Some(filename.clone())).unwrap();
+            let parsed_document =
+                ParsedDocument::from_string(buffer, Some(filename.clone())).unwrap();
             let bytes = format.to_utf8(&parsed_document).unwrap();
             write_to_file(&filename, &bytes)?;
         }
