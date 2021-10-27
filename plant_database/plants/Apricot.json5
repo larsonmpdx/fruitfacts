@@ -8,11 +8,6 @@
         "name": "Katy"
     },
     {
-        "name": "Flavor Giant",
-        "description": "Zaiger variety",
-        "patent": "https://patents.google.com/patent/USPP5308 expired 2003"
-    },
-    {
         "name": "Gold Kist",
         "description": "Zaiger variety",
         "patent": "https://patents.google.com/patent/USPP2826 expired"
@@ -93,11 +88,6 @@
     },
     {
         "name": "Hunza"
-    },
-    {
-        "name": "Earli-Autumn",
-        "description": "Zaiger variety",
-        "patent": "https://patents.google.com/patent/USPP9937 expired 2015"
     },
     {
         "name": "Autumn Glo",

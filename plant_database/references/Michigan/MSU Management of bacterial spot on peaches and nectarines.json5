@@ -80,8 +80,7 @@
         {
             "type": "Peach",
             "category": "White flesh peach",
-            // "Yukon King" = Autumn Snow
-            "names": ["Opale", "Snow Bride", "Snow Beauty", "Snow Giant", "Snow King", "Snow Prince", "Snow Fire", "Autumn Snow"],
+            "names": ["Opale", "Snow Bride", "Snow Beauty", "Snow Giant", "Snow King", "Snow Prince", "Snow Fire", "Autumn Snow" /*Yukon King*/],
             "disease_resistance": { "BLS": "Poor"}
         },
         {

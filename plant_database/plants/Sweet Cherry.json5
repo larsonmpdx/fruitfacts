@@ -29,11 +29,6 @@
         "patent": "https://patents.google.com/patent/USPP6407 expired 2007"
     },
     {
-        "name": "Craig's Crimson",
-        "description": "Zaiger variety",
-        "patent": "https://patents.google.com/patent/USPP7320 expired 2009"
-    },
-    {
         "name": "Glacier",
         "AKA": ["PC 7144-7"],
         "patent": "https://patents.google.com/patent/USPP8051 expired 2011"
@@ -52,38 +47,6 @@
         "name": "PC7146-8",
         "AKA": ["Benton (r)", "Columbia"],
         "patent": "https://patents.google.com/patent/USPP15847 expires 2023-04-28"
-    },
-    {
-        "name": "Minnie Royal",
-        "description": "Zaiger variety. early, Bing-11-14",
-        "patent": "https://patents.google.com/patent/USPP12942 expired 2020"
-    },
-    {
-        "name": "Royal Rainier",
-        "description": "Zaiger variety",
-        "patent": "https://patents.google.com/patent/USPP10790 expired 2017"
-    },
-    {
-        "name": "Royal Lee",
-        "AKA": ["Regal Lee"],
-        "description": "Zaiger variety",
-        "patent": "https://patents.google.com/patent/USPP12417 expired 2020"
-    },
-    {
-        "name": "Royal Lynn",
-        "description": "Zaiger variety. very early, Bing-16-18",
-        "patent": "https://patents.google.com/patent/USPP19589 expires 2027-07-14"
-    },
-    {
-        "name": "Royal Hazel",
-        "description": "Zaiger variety",
-        "patent": "https://patents.google.com/patent/USPP19920 expires 2027-12-26"
-    },
-    {
-        "name": "Royal Crimson",
-        "AKA": ["6GM25", "Royal Fran"],
-        "description": "Zaiger variety. self fruitful",
-        "patent": "PPAF"
     },
     {
         "name": "Hedelfingen"

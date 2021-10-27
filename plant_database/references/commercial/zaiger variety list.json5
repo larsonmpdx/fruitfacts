@@ -855,9 +855,9 @@
             "type": "Nectarine",
             "name": "Honeylicious",
             "description": "zaiger. Yellow. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "patent": "https://patents.google.com/patent/USPP26056 expires 2034-06-10",
+            "chill": "700 hours",
+            "harvest_time": "June 22 to July 7"
         },
         {
             "type": "Nectarine",
@@ -983,264 +983,269 @@
         {
             "type": "Peach",
             "name": "Garden Gold",
-            "description": "zaiger. Genetic Dwarf. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Genetic Dwarf. retail https://www.davewilson.com/nurseries/products/fruit-trees/peach-yellow/garden_gold/",
+            "patent": "unknown. older variety, likely off patent",
+            "chill": "500 or fewer hours",
+            "harvest_time": "August 10 to August 28"
         },
         {
             "type": "Peach",
             "name": "Garden Sun",
-            "description": "zaiger. Genetic Dwarf. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Genetic Dwarf. retail https://www.davewilson.com/nurseries/products/fruit-trees/peach-yellow/garden_sun/",
+            "patent": "unknown. older variety, likely off patent",
+            "chill": "500 or fewer hours",
+            "harvest_time": "August 5 to August 19"
         },
         {
             "type": "Peach",
             "name": "Honey Babe",
-            "description": "zaiger. Genetic Dwarf. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "AKA": ["Honey Bee"], // patent name
+            "description": "zaiger. Genetic Dwarf. retail https://www.davewilson.com/nurseries/products/fruit-trees/peach-yellow/honey_babe/",
+            "patent": "https://patents.google.com/patent/USPP5276 expired 2002-12-27",
+            "chill": "400 or fewer hours",
+            "harvest_time": "July 1 to July 15"
         },
         {
             "type": "Peach",
             "name": "Pix Zee",
-            "description": "zaiger. Genetic Dwarf. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Genetic Dwarf. retail https://www.davewilson.com/nurseries/products/fruit-trees/peach-yellow/pix_zee/",
+            "patent": "https://patents.google.com/patent/USPP6364 expired 2006-12-29",
+            "chill": "400 or fewer hours",
+            "harvest_time": "June 25 to July 10"
         },
         {
             "type": "Peach",
             "name": "Snow Babe",
-            "description": "zaiger. Genetic Dwarf. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Genetic Dwarf. retail https://www.davewilson.com/nurseries/products/fruit-trees/peach-white/snow-babe/",
+            "patent": "assumed ppaf, released 2020-21",
+            "chill": "450 hours below 45°F",
+            "harvest_time": "July 20 to August 5"
         },
         {
             "type": "Peach",
             "name": "Arctic Supreme",
-            "description": "zaiger. White. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. retail https://www.davewilson.com/nurseries/products/fruit-trees/peach-white/arctic_supreme/",
+            "patent": "unknown, found in references as far back as 2011 which limits possible duration",
+            "chill": "700 hours",
+            "harvest_time": "July 20 to August 5"
         },
         {
             "type": "Peach",
             "name": "Aspen",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "AKA": ["Aspen White"], // patent name
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/aspen/",
+            "patent": "https://patents.google.com/patent/USPP23609 expires 2031-11-09",
+            "chill": "600 hours",
+            "harvest_time": "June 10 to June 25"
         },
         {
             "type": "Peach",
             "name": "Glacier",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/glacier/",
+            "patent": "https://patents.google.com/patent/USPP11868 expired 2019-01-29",
+            "chill": "750-850 hours",
+            "harvest_time": "July 25 to August 10"
         },
         {
             "type": "Peach",
-            "name": "Klondike",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "name": "Klondike White", // patent name
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/klondike/",
+            "patent": "https://patents.google.com/patent/USPP10872 expired 2017-12-01",
+            "chill": "700-800 hours",
+            "harvest_time": "June 25 to July 10"
         },
         {
             "type": "Peach",
             "name": "Rich Snow",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/rich_snow/",
+            "patent": "https://patents.google.com/patent/USPP25812 expires 2034-04-06",
+            "chill": "400 hours",
+            "harvest_time": "May 4 to May 19"
         },
         {
             "type": "Peach",
             "name": "Sauzee Giant",
-            "description": "zaiger. White. peento. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. peento. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/sauzee_giant/",
+            "patent": "https://patents.google.com/patent/USPP27955 expires 2035-12-01",
+            "chill": "850 hours",
+            "harvest_time": "August 1 to August 15"
         },
         {
             "type": "Peach",
             "name": "Sauzee Jewel",
-            "description": "zaiger. White. peento. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. peento. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/sauzee_jewel/",
+            "patent": "https://patents.google.com/patent/USPP26839 expires 2035-02-05",
+            "chill": "950 hours",
+            "harvest_time": "September 1 to September 15"
         },
         {
             "type": "Peach",
             "name": "Sauzee Lady",
-            "description": "zaiger. White. peento. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. peento. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/sauzee_lady/",
+            "patent": "https://patents.google.com/patent/USPP22404 expires 2030-07-29",
+            "chill": "300 hours",
+            "harvest_time": "August 13 to August 28"
         },
         {
             "type": "Peach",
             "name": "Sauzee Queen",
-            "description": "zaiger. White. peento. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. peento. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/sauzee_queen/",
+            "patent": "https://patents.google.com/patent/USPP16179 expires 2024-11-14",
+            "chill": "500-600 hours",
+            "harvest_time": "May 12 to May 27"
         },
         {
             "type": "Peach",
             "name": "Sauzee Swirl",
-            "description": "zaiger. White. peento. retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. peento. retail https://www.davewilson.com/nurseries/products/fruit-trees/peach-white/sauzee_swirl/",
+            "patent": "ppaf nlt 2021",
+            "chill": "400 hours",
+            "harvest_time": "May 15 to May 30"
         },
         {
             "type": "Peach",
             "name": "September Snow",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/september_snow/",
+            "patent": "https://patents.google.com/patent/USPP8003 expired 2011-04-29",
+            "chill": "900-1,000 hours",
+            "harvest_time": "August 25 to September 10"
         },
         {
             "type": "Peach",
             "name": "Sierra Snow",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/sierra_snow/",
+            "patent": "https://patents.google.com/patent/USPP13527 expires 2022-01-25",
+            "chill": "700-800 hours",
+            "harvest_time": "June 15 to June 30"
         },
         {
             "type": "Peach",
             "name": "Snow Angel",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_angel/",
+            "patent": "https://patents.google.com/patent/USPP18750 expires 2025-04-22",
+            "chill": "200 hours",
+            "harvest_time": "April 30 to May 14"
         },
         {
             "type": "Peach",
             "name": "Snow Beauty",
-            "description": "zaiger. White. commercial and retail",
-            "patent": "https://patents.google.com/patent/USPP10175 expired 2016-08-30"
+            "description": "zaiger. White. commercial and retail https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_beauty/",
+            "patent": "https://patents.google.com/patent/USPP10175 expired 2016-08-30",
+            "chill": "700-800 hours",
+            "harvest_time": "June 17 to July 2"
         },
         {
             "type": "Peach",
             "name": "Snow Fall",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_fall/",
+            "patent": "https://patents.google.com/patent/USPP11568 expired 2018-12-15",
+            "chill": "700-800 hours",
+            "harvest_time": "September 15 to September 30"
         },
         {
             "type": "Peach",
             "name": "Snow Fire",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_fire/",
+            "patent": "https://patents.google.com/patent/USPP9470 expired 2015-03-17",
+            "chill": "700-800 hours",
+            "harvest_time": "August 7 to August 22"
         },
         {
             "type": "Peach",
             "name": "Snow Fox",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_fox/",
+            "patent": "https://patents.google.com/patent/USPP27790 expires 2035-06-06",
+            "chill": "550 hours",
+            "harvest_time": "June 1 to June 15"
         },
         {
             "type": "Peach",
             "name": "Snow Gem",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_gem/",
+            "patent": "https://patents.google.com/patent/USPP11435 expires 2018-04-01",
+            "chill": "700-800 hours",
+            "harvest_time": "August 18 to September 3"
         },
         {
             "type": "Peach",
             "name": "Snow Giant",
-            "description": "zaiger. White. commercial and retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial and retail https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_giant/",
+            "patent": "https://patents.google.com/patent/USPP8085 expired 2011-08-27",
+            "chill": "800-900 hours",
+            "harvest_time": "August 8 to August 23"
         },
         {
             "type": "Peach",
             "name": "Snow King",
-            "description": "zaiger. White. commercial and retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial and retail https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_king/",
+            "patent": "https://patents.google.com/patent/USPP8415 expired 2012-12-31",
+            "chill": "900-1,000 hours",
+            "harvest_time": "August 5 to August 20"
         },
         {
             "type": "Peach",
             "name": "Snow Lady",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_lady/",
+            "patent": "https://patents.google.com/patent/USPP25093 expires 2033-04-19",
+            "chill": "300 hours",
+            "harvest_time": "May 1 to May 15"
         },
         {
             "type": "Peach",
             "name": "Spring Snow",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/spring_snow/",
+            "patent": "https://patents.google.com/patent/USPP9883 expired 2015-12-06",
+            "chill": "750-850 hours",
+            "harvest_time": "May 25 to June 10"
         },
         {
             "type": "Peach",
             "name": "Sugar Giant",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/sugar_giant/",
+            "patent": "https://patents.google.com/patent/USPP8442 expired 2013-01-25",
+            "chill": "800-900 hours",
+            "harvest_time": "July 10 to July 25"
         },
         {
             "type": "Peach",
             "name": "Sugar Lady",
-            "description": "zaiger. White. commercial and retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial and retail https://www.davewilson.com/growers/products/fruit-trees/peach-white/sugar_lady/",
+            "patent": "https://patents.google.com/patent/USPP7532 expired 2009-07-10",
+            "chill": "850-950 hours",
+            "harvest_time": "June 25 to July 10"
         },
         {
             "type": "Peach",
             "name": "Sugar May",
-            "description": "zaiger. White. commercial and retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial and retail https://www.davewilson.com/growers/products/fruit-trees/peach-white/sugar_may/",
+            "patent": "https://patents.google.com/patent/USPP8034 expired 2011-05-13",
+            "chill": "600-700 hours",
+            "harvest_time": "June 8 to June 23"
         },
         {
             "type": "Peach",
             "name": "Summer Sweet",
-            "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/summer_sweet/",
+            "patent": "https://patents.google.com/patent/USPP8070 expired 2011-06-17",
+            "chill": "500-600 hours",
+            "harvest_time": "July 5 to July 20"
         },
         {
             "type": "Peach",
             "name": "White Lady",
-            "description": "zaiger. White. commercial and retail",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. White. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/peach-white/white_lady/",
+            "patent": "https://patents.google.com/patent/USPP5821 expired 2005-02-04",
+            "chill": "800 hours",
+            "harvest_time": "July 5 to July 20"
         },
         {
             "type": "Peach",
             "name": "Autumn Snow",
+            "AKA": ["Yukon King (tm)"],
             "description": "zaiger. White. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "patent": "https://patents.google.com/patent/USPP9872 expired 2016",
+            "chill": "750-850 hours",
+            "harvest_time": "August 8 to August 23"
         },
         {
             "type": "Peach",
@@ -1367,7 +1372,7 @@
             "type": "Peach",
             "name": "Mid-Pride",
             "description": "zaiger. Yellow. retail https://www.davewilson.com/nurseries/products/fruit-trees/peach-yellow/mid-pride/",
-            "patent": "https://patents.google.com/patent/USPP ",
+            "patent": "unknown",
             "chill": "250 hours",
             "harvest_time": "July 8 to July 29"
         },
@@ -1604,42 +1609,38 @@
         {
             "type": "Peach",
             "name": "American",
-            "description": "zaiger. Canning Clingstone. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Canning Clingstone. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-canning-cling/american/",
+            "patent": "https://patents.google.com/patent/USPP27828 expires 2035-11-12",
+            "chill": "700 hours",
+            "harvest_time": "July 10 to July 25"
         },
         {
             "type": "Peach",
             "name": "Calaveras",
-            "description": "zaiger. Canning Clingstone. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Canning Clingstone. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-canning-cling/calaveras/",
+            "patent": "https://patents.google.com/patent/USPP27351 expires 2035-06-16",
+            "chill": "800 hours",
+            "harvest_time": "July 15 to July 30"
         },
         {
             "type": "Peach",
             "name": "Klamath",
-            "description": "zaiger. Canning Clingstone. commercial",
+            "description": "zaiger. Canning Clingstone. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-canning-cling/klamath/",
             "patent": "https://patents.google.com/patent/USPP15557 expires 2023-12-15",
-            "chill": " hours",
-            "harvest_time": ""
+            "harvest_time": "August 4 to August 19"
         },
         {
             "type": "Peach",
             "name": "Stanislaus",
-            "description": "zaiger. Canning Clingstone. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Canning Clingstone. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-canning-cling/stanislaus/",
+            "patent": "https://patents.google.com/patent/USPP8376 expired 2012-12-21",
+            "harvest_time": "July 20 to August 5"
         },
         {
             "type": "Peach",
             "name": "Tuolumne",
-            "description": "zaiger. Canning Clingstone. commercial",
-            "patent": "https://patents.google.com/patent/USPP ",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. Canning Clingstone. commercial. no plant page",
+            "patent": "https://patents.google.com/patent/USPP10609 expired 2017-06-05"
         },
         {
             "type": "Peach",
@@ -1741,10 +1742,10 @@
             "type": "Japanese Plum",
             "name": "Candy Heart",
             "AKA": ["Sweet Pixie 5"],
-            "description": "zaiger. marketed as \"pluerry\". retail",
+            "description": "zaiger. marketed as \"pluerry\". retail https://www.davewilson.com/nurseries/products/fruit-trees/pluerry-interspecific/candy_heart/",
             "patent": "https://patents.google.com/patent/USPP28308 expires 2036-03-30",
-            "chill": " hours",
-            "harvest_time": ""
+            "chill": "500-600 hours",
+            "harvest_time": "July 28 to August 23"
         },
         {
             "type": "Japanese Plum",
@@ -1880,7 +1881,7 @@
         {
             "type": "Pluot",
             "name": "Emerald Drop",
-            "AKA": ["Emerald Gem"],
+            "AKA": ["Emerald Gem", "7HC165"],
             "description": "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/emerald_drop/",
             "patent": "https://patents.google.com/patent/USPP14599 expires 2023-06-16",
             "chill": "400 or fewer hours",
@@ -1943,10 +1944,8 @@
         {
             "type": "Pluot",
             "name": "Flavor Gem",
-            "description": "zaiger. commercial",
-            "patent": "https://patents.google.com/patent/USPP10915 expired 2017-11-25",
-            "chill": " hours",
-            "harvest_time": ""
+            "description": "zaiger. commercial. no plant page",
+            "patent": "https://patents.google.com/patent/USPP10915 expired 2017-11-25"
         },
         {
             "type": "Pluot",

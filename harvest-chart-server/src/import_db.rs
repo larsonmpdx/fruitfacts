@@ -690,11 +690,8 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
                 if marketing_name.is_none() {
                     marketing_name = Some(aka_element.to_string());
                 } else {
-                    panic!(
-                        "plant had multiple marketing names: {} {}",
-                        marketing_name.unwrap(),
-                        aka_element
-                    );
+                    marketing_name = Some(marketing_name.unwrap() + "," + &aka_element.to_string());
+                    // allow multiples, separate by a comma
                 }
             }
         }
@@ -1010,8 +1007,7 @@ fn add_collection_plant(
             collection_items::category_description.eq(category_description),
             collection_items::disease_resistance
                 .eq(serde_json::to_string(&plant.disease_resistance).unwrap()),
-            collection_items::disease_resistance
-                .eq(&plant.chill),
+            collection_items::disease_resistance.eq(&plant.chill),
             collection_items::description.eq(&plant.description),
             collection_items::harvest_relative.eq(&plant.harvest_time_relative),
             collection_items::harvest_text.eq(harvest_time_helper_text),

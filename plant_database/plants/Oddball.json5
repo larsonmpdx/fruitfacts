@@ -20,24 +20,8 @@
     {
         "type": "Japanese Plum",
         "display_type": "Pluerry",
-        "name": "Candy Heart",
-        "AKA": ["Sweet Pixie 5"],
-        "patent": "https://patents.google.com/patent/USPP28308 expires 2036-03-30",
-        "description": "Zaiger Variety"
-    },
-    {
-        "type": "Japanese Plum",
-        "display_type": "Pluerry",
         "name": "Sugar Twist",
         "patent": "assumed PPAF, likely ~2026 along with candy heart",
-        "description": "Zaiger Variety"
-    },
-    {
-        "type": "Japanese Plum",
-        "display_type": "Pluerry",
-        "name": "Sweet Treat",
-        "AKA": ["Sweet Pixzee 2"],
-        "patent": "https://patents.google.com/patent/USPP23796 expires 2032-03-06",
         "description": "Zaiger Variety"
     },
     {
