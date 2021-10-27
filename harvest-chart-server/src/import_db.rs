@@ -598,7 +598,7 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     }
 }
 
-fn get_database_dir() -> Option<std::path::PathBuf> {
+pub fn get_database_dir() -> Option<std::path::PathBuf> {
     let max_up_traversal_levels = 4; // enough levels to work from the build dir on windows
     let mut i = 0;
 

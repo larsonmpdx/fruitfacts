@@ -1,24 +1,10 @@
-#[cfg(test)]
-#[macro_use]
-extern crate more_asserts;
-
-#[macro_use]
-extern crate diesel;
-use diesel::prelude::*;
-use diesel::r2d2::{self, ConnectionManager};
-
-#[macro_use]
-extern crate diesel_migrations;
-embed_migrations!();
-
-extern crate dotenv;
-
-mod import_db;
-mod queries;
-mod schema_generated;
-mod schema_types;
+use harvest_chart_server::import_db;
+use harvest_chart_server::queries;
 
 use actix_web::{App, HttpServer};
+
+use diesel::prelude::*;
+use diesel::r2d2::{self, ConnectionManager};
 
 extern crate clap;
 use clap::{crate_version, App as ClapApp, Arg};
