@@ -28,15 +28,6 @@
         "tags": [ "columnar apple" ]
     },
     {
-        "name": "Pristine",
-        "patent": "https://patents.google.com/patent/USPP9881 expired 2014",
-        "description": "PRI variety. early season"
-    },
-    {
-        "name": "Williams' Pride",
-        "patent": "https://patents.google.com/patent/USPP6268 expired 2006"
-    },
-    {
         "name": "Belmac",
         "patent": "no US patent. Canada PBR expired 2015 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00000569e.shtml"
     },
@@ -103,12 +94,6 @@
         "name": "NJ 55",
         "AKA": ["Suncrisp (tm)"],
         "patent": "https://patents.google.com/patent/USPP8648 expired 2012"
-    },
-    {
-        "name": "Co-op 31",
-        "AKA": ["WineCrisp (tm)"],
-        "description": "PRI release. https://hort.purdue.edu/newcrop/pri/coop31.html",
-        "patent": "https://patents.google.com/patent/USPP20437 expires 2028-04-11"
     },
     {
         "name": "GoldRush",

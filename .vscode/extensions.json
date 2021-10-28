@@ -1,6 +1,7 @@
 {
 	"recommendations": [
         "rust-lang.rust",
+		"vadimcn.vscode-lldb",
         "matklad.rust-analyzer",
 		"katjanakosic.vscode-json5",
 		"jbockle.jbockle-format-files",

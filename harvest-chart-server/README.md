@@ -25,9 +25,9 @@
   * `cargo clippy --fix`
 
 # debugging in vs code
-* 2021: vs code rust plugins work best when the folder opened has cargo.toml in its root (don't open the whole repo).  hopefully this gets better over time
-* `install codelldb extension` and `rust-analyzer extension`
+* see extensions.json for recommended extensions
   * 2021: on windows vs code, `codelldb+rust-analyzer` debugger works slightly better than cppvsdbg or the official "rust" extension. see launch.json
+  * 2021: vs code rust plugins work best when the folder opened has cargo.toml in its root (don't open the whole repo).  hopefully this gets better over time
 
 # diesel (rust ORM) things
 * see https://diesel.rs/guides/getting-started

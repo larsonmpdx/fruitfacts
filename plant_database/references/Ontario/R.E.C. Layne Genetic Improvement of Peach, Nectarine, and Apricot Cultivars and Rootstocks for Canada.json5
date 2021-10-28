@@ -1,0 +1,213 @@
+{
+    title: "Genetic Improvement of Peach, Nectarine, and Apricot Cultivars and Rootstocks for Canada",
+    author: "R.E.C. Layne",
+    url: "https://www.actahort.org/books/374/374_11.htm",
+    published: "1996",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "research Station Harrow, Ontario Canada",
+            latitude: 42.033756103194264,
+            longitude: -82.90068212720712
+        }
+    ],
+    plants: [
+        {
+            name: "Harbelle",
+            type: "Peach",
+            harvest_time: "August 1",
+            description: "1968. Yellow melting flesh. Medium hardy; medium resistance to bacterial spot, brown rot, and canker; attractive, medium quality fruit. Sunhaven x Sunhaven",
+            disease_resistance: {
+                bacterial_spot: "medium resistance",
+                brown_rot: "medium resistance",
+                canker: "medium resistance"
+            }
+        },
+        {
+            name: "Canadian Harmony",
+            type: "Peach",
+            harvest_time: "August 25",
+            description: "1968. Yellow melting flesh. Medium hardy and productive; large fruit of medium quality. Redskin x Sunhaven"
+        },
+        {
+            name: "Harbrite",
+            type: "Peach",
+            harvest_time: "August 15",
+            description: "1969. Yellow melting flesh. Hardy and productive; resistant to bacterial spot and brown rot; attractive and good quality. Redskin x Sunhaven",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harken",
+            type: "Peach",
+            harvest_time: "August 12",
+            description: "1970. Yellow melting flesh. Hardy and productive; resistant to bacterial spot and brown rot; attractive and good quality. Redskin x Sunhaven",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harbinger",
+            type: "Peach",
+            harvest_time: "July 14",
+            description: "1971. Yellow melting flesh. Hardy and productive; resistant to bacterial spot and brown rot; very early ripening. Cherry Red x NJ560619",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harland",
+            type: "Peach",
+            harvest_time: "July 14",
+            description: "1979. Yellow melting flesh. Medium hardy; resistant to bacterial spot and brown rot; very early ripening. V37016 x Earlired",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harson",
+            type: "Peach",
+            harvest_time: "August 10",
+            description: "1982. Yellow melting flesh. Hardy and moderately productive; resistant to bacterial spot and brown rot; attractive, large, uniform ripening fruit with good quality. Redskin x Sunhaven",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harrow Beauty",
+            type: "Peach",
+            harvest_time: "August 26",
+            description: "1983. Yellow melting flesh. Hardy and productive; resistant to bacterial spot and brown rot; very attractive fruit with firm flesh of medium quality. Cresthaven x Harken",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harcrest",
+            type: "Peach",
+            harvest_time: "September 10",
+            description: "1983. Yellow melting flesh. Hardy and productive; resistant to bacterial spot and brown rot; attractive fruit with firm flesh and good quality. Redskin x H4219",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harrow Diamond",
+            type: "Peach",
+            harvest_time: "July 21",
+            description: "1984. Yellow melting flesh. Hardy and productive; resistant to bacterial spot and brown rot; attractive, medium quality, early ripening fruit. Redskin x Harbinger",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        // rootstocks omitted: Harrow Blood, Siberian C and Haggith
+        {
+            name: "Harko",
+            type: "Nectarine",
+            harvest_time: "August 12",
+            description: "1974. Yellow melting flesh. Hardy and productive; resistant to bacterial spot and brown rot; medium quality. Lexington x NJN 32",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Hardired",
+            type: "Nectarine",
+            harvest_time: "August 16",
+            description: "1974. Yellow melting flesh. Hardy and productive; resistant to bacterial spot and brown rot; medium quality. Lexington x NJN 32",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Hardiblaze",
+            type: "Nectarine",
+            harvest_time: "August 8",
+            description: "1989. Yellow melting flesh. Hardy and productive; resistant to bacterial spot and brown rot; very attractive, medium to large, firm, good quality. Stark Delicious x Hardired",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harcot",
+            type: "Apricot",
+            harvest_time: "July 17",
+            description: "1977. Moderately hardy and productive; resistant to bacterial spot and brown rot; attractive, good quality. [(Geneva x Naramata) x Morden 604] x NJA1",
+            disease_resistance: {
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harogem",
+            type: "Apricot",
+            harvest_time: "July 25",
+            description: "1979. Moderately hardy; resistant to canker and brown rot; attractive, firm, good quality. Rouge du Roussillon x NJA2",
+            disease_resistance: {
+                canker: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Hargrand",
+            type: "Apricot",
+            harvest_time: "July 27",
+            description: "1980. Hardy and productive; resistant to canker and brown rot; very large and good quality fruit. V51092 x NJA1",
+            disease_resistance: {
+                canker: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harlayne",
+            type: "Apricot",
+            harvest_time: "July 27",
+            description: "1980. Hardy and productive, late blooming; resistant to canker, bacterial spot and brown rot; good quality fruit. V51092 x SunGlo",
+            disease_resistance: {
+                canker: "resistant",
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Harglow",
+            type: "Apricot",
+            harvest_time: "July 29",
+            description: "1982. Hardy and productive, late blooming; resistant to canker, bacterial spot and brown rot; good quality fruit. V51092 x SunGlo",
+            disease_resistance: {
+                canker: "resistant",
+                bacterial_spot: "resistant",
+                brown_rot: "resistant"
+            }
+        },
+        {
+            name: "Laycot",
+            type: "Apricot",
+            harvest_time: "July 25",
+            description: "1988. Attractive fruit of good size and quality . V51092 x NJA1",
+            patent: 'paper notes "Protected by StarFruits - France". I can\'t find any current patent'
+        },
+        {
+            name: "Harval",
+            type: "Apricot",
+            harvest_time: "August 1",
+            description: "1989. Moderately hardy and productive; resistant to bacterial spot; attractive, good quality fruit. Veecot x HW 435",
+            disease_resistance: {
+                bacterial_spot: "resistant"
+            }
+        }
+        // ornamental peaches omitted: Harrow Candifloss, Harrow Frostipink, Harrow Rubirose
+    ]
+}

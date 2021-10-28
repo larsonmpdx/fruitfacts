@@ -1,0 +1,263 @@
+{
+    title: "PRI Disease Resistant Apple Breeding Program",
+    author: "unknown",
+    url: "https://www.hort.purdue.edu/newcrop/pri/",
+    published: "unknown",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Lafayette, IN",
+            latitude: 40.44043598397219,
+            longitude: -86.93564277629406
+        }
+    ],
+    plants: [
+        // unnamed releases omitted. there are a couple active in the current nursery trade that would be worth adding
+        {
+            name: "Prima",
+            type: "Apple",
+            AKA: ["Co-op 2"],
+            harvest_time: "Four to five weeks before 'Delicious'",
+            disease_resistance: {
+                scab: "Highly resistant to scab in the field",
+                powdery_mildew: "Good resistance to powdery mildew",
+                fire_blight: "Moderate to good resistance to fire blight",
+                CAR: "Susceptible to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop02.html",
+            patent: "https://patents.google.com/patent/USRE28435 expired"
+        },
+        {
+            name: "Priscilla",
+            type: "Apple",
+            AKA: ["Co-op 4"],
+            harvest_time: "Two weeks before 'Delicious'",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "high level of resistance to fire blight",
+                fire_blight: "good level of resistance to powdery mildew",
+                CAR: "high level of resistance to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop04.html",
+            patent: "https://patents.google.com/patent/USPP3488 expired"
+        },
+        {
+            name: "Sir Prize",
+            type: "Apple",
+            AKA: ["Co-op 5"],
+            harvest_time: "Season of Maturity: With 'Delicious'",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "good level of resistance to powdery mildew",
+                fire_blight: "susceptible to fire blight",
+                CAR: "moderately susceptible to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop05.html",
+            patent: "https://patents.google.com/patent/USPP3988 expired 1993-12-14"
+        },
+        {
+            name: "Redfree",
+            type: "Apple",
+            AKA: ["Co-op 13"],
+            harvest_time: "Season of Maturity: Seven weeks before 'Delicious'.",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "moderate level of resistance to powdery mildew",
+                fire_blight: "good level of resistance to fire blight",
+                CAR: "field immune to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop13.html",
+            patent: "https://patents.google.com/patent/USPP4322 expired 1997-08-04"
+        },
+        {
+            name: "Dayton",
+            type: "Apple",
+            AKA: ["Co-op 21"],
+            harvest_time: "Season of Maturity: Four to five weeks before 'Delicious'",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "moderate resistance to powdery mildew",
+                fire_blight: "moderate resistance to fire blight",
+                CAR: "moderately susceptible to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop21.html",
+            patent: "https://patents.google.com/patent/USPP5584 expired 2004-01-23"
+        },
+        {
+            name: "Jonafree",
+            type: "Apple",
+            AKA: ["Co-op 22"],
+            harvest_time: "Season of Maturity: With 'Jonathan,' one week before 'Delicious'",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "moderately susceptible to powder mildew",
+                fire_blight: "moderately susceptible to fire blight",
+                CAR: "moderately susceptible to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop22.html",
+            patent: "https://patents.google.com/patent/USPP4633 expired 1999-08-29"
+        },
+        {
+            name: "Williams' Pride",
+            type: "Apple",
+            AKA: ["Co-op 23"],
+            harvest_time: "Season of Maturity: Seven to eight weeks before 'Delicious'",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "good level of resistance to powdery mildew",
+                fire_blight: "high level of resistance to fire blight",
+                CAR: "field immune to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop23.html",
+            patent: "https://patents.google.com/patent/USPP6268 expired 2006-04-25"
+        },
+        {
+            name: "Co-op 25",
+            type: "Apple",
+            AKA: ["Scarlett O'Hara (tm)"],
+            harvest_time: "Season of Maturity: One to one-half week before 'Delicious'",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "moderately resistant to powdery mildew",
+                fire_blight: "highly susceptible to fire blight",
+                CAR: "highly resistant to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop25.html",
+            patent: "https://patents.google.com/patent/USPP12323 expired 2018-12-03"
+        },
+        {
+            name: "Co-op 29",
+            type: "Apple",
+            AKA: ["Sundance (tm)"],
+            harvest_time: "Season of Maturity: Two and one-half weeks after 'Delicious'",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "moderately resistant to powdery mildew",
+                fire_blight: "highly resistant to fire blight",
+                CAR: "highly resistant to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop29.html",
+            patent: "https://patents.google.com/patent/USPP13819 expired 2021-12-21"
+        },
+        {
+            name: "Enterprise",
+            type: "Apple",
+            AKA: ["Co-op 30"],
+            harvest_time: "Season of Maturity: Two and one-half weeks after 'Delicious'",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "moderately resistant to powdery mildew",
+                fire_blight: "highly resistant to fire blight",
+                CAR: "highly resistant to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop30.html",
+            patent: "https://patents.google.com/patent/USPP9193 expired 2013-06-02"
+        },
+        {
+            name: "Co-op 31",
+            type: "Apple",
+            AKA: ["WineCrisp (tm)"],
+            harvest_time: "Season of Maturity: Two weeks after 'Delicious'",
+            disease_resistance: {
+                scab: "Field immune to apple scab",
+                powdery_mildew: "moderately resistant to powdery mildew",
+                fire_blight: "good resistance to fire blight",
+                CAR: "moderately susceptible to cedar-apple rust",
+                other: "susceptible to Botryosphaeria rots in storage"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop31.html",
+            patent: "https://patents.google.com/patent/USPP20437 expires 2028-04-11"
+        },
+        {
+            name: "Co-op 32",
+            type: "Apple",
+            AKA: ["Pristine (tm)"],
+            harvest_time: "Season of Maturity: July 20 to August 3 at Lafayette, Indiana",
+            disease_resistance: {
+                scab: "Field immune to scab",
+                powdery_mildew: "resistant to powdery mildew",
+                fire_blight: "moderately resistant to fire blight",
+                CAR: "slightly resistant to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop32.html",
+            patent: "https://patents.google.com/patent/USPP9881 expired 2014"
+        },
+        {
+            name: "Co-op 33",
+            type: "Apple",
+            AKA: ["Pixie Crunch (tm)"],
+            harvest_time: "Season of Maturity: September 12 to 18 at Lafayette, Indiana",
+            disease_resistance: {
+                scab: "Field immune to scab",
+                powdery_mildew: "susceptible to downy mildew",
+                fire_blight: "moderately susceptible to fire blight",
+                CAR: "susceptible to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop33.html",
+            patent: "https://patents.google.com/patent/USPP13871 expires 2021-12-21"
+        },
+        {
+            name: "GoldRush",
+            type: "Apple",
+            AKA: ["Co-op 38"],
+            harvest_time: "Season of Maturity: October 20 to 30 at Lafayette, Indiana; about 1 week after 'Fuji'",
+            disease_resistance: {
+                scab: "Field immune to scab",
+                powdery_mildew: "highly resistant to powdery mildew",
+                fire_blight: "moderately resistant to fire blight",
+                CAR: "susceptible to cedar-apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop38.html",
+            patent: "https://patents.google.com/patent/USPP9392 expired 2013-06-02"
+        },
+        {
+            name: "Co-op 39",
+            type: "Apple",
+            AKA: ["CrimsonCrisp (tm)"],
+            harvest_time: "Maturity date: 15 Sept. at West Lafayette, but can be picked into October",
+            disease_resistance: {
+                scab: "resistant to apple scab,",
+                fire_blight: "susceptible to fireblight",
+                CAR: "susceptible to cedar apple rust"
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/coop39.html variety page as-yet unfilled, see cultivar release pdf",
+            patent: "https://patents.google.com/patent/USPP16622 expires 2025-02-01"
+        },
+        {
+            name: "Juliet",
+            type: "Apple",
+            AKA: ["Co-op 43"],
+            harvest_time: "Harvest period October 5 to 20 at Cream Ridge, New Jersey",
+            disease_resistance: {
+                scab: "Scab-Field immune",
+                powdery_mildew: "Mildew-None observed in New Jersey or Illinois",
+                fire_blight: "Fire blight-None observed in New Jersey or Illinois",
+                CAR: "Rust-Leaves moderately susceptible; fruit resistant."
+            },
+            description: "european club apple, not available in the US in 2021 https://www.hort.purdue.edu/newcrop/pri/coop43.html",
+            patent: "no patent found. co-op release page doesn't claim US ppaf"
+        },
+        {
+            name: "Priam",
+            type: "Apple",
+            harvest_time: "Time of fruit maturity (for picking): midseason, 1-2 weeks before 'Delicious'",
+            disease_resistance: {
+                // no other disease notes
+                scab: "scab resistant "
+            },
+            description: "https://www.hort.purdue.edu/newcrop/pri/priam.html",
+            patent: "https://patents.google.com/patent/USPP expire "
+        },
+        {
+            name: "McShay",
+            type: "Apple",
+            harvest_time: "Maturity season: 2 weeks before 'Jonathan', 3 weeks before 'Delicious', 1 week after 'Prima'",
+            disease_resistance: {
+                scab: "Leaves and fruit are field immune to the apple scab organism",
+                powdery_mildew: "Leaves are susceptible to powdery mildew, fruit resistant"
+            },
+            description: "joint release with OSU. out of retail circulation in 2021 https://www.hort.purdue.edu/newcrop/pri/mcshay.html",
+            patent: "https://patents.google.com/patent/USPP4724 expired 2000-03-17"
+        }
+    ]
+}

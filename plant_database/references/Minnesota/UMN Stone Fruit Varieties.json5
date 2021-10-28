@@ -13,9 +13,58 @@
     ],
     plants: [
         {
-            type: "",
-            name: "",
-            description: ""
+            type: "Apricot",
+            name: "Moongold",
+            description: '1960. Golden yellow. Very hardy. Blooms the third week of April. 1 3/4" fruit hangs on tree until ripe. Self-unfruitful. Freestone',
+            harvest_time: "Late July"
+        },
+        {
+            type: "Apricot",
+            name: "Sungold",
+            description: '1960. Yellow with red blush. Very hardy, 1 1/4" fruit with clear flesh. Fruit hangs on the tree until ripe. Mild flavor. Upright growth habit. Blooms third week of April. Requires another apricot for cross-pollination. Freestone',
+            harvest_time: "Early August"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Meteor",
+            description: "1952. Semidwarf (10-14'). Hardy, vigorous, pie cherry tree with large bright red fruit. No cross-pollination needed",
+            harvest_time: "Mid July"
+        },
+        {
+            type: "Sour Cherry",
+            name: "North Star",
+            description: "1950. Dwarf tree (7-10'). Pie cherry. No cross-pollination needed. Very productive. Bright red deepening to mahogany skin. Yellow, juicy, tender flesh. Tree resistant to leaf spot and brown rot",
+            harvest_time: "Early July"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Alderman",
+            description: "1986. Fruit is burgundy red with golden yellow, sweet, juicy flesh. Eat fresh or use for preserves. Tree is valued as an ornamental and fruits consistently. Clingstone",
+            harvest_time: "Late August"
+        },
+        {
+            type: "Japanese Plum",
+            name: "La Crescent",
+            description: "1923. High-quality yellow plum. Fruit is small to medium, sometimes with a light blush skin. Flesh is sweet, juicy. Freestone. Somewhat suggestive of apricots. Vigorous grower but often a shy bearer",
+            harvest_time: "Early August"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Pipestone",
+            description: "1942. Large, attractive red fruits for drier areas. Sweet, juicy yellow fruit. Excellent quality for jam, jellies, and fresh use. Very hardy. Tree is productive. Clingstone",
+            harvest_time: "Late August"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Superior",
+            description: "1933. Hybrid with large fruit with dark red, russet- dotted skin. Flesh is yellow, juicy, and sweet. Heavy bearing tree may lack hardiness in north. Often sets fruit the first year. Clingstone",
+            harvest_time: "Mid August"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Underwood",
+            description: "1920. Medium-large, red fruit with golden yellow flesh. Juicy and sweet flavor. High quality for fresh use and jam. Clingstone. Hardy, vigorous grower with horizontal spread",
+            harvest_time: "Late July"
         }
     ]
 }
