@@ -13,21 +13,30 @@
     plants: [
         {
             name: "NY 1",
-            AKA: ["Snapdragon (tm)", "New York 1"],
+            AKA: ["Snapdragon (tm)", "New York 1", "NY 98804-001"],
             type: "Apple",
-            description: "club variety. http://www.hort.cornell.edu/brown/pdfs/snapdragon.pdf",
+            description: "club variety. Honeycrisp x NY 752. http://www.hort.cornell.edu/brown/pdfs/snapdragon.pdf",
             harvest_time: "late September",
+            released: "2010",
             patent: "https://patents.google.com/patent/USPP22228 expires 2030-01-13"
         },
         {
             name: "NY 2",
-            AKA: ["Rubyfrost (tm)", "New York 2"],
+            AKA: ["Rubyfrost (tm)", "New York 2", "NY 92609-463"],
             type: "Apple",
-            description: "club variety. http://www.hort.cornell.edu/brown/pdfs/rubyfrost.pdf",
+            description: "club variety. Autumncrisp x Braeburn. http://www.hort.cornell.edu/brown/pdfs/rubyfrost.pdf",
             harvest_time: "mid to late October",
+            released: "2010",
             patent: "https://patents.google.com/patent/USPP22207 expires 2030-01-13"
         },
-        // todo Fortune apple U.S. Plant Patent #11,000. Tested as NY 429
+        {
+            name: "Fortune",
+            "AKA": ["NY 429"],
+            type: "Apple",
+            description: "Schoharie Spy x Empire https://ecommons.cornell.edu/bitstream/handle/1813/5211/FLS-147.pdf?sequence=1&isAllowed=y",
+            released: "1996",
+            patent: "https://patents.google.com/patent/USPP11000 expired 2015-03-10"
+        },
         {
             name: "Royalton", // patent name, can't be trademarked
             AKA: ["NY 11390"],
@@ -85,5 +94,10 @@
         }
         // todo 2008 ebony pearl (NY 32)
         // todo 2008 radiant pearl (NY 7679
+
+        // todo - newest apples
+        // NY56, NY73 and NY109 – marketed as Cordera, Pink Luster and Firecracker
+        // https://cals.cornell.edu/news/2020/09/crunchy-complex-cornell-releases-three-new-apples
+        // https://news.cornell.edu/stories/2020/09/crunchy-complex-cornell-releases-three-new-apples
     ]
 }

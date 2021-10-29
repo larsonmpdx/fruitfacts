@@ -13,10 +13,440 @@
     // Susan Brown apple varieties are in a separate file
     plants: [
         {
-            name: "",
+            name: "Alton",
+            AKA: ["NY 4588"],
             type: "Apple",
-            released: "",
-            description: ""
+            description: " Early Mclntosh x Sta. 845 (Red Canada x Yellow Transparent)",
+            released: "1938"
+        },
+        {
+            name: "Autumncrisp",
+            AKA: ["NY 674"],
+            type: "Apple",
+            description: "Golden Delicious x Monroe",
+            released: "2010"
+        },
+        {
+            name: "Barry",
+            AKA: ["NY 4111"],
+            type: "Apple",
+            description: "Mclntosh x Cox’s Orange Pippin",
+            released: "1957"
+        },
+        {
+            name: "Broome",
+            AKA: ["Wheeler No. 56"],
+            type: "Apple",
+            description: "Unknown parentage",
+            released: "1914"
+        },
+        {
+            name: "Burgundy",
+            AKA: ["NY 161"],
+            type: "Apple",
+            description: "Monroe x NY 18491 (Macoun x Antonovka) https://ecommons.cornell.edu/bitstream/handle/1813/5040/FLS-047.pdf?sequence=1",
+            released: "1974"
+        },
+        {
+            name: "Carlton",
+            AKA: ["NY 2391"],
+            type: "Apple",
+            description: "Montgomery x Red Astrachan",
+            released: "1923"
+        },
+        {
+            name: "Chautauqua",
+            AKA: ["NY 122"],
+            type: "Apple",
+            description: "Esopus Spitzenberg x Ben Davis",
+            released: "1915"
+        },
+        {
+            name: "Clinton",
+            AKA: ["NY 86"],
+            type: "Apple",
+            description: "Ben Davis x Green Newton",
+            released: "1914"
+        },
+        {
+            name: "Cornell Mclntosh",
+            type: "Apple",
+            description: "Mclntosh Sport",
+            released: "1956"
+        },
+        {
+            name: "Cortland",
+            AKA: ["NY 79"],
+            type: "Apple",
+            description: "Ben Davis x Mclntosh",
+            released: "1915"
+        },
+        {
+            name: "Dunning",
+            AKA: ["NY 4526"],
+            type: "Apple",
+            description: "Early Mclntosh x Cox’s Orange Pippin",
+            released: "1938"
+        },
+        {
+            name: "Early Cortland",
+            AKA: ["NY 49-19"],
+            type: "Apple",
+            description: "Cortland x Lodi https://ecommons.cornell.edu/bitstream/handle/1813/5107/FLS-099.pdf?sequence=1",
+            released: "1982"
+        },
+        {
+            name: "Early Mclntosh",
+            AKA: ["NY 1022"],
+            type: "Apple",
+            description: "Yellow Transparent x Mclntosh",
+            released: "1923"
+        },
+        {
+            name: "Empire",
+            AKA: ["NY 45500-5"],
+            type: "Apple",
+            description: "Mclntosh x Delicious",
+            released: "1966"
+        },
+        {
+            name: "Empress",
+            AKA: ["NY 651"],
+            type: "Apple",
+            description: "Jonamac x Vista Bella",
+            released: "1988",
+            patent: "https://patents.google.com/patent/USPP7118 expired 2008-12-07"
+        },
+        // Fortune in the Susan Brown file
+        {
+            name: "Freedom",
+            AKA: ["NY 58553-1"],
+            type: "Apple",
+            description: "scab resistant. NY 18492 x NY 49821-46 https://ecommons.cornell.edu/bitstream/handle/1813/5117/FLS-103.pdf",
+            released: "1983"
+        },
+        {
+            name: "Geneva Early",
+            AKA: ["NY 444"],
+            type: "Apple",
+            description: "Quinte x Julyred https://ecommons.cornell.edu/bitstream/handle/1813/5107/FLS-099.pdf?sequence=1",
+            released: "1982"
+        },
+        {
+            name: "Geneva Mclntosh",
+            type: "Apple",
+            description: "Mclntosh sport",
+            released: "1959"
+        },
+        {
+            name: "Geneva Ontario",
+            type: "Apple",
+            description: "Ontario sport",
+            released: "1964"
+        },
+        {
+            name: "Greendale",
+            AKA: ["NY 4793"],
+            type: "Apple",
+            description: "Mclntosh x Lodi",
+            released: "1938"
+        },
+        {
+            name: "Herkimer",
+            AKA: ["NY 3150-4"],
+            type: "Apple",
+            description: "Ben Davis x Green Newton",
+            released: "1914"
+        },
+        {
+            name: "Jonagold",
+            AKA: ["NY 43013-1"],
+            type: "Apple",
+            description: "Golden Delicious x Jonathan",
+            released: "1968"
+        },
+        {
+            name: "Jonamac",
+            AKA: ["NY 44428-5"],
+            type: "Apple",
+            description: "Mclntosh x Jonathan https://ecommons.cornell.edu/bitstream/handle/1813/4057/FLS-025.pdf?sequence=1",
+            released: "1972"
+        },
+        {
+            name: "Kendall",
+            AKA: ["NY 3616"],
+            type: "Apple",
+            description: "Zusoff x Mclntosh",
+            released: "1932"
+        },
+        {
+            name: "Liberty",
+            AKA: ["NY 55140-19"],
+            type: "Apple",
+            description: "scab resistant. Macoun x Purdue 54-12 https://ecommons.cornell.edu/bitstream/handle/1813/5079/FLS-073.pdf?sequence=1",
+            released: "1978"
+        },
+        {
+            name: "Lodi",
+            AKA: ["NY 2581"],
+            type: "Apple",
+            description: "Montgomery x Yellow Transparent",
+            released: "1924"
+        },
+        {
+            name: "Macoun",
+            AKA: ["NY 547"],
+            type: "Apple",
+            description: "Mclntosh x Jersey Black",
+            released: "1923"
+        },
+        {
+            name: "Medina",
+            AKA: ["NY 2082"],
+            type: "Apple",
+            description: "Deacon Jones x Delicious",
+            released: "1922"
+        },
+        {
+            name: "Milton",
+            AKA: ["NY 1040"],
+            type: "Apple",
+            description: "Yellow Transparent x Mclntosh",
+            released: "1923"
+        },
+        {
+            name: "Monroe",
+            AKA: ["NY 1546"],
+            type: "Apple",
+            description: "Jonathan x Rome Beauty",
+            released: "1949"
+        },
+        {
+            name: "Montgomery",
+            AKA: ["Wheeler No. 76"],
+            type: "Apple",
+            description: "unknown parentage",
+            released: "1914"
+        },
+        {
+            name: "Nassau",
+            AKA: ["NY 3171-9"],
+            type: "Apple",
+            description: "Esopus Spitzenberg x Ben Davis",
+            released: "1914"
+        },
+        {
+            name: "Newfane",
+            AKA: ["NY 2236"],
+            type: "Apple",
+            description: "Deacon Jones x Delicious",
+            released: "1927"
+        },
+        // NY1 and NY2 in the Susan Brown file
+        {
+            name: "Niagara",
+            AKA: ["NY 50-2"],
+            type: "Apple",
+            description: "Carlton x Mclntosh",
+            released: "1962"
+        },
+        {
+            name: "Northern Lights",
+            AKA: ["NY 17207"],
+            type: "Apple",
+            description: "Haralson x Mclntosh https://ecommons.cornell.edu/bitstream/handle/1813/5192/FLS-133.pdf?sequence=1",
+            released: "1990",
+            patent: "not patented"
+        },
+        {
+            name: "Ogden",
+            AKA: ["NY 3609"],
+            type: "Apple",
+            description: "Zusoff x Mclntosh",
+            released: "1928"
+        },
+        {
+            name: "Onondaga",
+            AKA: ["NY 80"],
+            type: "Apple",
+            description: "Ben Davis x Mclntosh",
+            released: "1915"
+        },
+        {
+            name: "Orleans",
+            AKA: ["NY 2078"],
+            type: "Apple",
+            description: "Deacon Jones x Delicious",
+            released: "1924"
+        },
+        {
+            name: "Oswego",
+            AKA: ["NY 57"],
+            type: "Apple",
+            description: "Sutton x Northern Spy",
+            released: "1915"
+        },
+        {
+            name: "Otsego",
+            AKA: ["NY 82"],
+            type: "Apple",
+            description: "Ben Davis x Mclntosh",
+            released: "1914"
+        },
+        {
+            name: "Redfield",
+            AKA: ["NY 4840"],
+            type: "Apple",
+            description: "ornamental apple. Wolf River x M. niedzwetzkyana",
+            released: "1938"
+        },
+        {
+            name: "Redford",
+            AKA: ["NY 4876"],
+            type: "Apple",
+            description: "ornamental apple. Wolf River x M. niedzwetzkyana",
+            released: "1938"
+        },
+        {
+            name: "Redhood",
+            AKA: ["NY 4284"],
+            type: "Apple",
+            description: "Mclntosh x Carlton",
+            released: "1938"
+        },
+        {
+            name: "Red Jacket",
+            AKA: ["NY 11933"],
+            type: "Apple",
+            description: "ornamental apple. M. niedzwetzkyana x M. astrosanguinea",
+            released: "1938"
+        },
+        {
+            name: "Red Sauce",
+            AKA: ["NY 1311"],
+            type: "Apple",
+            description: "Deacon Jones x Wealthy",
+            released: "1926"
+        },
+        {
+            name: "Rensselaer",
+            AKA: ["NY 28"],
+            type: "Apple",
+            description: "Ben Davis x Jonathan",
+            released: "1914"
+        },
+        {
+            name: "Rockland",
+            AKA: ["NY 5558-14"],
+            type: "Apple",
+            description: "Ben Davis x Mother",
+            released: "1914"
+        },
+        {
+            name: "Teeple Red Empire",
+            AKA: ["Royal Empire (tm)"],
+            type: "Apple",
+            description: "Sport of Empire https://ecommons.cornell.edu/bitstream/handle/1813/5193/FLS-134.pdf?sequence=1",
+            released: "1990",
+            patent: "https://patents.google.com/patent/USPP7820 expired 2010-01-09"
+        },
+        {
+            name: "Saratoga",
+            AKA: ["NY 96"],
+            type: "Apple",
+            description: "Ben Davis x Green Newton",
+            released: "1914"
+        },
+        {
+            name: "Schenectady",
+            AKA: ["NY 47"],
+            type: "Apple",
+            description: "Ben Davis x Mother",
+            released: "1915"
+        },
+        {
+            name: "Schohaire",
+            AKA: ["NY 63"],
+            type: "Apple",
+            description: "Ralls Janet x Northern Spy",
+            released: "1914"
+        },
+        {
+            name: "Spigold",
+            AKA: ["NY E-6"],
+            type: "Apple",
+            description: "Red Spy x Golden Delicious",
+            released: "1962"
+        },
+        {
+            name: "Spijon",
+            AKA: ["NY 44408-5"],
+            type: "Apple",
+            description: "Red Spy x Monroe",
+            released: "1968"
+        },
+        {
+            name: "Sweet Delicious",
+            AKA: ["NY 2128"],
+            type: "Apple",
+            description: "Deacon Jones x Delicious",
+            released: "1922"
+        },
+        {
+            name: "Sweet Mclntosh",
+            AKA: ["NY 505"],
+            type: "Apple",
+            description: "Lawver x Mclntosh",
+            released: "1922"
+        },
+        {
+            name: "Tioga",
+            AKA: ["NY 5559-4"],
+            type: "Apple",
+            description: "Sutton x Northern Spy",
+            released: "1915"
+        },
+        {
+            name: "Ulster",
+            AKA: ["Wheeler No. 3"],
+            type: "Apple",
+            description: "unknown parentage",
+            released: "1914"
+        },
+        {
+            name: "Van Eseltine",
+            AKA: ["NY 11903"],
+            type: "Apple",
+            description: "ornamental apple. M. arnoldiana x M. spectablis",
+            released: "1937"
+        },
+        {
+            name: "Wayne",
+            AKA: ["NY 44420-1"],
+            type: "Apple",
+            description: "N. W. Greening x Red Spy",
+            released: "1962"
+        },
+        {
+            name: "Webster",
+            AKA: ["NY 2987"],
+            type: "Apple",
+            description: "Sta.26 x Sta.19 (Ben Davis x Jonathan)",
+            released: "1938"
+        },
+        {
+            name: "Wellington",
+            AKA: ["NY 747"],
+            type: "Apple",
+            description: "Cortland x Crimson Beauty",
+            released: "1955"
+        },
+        {
+            name: "Westchester",
+            AKA: ["NY 94"],
+            type: "Apple",
+            description: "Ben Davis x Green Newton",
+            released: "1914"
         }
     ]
 }

@@ -12,10 +12,102 @@
     ],
     plants: [
         {
-            name: "",
+            name: "Aurora",
+            AKA: ["NY 7620"],
             type: "Pear",
-            released: "",
-            description: ""
+            description: "Marguerite Marrilat x Bartlett",
+            released: "1964"
+        },
+        {
+            name: "Canadice",
+            AKA: ["NY 1359"],
+            type: "Pear",
+            description: "Seckel open pollinated",
+            released: "1920"
+        },
+        {
+            name: "Cayuga",
+            AKA: ["NY 272"],
+            type: "Pear",
+            description: "Seckel open pollinated",
+            released: "1920"
+        },
+        {
+            name: "Caywood",
+            AKA: ["NY 624"],
+            type: "Pear",
+            description: "Seckel open pollinated",
+            released: "1938"
+        },
+        {
+            name: "Chapin",
+            AKA: ["NY 783"],
+            type: "Pear",
+            description: "Seckel open pollinated",
+            released: "1945"
+        },
+        {
+            name: "Clyde",
+            AKA: ["NY 841"],
+            type: "Pear",
+            description: "Seckel open pollinated",
+            released: "1932"
+        },
+        {
+            name: "Covert",
+            AKA: ["NY 1629"],
+            type: "Pear",
+            description: "Bartlett x Dorset",
+            released: "1935"
+        },
+        {
+            name: "Early Seckel",
+            AKA: ["NY 104"],
+            type: "Pear",
+            description: "Seckel open pollinated",
+            released: "1935"
+        },
+        {
+            name: "Gorham",
+            AKA: ["NY 1544"],
+            type: "Pear",
+            description: "Bartlett x Josephine de Malines",
+            released: "1923"
+        },
+        {
+            name: "Highland",
+            AKA: ["NY 10274"],
+            type: "Pear",
+            description: "Bartlett x Cornice",
+            released: "1974"
+        },
+        {
+            name: "Ovid",
+            AKA: ["NY 1606"],
+            type: "Pear",
+            description: "Bartlett x Dorset",
+            released: "1931"
+        },
+        {
+            name: "Phelps",
+            AKA: ["NY 1633"],
+            type: "Pear",
+            description: "Winter Nellis x Russet Bartlett",
+            released: "1925"
+        },
+        {
+            name: "Pulteney",
+            AKA: ["NY 1622"],
+            type: "Pear",
+            description: "Winter Nellis x Russet Bartlett",
+            released: "1925"
+        },
+        {
+            name: "Willard",
+            AKA: ["NY 1616"],
+            type: "Pear",
+            description: "Bartlett x Dorset",
+            released: "1931"
         }
     ]
 }

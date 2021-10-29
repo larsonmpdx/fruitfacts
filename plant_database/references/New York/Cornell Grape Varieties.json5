@@ -11,11 +11,78 @@
         }
     ],
     plants: [
+
+
+Alden 13035 Ontario x Grosse Guillaume 1952
+Athens 12046 Hubbard x Portland 1938
+Bath 18149 Fredonia x (Chass. Rose Violet x Mills) 1952
+Brocton 3345 Brighton x (Winchell x Diamond) 1919
+Bronx Seedless 12583 NY 8536 (Goff x Iona) x Sultanina 1937
+Buffalo 10830 Herbert x Watkins 1938
+Canada Muscat 17806 Muscat Hamburg x Hubbard 1961
+Canadice 45625 Bath x Himrod 1977
+(seedless)
+Cayuga White 33403 (GW3) Seyval x Schuyler 1972
+Chardonel GW9 Seyval x Chardonnay 1991
+Corot noir 70.0809.10 Seyve Villard 18-307 x Steuben 2006
+Dunkirk 2569 Brighton x Jefferson 1920
+Eden 11737 Ontario x (Triumph x Mills) 1938
+Einset Seedless 63.878.1 Fredonia x Canner (Hunisa x Sultanina) 1985
+Erie Gladwin 100 (Goff x Worden) x Worden 1932
+Fredonia Gladwin 15 Champion x Lucile 1927
+Glenora 35814 Ontario x Black Kishmish 1977
+(seedless)
+Goff 797 Unknown 1906
+Golden Muscat 10303 Muscat Hamburg x Diamond 1927
+Geneva Red 34791 (GR7) Buffalo x Baco noir 2003
+Hanover 1458 Brighton x Niagara 1928
+Hector 11456 Chasselas Rose x Brocton 1937
+Himrod (seedless) 15310 Ontario x Sultanina 1952
+Horizon 33472 (GW7) Seyval x Schuyler 1982
+Interlaken Seedless 15292 Ontario x Sultanina 1947
+Kendaia 12341 Portland x Hubbard 1939
+Keuka 9936 Chasselas Rose x Mills 1923
+Lakemont 15305 Ontario x Sultanina 1972
+(seedless)
+Marquis 64.029.01 Athens x Emerald Seedless 1996
+(seedless)
+Melody 65.444.4 Seyval x GW 5 (Pinot blanc x Ontario) 1985
+Melton 9145 Triumph x [(Winchell x Diamond) 1923
+x Jefferson]
+Naples 17594 Delaware x (Mills x Iona) 1952
+New York Muscat 12997 Muscat Hamburg x Ontario 1961
+Noiret 73.0136.17 NY65.0467.08 x Steuben 2006
+Ontario 95 Winchell x Diamond 1908
+Pontiac 4265 Herbert x Worden 1922
+Portland 4393 Champion x Lutie 1912
+Remaily Seedless 65.085.1 Lady Patricia x NY 33979 1980
+Ripley 98 Winchell x Diamond 1912
+Romulus 15291 Ontario x Sultanina 1952
+(seedless)
+Ruby 11678 Keuka x Ontario 1938
+Schuyler 13920 Zinfandel x Ontario 1947
+Seneca 10513 Lignan blanc x Ontario 1930
+Sheridan 4272 Herbert x Worden 1921
+Steuben 12696 Wayne x Sheridan 1947
+Stout Seedless 10918 (Triumph x Dutchess) x Sultanina Rose 1930
+Suffolk Red 21572 Fredonia x Black Kishmish 1972
+(seedless)
+Traminette 65.533.13 J.S. 23-416 x Gewürztraminer 1996
+Urbana 3518 Governor Ross x Mills 1912
+Valvin Muscat 62.0122.01 Couderc 299-35 x Muscat Ottonel 2006
+Van Buren Gladwin 3000 Fredonia x Worden 1935
+Watkins 7588 Mills x Ontario 1930
+Wayne 7606 Mills x Ontario 1927
+Westfield Gladwin 200 Herbert x Concord Seedless 1935
+Yates 11683 Mills x Ontario 1937
+
+
         {
             name: "",
+            AKA: ["NY "],
             type: "Grape",
-            released: "",
-            description: ""
+            description: "",
+            released: ""
         }
     ]
 }

@@ -61,14 +61,12 @@
         },
         {
             name: "MAIA7",
-            description: "MAIA variety",
             AKA: ["Crunch-a-Bunch (tm)"],
             description: "marketed by Gurney's",
             patent: "https://patents.google.com/patent/USPP29126 expires 2036-09-12"
         },
         {
             name: "MAIA8",
-            description: "MAIA variety",
             AKA: ["Baker's Delight (tm)"],
             description: "marketed by Gurney's",
             patent: "https://patents.google.com/patent/USPP29147 expires 2036-09-12"
