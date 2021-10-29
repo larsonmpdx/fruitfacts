@@ -40,7 +40,7 @@ async fn main() -> std::io::Result<()> {
 
     let pool = r2d2::Pool::builder()
         .build(manager)
-        .expect("Failed to create pool.");
+        .expect("Failed to create pool");
 
     println!("starting http server");
     HttpServer::new(move || {

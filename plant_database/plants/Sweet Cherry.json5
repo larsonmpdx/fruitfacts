@@ -34,16 +34,6 @@
         "patent": "https://patents.google.com/patent/USPP8051 expired 2011"
     },
     {
-        "name": "Ridgewood",
-        "AKA": ["Blackgold (tm)"],
-        "patent": "https://patents.google.com/patent/USPP17301 expires 2021-09-24"
-    },
-    {
-        "name": "Newfane",
-        "AKA": ["Whitegold (tm)"],
-        "patent": "https://patents.google.com/patent/USPP18892 expires 2022-03-21"
-    },
-    {
         "name": "PC7146-8",
         "AKA": ["Benton (r)", "Columbia"],
         "patent": "https://patents.google.com/patent/USPP15847 expires 2023-04-28"
@@ -67,12 +57,7 @@
         "name": "Royal Ann",
         "AKA": ["Napoleon"]
     },
-    {
-        "name": "NY 11390",
-        "AKA": ["Royalton (tm)"],
-        "patent": "https://patents.google.com/patent/USPP11107 expired 2011-09-18",
-        "description": "https://ecommons.cornell.edu/bitstream/handle/1813/5204/FLS-140.pdf?sequence=1&isAllowed=y"
-    },
+
     {
         "name": "Van"
     },
@@ -129,9 +114,6 @@
         "name": "Emperor Francis"
     },
     {
-        "name": "Hartland"
-    },
-    {
         "name": "Black York"
     },
     {
@@ -166,16 +148,6 @@
         "AKA": ["Santina"],
         "description": "Summerland variety. Bing-8",
         "patent": "PPAF nlt 2019"
-    },
-    {
-        "name": "NY 8139",
-        "AKA": ["BlackPearl (tm)"],
-        "description": "Cornell variety. Bing-10"
-    },
-    {
-        "name": "NY 38L",
-        "AKA": ["BurgundyPearl (tm)"],
-        "description": "Cornell variety. Bing-10"
     },
     {
         "name": "NY32",

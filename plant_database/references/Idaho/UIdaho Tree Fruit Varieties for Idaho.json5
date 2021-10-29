@@ -74,7 +74,7 @@
         {
             name: "Harcot",
             type: "Apricot",
-            description: "Produces medium-large fruits that have a slight red blush. The flesh is smooth, fine-grained, sweet, and has good flavor. Reportedly has good resistance to perennial canker, bacterial spot, and brown rot. Developed in Canada.",
+            description: "Produces medium-large fruits that have a slight red blush. The flesh is smooth, fine-grained, sweet, and has good flavor. Reportedly has good resistance to perennial canker, bacterial spot, and brown rot. Developed in Canada",
             locations: ["N/Central/SE", "SW"]
         },
         {
@@ -86,31 +86,31 @@
         {
             name: "Harlayne",
             type: "Apricot",
-            description: "Produces medium-sized fruits with that have a red blush. Firm, orange flesh with good flavor and a freestone pit.Suitable for fresh or processing uses. Reportedly resistant to perennial canker and brown rot and moderately resistant to bacterial spot. Developed in Canada.",
+            description: "Produces medium-sized fruits with that have a red blush. Firm, orange flesh with good flavor and a freestone pit.Suitable for fresh or processing uses. Reportedly resistant to perennial canker and brown rot and moderately resistant to bacterial spot. Developed in Canada",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Harogem",
             type: "Apricot",
-            description: "Produces small to medium-sized fruits with a red blush. Firm, orange flesh with good flavor and a freestone pit. Developed for the fresh market. Reportedly resistant to perennial canker and brown rot and moderately resistant to bacterial canker. Developed in Canada.",
+            description: "Produces small to medium-sized fruits with a red blush. Firm, orange flesh with good flavor and a freestone pit. Developed for the fresh market. Reportedly resistant to perennial canker and brown rot and moderately resistant to bacterial canker. Developed in Canada",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Moongold",
             type: "Apricot",
-            description: "Produces medium-sized fruits with yellowish-orange flesh, sweet and slightly acid flavor, and freestone pit. Suitable for fresh and processing uses. Reportedly vigorous and disease-free. Fruits may ripen unevenly and fruit cracking and premature fruit drop have been reported. Needs 'Sungold' as a pollinator. Developed at the University of Minnesota.",
+            description: "Produces medium-sized fruits with yellowish-orange flesh, sweet and slightly acid flavor, and freestone pit. Suitable for fresh and processing uses. Reportedly vigorous and disease-free. Fruits may ripen unevenly and fruit cracking and premature fruit drop have been reported. Needs 'Sungold' as a pollinator. Developed at the University of Minnesota",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Sungold",
             type: "Apricot",
-            description: "Produces medium-sized fruits with orange flesh, sweet and mild flavor, and freestone pit. Suitable for fresh or processing uses. Heavy bearer. Pollinate with 'Moongold.' Developed at the University of Minnesota.",
+            description: "Produces medium-sized fruits with orange flesh, sweet and mild flavor, and freestone pit. Suitable for fresh or processing uses. Heavy bearer. Pollinate with 'Moongold.' Developed at the University of Minnesota",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Goldrich",
             type: "Apricot",
-            description: "Large, firm, fine-textured fruits with deep orange flesh. Vigorous, hardy, and productive but blooms early and is sensitive to apricot ring pox disease. Introduced by Washington State University.",
+            description: "Large, firm, fine-textured fruits with deep orange flesh. Vigorous, hardy, and productive but blooms early and is sensitive to apricot ring pox disease. Introduced by Washington State University",
             locations: ["SW"]
         },
         {
@@ -121,31 +121,31 @@
         {
             name: "Perfection",
             type: "Apricot",
-            description: "Large fruits have yellowish to deep orange skins and flesh. Good fruit quality and flavor. Very hardy and productive.",
+            description: "Large fruits have yellowish to deep orange skins and flesh. Good fruit quality and flavor. Very hardy and productive",
             locations: ["SW"]
         },
         {
             name: "Plumcot",
             type: "Apricot",
-            description: "Several named varieties are available. An interspecific cross of 50% apricot and 50% plum. Resembles a plum in appearance and has fine flesh.",
+            description: "Several named varieties are available. An interspecific cross of 50% apricot and 50% plum. Resembles a plum in appearance and has fine flesh",
             locations: ["SW"]
         },
         {
             name: "Riland",
             type: "Apricot",
-            description: "One of the earliest-ripening commercial varieties. Fruits color up before fully ripening, have good quality, and ship well. A good pollinator for Perfection.",
+            description: "One of the earliest-ripening commercial varieties. Fruits color up before fully ripening, have good quality, and ship well. A good pollinator for Perfection",
             locations: ["SW"]
         },
         {
             name: "Tilton",
             type: "Apricot",
-            description: "A leading variety for commercial freezing, drying, and canning. The fruits have a sweet-tart flavor. The trees are vigorous and productive. Blooms very early.",
+            description: "A leading variety for commercial freezing, drying, and canning. The fruits have a sweet-tart flavor. The trees are vigorous and productive. Blooms very early",
             locations: ["SW"]
         },
         {
             name: "Wenatchee Moorpark",
             type: "Apricot",
-            description: "Large fruits with yellow skins and flesh. Flavor is good and the fruits are excellent for home fresh, dried, or canned uses. Compatible with Perfection and Tilton for cross pollination. Introduced in Washington State in 1908.",
+            description: "Large fruits with yellow skins and flesh. Flavor is good and the fruits are excellent for home fresh, dried, or canned uses. Compatible with Perfection and Tilton for cross pollination. Introduced in Washington State in 1908",
             locations: ["SW"]
         },
         {
@@ -163,79 +163,79 @@
         {
             name: "Hudson",
             type: "Sweet Cherry",
-            description: "The late-ripening fruits are medium to large, very firm, sweet, and have good flavor. Resistant to cracking. A large, open, moderately productive tree. Pollinate with Hartland, Hedelfingen, Napoleon, Sam, Stark Gold, or Van. IX.",
+            description: "The late-ripening fruits are medium to large, very firm, sweet, and have good flavor. Resistant to cracking. A large, open, moderately productive tree. Pollinate with Hartland, Hedelfingen, Napoleon, Sam, Stark Gold, or Van. IX",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Royal Ann",
             type: "Sweet Cherry",
-            description: "The fruits are pale yellow with a bright red blush. The flesh is firm, fine-textured, and very sweet. Trees are vigorous and productive. Pollinate with any sweet cherry except Bing or Lambert. III.",
+            description: "The fruits are pale yellow with a bright red blush. The flesh is firm, fine-textured, and very sweet. Trees are vigorous and productive. Pollinate with any sweet cherry except Bing or Lambert. III",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Sam",
             type: "Sweet Cherry",
-            description: "The black fruits are medium to large. Late blooming helps reduce spring frost injuries. Self unfruitful but makes a good pollinator. Pollinate with Bing, Montmorancy, Napoleon, Stella, or Van.",
+            description: "The black fruits are medium to large. Late blooming helps reduce spring frost injuries. Self unfruitful but makes a good pollinator. Pollinate with Bing, Montmorancy, Napoleon, Stella, or Van",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Stark Gold",
             type: "Sweet Cherry",
-            description: "The golden fruits have a tangy flavor. Reportedly very cold hardy and disease resistant. Pollinate with any other sweet cherry. Pollination group VI.",
+            description: "The golden fruits have a tangy flavor. Reportedly very cold hardy and disease resistant. Pollinate with any other sweet cherry. Pollination group VI",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Starkrimson",
             type: "Sweet Cherry",
-            description: "Very large, red fruits. Self-fruitful.",
+            description: "Very large, red fruits. Self-fruitful",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Van",
             type: "Sweet Cherry",
-            description: "Fruits are large, reddish-black, firm, and resemble Bing. The flavor is good and fruits are suitable for fresh, frozen, or canned uses. Resists cracking. The fruits have commercial size and quality, but do not ship well to distant markets. Trees are vigorous, upright, bear early, and fruit heavily. An excellent pollinator. Pollinate with Bing, Napoleon, Rainier, Sam, or Stella. The most cold hardy sweet cherry.",
+            description: "Fruits are large, reddish-black, firm, and resemble Bing. The flavor is good and fruits are suitable for fresh, frozen, or canned uses. Resists cracking. The fruits have commercial size and quality, but do not ship well to distant markets. Trees are vigorous, upright, bear early, and fruit heavily. An excellent pollinator. Pollinate with Bing, Napoleon, Rainier, Sam, or Stella. The most cold hardy sweet cherry",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Bing",
             type: "Sweet Cherry",
-            description: "Large fruits have dark red to brownish purple skins and firm, purple flesh. Excellent flavor and a standard commercial variety for fresh and canning markets. Only moderately hardy. Susceptible to cracking. Pollinate with Black Tartarian, Mazzard, Montmorancy, Rainier, Sam, Van, Windsor, or Stella.",
+            description: "Large fruits have dark red to brownish purple skins and firm, purple flesh. Excellent flavor and a standard commercial variety for fresh and canning markets. Only moderately hardy. Susceptible to cracking. Pollinate with Black Tartarian, Mazzard, Montmorancy, Rainier, Sam, Van, Windsor, or Stella",
             locations: ["SW"]
         },
         {
             name: "Chelan",
             type: "Sweet Cherry",
-            description: "A popular early season, export-quality dark red sweet cherry. Similar to Bing in appearance, the fruit is medium-to large in size, with a mahogany red skin and medium-to-dark red flesh. It ripens 10 to 12 days before Bing, has good firmness and flavor, and exhibits lower susceptibility to both rain-induced cracking and heat-induced double/spur fruit formation than Bing. It flowers precociously and fruits heavily, requiring good management to achieve optimal fruit size. Precocious rootstocks are not needed for early cropping and may make management for optimal fruit size more intensive. Cross pollinizers include Rainier, Bing, Van, and Index. Chelan is incompatible with Burlat, Tieton and PC 7214-3. Do not propagate on Mahaleb rootstocks.",
+            description: "A popular early season, export-quality dark red sweet cherry. Similar to Bing in appearance, the fruit is medium-to large in size, with a mahogany red skin and medium-to-dark red flesh. It ripens 10 to 12 days before Bing, has good firmness and flavor, and exhibits lower susceptibility to both rain-induced cracking and heat-induced double/spur fruit formation than Bing. It flowers precociously and fruits heavily, requiring good management to achieve optimal fruit size. Precocious rootstocks are not needed for early cropping and may make management for optimal fruit size more intensive. Cross pollinizers include Rainier, Bing, Van, and Index. Chelan is incompatible with Burlat, Tieton and PC 7214-3. Do not propagate on Mahaleb rootstocks",
             locations: ["SW"]
         },
         {
             name: "Rainier",
             type: "Sweet Cherry",
-            description: "A large, yellow fruit best suited for fresh use. Vigorous and very productive. Resistant to cracking. Pollinate with Bing, Montmorancy, Napoleon, Sam, or Stella. Stella - Self fruitful. Popular with home gardeners. Dark red fruits with sweet, rich flavor. Vigorous and productive.",
+            description: "A large, yellow fruit best suited for fresh use. Vigorous and very productive. Resistant to cracking. Pollinate with Bing, Montmorancy, Napoleon, Sam, or Stella. Stella - Self fruitful. Popular with home gardeners. Dark red fruits with sweet, rich flavor. Vigorous and productive",
             locations: ["SW"]
         },
         {
             name: "Meteor",
             type: "Sour Cherry",
-            description: "The large, bright-red fruits resemble Montmorancy. The fruits are tart, juicy, and have colorless juice and a free pit. A natural genetic dwarf that grows 8-12 feet tall. Self fruitful. The most cold hardy tart cherry variety that is commercially available. Developed at the Minnesota Fruit Breeding Farm.",
+            description: "The large, bright-red fruits resemble Montmorancy. The fruits are tart, juicy, and have colorless juice and a free pit. A natural genetic dwarf that grows 8-12 feet tall. Self fruitful. The most cold hardy tart cherry variety that is commercially available. Developed at the Minnesota Fruit Breeding Farm",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Montmorency",
             type: "Sour Cherry",
-            description: "This variety is the standard for tart cherries. The fruits are medium to large, bright red with yellow flesh and clear juice. Remains firm during processing. Self fruitful, but bears better crops with cross pollination. Very cold hardy. Developed in France in the 17 century.",
+            description: "This variety is the standard for tart cherries. The fruits are medium to large, bright red with yellow flesh and clear juice. Remains firm during processing. Self fruitful, but bears better crops with cross pollination. Very cold hardy. Developed in France in the 17 century",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "North Star",
             type: "Sour Cherry",
-            description: "The fruits are large with a thin, light-red skin, red flesh, red juice, and a free pit. The trees are naturally dwarfed, growing 6-12 feet tall. Very cold hardy and self fruitful. Developed by the Minnesota Agricultural Experiment Station from a seedling found in Yugoslavia.",
+            description: "The fruits are large with a thin, light-red skin, red flesh, red juice, and a free pit. The trees are naturally dwarfed, growing 6-12 feet tall. Very cold hardy and self fruitful. Developed by the Minnesota Agricultural Experiment Station from a seedling found in Yugoslavia",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "August Lad",
             type: "Peach",
-            description: "The fruits are yellow-gold with a red blush and yellow flesh. The flesh is firm, fine textured, aromatic, and has a well-balanced taste and freestone pit. Well-suited to the fresh market and grown commercially in southwestern Idaho. The trees are vigorous, productive, and the fruits ripen early.",
+            description: "The fruits are yellow-gold with a red blush and yellow flesh. The flesh is firm, fine textured, aromatic, and has a well-balanced taste and freestone pit. Well-suited to the fresh market and grown commercially in southwestern Idaho. The trees are vigorous, productive, and the fruits ripen early",
             locations: ["SW"]
         },
         {
@@ -247,163 +247,163 @@
         {
             name: "Canadian Harmony",
             type: "Peach",
-            description: "The fruits are medium to large, yellow, and have a red blush. The yellow flesh is moderately firm and freestone. The fruits freeze well. Trees are vigorous and productive. Considered to be cold hardy. Developed in Ontario, Canada.",
+            description: "The fruits are medium to large, yellow, and have a red blush. The yellow flesh is moderately firm and freestone. The fruits freeze well. Trees are vigorous and productive. Considered to be cold hardy. Developed in Ontario, Canada",
             locations: ["SW"]
         },
         {
             name: "Eden",
             type: "Peach",
-            description: "The white fruits have a red blush and firm, white, freestone flesh. Slow to brown for a white-fleshed variety. The flavor is sweet and rich. Ripens in midseason. Vigorous and productive. Considered to be cold hardy.",
+            description: "The white fruits have a red blush and firm, white, freestone flesh. Slow to brown for a white-fleshed variety. The flavor is sweet and rich. Ripens in midseason. Vigorous and productive. Considered to be cold hardy",
             locations: ["SW"]
         },
         {
             name: "Harbrite",
             type: "Peach",
-            description: "The fruits have a brilliant red over yellow, nearly fuzzless skin. The yellow flesh is firm, has good quality, and is freestone. Good for canning and freezing. Vigorous, productive, and cold hardy. Developed in Ontario, Canada.",
+            description: "The fruits have a brilliant red over yellow, nearly fuzzless skin. The yellow flesh is firm, has good quality, and is freestone. Good for canning and freezing. Vigorous, productive, and cold hardy. Developed in Ontario, Canada",
             locations: ["SW"]
         },
         {
             name: "Harrow Diamond",
             type: "Peach",
-            description: "The red-blushed fruit has yellow, nearly freestone flesh. Ripens early in the season. Vigorous and requires thinning for good fruit size. Some resistance to bacterial spot, brown rot and perennial canker. Considered cold hardy.  Developed in Ontario, Canada.",
+            description: "The red-blushed fruit has yellow, nearly freestone flesh. Ripens early in the season. Vigorous and requires thinning for good fruit size. Some resistance to bacterial spot, brown rot and perennial canker. Considered cold hardy.  Developed in Ontario, Canada",
             locations: ["SW"]
         },
         {
             name: "Burpeachfive", //"July Flame"
             type: "Peach",
-            description: "The fruits have a deep orange blush and firm, yellow flesh. The flavor is very good. A commercial variety grown in southwestern Idaho.",
+            description: "The fruits have a deep orange blush and firm, yellow flesh. The flavor is very good. A commercial variety grown in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Madison",
             type: "Peach",
-            description: "Fruits are medium-sized, bright red, and freestone. The flesh is yellow with a mild, sweet flavor. Excellent for canning. The trees are vigorous, resistant to spring frosts, and considered cold hardy.",
+            description: "Fruits are medium-sized, bright red, and freestone. The flesh is yellow with a mild, sweet flavor. Excellent for canning. The trees are vigorous, resistant to spring frosts, and considered cold hardy",
             locations: ["SW"]
         },
         {
             name: "Redhaven",
             type: "Peach",
-            description: "The medium-sized, bright red fruits are nearly fuzzless. The fruit is yellow and freestone when ripe. Excellent for dessert, canning, and freezing. The standard for early-season peaches. The trees are vigorous and productive. Thinning is required for good fruit size. Reportedly susceptible to leaf curl, brown rot, Oriental fruit moth and twig borer. Considered cold hardy. Developed in Michigan.",
+            description: "The medium-sized, bright red fruits are nearly fuzzless. The fruit is yellow and freestone when ripe. Excellent for dessert, canning, and freezing. The standard for early-season peaches. The trees are vigorous and productive. Thinning is required for good fruit size. Reportedly susceptible to leaf curl, brown rot, Oriental fruit moth and twig borer. Considered cold hardy. Developed in Michigan",
             locations: ["SW"]
         },
         {
             name: "FA 52", //"Red Star"
             type: "Peach",
-            description: "A yellow fleshed peach. A commercial variety grown in southwestern Idaho.",
+            description: "A yellow fleshed peach. A commercial variety grown in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Reliance",
             type: "Peach",
-            description: "Medium-sized fruits with a dull red blush. The flesh is yellow, medium soft, sweet, and freestone. The trees are vigorous and bear young. Widely considered to be the most cold hardy commercial peach variety. Developed in New Hampshire.",
+            description: "Medium-sized fruits with a dull red blush. The flesh is yellow, medium soft, sweet, and freestone. The trees are vigorous and bear young. Widely considered to be the most cold hardy commercial peach variety. Developed in New Hampshire",
             locations: ["SW"]
         },
         {
             name: "Saturn",
             type: "Peach",
-            description: "A white-fleshed, semi-freestone, donut-shaped peach. The flesh is soft, sweet, and mild-flavored. Does not hang on the tree well without over-ripening and must be picked early. An early-season variety. The fruits adhere tightly to the trees and can be difficult to thin or pick. Good resistance to bacterial leaf spot. Considered quite cold hardy. Grown commercially in southwestern Idaho.",
+            description: "A white-fleshed, semi-freestone, donut-shaped peach. The flesh is soft, sweet, and mild-flavored. Does not hang on the tree well without over-ripening and must be picked early. An early-season variety. The fruits adhere tightly to the trees and can be difficult to thin or pick. Good resistance to bacterial leaf spot. Considered quite cold hardy. Grown commercially in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Snow Giant",
             type: "Peach",
-            description: "The fruits have a pink blush and white flesh with a sweet, subacid flavor. Ships well. A commercial variety grown in southwestern Idaho.",
+            description: "The fruits have a pink blush and white flesh with a sweet, subacid flavor. Ships well. A commercial variety grown in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Snow King",
             type: "Peach",
-            description: "A white-fleshed peach that is similar to Snow Giant. Extremely sweet. Susceptible to flesh-corking. A commercial variety grown in southwestern Idaho.",
+            description: "A white-fleshed peach that is similar to Snow Giant. Extremely sweet. Susceptible to flesh-corking. A commercial variety grown in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Sweet Dreams",
             type: "Peach",
-            description: "A yellow-fleshed peach. Grown commercially in southwestern Idaho.",
+            description: "A yellow-fleshed peach. Grown commercially in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Zee Lady",
             type: "Peach",
-            description: "The fruits have an orange blush and yellow, freestone flesh. High-quality fruits are excellent for freezing. Heavy producer. A commercial variety grown in southwestern Idaho.",
+            description: "The fruits have an orange blush and yellow, freestone flesh. High-quality fruits are excellent for freezing. Heavy producer. A commercial variety grown in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Arctic Joy",
             type: "Nectarine",
-            description: "White flesh. A commercial variety grown in southwestern Idaho.",
+            description: "White flesh. A commercial variety grown in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Arctic Pride",
             type: "Nectarine",
-            description: "A bright red-over-white variety with white, clingstone flesh. The flavor is subacid. Produces heavily but susceptible to powdery mildew. A commercial variety grown in southwestern Idaho.",
+            description: "A bright red-over-white variety with white, clingstone flesh. The flavor is subacid. Produces heavily but susceptible to powdery mildew. A commercial variety grown in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Fantasia",
             type: "Nectarine",
-            description: "The large, bright red-over-yellow fruits have yellow flesh of excellent quality. Can be harvested firm and tangy or soft-ripe and sweet. The trees are small and reliably productive. Susceptible to peach leaf curl, brown rot, Oriental fruit moth, and bacterial leaf spot. Developed in California. A commercial variety grown in southwestern Idaho.",
+            description: "The large, bright red-over-yellow fruits have yellow flesh of excellent quality. Can be harvested firm and tangy or soft-ripe and sweet. The trees are small and reliably productive. Susceptible to peach leaf curl, brown rot, Oriental fruit moth, and bacterial leaf spot. Developed in California. A commercial variety grown in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Harblaze",
             type: "Nectarine",
-            description: "The red-blushed fruits are semi-freestone and ripen during the early-mid season. The fruit softens quickly near maturity. Good resistance to brown rot, bacterial leaf spot, and powdery mildew. The trees are vigorous and considered cold hardy. Developed in Ontario, Canada.",
+            description: "The red-blushed fruits are semi-freestone and ripen during the early-mid season. The fruit softens quickly near maturity. Good resistance to brown rot, bacterial leaf spot, and powdery mildew. The trees are vigorous and considered cold hardy. Developed in Ontario, Canada",
             locations: ["SW"]
         },
         {
             name: "Summer Fire",
             type: "Nectarine",
-            description: "The large, dark red fruits have yellow, high quality, clingstone flesh. The flavor is good. A commercial variety grown in southwestern Idaho.",
+            description: "The large, dark red fruits have yellow, high quality, clingstone flesh. The flavor is good. A commercial variety grown in southwestern Idaho",
             locations: ["SW"]
         },
         {
             name: "Sunglo",
             type: "Nectarine",
-            description: "The large, red-over-yellow have yellow, sweet, semi-clingstone flesh. The fruits have long storage and shelf lives and are excellent for the packed, retail, or roadside markets. Ripens in midseason.",
+            description: "The large, red-over-yellow have yellow, sweet, semi-clingstone flesh. The fruits have long storage and shelf lives and are excellent for the packed, retail, or roadside markets. Ripens in midseason",
             locations: ["SW"]
         },
         {
             name: "Bartlett",
             type: "Euro Pear",
-            description: "Bartlett is the standard for pears and many named strains are commercially available. The large, golden-yellow fruits have a reddish or brownish blush and classic pear shape. The white flesh is smooth, juicy, and pleasantly tart. Suitable for fresh and canning uses. Ripen the fruits off the trees for several weeks to develop a full flavor. Keeps in storage for three months. The trees are medium-sized, upright, and suitable for high-density plantings. Partially self-fruitful, but bears better with cross pollination in some areas. Can be difficult to ripen in cool, short-season areas. Introduced from England in 1797.",
+            description: "Bartlett is the standard for pears and many named strains are commercially available. The large, golden-yellow fruits have a reddish or brownish blush and classic pear shape. The white flesh is smooth, juicy, and pleasantly tart. Suitable for fresh and canning uses. Ripen the fruits off the trees for several weeks to develop a full flavor. Keeps in storage for three months. The trees are medium-sized, upright, and suitable for high-density plantings. Partially self-fruitful, but bears better with cross pollination in some areas. Can be difficult to ripen in cool, short-season areas. Introduced from England in 1797",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Flemish Beauty",
             type: "Euro Pear",
-            description: "Once known as Fondante de Boise. The fruits are large, round with clear yellow skin and firm, yellowishwhite flesh that becomes sweet and aromatic when ripe. Dries well. Requires cross-pollination. The trees are vigorous and productive. Considered very cold hardy.",
+            description: "Once known as Fondante de Boise. The fruits are large, round with clear yellow skin and firm, yellowishwhite flesh that becomes sweet and aromatic when ripe. Dries well. Requires cross-pollination. The trees are vigorous and productive. Considered very cold hardy",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Harrow Delight",
             type: "Euro Pear",
-            description: "The medium-sized fruits have a red blush over yellow background. The flesh is very smooth with few grit cells. Similar to Bartlett but ripens 14 to 28 days earlier. Pollinate with Bartlett, D'Anjou, Moonglow, or Starking Delicious. Trees are vigorous and hardy in Plant Hardiness Zone 5. Developed in Ontario, Canada.",
+            description: "The medium-sized fruits have a red blush over yellow background. The flesh is very smooth with few grit cells. Similar to Bartlett but ripens 14 to 28 days earlier. Pollinate with Bartlett, D'Anjou, Moonglow, or Starking Delicious. Trees are vigorous and hardy in Plant Hardiness Zone 5. Developed in Ontario, Canada",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Moonglow",
             type: "Euro Pear",
-            description: "The medium-sized fruits are dull yellow with a pink blush. The white flesh is soft, mild, sweet, and has few grit cells. Excellent for fresh use or canning and stores well. Place in cool storage for 10 to 15 days after harvest to develop full flavor. Ripens 10 to 14 days earlier than Bartlett. Requires cross pollination. Adapted to Plant Hardiness Zones 5-8.",
+            description: "The medium-sized fruits are dull yellow with a pink blush. The white flesh is soft, mild, sweet, and has few grit cells. Excellent for fresh use or canning and stores well. Place in cool storage for 10 to 15 days after harvest to develop full flavor. Ripens 10 to 14 days earlier than Bartlett. Requires cross pollination. Adapted to Plant Hardiness Zones 5-8",
             locations: ["N/Central/SE", "SW"]
         },
         {
             name: "Kikusui",
             type: "Asian Pear",
-            description: "The fruits are medium-sized with a thin, greenish skin. The white flesh is white and described as both sweet and tart. Keeps well after harvest but is not suitable for shipping. The trees are vigorous, medium-sized, and tend to droop. Very productive. Pollinate with Chojuro, 20th Century, or Bartlett.",
+            description: "The fruits are medium-sized with a thin, greenish skin. The white flesh is white and described as both sweet and tart. Keeps well after harvest but is not suitable for shipping. The trees are vigorous, medium-sized, and tend to droop. Very productive. Pollinate with Chojuro, 20th Century, or Bartlett",
             locations: ["SW"]
         },
         {
             name: "Niitaka",
             type: "Asian Pear",
-            description: "The large fruits have greenish skins with a brown russet. The flesh is mild, sweet, crisp, and juicy. Fruit quality is good to excellent. Ripen on the tree. One of the best Asian pears in terms of keepability after harvest. Not suitable as a  pollinator.",
+            description: "The large fruits have greenish skins with a brown russet. The flesh is mild, sweet, crisp, and juicy. Fruit quality is good to excellent. Ripen on the tree. One of the best Asian pears in terms of keepability after harvest. Not suitable as a  pollinator",
             locations: ["SW"]
         },
         {
             name: "Nijisseiki",
             type: "Asian Pear",
-            description: "The best known Asian pear, derived from Japan. The medium-sized yellow fruits are round to lopsided and have long stems. The skin is thin and tender and the flesh juicy and crisp with a bland flavor. The fruits have excellent quality and store well. Very productive and requires thinning to produce well-sized fruits. Pollinate with Chojuro, Hosui, Bartlett, or Shinseiki. Susceptible to many diseases. Hardy in Plant Hardiness Zones 6-9.",
+            description: "The best known Asian pear, derived from Japan. The medium-sized yellow fruits are round to lopsided and have long stems. The skin is thin and tender and the flesh juicy and crisp with a bland flavor. The fruits have excellent quality and store well. Very productive and requires thinning to produce well-sized fruits. Pollinate with Chojuro, Hosui, Bartlett, or Shinseiki. Susceptible to many diseases. Hardy in Plant Hardiness Zones 6-9",
             locations: ["SW"]
         },
         {
@@ -467,7 +467,7 @@
         {
             name: "Dapple Dandy",
             type: "Pluot",
-            description: "Pluots are complex interspecific hybrids made up of 75% plum and 25% apricot parentage. Several named varieties are available. Dapple Dandy has large, firm fruit with distinctive, mottled skin color and pink to red flesh. Good acid to sugar balance with excellent flavor. Grown commercially in southwestern Idaho.",
+            description: "Pluots are complex interspecific hybrids made up of 75% plum and 25% apricot parentage. Several named varieties are available. Dapple Dandy has large, firm fruit with distinctive, mottled skin color and pink to red flesh. Good acid to sugar balance with excellent flavor. Grown commercially in southwestern Idaho",
             locations: ["N/Central/SE", "SW"]
         }
     ]

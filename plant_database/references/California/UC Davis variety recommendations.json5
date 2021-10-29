@@ -40,18 +40,18 @@
     categories: [
         {
             name: "early summer",
-            description: "These cultivars do not have the high-quality characteristics of standard cultivars but ripen early when no other fresh apples are available. They are good for eating fresh and cooking."
+            description: "These cultivars do not have the high-quality characteristics of standard cultivars but ripen early when no other fresh apples are available. They are good for eating fresh and cooking"
         },
         {
             name: "disease resistant",
-            description: "Several scab-resistant apple cultivars have been developed in breeding programs for the eastern United States, where this disease is quite sever due to summer humidity and rain. Some have received limited testing under California growing conditions. In growing districts with extended spring rains, organic growers should experiment with these cultivars to see how they perform in their orchards."
+            description: "Several scab-resistant apple cultivars have been developed in breeding programs for the eastern United States, where this disease is quite sever due to summer humidity and rain. Some have received limited testing under California growing conditions. In growing districts with extended spring rains, organic growers should experiment with these cultivars to see how they perform in their orchards"
         }
     ],
     plants: [
         {
             name: "Fuji",
             type: "Apple",
-            description: "Round to flat apple with very sweet yellow-orange flesh. Skin is red if given enough sunlight and cool temperatures. One of the best sweet eating apples. Stores well.",
+            description: "Round to flat apple with very sweet yellow-orange flesh. Skin is red if given enough sunlight and cool temperatures. One of the best sweet eating apples. Stores well",
             locations: [
                 { "San Joaquin Valley": "Oct-Nov" },
                 { "Sacramento Valley": "late Oct-Nov" },
@@ -64,7 +64,7 @@
         {
             name: "Gala",
             type: "Apple",
-            description: "Small to medium sized, conic red apple with excellent flavor and keeping qualities. The best cultivar for the early season.",
+            description: "Small to medium sized, conic red apple with excellent flavor and keeping qualities. The best cultivar for the early season",
             locations: [
                 { "San Joaquin Valley": "late Jun" },
                 { "Sacramento Valley": "late Jun" },
@@ -77,7 +77,7 @@
         {
             name: "Gravenstein",
             type: "Apple",
-            description: "Medium-large fruit with short, fat stem. Skin is greenish yellow overlaid with red stripes. Excellent flavor when fully ripe. Crisp, subacid, and aromatic. A good sauce and pie apple. Stores and ships poorly. High percentage of windfalls. Sterile pollen.",
+            description: "Medium-large fruit with short, fat stem. Skin is greenish yellow overlaid with red stripes. Excellent flavor when fully ripe. Crisp, subacid, and aromatic. A good sauce and pie apple. Stores and ships poorly. High percentage of windfalls. Sterile pollen",
             locations: [
                 { "San Joaquin Valley": "late Jun" },
                 { "Sacramento Valley": "late Jun" },
@@ -90,7 +90,7 @@
         {
             name: "Golden Delicous",
             type: "Apple",
-            description: "Conic apple with a long stem, yellow to green skin, yellow flesh, and russet dots. Sweet, juicy, fine textured. Number one on the California North Coast for fresh eating quality and processing. Stores well but susceptible to bitter pit, bruising, russeting. Erratic in self-fruitfulness.",
+            description: "Conic apple with a long stem, yellow to green skin, yellow flesh, and russet dots. Sweet, juicy, fine textured. Number one on the California North Coast for fresh eating quality and processing. Stores well but susceptible to bitter pit, bruising, russeting. Erratic in self-fruitfulness",
             locations: [
                 { "San Joaquin Valley": "late Aug" },
                 { "Sacramento Valley": "late Aug" },
@@ -103,7 +103,7 @@
         {
             name: "Granny Smith",
             type: "Apple",
-            description: "Round, green to yellow-skinned apple that is quite firm. Keeps very well. Crisp flesh. If harvested early, it is green and tart. Late-harvested fruit are yellow and sweet.",
+            description: "Round, green to yellow-skinned apple that is quite firm. Keeps very well. Crisp flesh. If harvested early, it is green and tart. Late-harvested fruit are yellow and sweet",
             locations: [
                 { "San Joaquin Valley": "Oct-Nov" },
                 { "Sacramento Valley": "late Oct-Nov" },
@@ -116,7 +116,7 @@
         {
             name: "Jonathan",
             type: "Apple",
-            description: "Round, red apple with pure white flesh. Crisp, juicy, and slightly subacid. Excellent for eating fresh, sauce, and juice. Highly susceptible to mildew, fire blight, and Jonathan spot.",
+            description: "Round, red apple with pure white flesh. Crisp, juicy, and slightly subacid. Excellent for eating fresh, sauce, and juice. Highly susceptible to mildew, fire blight, and Jonathan spot",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -142,7 +142,7 @@
         {
             name: "Rome Beauty",
             type: "Apple",
-            description: "Round fruit with a deep cavity, no lobes, and little russet. Several strains, including the old standard and several new strains with solid red skin, such as Taylor and Law. Stores moderately well. Tree leafs out late, flowers late, and produces flowers and fruit on long spur growth that requires modification in pruning. Good for baking.",
+            description: "Round fruit with a deep cavity, no lobes, and little russet. Several strains, including the old standard and several new strains with solid red skin, such as Taylor and Law. Stores moderately well. Tree leafs out late, flowers late, and produces flowers and fruit on long spur growth that requires modification in pruning. Good for baking",
             locations: [
                 { "San Joaquin Valley": "Oct-Nov" },
                 { "Sacramento Valley": "late Oct-Nov" },
@@ -180,13 +180,13 @@
             ],
             type: "Apple",
             category: "spur type",
-            category_description: "Strains (mutations) of the original cultivars that have shorter internodes and are naturally dwarfing. Best on seedling rootstock."
+            category_description: "Strains (mutations) of the original cultivars that have shorter internodes and are naturally dwarfing. Best on seedling rootstock"
         },
         {
             names: ["Anna", "Beverly Hills", "Dorsett Golden", "Ein Shemer", "Gordon", "Tropical Beauty"],
             type: "Apple",
             category: "low chill",
-            category_description: "These cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."
+            category_description: "These cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)"
         },
         {
             names: [
@@ -209,108 +209,108 @@
             ],
             type: "Apple",
             category: "antique",
-            category_description: "These cultivars do well in much of California if there is adequate chilling and summer heat is not too intense. They are hard to find because they lack commercial value. Many have excellent flavor and perform well in home gardens."
+            category_description: "These cultivars do well in much of California if there is adequate chilling and summer heat is not too intense. They are hard to find because they lack commercial value. Many have excellent flavor and perform well in home gardens"
         },
         {
             name: "Akane",
             type: "Apple",
-            description: "Similar to Jonathan but earlier, good solid red color, white flesh, good for eating fresh and juice.",
+            description: "Similar to Jonathan but earlier, good solid red color, white flesh, good for eating fresh and juice",
             category: "early summer"
         },
         {
             name: "Jerseymac",
             type: "Apple",
-            description: "Large, good red color, excellent flavor, firmer than McIntosh, stores 4 to 8 weeks.",
+            description: "Large, good red color, excellent flavor, firmer than McIntosh, stores 4 to 8 weeks",
             category: "early summer"
         },
         {
             name: "Jonamac",
             type: "Apple",
-            description: "Similar to McIntosh but has better color, firmness, and storage life.",
+            description: "Similar to McIntosh but has better color, firmness, and storage life",
             category: "early summer"
         },
         {
             name: "Paulared",
             type: "Apple",
-            description: "High-quality, white flesh, stores fairly well, tree requires thinning.",
+            description: "High-quality, white flesh, stores fairly well, tree requires thinning",
             category: "early summer"
         },
         {
             name: "Vista Bell",
             type: "Apple",
-            description: "Terminal bearing habit, white-fleshed fruit, stores well.",
+            description: "Terminal bearing habit, white-fleshed fruit, stores well",
             category: "early summer"
         },
         {
             name: "Enterprise",
             type: "Apple",
-            description: "A large-fruited, late-maturing, dense, crisp cultivar that has good keeping qualities. The skin is dark red over a yellow-green background. One of the best of the scab-resistant cultivars.",
+            description: "A large-fruited, late-maturing, dense, crisp cultivar that has good keeping qualities. The skin is dark red over a yellow-green background. One of the best of the scab-resistant cultivars",
             category: "disease resistant"
         },
         {
             name: "Florina",
             type: "Apple",
-            description: "A promising scab-resistant selection from France, with large, round oblong, purple-red fruit; ripens late and has a mixed sweet tart flavor.",
+            description: "A promising scab-resistant selection from France, with large, round oblong, purple-red fruit; ripens late and has a mixed sweet tart flavor",
             category: "disease resistant"
         },
         {
             name: "Freedom",
             type: "Apple",
-            description: "A late-season cultivar with large fruit and mild flavor; not completely immune to scab.",
+            description: "A late-season cultivar with large fruit and mild flavor; not completely immune to scab",
             category: "disease resistant"
         },
         {
             name: "GoldRush",
             type: "Apple",
-            description: "A scab-immune selection with Golden Delicious parentage; late maturing, large, firm textured, and tart with an excellent flavor; stores well.",
+            description: "A scab-immune selection with Golden Delicious parentage; late maturing, large, firm textured, and tart with an excellent flavor; stores well",
             category: "disease resistant"
         },
         {
             name: "Jonafree",
             type: "Apple",
-            description: "A midseason apple that compares with Jonathan, with soft flesh and uneven coloring.",
+            description: "A midseason apple that compares with Jonathan, with soft flesh and uneven coloring",
             category: "disease resistant"
         },
         {
             name: "Liberty",
             type: "Apple",
-            description: "One of the best-quality apples of the disease-resistant cultivars; is very productive and requires heavy early thinning to achieve good size; ripens in midseason, has an attractive red color with some striping, and a good, sweet flavor.",
+            description: "One of the best-quality apples of the disease-resistant cultivars; is very productive and requires heavy early thinning to achieve good size; ripens in midseason, has an attractive red color with some striping, and a good, sweet flavor",
             category: "disease resistant"
         },
         {
             name: "Prima",
             type: "Apple",
-            description: "An early-season, uneven-ripening, moderate-quality cultivar.",
+            description: "An early-season, uneven-ripening, moderate-quality cultivar",
             category: "disease resistant"
         },
         {
             name: "Priscilla",
             type: "Apple",
-            description: "A late-season cultivar with small fruit, soft flesh, and mild flavor.",
+            description: "A late-season cultivar with small fruit, soft flesh, and mild flavor",
             category: "disease resistant"
         },
         {
             name: "Pristine",
             type: "Apple",
-            description: "Moderate to large, tart, yellow apple immune to scab and resistant to fire blight and mildew.",
+            description: "Moderate to large, tart, yellow apple immune to scab and resistant to fire blight and mildew",
             category: "disease resistant"
         },
         {
             name: "Redfree",
             type: "Apple",
-            description: "Matures in early July, heat-sensitive, small fruited; susceptible to water core, sunburn, and russet.",
+            description: "Matures in early July, heat-sensitive, small fruited; susceptible to water core, sunburn, and russet",
             category: "disease resistant"
         },
         {
             name: "Williams' Pride",
             type: "Apple",
-            description: "Early maturing, scab immune; also resistant to fire blight and mildew; medium to large fruit with a round-oblique shape; attractive red striped color on a green-yellow background.",
+            description: "Early maturing, scab immune; also resistant to fire blight and mildew; medium to large fruit with a round-oblique shape; attractive red striped color on a green-yellow background",
             category: "disease resistant"
         },
         {
             name: "Bartlett",
             type: "Euro Pear",
-            description: "The best-quality pear fruit. Bell shaped with white flesh and excellent flavor. Tree is susceptible to fire blight. Fruit keep relatively well, up to 2 months after maturing in August. Sensation is a red Bartlett.",
+            description: "The best-quality pear fruit. Bell shaped with white flesh and excellent flavor. Tree is susceptible to fire blight. Fruit keep relatively well, up to 2 months after maturing in August. Sensation is a red Bartlett",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -323,7 +323,7 @@
         {
             name: "Bosc",
             type: "Euro Pear",
-            description: "Midseason cultivar that bears heavy crops regularly. Fruit are long and tapering, with a long neck and stem. Skin is golden russet brown.",
+            description: "Midseason cultivar that bears heavy crops regularly. Fruit are long and tapering, with a long neck and stem. Skin is golden russet brown",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "Oct" },
@@ -336,7 +336,7 @@
         {
             name: "Comice",
             type: "Euro Pear",
-            description: "Inconsistent bearer. Excellent fruit, green with red blush. Delicate skin, chubby shape. Very vigorous tree, does best on Quince rootstock. Late maturing.",
+            description: "Inconsistent bearer. Excellent fruit, green with red blush. Delicate skin, chubby shape. Very vigorous tree, does best on Quince rootstock. Late maturing",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "Oct" },
@@ -349,7 +349,7 @@
         {
             name: "D'Anjou",
             type: "Euro Pear",
-            description: "Good winter pear with excellent keeping qualities. A large, vigorous tree. Egg-shaped fruit with a small shoulder. Light green to yellow-green color with white flesh. French origin. There is a red strain called Red Anjou.",
+            description: "Good winter pear with excellent keeping qualities. A large, vigorous tree. Egg-shaped fruit with a small shoulder. Light green to yellow-green color with white flesh. French origin. There is a red strain called Red Anjou",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -362,7 +362,7 @@
         {
             name: "Seckel",
             type: "Euro Pear",
-            description: "The small fruit are reddish green, with very dense, sweet, flavorful flesh. Excellent quality for the home orchard. Resistant to fire blight and pear scab.",
+            description: "The small fruit are reddish green, with very dense, sweet, flavorful flesh. Excellent quality for the home orchard. Resistant to fire blight and pear scab",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -375,7 +375,7 @@
         {
             name: "Winter Nellis",
             type: "Euro Pear",
-            description: "Medium small, almost round fruit with light russeting over a green skin. Resistant to blight. Large tree. Regular producer, but late.",
+            description: "Medium small, almost round fruit with light russeting over a green skin. Resistant to blight. Large tree. Regular producer, but late",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "Oct" },
@@ -402,12 +402,12 @@
             ],
             type: "Euro Pear",
             category: "low chill",
-            category_description: "These pear cultivars are adapted to the low latitudes of southern California becuse they have low winter chilling requirements (< 300 hours)."
+            category_description: "These pear cultivars are adapted to the low latitudes of southern California becuse they have low winter chilling requirements (< 300 hours)"
         },
         {
             name: "Chojuro",
             type: "Asian Pear",
-            description: "Greenish brown to brown russet skin. Coarse, tasty flesh.",
+            description: "Greenish brown to brown russet skin. Coarse, tasty flesh",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -420,7 +420,7 @@
         {
             name: "Hosui",
             type: "Asian Pear",
-            description: "Brown skin, juicy white flesh with a sweet aromatic flavor.",
+            description: "Brown skin, juicy white flesh with a sweet aromatic flavor",
             locations: [
                 { "San Joaquin Valley": "late Aug" },
                 { "Sacramento Valley": "late Aug" },
@@ -433,7 +433,7 @@
         {
             name: "Kikusui",
             type: "Asian Pear",
-            description: "Yellow-green skin. White flesh, excellent flavor. Fruit drop from tree when ripe.",
+            description: "Yellow-green skin. White flesh, excellent flavor. Fruit drop from tree when ripe",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -446,7 +446,7 @@
         {
             name: "Niiataka",
             type: "Asian Pear",
-            description: "Very large, juicy fruit with an aromatic flavor.",
+            description: "Very large, juicy fruit with an aromatic flavor",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
                 { "Sacramento Valley": "late Sep" },
@@ -459,7 +459,7 @@
         {
             name: "Nijisseiki",
             type: "Asian Pear",
-            description: "Also known as Twentieth Century. Excellent quality. Very popular cultivar, yellow-green skin.",
+            description: "Also known as Twentieth Century. Excellent quality. Very popular cultivar, yellow-green skin",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -472,7 +472,7 @@
         {
             name: "Shinko",
             type: "Asian Pear",
-            description: "Brown russet skin; firm, crisp flesh; very aromatic flavor.",
+            description: "Brown russet skin; firm, crisp flesh; very aromatic flavor",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
                 { "Sacramento Valley": "late Sep" },
@@ -485,7 +485,7 @@
         {
             name: "Shinseiki",
             type: "Asian Pear",
-            description: "Amber yellow skin; White flesh is crisp but softens rapidly; less flavor than other cultivars.",
+            description: "Amber yellow skin; White flesh is crisp but softens rapidly; less flavor than other cultivars",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -498,7 +498,7 @@
         {
             name: "Tsu Li",
             type: "Asian Pear",
-            description: "Blooms early. Use Ya Li as pollenizer. Chinese type (pear shape). Light green color, crisp, tasty flesh.",
+            description: "Blooms early. Use Ya Li as pollenizer. Chinese type (pear shape). Light green color, crisp, tasty flesh",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
                 { "Sacramento Valley": "late Sep" },
@@ -511,7 +511,7 @@
         {
             name: "Ya Li",
             type: "Asian Pear",
-            description: "Blooms early. Use Tsu Li as pollenizer. Chinese type (pear shape). Light, shiny yellow color, crisp, tasty flesh.",
+            description: "Blooms early. Use Tsu Li as pollenizer. Chinese type (pear shape). Light, shiny yellow color, crisp, tasty flesh",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
                 { "Sacramento Valley": "late Sep" },
@@ -537,7 +537,7 @@
         {
             name: "Eversweet",
             type: "Pomegranate",
-            description: "Very sweet, almost seedless fruit. Red skin, clear juice. Good for coastal areas.",
+            description: "Very sweet, almost seedless fruit. Red skin, clear juice. Good for coastal areas",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "early Sep" },
@@ -563,7 +563,7 @@
         {
             name: "Ruby Red",
             type: "Pomegranate",
-            description: "Matures late (with Wondeful) but not as sweet or colorful as Wonderful. All fruit matures at once.",
+            description: "Matures late (with Wondeful) but not as sweet or colorful as Wonderful. All fruit matures at once",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -576,7 +576,7 @@
         {
             name: "Wonderful",
             type: "Pomegranate",
-            description: "Large, deep red fruit. Large, juicy, red kernels. Small seed. Matures late. Juice is made into grenadine syrup.",
+            description: "Large, deep red fruit. Large, juicy, red kernels. Small seed. Matures late. Juice is made into grenadine syrup",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -589,7 +589,7 @@
         {
             name: "Champion",
             type: "Quince",
-            description: "Green-yellow flesh. Pear-shaped fruit.",
+            description: "Green-yellow flesh. Pear-shaped fruit",
             locations: [
                 { "San Joaquin Valley": "early Oct" },
                 { "Sacramento Valley": "early Oct" },
@@ -602,7 +602,7 @@
         {
             name: "Sweet Orange",
             type: "Quince",
-            description: "Orange-yellow flesh. Golden skin. Rich flavor. Low-chill cultivar.",
+            description: "Orange-yellow flesh. Golden skin. Rich flavor. Low-chill cultivar",
             locations: [
                 { "San Joaquin Valley": "early Sep" },
                 { "Sacramento Valley": "early Sep" },
@@ -615,7 +615,7 @@
         {
             name: "Pineapple",
             type: "Quince",
-            description: "The preferred cultivar. Pineapple flavor. White flesh. Golden skin. Low-chill fruit.",
+            description: "The preferred cultivar. Pineapple flavor. White flesh. Golden skin. Low-chill fruit",
             locations: [
                 { "San Joaquin Valley": "early Oct" },
                 { "Sacramento Valley": "early Oct" },
@@ -628,7 +628,7 @@
         {
             name: "Smyrna",
             type: "Quince",
-            description: "Large fruit with brown pubescence. Light, tender flesh. Yellow skin. Low-chill fruit.",
+            description: "Large fruit with brown pubescence. Light, tender flesh. Yellow skin. Low-chill fruit",
             locations: [
                 { "San Joaquin Valley": "early Oct" },
                 { "Sacramento Valley": "early Oct" },
@@ -641,7 +641,7 @@
         {
             name: "Van Deman",
             type: "Quince",
-            description: "Pale yellow, coarse flesh. Orange skin turns red when cooked.",
+            description: "Pale yellow, coarse flesh. Orange skin turns red when cooked",
             locations: [
                 { "San Joaquin Valley": "early Sep" },
                 { "Sacramento Valley": "early Sep" },
@@ -654,7 +654,7 @@
         {
             name: "Autumn Royal",
             type: "Apricot",
-            description: "Blenheim sport (mutation). Ripens in late summer to fall.",
+            description: "Blenheim sport (mutation). Ripens in late summer to fall",
             locations: [
                 { "San Joaquin Valley": "Jun" },
                 { "Sacramento Valley": "Jun" },
@@ -667,7 +667,7 @@
         {
             name: "Moorpark",
             type: "Apricot",
-            description: "Excellent flavor, ripens unevenly, highly colored.",
+            description: "Excellent flavor, ripens unevenly, highly colored",
             locations: [
                 { "San Joaquin Valley": "Jun" },
                 { "Sacramento Valley": "Jun" },
@@ -680,7 +680,7 @@
         {
             name: "Blenheim",
             type: "Apricot",
-            description: "Large, very flavorful, used for eating fresh and drying.",
+            description: "Large, very flavorful, used for eating fresh and drying",
             locations: [
                 { "San Joaquin Valley": "Jun" },
                 { "Sacramento Valley": "Jun" },
@@ -693,7 +693,7 @@
         {
             name: "Tilton",
             type: "Apricot",
-            description: "Large fruit, heavy producer. Mild flavor. Used for canning.",
+            description: "Large fruit, heavy producer. Mild flavor. Used for canning",
             locations: [
                 { "San Joaquin Valley": "early Jul" },
                 { "Sacramento Valley": "Jul" },
@@ -707,7 +707,7 @@
             names: ["Early Gold", "Gold Kist", "Newcastle"],
             type: "Apricot",
             category: "low chill",
-            category_description: "These apricot cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."
+            category_description: "These apricot cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)"
         },
         {
             names: [
@@ -725,12 +725,12 @@
             ],
             type: "Apricot",
             category: "newer cultivars",
-            category_description: "These cultivars are newer and should be evaluated for your climate zone and site before being selected."
+            category_description: "These cultivars are newer and should be evaluated for your climate zone and site before being selected"
         },
         {
             name: "Bing",
             type: "Sweet Cherry",
-            description: "Industry standard. Deep mahogany red fruit. Produces very heavily. Very susceptible to bacterial canker. Pollenized by Van, Black tartarian, or Sam. Bing, Lambert, and Royal Ann will not pollinate each other (they are intrasterile).",
+            description: "Industry standard. Deep mahogany red fruit. Produces very heavily. Very susceptible to bacterial canker. Pollenized by Van, Black tartarian, or Sam. Bing, Lambert, and Royal Ann will not pollinate each other (they are intrasterile)",
             locations: [
                 { "San Joaquin Valley": "Jun" },
                 { "Sacramento Valley": "Jun" },
@@ -743,7 +743,7 @@
         {
             name: "Black Tartarian",
             type: "Sweet Cherry",
-            description: "Small, black fruit. A good pollenizer for Bing and most other cultivars.",
+            description: "Small, black fruit. A good pollenizer for Bing and most other cultivars",
             locations: [
                 { "San Joaquin Valley": "Jun" },
                 { "Sacramento Valley": "Jun" },
@@ -756,7 +756,7 @@
         {
             name: "Brooks",
             type: "Sweet Cherry",
-            description: "A large, dark red fruit with good flavor. Produces few doubles even in hot climates.",
+            description: "A large, dark red fruit with good flavor. Produces few doubles even in hot climates",
             locations: [
                 { "San Joaquin Valley": "mid Jun" },
                 { "Sacramento Valley": "mid Jun" },
@@ -769,7 +769,7 @@
         {
             name: "Early Burlat",
             type: "Sweet Cherry",
-            description: "Moderate-sized fruit. Ripens 2 weeks before Bing. Soft flesh. Pollenized by Bing and B. Tartarian.",
+            description: "Moderate-sized fruit. Ripens 2 weeks before Bing. Soft flesh. Pollenized by Bing and B. Tartarian",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "early Jun" },
@@ -782,7 +782,7 @@
         {
             name: "Early Ruby",
             type: "Sweet Cherry",
-            description: "Early season. Large, dark fred fruit. Prolific. Fruit hold on tree.",
+            description: "Early season. Large, dark fred fruit. Prolific. Fruit hold on tree",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "early Jun" },
@@ -795,7 +795,7 @@
         {
             name: "Lambert",
             type: "Sweet Cherry",
-            description: "Dark, large, firm fruit. Pollenized by Van. Late season. Lambert, Bing, and Royal Ann do not pollinate each other.",
+            description: "Dark, large, firm fruit. Pollenized by Van. Late season. Lambert, Bing, and Royal Ann do not pollinate each other",
             locations: [
                 { "San Joaquin Valley": "late Jun" },
                 { "Sacramento Valley": "late Jun" },
@@ -808,7 +808,7 @@
         {
             name: "Rainier",
             type: "Sweet Cherry",
-            description: "Yellow-red blush. Large, crack-resistant fruit.",
+            description: "Yellow-red blush. Large, crack-resistant fruit",
             locations: [
                 { "San Joaquin Valley": "Jun" },
                 { "Sacramento Valley": "Jun" },
@@ -821,7 +821,7 @@
         {
             name: "Royal Ann",
             type: "Sweet Cherry",
-            description: "Yellow fruit with a red blush. Pollenized by Van. Late season, Royal Ann, Lambert, and Bing will not pollinate each other.",
+            description: "Yellow fruit with a red blush. Pollenized by Van. Late season, Royal Ann, Lambert, and Bing will not pollinate each other",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "early Jun" },
@@ -834,7 +834,7 @@
         {
             name: "Stella",
             type: "Sweet Cherry",
-            description: "Dark-fleshed fruit. Matures just after Bing. Self-fruitful.",
+            description: "Dark-fleshed fruit. Matures just after Bing. Self-fruitful",
             locations: [
                 { "San Joaquin Valley": "late Jun" },
                 { "Sacramento Valley": "late Jun" },
@@ -847,7 +847,7 @@
         {
             name: "Van",
             type: "Sweet Cherry",
-            description: "Large, dark fruit. Pollenized by Bing or Lambert.",
+            description: "Large, dark fruit. Pollenized by Bing or Lambert",
             locations: [
                 { "San Joaquin Valley": "Jun" },
                 { "Sacramento Valley": "Jun" },
@@ -860,7 +860,7 @@
         {
             name: "Early Richmond",
             type: "Sour Cherry",
-            description: "Very early in season. Bright red fruit.",
+            description: "Very early in season. Bright red fruit",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "early Jun" },
@@ -873,7 +873,7 @@
         {
             name: "Meteor",
             type: "Sour Cherry",
-            description: "Semidwarf.",
+            description: "Semidwarf",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "early Jun" },
@@ -886,7 +886,7 @@
         {
             name: "Montmorency",
             type: "Sour Cherry",
-            description: "The leadign sour cultivar. Medium-sized, dark red fruit.",
+            description: "The leadign sour cultivar. Medium-sized, dark red fruit",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "early Jun" },
@@ -899,7 +899,7 @@
         {
             name: "North Star",
             type: "Sour Cherry",
-            description: "Semidwarf. Self-fruitful.",
+            description: "Semidwarf. Self-fruitful",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "early Jun" },
@@ -912,7 +912,7 @@
         {
             name: "Arctic Glo",
             type: "Nectarine",
-            description: "Small, fantastic flavor. White flesh. Early.",
+            description: "Small, fantastic flavor. White flesh. Early",
             locations: [
                 { "San Joaquin Valley": "mid Jun" },
                 { "Sacramento Valley": "mid Jun" },
@@ -925,7 +925,7 @@
         {
             name: "Fantasia",
             type: "Nectarine",
-            description: "Large, brightly-colored yellow freestone. Late.",
+            description: "Large, brightly-colored yellow freestone. Late",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "Aug" },
@@ -938,7 +938,7 @@
         {
             name: "Flamekist",
             type: "Nectarine",
-            description: "Excellent quality. Large, firm, yellow, clingstone.",
+            description: "Excellent quality. Large, firm, yellow, clingstone",
             locations: [
                 { "San Joaquin Valley": "late Aug" },
                 { "Sacramento Valley": "early Sep" },
@@ -951,7 +951,7 @@
         {
             name: "Flavortop",
             type: "Nectarine",
-            description: "Large, excellent flavor. Yellow, freestone. Midseason.",
+            description: "Large, excellent flavor. Yellow, freestone. Midseason",
             locations: [
                 { "San Joaquin Valley": "mid Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -964,7 +964,7 @@
         {
             name: "Goldmine",
             type: "Nectarine",
-            description: "Large, great flavor. White flesh. Freestone.",
+            description: "Large, great flavor. White flesh. Freestone",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "late Aug" },
@@ -977,7 +977,7 @@
         {
             name: "Heavenly White",
             type: "Nectarine",
-            description: "Large, excellent flavor. White flesh.",
+            description: "Large, excellent flavor. White flesh",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -990,7 +990,7 @@
         {
             name: "May Grand",
             type: "Nectarine",
-            description: "Large, yellow fruited, freestone. Early.",
+            description: "Large, yellow fruited, freestone. Early",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "mid Jun" },
@@ -1003,7 +1003,7 @@
         {
             name: "Panamint",
             type: "Nectarine",
-            description: "Medium-sized fruit. Red skin, golden flesh. Freestone, low-chill cultivar.",
+            description: "Medium-sized fruit. Red skin, golden flesh. Freestone, low-chill cultivar",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "early Aug" },
@@ -1016,7 +1016,7 @@
         {
             name: "Red Gold",
             type: "Nectarine",
-            description: "Large, excellent flavor. Stores well. Late.",
+            description: "Large, excellent flavor. Stores well. Late",
             locations: [
                 { "San Joaquin Valley": "late Aug" },
                 { "Sacramento Valley": "early Sep" },
@@ -1029,7 +1029,7 @@
         {
             name: "Rose",
             type: "Nectarine",
-            description: "Old favorite white freestone with excellent flavor and low-chilling requirement.",
+            description: "Old favorite white freestone with excellent flavor and low-chilling requirement",
             locations: [
                 { "San Joaquin Valley": "mid Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -1042,7 +1042,7 @@
         {
             name: "September Red",
             type: "Nectarine",
-            description: "Large, yellow. Very late.",
+            description: "Large, yellow. Very late",
             locations: [
                 { "San Joaquin Valley": "late Aug" },
                 { "Sacramento Valley": "early Sep" },
@@ -1055,7 +1055,7 @@
         {
             name: "Snow Queen",
             type: "Nectarine",
-            description: "Early-season white freestone, juicy and tasty.",
+            description: "Early-season white freestone, juicy and tasty",
             locations: [
                 { "San Joaquin Valley": "late Jun" },
                 { "Sacramento Valley": "Jul" },
@@ -1068,7 +1068,7 @@
         {
             name: "Summer Grand",
             type: "Nectarine",
-            description: "One of the best. Large, yellow, freestone.",
+            description: "One of the best. Large, yellow, freestone",
             locations: [
                 { "San Joaquin Valley": "mid Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -1082,12 +1082,12 @@
             names: ["Desert Dawn", "Desert Delight", "Panamint", "Pioneer", "Rose", "Silver Lode"],
             type: "Nectarine",
             category: "low chill",
-            category_description: "These nectarine cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements."
+            category_description: "These nectarine cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements"
         },
         {
             name: "Autumn Gold",
             type: "Peach",
-            description: "Medium-large fruit. Yellow flesh. Keeps well.",
+            description: "Medium-large fruit. Yellow flesh. Keeps well",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1100,7 +1100,7 @@
         {
             name: "Babcock",
             type: "Peach",
-            description: "Medium sized. White flesh. Freestone, low-chill cultivar.",
+            description: "Medium sized. White flesh. Freestone, low-chill cultivar",
             locations: [
                 { "San Joaquin Valley": "late Jun" },
                 { "Sacramento Valley": "Jul" },
@@ -1113,7 +1113,7 @@
         {
             name: "Earligrande",
             type: "Peach",
-            description: "Excellent flavor. Yellow-red blush. Semifreestone, low-chill cultivar.",
+            description: "Excellent flavor. Yellow-red blush. Semifreestone, low-chill cultivar",
             locations: [
                 { "San Joaquin Valley": "May" },
                 { "Sacramento Valley": "late May" },
@@ -1126,7 +1126,7 @@
         {
             name: "Fairtime",
             type: "Peach",
-            description: "Large fruit. Yellow, firm flesh. Excellent flavor.",
+            description: "Large fruit. Yellow, firm flesh. Excellent flavor",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1139,7 +1139,7 @@
         {
             name: "Fay Elberta",
             type: "Peach",
-            description: "Large fruit. Yellow flesh. Freestone.",
+            description: "Large fruit. Yellow flesh. Freestone",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -1152,7 +1152,7 @@
         {
             name: "Forty-Niner",
             type: "Peach",
-            description: "Large fruit. Yellow flesh. Freestone.",
+            description: "Large fruit. Yellow flesh. Freestone",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -1165,7 +1165,7 @@
         {
             name: "Indian Blood",
             type: "Peach",
-            description: "Cling. Red skin and flesh. Tart. Prolific.",
+            description: "Cling. Red skin and flesh. Tart. Prolific",
             locations: [
                 { "San Joaquin Valley": "late Aug" },
                 { "Sacramento Valley": "late Aug" },
@@ -1178,7 +1178,7 @@
         {
             name: "La Feliciana",
             type: "Peach",
-            description: "Medium sized. Firm, red. Excellent flavor. Somewhat more disease resistant.",
+            description: "Medium sized. Firm, red. Excellent flavor. Somewhat more disease resistant",
             locations: [
                 { "San Joaquin Valley": "mid Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -1191,7 +1191,7 @@
         {
             name: "Loring",
             type: "Peach",
-            description: "Very large fruit. Red skin. Yellow flesh. Freestone. Somewhat more disease resistant.",
+            description: "Very large fruit. Red skin. Yellow flesh. Freestone. Somewhat more disease resistant",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "Aug" },
@@ -1204,7 +1204,7 @@
         {
             name: "Nectar",
             type: "Peach",
-            description: "White flesh. Pink skin. Excellent flavor.",
+            description: "White flesh. Pink skin. Excellent flavor",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -1217,7 +1217,7 @@
         {
             name: "O'Henry",
             type: "Peach",
-            description: "One of the best. Large fruit. Yellow flesh. Freestone.",
+            description: "One of the best. Large fruit. Yellow flesh. Freestone",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "late Jul" },
@@ -1230,7 +1230,7 @@
         {
             name: "Redhaven",
             type: "Peach",
-            description: "Yellow. Semifreestone. Needs heavy thinning.",
+            description: "Yellow. Semifreestone. Needs heavy thinning",
             locations: [
                 { "San Joaquin Valley": "early Jul" },
                 { "Sacramento Valley": "Jul" },
@@ -1243,7 +1243,7 @@
         {
             name: "Rio Oso Gem",
             type: "Peach",
-            description: "Very large fruit. Yellow flesh. Freestone.",
+            description: "Very large fruit. Yellow flesh. Freestone",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "late Aug" },
@@ -1256,7 +1256,7 @@
         {
             name: "Springcrest",
             type: "Peach",
-            description: "Medium sized. Yellow flesh. Semi-freestone.",
+            description: "Medium sized. Yellow flesh. Semi-freestone",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "mid Jun" },
@@ -1269,7 +1269,7 @@
         {
             name: "Suncrest",
             type: "Peach",
-            description: "Large fruit. Yellow flesh. Freestone. Midseason.",
+            description: "Large fruit. Yellow flesh. Freestone. Midseason",
             locations: [
                 { "San Joaquin Valley": "early Jul" },
                 { "Sacramento Valley": "Jul" },
@@ -1282,7 +1282,7 @@
         {
             name: "Veteran",
             type: "Peach",
-            description: "Red blush. Elberta-type. Freestone. Dependable, heavy producer, excellent flavor. Somewhat more disease resistant.",
+            description: "Red blush. Elberta-type. Freestone. Dependable, heavy producer, excellent flavor. Somewhat more disease resistant",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "Aug" },
@@ -1308,12 +1308,12 @@
             ],
             type: "Peach",
             category: "low chill",
-            category_description: "These peach cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)."
+            category_description: "These peach cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (< 300 hours)"
         },
         {
             name: "Autumn Rosa",
             type: "Japanese Plum",
-            description: "Large. Purple skin. Self-fertile. Japanese plum.",
+            description: "Large. Purple skin. Self-fertile. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "late Aug" },
                 { "Sacramento Valley": "late Aug" },
@@ -1326,7 +1326,7 @@
         {
             name: "Beauty",
             type: "Japanese Plum",
-            description: "Green skin, amber flesh, heart shaped. Poor keeper. Japanese plum.",
+            description: "Green skin, amber flesh, heart shaped. Poor keeper. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "Jun" },
                 { "Sacramento Valley": "Jun" },
@@ -1339,7 +1339,7 @@
         {
             name: "Burgundy",
             type: "Japanese Plum",
-            description: "Red skin and flesh. Self-fertile. Holds well.",
+            description: "Red skin and flesh. Self-fertile. Holds well",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "early Aug" },
@@ -1352,7 +1352,7 @@
         {
             name: "El Dorado",
             type: "Japanese Plum",
-            description: "Purple skin. Amber flesh. Large, oblong.",
+            description: "Purple skin. Amber flesh. Large, oblong",
             locations: [
                 { "San Joaquin Valley": "early Jul" },
                 { "Sacramento Valley": "mid Jul" },
@@ -1365,7 +1365,7 @@
         {
             name: "Elephant Heart",
             type: "Japanese Plum",
-            description: "Purple skin. Large, heart shaped. Japanese plum.",
+            description: "Purple skin. Large, heart shaped. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "early Aug" },
@@ -1378,7 +1378,7 @@
         {
             name: "Friar",
             type: "Japanese Plum",
-            description: "Black skin. Firm, amber flesh. Mild flavor. Japanese plum.",
+            description: "Black skin. Firm, amber flesh. Mild flavor. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "mid Aug" },
                 { "Sacramento Valley": "mid Aug" },
@@ -1391,7 +1391,7 @@
         {
             name: "Golden Nectar",
             type: "Japanese Plum",
-            description: "Large. Yellow flesh. Tender skin. Great flavor. Japanese plum.",
+            description: "Large. Yellow flesh. Tender skin. Great flavor. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "late Aug" },
                 { "Sacramento Valley": "late Aug" },
@@ -1404,7 +1404,7 @@
         {
             name: "Howard Miracle",
             type: "Japanese Plum",
-            description: "Large, pink skin. Yellow flesh. Japanese plum.",
+            description: "Large, pink skin. Yellow flesh. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "early Aug" },
@@ -1417,7 +1417,7 @@
         {
             name: "Kelsey",
             type: "Japanese Plum",
-            description: "Green-yellow skin and flesh. Japanese plum.",
+            description: "Green-yellow skin and flesh. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "early Aug" },
@@ -1430,7 +1430,7 @@
         {
             name: "Laroda",
             type: "Japanese Plum",
-            description: "Red-purple skin. Yellow flesh.",
+            description: "Red-purple skin. Yellow flesh",
             locations: [
                 { "San Joaquin Valley": "mid Aug" },
                 { "Sacramento Valley": "mid Aug" },
@@ -1443,7 +1443,7 @@
         {
             name: "Mariposa",
             type: "Japanese Plum",
-            description: "Green-yellow skin. Red flesh. Large, heart shaped. Japanese plum.",
+            description: "Green-yellow skin. Red flesh. Large, heart shaped. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1456,7 +1456,7 @@
         {
             name: "Nubiana",
             type: "Japanese Plum",
-            description: "Purple-black skin. Yellow flesh. Oblong. Japanese plum.",
+            description: "Purple-black skin. Yellow flesh. Oblong. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "early AUg" },
@@ -1469,7 +1469,7 @@
         {
             name: "President",
             type: "Euro Plum",
-            description: "Large. Blue skin. Yellow flesh. European plum.",
+            description: "Large. Blue skin. Yellow flesh. European plum",
             locations: [
                 { "San Joaquin Valley": "late Aug" },
                 { "Sacramento Valley": "late Aug" },
@@ -1482,7 +1482,7 @@
         {
             name: "Red Beauty",
             type: "Japanese Plum",
-            description: "Red skin, yellow flesh, excellent flavor.",
+            description: "Red skin, yellow flesh, excellent flavor",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "early Jun" },
@@ -1495,7 +1495,7 @@
         {
             name: "Roysum",
             type: "Japanese Plum",
-            description: "Light purple skin. Yellow flesh.",
+            description: "Light purple skin. Yellow flesh",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1508,7 +1508,7 @@
         {
             name: "Santa Rosa",
             type: "Japanese Plum",
-            description: "Purple skin. Amber flesh. Excellent flavor. Japanese plum.",
+            description: "Purple skin. Amber flesh. Excellent flavor. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "early Jul" },
                 { "Sacramento Valley": "early Jul" },
@@ -1521,7 +1521,7 @@
         {
             name: "Satsuma",
             type: "Japanese Plum",
-            description: "Red skin and flesh. Small, round. Japanese plum.",
+            description: "Red skin and flesh. Small, round. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "early Aug" },
@@ -1534,7 +1534,7 @@
         {
             name: "Shiro",
             type: "Japanese Plum",
-            description: "Light green-yellow skin. Yellow flesh.",
+            description: "Light green-yellow skin. Yellow flesh",
             locations: [
                 { "San Joaquin Valley": "early Jul" },
                 { "Sacramento Valley": "early Jul" },
@@ -1547,7 +1547,7 @@
         {
             name: "Simka",
             type: "Japanese Plum",
-            description: "Dark black skin. Yellow flesh. Oblong.",
+            description: "Dark black skin. Yellow flesh. Oblong",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "early Aug" },
@@ -1560,7 +1560,7 @@
         {
             name: "Sprite Cherry Plum",
             type: "Japanese Plum",
-            description: "Black, sweet skin. Exotic flavor. Small.",
+            description: "Black, sweet skin. Exotic flavor. Small",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "early Aug" },
@@ -1573,7 +1573,7 @@
         {
             name: "Wickson",
             type: "Japanese Plum",
-            description: "Green-yellow skin. Yellow flesh. Large, heart shaped. Japanese plum.",
+            description: "Green-yellow skin. Yellow flesh. Large, heart shaped. Japanese plum",
             locations: [
                 { "San Joaquin Valley": "Jul" },
                 { "Sacramento Valley": "Jul" },
@@ -1599,12 +1599,12 @@
             ],
             type: "Japanese Plum",
             category: "low chill",
-            category_description: "These plum cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements."
+            category_description: "These plum cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements"
         },
         {
             name: "French",
             type: "Euro Plum",
-            description: "Medium-sized fruit. Self-fertile. Late maturing. European plum.",
+            description: "Medium-sized fruit. Self-fertile. Late maturing. European plum",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1617,7 +1617,7 @@
         {
             name: "Bavay's Green Gage",
             type: "Euro Plum",
-            description: "Greenish yellow skin. Amber flesh. Old, European plum.",
+            description: "Greenish yellow skin. Amber flesh. Old, European plum",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1630,7 +1630,7 @@
         {
             name: "Imperial",
             type: "Euro Plum",
-            description: "Large fruit. Requires cross pollination. Late maturing. European plum.",
+            description: "Large fruit. Requires cross pollination. Late maturing. European plum",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1643,7 +1643,7 @@
         {
             name: "Italian",
             type: "Euro Plum",
-            description: "Large fruit. Purple skin. Yellow flesh. European plum.",
+            description: "Large fruit. Purple skin. Yellow flesh. European plum",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1656,7 +1656,7 @@
         {
             name: "Flavor Supreme",
             type: "Pluot",
-            description: "Pluot. Green to brown skin. Red, juicy flesh. Excellent size and flavor.",
+            description: "Pluot. Green to brown skin. Red, juicy flesh. Excellent size and flavor",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "mid Jun" },
@@ -1669,7 +1669,7 @@
         {
             name: "Flavor King",
             type: "Pluot",
-            description: "low chill. Pluot. Red-purple skin. Good size, irregular ripening, sweet flavor. Cross-pollinated with Flavor Grenade, Beauty Plum, or Burgundy Plum.",
+            description: "low chill. Pluot. Red-purple skin. Good size, irregular ripening, sweet flavor. Cross-pollinated with Flavor Grenade, Beauty Plum, or Burgundy Plum",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "mid Aug" },
@@ -1682,7 +1682,7 @@
         {
             name: "Flavor Queen",
             type: "Pluot",
-            description: "Pluot. Green-golden skin. Yellow, firm flesh. Good size. Excellent, very sweet flavor.",
+            description: "Pluot. Green-golden skin. Yellow, firm flesh. Good size. Excellent, very sweet flavor",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
                 { "Sacramento Valley": "mid Jul" },
@@ -1695,7 +1695,7 @@
         {
             name: "Flavor Grenade",
             type: "Pluot",
-            description: "low chill. Pluot. Green skin with red blush. Elongated shape, excellent flavor. Best pollinated with Burgundy plum.",
+            description: "low chill. Pluot. Green skin with red blush. Elongated shape, excellent flavor. Best pollinated with Burgundy plum",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
                 { "Sacramento Valley": "mid Aug" },
@@ -1708,7 +1708,7 @@
         {
             name: "Flavorella",
             type: "Plumcot",
-            description: "Plumcot. Golden yellow skin. Very sweet, excellent flavor.",
+            description: "Plumcot. Golden yellow skin. Very sweet, excellent flavor",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "mid Jun" },
@@ -1721,7 +1721,7 @@
         {
             name: "Flavor Ann",
             type: "Aprium",
-            description: "Aprium. Golden skin and flesh. Strong, sweet apricot flavor.",
+            description: "Aprium. Golden skin and flesh. Strong, sweet apricot flavor",
             locations: [
                 { "San Joaquin Valley": "mid May" },
                 { "Sacramento Valley": "mid May" },
@@ -1734,7 +1734,7 @@
         {
             name: "Flavor Delight",
             type: "Aprium",
-            description: "low chill. Aprium. Golden skin and flesh. Strong, sweet apricot flavor. Reliable production. Sets best with cross-pollination from an apricot.",
+            description: "low chill. Aprium. Golden skin and flesh. Strong, sweet apricot flavor. Reliable production. Sets best with cross-pollination from an apricot",
             locations: [
                 { "San Joaquin Valley": "mid May" },
                 { "Sacramento Valley": "late May" },
@@ -1747,7 +1747,7 @@
         {
             name: "Carmel",
             type: "Almond",
-            description: "Excellent quality. Nut well sealed in the shell. Excellent pollinzer.",
+            description: "Excellent quality. Nut well sealed in the shell. Excellent pollinzer",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1760,7 +1760,7 @@
         {
             name: "Mission",
             type: "Almond",
-            description: "Late-blooming; productive tree. Hard shell, short kernel.",
+            description: "Late-blooming; productive tree. Hard shell, short kernel",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1773,7 +1773,7 @@
         {
             name: "Neplus Ultra",
             type: "Almond",
-            description: "Large, soft-shelled nut. Long, flat kernel. Good pollenizer.",
+            description: "Large, soft-shelled nut. Long, flat kernel. Good pollenizer",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1786,7 +1786,7 @@
         {
             name: "Nonpareil",
             type: "Almond",
-            description: "The most popular paper-shelled cultivar. Interfruitful with Price, Mission, Carmel.",
+            description: "The most popular paper-shelled cultivar. Interfruitful with Price, Mission, Carmel",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1799,7 +1799,7 @@
         {
             name: "Price",
             type: "Almond",
-            description: "Very similar to Nonpareil. A good pollenizer.",
+            description: "Very similar to Nonpareil. A good pollenizer",
             locations: [
                 { "San Joaquin Valley": "Aug" },
                 { "Sacramento Valley": "Aug" },
@@ -1812,7 +1812,7 @@
         {
             name: "Colossal",
             type: "Chestnut",
-            description: "The industry standard and the overall best choice. Large fruited. Excellent quality. Parentage unknown.",
+            description: "The industry standard and the overall best choice. Large fruited. Excellent quality. Parentage unknown",
             locations: [
                 { "San Joaquin Valley": "early Oct" },
                 { "Sacramento Valley": "early Oct" },
@@ -1825,7 +1825,7 @@
         {
             name: "Dunstan",
             type: "Chestnut",
-            description: "A cross of American and Chinese cultivars. Medium-small nuts. Sweet, and blight resistant. Late flowering.",
+            description: "A cross of American and Chinese cultivars. Medium-small nuts. Sweet, and blight resistant. Late flowering",
             locations: [
                 { "San Joaquin Valley": "early Oct" },
                 { "Sacramento Valley": "early Oct" },
@@ -1838,7 +1838,7 @@
         {
             name: "Eurobella",
             type: "Chestnut",
-            description: "Large nut. Good pollenizer for Colossal.",
+            description: "Large nut. Good pollenizer for Colossal",
             locations: [
                 { "San Joaquin Valley": "early Oct" },
                 { "Sacramento Valley": "early Oct" },
@@ -1851,7 +1851,7 @@
         {
             name: "Seedling",
             type: "Chestnut",
-            description: "Not a named cultivar. Each tree is genetically different. Unknown fruit quality. Unknown tree shape and fruit size. Only known rootstock.",
+            description: "Not a named cultivar. Each tree is genetically different. Unknown fruit quality. Unknown tree shape and fruit size. Only known rootstock",
             locations: [
                 { "San Joaquin Valley": "early Oct" },
                 { "Sacramento Valley": "early Oct" },
@@ -1864,7 +1864,7 @@
         {
             name: "Silverleaf",
             type: "Chestnut",
-            description: "Medium-sized nut. Good pollenizer for colossal, but shell splits are a problem.",
+            description: "Medium-sized nut. Good pollenizer for colossal, but shell splits are a problem",
             locations: [
                 { "San Joaquin Valley": "early Oct" },
                 { "Sacramento Valley": "early Oct" },
@@ -1878,12 +1878,12 @@
             names: ["Castel del Rio", "Fowler", "Marrone di Maradi", "Montesol"],
             type: "Chestnut",
             category: "others",
-            category_description: "These cultivars are available for trial."
+            category_description: "These cultivars are available for trial"
         },
         {
             name: "Barcelona",
             type: "Hazelnut",
-            description: "The old industry standard. Use Davianna or Du Chilly as a pollenizer.",
+            description: "The old industry standard. Use Davianna or Du Chilly as a pollenizer",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1896,7 +1896,7 @@
         {
             name: "Brixnut",
             type: "Hazelnut",
-            description: "A secondary main production nut. Use Davianna or Du Chilly as a pollenizer.",
+            description: "A secondary main production nut. Use Davianna or Du Chilly as a pollenizer",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1909,7 +1909,7 @@
         {
             name: "Butler",
             type: "Hazelnut",
-            description: "Pollenizer for Ennis.",
+            description: "Pollenizer for Ennis",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1922,7 +1922,7 @@
         {
             name: "Davianna",
             type: "Hazelnut",
-            description: "Use Barcelona or Du Chilly as a pollenizer.",
+            description: "Use Barcelona or Du Chilly as a pollenizer",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1935,7 +1935,7 @@
         {
             name: "Du Chilly",
             type: "Hazelnut",
-            description: "Use Barcelona or Davianna as a pollenizer.",
+            description: "Use Barcelona or Davianna as a pollenizer",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1948,7 +1948,7 @@
         {
             name: "Ennis",
             type: "Hazelnut",
-            description: "A new cultivar that has better quality than Barcelona. Use Butler as a pollenizer.",
+            description: "A new cultivar that has better quality than Barcelona. Use Butler as a pollenizer",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1961,7 +1961,7 @@
         {
             name: "White Aveline",
             type: "Hazelnut",
-            description: "General pollenizer.",
+            description: "General pollenizer",
             locations: [
                 { "San Joaquin Valley": "Sep" },
                 { "Sacramento Valley": "Sep" },
@@ -1974,7 +1974,7 @@
         {
             name: "Apache",
             type: "Pecan",
-            description: "Late pollen shed. Early receptivity.",
+            description: "Late pollen shed. Early receptivity",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -1987,7 +1987,7 @@
         {
             name: "Barton",
             type: "Pecan",
-            description: "Early pollen shed and receptivity.",
+            description: "Early pollen shed and receptivity",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2000,7 +2000,7 @@
         {
             name: "Bradley",
             type: "Pecan",
-            description: "Excellent pollenizer for Western Schley.",
+            description: "Excellent pollenizer for Western Schley",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2013,7 +2013,7 @@
         {
             name: "Choctaw",
             type: "Pecan",
-            description: "Late pollen shed. Early receptivity.",
+            description: "Late pollen shed. Early receptivity",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2026,7 +2026,7 @@
         {
             name: "Comanche",
             type: "Pecan",
-            description: "Late pollen shed. Early receptivity.",
+            description: "Late pollen shed. Early receptivity",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2039,7 +2039,7 @@
         {
             name: "Shawnee",
             type: "Pecan",
-            description: "Early pollen shed. Midseason receptivity.",
+            description: "Early pollen shed. Midseason receptivity",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2052,7 +2052,7 @@
         {
             name: "Sioux",
             type: "Pecan",
-            description: "Early pollen shed and receptivity.",
+            description: "Early pollen shed and receptivity",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2065,7 +2065,7 @@
         {
             name: "Western Schley",
             type: "Pecan",
-            description: "Early pollen shed and receptivity.",
+            description: "Early pollen shed and receptivity",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2078,7 +2078,7 @@
         {
             name: "Wichita",
             type: "Pecan",
-            description: "Late pollen shed. Early receptivity.",
+            description: "Late pollen shed. Early receptivity",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2091,7 +2091,7 @@
         {
             name: "Joley",
             type: "Pistachio",
-            description: "Female. Smaller nuts. Fewer blanks. More splits. Pistachio may not produce well in most areas of southern California.",
+            description: "Female. Smaller nuts. Fewer blanks. More splits. Pistachio may not produce well in most areas of southern California",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2104,7 +2104,7 @@
         {
             name: "Kerman",
             type: "Pistachio",
-            description: "Female. Best nut-producing cultivar. Pistachio may not produce well in most areas of southern California.",
+            description: "Female. Best nut-producing cultivar. Pistachio may not produce well in most areas of southern California",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2117,7 +2117,7 @@
         {
             name: "Peters",
             type: "Pistachio",
-            description: "Male. Good for pollination. Pistachio may not produce well in most areas of southern California.",
+            description: "Male. Good for pollination. Pistachio may not produce well in most areas of southern California",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2130,7 +2130,7 @@
         {
             name: "Sfax",
             type: "Pistachio",
-            description: "Smaller, good-quality nuts. Pistachio may not produce well in most areas of southern California.",
+            description: "Smaller, good-quality nuts. Pistachio may not produce well in most areas of southern California",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2143,7 +2143,7 @@
         {
             name: "Chandler",
             type: "Walnut",
-            description: "Best choice for coastal California. New cultivar. 80% fruitful lateral buds. Produces a smaller tree that requires careful pruning and training. Blooms late. Leafs out late.",
+            description: "Best choice for coastal California. New cultivar. 80% fruitful lateral buds. Produces a smaller tree that requires careful pruning and training. Blooms late. Leafs out late",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2156,7 +2156,7 @@
         {
             name: "Hartley",
             type: "Walnut",
-            description: "The main cultivar grown in California. Excellent-quality nuts. Huge tree but requires little pruning. 5% fruitful lateral buds. Leafs out late, blooms late. Good choice.",
+            description: "The main cultivar grown in California. Excellent-quality nuts. Huge tree but requires little pruning. 5% fruitful lateral buds. Leafs out late, blooms late. Good choice",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2169,7 +2169,7 @@
         {
             name: "Howard",
             type: "Walnut",
-            description: "Good choice. New cultivar. 80% fruitful lateral buds. Produces a smaller tree that requires careful pruning and training. Blooms late. Leafs out late.",
+            description: "Good choice. New cultivar. 80% fruitful lateral buds. Produces a smaller tree that requires careful pruning and training. Blooms late. Leafs out late",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2182,7 +2182,7 @@
         {
             name: "Mayette",
             type: "Walnut",
-            description: "Old-time cultivar. PLant as a pollenizer for late-blooming cultivars. Poor producer. Leafs out late. Blooms late. Large tree.",
+            description: "Old-time cultivar. PLant as a pollenizer for late-blooming cultivars. Poor producer. Leafs out late. Blooms late. Large tree",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2195,7 +2195,7 @@
         {
             name: "S. Franquette",
             type: "Walnut",
-            description: "Old-time cultivar. Should be planted as a pollenizer for the late-blooming cultivars. Poor producer. Leafs out late. Blooms late. Large tree, but requires little pruning.",
+            description: "Old-time cultivar. Should be planted as a pollenizer for the late-blooming cultivars. Poor producer. Leafs out late. Blooms late. Large tree, but requires little pruning",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2208,7 +2208,7 @@
         {
             name: "Tehama",
             type: "Walnut",
-            description: "Good choice. New cultivar. 80% fruitful lateral buds. Produces a smaller tree that requires careful pruning and training. Blooms late. Leafs out late.",
+            description: "Good choice. New cultivar. 80% fruitful lateral buds. Produces a smaller tree that requires careful pruning and training. Blooms late. Leafs out late",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2221,7 +2221,7 @@
         {
             name: "Black Walnut Seedling",
             type: "Walnut",
-            description: "Not a true cultivar. Seedlings of Northern California Black Walnut trees.",
+            description: "Not a true cultivar. Seedlings of Northern California Black Walnut trees",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2234,7 +2234,7 @@
         {
             name: "Thomas",
             type: "Walnut",
-            description: "Eastern Black Walnut cultivar that may be worthy of consideration.",
+            description: "Eastern Black Walnut cultivar that may be worthy of consideration",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2247,7 +2247,7 @@
         {
             name: "Ohio",
             type: "Walnut",
-            description: "Eastern Black Walnut cultivar that may be worthy of consideration.",
+            description: "Eastern Black Walnut cultivar that may be worthy of consideration",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2260,7 +2260,7 @@
         {
             name: "Meyers",
             type: "Walnut",
-            description: "Eastern Black Walnut cultivar that may be worthy of consideration.",
+            description: "Eastern Black Walnut cultivar that may be worthy of consideration",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2273,7 +2273,7 @@
         {
             name: "Chico",
             type: "Fuzzy Kiwi",
-            description: "Male vine used to pollinate Hayward, 8:1 ratio.",
+            description: "Male vine used to pollinate Hayward, 8:1 ratio",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2286,7 +2286,7 @@
         {
             name: "Hayward",
             type: "Fuzzy Kiwi",
-            description: "The commercial female cultivar grown in California. Large fruit. Excellent flavor. Will ripen on the vine but can be picked when still hard, placed in cold storage (32°F), and removed to room temperature for final ripening. Will keep for up to 6 months.",
+            description: "The commercial female cultivar grown in California. Large fruit. Excellent flavor. Will ripen on the vine but can be picked when still hard, placed in cold storage (32°F), and removed to room temperature for final ripening. Will keep for up to 6 months",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2299,7 +2299,7 @@
         {
             name: "Matua",
             type: "Fuzzy Kiwi",
-            description: "Male vine used to pollinate Hayward, 8:1 ratio.",
+            description: "Male vine used to pollinate Hayward, 8:1 ratio",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2312,7 +2312,7 @@
         {
             name: "Tamori",
             type: "Fuzzy Kiwi",
-            description: "Male vine used to pollinate Hayward, 8:1 ratio.",
+            description: "Male vine used to pollinate Hayward, 8:1 ratio",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },
@@ -2325,7 +2325,7 @@
         {
             name: "Anna",
             type: "Hardy Kiwi",
-            description: "Nickel-sized fruit. Unique flavor. Very productive.",
+            description: "Nickel-sized fruit. Unique flavor. Very productive",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
                 { "Sacramento Valley": "late Sep" },
@@ -2338,7 +2338,7 @@
         {
             name: "Issai",
             type: "Hardy Kiwi",
-            description: "Dime-sized fruit that requires no cross-pollination.",
+            description: "Dime-sized fruit that requires no cross-pollination",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
                 { "Sacramento Valley": "late Sep" },
@@ -2351,7 +2351,7 @@
         {
             name: "Ken's Red",
             type: "Hardy Kiwi",
-            description: "Dime-sized fruit. Red flesh and skin. Excellent flavor.",
+            description: "Dime-sized fruit. Red flesh and skin. Excellent flavor",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
                 { "Sacramento Valley": "late Sep" },
@@ -2365,12 +2365,12 @@
             names: ["Abbott", "Allison", "Blake", "Bruno", "Elmwood", "Tewi", "Vincent"],
             type: "Fuzzy Kiwi",
             category: "others",
-            category_description: "These kiwi cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (50-250 hours)."
+            category_description: "These kiwi cultivars are adapted to the low latitudes of southern California because they have low winter chilling requirements (50-250 hours)"
         },
         {
             name: "Adriatic",
             type: "Fig",
-            description: "Good fresh but especially good for drying. Yellow skin and amber flesh.",
+            description: "Good fresh but especially good for drying. Yellow skin and amber flesh",
             locations: [
                 { "San Joaquin Valley": "Jun/Sep" },
                 { "Sacramento Valley": "Jun/Sep" },
@@ -2383,7 +2383,7 @@
         {
             name: "Black Mission",
             type: "Fig",
-            description: "The most dependable cultivar for the home orchard. Purple-black skin with red flesh.",
+            description: "The most dependable cultivar for the home orchard. Purple-black skin with red flesh",
             locations: [
                 { "San Joaquin Valley": "Jun/Sep" },
                 { "Sacramento Valley": "Jun/Sep" },
@@ -2396,7 +2396,7 @@
         {
             name: "Brown Turkey",
             type: "Fig",
-            description: "Large fruit. Excellent quality. Purple-green skin. Red flesh.",
+            description: "Large fruit. Excellent quality. Purple-green skin. Red flesh",
             locations: [
                 { "San Joaquin Valley": "Jun/Sep" },
                 { "Sacramento Valley": "Jun/Sep" },
@@ -2409,7 +2409,7 @@
         {
             name: "Italian Everbearing",
             type: "Fig",
-            description: "Brown. Turkey type. Very prolific.",
+            description: "Brown. Turkey type. Very prolific",
             locations: [
                 { "San Joaquin Valley": "Jun/Sep" },
                 { "Sacramento Valley": "Jun/Sep" },
@@ -2422,7 +2422,7 @@
         {
             name: "Kadota",
             type: "Fig",
-            description: "Requires high temperatures and a long growing season to perform well. Yellow-green fruit with amber flesh. Produces both a breba and a second crop with moderate pruning.",
+            description: "Requires high temperatures and a long growing season to perform well. Yellow-green fruit with amber flesh. Produces both a breba and a second crop with moderate pruning",
             locations: [
                 { "San Joaquin Valley": "Jun/Sep" },
                 { "Sacramento Valley": "Jun/Sep" },
@@ -2435,7 +2435,7 @@
         {
             name: "Osborn",
             type: "Fig",
-            description: "Performs well only in cool coastal areas. Purple-bronze fruit with amber flesh. Very prolific.",
+            description: "Performs well only in cool coastal areas. Purple-bronze fruit with amber flesh. Very prolific",
             locations: [
                 { "San Joaquin Valley": "Jun/Sep" },
                 { "Sacramento Valley": "Jun/Sep" },
@@ -2448,7 +2448,7 @@
         {
             name: "Smyrna-type",
             type: "Fig",
-            description: "Requires cross-pollination by the Capri fig female wasp to produce a crop. Capri figs containing female wasps may be difficult to locate for backyard tree fruit producers.",
+            description: "Requires cross-pollination by the Capri fig female wasp to produce a crop. Capri figs containing female wasps may be difficult to locate for backyard tree fruit producers",
             locations: [
                 { "San Joaquin Valley": "Jun/Sep" },
                 { "Sacramento Valley": "Jun/Sep" },
@@ -2461,7 +2461,7 @@
         {
             name: "White Genoa",
             type: "Fig",
-            description: "Good for coastal locations. Large fruit. Yellow-green, thin skin. Strawberry flesh. Ripens when others won't.",
+            description: "Good for coastal locations. Large fruit. Yellow-green, thin skin. Strawberry flesh. Ripens when others won't",
             locations: [
                 { "San Joaquin Valley": "Jun/Sep" },
                 { "Sacramento Valley": "Jun/Sep" },
@@ -2474,7 +2474,7 @@
         {
             name: "Ascolano",
             type: "Olive",
-            description: "Large-fruited cultivar, the most cold-hardy of all table cultivars in California. Large fruit, Oil is very aromatic.",
+            description: "Large-fruited cultivar, the most cold-hardy of all table cultivars in California. Large fruit, Oil is very aromatic",
             tags: "Table Olive",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
@@ -2488,7 +2488,7 @@
         {
             name: "Manzanillo",
             type: "Olive",
-            description: "The main cultivar used for the black California-style olive. Low, spreading, medium-sized tree, early-maturing fruit with a medium oil content. Trees are susceptible to cold injury, peacock spot, and olive knot.",
+            description: "The main cultivar used for the black California-style olive. Low, spreading, medium-sized tree, early-maturing fruit with a medium oil content. Trees are susceptible to cold injury, peacock spot, and olive knot",
             tags: "Table Olive",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
@@ -2502,7 +2502,7 @@
         {
             name: "Mission",
             type: "Olive",
-            description: "Medium-sized fruit, high oil content, cold-hardy, susceptible to foliar diseases.",
+            description: "Medium-sized fruit, high oil content, cold-hardy, susceptible to foliar diseases",
             tags: "Table Olive",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
@@ -2516,7 +2516,7 @@
         {
             name: "Sevillano",
             type: "Olive",
-            description: "Largest fruit. Very susceptible to olive fly. Produces an interesting, herbal-flavored oil.",
+            description: "Largest fruit. Very susceptible to olive fly. Produces an interesting, herbal-flavored oil",
             tags: "Table Olive",
             locations: [
                 { "San Joaquin Valley": "late Sep" },
@@ -2530,7 +2530,7 @@
         {
             name: "Arbequina",
             type: "Olive",
-            description: "A cultivar from northern Spain that produces a very high quality fruity oil. Fruit is small. Very fruitful. One of the most cold tolerant.",
+            description: "A cultivar from northern Spain that produces a very high quality fruity oil. Fruit is small. Very fruitful. One of the most cold tolerant",
             tags: "Oil Olive",
             locations: [
                 { "San Joaquin Valley": "mid Nov" },
@@ -2544,7 +2544,7 @@
         {
             name: "Coratina",
             type: "Olive",
-            description: "A cultivar from southern Italy that ripens very late. Very high oil content and very high in poly-phenols. Regular bearing but sensitive to cold.",
+            description: "A cultivar from southern Italy that ripens very late. Very high oil content and very high in poly-phenols. Regular bearing but sensitive to cold",
             tags: "Oil Olive",
             locations: [
                 { "San Joaquin Valley": "Nov-Dec" },
@@ -2558,7 +2558,7 @@
         {
             name: "Frantoio",
             type: "Olive",
-            description: "Italian cultivar with a high oil content that is very aromatic, floral, and grassy. Not adapted to hot desert areas. Cold-sensitive.",
+            description: "Italian cultivar with a high oil content that is very aromatic, floral, and grassy. Not adapted to hot desert areas. Cold-sensitive",
             tags: "Oil Olive",
             locations: [
                 { "San Joaquin Valley": "mid Nov" },
@@ -2572,7 +2572,7 @@
         {
             name: "Leccino",
             type: "Olive",
-            description: "Italian cultivar used in olive oil blends with Frantoio. Ripens a little earlier than other cultivars. Cold-hardy.",
+            description: "Italian cultivar used in olive oil blends with Frantoio. Ripens a little earlier than other cultivars. Cold-hardy",
             tags: "Oil Olive",
             locations: [
                 { "San Joaquin Valley": "mid Nov" },
@@ -2586,7 +2586,7 @@
         {
             name: "Maurino",
             type: "Olive",
-            description: "Italian cultivar used in olive oil blends. Very flavorful, spicy oil.",
+            description: "Italian cultivar used in olive oil blends. Very flavorful, spicy oil",
             tags: "Oil Olive",
             locations: [
                 { "San Joaquin Valley": "mid Nov" },
@@ -2600,7 +2600,7 @@
         {
             name: "Pendolino",
             type: "Olive",
-            description: "Italian cultivar used in olive oil blends. Also used as a pollenizer. Cold-hardy.",
+            description: "Italian cultivar used in olive oil blends. Also used as a pollenizer. Cold-hardy",
             tags: "Oil Olive",
             locations: [
                 { "San Joaquin Valley": "mid Nov" },
@@ -2614,7 +2614,7 @@
         {
             name: "Picual",
             type: "Olive",
-            description: "Spanish cultivar used for oil and table fruit. Very high in polyphenols and oil. Very fruity. Ripens early, easy to harvest. Cold-hardy.",
+            description: "Spanish cultivar used for oil and table fruit. Very high in polyphenols and oil. Very fruity. Ripens early, easy to harvest. Cold-hardy",
             tags: "Oil Olive",
             locations: [
                 { "San Joaquin Valley": "Nov" },
@@ -2628,7 +2628,7 @@
         {
             name: "Baru",
             type: "Persimmon",
-            description: "Round; orange skin. Sweet brown flesh.",
+            description: "Round; orange skin. Sweet brown flesh",
             tags: "asian persimmon",
             locations: [
                 { "San Joaquin Valley": "Oct" },
@@ -2642,7 +2642,7 @@
         {
             name: "Diospyros virginiana",
             type: "Persimmon",
-            description: "Native species, not a cultivar. Very small, very flavorful fruit. Must be eaten when soft.",
+            description: "Native species, not a cultivar. Very small, very flavorful fruit. Must be eaten when soft",
             tags: "american persimmon",
             locations: [
                 { "San Joaquin Valley": "Oct" },
@@ -2656,7 +2656,7 @@
         {
             name: "Fuyu",
             type: "Persimmon",
-            description: "Large, flat; orange-red color. Flesh is firm like an apple and nonastringent when ripe. Cross-pollination is no required, but when present, fruit will have seed. Trees are smaller, requiring 14-16ft. Fruit loses astringency at maturity while still firm and crunchy.",
+            description: "Large, flat; orange-red color. Flesh is firm like an apple and nonastringent when ripe. Cross-pollination is no required, but when present, fruit will have seed. Trees are smaller, requiring 14-16ft. Fruit loses astringency at maturity while still firm and crunchy",
             tags: "asian persimmon",
             locations: [
                 { "San Joaquin Valley": "Oct" },
@@ -2670,7 +2670,7 @@
         {
             name: "Hachiya",
             type: "Persimmon",
-            description: "Large, deep orange-red, acorn-shaped fruit. Flesh turns brown around the seed and must be very soft to eat. Does not need cross-pollination. Trees get large and require 20 ft. Fruit is astringent until very ripe and soft.",
+            description: "Large, deep orange-red, acorn-shaped fruit. Flesh turns brown around the seed and must be very soft to eat. Does not need cross-pollination. Trees get large and require 20 ft. Fruit is astringent until very ripe and soft",
             tags: "asian persimmon",
             locations: [
                 { "San Joaquin Valley": "Oct" },
@@ -2684,7 +2684,7 @@
         {
             name: "Hyakume",
             type: "Persimmon",
-            description: "Cinnamon-chocolate-colored flesh.",
+            description: "Cinnamon-chocolate-colored flesh",
             tags: "asian persimmon",
             locations: [
                 { "San Joaquin Valley": "Oct" },

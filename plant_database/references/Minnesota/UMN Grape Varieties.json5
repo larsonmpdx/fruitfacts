@@ -31,7 +31,7 @@
         {
             type: "Grape",
             name: "Itasca",
-            description: "2017. type: White wine. Lower acidity and high sugar levels. High resistance to downy and powdery mildew and the insect phylloxera."
+            description: "2017. type: White wine. Lower acidity and high sugar levels. High resistance to downy and powdery mildew and the insect phylloxera"
         },
         {
             type: "Grape",
@@ -46,7 +46,7 @@
         {
             type: "Grape",
             name: "Bluebell",
-            description: "1944. type: Table, juice, jelly. Early ripening. Blue-seeded table grape with a juice, jelly mild Concord-like flavor. Disease resistant."
+            description: "1944. type: Table, juice, jelly. Early ripening. Blue-seeded table grape with a juice, jelly mild Concord-like flavor. Disease resistant"
         },
         {
             type: "Grape",

@@ -1,0 +1,172 @@
+{
+    title: "Midwest Apple Improvement Association Varieties",
+    author: "unknown",
+    url: "https://agproducts.rutgers.edu/fruit-trees/varieties.html",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "The Midwest, USA",
+            latitude: 40.77500060512835,
+            longitude: -81.92345805361427
+        }
+    ],
+    plants: [
+
+        NJ 356
+        August Rose (tm)
+        Peach
+        white-fleshed melting
+        This tree is tolerant to bacterial leaf spot and constriction canker
+        24 days after Redhaven
+        https://agproducts.rutgers.edu/fruit-trees/august-rose-peach.html
+        23,884
+
+
+        NJN 101
+        Avalon (tm)
+        Nectarine
+        yellow melting
+        low susceptibility to bacterial leaf spot.
+        10 days before Redhaven
+        https://agproducts.rutgers.edu/fruit-trees/avalon-nectarine.html
+        23,882
+
+
+        NJ 350
+        Desiree (r)
+        Peach
+        yellow firm
+        Low susceptibility to bacterial spot
+        28 days before Redhaven
+        https://agproducts.rutgers.edu/fruit-trees/desiree-peach.html
+        19,382e
+
+
+        NJ 351
+        Gloria (r)
+        Peach
+        yellow firm
+        Very low susceptibility to bacterial spot
+        +25
+        https://agproducts.rutgers.edu/fruit-trees/gloria-peach.html
+        18,224e
+        
+
+        NJ 354
+        July Rose (tm)
+        Peach
+        white firm
+        tolerant of bacterial leaf spot
+        5-7 days before Redhaven
+        https://agproducts.rutgers.edu/fruit-trees/july-rose-peach.html
+        23,669
+
+
+        NJ 354 
+        Messina (r)
+        Peach
+        yellow firm
+        Good tolerance to bacterial spot and constriction canker
+        (+28)
+        https://agproducts.rutgers.edu/fruit-trees/messina-peach.html
+        18,091
+
+
+        NJ 355
+        Scarlet Rose (tm)
+        Peach
+        white firm
+        Medium susceptibility to bacterial spot.
+        "early season" given in patent, no redhaven+/- in page
+        https://agproducts.rutgers.edu/fruit-trees/scarlet-rose-peach.html
+        https://patents.google.com/patent/USPP23883
+
+
+        NJ 353
+        Victoria (r)
+        Peach
+        firm yellow
+        High tolerance to bacterial spot
+        +47
+        https://agproducts.rutgers.edu/fruit-trees/victoria-peach.html
+        18,134
+
+
+        NJF 15
+        BuenOs II (tm)
+        Peach
+        flat, firm yellow
+        resistant to bacterial spot.
+        -3
+        https://agproducts.rutgers.edu/fruit-trees/buenos2-peach.html
+        20,128
+
+
+
+        
+        BuenOs (tm)
+        Peach
+        flat, melting yellow. self-sterile
+        Low susceptibility for bacterial spot
+        -6
+        https://agproducts.rutgers.edu/fruit-trees/buenos-peach.html
+        19273
+
+
+        NJN100 
+        Silver Gem (r)
+        Nectarine
+        firm white
+        Low susceptibility to bacterial spot
+        -14
+        https://agproducts.rutgers.edu/fruit-trees/silver-gem-nectarine.html
+        18147
+
+
+        NJF 17
+        TangOs II (r)
+        Peach
+        flat, green skin color, melting
+        resistant to bacterial spot.
+        +8
+        https://agproducts.rutgers.edu/fruit-trees/tangos2-peach.html
+        19383
+
+
+        NJF 16
+        TangOs (r)
+        Peach
+        flat, yellow non-melting
+        resistant to bacterial spot.
+        -4
+        https://agproducts.rutgers.edu/fruit-trees/tangos-peach.html
+        18,997
+
+
+        NJA150
+        Sugar Pearls (tm)
+        Apricot
+        self-fertile but better crops with a pollinator
+        https://agproducts.rutgers.edu/fruit-trees/sugar-pearls-apricot.html
+        https://patents.google.com/patent/USPP18639 expires 2026-07-06
+
+
+        H28-52-96270
+        Flat Wonderful (tm)
+        Peach
+        flat, yellow, dense
+        https://agproducts.rutgers.edu/fruit-trees/flat-wonderful-peach.html
+        https://patents.google.com/patent/USPP16836 expires 2025-03-25
+
+
+
+        {
+            name: "",
+            AKA: [""],
+            type: "",
+            description: "",
+            harvest_time: "",
+            patent: "https://patents.google.com/patent/USPP expires "
+        }
+    ]
+}

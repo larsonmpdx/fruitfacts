@@ -1,0 +1,77 @@
+{
+    title: "Midwest Apple Improvement Association Varieties",
+    author: "unknown",
+    url: "http://maiaapples.com/apples/",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "The Midwest, USA",
+            latitude: 40.77500060512835,
+            longitude: -81.92345805361427
+        }
+    ],
+    plants: [
+        {
+            name: "MAIA1",
+            AKA: ["EverCrisp®", "MDD5-44"],
+            type: "Apple",
+            description: "http://maiaapples.com/apples/maia-1-evercrisp/",
+            harvest_time: "mid October", // approx. golden delicious +4 weeks
+            patent: "https://patents.google.com/patent/USPP24579 expires 2032-11-14"
+        },
+        {
+            name: "MAIA-L",
+            AKA: ["Ludacrisp®", "Juicy Fruit"],
+            type: "Apple",
+            description: "http://maiaapples.com/apples/maia-l-ludacrisp/",
+            harvest_time_relative: "MAIA1 -1 week",
+            patent: "https://patents.google.com/patent/USPP30472 expires 2037-07-31"
+        },
+        {
+            name: "MAIA11",
+            AKA: ["Rosalee®", "MDD5-41"],
+            type: "Apple",
+            description: "http://maiaapples.com/apples/maia11-rosalee/",
+            harvest_time_relative: "MAIA1 -2 weeks", // given as "Golden Delicious +2 weeks"
+            patent: "https://patents.google.com/patent/USPP29146 expires 2036-09-12"
+        },
+        {
+            name: "MAIA12",
+            AKA: ["Summerset®", "MDD3-75"],
+            type: "Apple",
+            description: "http://maiaapples.com/apples/maia12-summerset/",
+            harvest_time_relative: "around the 2nd or 3rd pick of Honeycrisp",
+            patent: "https://patents.google.com/patent/USPP29213 expires 2036-09-12"
+        },
+        {
+            name: "MAIA-Z",
+            AKA: ["Sweet Zinger®", "MJE 1238"],
+            type: "Apple",
+            description: "http://maiaapples.com/apples/maia-z-sweet-zinger/",
+            harvest_time_relative: "MAIA1 -1 week",
+            patent: "https://patents.google.com/patent/USPP30059 expires 2037-07-31"
+        },
+        {
+            name: "MAIA-SM",
+            AKA: ["SweetMAIA®", "MDD 7-50"],
+            type: "Apple",
+            description: "http://maiaapples.com/apples/maia-sm-sweetmaia/",
+            harvest_time_relative: "Gala -12 to -7",
+            patent: "ppaf 2020"
+        },
+        {
+            name: "MAIA7",
+            description: "MAIA variety",
+            AKA: ["Crunch-a-Bunch (tm)"],
+            description: "marketed by Gurney's",
+            patent: "https://patents.google.com/patent/USPP29126 expires 2036-09-12"
+        },
+        {
+            name: "MAIA8",
+            description: "MAIA variety",
+            AKA: ["Baker's Delight (tm)"],
+            description: "marketed by Gurney's",
+            patent: "https://patents.google.com/patent/USPP29147 expires 2036-09-12"
+        }
+    ]
+}

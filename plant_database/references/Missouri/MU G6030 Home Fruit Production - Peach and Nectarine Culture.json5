@@ -20,7 +20,7 @@
             disease_resistance: {
                 BLS: "Excellent"
             },
-            description: "Small, semifreestone, very little split pit."
+            description: "Small, semifreestone, very little split pit"
         },
         {
             name: "Harrow Diamond",
@@ -29,7 +29,7 @@
             disease_resistance: {
                 BLS: "Moderate"
             },
-            description: "Small, semifreestone, very little split pit."
+            description: "Small, semifreestone, very little split pit"
         },
         {
             name: "Candor",
@@ -38,7 +38,7 @@
             disease_resistance: {
                 BLS: "Excellent"
             },
-            description: "Small, freestone, less color and softer than later-ripening cultivars."
+            description: "Small, freestone, less color and softer than later-ripening cultivars"
         },
         {
             name: "Manon",
@@ -47,7 +47,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Highly colored, white flesh, semifreestone, low-acid flavor."
+            description: "Highly colored, white flesh, semifreestone, low-acid flavor"
         },
         {
             name: "Garnet Beauty",
@@ -56,7 +56,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Bud sport of Redhaven, freestone when fully ripe, best for cooler areas."
+            description: "Bud sport of Redhaven, freestone when fully ripe, best for cooler areas"
         },
         {
             name: "Summer Serenade",
@@ -65,7 +65,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Bud sport of Garnet Beauty, highly colored, semifreestone."
+            description: "Bud sport of Garnet Beauty, highly colored, semifreestone"
         },
         {
             name: "PF 9A-007",
@@ -75,7 +75,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Large, highly colored freestone, very few split pits."
+            description: "Large, highly colored freestone, very few split pits"
         },
         {
             name: "Redhaven",
@@ -84,7 +84,7 @@
             disease_resistance: {
                 BLS: "Moderate"
             },
-            description: "The standard of all peaches, low-browning, freestone, requires aggressive thinning to maintain fruit size."
+            description: "The standard of all peaches, low-browning, freestone, requires aggressive thinning to maintain fruit size"
         },
         {
             name: "PF 11",
@@ -94,7 +94,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Very large, highly colored freestone, fewer split pits than Redhaven."
+            description: "Very large, highly colored freestone, fewer split pits than Redhaven"
         },
         {
             name: "FA 52", // "redstar"
@@ -103,7 +103,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Large, semifreestone, 80 percent red blush."
+            description: "Large, semifreestone, 80 percent red blush"
         },
         {
             name: "FA 11", // "Starfire"
@@ -112,7 +112,7 @@
             disease_resistance: {
                 BLS: "Excellent"
             },
-            description: "Medium-size, brilliant red, freestone, requires several harvests."
+            description: "Medium-size, brilliant red, freestone, requires several harvests"
         },
         {
             name: "FA 12", //"Blazingstar"
@@ -121,7 +121,7 @@
             disease_resistance: {
                 BLS: "Excellent"
             },
-            description: "Medium-size, freestone, softer than Redhaven."
+            description: "Medium-size, freestone, softer than Redhaven"
         },
         {
             name: "White Lady",
@@ -139,7 +139,7 @@
             disease_resistance: {
                 BLS: "Moderate"
             },
-            description: "Small and soft, yellow flesh, low-browning, freestone, one of the hardiest cultivars."
+            description: "Small and soft, yellow flesh, low-browning, freestone, one of the hardiest cultivars"
         },
         {
             name: "John Boy",
@@ -148,7 +148,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Budsport of Loring, large, very firm, freestone."
+            description: "Budsport of Loring, large, very firm, freestone"
         },
         {
             name: "TangOs",
@@ -157,7 +157,7 @@
             disease_resistance: {
                 BLS: "Excellent"
             },
-            description: "All yellow peel, yellow flesh, doughnut-shaped."
+            description: "All yellow peel, yellow flesh, doughnut-shaped"
         },
         {
             name: "Raritan Rose",
@@ -166,7 +166,7 @@
             disease_resistance: {
                 BLS: "Moderate"
             },
-            description: "Soft white flesh, acidic flavor, winter hardy."
+            description: "Soft white flesh, acidic flavor, winter hardy"
         },
         {
             name: "TangOs II",
@@ -175,7 +175,7 @@
             disease_resistance: {
                 BLS: "Excellent"
             },
-            description: "Doughnut-shaped, white flesh, harder to grow than yellow-fleshed TangOs."
+            description: "Doughnut-shaped, white flesh, harder to grow than yellow-fleshed TangOs"
         },
         {
             name: "Contender",
@@ -184,7 +184,7 @@
             disease_resistance: {
                 BLS: "Excellent"
             },
-            description: "Medium-size, freestone, nonbrowning."
+            description: "Medium-size, freestone, nonbrowning"
         },
         {
             name: "PF 24-007",
@@ -194,7 +194,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Very large, freestone, well-colored fruit, less cold hardy than Redhaven."
+            description: "Very large, freestone, well-colored fruit, less cold hardy than Redhaven"
         },
         {
             name: "FA 18", // "Blushingstar"
@@ -203,7 +203,7 @@
             disease_resistance: {
                 BLS: "Moderate"
             },
-            description: "Medium-size, freestone, white flesh, nonbrowning."
+            description: "Medium-size, freestone, white flesh, nonbrowning"
         },
         {
             name: "Messina",
@@ -212,7 +212,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Large, freestone, highly colored fruit."
+            description: "Large, freestone, highly colored fruit"
         },
         {
             name: "Victoria",
@@ -221,7 +221,7 @@
             disease_resistance: {
                 BLS: "Good"
             },
-            description: "Large, freestone, 40 percent red bush, maintains quality in cold storage."
+            description: "Large, freestone, 40 percent red bush, maintains quality in cold storage"
         },
         {
             names: ["Bounty", "Cresthaven", "GaLa", "Jerseyqueen"],

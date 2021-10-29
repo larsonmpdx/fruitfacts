@@ -15,31 +15,31 @@
         {
             name: "Gala",
             type: "Apple",
-            description: "High-color sports preferred.",
+            description: "High-color sports preferred",
             harvest_time: "Aug 10-20"
         },
         {
             name: "Jonathan",
             type: "Apple",
-            description: "Very susceptible to fireblight and cedar-apple rust.",
+            description: "Very susceptible to fireblight and cedar-apple rust",
             harvest_time: "Aug 25 to Sep 10"
         },
         {
             name: "Red Delicious",
             type: "Apple",
-            description: "Very upright growing. needs branch spreading for good tree structure.",
+            description: "Very upright growing. needs branch spreading for good tree structure",
             harvest_time: "Sep 1-10"
         },
         {
             name: "Golden Delicious",
             type: "Apple",
-            description: "Very well adapted. Smoothee tends to russet less.",
+            description: "Very well adapted. Smoothee tends to russet less",
             harvest_time: "Sep 10-20"
         },
         {
             name: "Fuji",
             type: "Apple",
-            description: "Disease susceptible. Very sweet.",
+            description: "Disease susceptible. Very sweet",
             harvest_time: "Oct 10-20"
         },
         {

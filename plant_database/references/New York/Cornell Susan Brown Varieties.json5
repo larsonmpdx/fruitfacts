@@ -1,0 +1,89 @@
+{
+    title: "Cornell Varieties",
+    author: "Susan Brown",
+    url: "https://cals.cornell.edu/susan-k-brown http://www.hort.cornell.edu/brown/pdfs/patents.pdf",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Geneva, NY",
+            latitude: 42.87719192532212,
+            longitude: -77.00783342124748
+        }
+    ],
+    plants: [
+        {
+            name: "NY 1",
+            AKA: ["Snapdragon (tm)", "New York 1"],
+            type: "Apple",
+            description: "club variety. http://www.hort.cornell.edu/brown/pdfs/snapdragon.pdf",
+            harvest_time: "late September",
+            patent: "https://patents.google.com/patent/USPP22228 expires 2030-01-13"
+        },
+        {
+            name: "NY 2",
+            AKA: ["Rubyfrost (tm)", "New York 2"],
+            type: "Apple",
+            description: "club variety. http://www.hort.cornell.edu/brown/pdfs/rubyfrost.pdf",
+            harvest_time: "mid to late October",
+            patent: "https://patents.google.com/patent/USPP22207 expires 2030-01-13"
+        },
+        // todo Fortune apple U.S. Plant Patent #11,000. Tested as NY 429
+        {
+            name: "Royalton", // patent name, can't be trademarked
+            AKA: ["NY 11390"],
+            patent: "https://patents.google.com/patent/USPP11107 expired 2011-09-18",
+            description: "https://ecommons.cornell.edu/bitstream/handle/1813/5204/FLS-140.pdf?sequence=1&isAllowed=y"
+        },
+        {
+            name: "Hartland",
+            AKA: ["NY 3308"],
+            s_allele: "S3S6",
+            type: "Sweet Cherry",
+            decription: "https://ecommons.cornell.edu/bitstream/handle/1813/5205/FLS-141.pdf?sequence=1",
+            patent: "https://patents.google.com/patent/USPP11034 expired 2012-11-04"
+        },
+        {
+            name: "Surefire",
+            AKA: ["NY 12716"],
+            type: "Sour Cherry",
+            description: "",
+            patent: "https://patents.google.com/patent/USPP11108 expired 2013-11-04"
+        },
+        {
+            name: "Somerset",
+            type: "Sweet Cherry",
+            AKA: ["NY 6476"],
+            description: "",
+            patent: "https://patents.google.com/patent/USPP11118 expired 2013-11-04"
+        },
+        {
+            name: "Newfane",
+            type: "Sweet Cherry",
+            AKA: ["Whitegold (tm)"],
+            patent: "https://patents.google.com/patent/USPP18892 expires 2022-03-21"
+        },
+        {
+            name: "Ridgewood",
+            type: "Sweet Cherry",
+            AKA: ["Blackgold (tm)"],
+            patent: "https://patents.google.com/patent/USPP17301 expires 2021-09-24"
+        },
+        // todo 2003 ‘BlackYork’™ NY 1725
+        // todo 2003 ‘Blushing Gold’™  NY 8182 (also called ‘Pendleton’)
+        // todo 2006: ‘Andersen’™ (NY 9295)
+        // todo 2006: ‘Nugent’ (NY 518) 
+        {
+            name: "NY 8139",
+            type: "Sweet Cherry",
+            AKA: ["BlackPearl (tm)"],
+            description: "2008. Bing-10"
+        },
+        {
+            name: "NY 38L",
+            AKA: ["BurgundyPearl (tm)"],
+            description: "2008. Bing-10"
+        }
+        // todo 2008 ebony pearl (NY 32)
+        // todo 2008 radiant pearl (NY 7679
+    ]
+}

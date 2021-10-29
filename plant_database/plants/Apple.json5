@@ -5,18 +5,6 @@
         "patent": "https://patents.google.com/patent/USPP18730 expires 2026-03-25"
     },
     {
-        "name": "MAIA8",
-        "description": "MAIA variety",
-        "AKA": ["Baker's Delight (tm)"],
-        "patent": "https://patents.google.com/patent/USPP29147 expires 2036-09-12"
-    },
-    {
-        "name": "MAIA7",
-        "description": "MAIA variety",
-        "AKA": ["Crunch-a-Bunch (tm)"],
-        "patent": "https://patents.google.com/patent/USPP29126 expires 2036-09-12"
-    },
-    {
         "name": "WA-38",
         "AKA": ["Cosmic Crisp (tm)"],
         "description": "WSU variety for WA state growers only",
