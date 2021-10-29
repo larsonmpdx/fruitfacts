@@ -13,50 +13,133 @@
     plants: [
 
 Addison 1310 President x Marshall 1918
+
+
 Alden 1311 President x Marshall 1918
+
+
 Angola 1314 President x Marshall 1918
+
+
 Arcade 1329 President x Marshall 1918
+
+
 Argyle 1334 President x Marshall 1918
+
+
 Ashton 1341 President x Marshall 1918
+
+
 Athens 1345 President x Marshall 1918
-Aurora 1384 Prolific o.p.* 1918
+
+
+Aurora 1384 Prolific open pollinated 1918
+
+
 Beacon 1564 President x Marshall 1923
+
+
 Bliss 1695 Chesapeake x Atkins Continuity 1923
+
+
 Boquet 1730 Chesapeake x Pan American 1923
+
+
 Caldeonia 4869 Marshall x Howard 1931
+
+
 Camden 4792 Marshall x Howard 1931
+
+
 Canoga 1362 NY 1123 (Senga Sengana 1979
 Midland) x Holiday
+
+
 Cato 4803 Marshall x Howard 1931
+
+
 Catskill 4435 Marshall x Howard 1933
+
+
 Clermont 4281 Marshall x Howard 1931
+
+
 Clancy 304B MDUS4774 x MDUS5199 2003
+
+
 Culver 4799 Marshall x Howard 1931
+
+
 Dresden 10183 Deacon x Howard 1939
+
+
 Eden 24248 Dresden x Fairfax 1952
+
+
 Empire 25460 Dresden x Sparkle 1951
 
+
 Erie 28340 Sparkle x Howard 1951
+
+
 Essex 7225 Howard x Deutsch Evern 1951
+
+
 Fletcher 423 Midland x Suwannee 1959
+
+
 Fortune 386 USDA 2827 x self 1961
+
+
 Frontenac 96 Erie x (Fairfax x Dresden) 1959
+
+
 Fulton 233 Starbright x Pathfinder 1959
+
+
 Gala 418 Midland x Suwannee 1966
+
+
 Garnet 430 Midland x Suwannee 1965
+
+
 Geneva 547 NY 316 x Redrich 1961
+
+
 Herriot 99-21 NYUS299 x Winona 2011
+
+
 Holiday 1144 Raritan x NY 844 1972
+
+
 Honeoye 1409 Vibrant x Holiday 1979
+
+
 Hunn 198 Unknown 1894
+
+
 Jewel 1324 NY 1221 x Holiday 1985
+
+
 L’Amour 1829 (MDUS5252 x Etna) x Cavendish 2003
+
+
 Magnus 1235 Hunn x Marshall 1910
+
+
 Walker 99-15 NYUS299 (Blomdon x MNUS15) x 2011
+
+
 (marketed under NY1674 (Earliglow x NY1424)
 Purple Wonder™)
+
+
 Prolific 1244 Sample x Marshall 1908
+
+
 Quality 1258 Hunn x Atlantic 1910
+
+
 Seneca 1529 NY 1261 x Holiday 1991
 
 
@@ -66,6 +149,6 @@ Seneca 1529 NY 1261 x Holiday 1991
             type: "Strawberry",
             description: "",
             released: ""
-        }
+        },
     ]
 }

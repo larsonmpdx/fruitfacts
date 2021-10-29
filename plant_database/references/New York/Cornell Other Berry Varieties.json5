@@ -14,7 +14,11 @@
 
 BLACKBERRIES (3):
 Bailey Unknown 1950
+
+
 Darrow 24338 NY 15826 (Eldorado x Brewer) x Hedrick 1958
+
+
 Hedrick 15827 Eldorado x Brewer 1950
 
 
@@ -32,6 +36,6 @@ Fredonia 388 Unknown English var. o.p.* 1926
             type: "Blackberry",
             released: "",
             description: ""
-        }
+        },
     ]
 }

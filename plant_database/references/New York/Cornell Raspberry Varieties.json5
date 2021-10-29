@@ -13,52 +13,131 @@
     plants: [
 
 Allen (black) 30001 Bristol x Cumberland 1963
+
+
 Amber (yellow) 18673 Taylor x Cuthbert 1950
+
+
 Brandywine 905 NY 6731 x Hilton 1976
 (purple)
+
+
 Brant (purple) 806 Smith No. 1 x June 1926
+
+
 Bristol (black) 2635 Watson No. 1 x Honeysweet 1934
+
+
 Cayuga (red) 286 June x Cuthbert 1922
+
+
 Clyde (purple) 245 Bristol x NY 17861 1961
+
+
 Crimson Giant 99-45 Titan x NY950 2011
+
+
 Crimson Night 03-56 (Fallgold x NY116) x Boyne o.p. 2012
 
-Double Gold 04-25 (NY116 x Fallgold) x Goldie
+
+Double Gold 04-25 (NY116 x Fallgold) x Goldie no year given
+
+
 Donboro (red) 69 Loudon x Marlboro 1908
+
+
 Dundee (black) 459 Smith No. 1 x Palmer 1927
+
+
 Encore (red) 7 Canby x Cherokee 1998
+
+
 Evans (black) 2609 Watson Prolific x Honeysweet 1935
+
+
 Heritage (red) 696 (Milton x Cuthbert) x Durham 1969
+
+
 Hilton (red) 183 Newburgh x St. Walfried 1965
+
+
 Huron (black) 27189 Rachel x Dundee 1965
+
+
 Jewel (black) 628 NY 29773 (Bristol x Dundee) x Dundee 1973
+
+
 June (red) 45 Loudon x Marlboro 1909
+
+
 Indian Summer 8126 NY 1950 (Empire x Herbert) x 1936
 (red) Lloyd George
+
+
 Louboro (red) 48 Loudon x Marlboro 1908
+
+
 Marcy (red) 5220 Lloyd George x Newman 1936
+
+
 Marion (purple) 10722 Bristol x NY 2585 (Newman x Herbert) 1937
+
+
 Marlative (red) 80 Marlboro x Superlative 1908
+
+
 Marldon (red) 64 Marlboro x Loudon 1908
+
+
 Milton (red) 13618 Lloyd George x Newburgh 1942
+
+
 Monroe (red) 2568 Newman x Cuthbert 1932
+
+
 Naples (black) 3211 Honeysweet x Rachel 1931
+
+
 Newburgh (red) 2588 Newman x Herbert 1929
+
+
 Ontario (red) 122 NY 94 (Superlative x Loudon) x self 1918
+
+
 Owasco (red) 287 June x Cuthbert 1922
+
+
 Prelude (red) 1009 NY 817 [Hilton x NY 600 1998
 (Durham x September)] x Hilton
+
+
 Royalty 632 NY 253 (Cumberland x Newburgh) x 1982
 (purple-red) NY 17861 (Newburgh x Indian Summer)
+
+
 Ruby (cultivar 114 Heritage x Titan 1988
 Watson) (red)
+
+
 Seneca (red) 284 June x Cuthbert 1922
+
+
 September (red) 17438 Marcy x Ranere 1947
+
+
 Sodus (purple) 12417 Dundee x Newburgh 1935
+
+
 Titan (red) 883 Hilton x NY 598 1985
 (Newburgh x St. Walfried)
+
+
 Taylor (red) 5555 Newman x Lloyd George 1935
+
+
 Ulster (red) 2490 Herbert x June 1933
+
+
 Webster (purple) 449 Smith No. 1 x unknown purple 1926
 
 
@@ -69,6 +148,6 @@ Webster (purple) 449 Smith No. 1 x unknown purple 1926
             type: "Raspberry",
             description: "",
             released: ""
-        }
+        },
     ]
 }

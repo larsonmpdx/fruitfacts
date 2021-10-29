@@ -16,66 +16,143 @@
 
 Apricots
 
-Alfred 345 Doty o.p.* x Geneva 1965
-Farmingdale 346 Doty o.p.* x Geneva 1965
+Alfred 345 Doty open pollinated x Geneva 1965
+
+
+Farmingdale 346 Doty open pollinated x Geneva 1965
+
+
 Geneva Frascato (FPI 34265) 1934
 
 
 Cherries
 
-Andersen™ 9295 Wederscher Market x o.p* 2006
-Blushing Gold™ 8182 Yellow Glass x Emperor Francis 2003
-BlackGold™ 13791 Stark Gold x Stella 2002
-BlackYork™ 1725 Giant x Emperor Francis 2003
-BurgandyPearl™ 38L Sport of NY 38 2008
-(Royalton x Hedel Finger)
-EbonyPearl™ 32 Somerset x o.p.* 2008
+// Andersen in the Susan Brown file
+
+
+
 Gil Peck 468 Napoleon x Giant 1936
-Hartland™ 3308 Windsor o.p.* 1992
+
+
+// Hartland in the Susan Brown file
+
+
 Hudson 591 Oswego x Giant 1964
+
+
 Kristin 1599 Emperor Francis x Gil Peck 1982
-Nugent™ 518 Germersdorfer x o.p* 2006
-Oswego Unknown Mazzard
-Radiance Pearl™ 7679 PR 1-638 x NY 5656 2008
-Royalton™ 11390 NY 1725 o.p.* 1991
+
+
+// Nugent in the Susan Brown file
+
+
+Oswego Unknown Mazzard no year given
+
+
+// Radiance Pearl, Royalton in the Susan Brown file
+
+
 Seneca 1 Unknown x Early Purple Guigne 1924
+
+
 Sodus 467 Napoleon x Giant 1938
-Somerset™ 6476 Van x Vic 1993
-Surefire™ (tart) 12716 Borchert Black Sour x NY 6935 1993
+
+
+
+
+// Somerset, Surefire in the Susan Brown file
+
+
 Ulster 1519 Schmidt x Lambert 1964
-White Gold™ 13688 Emperor Francis x Stella 2002
+
+
+// Whitegold is in the Susan Brown file
+
+
+
+
 
 
 Netarines
 
-Hunter 50 Hunter No. 1 o.p.* 1924
-Morton 884 (New Boy x Schumaker) o.p.* 1965
-New Yorker 1017 Livingstone x Greensboro o.p.* 1967
+Hunter 50 Hunter No. 1 open pollinated 1924
+
+
+Morton 884 (New Boy x Schumaker) open pollinated 1965
+
+
+New Yorker 1017 Livingstone x Greensboro open pollinated 1967
 (white flesh
+
+
+
+
+
+
 
 Peaches
 
 Brighton 2622 Sunhigh x Redhaven 1972
+
+
 Eden (white flesh) 1466 Champion x Raritan Rose 1972
+
+
+
+
+
+
 
 Plums
 
 Albion 33 Golden Drop x Grand Duke 1929
+
+
 American Mirabelle 219 Imperial Epineuse x Mirabelle 1925
-Blues Jam™ 9041 (58.904.1) Furst o.p.* 2005
+
+
+Blues Jam™ 9041 (58.904.1) Furst open pollinated 2005
+
+
 Castleton 66.609.4 Valor x Iroquois 1993
-Geneva Mirabelle™ 858 American Mirabelle o.p.* 2005
+
+
+Geneva Mirabelle™ 858 American Mirabelle open pollinated 2005
+
+
 Hall 37 Golden Drop x Grand Duke 1923
+
+
 Iroquois 797 Italian Prune x Hall 1966
-Jam Session™ 111 (58.911.1) Late Muscatel o.p.* 2005
+
+
+Jam Session™ 111 (58.911.1) Late Muscatel open pollinated 2005
+
+
 Longjohn 66.601.1 Iroquois x Ca4A33L 1993
+
+
 Mohawk 795 Italian Prune x Hall 1966
+
+
 NY6™ 66.609.6 Valor x Iroquois 2002
+
+
 NY9™ 58.900.9 Standard x Stanley 2002
+
+
 Oneida 826 Albion x Italian Prune 1966
-Polly 65.363.1 Oneida o.p.* 1993
-Rosy Gage™ 101 (77.610.1) Imperial Epineuse o.p.* 2005
+
+
+Polly 65.363.1 Oneida open pollinated 1993
+
+
+Rosy Gage™ 101 (77.610.1) Imperial Epineuse open pollinated 2005
+
+
 Seneca 981 Italian Prune x Prinlew 1972
+
+
 Stanley 274 Agen x Grand Duke 1926
 
 
@@ -86,6 +163,6 @@ Stanley 274 Agen x Grand Duke 1926
             type: "",
             description: "",
             released: ""
-        }
+        },
     ]
 }

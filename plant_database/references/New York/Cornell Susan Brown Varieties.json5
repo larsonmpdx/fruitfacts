@@ -15,8 +15,8 @@
             name: "NY 1",
             AKA: ["Snapdragon (tm)", "New York 1", "NY 98804-001"],
             type: "Apple",
-            description: "club variety. Honeycrisp x NY 752. http://www.hort.cornell.edu/brown/pdfs/snapdragon.pdf",
             harvest_time: "late September",
+            description: "club variety. Honeycrisp x NY 752. http://www.hort.cornell.edu/brown/pdfs/snapdragon.pdf",
             released: "2010",
             patent: "https://patents.google.com/patent/USPP22228 expires 2030-01-13"
         },
@@ -24,80 +24,152 @@
             name: "NY 2",
             AKA: ["Rubyfrost (tm)", "New York 2", "NY 92609-463"],
             type: "Apple",
-            description: "club variety. Autumncrisp x Braeburn. http://www.hort.cornell.edu/brown/pdfs/rubyfrost.pdf",
             harvest_time: "mid to late October",
+            description: "club variety. Autumncrisp x Braeburn. http://www.hort.cornell.edu/brown/pdfs/rubyfrost.pdf",
             released: "2010",
             patent: "https://patents.google.com/patent/USPP22207 expires 2030-01-13"
         },
         {
-            name: "Fortune",
-            "AKA": ["NY 429"],
+            name: "Fortune", // patent name
+            AKA: ["NY 429"],
             type: "Apple",
             description: "Schoharie Spy x Empire https://ecommons.cornell.edu/bitstream/handle/1813/5211/FLS-147.pdf?sequence=1&isAllowed=y",
             released: "1996",
             patent: "https://patents.google.com/patent/USPP11000 expired 2015-03-10"
         },
         {
-            name: "Royalton", // patent name, can't be trademarked
+            name: "Royalton", // some Cornell documents claim trademark on this, but it can't be trademarked because "Royalton" was used as the name in the patent
             AKA: ["NY 11390"],
-            patent: "https://patents.google.com/patent/USPP11107 expired 2011-09-18",
-            description: "https://ecommons.cornell.edu/bitstream/handle/1813/5204/FLS-140.pdf?sequence=1&isAllowed=y"
+            description: "NY 1725 open pollinated https://ecommons.cornell.edu/bitstream/handle/1813/5204/FLS-140.pdf?sequence=1&isAllowed=y",
+            released: "1991",
+            patent: "https://patents.google.com/patent/USPP11107 expired 2011-09-18"
         },
         {
-            name: "Hartland",
+            name: "Hartland", // some Cornell documents claim trademark on this, but it can't be trademarked because "Hartland" was used as the name in the patent
             AKA: ["NY 3308"],
             s_allele: "S3S6",
             type: "Sweet Cherry",
-            decription: "https://ecommons.cornell.edu/bitstream/handle/1813/5205/FLS-141.pdf?sequence=1",
+            decription: "Windsor open pollinated https://ecommons.cornell.edu/bitstream/handle/1813/5205/FLS-141.pdf?sequence=1",
+            released: "1992",
             patent: "https://patents.google.com/patent/USPP11034 expired 2012-11-04"
         },
         {
-            name: "Surefire",
+            name: "Surefire", // some Cornell documents claim trademark on this, but it can't be trademarked because "Surefire" was used as the name in the patent
             AKA: ["NY 12716"],
             type: "Sour Cherry",
-            description: "",
+            description: "Borchert Black Sour x NY 6935",
+            released: "1993",
             patent: "https://patents.google.com/patent/USPP11108 expired 2013-11-04"
         },
         {
-            name: "Somerset",
+            name: "Somerset", // some Cornell documents claim trademark on this, but it can't be trademarked because "Somerset" was used as the name in the patent
             type: "Sweet Cherry",
             AKA: ["NY 6476"],
-            description: "",
+            description: "Van x Vic https://ctl.cornell.edu/news/product/cherry-somerset/",
+            released: "1993",
             patent: "https://patents.google.com/patent/USPP11118 expired 2013-11-04"
         },
         {
             name: "Newfane",
             type: "Sweet Cherry",
-            AKA: ["Whitegold (tm)"],
+            AKA: ["Whitegold (tm)", "NY 13688"],
+            description: "Emperor Francis x Stella https://nyshs.org/wp-content/uploads/2016/10/Editorial-WhiteGold-A-New-White-Fleshed-Sweet-Cherry-from-Geneva.pdf",
+            released: "2002",
             patent: "https://patents.google.com/patent/USPP18892 expires 2022-03-21"
         },
         {
             name: "Ridgewood",
             type: "Sweet Cherry",
-            AKA: ["Blackgold (tm)"],
+            AKA: ["Blackgold (tm)", "NY 13791"],
+            description: "Stark Gold x Stella https://nyshs.org/wp-content/uploads/2016/10/Editorial-WhiteGold-A-New-White-Fleshed-Sweet-Cherry-from-Geneva.pdf",
+            released: "2002",
             patent: "https://patents.google.com/patent/USPP17301 expires 2021-09-24"
         },
-        // todo 2003 ‘BlackYork’™ NY 1725
-        // todo 2003 ‘Blushing Gold’™  NY 8182 (also called ‘Pendleton’)
-        // todo 2006: ‘Andersen’™ (NY 9295)
-        // todo 2006: ‘Nugent’ (NY 518) 
+        {
+            name: "Haas",
+            type: "Sweet Cherry",
+            AKA: ["BlackYork™", "NY 1725"],
+            description: "Giant x Emperor Francis",
+            released: "2003",
+            patent: "https://patents.google.com/patent/US20050241028 patent abandoned 2005"
+        },
+        {
+            name: "Pendleton",
+            AKA: ["BlushingGold (tm)", "NY 8182"],
+            description: "Yellow Glass x Emperor Francis",
+            released: "2003",
+            patent: "https://patents.google.com/patent/US20050273892 patent abandoned 2005"
+        },
+        {
+            name: "NY 9295",
+            type: "Sweet Cherry",
+            AKA: ["Andersen™"],
+            description: "Wederscher Market x open pollinated",
+            released: "2006",
+            patent: "not patented"
+        },
+        {
+            name: "NY 518",
+            type: "Sweet Cherry",
+            AKA: ["Nugent™"],
+            description: "Germersdorfer x open pollinated",
+            released: "2006",
+            patent: "not patented"
+        },
         {
             name: "NY 8139",
             type: "Sweet Cherry",
             AKA: ["BlackPearl (tm)"],
-            description: "2008. Bing-10"
+            harvest_time_relative: "Bing-10",
+            description: "",
+            released: "2008",
+            patent: "the pearl series is not patented"
         },
         {
             name: "NY 38L",
-            AKA: ["BurgundyPearl (tm)"],
-            description: "2008. Bing-10"
+            type: "Sweet Cherry",
+            AKA: ["BurgundyPearl (tm)", "NY 38L"],
+            harvest_time_relative: "Bing-10",
+            description: "Sport of NY 38 (Royalton x Hedel Finger)",
+            released: "2008",
+            patent: "the pearl series is not patented"
+        },
+        {
+            name: "NY 32",
+            type: "Sweet Cherry",
+            AKA: ["EbonyPearl™"],
+            description: "Somerset x open pollinated",
+            released: "2008",
+            patent: "the pearl series is not patented"
+        },
+        {
+            name: "NY 7679",
+            type: "Sweet Cherry",
+            AKA: ["Radiance Pearl™"],
+            description: "PR 1-638 x NY 5656",
+            released: "2008",
+            patent: "the pearl series is not patented"
+        },
+        {
+            name: "NY 56",
+            type: "Apple",
+            AKA: ["Cordera (tm)"],
+            description: "https://cals.cornell.edu/news/2020/09/crunchy-complex-cornell-releases-three-new-apples",
+            patent: "https://patents.google.com/patent/USPP30758 expires 2037-11-07"
+        },
+        {
+            name: "NY 73",
+            type: "Apple",
+            AKA: ["Pink Luster (tm)"],
+            description: "https://cals.cornell.edu/news/2020/09/crunchy-complex-cornell-releases-three-new-apples",
+            patent: "https://patents.google.com/patent/USPP32702 expires 2039-08-01"
+        },
+        {
+            name: "NY 109",
+            type: "Apple",
+            AKA: ["Firecracker (tm)"],
+            description: 'not the same as "Firecracker" crabapple https://cals.cornell.edu/news/2020/09/crunchy-complex-cornell-releases-three-new-apples',
+            patent: "https://patents.google.com/patent/USPP31145 expires 2038-03-30"
         }
-        // todo 2008 ebony pearl (NY 32)
-        // todo 2008 radiant pearl (NY 7679
-
-        // todo - newest apples
-        // NY56, NY73 and NY109 – marketed as Cordera, Pink Luster and Firecracker
-        // https://cals.cornell.edu/news/2020/09/crunchy-complex-cornell-releases-three-new-apples
-        // https://news.cornell.edu/stories/2020/09/crunchy-complex-cornell-releases-three-new-apples
     ]
 }
