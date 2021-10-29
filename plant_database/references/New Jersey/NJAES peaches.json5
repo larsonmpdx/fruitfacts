@@ -1,172 +1,174 @@
 {
-    title: "Midwest Apple Improvement Association Varieties",
+    title: "Rutgers New Jersey Agricultural Experiment Station Stone Fruit Varieties",
     author: "unknown",
     url: "https://agproducts.rutgers.edu/fruit-trees/varieties.html",
     accessed: "Oct 2021",
     locations: [
         {
-            name: "The Midwest, USA",
-            latitude: 40.77500060512835,
-            longitude: -81.92345805361427
+            name: "Cream Ridge, NJ",
+            latitude: 40.13233771380199,
+            longitude: -74.52852612532256
         }
     ],
     plants: [
-
-        NJ 356
-        August Rose (tm)
-        Peach
-        white-fleshed melting
-        This tree is tolerant to bacterial leaf spot and constriction canker
-        24 days after Redhaven
-        https://agproducts.rutgers.edu/fruit-trees/august-rose-peach.html
-        23,884
-
-
-        NJN 101
-        Avalon (tm)
-        Nectarine
-        yellow melting
-        low susceptibility to bacterial leaf spot.
-        10 days before Redhaven
-        https://agproducts.rutgers.edu/fruit-trees/avalon-nectarine.html
-        23,882
-
-
-        NJ 350
-        Desiree (r)
-        Peach
-        yellow firm
-        Low susceptibility to bacterial spot
-        28 days before Redhaven
-        https://agproducts.rutgers.edu/fruit-trees/desiree-peach.html
-        19,382e
-
-
-        NJ 351
-        Gloria (r)
-        Peach
-        yellow firm
-        Very low susceptibility to bacterial spot
-        +25
-        https://agproducts.rutgers.edu/fruit-trees/gloria-peach.html
-        18,224e
-        
-
-        NJ 354
-        July Rose (tm)
-        Peach
-        white firm
-        tolerant of bacterial leaf spot
-        5-7 days before Redhaven
-        https://agproducts.rutgers.edu/fruit-trees/july-rose-peach.html
-        23,669
-
-
-        NJ 354 
-        Messina (r)
-        Peach
-        yellow firm
-        Good tolerance to bacterial spot and constriction canker
-        (+28)
-        https://agproducts.rutgers.edu/fruit-trees/messina-peach.html
-        18,091
-
-
-        NJ 355
-        Scarlet Rose (tm)
-        Peach
-        white firm
-        Medium susceptibility to bacterial spot.
-        "early season" given in patent, no redhaven+/- in page
-        https://agproducts.rutgers.edu/fruit-trees/scarlet-rose-peach.html
-        https://patents.google.com/patent/USPP23883
-
-
-        NJ 353
-        Victoria (r)
-        Peach
-        firm yellow
-        High tolerance to bacterial spot
-        +47
-        https://agproducts.rutgers.edu/fruit-trees/victoria-peach.html
-        18,134
-
-
-        NJF 15
-        BuenOs II (tm)
-        Peach
-        flat, firm yellow
-        resistant to bacterial spot.
-        -3
-        https://agproducts.rutgers.edu/fruit-trees/buenos2-peach.html
-        20,128
-
-
-
-        
-        BuenOs (tm)
-        Peach
-        flat, melting yellow. self-sterile
-        Low susceptibility for bacterial spot
-        -6
-        https://agproducts.rutgers.edu/fruit-trees/buenos-peach.html
-        19273
-
-
-        NJN100 
-        Silver Gem (r)
-        Nectarine
-        firm white
-        Low susceptibility to bacterial spot
-        -14
-        https://agproducts.rutgers.edu/fruit-trees/silver-gem-nectarine.html
-        18147
-
-
-        NJF 17
-        TangOs II (r)
-        Peach
-        flat, green skin color, melting
-        resistant to bacterial spot.
-        +8
-        https://agproducts.rutgers.edu/fruit-trees/tangos2-peach.html
-        19383
-
-
-        NJF 16
-        TangOs (r)
-        Peach
-        flat, yellow non-melting
-        resistant to bacterial spot.
-        -4
-        https://agproducts.rutgers.edu/fruit-trees/tangos-peach.html
-        18,997
-
-
-        NJA150
-        Sugar Pearls (tm)
-        Apricot
-        self-fertile but better crops with a pollinator
-        https://agproducts.rutgers.edu/fruit-trees/sugar-pearls-apricot.html
-        https://patents.google.com/patent/USPP18639 expires 2026-07-06
-
-
-        H28-52-96270
-        Flat Wonderful (tm)
-        Peach
-        flat, yellow, dense
-        https://agproducts.rutgers.edu/fruit-trees/flat-wonderful-peach.html
-        https://patents.google.com/patent/USPP16836 expires 2025-03-25
-
-
-
         {
-            name: "",
-            AKA: [""],
-            type: "",
-            description: "",
-            harvest_time: "",
-            patent: "https://patents.google.com/patent/USPP expires "
+            name: "NJ 356",
+            AKA: ["August Rose (tm)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "tolerant",
+                constriction_canker: "tolerant"
+            },
+            harvest_time_relative: "Redhaven +24",
+            description: "white, melting. https://agproducts.rutgers.edu/fruit-trees/august-rose-peach.html",
+            patent: "https://patents.google.com/patent/USPP23884 expires 2031-09-27"
+        },
+        {
+            name: "NJN 101",
+            AKA: ["Avalon (tm)"],
+            type: "Nectarine",
+            disease_resistance: {
+                bacterial_spot: "Low susceptibility"
+            },
+            harvest_time_relative: "Redhaven -10",
+            description: "yellow melting. https://agproducts.rutgers.edu/fruit-trees/avalon-nectarine.html",
+            patent: "https://patents.google.com/patent/USPP23882 expires 2031-09-16"
+        },
+        {
+            name: "NJ 350",
+            AKA: ["Desiree (r)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "Low susceptibility"
+            },
+            harvest_time_relative: "Redhaven -28",
+            description: "yellow firm. https://agproducts.rutgers.edu/fruit-trees/desiree-peach.html",
+            patent: "https://patents.google.com/patent/USPP19382 expires 2026-11-02"
+        },
+        {
+            name: "NJ 351",
+            AKA: ["Gloria (r)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "Very low susceptibility"
+            },
+            harvest_time_relative: "Redhaven +25",
+            description: "yellow firm. https://agproducts.rutgers.edu/fruit-trees/gloria-peach.html",
+            patent: "https://patents.google.com/patent/USPP18224 expires 2026-01-28"
+        },
+        {
+            name: "NJ 354",
+            AKA: ["July Rose (tm)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "tolerant"
+            },
+            harvest_time_relative: "Redhaven -7 to -5",
+            description: "white firm. https://agproducts.rutgers.edu/fruit-trees/july-rose-peach.html",
+            patent: "https://patents.google.com/patent/USPP23669 expires 2031-09-27"
+        },
+        {
+            name: "NJ 352",
+            AKA: ["Messina (r)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "Good tolerance",
+                constriction_canker: "Good tolerance"
+            },
+            harvest_time_relative: "Redhaven +28",
+            description: "https://agproducts.rutgers.edu/fruit-trees/messina-peach.html",
+            patent: "https://patents.google.com/patent/USPP18091 expires 2026-03-29"
+        },
+        {
+            name: "NJ 355",
+            AKA: ["Scarlet Rose (tm)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "Medium susceptibility"
+            },
+            harvest_time_relative: '"early season" given in patent, no redhaven+/- in page',
+            description: "white. https://agproducts.rutgers.edu/fruit-trees/scarlet-rose-peach.html",
+            patent: "https://patents.google.com/patent/USPP23883 expires 2031-09-22"
+        },
+        {
+            name: "NJ 353",
+            AKA: ["Victoria (r)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "High tolerance"
+            },
+            harvest_time_relative: "Redhaven +47",
+            description: "yellow. https://agproducts.rutgers.edu/fruit-trees/victoria-peach.html",
+            patent: "https://patents.google.com/patent/USPP18134 expires 2026-03-29"
+        },
+        {
+            name: "NJF 15",
+            AKA: ["BuenOs II (tm)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "resistant"
+            },
+            harvest_time_relative: "Redhaven -3",
+            description: "flat, yellow. https://agproducts.rutgers.edu/fruit-trees/buenos2-peach.html",
+            patent: "https://patents.google.com/patent/USPP20128 expires 2027-03-16"
+        },
+        {
+            name: "NJF 18",
+            AKA: ["BuenOs (tm)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "Low susceptibility"
+            },
+            harvest_time_relative: "Redhaven -6",
+            description: "flat, melting yellow. self-sterile. https://agproducts.rutgers.edu/fruit-trees/buenos-peach.html",
+            patent: "https://patents.google.com/patent/USPP19273 expires 2027-03-16"
+        },
+        {
+            name: "NJN100",
+            AKA: ["Silver Gem (r)"],
+            type: "Nectarine",
+            disease_resistance: {
+                bacterial_spot: "Low susceptibility"
+            },
+            harvest_time_relative: "Redhaven -14",
+            description: "white. https://agproducts.rutgers.edu/fruit-trees/silver-gem-nectarine.html",
+            patent: "https://patents.google.com/patent/USPP18147 expires 2026-03-29"
+        },
+        {
+            name: "NJF 17",
+            AKA: ["TangOs II (r)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "resistant"
+            },
+            harvest_time_relative: "Redhaven +8",
+            description: "flat, green skin color, melting. https://agproducts.rutgers.edu/fruit-trees/tangos2-peach.html",
+            patent: "https://patents.google.com/patent/USPP19383 expires 2026-11-07"
+        },
+        {
+            name: "NJF 16",
+            AKA: ["TangOs (r)"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "resistant"
+            },
+            harvest_time_relative: "Redhaven -4",
+            description: "flat, yellow. https://agproducts.rutgers.edu/fruit-trees/tangos-peach.html",
+            patent: "https://patents.google.com/patent/USPP18997 expires 2026-08-04"
+        },
+        {
+            name: "NJA150",
+            AKA: ["Sugar Pearls (tm)"],
+            type: "Apricot",
+            description: "self-fertile but better crops with a pollinator. https://agproducts.rutgers.edu/fruit-trees/sugar-pearls-apricot.html",
+            patent: "https://patents.google.com/patent/USPP18639 expires 2026-07-06"
+        },
+        {
+            name: "H28-52-96270",
+            AKA: ["Flat Wonderful (tm)"],
+            type: "Peach",
+            description: "flat, yellow. https://agproducts.rutgers.edu/fruit-trees/flat-wonderful-peach.html",
+            patent: "https://patents.google.com/patent/USPP16836 expires 2025-03-25"
         }
     ]
 }

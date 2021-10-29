@@ -1,0 +1,41 @@
+{
+    title: "Rutgers New Jersey Agricultural Experiment Station Apple Varieties",
+    author: "unknown",
+    url: "various, Rutgers lacks a good history page as this breeding program shut down some time ago. Apples, Botany, Production and Uses 2003 Ed. Feree and Warrington. https://njaes.rutgers.edu/fs1303/",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Cream Ridge, NJ",
+            latitude: 40.13233771380199,
+            longitude: -74.52852612532256
+        }
+    ],
+    plants: [
+        {
+            name: "Jerseymac",
+            type: "Apple",
+            released: "1961"
+        },
+        {
+            name: "Mollies Delicious",
+            type: "Apple",
+            released: "1966"
+        },
+        {
+            name: "Vista Bella",
+            type: "Apple",
+            released: "1974"
+        },
+        {
+            name: "Summer Treat",
+            type: "Apple",
+            released: "1981"
+        },
+        {
+            name: "NJ 55",
+            AKA: ["Suncrisp (tm)"], // listed as (r) registered trademark in some places but Rutgers' own website claims (tm)
+            type: "Apple",
+            released: "1992"
+        }
+    ]
+}

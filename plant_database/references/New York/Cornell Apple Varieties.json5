@@ -1,0 +1,22 @@
+{
+    title: "Cornell Varieties",
+    author: "unknown",
+    url: "http://www.hort.cornell.edu/brown/pdfs/newfruitimpact.pdf",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Geneva, NY",
+            latitude: 42.87719192532212,
+            longitude: -77.00783342124748
+        }
+    ],
+    // Susan Brown apple varieties are in a separate file
+    plants: [
+        {
+            name: "",
+            type: "Apple",
+            released: "",
+            description: ""
+        }
+    ]
+}
