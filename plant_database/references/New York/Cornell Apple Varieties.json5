@@ -106,7 +106,7 @@
             name: "Empire",
             AKA: ["NY 45500-5"],
             type: "Apple",
-            description: "Mclntosh x Delicious",
+            description: "Mclntosh x Delicious https://ecommons.cornell.edu/handle/1813/5053",
             released: "1966"
         },
         {
@@ -162,7 +162,7 @@
             name: "Jonagold",
             AKA: ["NY 43013-1"],
             type: "Apple",
-            description: "Golden Delicious x Jonathan",
+            description: "Golden Delicious x Jonathan https://ecommons.cornell.edu/handle/1813/5214",
             released: "1968"
         },
         {
@@ -424,7 +424,7 @@
             name: "Wayne",
             AKA: ["NY 44420-1"],
             type: "Apple",
-            description: "N. W. Greening x Red Spy",
+            description: "N. W. Greening x Red Spy https://ecommons.cornell.edu/handle/1813/4817",
             released: "1962"
         },
         {

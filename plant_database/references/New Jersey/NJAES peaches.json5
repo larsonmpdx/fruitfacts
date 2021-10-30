@@ -1,7 +1,7 @@
 {
     title: "Rutgers New Jersey Agricultural Experiment Station Stone Fruit Varieties",
     author: "unknown",
-    url: "https://agproducts.rutgers.edu/fruit-trees/varieties.html",
+    url: "https://agproducts.rutgers.edu/fruit-trees/varieties.html and https://njaes.rutgers.edu/fs1300/ and https://njaes.rutgers.edu/peach/postharvest/pdfs/New-Peach-Varieties-and-Post-Harvest-Fruit-Quality.pdf",
     accessed: "Oct 2021",
     locations: [
         {
@@ -11,6 +11,7 @@
         }
     ],
     plants: [
+        // https://agproducts.rutgers.edu/fruit-trees/varieties.html
         {
             name: "NJ 356",
             AKA: ["August Rose (tm)"],
@@ -169,6 +170,67 @@
             type: "Peach",
             description: "flat, yellow. https://agproducts.rutgers.edu/fruit-trees/flat-wonderful-peach.html",
             patent: "https://patents.google.com/patent/USPP16836 expires 2025-03-25"
+        },
+        // https://njaes.rutgers.edu/fs1300/
+        {
+            name: "NJ 357",
+            AKA: ["Evelynn (tm)", "NJH7-47"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "low susceptibility"
+            },
+            harvest_time: "early august", // redhaven +/- todo
+            released: "2017",
+            description: "yellow",
+            patent: "ppaf 2017"
+        },
+        {
+            name: "NJ 358",
+            AKA: ["Selena (tm)", "NJ K64-197"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "low susceptibility"
+            },
+            harvest_time: "early september", // redhaven +/- todo
+            released: "2017",
+            description: "yellow",
+            patent: "ppaf 2017"
+        },
+        {
+            name: "NJ 359",
+            AKA: ["Tiana (tm)", "NJ K65-76"],
+            type: "Peach",
+            disease_resistance: {
+                bacterial_spot: "low susceptibility"
+            },
+            harvest_time: "mid september", // redhaven +/- todo
+            released: "2017",
+            description: "yellow",
+            patent: "ppaf 2017"
+        },
+        {
+            name: "NJN 102",
+            AKA: ["Brigantine (tm)", "NJH21-44"],
+            type: "Nectarine",
+            disease_resistance: {
+                bacterial_spot: "moderate susceptibility"
+            },
+            harvest_time: "late july", // redhaven +/- todo
+            released: "2017",
+            description: "yellow",
+            patent: "ppaf 2017"
+        },
+        {
+            name: "NJN 103",
+            AKA: ["Silverglo (tm)", "NJ K54-42"],
+            type: "Nectarine",
+            disease_resistance: {
+                bacterial_spot: "low susceptibility"
+            },
+            harvest_time: "early august", // redhaven +/- todo
+            released: "2017",
+            description: "white",
+            patent: "ppaf 2017"
         }
     ]
 }
