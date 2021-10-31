@@ -66,7 +66,7 @@
             type: "Raspberry",
             description: "Titan x NY950 https://ctl.cornell.edu/wp-content/uploads/plants/Crimson-Giant-Poster-small.pdf",
             released: "2011",
-            "patent": "https://patents.google.com/patent/USPP23375 expires 2031-03-19" 
+            patent: "https://patents.google.com/patent/USPP23375 expires 2031-03-19"
         },
         {
             name: "Crimson Night", // patent name
@@ -283,7 +283,7 @@
             type: "Raspberry",
             description: "red. Hilton x NY 598 (Newburgh x St. Walfried) https://ecommons.cornell.edu/handle/1813/5142",
             released: "1985",
-            "patent": "https://patents.google.com/patent/USPP5404 expired 2002-09-16"
+            patent: "https://patents.google.com/patent/USPP5404 expired 2002-09-16"
         },
         {
             name: "Taylor",
@@ -306,5 +306,14 @@
             description: "purple. Smith No. 1 x unknown purple",
             released: "1926"
         },
+        // https://news.cornell.edu/stories/2018/09/new-high-yield-strawberry-raspberry-varieties-released
+        {
+            name: "Crimson Treasure", // patent name
+            AKA: ["NY 12-30"],
+            type: "Raspberry",
+            description: "NY02-57 x Rafzaqu https://news.cornell.edu/stories/2018/09/new-high-yield-strawberry-raspberry-varieties-released",
+            released: "2018",
+            patent: "https://patents.google.com/patent/USPP32799 expires 2039-08-29"
+        }
     ]
 }

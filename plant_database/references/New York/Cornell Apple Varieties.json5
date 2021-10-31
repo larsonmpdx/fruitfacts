@@ -30,7 +30,7 @@
             name: "Barry",
             AKA: ["NY 4111"],
             type: "Apple",
-            description: "Mclntosh x Cox’s Orange Pippin",
+            description: "Mclntosh x Cox's Orange Pippin",
             released: "1957"
         },
         {
@@ -85,7 +85,7 @@
             name: "Dunning",
             AKA: ["NY 4526"],
             type: "Apple",
-            description: "Early Mclntosh x Cox’s Orange Pippin",
+            description: "Early Mclntosh x Cox's Orange Pippin",
             released: "1938"
         },
         {

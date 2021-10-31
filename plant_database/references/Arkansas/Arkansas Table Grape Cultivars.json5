@@ -1,0 +1,102 @@
+{
+    title: "Arkansas Table Grape Cultivars",
+    author: "Eric T. Stafne, Mississippi State University and John R. Clark, University of Arkansas",
+    url: "https://grapes.extension.org/arkansas-table-grape-cultivars/",
+    published: "June 2019",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Fruit Research Station, Clarksville",
+            latitude: 35.532778,
+            longitude: -93.403333
+        }
+    ],
+    plants: [
+        {
+            type: "Grape",
+            name: "Faith",
+            color: "blue",
+            seedless: true,
+            harvest_time: "late July to early August",
+            description: "non-slipskin, ripens early. good cold hardiness in Arkansas",
+            patent: "https://patents.google.com/patent/USPP25696 expires 2034-01-28"
+        },
+        {
+            type: "Grape",
+            name: "Gratitude",
+            color: "green",
+            seedless: true,
+            description: "exceptional crisp texture",
+            harvest_time: "late August",
+            patent: "https://patents.google.com/patent/USPP25746 expires 2034-01-25"
+        },
+        {
+            type: "Grape",
+            name: "Hope",
+            color: "green",
+            seedless: true,
+            harvest_time: "August 20th",
+            description: "fruity flavor and high yields. non-slipskin",
+            patent: "https://patents.google.com/patent/USPP25697 expires 2034-02-07"
+        },
+        {
+            type: "Grape",
+            name: "Joy",
+            color: "blue",
+            seedless: true,
+            harvest_time: "August 11th",
+            description: "non-slipskin, exceptional fruity flavor. very soft texture",
+            patent: "https://patents.google.com/patent/USPP25726 expires 2034-01-28"
+        },
+        {
+            type: "Grape",
+            name: "Jupiter",
+            color: "reddish-blue",
+            seedless: true,
+            description: "mild Muscat flavor. It is a non-slipskin type with crisp flesh texture. high yielding. moderate resistance to common fungal diseases. one of the hardier Arkansas cultivars"
+        },
+        {
+            type: "Grape",
+            name: "Mars",
+            color: "reddish-blue",
+            seedless: true,
+            description: "foxy flavor. slipskin. Skins are thick. high yielding. the most disease resistant of the Arkansas cultivars"
+        },
+        {
+            type: "Grape",
+            name: "Neptune",
+            color: "white",
+            seedless: true,
+            description: "non-slipskin and has a fruity flavor, but is not foxy. moderate yield. cold hardiness is moderate for a table grape"
+        },
+        {
+            type: "Grape",
+            name: "Reliance",
+            color: "red",
+            seedless: true,
+            description: "very cold hardy. most widely sold Arkansas cultivar. moderate yield. moderate resistance to common fungal diseases"
+        },
+        {
+            type: "Grape",
+            name: "Saturn",
+            color: "red",
+            seedless: true,
+            description: "strong fruity flavor. It is a non-slipskin. crisp flesh. some issues with cold hardiness and disease susceptibility that limit its commercial viability. low to moderate yield"
+        },
+        {
+            type: "Grape",
+            name: "Venus",
+            color: "dark",
+            seedless: "mostly",
+            description: "foxy, Muscat flavor. reliable producer. slipskin. high yielding. some resistance to common fungal diseases"
+        },
+        {
+            type: "Grape",
+            name: "Sunbelt",
+            color: "blue",
+            seedless: false,
+            description: "a juice grape that is very similar to ‘Concord’ but displays even ripening under hot conditions. low to moderate yield. good cold hardiness. moderate to high resistance to common fungal diseases",
+            patent: "https://patents.google.com/patent/USPP8511 expired 2012-09-25"
+        }
+    ]
+}

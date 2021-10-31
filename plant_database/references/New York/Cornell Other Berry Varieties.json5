@@ -11,31 +11,39 @@
         }
     ],
     plants: [
-
-BLACKBERRIES (3):
-Bailey Unknown 1950
-
-
-Darrow 24338 NY 15826 (Eldorado x Brewer) x Hedrick 1958
-
-
-Hedrick 15827 Eldorado x Brewer 1950
-
-
-ELDERBERRIES (1):
-York 12 Adams #2 x Ezyoff 1964
-
-
-GOOSEBERRIES (1):
-Fredonia 388 Unknown English var. o.p.* 1926
-
-
-
         {
-            name: "",
+            name: "Bailey",
             type: "Blackberry",
-            released: "",
-            description: ""
+            description: "unknown parentage",
+            released: "1950"
         },
+        {
+            name: "Darrow",
+            AKA: ["NY 24338"],
+            type: "Blackberry",
+            description: "NY 15826 (Eldorado x Brewer) x Hedrick",
+            released: "1958"
+        },
+        {
+            name: "Hedrick",
+            AKA: ["NY 15827"],
+            type: "Blackberry",
+            description: "Eldorado x Brewer",
+            released: "1950"
+        },
+        {
+            name: "York",
+            AKA: ["NY 12"],
+            type: "Elderberry",
+            description: "Adams #2 x Ezyoff",
+            released: "1964"
+        },
+        {
+            name: "Fredonia",
+            AKA: ["NY 388"],
+            type: "Gooseberry",
+            description: "Unknown English var. open pollinated",
+            released: "1926"
+        }
     ]
 }

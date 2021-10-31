@@ -11,144 +11,323 @@
         }
     ],
     plants: [
-
-Addison 1310 President x Marshall 1918
-
-
-Alden 1311 President x Marshall 1918
-
-
-Angola 1314 President x Marshall 1918
-
-
-Arcade 1329 President x Marshall 1918
-
-
-Argyle 1334 President x Marshall 1918
-
-
-Ashton 1341 President x Marshall 1918
-
-
-Athens 1345 President x Marshall 1918
-
-
-Aurora 1384 Prolific open pollinated 1918
-
-
-Beacon 1564 President x Marshall 1923
-
-
-Bliss 1695 Chesapeake x Atkins Continuity 1923
-
-
-Boquet 1730 Chesapeake x Pan American 1923
-
-
-Caldeonia 4869 Marshall x Howard 1931
-
-
-Camden 4792 Marshall x Howard 1931
-
-
-Canoga 1362 NY 1123 (Senga Sengana 1979
-Midland) x Holiday
-https://ecommons.cornell.edu/handle/1813/5090
-
-Cato 4803 Marshall x Howard 1931
-
-
-Catskill 4435 Marshall x Howard 1933
-
-
-Clermont 4281 Marshall x Howard 1931
-
-
-Clancy 304B MDUS4774 x MDUS5199 2003
-
-
-Culver 4799 Marshall x Howard 1931
-
-
-Dresden 10183 Deacon x Howard 1939
-
-
-Eden 24248 Dresden x Fairfax 1952
-
-
-Empire 25460 Dresden x Sparkle 1951
-
-
-Erie 28340 Sparkle x Howard 1951
-
-
-Essex 7225 Howard x Deutsch Evern 1951
-
-
-Fletcher 423 Midland x Suwannee 1959
-
-
-Fortune 386 USDA 2827 x self 1961
-
-
-Frontenac 96 Erie x (Fairfax x Dresden) 1959
-
-
-Fulton 233 Starbright x Pathfinder 1959
-
-
-Gala 418 Midland x Suwannee 1966
-
-
-Garnet 430 Midland x Suwannee 1965
-
-
-Geneva 547 NY 316 x Redrich 1961
-
-
-Herriot 99-21 NYUS299 x Winona 2011
-
-
-Holiday 1144 Raritan x NY 844 1972
-https://ecommons.cornell.edu/handle/1813/4056
-
-Honeoye 1409 Vibrant x Holiday 1979
-https://ecommons.cornell.edu/handle/1813/5090
-
-Hunn 198 Unknown 1894
-
-
-Jewel 1324 NY 1221 x Holiday 1985
-https://ecommons.cornell.edu/handle/1813/5145
-
-L’Amour 1829 (MDUS5252 x Etna) x Cavendish 2003
-
-
-Magnus 1235 Hunn x Marshall 1910
-
-
-Walker 99-15 NYUS299 (Blomdon x MNUS15) x 2011
-
-
-(marketed under NY1674 (Earliglow x NY1424)
-Purple Wonder™)
-
-
-Prolific 1244 Sample x Marshall 1908
-
-
-Quality 1258 Hunn x Atlantic 1910
-
-
-Seneca 1529 NY 1261 x Holiday 1991
-https://ecommons.cornell.edu/handle/1813/5200
-
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Addison",
+            AKA: ["NY 1310"],
             type: "Strawberry",
-            description: "",
-            released: ""
+            description: "President x Marshall",
+            released: "1918"
         },
+        {
+            name: "Alden",
+            AKA: ["NY 1311"],
+            type: "Strawberry",
+            description: "President x Marshall",
+            released: "1918"
+        },
+        {
+            name: "Angola",
+            AKA: ["NY 1314"],
+            type: "Strawberry",
+            description: "President x Marshall",
+            released: "1918"
+        },
+        {
+            name: "Arcade",
+            AKA: ["NY 1329"],
+            type: "Strawberry",
+            description: "President x Marshall",
+            released: "1918"
+        },
+        {
+            name: "Argyle",
+            AKA: ["NY 1334"],
+            type: "Strawberry",
+            description: "President x Marshall",
+            released: "1918"
+        },
+        {
+            name: "Ashton",
+            AKA: ["NY 1341"],
+            type: "Strawberry",
+            description: "President x Marshall",
+            released: "1918"
+        },
+        {
+            name: "Athens",
+            AKA: ["NY 1345"],
+            type: "Strawberry",
+            description: "President x Marshall",
+            released: "1918"
+        },
+        {
+            name: "Aurora",
+            AKA: ["NY 1384"],
+            type: "Strawberry",
+            description: "Prolific open pollinated",
+            released: "1918"
+        },
+        {
+            name: "Beacon",
+            AKA: ["NY 1564"],
+            type: "Strawberry",
+            description: "President x Marshall",
+            released: "1923"
+        },
+        {
+            name: "Bliss",
+            AKA: ["NY 1695"],
+            type: "Strawberry",
+            description: "Chesapeake x Atkins Continuity",
+            released: "1923"
+        },
+        {
+            name: "Boquet",
+            AKA: ["NY 1730"],
+            type: "Strawberry",
+            description: "Chesapeake x Pan American",
+            released: "1923"
+        },
+        {
+            name: "Caldeonia",
+            AKA: ["NY 4869"],
+            type: "Strawberry",
+            description: "Marshall x Howard",
+            released: "1931"
+        },
+        {
+            name: "Camden",
+            AKA: ["NY 4792"],
+            type: "Strawberry",
+            description: "Marshall x Howard",
+            released: "1931"
+        },
+        {
+            name: "Canoga",
+            AKA: ["NY 1362"],
+            type: "Strawberry",
+            description: "NY 1123 (Senga Sengana Midland) x Holiday https://ecommons.cornell.edu/handle/1813/5090",
+            released: "1979"
+        },
+        {
+            name: "Cato",
+            AKA: ["NY 4803"],
+            type: "Strawberry",
+            description: "Marshall x Howard",
+            released: "1931"
+        },
+        {
+            name: "Catskill",
+            AKA: ["NY 4435"],
+            type: "Strawberry",
+            description: "Marshall x Howard",
+            released: "1933"
+        },
+        {
+            name: "Clermont",
+            AKA: ["NY 4281"],
+            type: "Strawberry",
+            description: "Marshall x Howard",
+            released: "1931"
+        },
+        {
+            name: "Clancy", // patent name
+            AKA: ["NY 304B"],
+            type: "Strawberry",
+            description: "MDUS4774 x MDUS5199",
+            released: "2003",
+            patent: "https://patents.google.com/patent/USPP16571 expires 2024-11-11"
+        },
+        {
+            name: "Culver",
+            AKA: ["NY 4799"],
+            type: "Strawberry",
+            description: "Marshall x Howard",
+            released: "1931"
+        },
+        {
+            name: "Dresden",
+            AKA: ["NY 10183"],
+            type: "Strawberry",
+            description: "Deacon x Howard",
+            released: "1939"
+        },
+        {
+            name: "Eden",
+            AKA: ["NY 24248"],
+            type: "Strawberry",
+            description: "Dresden x Fairfax",
+            released: "1952"
+        },
+        {
+            name: "Empire",
+            AKA: ["NY 25460"],
+            type: "Strawberry",
+            description: "Dresden x Sparkle",
+            released: "1951"
+        },
+        {
+            name: "Erie",
+            AKA: ["NY 28340"],
+            type: "Strawberry",
+            description: "Sparkle x Howard",
+            released: "1951"
+        },
+        {
+            name: "Essex",
+            AKA: ["NY 7225"],
+            type: "Strawberry",
+            description: "Howard x Deutsch Evern",
+            released: "1951"
+        },
+        {
+            name: "Fletcher",
+            AKA: ["NY 423"],
+            type: "Strawberry",
+            description: "Midland x Suwannee",
+            released: "1959"
+        },
+        {
+            name: "Fortune",
+            AKA: ["NY 386"],
+            type: "Strawberry",
+            description: "USDA 2827 x self",
+            released: "1961"
+        },
+        {
+            name: "Frontenac",
+            AKA: ["NY 96"],
+            type: "Strawberry",
+            description: "Erie x (Fairfax x Dresden)",
+            released: "1959"
+        },
+        {
+            name: "Fulton",
+            AKA: ["NY 233"],
+            type: "Strawberry",
+            description: "Starbright x Pathfinder",
+            released: "1959"
+        },
+        {
+            name: "Gala",
+            AKA: ["NY 418"],
+            type: "Strawberry",
+            description: "Midland x Suwannee",
+            released: "1966"
+        },
+        {
+            name: "Garnet",
+            AKA: ["NY 430"],
+            type: "Strawberry",
+            description: "Midland x Suwannee",
+            released: "1965"
+        },
+        {
+            name: "Geneva",
+            AKA: ["NY 547"],
+            type: "Strawberry",
+            description: "NY 316 x Redrich",
+            released: "1961"
+        },
+        {
+            name: "Herriot",
+            AKA: ["NY 99-21"],
+            type: "Strawberry",
+            description: "NYUS299 x Winona https://news.cornell.edu/stories/2012/01/rugged-new-strawberry-has-hint-pineapple",
+            released: "2011",
+            patent: "https://patents.google.com/patent/USPP24613 expires 2033-01-17"
+        },
+        {
+            name: "Holiday",
+            AKA: ["NY 1144"],
+            type: "Strawberry",
+            description: "Raritan x NY 844 https://ecommons.cornell.edu/handle/1813/4056",
+            released: "1972"
+        },
+        {
+            name: "Honeoye",
+            AKA: ["NY 1409"],
+            type: "Strawberry",
+            description: "Vibrant x Holiday https://ecommons.cornell.edu/handle/1813/5090",
+            released: "1979"
+        },
+        {
+            name: "Hunn",
+            AKA: ["NY 198"],
+            type: "Strawberry",
+            description: "Unknown parentage",
+            released: "1894"
+        },
+        {
+            name: "Jewel",
+            AKA: ["NY 1324"],
+            type: "Strawberry",
+            description: "NY 1221 x Holiday https://ecommons.cornell.edu/handle/1813/5145",
+            released: "1985",
+            patent: "https://patents.google.com/patent/USPP5897 expired 2005-07-02"
+        },
+        {
+            name: "L'Amour", // patent name
+            AKA: ["NY 1829"],
+            type: "Strawberry",
+            description: "(MDUS5252 x Etna) x Cavendish",
+            released: "2003",
+            patent: "https://patents.google.com/patent/USPP16480 expires 2024-10-30"
+        },
+        {
+            name: "Magnus",
+            AKA: ["NY 1235"],
+            type: "Strawberry",
+            description: "Hunn x Marshall",
+            released: "1910"
+        },
+        {
+            name: "Walker", // patent name
+            AKA: ["Purple Wonder™", "NY 99-15"],
+            type: "Strawberry",
+            description: "NYUS299 (Blomdon x MNUS15) x NY1674 (Earliglow x NY1424). burpee exclusive",
+            released: "2011",
+            patent: "https://patents.google.com/patent/USPP24612 expires 2032-10-17"
+        },
+        {
+            name: "Prolific",
+            AKA: ["NY 1244"],
+            type: "Strawberry",
+            description: "Sample x Marshall",
+            released: "1908"
+        },
+        {
+            name: "Quality",
+            AKA: ["NY 1258"],
+            type: "Strawberry",
+            description: "Hunn x Atlantic",
+            released: "1910"
+        },
+        {
+            name: "Seneca", // patent name
+            AKA: ["NY 1529"],
+            type: "Strawberry",
+            description: "NY 1261 x Holiday https://ecommons.cornell.edu/handle/1813/5200",
+            released: "1991",
+            patent: "https://patents.google.com/patent/USPP8991 expired 2011-11-29"
+        },
+        // https://news.cornell.edu/stories/2016/09/archer-newest-cornell-strawberry-hits-sweet-spot
+        {
+            name: "Archer", // patent name
+            AKA: ["NY 01-16"],
+            type: "Strawberry",
+            description: "NY1786 x L'Amour https://news.cornell.edu/stories/2016/09/archer-newest-cornell-strawberry-hits-sweet-spot",
+            released: "2016",
+            patent: "https://patents.google.com/patent/USPP30213 expires 2037-08-31"
+        },
+        // https://news.cornell.edu/stories/2018/09/new-high-yield-strawberry-raspberry-varieties-released
+        {
+            name: "Dickens", // patent name
+            AKA: ["NY 02-56"],
+            type: "Strawberry",
+            description: "Jewel x Clancy https://news.cornell.edu/stories/2018/09/new-high-yield-strawberry-raspberry-varieties-released",
+            released: "2018",
+            patent: "https://patents.google.com/patent/USPP32535 expires 2039-08-01"
+        }
     ]
 }

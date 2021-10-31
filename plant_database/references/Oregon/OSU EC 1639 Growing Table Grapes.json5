@@ -217,7 +217,8 @@
             berry_size: "Medium",
             flavor: "Sweet, foxy, fruity",
             pruning: "Spur",
-            description: "Cold hardy (-20°F); slip skin; fruit may not develop good red color in some years and may crack in wet fall; tender skin; good for raisins, fresh, jellies, and juice"
+            description: "Cold hardy (-20°F); slip skin; fruit may not develop good red color in some years and may crack in wet fall; tender skin; good for raisins, fresh, jellies, and juice",
+            patent: "https://patents.google.com/patent/USPP5174 expired 2002-12-27"
         },
         {
             type: "Grape",
@@ -341,7 +342,7 @@
             clusters: "Medium",
             berry_size: "Medium",
             flavor: "Foxy; juicy; sweet; low acid",
-            description: "Cold hardy; slip skin; juice similar to Concord; berries prone to splitting; fresh fruit doesn’t store well; not ideal for juice; vine does best in light, fertile soil"
+            description: "Cold hardy; slip skin; juice similar to Concord; berries prone to splitting; fresh fruit doesn't store well; not ideal for juice; vine does best in light, fertile soil"
         },
         {
             type: "Grape",
