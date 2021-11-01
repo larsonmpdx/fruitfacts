@@ -26,9 +26,10 @@
             name: "Gratitude",
             color: "green",
             seedless: true,
-            description: "exceptional crisp texture",
+            description: "exceptional crisp texture https://uark.flintbox.com/technologies/aa7b9d9c-5835-4c81-a2c9-8a9067e330ac",
             harvest_time: "late August",
-            patent: "https://patents.google.com/patent/USPP25746 expires 2034-01-25"
+            patent: "https://patents.google.com/patent/USPP25746 expires 2034-01-25",
+            released: "2012"
         },
         {
             type: "Grape",
@@ -95,8 +96,20 @@
             name: "Sunbelt",
             color: "blue",
             seedless: false,
-            description: "a juice grape that is very similar to ‘Concord’ but displays even ripening under hot conditions. low to moderate yield. good cold hardiness. moderate to high resistance to common fungal diseases",
+            description: "a juice grape that is very similar to ‘Concord' but displays even ripening under hot conditions. low to moderate yield. good cold hardiness. moderate to high resistance to common fungal diseases",
             patent: "https://patents.google.com/patent/USPP8511 expired 2012-09-25"
         }
+
+        // todo "Compassion"
+        // https://patents.google.com/patent/USPP31526 expires 2038-09-17
+        // https://journals.ashs.org/hortsci/downloadpdf/journals/hortsci/53/3/article-p401.xml
+        // https://uark.flintbox.com/technologies/75239314-1151-4124-8251-16a70cc192b4
+
+        // todo Grape plant named 'A-2640'. I think this is part of a UIdaho cooperation but not named or released
+        // https://patents.google.com/patent/USPP20745 expires 2028-06-10
+        // https://scholarworks.uark.edu/pat/82/
+
+        // todo - go through https://scholarworks.uark.edu/do/search/?q=author_lname%3A%22Clark%22%20author_fname%3A%22John%22&start=25&context=6377311&facet=#query-results
+        // todo - go through https://scholarworks.uark.edu/do/search/?q=author_lname%3A%22Moore%22%20author_fname%3A%22James%22&start=0&context=6377311&facet=publication_facet%3APatents%20Granted#
     ]
 }

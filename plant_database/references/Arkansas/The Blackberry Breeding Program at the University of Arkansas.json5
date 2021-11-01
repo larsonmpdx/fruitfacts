@@ -1,7 +1,7 @@
 {
     title: "The Blackberry Breeding Program at the University of Arkansas: Thirty-plus Years of Progress and Developments for the Future",
     author: "John R. Clark",
-    url: "https://www.actahort.org/books/505/505_8.htm",
+    url: "https://www.actahort.org/books/505/505_8.htm and others for releases newer than this paper",
     published: "1999",
     accessed: "Oct 2021",
     locations: [
@@ -60,5 +60,80 @@
             patent: "https://patents.google.com/patent/USPP9861 expired 2015-11-06",
             released: "1996"
         }
+// newer than the acta hort paper:
+
+        // chickasaw released 1998
+        // https://patents.google.com/patent/USPP11861 expired 2019-01-11
+
+
+        // Ouachita
+        // 
+        // https://scholarworks.uark.edu/pat/114/
+
+        // Prime-Jim APF-12
+        // https://patents.google.com/patent/USPP16989 expires 2024-06-15
+        // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2005/Prime-Jan2005.pdf
+
+        // Prime-Jan
+        // APF-8
+        // https://patents.google.com/patent/USPP15788 expires 2024-05-01
+        // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2005/Prime-Jan2005.pdf
+
+        // Prime-Ark freedom
+        // APF-153T (matched by patent number)
+        // https://patents.google.com/patent/USPP26990 expires 2035-03-05
+
+        // prime-ark traveler
+        // APF-190T
+        // https://patents.google.com/patent/USPP28598 expires 2036-01-19
+        // https://www.emcocal.com/apf-190t-prime-ark-traveler/
+
+        // prime-ark 45 assume this is APF-45?
+        // https://patents.google.com/patent/USPP22449 expires 2030-06-03
+
+        // Natchez
+        // https://patents.google.com/patent/USPP20891 expires 2028-05-15
+
+        // Osage 26120
+
+        // 2020: 'A-2538T' , Sweet-Ark ® 'Ponca'
+        // APF-268; 'Prime-Ark Horizon' released 2021
+
+        // Emilia - sold to hortifruit I guess
+        // https://patents.google.com/patent/USPP26902 expires 2033-04-10
+
+        // Camila - sold to hortifruit
+        // https://patents.google.com/patent/USPP26368 expires 2033-06-16
+
+        // Amara, another hortifruit
+        // https://patents.google.com/patent/USPP26413 expires 2033-08-30
+
+        // Reuben - sold to Hargreaves Plants Ltd (UK propagation company)
+        // https://patents.google.com/patent/USPP23497 expires 2030-12-10
+
+
+        // to match
+
+        // APF-77 Black Magic - sold to gurney's?
+        // https://patents.google.com/patent/USPP24249 expires 2032-04-05
+        // https://plantbreeding.oregonstate.edu/biblio/black-magictmapf-77-primocane-fruiting-blackberry - I haven't found this pdf yet
+
+
+        // APF-236T Baby Cakes™ Blackberry monrovia
+        // https://patents.google.com/patent/USPP27032 expires 2035-03-08
+
+        // APF-122 Mary Carmen
+        // https://www.emcocal.com/apf-122/
+        // https://patents.google.com/patent/USPP27401 expires 2034-04-28
+
+        // A-2312
+        // https://patents.google.com/patent/USPP25864 expires 2033-08-23
+
+        // A-1960 - can't find this referenced anywhere
+        // https://patents.google.com/patent/USPP26405 expires 2034-06-04
+
+
+        // 2019-006 Blackberry- 'Sweet-Ark™ Caddo'
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/54/9/article-p1632.xml
     ]
 }
