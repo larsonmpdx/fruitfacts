@@ -1,0 +1,71 @@
+{
+    title: "USDA ARS Byron, GA releases",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "USDA ARS Byron, GA",
+            latitude: 32.65742348055435,
+            longitude: -83.7417858800921
+        }
+    ],
+    plants: [
+        {
+            name: "",
+            type: "Peach",
+            description: "",
+            released: "2020",
+            patent: ""
+        },
+
+
+Crimson Joy  2000
+        https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p972.xml
+Rich Joy Peach  2000
+        https://journals.ashs.org/hortsci/view/journals/hortsci/55/4/article-p591.xml;
+Liberty Joy Peach  2000
+        https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p951.xml
+
+
+
+// Scarletpearl 1993
+// Okie, W.R. 1993 Goldprince and Scarletpearl peaches HortScience 28 231
+
+// Goldprince 1993
+// Okie, W.R. 1993 Goldprince and Scarletpearl peaches HortScience 28 231
+
+// Early Augustprince 2008
+// Okie, W.R. & Layne, D.R. 2008a Early Augustprince and Augustprince peaches HortScience 43 1600 1602
+
+// Augustprince 2008
+// Okie, W.R. & Layne, D.R. 2008a Early Augustprince and Augustprince peaches HortScience 43 1600 1602
+
+
+// Scarletprince 2008
+// Okie, W.R. & Layne, D.R. 2008b Scarletprince and Julyprince peaches HortScience 43 1603 1605
+
+// Julyprince 2008
+// Okie, W.R. & Layne, D.R. 2008b Scarletprince and Julyprince peaches HortScience 43 1603 1605
+
+
+
+// Sunprince
+// Okie, W.R., Prince, V.E. & Reilly, C.C. 1982 Sunprince peach HortScience 17 414
+
+
+// Juneprince 1987
+// Okie, W.R. & Reilly, C.C. 1987 Juneprince and Fireprince peaches HortScience 22 325 326
+
+
+// Fireprince 1987
+// Okie, W.R. & Reilly, C.C. 1987 Juneprince and Fireprince peaches HortScience 22 325 326
+
+
+
+
+
+
+    ]
+}
