@@ -339,6 +339,13 @@ fn test_parse_relative_harvest() {
             relative_days: -31
         })
     );
+    assert_eq!(
+        parse_relative_harvest("Delicious -5 to -4 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Delicious".to_string(),
+            relative_days: -31
+        })
+    );
 }
 
 #[test]

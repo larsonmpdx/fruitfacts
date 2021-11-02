@@ -12,6 +12,8 @@
         }
     ],
     plants: [
+
+        /*
         {
             name: "",
             type: "Peach",
@@ -20,13 +22,13 @@
             patent: ""
         },
 
-
-Crimson Joy  2000
-        https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p972.xml
-Rich Joy Peach  2000
-        https://journals.ashs.org/hortsci/view/journals/hortsci/55/4/article-p591.xml;
-Liberty Joy Peach  2000
-        https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p951.xml
+*/
+// Crimson Joy  2000
+//         https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p972.xml
+// Rich Joy Peach  2000
+//         https://journals.ashs.org/hortsci/view/journals/hortsci/55/4/article-p591.xml;
+// Liberty Joy Peach  2000
+//        https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p951.xml
 
 
 
@@ -51,7 +53,7 @@ Liberty Joy Peach  2000
 
 
 
-// Sunprince
+// Sunprince 1982
 // Okie, W.R., Prince, V.E. & Reilly, C.C. 1982 Sunprince peach HortScience 17 414
 
 

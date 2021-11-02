@@ -1,5 +1,18 @@
 
-
+{
+    title: "Arkansas Peahes and Nectarines",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "",
+    locations: [
+        {
+            name: "Fruit Research Station, Clarksville",
+            latitude: 35.532778,
+            longitude: -93.403333
+        }
+    ],
+    plants: [
 // 'Whitewater" Peach 'A-856' 2021
 
 
@@ -37,3 +50,5 @@
 
 // Effie        https://uark.flintbox.com/technologies/cc9f10df-bedb-4372-9eaa-6b2c19bdbaf4
 // released 2018
+    ]
+}

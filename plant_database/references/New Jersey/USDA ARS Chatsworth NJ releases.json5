@@ -1,3 +1,18 @@
+{
+    title: "USDA ARS Chatsworth NJ Releases",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "USDA ARS Chatsworth NJ",
+            latitude: 39.71401390735407,
+            longitude: -74.51148659775583
+        }
+    ],
+    plants: [
+
 // todo - Nocturne Blueberry AKA: ["US 1056"]  https://agresearchmag.ars.usda.gov/2015/jun/blueberry/
 // todo - Chandler (1994;USDA-ARS, Chatsworth, primary releasing institution)
 //        Chandler was initially selected and developed by Arlen Draper at the ARS Fruit Laboratory in Beltsville, Maryland. Mark K. Ehlenfeldt, a geneticist at the ARS Blueberry/Cranberry Research Laboratory in Chatsworth, New Jersey, completed its development and cooperative release with ARS in Oregon.
@@ -20,3 +35,5 @@
 // todo -  (2005; USDA-ARS, Chatsworth, primary releasing institution)
 // Razz   11-104    https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/razz/
 // Sweetheart    ARS 99-88      https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/sweetheart/
+    ]
+}

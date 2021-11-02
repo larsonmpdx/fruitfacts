@@ -17,7 +17,7 @@
             name: "Prima",
             type: "Apple",
             AKA: ["Co-op 2"],
-            harvest_time: "Delicious -5 to -4 weeks",
+            harvest_time_relative: "Delicious -5 to -4 weeks",
             disease_resistance: {
                 scab: "Highly resistant",
                 powdery_mildew: "Good resistance",
@@ -31,7 +31,7 @@
             name: "Priscilla",
             type: "Apple",
             AKA: ["Co-op 4"],
-            harvest_time: "Delicious -2 weeks",
+            harvest_time_relative: "Delicious -2 weeks",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "good level of resistance",
@@ -45,7 +45,7 @@
             name: "Sir Prize",
             type: "Apple",
             AKA: ["Co-op 5"],
-            harvest_time: "Delicious +0",
+            harvest_time_relative: "Delicious +0",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "good level of resistance",
@@ -59,7 +59,7 @@
             name: "Redfree",
             type: "Apple",
             AKA: ["Co-op 13"],
-            harvest_time: "Delicious -7 weeks",
+            harvest_time_relative: "Delicious -7 weeks",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "moderate level of resistance",
@@ -73,7 +73,7 @@
             name: "Dayton",
             type: "Apple",
             AKA: ["Co-op 21"],
-            harvest_time: "Delicious -5 to -4 weeks",
+            harvest_time_relative: "Delicious -5 to -4 weeks",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "moderate resistance",
@@ -87,7 +87,7 @@
             name: "Jonafree",
             type: "Apple",
             AKA: ["Co-op 22"],
-            harvest_time: "Delicious -1 week",
+            harvest_time_relative: "Delicious -1 week",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "moderately susceptible",
@@ -101,7 +101,7 @@
             name: "Williams' Pride",
             type: "Apple",
             AKA: ["Co-op 23"],
-            harvest_time: "Delicious -8 to -7 weeks",
+            harvest_time_relative: "Delicious -8 to -7 weeks",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "good level of resistance",
@@ -115,7 +115,7 @@
             name: "Co-op 25",
             type: "Apple",
             AKA: ["Scarlett O'Hara (tm)"],
-            harvest_time: "Delicious -1 to -0.5 weeks",
+            harvest_time_relative: "Delicious -1 to -0.5 weeks",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "moderately resistant",
@@ -129,7 +129,7 @@
             name: "Co-op 29",
             type: "Apple",
             AKA: ["Sundance (tm)"],
-            harvest_time: "Delicious +2.5 weeks",
+            harvest_time_relative: "Delicious +2.5 weeks",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "moderately resistant",
@@ -143,7 +143,7 @@
             name: "Enterprise",
             type: "Apple",
             AKA: ["Co-op 30"],
-            harvest_time: "Delicious +2.5 weeks",
+            harvest_time_relative: "Delicious +2.5 weeks",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "moderately resistant",
@@ -157,7 +157,7 @@
             name: "Co-op 31",
             type: "Apple",
             AKA: ["WineCrisp (tm)"],
-            harvest_time: "Delicious +2 weeks",
+            harvest_time_relative: "Delicious +2 weeks",
             disease_resistance: {
                 scab: "Field immune",
                 powdery_mildew: "moderately resistant",
@@ -240,7 +240,7 @@
         {
             name: "Priam",
             type: "Apple",
-            harvest_time: "Delicious -1 to -2 weeks",
+            harvest_time_relative: "Delicious -1 to -2 weeks",
             disease_resistance: {
                 // no other disease notes
                 scab: "resistant"
@@ -251,7 +251,7 @@
         {
             name: "McShay",
             type: "Apple",
-            harvest_time: "Delicious -3 weeks",
+            harvest_time_relative: "Delicious -3 weeks",
             disease_resistance: {
                 scab: "Leaves and fruit are field immune",
                 powdery_mildew: "Leaves susceptible, fruit resistant"

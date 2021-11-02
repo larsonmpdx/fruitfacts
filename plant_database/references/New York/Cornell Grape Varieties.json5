@@ -11,88 +11,68 @@
         }
     ],
     plants: [
-
-
-Alden 13035 Ontario x Grosse Guillaume 
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Alden",
+            AKA: ["NY 13035"],
             type: "Grape",
-            description: "",
+            description: "Ontario x Grosse Guillaume",
             released: "1952"
         },
-
-Athens 12046 Hubbard x Portland 
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Athens",
+            AKA: ["NY 12046"],
             type: "Grape",
-            description: "",
+            description: "Hubbard x Portland",
             released: "1938"
         },
-
-Bath 18149 Fredonia x (Chass. Rose Violet x Mills) 
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Bath",
+            AKA: ["NY 18149"],
             type: "Grape",
-            description: "",
+            description: "Fredonia x (Chass. Rose Violet x Mills)",
             released: "1952"
         },
-
-Brocton 3345 Brighton x (Winchell x Diamond) 
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Brocton",
+            AKA: ["NY 3345"],
             type: "Grape",
-            description: "",
+            description: "Brighton x (Winchell x Diamond)",
             released: "1919"
         },
-
-Bronx Seedless 12583 NY 8536 (Goff x Iona) x Sultanina 
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Bronx Seedless",
+            AKA: ["NY 12583"],
             type: "Grape",
-            description: "",
+            description: "NY 8536 (Goff x Iona) x Sultanina",
             released: "1937"
         },
-
-Buffalo 10830 Herbert x Watkins 
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Buffalo",
+            AKA: ["NY 10830"],
             type: "Grape",
-            description: "",
+            description: "Herbert x Watkins",
             released: "1938"
         },
-
-Canada Muscat 17806 Muscat Hamburg x Hubbard 
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Canada Muscat",
+            AKA: ["NY 17806"],
             type: "Grape",
-            description: "",
+            description: "Muscat Hamburg x Hubbard",
             released: "1961"
         },
-
-Canadice 45625 Bath x Himrod 
-(seedless)
-
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Canadice",
+            AKA: ["NY 45625"],
             type: "Grape",
-            description: " https://ecommons.cornell.edu/handle/1813/5220",
+            seedless: true,
+            description: "Bath x Himrod https://ecommons.cornell.edu/handle/1813/5220",
             released: "1977"
         },
-Cayuga White 33403 (GW3) Seyval x Schuyler 
-
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Cayuga White",
+            AKA: ["NY 33403"],
             type: "Grape",
-            description: " https://ecommons.cornell.edu/handle/1813/4054",
+            description: "(GW3) Seyval x Schuyler https://ecommons.cornell.edu/handle/1813/4054",
             released: "1972"
         },
         {
@@ -103,414 +83,329 @@ Cayuga White 33403 (GW3) Seyval x Schuyler
             released: "1991",
             patent: "https://patents.google.com/patent/USPP7860 expired 2010-09-19"
         },
- Seyve Villard 18-307 x Steuben 
-
         {
             name: "NY 70.0809.10",
             AKA: ["Corot noir (tm)"],
             type: "Grape",
-            description: "https://ecommons.cornell.edu/handle/1813/33326 http://www.hort.cornell.edu/reisch/grapegenetics/bulletin/Corot_noir.pdf",
+            description: "Seyve Villard 18-307 x Steuben https://ecommons.cornell.edu/handle/1813/33326 http://www.hort.cornell.edu/reisch/grapegenetics/bulletin/Corot_noir.pdf",
             released: "2006",
             patent: "can't find one. some growers charge a royalty. I dunno"
         },
-Dunkirk 2569 Brighton x Jefferson 1920
-        {
-            name: "",
-            AKA: ["NY "],
-            type: "Grape",
-            description: "",
-            released: ""
-        },
 
-Eden 11737 Ontario x (Triumph x Mills) 1938
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Dunkirk",
+            AKA: ["NY 2569"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Brighton x Jefferson",
+            released: "1920"
         },
-
-Einset Seedless 63.878.1 Fredonia x Canner (Hunisa x Sultanina) 1985
-https://ecommons.cornell.edu/handle/1813/5144
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Eden",
+            AKA: ["NY 11737"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Ontario x (Triumph x Mills)",
+            released: "1938"
         },
-Erie Gladwin 100 (Goff x Worden) x Worden 1932
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Einset Seedless",
+            AKA: ["NY 63.878.1"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Fredonia x Canner (Hunisa x Sultanina) https://ecommons.cornell.edu/handle/1813/5144",
+            released: "1985"
         },
-
-Fredonia Gladwin 15 Champion x Lucile 1927
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Erie",
+            AKA: ["NY Gladwin 100"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "(Goff x Worden) x Worden",
+            released: "1932"
         },
-
-Glenora 35814 Ontario x Black Kishmish 1977
-(seedless)
-https://ecommons.cornell.edu/handle/1813/5220
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Fredonia",
+            AKA: ["NY Gladwin 15"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Champion x Lucile",
+            released: "1927"
         },
-
-Goff 797 Unknown 1906
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Glenora",
+            AKA: ["NY 35814"],
             type: "Grape",
-            description: "",
-            released: ""
+            seedless: true,
+            description: "Ontario x Black Kishmish https://ecommons.cornell.edu/handle/1813/5220",
+            released: "1977"
         },
-
-Golden Muscat 10303 Muscat Hamburg x Diamond 1927
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Goff",
+            AKA: ["NY 797"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Unknown parentage",
+            released: "1906"
         },
-
-Geneva Red 34791 (GR7) Buffalo x Baco noir 2003
-http://www.hort.cornell.edu/reisch/grapegenetics/GR7.pdf
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Golden Muscat",
+            AKA: ["NY 10303"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Muscat Hamburg x Diamond",
+            released: "1927"
         },
-
-Hanover 1458 Brighton x Niagara 1928
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Geneva Red",
+            AKA: ["NY 34791", "GR7"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Buffalo x Baco noir http://www.hort.cornell.edu/reisch/grapegenetics/GR7.pdf",
+            released: "2003"
         },
-
-Hector 11456 Chasselas Rose x Brocton 1937
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Hanover",
+            AKA: ["NY 1458"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Brighton x Niagara",
+            released: "1928"
         },
-
-Himrod (seedless) 15310 Ontario x Sultanina 1952
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Hector",
+            AKA: ["NY 11456"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Chasselas Rose x Brocton",
+            released: "1937"
         },
-
-Horizon 33472 (GW7) Seyval x Schuyler 1982
-https://ecommons.cornell.edu/handle/1813/5103
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Himrod",
+            AKA: ["NY 15310"],
             type: "Grape",
-            description: "",
-            released: ""
+            seedless: true,
+            description: "Ontario x Sultanina",
+            released: "1952"
         },
-Interlaken Seedless 15292 Ontario x Sultanina 1947
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Horizon",
+            AKA: ["NY 33472", "GW7"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Seyval x Schuyler https://ecommons.cornell.edu/handle/1813/5103",
+            released: "1982"
         },
-
-Kendaia 12341 Portland x Hubbard 1939
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Interlaken Seedless",
+            AKA: ["NY 15292"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Ontario x Sultanina",
+            released: "1947"
         },
-
-Keuka 9936 Chasselas Rose x Mills 1923
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Kendaia",
+            AKA: ["NY 12341"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Portland x Hubbard",
+            released: "1939"
         },
-
-Lakemont 15305 Ontario x Sultanina 1972
-(seedless)
-https://ecommons.cornell.edu/handle/1813/4053
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Keuka",
+            AKA: ["NY 9936"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Chasselas Rose x Mills",
+            released: "1923"
         },
-Marquis 64.029.01 Athens x Emerald Seedless 1996
-(seedless)
-https://ecommons.cornell.edu/handle/1813/5212
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Lakemont",
+            AKA: ["NY 15305"],
             type: "Grape",
-            description: "",
-            released: ""
+            seedless: true,
+            description: "Ontario x Sultanina https://ecommons.cornell.edu/handle/1813/4053",
+            released: "1972"
         },
-
-Melody 65.444.4 Seyval x GW 5 (Pinot blanc x Ontario) 1985
-https://ecommons.cornell.edu/handle/1813/5143
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Marquis",
+            AKA: ["NY 64.029.01"],
             type: "Grape",
-            description: "",
-            released: ""
+            seedless: true,
+            description: "Athens x Emerald Seedless https://ecommons.cornell.edu/handle/1813/5212",
+            released: "1996"
         },
-Melton 9145 Triumph x [(Winchell x Diamond) 1923
-x Jefferson]
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Melody",
+            AKA: ["NY 65.444.4"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Seyval x GW 5 (Pinot blanc x Ontario) https://ecommons.cornell.edu/handle/1813/5143",
+            released: "1985"
         },
-
-Naples 17594 Delaware x (Mills x Iona) 1952
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Melton",
+            AKA: ["NY 9145"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Triumph x [(Winchell x Diamond) x Jefferson]",
+            released: "1923"
         },
-
-New York Muscat 12997 Muscat Hamburg x Ontario 1961
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Naples",
+            AKA: ["NY 17594"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Delaware x (Mills x Iona)",
+            released: "1952"
         },
-
-Noiret 73.0136.17 NY65.0467.08 x Steuben 2006
-https://ecommons.cornell.edu/handle/1813/33325
         {
-            name: "",
-            AKA: ["NY "],
+            name: "New York Muscat",
+            AKA: ["NY 12997"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Muscat Hamburg x Ontario",
+            released: "1961"
         },
-Ontario 95 Winchell x Diamond 1908
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Noiret",
+            AKA: ["NY 73.0136.17"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "NY65.0467.08 x Steuben https://ecommons.cornell.edu/handle/1813/33325",
+            released: "2006"
         },
-
-Pontiac 4265 Herbert x Worden 1922
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Ontario",
+            AKA: ["NY 95"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Winchell x Diamond ",
+            released: "1908"
         },
-
-Portland 4393 Champion x Lutie 1912
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Pontiac",
+            AKA: ["NY 4265"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Herbert x Worden",
+            released: "1922"
         },
-
-Remaily Seedless 65.085.1 Lady Patricia x NY 33979 1980
-https://ecommons.cornell.edu/handle/1813/5096
-
-Ripley 98 Winchell x Diamond 1912
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Portland",
+            AKA: ["NY 4393"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Champion x Lutie",
+            released: "1912"
         },
-
-Romulus 15291 Ontario x Sultanina 1952
-(seedless)
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Remaily Seedless",
+            AKA: ["NY 65.085.1"],
             type: "Grape",
-            description: "",
-            released: ""
+            seedless: true,
+            description: "Lady Patricia x NY 33979 https://ecommons.cornell.edu/handle/1813/5096",
+            released: "1980"
         },
-
-Ruby 11678 Keuka x Ontario 1938
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Ripley",
+            AKA: ["NY 98"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Winchell x Diamond",
+            released: "1912"
         },
-
-Schuyler 13920 Zinfandel x Ontario 1947
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Romulus",
+            AKA: ["NY 15291"],
             type: "Grape",
-            description: "",
-            released: ""
+            seedless: true,
+            description: "Ontario x Sultanina",
+            released: "1952"
         },
-
-Seneca 10513 Lignan blanc x Ontario 1930
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Ruby",
+            AKA: ["NY 11678"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Keuka x Ontario",
+            released: "1938"
         },
-
-Sheridan 4272 Herbert x Worden 1921
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Schuyler",
+            AKA: ["NY 13920"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Zinfandel x Ontario",
+            released: "1947"
         },
-
-Steuben 12696 Wayne x Sheridan 1947
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Seneca",
+            AKA: ["NY 10513"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Lignan blanc x Ontario",
+            released: "1930"
         },
-
-Stout Seedless 10918 (Triumph x Dutchess) x Sultanina Rose 1930
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Sheridan",
+            AKA: ["NY 4272"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Herbert x Worden",
+            released: "1921"
         },
-
-Suffolk Red 21572 Fredonia x Black Kishmish 1972
-(seedless)
-https://ecommons.cornell.edu/handle/1813/4053
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Steuben",
+            AKA: ["NY 12696"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Wayne x Sheridan",
+            released: "1947"
         },
-Traminette 65.533.13 J.S. 23-416 x Gewürztraminer 1996
-https://ecommons.cornell.edu/handle/1813/5213
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Stout Seedless",
+            AKA: ["NY 10918"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "(Triumph x Dutchess) x Sultanina Rose",
+            released: "1930"
         },
-
-Urbana 3518 Governor Ross x Mills 1912
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Suffolk Red",
+            AKA: ["NY 21572"],
             type: "Grape",
-            description: "",
-            released: ""
+            seedless: true,
+            description: "Fredonia x Black Kishmish https://ecommons.cornell.edu/handle/1813/4053",
+            released: "1972"
         },
-
-Valvin Muscat 62.0122.01 Couderc 299-35 x Muscat Ottonel 2006
-https://ecommons.cornell.edu/handle/1813/33324
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Traminette",
+            AKA: ["NY 65.533.13 "],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "J.S. 23-416 x Gewürztraminer https://ecommons.cornell.edu/handle/1813/5213",
+            released: "1996"
         },
-Van Buren Gladwin 3000 Fredonia x Worden 1935
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Urbana",
+            AKA: ["NY 3518"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Governor Ross x Mills",
+            released: "1912"
         },
-
-Watkins 7588 Mills x Ontario 1930
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Valvin Muscat",
+            AKA: ["NY 62.0122.01"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Couderc 299-35 x Muscat Ottonel https://ecommons.cornell.edu/handle/1813/33324",
+            released: "2006"
         },
-
-Wayne 7606 Mills x Ontario 1927
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Van Buren",
+            AKA: ["NY Gladwin 3000"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Fredonia x Worden",
+            released: "1935"
         },
-
-Westfield Gladwin 200 Herbert x Concord Seedless 1935
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Watkins",
+            AKA: ["NY 7588"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Mills x Ontario",
+            released: "1930"
         },
-
-Yates 11683 Mills x Ontario 1937
         {
-            name: "",
-            AKA: ["NY "],
+            name: "Wayne",
+            AKA: ["NY 7606"],
             type: "Grape",
-            description: "",
-            released: ""
+            description: "Mills x Ontario",
+            released: "1927"
         },
+        {
+            name: "Westfield",
+            AKA: ["NY Gladwin 200"],
+            type: "Grape",
+            description: "Herbert x Concord Seedless",
+            released: "1935"
+        },
+        {
+            name: "Yates",
+            AKA: ["NY 11683"],
+            type: "Grape",
+            description: "Mills x Ontario",
+            released: "1937"
+        }
     ]
 }

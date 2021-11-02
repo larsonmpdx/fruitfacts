@@ -1,7 +1,23 @@
-// Ozarkblue
+{
+    title: "Arkansas Blueberries",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "",
+    locations: [
+        {
+            name: "Fruit Research Station, Clarksville",
+            latitude: 35.532778,
+            longitude: -93.403333
+        }
+    ],
+    plants: [
+
+        // Ozarkblue
 // https://patents.google.com/patent/USPP10035 expired 2016-02-26
 
 // Norman
 // 2014-09 Blueberry Plant- 'Norman'        https://uark.flintbox.com/technologies/792a89ca-69d1-47da-976a-8635301126e1
 // https://patents.google.com/patent/USPP28502 expires 2036-01-19
-
+    ]
+}

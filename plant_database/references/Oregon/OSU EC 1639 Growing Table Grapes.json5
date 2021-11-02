@@ -15,7 +15,7 @@
     plants: [
         {
             type: "Grape",
-            name: "Interlaken",
+            name: "Interlaken Seedless",
             color: "Green",
             harvest_time_unparsed: "Very early (~ 6 weeks before Concord)",
             harvest_time_relative: "Concord -6 weeks",
