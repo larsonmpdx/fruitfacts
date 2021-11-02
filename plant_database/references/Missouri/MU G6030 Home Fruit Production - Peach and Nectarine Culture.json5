@@ -151,7 +151,7 @@
             description: "Budsport of Loring, large, very firm, freestone"
         },
         {
-            name: "TangOs",
+            name: "NJF 16", //"TangOs"
             type: "Peach",
             harvest_time_relative: "Redhaven +5",
             disease_resistance: {
@@ -169,7 +169,7 @@
             description: "Soft white flesh, acidic flavor, winter hardy"
         },
         {
-            name: "TangOs II",
+            name: "NJF 17", //"TangOs II"
             type: "Peach",
             harvest_time_relative: "Redhaven +8",
             disease_resistance: {
@@ -206,7 +206,7 @@
             description: "Medium-size, freestone, white flesh, nonbrowning"
         },
         {
-            name: "Messina",
+            name: "NJ 352", //"Messina"
             type: "Peach",
             harvest_time_relative: "Redhaven +28",
             disease_resistance: {
@@ -215,7 +215,7 @@
             description: "Large, freestone, highly colored fruit"
         },
         {
-            name: "Victoria",
+            name: "NJ 353", //"Victoria"
             type: "Peach",
             harvest_time_relative: "Redhaven +45",
             disease_resistance: {

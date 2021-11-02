@@ -43,7 +43,7 @@
             harvest_time: "Oct 10-20"
         },
         {
-            names: ["Williams' Pride", "Pristine", "Enterprise", "GoldRush"],
+            names: ["Williams' Pride", "Co-op 32" /*"Pristine"*/, "Enterprise", "GoldRush"],
             type: "Apple",
             category: "others",
             category_description: "For homeowner production in central and northern Arkansas, the University of Arkansas recommends these"

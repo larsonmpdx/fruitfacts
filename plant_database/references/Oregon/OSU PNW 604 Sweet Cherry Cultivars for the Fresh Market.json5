@@ -66,8 +66,8 @@
             description: "S3S4"
         },
         {
-            name: "NY32",
-            AKA: ["EbonyPearl (r)"],
+            name: "NY 32",
+            AKA: ["EbonyPearl (tm)"],
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -3 to +2",
             description: "S1S4"
@@ -129,7 +129,7 @@
             description: "blush. S1S3"
         },
         {
-            name: "Radiance Pearl",
+            name: "NY 7679", //"Radiance Pearl"
             type: "Sweet Cherry",
             harvest_time_relative: "Rainier -4 to -7",
             description: "blush. S1S13"

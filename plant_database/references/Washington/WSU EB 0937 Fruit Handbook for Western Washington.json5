@@ -177,7 +177,7 @@
             harvest_time: "mid to late October"
         },
         {
-            name: "Pristine",
+            name: "Co-op 32", //"Pristine"
             type: "Apple",
             category: "Disease resistant varieties",
             harvest_time: "early to mid August"

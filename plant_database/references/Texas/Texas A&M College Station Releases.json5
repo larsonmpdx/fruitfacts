@@ -1,3 +1,19 @@
-// TexPrince 2004
-// https://journals.ashs.org/hortsci/downloadpdf/journals/hortsci/39/3/article-p631.xml
-
+{
+    title: "Texas A&M College Station Releases",
+    author: "various",
+    url: "various",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "College Station, TX",
+            latitude: 30.523604287211427,
+            longitude: -96.42788616864308
+        }
+    ],
+    plants: [
+        // todo
+        // TexPrince 2004
+        // https://journals.ashs.org/hortsci/downloadpdf/journals/hortsci/39/3/article-p631.xml
+    ]
+}

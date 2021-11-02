@@ -16,6 +16,7 @@
         }
     ],
     plants: [
+        // todo - the remaining commented varieties already in here
         // todo - this pub https://catalog.extension.oregonstate.edu/ec1617/html
         // https://www.ars.usda.gov/news-events/news/research-news/2020/new-blackberries-eclipse-galaxy-and-twilight/
         {
@@ -220,7 +221,7 @@
             description: "https://journals.ashs.org/hortsci/view/journals/hortsci/54/2/article-p368.xml",
             released: "2019",
             patent: "https://patents.google.com/patent/USPP29787 expires 2037-03-28"
-        }
+        },
         {
             name: "Mini Blues",
             type: "Blueberry",

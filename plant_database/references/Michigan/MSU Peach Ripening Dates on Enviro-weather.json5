@@ -28,7 +28,7 @@
             harvest_time_relative: "Redhaven -28"
         },
         {
-            name: "Desiree",
+            name: "NJ 350", //"Desiree"
             type: "Peach",
             harvest_time_relative: "Redhaven -26"
         },
@@ -250,7 +250,7 @@
             harvest_time_relative: "Redhaven +16"
         },
         {
-            name: "Messina",
+            name: "NJ 352", //"Messina"
             type: "Peach",
             harvest_time_relative: "Redhaven +17"
         },
@@ -315,7 +315,7 @@
             harvest_time_relative: "Redhaven +26"
         },
         {
-            name: "Gloria (LA)",
+            name: "NJ 351", //"Gloria"
             type: "Peach",
             harvest_time_relative: "Redhaven +26"
         },
@@ -380,7 +380,7 @@
             harvest_time_relative: "Redhaven +41"
         },
         {
-            name: "Victoria",
+            name: "NJ 353", //"Victoria"
             type: "Peach",
             harvest_time_relative: "Redhaven +47"
         },

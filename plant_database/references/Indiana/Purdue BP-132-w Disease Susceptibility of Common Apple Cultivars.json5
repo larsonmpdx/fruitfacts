@@ -70,7 +70,7 @@
         },
         {
             type: "Apple",
-            name: "CrimsonCrisp",
+            name: "Co-op 39", //"CrimsonCrisp"
             disease_resistance: { scab: "VR", FB: "MR", rust: "S", PM: "MR" }
         },
         {
@@ -305,7 +305,7 @@
         },
         {
             type: "Apple",
-            name: "Pristine",
+            name: "Co-op 32", //"Pristine"
             disease_resistance: { scab: "VR", FB: "R", rust: "S", PM: "R" }
         },
         {
@@ -385,13 +385,12 @@
         },
         {
             type: "Apple",
-            // "Suncrisp"
-            name: "NJ 55",
+            name: "NJ 55", // "Suncrisp"
             disease_resistance: { scab: "MS", FB: "VS", rust: "MS", PM: "MS" }
         },
         {
             type: "Apple",
-            name: "Sundance",
+            name: "Co-op 29", //"Sundance"
             disease_resistance: { scab: "VR", FB: "R", rust: "R", PM: "MR" }
         },
         {

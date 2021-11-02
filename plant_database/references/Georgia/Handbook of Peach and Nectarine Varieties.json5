@@ -322,7 +322,7 @@
         { patent: "https://patents.google.com/patent/USPP3101", type: "Peach", name: "Ruby Gold" },
         { patent: "https://patents.google.com/patent/USPP3127", type: "Peach", name: "Stagg" },
         { patent: "https://patents.google.com/patent/USPP3133", type: "Peach", name: "Hi-Red" },
-        { patent: "https://patents.google.com/patent/USPP3145", type: "Peach", name: "Early Star" },
+        { patent: "https://patents.google.com/patent/USPP3145", type: "Nectarine", name: "Early Star" },
         { patent: "https://patents.google.com/patent/USPP3165", type: "Peach", name: "Red Diamond" },
         { patent: "https://patents.google.com/patent/USPP3179", type: "Peach", name: "Paul's Pride" },
         { patent: "https://patents.google.com/patent/USPP3202", type: "Peach", name: "Honey Gold" },
@@ -457,7 +457,7 @@
         { patent: "https://patents.google.com/patent/USPP5241", type: "Peach", name: "Ama Lin" },
         { patent: "https://patents.google.com/patent/USPP5245", type: "Peach", name: "May Qlo" },
         { patent: "https://patents.google.com/patent/USPP5251", type: "Peach", name: "Snowflame" },
-        { patent: "https://patents.google.com/patent/USPP5276", type: "Peach", name: "Honey Bee" },
+        { patent: "https://patents.google.com/patent/USPP5276", type: "Peach", name: "Honey Babe" }, //"Honey Bee"
         { patent: "https://patents.google.com/patent/USPP5297", type: "Peach", name: "Berenda Sun" },
         { patent: "https://patents.google.com/patent/USPP5344", type: "Peach", name: "Earlycrest" },
         { patent: "https://patents.google.com/patent/USPP5388", type: "Peach", name: "Raycrest" },
@@ -569,7 +569,11 @@
             type: "Peach",
             name: "Last Chance; Sprague Peach Bush"
         },
-        { patent: "https://patents.google.com/patent/USPP7364 expired 2009-04-07", type: "Nectarine", name: "Sun Burst" },
+        {
+            patent: "https://patents.google.com/patent/USPP7364 expired 2009-04-07",
+            type: "Nectarine",
+            name: "Sun Burst"
+        },
         { patent: "https://patents.google.com/patent/USPP7402", type: "Peach", name: "Earliglo" },
         { patent: "https://patents.google.com/patent/USPP7421", type: "Peach", name: "Rose Diamond" },
         { patent: "https://patents.google.com/patent/USPP7432", type: "Peach", name: "Rich May" },
@@ -682,10 +686,10 @@
         { patent: "https://patents.google.com/patent/USPP9643", type: "Peach", name: "Crystal Belle" },
         { patent: "https://patents.google.com/patent/USPP9673", type: "Peach", name: "Zee Diamond" },
         { patent: "https://patents.google.com/patent/USPP9695", type: "Peach", name: "Sweet Scarlet" },
-        { patent: "https://patents.google.com/patent/USPP9778", type: "Peach", name: "Star-Fire" },
+        { patent: "https://patents.google.com/patent/USPP9778", type: "Peach", name: "Star-Fire (Zaiger)" },
         // 630-631 page break
         { patent: "https://patents.google.com/patent/USPP9784", type: "Peach", name: "August White" },
-        { patent: "https://patents.google.com/patent/USPP9800", type: "Peach", name: "Siesta Gem" },
+        { patent: "https://patents.google.com/patent/USPP9800", type: "Peach", name: "Fiesta Gem" }, // "Siesta Gem"
         { patent: "https://patents.google.com/patent/USPP9841", type: "Peach", name: "Edwards Annbrosia" },
         { patent: "https://patents.google.com/patent/USPP9842", type: "Peach", name: "Earlitreat" },
         { patent: "https://patents.google.com/patent/USPP9850", type: "Peach", name: "PF 5B" },

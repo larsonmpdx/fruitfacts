@@ -1306,7 +1306,7 @@
         {
             type: "Peach",
             name: "Fiesta Gem",
-            AKA: ["Siesta Gem"],
+            AKA: ["Siesta Gem"], // patent name
             description: "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-yellow/fiesta_gem/",
             patent: "https://patents.google.com/patent/USPP9800 expired 2015-12-22",
             chill: "750-850 hours",

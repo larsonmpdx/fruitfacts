@@ -1,5 +1,5 @@
 {
-    title: "Peaches",
+    title: "Texas Fruit and Nut Production: Peaches",
     author: "Jim Kamas, Larry Stein, and Monte Nesbitt, Extension Fruit Specialists, The Texas A&M University System",
     url: "https://aggie-horticulture.tamu.edu/fruit-nut/files/2015/04/peaches_2015.pdf",
     published: "2015",
@@ -27,7 +27,7 @@
             harvest_time_relative: "Elberta -54"
         },
         {
-            name: "Junegold",
+            name: "June Gold",
             type: "Peach",
             chill: "650 hours",
             description: "Cling. listed for both high and medium chill areas",

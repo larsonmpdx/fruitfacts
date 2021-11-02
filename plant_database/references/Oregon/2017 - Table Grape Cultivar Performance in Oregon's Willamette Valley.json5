@@ -1,6 +1,21 @@
-https://ir.library.oregonstate.edu/concern/articles/0r967909t
+{
+    title: "Table Grape Cultivar Performance in Oregon's Willamette Valley",
+    author: "Vance, Amanda J., Strik, Bernadine C., Clark, John R.",
+    url: "https://ir.library.oregonstate.edu/concern/articles/0r967909t",
+    published: "2017",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Corvallis, OR", // todo - change to farm and nwrec
+            latitude: 44.54820212695868,
+            longitude: -123.21537145957399
+        }
+    ],
+    plants: [
 
 
+// NWREC; Aurora, OR, lat. 45°28′ N, long. 122°76′ W
+// Lewis Brown Farm (LB; Corvallis, OR, lat. 44°55’N, long. 123°22’W)
 
 // harvest dates and GDD
 /*
@@ -39,3 +54,6 @@ season and had an inferior quality compared
 to 'Neptune', another green-fruited late-season cultivar. 'Neptune' is thus a better lateseason option for growers in this region.
 
 */
+
+    ]
+}

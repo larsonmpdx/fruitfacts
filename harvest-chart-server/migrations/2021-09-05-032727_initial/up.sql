@@ -13,7 +13,7 @@ CREATE TABLE base_plants (
   uspp_expiration BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
 
   UNIQUE(uspp_number)
-  UNIQUE(name_fts, type) --combo of these columns must be unique.  example: name "Pristine" type "Apple"
+  UNIQUE(name_fts, type) --combo of these columns must be unique.  example: name "Co-op 32" type "Apple"
   UNIQUE(name, type)
 );
 

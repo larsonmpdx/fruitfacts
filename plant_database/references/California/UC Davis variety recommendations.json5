@@ -290,7 +290,7 @@
             category: "disease resistant"
         },
         {
-            name: "Pristine",
+            name: "Co-op 32", // "Pristine"
             type: "Apple",
             description: "Moderate to large, tart, yellow apple immune to scab and resistant to fire blight and mildew",
             category: "disease resistant"
