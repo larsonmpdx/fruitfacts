@@ -1,0 +1,320 @@
+{
+    title: "A2105 Apple Cultivars for Wisconsin",
+    author: "T.R. Roper",
+    url: "https://barron.extension.wisc.edu/files/2021/09/Apple-Cultivars-for-WI-A2105.pdf",
+    published: "various",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "UW-Madision, WI",
+            latitude: 43.07567692676346,
+            longitude: -89.41041826332773
+        }
+    ],
+    plants: [
+        // harvest times were given like "3rd week in August"
+        // I converted them like this:
+        // 1st week: day 4
+        // 2nd week: day 11
+        // 3rd week: day 18
+        // 4th week: day 25
+        {
+            name: "Lodi",
+            type: "Apple",
+            harvest_time: "August 4",
+            description: "Green to yellow. Tender, soft. Tart. Uses: cooking. 1 week storage. Moderately good early apple",
+            hardy: "down to zone 3",
+            disease_resistance: {
+                scab: "S",
+                CAR: "VS",
+                FB: "VS"
+            }
+        },
+        {
+            name: "Minnewashta", //"Zestar!"
+            type: "Apple",
+            harvest_time: "August 18",
+            description: "Red blush. Coarse, crisp. Balanced. Uses: all purpose. 1 month storage. Good early apple, stores well",
+            hardy: "down to zone 3",
+            disease_resistance: {
+                scab: "S",
+                CAR: "S",
+                FB: "S"
+            }
+        },
+        {
+            name: "Sunrise",
+            type: "Apple",
+            harvest_time: "August 18-25",
+            description: "Orange-yellow. Coarse. Sweet, aromatic. Uses: fresh, cooking. 2 weeks storage. Good early apple",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "S",
+                CAR: "S",
+                FB: "S"
+            }
+        },
+        {
+            name: "Paulared",
+            type: "Apple",
+            harvest_time: "August 18-25",
+            description: "Bright red. Firm, fine-grained. Mildly tart. Uses: fresh. 3 weeks storage. Good quality summer apple",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "S",
+                CAR: "S",
+                FB: "VS"
+            }
+        },
+        {
+            name: "Gala",
+            type: "Apple",
+            harvest_time: "September 11",
+            description: "Orange-red. Crisp, fine-grained. Very sweet, aromatic. Uses: fresh. 3 months storage. High quality fall apple, small fruit",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "S",
+                CAR: "VS",
+                FB: "VS"
+            },
+            strains: ["Royal Gala", "Imperial Gala", "Scarlet Gala", "Fulford Gala"]
+        },
+        {
+            name: "McIntosh",
+            type: "Apple",
+            harvest_time: "September 11",
+            description: "Red blush over green. Tender, fine-grained. Mildly tart, distinctive. Uses: fresh, cooking. 3 months storage. Wisconsin’s most popular apple",
+            hardy: "down to zone 3",
+            disease_resistance: {
+                scab: "VS",
+                CAR: "VR",
+                FB: "S"
+            },
+            strains: ["Rogers McIntosh", "Marshall McIntosh", "Mac Spur", "Redmax"]
+        },
+        {
+            name: "Ginger Gold",
+            type: "Apple",
+            harvest_time: "September 18",
+            description: "Yellow. Coarse. Sweet, spicy. Uses: fresh. 2 months storage. Very good yellow-skinned apple",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "S",
+                CAR: "S",
+                FB: "S"
+            }
+        },
+        {
+            name: "Cortland",
+            type: "Apple",
+            harvest_time: "September 25",
+            description: "Dark red. Firm, crisp. Sweet. Uses: fresh. 3 months storage. High-quality fall to winter apple",
+            hardy: "down to zone 3",
+            disease_resistance: {
+                scab: "VS",
+                CAR: "S",
+                FB: "S"
+            },
+            strains: ["Redcort"]
+        },
+        {
+            name: "Honeycrisp",
+            type: "Apple",
+            harvest_time: "September 25",
+            description: "Red blush over yellow. Coarse, very crisp, juicy. Sweet, aromatic. Uses: fresh 4 months storage. Very crisp, high quality eating apple",
+            hardy: "down to zone 3",
+            disease_resistance: {
+                scab: "S",
+                CAR: "S",
+                FB: "S"
+            }
+        },
+        {
+            name: "Empire",
+            type: "Apple",
+            harvest_time: "October 4",
+            description: "Deep red. Firm, crisp. Sweet. Uses: fresh. 4 months storage. One of the better new apples",
+            hardy: "down to zone 3",
+            disease_resistance: {
+                scab: "VS",
+                CAR: "R",
+                FB: "R"
+            }
+        },
+        {
+            name: "Haralson",
+            type: "Apple",
+            harvest_time: "October 4",
+            description: "Red striped. Crisp, juicy. Tart, distinctive. Fresh, cooking. 3 months storage. Popular in northwest Wisconsin",
+            hardy: "down to zone 3",
+            disease_resistance: {
+                scab: "S",
+                CAR: "MR",
+                FB: "MR"
+            },
+            strains: ["Haralred", "Red Haralson"]
+        },
+        {
+            name: "Fireside",
+            type: "Apple",
+            harvest_time: "October 11",
+            description: "Red over yellow. Crisp, juicy. Sweet, subacid. Uses: fresh, cooking. 3 months storage. Connell Red is a colored strain of Fireside",
+            hardy: "down to zone 3",
+            disease_resistance: {
+                scab: "S",
+                CAR: "R",
+                FB: "S"
+            },
+            strains: ["Connell Red"]
+        },
+        {
+            name: "Red Delicious",
+            type: "Apple",
+            harvest_time: "October 11",
+            description: "Solid red. Crisp, juicy. Sweet, distinctive. Uses: fresh. 4 months storage. Many improved strains",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "S",
+                CAR: "VR",
+                FB: "R"
+            },
+            strains: ["Starking Delicious", "Starkrimson", "Richared", "Oregon Spur", "Redchief"]
+        },
+        {
+            name: "Jonathan",
+            type: "Apple",
+            harvest_time: "October 11",
+            description: "Bright red. Firm. Sweet, distinctive. Uses: fresh. 3 months storage. Better after storage",
+            hardy: "down to zone 5",
+            disease_resistance: {
+                scab: "S",
+                CAR: "VS",
+                FB: "VS"
+            },
+            strains: ["Jonared", "Jonee"]
+        },
+        {
+            name: "Idared",
+            type: "Apple",
+            harvest_time: "October 11",
+            description: "Red. Firm, fine-grained. Tart. Uses: all purpose. 4 months storage. Good keeping quality",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "S",
+                CAR: "S",
+                FB: "VS"
+            }
+        },
+        {
+            name: "Jonagold",
+            type: "Apple",
+            harvest_time: "October 11",
+            description: "Yellow with red blush. Firm, juicy, fine-grained. Sweet. Uses: fresh. 3 months storage. Does best in cool locations",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "VS",
+                CAR: "S",
+                FB: "VS"
+            },
+            strains: ["Red Jonagold", "Nicobel Jonagold", "Jona-go-red"]
+        },
+        {
+            name: "Golden Supreme",
+            type: "Apple",
+            harvest_time: "October 11",
+            description: "Yellow. Fine, crisp. Sweet. Uses: fresh. 3-5 months storage. Great eating-quality apple",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "S",
+                CAR: "S",
+                FB: "S"
+            }
+        },
+        {
+            name: "Golden Delicious",
+            type: "Apple",
+            harvest_time: "October 18",
+            description: "Yellow. Crisp, fine-grained. Sweet. Uses: fresh. 3 months storage. Spur-type strains not recommended",
+            hardy: "down to zone 5",
+            disease_resistance: {
+                scab: "S",
+                CAR: "VS",
+                FB: "S"
+            },
+            strains: ["Smoothee"]
+        },
+        // disease resistant
+        {
+            name: "Redfree",
+            type: "Apple",
+            harvest_time: "August 18",
+            description: "Bright red. Crisp, juicy. Mildly tart to sweet. Uses: Fresh, cooking. 6–8 weeks storage. Good disease-resistant summer apple",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "VR",
+                CAR: "VR",
+                FB: "S"
+            }
+        },
+        {
+            name: "Prima",
+            type: "Apple",
+            harvest_time: "September 4",
+            description: "Red on green. Soft. Mild, subacid. Uses: Fresh, cooking. 1–2 months storage. Must thin for annual bearing",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "VR",
+                CAR: "VS",
+                FB: "R"
+            }
+        },
+        {
+            name: "Priscilla",
+            type: "Apple",
+            harvest_time: "September 11",
+            description: "Red over yellow. Crisp, coarse. Sweet, aromatic. Uses: Fresh. 2–3 months storage. May not ripen in northern Wisconsin",
+            hardy: "down to zone 5",
+            disease_resistance: {
+                scab: "VR",
+                CAR: "VR",
+                FB: "R"
+            }
+        },
+        {
+            name: "Jonafree",
+            type: "Apple",
+            harvest_time: "September 25",
+            description: "Medium red  Crisp, juicy. Mildly tart. Uses: Fresh. 2 months storage. Resembles Jonathan",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "VR",
+                CAR: "R",
+                FB: "R"
+            }
+        },
+        {
+            name: "Nova Easygro",
+            type: "Apple",
+            harvest_time: "September 25",
+            description: "Red blushed. Firm, slightly juicy. Sweet. Use: Fresh. 2 months storage. Quality improves in storage",
+            hardy: "down to zone 3",
+            disease_resistance: {
+                scab: "VR",
+                CAR: "VR",
+                FB: "R"
+            }
+        },
+        {
+            name: "Liberty",
+            type: "Apple",
+            harvest_time: "October 4",
+            description: "Purple red, Light Crisp, juicy, sprightly flavor. Moderately tart, like McIntosh. Use: All purpose. 3–4 months storage. One of the best disease-resistant apples",
+            hardy: "down to zone 4",
+            disease_resistance: {
+                scab: "VR",
+                CAR: "VR",
+                FB: "R"
+            }
+        }
+    ]
+}
