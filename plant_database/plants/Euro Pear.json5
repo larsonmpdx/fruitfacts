@@ -1,63 +1,63 @@
 [
     {
-        "name": "Bartlett"
+        name: "Bartlett"
     },
     {
-        "name": "Warren"
+        name: "Warren"
     },
     {
-        "name": "Blake's Pride"
+        name: "Blake's Pride"
     },
     {
-        "name": "D'Anjou",
-        "AKA": ["Anjou"]
+        name: "D'Anjou",
+        AKA: ["Anjou"]
     },
     {
-        "name": "Flemish Beauty",
-        "AKA": ["Fondante de Boise"]
+        name: "Flemish Beauty",
+        AKA: ["Fondante de Boise"]
     },
     {
-        "name": "Comice"
+        name: "Comice"
     },
     {
-        "name": "Red Clapp's Favorite",
-        "AKA": ["Red Clapp's", "Kalle", "Super Red", "Starkrimson"]
+        name: "Red Clapp's Favorite",
+        AKA: ["Red Clapp's", "Kalle", "Super Red", "Starkrimson"]
     },
     {
-        "name": "Golden Russet Bosc",
-        "patent": "https://patents.google.com/patent/USPP5243 expired 2002"
+        name: "Golden Russet Bosc",
+        patent: "https://patents.google.com/patent/USPP5243 expired 2002"
     },
     {
-        "name": "Doyenne du Comice",
-        "patent": "https://patents.google.com/patent/USPP10459 expired 2017"
+        name: "Doyenne du Comice",
+        patent: "https://patents.google.com/patent/USPP10459 expired 2017"
     },
     {
-        "name": "Columbia Red Anjou",
-        "patent": "https://patents.google.com/patent/USPP6194 expired 2006"
+        name: "Columbia Red Anjou",
+        patent: "https://patents.google.com/patent/USPP6194 expired 2006"
     },
     {
-        "name": "Concorde",
-        "patent": "https://patents.google.com/patent/USPP9192 expired 2014"
+        name: "Concorde",
+        patent: "https://patents.google.com/patent/USPP9192 expired 2014"
     },
     {
-        "name": "Taylor's Gold",
-        "patent": "https://patents.google.com/patent/USPP8308 expired 2011"
+        name: "Taylor's Gold",
+        patent: "https://patents.google.com/patent/USPP8308 expired 2011"
     },
     {
-        "name": "Wimmer Bosc",
-        "AKA": ["Bronze Beauty (tm)"],
-        "patent": "https://patents.google.com/patent/USPP7485 expired 2009"
+        name: "Wimmer Bosc",
+        AKA: ["Bronze Beauty (tm)"],
+        patent: "https://patents.google.com/patent/USPP7485 expired 2009"
     },
     {
-        "name": "Honeysweet",
-        "patent": "https://patents.google.com/patent/USPP4379 expired 1998"
+        name: "Honeysweet",
+        patent: "https://patents.google.com/patent/USPP4379 expired 1998"
     },
     {
-        "name": "Flordahome",
-        "AKA": ["Florida Home"]
+        name: "Flordahome",
+        AKA: ["Florida Home"]
     },
     {
-        "name": "Tenn",
-        "AKA": ["Tennessee"]
+        name: "Tenn",
+        AKA: ["Tennessee"]
     }
 ]

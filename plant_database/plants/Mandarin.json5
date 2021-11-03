@@ -1,13 +1,13 @@
 [
     {
-        "name": "950",
-        "description": "FFSP variety",
-        "patent": "23,359"
+        name: "950",
+        description: "FFSP variety",
+        patent: "23,359"
     },
     {
-        "name": "LB8-9",
-        "description": "FFSP variety",
-        "AKA": ["Sugar Belle (tm)"],
-        "patent": "21,356"
+        name: "LB8-9",
+        description: "FFSP variety",
+        AKA: ["Sugar Belle (tm)"],
+        patent: "21,356"
     }
 ]

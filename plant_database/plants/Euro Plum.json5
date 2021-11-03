@@ -1,85 +1,85 @@
 [
     {
-        "name": "Early Laxton",
-        "description": "One of the earliest euro plums"
+        name: "Early Laxton",
+        description: "One of the earliest euro plums"
     },
     {
-        "name": "Bavay's Green Gage",
-        "AKA": ["Green Gage", "Reine Claude"]
+        name: "Bavay's Green Gage",
+        AKA: ["Green Gage", "Reine Claude"]
     },
     {
-        "name": "Purple Gage",
-        "AKA": ["Reine Claude Violette"]
+        name: "Purple Gage",
+        AKA: ["Reine Claude Violette"]
     },
     {
-        "name": "Early Italian"
+        name: "Early Italian"
     },
     {
-        "name": "Italian",
-        "AKA": ["Fellenberg", "Italian Quetsche"]
+        name: "Italian",
+        AKA: ["Fellenberg", "Italian Quetsche"]
     },
     {
-        "name": "Late Italian"
+        name: "Late Italian"
     },
     {
-        "name": "Stanley"
+        name: "Stanley"
     },
     {
-        "name": "President"
+        name: "President"
     },
     {
-        "name": "Sugar",
-        "AKA": ["Improved Sugar"],
-        "description": "Burbank variety, 1899"
+        name: "Sugar",
+        AKA: ["Improved Sugar"],
+        description: "Burbank variety, 1899"
     },
     {
-        "name": "Edwards",
-        "patent": "USPP 1213"
+        name: "Edwards",
+        patent: "USPP 1213"
     },
     {
-        "name": "Parson",
-        "patent": "USPP 872",
-        "description": "originated in Forest Grove, Oregon about 1930"
+        name: "Parson",
+        patent: "USPP 872",
+        description: "originated in Forest Grove, Oregon about 1930"
     },
     {
-        "name": "Miller Early Sweet",
-        "description": "originated in Eugene, Oregon about 1930"
+        name: "Miller Early Sweet",
+        description: "originated in Eugene, Oregon about 1930"
     },
     {
-        "name": "Date Prune",
-        "AKA": ["Coates 1418"]
+        name: "Date Prune",
+        AKA: ["Coates 1418"]
     },
     {
-        "name": "Weatherspoon",
-        "description": "chance seedling found near Elgin, Oregon about 1915"
+        name: "Weatherspoon",
+        description: "chance seedling found near Elgin, Oregon about 1915"
     },
     {
-        "name": "Noble French",
-        "description": "originated at Myrtle Creek, Oregon about 1925"
+        name: "Noble French",
+        description: "originated at Myrtle Creek, Oregon about 1925"
     },
     {
-        "name": "Rich Pride",
-        "description": "originated at Junction City, Oregon 1946"
+        name: "Rich Pride",
+        description: "originated at Junction City, Oregon 1946"
     },
     {
-        "name": "Brooks",
-        "description": "originated near Lafayette, Oregon about 1930"
+        name: "Brooks",
+        description: "originated near Lafayette, Oregon about 1930"
     },
     {
-        "name": "French Improved"
+        name: "French Improved"
     },
     {
-        "name": "Moyer",
-        "AKA": ["Moyer Perfecto"],
-        "description": "seedling found at Roseburg, Oregon about 1925"
+        name: "Moyer",
+        AKA: ["Moyer Perfecto"],
+        description: "seedling found at Roseburg, Oregon about 1925"
     },
     {
-        "name": "Valor"
+        name: "Valor"
     },
     {
-        "name": "Empress"
+        name: "Empress"
     },
     {
-        "name": "Blue Damson"
+        name: "Blue Damson"
     }
 ]

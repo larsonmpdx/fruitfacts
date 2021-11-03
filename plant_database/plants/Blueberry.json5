@@ -1,118 +1,118 @@
 [
     {
-        "name": "Bluetta",
-        "tags": [ "northern highbush" ]
+        name: "Bluetta",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Duke",
-        "tags": [ "northern highbush" ]
+        name: "Duke",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Earliblue",
-        "tags": [ "northern highbush" ]
+        name: "Earliblue",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Chippewa",
-        "tags": [ "northern highbush" ]
+        name: "Chippewa",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Bountiful Blue",
-        "AKA": ["FLX-2"],
-        "patent": "https://patents.google.com/patent/USPP19381 expires 2027-10-25",
-        "tags": [ "northern highbush" ]
+        name: "Bountiful Blue",
+        AKA: ["FLX-2"],
+        patent: "https://patents.google.com/patent/USPP19381 expires 2027-10-25",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Northland",
-        "tags": [ "northern highbush" ]
+        name: "Northland",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Bluegold",
-        "tags": [ "northern highbush" ]
+        name: "Bluegold",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Spartan",
-        "tags": [ "northern highbush" ]
+        name: "Spartan",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Draper",
-        "patent": "https://patents.google.com/patent/USPP15103 expires 2023-01-23",
-        "tags": [ "northern highbush" ]
+        name: "Draper",
+        patent: "https://patents.google.com/patent/USPP15103 expires 2023-01-23",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Reka",
-        "patent": "https://patents.google.com/patent/USPP6700 expired 2007",
-        "tags": [ "northern highbush" ],
-        "description": "from New Zealand"
+        name: "Reka",
+        patent: "https://patents.google.com/patent/USPP6700 expired 2007",
+        tags: ["northern highbush"],
+        description: "from New Zealand"
     },
     {
-        "name": "Bluejay",
-        "tags": [ "northern highbush" ]
+        name: "Bluejay",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Toro",
-        "tags": [ "northern highbush" ]
+        name: "Toro",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Olympia",
-        "tags": [ "northern highbush" ]
+        name: "Olympia",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Berkeley",
-        "tags": [ "northern highbush" ]
+        name: "Berkeley",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Bluecrop",
-        "tags": [ "northern highbush" ]
+        name: "Bluecrop",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Rubel",
-        "tags": [ "northern highbush" ]
+        name: "Rubel",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Jersey",
-        "tags": [ "northern highbush" ]
+        name: "Jersey",
+        tags: ["northern highbush"]
     },
     {
-        "name": "1613-A",
-        "tags": [ "northern highbush" ]
+        name: "1613-A",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Legacy",
-        "tags": [ "southern highbush", "northern highbush", "northern-southern highbush hybrid" ]
+        name: "Legacy",
+        tags: ["southern highbush", "northern highbush", "northern-southern highbush hybrid"]
     },
     {
-        "name": "Liberty",
-        "tags": [ "northern highbush" ]
+        name: "Liberty",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Brigitta Blue",
-        "tags": [ "northern highbush" ]
+        name: "Brigitta Blue",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Darrow",
-        "tags": [ "northern highbush" ]
+        name: "Darrow",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Chandler",
-        "tags": [ "northern highbush" ]
+        name: "Chandler",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Ozarkblue",
-        "tags": [ "southern highbush", "northern highbush", "northern-southern highbush hybrid" ]
+        name: "Ozarkblue",
+        tags: ["southern highbush", "northern highbush", "northern-southern highbush hybrid"]
     },
     {
-        "name": "Elliott",
-        "tags": [ "northern highbush" ]
+        name: "Elliott",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Aurora",
-        "description": "latest ripening northern highbush",
-        "patent": "https://patents.google.com/patent/USPP15185 expires 2023-01-23",
-        "tags": [ "northern highbush" ]
+        name: "Aurora",
+        description: "latest ripening northern highbush",
+        patent: "https://patents.google.com/patent/USPP15185 expires 2023-01-23",
+        tags: ["northern highbush"]
     },
     {
-        "name": "Mini Blues",
-        "patent": "https://patents.google.com/patent/USPP28233 expires 2035-05-21",
-        "tags": [ "northern highbush" ]
+        name: "Mini Blues",
+        patent: "https://patents.google.com/patent/USPP28233 expires 2035-05-21",
+        tags: ["northern highbush"]
     }
 ]

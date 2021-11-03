@@ -1,52 +1,52 @@
 [
     {
-        "name": "Montmorency",
-        "description": "the classic sour cherry for commercial production, by far the most planted in the US"
+        name: "Montmorency",
+        description: "the classic sour cherry for commercial production, by far the most planted in the US"
     },
     {
-        "name": "Evans",
-        "AKA": ["Bali"]
+        name: "Evans",
+        AKA: ["Bali"]
     },
     {
-        "name": "Early Richmond"
+        name: "Early Richmond"
     },
     {
-        "name": "English Morello"
+        name: "English Morello"
     },
     {
-        "name": "Meteor"
+        name: "Meteor"
     },
     {
-        "name": "Carmine Jewel",
-        "description":"USask bush cherry, their first variety"
+        name: "Carmine Jewel",
+        description: "USask bush cherry, their first variety"
     },
     {
-        "name": "Romeo",
-        "description": "USask bush cherry"
+        name: "Romeo",
+        description: "USask bush cherry"
     },
     {
-        "name": "Juliet",
-        "description": "USask bush cherry"
+        name: "Juliet",
+        description: "USask bush cherry"
     },
     {
-        "name": "Crimson Passion",
-        "description": "USask bush cherry. considered a low yielding variety"
+        name: "Crimson Passion",
+        description: "USask bush cherry. considered a low yielding variety"
     },
     {
-        "name": "Kansas Sweet",
-        "tags": "sweet-sour cherry cross"
+        name: "Kansas Sweet",
+        tags: "sweet-sour cherry cross"
     },
     {
-        "name": "Jubileum",
-        "AKA": ["M-136"],
-        "description": "early: Montmorency-7"
+        name: "Jubileum",
+        AKA: ["M-136"],
+        description: "early: Montmorency-7"
     },
     {
-        "name": "Danube",
-        "description": "early: Montmorency-7",
-        "AKA": ["Erdi Botermo"]
+        name: "Danube",
+        description: "early: Montmorency-7",
+        AKA: ["Erdi Botermo"]
     },
     {
-        "name": "Balaton"
+        name: "Balaton"
     }
 ]

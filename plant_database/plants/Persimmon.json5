@@ -1,54 +1,54 @@
 [
     {
-        "name": "Giant Fuyu",
-        "tags": "asian persimmon"
+        name: "Giant Fuyu",
+        tags: "asian persimmon"
     },
     {
-        "name": "Fuyu (Jiro)",
-        "AKA": ["Jiro"],
-        "tags": "asian persimmon"
+        name: "Fuyu (Jiro)",
+        AKA: ["Jiro"],
+        tags: "asian persimmon"
     },
     {
-        "name": "Fuyu (Imoto)",
-        "AKA": ["Imoto"],
-        "tags": "asian persimmon"
+        name: "Fuyu (Imoto)",
+        AKA: ["Imoto"],
+        tags: "asian persimmon"
     },
     {
-        "name": "Chocolate",
-        "tags": "asian persimmon"
+        name: "Chocolate",
+        tags: "asian persimmon"
     },
     {
-        "name": "Coffee Cake",
-        "AKA": ["Nishimura Wase"],
-        "tags": "asian persimmon"
+        name: "Coffee Cake",
+        AKA: ["Nishimura Wase"],
+        tags: "asian persimmon"
     },
     {
-        "name": "Izu",
-        "tags": "asian persimmon"
+        name: "Izu",
+        tags: "asian persimmon"
     },
     {
-        "name": "Maru",
-        "tags": "asian persimmon"
+        name: "Maru",
+        tags: "asian persimmon"
     },
     {
-        "name": "Saijo",
-        "tags": "asian persimmon"
+        name: "Saijo",
+        tags: "asian persimmon"
     },
     {
-        "name": "Tamopan",
-        "tags": "asian persimmon"
+        name: "Tamopan",
+        tags: "asian persimmon"
     },
     {
-        "name": "Hachiya",
-        "tags": "asian persimmon"
+        name: "Hachiya",
+        tags: "asian persimmon"
     },
     {
-        "name": "Garretson",
-        "tags": "american persimmon"
+        name: "Garretson",
+        tags: "american persimmon"
     },
     {
-        "name": "Early Jewel",
-        "AKA": ["H-118"],
-        "tags": "american persimmon"
+        name: "Early Jewel",
+        AKA: ["H-118"],
+        tags: "american persimmon"
     }
 ]

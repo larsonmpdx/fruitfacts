@@ -1,103 +1,97 @@
 [
     {
-        "name": "CIVG198",
-        "AKA": ["Modi"],
-        "patent": "https://patents.google.com/patent/USPP18730 expires 2026-03-25"
+        name: "CIVG198",
+        AKA: ["Modi"],
+        patent: "https://patents.google.com/patent/USPP18730 expires 2026-03-25"
     },
     {
-        "name": "WA-38",
-        "AKA": ["Cosmic Crisp (tm)"],
-        "description": "WSU variety for WA state growers only",
-        "patent": "https://patents.google.com/patent/USPP24210 expires 2032-05-26"
+        name: "Scarlet Sentinel",
+        patent: "no US patent. Canada PBR expired 2020 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00001216e.shtml",
+        tags: ["columnar apple"]
     },
     {
-        "name": "Scarlet Sentinel",
-        "patent": "no US patent. Canada PBR expired 2020 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00001216e.shtml",
-        "tags": [ "columnar apple" ]
+        name: "Belmac",
+        patent: "no US patent. Canada PBR expired 2015 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00000569e.shtml"
     },
     {
-        "name": "Belmac",
-        "patent": "no US patent. Canada PBR expired 2015 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00000569e.shtml"
+        name: "September Wonder",
+        AKA: ["Jubilee"]
     },
     {
-        "name": "September Wonder",
-        "AKA": ["Jubilee"]
+        name: "Silken",
+        description: "Summerland variety",
+        patent: "https://patents.google.com/patent/USPP10740 expired 2017"
     },
     {
-        "name": "Silken",
-        "description": "Summerland variety",
-        "patent": "https://patents.google.com/patent/USPP10740 expired 2017"
+        name: "Millenium",
+        AKA: ["NY 460"]
     },
     {
-        "name": "Millenium",
-        "AKA": ["NY 460"]
+        name: "Nugget Spur",
+        description: "Golden Delicious Spur"
     },
     {
-        "name": "Nugget Spur",
-        "description": "Golden Delicious Spur"
+        name: "Goldspur",
+        description: "Golden Delicious Spur"
     },
     {
-        "name": "Goldspur",
-        "description": "Golden Delicious Spur"
+        name: "Yelo Spur",
+        description: "Golden Delicious Spur"
     },
     {
-        "name": "Yelo Spur",
-        "description": "Golden Delicious Spur"
+        name: "Starkspur",
+        description: "Golden Delicious Spur"
     },
     {
-        "name": "Starkspur",
-        "description": "Golden Delicious Spur"
+        name: "Silverspur",
+        description: "Red Delicious Spur"
     },
     {
-        "name": "Silverspur",
-        "description": "Red Delicious Spur"
+        name: "Crimson Spur",
+        description: "Red Delicious Spur"
     },
     {
-        "name": "Crimson Spur",
-        "description": "Red Delicious Spur"
+        name: "Skyspur",
+        description: "Red Delicious Spur"
     },
     {
-        "name": "Skyspur",
-        "description": "Red Delicious Spur"
+        name: "Cherry Parfait #19",
+        description: "stark variety, honeycrisp/pink lady cross",
+        AKA: ["Scarlet Crush (tm)"],
+        patent: "https://patents.google.com/patent/USPP30925 expires 2038-03-07"
     },
     {
-        "name": "Cherry Parfait #19",
-        "description": "stark variety, honeycrisp/pink lady cross",
-        "AKA": ["Scarlet Crush (tm)"],
-        "patent": "https://patents.google.com/patent/USPP30925 expires 2038-03-07"
+        name: "Honeysuckle Rose #1-6",
+        description: "stark variety, Honeycrisp/Gala cross",
+        AKA: ["Ruby Darling (tm)"],
+        patent: "https://patents.google.com/patent/USPP30978 expires 2038-03-07"
     },
     {
-        "name": "Honeysuckle Rose #1-6",
-        "description": "stark variety, Honeycrisp/Gala cross",
-        "AKA": ["Ruby Darling (tm)"],
-        "patent": "https://patents.google.com/patent/USPP30978 expires 2038-03-07"
+        name: "Mayo",
+        description: "stark variety",
+        AKA: ["Franklin Cider (tm)"],
+        patent: "https://patents.google.com/patent/USPP28791 expires 2036-03-01"
     },
     {
-        "name": "Mayo",
-        "description": "stark variety",
-        "AKA": ["Franklin Cider (tm)"],
-        "patent": "https://patents.google.com/patent/USPP28791 expires 2036-03-01"
+        name: "NJ 55",
+        AKA: ["Suncrisp (tm)"],
+        patent: "https://patents.google.com/patent/USPP8648 expired 2012"
     },
     {
-        "name": "NJ 55",
-        "AKA": ["Suncrisp (tm)"],
-        "patent": "https://patents.google.com/patent/USPP8648 expired 2012"
+        name: "Florina",
+        AKA: ["Querina"]
     },
     {
-        "name": "Florina",
-        "AKA": ["Querina"]
+        name: "Pinova",
+        AKA: ["Corail"]
     },
     {
-        "name": "Pinova",
-        "AKA": ["Corail"]
+        name: "Mutsu",
+        AKA: ["Crispin"]
     },
     {
-        "name": "Mutsu",
-        "AKA": ["Crispin"]
-    },
-    {
-        "name": "Fla. 90-3",
-        "AKA": ["TropicSweet (tm)"],
-        "patent": "https://patents.google.com/patent/USPP9708 expired 2015-09-05"
+        name: "Fla. 90-3",
+        AKA: ["TropicSweet (tm)"],
+        patent: "https://patents.google.com/patent/USPP9708 expired 2015-09-05"
     }
 ]
