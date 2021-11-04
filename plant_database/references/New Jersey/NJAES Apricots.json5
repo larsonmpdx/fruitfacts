@@ -1,0 +1,74 @@
+{
+    title: "Rutgers New Jersey Agricultural Experiment Station Apricot Varieties",
+    author: "unknown",
+    url: "https://njaes.rutgers.edu/peach/cultivars/breeding-program.php and https://plantbiology.rutgers.edu/faculty/goffreda/Goffreda_CV_September%20_2017.pdf",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Cream Ridge, NJ",
+            latitude: 40.13233771380199,
+            longitude: -74.52852612532256
+        }
+    ],
+    plants: [
+        {
+            name: "NJA152",
+            AKA: ['Honey Pearls™ "nectacot"'],
+            type: "Apricot",
+            description: "gurney's exclusive",
+            released: "2016",
+            patent: "https://patents.google.com/patent/USPP27166 expires 2034-09-17"
+        },
+        {
+            name: "NJA151",
+            AKA: ["Ilona™"],
+            type: "Apricot",
+            description: "",
+            released: "2015",
+            patent: "https://patents.google.com/patent/USPP25862 expires 2033-10-20"
+        },
+        {
+            name: "NJA150",
+            AKA: ["Sugar Pearls (tm)"],
+            type: "Apricot",
+            description: "self-fertile but better crops with a pollinator. https://agproducts.rutgers.edu/fruit-trees/sugar-pearls-apricot.html",
+            released: "2006", // patent year, didn't find a release article
+            patent: "https://patents.google.com/patent/USPP18639 expires 2026-07-06"
+        },
+        {
+            name: "NJA54",
+            AKA: ["SunGem®"],
+            type: "Apricot",
+            description: "NJA2 x RR17-62",
+            harvest_time_relative: "Harcot -2 to -1.5 weeks",
+            released: "1994",
+            patent: "https://patents.google.com/patent/USPP8674 expired 2012-11-18"
+        },
+        {
+            name: "NJA53",
+            AKA: ["Early Blush®"],
+            type: "Apricot",
+            description: "RR17-62 x NJA13",
+            harvest_time_relative: "Harcot -2.5 weeks",
+            released: "1995",
+            patent: "https://patents.google.com/patent/USPP9255 expired 2012-11-18"
+        },
+        {
+            name: "NJA32", // patent name
+            AKA: ["Orangered®", "Bhart"],
+            type: "Apricot",
+            description: "Lasgerdi Mashhad x NJA2",
+            harvest_time_relative: "Harcot -1 week",
+            // relase year todo
+            patent: "not patented"
+        },
+        {
+            name: "Jerseycot",
+            type: "Apricot",
+            description: "RR18-64 x CR3-135",
+            harvest_time_relative: "Harcot -5",
+            released: "1987",
+            patent: "not patented"
+        }
+    ]
+}

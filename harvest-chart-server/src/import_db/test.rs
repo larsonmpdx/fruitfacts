@@ -383,7 +383,7 @@ fn test_database_loading() {
 
     let items_loaded = super::load_all(&db_conn);
 
-    assert_ge!(items_loaded.base_plants_found, 245);
+    assert_ge!(items_loaded.base_plants_found, 244);
     assert_ge!(items_loaded.base_types_found, 40);
     assert_ge!(items_loaded.reference_items.reference_locations_found, 43);
     assert_ge!(

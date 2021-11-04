@@ -16,47 +16,56 @@
             type: "Grape",
             name: "Frontenac",
             AKA: ["Frontenac noir"],
-            description: "1996. type: Red and rosé, port. Vigorous and very disease resistant. Wine has flavors of cherry and plum. Can be high in acidity"
+            released: "1996",
+            description: "type: Red and rosé, port. Vigorous and very disease resistant. Wine has flavors of cherry and plum. Can be high in acidity"
         },
         {
             type: "Grape",
-            name: "Frontenac blanc	",
-            description: "2012. type: White wine. White-fruited sports of Frontenac and Frontenac gris with earlier harvest date"
+            name: "Frontenac blanc",
+            released: "2012",
+            description: "type: White wine. White-fruited sports of Frontenac and Frontenac gris with earlier harvest date"
         },
         {
             type: "Grape",
             name: "Frontenac gris",
-            description: "2003. type: White wine. Vigorous and very disease resistant. Wine has a characteristic peach flavor. Can be high in acidity"
+            released: "2003",
+            description: "type: White wine. Vigorous and very disease resistant. Wine has a characteristic peach flavor. Can be high in acidity"
         },
         {
             type: "Grape",
             name: "Itasca",
-            description: "2017. type: White wine. Lower acidity and high sugar levels. High resistance to downy and powdery mildew and the insect phylloxera"
+            released: "2017",
+            description: "type: White wine. Lower acidity and high sugar levels. High resistance to downy and powdery mildew and the insect phylloxera"
         },
         {
             type: "Grape",
             name: "La Crescent",
-            description: "2002. type: White wine. Very cold hardy. Wine has flavors of apricot, citrus, and tropical fruit. Moderately disease resistant"
+            released: "2002",
+            description: "type: White wine. Very cold hardy. Wine has flavors of apricot, citrus, and tropical fruit. Moderately disease resistant"
         },
         {
             type: "Grape",
             name: "Marquette",
-            description: "2006. type: Red wine. Resists downy and powdery mildew, and black rot, with open, orderly growth habit. Wine has complex notes of cherry, berry, black pepper, and spice on both nose and palate"
+            released: "2006",
+            description: "type: Red wine. Resists downy and powdery mildew, and black rot, with open, orderly growth habit. Wine has complex notes of cherry, berry, black pepper, and spice on both nose and palate"
         },
         {
             type: "Grape",
             name: "Bluebell",
-            description: "1944. type: Table, juice, jelly. Early ripening. Blue-seeded table grape with a juice, jelly mild Concord-like flavor. Disease resistant"
+            released: "1944",
+            description: "type: Table, juice, jelly. Early ripening. Blue-seeded table grape with a juice, jelly mild Concord-like flavor. Disease resistant"
         },
         {
             type: "Grape",
             name: "Edelweiss",
-            description: "1977. type: Table, wine. Joint release with Elmer Swenson.Large-clustered, white-seeded table grape with a wine Concord-like flavor. May need winter protection"
+            released: "1977",
+            description: "type: Table, wine. Joint release with Elmer Swenson.Large-clustered, white-seeded table grape with a wine Concord-like flavor. May need winter protection"
         },
         {
             type: "Grape",
             name: "Swenson Red",
-            description: "1977. type: Table. Joint release with Elmer Swenson. Red-seeded table grape with refreshing flavor and crisp texture. Needs winter protection and a thorough spray program"
+            released: "1977",
+            description: "type: Table. Joint release with Elmer Swenson. Red-seeded table grape with refreshing flavor and crisp texture. Needs winter protection and a thorough spray program"
         }
     ]
 }

@@ -1,5 +1,6 @@
 # harvest chart
 * a project to track typical harvest times for crops especially tree fruits which have consistent harvest times year to year
+* also a cross-referencing system for common tree fruits, with an emphasis on information from university agricultural extension publications and other evidence-based sources
 
 # goals
 * able to reproduce all of the common charts like DWN, ACN, and charts in university extension publications with some level of beauty. charts can be private or public and can be saved to a permalink

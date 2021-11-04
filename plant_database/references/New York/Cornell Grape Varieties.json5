@@ -1,7 +1,7 @@
 {
     title: "Cornell Varieties",
     author: "unknown",
-    url: "http://www.hort.cornell.edu/brown/pdfs/newfruitimpact.pdf",
+    url: "http://www.hort.cornell.edu/brown/pdfs/newfruitimpact.pdf http://www.hort.cornell.edu/reisch/grapegenetics/grapeinfo.html",
     accessed: "Oct 2021",
     locations: [
         {
@@ -406,6 +406,21 @@
             type: "Grape",
             description: "Mills x Ontario",
             released: "1937"
+        },
+        // https://grapesandwine.cals.cornell.edu/newsletters/appellation-cornell/2013-newsletters/issue-13/research-focus/
+        {
+            name: "Aromella",
+            AKA: ["NY76.0844.24"],
+            type: "Grape",
+            description: "https://grapesandwine.cals.cornell.edu/sites/grapesandwine.cals.cornell.edu/files/shared/%E2%80%98Aromella%E2%80%99%20FINAL.pdf",
+            released: "2013"
+        },
+        {
+            name: "Arandell",
+            AKA: [""],
+            type: "Grape",
+            description: "https://grapesandwine.cals.cornell.edu/sites/grapesandwine.cals.cornell.edu/files/shared/%E2%80%98Arandell%E2%80%99%20FINAL.pdf",
+            released: "2013"
         }
     ]
 }

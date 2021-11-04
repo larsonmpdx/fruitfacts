@@ -108,8 +108,5 @@
         // todo Grape plant named 'A-2640'. I think this is part of a UIdaho cooperation but not named or released
         // https://patents.google.com/patent/USPP20745 expires 2028-06-10
         // https://scholarworks.uark.edu/pat/82/
-
-        // todo - go through https://scholarworks.uark.edu/do/search/?q=author_lname%3A%22Clark%22%20author_fname%3A%22John%22&start=25&context=6377311&facet=#query-results
-        // todo - go through https://scholarworks.uark.edu/do/search/?q=author_lname%3A%22Moore%22%20author_fname%3A%22James%22&start=0&context=6377311&facet=publication_facet%3APatents%20Granted#
     ]
 }

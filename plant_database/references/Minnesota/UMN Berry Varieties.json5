@@ -16,25 +16,29 @@
             type: "Blueberry",
             name: "Chippewa",
             tags: ["northern highbush"],
-            description: "1996. Most productive U of M variety"
+            released: "1996",
+            description: "Most productive U of M variety"
         },
         {
             type: "Blueberry",
             name: "Northblue",
             tags: ["northern highbush"],
-            description: "1983. Large fruit. Tart flavor. Productive. Half-high habit"
+            released: "1983",
+            description: "Large fruit. Tart flavor. Productive. Half-high habit"
         },
         {
             type: "Blueberry",
             name: "Northcountry",
             tags: ["northern highbush"],
-            description: "1986. Half-high habit. Wild blueberry flavor"
+            released: "1986",
+            description: "Half-high habit. Wild blueberry flavor"
         },
         {
             type: "Blueberry",
             name: "Northsky",
             tags: ["northern highbush"],
-            description: "1981 or 1983. Half-high habit. Compact"
+            released: "1981 or 1983",
+            description: "Half-high habit. Compact"
         },
         {
             type: "Blueberry",
@@ -42,48 +46,56 @@
             AKA: ["Pink Popcorn (r)"],
             patent: "https://patents.google.com/patent/USPP25792 expires 2034-03-21",
             tags: ["northern highbush"],
-            description: "2014. Pale pink blush color with aroma, taste and texture of blueberry"
+            released: "2014",
+            description: "Pale pink blush color with aroma, taste and texture of blueberry"
         },
         {
             type: "Blueberry",
             name: "Polaris",
             tags: ["northern highbush"],
-            description: "1996. Aromatic flavor and firm texture. Early maturing"
+            released: "1996",
+            description: "Aromatic flavor and firm texture. Early maturing"
         },
         {
             type: "Blueberry",
             name: "St. Cloud",
             tags: ["northern highbush"],
-            description: "1990. Sweet flavor. Early maturing"
+            released: "1990",
+            description: "Sweet flavor. Early maturing"
         },
         {
             type: "Blueberry",
             name: "Superior",
             tags: ["northern highbush"],
             patent: "not patented. MNRC participants can support breeding efforts through voluntary payments https://mnhardy.umn.edu/commercial-growers/license/license-fruit",
-            description: "2009. Highly productive. Late-season variety"
+            released: "2009",
+            description: "Highly productive. Late-season variety"
         },
         {
             name: "Ben Chaska",
             type: "Currant",
             patent: "https://patents.google.com/patent/USPP23417 expires 2031-10-27",
-            description: "2013. Joint release with James Hutton Institute in Invergowrie, Scotland. Highly productive plants yield larger berries and earlier fruit than 'Ben Como.' Suitable for jelly, juice, or wine. Upright, compact growth habit"
+            released: "2013",
+            description: "Joint release with James Hutton Institute in Invergowrie, Scotland. Highly productive plants yield larger berries and earlier fruit than 'Ben Como.' Suitable for jelly, juice, or wine. Upright, compact growth habit"
         },
         {
             name: "Ben Como",
             type: "Currant",
             patent: "https://patents.google.com/patent/USPP23416 expires 2031-10-27",
-            description: "2013. Joint release with James Hutton Institute in Invergowrie, Scotland. Highly productive. Larger plant, smaller berry, and fruit that ripens later than ‘Ben Chaska' Suitable for jelly, juice, or wine. Upright, compact growth habit"
+            released: "2013",
+            description: "Joint release with James Hutton Institute in Invergowrie, Scotland. Highly productive. Larger plant, smaller berry, and fruit that ripens later than ‘Ben Chaska' Suitable for jelly, juice, or wine. Upright, compact growth habit"
         },
         {
             name: "Red Lake",
             type: "Currant",
-            description: "1933. Plants have large clusters of red, medium-size fruits, excellent for use in jellies, salads, and desserts"
+            released: "1933",
+            description: "Plants have large clusters of red, medium-size fruits, excellent for use in jellies, salads, and desserts"
         },
         {
             name: "Latham",
             type: "Raspberry",
-            description: "1920. Floricane-bearing. Vigorous plants produce lots of large, sweet, firm, bright red berries. Plants are disease resistant"
+            released: "1920",
+            description: "Floricane-bearing. Vigorous plants produce lots of large, sweet, firm, bright red berries. Plants are disease resistant"
         },
         {
             name: "MNUS 138",
@@ -91,7 +103,8 @@
             type: "Strawberry",
             patent: "USPP17404",
             harvest_time: "Late June-early July",
-            description: "2006. Joint release with USDA-ARS. Hardy through Zone 3B. Productive plant with richly colored tart berries"
+            released: "2006",
+            description: "Joint release with USDA-ARS. Hardy through Zone 3B. Productive plant with richly colored tart berries"
         },
         {
             name: "MNUS 248",
@@ -99,7 +112,8 @@
             type: "Strawberry",
             patent: "USPP11116",
             harvest_time: "Mid-late June",
-            description: "1999. Joint release with USDA-ARS. Large, bright red glossy fruit with melting texture. Fine flavor. Winter hardy. Impressive disease resistance. Ideal for gardens with reduced pesticide use"
+            released: "1999",
+            description: "Joint release with USDA-ARS. Large, bright red glossy fruit with melting texture. Fine flavor. Winter hardy. Impressive disease resistance. Ideal for gardens with reduced pesticide use"
         },
         {
             name: "MNUS 210",
@@ -107,7 +121,8 @@
             type: "Strawberry",
             patent: "USPP10191",
             harvest_time: "Late June-early July",
-            description: "1997. Joint release with USDA-ARS. Large fruit with excellent texture and hints of peach flavor. Hardy and disease resistant"
+            released: "1997",
+            description: "Joint release with USDA-ARS. Large fruit with excellent texture and hints of peach flavor. Hardy and disease resistant"
         }
     ]
 }

@@ -15,19 +15,22 @@
         {
             name: "Beacon",
             type: "Apple",
+            released: "1936",
             harvest_time: "mid to late August",
-            patent: "not patented (introduced 1936)"
+            patent: "not patented"
         },
         {
             name: "Centennial",
             type: "Crabapple",
+            released: "1957",
             harvest_time: "mid to late August",
-            patent: "not patented (introduced 1957)"
+            patent: "not patented"
         },
         {
             name: "MN55",
             type: "Apple",
             AKA: ["Rave (r)", "First Kiss (r)"],
+            released: "2014",
             harvest_time: "mid to late August",
             description: "https://mnhardy.umn.edu/varieties/fruit/apples/ravefirst-kiss",
             patent: "https://patents.google.com/patent/USPP26412 expires 2034-06-09"
@@ -35,13 +38,15 @@
         {
             name: "State Fair",
             type: "Apple",
+            released: "1977",
             harvest_time: "mid to late August",
-            patent: "not patented (introduced 1977). purchases through MNRC nurseries will support the breeding program https://mnhardy.umn.edu/commercial-growers/availability/mnrc"
+            patent: "not patented. purchases through MNRC nurseries will support the breeding program https://mnhardy.umn.edu/commercial-growers/availability/mnrc"
         },
         {
             name: "Minneiska",
             type: "Apple",
             AKA: ["SweeTango®"],
+            released: "2006",
             description: "https://mnhardy.umn.edu/varieties/fruit/apples/sweetango",
             harvest_time: "early September",
             patent: "https://patents.google.com/patent/USPP18812 expires 2026-11-22"
@@ -50,6 +55,7 @@
             name: "Minnewashta",
             type: "Apple",
             AKA: ["Zestar! (r)"],
+            released: "1999",
             description: "https://mnhardy.umn.edu/varieties/fruit/apples/zestar",
             harvest_time: "late August to early September",
             patent: "https://patents.google.com/patent/USPP11367 expired 2017-11-25"
@@ -58,19 +64,22 @@
         {
             name: "Chestnut",
             type: "Crabapple",
+            released: "1949",
             harvest_time: "early September",
             patent: ""
         },
         {
             name: "Red Baron",
             type: "Apple",
+            released: "1970",
             harvest_time: "mid September",
-            patent: "not patented (introduced 1970)"
+            patent: "not patented"
         },
         {
             name: "Sweet Sixteen",
             type: "Apple",
             AKA: ["Sweet 16"],
+            released: "1977",
             harvest_time: "mid to late September",
             patent: "not patented. purchases through MNRC nurseries will support the breeding program https://mnhardy.umn.edu/commercial-growers/availability/mnrc"
         },
@@ -78,6 +87,7 @@
             name: "MN80",
             type: "Apple",
             AKA: ["Triumph! (tm)"],
+            released: "2021",
             description: "https://mnhardy.umn.edu/triumph-apple",
             harvest_time: "mid to late September",
             patent: "ppaf nlt 2021 (application 17/152,776)"
@@ -86,6 +96,7 @@
             name: "Honeycrisp",
             type: "Apple",
             AKA: ["Honeycrunch (r)"], // international name
+            released: "1991",
             description: "https://mnhardy.umn.edu/varieties/fruit/apples/honeycrisp",
             harvest_time: "late September",
             patent: "https://patents.google.com/patent/USPP7197 expired 2008-11-07"
@@ -93,33 +104,38 @@
         {
             name: "Honeygold",
             type: "Apple",
+            released: "1970",
             harvest_time: "late September",
-            patent: "not patented (introduced 1970)"
+            patent: "not patented"
         },
         {
             name: "Haralson",
             type: "Apple",
+            released: "1922",
             harvest_time: "late September to early October",
-            patent: "not patented (introduced 1922)"
+            patent: "not patented"
         },
         {
             name: "MN 447",
             type: "Apple",
             AKA: ["Frostbite™"],
+            released: "2008",
             harvest_time: "late September to mid October",
             description: "https://mnhardy.umn.edu/varieties/fruit/apples/frostbite",
-            patent: "not patented (old variety). purchases through MNRC nurseries will support the breeding program https://mnhardy.umn.edu/commercial-growers/availability/mnrc"
+            patent: "not patented (old variety with a new release). purchases through MNRC nurseries will support the breeding program https://mnhardy.umn.edu/commercial-growers/availability/mnrc"
         },
         {
             name: "Regent",
             type: "Apple",
+            released: "1964",
             harvest_time: "mid October",
-            patent: "not patented (introduced 1964)"
+            patent: "not patented"
         },
         {
             name: "Wildung",
             type: "Apple",
             AKA: ["SnowSweet®"],
+            released: "2006",
             description: "https://mnhardy.umn.edu/varieties/fruit/apples/snowsweet",
             harvest_time: "mid October",
             patent: "https://patents.google.com/patent/USPP19446 expires 2027-02-02"
@@ -128,20 +144,23 @@
             name: "Fireside",
             AKA: ["Connell Red"],
             type: "Apple",
+            released: "1943",
             harvest_time: "mid October",
-            patent: "not patented (introduced 1943)"
+            patent: "not patented"
         },
         {
             name: "Keepsake",
             type: "Apple",
+            released: "1978",
             harvest_time: "mid October",
-            patent: "not patented (introduced 1978). purchases through MNRC nurseries will support the breeding program https://mnhardy.umn.edu/commercial-growers/availability/mnrc"
+            patent: "not patented. purchases through MNRC nurseries will support the breeding program https://mnhardy.umn.edu/commercial-growers/availability/mnrc"
         },
         {
             name: "Prairie Spy",
             type: "Apple",
+            released: "1940",
             harvest_time: "late October",
-            patent: "not patented (introduced 1940)"
+            patent: "not patented"
         }
     ]
 }

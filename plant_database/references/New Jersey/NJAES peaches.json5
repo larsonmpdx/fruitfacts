@@ -158,13 +158,6 @@
             patent: "https://patents.google.com/patent/USPP18997 expires 2026-08-04"
         },
         {
-            name: "NJA150",
-            AKA: ["Sugar Pearls (tm)"],
-            type: "Apricot",
-            description: "self-fertile but better crops with a pollinator. https://agproducts.rutgers.edu/fruit-trees/sugar-pearls-apricot.html",
-            patent: "https://patents.google.com/patent/USPP18639 expires 2026-07-06"
-        },
-        {
             name: "H28-52-96270",
             AKA: ["Flat Wonderful (tm)"],
             type: "Peach",

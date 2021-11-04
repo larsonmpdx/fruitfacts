@@ -15,23 +15,26 @@
         {
             name: "WA 2",
             AKA: ["Sunrise Magic®"],
+            type: "Apple",
             description: "Splendour x Gala https://tfrec.cahnrs.wsu.edu/breed/wa-2/ https://journals.ashs.org/hortsci/view/journals/hortsci/45/4/article-p668.xml?rskey=SemCMG",
             harvest_time: "late September",
             released: "2010", // ashs publication year
-            patent: "https://patents.google.com/patent/USPP expires "
+            patent: "https://patents.google.com/patent/USPP21710 expires 2029-03-24"
         },
         {
             name: "WA 5", // not branded as of 2021
+            type: "Apple",
             description: "Splendour x Co-op 15 https://tfrec.cahnrs.wsu.edu/breed/introducing-wa-5/ https://journals.ashs.org/hortsci/view/journals/hortsci/46/6/article-p958.xml?rskey=7NGoqG",
-            harvest_time: "early to mid Sept",
+            harvest_time: "early to mid September",
             released: "2011", // ashs publication year
-            patent: "https://patents.google.com/patent/USPP expires "
+            patent: "https://patents.google.com/patent/USPP24054 expires 2032-03-23"
         },
         {
             name: "WA 38",
             AKA: ["Cosmic Crisp (tm)"],
+            type: "Apple",
             description: "Enterprise x Honeycrisp. WSU variety for WA state growers only https://tfrec.cahnrs.wsu.edu/breed/cosmiccrispbrandwa38/ https://journals.ashs.org/hortsci/view/journals/hortsci/47/8/article-p1177.xml",
-            harvest_time: "late september", // from ashs article
+            harvest_time: "late September", // from ashs article
             released: "2012", // ashs publication year
             patent: "https://patents.google.com/patent/USPP24210 expires 2032-05-26"
         }
