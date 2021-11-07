@@ -1,7 +1,7 @@
 {
     title: "Arkansas Blueberries",
     author: "",
-    url: "",
+    url: "https://aaes.uada.edu/fruit-breeding/blueberries/",
     published: "",
     accessed: "",
     locations: [
@@ -12,6 +12,9 @@
         }
     ],
     plants: [
+
+// https://aaes.uada.edu/fruit-breeding/blueberries/
+
 
         // Ozarkblue
 // https://patents.google.com/patent/USPP10035 expired 2016-02-26

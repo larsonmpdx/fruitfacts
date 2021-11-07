@@ -154,7 +154,7 @@
         },
         {
             name: "NY 56",
-            AKA: ["Cordera (tm)"],
+            AKA: ["Cordera (tm)", "NY94410-56"],
             type: "Apple",
             description: "https://cals.cornell.edu/news/2020/09/crunchy-complex-cornell-releases-three-new-apples",
             patent: "https://patents.google.com/patent/USPP30758 expires 2037-11-07"

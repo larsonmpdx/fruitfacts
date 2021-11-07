@@ -1,7 +1,7 @@
 {
     title: "Arkansas Table Grape Cultivars",
     author: "Eric T. Stafne, Mississippi State University and John R. Clark, University of Arkansas",
-    url: "https://grapes.extension.org/arkansas-table-grape-cultivars/",
+    url: "https://grapes.extension.org/arkansas-table-grape-cultivars/ https://aaes.uada.edu/fruit-breeding/grapes/",
     published: "June 2019",
     accessed: "Oct 2021",
     locations: [
@@ -98,13 +98,16 @@
             seedless: false,
             description: "a juice grape that is very similar to ‘Concord' but displays even ripening under hot conditions. low to moderate yield. good cold hardiness. moderate to high resistance to common fungal diseases",
             patent: "https://patents.google.com/patent/USPP8511 expired 2012-09-25"
+        },
+        {
+            type: "Grape",
+            name: "Compassion",
+            color: "green",
+            seedless: true,
+            released: "2017",
+            description: "https://journals.ashs.org/hortsci/downloadpdf/journals/hortsci/53/3/article-p401.xml https://uark.flintbox.com/technologies/75239314-1151-4124-8251-16a70cc192b4",
+            patent: "https://patents.google.com/patent/USPP31526 expires 2038-09-17"
         }
-
-        // todo "Compassion"
-        // https://patents.google.com/patent/USPP31526 expires 2038-09-17
-        // https://journals.ashs.org/hortsci/downloadpdf/journals/hortsci/53/3/article-p401.xml
-        // https://uark.flintbox.com/technologies/75239314-1151-4124-8251-16a70cc192b4
-
         // todo Grape plant named 'A-2640'. I think this is part of a UIdaho cooperation but not named or released
         // https://patents.google.com/patent/USPP20745 expires 2028-06-10
         // https://scholarworks.uark.edu/pat/82/

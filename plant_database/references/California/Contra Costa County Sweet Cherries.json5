@@ -1,0 +1,191 @@
+{
+    name: "Black Tartarian",
+harvest_time_relative: "Bing -14",
+color: "black"
+},
+{
+    name: "Early Burlat",
+harvest_time_relative: "Bing -14",
+color: "dark red"
+},
+{
+    name: "Mona",
+harvest_time_relative: "Bing -14",
+color: "red to dark red",
+},
+// I don't think this is notable enough or is maybe misspelled: Berryessa -10 yellow w/ blush
+{
+    name: "Brooks",
+harvest_time_relative: "Bing -9",
+color: "dark red",
+
+},
+{
+    name: "Chelan",
+harvest_time_relative: "Bing -9",
+color: "dark red",
+
+},
+{
+    name: "Bada",
+harvest_time_relative: "Bing -7",
+color: "yellow w/ blush",
+
+},
+{
+    name: "Chinook",
+harvest_time_relative: "Bing -7",
+color: "red to dark red",
+},
+{
+    name: "Coral",
+harvest_time_relative: "Bing -7",
+color: "red to dark red",
+},
+{
+    name: "Corum",
+harvest_time_relative: "Bing -7",
+color: "yellow w/ blush",
+
+},
+{
+    name: "Larian",
+harvest_time_relative: "Bing -7",
+color: "dark red",
+
+},
+{
+    name: "Tieton",
+harvest_time_relative: "Bing -6",
+color: "dark red",
+
+},
+{
+    name: "Tulare",
+harvest_time_relative: "Bing -6",
+color: "red",
+
+},
+{
+    name: "Index",
+harvest_time_relative: "Bing -5",
+color: "dark red",
+description: "self fertile",
+
+},
+{
+    name: "Garnet",
+harvest_time_relative: "Bing -4",
+color: "red",
+
+},
+{
+    name: "Ruby",
+harvest_time_relative: "Bing -4",
+color: "red",
+
+},
+{
+    name: "Julbilee",
+harvest_time_relative: "Bing -3",
+color: "red to dark red",
+
+},
+{
+    name: "King",
+harvest_time_relative: "Bing -3",
+color: "red to dark red",
+
+},
+{
+    name: "Cristalina",
+harvest_time_relative: "Bing -2",
+color: "dark red",
+
+},
+{
+    name: "Benton",
+harvest_time_relative: "Bing -1",
+color: "dark red",
+description: "self fertile",
+},
+{
+    name: "Bing
+harvest_time_relative: "Bing 0
+color: "dark red
+
+},
+{
+    name: "Sweet Ann
+harvest_time_relative: "Bing 0
+color: "yellow w/ blush
+
+},
+{
+    name: "Van
+harvest_time_relative: "Bing 0
+color: "black
+partially incompatible on Mahaleb
+
+},
+{
+    name: "Summit
+harvest_time_relative: "Bing +1
+color: "red
+
+},
+{
+    name: "Rainier
+harvest_time_relative: "Bing +2
+color: "yellow w/ blush
+},
+{
+    name: "Utah Giant
+harvest_time_relative: "Bing +2
+dark red
+
+},
+{
+    name: "Stella
+harvest_time_relative: "Bing +4
+color: "dark red
+description: "self fertile
+
+},
+{
+    name: "Lambert
+harvest_time_relative: "Bing +5
+color: "dark red
+
+},
+{
+    name: "Selah (Liberty Bell)
+harvest_time_relative: "Bing +5
+description: "self fertile
+
+},
+{
+    name: "Attika
+harvest_time_relative: "Bing +6
+color: "dark red
+},
+{
+    name: "Lapins
+harvest_time_relative: "Bing +7
+color: "dark red
+description: "self fertile
+
+},
+{
+    name: "Skenna
+harvest_time_relative: "Bing +7
+color: "dark red
+description: "self fertile
+
+},
+{
+    name: "Sweetheart",
+harvest_time_relative: "Bing +10",
+color: "dark red",
+description: "self fertile
+}

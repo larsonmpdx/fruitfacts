@@ -16,7 +16,7 @@
             name: "WA 2",
             AKA: ["Sunrise Magic®"],
             type: "Apple",
-            description: "Splendour x Gala https://tfrec.cahnrs.wsu.edu/breed/wa-2/ https://journals.ashs.org/hortsci/view/journals/hortsci/45/4/article-p668.xml?rskey=SemCMG",
+            description: "Splendour x Gala https://tfrec.cahnrs.wsu.edu/breed/wa-2/ https://journals.ashs.org/hortsci/view/journals/hortsci/45/4/article-p668.xml",
             harvest_time: "late September",
             released: "2010", // ashs publication year
             patent: "https://patents.google.com/patent/USPP21710 expires 2029-03-24"
@@ -24,7 +24,7 @@
         {
             name: "WA 5", // not branded as of 2021
             type: "Apple",
-            description: "Splendour x Co-op 15 https://tfrec.cahnrs.wsu.edu/breed/introducing-wa-5/ https://journals.ashs.org/hortsci/view/journals/hortsci/46/6/article-p958.xml?rskey=7NGoqG",
+            description: "Splendour x Co-op 15 https://tfrec.cahnrs.wsu.edu/breed/introducing-wa-5/ https://journals.ashs.org/hortsci/view/journals/hortsci/46/6/article-p958.xml",
             harvest_time: "early to mid September",
             released: "2011", // ashs publication year
             patent: "https://patents.google.com/patent/USPP24054 expires 2032-03-23"

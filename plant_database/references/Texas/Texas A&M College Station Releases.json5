@@ -12,8 +12,115 @@
         }
     ],
     plants: [
+        // background article https://www.chron.com/life/food/article/Peaches-by-design-1584367.php
+        
         // todo
         // TexPrince 2004
         // https://journals.ashs.org/hortsci/downloadpdf/journals/hortsci/39/3/article-p631.xml
+
+        // fire zest, royal zest, golden zest 2013
+        // https://aggie-horticulture.tamu.edu/fruit-nut/files/2010/10/Royal-Golden-Zest-Peaches-one-Pager-Feb-8-2013.pdf
+
+        // white delight one, two, three, four. 2019?
+        // WD1, WD2, WD3, WD4
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/48/8/article-p1056.xml
+        // https://aggie-horticulture.tamu.edu/fruit-nut/files/2019/03/4-White-Delight-Peaches-Feb-2019.pdf
+
+        // flat delight one, flat delight two
+        // https://aggie-horticulture.tamu.edu/fruit-nut/files/2019/03/5-Flat-Delight-peaches-Feb-2019.pdf
+
+        // Smooth Texan One, Smooth Texan Two, Smooth Texan Three
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/49/8/article-p1095.xml
+        // https://aggie-horticulture.tamu.edu/fruit-nut/files/2019/03/6-Smooth-Texas-nectarines-Feb-2019.pdf
+
+        // Smooth Delight One, Smooth Delight Two, Smooth Delight Three
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/49/12/article-p1593.xml - only for one, two
+        // three not found yet
+        // https://aggie-horticulture.tamu.edu/fruit-nut/files/2019/03/7-Smooth-Delight-Nectarines-Feb-2019.pdf
+
+        // Smooth Zest One (TX2B300WN), Smooth Zest Two (TX2B261N)
+        // 2015
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/50/11/article-p1729.xml
+        // https://aggie-horticulture.tamu.edu/fruit-nut/files/2019/03/8-Smooth-Zest-Nectarines-Feb-2019.pdf
+
+        // texfirst
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/47/12/article-p1803.xml
+        // https://aggie-horticulture.tamu.edu/fruit-nut/files/2019/03/9-Tropical-peaches-Feb-2019.pdf ?
+
+        // tropic zest two, tropic zest three
+        // https://aggie-horticulture.tamu.edu/fruit-nut/files/2019/03/9-Tropical-peaches-Feb-2019.pdf
+
+        // tropic zest four
+        // https://agrilifetoday.tamu.edu/2013/12/30/new-peach-varieties-available-in-january-for-home-gardens-across-texas/
+
+
+        // Diamond Ray: todo figure out who released this
+        // Bradford, L.G. & Bradford, N.G. 1994 Nectarine tree (Diamond Ray). United States Patent # 8,948, 18 Oct. 1994
+
+// to match patent
+// Tropicpeachone
+// Byrne, D.H. 2002 Peach tree named ‘Tropicpeachone’. U.S. plant patent 12965. 17 Sept. 2002
+
+
+// zest series article
+// https://journals.ashs.org/hortsci/view/journals/hortsci/49/4/article-p506.xml
+// todo - the other ashs articles
+
+
+        // white zest one (TX3C331W)
+        // 2015
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/50/2/article-p315.xml
+        // https://www.rosbreed.org/node/911
+
+        // royal zest three
+
+        // texking
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/39/2/article-p442.xml
+
+        // texroyal 1991
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/26/10/article-p1338.xml
+
+        // texstar
+        // Byrne, D.H. and J.S. Kamas. 1984. ʻTexstarʼ Peach. HortScience 19:453–454
+
+
+        // "thai tiger" series 2008 - released for thailand breeding, they don't look named or released in the US
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/43/7/article-p2226.xml
+
+
+        // Sharpe, R.H. 1970. Sub-tropical peaches and nectarines. Proc. Fla. State Hort. Soc. 82:302–306.
+        // https://www.cabdirect.org/cabdirect/abstract/19710300540
+
+
+        // ValleGrande peach 1989
+        // ValleGrande’  is  a  bud  mutation  from  thecultivar  ‘EarliGrande’  that  was  released  in1980
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/25/6/article-p714.xml
+
+        // EarliGrande 1980
+        // Bowen,  H.H.  1980.  ‘EarliGrande’  peach.  Hort-Science 15:207
+
+
+        // TropicSweet - I think florida
+        // Rouse,  R.E.  and  W.B.  Sherman.  1987.‘’:  A  freestone  peach  for  subtrop-ical  climates.  HortScience  22:  169–170
+
+        // TropicBeauty - I think florida
+        // Rouse,  R.E.  and  W.B.  Sherman.  1989.‘TropicBeauty’:  A  low-chilling  peach  for  sub-tropical  climates.  HortScience  24:165-166.
+
+        // FlordaGrande - I think florida
+        // Rouse,  R.  E.,  W.B.  Sherman,  and  R.H.  Sharpe.1985. ‘FlordaGrande’: A peach for subtropicalclimates.  HortScience  20:304–305
+
+        // ‘Flordaprince’ - I think florida
+        // Sherman,  W.  B.,  P.M.  Lyrene,  J.A.  Mortensen,and  R.H.  Sharpe.  1982.  ‘Flordaprince’  peach.HortScience  17:988.
+
+        // flordaking - to put in fl one
+        // Andrews, C.P., Sherman, W.B. & Lyrene, P.M. 1979 ‘Flordaking’ peach HortScience 14 81 82
+
+        // Sunraycer - to put in fl one
+        // Sherman, W.B., Andersen, P.C. & Lyrene, P.M. 1995 ‘Sunraycer’ nectarine HortScience 30 154
+
+        // Sunmist - I think fl
+        // Sherman, W.B., Andersen, P.C. & Lyrene, P.M. 1995b ‘Sunmist’ nectarine HortScience 30 155
+
+        // Brooks, R.M. 1958 Double Delight, Earligold, and June Gold peaches Fruit Var. J. 3 22
     ]
 }

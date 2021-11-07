@@ -1,0 +1,55 @@
+{
+    title: "WSU Mt. Vernon Stone Fruit Releases",
+    author: "",
+    url: "https://www.pacifichorticulture.org/articles/well-bred-fruit-for-the-maritime-climate-2/",
+    published: "various",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "WWFRF, Mt. Vernon, WA",
+            latitude: 48.439906165067555,
+            longitude: -122.38861565365134
+        }
+    ],
+    plants: [
+        {
+            name: "Avalon Pride",
+            AKA: ["Croft"], // patent name
+            type: "Peach",
+            tags: ["Yellow Peach"],
+            description: "Margaret Proud provided for testing", 
+            disease_resistance: {
+                peach_leaf_curl: "resistant"
+            },
+            released: 2003,
+            patent: "https://patents.google.com/patent/USPP11769 expired 2018-11-02"
+        },
+        {
+            name: "Puget Gold",
+            type: "Apricot",
+            description: "The Copeland Family provided for testing. \"Puget Gold apricot. RA Norton, J King, GA Moulton - HortScience, 1988\"", // haven't gotten a pdf of the release paper, ashs doesn't make about pre-1990 easily found
+            relased: "1988"
+        },
+        {
+            // release year todo
+            name: "Frost",
+            type: "Peach",
+            description: "Herb Frost provided for testing",
+            disease_resistance: {
+                peach_leaf_curl: "resistant"
+            },
+        },
+        {
+            name: "Orcas",
+            type: "Euro Pear",
+            description: "Joe Long provided for testing. https://extension.wsu.edu/maritimefruit/tree-fruit/pears/",
+            released: "1986"
+        },
+        {
+            name: "Rescue",
+            type: "Euro Pear",
+            description: "Knox Nomura provided for testing. https://extension.wsu.edu/maritimefruit/tree-fruit/pears/",
+            released: "1987"
+        }
+    ]
+}

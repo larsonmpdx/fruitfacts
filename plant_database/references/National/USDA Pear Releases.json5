@@ -1,0 +1,64 @@
+{
+    title: "USDA Pear Releases",
+    author: "",
+    url: "https://www.ars.usda.gov/ARSUserFiles/382/USDA%20Pear%20Cultivars%20-%20BARC%20and%20AFRS.pdf",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "USDA Washington, DC",
+            latitude: 38.888076929585985,
+            longitude: -77.01301046627138
+        }
+    ],
+    plants: [
+        {
+            name: "Magness",
+            type: "Euro Pear",
+            description: "Released by the Beltsville Agricultural Research Center",
+            released: "1960"
+        },
+        {
+            name: "Moonglow",
+            type: "Euro Pear",
+            description: "Released by the Beltsville Agricultural Research Center",
+            released: "1960"
+        },
+        {
+            name: "Dawn",
+            type: "Euro Pear",
+            description: "Released by the Beltsville Agricultural Research Center",
+            released: "1960"
+        },
+        {
+            name: "Potomac",
+            type: "Euro Pear",
+            description: "Released by USDA-ARS-AFRS and The Ohio State University",
+            released: "1993"
+        },
+        {
+            name: "Blake's Pride",
+            type: "Euro Pear",
+            description: "Released by USDAARS-AFRS and The Ohio State University",
+            released: "1998"
+        },
+        {
+            name: "Shenandoah",
+            type: "Euro Pear",
+            description: "Released by USDA-ARS and The Ohio State University https://journals.ashs.org/hortsci/view/journals/hortsci/43/7/article-p2219.xml",
+            released: "2002"
+        },
+        {
+            name: "Sunrise",
+            type: "Euro Pear",
+            description: "Released by USDA-ARSAFRS and Ohio State University",
+            released: "2006"
+        },
+        {
+            name: "Gem",
+            type: "Euro Pear",
+            description: "Joint release with Oregon State University, Michigan State University and Clemson University http://www.interpera.org/uploads/1/7/0/4/17040934/einhorn_presentation_2.pdf",
+            released: "2013"
+        }
+    ]
+}

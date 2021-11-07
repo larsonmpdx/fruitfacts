@@ -13,42 +13,60 @@
         }
     ],
     plants: [
+
+
+// https://aaes.uada.edu/fruit-breeding/peaches-and-nectarines/ todo - pull out links and stuff from this page
+
+
 // 'Whitewater" Peach 'A-856' 2021
+// https://aaes.uada.edu/files/2021/01/Whitewater-release-flyer.pdf
 
+// Effie        https://uark.flintbox.com/technologies/cc9f10df-bedb-4372-9eaa-6b2c19bdbaf4
+// released 2018
 
-// 2000: 1500-03 Nectarine - 'Bradley'
-// https://patents.google.com/patent/USPP12620 expired 2020-10-23
+// 2012: 2013-23 Nectarine - 'Amoore Sweet'    https://uark.flintbox.com/technologies/d231be89-35d6-477b-98ba-0e853e58aa76 
+// https://patents.google.com/patent/USPP26367 expires 2033-12-22
 
+// 2012: 2013-22 Nectarine - 'Bowden'       https://uark.flintbox.com/technologies/a5da54de-b0f8-450f-b609-a071928c4317
+// https://patents.google.com/patent/USPP26402 expires 2033-12-24
+
+// 2012: 2013-21 Peach - 'Souvenirs'              https://uark.flintbox.com/technologies/9b114d72-806f-457e-891e-a4051d4b3af8
+// https://patents.google.com/patent/USPP26920 expires 2034-09-05
+
+// White Cloud - todo
+// 
+
+// 2004: 1504-04 Peach - 'White Rock'               https://uark.flintbox.com/technologies/488481d0-40af-43f1-93c3-67db9ad129d1
+// https://patents.google.com/patent/USPP17911 expires 2025-07-07
+
+// 2004: 1504-03 Peach - 'White County'         https://uark.flintbox.com/technologies/62bb9226-a866-4fbc-8377-e61c9de87538
+// https://patents.google.com/patent/USPP17742 expires 2025-06-04
+
+// white river 
+// https://patents.google.com/patent/USPP15159 expires 2023-02-02
 
 // 2000: 1500-02 Nectarine- 'Westbrook'
 // https://patents.google.com/patent/USPP12622 expired 2020-10-20
 
 // 2000: 1500-01 Nectarine - 'Arrington'    
-// https://patents.google.com/patent/USPP12641
+// https://patents.google.com/patent/USPP12641 expired 2020-10-13
+
+// 2000: 1500-03 Nectarine - 'Bradley'
+// a citation: Clark, J.R. & Moore, J.N. 2002 Nectarine tree named ‘Bradley’ cultivar. United States Patent # 12620, 14 May 2002
+// https://patents.google.com/patent/USPP12620 expired 2020-10-23
 
 
-// 2012: 2013-22 Nectarine - 'Bowden'       https://uark.flintbox.com/technologies/a5da54de-b0f8-450f-b609-a071928c4317
-// https://patents.google.com/patent/USPP26402 expires 2033-12-24
-
-// 2012: 2013-23 Nectarine - 'Amoore Sweet'    https://uark.flintbox.com/technologies/d231be89-35d6-477b-98ba-0e853e58aa76 
-// https://patents.google.com/patent/USPP26367 expires 2033-12-22
-
-// 2004: 1504-03 Peach - 'White County'         https://uark.flintbox.com/technologies/62bb9226-a866-4fbc-8377-e61c9de87538
-// https://patents.google.com/patent/USPP17742 expires 2025-06-04
-
-// 2004: 1504-04 Peach - 'White Rock'               https://uark.flintbox.com/technologies/488481d0-40af-43f1-93c3-67db9ad129d1
-// https://patents.google.com/patent/USPP17911 expires 2025-07-07
+// not on that page -
 
 // 2009: 2010-20 Peach - 'White Diamond'               https://uark.flintbox.com/technologies/76f6cb51-4c6e-42ca-8c24-7209a773f95d
 // https://patents.google.com/patent/USPP22464 expires 2030-06-11
 
-// 2012: 2013-21 Peach - 'Souvenirs'              https://uark.flintbox.com/technologies/9b114d72-806f-457e-891e-a4051d4b3af8
-// https://patents.google.com/patent/USPP26920 expires 2034-09-05
 
-// white river 
-// https://patents.google.com/patent/USPP15159 expires 2023-02-02
 
-// Effie        https://uark.flintbox.com/technologies/cc9f10df-bedb-4372-9eaa-6b2c19bdbaf4
-// released 2018
+
+
+
+
+
     ]
 }
