@@ -1,80 +1,161 @@
-// todo. I think I got all ashs articles so all that's left is formatting
+{
+    title: "WSU Cherry Releases",
+    author: "",
+    url: "http://treefruit.wsu.edu/web-article/cherry-varieties/",
+    published: "various",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "WSU-TFREC Wenatchee WA",
+            latitude: 47.43797869140167,
+            longitude: -120.34750055765679
+        }
+    ],
+    plants: [
+        // https://read.dmtmag.com/i/132109-june-1/17? "good fruit grower: WSU program focused on self-fertility" June 2013
+        // "Sweet Cherry Breeding at WSU acta hort 2000" http://treefruit.wsu.edu.s3.amazonaws.com/wp-content/uploads/2019/10/08094509/WSU-cherry-breeding-Olmstead.pdf
+        {
+            color: "dark red",
+            name: "PC7146-23",
+            AKA: ["Chelan (tm)"],
+            type: "Sweet Cherry",
+            description: "http://treefruit.wsu.edu/variety/chelan/ https://www.canr.msu.edu/hrt/uploads/534/82106/Chelan_Sweet_Cherry.pdf",
+            s_allele: "S3S9",
+            patent: "https://patents.google.com/patent/USPP8545 expired 2012-12-24"
+        },
+        {
+            color: "dark red",
+            name: "PC7903-2",
+            AKA: ["Cowiche (tm)"],
+            type: "Sweet Cherry",
+            description: "http://treefruit.wsu.edu/variety/cowiche/ https://journals.ashs.org/hortsci/view/journals/hortsci/49/10/article-p1346.xml",
+            released: "2007",
+            patent: "https://patents.google.com/patent/USPP21073 expires 2028-03-16",
+            harvest_time_relative: "Bing +3 to +7"
+        },
+        {
+            color: "dark red",
+            name: "PC8007-2",
+            AKA: ["Kiona (tm)"],
+            type: "Sweet Cherry",
+            description: "Glacier x Cashmere http://treefruit.wsu.edu/variety/kiona/ https://journals.ashs.org/hortsci/view/journals/hortsci/45/12/article-p1906.xml",
+            harvest_time_relative: "Bing -6 to -9 days",
+            released: "2010",
+            patent: "https://patents.google.com/patent/USPP20526 expires 2028-01-30"
+        },
+        {
+            name: "PC7064-3",
+            AKA: ["Selah (r)", "Liberty Bell"], // ashs article: The trademark initially pursued for ‘PC7064-3’ was Liberty Bell. However, the inability to trademark the name Liberty Bell necessitated the change in name to Selah®
+            type: "Sweet Cherry",
+            description: "self-fertile. P8-79 (Rainier x Bing) x Stella http://treefruit.wsu.edu/variety/selah/ https://journals.ashs.org/hortsci/view/journals/hortsci/46/1/article-p123.xml",
+            color: "dark red",
+            harvest_Time_relative: "Bing +10 to +14 days",
+            patent: "https://patents.google.com/patent/USPP16135 expires 2023-10-06",
+            released: "2011"
+        },
+        {
+            color: "dark red",
+            name: "PC7144-6",
+            AKA: ["Tieton (r)"],
+            type: "Sweet Cherry",
+            description: "Stella x Early Burlat http://treefruit.wsu.edu/variety/tieton/ https://www.canr.msu.edu/hrt/uploads/534/82106/Tieton_Sweet_Cherry.pdf",
+            s_allele: "S3S9",
+            patent: "https://patents.google.com/patent/USPP11385 expired 2018-04-24",
+            released: "1995"
+        },
+        {
+            color: "red",
+            name: "PC7146-8",
+            AKA: ["Benton (r)"],
+            type: "Sweet Cherry",
+            description: "self-fertile. Stella x Beaulieu http://treefruit.wsu.edu/variety/benton/ https://journals.ashs.org/hortsci/view/journals/hortsci/46/1/article-p121.xml",
+            patent: "https://patents.google.com/patent/USPP15847 expires 2023-04-28",
+            harvest_time_relateive: "Bing +1 to +2 days",
+            released: "2003"
+        },
+        {
+            color: "red",
+            name: "PC 7222-1",
+            AKA: ["Index (tm)"],
+            type: "Sweet Cherry",
+            description: "self-fertile. http://treefruit.wsu.edu/variety/index/",
+            patent: "https://patents.google.com/patent/USPP10459 expired 2017-01-14"
+        },
+        {
+            name: "Rainier",
+            AKA: ["P 1-680"],
+            type: "Sweet Cherry",
+            description: "Bing x Van http://treefruit.wsu.edu/variety/rainier/",
+            s_allele: "S1S4",
+            released: "1960",
+            color: "red"
+        },
+        {
+            name: "Chinook",
+            AKA: ["P 1-246"],
+            type: "Sweet Cherry",
+            description: "Bing x Gil Peck",
+            released: "1960"
+        },
+        {
+            name: "Olympus",
+            AKA: ["PC6659-2"],
+            description: "Lambert x Van https://anfic.com.au/variety/olympus-pc-6659-2-cherry/",
+            type: "Sweet Cherry",
+            patent: "https://patents.google.com/patent/USPP8033 expired 2011-03-04",
+            // "1990-1993"
+            released: "1990"
+        },
+        {
+            name: "Glacier",
+            AKA: ["PC7144-7"],
+            type: "Sweet Cherry",
+            description: "Stella x Early Burlat",
+            // "1990-1993"
+            released: "1990",
+            patent: "https://patents.google.com/patent/USPP8051 expired 2011-03-04"
+        },
+        {
+            name: "Cashmere",
+            AKA: ["PC 7144-3"],
+            type: "Sweet Cherry",
+            description: "Stella x Early Burlat",
+            // "1990-1993"
+            released: "1990"
+        },
+        {
+            name: "Simcoe", // I think not trademarked in the US
+            AKA: ["PC 7147-1"],
+            description: "Stella x Hollander or Staking Hardy Giant https://www.canr.msu.edu/hrt/uploads/534/82106/Simcoe_Sweet_Cherry.pdf https://anfic.com.au/variety/simcoe-pc-7147-1-cherry/",
+            type: "Sweet Cherry",
+            // "1990-1993"
+            released: "1990"
+        },
+        {
+            name: "PC8011-3",
+            description: "unreleased. PC7147-4 x PC66138-2 https://www.goodfruit.com/dream-blush-cherry-has-dim-future/",
+            patent: "https://patents.google.com/patent/USPP15868",
+            type: "Sweet Cherry"
+        }
+    ]
+}
 
-// dark red
-http://treefruit.wsu.edu/variety/chelan/ S3S9
+// varieties under test with ANFIC, no WSU release as far as I can tell:
 
+// PC 7146-16
+// https://anfic.com.au/variety/pc-7146-16-cherry/
 
+// PC 7616-4
+// https://anfic.com.au/variety/pc-7616-4-cherry/
 
-// dark red
-http://treefruit.wsu.edu/variety/cowiche/ (tm) 2007
-https://journals.ashs.org/hortsci/view/journals/hortsci/49/10/article-p1346.xml?rskey=5Ztf89 Bing +3 to +7
-PC 7903-2
+// PC 7636-1
+// https://anfic.com.au/variety/pc-7636-1-cherry/
 
-// dark red
-http://treefruit.wsu.edu/variety/kiona/ 2010
-https://journals.ashs.org/hortsci/view/journals/hortsci/45/12/article-p1906.xml Bing -6 to -9 days
+// PC 8008-1
+// https://anfic.com.au/variety/pc-8008-1-cherry/
 
+// PC 8008-10
+// https://anfic.com.au/variety/pc-8008-10-cherry/
 
-// dark red
-// PC7064-3
-http://treefruit.wsu.edu/variety/selah/ self-fertile 2011
-// The trademark initially pursued for ‘PC7064-3’ was Liberty Bell. However, the inability to trademark the name Liberty Bell necessitated the change in name to Selah®. Therefore, some reference may be found to Liberty Bell, particularly in trade publications.
-https://journals.ashs.org/hortsci/view/journals/hortsci/46/1/article-p123.xml Bing +10 to +14 days
-
-
-// dark red
-http://treefruit.wsu.edu/variety/tieton/ S3S9
-
-
-
-// red
-http://treefruit.wsu.edu/variety/benton/ self-fertile
-https://journals.ashs.org/hortsci/view/journals/hortsci/46/1/article-p121.xml Bing +1 to +2 days
-
-
-// red
-http://treefruit.wsu.edu/variety/index/ self-fertile
-
-
-
-// red
-http://treefruit.wsu.edu/variety/rainier/ 1960 S1S4
-
-
-
-
-// from https://read.dmtmag.com/i/132109-june-1/17? "good fruit grower: WSU program focused on self-fertility" June 2013
-// Rainier      Bing x Van              1960
-
-
-// Chinook      Bing x Gil Peck         1960
-
-
-// Olympus      Lambert x Van           1990-1993
-
-
-// Glacier      Stella x Early Burlat   1990-1993
-
-
-// Cashmere     Stella x Early Burlat   1990-1993
-
-
-// Simcoe       Stella x Hollander or Staking Hardy Giant       1990-1993
-
-
-// Tieton       Stella x Early Burlat   1995
-
-
-// Benton       Stella x Beaulieu       2003
-
-
-// Selah        P8-79 (Rainier x Bing) x Stella     2003
-
-
-// PC8011-3     PC7147-4 x PC66138-2        2003
-//   PP15868
-// https://www.goodfruit.com/dream-blush-cherry-has-dim-future/
-
-
-// Kiona        Glacier x Cashmere  2007
-// 
+// PC 8012-5
+// https://anfic.com.au/variety/pc-8012-5-cherry/
