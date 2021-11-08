@@ -1,106 +1,275 @@
-// "good fruit grower: stellar lineage" June 2013
-// https://read.dmtmag.com/i/132109-june-1/19?
+{
+    title: "Summerland Cherry Varieties",
+    author: "",
+    url: "https://profils-profiles.science.gc.ca/en/research-centre/centre-de-recherche-et-de-developpement-de-summerland/research-projects https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Summerland RDC, British Columbia",
+            latitude: 49.56620016490658,
+            longitude: -119.63687182593357
+        }
+    ],
+    plants: [
+        // "good fruit grower: stellar lineage" June 2013
+        // https://read.dmtmag.com/i/132109-june-1/19?
 
-// todo - format these and fill in post-2013 varieties
+        {
+            name: "Van",
+            type: "Sweet Cherry",
+            released: "1944",
+            description: "Empress Eugenie open pollinated"
+        },
+        {
+            name: "Sparkle",
+            type: "Sweet Cherry",
+            released: "1945",
+            description: "Empress Eugenie open pollinated"
+        },
+        {
+            name: "Star",
+            type: "Sweet Cherry",
+            released: "1949",
+            description: "Deacon open pollinated"
+        },
+        {
+            name: "Sam",
+            type: "Sweet Cherry",
+            released: "1953",
+            description: "V-16140 open pollinated"
+        },
+        {
+            name: "Sue",
+            type: "Sweet Cherry",
+            released: "1954",
+            description: "Bing x Schmidt"
+        },
+        {
+            name: "Compact Lambert",
+            type: "Sweet Cherry",
+            released: "1964",
+            description: "Irradiated Lambert"
+        },
+        {
+            name: "Stella",
+            type: "Sweet Cherry",
+            released: "1968",
+            description: "Lambert x J.I.2420"
+        },
+        {
+            name: "Salmo",
+            type: "Sweet Cherry",
+            released: "1970",
+            description: "Lambert x Van"
+        },
+        {
+            name: "Compact Stella",
+            type: "Sweet Cherry",
+            released: "1973",
+            description: "Irradiated Stella"
+        },
+        //
+        {
+            name: "Summit",
+            type: "Sweet Cherry",
+            released: "1973",
+            description: "Van x Sam"
+        },
+        //
+        {
+            name: "Lapins",
+            type: "Sweet Cherry",
+            released: "1973",
+            description: "Van x Stella https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/28/Lapins/",
+            harvest_time_relative: "Bing +12 to +14"
+        },
+        {
+            name: "Sunburst",
+            type: "Sweet Cherry",
+            released: "1973",
+            description: "Van x Stella"
+        },
+        {
+            name: "Newstar",
+            type: "Sweet Cherry",
+            released: "1988",
+            description: "Van x Stella"
+        },
+        {
+            name: "Newmoon",
+            type: "Sweet Cherry",
+            released: "?",
+            description: "Van x Stella"
+        },
+        {
+            name: "Sylvia",
+            type: "Sweet Cherry",
+            released: "1988",
+            description: "Van x Sam https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/34/Sylvia/",
+            harvest_time_relative: "Bing+7"
+        },
+        {
+            name: "Celeste", // I don't think any trademark is defended in the US on this. it appears to be an NZ/GB variety mainly
+            AKA: ["Sumpaca"],
+            type: "Sweet Cherry",
+            released: "1990?",
+            description: "Van x Newstar https://journals.ashs.org/hortsci/view/journals/hortsci/33/6/article-p1087.xml"
+        },
+        {
+            name: "Sweetheart",
+            AKA: ["Sumtare"],
+            type: "Sweet Cherry",
+            released: "1995",
+            description: "Van x Newstar https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/35/Sweetheart/",
+            harvest_time_relative: "Bing+21"
+        },
+        {
+            name: "Sandra Rose",
+            type: "Sweet Cherry",
+            released: "1997",
+            description: "2C-61-18 x Sunburst https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/29/Sandra_Rose/",
+            harvest_time_relative: "Bing +3 to +4"
+        },
+        {
+            name: "Santina",
+            type: "Sweet Cherry",
+            released: "1997",
+            description: "Stella x Summit https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/83/Santina/ https://journals.ashs.org/hortsci/view/journals/hortsci/33/6/article-p1087.xml",
+            harvest_time_relative: "Bing-11"
+        },
+        {
+            name: "Skeena",
+            type: "Sweet Cherry",
+            released: "1997",
+            description: "2N-60-07 x 2N-38-22 https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/page:2/product/86/Skeena/",
+            harvest_time_relative: "Bing+10"
+        },
+        {
+            name: "Sumleta",
+            AKA: ["Sonata (tm)"],
+            type: "Sweet Cherry",
+            released: "1997",
+            description: "Lapins x 2n-39-05 https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/32/Sumleta_Sonata/",
+            harvest_time_relative: "Bing+7"
+        },
+        {
+            name: "Summer Jewel",
+            type: "Sweet Cherry",
+            released: "1997",
+            description: "2C-61-18 x 2D-28-30"
+        },
+        {
+            name: "Sumnue",
+            AKA: ["Cristalina (tm)"],
+            type: "Sweet Cherry",
+            released: "1997",
+            description: "Star x Van https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/33/Sumnue_Cristalina/ https://journals.ashs.org/hortsci/view/journals/hortsci/33/6/article-p1087.xml",
+            harvest_time_relative: "Bing +5 to +7"
+        },
+        {
+            name: "Sumste",
+            AKA: ["Samba (tm)"],
+            type: "Sweet Cherry",
+            released: "1997",
+            description: "2S-84-10 x Stella 16A-7 https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/24/Sumste_Samba/",
+            harvest_time_relative: "Bing +2"
+        },
+        {
+            name: "Symphony",
+            type: "Sweet Cherry",
+            released: "1997",
+            description: "Lapins x Bing?"
+        },
+        {
+            name: "Sonnet",
+            type: "Sweet Cherry",
+            released: "1998",
+            description: "2N-49-02 x 2N-63-31 https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/page:2/product/84/Sonnet/",
+            harvest_time_relative: "Bing-4"
+        },
+        {
+            name: "13S2009",
+            AKA: ["Staccato (r)"],
+            type: "Sweet Cherry",
+            released: "2000",
+            description: "Sweetheart open pollinated https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/26/13S2009_Staccato/",
+            // or Sweetheart+7
+            harvest_time_relative: "Bing+26"
+        },
+        {
+            name: "Satin", // I don't think a trademark is defended on this
+            AKA: ["Sumele"],
+            type: "Sweet Cherry",
+            released: "2000",
+            description: "Lapins x 2N-39-05"
+        },
+        {
+            name: "13S2101",
+            AKA: ["Sovereign (tm)"],
+            type: "Sweet Cherry",
+            released: "2006",
+            description: "Sweetheart open pollinated https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/27/13S2101_Sovereign/",
+            // or Sweetheart+10
+            harvest_time_relative: "Bing+29",
+            patent: "https://patents.google.com/patent/USPP26646 expires 2034-07-06 "
+        },
+        {
+            name: "SPC 103",
+            AKA: ["Sentennial (tm)"],
+            type: "Sweet Cherry",
+            released: "2006",
+            description: "Sweetheart open pollinated https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/30/SPC_103_Sentennial/",
+            // or Sweetheart+10
+            harvest_time_relative: "Bing+29",
+            patent: "https://patents.google.com/patent/USPP26645 expires 2034-07-06"
+        },
+        {
+            name: "13N0770",
+            AKA: ["Stardust (tm)"],
+            type: "Sweet Cherry",
+            released: "2008",
+            description: "Blush. 2N-63-20 x Stella https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/25/13N0770_Stardust/",
+            harvest_time_relative: "Bing +12 to +15"
+        },
+        {
+            name: "SPC 136",
+            AKA: ["Suite Note (tm)"],
+            type: "Sweet Cherry",
+            released: "2012",
+            description: "2S-36-36 x Summit",
+            patent: "https://patents.google.com/patent/USPP26680 expires 2034-07-08"
+        },
+        {
+            name: "SPC 106",
+            AKA: ["Sofia (tm)"],
+            type: "Sweet Cherry",
+            released: "2013",
+            description: "OSC #6 x 2S-28-39",
+            harvest_time_relative: "Bing+4"
+        },
+        // post-2013 (not in the gfg article):
+        {
+            name: "13N0739",
+            AKA: ["Starletta™"],
+            type: "Sweet Cherry",
+            released: "~2012",
+            description: "https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/page:2/product/87/13N0739_Starletta/",
+            patent: "can't find a US patent. I think this one went mainly to NZ"
+        },
+        {
+            name: "SPC342",
+            type: "Sweet Cherry",
+            description: "exclusive to ANFIC https://anfic.com.au/variety/spc342-cherry/",
+            patent: "https://patents.google.com/patent/USPP29788 expires 2036-12-22"
+        },
+        {
+            name: "SPC243",
+            type: "Sweet Cherry",
+            description: "exclusive to ANFIC  https://anfic.com.au/variety/spc243-cv-13s-21-14-cherry/",
+            patent: "https://patents.google.com/patent/USPP27927 expires 2035-09-17"
+        }
+    ]
+}
 
-// Van              Empress Eugenie open pollinated     1944
-// Sparkle          Empress Eugenie open pollinated     1945
-// Star             Deacon open pollinated              1949
-// Sam              V-16140 open pollinated             1953
-// Sue              Bing x Schmidt                      1954
-// Compact Lambert  Irradiated Lambert                  1964
-// Stella           Lambert x J.I.2420                  1968
-// Salmo            Lambert x Van                       1970
-// Compact Stella   Irradiated Stella                   1973
-// Summit           Van x Sam                           1973
-
-
-// Lapins           Van x Stella                        1973
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/28/Lapins/
-// Bing +12 to +14
-
-
-
-// Sunburst         Van x Stella                        1973
-
-
-// Newstar          Van x Stella                        1988
-
-
-// Newmoon          Van x Stella                        ?
-
-
-// Sylvia           Van x Sam                           1988
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/34/Sylvia/
-// Bing+7
-
-// Celeste (Sumpaca)    Van x Newstar                   1990?
-
-
-// Sweetheart (Sumtare)     Van x Newstar               1995
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/35/Sweetheart/
-// Bing+21
-
-// Sandra Rose      2C-61-18 x Sunburst                 1997
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/29/Sandra_Rose/
-// Bing +3 to +4
-
-// Santina      Stella x Summit                         1997
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/83/Santina/
-// Bing-11
-
-// Skeena       2N-60-07 x 2N-38-22                     1997
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/page:2/product/86/Skeena/
-// Bing+10
-
-// Sumleta (Sonata (tm))     Lapins x 2n-39-05               1997
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/32/Sumleta_Sonata/
-// Bing+7
-
-// Summer Jewel         2C-61-18 x 2D-28-30             1997
-
-
-// Sumnue (Cristalina (tm))  Star x Van                      1997
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/33/Sumnue_Cristalina/
-// Bring +5 to +7
-
-// Sumste (Samba (tm))       2S-84-10 x Stella 16A-7         1997
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/24/Sumste_Samba/
-// Bing + 2
-
-// Symphony             Lapins x Bing?                  1997
-
-
-// Sonnet               2N-49-02 x 2N-63-31             1998
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/page:2/product/84/Sonnet/
-// Bing-4
-
-// 13S2009 (Staccato (r))         Sweetheart open pollinated          2000
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/26/13S2009_Staccato/
-// Bing+26 or Sweetheart+7
-
-// Satin (Sumele)       Lapins x 2N-39-05               2000
-
-
-// 13S2101 (Sovereign (tm))            Sweetheart open pollinated      2006
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/27/13S2101_Sovereign/
-// Bing+29 or Sweetheart+10
-
-// SPC 103 (Sentennial (tm))           Sweetheart open pollinated      2006
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/30/SPC_103_Sentennial/
-// Bing+29 or Sweetheart+10
-
-// 13N0770 (Stardust (tm)             2N-63-20 x Stella               2008
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/25/13N0770_Stardust/
-// Blush, Bing +12 to +15
-
-// Suite Note           2S-36-36 x Summit               2012
-
-
-// SPC 106 (Sofia (tm))                OSC #6 x 2S-28-39               2013
-// Bing+4
-
-// post-2013:
-
-// 13N0739 (Starletta™)
-// https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/page:2/product/87/13N0739_Starletta/
+// todo: ANFIC aussie IP licensing https://anfic.com.au/

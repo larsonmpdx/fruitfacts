@@ -1,0 +1,106 @@
+{
+    title: "Summerland Apple Varieties",
+    author: "",
+    url: "https://profils-profiles.science.gc.ca/en/research-centre/centre-de-recherche-et-de-developpement-de-summerland/research-projects https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Summerland RDC, British Columbia",
+            latitude: 49.56620016490658,
+            longitude: -119.63687182593357
+        }
+    ],
+    plants: [
+        // collated from a few places
+        // ‘Spartan’ 1936
+        // Summerred 1964
+        // Summerland
+        // Shamrock 1986
+        // Sunrise 1991
+        // Sinta
+        // Creston 1996
+        // Chinook 1996
+        // Silken 1996
+        // Scarlet Sentinel 1997
+        // Golden Sentinel 1997
+
+        {
+            // not a summerland variety
+            name: "Ambrosia",
+            type: "Apple",
+            harvest_time: "Early to mid October", // in BC
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/3/Ambrosia/"
+        },
+        {
+            name: "SPA493",
+            AKA: "Salish®",
+            type: "Apple",
+            harvest_time: "Late September to the first week of October", // in Summerland
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/17/SPA493_Salish/",
+            released: "2018",
+            patent: "https://patents.google.com/patent/USPP28075 expires 2035-07-08"
+        },
+        {
+            name: "8S6923",
+            AKA: ["Aurora Golden Gala™"],
+            type: "Apple",
+            harvest_time: "Late September to early October", // in BC
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/4/8S6923_Aurora_Golden_Gala/"
+        },
+        {
+            name: "SPA 440",
+            AKA: ["Nicola™"],
+            type: "Apple",
+            harvest_time_unparsed: "Mid to late season, after Ambrosia™",
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/13/SPA_440_Nicola/"
+        },
+        {
+            name: "Silken",
+            type: "Apple",
+            harvest_time: "Early September", // in BC
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/12/Silken/"
+        },
+        {
+            name: "Sunrise",
+            type: "Apple",
+            harvest_time: "mid August to early September", // in BC
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/15/Sunrise/"
+        },
+        {
+            name: "Olsentwo Gala",
+            AKA: ["Pacific Gala (tm)"],
+            type: "Apple",
+            description: "not a summerland variety. https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/53/Pacific_Gala_TM/",
+            patent: "https://patents.google.com/patent/USPP9681 expired 2015-01-23"
+        },
+        {
+            name: "LJ-1000",
+            AKA: "Royal Red Honeycrisp™",
+            type: "Apple",
+            description: "not a summerland variety. https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/54/Royal_Red_Honeycrisp/",
+            patent: "https://patents.google.com/patent/USPP22244 expires 2030-07-06"
+        },
+        {
+            name: "VK71",
+            type: "Apple",
+            harvest_time: "",
+            description: "not a summerland variety. McIntosh sport https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/57/VK71"
+        },
+        {
+            name: "Greiner",
+            AKA: ["Pioneer Mac (tm)"],
+            type: "Apple",
+            harvest_time: "",
+            description: "not a summerland variety. https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/58/Pioneer_Mac_TM/",
+            patent: "https://patents.google.com/patent/USPP7002 expired 2008-07-20"
+        },
+        {
+            name: "SPA766",
+            type: "Apple",
+            harvest_time: "",
+            description: "can't match this to a released variety https://inspection.canada.ca/english/plaveg/pbrpov/cropreport/app/app00010540e.shtml",
+            patent: "https://patents.google.com/patent/USPP30060 expires 2037-02-03"
+        }
+    ]
+}
