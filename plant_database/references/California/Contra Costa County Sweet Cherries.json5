@@ -14,168 +14,200 @@
     plants: [
         {
             name: "Black Tartarian",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -14",
             color: "black"
         },
         {
             name: "Early Burlat",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -14",
             color: "dark red"
         },
         {
             name: "Mona",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -14",
             color: "red to dark red"
         },
         // I don't think this is notable enough or is maybe misspelled: Berryessa -10 yellow w/ blush
         {
             name: "Brooks",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -9",
             color: "dark red"
         },
         {
-            name: "Chelan",
+            name: "PC7146-23", // "Chelan"
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -9",
             color: "dark red"
         },
         {
             name: "Bada",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -7",
             color: "yellow w/ blush"
         },
         {
             name: "Chinook",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -7",
             color: "red to dark red"
         },
         {
-            name: "Coral",
+            name: "Coral Champagne",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -7",
             color: "red to dark red"
         },
         {
             name: "Corum",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -7",
             color: "yellow w/ blush"
         },
         {
             name: "Larian",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -7",
             color: "dark red"
         },
         {
-            name: "Tieton",
+            name: "PC7144-6", //"Tieton"
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -6",
             color: "dark red"
         },
         {
             name: "Tulare",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -6",
             color: "red"
         },
         {
             name: "Index",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -5",
             color: "dark red",
             description: "self fertile"
         },
         {
             name: "Garnet",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -4",
             color: "red"
         },
         {
             name: "Ruby",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -4",
             color: "red"
         },
         {
             name: "Julbilee",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -3",
             color: "red to dark red"
         },
         {
             name: "King",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -3",
             color: "red to dark red"
         },
         {
-            name: "Cristalina",
+            name: "Sumnue", // "Cristalina"
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -2",
             color: "dark red"
         },
         {
-            name: "Benton",
+            name: "PC7146-8", // "Benton"
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing -1",
             color: "dark red",
             description: "self fertile"
         },
         {
             name: "Bing",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +0",
             color: "dark red"
         },
         {
             name: "Sweet Ann",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing 0",
             color: "yellow w/ blush"
         },
         {
             name: "Van",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing 0",
             color: "black",
             description: "partially incompatible on Mahaleb"
         },
         {
             name: "Summit",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +1",
             color: "red"
         },
         {
             name: "Rainier",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +2",
             color: "yellow w/ blush"
         },
         {
             name: "Utah Giant",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +2",
             color: "dark red"
         },
         {
             name: "Stella",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +4",
             color: "dark red",
             description: "self fertile"
         },
         {
             name: "Lambert",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +5",
             color: "dark red"
         },
         {
             name: "PC7064-3", // "Selah"
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +5",
             description: "self fertile"
         },
         {
-            name: "Attika",
+            name: "Kordia", // "Attika"
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +6",
             color: "dark red"
         },
         {
             name: "Lapins",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +7",
             color: "dark red",
             description: "self fertile"
         },
         {
             name: "Skenna",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +7",
             color: "dark red",
             description: "self fertile"
         },
         {
             name: "Sweetheart",
+            type: "Sweet Cherry",
             harvest_time_relative: "Bing +10",
             color: "dark red",
             description: "self fertile"

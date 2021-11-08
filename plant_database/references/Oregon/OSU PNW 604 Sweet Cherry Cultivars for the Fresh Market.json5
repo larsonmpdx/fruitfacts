@@ -13,7 +13,7 @@
     ],
     plants: [
         {
-            name: "Chelan",
+            name: "PC7146-23", // "Chelan"
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -10 to -12",
             description: "S3S9"
@@ -32,8 +32,7 @@
             description: "S4S13"
         },
         {
-            // "Santina"
-            name: "13S-5-22",
+            name: "Santina",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -5 to -7",
             description: "Self-fertile"

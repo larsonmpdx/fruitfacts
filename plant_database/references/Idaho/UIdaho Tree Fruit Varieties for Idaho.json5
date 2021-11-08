@@ -66,7 +66,7 @@
             locations: ["SW"]
         },
         {
-            names: ["Buckeye Gala", "Gale Gala", "Pacific Gala"],
+            names: ["Buckeye Gala", "Gale Gala", "Olsentwo Gala" /*"Pacific Gala"*/],
             type: "Apple",
             category: "varieties popular with commercial growers: Gala strains",
             locations: ["SW"]
@@ -203,7 +203,7 @@
             locations: ["SW"]
         },
         {
-            name: "Chelan",
+            name: "PC7146-23", // "Chelan"
             type: "Sweet Cherry",
             description: "A popular early season, export-quality dark red sweet cherry. Similar to Bing in appearance, the fruit is medium-to large in size, with a mahogany red skin and medium-to-dark red flesh. It ripens 10 to 12 days before Bing, has good firmness and flavor, and exhibits lower susceptibility to both rain-induced cracking and heat-induced double/spur fruit formation than Bing. It flowers precociously and fruits heavily, requiring good management to achieve optimal fruit size. Precocious rootstocks are not needed for early cropping and may make management for optimal fruit size more intensive. Cross pollinizers include Rainier, Bing, Van, and Index. Chelan is incompatible with Burlat, Tieton and PC 7214-3. Do not propagate on Mahaleb rootstocks",
             locations: ["SW"]

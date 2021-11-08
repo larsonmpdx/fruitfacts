@@ -557,6 +557,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
     output
 }
 
+#[derive(Debug)]
 pub struct LoadAllReturn {
     pub base_plants_found: isize,
     pub base_types_found: isize,
@@ -1223,6 +1224,7 @@ fn add_collection_plant_by_location(
     plants_added
 }
 
+#[derive(Debug)]
 pub struct LoadReferencesReturn {
     pub reference_locations_found: isize,
     pub reference_base_plants_added: isize,

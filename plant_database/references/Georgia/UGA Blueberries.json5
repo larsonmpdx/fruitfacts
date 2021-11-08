@@ -1,6 +1,21 @@
-https://smallfruits.org/files/2019/06/alap10rep.pdf
+{
+    title: "UGA Blueberries",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 32.65742348055435,
+            longitude: -83.7417858800921
+        }
+    ],
+    plants: [
+        
+        // https://smallfruits.org/files/2019/06/alap10rep.pdf
 
-https://turf.caes.uga.edu/content/dam/caes-subsite/georgiaturf/docs/se-turf/presentations/2015/2015-scott-nesmith.pdf
+// https://turf.caes.uga.edu/content/dam/caes-subsite/georgiaturf/docs/se-turf/presentations/2015/2015-scott-nesmith.pdf
 
 // https://smallfruits.org/files/2019/06/SRFC-training-Jun-19-21-2007.pdf
 // todo - has a few harvest times on the last slide
@@ -137,3 +152,5 @@ https://turf.caes.uga.edu/content/dam/caes-subsite/georgiaturf/docs/se-turf/pres
 // TO-1088 Cutie Pie "Dwarf Hybrid for Home Gardens"
 // https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p384.xml
 // https://patents.google.com/patent/USPP28467 expires 2035-09-17
+    ]
+}

@@ -1,4 +1,17 @@
-
+{
+    title: "UGA Pecans",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 32.65742348055435,
+            longitude: -83.7417858800921
+        }
+    ],
+    plants: [
 // todo: others in this list that were older, unpatented, joint, etc.
 // https://pecanbreeding.uga.edu/cultivars/alphabetical-list.html
 // http://georgiacultivars.com/cultivars/pecans/ todo
@@ -72,3 +85,5 @@
 // http://georgiacultivars.com/images/uploads/documents/GA_00-7-75_Pecan_Cultivar.pdf
 
 // as of 2021 I think this is still the newest UGA pecan release
+    ]
+}

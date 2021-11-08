@@ -1,4 +1,18 @@
-// http://georgiacultivars.com/cultivars/muscadines/
+{
+    title: "UGA Muscadines",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 32.65742348055435,
+            longitude: -83.7417858800921
+        }
+    ],
+    plants: [
+        // http://georgiacultivars.com/cultivars/muscadines/
 
 // patrick j conner patent list
 
@@ -27,3 +41,5 @@
 //  Supreme’ x ‘Tara’   mid-season muscadine with red colored berries and hermaphroditic flowers
 // https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/ruby-crisp.html
 // https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p961.xml
+    ]
+}

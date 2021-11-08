@@ -67,9 +67,9 @@
         },
         {
             name: "SPA493",
-            AKA: "Salish®",
+            AKA: ["Salish®"],
             type: "Apple",
-            harvest_time: "Late September to the first week of October", // in Summerland
+            harvest_time_unparsed: "Late September to the first week of October", // in Summerland
             description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/17/SPA493_Salish/",
             released: "2018",
             patent: "https://patents.google.com/patent/USPP28075 expires 2035-07-08"
@@ -111,7 +111,7 @@
         },
         {
             name: "LJ-1000",
-            AKA: "Royal Red Honeycrisp™",
+            AKA: ["Royal Red Honeycrisp™"],
             type: "Apple",
             description: "not a summerland variety. https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/54/Royal_Red_Honeycrisp/",
             patent: "https://patents.google.com/patent/USPP22244 expires 2030-07-06"
@@ -119,21 +119,18 @@
         {
             name: "VK71",
             type: "Apple",
-            harvest_time: "",
             description: "not a summerland variety. McIntosh sport https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/57/VK71"
         },
         {
             name: "Greiner",
             AKA: ["Pioneer Mac (tm)"],
             type: "Apple",
-            harvest_time: "",
             description: "not a summerland variety. https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/58/Pioneer_Mac_TM/",
             patent: "https://patents.google.com/patent/USPP7002 expired 2008-07-20"
         },
         {
             name: "SPA766",
             type: "Apple",
-            harvest_time: "",
             description: "can't match this to a released variety https://inspection.canada.ca/english/plaveg/pbrpov/cropreport/app/app00010540e.shtml",
             patent: "https://patents.google.com/patent/USPP30060 expires 2037-02-03"
         }

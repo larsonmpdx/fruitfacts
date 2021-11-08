@@ -1,6 +1,21 @@
+{
+    title: "USDA ARS Kearneysville Releases",
+    author: "",
+    url: "",
+    published: "various",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 47.43797869140167,
+            longitude: -120.34750055765679
+        }
+    ],
+    plants: [
 // "trugold" peach, P21-5-2n, gurney's exclusive
 // "Trugold" was used as the variety name on the PVP application so any trademark is probably invalid
 // https://apps.ams.usda.gov/cms/adobeimages/200400055.pdf
 // pvp because it comes true from seed
 // pvp lasts 20 years so this would expire ~2024
-
+    ]
+}

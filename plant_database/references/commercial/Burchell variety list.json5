@@ -427,7 +427,7 @@
             harvest_time: "June 25-July 5"
         },
         {
-            name: "Tomcot",
+            name: "PA7005-8", // "Tomcot"
             type: "Apricot",
             harvest_time_unparsed: "early"
         },
@@ -437,9 +437,9 @@
             harvest_time: "July 7"
         },
         {
+            // no harvest time given
             name: "White Knockout",
             type: "Apricot"
-            // no harvest time given
         },
         // cherries
         {
@@ -449,9 +449,9 @@
             harvest_time_relative: "Bing -2 to -3"
         },
         {
+            // no harvest time given
             name: "Black Tartarian",
             type: "Sweet Cherry"
-            // no harvest time given
         },
         {
             name: "Brooks",
@@ -459,7 +459,7 @@
             harvest_time_relative: "Bing -10 to -14"
         },
         {
-            name: "Chelan",
+            name: "PC7146-23", // "Chelan"
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -14"
         },
@@ -475,9 +475,9 @@
         },
         {
             // "Index"
+            // no harvest time given
             name: "PC 7222-1",
             type: "Sweet Cherry"
-            // no harvest time given
         },
         {
             name: "Lapins",
@@ -496,8 +496,7 @@
             harvest_time_unparsed: "late season"
         },
         {
-            // "Santina"
-            name: "13S-5-22",
+            name: "Santina",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -8"
         },

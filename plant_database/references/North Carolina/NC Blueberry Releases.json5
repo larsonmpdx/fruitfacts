@@ -1,3 +1,18 @@
+{
+    title: "NC Blueberry Releases",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 34.32048103739439,
+            longitude: -77.91984738099124
+        }
+    ],
+    plants: [
+/*        
 Croatan
 1954
 resistant to stem canker
@@ -170,3 +185,6 @@ https://patents.google.com/patent/USPP26899 expires 2034-08-29
 // Ovation Strawberry USDA-ARS Beltsville
 // https://journals.ashs.org/hortsci/view/journals/hortsci/39/7/article-p1785.xml
 
+*/
+    ]
+}

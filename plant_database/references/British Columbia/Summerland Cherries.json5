@@ -113,11 +113,12 @@
             AKA: ["Sumpaca"],
             type: "Sweet Cherry",
             released: "1990?",
-            description: "Van x Newstar https://journals.ashs.org/hortsci/view/journals/hortsci/33/6/article-p1087.xml"
+            description: "Van x Newstar https://journals.ashs.org/hortsci/view/journals/hortsci/33/6/article-p1087.xml",
+            harvest_time_relative: "Bing-6"
         },
         {
             name: "Sweetheart",
-            AKA: ["Sumtare"],
+            AKA: ["Sumtare", "13S-22-08"],
             type: "Sweet Cherry",
             released: "1995",
             description: "Van x Newstar https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/35/Sweetheart/",
@@ -131,11 +132,12 @@
             harvest_time_relative: "Bing +3 to +4"
         },
         {
-            name: "Santina",
+            name: "Santina", // no trademark claimed on svc website
+            AKA: ["13S-5-22"],
             type: "Sweet Cherry",
             released: "1997",
             description: "Stella x Summit https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/83/Santina/ https://journals.ashs.org/hortsci/view/journals/hortsci/33/6/article-p1087.xml",
-            harvest_time_relative: "Bing-11"
+            harvest_time_relative: "Bing-8"
         },
         {
             name: "Skeena",
@@ -160,11 +162,11 @@
         },
         {
             name: "Sumnue",
-            AKA: ["Cristalina (tm)"],
+            AKA: ["Cristalina (tm)", "PC2C-61-22"],
             type: "Sweet Cherry",
             released: "1997",
             description: "Star x Van https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/33/Sumnue_Cristalina/ https://journals.ashs.org/hortsci/view/journals/hortsci/33/6/article-p1087.xml",
-            harvest_time_relative: "Bing +5 to +7"
+            harvest_time_relative: "Bing -4"
         },
         {
             name: "Sumste",

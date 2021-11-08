@@ -15,6 +15,7 @@
         {
             name: "PA7005-8",
             AKA: ["Tomcot (tm)"],
+            type: "Apricot",
             description: "https://nniifruittrees.org/varieties/ register of new fruit and nut varieties list 35 1991 https://journals.ashs.org/hortsci/view/journals/hortsci/26/8/article-p951.xml",
             patent: "https://patents.google.com/patent/USPP7034 expired 2014-05-12",
             released: "~1991"
@@ -22,6 +23,7 @@
         {
             name: "PA7201-1",
             AKA: ["Goldbar (tm)"],
+            type: "Apricot",
             description: "https://nniifruittrees.org/varieties/",
             patent: "https://patents.google.com/patent/USPP7045 expired 2008-07-21",
             released: "~1988"
@@ -29,6 +31,7 @@
         {
             name: "PA7221-1",
             AKA: ["Goldstrike (tm)"],
+            type: "Apricot",
             description: "https://nniifruittrees.org/varieties/",
             patent: "https://patents.google.com/patent/USPP7035 expired 2014-05-12",
             released: "~1988"

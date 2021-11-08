@@ -35,7 +35,7 @@
             description: "Low suitability for brining. Too small for brine at proper brining stage. Normally marketed as a freezer. Pollenizer: Bing"
         },
         {
-            name: "Chelan",
+            name: "PC7146-23", // "Chelan"
             type: "Sweet Cherry",
             description: "Low suitability for brining. Aborted cherries on tree tend not to drop until crop is fully mature. Pits in aborted cherries tend to shatter. Pollenizer: Bing"
         },
