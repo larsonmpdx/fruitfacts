@@ -14,7 +14,6 @@
     plants: [
         // "good fruit grower: stellar lineage" June 2013
         // https://read.dmtmag.com/i/132109-june-1/19?
-
         {
             name: "Van",
             type: "Sweet Cherry",

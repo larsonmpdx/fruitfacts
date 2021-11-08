@@ -12,25 +12,58 @@
         }
     ],
     plants: [
-        // collated from a few places
-        // ‘Spartan’ 1936
-        // Summerred 1964
-        // Summerland
-        // Shamrock 1986
-        // Sunrise 1991
-        // Sinta
-        // Creston 1996
-        // Chinook 1996
-        // Silken 1996
-        // Scarlet Sentinel 1997
-        // Golden Sentinel 1997
-
+        // this list is incomplete but it's most of the notable ones that are still in circulation
         {
-            // not a summerland variety
+            name: "Spartan",
+            type: "Apple",
+            released: "1936"
+        },
+        {
+            name: "Summerred",
+            type: "Apple",
+            released: "1964"
+        },
+        {
+            name: "Summerland",
+            type: "Apple",
+            released: "1969",
+            description: "https://www.saltspringapplecompany.com/summerland"
+        },
+        {
+            name: "Shamrock",
+            type: "Apple",
+            released: "1986"
+        },
+        {
+            name: "Sinta",
+            type: "Apple",
+            released: "1965"
+        },
+        {
+            name: "Creston",
+            type: "Apple",
+            released: "1996"
+        },
+        {
+            name: "Chinook",
+            type: "Apple",
+            released: "1996"
+        },
+        {
+            name: "Scarlet Sentinel",
+            type: "Apple",
+            released: "1997"
+        },
+        {
+            name: "Golden Sentinel",
+            type: "Apple",
+            released: "1997"
+        },
+        {
             name: "Ambrosia",
             type: "Apple",
             harvest_time: "Early to mid October", // in BC
-            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/3/Ambrosia/"
+            description: "not a summerland variety. https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/3/Ambrosia/"
         },
         {
             name: "SPA493",
@@ -59,13 +92,15 @@
             name: "Silken",
             type: "Apple",
             harvest_time: "Early September", // in BC
-            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/12/Silken/"
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/12/Silken/",
+            released: "1996"
         },
         {
             name: "Sunrise",
             type: "Apple",
             harvest_time: "mid August to early September", // in BC
-            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/15/Sunrise/"
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/15/Sunrise/",
+            released: "1991"
         },
         {
             name: "Olsentwo Gala",
