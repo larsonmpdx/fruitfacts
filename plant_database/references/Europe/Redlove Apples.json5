@@ -1,0 +1,102 @@
+{
+    title: "Lubera Redlove Apple Releases",
+    author: "Markus Kobelt",
+    url: "http://www.lubera.co.uk/plants/fruit-trees/apple-trees/red-fleshed-apple-trees-redloves/",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Lubera AG, Buchs, Switzerland",
+            latitude: 47.15874679296533,
+            longitude: 9.484780599790128
+        }
+    ],
+    plants: [
+        {
+            type: "Apple",
+            name: "Everybody's",
+            AKA: ["Redlove® Jedermann's", "Jedermann's"],
+            description: "not as sour as the others in the redlove series http://www.lubera.co.uk/plants/fruit-trees/apple-trees/red-fleshed-apple-trees-redloves/red-fleshed-apple-redlove-jedermann-s/everybody-s",
+            harvest_time: "September",
+            released: "2019"
+        },
+        {
+            type: "Apple",
+            name: "Calypso",
+            AKA: ["Redlove® Calypso"],
+            description: "70% dark red. most aromatic Redlove. should be stored 1-3 weeks after harvest and then it develops its full flavour. http://www.lubera.co.uk/plants/fruit-trees/apple-trees/autumn-apples/redlove-calypso https://www.youtube.com/watch?v=nN0DJohM9HE",
+            harvest_time: "September 20",
+            disease_resistance: {
+                scab: "resistant",
+                powdery_mildew: "less prone"
+            },
+            // release year based on when Markus's youtube video came out
+            released: "2011"
+        },
+        {
+            type: "Apple",
+            name: "Circe",
+            AKA: ["Redlove® Circe"],
+            description: "80% dark red. ready to eat once picked http://www.lubera.co.uk/plants/fruit-trees/apple-trees/summer-apples/redlove-circe",
+            harvest_time: "August 20",
+            disease_resistance: {
+                scab: "resistant"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Era",
+            AKA: ["Redlove® Era"],
+            description: "95% dark red http://www.lubera.co.uk/plants/fruit-trees/apple-trees/red-fleshed-apple-trees-redloves/redlove-era",
+            harvest_time: "September 10-20",
+            disease_resistance: {
+                scab: "resistant"
+            },
+            // release year based on when Markus's youtube video came out
+            released: "2010"
+        },
+        {
+            type: "Apple",
+            name: "Odysso",
+            AKA: ["Redlove® Odysso"],
+            description: "95% dark red. the sweetest Redlove variety with nearly solid-coloured flesh. http://www.lubera.co.uk/plants/fruit-trees/apple-trees/winter-apples/redlove-odysso",
+            harvest_time: "early October",
+            disease_resistance: {
+                scab: "resistant",
+                powdery_mildew: "little"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Sirene",
+            AKA: ["Redlove® Sirene"],
+            description: "http://www.lubera.co.uk/VideoDetail/getVideoDetail/youtubeId/vYHUaqsgaTI",
+            harvest_time: "mid August", // from a comment on lubera's website, couldn't find a sales page like the others
+            disease_resistance: {
+                scab: "resistant"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Kohlhaas",
+            AKA: ["Redlove® Kohlhaas"],
+            description: "small but larger than lollipop. can be enjoyed directly off from tree http://www.lubera.co.uk/plants/fruit-trees/apple-trees/red-fleshed-apple-trees-redloves/redlove-kohlhaas",
+            harvest_time: "Sept 15-25",
+            disease_resistance: {
+                scab: "resistant",
+                powdery_mildew: "little"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Lollipop",
+            AKA: ["Redlove® Lollipop"],
+            description: "small size 4-6cm. hangs till end of September http://www.lubera.co.uk/plants/fruit-trees/apple-trees/red-fleshed-apple-trees-redloves/redlove-lollipop",
+            harvest_time: "late August",
+            disease_resistance: {
+                scab: "resistant",
+                powdery_mildew: "slightly susceptible"
+            }
+        }
+    ]
+}

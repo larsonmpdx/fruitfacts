@@ -1,7 +1,7 @@
 {
     title: "UGA Muscadines",
     author: "",
-    url: "",
+    url: "http://georgiacultivars.com/cultivars/muscadines/",
     published: "",
     accessed: "Oct 2021",
     locations: [
@@ -12,34 +12,44 @@
         }
     ],
     plants: [
-        // http://georgiacultivars.com/cultivars/muscadines/
-
-// patrick j conner patent list
-
-// Lane muscadine 2011
-// Muscadine "Lane" "Ga. 5-1-45" https://patents.google.com/patent/USPP24142 expires 2032-07-28
-//  ‘Supreme’×‘Tara’    early season, self-fertile, black berried
-//   supreme is uspp 7267 
-// http://georgiacultivars.com/cultivars/lane
-// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/lane.html
-// https://journals.ashs.org/hortsci/view/journals/hortsci/48/1/article-p128.xml
-
-
-// Muscadine "Hall" "Ga. 1-1-48" https://patents.google.com/patent/USPP27033 expires 2035-03-19
-//  ‘Fry’×‘Tara’ early season muscadine with yellow-green colored berries
-// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/hall.html
-// https://journals.ashs.org/hortsci/view/journals/hortsci/49/5/article-p688.xml
-
-// Muscadine "Paulk"
-// Muscadine "Ga. 6-2-26" https://patents.google.com/patent/USPP30014 expires 2037-05-22
-//   ‘Supreme’ x ‘Tara’  mid to late season muscadine with purple colored berries
-// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/paulk.html
-// https://journals.ashs.org/hortsci/view/journals/hortsci/52/11/article-p1639.xml
-
-// Muscadine "RubyCrisp"
-// Muscadine "Ga. 8-1-338" https://patents.google.com/patent/USPP32111 expires 2039-11-14
-//  Supreme’ x ‘Tara’   mid-season muscadine with red colored berries and hermaphroditic flowers
-// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/ruby-crisp.html
-// https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p961.xml
+        // patrick j conner patent list
+        // todo pre-1996 varieties - https://muscadines.caes.uga.edu/content/dam/caes-subsite/muscadine-grape-breeding/docs/A-Century-of-Muscadine-Grape-Breeding.pdf
+        {
+            name: "Lane",
+            AKA: ["Ga. 5-1-45"],
+            type: "Muscadine",
+            description: "Supreme x Tara. early season, self-fertile, black berried  http://georgiacultivars.com/cultivars/lane https://journals.ashs.org/hortsci/view/journals/hortsci/48/1/article-p128.xml",
+            patent: "https://patents.google.com/patent/USPP24142 expires 2032-07-28",
+            released: "2011"
+        },
+        {
+            name: "Hall",
+            AKA: ["Ga. 1-1-48"],
+            type: "Muscadine",
+            description: "Fry × Tara. early season muscadine with yellow-green colored berries https://journals.ashs.org/hortsci/view/journals/hortsci/49/5/article-p688.xml",
+            patent: "https://patents.google.com/patent/USPP27033 expires 2035-03-19",
+            released: "2014"
+        },
+        {
+            name: "Paulk",
+            AKA: ["Ga. 6-2-26"],
+            type: "Muscadine",
+            description: "Supreme x Tara. mid to late season muscadine with purple colored berries https://journals.ashs.org/hortsci/view/journals/hortsci/52/11/article-p1639.xml",
+            patent: "https://patents.google.com/patent/USPP30014 expires 2037-05-22",
+            released: ""
+        },
+        {
+            name: "RubyCrisp",
+            AKA: ["Ga. 8-1-338"],
+            type: "Muscadine",
+            description: "Supreme x Tara. mid-season muscadine with red colored berries and hermaphroditic flowers. https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p961.xml",
+            patent: "https://patents.google.com/patent/USPP32111 expires 2039-11-14",
+            released: "2020"
+        }
     ]
 }
+
+// todo in another doc -
+//   supreme is https://patents.google.com/patent/USPP7267, ISON
+
+// https://muscadines.caes.uga.edu/cultivars.html - todo a separate doc for all of these

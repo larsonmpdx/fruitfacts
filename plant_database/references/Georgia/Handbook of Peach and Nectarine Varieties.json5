@@ -720,6 +720,6 @@
         { patent: "https://patents.google.com/patent/USPP10190", type: "Peach", name: "Snow Jewel" }
         // page 631 end of the patent list
 
-        // todo: an exhaustive peach/nectarine patent search post-10190?
+        // todo: an exhaustive peach/nectarine patent search post-PP10190?
     ]
 }

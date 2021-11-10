@@ -348,9 +348,9 @@
             harvest_time_unparsed: "first week in May"
         },
         {
+            // harvest time not given
             name: "Blenheim",
             type: "Apricot"
-            // no harvest time given
         },
         {
             name: "Castlebrite",
@@ -359,9 +359,9 @@
             harvest_time: "May 20-25"
         },
         {
+            // harvest time not given
             name: "Chinese",
             type: "Apricot"
-            // no harvest time given
         },
         {
             name: "Golden Sweet",
@@ -371,14 +371,14 @@
             patent: "https://patents.google.com/patent/USPP8932 expired 2014-01-24"
         },
         {
+            // harvest time not given
             name: "Harcot",
             type: "Apricot"
-            // no harvest time given
         },
         {
+            // harvest time not given
             name: "Harglow",
             type: "Apricot"
-            // no harvest time given
         },
         {
             name: "Helena",
@@ -404,9 +404,9 @@
             harvest_time: "June 10-15"
         },
         {
+            // harvest time not given
             name: "Moorpark",
             type: "Apricot"
-            // no harvest time given
         },
         {
             name: "Patterson",
@@ -517,14 +517,14 @@
             harvest_time_relative: "Bing -10"
         },
         {
+            // harvest time not given
             name: "Utah Giant",
             type: "Sweet Cherry"
-            // no harvest time given
         },
         {
+            // harvest time not given
             name: "Van",
             type: "Sweet Cherry"
-            // no harvest time given
         },
         // citrus
         {
@@ -683,9 +683,9 @@
             harvest_time_unparsed: "mid season"
         },
         {
+            // harvest time not given
             name: "Arctic Rose",
             type: "Nectarine"
-            // no harvest time given
         },
         {
             name: "Candy Sprinkles",
@@ -693,9 +693,9 @@
             harvest_time: "July 1-10"
         },
         {
+            // harvest time not given
             name: "Double Delight",
             type: "Nectarine"
-            // no harvest time given
         },
         {
             name: "Fairlane",
@@ -720,9 +720,9 @@
             harvest_time: "August 10-15"
         },
         {
+            // harvest time not given
             name: "Flavor Gold",
             type: "Nectarine"
-            // no harvest time given
         },
         {
             name: "Flavortop",
@@ -731,19 +731,19 @@
             chill: "750 hours"
         },
         {
+            // harvest time not given
             name: "Freckle Face",
             type: "Nectarine"
-            // no harvest time given
         },
         {
+            // harvest time not given
             name: "Harko",
             type: "Nectarine"
-            // no harvest time given
         },
         {
+            // harvest time not given
             name: "Honey Halo",
             type: "Nectarine"
-            // no harvest time given
         },
         {
             name: "Independence",
@@ -810,19 +810,20 @@
             harvest_time: "September 8-15"
         },
         {
+            // harvest time not given
             name: "Cassie",
             type: "Peach"
-            // harvest time not given
+
         },
         {
+            // harvest time not given
             name: "Contender",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Cresthaven",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "Crimson Lady",
@@ -841,9 +842,9 @@
             chill: "750 hours"
         },
         {
+            // harvest time not given
             name: "Elberta",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "Elegant Lady",
@@ -889,9 +890,9 @@
             chill: "150 hours"
         },
         {
+            // harvest time not given
             name: "Frost",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "Galaxy",
@@ -900,47 +901,47 @@
             description: "peento"
         },
         {
+            // harvest time not given
             name: "Gold Dust",
             type: "Peach"
-            // harvest time not given
         },
         // peaches page 2
         {
+            // harvest time not given
             name: "Hale Haven",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Harken",
             type: "Peach"
-            // harvest time not given
         },
         {
             // on the page as "Improved Lemon Elbert"
+            // harvest time not given
             name: "Improved Elberta",
             AKA: ["Lemon Elberta"],
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "J.H. Hale",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "John Henry",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Juliet's Prize",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "July Snow",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "June Lady",
@@ -948,9 +949,9 @@
             harvest_time: "June 8-15"
         },
         {
+            // harvest time not given
             name: "June Snow",
             type: "Peach"
-            // harvest time not given
         },
         // improved/lemon elberta repeated - see above
         {
@@ -959,9 +960,9 @@
             harvest_time: "May 20-27"
         },
         {
+            // harvest time not given
             name: "Marbled Ginger",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "O'Henry",
@@ -974,24 +975,24 @@
             harvest_time: "August 20-27"
         },
         {
+            // harvest time not given
             name: "Pink Diamond",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Pink Halo",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Polly White",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Pumpkin Spice",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "Queencrest",
@@ -1004,9 +1005,9 @@
             harvest_time: "early to mid August"
         },
         {
+            // harvest time not given
             name: "Redhaven",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "Red Top",
@@ -1014,24 +1015,24 @@
             harvest_time: "June 11-26"
         },
         {
+            // harvest time not given
             name: "Regina",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Reliance",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Rich Lady",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Rio Oso Gem",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "Ryan Sun",
@@ -1055,9 +1056,9 @@
             harvest_time: "August 29-September 5"
         },
         {
+            // harvest time not given
             name: "Sierra Rich",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "Springcrest",
@@ -1070,9 +1071,9 @@
             harvest_time: "May 27-June 4"
         },
         {
+            // harvest time not given
             name: "Sugar Tiger",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "Summerset",
@@ -1085,19 +1086,19 @@
             harvest_time: "July 23-30"
         },
         {
+            // harvest time not given
             name: "Summer Sweet",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Suncrest",
             type: "Peach"
-            // harvest time not given
         },
         {
+            // harvest time not given
             name: "Sweet Dream",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "Sweet Sensation",
@@ -1118,9 +1119,9 @@
             chill: "<150 hours"
         },
         {
+            // harvest time not given
             name: "TropicSnow",
             type: "Peach"
-            // harvest time not given
         },
         {
             name: "TropicSweet",

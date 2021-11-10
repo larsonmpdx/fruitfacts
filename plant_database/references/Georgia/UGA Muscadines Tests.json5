@@ -1,0 +1,249 @@
+{
+    title: "UGA Muscadine Tests",
+    author: "",
+    url: "https://muscadines.caes.uga.edu/cultivars.html",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 32.65742348055435,
+            longitude: -83.7417858800921
+        }
+    ],
+    plants: [
+        /*
+        {
+            name: "",
+            AKA: [],
+            type: "Muscadine",
+            description: "",
+            patent: "",
+            released: ""
+        },
+        */
+    ]
+}
+
+
+// Juice varieties
+// Carlos	Self-fertile	Bronze	Midseason	Small	90%	90%
+// https://muscadines.caes.uga.edu/cultivars/juice-cultivars/carlos.html
+// 1970 released by the W.B. Nesbitt, V.H. Underwood, and D.E. Carroll in 1970 from the North Carolina Agr. Expt. Station in Raleigh, N.C.
+
+
+// Doreen	Self-fertile	Bronze	Late	Small	90%	60%
+// https://muscadines.caes.uga.edu/cultivars/juice-cultivars/doreen.html
+// W. Nesbitt, D. Carroll of North Carolina State Univ. and J. Overcash, C. Hedgwood, and B. Stojanovic of Mississippi State University in 1982
+
+
+// Golden Isles	Self-fertile	Bronze	Late	Large	110%	10%
+// https://muscadines.caes.uga.edu/cultivars/juice-cultivars/golden-isles.html
+// released in 1987 by R. Lane of the University of Georgia
+// also says 1967, todo figure out which
+// not recommended, performed poorly
+
+
+// Magnolia	Self-fertile	Bronze	Midseason	Small	90%	60%
+// https://muscadines.caes.uga.edu/cultivars/juice-cultivars/magnolia.html
+// released in 1962 jointly by N.C. State Univ. and the USDA
+// not recommended, not superior to Carlos
+
+
+// Noble	Self-fertile	Purple	Midseason	Small	100%	30%
+// https://muscadines.caes.uga.edu/cultivars/juice-cultivars/noble.html
+// released in 1973 by W. Nesbitt, D. Carroll, and V. Underwood of the North Carolina Agricultural Exp. Station
+
+
+// Regale	Self-fertile	Purple	Midseason	Medium	110%	10%
+// https://muscadines.caes.uga.edu/cultivars/juice-cultivars/regale.html
+// released in 1981 by C. Williams of the USDA and North Carolina State Univ
+// not recommended, sugar can be low, worse than noble
+
+
+// Sterling	Self-fertile	Bronze	Midseason	Medium	100%	10%
+// https://muscadines.caes.uga.edu/cultivars/juice-cultivars/sterling.html
+// released in 1981 by C. Williams, W. Nesbitt, and V. Underwood of the U.S.D.A. and N.C. State University
+// not recommended: disease susceptible
+
+
+// Welder	Self-fertile	Bronze	Midseason	Small	90%	50%
+// https://muscadines.caes.uga.edu/cultivars/juice-cultivars/welder.html
+// introduced by Henry Welder of Tavares, Florida in 1972
+
+
+
+
+
+
+
+// fresh eating varieties
+// Alachua	Self-fertile	Purple	Midseason	Medium	100%	50%
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/alachua.html
+// introduced by J.A. Mortensen and J.W. Harris of the Central Florida Research and Education Center in 1990
+
+
+// Cowart	Self-fertile	Purple	Midseason	Medium	40%	30%
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/cowart.html
+// released in 1968 by B.O. Fry from the University of Georgia
+
+
+// Darlene	Female	Bronze	Midseason	Very Large	40%	20%
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/darlene.html
+// released and patented by Ison's Nursery in 1988
+// Plant patent #7314
+// not recommended, Yields were inconsistent and low
+
+
+// Delicious*	Self-fertile	Purple	Early-Mid	Large	130%	?
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/delicious.html
+// introduced by Dennis Gray of the University of Florida in 2009
+// https://journals.ashs.org/hortsci/view/journals/hortsci/44/1/article-p200.xml
+
+
+// Dixieland	Female	Bronze	Late	Large	90%	10%
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/dixieland.html
+// 'Dixieland' was released and patented by Ison's Nursery in 1976
+// Plant patent #4771
+
+
+// Early Fry	Female	Bronze	Early	Very Large	80%	20%
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/early-fry.html
+// released and patented by Ison's Nursery in 1993
+// Plant patent #9225
+
+
+// Eudora	Self-fertile	Purple	Midseason	Med/Lar	100%	low
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/eudora.html
+// introduced by Stephen Stringer of the USDA in Poplarville MS in 2009
+
+
+// Fry*	Female	Bronze	Midseason	Large	70%	50%
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/fry.html
+// released in 1970 by R. Lane of the University of Georgia
+
+
+// Granny Val*	Self-fertile	Bronze	Very Late	Large	110%	50%
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/granny-val.html
+// released and patented by Ison's Nursery in 1983. Plant patent #5823
+
+
+// Higgins	Female	Bronze	Midseason	Large	70%	30%
+// https://muscadines.caes.uga.edu/cultivars/fresh-market-cultivars/higgins.html
+// released in 1955 by M. Murphy and B. Fry of the University of Georgia
+// 'Higgins' has a wet scar, is susceptible to fruit rots, has a late harvest date, and is
+// not recommended for planting in either home or commercial orchards.
+
+
+// Hall*	Self-fertile	Bronze	Early	Large	100%	90%
+//  released in 2014 and a U.S. plant patent was applied for later that year. Georgia muscadine breeding program
+
+
+// Ison*	Self-fertile	Purple	Late	Large	120%	50%
+
+
+
+// Janet	Female	Bronze	Late	Large	100%	0%
+
+
+
+// Jumbo	Female	Purple	Midseason	Large	80%	30%
+
+
+
+// Lane*	Self-fertile	Black	Early	Large	60%	60%
+
+
+
+// Late Fry*	Self-fertile	Bronze	Late	Very Large	80%	60%
+
+
+
+// Loomis	Female	Red	Late	Medium	20%	30%
+
+
+
+// Magoon	Self-fertile	Purple	Midseason	Small	90%	30%
+
+
+
+// Majesty	Female	Black	Midseason	Very Large	Low	Untested
+
+
+
+// Nesbitt*	Self-fertile	Purple	Midseason/ Late	Large	100%	40%
+
+
+
+// Pam*	Female	Bronze	Late	Very Large	60%	40%
+
+
+
+// Paulk*	Self-fertile	Purple	Midseason	Very Large	100%	85%
+
+
+
+// Pineapple	Self-fertile	Bronze	Midseason	Medium	130%	10%
+
+
+
+// Polyanna	Self-fertile	Purple	Late	Large	80%	70%
+
+
+
+// Pride	Female	Purple	Midseason	Large	90%	40%
+
+
+
+// RubyCrisp	Self-fertile	Red	Midseason	Very Large	100%	50%
+
+
+
+// Scarlett	Female	Pink	Midseason	Large	30%	70%
+
+
+
+// Scuppernong	Female	Bronze	Late	Small	40%	60%
+
+
+
+// Southern Home	Self-fertile	Purple	Midseason/ Late	Medium	80%	30%
+
+
+
+// Southland	Self-fertile	Purple	Late	Small	90%	100%
+
+
+
+// Southern Jewel	Self-fertile	Purple	Early	Large - -
+
+
+
+// Sugargate	Female	Purple	Early	Large	40%	20%
+
+
+
+// Summit*	Female	Bronze	Midseason	Large	80%	80%
+
+
+
+// Supreme*	Female	Purple	Midseason	Very Large	90%	60%
+
+
+
+// Sweet Jenny	Female	Bronze	Midseason	Very Large	50%	30%
+
+
+
+// Tara*	Self-fertile	Bronze	Early	Large	90%	80%
+
+
+
+// Triumph	Self-fertile	Bronze/Pink	Early	Medium	100%	60%
+
+
+
+// todo in another doc -
+//   supreme is https://patents.google.com/patent/USPP7267, ISON
+
+//  - todo a separate doc for all of these
