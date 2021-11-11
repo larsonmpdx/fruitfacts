@@ -1,0 +1,170 @@
+{
+    title: "Recommended Fruit Trees for the Puget Sound",
+    author: "G.A. Moulton & J. King",
+    url: "https://nwfruit.org/recommended-fruit-trees/",
+    published: "2012", // year it's available at that url on wayback
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Mt. Vernon, WA",
+            latitude: 48.439906165067555,
+            longitude: -122.38861565365134
+        }
+    ],
+    plants: [
+        {
+            names: [
+                "Minnewashta", // "Zestar"
+                "Sunrise",
+                "Silken",
+                "Gravenstein",
+                "Red Gravenstein",
+                "Akane",
+                "Alkmene",
+                "Marshall Mac",
+                "Honeycrisp",
+                "Jonamac",
+                "Sansa",
+                "Tsugaru Homei",
+                "Cox's Orange Pippin",
+                "Karmijn de Sonnaville",
+                "Spartan",
+                "Jonagold strains",
+                "Rubinette",
+                "Beni Shogun Fuji",
+                "September Wonder Fuji",
+                "Melrose",
+                "Redcort",
+                "Empire",
+                "Teeple Red Empire", // "Royal Empire"
+                "Boskoop",
+                "Red Boskoop",
+                "Ashmead's Kernel",
+                "Shizuka",
+                "Mutsu",
+                "Braeburn",
+                "Hillwell Braeburn"
+            ],
+            type: "Apple"
+        },
+        {
+            name: "Millenium",
+            AKA: ["NY 460"],
+            type: "Apple"
+        },
+        {
+            name: "Elstar",
+            type: "Apple",
+            description: '"Elista" is a sport of Elstar'
+        },
+        {
+            name: "Red Elstar",
+            type: "Apple"
+        },
+        {
+            name: "Fulford Gala",
+            AKA: ["Regal Gala"],
+            type: "Apple"
+        },
+        {
+            names: [
+                "Co-op 32", //"Pristine"
+                "Williams' Pride",
+                "Prima",
+                "Dayton",
+                "Releika",
+                "Rajka",
+                "Liberty",
+                "Belmac",
+                "Goldstar"
+            ],
+            type: "Apple",
+            category: "scab immune"
+        },
+        {
+            names: [
+                "Stuttgarter Gieshirltle",
+                "Clapp's Favorite",
+                "Red Clapp's Favorite",
+                "Orcas",
+                "Rescue",
+                "Bartlett",
+                "Seckel",
+                "Blake's Pride",
+                "Honeysweet",
+                "Comice",
+                "Concorde",
+                "Conference",
+                "Bosc"
+            ],
+            type: "Euro Pear"
+        },
+        {
+            names: ["Hamese", "Shinseiki", "Kosui", "Mishirasu", "Chojuro", "Yoinashi", "Atago"],
+            type: "Asian Pear"
+        },
+        {
+            names: [
+                "Harken",
+                "Redhaven",
+                "FA 11", // "Starfire"
+                "Frost",
+                "HW 272",
+                "FA 12", // "Blazingstar"
+                "FA 52", // "Redstar"
+                "Contender"
+            ],
+            type: "Peach"
+        },
+        {
+            names: ["Hardired"],
+            type: "Nectarine"
+        },
+        {
+            names: ["Methley", "Beauty", "Shiro", "Hollywood", "Obilnaja"],
+            type: "Japanese Plum"
+        },
+        {
+            names: [
+                "Early Laxton",
+                "Imperial Epineuse",
+                "Richards' Early Italian",
+                "Seneca",
+                "Mirabelle",
+                "Victoria",
+                "Longjohn",
+                "Victory",
+                "Valor",
+                "Stanley",
+                "Schoolhouse",
+                "Vision"
+            ],
+            type: "Euro Plum"
+        },
+        {
+            names: ["Early Burlat", "Hartland", "Hudson", "Kristin", "Angela", "Bing", "Rainier"],
+            type: "Sweet Cherry"
+        },
+        {
+            names: [
+                "Ridgewood", // "BlackGold"
+                "Newfane", // "WhiteGold"
+                "Lapins",
+                "Vandalay",
+                "Sweetheart",
+                "Tehranivee"
+            ],
+            type: "Sweet Cherry",
+            description: "self fertile"
+        },
+        {
+            names: ["Surefire", "Montmorency"],
+            type: "Sour Cherry",
+            description: "self fertile"
+        },
+        {
+            names: ["Puget Gold", "Westley"],
+            type: "Apricot"
+        }
+    ]
+}
