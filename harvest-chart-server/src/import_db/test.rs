@@ -74,6 +74,54 @@ fn test_dates() {
 }
 
 #[test]
+fn test_parse_released() {
+    assert_eq!(
+        parse_released(""),
+        None
+    );
+    assert_eq!(
+        parse_released("WSU 2011*"),
+        Some(ReleasedOutput {
+            releaser: "WSU".to_string(),
+            year: 2011,
+            authoritative: true
+        })
+    );
+    assert_eq!(
+        parse_released("WSU 2012"),
+        Some(ReleasedOutput {
+            releaser: "WSU".to_string(),
+            year: 2012,
+            authoritative: false
+        })
+    );
+    assert_eq!(
+        parse_released("WSU"),
+        None
+    );
+    assert_eq!(
+        parse_released("2013"),
+        Some(ReleasedOutput {
+            releaser: "".to_string(),
+            year: 2013,
+            authoritative: false
+        })
+    );
+}
+
+#[test]
+#[should_panic]
+fn test_parse_released_panic() {
+    parse_released("201");
+}
+
+#[test]
+#[should_panic]
+fn test_parse_released_panic_2() {
+    parse_released("2101");
+}
+
+#[test]
 fn test_day_range() {
     assert_eq!(
         string_to_day_range("eary Jun"), // misspelled - parse error
@@ -385,6 +433,7 @@ fn test_database_loading() {
 
     println!("loaded: {:#?}", items_loaded);
 
+    // update these every so often so we can check that a change doesn't cause fewer items than we expect
     assert_ge!(items_loaded.base_plants_found, 234);
     assert_ge!(items_loaded.base_types_found, 47);
     assert_ge!(items_loaded.reference_items.reference_locations_found, 47);

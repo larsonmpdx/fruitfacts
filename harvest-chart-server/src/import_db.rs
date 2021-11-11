@@ -184,6 +184,38 @@ fn get_month(input: &str) -> String {
     }
 }
 
+#[derive(Default, Debug, PartialEq, Eq)]
+struct ReleasedOutput {
+    releaser: String,
+    year: i32,
+    authoritative: bool,
+}
+
+fn parse_released(input: &str) -> Option<ReleasedOutput> {
+    let released_regex = Regex::new(r#"(.*\s)?([0-9]+)"#).unwrap();
+
+    if let Some(matches) = released_regex.captures(&input) {
+        if matches.len() >= 3 {
+            let mut output = ReleasedOutput::default();
+            if let Some(releaser) = matches.get(1) {
+                output.releaser = releaser.as_str().trim().to_string();
+            }
+            if let Some(year) =  matches.get(2) {
+                output.year = year.as_str().parse::<i32>().unwrap();
+
+                assert_ge!(output.year, 1800, "parsed release year was <1800");
+                assert_le!(output.year, 2100, "parsed release year was >2100");
+            }
+
+            if input.ends_with("*") {
+                output.authoritative = true;
+            }
+            return Some(output);
+        }
+    }
+    None
+}
+
 // should this date string be treated as being centered on a single month?
 // we accept either "mid september" or "september" for this
 // we're looking to distinguish this from regular start dates which, when charted,
