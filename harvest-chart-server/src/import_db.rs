@@ -196,7 +196,7 @@ struct ReleasedOutput {
 fn parse_released(input: &str) -> Option<ReleasedOutput> {
     let released_regex = Regex::new(r#"(.*\s)?([0-9]+)"#).unwrap();
 
-    if let Some(matches) = released_regex.captures(&input) {
+    if let Some(matches) = released_regex.captures(input) {
         if matches.len() >= 3 {
             let mut output = ReleasedOutput::default();
             if let Some(releaser) = matches.get(1) {
@@ -209,7 +209,7 @@ fn parse_released(input: &str) -> Option<ReleasedOutput> {
                 assert_le!(output.year, 2100, "parsed release year was >2100");
             }
 
-            if input.ends_with("*") {
+            if input.ends_with('*') {
                 output.authoritative = true;
             }
             return Some(output);
@@ -837,7 +837,7 @@ fn apply_top_level_fields(
 
     let mut release_parsed = None;
     if let Some(released) = &plant.released {
-        release_parsed = parse_released(&released);
+        release_parsed = parse_released(released);
     }
 
     let mut release_year = None;
