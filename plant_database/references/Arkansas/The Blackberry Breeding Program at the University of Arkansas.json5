@@ -16,49 +16,49 @@
             type: "Blackberry",
             name: "Comanche",
             patent: "not patented",
-            released: "1974"
+            released: "U Arkansas 1974*"
         },
         {
             type: "Blackberry",
             name: "Cherokee",
             patent: "not patented",
-            released: "1974"
+            released: "U Arkansas 1974*"
         },
         {
             type: "Blackberry",
             name: "Cheyenne",
             patent: "not patented",
-            released: "1976"
+            released: "U Arkansas 1976*"
         },
         {
             type: "Blackberry",
             name: "Shawnee",
             patent: "https://patents.google.com/patent/USPP5686 expired 2004-07-05",
-            released: "1984"
+            released: "U Arkansas 1984*"
         },
         {
             type: "Blackberry",
             name: "Navaho",
             patent: "https://patents.google.com/patent/USPP6679 expired 2007-11-09",
-            released: "1988"
+            released: "U Arkansas 1988*"
         },
         {
             type: "Blackberry",
             name: "Choctaw",
             patent: "https://patents.google.com/patent/USPP6678 expired 2007-11-09",
-            released: "1988"
+            released: "U Arkansas 1988*"
         },
         {
             type: "Blackberry",
             name: "Arapaho",
             patent: "https://patents.google.com/patent/USPP8510 expired 2012-09-25",
-            released: "1993"
+            released: "U Arkansas 1993*"
         },
         {
             type: "Blackberry",
             name: "Kiowa",
             patent: "https://patents.google.com/patent/USPP9861 expired 2015-11-06",
-            released: "1996"
+            released: "U Arkansas 1996*"
         }
 // newer than the acta hort paper:
 
