@@ -591,7 +591,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
     output
 }
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub struct LoadAllReturn {
     pub base_plants_found: isize,
     pub base_types_found: isize,
@@ -774,7 +774,7 @@ fn new_or_old<T: std::cmp::PartialEq + std::fmt::Debug>(
 }
 
 // we allow references to set some top-level fields, as long as they're either previously unset or an exact match
-fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, plant_type: String) {
+fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, plant_type: String, current_collection_id: Option<i32>) {
     // find existing base plant (must exist)
     let existing_base_plant = base_plants::dsl::base_plants
         .filter(base_plants::name.eq(&plant.name))
@@ -835,16 +835,18 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
         release_parsed = parse_released(&released);
     }
 
-    let mut year = None;
+    let mut release_year = None;
     let mut releaser = None;
+    let mut release_authoritative = false;
     if let Some(release_parsed) = release_parsed {
-        year = Some(release_parsed.year);
+        release_year = Some(release_parsed.year);
         releaser = release_parsed.releaser;
+        release_authoritative = release_parsed.authoritative;
     }
 
     let release_year = new_or_old(
         existing_base_plant.release_year,
-        year,
+        release_year,
         plant,
         "release_year",
     );
@@ -856,7 +858,18 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
         "released_by",
     );
 
-    let release_collection_id: Option<i32> = None; // todo
+    // only update this if our parsed release string tells us this is the authoritative collection
+    let mut release_collection_id = None;
+    if release_authoritative {
+        release_collection_id = current_collection_id;
+    }
+
+    let release_collection_id = new_or_old(
+        existing_base_plant.release_collection_id,
+        release_collection_id,
+        plant,
+        "release_collection_id",
+    );
 
     let _updated_row =
         diesel::update(base_plants::dsl::base_plants.filter(base_plants::name.eq(&plant.name)))
@@ -920,7 +933,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                 assert_eq!(Ok(1), rows_inserted);
                 plants_found += 1;
 
-                apply_top_level_fields(db_conn, plant, plant_type.clone().unwrap());
+                apply_top_level_fields(db_conn, plant, plant_type.clone().unwrap(),None);
             }
         }
     }
@@ -1155,6 +1168,7 @@ fn maybe_add_base_plant(
     plant_name: &str,
     plant: &CollectionPlantJson,
     db_conn: &SqliteConnection,
+    current_collection_id: i32,
 ) -> isize {
     let num_added;
 
@@ -1194,7 +1208,7 @@ fn maybe_add_base_plant(
         patent: plant.patent.clone(),
         released: plant.released.clone(),
     };
-    apply_top_level_fields(db_conn, &base_plant, plant.type_.clone());
+    apply_top_level_fields(db_conn, &base_plant, plant.type_.clone(), Some(current_collection_id));
     num_added
 }
 
@@ -1291,7 +1305,7 @@ fn add_collection_plant_by_location(
     plants_added
 }
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub struct LoadReferencesReturn {
     pub reference_locations_found: isize,
     pub reference_base_plants_added: isize,
@@ -1378,7 +1392,7 @@ fn load_references(
                         // or give descriptions for each apple
                         // we want to preserve the list so it can be displayed off in a corner or whatever
                         reference_base_plants_added +=
-                            maybe_add_base_plant(&plant_name, &plant, db_conn);
+                            maybe_add_base_plant(&plant_name, &plant, db_conn, collection_id);
 
                         reference_plants_added += add_collection_plant_by_location(
                             collection_id,
@@ -1391,7 +1405,7 @@ fn load_references(
                     }
                 } else if plant.name.is_some() {
                     reference_base_plants_added +=
-                        maybe_add_base_plant(plant.name.as_ref().unwrap(), &plant, db_conn);
+                        maybe_add_base_plant(plant.name.as_ref().unwrap(), &plant, db_conn, collection_id);
 
                     reference_plants_added += add_collection_plant_by_location(
                         collection_id,

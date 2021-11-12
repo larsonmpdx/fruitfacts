@@ -16,48 +16,48 @@
         {
             name: "Spartan",
             type: "Apple",
-            released: "1936"
+            released: "Summerland 1936*"
         },
         {
             name: "Summerred",
             type: "Apple",
-            released: "1964"
+            released: "Summerland 1964*"
         },
         {
             name: "Summerland",
             type: "Apple",
-            released: "1969",
+            released: "Summerland 1969*",
             description: "https://www.saltspringapplecompany.com/summerland"
         },
         {
             name: "Shamrock",
             type: "Apple",
-            released: "1986"
+            released: "Summerland 1986*"
         },
         {
             name: "Sinta",
             type: "Apple",
-            released: "1965"
+            released: "Summerland 1965*"
         },
         {
             name: "Creston",
             type: "Apple",
-            released: "1996"
+            released: "Summerland 1996*"
         },
         {
             name: "Chinook",
             type: "Apple",
-            released: "1996"
+            released: "Summerland 1996*"
         },
         {
             name: "Scarlet Sentinel",
             type: "Apple",
-            released: "1997"
+            released: "Summerland 1997*"
         },
         {
             name: "Golden Sentinel",
             type: "Apple",
-            released: "1997"
+            released: "Summerland 1997*"
         },
         {
             name: "Ambrosia",
@@ -71,7 +71,7 @@
             type: "Apple",
             harvest_time_unparsed: "Late September to the first week of October", // in Summerland
             description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/17/SPA493_Salish/",
-            released: "2018",
+            released: "Summerland 2018*",
             patent: "https://patents.google.com/patent/USPP28075 expires 2035-07-08"
         },
         {
@@ -86,21 +86,23 @@
             AKA: ["Nicola™"],
             type: "Apple",
             harvest_time_unparsed: "Mid to late season, after Ambrosia™",
-            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/13/SPA_440_Nicola/"
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/13/SPA_440_Nicola/ https://journals.ashs.org/hortsci/view/journals/hortsci/40/7/article-p2204.xml",
+            // release year from hortsci article
+            released: "Summerland 2005*"
         },
         {
             name: "Silken",
             type: "Apple",
             harvest_time: "Early September", // in BC
             description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/12/Silken/",
-            released: "1996"
+            released: "Summerland 1996*"
         },
         {
             name: "Sunrise",
             type: "Apple",
             harvest_time: "mid August to early September", // in BC
             description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/15/Sunrise/",
-            released: "1991"
+            released: "Summerland 1991*"
         },
         {
             name: "Olsentwo Gala",
