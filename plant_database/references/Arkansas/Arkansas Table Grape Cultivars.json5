@@ -19,7 +19,8 @@
             seedless: true,
             harvest_time: "late July to early August",
             description: "non-slipskin, ripens early. good cold hardiness in Arkansas",
-            patent: "https://patents.google.com/patent/USPP25696 expires 2034-01-28"
+            patent: "https://patents.google.com/patent/USPP25696 expires 2034-01-28",
+            released: "2012"
         },
         {
             type: "Grape",

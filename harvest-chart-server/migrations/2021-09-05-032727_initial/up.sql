@@ -11,6 +11,9 @@ CREATE TABLE base_plants (
   description TEXT,
   uspp_number TEXT, -- text so we can store odd patent numbers - sometimes plants get non-plant patents
   uspp_expiration BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
+  release_year INTEGER,
+  released_by TEXT,
+  release_collection_id INTEGER,
 
   UNIQUE(uspp_number)
   UNIQUE(name_fts, type) --combo of these columns must be unique.  example: name "Co-op 32" type "Apple"

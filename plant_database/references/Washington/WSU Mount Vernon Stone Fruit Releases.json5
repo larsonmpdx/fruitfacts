@@ -21,7 +21,7 @@
             disease_resistance: {
                 peach_leaf_curl: "resistant"
             },
-            released: 2003,
+            released: "WSU Mt Vernon 2003",
             patent: "https://patents.google.com/patent/USPP11769 expired 2018-11-02"
         },
         {

@@ -39,6 +39,7 @@ struct BasePlantJson {
     #[serde(rename = "AKA")]
     aka: Option<Vec<String>>,
     patent: Option<String>,
+    released: Option<String>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -103,6 +104,7 @@ struct CollectionPlantJson {
     #[serde(rename = "AKA")]
     aka: Option<Vec<String>>,
     patent: Option<String>,
+    released: Option<String>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -186,7 +188,7 @@ fn get_month(input: &str) -> String {
 
 #[derive(Default, Debug, PartialEq, Eq)]
 struct ReleasedOutput {
-    releaser: String,
+    releaser: Option<String>,
     year: i32,
     authoritative: bool,
 }
@@ -198,7 +200,7 @@ fn parse_released(input: &str) -> Option<ReleasedOutput> {
         if matches.len() >= 3 {
             let mut output = ReleasedOutput::default();
             if let Some(releaser) = matches.get(1) {
-                output.releaser = releaser.as_str().trim().to_string();
+                output.releaser = Some(releaser.as_str().trim().to_string());
             }
             if let Some(year) =  matches.get(2) {
                 output.year = year.as_str().parse::<i32>().unwrap();
@@ -621,6 +623,7 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
 
     println!("calculating relative harvest times");
     calculate_relative_harvest_times(db_conn);
+    calculate_release_year_from_patent(db_conn);
     println!("checking database");
     check_database(db_conn);
 
@@ -754,14 +757,14 @@ fn new_or_old<T: std::cmp::PartialEq + std::fmt::Debug>(
     old: Option<T>,
     new: Option<T>,
     plant: &BasePlantJson,
-    field_name: &str,
+    field_name_for_error_message: &str,
 ) -> Option<T> {
     if let Some(old) = old {
         if let Some(new) = new {
             assert_eq!(
                 old, new,
                 "tried to update field {} for plant but it was already set {:?}",
-                field_name, plant
+                field_name_for_error_message, plant
             );
         }
         Some(old)
@@ -772,18 +775,6 @@ fn new_or_old<T: std::cmp::PartialEq + std::fmt::Debug>(
 
 // we allow references to set some top-level fields, as long as they're either previously unset or an exact match
 fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, plant_type: String) {
-    let aka_formatted = format_aka_strings(&plant.aka);
-
-    let mut patent_info = Default::default();
-    if let Some(patent_string) = &plant.patent {
-        patent_info = string_to_patent_info(patent_string);
-    }
-
-    let mut uspp_expiration_i64 = None;
-    if let Some(uspp_expiration) = patent_info.uspp_expiration {
-        uspp_expiration_i64 = Some(uspp_expiration.timestamp() as i64);
-    }
-
     // find existing base plant (must exist)
     let existing_base_plant = base_plants::dsl::base_plants
         .filter(base_plants::name.eq(&plant.name))
@@ -795,6 +786,8 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
                 plant
             )
         });
+
+    let aka_formatted = format_aka_strings(&plant.aka);
 
     // check existing values: new value should be either an exact match, or not yet set in the database
     let aka = new_or_old(existing_base_plant.aka, aka_formatted.aka, plant, "aka");
@@ -813,6 +806,16 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
         "marketing_name",
     );
 
+    let mut patent_info = Default::default();
+    if let Some(patent_string) = &plant.patent {
+        patent_info = string_to_patent_info(patent_string);
+    }
+
+    let mut uspp_expiration_i64 = None;
+    if let Some(uspp_expiration) = patent_info.uspp_expiration {
+        uspp_expiration_i64 = Some(uspp_expiration.timestamp() as i64);
+    }
+
     let uspp_number = new_or_old(
         existing_base_plant.uspp_number,
         patent_info.uspp_number,
@@ -827,6 +830,34 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
         "uspp_expiration",
     );
 
+    let mut release_parsed = None;
+    if let Some(released) = &plant.released {
+        release_parsed = parse_released(&released);
+    }
+
+    let mut year = None;
+    let mut releaser = None;
+    if let Some(release_parsed) = release_parsed {
+        year = Some(release_parsed.year);
+        releaser = release_parsed.releaser;
+    }
+
+    let release_year = new_or_old(
+        existing_base_plant.release_year,
+        year,
+        plant,
+        "release_year",
+    );
+
+    let released_by = new_or_old(
+        existing_base_plant.released_by,
+        releaser,
+        plant,
+        "released_by",
+    );
+
+    let release_collection_id: Option<i32> = None; // todo
+
     let _updated_row =
         diesel::update(base_plants::dsl::base_plants.filter(base_plants::name.eq(&plant.name)))
             .filter(base_plants::type_.eq(plant_type))
@@ -836,6 +867,9 @@ fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, pla
                 base_plants::marketing_name.eq(&marketing_name),
                 base_plants::uspp_number.eq(uspp_number),
                 base_plants::uspp_expiration.eq(uspp_expiration),
+                base_plants::release_year.eq(release_year),
+                base_plants::released_by.eq(released_by),
+                base_plants::release_collection_id.eq(release_collection_id),
             ))
             .execute(db_conn);
 }
@@ -1158,6 +1192,7 @@ fn maybe_add_base_plant(
         description: None,
         aka: plant.aka.clone(),
         patent: plant.patent.clone(),
+        released: plant.released.clone(),
     };
     apply_top_level_fields(db_conn, &base_plant, plant.type_.clone());
     num_added
@@ -1571,6 +1606,12 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             }
         }
     }
+}
+
+fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
+    // todo - for each base plant, if the release year isn't filled in, guess at it from the patent number if available
+
+    // put in a note in a new column about how the release year was guessed at
 }
 
 #[derive(Queryable, Debug)]
