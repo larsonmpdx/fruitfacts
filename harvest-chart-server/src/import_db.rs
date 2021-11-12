@@ -202,7 +202,7 @@ fn parse_released(input: &str) -> Option<ReleasedOutput> {
             if let Some(releaser) = matches.get(1) {
                 output.releaser = Some(releaser.as_str().trim().to_string());
             }
-            if let Some(year) =  matches.get(2) {
+            if let Some(year) = matches.get(2) {
                 output.year = year.as_str().parse::<i32>().unwrap();
 
                 assert_ge!(output.year, 1800, "parsed release year was <1800");
@@ -774,7 +774,12 @@ fn new_or_old<T: std::cmp::PartialEq + std::fmt::Debug>(
 }
 
 // we allow references to set some top-level fields, as long as they're either previously unset or an exact match
-fn apply_top_level_fields(db_conn: &SqliteConnection, plant: &BasePlantJson, plant_type: String, current_collection_id: Option<i32>) {
+fn apply_top_level_fields(
+    db_conn: &SqliteConnection,
+    plant: &BasePlantJson,
+    plant_type: String,
+    current_collection_id: Option<i32>,
+) {
     // find existing base plant (must exist)
     let existing_base_plant = base_plants::dsl::base_plants
         .filter(base_plants::name.eq(&plant.name))
@@ -933,7 +938,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                 assert_eq!(Ok(1), rows_inserted);
                 plants_found += 1;
 
-                apply_top_level_fields(db_conn, plant, plant_type.clone().unwrap(),None);
+                apply_top_level_fields(db_conn, plant, plant_type.clone().unwrap(), None);
             }
         }
     }
@@ -1208,7 +1213,12 @@ fn maybe_add_base_plant(
         patent: plant.patent.clone(),
         released: plant.released.clone(),
     };
-    apply_top_level_fields(db_conn, &base_plant, plant.type_.clone(), Some(current_collection_id));
+    apply_top_level_fields(
+        db_conn,
+        &base_plant,
+        plant.type_.clone(),
+        Some(current_collection_id),
+    );
     num_added
 }
 
@@ -1404,8 +1414,12 @@ fn load_references(
                         );
                     }
                 } else if plant.name.is_some() {
-                    reference_base_plants_added +=
-                        maybe_add_base_plant(plant.name.as_ref().unwrap(), &plant, db_conn, collection_id);
+                    reference_base_plants_added += maybe_add_base_plant(
+                        plant.name.as_ref().unwrap(),
+                        &plant,
+                        db_conn,
+                        collection_id,
+                    );
 
                     reference_plants_added += add_collection_plant_by_location(
                         collection_id,

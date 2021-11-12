@@ -77,10 +77,7 @@ fn test_dates() {
 
 #[test]
 fn test_parse_released() {
-    assert_eq!(
-        parse_released(""),
-        None
-    );
+    assert_eq!(parse_released(""), None);
     assert_eq!(
         parse_released("WSU 2011*"),
         Some(ReleasedOutput {
@@ -97,10 +94,7 @@ fn test_parse_released() {
             authoritative: false
         })
     );
-    assert_eq!(
-        parse_released("WSU"),
-        None
-    );
+    assert_eq!(parse_released("WSU"), None);
     assert_eq!(
         parse_released("2013"),
         Some(ReleasedOutput {
@@ -435,10 +429,12 @@ fn test_database_loading() {
     db_conn.batch_execute("PRAGMA synchronous = OFF").unwrap();
 
     let mut items_loaded = Default::default();
-    db_conn.immediate_transaction::<_, diesel::result::Error, _>(|| {
-        items_loaded = super::load_all(&db_conn);
-        Ok(())
-    }).unwrap();
+    db_conn
+        .immediate_transaction::<_, diesel::result::Error, _>(|| {
+            items_loaded = super::load_all(&db_conn);
+            Ok(())
+        })
+        .unwrap();
 
     println!("loaded: {:#?}", items_loaded);
 
@@ -446,7 +442,10 @@ fn test_database_loading() {
     assert_ge!(items_loaded.base_plants_found, 234);
     assert_ge!(items_loaded.base_types_found, 47);
     assert_ge!(items_loaded.reference_items.reference_locations_found, 47);
-    assert_ge!(items_loaded.reference_items.reference_base_plants_added, 2372);
+    assert_ge!(
+        items_loaded.reference_items.reference_base_plants_added,
+        2372
+    );
     assert_ge!(items_loaded.reference_items.reference_plants_added, 4644);
 }
 
