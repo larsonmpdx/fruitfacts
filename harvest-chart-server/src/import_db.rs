@@ -1636,7 +1636,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
     }
 }
 
-fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
+fn calculate_release_year_from_patent(_db_conn: &SqliteConnection) {
     // todo - for each base plant, if the release year isn't filled in, guess at it from the patent number if available
 
     // put in a note in a new column about how the release year was guessed at
