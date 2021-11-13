@@ -14,7 +14,7 @@ fn test_is_a_midpoint() {
 }
 
 #[test]
-fn test_USPP_number_to_release_year() {
+fn test_uspp_number_to_release_year() {
     assert_eq!(USPP_number_to_release_year(1), 1931);
     assert_eq!(USPP_number_to_release_year(4969), 1982);
     assert_eq!(USPP_number_to_release_year(4970), 1983);
