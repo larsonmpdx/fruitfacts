@@ -23,6 +23,7 @@ pub struct BasePlant {
     pub uspp_number: Option<String>,
     pub uspp_expiration: Option<i64>,
     pub release_year: Option<i32>,
+    pub release_year_note: Option<String>,
     pub released_by: Option<String>,
     pub release_collection_id: Option<i32>,
 }

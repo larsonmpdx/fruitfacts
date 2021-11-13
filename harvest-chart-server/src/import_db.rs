@@ -7,6 +7,8 @@
 #[cfg(test)]
 mod test;
 
+mod util;
+
 use super::schema_generated::base_plants;
 use super::schema_generated::collection_items;
 use super::schema_generated::collections;

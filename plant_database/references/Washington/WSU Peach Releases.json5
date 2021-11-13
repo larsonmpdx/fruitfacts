@@ -1,0 +1,27 @@
+{
+    title: "WSU Peach Releases",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "WSU Prosser",
+            latitude: 46.29403228773569,
+            longitude: -119.74628066355086
+        }
+    ],
+    plants: [
+        // from "Handbook of Peach and Nectarine Varieties" Okie 1998
+        {
+            name: "Earlihale",
+            type: "Peach",
+            released: "1958"
+        },
+        {
+            name: "Roza",
+            type: "Peach",
+            released: "1971"
+        }
+    ]
+}
