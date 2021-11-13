@@ -5,7 +5,7 @@ struct year_and_patent_number {
 }
 
 // for varieties with no release year listed but a patent number given, guess at it based on their US patent number
-pub fn uspp_number_to_release_year(uspp_number_input: i32) -> i32 {
+pub fn USPP_number_to_release_year(uspp_number_input: i32) -> i32 {
     // https://www.uspto.gov/web/offices/ac/ido/oeip/taf/issuyear.htm
     const patent_numbers_to_year: [year_and_patent_number; 91] = [
         year_and_patent_number {
@@ -383,5 +383,5 @@ pub fn uspp_number_to_release_year(uspp_number_input: i32) -> i32 {
         previous_year = element.year;
     }
 
-    return previous_year;
+    previous_year
 }
