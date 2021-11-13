@@ -22,7 +22,7 @@
 * `cargo fetch` install packages
 * `cargo outdated` after installing `cargo install --locked cargo-outdated`
 * `cargo fmt` after installing `rustup component add rustfmt`
-* `cargo fix`
+* `cargo fix`a
 * `cargo clippy` after installing `rustup component add clippy`
   * `cargo clippy --fix`
 

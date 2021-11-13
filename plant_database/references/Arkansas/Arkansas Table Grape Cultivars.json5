@@ -20,7 +20,7 @@
             harvest_time: "late July to early August",
             description: "non-slipskin, ripens early. good cold hardiness in Arkansas",
             patent: "https://patents.google.com/patent/USPP25696 expires 2034-01-28",
-            released: "2012"
+            released: "U Arkansas 2012*"
         },
         {
             type: "Grape",
@@ -30,7 +30,7 @@
             description: "exceptional crisp texture https://uark.flintbox.com/technologies/aa7b9d9c-5835-4c81-a2c9-8a9067e330ac",
             harvest_time: "late August",
             patent: "https://patents.google.com/patent/USPP25746 expires 2034-01-25",
-            released: "2012"
+            released: "U Arkansas 2012"
         },
         {
             type: "Grape",
@@ -39,7 +39,8 @@
             seedless: true,
             harvest_time: "August 20th",
             description: "fruity flavor and high yields. non-slipskin",
-            patent: "https://patents.google.com/patent/USPP25697 expires 2034-02-07"
+            patent: "https://patents.google.com/patent/USPP25697 expires 2034-02-07",
+            released: "U Arkansas*"
         },
         {
             type: "Grape",
@@ -48,49 +49,56 @@
             seedless: true,
             harvest_time: "August 11th",
             description: "non-slipskin, exceptional fruity flavor. very soft texture",
-            patent: "https://patents.google.com/patent/USPP25726 expires 2034-01-28"
+            patent: "https://patents.google.com/patent/USPP25726 expires 2034-01-28",
+            released: "U Arkansas*"
         },
         {
             type: "Grape",
             name: "Jupiter",
             color: "reddish-blue",
             seedless: true,
-            description: "mild Muscat flavor. It is a non-slipskin type with crisp flesh texture. high yielding. moderate resistance to common fungal diseases. one of the hardier Arkansas cultivars"
+            description: "mild Muscat flavor. It is a non-slipskin type with crisp flesh texture. high yielding. moderate resistance to common fungal diseases. one of the hardier Arkansas cultivars",
+            released: "U Arkansas*"
         },
         {
             type: "Grape",
             name: "Mars",
             color: "reddish-blue",
             seedless: true,
-            description: "foxy flavor. slipskin. Skins are thick. high yielding. the most disease resistant of the Arkansas cultivars"
+            description: "foxy flavor. slipskin. Skins are thick. high yielding. the most disease resistant of the Arkansas cultivars",
+            released: "U Arkansas*"
         },
         {
             type: "Grape",
             name: "Neptune",
             color: "white",
             seedless: true,
-            description: "non-slipskin and has a fruity flavor, but is not foxy. moderate yield. cold hardiness is moderate for a table grape"
+            description: "non-slipskin and has a fruity flavor, but is not foxy. moderate yield. cold hardiness is moderate for a table grape",
+            released: "U Arkansas*"
         },
         {
             type: "Grape",
             name: "Reliance",
             color: "red",
             seedless: true,
-            description: "very cold hardy. most widely sold Arkansas cultivar. moderate yield. moderate resistance to common fungal diseases"
+            description: "very cold hardy. most widely sold Arkansas cultivar. moderate yield. moderate resistance to common fungal diseases",
+            released: "U Arkansas*"
         },
         {
             type: "Grape",
             name: "Saturn",
             color: "red",
             seedless: true,
-            description: "strong fruity flavor. It is a non-slipskin. crisp flesh. some issues with cold hardiness and disease susceptibility that limit its commercial viability. low to moderate yield"
+            description: "strong fruity flavor. It is a non-slipskin. crisp flesh. some issues with cold hardiness and disease susceptibility that limit its commercial viability. low to moderate yield",
+            released: "U Arkansas*"
         },
         {
             type: "Grape",
             name: "Venus",
             color: "dark",
             seedless: "mostly",
-            description: "foxy, Muscat flavor. reliable producer. slipskin. high yielding. some resistance to common fungal diseases"
+            description: "foxy, Muscat flavor. reliable producer. slipskin. high yielding. some resistance to common fungal diseases",
+            released: "U Arkansas*"
         },
         {
             type: "Grape",
@@ -98,16 +106,17 @@
             color: "blue",
             seedless: false,
             description: "a juice grape that is very similar to ‘Concord' but displays even ripening under hot conditions. low to moderate yield. good cold hardiness. moderate to high resistance to common fungal diseases",
-            patent: "https://patents.google.com/patent/USPP8511 expired 2012-09-25"
+            patent: "https://patents.google.com/patent/USPP8511 expired 2012-09-25",
+            released: "U Arkansas*"
         },
         {
             type: "Grape",
             name: "Compassion",
             color: "green",
             seedless: true,
-            released: "2017",
             description: "https://journals.ashs.org/hortsci/downloadpdf/journals/hortsci/53/3/article-p401.xml https://uark.flintbox.com/technologies/75239314-1151-4124-8251-16a70cc192b4",
-            patent: "https://patents.google.com/patent/USPP31526 expires 2038-09-17"
+            patent: "https://patents.google.com/patent/USPP31526 expires 2038-09-17",
+            released: "U Arkansas 2017*"
         }
         // todo Grape plant named 'A-2640'. I think this is part of a UIdaho cooperation but not named or released
         // https://patents.google.com/patent/USPP20745 expires 2028-06-10

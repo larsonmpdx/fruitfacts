@@ -71,7 +71,8 @@
             type: "Apple",
             harvest_time_unparsed: "Late September to the first week of October", // in Summerland
             description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/17/SPA493_Salish/",
-            released: "Summerland 2018*",
+            // release year may have been 2005 but it wasn't US patented until later. 2017 in ashs varieties list
+            released: "Summerland 2017*",
             patent: "https://patents.google.com/patent/USPP28075 expires 2035-07-08"
         },
         {
@@ -79,7 +80,9 @@
             AKA: ["Aurora Golden Gala™"],
             type: "Apple",
             harvest_time: "Late September to early October", // in BC
-            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/4/8S6923_Aurora_Golden_Gala/"
+            description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/4/8S6923_Aurora_Golden_Gala/ https://journals.ashs.org/hortsci/view/journals/hortsci/40/1/article-p251.xml",
+            // release year from hortsci article
+            released: "Summerland 2005"
         },
         {
             name: "SPA 440",

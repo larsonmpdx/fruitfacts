@@ -28,7 +28,7 @@
             name: "Puget Gold",
             type: "Apricot",
             description: "The Copeland Family provided for testing. \"Puget Gold apricot. RA Norton, J King, GA Moulton - HortScience, 1988\"", // haven't gotten a pdf of the release paper, ashs doesn't make about pre-1990 easily found
-            relased: "1988"
+            released: "1988"
         },
         {
             // release year todo
