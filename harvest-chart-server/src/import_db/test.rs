@@ -1,5 +1,5 @@
 use diesel::connection::SimpleConnection;
-use crate::import_db::util::USPP_number_to_release_year;
+use crate::import_db::util::uspp_number_to_release_year;
 
 use super::*;
 #[test]
@@ -15,11 +15,11 @@ fn test_is_a_midpoint() {
 
 #[test]
 fn test_uspp_number_to_release_year() {
-    assert_eq!(USPP_number_to_release_year(1), 1931);
-    assert_eq!(USPP_number_to_release_year(4969), 1982);
-    assert_eq!(USPP_number_to_release_year(4970), 1983);
-    assert_eq!(USPP_number_to_release_year(4971), 1983);
-    assert_eq!(USPP_number_to_release_year(33333), 2021);
+    assert_eq!(uspp_number_to_release_year(1), 1931);
+    assert_eq!(uspp_number_to_release_year(4969), 1982);
+    assert_eq!(uspp_number_to_release_year(4970), 1983);
+    assert_eq!(uspp_number_to_release_year(4971), 1983);
+    assert_eq!(uspp_number_to_release_year(33333), 2021);
 }
 
 #[test]
