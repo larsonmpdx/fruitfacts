@@ -19,7 +19,7 @@
             color: "blue",
             seedless: true,
             description: "slipskin. Alden x NY 46000",
-            released: "U Arkansas 1977*", // Moore and Brown
+            released: "U Arkansas 1977", // Moore and Brown
             patent: "not patented"
         },
         {
@@ -27,7 +27,7 @@
             name: "Reliance",
             seedless: true,
             description: "excellent fruity flavor, seedless, slipskin. Ontario x Suffolk Red",
-            released: "U Arkansas 1983*", // Moore
+            released: "U Arkansas 1983", // Moore
             patent: "https://patents.google.com/patent/USPP5174 expired 2002-12-27"
         },
         {
@@ -36,7 +36,7 @@
             color: "blue",
             seedless: true,
             description: "very hardy, very vigorous, slipskin. more fungal disease resistance than other Arkansas cultivars. Island Belle x A-1339",
-            released: "U Arkansas 1985*", // Moore
+            released: "U Arkansas 1985", // Moore
             patent: "https://patents.google.com/patent/USPP5680 expired 2004-07-05"
         },
         {
@@ -44,7 +44,7 @@
             name: "Saturn",
             seedless: true,
             description: "non-slipskin. unreliability in cropping due likely to winter hardiness and disease susceptibility tendencies. D-210 x NY 45791",
-            released: "U Arkansas 1989*", // Moore et al.
+            released: "U Arkansas 1989", // Moore et al.
             patent: "https://patents.google.com/patent/USPP6703 expired 2007-11-13"
         },
         {
@@ -52,7 +52,7 @@
             name: "Jupiter",
             seedless: true,
             description: "A-1258 x A-1672. non-slipskin. excellent quality combined with a mild muscat flavor",
-            released: "U Arkansas 1999*", // Clark and Moore
+            released: "U Arkansas 1999", // Clark and Moore
             patent: "https://patents.google.com/patent/USPP13309 expired 2019-01-11"
         },
         {
@@ -61,7 +61,7 @@
             color: "yellow-green",
             seedless: true,
             description: "exceptional cluster size and attractiveness. fruity flavor, but not foxy. A-1562 x A-1704",
-            released: "U Arkansas 1999*", // Clark and Moore
+            released: "U Arkansas 1999", // Clark and Moore
             patent: "https://patents.google.com/patent/USPP12302"
         },
     ]

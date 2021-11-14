@@ -235,7 +235,7 @@ fn parse_released(input: &str) -> Option<ReleasedOutput> {
 
         return Some(output);
     }
-    None
+    panic!("couldn't parse \"released\" string: {}", input);
 }
 
 // should this date string be treated as being centered on a single month?

@@ -23,14 +23,14 @@
             name: "Eclipse",
             type: "Blackberry",
             description: "https://www.emcocal.com/eclipse-variety/ ",
-            released: "2020",
+            released: "USDA-OSU 2020*",
             patent: "https://patents.google.com/patent/USPP30448 expires 2037-06-20"
         },
         {
             name: "Galaxy",
             type: "Blackberry",
             description: "https://www.emcocal.com/galaxy-variety/",
-            released: "2020",
+            released: "USDA-OSU 2020*",
             patent: "https://patents.google.com/patent/USPP30062 expires 2037-06-20"
         },
         {
@@ -38,35 +38,35 @@
             AKA: ["ORUS 4370-1"],
             type: "Blackberry",
             description: "https://journals.ashs.org/hortsci/view/journals/hortsci/55/7/article-p1148.xml", // todo - has some harvest dates
-            released: "2020",
+            released: "USDA-OSU 2020*",
             patent: "https://patents.google.com/patent/USPP30879 expires 2038-08-02"
         },
         {
             name: "Hall's Beauty",
             type: "Blackberry",
             description: "https://journals.ashs.org/hortsci/abstract/journals/hortsci/54/2/article-p371.xml https://www.emcocal.com/halls-beauty-variety/",
-            released: "2019",
+            released: "USDA-OSU 2019*",
             patent: "https://patents.google.com/patent/USPP30063 expires 2037-04-26"
         },
         {
             name: "Columbia Giant",
             type: "Blackberry",
             description: "https://journals.ashs.org/hortsci/view/journals/hortsci/53/2/article-p251.xml https://www.emcocal.com/columbia-giant-variety/",
-            released: "2018",
+            released: "USDA-OSU 2018*",
             patent: "https://patents.google.com/patent/USPP28369 expires 2035-10-22"
         },
         {
             name: "Columbia Sunrise",
             type: "Blackberry",
             description: "https://journals.ashs.org/hortsci/view/journals/hortsci/53/2/article-p256.xml https://www.emcocal.com/columbia-sunrise-variety/",
-            released: "2018",
+            released: "USDA-OSU 2018*",
             patent: "https://patents.google.com/patent/USPP29367 expires 2036-09-29"
         },
         {
             name: "Columbia Star",
             type: "Blackberry",
             description: "https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/90_finn_et_al_columbia_star_hs_2014.pdf",
-            released: "2014",
+            released: "USDA-OSU 2014*",
             patent: "https://patents.google.com/patent/USPP25532 expires 2033-05-09"
         },
         // no entry: ORUS 1939-4 (2012) - I think not named
@@ -74,70 +74,70 @@
             name: "Onyx",
             type: "Blackberry",
             description: "https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/72_finn_et_al_onyx_blackberry_hs_2011.pdf",
-            released: "2010",
+            released: "USDA-OSU 2010*",
             patent: "22358"
         },
         {
             name: "Newberry",
             type: "Blackberry",
             description: "",
-            released: "2010",
+            released: "USDA-OSU 2010*",
             patent: ""
         },
         {
             name: "Wild Treasure",
             type: "Blackberry",
             description: "",
-            released: "2010",
+            released: "USDA-OSU 2010*",
             patent: ""
         },
         {
             name: "Obsidian",
             type: "Blackberry",
             description: "https://oregon-berries.com/variety/obsidian-blackberry/",
-            released: "2005",
+            released: "USDA-OSU 2005*",
             patent: ""
         },
         {
             name: "Metolius",
             type: "Blackberry",
             description: "https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2005/Metolius.pdf",
-            released: "2005",
+            released: "USDA-OSU 2005*",
             patent: ""
         },
         {
             name: "Black Pearl",
             type: "Blackberry",
             description: "",
-            released: "2005",
+            released: "USDA-OSU 2005*",
             patent: ""
         },
         {
             name: "Nightfall",
             type: "Blackberry",
             description: "",
-            released: "2005",
+            released: "USDA-OSU 2005*",
             patent: ""
         },
         {
             name: "",
             type: "Blackberry",
             description: "",
-            released: "2005",
+            released: "USDA-OSU 2005*",
             patent: ""
         },
         {
             name: "Siskiyou",
             type: "Blackberry",
             description: "",
-            released: "1997",
+            released: "USDA-OSU 1997*",
             patent: ""
         },
         {
             name: "Black Butte",
             type: "Blackberry",
             description: "https://www.ars.usda.gov/research/publications/publication/?seqNo115=82031",
-            released: "1996",
+            released: "USDA-OSU 1996*",
             patent: ""
         },
         {
@@ -145,7 +145,7 @@
             AKA: ["Marionberry"],
             type: "Blackberry",
             description: "https://en.wikipedia.org/wiki/Marionberry",
-            released: "1957",
+            released: "USDA-OSU 1957*",
             patent: ""
         },
 // todo - other programs:
@@ -159,14 +159,14 @@
             name: "Vintage",
             type: "Raspberry",
             description: "https://journals.ashs.org/hortsci/view/journals/hortsci/48/9/article-p1181.xml",
-            released: "2013",
+            released: "USDA-OSU 2013",
             patent: ""
         },
         {
             name: "Kokanee",
             type: "Raspberry",
             description: "https://www.emcocal.com/kokanee-variety/",
-            released: "",
+            released: "USDA-OSU*",
             patent: ""
         },
 
@@ -181,21 +181,21 @@
             name: "Charm",
             type: "Strawberry",
             description: "",
-            released: "",
+            released: "USDA-OSU*",
             patent: "https://patents.google.com/patent/USPP25300 expires 2033-01-22"
         },
         {
             name: "Sweet Sunrise",
             type: "Strawberry",
             description: "",
-            released: "",
+            released: "USDA-OSU*",
             patent: "https://patents.google.com/patent/USPP25223 expires 2033-02-01"
         },
         {
             name: "Marys Peak",
             type: "Strawberry",
             description: "https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p395.xml", // todo - has harvest dates of a few things
-            released: "",
+            released: "USDA-OSU*",
             patent: ""
         },
 
@@ -219,14 +219,14 @@
             name: "Echo",
             type: "Blueberry",
             description: "https://journals.ashs.org/hortsci/view/journals/hortsci/54/2/article-p368.xml",
-            released: "2019",
+            released: "USDA-OSU 2019*",
             patent: "https://patents.google.com/patent/USPP29787 expires 2037-03-28"
         },
         {
             name: "Mini Blues",
             type: "Blueberry",
             description: "https://www.emcocal.com/mini-blues-variety/ https://www.oregonblueberry.com/update-F2019/mini.html",
-            released: "2019",
+            released: "USDA-OSU 2019*",
             patent: ""
         },
         // Baby Blues blueberry ORUS 10-1 2016 https://www.ars.usda.gov/research/publications/publication/?seqNo115=328114
@@ -235,7 +235,7 @@
             name: "Perpetua",
             type: "Blueberry",
             description: "ornamental. https://journals.ashs.org/hortsci/view/journals/hortsci/50/12/article-p1828.xml",
-            released: "2015",
+            released: "USDA-OSU 2015*",
             patent: "https://patents.google.com/patent/USPP24209 expires 2032-06-26"
         },
 
