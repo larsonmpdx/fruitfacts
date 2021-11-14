@@ -1638,10 +1638,31 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
     }
 }
 
-fn calculate_release_year_from_patent(_db_conn: &SqliteConnection) {
+fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
     // todo - for each base plant, if the release year isn't filled in, guess at it from the patent number if available
 
     // put in a note in a new column about how the release year was guessed at
+
+    let all_plants = base_plants::dsl::base_plants
+        .load::<BasePlant>(db_conn)
+        .unwrap();
+
+    for plant in all_plants {
+
+        // if release year is unset but patent number is set, fill in release year from a patent->year table
+
+        if plant.release_year.is_none() && plant.uspp_number.is_some() {
+            let _updated_row = diesel::update(
+                base_plants::dsl::base_plants
+                    .filter(base_plants::plant_id.eq(plant.plant_id)),
+            )
+            .set((
+                base_plants::release_year.eq(util::uspp_number_to_release_year(plant.uspp_number.unwrap().parse::<i32>().unwrap())),
+                base_plants::release_year_note.eq("release year derived from patent number"),
+            ))
+            .execute(db_conn);
+        }
+    }
 }
 
 #[derive(Queryable, Debug)]

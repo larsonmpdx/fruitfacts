@@ -1,3 +1,4 @@
+/*
 Melrose, Granny Smith, Jonagold, Idared, Mutsu, Cameo, and Braeburn
 
 20th Century, Hosui, Shinko
@@ -17,3 +18,21 @@ Bramleys Seedling, Dabinett, Foxwhelp, Kingston Black,  Smith’s cider, Muscat 
 
 Gravenstein 
 
+*/
+
+{
+    title: "",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 44.36728083819834,
+            longitude: -121.14213716576367
+        }
+    ],
+    plants: [
+    ]
+}

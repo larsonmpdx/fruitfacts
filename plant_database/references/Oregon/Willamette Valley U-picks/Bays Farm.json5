@@ -1,15 +1,32 @@
-https://www.tricountyfarm.org/farm/bays-family-farm-llc
+// https://www.tricountyfarm.org/farm/bays-family-farm-llc
 
-Braeburn apples are ready to pick. There may still be some of the following apples that are not too ripe for U-pick: Fuji, Hidden Rose, Jonagold, Liberty, Melrose, Mutsu and Pixie Crunch
+// Braeburn apples are ready to pick. There may still be some of the following apples that are not too ripe for U-pick: Fuji, Hidden Rose, Jonagold, Liberty, Melrose, Mutsu and Pixie Crunch
 
-Akane, Ashmead Kernal, Auvil Fuji, Chehalis, Famouse, Gingergold, Hidden Rose, Jonagold, Jonamac, Pink Pearl, Pixie Crunch, Red McIntosh, Red Spitzenberg, Rubinstar Jonagold, Sansa, Stearns, Summerred and a couple of very large Wealthy apples picked in the cooler.
+// Akane, Ashmead Kernal, Auvil Fuji, Chehalis, Famouse, Gingergold, Hidden Rose, Jonagold, Jonamac, Pink Pearl, Pixie Crunch, Red McIntosh, Red Spitzenberg, Rubinstar Jonagold, Sansa, Stearns, Summerred and a couple of very large Wealthy apples picked in the cooler.
 
-Rescue, Bartlett and Red Sensation Bartlett
+// Rescue, Bartlett and Red Sensation Bartlett
 
-D'Anjou
+// D'Anjou
 
-some asian
+// some asian
 
-suncrest
-canadian harmony
-veteran
+// suncrest
+// canadian harmony
+// veteran
+
+{
+    title: "",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 44.36728083819834,
+            longitude: -121.14213716576367
+        }
+    ],
+    plants: [
+    ]
+}

@@ -1,3 +1,4 @@
+/*
 http://www.perryhillfarm.net/peaches.php
 
 5775 Perrydale Rd, Dallas, OR 97338
@@ -24,3 +25,21 @@ Bing, Rainier, Lapins and Van. As well as new selections for you to try like Chr
 
 apples
 Royal Gala, Jonagold, and Honeysrisp
+*/
+
+{
+    title: "",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 44.36728083819834,
+            longitude: -121.14213716576367
+        }
+    ],
+    plants: [
+    ]
+}

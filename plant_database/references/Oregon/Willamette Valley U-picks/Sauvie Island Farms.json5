@@ -1,6 +1,25 @@
+/*
 early redhaven
 redhaven
 rosa
 halehaven
 veteran
 elberta
+*/
+
+{
+    title: "",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 44.36728083819834,
+            longitude: -121.14213716576367
+        }
+    ],
+    plants: [
+    ]
+}

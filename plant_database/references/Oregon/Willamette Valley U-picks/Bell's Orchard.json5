@@ -1,19 +1,35 @@
-http://www.bellsorchard.com/fruits/peaches/
+// http://www.bellsorchard.com/fruits/peaches/
 
-rising star
-starfire
-all star
-elberta
+// rising star
+// starfire
+// all star
+// elberta
 
-moonglow
-bartlett
-comice
-bosc
+// moonglow
+// bartlett
+// comice
+// bosc
 
-gravenstein
-pacific gala
-honeycrisp
-september wonder (fuji)
-rubinstar jonagold
-kumeo crimson red (braeburn)
+// gravenstein
+// pacific gala
+// honeycrisp
+// september wonder (fuji)
+// rubinstar jonagold
+// kumeo crimson red (braeburn)
 
+{
+    title: "",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "todo",
+            latitude: 44.36728083819834,
+            longitude: -121.14213716576367
+        }
+    ],
+    plants: [
+    ]
+}
