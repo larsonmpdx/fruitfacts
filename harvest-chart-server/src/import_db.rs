@@ -191,11 +191,16 @@ fn get_month(input: &str) -> String {
 #[derive(Default, Debug, PartialEq, Eq)]
 struct ReleasedOutput {
     releaser: Option<String>,
-    year: i32,
+    year: Option<i32>,
     authoritative: bool,
 }
 
 fn parse_released(input: &str) -> Option<ReleasedOutput> {
+
+    if input.is_empty() {
+        return None;
+    }
+
     let released_regex = Regex::new(r#"(.*\s)?([0-9]+)"#).unwrap();
 
     if let Some(matches) = released_regex.captures(input) {
@@ -205,17 +210,30 @@ fn parse_released(input: &str) -> Option<ReleasedOutput> {
                 output.releaser = Some(releaser.as_str().trim().to_string());
             }
             if let Some(year) = matches.get(2) {
-                output.year = year.as_str().parse::<i32>().unwrap();
+                output.year = Some(year.as_str().parse::<i32>().unwrap());
 
-                assert_ge!(output.year, 1800, "parsed release year was <1800");
-                assert_le!(output.year, 2100, "parsed release year was >2100");
+                assert_ge!(output.year.unwrap(), 1800, "parsed release year was <1800");
+                assert_le!(output.year.unwrap(), 2100, "parsed release year was >2100");
             }
 
             if input.ends_with('*') {
                 output.authoritative = true;
             }
+
             return Some(output);
         }
+    } else {
+        // for no-year strings like "WSU*" or "WSU"
+        let mut output = ReleasedOutput::default();
+
+        if input.ends_with('*') {
+            output.authoritative = true;
+            output.releaser = Some(rem_last_n(input.trim(), 1).to_string());
+        } else {
+            output.releaser = Some(input.trim().to_string());
+        }
+
+        return Some(output);
     }
     None
 }
@@ -846,7 +864,7 @@ fn apply_top_level_fields(
     let mut releaser = None;
     let mut release_authoritative = false;
     if let Some(release_parsed) = release_parsed {
-        release_year = Some(release_parsed.year);
+        release_year = release_parsed.year;
         releaser = release_parsed.releaser;
         release_authoritative = release_parsed.authoritative;
     }

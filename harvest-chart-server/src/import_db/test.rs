@@ -92,7 +92,7 @@ fn test_parse_released() {
         parse_released("WSU 2011*"),
         Some(ReleasedOutput {
             releaser: Some("WSU".to_string()),
-            year: 2011,
+            year: Some(2011),
             authoritative: true
         })
     );
@@ -100,17 +100,34 @@ fn test_parse_released() {
         parse_released("WSU Mt Vernon 2003"),
         Some(ReleasedOutput {
             releaser: Some("WSU Mt Vernon".to_string()),
-            year: 2003,
+            year: Some(2003),
             authoritative: false
         })
     );
-    assert_eq!(parse_released("WSU"), None);
+    assert_eq!(parse_released("WSU"), Some(ReleasedOutput {
+        releaser: Some("WSU".to_string()),
+        year: None,
+        authoritative: false
+    }));
+    assert_eq!(parse_released("WSU*"), Some(ReleasedOutput {
+        releaser: Some("WSU".to_string()),
+        year: None,
+        authoritative: true
+    }));
     assert_eq!(
         parse_released("2013"),
         Some(ReleasedOutput {
             releaser: None,
-            year: 2013,
+            year: Some(2013),
             authoritative: false
+        })
+    );
+    assert_eq!(
+        parse_released("2013*"),
+        Some(ReleasedOutput {
+            releaser: None,
+            year: Some(2013),
+            authoritative: true
         })
     );
 }
