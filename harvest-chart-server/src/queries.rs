@@ -1,5 +1,6 @@
 use crate::schema_types::Collections;
 use super::schema_generated::*;
+use std::collections::HashSet;
 use actix_web::{get, web, Error, HttpResponse};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
@@ -56,10 +57,22 @@ pub struct CollectionsForPaths {
     pub title: Option<String>,
 }
 
+#[derive(Default, Serialize)]
+pub struct CollectionsReturn {
+    directories: HashSet<String>,
+    collections: Vec<CollectionsForPaths>,
+}
+
 pub fn get_collections_db(
     conn: &SqliteConnection,
-) -> Result<Vec<CollectionsForPaths>, diesel::result::Error> {
-    collections::dsl::collections
+    path: &str,
+) -> Result<CollectionsReturn, diesel::result::Error> {
+
+    if !path.is_empty() && !path.ends_with("/") {
+        return Ok(Default::default())
+    }
+
+    let db_return = collections::dsl::collections
     .select((
         collections::location_id,
         collections::collection_id,
@@ -67,8 +80,30 @@ pub fn get_collections_db(
         collections::filename,
         collections::title,
     ))
-        .filter(collections::path.like("Oregon//%"))
-        .load::<CollectionsForPaths>(conn)
+        .filter(collections::path.like(path.to_owned() + r#"%"#))
+        .load::<CollectionsForPaths>(conn);
+
+    match db_return {
+        Ok(collections) => {
+
+            let mut output: CollectionsReturn = Default::default();
+            for collection in collections {
+                if let Some(collection_path) = &collection.path {
+                    if collection_path == path {
+                        output.collections.push(collection);
+                    } else {
+                        output.directories.insert(collection_path.to_string()); // this is a hashset so we'll get paths de-duplicated here
+                    }
+                }
+            }
+            // output.collections = collections;
+
+            return Ok(output);
+        }
+        Err(error) => {
+            return Err(error);
+        }
+    }
 }
 
 #[derive(Deserialize)]
@@ -80,7 +115,7 @@ struct Path {
 async fn get_collections(info: web::Path<Path>, pool: web::Data<DbPool>) -> Result<HttpResponse, Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    let collections = web::block(move || get_collections_db(&conn))
+    let collections = web::block(move || get_collections_db(&conn, &info.path))
     .await
     .map_err(|e| {
         eprintln!("{}", e);
