@@ -483,14 +483,14 @@ fn test_format_name_fts_string() {
 }
 
 #[test]
-fn test_simplify_path() {
-    assert_eq!(simplify_path(r#".\..\plant_database\references"#), "");
+fn test_format_path() {
+    assert_eq!(format_path(r#".\..\plant_database\references"#), "/");
     assert_eq!(
-        simplify_path("./../plant_database/references/Oregon"),
-        "Oregon"
+        format_path("./../plant_database/references/Oregon"),
+        "Oregon/"
     );
     assert_eq!(
-        simplify_path("./../plant_database/references/Oregon/Willamette Valley"),
-        "Oregon/Willamette Valley"
+        format_path(r#".\..\plant_database\references\Oregon\Willamette Valley"#),
+        "Oregon/Willamette Valley/"
     );
 }

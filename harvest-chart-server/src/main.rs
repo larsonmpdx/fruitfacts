@@ -49,6 +49,7 @@ async fn main() -> std::io::Result<()> {
             .data(pool.clone())
             //    .wrap(middleware::Logger::default())
             .service(queries::get_recent_patents)
+            .service(queries::get_collections)
     })
     .bind(("127.0.0.1", 8080))?
     .run()

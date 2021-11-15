@@ -681,21 +681,29 @@ pub fn get_database_dir() -> Option<std::path::PathBuf> {
     None
 }
 
-fn simplify_path(input: &str) -> &str {
+// given input like ".../references/Oregon/Willamette Valley"
+// get the part after "references", change any '\' to '/' (for windows) and add a trailing '/'
+// return "Oregon/Willamette Valley/"
+fn format_path(input: &str) -> String {
     let v: Vec<&str> = input.split("references").collect();
 
     let after_references = v.last().unwrap();
     // println!("split result: {}", after_references);
 
+    let mutable: &str;
     if after_references.is_empty() {
-        return after_references;
+        mutable = after_references;
+    } else {
+        mutable = match after_references.chars().next().unwrap() {
+            '/' => rem_first_n(after_references, 1),
+            '\\' => rem_first_n(after_references, 1),
+            _ => after_references,
+        }
     }
 
-    match after_references.chars().next().unwrap() {
-        '/' => rem_first_n(after_references, 1),
-        '\\' => rem_first_n(after_references, 1),
-        _ => after_references,
-    }
+    let mut string_mutable = str::replace(mutable, r#"\"#, "/").to_string();
+    string_mutable.push('/');
+    return string_mutable
 }
 
 pub struct AkaFormatted {
@@ -1374,7 +1382,7 @@ fn load_references(
             });
 
             let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), ".json5".len());
-            let path = simplify_path(path_.parent().unwrap().to_str().unwrap());
+            let path = format_path(path_.parent().unwrap().to_str().unwrap());
 
             collection_id += 1;
             for location in &collection.locations {
