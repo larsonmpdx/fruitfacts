@@ -1,4 +1,4 @@
-use crate::schema_types::Collections;
+
 use super::schema_generated::*;
 use std::collections::HashSet;
 use actix_web::{get, web, Error, HttpResponse};
