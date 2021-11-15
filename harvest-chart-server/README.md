@@ -15,6 +15,10 @@
 * all of an individual's data should be able to be imported/exported in a simple text format
 
 # hints
+* install cmake for libgit2/git2 build: https://cmake.org/download/
+* also vs build tools for libgit2/git2 build: https://visualstudio.microsoft.com/downloads/?q=build+tools
+  * 2013: https://www.microsoft.com/en-us/download/details.aspx?id=40760
+  * choose "desktop development with c++" in the installer
 * `cargo build`
 * `cargo run`
 * `cargo test` and `cargo test -- --include-ignored` (include long tests)

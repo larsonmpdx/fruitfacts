@@ -11,6 +11,7 @@ embed_migrations!();
 extern crate dotenv;
 
 pub mod import_db;
+pub mod git_info;
 pub mod queries;
 mod schema_generated;
 mod schema_types;

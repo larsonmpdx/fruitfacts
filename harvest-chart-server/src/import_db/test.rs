@@ -447,6 +447,25 @@ fn test_patent_parsing() {
 }
 
 #[test]
+fn test_format_name_fts_string() {
+    assert_eq!(format_name_fts_string(r#"tulare! (tm)"#), "tulare");
+    assert_eq!(format_name_fts_string(r#"Santina ®"#), "santina");
+}
+
+#[test]
+fn test_format_path() {
+    assert_eq!(format_path(r#".\..\plant_database\references"#), "/");
+    assert_eq!(
+        format_path("./../plant_database/references/Oregon"),
+        "Oregon/"
+    );
+    assert_eq!(
+        format_path(r#".\..\plant_database\references\Oregon\Willamette Valley"#),
+        "Oregon/Willamette Valley/"
+    );
+}
+
+#[test]
 #[ignore] // long runtime
 fn test_database_loading() {
     let db_conn = super::establish_connection();
@@ -474,23 +493,4 @@ fn test_database_loading() {
         2372
     );
     assert_ge!(items_loaded.reference_items.reference_plants_added, 4644);
-}
-
-#[test]
-fn test_format_name_fts_string() {
-    assert_eq!(format_name_fts_string(r#"tulare! (tm)"#), "tulare");
-    assert_eq!(format_name_fts_string(r#"Santina ®"#), "santina");
-}
-
-#[test]
-fn test_format_path() {
-    assert_eq!(format_path(r#".\..\plant_database\references"#), "/");
-    assert_eq!(
-        format_path("./../plant_database/references/Oregon"),
-        "Oregon/"
-    );
-    assert_eq!(
-        format_path(r#".\..\plant_database\references\Oregon\Willamette Valley"#),
-        "Oregon/Willamette Valley/"
-    );
 }

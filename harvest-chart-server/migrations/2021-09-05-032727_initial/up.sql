@@ -39,6 +39,8 @@ CREATE TABLE collections (
   collection_id INTEGER NOT NULL,
   user_id INTEGER NOT NULL,
 
+  git_edit_time BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
+
   path TEXT, -- directory that we found this in, like "Oregon" or "Oregon/Willamette Valley"
   filename TEXT,
 

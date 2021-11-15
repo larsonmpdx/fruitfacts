@@ -48,6 +48,7 @@ table! {
         location_id -> Integer,
         collection_id -> Integer,
         user_id -> Integer,
+        git_edit_time -> Nullable<BigInt>,
         path -> Nullable<Text>,
         filename -> Nullable<Text>,
         title -> Nullable<Text>,

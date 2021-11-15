@@ -9,6 +9,8 @@ mod test;
 
 mod util;
 
+use crate::git_info::GitModificationTimes;
+
 use super::schema_generated::base_plants;
 use super::schema_generated::collection_items;
 use super::schema_generated::collections;
@@ -25,7 +27,9 @@ use std::collections::HashSet;
 use std::convert::TryFrom;
 use std::fs;
 use walkdir::WalkDir;
+use std::path::Path;
 
+extern crate pathdiff;
 extern crate regex;
 use regex::Regex;
 
@@ -1360,9 +1364,11 @@ fn load_references(
     let mut reference_base_plants_added = 0;
     let mut reference_plants_added = 0;
 
+    let git_info = GitModificationTimes::new(&database_dir.join("..")).unwrap();
+    git_info.print();
+
     // traverse /plant_database/references/
     // create a collections table entry for each location in this reference, or only one if there's only one location
-
     for entry in WalkDir::new(database_dir.join("references"))
         .max_depth(5)
         .into_iter()
@@ -1375,10 +1381,27 @@ fn load_references(
         {
             println!("loading reference: {}", path_.display());
 
+            // get a path for this relative to our git base directory so we can match it against the git mtime list
+            let absolute_path_git = fs::canonicalize(&database_dir.join("..")).unwrap();
+            let absolute_path_file = fs::canonicalize(&path_).unwrap();
+            let file_git_path = pathdiff::diff_paths(absolute_path_file, absolute_path_git).unwrap();
+
+            let path_git_info = git_info.for_path(&file_git_path);
+            if path_git_info.is_none() {
+                println!("no git mod time for: {}", file_git_path.display());
+            }
+
+            let git_edit_time;
+            if let Some(path_git_info) = path_git_info {
+                git_edit_time = Some(path_git_info.seconds());
+            } else {
+                git_edit_time = None;
+            }
+
             let contents = fs::read_to_string(path_).unwrap();
 
             let collection: CollectionJson = json5::from_str(&contents).unwrap_or_else(|error| {
-                panic!("couldn't parse json in file {} {}", path_.display(), error)
+                panic!("couldn't parse json in file {} {}", path_.display(), error);
             });
 
             let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), ".json5".len());
@@ -1391,6 +1414,7 @@ fn load_references(
                     .values((
                         collections::collection_id.eq(collection_id),
                         collections::user_id.eq(0), // todo - codify this as the root/fake user
+                        collections::git_edit_time.eq(git_edit_time),
                         collections::path.eq(&path),
                         collections::filename.eq(&filename),
                         collections::title.eq(&collection.title),

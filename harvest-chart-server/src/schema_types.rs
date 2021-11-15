@@ -64,6 +64,7 @@ pub struct Collections {
     pub location_id: i32,
     pub collection_id: i32,
     pub user_id: i32,
+    pub git_edit_time: Option<i64>,
 
     pub path: Option<String>,
     pub filename: Option<String>,
