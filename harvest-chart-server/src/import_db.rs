@@ -701,9 +701,9 @@ fn format_path(input: &str) -> String {
         }
     }
 
-    let mut string_mutable = str::replace(mutable, r#"\"#, "/").to_string();
+    let mut string_mutable = str::replace(mutable, r#"\"#, "/");
     string_mutable.push('/');
-    return string_mutable
+    string_mutable
 }
 
 pub struct AkaFormatted {

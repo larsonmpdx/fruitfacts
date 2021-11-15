@@ -68,7 +68,7 @@ pub fn get_collections_db(
     path: &str,
 ) -> Result<CollectionsReturn, diesel::result::Error> {
 
-    if !path.is_empty() && !path.ends_with("/") {
+    if !path.is_empty() && !path.ends_with('/') {
         return Ok(Default::default())
     }
 
@@ -98,10 +98,10 @@ pub fn get_collections_db(
             }
             // output.collections = collections;
 
-            return Ok(output);
+            Ok(output)
         }
         Err(error) => {
-            return Err(error);
+            Err(error)
         }
     }
 }
