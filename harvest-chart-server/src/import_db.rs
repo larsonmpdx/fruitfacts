@@ -1194,7 +1194,7 @@ fn get_location_id(
 
     if let Ok(locations) = locations {
         if locations.len() == 1 {
-            return Some(locations[0].location_id);
+            return Some(locations[0].id);
         }
     }
 

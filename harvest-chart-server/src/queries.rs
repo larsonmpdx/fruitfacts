@@ -100,7 +100,8 @@ pub fn get_collections_db(
 #[derive(Default, Serialize)]
 pub struct CollectionReturn {
     collection: Option<Collection>,
-    locations: Vec<Location>
+    locations: Vec<Location>,
+    items: Vec<CollectionItem>,
 }
 
 pub fn get_collection_db(
@@ -132,22 +133,27 @@ pub fn get_collection_db(
 
     println!("{:#?} {:#?}", dir, file);
 
-    let db_return: Result<Collection, diesel::result::Error> = collections::dsl::collections
+    let collection: Result<Collection, diesel::result::Error> = collections::dsl::collections
         .filter(collections::path.eq(dir))
         .filter(collections::filename.eq(file))
         .order(collections::collection_id)
         .first(conn);
 
-    match db_return {
+    match collection {
         Ok(collection) => {
             let mut output: CollectionReturn = Default::default();
 
+            let locations = Location::belonging_to(&collection)
+            .load::<Location>(conn)
+            .expect("Error loading locations");
+
+            let items = CollectionItem::belonging_to(&collection)
+            .load::<CollectionItem>(conn)
+            .expect("Error loading items");
+
             output.collection = Some(collection);
-
-            // todo - foreign key stuff for locations and then items
-            // https://docs.diesel.rs/diesel/associations/index.html
-
-
+            output.locations = locations;
+            output.items = items;
             Ok(output)
         }
         Err(error) => Err(error),
