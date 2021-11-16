@@ -2,9 +2,11 @@ use super::schema_generated::*;
 use actix_web::{get, web, Error, HttpResponse};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
+use regex::Regex;
 use std::collections::HashSet;
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use serde::{Deserialize, Serialize};
+use super::schema_types::*;
 
 #[derive(Queryable, Debug, Serialize)]
 pub struct BasePlantsItemForPatents {
@@ -65,10 +67,6 @@ pub fn get_collections_db(
     conn: &SqliteConnection,
     path: &str,
 ) -> Result<CollectionsReturn, diesel::result::Error> {
-    if !path.is_empty() && !path.ends_with('/') {
-        return Ok(Default::default());
-    }
-
     let db_return = collections::dsl::collections
         .select((
             collections::collection_id,
@@ -99,6 +97,63 @@ pub fn get_collections_db(
     }
 }
 
+#[derive(Default, Serialize)]
+pub struct CollectionReturn {
+    collection: Option<Collections>,
+    locations: Vec<Locations>
+}
+
+pub fn get_collection_db(
+    conn: &SqliteConnection,
+    path: &str,
+) -> Result<CollectionReturn, diesel::result::Error> {
+
+    println!("{}", path);
+
+    // this could be done with rfind('/') or similar to get rid of the regex
+    let slash_regex =
+        Regex::new(r#"(.*)/(.*)"#).unwrap();
+
+    let mut dir: String = Default::default();
+    let mut file: String = Default::default();
+    if let Some(matches) = slash_regex.captures(path) {
+        if matches.len() >= 3 {
+            if let Some(dir_match) = matches.get(1) {
+                dir = dir_match.as_str().to_string();
+            }
+            if let Some(file_match) = matches.get(2) {
+                file = file_match.as_str().to_string();
+            }
+        }
+    } else {
+        file = path.to_string();
+    }
+    dir.push('/');
+
+    println!("{:#?} {:#?}", dir, file);
+
+    let db_return: Result<Collections, diesel::result::Error> = collections::dsl::collections
+        .filter(collections::path.eq(dir))
+        .filter(collections::filename.eq(file))
+        .order(collections::collection_id)
+        .first(conn);
+
+    match db_return {
+        Ok(collection) => {
+            let mut output: CollectionReturn = Default::default();
+
+            output.collection = Some(collection);
+
+            // todo - foreign key stuff for locations and then items
+            // https://docs.diesel.rs/diesel/associations/index.html
+
+
+            Ok(output)
+        }
+        Err(error) => Err(error),
+    }
+}
+
 #[derive(Deserialize)]
 struct Path {
     path: String,
@@ -111,18 +166,30 @@ async fn get_collections(
 ) -> Result<HttpResponse, Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    let collections = web::block(move || get_collections_db(&conn, &info.path))
+    if info.path.is_empty() || info.path.ends_with('/') {
+        // get all subdirectories and all collections at this path
+        let collections = web::block(move || get_collections_db(&conn, &info.path))
         .await
         .map_err(|e| {
             eprintln!("{}", e);
             HttpResponse::InternalServerError().finish()
         })?;
 
-    // get all collections paths
-    // if there's a further '/' in the path, put this in a directory array
-    // if there isn't, put it in a collections array
+        Ok(HttpResponse::Ok().json(collections))
+    } else {
+        // doesn't end in '/': get an individual collection
 
-    Ok(HttpResponse::Ok().json(collections))
+        let collection = web::block(move || get_collection_db(&conn, &info.path))
+        .await
+        .map_err(|e| {
+            eprintln!("{}", e);
+            HttpResponse::InternalServerError().finish()
+        })?;
+
+        Ok(HttpResponse::Ok().json(collection))
+
+    }
+
 }
 
 #[derive(Serialize)]

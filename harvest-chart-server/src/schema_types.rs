@@ -34,7 +34,6 @@ pub struct BasePlant {
 pub struct CollectionItems {
     pub collection_item_id: i32,
 
-    pub collection_title: Option<String>,
     pub collection_id: i32,
     pub location_id: Option<i32>,
 

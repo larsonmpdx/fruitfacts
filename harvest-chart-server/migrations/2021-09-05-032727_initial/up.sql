@@ -64,7 +64,6 @@ CREATE TABLE locations (
 CREATE TABLE collection_items (
   collection_item_id INTEGER PRIMARY KEY NOT NULL,
   
-  collection_title TEXT,
   collection_id INTEGER NOT NULL,
   location_id INTEGER, -- this can be unset for cases where there's a random list of varieties not attached to a location
 

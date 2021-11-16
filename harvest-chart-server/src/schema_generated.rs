@@ -21,7 +21,6 @@ table! {
 table! {
     collection_items (collection_item_id) {
         collection_item_id -> Integer,
-        collection_title -> Nullable<Text>,
         collection_id -> Integer,
         location_id -> Nullable<Integer>,
         name -> Text,
