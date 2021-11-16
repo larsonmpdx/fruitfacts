@@ -99,8 +99,8 @@ pub fn get_collections_db(
 
 #[derive(Default, Serialize)]
 pub struct CollectionReturn {
-    collection: Option<Collections>,
-    locations: Vec<Locations>
+    collection: Option<Collection>,
+    locations: Vec<Location>
 }
 
 pub fn get_collection_db(
@@ -132,7 +132,7 @@ pub fn get_collection_db(
 
     println!("{:#?} {:#?}", dir, file);
 
-    let db_return: Result<Collections, diesel::result::Error> = collections::dsl::collections
+    let db_return: Result<Collection, diesel::result::Error> = collections::dsl::collections
         .filter(collections::path.eq(dir))
         .filter(collections::filename.eq(file))
         .order(collections::collection_id)

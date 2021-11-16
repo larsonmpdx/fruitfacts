@@ -1190,7 +1190,7 @@ fn get_location_id(
     let locations = locations::dsl::locations
         .filter(locations::collection_id.eq(collection_id))
         .filter(locations::location_name.eq(location_name))
-        .load::<Locations>(db_conn);
+        .load::<Location>(db_conn);
 
     if let Ok(locations) = locations {
         if locations.len() == 1 {
@@ -1657,7 +1657,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                     .filter(collection_items::location_id.eq(plant.location_id))
                     .filter(collection_items::name.eq(harvest_relative.name))
                     .filter(collection_items::type_.eq(plant.type_))
-                    .first::<CollectionItems>(db_conn)
+                    .first::<CollectionItem>(db_conn)
                 {
                     let harvest_start = add_relative_value(
                         relative_plant.harvest_start,
