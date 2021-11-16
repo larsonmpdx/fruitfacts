@@ -193,9 +193,7 @@ async fn get_collections(
         })?;
 
         Ok(HttpResponse::Ok().json(collection))
-
     }
-
 }
 
 #[derive(Serialize)]
