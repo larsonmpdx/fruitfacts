@@ -5,8 +5,8 @@ use diesel::r2d2::{self, ConnectionManager};
 use regex::Regex;
 use std::collections::HashSet;
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
-use serde::{Deserialize, Serialize};
 use super::schema_types::*;
+use serde::{Deserialize, Serialize};
 
 #[derive(Queryable, Debug, Serialize)]
 pub struct BasePlantsItemForPatents {
@@ -108,12 +108,10 @@ pub fn get_collection_db(
     conn: &SqliteConnection,
     path: &str,
 ) -> Result<CollectionReturn, diesel::result::Error> {
-
     println!("{}", path);
 
     // this could be done with rfind('/') or similar to get rid of the regex
-    let slash_regex =
-        Regex::new(r#"(.*)/(.*)"#).unwrap();
+    let slash_regex = Regex::new(r#"(.*)/(.*)"#).unwrap();
 
     let mut dir: String = Default::default();
     let mut file: String = Default::default();
@@ -144,12 +142,12 @@ pub fn get_collection_db(
             let mut output: CollectionReturn = Default::default();
 
             let locations = Location::belonging_to(&collection)
-            .load::<Location>(conn)
-            .expect("Error loading locations");
+                .load::<Location>(conn)
+                .expect("Error loading locations");
 
             let items = CollectionItem::belonging_to(&collection)
-            .load::<CollectionItem>(conn)
-            .expect("Error loading items");
+                .load::<CollectionItem>(conn)
+                .expect("Error loading items");
 
             output.collection = Some(collection);
             output.locations = locations;
@@ -175,22 +173,22 @@ async fn get_collections(
     if info.path.is_empty() || info.path.ends_with('/') {
         // get all subdirectories and all collections at this path
         let collections = web::block(move || get_collections_db(&conn, &info.path))
-        .await
-        .map_err(|e| {
-            eprintln!("{}", e);
-            HttpResponse::InternalServerError().finish()
-        })?;
+            .await
+            .map_err(|e| {
+                eprintln!("{}", e);
+                HttpResponse::InternalServerError().finish()
+            })?;
 
         Ok(HttpResponse::Ok().json(collections))
     } else {
         // doesn't end in '/': get an individual collection
 
         let collection = web::block(move || get_collection_db(&conn, &info.path))
-        .await
-        .map_err(|e| {
-            eprintln!("{}", e);
-            HttpResponse::InternalServerError().finish()
-        })?;
+            .await
+            .map_err(|e| {
+                eprintln!("{}", e);
+                HttpResponse::InternalServerError().finish()
+            })?;
 
         Ok(HttpResponse::Ok().json(collection))
     }

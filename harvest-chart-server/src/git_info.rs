@@ -5,11 +5,7 @@
 use git2::Error;
 
 use git2::Time;
-use std::{
-    cmp::max,
-    collections::HashMap,
-    path::{Path},
-};
+use std::{cmp::max, collections::HashMap, path::Path};
 
 // Tracks the time of latest modification of files in git
 pub struct GitModificationTimes {

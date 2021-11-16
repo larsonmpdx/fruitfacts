@@ -200,7 +200,6 @@ struct ReleasedOutput {
 }
 
 fn parse_released(input: &str) -> Option<ReleasedOutput> {
-
     if input.is_empty() {
         return None;
     }
@@ -1384,7 +1383,8 @@ fn load_references(
             // get a path for this relative to our git base directory so we can match it against the git mtime list
             let absolute_path_git = fs::canonicalize(&database_dir.join("..")).unwrap();
             let absolute_path_file = fs::canonicalize(&path_).unwrap();
-            let file_git_path = pathdiff::diff_paths(absolute_path_file, absolute_path_git).unwrap();
+            let file_git_path =
+                pathdiff::diff_paths(absolute_path_file, absolute_path_git).unwrap();
 
             let path_git_info = git_info.for_path(&file_git_path);
             if path_git_info.is_none() {
@@ -1409,7 +1409,7 @@ fn load_references(
 
             collection_id += 1;
 
-                //    println!("inserting");
+            //    println!("inserting");
             let rows_inserted = diesel::insert_into(collections::dsl::collections)
                 .values((
                     collections::collection_id.eq(collection_id),
@@ -1423,7 +1423,7 @@ fn load_references(
                     collections::url.eq(&collection.url),
                     collections::published.eq(&collection.published),
                     collections::reviewed.eq(&collection.reviewed),
-                    collections::accessed.eq(&collection.accessed)
+                    collections::accessed.eq(&collection.accessed),
                 ))
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
@@ -1707,16 +1707,16 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
         .unwrap();
 
     for plant in all_plants {
-
         // if release year is unset but patent number is set, fill in release year from a patent->year table
 
         if plant.release_year.is_none() && plant.uspp_number.is_some() {
             let _updated_row = diesel::update(
-                base_plants::dsl::base_plants
-                    .filter(base_plants::plant_id.eq(plant.plant_id)),
+                base_plants::dsl::base_plants.filter(base_plants::plant_id.eq(plant.plant_id)),
             )
             .set((
-                base_plants::release_year.eq(util::uspp_number_to_release_year(plant.uspp_number.unwrap().parse::<i32>().unwrap())),
+                base_plants::release_year.eq(util::uspp_number_to_release_year(
+                    plant.uspp_number.unwrap().parse::<i32>().unwrap(),
+                )),
                 base_plants::release_year_note.eq("release year derived from patent number"),
             ))
             .execute(db_conn);

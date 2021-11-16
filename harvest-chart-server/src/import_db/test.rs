@@ -1,5 +1,5 @@
-use diesel::connection::SimpleConnection;
 use crate::import_db::util::uspp_number_to_release_year;
+use diesel::connection::SimpleConnection;
 
 use super::*;
 #[test]
@@ -104,16 +104,22 @@ fn test_parse_released() {
             authoritative: false
         })
     );
-    assert_eq!(parse_released("WSU"), Some(ReleasedOutput {
-        releaser: Some("WSU".to_string()),
-        year: None,
-        authoritative: false
-    }));
-    assert_eq!(parse_released("WSU*"), Some(ReleasedOutput {
-        releaser: Some("WSU".to_string()),
-        year: None,
-        authoritative: true
-    }));
+    assert_eq!(
+        parse_released("WSU"),
+        Some(ReleasedOutput {
+            releaser: Some("WSU".to_string()),
+            year: None,
+            authoritative: false
+        })
+    );
+    assert_eq!(
+        parse_released("WSU*"),
+        Some(ReleasedOutput {
+            releaser: Some("WSU".to_string()),
+            year: None,
+            authoritative: true
+        })
+    );
     assert_eq!(
         parse_released("2013"),
         Some(ReleasedOutput {
