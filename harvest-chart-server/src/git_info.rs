@@ -1,13 +1,14 @@
 // MIT or Apache from https://github.com/rustsec/rustsec/blob/main/rustsec/src/repository/git/modification_time.rs
 // see discussion https://github.com/rust-lang/git2-rs/issues/588
 // last updated Nov 2021 from version 740a1dc
+// changed from indexing on a path to a string in order to handle git's lowercase/uppercase mixups
 use git2::Error;
 
 use git2::Time;
 use std::{
     cmp::max,
     collections::HashMap,
-    path::{Path, PathBuf},
+    path::{Path},
 };
 
 // Tracks the time of latest modification of files in git
@@ -23,7 +24,7 @@ impl GitModificationTimes {
     // Performance: collects all modification times on creation
     // and caches them. This is more efficient for looking up lots of files,
     // but wasteful if you just need to look up a couple files
-    pub fn new(path: &PathBuf) -> Result<Self, Error> {
+    pub fn new(path: &Path) -> Result<Self, Error> {
         // Sadly I had to hand-roll this; there is no good off-the-shelf impl
         // libgit2 has had a feature request for this for over a decade:
         // https://github.com/libgit2/libgit2/issues/495
