@@ -35,8 +35,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE collections (
-  location_id INTEGER PRIMARY KEY NOT NULL,
-  collection_id INTEGER NOT NULL,
+  collection_id INTEGER PRIMARY KEY NOT NULL,
   user_id INTEGER NOT NULL,
 
   git_edit_time BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
@@ -50,7 +49,12 @@ CREATE TABLE collections (
   url TEXT,
   published TEXT,
   reviewed TEXT,
-  accessed TEXT,
+  accessed TEXT
+);
+
+CREATE TABLE locations (
+  collection_id INTEGER NOT NULL,
+  location_id INTEGER PRIMARY KEY NOT NULL,
 
   location_name TEXT,
   latitude DOUBLE,

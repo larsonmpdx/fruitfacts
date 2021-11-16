@@ -44,8 +44,7 @@ table! {
 }
 
 table! {
-    collections (location_id) {
-        location_id -> Integer,
+    collections (collection_id) {
         collection_id -> Integer,
         user_id -> Integer,
         git_edit_time -> Nullable<BigInt>,
@@ -58,6 +57,13 @@ table! {
         published -> Nullable<Text>,
         reviewed -> Nullable<Text>,
         accessed -> Nullable<Text>,
+    }
+}
+
+table! {
+    locations (location_id) {
+        collection_id -> Integer,
+        location_id -> Integer,
         location_name -> Nullable<Text>,
         latitude -> Nullable<Double>,
         longitude -> Nullable<Double>,
@@ -83,6 +89,7 @@ allow_tables_to_appear_in_same_query!(
     base_plants,
     collection_items,
     collections,
+    locations,
     plant_types,
     users,
 );

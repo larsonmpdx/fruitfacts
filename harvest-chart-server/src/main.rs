@@ -47,9 +47,10 @@ async fn main() -> std::io::Result<()> {
         App::new()
             // set up DB pool to be used with web::Data<Pool> extractor
             .data(pool.clone())
-            //    .wrap(middleware::Logger::default())
+            // .wrap(middleware::Logger::default())
             .service(queries::get_recent_patents)
             .service(queries::get_collections)
+            .service(queries::get_build_info)
     })
     .bind(("127.0.0.1", 8080))?
     .run()

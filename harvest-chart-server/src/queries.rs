@@ -1,9 +1,8 @@
-
 use super::schema_generated::*;
-use std::collections::HashSet;
 use actix_web::{get, web, Error, HttpResponse};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
+use std::collections::HashSet;
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use serde::{Deserialize, Serialize};
 
@@ -48,7 +47,6 @@ async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, Err
 
 #[derive(Queryable, Debug, Serialize)]
 pub struct CollectionsForPaths {
-    pub location_id: i32,
     pub collection_id: i32,
 
     pub path: Option<String>,
@@ -67,25 +65,22 @@ pub fn get_collections_db(
     conn: &SqliteConnection,
     path: &str,
 ) -> Result<CollectionsReturn, diesel::result::Error> {
-
     if !path.is_empty() && !path.ends_with('/') {
-        return Ok(Default::default())
+        return Ok(Default::default());
     }
 
     let db_return = collections::dsl::collections
-    .select((
-        collections::location_id,
-        collections::collection_id,
-        collections::path,
-        collections::filename,
-        collections::title,
-    ))
+        .select((
+            collections::collection_id,
+            collections::path,
+            collections::filename,
+            collections::title,
+        ))
         .filter(collections::path.like(path.to_owned() + r#"%"#))
         .load::<CollectionsForPaths>(conn);
 
     match db_return {
         Ok(collections) => {
-
             let mut output: CollectionsReturn = Default::default();
             for collection in collections {
                 if let Some(collection_path) = &collection.path {
@@ -100,9 +95,7 @@ pub fn get_collections_db(
 
             Ok(output)
         }
-        Err(error) => {
-            Err(error)
-        }
+        Err(error) => Err(error),
     }
 }
 
@@ -112,19 +105,38 @@ struct Path {
 }
 
 #[get("/collections/{path:.*}")] // the ":.*" part is a regex to get the entire tail of the path
-async fn get_collections(info: web::Path<Path>, pool: web::Data<DbPool>) -> Result<HttpResponse, Error> {
+async fn get_collections(
+    info: web::Path<Path>,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
     let collections = web::block(move || get_collections_db(&conn, &info.path))
-    .await
-    .map_err(|e| {
-        eprintln!("{}", e);
-        HttpResponse::InternalServerError().finish()
-    })?;
+        .await
+        .map_err(|e| {
+            eprintln!("{}", e);
+            HttpResponse::InternalServerError().finish()
+        })?;
 
     // get all collections paths
     // if there's a further '/' in the path, put this in a directory array
     // if there isn't, put it in a collections array
 
     Ok(HttpResponse::Ok().json(collections))
+}
+
+#[derive(Serialize)]
+struct BuildInfo {
+    git_hash: String,
+    git_unix_time: String,
+    git_commit_count: String,
+}
+
+#[get("/build_info")]
+async fn get_build_info() -> Result<HttpResponse, Error> {
+    Ok(HttpResponse::Ok().json(BuildInfo {
+        git_hash: env!("GIT_HASH").to_string(),
+        git_unix_time: env!("GIT_UNIX_TIME").to_string(),
+        git_commit_count: env!("GIT_MAIN_COMMIT_COUNT").to_string(),
+    }))
 }

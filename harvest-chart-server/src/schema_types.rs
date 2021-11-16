@@ -61,7 +61,6 @@ pub struct CollectionItems {
 
 #[derive(Serialize, Queryable)]
 pub struct Collections {
-    pub location_id: i32,
     pub collection_id: i32,
     pub user_id: i32,
     pub git_edit_time: Option<i64>,
@@ -76,6 +75,12 @@ pub struct Collections {
     pub published: Option<String>,
     pub reviewed: Option<String>,
     pub accessed: Option<String>,
+}
+
+#[derive(Serialize, Queryable)]
+pub struct Locations {
+    pub collection_id: i32,
+    pub location_id: i32,
 
     pub location_name: Option<String>,
     pub latitude: Option<f64>,

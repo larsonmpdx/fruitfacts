@@ -1,5 +1,6 @@
 // MIT or Apache from https://github.com/rustsec/rustsec/blob/main/rustsec/src/repository/git/modification_time.rs
 // see discussion https://github.com/rust-lang/git2-rs/issues/588
+// last updated Nov 2021 from version 740a1dc
 use git2::Error;
 
 use git2::Time;
@@ -11,7 +12,11 @@ use std::{
 
 // Tracks the time of latest modification of files in git
 pub struct GitModificationTimes {
-    mtimes: HashMap<PathBuf, Time>,
+    mtimes: HashMap<String, Time>,
+}
+
+pub fn format_path(input: &str) -> String {
+    str::replace(&input.to_lowercase(), r#"\"#, "/") // to_lowercase: git is slightly case-insensitive, and git logs will maintain the original case for a file. when we fix casing we want to still find the file
 }
 
 impl GitModificationTimes {
@@ -25,7 +30,7 @@ impl GitModificationTimes {
         // as does git2-rs: https://github.com/rust-lang/git2-rs/issues/588
         // To make sure this works I've verified it against a naive shell script using `git log`
         // as well as `git whatchanged`
-        let mut mtimes: HashMap<PathBuf, Time> = HashMap::new();
+        let mut mtimes: HashMap<String, Time> = HashMap::new();
         let repo = git2::Repository::open(path)?;
         let mut revwalk = repo.revwalk()?;
         revwalk.set_sorting(git2::Sort::TIME)?;
@@ -47,7 +52,7 @@ impl GitModificationTimes {
                     let file_mod_time = commit.time();
 
                     mtimes
-                        .entry(file_path.to_owned())
+                        .entry(format_path(file_path.to_owned().to_str().unwrap()))
                         .and_modify(|t| *t = max(*t, file_mod_time))
                         .or_insert(file_mod_time);
                 }
@@ -59,8 +64,9 @@ impl GitModificationTimes {
     // Looks up the Git modification time for a given file path
     // The path must be relative to the root of the repository
     pub fn for_path(&self, path: &Path) -> Option<&Time> {
-        println!(r#"looking up {}"#, path.display());
-        self.mtimes.get(path)
+        let formatted = format_path(path.to_owned().to_str().unwrap());
+        // println!(r#"looking up {}"#, formatted);
+        self.mtimes.get(&formatted)
     }
 
     pub fn print(&self) {

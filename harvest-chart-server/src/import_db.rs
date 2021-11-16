@@ -14,6 +14,7 @@ use crate::git_info::GitModificationTimes;
 use super::schema_generated::base_plants;
 use super::schema_generated::collection_items;
 use super::schema_generated::collections;
+use super::schema_generated::locations;
 use super::schema_generated::plant_types;
 use super::schema_types::*;
 use chrono::prelude::*;
@@ -27,7 +28,6 @@ use std::collections::HashSet;
 use std::convert::TryFrom;
 use std::fs;
 use walkdir::WalkDir;
-use std::path::Path;
 
 extern crate pathdiff;
 extern crate regex;
@@ -1187,10 +1187,10 @@ fn get_location_id(
     db_conn: &SqliteConnection,
 ) -> Option<i32> {
     // either look up this location ID by (collection ID + name) or look it up with only collection ID and expect only one result
-    let locations = collections::dsl::collections
-        .filter(collections::collection_id.eq(collection_id))
-        .filter(collections::location_name.eq(location_name))
-        .load::<Collections>(db_conn);
+    let locations = locations::dsl::locations
+        .filter(locations::collection_id.eq(collection_id))
+        .filter(locations::location_name.eq(location_name))
+        .load::<Locations>(db_conn);
 
     if let Ok(locations) = locations {
         if locations.len() == 1 {
@@ -1365,7 +1365,7 @@ fn load_references(
     let mut reference_plants_added = 0;
 
     let git_info = GitModificationTimes::new(&database_dir.join("..")).unwrap();
-    git_info.print();
+    // git_info.print();
 
     // traverse /plant_database/references/
     // create a collections table entry for each location in this reference, or only one if there's only one location
@@ -1408,25 +1408,34 @@ fn load_references(
             let path = format_path(path_.parent().unwrap().to_str().unwrap());
 
             collection_id += 1;
+
+                //    println!("inserting");
+            let rows_inserted = diesel::insert_into(collections::dsl::collections)
+                .values((
+                    collections::collection_id.eq(collection_id),
+                    collections::user_id.eq(0), // todo - codify this as the root/fake user
+                    collections::git_edit_time.eq(git_edit_time),
+                    collections::path.eq(&path),
+                    collections::filename.eq(&filename),
+                    collections::title.eq(&collection.title),
+                    collections::author.eq(&collection.author),
+                    collections::description.eq(&collection.description),
+                    collections::url.eq(&collection.url),
+                    collections::published.eq(&collection.published),
+                    collections::reviewed.eq(&collection.reviewed),
+                    collections::accessed.eq(&collection.accessed)
+                ))
+                .execute(db_conn);
+            assert_eq!(Ok(1), rows_inserted);
+
             for location in &collection.locations {
                 //    println!("inserting");
-                let rows_inserted = diesel::insert_into(collections::dsl::collections)
+                let rows_inserted = diesel::insert_into(locations::dsl::locations)
                     .values((
-                        collections::collection_id.eq(collection_id),
-                        collections::user_id.eq(0), // todo - codify this as the root/fake user
-                        collections::git_edit_time.eq(git_edit_time),
-                        collections::path.eq(&path),
-                        collections::filename.eq(&filename),
-                        collections::title.eq(&collection.title),
-                        collections::author.eq(&collection.author),
-                        collections::description.eq(&collection.description),
-                        collections::url.eq(&collection.url),
-                        collections::published.eq(&collection.published),
-                        collections::reviewed.eq(&collection.reviewed),
-                        collections::accessed.eq(&collection.accessed),
-                        collections::location_name.eq(&location.name),
-                        collections::latitude.eq(&location.latitude),
-                        collections::longitude.eq(&location.longitude),
+                        locations::collection_id.eq(collection_id),
+                        locations::location_name.eq(&location.name),
+                        locations::latitude.eq(&location.latitude),
+                        locations::longitude.eq(&location.longitude),
                     ))
                     .execute(db_conn);
                 assert_eq!(Ok(1), rows_inserted);
