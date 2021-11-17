@@ -1717,7 +1717,7 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
                 base_plants::release_year.eq(util::uspp_number_to_release_year(
                     plant.uspp_number.unwrap().parse::<i32>().unwrap(),
                 )),
-                base_plants::release_year_note.eq("release year derived from patent number"),
+                base_plants::release_year_note.eq("derived from patent number"),
             ))
             .execute(db_conn);
         }

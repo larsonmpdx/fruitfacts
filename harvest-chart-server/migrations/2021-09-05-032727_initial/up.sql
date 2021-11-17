@@ -49,7 +49,9 @@ CREATE TABLE collections (
   url TEXT,
   published TEXT,
   reviewed TEXT,
-  accessed TEXT
+  accessed TEXT,
+
+  UNIQUE(path, filename)
 );
 
 CREATE TABLE locations (

@@ -111,6 +111,7 @@ pub fn get_collection_db(
     println!("{}", path);
 
     // this could be done with rfind('/') or similar to get rid of the regex
+    // todo: at least limit the length of the incoming text to protect the regex
     let slash_regex = Regex::new(r#"(.*)/(.*)"#).unwrap();
 
     let mut dir: String = Default::default();
@@ -162,7 +163,8 @@ pub fn get_collection_db(
 struct Path {
     path: String,
 }
-
+// /collections/path/ - get subdirectories starting at this path, and collection names at this path
+// /collections/path/collection - get a single collection
 #[get("/collections/{path:.*}")] // the ":.*" part is a regex to get the entire tail of the path
 async fn get_collections(
     info: web::Path<Path>,
@@ -184,6 +186,78 @@ async fn get_collections(
         // doesn't end in '/': get an individual collection
 
         let collection = web::block(move || get_collection_db(&conn, &info.path))
+            .await
+            .map_err(|e| {
+                eprintln!("{}", e);
+                HttpResponse::InternalServerError().finish()
+            })?;
+
+        Ok(HttpResponse::Ok().json(collection))
+    }
+}
+
+#[derive(Default, Serialize)]
+pub struct PlantReturn {
+    base: Option<BasePlant>,
+    collection: Vec<CollectionItem>,
+}
+
+pub fn get_plant_db(
+    conn: &SqliteConnection,
+    type_: &str,
+    name: &str,
+) -> Result<PlantReturn, diesel::result::Error> {
+    let plant: Result<BasePlant, diesel::result::Error> = base_plants::dsl::base_plants
+        .filter(base_plants::type_.eq(type_))
+        .filter(base_plants::name.eq(name))
+        .first(conn);
+
+        println!("get plant: {} {}", type_, name);
+
+    match plant {
+        Ok(plant) => {
+            let collection_plants: Result<Vec<CollectionItem>, diesel::result::Error> =
+                collection_items::dsl::collection_items
+                    .filter(collection_items::type_.eq(type_))
+                    .filter(collection_items::name.eq(name))
+                    .load(conn);
+
+            // todo: limit number to maybe 10, ordered by significance, and return the total number if we were limited so we can show "see all"
+
+            match collection_plants {
+                Ok(collection_plants) => {
+                    let output = PlantReturn {
+                        base: Some(plant),
+                        collection: collection_plants,
+                    };
+                    Ok(output)
+                }
+                Err(error) => Err(error),
+            }
+        }
+        Err(error) => Err(error),
+    }
+}
+
+#[derive(Deserialize)]
+struct GetPlantPath {
+    type_: String,
+    plant: String,
+}
+
+// /plants/type/ - all plants of this type. paginated?
+// /plants/type/plant name - this specific plant
+#[get("/plants/{type_}/{plant:.*}")] // the ":.*" part is a regex to get the entire tail of the path
+async fn get_plant(info: web::Path<GetPlantPath>, pool: web::Data<DbPool>) -> Result<HttpResponse, Error> {
+    let conn = pool.get().expect("couldn't get db connection from pool");
+
+    if info.plant.is_empty() {
+        // todo: all plants in this category. pagination?
+        Ok(HttpResponse::Ok().json({}))
+    } else {
+        // one plant
+
+        let collection = web::block(move || get_plant_db(&conn, &info.type_, &info.plant))
             .await
             .map_err(|e| {
                 eprintln!("{}", e);

@@ -1,0 +1,16 @@
+{
+    title: "Clemson Peach Releases",
+    author: "Ksenija Gasic",
+    url: "https://www.youtube.com/watch?v=NzbVXNLelmU",
+    published: "",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "Musser Fruit Research Farm",
+            latitude: 34.603700256860975,
+            longitude: -82.87853121516959
+        }
+    ],
+    plants: [
+    ]
+}
