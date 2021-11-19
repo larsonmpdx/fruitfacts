@@ -1,5 +1,6 @@
-# For documentation on how to configure this file,
-# see diesel.rs/guides/configuring-diesel-cli
+# see http://diesel.rs/guides/configuring-diesel-cli.html
 
 [print_schema]
 file = "src/schema_generated.rs"
+
+filter = { except_tables = ["fts_base_plants"] } # diesel can't auto generate for this because "...no primary key"

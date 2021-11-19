@@ -420,7 +420,14 @@
             AKA: [""],
             type: "Grape",
             description: "https://grapesandwine.cals.cornell.edu/sites/grapesandwine.cals.cornell.edu/files/shared/%E2%80%98Arandell%E2%80%99%20FINAL.pdf",
+            // todo: high disease resistance
             released: "2013"
         }
     ]
 }
+
+
+// todo: "everest seedless" 2018
+// https://news.cornell.edu/stories/2018/09/big-blue-everest-seedless-cornells-newest-grape
+// https://youtu.be/nggBYIwzGzA?t=758
+// exclusive license for 10 years https://doubleavineyards.com/everest-seedless

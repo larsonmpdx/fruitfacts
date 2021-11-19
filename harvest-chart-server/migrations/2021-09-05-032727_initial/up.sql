@@ -1,5 +1,5 @@
 CREATE TABLE base_plants (
-  plant_id INTEGER PRIMARY KEY NOT NULL,
+  base_plant_id INTEGER PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
   name_fts TEXT NOT NULL, -- for full text search, without special characters
   type TEXT NOT NULL,
@@ -20,6 +20,22 @@ CREATE TABLE base_plants (
   UNIQUE(name_fts, type) --combo of these columns must be unique.  example: name "Co-op 32" type "Apple"
   UNIQUE(name, type)
 );
+
+-- fts: see https://www.sqlite.org/fts5.html
+CREATE VIRTUAL TABLE fts_base_plants USING fts5(name_fts, aka_fts, content='base_plants', content_rowid='base_plant_id');
+
+-- Triggers to keep the FTS index up to date.
+CREATE TRIGGER base_plants_ai AFTER INSERT ON base_plants BEGIN
+  INSERT INTO fts_idx(rowid, name_fts, aka_fts) VALUES (new.base_plant_id, new.name_fts, new.aka_fts);
+END;
+CREATE TRIGGER base_plants_ad AFTER DELETE ON base_plants BEGIN
+  INSERT INTO fts_idx(fts_idx, rowid, name_fts, aka_fts) VALUES('delete', old.base_plant_id, old.name_fts, old.aka_fts);
+END;
+CREATE TRIGGER base_plants_au AFTER UPDATE ON base_plants BEGIN
+  INSERT INTO fts_idx(fts_idx, rowid, name_fts, aka_fts) VALUES('delete', old.base_plant_id, old.name_fts, old.aka_fts);
+  INSERT INTO fts_idx(rowid, name_fts, aka_fts) VALUES (new.base_plant_id, new.name_fts, new.aka_fts);
+END;
+
 
 CREATE TABLE plant_types (
   plant_type_id INTEGER PRIMARY KEY NOT NULL,
