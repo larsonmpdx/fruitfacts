@@ -60,35 +60,6 @@ table! {
 }
 
 table! {
-    fts_base_plants_config (k) {
-        k -> Binary,
-        v -> Nullable<Binary>,
-    }
-}
-
-table! {
-    fts_base_plants_data (id) {
-        id -> Nullable<Integer>,
-        block -> Nullable<Binary>,
-    }
-}
-
-table! {
-    fts_base_plants_docsize (id) {
-        id -> Nullable<Integer>,
-        sz -> Nullable<Binary>,
-    }
-}
-
-table! {
-    fts_base_plants_idx (segid, term) {
-        segid -> Binary,
-        term -> Binary,
-        pgno -> Nullable<Binary>,
-    }
-}
-
-table! {
     locations (location_id) {
         collection_id -> Integer,
         location_id -> Integer,
@@ -117,10 +88,6 @@ allow_tables_to_appear_in_same_query!(
     base_plants,
     collection_items,
     collections,
-    fts_base_plants_config,
-    fts_base_plants_data,
-    fts_base_plants_docsize,
-    fts_base_plants_idx,
     locations,
     plant_types,
     users,

@@ -1711,7 +1711,7 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
 
         if plant.release_year.is_none() && plant.uspp_number.is_some() {
             let _updated_row = diesel::update(
-                base_plants::dsl::base_plants.filter(base_plants::plant_id.eq(plant.plant_id)),
+                base_plants::dsl::base_plants.filter(base_plants::base_plant_id.eq(plant.plant_id)),
             )
             .set((
                 base_plants::release_year.eq(util::uspp_number_to_release_year(

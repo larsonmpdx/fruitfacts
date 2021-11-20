@@ -26,14 +26,14 @@ CREATE VIRTUAL TABLE fts_base_plants USING fts5(name_fts, aka_fts, content='base
 
 -- Triggers to keep the FTS index up to date.
 CREATE TRIGGER base_plants_ai AFTER INSERT ON base_plants BEGIN
-  INSERT INTO fts_idx(rowid, name_fts, aka_fts) VALUES (new.base_plant_id, new.name_fts, new.aka_fts);
+  INSERT INTO fts_base_plants(rowid, name_fts, aka_fts) VALUES (new.base_plant_id, new.name_fts, new.aka_fts);
 END;
 CREATE TRIGGER base_plants_ad AFTER DELETE ON base_plants BEGIN
-  INSERT INTO fts_idx(fts_idx, rowid, name_fts, aka_fts) VALUES('delete', old.base_plant_id, old.name_fts, old.aka_fts);
+  INSERT INTO fts_base_plants(fts_base_plants, rowid, name_fts, aka_fts) VALUES('delete', old.base_plant_id, old.name_fts, old.aka_fts);
 END;
 CREATE TRIGGER base_plants_au AFTER UPDATE ON base_plants BEGIN
-  INSERT INTO fts_idx(fts_idx, rowid, name_fts, aka_fts) VALUES('delete', old.base_plant_id, old.name_fts, old.aka_fts);
-  INSERT INTO fts_idx(rowid, name_fts, aka_fts) VALUES (new.base_plant_id, new.name_fts, new.aka_fts);
+  INSERT INTO fts_base_plants(fts_base_plants, rowid, name_fts, aka_fts) VALUES('delete', old.base_plant_id, old.name_fts, old.aka_fts);
+  INSERT INTO fts_base_plants(rowid, name_fts, aka_fts) VALUES (new.base_plant_id, new.name_fts, new.aka_fts);
 END;
 
 
@@ -108,5 +108,5 @@ CREATE TABLE collection_items (
   harvest_end_2 INTEGER,
   harvest_start_2_is_midpoint INTEGER,
 
-  UNIQUE(collection_id, location_id, type, name) --combo of these columns must be unique
+  UNIQUE(collection_id, location_id, name, type) --combo of these columns must be unique
 );

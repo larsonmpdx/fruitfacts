@@ -3,4 +3,4 @@
 [print_schema]
 file = "src/schema_generated.rs"
 
-filter = { except_tables = ["fts_base_plants"] } # diesel can't auto generate for this because "...no primary key"
+filter = { except_tables = ["fts_base_plants", "fts_base_plants_config", "fts_base_plants_data", "fts_base_plants_docsize", "fts_base_plants_idx"] } # diesel can't auto generate for this because "...no primary key"
