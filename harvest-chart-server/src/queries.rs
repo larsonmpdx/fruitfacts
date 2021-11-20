@@ -49,7 +49,7 @@ async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, Err
 
 #[derive(Queryable, Debug, Serialize)]
 pub struct CollectionsForPaths {
-    pub collection_id: i32,
+    pub id: i32,
 
     pub path: Option<String>,
     pub filename: Option<String>,
@@ -69,7 +69,7 @@ pub fn get_collections_db(
 ) -> Result<CollectionsReturn, diesel::result::Error> {
     let db_return = collections::dsl::collections
         .select((
-            collections::collection_id,
+            collections::id,
             collections::path,
             collections::filename,
             collections::title,
@@ -135,7 +135,7 @@ pub fn get_collection_db(
     let collection: Result<Collection, diesel::result::Error> = collections::dsl::collections
         .filter(collections::path.eq(dir))
         .filter(collections::filename.eq(file))
-        .order(collections::collection_id)
+        .order(collections::id)
         .first(conn);
 
     match collection {

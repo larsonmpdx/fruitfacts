@@ -85,7 +85,7 @@ pub struct Collection {
 }
 
 #[skip_serializing_none]
-#[derive(Identifiable, Serialize, Queryable, Associations)]
+#[derive(Debug, Identifiable, Serialize, Queryable, Associations)]
 #[belongs_to(Collection)]
 pub struct Location {
     pub id: i32,

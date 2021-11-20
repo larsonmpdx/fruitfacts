@@ -1,5 +1,5 @@
 CREATE TABLE base_plants (
-  base_plant_id INTEGER PRIMARY KEY NOT NULL,
+  id INTEGER PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
   name_fts TEXT NOT NULL, -- for full text search, without special characters
   type TEXT NOT NULL,
@@ -22,36 +22,36 @@ CREATE TABLE base_plants (
 );
 
 -- fts: see https://www.sqlite.org/fts5.html
-CREATE VIRTUAL TABLE fts_base_plants USING fts5(name_fts, aka_fts, content='base_plants', content_rowid='base_plant_id');
+CREATE VIRTUAL TABLE fts_base_plants USING fts5(name_fts, aka_fts, content='base_plants', content_rowid='id');
 
--- Triggers to keep the FTS index up to date.
+-- Triggers to keep the FTS index up to date
 CREATE TRIGGER base_plants_ai AFTER INSERT ON base_plants BEGIN
-  INSERT INTO fts_base_plants(rowid, name_fts, aka_fts) VALUES (new.base_plant_id, new.name_fts, new.aka_fts);
+  INSERT INTO fts_base_plants(rowid, name_fts, aka_fts) VALUES (new.id, new.name_fts, new.aka_fts);
 END;
 CREATE TRIGGER base_plants_ad AFTER DELETE ON base_plants BEGIN
-  INSERT INTO fts_base_plants(fts_base_plants, rowid, name_fts, aka_fts) VALUES('delete', old.base_plant_id, old.name_fts, old.aka_fts);
+  INSERT INTO fts_base_plants(fts_base_plants, rowid, name_fts, aka_fts) VALUES('delete', old.id, old.name_fts, old.aka_fts);
 END;
 CREATE TRIGGER base_plants_au AFTER UPDATE ON base_plants BEGIN
-  INSERT INTO fts_base_plants(fts_base_plants, rowid, name_fts, aka_fts) VALUES('delete', old.base_plant_id, old.name_fts, old.aka_fts);
-  INSERT INTO fts_base_plants(rowid, name_fts, aka_fts) VALUES (new.base_plant_id, new.name_fts, new.aka_fts);
+  INSERT INTO fts_base_plants(fts_base_plants, rowid, name_fts, aka_fts) VALUES('delete', old.id, old.name_fts, old.aka_fts);
+  INSERT INTO fts_base_plants(rowid, name_fts, aka_fts) VALUES (new.id, new.name_fts, new.aka_fts);
 END;
 
 
 CREATE TABLE plant_types (
-  plant_type_id INTEGER PRIMARY KEY NOT NULL,
+  id INTEGER PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
   latin_name TEXT,
   UNIQUE(name)
 );
 
 CREATE TABLE users (
-  user_id INTEGER PRIMARY KEY NOT NULL,
+  id INTEGER PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
   UNIQUE(name)
 );
 
 CREATE TABLE collections (
-  collection_id INTEGER PRIMARY KEY NOT NULL,
+  id INTEGER PRIMARY KEY NOT NULL,
   user_id INTEGER NOT NULL,
 
   git_edit_time BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
@@ -71,8 +71,8 @@ CREATE TABLE collections (
 );
 
 CREATE TABLE locations (
+  id INTEGER PRIMARY KEY NOT NULL,
   collection_id INTEGER NOT NULL,
-  location_id INTEGER PRIMARY KEY NOT NULL,
 
   location_name TEXT,
   latitude DOUBLE,
@@ -80,7 +80,7 @@ CREATE TABLE locations (
 );
 
 CREATE TABLE collection_items (
-  collection_item_id INTEGER PRIMARY KEY NOT NULL,
+  id INTEGER PRIMARY KEY NOT NULL,
   
   collection_id INTEGER NOT NULL,
   location_id INTEGER, -- this can be unset for cases where there's a random list of varieties not attached to a location

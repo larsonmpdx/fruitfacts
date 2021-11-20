@@ -1114,7 +1114,12 @@ fn add_collection_plant(
         harvest_time_helper_text = harvest_time.as_ref();
     }
 
-    let rows_inserted = diesel::insert_into(collection_items::dsl::collection_items)
+    println!("inserting {} C {} L {:?}",
+    plant_name,
+    collection_id,
+    location_id);
+
+    let result = diesel::insert_into(collection_items::dsl::collection_items)
         .values((
             collection_items::collection_id.eq(collection_id),
             collection_items::location_id.eq(location_id),
@@ -1138,10 +1143,13 @@ fn add_collection_plant(
         .execute(db_conn);
     assert_eq!(
         Ok(1),
-        rows_inserted,
-        "failed inserting {} {:?}",
+        result,
+        "failed inserting {} {:?} {:?} C {} L {:?}",
         plant_name,
-        rows_inserted
+        result,
+        plant,
+        collection_id,
+        location_id
     );
 
     1
@@ -1188,8 +1196,10 @@ fn get_location_id(
     // either look up this location ID by (collection ID + name) or look it up with only collection ID and expect only one result
     let locations = locations::dsl::locations
         .filter(locations::collection_id.eq(collection_id))
-        .filter(locations::location_name.eq(location_name))
+        .filter(locations::location_name.eq(&location_name))
         .load::<Location>(db_conn);
+
+    println!("{:#?} {:#?}", location_name, locations); // todo remove
 
     if let Ok(locations) = locations {
         if locations.len() == 1 {
@@ -1412,7 +1422,7 @@ fn load_references(
             //    println!("inserting");
             let rows_inserted = diesel::insert_into(collections::dsl::collections)
                 .values((
-                    collections::collection_id.eq(collection_id),
+                    collections::id.eq(collection_id),
                     collections::user_id.eq(0), // todo - codify this as the root/fake user
                     collections::git_edit_time.eq(git_edit_time),
                     collections::path.eq(&path),
@@ -1634,7 +1644,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
 
     let all_plants = collection_items::dsl::collection_items
         .select((
-            collection_items::collection_item_id,
+            collection_items::id,
             collection_items::location_id,
             collection_items::type_,
             collection_items::harvest_relative,
@@ -1678,7 +1688,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
 
                     let _updated_row =
                         diesel::update(collection_items::dsl::collection_items.filter(
-                            collection_items::collection_item_id.eq(plant.collection_item_id),
+                            collection_items::id.eq(plant.collection_item_id),
                         ))
                         .set((
                             collection_items::harvest_start.eq(harvest_start),
@@ -1711,7 +1721,7 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
 
         if plant.release_year.is_none() && plant.uspp_number.is_some() {
             let _updated_row = diesel::update(
-                base_plants::dsl::base_plants.filter(base_plants::base_plant_id.eq(plant.plant_id)),
+                base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.plant_id)),
             )
             .set((
                 base_plants::release_year.eq(util::uspp_number_to_release_year(

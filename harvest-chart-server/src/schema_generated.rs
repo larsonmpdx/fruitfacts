@@ -1,6 +1,6 @@
 table! {
-    base_plants (base_plant_id) {
-        base_plant_id -> Integer,
+    base_plants (id) {
+        id -> Integer,
         name -> Text,
         name_fts -> Text,
         #[sql_name = "type"]
@@ -19,8 +19,8 @@ table! {
 }
 
 table! {
-    collection_items (collection_item_id) {
-        collection_item_id -> Integer,
+    collection_items (id) {
+        id -> Integer,
         collection_id -> Integer,
         location_id -> Nullable<Integer>,
         name -> Text,
@@ -43,8 +43,8 @@ table! {
 }
 
 table! {
-    collections (collection_id) {
-        collection_id -> Integer,
+    collections (id) {
+        id -> Integer,
         user_id -> Integer,
         git_edit_time -> Nullable<BigInt>,
         path -> Nullable<Text>,
@@ -60,9 +60,9 @@ table! {
 }
 
 table! {
-    locations (location_id) {
+    locations (id) {
+        id -> Integer,
         collection_id -> Integer,
-        location_id -> Integer,
         location_name -> Nullable<Text>,
         latitude -> Nullable<Double>,
         longitude -> Nullable<Double>,
@@ -70,16 +70,16 @@ table! {
 }
 
 table! {
-    plant_types (plant_type_id) {
-        plant_type_id -> Integer,
+    plant_types (id) {
+        id -> Integer,
         name -> Text,
         latin_name -> Nullable<Text>,
     }
 }
 
 table! {
-    users (user_id) {
-        user_id -> Integer,
+    users (id) {
+        id -> Integer,
         name -> Text,
     }
 }
