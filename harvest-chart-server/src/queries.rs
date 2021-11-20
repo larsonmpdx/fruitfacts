@@ -253,7 +253,7 @@ async fn get_plant(info: web::Path<GetPlantPath>, pool: web::Data<DbPool>) -> Re
 
     if info.plant.is_empty() {
         // todo: all plants in this category. pagination?
-        Ok(HttpResponse::Ok().json({}))
+        Ok(HttpResponse::Ok().json(()))
     } else {
         // one plant
 
