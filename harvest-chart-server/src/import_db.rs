@@ -1114,10 +1114,10 @@ fn add_collection_plant(
         harvest_time_helper_text = harvest_time.as_ref();
     }
 
-    println!("inserting {} C {} L {:?}",
-    plant_name,
-    collection_id,
-    location_id);
+    println!(
+        "inserting {} C {} L {:?}",
+        plant_name, collection_id, location_id
+    );
 
     let result = diesel::insert_into(collection_items::dsl::collection_items)
         .values((
@@ -1686,21 +1686,21 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                         harvest_relative.relative_days,
                     );
 
-                    let _updated_row =
-                        diesel::update(collection_items::dsl::collection_items.filter(
-                            collection_items::id.eq(plant.collection_item_id),
-                        ))
-                        .set((
-                            collection_items::harvest_start.eq(harvest_start),
-                            collection_items::harvest_end.eq(harvest_end),
-                            collection_items::harvest_start_is_midpoint
-                                .eq(relative_plant.harvest_start_is_midpoint),
-                            collection_items::harvest_start_2.eq(harvest_start_2),
-                            collection_items::harvest_end_2.eq(harvest_end_2),
-                            collection_items::harvest_start_is_midpoint
-                                .eq(relative_plant.harvest_start_2_is_midpoint),
-                        ))
-                        .execute(db_conn);
+                    let _updated_row = diesel::update(
+                        collection_items::dsl::collection_items
+                            .filter(collection_items::id.eq(plant.collection_item_id)),
+                    )
+                    .set((
+                        collection_items::harvest_start.eq(harvest_start),
+                        collection_items::harvest_end.eq(harvest_end),
+                        collection_items::harvest_start_is_midpoint
+                            .eq(relative_plant.harvest_start_is_midpoint),
+                        collection_items::harvest_start_2.eq(harvest_start_2),
+                        collection_items::harvest_end_2.eq(harvest_end_2),
+                        collection_items::harvest_start_is_midpoint
+                            .eq(relative_plant.harvest_start_2_is_midpoint),
+                    ))
+                    .execute(db_conn);
                 }
             }
         }

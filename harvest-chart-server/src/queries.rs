@@ -212,7 +212,7 @@ pub fn get_plant_db(
         .filter(base_plants::name.eq(name))
         .first(conn);
 
-        println!("get plant: {} {}", type_, name);
+    println!("get plant: {} {}", type_, name);
 
     match plant {
         Ok(plant) => {
@@ -248,7 +248,10 @@ struct GetPlantPath {
 // /plants/type/ - all plants of this type. paginated?
 // /plants/type/plant name - this specific plant
 #[get("/plants/{type_}/{plant:.*}")] // the ":.*" part is a regex to get the entire tail of the path
-async fn get_plant(info: web::Path<GetPlantPath>, pool: web::Data<DbPool>) -> Result<HttpResponse, Error> {
+async fn get_plant(
+    info: web::Path<GetPlantPath>,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
     if info.plant.is_empty() {
