@@ -364,7 +364,7 @@
             type: "Apricot"
         },
         {
-            name: "Golden Sweet",
+            name: "Goldensweet",
             type: "Apricot",
             // pulled from the chart. text gives "just ahead of Patterson"
             harvest_time_unparsed: "June 10-15",

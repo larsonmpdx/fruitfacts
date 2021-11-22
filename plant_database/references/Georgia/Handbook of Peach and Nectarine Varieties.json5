@@ -644,7 +644,7 @@
         { patent: "https://patents.google.com/patent/USPP8597", type: "Peach", name: "Special Red July" },
         { patent: "https://patents.google.com/patent/USPP8744", type: "Peach", name: "Thiara" },
         { patent: "https://patents.google.com/patent/USPP8923", type: "Peach", name: "Kay Diamond" },
-        { patent: "https://patents.google.com/patent/USPP8947", type: "Peach", name: "August Snow" },
+        { patent: "https://patents.google.com/patent/USPP8947", type: "Nectarine", name: "August Snow" },
         { patent: "https://patents.google.com/patent/USPP8948", type: "Peach", name: "Diamond Ray" },
         { patent: "https://patents.google.com/patent/USPP8949", type: "Peach", name: "Stark Encore" },
         { patent: "https://patents.google.com/patent/USPP8950", type: "Peach", name: "PF 12A" },

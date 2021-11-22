@@ -51,9 +51,6 @@
         description: "Harrow vareity"
     },
     {
-        name: "Golden Sweet"
-    },
-    {
         name: "Golden Amber",
         description: "L.E. Cooke Variety. https://www.lecooke.com/le-cooke-blog/golden-amber-apricot-history.html",
         patent: "https://patents.google.com/patent/USPP3067 expired"
