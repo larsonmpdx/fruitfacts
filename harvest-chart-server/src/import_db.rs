@@ -119,7 +119,7 @@ struct TypeJson {
     latin_name: Option<String>,
 }
 
-fn rem_last_n(value: &str, n: usize) -> &str {
+pub fn rem_last_n(value: &str, n: usize) -> &str {
     let mut chars = value.chars();
     for _ in 0..n {
         chars.next_back();
@@ -127,7 +127,7 @@ fn rem_last_n(value: &str, n: usize) -> &str {
     chars.as_str()
 }
 
-fn rem_first_n(value: &str, n: usize) -> &str {
+pub fn rem_first_n(value: &str, n: usize) -> &str {
     let mut chars = value.chars();
     for _ in 0..n {
         chars.next();
@@ -647,6 +647,8 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     println!("calculating relative harvest times");
     calculate_relative_harvest_times(db_conn);
     calculate_release_year_from_patent(db_conn);
+    println!("rebuilding fts tables");
+    rebuild_fts(db_conn);
     println!("checking database");
     check_database(db_conn);
 

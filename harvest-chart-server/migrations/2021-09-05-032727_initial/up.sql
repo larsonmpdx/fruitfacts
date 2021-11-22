@@ -22,7 +22,10 @@ CREATE TABLE base_plants (
 );
 
 -- fts: see https://www.sqlite.org/fts5.html
-CREATE VIRTUAL TABLE fts_base_plants USING fts5(name_fts, aka_fts, content='base_plants', content_rowid='id');
+-- trigram needs sqlite 3.34.0+
+-- open the amalgamated sqlite3.c to check version
+-- SQL LIKE queries are an alternative to this, but probably slower
+CREATE VIRTUAL TABLE fts_base_plants USING fts5(name_fts, aka_fts, content='base_plants', content_rowid='id', tokenize='trigram');
 
 -- Triggers to keep the FTS index up to date
 CREATE TRIGGER base_plants_ai AFTER INSERT ON base_plants BEGIN

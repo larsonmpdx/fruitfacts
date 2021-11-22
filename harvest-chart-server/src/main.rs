@@ -52,6 +52,7 @@ async fn main() -> std::io::Result<()> {
             .service(queries::get_collections)
             .service(queries::get_build_info)
             .service(queries::get_plant)
+            .service(queries::variety_search)
     })
     .bind(("127.0.0.1", 8080))?
     .run()

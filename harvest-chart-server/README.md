@@ -38,5 +38,5 @@
 * see https://diesel.rs/guides/getting-started
 * adding a new table with diesel-cli:
 * `diesel migration generate [new table name]`
-* `diesel migration run`
+* `diesel migration run` - or omit this and just run all tests, there are embedded migrations
 * `diesel migration redo` (checks up+down)

@@ -101,3 +101,9 @@ pub struct User {
     pub user_id: i32,
     pub name: String,
 }
+
+#[derive(Debug, Queryable)]
+pub struct FtsBasePlants {
+    pub rowid: i32,
+    pub rank: f32,
+}

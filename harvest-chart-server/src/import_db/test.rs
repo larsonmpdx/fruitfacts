@@ -496,7 +496,7 @@ fn test_database_loading() {
     assert_ge!(items_loaded.reference_items.reference_locations_found, 47);
     assert_ge!(
         items_loaded.reference_items.reference_base_plants_added,
-        2647
+        2646
     );
     assert_ge!(items_loaded.reference_items.reference_plants_added, 4928);
 }
