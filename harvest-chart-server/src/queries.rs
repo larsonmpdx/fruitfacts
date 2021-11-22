@@ -89,7 +89,7 @@ pub fn get_collections_db(
                         // remove multi-level subdirectories (more than one '/' after our search directory)
                         let collection_path = collection_path.to_string();
                         let trimmed = crate::import_db::rem_first_n(&collection_path, path.len());
-                        if trimmed.matches(r#"/"#).count() == 1 {
+                        if trimmed.matches('/').count() == 1 {
                             output.directories.insert(collection_path); // this is a hashset so we'll get paths de-duplicated here
                         } else {
                             // println!("excluding subdir {}", collection_path)
