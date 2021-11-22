@@ -1812,6 +1812,16 @@ fn check_database(db_conn: &SqliteConnection) {
     check_aka_duplicates(db_conn);
 }
 
+fn rebuild_fts(db_conn: &SqliteConnection) {
+    let result1 =
+        diesel::sql_query("INSERT INTO fts_base_plants(fts_base_plants) VALUES('rebuild')")
+            .execute(db_conn);
+
+    let result2 =
+        diesel::sql_query("INSERT INTO fts_base_plants(fts_base_plants) VALUES('optimize')")
+            .execute(db_conn);
+}
+
 pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {
     base_plants::dsl::base_plants
         .select(diesel::dsl::count(base_plants::name))

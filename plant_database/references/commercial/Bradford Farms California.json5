@@ -1,0 +1,690 @@
+// todo - http://www.bradfordplums.com/b_q_genetics.htm
+// todo - https://bradfordfarms.com.au/wp-content/uploads/2017/05/121219-MATRIX-Montague_Bradford_Breeding_Poster_A2.jpg
+// todo - https://bradfordfarms.com.au/about-us/
+{
+    title: "Bradford Farms Varieties",
+    url: "http://www.bradfordgenetics.com/mainmenu.htm",
+    published: "unknown",
+    accessed: "Oct 2021",
+    locations: [
+        {
+            name: "La Grand, CA",
+            latitude: 37.24928550909665,
+            longitude: -120.30431380855144
+        }
+    ],
+    plants: [
+        {
+            name: "",
+            type: "Peach",
+            harvest_time_relative: ""
+        },
+    ]
+}
+/*
+
+Yellow 
+summer princess +20
+68P1116
+https://bradfordfarms.com.au/stonefruit/yellow-peaches/summer-princess/
+
+
+White Flesh Peach – Pearl Duchess -88
+https://bradfordfarms.com.au/stonefruit/white-peaches/pearl-duchess/
+
+
+White Flesh Peach – Pearl Queen
+https://bradfordfarms.com.au/stonefruit/white-peaches/pearl-queen/
+-66
+
+
+27C334
+Yellow Nectarine – Summer Sugarine
+https://bradfordfarms.com.au/stonefruit/new-releases/rose-princess-new/
+-14
+
+31C574
+Yellow Nectarine – Rose Sweet
+https://bradfordfarms.com.au/stonefruit/supersweet-nectarines/rose-sweet-new/
+-66
+
+
+Late Pearl nectarine 13A337
+https://bradfordfarms.com.au/stonefruit/the-pearls/late-pearl-new/
++47
+
+
+Pearlicious
+56P1206
+https://bradfordfarms.com.au/stonefruit/the-pearls/pearlicious-new/
+-9
+
+
+Fire Time
+Yellow Flesh Clingstone Nectarine
+https://bradfordfarms.com.au/stonefruit/new-releases/fire-time-2/
+-2
+
+20P1156
+July Princess
+https://bradfordfarms.com.au/stonefruit/new-releases/july-princess-new/
+-8
+
+
+
+
+
+
+*/
+
+
+
+/*
+Lowell Glen Bradford patent list
+
+
+Plum tree named ‘PLUMRED XIII’
+USPP33307 2041-01-04
+
+Plum tree named ‘BLACKRED X’
+USPP33354 2041-01-04
+
+Cherry tree named ‘Jonred IV’
+USPP33306 2041-01-04
+
+Plum tree named ‘PLUMRED XIV’
+USPP33139 2041-01-04
+
+Plum tree named ‘Plumred V’
+USPP33353 2041-01-04
+
+Plum tree named ‘Plumred IV’
+USPP33155 2041-01-04
+
+Peach tree named ‘Pearl Princess VI’
+USPP33156 2041-01-04
+
+Cherry tree named ‘Jonred I’
+USPP32235 2039-12-23
+
+Plum tree named ‘Plumsweet XXII’
+USPP32189 2039-12-23
+
+Plum tree named ‘PLUMCANDY XVII’
+USPP32160 2039-12-23
+
+Nectarine tree named ‘Summer Sugarine’
+USPP31608 2039-04-17
+
+Plum tree named ‘Plumcandy XVI’
+USPP32015 2039-04-17
+
+Plum tree named ‘Blackred VII’
+USPP31959 2039-04-17
+
+Peach tree named ‘RED PRINCESS VI’
+USPP31701 2039-04-17
+
+Nectarine tree named ‘Pearlicious XVIII’
+USPP31108 2038-12-26
+
+Plum tree named ‘Plumcandy XV’
+USPP31191 2038-12-26
+
+Peach tree named ‘Pearl Princess II’
+USPP31080 2038-12-26
+
+Plum tree named ‘Plumsweet XXI’
+USPP30210 2037-12-26
+
+Nectarine tree named ‘Pearlicious XX’
+USPP30145 2037-12-26
+
+Nectarine tree named ‘August Time’
+USPP30211 2037-12-26
+
+Cherry tree named ‘Glensweet II’
+USPP30229 2037-12-26
+
+Plum tree named ‘Plumcandy XIV’
+USPP30184 2037-12-26
+
+Cherry tree named ‘Glensweet I’
+USPP30209 2037-12-26
+
+Plum tree named ‘Plumsweet XX’
+USPP28997 2036-12-15
+
+Nectarine tree named ‘red bright it’
+USPP29127 2036-12-15
+
+Plum tree named ‘Plumcandy XI’
+USPP29050 2036-12-15
+
+Peach tree named ‘JULY PRINCESS’
+USPP28996 2036-12-15
+
+Peach tree named ‘Pearl Princess IX’
+USPP28249 2036-03-13
+
+Plum tree named ‘Plumsweet XVIII’
+USPP28469 2036-01-17
+
+Plum tree named ‘PLUMSWEET XIX’
+USPP28596 2036-01-03
+
+Plum tree named ‘Plumcandy XIII’
+USPP28468 2036-01-12
+
+Peach tree named ‘Pearl Princess III’
+USPP28505 2036-01-18
+
+Plum tree named ‘Plumsweet XVII’
+USPP28504 2036-01-06
+
+Plum tree named ‘Plumcandy XII’
+USPP28442 2036-01-06
+
+Plum tree named ‘Plumred XII’
+USPP28400 2036-01-14
+
+Peach tree named ‘Red Princess III’
+USPP28339 2036-02-03
+
+Peach tree named ‘Red Princess II’
+USPP28338 2036-01-28
+
+Nectarine tree named ‘Candysweet XII’
+USPP27580 2035-12-11
+
+Plum tree named ‘Blackred XXI’
+USPP28441 2036-01-14
+
+Interspecific tree named ‘Plumred XI’
+USPP27066 2035-03-24
+
+Nectarine tree named ‘Pearlicious X’
+USPP26797 2035-01-22
+
+Cherry tree named ‘Arvin Bruce’
+USPP27274 2035-03-26
+
+Nectarine tree named ‘Kay Diamond VIII’
+USPP26837 2035-01-22
+
+Peach tree named ‘Pearl Princess IV’
+USPP27467 2035-03-02
+
+Cherry tree named ‘Glencrest’
+USPP27369 2035-04-01
+
+Cherry tree named ‘Glenheart’
+USPP27248 2035-03-26
+
+Peach tree named ‘Pearl Princess XIII’
+USPP27629 2035-03-05
+
+Nectarine tree named ‘Pearlicious XVI’
+USPP25828 2034-01-05
+
+Interspecific tree named ‘Plumsweet XVI’
+USPP26055 2034-05-29
+
+Peach tree named ‘Summer Princess’
+USPP25793 2034-03-04
+
+Apricot tree named ‘Golden Gem
+USPP25743 2034-03-17
+
+Cherry tree named ‘El Capitan’
+USPP26315 2034-08-12
+
+Peach tree named ‘Sierra Princess’
+USPP25830 2034-04-03
+
+Interspecific tree named ‘Blackred XX’
+USPP26054 2034-05-29
+
+Nectarine tree named ‘Autumn Pearl’
+USPP25829 2034-04-02
+
+Peach tree named ‘Pearl Princess XII’
+USPP25745 2034-03-10
+
+Interspecific tree named ‘Plumgiant II’
+USPP26033 2034-05-29
+
+Nectarine tree named ‘Sierra Pearl’
+USPP25848 2034-03-31
+
+Cherry tree named ‘Glenearly’
+USPP24744 2033-03-11
+
+Interspecific tree named ‘Blackred IX’
+USPP23694 2032-02-02
+
+Nectarine tree named ‘Pearlicious VI’
+USPP23607 2031-12-19
+
+Interspecific tree named ‘Plumred VII’
+USPP23688 2032-02-08
+
+Interspecific tree named 'Plumred VIII'
+USPP23741 2032-02-15
+
+Interspecific tree named ‘Blackred VI’
+USPP23718 2032-02-08
+
+Interspecific tree named ‘Plumred IX’
+USPP23719 2032-02-14
+
+Interspecific tree named ‘LATESWEET XX’
+USPP23740 2032-02-22
+
+Peach tree named ‘Ivory May’
+USPP23866 2032-04-05
+
+Interspecific tree named ‘Plumsweet XV’
+USPP23687 2032-02-07
+
+Interspecific tree named ‘LATESWEET XXI’
+USPP23779 2032-02-27
+
+Interspecific tree named ‘Black Majesty IV’
+USPP23739 2032-02-23
+
+Nectarine tree named ‘Pearlicious VII’
+USPP23608 2031-12-19
+
+Peach tree named 'Glacier Princess'
+USPP23867 2032-04-05
+
+Peach tree named ‘Glacier Queen’
+USPP23868 2032-04-05
+
+Interspecific tree named ‘GREENSWEET XX’
+USPP23738 2032-02-09
+
+Interspecific tree named ‘Greensweet XXI’
+USPP23693 2032-02-01
+
+Interspecific tree named ‘Plumcandy X’
+USPP23685 2032-02-01
+
+Interspecific tree named ' Plumsweet XIV '
+USPP23686 2032-02-08
+
+Cherry tree named ‘ARVIN GLEN’
+USPP23721 2032-02-23
+
+Peach tree named ‘Polar Princess’
+USPP23723 2032-02-15
+
+Plum tree named ‘Black Majesty III’
+USPP22604 2030-12-17
+
+Nectarine tree named ‘Pearlicious II’
+USPP22759 2030-12-22
+
+Peach tree named 'June Time'
+USPP23530 2031-11-25
+
+Nectarine tree named ‘Pearlicious I’
+USPP22758 2030-12-22
+
+Nectarine tree named 'fire time'
+USPP22741 2030-12-21
+
+Nectarine tree named ‘Pearl Time’
+USPP22471 2030-12-13
+
+Nectarine tree named ‘Giant Bright’
+USPP21927 2029-12-24
+
+Interspecific tree named ‘Blackred XI’
+USPP21938 2029-12-24
+
+Nectarine tree named ‘May Bright’
+USPP21928 2029-12-24
+
+Cherry tree named ‘Sweet Fruitful’
+USPP21926 2029-12-24
+
+Interspecific tree named ‘Sweetcot II’
+USPP21937 2029-12-24
+
+Interspecific tree named ‘Plumred VI’
+USPP21051 2029-01-09
+
+Plum tree named ‘Sweet Majesty’
+USPP20865 2028-12-15
+
+Interspecific tree named ‘Blackred VIII’
+USPP20863 2028-12-15
+
+Interspecific tree name ‘Plumred III’
+USPP20864 2028-12-15
+
+Interspecific tree named ‘Blackred XII’
+USPP20892 2028-12-15
+
+Plum tree named ‘August Majesty’
+USPP20833 2028-12-15
+
+Interspecific tree name ‘Plumcandy V’
+USPP20834 2028-12-15
+
+Interspecific tree named ‘Blackred IV’
+USPP20832 2028-12-15
+
+Peach tree named ‘Neptune V’
+USPP20117 2028-04-07
+
+Nectarine tree named ‘CANDYSWEET X’
+USPP19914 2027-12-26
+
+Apricot tree named ‘Goldenmay’
+USPP20104 2028-02-11
+
+Nectarine tree named ‘Sugarred III’
+USPP19918 2027-12-26
+
+Peach tree named ‘Pearl Princess V’
+USPP19919 2027-12-26
+
+Nectarine tree named ‘Pearlicious V’
+USPP19917 2027-12-26
+
+Nectarine tree named ‘Sugarred II’
+USPP19890 2027-12-26
+
+Interspecific tree named ‘Plumsweet X’
+USPP19528 2027-11-26
+
+Interspecific tree named ‘Yellowsweet II’
+USPP19518 2027-11-26
+
+Interspecific tree named ‘Apriplum III’
+USPP19519 2027-11-26
+
+Plum tree named ‘Black Majesty’
+USPP19527 2027-11-26
+
+Interspecific tree named ‘Blackred V’
+USPP19576 2027-11-26
+
+Peach tree named ‘Princess Time’
+USPP19545 2027-11-26
+
+Interspecific tree named ‘Plumsweet XIII’
+USPP19530 2027-11-26
+
+Interspecific tree named ‘Blackred I’
+USPP19537 2027-11-26
+
+Interspecific tree named ‘Plumsweet XI’
+USPP19796 2027-11-26
+
+Interspecific tree named ‘Blackred II’
+USPP19827 2027-11-26
+
+Interspecific tree named ‘PLUMSWEET XII’
+USPP20106 2027-12-25
+
+Interspecific tree named ‘PLUMRED X’
+USPP19591 2027-11-26
+
+Interspecific tree named ‘Apriplum VII’
+USPP19529 2027-11-26
+
+Nectarine tree named ‘KAY DIAMOND V’
+USPP18772 2026-12-13
+
+Nectarine tree named ‘Pearlicious III’
+USPP18706 2026-12-13
+
+Peach tree named ‘Rose Princess’
+USPP18791 2026-12-13
+
+Peach tree named ‘MAY PRINCESS’
+USPP18771 2026-12-13
+
+Nectarine tree named ‘Majestic Sweet’
+USPP18714 2026-12-13
+
+Nectarine tree named ‘Majestic Pearl’
+USPP18778 2026-12-13
+
+Nectarine tree named ‘Snow Pearl’
+USPP18696 2026-12-13
+
+Nectarine tree named ‘Kay Diamond VII’
+USPP18715 2026-12-13
+
+Nectarine tree named ‘SUGARRED I’
+USPP18693 2026-12-13
+
+Nectarine tree named ‘June Bright’
+USPP18708 2026-12-13
+
+Nectarine tree named ‘CANDYSWEET V’
+USPP18701 2026-12-13
+
+Nectarine tree named ‘July Bright’
+USPP18703 2026-12-13
+
+Peach tree named ‘Western Princess’
+USPP18755 2027-02-18
+
+Nectarine tree named ‘AUTUMN BRIGHT’
+USPP18751 2026-12-13
+
+Nectarine tree named ‘June Sweet’
+USPP18752 2026-12-13
+
+Peach tree named ‘SUGARPEACH III’
+USPP18753 2026-12-13
+
+Interspecific tree named ‘Plumsweet VI’
+USPP18687 2026-12-07
+
+Interspecific tree named ‘BLACKRED III’
+USPP18668 2026-12-07
+
+Interspecific tree named ‘PLUMSWEET IX’
+USPP18666 2026-12-07
+
+Interspecific tree named ‘Plumsweet VII’
+USPP18667 2026-12-07
+
+Plum tree named ‘Plumgiant I’
+USPP18705 2026-12-07
+
+Interspecific tree named ‘YELLOWSWEET X’
+USPP18669 2026-12-07
+
+Interspecific tree named ‘PLUMSWEET VIII’
+USPP18670 2026-12-07
+
+Interspecific tree named ‘PLUMRED I’
+USPP18665 2026-12-07
+
+Plum tree named ‘REDYUMMY®’
+USPP18663 USPP18663P2
+
+Peach tree named ‘NEPTUNE I’
+USPP18816 2026-06-16
+
+Peach tree named ‘IVORY DUCHESS’
+USPP17282 2026-02-16
+
+Peach tree named ‘Diamond Candy’
+USPP17758 2025-12-20
+
+Peach tree named ‘Spring Princess’
+USPP17750 2025-12-20
+
+Peach tree named ‘CRIMSON PRINCESS’
+USPP17776 2025-12-20
+
+Nectarine tree named ‘SUGAR PEARL’
+USPP17442 2026-04-27
+
+Nectarine tree named ‘Red Bright’
+USPP17086 2025-12-20
+
+Nectarine tree named ‘MAY PEARL II’
+USPP17825 2025-12-20
+
+Peach tree named ‘SUGARPEACH II’
+USPP18027 2026-02-01
+
+Nectarine tree named ‘LATE BRIGHT’
+USPP17167 2025-12-22
+
+Nectarine tree named ‘MAY PEARL’
+USPP17254 2026-02-02
+
+Peach tree named ‘SNOW DUCHESS’
+USPP17281 2026-02-16
+
+Nectarine tree named ‘PACIFIC SWEET’
+USPP17206 2026-01-12
+
+Nectarine tree named ‘Grand Bright’
+USPP16494 2025-05-07
+
+Nectarine tree named ‘Western Bright’
+USPP16467 2025-04-23
+
+Interspecific tree named ‘Plumsweet V’
+USPP16369 2025-03-26
+
+Interspecific tree named ‘Plumsweet IV’
+USPP16461 2025-04-23
+
+Peach tree named ‘Candy Princess’
+USPP16462 2025-04-23
+
+Nectarine tree named ‘Sugarine I’
+USPP16585 2025-06-04
+
+Peach tree named “Sugarpeach”
+USPP15259 2023-12-29
+
+Plum tree named ‘Yummy®gem’
+USPP15809 2024-04-15
+
+Interspecific tree ‘Sweetcot’
+USPP15652 2024-03-12
+
+Apricot tree ‘Goldenblush’
+USPP15354 2023-12-29
+
+Interspecific plum tree named ‘Plumsweetthree’
+USPP15235 2023-12-29
+
+Nectarine tree named ‘Viking Pearl’
+USPP16539 2024-10-02
+
+Nectarine tree named ‘Rose Bright’
+USPP15845 2024-04-01
+
+Nectarine tree named ‘Spring Pearl’
+USPP16034 2024-03-18
+
+Cherry tree named ‘Glenoia’
+USPP15157 2023-07-21
+
+Cherry tree named ‘Glenrock’
+USPP15512 2023-09-25
+
+Cherry tree named ‘Glenare’
+USPP15180 2023-07-28
+
+Nectarine tree named ‘Royal Bright’
+USPP14594 2023-03-21
+
+Nectarine tree named ‘Western Sweet’
+USPP15055 2023-08-15
+
+Nectarine tree named ‘August Bright’
+USPP15143 2023-03-21
+
+Nectarine tree named ‘Bright Sweet’
+USPP14547 2023-02-28
+
+Peach tree named ‘Spring Candy’
+USPP14677 2023-04-14
+
+Plum tree named ‘September Yummy®’
+USPP14220 2022-11-21
+
+Plum tree named ‘August Yummy’
+USPP14247 2022-11-21
+
+Plum tree named ‘Yummycrisp’
+USPP14237 2022-11-21
+
+Plum tree named ‘PLUMSWEETTWO’
+USPP14196 2022-11-21
+
+Peach tree named ‘Bright Princess’
+USPP14695 2023-04-21
+
+Plum tree named ‘Autumn Yummy’
+USPP14178 2022-11-21
+
+Plum tree named ‘Plumsweetone’
+USPP14219 2022-11-21
+
+Nectarine tree named ‘Diamond Pearl’
+USPP14242 2022-11-19
+
+Nectarine tree named ‘Candy Pearl’
+USPP14249 2022-11-19
+
+Nectarine tree named ‘Early Pearl
+USPP14248 2022-11-19
+
+Nectarine tree named ‘Giant Pearl’
+USPP14240 2022-11-19
+
+Nectarine tree named ‘Sweet August’
+USPP13474 2021-12-13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+

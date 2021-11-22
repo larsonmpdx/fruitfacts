@@ -286,3 +286,6 @@ async fn get_build_info() -> Result<HttpResponse, Error> {
         git_commit_count: env!("GIT_MAIN_COMMIT_COUNT").to_string(),
     }))
 }
+
+// todo: fts variety search
+// order by match quality: SELECT * FROM fts WHERE fts MATCH ? ORDER BY bm25(fts)
