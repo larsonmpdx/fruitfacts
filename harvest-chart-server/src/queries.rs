@@ -1,5 +1,5 @@
-use super::schema_generated::*;
 use super::schema_fts::*;
+use super::schema_generated::*;
 use actix_web::{get, web, Error, HttpResponse};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
@@ -86,7 +86,6 @@ pub fn get_collections_db(
                     if collection_path == path {
                         output.collections.push(collection);
                     } else {
-
                         // remove multi-level subdirectories (more than one '/' after our search directory)
                         let collection_path = collection_path.to_string();
                         let trimmed = crate::import_db::rem_first_n(&collection_path, path.len());
@@ -296,21 +295,19 @@ async fn get_build_info() -> Result<HttpResponse, Error> {
     }))
 }
 
-
 pub fn variety_search_db(
     conn: &SqliteConnection,
     name: &str,
 ) -> Result<i32, diesel::result::Error> {
-
     let values = fts_base_plants::table
-    .select((fts_base_plants::rowid, fts_base_plants::rank))
-    .filter(fts_base_plants::whole_row.eq(name))
-    .order(fts_base_plants::rank.asc())
-    .limit(10)
-    .load::<FtsBasePlants>(conn);
+        .select((fts_base_plants::rowid, fts_base_plants::rank))
+        .filter(fts_base_plants::whole_row.eq(name))
+        .order(fts_base_plants::rank.asc())
+        .limit(10)
+        .load::<FtsBasePlants>(conn);
     // todo - maybe limit 100 or something? we want to get a bunch though in case we're limiting to only one variety later
     // todo - report total search results if limiting to N
-    
+
     println!("{:?}", values);
 
     // todo: filter by type, order or limit notoriety
@@ -319,9 +316,9 @@ pub fn variety_search_db(
             let ids_nullable: Vec<_> = values.iter().map(|x| x.rowid).collect();
 
             let results = base_plants::dsl::base_plants
-            .filter(base_plants::id.eq_any(ids_nullable))
-            .load::<BasePlant>(conn)
-            .unwrap();
+                .filter(base_plants::id.eq_any(ids_nullable))
+                .load::<BasePlant>(conn)
+                .unwrap();
 
             println!("{:?}", results);
 
@@ -331,10 +328,9 @@ pub fn variety_search_db(
     }
 }
 
-
 #[derive(Deserialize)]
 struct VarietySearchPath {
-    name: String
+    name: String,
 }
 
 // todo: fts variety search
