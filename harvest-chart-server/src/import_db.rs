@@ -1813,11 +1813,11 @@ fn check_database(db_conn: &SqliteConnection) {
 }
 
 fn rebuild_fts(db_conn: &SqliteConnection) {
-    let result1 =
+    let _result1 =
         diesel::sql_query("INSERT INTO fts_base_plants(fts_base_plants) VALUES('rebuild')")
             .execute(db_conn);
 
-    let result2 =
+    let _result2 =
         diesel::sql_query("INSERT INTO fts_base_plants(fts_base_plants) VALUES('optimize')")
             .execute(db_conn);
 }
