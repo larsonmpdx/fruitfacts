@@ -23,6 +23,9 @@ pub struct BasePlant {
     pub name: String,
     pub name_fts: String,
     pub type_: String,
+    pub number_of_references: i32,
+    pub notoriety_score: Option<f64>,
+    pub notoriety_score_explanation: Option<String>,
     pub aka: Option<String>,
     pub aka_fts: Option<String>,
     pub marketing_name: Option<String>,
@@ -74,6 +77,10 @@ pub struct Collection {
 
     pub path: Option<String>,
     pub filename: Option<String>,
+
+    pub notoriety_type: String,
+    pub notoriety_score: Option<f64>,
+    pub notoriety_score_explanation: Option<String>,
 
     pub title: Option<String>,
     pub author: Option<String>,

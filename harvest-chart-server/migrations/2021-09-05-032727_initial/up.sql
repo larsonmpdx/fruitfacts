@@ -4,6 +4,10 @@ CREATE TABLE base_plants (
   name_fts TEXT NOT NULL, -- for full text search, without special characters
   type TEXT NOT NULL,
 
+  number_of_references INTEGER NOT NULL,
+  notoriety_score REAL,
+  notoriety_score_explanation TEXT,
+
   -- these fields don't go into collections because they're part of our ground truth
   aka TEXT, -- comma separated
   aka_fts TEXT, -- for full text search, without special characters. comma separated
@@ -61,6 +65,10 @@ CREATE TABLE collections (
 
   path TEXT, -- directory that we found this in, like "Oregon" or "Oregon/Willamette Valley"
   filename TEXT,
+
+  notoriety_type TEXT NOT NULL,
+  notoriety_score REAL,
+  notoriety_score_explanation TEXT,
 
   title TEXT,
   author TEXT,

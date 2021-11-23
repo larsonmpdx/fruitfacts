@@ -8,6 +8,7 @@
 mod test;
 
 mod util;
+mod notoriety;
 
 use crate::git_info::GitModificationTimes;
 

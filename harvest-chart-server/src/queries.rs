@@ -333,9 +333,6 @@ struct VarietySearchPath {
     name: String,
 }
 
-// todo: fts variety search
-// order by match quality: SELECT * FROM fts WHERE fts MATCH ? ORDER BY bm25(fts)
-
 #[get("/search/variety/{name}")]
 async fn variety_search(
     info: web::Path<VarietySearchPath>,

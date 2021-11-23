@@ -56,7 +56,6 @@
         { patent: "https://patents.google.com/patent/USPP418", type: "Peach", name: "Sunday" },
         { patent: "https://patents.google.com/patent/USPP473", type: "Peach", name: "Golden Blush" },
         { patent: "https://patents.google.com/patent/USPP479", type: "Nectarine", name: "Fuzzless Berta" }, // patented as "Peach tree"
-
         { patent: "https://patents.google.com/patent/USPP496", type: "Peach", name: "Sequoia" },
         { patent: "https://patents.google.com/patent/USPP506", type: "Peach", name: "Kirkman Gem" },
         { patent: "https://patents.google.com/patent/USPP507", type: "Peach", name: "Wiser" },
