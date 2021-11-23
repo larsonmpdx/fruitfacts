@@ -4,6 +4,7 @@
     url: "https://catalog.extension.oregonstate.edu/pnw604",
     published: "January 2021",
     accessed: "Oct 2021",
+    type: "state extension guide",
     locations: [
         {
             name: "Corvallis, OR",

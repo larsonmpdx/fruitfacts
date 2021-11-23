@@ -5,6 +5,7 @@
     published: "2003",
     accessed: "Oct 2021",
     description: "about \"the largest table grape breeding effort in the U.S. outside of California.\" (in 2003)",
+    type: "public breeding program list",
     locations: [
         {
             name: "Fruit Research Station, Clarksville",

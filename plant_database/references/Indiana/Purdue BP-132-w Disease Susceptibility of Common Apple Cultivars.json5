@@ -5,6 +5,7 @@
     published: "Dec 2006",
     reviewed: "Sep 2015",
     accessed: "Sep 2021",
+    type: "extension test",
     locations: [
         {
             name: "Lafayette, IN",

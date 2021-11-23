@@ -58,6 +58,8 @@ struct CollectionJson {
     published: Option<String>,
     reviewed: Option<String>,
     accessed: Option<String>,
+    #[serde(rename = "type")] // notoriety type like "extension publication"
+    type_: String,
 
     locations: Vec<CollectionLocationJson>,
     categories: Option<Vec<CollectionCategoryJson>>,
@@ -648,6 +650,8 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     println!("calculating relative harvest times");
     calculate_relative_harvest_times(db_conn);
     calculate_release_year_from_patent(db_conn);
+    println!("calculating notoriety");
+    calculate_notoriety(db_conn);
     println!("rebuilding fts tables");
     rebuild_fts(db_conn);
     println!("checking database");
@@ -967,6 +971,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                         base_plants::name_fts.eq(format_name_fts_string(&plant.name)),
                         base_plants::type_.eq(&plant_type.clone().unwrap()),
                         base_plants::description.eq(&plant.description),
+                        base_plants::number_of_references.eq(0),
                     ))
                     .execute(db_conn);
                 assert_eq!(Ok(1), rows_inserted);
@@ -1234,6 +1239,7 @@ fn maybe_add_base_plant(
                 base_plants::name.eq(&plant_name),
                 base_plants::name_fts.eq(format_name_fts_string(&plant_name.to_string())),
                 base_plants::type_.eq(&plant.type_),
+                base_plants::number_of_references.eq(0),
             ))
             .execute(db_conn);
         assert_eq!(
@@ -1437,6 +1443,7 @@ fn load_references(
                     collections::published.eq(&collection.published),
                     collections::reviewed.eq(&collection.reviewed),
                     collections::accessed.eq(&collection.accessed),
+                    collections::notoriety_type.eq(&collection.type_.to_lowercase())
                 ))
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
@@ -1823,6 +1830,10 @@ fn rebuild_fts(db_conn: &SqliteConnection) {
     let _result2 =
         diesel::sql_query("INSERT INTO fts_base_plants(fts_base_plants) VALUES('optimize')")
             .execute(db_conn);
+}
+
+fn calculate_notoriety(db_conn: &SqliteConnection) {
+    // todo
 }
 
 pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {

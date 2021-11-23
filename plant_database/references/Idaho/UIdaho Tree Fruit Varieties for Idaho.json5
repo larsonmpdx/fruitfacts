@@ -3,6 +3,7 @@
     author: "Danny L. Barney, Ph.D.",
     url: "https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/county/Bonner/horticulture/nifrc-tree-fruit-varieties.pdf",
     accessed: "Sep 2021",
+    type: "state extension guide",
     locations: [
         {
             short_name: "N/Central/SE",

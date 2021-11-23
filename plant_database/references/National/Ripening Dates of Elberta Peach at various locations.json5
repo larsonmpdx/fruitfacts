@@ -8,6 +8,7 @@
     url: "\"Handbook of Peach and Nectarine Varieties\" Okie 1998",
     published: "",
     accessed: "Oct 2021",
+    type: "extension test",
     locations: [
         {
             name: "US",

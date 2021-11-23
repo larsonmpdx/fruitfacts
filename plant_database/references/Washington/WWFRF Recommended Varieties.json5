@@ -2,8 +2,9 @@
     title: "Recommended Fruit Trees for the Puget Sound",
     author: "G.A. Moulton & J. King",
     url: "https://nwfruit.org/recommended-fruit-trees/",
-    published: "2012", // year it's available at that url on wayback
+    published: "2012", // first year it's available at that url on wayback
     accessed: "Oct 2021",
+    type: "public garden guide",
     locations: [
         {
             name: "Mt. Vernon, WA",

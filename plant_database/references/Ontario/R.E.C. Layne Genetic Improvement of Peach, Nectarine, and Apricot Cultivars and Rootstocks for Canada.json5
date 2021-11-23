@@ -4,6 +4,7 @@
     url: "https://www.actahort.org/books/374/374_11.htm",
     published: "1996",
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "research Station Harrow, Ontario Canada",

@@ -1,5 +1,6 @@
 {
     title: "Michael's Garden",
+    type: "home grower variety list",
     locations: [
         {
             name: "Eugene, OR",

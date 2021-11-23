@@ -4,6 +4,7 @@
     url: "https://www.ars.usda.gov/ARSUserFiles/382/USDA%20Pear%20Cultivars%20-%20BARC%20and%20AFRS.pdf",
     published: "",
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "USDA Washington, DC",

@@ -4,6 +4,7 @@
     url: "https://muscadines.caes.uga.edu/cultivars.html",
     published: "",
     accessed: "Oct 2021",
+    type: "state extension guide",
     locations: [
         {
             name: "todo",

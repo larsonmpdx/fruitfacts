@@ -3,6 +3,7 @@
     url: "http://www.bradfordgenetics.com/mainmenu.htm",
     published: "unknown",
     accessed: "Oct 2021",
+    type: "private breeding program list",
     locations: [
         {
             name: "La Grand, CA",
@@ -39,7 +40,6 @@ https://bradfordfarms.com.au/stonefruit/supersweet-nectarines/rose-sweet-new/
 */
 
         // Lowell Glen Bradford patent list
-
         {
             type: "Japanese Plum",
             name: "PLUMRED XIII",
@@ -1420,8 +1420,8 @@ https://bradfordfarms.com.au/stonefruit/supersweet-nectarines/rose-sweet-new/
             patent: "https://patents.google.com/patent/USPP9959 2016-04-29",
             released: "Bradford Farms*"
         },
-        // ^^ last patent with "Glen"
-        // ^^ older patents are also LGB but it's G. middle name from here on
+        // ^^^ last patent with "Glen"
+        // vvv older patents are also LGB but it's G. middle name from here on
         // https://patents.google.com/?inventor=Norman+G.+Bradford&sort=new
         {
             type: "Peach",

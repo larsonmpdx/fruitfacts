@@ -3,6 +3,7 @@
     author: "unknown",
     url: "http://maiaapples.com/apples/",
     accessed: "Oct 2021",
+    type: "private breeding program list",
     locations: [
         {
             name: "The Midwest, USA",

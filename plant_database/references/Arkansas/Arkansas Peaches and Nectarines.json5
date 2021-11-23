@@ -5,6 +5,7 @@
     url: "",
     published: "",
     accessed: "",
+    type: "public breeding program list",
     locations: [
         {
             name: "Fruit Research Station, Clarksville",

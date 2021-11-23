@@ -4,6 +4,7 @@
     url: "http://treefruit.wsu.edu/web-article/cherry-varieties/",
     published: "various",
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "WSU-TFREC Wenatchee WA",

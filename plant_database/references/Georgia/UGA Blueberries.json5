@@ -4,6 +4,7 @@
     url: "",
     published: "",
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "todo",

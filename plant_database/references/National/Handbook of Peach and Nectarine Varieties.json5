@@ -16,6 +16,7 @@
     url: "https://agsci.oregonstate.edu/berrycrops/research/breeding https://www.emcocal.com/usda-osu-program/ https://www.ars.usda.gov/news-events/news/research-news/2020/new-blackberries-eclipse-galaxy-and-twilight/",
     published: "",
     accessed: "Oct 2021",
+    type: "dictionary",
     locations: [
         {
             name: "Corvallis, OR",

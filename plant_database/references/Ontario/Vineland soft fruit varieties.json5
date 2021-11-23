@@ -4,6 +4,7 @@
     url: "https://www.vinelandresearch.com/wp-content/uploads/2020/03/tender_fruit_fact_sheet_master_2019-1.pdf",
     published: "Mar 2020", // date from url
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "Vineland, ON",

@@ -4,6 +4,7 @@
     url: "https://aaes.uada.edu/fruit-breeding/grapes/",
     published: "",
     accessed: "",
+    type: "public breeding program list",
     locations: [
         {
             name: "Fruit Research Station, Clarksville",

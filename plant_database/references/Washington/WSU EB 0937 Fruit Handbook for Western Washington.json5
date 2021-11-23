@@ -4,6 +4,7 @@
     url: "https://pubs.extension.wsu.edu/fruit-handbook-for-western-washingtonpdf",
     published: "2008",
     accessed: "Sep 2021",
+    type: "state extension guide",
     locations: [
         {
             name: "Mt. Vernon, WA",

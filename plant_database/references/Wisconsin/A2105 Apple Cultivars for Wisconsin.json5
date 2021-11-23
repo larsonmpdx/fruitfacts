@@ -4,6 +4,7 @@
     url: "https://barron.extension.wisc.edu/files/2021/09/Apple-Cultivars-for-WI-A2105.pdf",
     published: "various",
     accessed: "Oct 2021",
+    type: "state extension guide",
     locations: [
         {
             name: "UW-Madision, WI",

@@ -4,6 +4,7 @@
     url: "https://ir.library.oregonstate.edu/concern/articles/0r967909t",
     published: "2017",
     accessed: "Oct 2021",
+    type: "extension test",
     locations: [
         {
             name: "Corvallis, OR", // todo - change to farm and nwrec

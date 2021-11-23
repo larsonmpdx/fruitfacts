@@ -4,6 +4,7 @@
     url: "https://cider.wsu.edu/ciderweb/",
     published: "unknown",
     accessed: "Oct 2021",
+    type: "extension test",
     locations: [
         {
             name: "Mt. Vernon, WA",
@@ -28,8 +29,8 @@
         {
             name: "Ashmead's Kernel",
             type: "Apple",
-            description: "cider apple"
             // harvest time not evaluated
+            description: "cider apple"
         },
         {
             name: "Bedan de Parts",
@@ -136,8 +137,8 @@
         {
             name: "Ellis Bitter",
             type: "Apple",
-            description: "cider apple"
             // harvest time not evaluated
+            description: "cider apple"
         },
         {
             name: "Fillbarrel",
@@ -166,8 +167,8 @@
         {
             name: "Golden Harvey",
             type: "Apple",
-            description: "cider apple"
             // harvest time not evaluated
+            description: "cider apple"
         },
         {
             name: "Golden Russet",
@@ -214,8 +215,8 @@
         {
             name: "Isle of Wight Pippin",
             type: "Apple",
-            description: "cider apple"
             // harvest time not evaluated
+            description: "cider apple"
         },
         {
             name: "Jouveaux",

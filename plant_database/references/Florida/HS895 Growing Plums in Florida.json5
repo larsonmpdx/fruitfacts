@@ -4,6 +4,7 @@
     url: "https://edis.ifas.ufl.edu/publication/hs250",
     published: "2018-09-13",
     accessed: "Oct 2021",
+    type: "state extension guide",
     locations: [
         {
             name: "Florida (various locations)",

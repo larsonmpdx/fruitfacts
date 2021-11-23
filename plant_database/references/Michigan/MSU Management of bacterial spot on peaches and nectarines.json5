@@ -4,6 +4,7 @@
     url: "https://www.canr.msu.edu/news/management_of_bacterial_spot_on_peaches_and_nectarines",
     published: "Apr 2011",
     accessed: "Oct 2021",
+    type: "extension test",
     locations: [
         {
             name: "East Lansing, MI (MSU Hort)",

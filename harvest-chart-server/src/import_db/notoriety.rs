@@ -21,7 +21,7 @@ struct NotorietyEntry<'a> {
     value: f32,
 }
 
-const REFERENCE_NOTORIETY_TABLE: [NotorietyEntry; 8] = [
+const REFERENCE_NOTORIETY_TABLE: [NotorietyEntry; 13] = [
     NotorietyEntry {
         type_: "state extension guide",
         value: 100.0,
@@ -31,12 +31,24 @@ const REFERENCE_NOTORIETY_TABLE: [NotorietyEntry; 8] = [
         value: 90.0,
     },
     NotorietyEntry {
+        type_: "public garden guide", // not a list of public garden varieties, some actual recommendations from them. for example WWFRF recommendations
+        value: 85.0,
+    },
+    NotorietyEntry {
         type_: "U-pick variety list",
         value: 80.0,
     },
     NotorietyEntry {
         type_: "journal article", // not a release article for one variety - an actual growing test like the OSU table grape trial
         value: 50.0,
+    },
+    NotorietyEntry {
+        type_: "extension test", // same as "journal article" but not published in a journal
+        value: 50.0,
+    },
+    NotorietyEntry {
+        type_: "home grower variety list",
+        value: 35.0,
     },
     NotorietyEntry {
         type_: "public breeding program list", // PRI apples for example
@@ -49,6 +61,14 @@ const REFERENCE_NOTORIETY_TABLE: [NotorietyEntry; 8] = [
     NotorietyEntry {
         type_: "private breeding program list", // especially breeding programs that supply mainly commercial customers
         value: 15.0,
+    },
+    NotorietyEntry {
+        type_: "IP company list",
+        value: 15.0,
+    },
+    NotorietyEntry {
+        type_: "nursery catalog",
+        value: 10.0,
     },
     NotorietyEntry {
         type_: "dictionary", // for example the register of new fruit and nut cultivars

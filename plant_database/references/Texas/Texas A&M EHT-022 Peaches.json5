@@ -4,6 +4,7 @@
     url: "https://aggie-horticulture.tamu.edu/fruit-nut/files/2015/04/peaches_2015.pdf",
     published: "2015",
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "College Station, TX",

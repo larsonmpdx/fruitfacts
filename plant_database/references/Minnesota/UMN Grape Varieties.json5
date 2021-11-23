@@ -4,6 +4,7 @@
     url: "https://mnhardy.umn.edu/varieties/fruit/grapes",
     published: "unknown",
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "Minneapolis, MN",

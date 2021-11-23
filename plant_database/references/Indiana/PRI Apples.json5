@@ -4,6 +4,7 @@
     url: "https://www.hort.purdue.edu/newcrop/pri/",
     published: "unknown",
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "Lafayette, IN",

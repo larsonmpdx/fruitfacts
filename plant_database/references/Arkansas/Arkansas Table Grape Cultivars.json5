@@ -4,6 +4,7 @@
     url: "https://grapes.extension.org/arkansas-table-grape-cultivars/ https://aaes.uada.edu/fruit-breeding/grapes/",
     published: "June 2019",
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "Fruit Research Station, Clarksville",

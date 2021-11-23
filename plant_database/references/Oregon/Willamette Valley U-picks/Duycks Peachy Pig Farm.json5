@@ -24,6 +24,7 @@ Transparent
     url: "",
     published: "",
     accessed: "Oct 2021",
+    type: "U-pick variety list",
     locations: [
         {
             name: "todo",

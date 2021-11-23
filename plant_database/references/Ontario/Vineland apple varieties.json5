@@ -4,6 +4,7 @@
     url: "https://www.vinelandresearch.com/wp-content/uploads/2020/02/apple_varieties_fact_sheet.pdf",
     published: "Feb 2020", // date from url
     accessed: "Oct 2021",
+    type: "public breeding program list",
     locations: [
         {
             name: "Vineland, ON",

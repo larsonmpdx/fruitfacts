@@ -4,6 +4,7 @@
     url: "https://edis.ifas.ufl.edu/publication/HS1393",
     published: "Nov 2020",
     accessed: "Oct 2021",
+    type: "state extension guide",
     locations: [
         {
             short_name: "North",

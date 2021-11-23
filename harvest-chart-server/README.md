@@ -31,12 +31,16 @@
   * 2021: on windows vs code, `codelldb+rust-analyzer` debugger works slightly better than cppvsdbg or the official "rust" extension. see launch.json
   * 2021: vs code rust plugins work best when the folder opened has cargo.toml in its root (don't open the whole repo).  hopefully this gets better over time
 
-# diesel setup on windows
-* `cargo install diesel_cli --no-default-features --features "sqlite-bundled"` helper tool
-
 # diesel (rust ORM) things
 * see https://diesel.rs/guides/getting-started
-* adding a new table with diesel-cli:
+* there's no way to specify a dependency version with a regular `cargo install` command, and diesel seems to randomly pick an old bundled sqlite version, so to get diesel_cli with a new bundled sqlite (needed for fts trigram) we need to git clone it and edit cargo.toml. sad!
+  * see https://github.com/rust-lang/cargo/issues/3266
+  * check out diesel github 1.x version
+  * set rust version (not sure why this is necessary) `rustup override set 1.56.0`
+  * edit cargo.toml in diesel_cli folder to increase minimum sqlite version like `>=0.22.2`
+  * delete examples from top-level diesel cargo.toml (dependency problems in git checkout version)
+  * in diesel_cli folder: `cargo install diesel_cli --no-default-features --features "sqlite-bundled" --path .`
+* adding a new table with diesel_cli:
 * `diesel migration generate [new table name]`
 * `diesel migration run` - or omit this and just run all tests, there are embedded migrations
 * `diesel migration redo` (checks up+down)

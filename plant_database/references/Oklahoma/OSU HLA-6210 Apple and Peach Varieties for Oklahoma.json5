@@ -4,6 +4,7 @@
     url: "https://extension.okstate.edu/fact-sheets/apple-and-peach-varieties-for-oklahoma.html",
     published: "Oct 2016",
     accessed: "Sep 2021",
+    type: "state extension guide",
     locations: [
         {
             name: "Perkins, OK",
