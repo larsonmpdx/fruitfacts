@@ -22,12 +22,11 @@ pub struct collection_notoriety_decoded {
 }
 
 pub fn collection_notoriety_text_decoder(text: &str) -> collection_notoriety_decoded {
-
     struct NotorietyEntry<'a> {
         type_: &'a str,
         score: f32,
     }
-    
+
     const REFERENCE_NOTORIETY_TABLE: [NotorietyEntry; 13] = [
         NotorietyEntry {
             type_: "state extension guide",

@@ -7,8 +7,8 @@
 #[cfg(test)]
 mod test;
 
-mod util;
 mod notoriety;
+mod util;
 
 use crate::git_info::GitModificationTimes;
 
@@ -1443,7 +1443,7 @@ fn load_references(
                     collections::published.eq(&collection.published),
                     collections::reviewed.eq(&collection.reviewed),
                     collections::accessed.eq(&collection.accessed),
-                    collections::notoriety_type.eq(&collection.type_.to_lowercase())
+                    collections::notoriety_type.eq(&collection.type_.to_lowercase()),
                 ))
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
@@ -1838,18 +1838,16 @@ fn calculate_notoriety(db_conn: &SqliteConnection) {
         .unwrap();
 
     for collection in all_collections {
+        let notoriety_info =
+            notoriety::collection_notoriety_text_decoder(&collection.notoriety_type);
 
-        let notoriety_info = notoriety::collection_notoriety_text_decoder(&collection.notoriety_type);
-
-
-        let _updated_row = diesel::update(
-            collections::dsl::collections.filter(collections::id.eq(collection.id)),
-        )
-        .set((
-            collections::notoriety_score.eq(Some(notoriety_info.score)),
-            collections::notoriety_score_explanation.eq(Some(notoriety_info.explanation)),
-        ))
-        .execute(db_conn);
+        let _updated_row =
+            diesel::update(collections::dsl::collections.filter(collections::id.eq(collection.id)))
+                .set((
+                    collections::notoriety_score.eq(Some(notoriety_info.score)),
+                    collections::notoriety_score_explanation.eq(Some(notoriety_info.explanation)),
+                ))
+                .execute(db_conn);
     }
 }
 
