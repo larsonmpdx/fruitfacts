@@ -1833,7 +1833,24 @@ fn rebuild_fts(db_conn: &SqliteConnection) {
 }
 
 fn calculate_notoriety(db_conn: &SqliteConnection) {
-    // todo
+    let all_collections = collections::dsl::collections
+        .load::<Collection>(db_conn)
+        .unwrap();
+
+    for collection in all_collections {
+
+        let notoriety_info = notoriety::collection_notoriety_text_decoder(&collection.notoriety_type);
+
+
+        let _updated_row = diesel::update(
+            collections::dsl::collections.filter(collections::id.eq(collection.id)),
+        )
+        .set((
+            collections::notoriety_score.eq(Some(notoriety_info.score)),
+            collections::notoriety_score_explanation.eq(Some(notoriety_info.explanation)),
+        ))
+        .execute(db_conn);
+    }
 }
 
 pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {

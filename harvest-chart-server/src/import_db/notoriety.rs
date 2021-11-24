@@ -15,63 +15,83 @@
 
 // would like extension guide (100) to decay below u-pick (80) within about 20 years
 
-
-struct NotorietyEntry<'a> {
-    type_: &'a str,
-    value: f32,
+#[derive(Default)]
+pub struct collection_notoriety_decoded {
+    pub score: f32,
+    pub explanation: String,
 }
 
-const REFERENCE_NOTORIETY_TABLE: [NotorietyEntry; 13] = [
-    NotorietyEntry {
-        type_: "state extension guide",
-        value: 100.0,
-    },
-    NotorietyEntry {
-        type_: "local extension guide", // guide published by a local office, not a full state guide
-        value: 90.0,
-    },
-    NotorietyEntry {
-        type_: "public garden guide", // not a list of public garden varieties, some actual recommendations from them. for example WWFRF recommendations
-        value: 85.0,
-    },
-    NotorietyEntry {
-        type_: "U-pick variety list",
-        value: 80.0,
-    },
-    NotorietyEntry {
-        type_: "journal article", // not a release article for one variety - an actual growing test like the OSU table grape trial
-        value: 50.0,
-    },
-    NotorietyEntry {
-        type_: "extension test", // same as "journal article" but not published in a journal
-        value: 50.0,
-    },
-    NotorietyEntry {
-        type_: "home grower variety list",
-        value: 35.0,
-    },
-    NotorietyEntry {
-        type_: "public breeding program list", // PRI apples for example
-        value: 25.0,
-    },
-    NotorietyEntry {
-        type_: "release article", // article for one or more varieties
-        value: 25.0,
-    },
-    NotorietyEntry {
-        type_: "private breeding program list", // especially breeding programs that supply mainly commercial customers
-        value: 15.0,
-    },
-    NotorietyEntry {
-        type_: "IP company list",
-        value: 15.0,
-    },
-    NotorietyEntry {
-        type_: "nursery catalog",
-        value: 10.0,
-    },
-    NotorietyEntry {
-        type_: "dictionary", // for example the register of new fruit and nut cultivars
-        value: 1.0,
-    },
-];
+pub fn collection_notoriety_text_decoder(text: &str) -> collection_notoriety_decoded {
+
+    struct NotorietyEntry<'a> {
+        type_: &'a str,
+        score: f32,
+    }
+    
+    const REFERENCE_NOTORIETY_TABLE: [NotorietyEntry; 13] = [
+        NotorietyEntry {
+            type_: "state extension guide",
+            score: 100.0,
+        },
+        NotorietyEntry {
+            type_: "local extension guide", // guide published by a local office, not a full state guide
+            score: 90.0,
+        },
+        NotorietyEntry {
+            type_: "public garden guide", // not a list of public garden varieties, some actual recommendations from them. for example WWFRF recommendations
+            score: 85.0,
+        },
+        NotorietyEntry {
+            type_: "U-pick variety list",
+            score: 80.0,
+        },
+        NotorietyEntry {
+            type_: "journal article", // not a release article for one variety - an actual growing test like the OSU table grape trial
+            score: 50.0,
+        },
+        NotorietyEntry {
+            type_: "extension test", // same as "journal article" but not published in a journal
+            score: 50.0,
+        },
+        NotorietyEntry {
+            type_: "home grower variety list",
+            score: 35.0,
+        },
+        NotorietyEntry {
+            type_: "public breeding program list", // PRI apples for example
+            score: 25.0,
+        },
+        NotorietyEntry {
+            type_: "release article", // article for one or more varieties
+            score: 25.0,
+        },
+        NotorietyEntry {
+            type_: "private breeding program list", // especially breeding programs that supply mainly commercial customers
+            score: 15.0,
+        },
+        NotorietyEntry {
+            type_: "IP company list",
+            score: 15.0,
+        },
+        NotorietyEntry {
+            type_: "nursery catalog",
+            score: 10.0,
+        },
+        NotorietyEntry {
+            type_: "dictionary", // for example the register of new fruit and nut cultivars
+            score: 1.0,
+        },
+    ];
+
+    let mut output: collection_notoriety_decoded = Default::default();
+    for entry in REFERENCE_NOTORIETY_TABLE {
+        if entry.type_.to_lowercase() == text.to_lowercase() {
+            output.score = entry.score; // todo - we may factor in publication year to reduce notoriety of older collections
+            output.explanation = format!("{}: score {}/100", entry.type_, entry.score);
+
+            return output;
+        }
+    }
+
+    panic!("unknown collection type {}", text);
+}
