@@ -16,12 +16,12 @@
 // would like extension guide (100) to decay below u-pick (80) within about 20 years
 
 #[derive(Default)]
-pub struct collection_notoriety_decoded {
+pub struct CollectionNotorietyDecoded {
     pub score: f32,
     pub explanation: String,
 }
 
-pub fn collection_notoriety_text_decoder(text: &str) -> collection_notoriety_decoded {
+pub fn collection_notoriety_text_decoder(text: &str) -> CollectionNotorietyDecoded {
     struct NotorietyEntry<'a> {
         type_: &'a str,
         score: f32,
@@ -82,7 +82,7 @@ pub fn collection_notoriety_text_decoder(text: &str) -> collection_notoriety_dec
         },
     ];
 
-    let mut output: collection_notoriety_decoded = Default::default();
+    let mut output: CollectionNotorietyDecoded = Default::default();
     for entry in REFERENCE_NOTORIETY_TABLE {
         if entry.type_.to_lowercase() == text.to_lowercase() {
             output.score = entry.score; // todo - we may factor in publication year to reduce notoriety of older collections
