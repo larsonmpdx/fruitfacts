@@ -5,9 +5,11 @@ table! {
         name_fts -> Text,
         #[sql_name = "type"]
         type_ -> Text,
-        number_of_references -> Integer,
         notoriety_score -> Nullable<Float>,
         notoriety_score_explanation -> Nullable<Text>,
+        number_of_references -> Integer,
+        notoriety_highest_collection_score -> Nullable<Float>,
+        notoriety_highest_collection_score_id -> Nullable<Integer>,
         aka -> Nullable<Text>,
         aka_fts -> Nullable<Text>,
         marketing_name -> Nullable<Text>,

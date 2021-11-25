@@ -23,9 +23,13 @@ pub struct BasePlant {
     pub name: String,
     pub name_fts: String,
     pub type_: String,
-    pub number_of_references: i32,
+    
     pub notoriety_score: Option<f32>,
     pub notoriety_score_explanation: Option<String>,
+    pub number_of_references: i32,
+    pub notoriety_highest_collection_score: Option<f32>,
+    pub notoriety_highest_collection_score_id: Option<i32>,
+
     pub aka: Option<String>,
     pub aka_fts: Option<String>,
     pub marketing_name: Option<String>,

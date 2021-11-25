@@ -1,4 +1,6 @@
-use crate::import_db::util::uspp_number_to_release_year;
+use crate::import_db::{notoriety::base_plant_notoriety_calc, util::uspp_number_to_release_year};
+use crate::import_db::notoriety::BasePlantNotorietyInput;
+use crate::import_db::notoriety::BasePlantNotoriety;
 use diesel::connection::SimpleConnection;
 
 use super::*;
@@ -499,4 +501,16 @@ fn test_database_loading() {
         2646
     );
     assert_ge!(items_loaded.reference_items.reference_plants_added, 4928);
+}
+
+#[test]
+fn test_base_plant_notoriety_calc() {
+    assert_eq!(base_plant_notoriety_calc(&BasePlantNotorietyInput {
+        notoriety_highest_collection_score: Some(50.0),
+        notoriety_highest_collection_score_name: "collection name".to_string(),
+        current_year: 2021,
+        release_year: Some(1975),
+        number_of_references: 1,
+        uspp_number: None,
+    }), BasePlantNotoriety{score: 34.0, explanation: "50 (collection name) *0.85 (>40 years old) *0.8 (1 references) *1.0 (no uspp number)".to_string()});
 }

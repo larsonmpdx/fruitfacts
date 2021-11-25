@@ -1,0 +1,26 @@
+{
+    title: "UMD Apples",
+    author: "unknown",
+    url: "https://psla.umd.edu/research/research-lab-pages/walsh-lab/new-apples-bred-maryland-growers",
+    published: "unknown",
+    accessed: "Oct 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "Keedysville, MD",
+            latitude: 39.51002814380188,
+            longitude: -77.73345232710217
+        }
+    ],
+    plants: [
+        {
+            type: "Apple",
+            name: "CP 101",
+            AKA: ["Antietam Blush (r)"],
+            // patent application used the name "Antietam Blush" which may make any trademark invalid. this was changed to "CP 101" in the patent grant
+            // application: https://patents.google.com/patent/US20150150167
+            patent: "https://patents.google.com/patent/USPP28595 expires 2035-07-18",
+            released: "U Maryland 2018*"
+        }
+    ]
+}

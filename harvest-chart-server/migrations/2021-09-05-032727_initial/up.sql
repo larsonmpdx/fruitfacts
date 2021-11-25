@@ -4,9 +4,11 @@ CREATE TABLE base_plants (
   name_fts TEXT NOT NULL, -- for full text search, without special characters
   type TEXT NOT NULL,
 
-  number_of_references INTEGER NOT NULL,
   notoriety_score REAL,
   notoriety_score_explanation TEXT,
+  number_of_references INTEGER NOT NULL,
+  notoriety_highest_collection_score REAL,
+  notoriety_highest_collection_score_id INTEGER,
 
   -- these fields don't go into collections because they're part of our ground truth
   aka TEXT, -- comma separated
