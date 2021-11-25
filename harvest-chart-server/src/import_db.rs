@@ -1218,11 +1218,12 @@ fn get_location_id(
     None
 }
 
-fn maybe_add_base_plant(
+fn update_or_add_base_plant(
     plant_name: &str,
     plant: &CollectionPlantJson,
     db_conn: &SqliteConnection,
     current_collection_id: i32,
+    current_collection_score: f32,
 ) -> isize {
     let num_added;
 
@@ -1239,7 +1240,9 @@ fn maybe_add_base_plant(
                 base_plants::name.eq(&plant_name),
                 base_plants::name_fts.eq(format_name_fts_string(&plant_name.to_string())),
                 base_plants::type_.eq(&plant.type_),
-                base_plants::number_of_references.eq(0),
+                base_plants::number_of_references.eq(1),
+                base_plants::notoriety_highest_collection_score.eq(current_collection_score),
+                base_plants::notoriety_highest_collection_score_id.eq(current_collection_id),
             ))
             .execute(db_conn);
         assert_eq!(
@@ -1252,6 +1255,35 @@ fn maybe_add_base_plant(
 
         num_added = 1
     } else {
+        let existing_base_plant = existing_base_plant.as_ref().unwrap();
+
+        let new_references_count = existing_base_plant.number_of_references + 1;
+
+        let new_collection_score;
+        let new_collection_score_id;
+        if let Some(existing_score) = existing_base_plant.notoriety_highest_collection_score {
+            if current_collection_score > existing_score {
+                new_collection_score = current_collection_score;
+                new_collection_score_id = Some(current_collection_id);
+            } else {
+                new_collection_score = existing_score;
+                new_collection_score_id = existing_base_plant.notoriety_highest_collection_score_id;
+            }
+        } else {
+            new_collection_score = current_collection_score;
+            new_collection_score_id = Some(current_collection_id);
+        }
+
+        let _updated_row = diesel::update(
+            base_plants::dsl::base_plants.filter(base_plants::id.eq(existing_base_plant.id)),
+        )
+        .set((
+            base_plants::number_of_references.eq(new_references_count),
+            base_plants::notoriety_highest_collection_score.eq(new_collection_score),
+            base_plants::notoriety_highest_collection_score_id.eq(new_collection_score_id),
+        ))
+        .execute(db_conn);
+
         num_added = 0
     }
 
@@ -1426,6 +1458,9 @@ fn load_references(
             let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), ".json5".len());
             let path = format_path(path_.parent().unwrap().to_str().unwrap());
 
+            let notoriety_info =
+            notoriety::collection_notoriety_text_decoder(&collection.type_);
+
             collection_id += 1;
 
             //    println!("inserting");
@@ -1444,6 +1479,8 @@ fn load_references(
                     collections::reviewed.eq(&collection.reviewed),
                     collections::accessed.eq(&collection.accessed),
                     collections::notoriety_type.eq(&collection.type_.to_lowercase()),
+                    collections::notoriety_score.eq(Some(notoriety_info.score)),
+                    collections::notoriety_score_explanation.eq(Some(notoriety_info.explanation)),
                 ))
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
@@ -1483,7 +1520,7 @@ fn load_references(
                         // or give descriptions for each apple
                         // we want to preserve the list so it can be displayed off in a corner or whatever
                         reference_base_plants_added +=
-                            maybe_add_base_plant(&plant_name, &plant, db_conn, collection_id);
+                        update_or_add_base_plant(&plant_name, &plant, db_conn, collection_id, notoriety_info.score);
 
                         reference_plants_added += add_collection_plant_by_location(
                             collection_id,
@@ -1495,11 +1532,12 @@ fn load_references(
                         );
                     }
                 } else if plant.name.is_some() {
-                    reference_base_plants_added += maybe_add_base_plant(
+                    reference_base_plants_added += update_or_add_base_plant(
                         plant.name.as_ref().unwrap(),
                         &plant,
                         db_conn,
                         collection_id,
+                        notoriety_info.score,
                     );
 
                     reference_plants_added += add_collection_plant_by_location(
@@ -1731,7 +1769,7 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
 
         if plant.release_year.is_none() && plant.uspp_number.is_some() {
             let _updated_row = diesel::update(
-                base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.plant_id)),
+                base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)),
             )
             .set((
                 base_plants::release_year.eq(util::uspp_number_to_release_year(
@@ -1833,23 +1871,6 @@ fn rebuild_fts(db_conn: &SqliteConnection) {
 }
 
 fn calculate_notoriety(db_conn: &SqliteConnection) {
-    let all_collections = collections::dsl::collections
-        .load::<Collection>(db_conn)
-        .unwrap();
-
-    for collection in all_collections {
-        let notoriety_info =
-            notoriety::collection_notoriety_text_decoder(&collection.notoriety_type);
-
-        let _updated_row =
-            diesel::update(collections::dsl::collections.filter(collections::id.eq(collection.id)))
-                .set((
-                    collections::notoriety_score.eq(Some(notoriety_info.score)),
-                    collections::notoriety_score_explanation.eq(Some(notoriety_info.explanation)),
-                ))
-                .execute(db_conn);
-    }
-
     let all_base_plants = base_plants::dsl::base_plants
         .load::<BasePlant>(db_conn)
         .unwrap();
@@ -1866,7 +1887,7 @@ fn calculate_notoriety(db_conn: &SqliteConnection) {
         });
 
         let _updated_row = diesel::update(
-            base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.plant_id)),
+            base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)),
         )
         .set((
             base_plants::notoriety_score.eq(notoriety_score.score),

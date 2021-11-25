@@ -1,0 +1,72 @@
+{
+    title: "Guide H-330: Jujube: Chinese Date in New Mexico",
+    author: "Shengrui Yao, Assistant Professor, Sustainable Agriculture Science Center at Alcalde, New Mexico State University",
+    url: "https://aces.nmsu.edu/pubs/_h/H330/welcome.html",
+    published: "May 2012",
+    accessed: "Oct 2021",
+    type: "state extension guide",
+    locations: [
+        {
+            name: "NMSU, Las Cruces NM",
+            latitude: 32.28121882836718,
+            longitude: -106.75678369515053
+        }
+    ],
+    plants: [
+        {
+            type: "Jujube",
+            name: "Li",
+            description: "Popular commercial cultivar imported directly from China by Frank Meyer. Large, round fruit up to 3 ounces, mid-season, fresh eating cultivar. Good quality"
+        },
+        {
+            type: "Jujube",
+            name: "Lang",
+            description: "Popular commercial cultivar imported directly from China by Frank Meyer. Fruit is big and pear-shaped and good for drying. Some fruit may split if it rains at mature season"
+        },
+        {
+            type: "Jujube",
+            name: "So",
+            description: "Frank Meyers cultivar. Beautiful ornamental tree with zigzagged branches. Medium-sized, round fruit with balanced sweet/tart flavor. Good for fresh eating and drying. Suitable for landscaping and home gardeners"
+        },
+        {
+            type: "Jujube",
+            name: "Shuimen",
+            description: "Frank Meyers cultivar. Medium-sized, elongated fruit with big pit, good for fresh eating and drying"
+        },
+        {
+            type: "Jujube",
+            name: "Sugarcane",
+            description: "Small- to medium-sized, round to elongated fruit with excellent quality. Fruit is extremely sweet and crunchy on a spiny tree. Good for fresh eating and drying. It could be the offspring of Chin zse tsao. This cultivar has low fruit set at Alcalde, NM. Pollinizing cultivars and bee activity are necessary to ensure good fruit set"
+        },
+        {
+            type: "Jujube",
+            name: "GA866",
+            description: "From USDA Chico Plant Introduction Stations jujube breeding program in California. Excellent large fruit with very high sugar content. Fruit is elongated and pointed at the far end"
+        },
+        {
+            type: "Jujube",
+            name: "Sherwood",
+            description: "A seedling from Louisiana. Firm fruit with excellent quality. Trees are upright and narrow. Late-maturing cultivar. Good for long growing season areas"
+        },
+        {
+            type: "Jujube",
+            name: "Honey Jar",
+            description: "A recent importation from China by Roger Meyer (no relation to Frank Meyer). Round, small fruit with excellent quality. Very sweet and crispy. Excellent for fresh eating. Tree is precocious and fruits during planting year or grafting year"
+        },
+        {
+            type: "Jujube",
+            name: "Shanxi Li",
+            description: "Became popular in the late 1980s and early 1990s in China. Now one of the major fresh eating cultivars in China. Medium- to large-sized fruit with good eating quality. Mid-season maturity. Tree is precocious and productive"
+        },
+        {
+            type: "Jujube",
+            name: "Sihong",
+            description: "A new importation from China by Roger Meyer. Good for fresh eating and excellent for drying. When dried, fruit has fine wrinkles on its surface. Mid-season maturity"
+        },
+        {
+            type: "Jujube",
+            name: "Abberville",
+            description: "Tree is prolific and loaded with small fruit. Fruit quality is mediocre. Branchlets and fruits remain on tree for 1 to 3 weeks after defoliation, making it a good ornamental tree"
+        }
+    ]
+}

@@ -19,7 +19,7 @@ pub struct PlantType {
 #[skip_serializing_none]
 #[derive(Debug, Serialize, Queryable)]
 pub struct BasePlant {
-    pub plant_id: i32,
+    pub id: i32,
     pub name: String,
     pub name_fts: String,
     pub type_: String,
