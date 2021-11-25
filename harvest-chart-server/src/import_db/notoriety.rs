@@ -69,8 +69,8 @@ pub fn collection_notoriety_text_decoder(text: &str) -> CollectionNotoriety {
         },
     ];
 
-        // todo: add age decay. Extension guides from the 90s are worth a lot less than from the 2010s. Account for “published, updated, reviewed” fields - newest one
-        // would like extension guide (100) to decay below u-pick (80) within about 20 years
+    // todo: add age decay. Extension guides from the 90s are worth a lot less than from the 2010s. Account for “published, updated, reviewed” fields - newest one
+    // would like extension guide (100) to decay below u-pick (80) within about 20 years
 
     let mut output: CollectionNotoriety = Default::default();
     for entry in REFERENCE_NOTORIETY_TABLE {

@@ -1458,8 +1458,7 @@ fn load_references(
             let filename = rem_last_n(path_.file_name().unwrap().to_str().unwrap(), ".json5".len());
             let path = format_path(path_.parent().unwrap().to_str().unwrap());
 
-            let notoriety_info =
-            notoriety::collection_notoriety_text_decoder(&collection.type_);
+            let notoriety_info = notoriety::collection_notoriety_text_decoder(&collection.type_);
 
             collection_id += 1;
 
@@ -1519,8 +1518,13 @@ fn load_references(
                         // a list of "all of the scab resistant apples" but don't tie that to one location
                         // or give descriptions for each apple
                         // we want to preserve the list so it can be displayed off in a corner or whatever
-                        reference_base_plants_added +=
-                        update_or_add_base_plant(&plant_name, &plant, db_conn, collection_id, notoriety_info.score);
+                        reference_base_plants_added += update_or_add_base_plant(
+                            &plant_name,
+                            &plant,
+                            db_conn,
+                            collection_id,
+                            notoriety_info.score,
+                        );
 
                         reference_plants_added += add_collection_plant_by_location(
                             collection_id,
@@ -1768,16 +1772,15 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
         // if release year is unset but patent number is set, fill in release year from a patent->year table
 
         if plant.release_year.is_none() && plant.uspp_number.is_some() {
-            let _updated_row = diesel::update(
-                base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)),
-            )
-            .set((
-                base_plants::release_year.eq(util::uspp_number_to_release_year(
-                    plant.uspp_number.unwrap().parse::<i32>().unwrap(),
-                )),
-                base_plants::release_year_note.eq("derived from patent number"),
-            ))
-            .execute(db_conn);
+            let _updated_row =
+                diesel::update(base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)))
+                    .set((
+                        base_plants::release_year.eq(util::uspp_number_to_release_year(
+                            plant.uspp_number.unwrap().parse::<i32>().unwrap(),
+                        )),
+                        base_plants::release_year_note.eq("derived from patent number"),
+                    ))
+                    .execute(db_conn);
         }
     }
 }
@@ -1877,23 +1880,23 @@ fn calculate_notoriety(db_conn: &SqliteConnection) {
 
     let current_year = chrono::Utc::now().year();
     for plant in &all_base_plants {
-        let notoriety_score = notoriety::base_plant_notoriety_calc(&notoriety::BasePlantNotorietyInput {
-            notoriety_highest_collection_score: plant.notoriety_highest_collection_score,
-            notoriety_highest_collection_score_name: "todo".to_string(), // plant.notoriety_highest_collection_score_id -> name
-            current_year: current_year,
-            release_year: plant.release_year,
-            number_of_references: plant.number_of_references,
-            uspp_number: plant.uspp_number.as_ref(),
-        });
+        let notoriety_score =
+            notoriety::base_plant_notoriety_calc(&notoriety::BasePlantNotorietyInput {
+                notoriety_highest_collection_score: plant.notoriety_highest_collection_score,
+                notoriety_highest_collection_score_name: "todo".to_string(), // plant.notoriety_highest_collection_score_id -> name
+                current_year: current_year,
+                release_year: plant.release_year,
+                number_of_references: plant.number_of_references,
+                uspp_number: plant.uspp_number.as_ref(),
+            });
 
-        let _updated_row = diesel::update(
-            base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)),
-        )
-        .set((
-            base_plants::notoriety_score.eq(notoriety_score.score),
-            base_plants::notoriety_score_explanation.eq(notoriety_score.explanation),
-        ))
-        .execute(db_conn);
+        let _updated_row =
+            diesel::update(base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)))
+                .set((
+                    base_plants::notoriety_score.eq(notoriety_score.score),
+                    base_plants::notoriety_score_explanation.eq(notoriety_score.explanation),
+                ))
+                .execute(db_conn);
     }
 }
 
