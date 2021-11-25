@@ -1884,7 +1884,7 @@ fn calculate_notoriety(db_conn: &SqliteConnection) {
             notoriety::base_plant_notoriety_calc(&notoriety::BasePlantNotorietyInput {
                 notoriety_highest_collection_score: plant.notoriety_highest_collection_score,
                 notoriety_highest_collection_score_name: "todo".to_string(), // plant.notoriety_highest_collection_score_id -> name
-                current_year: current_year,
+                current_year,
                 release_year: plant.release_year,
                 number_of_references: plant.number_of_references,
                 uspp_number: plant.uspp_number.as_ref(),
