@@ -1,6 +1,6 @@
-use crate::import_db::{notoriety::base_plant_notoriety_calc, util::uspp_number_to_release_year};
-use crate::import_db::notoriety::BasePlantNotorietyInput;
 use crate::import_db::notoriety::BasePlantNotoriety;
+use crate::import_db::notoriety::BasePlantNotorietyInput;
+use crate::import_db::{notoriety::base_plant_notoriety_calc, util::uspp_number_to_release_year};
 use diesel::connection::SimpleConnection;
 
 use super::*;

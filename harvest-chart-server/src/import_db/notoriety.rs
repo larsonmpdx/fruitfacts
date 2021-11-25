@@ -115,7 +115,10 @@ pub fn base_plant_notoriety_calc(input: &BasePlantNotorietyInput) -> BasePlantNo
 
     if let Some(score) = input.notoriety_highest_collection_score {
         output.score = score;
-        output.explanation = format!("{} ({})", score, input.notoriety_highest_collection_score_name);
+        output.explanation = format!(
+            "{} ({})",
+            score, input.notoriety_highest_collection_score_name
+        );
     } else {
         output.score = 1.0; // same as dictionary
         output.explanation = "1.0 (no collection)".to_string();
@@ -130,18 +133,18 @@ pub fn base_plant_notoriety_calc(input: &BasePlantNotorietyInput) -> BasePlantNo
         let age = input.current_year - release_year;
 
         age_multiplier = match age {
-            i32::MIN ..= 30 => {
+            i32::MIN..=30 => {
                 age_explanation = "<=30 years old";
                 1.0
-            },
-            31 ..= 40 => {
+            }
+            31..=40 => {
                 age_explanation = ">30 years old";
                 0.9
-            },
-            41 ..= i32::MAX => {
+            }
+            41..=i32::MAX => {
                 age_explanation = ">40 years old";
                 0.85
-            },
+            }
         };
     } else {
         age_multiplier = 0.8;
@@ -151,22 +154,25 @@ pub fn base_plant_notoriety_calc(input: &BasePlantNotorietyInput) -> BasePlantNo
     output.explanation += &format!(" *{} ({})", age_multiplier, age_explanation);
 
     let references_multiplier = match input.number_of_references {
-        5 ..= i32::MAX => 1.3,
+        5..=i32::MAX => 1.3,
         4 => 1.1,
         3 => 1.0,
         2 => 0.9,
-        i32::MIN ..= 1 => 0.8,
+        i32::MIN..=1 => 0.8,
     };
     output.score *= references_multiplier;
-    output.explanation += &format!(" *{} ({} references)", references_multiplier, input.number_of_references);
+    output.explanation += &format!(
+        " *{} ({} references)",
+        references_multiplier, input.number_of_references
+    );
 
     // multiply by 1.2 if patented
     if input.uspp_number.is_some() {
         let patent_multiplier = 1.2;
         output.score *= patent_multiplier;
-        output.explanation += &format!(" *{} (uspp)", patent_multiplier); 
+        output.explanation += &format!(" *{} (uspp)", patent_multiplier);
     } else {
-        output.explanation += &format!(" *1.0 (no uspp number)");  
+        output.explanation += &format!(" *1.0 (no uspp number)");
     }
 
     output
