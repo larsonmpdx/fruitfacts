@@ -2,19 +2,6 @@
 // this helps sort search results and filter browsing to only relevant varieties
 // the database has many old varieties that have fallen out of circulation, these should be filtered out most of the time but still accessible if needed
 
-// Number of references > N
-// Each reference having a notoriety rating 1-100, and combining that with the publication year of the reference to give a max notoriety
-//    -> reference score
-// Plant release year
-// These three can be combined to an overall score in post processing. Can work on the formula later
-//    -> plant score
-// Filter out anything that doesn’t clear some bars unless “show all” is checked, or bumping non-notorious ones to the bottom of a search, and generally sorting by notoriety score if it makes more sense than sorting by name or search match quality
-
-// *   + years-old decay. Extension guides from the 90s are worth a lot less than from the 2010s. Account for “published, updated, reviewed” fields - newest one
-// * Put notoriety score text into a field somewhere?
-
-// would like extension guide (100) to decay below u-pick (80) within about 20 years
-
 #[derive(Default)]
 pub struct CollectionNotoriety {
     pub score: f32,
@@ -82,6 +69,9 @@ pub fn collection_notoriety_text_decoder(text: &str) -> CollectionNotoriety {
         },
     ];
 
+        // todo: add age decay. Extension guides from the 90s are worth a lot less than from the 2010s. Account for “published, updated, reviewed” fields - newest one
+        // would like extension guide (100) to decay below u-pick (80) within about 20 years
+
     let mut output: CollectionNotoriety = Default::default();
     for entry in REFERENCE_NOTORIETY_TABLE {
         if entry.type_.to_lowercase() == text.to_lowercase() {
@@ -95,13 +85,13 @@ pub fn collection_notoriety_text_decoder(text: &str) -> CollectionNotoriety {
     panic!("unknown collection type {}", text);
 }
 
-pub struct BasePlantNotorietyInput {
+pub struct BasePlantNotorietyInput<'a> {
     pub notoriety_highest_collection_score: Option<f32>,
     pub notoriety_highest_collection_score_name: String,
     pub current_year: i32,
     pub release_year: Option<i32>,
     pub number_of_references: i32,
-    pub uspp_number: Option<String>,
+    pub uspp_number: Option<&'a String>,
 }
 
 #[derive(Debug, Default, PartialEq)]
@@ -154,7 +144,8 @@ pub fn base_plant_notoriety_calc(input: &BasePlantNotorietyInput) -> BasePlantNo
     output.explanation += &format!(" *{} ({})", age_multiplier, age_explanation);
 
     let references_multiplier = match input.number_of_references {
-        5..=i32::MAX => 1.3,
+        6..=i32::MAX => 1.3,
+        5 => 1.2,
         4 => 1.1,
         3 => 1.0,
         2 => 0.9,

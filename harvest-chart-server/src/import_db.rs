@@ -1849,6 +1849,31 @@ fn calculate_notoriety(db_conn: &SqliteConnection) {
                 ))
                 .execute(db_conn);
     }
+
+    let all_base_plants = base_plants::dsl::base_plants
+        .load::<BasePlant>(db_conn)
+        .unwrap();
+
+    let current_year = chrono::Utc::now().year();
+    for plant in &all_base_plants {
+        let notoriety_score = notoriety::base_plant_notoriety_calc(&notoriety::BasePlantNotorietyInput {
+            notoriety_highest_collection_score: plant.notoriety_highest_collection_score,
+            notoriety_highest_collection_score_name: "todo".to_string(), // plant.notoriety_highest_collection_score_id -> name
+            current_year: current_year,
+            release_year: plant.release_year,
+            number_of_references: plant.number_of_references,
+            uspp_number: plant.uspp_number.as_ref(),
+        });
+
+        let _updated_row = diesel::update(
+            base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.plant_id)),
+        )
+        .set((
+            base_plants::notoriety_score.eq(notoriety_score.score),
+            base_plants::notoriety_score_explanation.eq(notoriety_score.explanation),
+        ))
+        .execute(db_conn);
+    }
 }
 
 pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {
