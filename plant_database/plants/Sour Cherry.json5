@@ -17,22 +17,6 @@
         name: "Meteor"
     },
     {
-        name: "Carmine Jewel",
-        description: "USask bush cherry, their first variety"
-    },
-    {
-        name: "Romeo",
-        description: "USask bush cherry"
-    },
-    {
-        name: "Juliet",
-        description: "USask bush cherry"
-    },
-    {
-        name: "Crimson Passion",
-        description: "USask bush cherry. considered a low yielding variety"
-    },
-    {
         name: "Kansas Sweet",
         tags: "sweet-sour cherry cross"
     },

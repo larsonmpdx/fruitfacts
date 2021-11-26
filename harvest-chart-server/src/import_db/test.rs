@@ -493,14 +493,14 @@ fn test_database_loading() {
     println!("loaded: {:#?}", items_loaded);
 
     // update these every so often so we can check that a change doesn't cause fewer items than we expect
-    assert_ge!(items_loaded.base_plants_found, 228);
+    assert_ge!(items_loaded.base_plants_found, 224);
     assert_ge!(items_loaded.base_types_found, 47);
     assert_ge!(items_loaded.reference_items.reference_locations_found, 47);
     assert_ge!(
         items_loaded.reference_items.reference_base_plants_added,
-        2657
+        2666
     );
-    assert_ge!(items_loaded.reference_items.reference_plants_added, 4940);
+    assert_ge!(items_loaded.reference_items.reference_plants_added, 4950);
 }
 
 #[test]

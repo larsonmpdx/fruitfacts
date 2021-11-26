@@ -1,0 +1,18 @@
+{
+    title: "Gulf Coast, Atlantic Coast: Corpus Christi, Houston, New Orleans, Mobile, Tallahassee, Charleston",
+    url: "https://www.lecooke.com/Images/Recommended-Varieties/Zone-28-Northern-Florida-Gulf-Coast-South-Atlantic-Coast.pdf",
+    published: "",
+    accessed: "Oct 2021",
+    type: "localized grower or nursery recommendations",
+    description: "",
+    locations: [
+        {
+            name: "",
+            latitude: 0.0,
+            longitude: 0.0
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

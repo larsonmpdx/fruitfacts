@@ -1,0 +1,18 @@
+// todo 
+{
+    title: "Circular 483: Growing Grapes in New Mexico",
+    author: "Esteban Herrera, Extension Horticulturist",
+    url: "https://aces.nmsu.edu/pubs/_circulars/CR483/",
+    published: "July 2000",
+    accessed: "Oct 2021",
+    type: "state extension guide",
+    locations: [
+        {
+            name: "NMSU, Las Cruces NM",
+            latitude: 32.28121882836718,
+            longitude: -106.75678369515053
+        }
+    ],
+    plants: [
+    ]
+}

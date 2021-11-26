@@ -1,0 +1,18 @@
+{
+    title: "Willamette and Lower Columbia River Valleys Portland, Salem, Eugene, Roseburg, Vancouver, WA",
+    url: "https://www.lecooke.com/Images/Recommended-Varieties/Zone-6-Willamette-and-Lower-Columbia-River-Valleys.pdf",
+    published: "",
+    accessed: "Oct 2021",
+    type: "localized grower or nursery recommendations",
+    description: "",
+    locations: [
+        {
+            name: "",
+            latitude: 0.0,
+            longitude: 0.0
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

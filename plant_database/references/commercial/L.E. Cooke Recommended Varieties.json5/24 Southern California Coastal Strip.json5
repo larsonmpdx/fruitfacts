@@ -1,0 +1,18 @@
+{
+    title: "Southern California Coastal Strip: Coastal Areas of San Diego, Los Angeles, Orange County, Oxnard, Ventura",
+    url: "https://www.lecooke.com/Images/Recommended-Varieties/Zone-24-Southern-California-Coastal-Strip.pdf",
+    published: "",
+    accessed: "Oct 2021",
+    type: "localized grower or nursery recommendations",
+    description: "",
+    locations: [
+        {
+            name: "",
+            latitude: 0.0,
+            longitude: 0.0
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

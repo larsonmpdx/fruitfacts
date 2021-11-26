@@ -1,0 +1,76 @@
+{
+    title: "SK Sour Bush Cherries",
+    author: "",
+    url: "https://research-groups.usask.ca/fruit/Fruit%20crops/sour-cherries.php https://www.goodfruit.com/new-prairie-cherry-varieties-making-an-impact/",
+    published: "",
+    accessed: "Oct 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "University of Saskatchewan",
+            latitude: 52.1328167945073,
+            longitude: -106.63127677691207
+        }
+    ],
+    plants: [
+        {
+            type: "Sour Cherry",
+            name: "d'Artagnan",
+            description: "https://research-groups.usask.ca/fruit/Fruit%20crops/dartagnan-cherry.pdf",
+            released: "USask 2021*"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Sweet Thing",
+            description: "https://research-groups.usask.ca/fruit/Fruit%20crops/sweet-thing.pdf",
+            released: "USask 2021*"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Cutie pie",
+            description: "https://research-groups.usask.ca/fruit/Fruit%20crops/cutie-pie-cherry.pdf",
+            released: "USask 2021*"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Big Red",
+            AKA: ["Wowza (tm)"],
+            description: "Gardens Alive https://research-groups.usask.ca/fruit/Fruit%20crops/big-red-cherry.pdf",
+            patent: "https://patents.google.com/patent/USPP32782 expires 2039-10-22",
+            // release year isn't quite right as the plant was tested and released by Gardens Alive after being provided by USask
+            released: "USask 2019*"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Crimson Passion",
+            released: "USask 2004*"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Cupid",
+            released: "USask 2004*"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Juliet",
+            description: "https://research-groups.usask.ca/fruit/documents/cherrys/Juliet-notes.pdf",
+            released: "USask 2004*"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Romeo",
+            released: "USask 2004*"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Valentine",
+            released: "USask 2004*"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Carmine Jewel",
+            description: "https://research-groups.usask.ca/fruit/documents/cherrys/Carmine-Jewel-notes.pdf",
+            released: "USask 1999*"
+        },
+    ]
+}
