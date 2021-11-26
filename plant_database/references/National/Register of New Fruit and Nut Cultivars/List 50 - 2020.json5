@@ -13,8 +13,7 @@
         }
     ],
     plants: [
-
-/*
+        /*
 Almond
 Capella introd. 2017. USPP 29,674
 University of Adelaide
@@ -675,53 +674,10 @@ USPP applied for
 === elderberry ===
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// skip:
-// avocado
-// citrus
-// kiwifruit
-// mango
-
-
-
+        // skip:
+        // avocado
+        // citrus
+        // kiwifruit
+        // mango
     ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

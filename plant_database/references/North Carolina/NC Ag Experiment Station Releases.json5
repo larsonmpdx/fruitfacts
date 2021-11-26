@@ -14,14 +14,11 @@
     ],
     plants: [
         // todo
-
-// Clayton, C.N., F.E. Correll, J.R. Ballington, and S.M. Worthington. 1977. Hamlet, Correll, Clayton, and Ellerbe peaches. Fruit Var. J. 31:34–35.
-// https://www.pubhort.org/aps/31/v31_n2_a4.htm
-// NC Ag experiment station 1975
-
-// see also pdf "peach cultivars" in nc folder
-
-// "Von" blackberry
-// https://patents.google.com/patent/USPP27299 expires 2034-12-24
+        // Clayton, C.N., F.E. Correll, J.R. Ballington, and S.M. Worthington. 1977. Hamlet, Correll, Clayton, and Ellerbe peaches. Fruit Var. J. 31:34–35.
+        // https://www.pubhort.org/aps/31/v31_n2_a4.htm
+        // NC Ag experiment station 1975
+        // see also pdf "peach cultivars" in nc folder
+        // "Von" blackberry
+        // https://patents.google.com/patent/USPP27299 expires 2034-12-24
     ]
 }

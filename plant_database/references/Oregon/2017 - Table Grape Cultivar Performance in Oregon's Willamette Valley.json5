@@ -13,13 +13,10 @@
         }
     ],
     plants: [
-
-
-// NWREC; Aurora, OR, lat. 45°28′ N, long. 122°76′ W
-// Lewis Brown Farm (LB; Corvallis, OR, lat. 44°55’N, long. 123°22’W)
-
-// harvest dates and GDD
-/*
+        // NWREC; Aurora, OR, lat. 45°28′ N, long. 122°76′ W
+        // Lewis Brown Farm (LB; Corvallis, OR, lat. 44°55’N, long. 123°22’W)
+        // harvest dates and GDD
+        /*
 Cultivar LB NWREC LB NWREC
 Interlaken Seedless 27 Aug 25 Aug 2242 2381
 Jupiter 27 Aug 25 Aug 2242 2381
@@ -70,6 +67,5 @@ season and had an inferior quality compared
 to 'Neptune', another green-fruited late-season cultivar. 'Neptune' is thus a better lateseason option for growers in this region.
 
 */
-
     ]
 }

@@ -149,11 +149,11 @@
             released: "USDA-OSU 1957*",
             patent: ""
         },
-// todo - other programs:
-// todo - Triple Crown(1996; USDA-ARS, Beltsville, primary releasing institution)
-// todo - Saanich (2006; Agric. and Agri-Food Canada primary releasing institution)
-// todo - Esquimalt (2005; Agric. and Agri-Food Canada primary releasing institution)
-// todo - Stolo (2007; Agriculture and Agri-Foods Canada primary releasing institution)
+        // todo - other programs:
+        // todo - Triple Crown(1996; USDA-ARS, Beltsville, primary releasing institution)
+        // todo - Saanich (2006; Agric. and Agri-Food Canada primary releasing institution)
+        // todo - Esquimalt (2005; Agric. and Agri-Food Canada primary releasing institution)
+        // todo - Stolo (2007; Agriculture and Agri-Foods Canada primary releasing institution)
 
         // Red Raspberry
         {
@@ -171,11 +171,9 @@
             patent: ""
         },
 
-
-// Chinook (2002)
-// Coho (1999)
-// Lewis (1998; in cooperation with HortResearch Inc. New Zealand)
-
+        // Chinook (2002)
+        // Coho (1999)
+        // Lewis (1998; in cooperation with HortResearch Inc. New Zealand)
 
         // Strawberry
         {
@@ -200,20 +198,17 @@
             patent: ""
         },
 
+        // Sweet Sunrise (ORUS 2240-1) (2012)
+        // Charm (ORUS 2262-2) (2012)
 
-// Sweet Sunrise (ORUS 2240-1) (2012)
-// Charm (ORUS 2262-2) (2012)
+        // Sweet Bliss (2011)
+        // Valley Red (2009) https://journals.ashs.org/hortsci/view/journals/hortsci/44/5/article-p1468.xml
 
-// Sweet Bliss (2011)
-// Valley Red (2009) https://journals.ashs.org/hortsci/view/journals/hortsci/44/5/article-p1468.xml
+        // Pinnacle (2002)
+        // Tillamook (2002)
 
-// Pinnacle (2002)
-// Tillamook (2002)
-
-// Firecracker (1997)
-// Independence(1997
-
-
+        // Firecracker (1997)
+        // Independence(1997
 
         // Blueberry
         {
@@ -238,29 +233,17 @@
             description: "ornamental. https://journals.ashs.org/hortsci/view/journals/hortsci/50/12/article-p1828.xml",
             released: "USDA-OSU 2015*",
             patent: "https://patents.google.com/patent/USPP24209 expires 2032-06-26"
-        },
+        }
 
-
-
-// Pink Champagne  pink, highbush (2007)
-// Pink Lemonade  pink rabbiteye (2007)
-
-
-
+        // Pink Champagne  pink, highbush (2007)
+        // Pink Lemonade  pink rabbiteye (2007)
 
         // https://extension.oregonstate.edu/crop-production/berries/usda-ars-osu-cooperative-breeding-program-nwrec-trials
 
-
-
-
         // 'Ananasnaya' hardy kiwifruit
-
-
-
-
 
         // usda release? https://oregon-berries.com/variety/kotata-blackberry/
         // ?? https://oregon-berries.com/variety/boysenberry/
-        // 
+        //
     ]
 }

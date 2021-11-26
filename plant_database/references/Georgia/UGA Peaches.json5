@@ -13,16 +13,10 @@
         }
     ],
     plants: [
-
-// from a patent/paper canvas
-
-// GulfAtlas peach https://patents.google.com/patent/USPP27128 expires 2033-09-27
-// https://journals.ashs.org/hortsci/view/journals/hortsci/49/8/article-p1093.xml
-
-
-// Gulfsnow peach https://patents.google.com/patent/USPP25299 expires 2032-10-27
-// https://journals.ashs.org/hortsci/view/journals/hortsci/48/1/article-p126.xml
-
-
+        // from a patent/paper canvas
+        // GulfAtlas peach https://patents.google.com/patent/USPP27128 expires 2033-09-27
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/49/8/article-p1093.xml
+        // Gulfsnow peach https://patents.google.com/patent/USPP25299 expires 2032-10-27
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/48/1/article-p126.xml
     ]
 }

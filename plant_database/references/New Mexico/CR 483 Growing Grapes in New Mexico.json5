@@ -1,4 +1,4 @@
-// todo 
+// todo
 {
     title: "Circular 483: Growing Grapes in New Mexico",
     author: "Esteban Herrera, Extension Horticulturist",
@@ -13,6 +13,5 @@
             longitude: -106.75678369515053
         }
     ],
-    plants: [
-    ]
+    plants: []
 }

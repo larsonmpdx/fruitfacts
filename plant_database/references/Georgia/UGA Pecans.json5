@@ -13,78 +13,63 @@
         }
     ],
     plants: [
-// todo: others in this list that were older, unpatented, joint, etc.
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list.html
-// http://georgiacultivars.com/cultivars/pecans/ todo
-
-
-
-
-
-
-// Morrill 2010
-// https://patents.google.com/patent/USPP23335
-// http://georgiacultivars.com/cultivars/morrell // yes the url is misspelled
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list/morrill.html
-// AKA: ["Selection No. 58"]
-// ‘Wichita’ x ‘Pawnee’.
-
-// Cunard 2011
-// https://patents.google.com/patent/USPP24373 expires 2032-05-31
-// http://georgiacultivars.com/cultivars/cunard
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list/cunard.html
-// AKA: ["Selection No. 70"]
-// ‘Wichita’ x ‘Pawnee’.  
-
-// Byrd 2012
-// https://patents.google.com/patent/USPP20867 expires 2028-07-23
-// http://georgiacultivars.com/cultivars/byrd
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list/byrd.html
-// AKA: ["Selection No. 89"]
-// ‘Wichita’ x ‘Pawnee’. 
-
-// Huffman 2012
-// https://patents.google.com/patent/USPP25465
-// http://georgiacultivars.com/cultivars/huffman
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list/huffman.html
-// AKA: ["Selection No. 3"]
-// ‘Pawnee’ x ‘Desirable’
-
-// Treadwell 2012
-// https://patents.google.com/patent/USPP25740 expires 2033-11-05
-// http://georgiacultivars.com/cultivars/treadwell
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list/treadwell.html
-// AKA: ["Selection No. 34"]
-// ‘Wichita’ x ‘Pawnee’
-
-// Tom 2014
-// https://patents.google.com/patent/USPP26705 expires 2035-01-06
-// http://georgiacultivars.com/cultivars/tom
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list/tom.html
-// AKA: ["Selection No. 121"]
-// ‘Wichita’ x ‘Pawnee’
-
-// Whiddon 2015
-// http://georgiacultivars.com/cultivars/whiddon
-// https://patents.google.com/patent/USPP29316 expires 2036-07-05
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list/whiddon.html
-// AKA: ["Selection No. 16"]
-// ‘Pawnee’ x ‘Desirable’
-
-// Tanner 2015
-// https://patents.google.com/patent/USPP29422 expires 2036-07-05
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list/tanner.html
-// AKA: ["Selection No. 112"]
-// ‘Wichita’ x ‘Pawnee’.
-
-// Avalon Pecan 2017
-// Pecan "Ga. 00-7-75" https://patents.google.com/patent/USPP30227 expires 2037-04-05
-//    patent says ‘Barton’ x ‘Gloria Grande’ and info page says  ‘Gloria Grande’ x ‘Caddo’
-//    lack of scab infection, large nut size, good kernel quality, and moderately early harvest
-// https://journals.ashs.org/hortsci/view/journals/hortsci/53/12/article-p1915.xml
-// https://pecanbreeding.uga.edu/cultivars/alphabetical-list/Avalon.html
-// http://georgiacultivars.com/images/uploads/documents/GA_00-7-75_Pecan_Cultivar.pdf
-
-// as of 2021 I think this is still the newest UGA pecan release
+        // todo: others in this list that were older, unpatented, joint, etc.
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list.html
+        // http://georgiacultivars.com/cultivars/pecans/ todo
+        // Morrill 2010
+        // https://patents.google.com/patent/USPP23335
+        // http://georgiacultivars.com/cultivars/morrell // yes the url is misspelled
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list/morrill.html
+        // AKA: ["Selection No. 58"]
+        // ‘Wichita’ x ‘Pawnee’.
+        // Cunard 2011
+        // https://patents.google.com/patent/USPP24373 expires 2032-05-31
+        // http://georgiacultivars.com/cultivars/cunard
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list/cunard.html
+        // AKA: ["Selection No. 70"]
+        // ‘Wichita’ x ‘Pawnee’.
+        // Byrd 2012
+        // https://patents.google.com/patent/USPP20867 expires 2028-07-23
+        // http://georgiacultivars.com/cultivars/byrd
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list/byrd.html
+        // AKA: ["Selection No. 89"]
+        // ‘Wichita’ x ‘Pawnee’.
+        // Huffman 2012
+        // https://patents.google.com/patent/USPP25465
+        // http://georgiacultivars.com/cultivars/huffman
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list/huffman.html
+        // AKA: ["Selection No. 3"]
+        // ‘Pawnee’ x ‘Desirable’
+        // Treadwell 2012
+        // https://patents.google.com/patent/USPP25740 expires 2033-11-05
+        // http://georgiacultivars.com/cultivars/treadwell
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list/treadwell.html
+        // AKA: ["Selection No. 34"]
+        // ‘Wichita’ x ‘Pawnee’
+        // Tom 2014
+        // https://patents.google.com/patent/USPP26705 expires 2035-01-06
+        // http://georgiacultivars.com/cultivars/tom
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list/tom.html
+        // AKA: ["Selection No. 121"]
+        // ‘Wichita’ x ‘Pawnee’
+        // Whiddon 2015
+        // http://georgiacultivars.com/cultivars/whiddon
+        // https://patents.google.com/patent/USPP29316 expires 2036-07-05
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list/whiddon.html
+        // AKA: ["Selection No. 16"]
+        // ‘Pawnee’ x ‘Desirable’
+        // Tanner 2015
+        // https://patents.google.com/patent/USPP29422 expires 2036-07-05
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list/tanner.html
+        // AKA: ["Selection No. 112"]
+        // ‘Wichita’ x ‘Pawnee’.
+        // Avalon Pecan 2017
+        // Pecan "Ga. 00-7-75" https://patents.google.com/patent/USPP30227 expires 2037-04-05
+        //    patent says ‘Barton’ x ‘Gloria Grande’ and info page says  ‘Gloria Grande’ x ‘Caddo’
+        //    lack of scab infection, large nut size, good kernel quality, and moderately early harvest
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/53/12/article-p1915.xml
+        // https://pecanbreeding.uga.edu/cultivars/alphabetical-list/Avalon.html
+        // http://georgiacultivars.com/images/uploads/documents/GA_00-7-75_Pecan_Cultivar.pdf
+        // as of 2021 I think this is still the newest UGA pecan release
     ]
 }

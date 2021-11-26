@@ -5,7 +5,7 @@
 {
     title: "Ripening Dates of Elberta Peach at Various Locations",
     author: "",
-    url: "\"Handbook of Peach and Nectarine Varieties\" Okie 1998",
+    url: '"Handbook of Peach and Nectarine Varieties" Okie 1998',
     published: "",
     accessed: "Oct 2021",
     type: "extension test",
@@ -16,6 +16,5 @@
             longitude: -77.01301046627138
         }
     ],
-    plants: [
-    ]
+    plants: []
 }

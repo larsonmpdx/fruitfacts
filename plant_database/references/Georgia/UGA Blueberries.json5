@@ -13,145 +13,104 @@
         }
     ],
     plants: [
-        
         // https://smallfruits.org/files/2019/06/alap10rep.pdf
-
-// https://turf.caes.uga.edu/content/dam/caes-subsite/georgiaturf/docs/se-turf/presentations/2015/2015-scott-nesmith.pdf
-
-// https://smallfruits.org/files/2019/06/SRFC-training-Jun-19-21-2007.pdf
-// todo - has a few harvest times on the last slide
-
-// todo https://smallfruits.org/files/2019/06/New-UGA-Rabbiteye-Blueberry-Varieties-2017-Update.pdf
-
-// https://turf.caes.uga.edu/content/dam/caes-subsite/georgiaturf/docs/se-turf/presentations/2015/2015-scott-nesmith.pdf
-
-
-
-
-
-
-// http://georgiacultivars.com/
-
-// http://georgiacultivars.com/cultivars/blueberries/
-
-
-// todo - see if any are missing/new
-// https://patents.google.com/?inventor=D.+Scott+NeSmith
-
-// todo - fill in articles
-// https://journals.ashs.org/search?f_0=author&q_0=D.+Scott+NeSmith
-// https://journals.ashs.org/search?f_0=author&q_0=Mark+K.+Ehlenfeldt
-
-
-
-// Alapaha 2010? Rabbiteye
-// http://georgiacultivars.com/cultivars/alapaha
-// USPP 16,266
-// https://journals.ashs.org/hortsci/view/journals/hortsci/37/4/article-p714.xml
-
-// TH-682
-// AKA: ["Blue Suede™"]
-// http://georgiacultivars.com/cultivars/blue-suede
-// 21,222
-// Southern Highbush Blueberry
-//     Early season
-// https://journals.ashs.org/hortsci/view/journals/hortsci/45/2/article-p302.xml
-
-// Camellia 2005
-// AKA: ["TH-621"]
-// http://georgiacultivars.com/cultivars/camellia
-// 18,151
-// https://journals.ashs.org/hortsci/view/journals/hortsci/41/3/article-p512F.xml
-
-// TH-819
-// AKA: ["Georgia Dawn™"]
-// https://patents.google.com/patent/USPP24696 expires 2033-02-23
-// https://journals.ashs.org/hortsci/view/journals/hortsci/49/5/article-p674.xml
-
-// T-1101
-// rabbiteye
-// AKA: ["Krewer™"]
-// http://georgiacultivars.com/cultivars/krewer
-// https://journals.ashs.org/hortsci/view/journals/hortsci/53/1/article-p102.xml
-// https://patents.google.com/patent/USPP28623 expires 2036-01-01
-// https://journals.ashs.org/hortsci/view/journals/hortsci/53/1/article-p102.xml
-
-// Ochlockonee 2002 rabbiteye
-// http://georgiacultivars.com/cultivars/ochlockonee
-// https://patents.google.com/patent/USPP17300 expires 2024-12-15
-// https://journals.ashs.org/hortsci/view/journals/hortsci/38/7/article-p1448.xml
-
-// Palmetto 2003
-// Southern Highbush
-// http://georgiacultivars.com/cultivars/palmetto
-// https://patents.google.com/patent/USPP16756 expires 2024-08-02
-// https://journals.ashs.org/hortsci/view/journals/hortsci/39/7/article-p1774.xml
-
-
-// Rebel
-// AKA: ["TH-642"]
-// http://georgiacultivars.com/cultivars/rebel
-// https://patents.google.com/patent/USPP18138 expire 2025-12-08
-// https://journals.ashs.org/hortsci/view/journals/hortsci/43/5/article-p1592.xml
-
-// TH-917 2014
-// AKA: [Miss Jackie™"]
-// http://georgiacultivars.com/cultivars/southern-misses-series
-// https://journals.ashs.org/hortsci/view/journals/hortsci/51/12/article-p1607.xml
-
-// TH-921 2014
-// AKA: [Miss Alice Mae™"]
-// http://georgiacultivars.com/cultivars/southern-misses-series
-// https://journals.ashs.org/hortsci/view/journals/hortsci/52/1/article-p196.xml
-
-// TH-948 2014
-// AKA: ["Miss Lilly™"]
-// http://georgiacultivars.com/cultivars/southern-misses-series
-// https://journals.ashs.org/hortsci/view/journals/hortsci/52/5/article-p784.xml
-
-// Southern Splendour 2010
-// TH-664
-// http://georgiacultivars.com/cultivars/southern-splendour
-// https://journals.ashs.org/hortsci/view/journals/hortsci/46/4/article-p674.xml
-
-// T-885
-// AKA: ["Summer Sunset (tm)"]
-//     Hybrid Blueberry, "mostly rabbiteye"
-// http://georgiacultivars.com/cultivars/summer-sunset
-// https://journals.ashs.org/hortsci/view/journals/hortsci/46/11/article-p1560.xml
-// https://patents.google.com/patent/USPP23374 expires 2031-10-11
-
-
-// Suziblue
-// AKA: ["TH-730"]
-// http://georgiacultivars.com/cultivars/suziblue
-// https://patents.google.com/patent/USPP21167 expires 2029-03-09
-// https://journals.ashs.org/hortsci/view/journals/hortsci/45/1/article-p142.xml
-
-
-// T-959
-// Rabbiteye Blueberry
-// AKA: ["Titan™"]
-// early season. large berry size
-// http://georgiacultivars.com/cultivars/titan
-// https://patents.google.com/patent/USPP24135 expires 2031-08-02
-// https://journals.ashs.org/hortsci/view/journals/hortsci/49/5/article-p672.xml
-
-// Vernon 2004
-// http://georgiacultivars.com/cultivars/vernon
-// 18,291
-// https://journals.ashs.org/hortsci/view/journals/hortsci/40/7/article-p2200.xml
-
-
-// can't find a match - extras
-// Victoria™ ‘TH-929’ "licensed to fall creek" https://patents.google.com/patent/USPP25994 expires 2034
-// OlympusBlue® ‘TH-1008’ https://patents.google.com/patent/USPP32219 expires 2039-11-07
-
-// TO-1398 ‘Gold Rush’ - this was in a presentation, it's named but I think not released as of 2021. ornamental orange berries
-
-
-// TO-1088 Cutie Pie "Dwarf Hybrid for Home Gardens"
-// https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p384.xml
-// https://patents.google.com/patent/USPP28467 expires 2035-09-17
+        // https://turf.caes.uga.edu/content/dam/caes-subsite/georgiaturf/docs/se-turf/presentations/2015/2015-scott-nesmith.pdf
+        // https://smallfruits.org/files/2019/06/SRFC-training-Jun-19-21-2007.pdf
+        // todo - has a few harvest times on the last slide
+        // todo https://smallfruits.org/files/2019/06/New-UGA-Rabbiteye-Blueberry-Varieties-2017-Update.pdf
+        // https://turf.caes.uga.edu/content/dam/caes-subsite/georgiaturf/docs/se-turf/presentations/2015/2015-scott-nesmith.pdf
+        // http://georgiacultivars.com/
+        // http://georgiacultivars.com/cultivars/blueberries/
+        // todo - see if any are missing/new
+        // https://patents.google.com/?inventor=D.+Scott+NeSmith
+        // todo - fill in articles
+        // https://journals.ashs.org/search?f_0=author&q_0=D.+Scott+NeSmith
+        // https://journals.ashs.org/search?f_0=author&q_0=Mark+K.+Ehlenfeldt
+        // Alapaha 2010? Rabbiteye
+        // http://georgiacultivars.com/cultivars/alapaha
+        // USPP 16,266
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/37/4/article-p714.xml
+        // TH-682
+        // AKA: ["Blue Suede™"]
+        // http://georgiacultivars.com/cultivars/blue-suede
+        // 21,222
+        // Southern Highbush Blueberry
+        //     Early season
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/45/2/article-p302.xml
+        // Camellia 2005
+        // AKA: ["TH-621"]
+        // http://georgiacultivars.com/cultivars/camellia
+        // 18,151
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/41/3/article-p512F.xml
+        // TH-819
+        // AKA: ["Georgia Dawn™"]
+        // https://patents.google.com/patent/USPP24696 expires 2033-02-23
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/49/5/article-p674.xml
+        // T-1101
+        // rabbiteye
+        // AKA: ["Krewer™"]
+        // http://georgiacultivars.com/cultivars/krewer
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/53/1/article-p102.xml
+        // https://patents.google.com/patent/USPP28623 expires 2036-01-01
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/53/1/article-p102.xml
+        // Ochlockonee 2002 rabbiteye
+        // http://georgiacultivars.com/cultivars/ochlockonee
+        // https://patents.google.com/patent/USPP17300 expires 2024-12-15
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/38/7/article-p1448.xml
+        // Palmetto 2003
+        // Southern Highbush
+        // http://georgiacultivars.com/cultivars/palmetto
+        // https://patents.google.com/patent/USPP16756 expires 2024-08-02
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/39/7/article-p1774.xml
+        // Rebel
+        // AKA: ["TH-642"]
+        // http://georgiacultivars.com/cultivars/rebel
+        // https://patents.google.com/patent/USPP18138 expire 2025-12-08
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/43/5/article-p1592.xml
+        // TH-917 2014
+        // AKA: [Miss Jackie™"]
+        // http://georgiacultivars.com/cultivars/southern-misses-series
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/51/12/article-p1607.xml
+        // TH-921 2014
+        // AKA: [Miss Alice Mae™"]
+        // http://georgiacultivars.com/cultivars/southern-misses-series
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/52/1/article-p196.xml
+        // TH-948 2014
+        // AKA: ["Miss Lilly™"]
+        // http://georgiacultivars.com/cultivars/southern-misses-series
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/52/5/article-p784.xml
+        // Southern Splendour 2010
+        // TH-664
+        // http://georgiacultivars.com/cultivars/southern-splendour
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/46/4/article-p674.xml
+        // T-885
+        // AKA: ["Summer Sunset (tm)"]
+        //     Hybrid Blueberry, "mostly rabbiteye"
+        // http://georgiacultivars.com/cultivars/summer-sunset
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/46/11/article-p1560.xml
+        // https://patents.google.com/patent/USPP23374 expires 2031-10-11
+        // Suziblue
+        // AKA: ["TH-730"]
+        // http://georgiacultivars.com/cultivars/suziblue
+        // https://patents.google.com/patent/USPP21167 expires 2029-03-09
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/45/1/article-p142.xml
+        // T-959
+        // Rabbiteye Blueberry
+        // AKA: ["Titan™"]
+        // early season. large berry size
+        // http://georgiacultivars.com/cultivars/titan
+        // https://patents.google.com/patent/USPP24135 expires 2031-08-02
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/49/5/article-p672.xml
+        // Vernon 2004
+        // http://georgiacultivars.com/cultivars/vernon
+        // 18,291
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/40/7/article-p2200.xml
+        // can't find a match - extras
+        // Victoria™ ‘TH-929’ "licensed to fall creek" https://patents.google.com/patent/USPP25994 expires 2034
+        // OlympusBlue® ‘TH-1008’ https://patents.google.com/patent/USPP32219 expires 2039-11-07
+        // TO-1398 ‘Gold Rush’ - this was in a presentation, it's named but I think not released as of 2021. ornamental orange berries
+        // TO-1088 Cutie Pie "Dwarf Hybrid for Home Gardens"
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p384.xml
+        // https://patents.google.com/patent/USPP28467 expires 2035-09-17
     ]
 }

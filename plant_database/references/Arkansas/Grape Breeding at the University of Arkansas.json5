@@ -4,12 +4,12 @@
     url: "https://www.actahort.org/books/603/603_45.htm",
     published: "2003",
     accessed: "Oct 2021",
-    description: "about \"the largest table grape breeding effort in the U.S. outside of California.\" (in 2003)",
+    description: 'about "the largest table grape breeding effort in the U.S. outside of California." (in 2003)',
     type: "public breeding program list",
     locations: [
         {
             name: "Fruit Research Station, Clarksville",
-            latitude: 35.532778,   // in pub as "35*31'58'N 93*24'12'W"
+            latitude: 35.532778, // in pub as "35*31'58'N 93*24'12'W"
             longitude: -93.403333
         }
     ],
@@ -64,6 +64,6 @@
             description: "exceptional cluster size and attractiveness. fruity flavor, but not foxy. A-1562 x A-1704",
             released: "U Arkansas 1999", // Clark and Moore
             patent: "https://patents.google.com/patent/USPP12302"
-        },
+        }
     ]
 }

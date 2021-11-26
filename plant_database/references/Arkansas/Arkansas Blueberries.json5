@@ -13,15 +13,11 @@
         }
     ],
     plants: [
-
-// https://aaes.uada.edu/fruit-breeding/blueberries/
-
-
+        // https://aaes.uada.edu/fruit-breeding/blueberries/
         // Ozarkblue
-// https://patents.google.com/patent/USPP10035 expired 2016-02-26
-
-// Norman
-// 2014-09 Blueberry Plant- 'Norman'        https://uark.flintbox.com/technologies/792a89ca-69d1-47da-976a-8635301126e1
-// https://patents.google.com/patent/USPP28502 expires 2036-01-19
+        // https://patents.google.com/patent/USPP10035 expired 2016-02-26
+        // Norman
+        // 2014-09 Blueberry Plant- 'Norman'        https://uark.flintbox.com/technologies/792a89ca-69d1-47da-976a-8635301126e1
+        // https://patents.google.com/patent/USPP28502 expires 2036-01-19
     ]
 }

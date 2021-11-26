@@ -13,47 +13,39 @@
         }
     ],
     plants: [
-
-// todo - maybe one file for each?
-// URL list (files in drive)
-
-// https://www.americanpomological.org/?page_id=25
-
-
-// https://digital.library.cornell.edu/catalog/chla3174378 I guess this is the 1st edition of the full book? can't get pdf but can read it
-
-// Brooks, R.M. and H.P. Olmo. 1972a. Register of new fruit and nut varieties. 2nd ed. Univ. of California Press, Berkeley.
-// - I guess this would be 25 and earlier
-
-// citations for previous lists, but I think not open access so I don't have PDFs:
-// Brooks, R.M. and H.P. Olmo. 1971. Register of new fruit and nut varieties list 26. HortScience 6:439-442.
-// Brooks, R.M. and H.P. Olmo. 1972b. Register of new fruit and nut varieties list 27. HortScience 7:455-460.
-// Brooks, R.M. and H.P. Olmo. 1973. Register of new fruit and nut varieties list 28. HortScience 8:378-383.
-// Brooks, R.M. and H.P. Olmo. 1974. Register of new fruit and nut varieties list 29. HortScience 9:437-441.
-// Brooks, R.M. and H.P. Olmo. 1975. Register of new fruit and nut varieties list 30. HortScience 10:471-478.
-// Brooks, R.M. and H.P. Olmo. 1978. Register of new fruit and nut varieties list 31. HortScience 13:522-532.
-// Brooks, R.M. and H.P. Olmo. 1982. Register of new fruit and nut varieties list 31. HortScience 17:17-23.
-// Brooks, R.M. and H.P. Olmo. 1983. Register of new fruit and nut varieties list 33. HortScience 18:155-161.
-// Brooks, R.M. and H.P. Olmo. 1984. Register of new fruit and nut varieties list 34. HortScience 19:359-363.
-
-// Lists 34 and earlier are included in The Brooks and Olmo Register of Fruit & Nut Varieties, 3rd ed. (1997), ASHS Press.
-
-// lists 35-50 have maybe 12/page, 28 pages, ~= 5k varieties
-// 1991 List 35 https://journals.ashs.org/hortsci/view/journals/hortsci/26/8/article-p951.xml
-// 1994 List 36 https://journals.ashs.org/hortsci/view/journals/hortsci/29/9/article-p942.xml
-// 1995 List 37 https://journals.ashs.org/hortsci/view/journals/hortsci/30/6/article-p1135.xml
-// 1997 List 38 https://journals.ashs.org/hortsci/view/journals/hortsci/32/5/article-p785.xml
-// 1999 List 39 https://journals.ashs.org/hortsci/view/journals/hortsci/34/2/article-p181.xml
-// 2000 List 40 https://journals.ashs.org/hortsci/view/journals/hortsci/35/5/article-p812.xml
-// 2002 List 41 https://journals.ashs.org/hortsci/view/journals/hortsci/37/2/article-p251.xml
-// 2004 List 42 https://journals.ashs.org/hortsci/view/journals/hortsci/39/6/article-p1509.xml
-// 2006 List 43 https://journals.ashs.org/hortsci/view/journals/hortsci/41/5/article-p1101.xml
-// 2008 List 44 https://journals.ashs.org/hortsci/view/journals/hortsci/43/5/article-p1321.xml
-// 2010 list 45 https://journals.ashs.org/hortsci/view/journals/hortsci/45/5/article-p716.xml
-// 2012 list 46 https://journals.ashs.org/hortsci/view/journals/hortsci/47/5/article-p536.xml
-// 2014 list 47 https://journals.ashs.org/hortsci/view/journals/hortsci/49/4/article-p396.xml
-// 2016 list 48 https://journals.ashs.org/hortsci/view/journals/hortsci/51/6/article-p620.xml
-// 2018 list 49 https://journals.ashs.org/hortsci/abstract/journals/hortsci/53/6/article-p748.xml
-// 2020 list 50 https://journals.ashs.org/hortsci/view/journals/hortsci/55/7/article-p1164.xml
+        // todo - maybe one file for each?
+        // URL list (files in drive)
+        // https://www.americanpomological.org/?page_id=25
+        // https://digital.library.cornell.edu/catalog/chla3174378 I guess this is the 1st edition of the full book? can't get pdf but can read it
+        // Brooks, R.M. and H.P. Olmo. 1972a. Register of new fruit and nut varieties. 2nd ed. Univ. of California Press, Berkeley.
+        // - I guess this would be 25 and earlier
+        // citations for previous lists, but I think not open access so I don't have PDFs:
+        // Brooks, R.M. and H.P. Olmo. 1971. Register of new fruit and nut varieties list 26. HortScience 6:439-442.
+        // Brooks, R.M. and H.P. Olmo. 1972b. Register of new fruit and nut varieties list 27. HortScience 7:455-460.
+        // Brooks, R.M. and H.P. Olmo. 1973. Register of new fruit and nut varieties list 28. HortScience 8:378-383.
+        // Brooks, R.M. and H.P. Olmo. 1974. Register of new fruit and nut varieties list 29. HortScience 9:437-441.
+        // Brooks, R.M. and H.P. Olmo. 1975. Register of new fruit and nut varieties list 30. HortScience 10:471-478.
+        // Brooks, R.M. and H.P. Olmo. 1978. Register of new fruit and nut varieties list 31. HortScience 13:522-532.
+        // Brooks, R.M. and H.P. Olmo. 1982. Register of new fruit and nut varieties list 31. HortScience 17:17-23.
+        // Brooks, R.M. and H.P. Olmo. 1983. Register of new fruit and nut varieties list 33. HortScience 18:155-161.
+        // Brooks, R.M. and H.P. Olmo. 1984. Register of new fruit and nut varieties list 34. HortScience 19:359-363.
+        // Lists 34 and earlier are included in The Brooks and Olmo Register of Fruit & Nut Varieties, 3rd ed. (1997), ASHS Press.
+        // lists 35-50 have maybe 12/page, 28 pages, ~= 5k varieties
+        // 1991 List 35 https://journals.ashs.org/hortsci/view/journals/hortsci/26/8/article-p951.xml
+        // 1994 List 36 https://journals.ashs.org/hortsci/view/journals/hortsci/29/9/article-p942.xml
+        // 1995 List 37 https://journals.ashs.org/hortsci/view/journals/hortsci/30/6/article-p1135.xml
+        // 1997 List 38 https://journals.ashs.org/hortsci/view/journals/hortsci/32/5/article-p785.xml
+        // 1999 List 39 https://journals.ashs.org/hortsci/view/journals/hortsci/34/2/article-p181.xml
+        // 2000 List 40 https://journals.ashs.org/hortsci/view/journals/hortsci/35/5/article-p812.xml
+        // 2002 List 41 https://journals.ashs.org/hortsci/view/journals/hortsci/37/2/article-p251.xml
+        // 2004 List 42 https://journals.ashs.org/hortsci/view/journals/hortsci/39/6/article-p1509.xml
+        // 2006 List 43 https://journals.ashs.org/hortsci/view/journals/hortsci/41/5/article-p1101.xml
+        // 2008 List 44 https://journals.ashs.org/hortsci/view/journals/hortsci/43/5/article-p1321.xml
+        // 2010 list 45 https://journals.ashs.org/hortsci/view/journals/hortsci/45/5/article-p716.xml
+        // 2012 list 46 https://journals.ashs.org/hortsci/view/journals/hortsci/47/5/article-p536.xml
+        // 2014 list 47 https://journals.ashs.org/hortsci/view/journals/hortsci/49/4/article-p396.xml
+        // 2016 list 48 https://journals.ashs.org/hortsci/view/journals/hortsci/51/6/article-p620.xml
+        // 2018 list 49 https://journals.ashs.org/hortsci/abstract/journals/hortsci/53/6/article-p748.xml
+        // 2020 list 50 https://journals.ashs.org/hortsci/view/journals/hortsci/55/7/article-p1164.xml
     ]
 }

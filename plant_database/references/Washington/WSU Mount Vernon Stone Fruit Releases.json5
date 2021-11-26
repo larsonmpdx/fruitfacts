@@ -18,7 +18,7 @@
             AKA: ["Croft"], // patent name
             type: "Peach",
             tags: ["Yellow Peach"],
-            description: "Margaret Proud provided for testing", 
+            description: "Margaret Proud provided for testing",
             disease_resistance: {
                 peach_leaf_curl: "resistant"
             },
@@ -28,7 +28,7 @@
         {
             name: "Puget Gold",
             type: "Apricot",
-            description: "The Copeland Family provided for testing. \"Puget Gold apricot. RA Norton, J King, GA Moulton - HortScience, 1988\"", // haven't gotten a pdf of the release paper, ashs doesn't make about pre-1990 easily found
+            description: 'The Copeland Family provided for testing. "Puget Gold apricot. RA Norton, J King, GA Moulton - HortScience, 1988"', // haven't gotten a pdf of the release paper, ashs doesn't make about pre-1990 easily found
             released: "1988"
         },
         {
@@ -38,7 +38,7 @@
             description: "Herb Frost provided for testing",
             disease_resistance: {
                 peach_leaf_curl: "resistant"
-            },
+            }
         },
         {
             name: "Orcas",
