@@ -1,256 +1,275 @@
-// https://www.lecooke.com/introductions.html
-
-/*
-
-https://www.lecooke.com/le-cooke-blog/history-behind-introduction-of-la-feliciana-peach.html
-
-https://www.lecooke.com/le-cooke-blog/late-korean-pear-okusankichi.html
-
-https://www.lecooke.com/le-cooke-blog/pettingill-apple.html
-
-https://www.lecooke.com/le-cooke-blog/casselman-plum-late-improved-santa-rosa-plum.html
-
-https://www.lecooke.com/le-cooke-blog/ghost-hill-white-texas-everbearing-fig.html
-
-https://www.lecooke.com/le-cooke-blog/feicheng-tao-peach.html
-
-https://www.lecooke.com/le-cooke-blog/tropi-berta-peach.html
-
-https://www.lecooke.com/le-cooke-blog/peachy-keen-peach.html
-
-?? maybe no variety
-https://www.lecooke.com/le-cooke-blog/persimmons.html
-
-https://www.lecooke.com/le-cooke-blog/golden-nectar-plum.html
-
-https://www.lecooke.com/le-cooke-blog/july-golden-apple.html
-
-https://www.lecooke.com/le-cooke-blog/spur-apples.html
-
-https://www.lecooke.com/le-cooke-blog/galaxy-peach-history.html
-
-https://www.lecooke.com/le-cooke-blog/italian-everbearing-fig-history.html
-
-https://www.lecooke.com/le-cooke-blog/santa-barbara-peach-history.html
-
-https://www.lecooke.com/le-cooke-blog/persimmon-history.html
-
-https://www.lecooke.com/le-cooke-blog/inca-plum-history.html
-
-https://www.lecooke.com/le-cooke-blog/sweet-and-white-pomegranate-history.html
-
-https://www.lecooke.com/le-cooke-blog/natural-dwarf-fruit-trees-histories.html
-
-https://www.lecooke.com/le-cooke-blog/conadria-fig-history.html
-
-https://www.lecooke.com/le-cooke-blog/black-jack-fig-history.html
-
-https://www.lecooke.com/le-cooke-blog/utah-giant-cherry-history.html
-
-https://www.lecooke.com/le-cooke-blog/kansas-sweet-cherry-history.html
-
-https://www.lecooke.com/le-cooke-blog/early-ruby-cherry-history.html
-
-https://www.lecooke.com/le-cooke-blog/compact-stella-cherry-history.html
-
-https://www.lecooke.com/le-cooke-blog/utah-sweet-pomegranate-history.html
-
-https://www.lecooke.com/le-cooke-blog/long-beach-peach-history.html
-
-https://www.lecooke.com/le-cooke-blog/tropic-gold-apricot-history.html
-
-https://www.lecooke.com/le-cooke-blog/montrose-apricot-history.html
-
-https://www.lecooke.com/le-cooke-blog/autumn-royal-apricot-history.html
-
-https://www.lecooke.com/le-cooke-blog/golden-amber-apricot-history.html
-
-https://www.lecooke.com/le-cooke-blog/royalty-apricot-history.html
-
-https://www.lecooke.com/le-cooke-blog/moniqui-apricot-history.html
-
-https://www.lecooke.com/le-cooke-blog/history-of-mild-climate-peach-introductions.html
-
-https://www.lecooke.com/le-cooke-blog/autumn-rosa-plum-history.html
-
-https://www.lecooke.com/le-cooke-blog/blueberry-grape-history.html
-
-https://www.lecooke.com/le-cooke-blog/midgely-s-purple-seedless-grape-history.html
-
-https://www.lecooke.com/le-cooke-blog/cooke-s-purple-wisteria-history.html
-
-https://www.lecooke.com/le-cooke-blog/caroline-wisteria-history.html
-
-https://www.lecooke.com/le-cooke-blog/john-fanick-peach-history.html
-
-https://www.lecooke.com/le-cooke-blog/fan-cris-pear-history.html
-
-https://www.lecooke.com/le-cooke-blog/fan-stil-pear-history.html
-
-https://www.lecooke.com/le-cooke-blog/arctic-fantasy-nectarine-history.html
-
-https://www.lecooke.com/le-cooke-blog/austin-pomegranate-history.html
-
-https://www.lecooke.com/le-cooke-blog/history-of-l-e-cooke-introductions.html
-
+{
+    title: "",
+    url: "https://www.lecooke.com/introductions.html https://www.lecooke.com/le-cooke-blog/history-of-l-e-cooke-introductions.html",
+    published: "",
+    accessed: "Oct 2021",
+    type: "nursery catalog",
+    description: "",
+    locations: [
+        {
+            name: "",
+            latitude: 0.0,
+            longitude: 0.0
+        }
+    ],
+    plants: [
+        // todo
+        /*
 
 
 from https://www.lecooke.com/introductions.html
 
 
 APPLES	 	 
- 	LEC	ANDERS™ APPLE
- 	 	ANNA APPLE
- 	 	BURGUNDY APPLE
- 	LEC	JULY GOLDEN DELICIOUS APPLE
- 	LEC	EARLY SUMMER RED APPLE
- 	 	EIN SHEMER APPLE
- 	 	GORDON™ APPLE
- 	 	MOLLIE'S DELICIOUS APPLE
- 	 	PETTINGILL APPLE
- 	 	PINK PEARL APPLE
- 	LEC	RED (CRIMSON) DELICIOUS SPUR APPLE
- 	LEC	YELLOW (YELO) DELICIOUS SPUR APPLE
- 	 	GRANNY SMITH SPUR APPLE
+LEC	ANDERS™ APPLE
+ANNA APPLE
+BURGUNDY APPLE
+
+LEC	JULY GOLDEN DELICIOUS APPLE
+https://www.lecooke.com/le-cooke-blog/july-golden-apple.html
+
+LEC	EARLY SUMMER RED APPLE
+EIN SHEMER APPLE
+GORDON™ APPLE
+MOLLIE'S DELICIOUS APPLE
+
+PETTINGILL APPLE
+https://www.lecooke.com/le-cooke-blog/pettingill-apple.html
+
+PINK PEARL APPLE
+
+
+https://www.lecooke.com/le-cooke-blog/spur-apples.html
+LEC	RED (CRIMSON) DELICIOUS SPUR APPLE
+LEC	YELLOW (YELO) DELICIOUS SPUR APPLE
+	GRANNY SMITH SPUR APPLE
 
 
 
 APRICOTS	 	 
- 	LEC	AUTUMN ROYAL APRICOT
- 	LEC	GOLDEN AMBER APRICOT
- 	 	MONIQUI APRICOT
- 	 	MONTROSE APRICOT
- 	 	ROYALTY APRICOT
- 	LEC	TROPIC GOLD™ APRICOT
+LEC	AUTUMN ROYAL APRICOT
+https://www.lecooke.com/le-cooke-blog/autumn-royal-apricot-history.html
 
+LEC	GOLDEN AMBER APRICOT
+https://www.lecooke.com/le-cooke-blog/golden-amber-apricot-history.html
+
+
+https://www.lecooke.com/le-cooke-blog/moniqui-apricot-history.html
+MONIQUI APRICOT
+
+
+MONTROSE APRICOT
+https://www.lecooke.com/le-cooke-blog/montrose-apricot-history.html
+
+https://www.lecooke.com/le-cooke-blog/royalty-apricot-history.html
+ 	 	ROYALTY APRICOT
+
+ 	LEC	TROPIC GOLD™ APRICOT
+https://www.lecooke.com/le-cooke-blog/tropic-gold-apricot-history.html
 
 CHERRIES	 	 
- 	LEC	BADA BING™ CHERRY
- 	LEC	COMPACT STELLA CHERRY
- 	LEC	EARLY RUBY CHERRY
- 	 	KANSAS SWEET CHERRY
- 	 	UTAH GIANT CHERRY
+LEC	BADA BING™ CHERRY
 
 
+LEC	COMPACT STELLA CHERRY
+https://www.lecooke.com/le-cooke-blog/compact-stella-cherry-history.html
 
-FIGS	 	 
- 	 	BLACK JACK FIG
- 	LEC	CONADRIA FIG
- 	LEC	GHOST HILL™ WHITE TEXAS EVERBEARING FIG
- 	LEC	ITALIAN EVERBEARING FIG
- 	LEC	OSBORNE PROLIFIC FIG
+LEC	EARLY RUBY CHERRY
+https://www.lecooke.com/le-cooke-blog/early-ruby-cherry-history.html
+
+KANSAS SWEET CHERRY
+https://www.lecooke.com/le-cooke-blog/kansas-sweet-cherry-history.html
+
+UTAH GIANT CHERRY
+https://www.lecooke.com/le-cooke-blog/utah-giant-cherry-history.html
+
+
+FIGS
+
+BLACK JACK FIG
+https://www.lecooke.com/le-cooke-blog/black-jack-fig-history.html
+
+
+https://www.lecooke.com/le-cooke-blog/conadria-fig-history.html
+LEC	CONADRIA FIG
+
+LEC	GHOST HILL™ WHITE TEXAS EVERBEARING FIG
+https://www.lecooke.com/le-cooke-blog/ghost-hill-white-texas-everbearing-fig.html
+
+LEC	ITALIAN EVERBEARING FIG
+https://www.lecooke.com/le-cooke-blog/italian-everbearing-fig-history.html
+
+LEC	OSBORNE PROLIFIC FIG
 
 
 
 NECTARINES	 	 
- 	LEC	ARCTIC FANTASY® NECTARINE
+LEC	ARCTIC FANTASY® NECTARINE
+https://www.lecooke.com/le-cooke-blog/arctic-fantasy-nectarine-history.html
 
-
-
+https://www.lecooke.com/le-cooke-blog/history-of-mild-climate-peach-introductions.html
 PEACHES	 	HISTORY OF MILD CLIMATE PEACH INTRODUCTIONS
- 	 	BONITA PEACH
- 	 	CHAMPAGNE PEACH
- 	 	EARLIGRANDE PEACH
- 	 	EARLY AMBER PEACH
- 	LEC	FEICHENG TAO PEACH
- 	 	LA FELICIANA PEACH
- 	 	FLORDAPRINCE PEACH
- 	 	FROST® PEACH
- 	 	GALAXY PEACH
- 	LEC	GLEASON ELBERTA PEACH (Lemon Elberta)
- 	LEC	JOHN FANICK™ PEACH
- 	LEC	LONG BEACH PEACH
- 	LEC	PEACHY KEEN PEACH
- 	 	RIO GRANDE PEACH
- 	 	RUBIDOUX PEACH
- 	LEC	SANTA BARBARA PEACH
- 	LEC	TROPI-BERTA® PEACH
- 	 	VENTURA PEACH
+BONITA PEACH
+CHAMPAGNE PEACH
+EARLIGRANDE PEACH
+EARLY AMBER PEACH
+
+LEC	FEICHENG TAO PEACH
+https://www.lecooke.com/le-cooke-blog/feicheng-tao-peach.html
+
+LA FELICIANA PEACH
+https://www.lecooke.com/le-cooke-blog/history-behind-introduction-of-la-feliciana-peach.html
+
+FLORDAPRINCE PEACH
+
+FROST® PEACH
+
+GALAXY PEACH
+https://www.lecooke.com/le-cooke-blog/galaxy-peach-history.html
+
+LEC	GLEASON ELBERTA PEACH (Lemon Elberta)
+
+https://www.lecooke.com/le-cooke-blog/john-fanick-peach-history.html
+LEC	JOHN FANICK™ PEACH
+
+LEC	LONG BEACH PEACH
+https://www.lecooke.com/le-cooke-blog/long-beach-peach-history.html
+
+LEC	PEACHY KEEN PEACH
+https://www.lecooke.com/le-cooke-blog/peachy-keen-peach.html
+
+RIO GRANDE PEACH
+
+RUBIDOUX PEACH
+
+LEC	SANTA BARBARA PEACH
+https://www.lecooke.com/le-cooke-blog/santa-barbara-peach-history.html
+
+LEC	TROPI-BERTA® PEACH
+https://www.lecooke.com/le-cooke-blog/tropi-berta-peach.html
+
+VENTURA PEACH
 
 
 
-PEARS	 	 
- 	LEC	FAN-CRIS™ PEAR
- 	 	FAN-STIL™ PEAR
- 	 	FLORDAHOME PEAR
- 	 	HOOD PEAR
- 	LEC	LATE KOREAN (Okusankichi) PEAR
- 	 	MONTERREY PEAR
+PEARS
+
+LEC	FAN-CRIS™ PEAR
+https://www.lecooke.com/le-cooke-blog/fan-cris-pear-history.html
+
+
+https://www.lecooke.com/le-cooke-blog/fan-stil-pear-history.html
+FAN-STIL™ PEAR
+
+FLORDAHOME PEAR
+HOOD PEAR
+
+LEC	LATE KOREAN (Okusankichi) PEAR
+https://www.lecooke.com/le-cooke-blog/late-korean-pear-okusankichi.html
+
+MONTERREY PEAR
 
 
 
+?? maybe no variety
+https://www.lecooke.com/le-cooke-blog/persimmons.html
 
 PERSIMMONS	 	 
- 	LEC	FUYU (IMOTO) PERSIMMON
+LEC	FUYU (IMOTO) PERSIMMON
+https://www.lecooke.com/le-cooke-blog/persimmon-history.html
+
+PLUMS
+
+https://www.lecooke.com/le-cooke-blog/autumn-rosa-plum-history.html	 
+LEC	AUTUMN ROSA PLUM
 
 
-PLUMS	 	 
- 	LEC	AUTUMN ROSA PLUM
- 	LEC	CASSELMAN PLUM
- 	LEC	GOLDEN NECTAR™ PLUM
- 	LEC	IMPROVED LATE SANTA ROSA PLUM
- 	 	INCA PLUM
+LEC	CASSELMAN PLUM
+https://www.lecooke.com/le-cooke-blog/casselman-plum-late-improved-santa-rosa-plum.html
+
+LEC	GOLDEN NECTAR™ PLUM
+https://www.lecooke.com/le-cooke-blog/golden-nectar-plum.html
+
+LEC	IMPROVED LATE SANTA ROSA PLUM
+https://www.lecooke.com/le-cooke-blog/casselman-plum-late-improved-santa-rosa-plum.html
+
+INCA PLUM
+https://www.lecooke.com/le-cooke-blog/inca-plum-history.html
 
 
+POMEGRANATES
+https://www.lecooke.com/le-cooke-blog/sweet-and-white-pomegranate-history.html
 
-POMEGRANATES	 	 
- 	LEC	AUSTIN POMEGRANATE
- 	 	SWEET POMEGRANATE
- 	 	UTAH SWEET POMEGRANATE
- 	 	WHITE POMEGRANATE
+
+LEC	AUSTIN POMEGRANATE
+https://www.lecooke.com/le-cooke-blog/austin-pomegranate-history.html
+
+SWEET POMEGRANATE
+
+UTAH SWEET POMEGRANATE
+https://www.lecooke.com/le-cooke-blog/utah-sweet-pomegranate-history.html
+
+WHITE POMEGRANATE
 
 
 QUINCE	 	 
- 	LEC	COOKE'S JUMBO QUINCE
+LEC	COOKE'S JUMBO QUINCE
 
 
 
 NATURAL DWARF NECTARINES	 	 
- 	LEC	GOLDEN PROLIFIC NECTARINE
- 	LEC	RED SUNSET NECTARINE
- 	LEC	SILVER PROLIFIC NECTARINE
- 	LEC	SOUTHERN BELLE NECTARINE
+LEC	GOLDEN PROLIFIC NECTARINE
+LEC	RED SUNSET NECTARINE
+LEC	SILVER PROLIFIC NECTARINE
+LEC	SOUTHERN BELLE NECTARINE
 
 
+
+
+https://www.lecooke.com/le-cooke-blog/natural-dwarf-fruit-trees-histories.html
 
 NATURAL DWARF PEACHES	 	 
- 	LEC	EMPRESS PEACH
- 	LEC	GOLDEN GLORY PEACH
- 	LEC	SOUTHERN FLAME PEACH
- 	LEC	SOUTHERN ROSE PEACH
- 	LEC	SOUTHERN SWEET PEACH
- 	LEC	SUNBURST PEACH
+LEC	EMPRESS PEACH
+LEC	GOLDEN GLORY PEACH
+LEC	SOUTHERN FLAME PEACH
+LEC	SOUTHERN ROSE PEACH
+LEC	SOUTHERN SWEET PEACH
+LEC	SUNBURST PEACH
 
 
 WALNUTS	 	 
- 	LEC	CARPATHIAN (Mesa) WALNUT
- 	LEC	COOKE'S GIANT SWEET WALNUT
- 	LEC	IDAHO WALNUT
+LEC	CARPATHIAN (Mesa) WALNUT
+LEC	COOKE'S GIANT SWEET WALNUT
+LEC	IDAHO WALNUT
 
 
 
 GRAPES	 	 
- 	LEC	BLUEBERRY™ GRAPE
- 	 	EASTERN CONCORD SEEDLESS GRAPE
- 	LEC	MIDGELY'S PURPLE SEEDLESS GRAPE
+LEC	BLUEBERRY™ GRAPE
+https://www.lecooke.com/le-cooke-blog/blueberry-grape-history.html
 
+
+EASTERN CONCORD SEEDLESS GRAPE
+
+
+LEC	MIDGELY'S PURPLE SEEDLESS GRAPE
+https://www.lecooke.com/le-cooke-blog/midgely-s-purple-seedless-grape-history.html
 
 
 RASPBERRY	 	 
- 	LEC	BABABERRY®
+LEC	BABABERRY®
 
 
 
 
 MULBERRIES (Morus)	 	 
- 	LEC	CHAPARRAL WEEPING MULBERRY
- 	LEC	COOKE'S PAKISTAN FRUITING MULBERRY
- 	 	FAN-SAN™ MULBERRY
- 	 	TEAS WEEPING FRUITING MULBERRY
- 	LEC	WHITE FRUITING MULBERRY
-
-
+LEC	CHAPARRAL WEEPING MULBERRY
+LEC	COOKE'S PAKISTAN FRUITING MULBERRY
+	FAN-SAN™ MULBERRY
+	TEAS WEEPING FRUITING MULBERRY
+LEC	WHITE FRUITING MULBERRY
 
 
 */
-
+    ]
+}
