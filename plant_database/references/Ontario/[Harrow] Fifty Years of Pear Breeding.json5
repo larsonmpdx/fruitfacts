@@ -1,0 +1,126 @@
+{
+    title: "Fifty Years of Pear Breeding: An Overview of the Harrow (Ontario, Canada) Pear Breeding Program",
+    author: "David M. Hunter",
+    url: "https://dergipark.org.tr/en/download/article-file/270287",
+    published: "2016",
+    accessed: "Oct 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "Harrow RDC, Ontario CA",
+            latitude: 42.03348411240794,
+            longitude: -82.89994142577936
+        }
+    ],
+    plants: [
+        // todo - incorporate disease resistance notes
+        {
+            type: "Euro Pear",
+            name: "Bartlett",
+            description: "included in this list for a reference harvest time (not a Harrow release)",
+            // harvest time worked out from Harrow Delight "August 10  ~2 weeks before Bartlett" so August 10 +14 days = August 24
+            harvest_time: "August 24"
+        },
+        {
+            type: "Euro Pear",
+            name: "Harrow Delight",
+            AKA: ["HW603"],
+            harvest_time: "August 10", // "August 10  ~2 weeks before Bartlett"
+            released: "Harrow 1981*"
+        },
+        // Mature trees have excellent resistance to fire blight (9.5 rating on the USDA scale)
+        // but this cultivar is susceptible to pear psylla
+
+
+        {
+            type: "Euro Pear",
+            name: "Harrow Gold", // US trademark appears to be applied to the "AC" part although nurseries are pretty fuzzy on this
+            AKA: ["HW616", "AC Harrow Gold (tm)"],
+            patent: "https://patents.google.com/patent/USPP16124 expires 2023-12-15",
+            released: "Harrow 2000*",
+            // "Fruit are picked ~10 days before Bartlett, between Harrow Delight and Harvest Queen"
+            harvest_time_relative: "Bartlett-10"
+        },
+        // fire blight resistant (9.5 rating)
+
+
+
+        {
+            type: "Euro Pear",
+            name: "Harvest Queen",
+            AKA: ["HW602"],
+            released: "Harrow 1981*",
+            // "Picked the third week of August, ~1week before Bartlet"
+            harvest_time_relative: "Bartlett -1 week"
+        },
+        // very good fire blight resistance (9.1 rating)
+
+
+
+        {
+            type: "Euro Pear",
+            name: "Harrow Crisp", // US trademark appears to be applied to the "AC" part although nurseries are pretty fuzzy on this
+            AKA: ["HW610", "AC Harrow Crisp (tm)"],
+            patent: "https://patents.google.com/patent/USPP17843 expires 2023-01-21",
+            // matures at the end of August or early September, about the same time as Bartlett
+            harvest_time_relative: "Bartlett +0",
+            released: "Harrow 2000*"
+        },
+        // very good fire blight resistance (9.4 rating)
+
+
+
+        {
+            type: "Euro Pear",
+            name: "HW624",
+            harvest_time_relative: "Bartlett +7 to +14",
+            // unreleased: "Protection under the Plant Breeders Rights Act was granted in 2012, and this selection will be introduced in the near future"
+            released: "Harrow*"
+        },
+        // HW624 also has field resistance to pear psylla
+
+
+        {
+            type: "Euro Pear",
+            name: "HW623",
+            harvest_time_relative: "Bartlett +3 weeks", // "~3 weeks after Bartlet"
+            // unreleased: "Protection under the Plant Breeders Rights Act was granted in 2010, and this selection will be introduced in the near future"
+            released: "Harrow*"
+        },
+
+    
+
+
+        {
+            type: "Euro Pear",
+            name: "Harovin Sundown",
+            harvest_time_relative: "Bartlett +3 weeks", // "3 weeks after Bartlet"
+            AKA: ["HW614"],
+            released: "Harrow 2008*"
+        },
+        // fire blight resistant (9.6 rating)
+
+
+
+        {
+            type: "Euro Pear",
+            name: "Harrow Sweet", // PVM calls this "AC (tm)" but it was released in 1990 so... I'm not sure about that
+            AKA: ["HW609"],
+            harvest_time_relative: "Bartlett +23 to +25",
+            patent: "https://patents.google.com/patent/USPP9863 expired 2015-10-12",
+            released: "Harrow 1990*"
+        },
+        // good fire blight resistance (9.3 rating)
+
+
+        {
+            type: "Euro Pear",
+            name: "HW620",
+            harvest_time_relative: "Bartlett +4 weeks",
+            // unreleased: "Protection under the Plant Breeders Rights Act was granted in 2012, and this selection will be introduced in the near future"
+            released: "Harrow*"
+        },
+        // very good fire blight resistance (9.3 rating)
+        // pear scab has been a problem in some years
+    ]
+}
