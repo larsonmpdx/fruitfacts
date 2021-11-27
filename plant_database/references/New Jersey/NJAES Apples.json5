@@ -41,6 +41,7 @@
         {
             name: "NJ 150",
             AKA: ["RubyRush (tm)"],
+            type: "Apple",
             patent: "https://patents.google.com/patent/USPP33546 expires 2040-11-06"
         }
         // todo - variety search under NJ 150 patent inventors

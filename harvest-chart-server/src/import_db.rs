@@ -1163,6 +1163,28 @@ fn add_collection_plant(
     1
 }
 
+// get collection name from collection ID. used for the notoriety text description
+fn get_collection_name(
+    collection_id: Option<i32>,
+    db_conn: &SqliteConnection,
+) -> String {
+    if let Some(collection_id) = collection_id {
+        if let Ok(collection) = collections::dsl::collections
+        .filter(collections::id.eq(collection_id))
+        .first::<Collection>(db_conn) {
+            if let Some(title) = collection.title {
+                return title;
+            } else {
+                return format!("collection {}", collection_id);
+            }
+        } else {
+            return format!("collection {} not found", collection_id);
+        }
+    } else {
+        "no collection".to_string()
+    }
+}
+
 // if we're given a location like "I" and we have "short_name" matching "I" in our top-level locations list,
 // return "name" from the top level
 fn get_location_name(
@@ -1883,7 +1905,7 @@ fn calculate_notoriety(db_conn: &SqliteConnection) {
         let notoriety_score =
             notoriety::base_plant_notoriety_calc(&notoriety::BasePlantNotorietyInput {
                 notoriety_highest_collection_score: plant.notoriety_highest_collection_score,
-                notoriety_highest_collection_score_name: "todo".to_string(), // plant.notoriety_highest_collection_score_id -> name
+                notoriety_highest_collection_score_name: get_collection_name(plant.notoriety_highest_collection_score_id, db_conn),
                 current_year,
                 release_year: plant.release_year,
                 number_of_references: plant.number_of_references,

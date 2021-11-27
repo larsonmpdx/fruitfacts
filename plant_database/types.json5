@@ -60,6 +60,10 @@
         latin_name: "Ficus carica"
     },
     {
+        name: "Mulberry",
+        latin_name: "Morus spp."
+    },
+    {
         name: "Pomegranate",
         latin_name: "Punica granatum"
     },
