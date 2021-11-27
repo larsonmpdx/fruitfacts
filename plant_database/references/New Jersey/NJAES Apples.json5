@@ -18,7 +18,7 @@
             released: "1961"
         },
         {
-            name: "Mollies Delicious",
+            name: "Mollie's Delicious",
             type: "Apple",
             released: "1966"
         },
@@ -37,6 +37,15 @@
             AKA: ["Suncrisp (tm)"], // listed as (r) registered trademark in some places but Rutgers' own website claims (tm)
             type: "Apple",
             released: "1992"
+        },
+        {
+            name: "NJ 150",
+            AKA: ["RubyRush (tm)"],
+            patent: "https://patents.google.com/patent/USPP33546 expires 2040-11-06"
         }
+        // todo - variety search under NJ 150 patent inventors
+        // this program is still running but has very little public documentation
+        // https://patents.google.com/?inventor=Joseph+C.+Goffreda
+        // https://patents.google.com/?inventor=Anna+M.+Voordeckers
     ]
 }

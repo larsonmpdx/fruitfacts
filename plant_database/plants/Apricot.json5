@@ -47,15 +47,6 @@
         name: "Rival"
     },
     {
-        name: "Harglow",
-        description: "Harrow vareity"
-    },
-    {
-        name: "Golden Amber",
-        description: "L.E. Cooke Variety. https://www.lecooke.com/le-cooke-blog/golden-amber-apricot-history.html",
-        patent: "https://patents.google.com/patent/USPP3067 expired"
-    },
-    {
         name: "Bongo"
     },
     {
@@ -83,10 +74,5 @@
     {
         name: "Autumn Glo",
         description: "Zaiger variety"
-    },
-    {
-        name: "Autumn Royal",
-        description: "L.E. Cooke Variety. https://www.lecooke.com/le-cooke-blog/autumn-royal-apricot-history.html",
-        patent: "https://patents.google.com/patent/USPP2906 expired"
     }
 ]

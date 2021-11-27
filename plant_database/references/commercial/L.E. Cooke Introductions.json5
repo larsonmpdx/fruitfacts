@@ -1,5 +1,6 @@
 {
-    title: "",
+    title: "L.E. Cooke Introductions",
+    author: "Ron Ludekens",
     url: "https://www.lecooke.com/introductions.html https://www.lecooke.com/le-cooke-blog/history-of-l-e-cooke-introductions.html",
     published: "",
     accessed: "Oct 2021",
@@ -13,263 +14,501 @@
         }
     ],
     plants: [
-        // todo
-        /*
-
-
-from https://www.lecooke.com/introductions.html
-
-
-APPLES	 	 
-LEC	ANDERS™ APPLE
-ANNA APPLE
-BURGUNDY APPLE
-
-LEC	JULY GOLDEN DELICIOUS APPLE
-https://www.lecooke.com/le-cooke-blog/july-golden-apple.html
-
-LEC	EARLY SUMMER RED APPLE
-EIN SHEMER APPLE
-GORDON™ APPLE
-MOLLIE'S DELICIOUS APPLE
-
-PETTINGILL APPLE
-https://www.lecooke.com/le-cooke-blog/pettingill-apple.html
-
-PINK PEARL APPLE
-
-
-https://www.lecooke.com/le-cooke-blog/spur-apples.html
-LEC	RED (CRIMSON) DELICIOUS SPUR APPLE
-LEC	YELLOW (YELO) DELICIOUS SPUR APPLE
-	GRANNY SMITH SPUR APPLE
-
-
-
-APRICOTS	 	 
-LEC	AUTUMN ROYAL APRICOT
-https://www.lecooke.com/le-cooke-blog/autumn-royal-apricot-history.html
-
-LEC	GOLDEN AMBER APRICOT
-https://www.lecooke.com/le-cooke-blog/golden-amber-apricot-history.html
-
-
-https://www.lecooke.com/le-cooke-blog/moniqui-apricot-history.html
-MONIQUI APRICOT
-
-
-MONTROSE APRICOT
-https://www.lecooke.com/le-cooke-blog/montrose-apricot-history.html
-
-https://www.lecooke.com/le-cooke-blog/royalty-apricot-history.html
- 	 	ROYALTY APRICOT
-
- 	LEC	TROPIC GOLD™ APRICOT
-https://www.lecooke.com/le-cooke-blog/tropic-gold-apricot-history.html
-
-CHERRIES	 	 
-LEC	BADA BING™ CHERRY
-
-
-LEC	COMPACT STELLA CHERRY
-https://www.lecooke.com/le-cooke-blog/compact-stella-cherry-history.html
-
-LEC	EARLY RUBY CHERRY
-https://www.lecooke.com/le-cooke-blog/early-ruby-cherry-history.html
-
-KANSAS SWEET CHERRY
-https://www.lecooke.com/le-cooke-blog/kansas-sweet-cherry-history.html
-
-UTAH GIANT CHERRY
-https://www.lecooke.com/le-cooke-blog/utah-giant-cherry-history.html
-
-
-FIGS
-
-BLACK JACK FIG
-https://www.lecooke.com/le-cooke-blog/black-jack-fig-history.html
-
-
-https://www.lecooke.com/le-cooke-blog/conadria-fig-history.html
-LEC	CONADRIA FIG
-
-LEC	GHOST HILL™ WHITE TEXAS EVERBEARING FIG
-https://www.lecooke.com/le-cooke-blog/ghost-hill-white-texas-everbearing-fig.html
-
-LEC	ITALIAN EVERBEARING FIG
-https://www.lecooke.com/le-cooke-blog/italian-everbearing-fig-history.html
-
-LEC	OSBORNE PROLIFIC FIG
-
-
-
-NECTARINES	 	 
-LEC	ARCTIC FANTASY® NECTARINE
-https://www.lecooke.com/le-cooke-blog/arctic-fantasy-nectarine-history.html
-
-https://www.lecooke.com/le-cooke-blog/history-of-mild-climate-peach-introductions.html
-PEACHES	 	HISTORY OF MILD CLIMATE PEACH INTRODUCTIONS
-BONITA PEACH
-CHAMPAGNE PEACH
-EARLIGRANDE PEACH
-EARLY AMBER PEACH
-
-LEC	FEICHENG TAO PEACH
-https://www.lecooke.com/le-cooke-blog/feicheng-tao-peach.html
-
-LA FELICIANA PEACH
-https://www.lecooke.com/le-cooke-blog/history-behind-introduction-of-la-feliciana-peach.html
-
-FLORDAPRINCE PEACH
-
-FROST® PEACH
-
-GALAXY PEACH
-https://www.lecooke.com/le-cooke-blog/galaxy-peach-history.html
-
-LEC	GLEASON ELBERTA PEACH (Lemon Elberta)
-
-https://www.lecooke.com/le-cooke-blog/john-fanick-peach-history.html
-LEC	JOHN FANICK™ PEACH
-
-LEC	LONG BEACH PEACH
-https://www.lecooke.com/le-cooke-blog/long-beach-peach-history.html
-
-LEC	PEACHY KEEN PEACH
-https://www.lecooke.com/le-cooke-blog/peachy-keen-peach.html
-
-RIO GRANDE PEACH
-
-RUBIDOUX PEACH
-
-LEC	SANTA BARBARA PEACH
-https://www.lecooke.com/le-cooke-blog/santa-barbara-peach-history.html
-
-LEC	TROPI-BERTA® PEACH
-https://www.lecooke.com/le-cooke-blog/tropi-berta-peach.html
-
-VENTURA PEACH
-
-
-
-PEARS
-
-LEC	FAN-CRIS™ PEAR
-https://www.lecooke.com/le-cooke-blog/fan-cris-pear-history.html
-
-
-https://www.lecooke.com/le-cooke-blog/fan-stil-pear-history.html
-FAN-STIL™ PEAR
-
-FLORDAHOME PEAR
-HOOD PEAR
-
-LEC	LATE KOREAN (Okusankichi) PEAR
-https://www.lecooke.com/le-cooke-blog/late-korean-pear-okusankichi.html
-
-MONTERREY PEAR
-
-
-
-?? maybe no variety
-https://www.lecooke.com/le-cooke-blog/persimmons.html
-
-PERSIMMONS	 	 
-LEC	FUYU (IMOTO) PERSIMMON
-https://www.lecooke.com/le-cooke-blog/persimmon-history.html
-
-PLUMS
-
-https://www.lecooke.com/le-cooke-blog/autumn-rosa-plum-history.html	 
-LEC	AUTUMN ROSA PLUM
-
-
-LEC	CASSELMAN PLUM
-https://www.lecooke.com/le-cooke-blog/casselman-plum-late-improved-santa-rosa-plum.html
-
-LEC	GOLDEN NECTAR™ PLUM
-https://www.lecooke.com/le-cooke-blog/golden-nectar-plum.html
-
-LEC	IMPROVED LATE SANTA ROSA PLUM
-https://www.lecooke.com/le-cooke-blog/casselman-plum-late-improved-santa-rosa-plum.html
-
-INCA PLUM
-https://www.lecooke.com/le-cooke-blog/inca-plum-history.html
-
-
-POMEGRANATES
-https://www.lecooke.com/le-cooke-blog/sweet-and-white-pomegranate-history.html
-
-
-LEC	AUSTIN POMEGRANATE
-https://www.lecooke.com/le-cooke-blog/austin-pomegranate-history.html
-
-SWEET POMEGRANATE
-
-UTAH SWEET POMEGRANATE
-https://www.lecooke.com/le-cooke-blog/utah-sweet-pomegranate-history.html
-
-WHITE POMEGRANATE
-
-
-QUINCE	 	 
-LEC	COOKE'S JUMBO QUINCE
-
-
-
-NATURAL DWARF NECTARINES	 	 
-LEC	GOLDEN PROLIFIC NECTARINE
-LEC	RED SUNSET NECTARINE
-LEC	SILVER PROLIFIC NECTARINE
-LEC	SOUTHERN BELLE NECTARINE
-
-
-
-
-https://www.lecooke.com/le-cooke-blog/natural-dwarf-fruit-trees-histories.html
-
-NATURAL DWARF PEACHES	 	 
-LEC	EMPRESS PEACH
-LEC	GOLDEN GLORY PEACH
-LEC	SOUTHERN FLAME PEACH
-LEC	SOUTHERN ROSE PEACH
-LEC	SOUTHERN SWEET PEACH
-LEC	SUNBURST PEACH
-
-
-WALNUTS	 	 
-LEC	CARPATHIAN (Mesa) WALNUT
-LEC	COOKE'S GIANT SWEET WALNUT
-LEC	IDAHO WALNUT
-
-
-
-GRAPES	 	 
-LEC	BLUEBERRY™ GRAPE
-https://www.lecooke.com/le-cooke-blog/blueberry-grape-history.html
-
-
-EASTERN CONCORD SEEDLESS GRAPE
-
-
-LEC	MIDGELY'S PURPLE SEEDLESS GRAPE
-https://www.lecooke.com/le-cooke-blog/midgely-s-purple-seedless-grape-history.html
-
-
-RASPBERRY	 	 
-LEC	BABABERRY®
-
-
-
-
-MULBERRIES (Morus)	 	 
-LEC	CHAPARRAL WEEPING MULBERRY
-LEC	COOKE'S PAKISTAN FRUITING MULBERRY
-	FAN-SAN™ MULBERRY
-	TEAS WEEPING FRUITING MULBERRY
-LEC	WHITE FRUITING MULBERRY
-
-
-*/
+        // this list is from https://www.lecooke.com/introductions.html - it isn't every variety on their website
+        // todo - more individual plant pages, some I didn't fill in yet
+        // todo - fill in release days and maybe harvest time data from each individual plant page
+        {
+            type: "Apple",
+            // LE Cooke flyer claims copyright but newer sources don't and I can't find a variety name
+            name: "Anders Apple",
+            description: "https://www.lecooke.com/Images/Fruits_&_Nuts/Apples/Anders-Apple.pdf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Apple",
+            name: "Anna",
+            description: "https://www.lecooke.com/Images/Fruits_&_Nuts/Apples/Anna-Apple(RGB).pdf"
+        },
+        {
+            type: "Apple",
+            name: "Burgundy",
+            description: "https://www.lecooke.com/Images/Fruits_&_Nuts/Apples/Burgundy-Apple(RGB).pdf"
+        },
+        {
+            type: "Apple",
+            name: "July Golden Delicious",
+            description: "https://www.lecooke.com/le-cooke-blog/july-golden-apple.html",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Apple",
+            name: "Early Summer Red",
+            description: "",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Apple",
+            name: "Ein Shemer"
+        },
+        {
+            type: "Apple",
+            name: "Gordon", // list claims trademark but flyer doesn't. either way, I can't find a variety name
+            description: "https://www.lecooke.com/Images/Fruits_&_Nuts/Apples/Gordon-Apple(RGB).pdf",
+            patent: "https://patents.google.com/patent/USPP4144 expired 1994-11-08"
+        },
+        {
+            type: "Apple",
+            name: "Mollie's Delicious"
+        },
+        {
+            type: "Apple",
+            name: "Pettingill",
+            description: "https://www.lecooke.com/le-cooke-blog/pettingill-apple.html"
+        },
+        {
+            type: "Apple",
+            name: "Pink Pearl",
+            description: ""
+        },
+        {
+            type: "Apple",
+            name: "Crimson Spur",
+            AKA: ["Red Delicious Spur"],
+            description: "https://www.lecooke.com/le-cooke-blog/spur-apples.html",
+            harvest_time: "September-October",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Apple",
+            name: "Yelo Spur",
+            AKA: ["Yellow (Yelo) Delicious Spur"],
+            description: "https://www.lecooke.com/le-cooke-blog/spur-apples.html",
+            harvest_time: "September-October",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Apple",
+            name: "Granny Smith Spur",
+            description: "https://www.lecooke.com/le-cooke-blog/spur-apples.html",
+            harvest_time: "September-October"
+        },
+        {
+            type: "Apricot",
+            name: "Autumn Royal",
+            description: "https://www.lecooke.com/le-cooke-blog/autumn-royal-apricot-history.html",
+            released: "LE Cooke*",
+            patent: "https://patents.google.com/patent/USPP2906 expired"
+        },
+        {
+            type: "Apricot",
+            name: "Golden Amber",
+            description: "https://www.lecooke.com/le-cooke-blog/golden-amber-apricot-history.html",
+            released: "LE Cooke*",
+            patent: "https://patents.google.com/patent/USPP3067 expired"
+        },
+        {
+            type: "Apricot",
+            name: "Moniqui",
+            description: "https://www.lecooke.com/le-cooke-blog/moniqui-apricot-history.html"
+        },
+        {
+            type: "Apricot",
+            name: "Montrose",
+            description: "https://www.lecooke.com/le-cooke-blog/montrose-apricot-history.html"
+        },
+        {
+            type: "Apricot",
+            name: "Royalty",
+            description: "https://www.lecooke.com/le-cooke-blog/royalty-apricot-history.html"
+        },
+        {
+            type: "Apricot",
+            name: "Tropic Gold", // claimed trademark but I can't find a variety name
+            description: "https://www.lecooke.com/le-cooke-blog/tropic-gold-apricot-history.html https://www.lecooke.com/Images/Fruits_&_Nuts/Apricot/Tropic-Gold-Apricot(RGB).pdf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Bada Bing", // claimed trademark but I can't find a variety name
+            AKA: ["Self-Fertile Bing"],
+            description: "https://www.lecooke.com/Images/Fruits_&_Nuts/Cherry/BaDa-Bing-Cherry(RGB).pdf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Compact Stella",
+            // Summerland release, but LEC helped introduce this to the US - see page
+            description: "https://www.lecooke.com/le-cooke-blog/compact-stella-cherry-history.html"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Early Ruby",
+            description: "https://www.lecooke.com/le-cooke-blog/early-ruby-cherry-history.html",
+            released: "LE Cooke*",
+            patent: "https://patents.google.com/patent/USPP4150 expired 1994-11-15"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Kansas Sweet",
+            description: "https://www.lecooke.com/le-cooke-blog/kansas-sweet-cherry-history.html"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Utah Giant",
+            description: "https://www.lecooke.com/le-cooke-blog/utah-giant-cherry-history.html"
+        },
+        {
+            type: "Fig",
+            name: "Black Jack",
+            description: "https://www.lecooke.com/le-cooke-blog/black-jack-fig-history.html"
+        },
+        {
+            type: "Fig",
+            name: "Conadria",
+            description: "https://www.lecooke.com/le-cooke-blog/conadria-fig-history.html",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Fig",
+            name: "White Texas Everbearing",
+            AKA: ["Ghost Hill (tm) White Texas Everbearing"],
+            description: "https://www.lecooke.com/le-cooke-blog/ghost-hill-white-texas-everbearing-fig.html",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Fig",
+            name: "Italian Everbearing",
+            description: "https://www.lecooke.com/le-cooke-blog/italian-everbearing-fig-history.html",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Fig",
+            name: "Osborne Prolific",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Nectarine",
+            name: "ARCTIC FANTASY®",
+            description: "https://www.lecooke.com/le-cooke-blog/arctic-fantasy-nectarine-history.html",
+            released: "LE Cooke*"
+        },
+        // https://www.lecooke.com/le-cooke-blog/history-of-mild-climate-peach-introductions.html
+        {
+            type: "Peach",
+            name: "Bonita",
+            description: "https://www.lecooke.com/Images/Fruits_&_Nuts/Peach/Bonita-Peach%28RGB%29.pdf"
+        },
+        {
+            type: "Peach",
+            name: "Champagne",
+            description: ""
+        },
+        {
+            type: "Peach",
+            name: "Earligrande",
+            description: ""
+        },
+        {
+            type: "Peach",
+            name: "Early Amber",
+            description: ""
+        },
+        {
+            type: "Peach",
+            name: "Feicheng Tao",
+            description: "https://www.lecooke.com/le-cooke-blog/feicheng-tao-peach.html",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Peach",
+            name: "La Feliciana",
+            description: "https://www.lecooke.com/le-cooke-blog/history-behind-introduction-of-la-feliciana-peach.html"
+        },
+        {
+            type: "Peach",
+            name: "Flordaprince"
+        },
+        {
+            type: "Peach",
+            name: "Frost"
+        },
+        {
+            type: "Peach",
+            name: "Galaxy",
+            description: "https://www.lecooke.com/le-cooke-blog/galaxy-peach-history.html"
+        },
+        {
+            type: "Peach",
+            name: "Improved Elberta",
+            AKA: ["Gleason Elberta", "Lemon Elberta"],
+            released: "LE Cooke*"
+        },
+        {
+            type: "Peach",
+            name: "John Fanick", // claimed trademark but I can't find a variety name
+            description: "https://www.lecooke.com/le-cooke-blog/john-fanick-peach-history.html",
+            // year is approx - "budwood supplied ... 2000"
+            released: "LE Cooke 2000*"
+        },
+        {
+            type: "Peach",
+            name: "Long Beach",
+            description: "https://www.lecooke.com/le-cooke-blog/long-beach-peach-history.html",
+            released: "LE Cooke 2010*"
+        },
+        {
+            type: "Peach",
+            name: "Chapman",
+            AKA: ["Peachy Keen (r)"], // I think this trademark has been misused like most of the other LEC trademarks, by not having any non-trademark variety name, as the article says "renamed to..."
+            description: "https://www.lecooke.com/le-cooke-blog/peachy-keen-peach.html",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Peach",
+            name: "Rio Grande"
+        },
+        {
+            type: "Peach",
+            name: "Rubidoux"
+        },
+        {
+            type: "Peach",
+            name: "Santa Barbara",
+            description: "https://www.lecooke.com/le-cooke-blog/santa-barbara-peach-history.html https://www.lecooke.com/Images/Fruits_&_Nuts/Peach/Santa-Barbara-Peach%28RGB%29.pdf",
+            released: "LE Cooke 1990*"
+        },
+        {
+            type: "Peach",
+            name: "Tropi-Berta", // page claims trademark but I can't find a variety name
+            description: "https://www.lecooke.com/le-cooke-blog/tropi-berta-peach.html https://www.lecooke.com/Images/Fruits_&_Nuts/Peach/Tropi-Berta-Peach(RGB).pdf",
+            released: "LE Cooke 1977*",
+            patent: "https://patents.google.com/patent/USPP4014 expired 1994-02-01"
+        },
+        {
+            type: "Peach",
+            name: "Ventura"
+        },
+        {
+            type: "Euro Pear",
+            name: "Fan-Cris", // page claims trademark but I can't find a variety name
+            description: "https://www.lecooke.com/le-cooke-blog/fan-cris-pear-history.html https://www.lecooke.com/Images/Fruits_&_Nuts/Pear/Fan-Cris-Pear%28RGB%29.pdf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Euro Pear",
+            name: "Fan-Stil", // page claims trademark but I can't find a variety name
+            description: "https://www.lecooke.com/le-cooke-blog/fan-stil-pear-history.html https://www.lecooke.com/Images/Fruits_&_Nuts/Pear/Fan-Stil-Pear%28RGB%29.pdf",
+            released: "1972"
+        },
+        {
+            type: "Euro Pear",
+            name: "Flordahome"
+        },
+        {
+            type: "Euro Pear",
+            name: "Hood"
+        },
+        {
+            type: "Asian Pear",
+            name: "Late Korean",
+            AKA: ["Okusankichi"],
+            description: "https://www.lecooke.com/le-cooke-blog/late-korean-pear-okusankichi.html https://www.lecooke.com/Images/Fruits_&_Nuts/Pear/Asian%20Pear/Late-Korean-Pear(RGB).pdf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Euro Pear",
+            name: "Monterrey"
+        },
+        // https://www.lecooke.com/le-cooke-blog/persimmons.html
+        {
+            type: "Persimmmon",
+            name: "Fuyu (Imoto)",
+            AKA: ["Imoto"],
+            description: "https://www.lecooke.com/le-cooke-blog/persimmon-history.html https://www.lecooke.com/Images/Fruits_&_Nuts/Persimmon/Fuyu-Imoto-Persimmon%28RGB%29.pdf",
+            tags: "asian persimmon",
+            released: "LE Cooke 1985*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Autumn Rosa",
+            description: "https://www.lecooke.com/le-cooke-blog/autumn-rosa-plum-history.html",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Casselman",
+            AKA: ["Improved Late Santa Rosa"],
+            description: "https://www.lecooke.com/le-cooke-blog/casselman-plum-late-improved-santa-rosa-plum.html",
+            released: "LE Cooke 1967*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Golden Nectar",
+            description: "https://www.lecooke.com/le-cooke-blog/golden-nectar-plum.html",
+            released: "LE Cooke 1987*",
+            patent: "https://patents.google.com/patent/USPP4977 expired 2001-10-26"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Inca",
+            description: "https://www.lecooke.com/le-cooke-blog/inca-plum-history.html"
+        },
+        {
+            type: "Pomegranate",
+            name: "Austin",
+            description: "https://www.lecooke.com/le-cooke-blog/austin-pomegranate-history.html",
+            released: "LE Cooke 2009*"
+        },
+        {
+            type: "Pomegranate",
+            name: "Sweet",
+            description: "https://www.lecooke.com/le-cooke-blog/sweet-and-white-pomegranate-history.html",
+            released: "1984"
+        },
+        {
+            type: "Pomegranate",
+            name: "Utah Sweet",
+            description: "https://www.lecooke.com/le-cooke-blog/utah-sweet-pomegranate-history.html"
+        },
+        {
+            type: "Pomegranate",
+            name: "White",
+            description: "https://www.lecooke.com/le-cooke-blog/sweet-and-white-pomegranate-history.html",
+            released: "1994"
+        },
+        {
+            type: "Quince",
+            name: "Cooke's Jumbo",
+            released: "LE Cooke*"
+        },
+        // https://www.lecooke.com/le-cooke-blog/natural-dwarf-fruit-trees-histories.html
+        {
+            type: "Nectarine",
+            name: "Golden Prolific",
+            description: "Genetic Dwarf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Nectarine",
+            name: "Red Sunset",
+            // bradford farms release along with LEC
+            description: "Genetic Dwarf"
+        },
+        {
+            type: "Nectarine",
+            name: "Silver Prolific",
+            description: "Genetic Dwarf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Nectarine",
+            name: "Southern Belle",
+            description: "Genetic Dwarf",
+            released: "LE Cooke 1975*"
+        },
+        {
+            type: "Peach",
+            name: "Empress",
+            description: "Genetic Dwarf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Peach",
+            name: "Golden Glory",
+            description: "Genetic Dwarf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Peach",
+            name: "Southern Flame",
+            description: "Genetic Dwarf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Peach",
+            name: "Southern Rose",
+            description: "Genetic Dwarf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Peach",
+            name: "Southern Sweet",
+            description: "Genetic Dwarf",
+            released: "LE Cooke 1975*"
+        },
+        {
+            type: "Peach",
+            name: "Sunburst",
+            description: "Genetic Dwarf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Walnut",
+            name: "",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Walnut",
+            name: "Carpathian",
+            AKA: ["Mesa"],
+            released: "LE Cooke*"
+        },
+        {
+            type: "Walnut",
+            name: "Cooke's Giant Sweet",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Grape",
+            name: "Idaho",
+            description: "",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Grape",
+            name: "Blueberry", // page claims trademark but I can't find a variety name
+            description: "https://www.lecooke.com/le-cooke-blog/blueberry-grape-history.html https://www.lecooke.com/Images/Grapes/Blueberry-Grape%28RGB%29.pdf",
+            released: "2010"
+        },
+        {
+            type: "Grape",
+            name: "Eastern Concord Seedless"
+        },
+        {
+            type: "Grape",
+            name: "Midgely's Purple Seedless",
+            description: "https://www.lecooke.com/le-cooke-blog/midgely-s-purple-seedless-grape-history.html https://www.lecooke.com/Images/Grapes/Midgelys-Purple-Seedless-Grape(RGB).pdf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Raspberry",
+            name: "Bababerry", // patent name - any trademark is likely invalid
+            description: "https://www.lecooke.com/Images/Berries_&_Vegetables/Raspberries/bababerry(CMYK).pdf",
+            // flyer claims USPP4372 but that's wrong, that's for an apple
+            released: "LE Cooke*",
+            patent: "https://patents.google.com/patent/USPP4732 expired 1999-12-17"
+        },
+        {
+            type: "Mulberry",
+            name: "Cooke's Pakistan",
+            description: "https://www.lecooke.com/Images/Shades/Mulberry/Cooke's-Pakistan-Fruiting-Mulberry(RGB).pdf",
+            released: "LE Cooke*"
+        },
+        {
+            type: "Mulberry",
+            // LE Cooke flyer claims copyright but I can't find a variety name
+            name: "Fan-San Mulberry"
+        },
+        {
+            type: "Mulberry",
+            name: "Teas Weeping",
+            description: "https://www.lecooke.com/Images/Shades/Mulberry/Teas-Weeping-Fruiting-Mulberry(RGB).pdf"
+        },
+        {
+            type: "Mulberry",
+            name: "White",
+            released: "LE Cooke*",
+            description: "https://www.lecooke.com/Images/Shades/Mulberry/White-Fruiting-Mulberry(RGB).pdf"
+        }
     ]
 }

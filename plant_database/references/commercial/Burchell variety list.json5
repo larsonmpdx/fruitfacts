@@ -920,7 +920,7 @@
             // on the page as "Improved Lemon Elbert"
             // harvest time not given
             name: "Improved Elberta",
-            AKA: ["Lemon Elberta"],
+            // AKA: ["Lemon Elberta"],
             type: "Peach"
         },
         {

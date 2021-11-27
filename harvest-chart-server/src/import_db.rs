@@ -1426,7 +1426,7 @@ fn load_references(
     {
         let path_ = entry.path();
 
-        if fs::metadata(path_).unwrap().is_file()
+        if fs::metadata(path_).unwrap().is_file() // filenames can't be >260 chars here without help - probably fixed in rust 1.58 - https://github.com/rust-lang/rust/issues/67403
             && path_.extension().unwrap().to_str().unwrap() == "json5"
         {
             println!("loading reference: {}", path_.display());

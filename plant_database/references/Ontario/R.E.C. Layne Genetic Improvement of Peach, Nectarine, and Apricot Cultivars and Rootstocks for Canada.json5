@@ -13,6 +13,7 @@
         }
     ],
     plants: [
+        // todo - tag releaser and release year
         {
             name: "Harbelle",
             type: "Peach",

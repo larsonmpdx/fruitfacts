@@ -12,15 +12,6 @@
         AKA: ["P.I. 31652"]
     },
     {
-        name: "Shiro"
-    },
-    {
-        name: "Early Golden"
-    },
-    {
-        name: "Hollywood"
-    },
-    {
         name: "Howard Miracle",
         AKA: ["Howard Wonder"],
         patent: "https://patents.google.com/patent/USPP721 expired"
@@ -39,9 +30,6 @@
     },
     {
         name: "Wickson"
-    },
-    {
-        name: "Inca"
     },
     {
         name: "Superior"
@@ -79,8 +67,5 @@
         AKA: ["Black Ice (tm)"],
         patent: "https://patents.google.com/patent/USPP16621 expires 2024-12-03",
         description: "japanese-american hybrid"
-    },
-    {
-        name: "AU-Producer"
     }
 ]

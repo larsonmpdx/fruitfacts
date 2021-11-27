@@ -236,7 +236,7 @@
         },
         {
             type: "Apple",
-            name: "Mollies Delicious",
+            name: "Mollie's Delicious",
             disease_resistance: { scab: "S", FB: "S", rust: "VR", PM: "N/A" }
         },
         {

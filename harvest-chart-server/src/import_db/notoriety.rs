@@ -52,7 +52,7 @@ pub fn collection_notoriety_text_decoder(text: &str) -> CollectionNotoriety {
             score: 25.0,
         },
         NotorietyEntry {
-            type_: "release article", // article for one or more varieties
+            type_: "release article or journal overview", // article for one or more varieties
             score: 25.0,
         },
         NotorietyEntry {

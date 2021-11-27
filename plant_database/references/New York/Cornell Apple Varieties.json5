@@ -18,7 +18,8 @@
             AKA: ["NY 4588"],
             type: "Apple",
             description: " Early Mclntosh x Sta. 845 (Red Canada x Yellow Transparent)",
-            released: "1938"
+            // todo - tag the rest "Geneva...*"
+            released: "Geneva 1938*"
         },
         {
             name: "Autumncrisp",

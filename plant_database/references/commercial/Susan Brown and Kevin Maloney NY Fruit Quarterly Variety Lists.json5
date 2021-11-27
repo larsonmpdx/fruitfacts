@@ -1,0 +1,29 @@
+{
+    title: "Susan Brown and Kevin Maloney NY Fruit Quarterly Variety Lists",
+    author: "Susan Brown and Kevin Maloney",
+    url: "",
+    accessed: "Oct 2021",
+    type: "release article or journal overview",
+    locations: [
+        {
+            name: "Geneva, NY",
+            latitude: 42.87719192532212,
+            longitude: -77.00783342124748
+        }
+    ],
+    plants: [
+        // todo
+        // https://nyshs.org/wp-content/uploads/2016/10/1.An-Update-on-Apple-Cultivars-Brands-and-Club-Marketing.pdf
+        // 2013:
+        // An Update on Apple Cultivars, Brands and Club-Marketing
+        // Susan Brown and Kevin Maloney
+        // https://nyshs.org/wp-content/uploads/2009/10/NYFQ-FALL-09-pp-9-12.pdf
+        // NY Fruit Quarterly Fall 2009
+        // Making Sense of New Apple Varieties, Trademarks and Clubs: Current Status
+        // Susan Brown and Kevin Maloney
+        // https://fruit.wisc.edu/wp-content/uploads/sites/36/2016/03/Scab-resistant-Cultivars-Varieties.pdf
+        // NY Fruit Quarterly Winter 2008
+        // Scab-resistant Cultivars (Varieties)
+        // Susan Brown and Kevin Maloney
+    ]
+}
