@@ -17,21 +17,21 @@
             type: "Euro Pear",
             name: "Parker",
             harvest_time: "September",
-            released: "1934",
+            released: "UMN 1934*",
             description: "Medium to large, yellow-bronze fruit. Popular for its fine-grained, tender, juicy flesh. Fruit must be picked before it ripens. Upright, vigorous growing tree which may be susceptible to fire blight. Available at retail garden centers"
         },
         {
             type: "Euro Pear",
             name: "Bantam",
             // no harvest time given
-            released: "1940",
+            released: "UMN 1940*",
             description: "Heirloom variety with limited availability"
         },
         {
             type: "Euro Pear",
             name: "Golden Spice",
             // no harvest time given
-            released: "1949",
+            released: "UMN 1949*",
             description: "Small fruit, very hardy. Heirloom variety with limited availability"
         },
         {
@@ -39,7 +39,7 @@
             name: "Summercrisp",
             AKA: ["Gaspard #5", "N33201"],
             harvest_time: "Mid August",
-            released: "1985",
+            released: "UMN 1985*",
             description: "Sweet flavored, crisp fruit. Fruit is harvested while crisp and with a green background, often with a red blush. . Hardy in zone 4. May be used as a pollinator for Juicy Jewel™. Available at retail garden centers https://conservancy.umn.edu/bitstream/handle/11299/123172/1/MR211.pdf https://trees.umn.edu/summercrisp-pear-pyrus-summercrisp"
         },
         {
@@ -48,7 +48,7 @@
             AKA: ["Juicy Jewel™"],
             patent: "ppaf nlt 2021",
             harvest_time: "Mid August",
-            released: "2021",
+            released: "UMN 2021*",
             description: "Early ripening Asian-type pear that is hardy in zone 4. Fruit is attractive with an occasional orange-pink blush. Should be picked ripe, while crisp and with a yellow-green background color. May be used as a pollinator for Summercrisp. Will be available at retail garden centers in 2022 or 2023 https://mnhardy.umn.edu/juicy-jewel"
         }
     ]

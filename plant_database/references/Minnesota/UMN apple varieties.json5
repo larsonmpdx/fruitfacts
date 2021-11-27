@@ -162,6 +162,59 @@
             released: "UMN 1940*",
             harvest_time: "late October",
             patent: "not patented"
+        },
+        // adding missing things from this pub:
+        // 2009: "100 Years of Fruit Crops Breeding at the University of Minnesota" James Luby
+        // https://conservancy.umn.edu/handle/11299/206527
+        {
+            type: "Apple",
+            name: "Folwell",
+            released: "UMN 1922*"
+        },
+        {
+            type: "Apple",
+            name: "Lakeland",
+            released: "UMN 1950*"
+        },
+        {
+            type: "Apple",
+            name: "Minjon",
+            released: "UMN 1942*"
+        },
+        {
+            type: "Apple",
+            name: "Minnehaha",
+            released: "UMN 1920*"
+        },
+        {
+            type: "Apple",
+            name: "Oriole",
+            released: "UMN 1949*"
+        },
+        {
+            type: "Apple",
+            name: "Redwell",
+            released: "UMN 1946*"
+        },
+        {
+            type: "Apple",
+            name: "Victory",
+            released: "UMN 1943*"
+        },
+        {
+            type: "Apple",
+            name: "Wedge",
+            released: "UMN 1922*"
+        },
+        {
+            type: "Crabapple",
+            name: "Flame",
+            released: "UMN 1934*"
+        },
+        {
+            type: "Crabapple",
+            name: "Northland",
+            released: "UMN 1957*"
         }
     ]
 }
