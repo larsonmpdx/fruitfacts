@@ -195,7 +195,7 @@
             description: "Resists frost"
         },
         {
-            name: "Balaton",
+            name: "Bunched of Újfehértói", // "Balaton"
             type: "Sour Cherry",
             locations: ["I", "II"],
             harvest_time: "July",

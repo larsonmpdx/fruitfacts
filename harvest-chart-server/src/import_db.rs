@@ -1171,7 +1171,7 @@ fn get_collection_name(collection_id: Option<i32>, db_conn: &SqliteConnection) -
             .first::<Collection>(db_conn)
         {
             if let Some(title) = collection.title {
-                return title;
+                title
             } else {
                 return format!("collection {}", collection_id);
             }

@@ -1,0 +1,80 @@
+{
+    title: "MSU Sour Cherries",
+    author: "Amy F. Iezzoni",
+    url: "https://nyshs.org/wp-content/uploads/2016/10/Cherry-Breeding-Striving-to-make-a-Difference.pdf",
+    published: "2005",
+    accessed: "Oct 2021",
+    type: "journal article",
+    locations: [
+        {
+            name: "MSU's Clarksville Horticultural Experiment Station (CHES)",
+            latitude: 42.87336301567002,
+            longitude: -85.2588606700856 
+        }
+    ],
+    plants: [
+        {
+            type: "Sour Cherry",
+            name: "Érdi Jubileum",
+            AKA: ["Jubileum (tm)"],
+            // year is approximate
+            released: "MSU 2005*",
+            harvest_time_relative: "Montmorency-9"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Érdi Botermo",
+            AKA: ["Danube (tm)"],
+            // year is approximate
+            released: "MSU 2005*",
+            harvest_time_relative: "Montmorency-8"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Bunched of Újfehértói",
+            AKA: ["Újfehértói Fürtös", "Balaton (r)"],
+            // year is approximate
+            released: "MSU 2005*",
+            harvest_time_relative: "Montmorency+8"
+        },
+        // other articles/info
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/40/2/article-p304.xml
+        // todo - not all of these are notable enough, but a few are
+
+        // Montmorency
+        {
+            type: "Sour Cherry",
+            name: "Montmorency",
+            harvest_time: "July 10"
+        },
+        {
+            type: "Sour Cherry",
+            name: "English Morello",
+            AKA: ["Schattenmorelle"],
+            description: "a common northern European sour cherry landrace"
+        }
+
+        // North Star Alderman U. Minn 1950
+        // Meteor Alderman U. Minn 1952
+        // Surefire Anderson Cornell 2000
+
+        // Érdi Jubileum -> Jubileum (tm)
+        // Dropia, Sarandi, Steinsbar, Pozog, Crisana, Pándy, M209
+        // Érdi Botermo -> Danube (tm)
+        // Pitic de Iasi (P.  cerasus × P. fruticosa hybrid)
+        // MSU I 24 (63)
+        // Korai Pipacs Meggy
+        // MSU I 13 (61), Maliga Emléke
+        // Sumadinka
+        // R1 (1) (Sixth generation from P.  maackii)
+        // Oblacinska, Northstar, Csengodi Csokros, I 13 (61)
+        // 26e 2 (7), 26e 2 (9) (P.  fruticosa selections)
+
+        // Újfehértói Fürtös -> Bunched of Újfehértói -> Balaton (r)
+        // https://www.canr.msu.edu/profiles/dr_amy_iezzoni/balaton_cherries/history_of_tart_cherries
+        // https://www.canr.msu.edu/profiles/dr_amy_iezzoni/balaton_cherries/index
+
+        // can't access "SOUR CHERRY BREEDING PROGRAM AT MICHIGAN STATE UNIVERSITY"
+        // https://www.actahort.org/books/667/667_18.htm
+    ]
+}

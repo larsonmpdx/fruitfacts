@@ -546,12 +546,12 @@
             harvest_time: "mid July"
         },
         {
-            name: "Balaton",
+            name: "Bunched of Újfehértói", // "Balaton"
             type: "Sour Cherry",
             category: "morello"
         },
         {
-            name: "Danube",
+            name: "Érdi Botermo", // "Danube"
             type: "Sour Cherry",
             category: "morello"
         },
