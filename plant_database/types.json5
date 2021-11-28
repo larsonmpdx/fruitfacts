@@ -48,6 +48,10 @@
         latin_name: "Prunus avium"
     },
     {
+        name: "Nanking Cherry",
+        latin_name: "Prunus tomentosa"
+    },
+    {
         name: "Nectarine",
         latin_name: "Prunus persica"
     },
