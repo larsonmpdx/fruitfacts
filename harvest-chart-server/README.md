@@ -14,7 +14,7 @@
 * the web UI should be simple enough to be used by typical retiree gardeners
 * all of an individual's data should be able to be imported/exported in a simple text format
 
-# hints
+# rust hints
 * `cargo build`
 * `cargo run`
 * `cargo test` and `cargo test -- --include-ignored` (include long tests)
@@ -44,3 +44,11 @@
 * `diesel migration generate [new table name]`
 * `diesel migration run` - or omit this and just run all tests, there are embedded migrations
 * `diesel migration redo` (checks up+down)
+
+# js hints
+* install nvm (there is a related windows project)
+  * `nvm install lts` and `nvm use lts`
+
+## sveltekit
+* https://kit.svelte.dev/
+* `npm init svelte@next frontend` - in frontend dir - `npm install`  -  `npm run dev -- -open`
