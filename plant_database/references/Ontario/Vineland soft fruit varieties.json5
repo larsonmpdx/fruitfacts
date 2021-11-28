@@ -19,7 +19,7 @@
             type: "Peach",
             harvest_time: "September 2",
             patent: "https://patents.google.com/patent/USPP11455 expires 2018-02-18",
-            description: 'US patent lists variety name as "AC Harrow Fair".  Patent variety names can\'t be trademarked'
+            description: 'naming note: US patent lists variety name as "AC Harrow Fair".  Patent variety names can\'t be trademarked'
         },
         {
             name: "AC Harrow Dawn",
@@ -27,7 +27,7 @@
             type: "Peach",
             harvest_time: "August 2",
             patent: "https://patents.google.com/patent/USPP11449 expires 2018-02-18",
-            description: 'US patent lists variety name as "AC Harrow Dawn".  Patent variety names can\'t be trademarked'
+            description: 'naming note: US patent lists variety name as "AC Harrow Dawn".  Patent variety names can\'t be trademarked'
         }
         // todo
     ]

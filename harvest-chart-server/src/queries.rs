@@ -175,14 +175,14 @@ struct Path {
 // /collections/path/collection - get a single collection
 #[get("/collections/{path:.*}")] // the ":.*" part is a regex to get the entire tail of the path
 async fn get_collections(
-    info: web::Path<Path>,
+    path: web::Path<Path>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    if info.path.is_empty() || info.path.ends_with('/') {
+    if path.path.is_empty() || path.path.ends_with('/') {
         // get all subdirectories and all collections at this path
-        let collections = web::block(move || get_collections_db(&conn, &info.path))
+        let collections = web::block(move || get_collections_db(&conn, &path.path))
             .await
             .map_err(|e| {
                 eprintln!("{}", e);
@@ -193,7 +193,7 @@ async fn get_collections(
     } else {
         // doesn't end in '/': get an individual collection
 
-        let collection = web::block(move || get_collection_db(&conn, &info.path))
+        let collection = web::block(move || get_collection_db(&conn, &path.path))
             .await
             .map_err(|e| {
                 eprintln!("{}", e);
@@ -201,6 +201,43 @@ async fn get_collections(
             })?;
 
         Ok(HttpResponse::Ok().json(collection))
+    }
+}
+
+#[derive(Default, Serialize)]
+pub struct PlantsReturn {
+    plants: Vec<BasePlant>,
+}
+
+pub fn get_plants_db(
+    conn: &SqliteConnection,
+    type_: &str,
+    page: Option<i32>,
+) -> Result<PlantsReturn, diesel::result::Error> {
+
+    const PER_PAGE: i32 = 50;
+
+    let mut query = base_plants::table
+    .filter(base_plants::type_.eq(type_))
+    .limit(PER_PAGE.into()).into_boxed();
+
+    if let Some(page) = page {
+        query = query.offset((page * PER_PAGE).into());
+    }
+
+    // todo - apply other things: order by, asc/desc, etc.
+
+    let plants: Result<Vec<BasePlant>, diesel::result::Error> = query.load(conn);
+
+    println!("get plants: {} page {:?}", type_, page);
+
+    match plants {
+        Ok(plants) => {
+            Ok(PlantsReturn {
+                plants: plants
+            })
+        }
+        Err(error) => Err(error),
     }
 }
 
@@ -253,22 +290,34 @@ struct GetPlantPath {
     plant: String,
 }
 
+#[derive(Deserialize)]
+struct GetPlantQuery {
+    page: Option<i32>,
+}
+
 // /plants/type/ - all plants of this type. paginated?
 // /plants/type/plant name - this specific plant
 #[get("/plants/{type_}/{plant:.*}")] // the ":.*" part is a regex to get the entire tail of the path
 async fn get_plant(
-    info: web::Path<GetPlantPath>,
+    path: web::Path<GetPlantPath>,
+    query: web::Query<GetPlantQuery>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    if info.plant.is_empty() {
-        // todo: all plants in this category. pagination?
-        Ok(HttpResponse::Ok().json(()))
+    if path.plant.is_empty() {
+        let collection = web::block(move || get_plants_db(&conn, &path.type_, query.page))
+            .await
+            .map_err(|e| {
+                eprintln!("{}", e);
+                HttpResponse::InternalServerError().finish()
+            })?;
+
+        Ok(HttpResponse::Ok().json(collection))
     } else {
         // one plant
 
-        let collection = web::block(move || get_plant_db(&conn, &info.type_, &info.plant))
+        let collection = web::block(move || get_plant_db(&conn, &path.type_, &path.plant))
             .await
             .map_err(|e| {
                 eprintln!("{}", e);
@@ -335,12 +384,12 @@ struct VarietySearchPath {
 
 #[get("/search/variety/{name}")]
 async fn variety_search(
-    info: web::Path<VarietySearchPath>,
+    path: web::Path<VarietySearchPath>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    let results = web::block(move || variety_search_db(&conn, &info.name))
+    let results = web::block(move || variety_search_db(&conn, &path.name))
         .await
         .map_err(|e| {
             eprintln!("{}", e);
