@@ -8,6 +8,7 @@ edition = "2021"
 
 [dependencies]
 actix-web = "3.3.2"
+actix-cors = "0.5.4"
 diesel = { version = "1.4.7", features = ["sqlite", "r2d2"] }
 libsqlite3-sys = { version = "^0", features = ["bundled"] }
 diesel_migrations = "1.4"

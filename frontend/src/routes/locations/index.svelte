@@ -1,9 +1,9 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { apiData, drinkNames } from './store';
+    import { apiData, directories } from './store';
     
     onMount(async () => {
-      fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon")
+      fetch("http://localhost:8080/collections/")
       .then(response => response.json())
       .then(data => {
             console.log(data);
@@ -16,10 +16,10 @@
 </script>
     
 <main>
-    <h1>Whiskey Drinks Menu</h1>
+    <h1>dirs</h1>
     <ul>
-    {#each $drinkNames as drinkName}
-        <li>{drinkName}</li>
+    {#each $directories as directory}
+        <li>{directory}</li>
     {/each}
     </ul>
 </main>

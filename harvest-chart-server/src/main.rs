@@ -1,6 +1,7 @@
 use harvest_chart_server::import_db;
 use harvest_chart_server::queries;
 
+use actix_cors::Cors;
 use actix_web::{App, HttpServer};
 
 use diesel::prelude::*;
@@ -42,9 +43,14 @@ async fn main() -> std::io::Result<()> {
         .build(manager)
         .expect("Failed to create pool");
 
+
     println!("starting http server");
     HttpServer::new(move || {
+
+        let cors = Cors::permissive(); // todo - maybe remove this on release?
+
         App::new()
+            .wrap(cors)
             // set up DB pool to be used with web::Data<Pool> extractor
             .data(pool.clone())
             // .wrap(middleware::Logger::default())
