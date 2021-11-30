@@ -1,0 +1,155 @@
+{
+    title: "Muscadine Grape Production Guide for the Southeast",
+    author: "Many authors, see original document",
+    url: "https://content.ces.ncsu.edu/muscadine-grape-production-guide https://youtu.be/6NXkCNIktTA?t=1293 - a short video intro to this document in the webinar \"2020 Arkansas Virtual Muscadine Webinar Recording-Sept 17, 2020\"",
+    published: "Feb 2020",
+    accessed: "Oct 2021",
+    type: "state extension guide",
+    locations: [
+        {
+            name: "NC State",
+            latitude: 35.7846433652001,
+            longitude: -78.68262333932483
+        }
+    ],
+    plants: [
+        // todo
+        // imported cold tolerance as:
+        // "-" -> low cold tolerance
+        // "+" -> moderate cold tolerance
+        // "++" -> good cold tolerance
+        {
+            type: "Muscadine",
+            name: "Carlos",
+            description: "wine cultivar. Self-fertile Bronze Small-Mediumm oderate cold tolerance",
+            harvest_time_unparsed: "Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Doreen",
+            description: "wine cultivar. Self-fertile Bronze Small-Medium. moderate cold tolerance",
+            harvest_time_unparsed: "Late"
+        },
+        {
+            type: "Muscadine",
+            name: "Magnolia",
+            description: "wine cultivar. Self-fertile Bronze Small-Medium. moderate cold tolerance",
+            harvest_time_unparsed: "Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Noble",
+            description: "wine cultivar. Self-fertile Dark Small-Medium. good cold tolerance",
+            harvest_time_unparsed: "Mid"
+        },
+
+        {
+            type: "Muscadine",
+            name: "Black Beauty",
+            description: "fresh market cultivar. Female Dark Large. good cold tolerance",
+            harvest_time_unparsed: "Early-Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Black Fry",
+            description: "fresh market cultivar. Female Dark Large. good cold tolerance",
+            harvest_time_unparsed: "Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Darlene",
+            description: "fresh market cultivar. Female Bronze Large. low cold tolerance",
+            harvest_time_unparsed: "Early-Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Early Fry",
+            description: "fresh market cultivar. Female Bronze Large",
+            harvest_time_unparsed: "Early"
+        },
+        {
+            type: "Muscadine",
+            name: "Fry",
+            description: "fresh market cultivar. Female Bronze Large. good cold tolerance",
+            harvest_time_unparsed: "Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Granny Val",
+            description: "fresh market cultivar. Self-fertile Bronze Large ",
+            harvest_time_unparsed: "Late"
+        },
+        {
+            type: "Muscadine",
+            name: "Hall",
+            description: "fresh market cultivar. Self-fertile Bronze Medium-Large. low cold tolerance",
+            harvest_time_unparsed: "Early"
+        },
+        {
+            type: "Muscadine",
+            name: "Ison",
+            description: "fresh market cultivar. Self-fertile Dark Medium-Large",
+            harvest_time_unparsed: "Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Lane",
+            description: "fresh market cultivar. Self-fertile Dark Medium-Large. low cold tolerance",
+            harvest_time_unparsed: "Early"
+        },
+        {
+            type: "Muscadine",
+            name: "Late Fry",
+            description: "fresh market cultivar. Self-fertile Bronze Large. good cold tolerance",
+            harvest_time_unparsed: "Late"
+        },
+        {
+            type: "Muscadine",
+            name: "Nesbitt",
+            description: "fresh market cultivar. Self-fertile Dark Medium-Large. low cold tolerance",
+            harvest_time_unparsed: "Mid-Late"
+        },
+        {
+            type: "Muscadine",
+            name: "JB06-43-6-22", // "Oh My!"
+            description: "fresh market cultivar. Self-fertile Bronze Medium, seedless. unknown cold tolerance",
+            harvest_time_unparsed: "?"
+        },
+        {
+            type: "Muscadine",
+            name: "Paulk",
+            description: "fresh market cultivar. Self-fertile Dark Large. low cold tolerance",
+            harvest_time_unparsed: "Mid-Late"
+        },
+        {
+            type: "Muscadine",
+            name: "JB05-22-3-27", // "RazzMatazz"
+            description: "fresh market cultivar. Self-fertile Pink/Red Small, seedless. low cold tolerance",
+            harvest_time_unparsed: "All year"
+        },
+        {
+            type: "Muscadine",
+            name: "Summit",
+            description: "fresh market cultivar. Female Bronze Medium. moderate cold tolerance",
+            harvest_time_unparsed: "Early-Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Supreme",
+            description: "fresh market cultivar. Female Dark Large. low cold tolerance",
+            harvest_time_unparsed: "Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Tara",
+            description: "fresh market cultivar. Self-fertile Bronze Medium-Large. low cold tolerance",
+            harvest_time_unparsed: "Early-Mid"
+        },
+        {
+            type: "Muscadine",
+            name: "Triumph",
+            description: "fresh market cultivar. Self-fertile Bronze Medium. moderate cold tolerance",
+            harvest_time_unparsed: "Early"
+        },
+    ]
+}
