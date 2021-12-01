@@ -52,3 +52,18 @@
 ## sveltekit
 * https://kit.svelte.dev/
 * `npm init svelte@next frontend` - in frontend dir - `npm install`  -  `npm run dev -- -open`
+
+# external issues I'm tracking
+* support loading sqlite modules in diesel in order to use spatialite
+  * https://github.com/diesel-rs/diesel/issues/1867
+  * https://github.com/diesel-rs/diesel/pull/2180
+* windows better support for long paths so references can have long names
+  * https://github.com/rust-lang/rust/issues/67403
+* sveltekit: better support for relative paths in static sites
+  * https://github.com/sveltejs/kit/issues/1480
+  * https://github.com/sveltejs/kit/issues/595#issuecomment-842278606
+* sveltekit: debug server side code
+  * https://github.com/sveltejs/kit/issues/1144
+  * https://github.com/vitejs/vite/pull/3928
+* sveltekit: routing is totally insane and broken and needs a location.ts store workaround
+  * https://github.com/sveltejs/kit/issues/552
