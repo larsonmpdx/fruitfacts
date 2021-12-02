@@ -16,35 +16,35 @@
             name: "Bailey",
             type: "Blackberry",
             description: "unknown parentage",
-            released: "1950"
+            released: "Cornell 1950*"
         },
         {
             name: "Darrow",
             AKA: ["NY 24338"],
             type: "Blackberry",
             description: "NY 15826 (Eldorado x Brewer) x Hedrick",
-            released: "1958"
+            released: "Cornell 1958*"
         },
         {
             name: "Hedrick",
             AKA: ["NY 15827"],
             type: "Blackberry",
             description: "Eldorado x Brewer",
-            released: "1950"
+            released: "Cornell 1950*"
         },
         {
             name: "York",
             AKA: ["NY 12"],
             type: "Elderberry",
             description: "Adams #2 x Ezyoff",
-            released: "1964"
+            released: "Cornell 1964*"
         },
         {
             name: "Fredonia",
             AKA: ["NY 388"],
             type: "Gooseberry",
             description: "Unknown English var. open pollinated",
-            released: "1926"
+            released: "Cornell 1926*"
         }
     ]
 }

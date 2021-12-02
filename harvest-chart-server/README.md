@@ -27,6 +27,7 @@
   * `cargo clippy --fix`
 
 # js hints
+* `npm run dev` run a node host (with server-side rendering)
 * `ncu -u` update package.json versions after installing `npm i -g npm-check-updates`
 
 # debugging in vs code

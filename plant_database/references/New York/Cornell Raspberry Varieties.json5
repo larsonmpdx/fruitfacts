@@ -17,56 +17,56 @@
             AKA: ["NY 30001"],
             type: "Raspberry",
             description: "black. Bristol x Cumberland",
-            released: "1963"
+            released: "Cornell 1963*"
         },
         {
             name: "Amber",
             AKA: ["NY 18673"],
             type: "Raspberry",
             description: "yellow. Taylor x Cuthbert",
-            released: "1950"
+            released: "Cornell 1950*"
         },
         {
             name: "Brandywine",
             AKA: ["NY 905"],
             type: "Raspberry",
             description: "purple. NY 6731 x Hilton https://ecommons.cornell.edu/handle/1813/5065",
-            released: "1976"
+            released: "Cornell 1976*"
         },
         {
             name: "Brant",
             AKA: ["NY 806"],
             type: "Raspberry",
             description: "purple. Smith No. 1 x June",
-            released: "1926"
+            released: "Cornell 1926*"
         },
         {
             name: "Bristol",
             AKA: ["NY 2635"],
             type: "Raspberry",
             description: "black. Watson No. 1 x Honeysweet",
-            released: "1934"
+            released: "Cornell 1934*"
         },
         {
             name: "Cayuga",
             AKA: ["NY 286"],
             type: "Raspberry",
             description: "red. June x Cuthbert",
-            released: "1922"
+            released: "Cornell 1922*"
         },
         {
             name: "Clyde",
             AKA: ["NY 245"],
             type: "Raspberry",
             description: "purple. Bristol x NY 17861",
-            released: "1961"
+            released: "Cornell 1961*"
         },
         {
             name: "Crimson Giant", // patent name
             AKA: ["NY 99-45"],
             type: "Raspberry",
             description: "Titan x NY950 https://ctl.cornell.edu/wp-content/uploads/plants/Crimson-Giant-Poster-small.pdf",
-            released: "2011",
+            released: "Cornell 2011*",
             patent: "https://patents.google.com/patent/USPP23375 expires 2031-03-19"
         },
         {
@@ -74,7 +74,7 @@
             AKA: ["NY 03-56"],
             type: "Raspberry",
             description: "(Fallgold x NY116) x Boyne open pollinated https://news.cornell.edu/stories/2012/04/cornell-releases-two-new-raspberry-varieties",
-            released: "2012",
+            released: "Cornell 2012*",
             patent: "https://patents.google.com/patent/USPP24949 expires 2033-01-22"
         },
         {
@@ -82,7 +82,7 @@
             AKA: ["NY 04-25"],
             type: "Raspberry",
             description: "(NY116 x Fallgold) x Goldie https://news.cornell.edu/stories/2012/04/cornell-releases-two-new-raspberry-varieties",
-            released: "2012",
+            released: "Cornell 2012*",
             patent: "https://patents.google.com/patent/USPP24811 expires 2033-01-18"
         },
         {
@@ -90,21 +90,21 @@
             AKA: ["NY 69"],
             type: "Raspberry",
             description: "red. Loudon x Marlboro",
-            released: "1908"
+            released: "Cornell 1908*"
         },
         {
             name: "Dundee",
             AKA: ["NY 459"],
             type: "Raspberry",
             description: "black. Smith No. 1 x Palmer",
-            released: "1927"
+            released: "Cornell 1927*"
         },
         {
             name: "Encore", // patent name
             AKA: ["NY 7"],
             type: "Raspberry",
             description: "red. Canby x Cherokee https://ecommons.cornell.edu/handle/1813/5216",
-            released: "1998",
+            released: "Cornell 1998*",
             patent: "https://patents.google.com/patent/USPP11746 expired 2018-10-06"
         },
         {
@@ -112,133 +112,133 @@
             AKA: ["NY 2609"],
             type: "Raspberry",
             description: "black. Watson Prolific x Honeysweet",
-            released: "1935"
+            released: "Cornell 1935*"
         },
         {
             name: "Heritage",
             AKA: ["NY 696"],
             type: "Raspberry",
             description: "red. (Milton x Cuthbert) x Durham https://ecommons.cornell.edu/bitstream/handle/1813/35309/040729_Heritage_Raspberry.pdf?sequence=1",
-            released: "1969"
+            released: "Cornell 1969*"
         },
         {
             name: "Hilton",
             AKA: ["NY 183"],
             type: "Raspberry",
             description: "red. Newburgh x St. Walfried",
-            released: "1965"
+            released: "Cornell 1965*"
         },
         {
             name: "Huron",
             AKA: ["NY 27189"],
             type: "Raspberry",
             description: "black. Rachel x Dundee",
-            released: "1965"
+            released: "Cornell 1965*"
         },
         {
             name: "Jewel",
             AKA: ["NY 628"],
             type: "Raspberry",
             description: "black. NY 29773 (Bristol x Dundee) x Dundee https://ecommons.cornell.edu/handle/1813/4819",
-            released: "1973"
+            released: "Cornell 1973*"
         },
         {
             name: "June",
             AKA: ["NY 45"],
             type: "Raspberry",
             description: "red. Loudon x Marlboro",
-            released: "1909"
+            released: "Cornell 1909*"
         },
         {
             name: "Indian Summer",
             AKA: ["NY 8126"],
             type: "Raspberry",
             description: "red. NY 1950 (Empire x Herbert) x Lloyd George",
-            released: "1936"
+            released: "Cornell 1936*"
         },
         {
             name: "Louboro",
             AKA: ["NY 48"],
             type: "Raspberry",
             description: "red. Loudon x Marlboro",
-            released: "1908"
+            released: "Cornell 1908*"
         },
         {
             name: "Marcy",
             AKA: ["NY 5220"],
             type: "Raspberry",
             description: "red. Lloyd George x Newman",
-            released: "1936"
+            released: "Cornell 1936*"
         },
         {
             name: "Marion",
             AKA: ["NY 10722"],
             type: "Raspberry",
             description: "purple. Bristol x NY 2585 (Newman x Herbert)",
-            released: "1937"
+            released: "Cornell 1937*"
         },
         {
             name: "Marlative",
             AKA: ["NY 80"],
             type: "Raspberry",
             description: "red. Marlboro x Superlative",
-            released: "1908"
+            released: "Cornell 1908*"
         },
         {
             name: "Marldon",
             AKA: ["NY 64"],
             type: "Raspberry",
             description: "red. Marlboro x Loudon",
-            released: "1908"
+            released: "Cornell 1908*"
         },
         {
             name: "Milton",
             AKA: ["NY 13618"],
             type: "Raspberry",
             description: "red. Lloyd George x Newburgh ",
-            released: "1942"
+            released: "Cornell 1942*"
         },
         {
             name: "Monroe",
             AKA: ["NY 2568"],
             type: "Raspberry",
             description: "red. Newman x Cuthbert",
-            released: "1932"
+            released: "Cornell 1932*"
         },
         {
             name: "Naples",
             AKA: ["NY 3211"],
             type: "Raspberry",
             description: "black. Honeysweet x Rachel",
-            released: "1931"
+            released: "Cornell 1931*"
         },
         {
             name: "Newburgh",
             AKA: ["NY 2588"],
             type: "Raspberry",
             description: "red. Newman x Herbert",
-            released: "1929"
+            released: "Cornell 1929*"
         },
         {
             name: "Ontario",
             AKA: ["NY 122"],
             type: "Raspberry",
             description: "red.  NY 94 (Superlative x Loudon) x self",
-            released: "1918"
+            released: "Cornell 1918*"
         },
         {
             name: "Owasco",
             AKA: ["NY 287"],
             type: "Raspberry",
             description: "red. June x Cuthbert",
-            released: "1922"
+            released: "Cornell 1922*"
         },
         {
             name: "Prelude", // patent name
             AKA: ["NY 1009"],
             type: "Raspberry",
             description: "red. NY 817 [Hilton x NY 600 (Durham x September)] x Hilton https://ecommons.cornell.edu/handle/1813/5217",
-            released: "1998",
+            released: "Cornell 1998*",
             patent: "https://patents.google.com/patent/USPP11747 expired 2018-10-06"
         },
         {
@@ -246,7 +246,7 @@
             AKA: ["NY 632"],
             type: "Raspberry",
             description: "purple-red. NY 253 (Cumberland x Newburgh) x NY 17861 (Newburgh x Indian Summer) https://ecommons.cornell.edu/handle/1813/5104",
-            released: "1982",
+            released: "Cornell 1982*",
             patent: "https://patents.google.com/patent/USPP5405 expired 2002-09-16"
         },
         {
@@ -254,7 +254,7 @@
             AKA: ["Ruby (tm)", "NY 114"],
             type: "Raspberry",
             description: "red. Heritage x Titan https://ecommons.cornell.edu/handle/1813/5156",
-            released: "1988",
+            released: "Cornell 1988*",
             patent: "https://patents.google.com/patent/USPP7067 expired 2008-10-28"
         },
         {
@@ -262,28 +262,28 @@
             AKA: ["NY 284"],
             type: "Raspberry",
             description: "red. June x Cuthbert",
-            released: "1922"
+            released: "Cornell 1922*"
         },
         {
             name: "September",
             AKA: ["NY 17438"],
             type: "Raspberry",
             description: "red. Marcy x Ranere ",
-            released: "1947"
+            released: "Cornell 1947*"
         },
         {
             name: "Sodus",
             AKA: ["NY 12417"],
             type: "Raspberry",
             description: "purple. Dundee x Newburgh",
-            released: "1935"
+            released: "Cornell 1935*"
         },
         {
             name: "Titan",
             AKA: ["NY 883"],
             type: "Raspberry",
             description: "red. Hilton x NY 598 (Newburgh x St. Walfried) https://ecommons.cornell.edu/handle/1813/5142",
-            released: "1985",
+            released: "Cornell 1985*",
             patent: "https://patents.google.com/patent/USPP5404 expired 2002-09-16"
         },
         {
@@ -291,21 +291,21 @@
             AKA: ["NY 5555"],
             type: "Raspberry",
             description: "red. Newman x Lloyd George",
-            released: "1935"
+            released: "Cornell 1935*"
         },
         {
             name: "Ulster",
             AKA: ["NY 2490"],
             type: "Raspberry",
             description: "red. Herbert x June ",
-            released: "1933"
+            released: "Cornell 1933*"
         },
         {
             name: "Webster",
             AKA: ["NY 449"],
             type: "Raspberry",
             description: "purple. Smith No. 1 x unknown purple",
-            released: "1926"
+            released: "Cornell 1926*"
         },
         // https://news.cornell.edu/stories/2018/09/new-high-yield-strawberry-raspberry-varieties-released
         {
@@ -313,7 +313,7 @@
             AKA: ["NY 12-30"],
             type: "Raspberry",
             description: "NY02-57 x Rafzaqu https://news.cornell.edu/stories/2018/09/new-high-yield-strawberry-raspberry-varieties-released",
-            released: "2018",
+            released: "Cornell 2018*",
             patent: "https://patents.google.com/patent/USPP32799 expires 2039-08-29"
         }
     ]

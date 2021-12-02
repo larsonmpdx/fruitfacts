@@ -46,13 +46,22 @@
 </script>
 
 <main>
-	<h1>Base</h1>
-	<!--- todo header info --->
-	{base}
+	<p>{$base.name} {$base.type} {#if $base.marketing_name}(marketed as {$base.marketing_name}){/if}</p>
+	<p>{#if $base.AKA}AKA {$base.AKA}{/if}</p>
+	{#if $base.release_year || $base.released_by}
+	<!--- todo link to release collection --->
+	<p>{#if $base.release_year}{$base.release_year}{/if} {#if $base.released_by}{$base.released_by}{/if}</p>
+	{/if}
 	<h1>Collection Entries</h1>
 	<ul>
 		{#each $collection_entries as entry}
-			<li>{entry.description}</li>
+			{#if entry.description}<li>{entry.description}</li>{/if}
+		{/each}
+	</ul>
+	<h1>Harvest Times</h1>
+	<ul>
+		{#each $collection_entries as entry}
+			{#if entry.harvest_text}<li>{entry.harvest_text}</li>{/if}
 		{/each}
 	</ul>
 </main>

@@ -19,21 +19,21 @@
             AKA: ["NY 345"],
             type: "Apricot",
             description: "Doty open pollinated x Geneva",
-            released: "1965"
+            released: "Cornell 1965*"
         },
         {
             name: "Farmingdale",
             AKA: ["NY 346"],
             type: "Apricot",
             description: "Doty open pollinated x Geneva",
-            released: "1965"
+            released: "Cornell 1965*"
         },
         {
             name: "Geneva",
             AKA: ["Frascato (FPI 34265)"],
             type: "Apricot",
             description: "",
-            released: "1934"
+            released: "Cornell 1934*"
         },
         // Cherries
         // Andersen, BlushingGold, BlackGOld, BlackYork, BurgundyPearl, EbonyPearl in the Susan Brown file
@@ -42,7 +42,7 @@
             AKA: ["NY 468"],
             type: "Sweet Cherry",
             description: "Napoleon x Giant",
-            released: "1936"
+            released: "Cornell 1936*"
         },
         // Hartland in the Susan Brown file
         {
@@ -50,14 +50,14 @@
             AKA: ["NY 591"],
             type: "Sweet Cherry",
             description: "Oswego x Giant",
-            released: "1964"
+            released: "Cornell 1964*"
         },
         {
             name: "Kristin",
             AKA: ["NY 1599"],
             type: "Sweet Cherry",
             description: "Emperor Francis x Gil Peck https://ecommons.cornell.edu/bitstream/handle/1813/5105/FLS-098.pdf;sequence=1",
-            released: "1982"
+            released: "Cornell 1982*"
         },
         // Nugent in the Susan Brown file
         {
@@ -65,7 +65,8 @@
             AKA: ["NY "],
             type: "Sweet Cherry",
             description: "parentage: Unknown Mazzard",
-            released: "no year given"
+            // no release year given
+            released: "Cornell*"
         },
         // Radiance Pearl, Royalton in the Susan Brown file
         {
@@ -73,14 +74,14 @@
             AKA: ["NY 1"],
             type: "Sweet Cherry",
             description: "Unknown x Early Purple Guigne",
-            released: "1924"
+            released: "Cornell 1924*"
         },
         {
             name: "Sodus",
             AKA: ["NY 467"],
             type: "Sweet Cherry",
             description: "Napoleon x Giant",
-            released: "1938"
+            released: "Cornell 1938*"
         },
         // Somerset, Surefire in the Susan Brown file
         {
@@ -88,7 +89,7 @@
             AKA: ["NY 1519"],
             type: "Sweet Cherry",
             description: "Schmidt x Lambert",
-            released: "1964"
+            released: "Cornell 1964*"
         },
         // Whitegold is in the Susan Brown file
         // Nectarines
@@ -97,21 +98,21 @@
             AKA: ["NY 50"],
             type: "Nectarine",
             description: "Hunter No. 1 open pollinated",
-            released: "1924"
+            released: "Cornell 1924*"
         },
         {
             name: "Morton",
             AKA: ["NY 884"],
             type: "Nectarine",
             description: "(New Boy x Schumaker) open pollinated",
-            released: "1965"
+            released: "Cornell 1965*"
         },
         {
             name: "New Yorker",
             AKA: ["NY 1017"],
             type: "Nectarine",
             description: "white flesh. Livingstone x Greensboro open pollinated",
-            released: "1967"
+            released: "Cornell 1967*"
         },
         // Peaches
         {
@@ -122,7 +123,7 @@
                 canker: "tolerant"
             },
             description: "Sunhigh x Redhaven https://ecommons.cornell.edu/handle/1813/4055",
-            released: "1972"
+            released: "Cornell 1972*"
         },
         {
             name: "Eden",
@@ -132,7 +133,7 @@
                 canker: "appears to have considerable tolerance to perennial canker, but it is not highly resistant"
             },
             description: "white flesh. Champion x Raritan Rose https://ecommons.cornell.edu/handle/1813/4055",
-            released: "1972"
+            released: "Cornell 1972*"
         },
         // Plums
         {
@@ -140,14 +141,14 @@
             AKA: ["NY 33"],
             type: "Euro Plum",
             description: "Golden Drop x Grand Duke",
-            released: "1929"
+            released: "Cornell 1929*"
         },
         {
             name: "American Mirabelle",
             AKA: ["NY 219"],
             type: "Euro Plum",
             description: "Imperial Epineuse x Mirabelle",
-            released: "1925"
+            released: "Cornell 1925*"
         },
         {
             name: "NY 9041",
@@ -159,14 +160,14 @@
             },
             harvest_time: "mid September", // also "stanley+1 week" in the flyer
             description: "Furst open pollinated https://ecommons.cornell.edu/handle/1813/33419",
-            released: "2005"
+            released: "Cornell 2005*"
         },
         {
             name: "Castleton",
             AKA: ["NY 66.609.4"],
             type: "Euro Plum",
             description: "Valor x Iroquois",
-            released: "1993"
+            released: "Cornell 1993*"
         },
         {
             name: "NY 858",
@@ -178,21 +179,21 @@
             },
             harvest_time: "mid September",
             description: "American Mirabelle open pollinated https://ecommons.cornell.edu/handle/1813/33419",
-            released: "2005"
+            released: "Cornell 2005*"
         },
         {
             name: "Hall",
             AKA: ["NY 37"],
             type: "Euro Plum",
             description: "Golden Drop x Grand Duke",
-            released: "1923"
+            released: "Cornell 1923*"
         },
         {
             name: "Iroquois",
             AKA: ["NY 797"],
             type: "Euro Plum",
             description: "Italian Prune x Hall",
-            released: "1966"
+            released: "Cornell 1966*"
         },
         {
             name: "NY 111",
@@ -204,28 +205,28 @@
             },
             harvest_time: "mid September", // also "stanley+1 week" in the flyer
             description: "Late Muscatel open pollinated https://ecommons.cornell.edu/handle/1813/33419",
-            released: "2005"
+            released: "Cornell 2005*"
         },
         {
             name: "Longjohn",
             AKA: ["NY 66.601.1"],
             type: "Euro Plum",
             description: "Iroquois x Ca4A33L",
-            released: "1993"
+            released: "Cornell 1993*"
         },
         {
             name: "Mohawk",
             AKA: ["NY 795"],
             type: "Euro Plum",
             description: "Italian Prune x Hall",
-            released: "1966"
+            released: "Cornell 1966*"
         },
         {
             name: "Jayfree", // patent name
             AKA: ["Jayfre", "NY6", "NY 66.609.6"], // "Jayfre" is a common aftermarket name. "Jayfree" was used in the patent though so I'm calling that correct
             type: "Euro Plum",
             description: "Valor x Iroquois",
-            released: "2002",
+            released: "Cornell 2002*",
             patent: "https://patents.google.com/patent/USPP13881 expired 2021-06-27"
         },
         {
@@ -233,7 +234,7 @@
             AKA: ["NY9™", "NY 58.900.9"], // IPM claims "NY9" is trademarked, in a stunning reversal of the usual station name/ brand name situation
             type: "Euro Plum",
             description: "Standard x Stanley",
-            released: "2002",
+            released: "Cornell 2002*",
             patent: "https://patents.google.com/patent/USPP14020 expired 2021-06-30"
         },
         {
@@ -241,14 +242,14 @@
             AKA: ["NY 826"],
             type: "Euro Plum",
             description: "Albion x Italian Prune",
-            released: "1966"
+            released: "Cornell 1966*"
         },
         {
             name: "Polly",
             AKA: ["NY 65.363.1"],
             type: "Euro Plum",
             description: "Oneida open pollinated",
-            released: "1993"
+            released: "Cornell 1993*"
         },
         {
             name: "NY 101",
@@ -260,21 +261,21 @@
             },
             harvest_time: "late August to early September",
             description: "Imperial Epineuse open pollinated https://ecommons.cornell.edu/handle/1813/33419",
-            released: "2005"
+            released: "Cornell 2005*"
         },
         {
             name: "Seneca",
             AKA: ["NY 981"],
             type: "Euro Plum",
             description: "Italian Prune x Prinlew https://ecommons.cornell.edu/bitstream/handle/1813/4058/FLS-026.pdf?sequence=4&isAllowed=y",
-            released: "1972"
+            released: "Cornell 1972*"
         },
         {
             name: "Stanley",
             AKA: ["NY 274"],
             type: "Euro Plum",
             description: "Agen x Grand Duke",
-            released: "1926"
+            released: "Cornell 1926*"
         }
     ]
 }
