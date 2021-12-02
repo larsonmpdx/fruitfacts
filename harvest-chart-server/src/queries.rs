@@ -232,7 +232,7 @@ pub fn get_plants_db(
     println!("get plants: {} page {:?}", type_, page);
 
     match plants {
-        Ok(plants) => Ok(PlantsReturn { plants: plants }),
+        Ok(plants) => Ok(PlantsReturn { plants }),
         Err(error) => Err(error),
     }
 }
