@@ -43,10 +43,8 @@ async fn main() -> std::io::Result<()> {
         .build(manager)
         .expect("Failed to create pool");
 
-
     println!("starting http server");
     HttpServer::new(move || {
-
         let cors = Cors::permissive(); // todo - maybe remove this on release?
 
         App::new()

@@ -214,12 +214,12 @@ pub fn get_plants_db(
     type_: &str,
     page: Option<i32>,
 ) -> Result<PlantsReturn, diesel::result::Error> {
-
     const PER_PAGE: i32 = 50;
 
     let mut query = base_plants::table
-    .filter(base_plants::type_.eq(type_))
-    .limit(PER_PAGE.into()).into_boxed();
+        .filter(base_plants::type_.eq(type_))
+        .limit(PER_PAGE.into())
+        .into_boxed();
 
     if let Some(page) = page {
         query = query.offset((page * PER_PAGE).into());
@@ -232,11 +232,7 @@ pub fn get_plants_db(
     println!("get plants: {} page {:?}", type_, page);
 
     match plants {
-        Ok(plants) => {
-            Ok(PlantsReturn {
-                plants: plants
-            })
-        }
+        Ok(plants) => Ok(PlantsReturn { plants: plants }),
         Err(error) => Err(error),
     }
 }
