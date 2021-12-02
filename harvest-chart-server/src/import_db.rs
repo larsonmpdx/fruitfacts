@@ -35,8 +35,10 @@ extern crate regex;
 use regex::Regex;
 
 use serde::{Deserialize, Serialize};
+use serde_with::skip_serializing_none;
 //use serde_json::Result;
 
+#[skip_serializing_none]
 #[derive(Debug, Default, Serialize, Deserialize)]
 struct BasePlantJson {
     name: String,
@@ -49,6 +51,7 @@ struct BasePlantJson {
     released: Option<String>,
 }
 
+#[skip_serializing_none]
 #[derive(Serialize, Deserialize)]
 struct CollectionJson {
     title: String,
@@ -634,9 +637,12 @@ pub fn establish_connection() -> SqliteConnection {
 
 pub fn reset_database(db_conn: &SqliteConnection) {
     let _ = diesel::delete(base_plants::dsl::base_plants).execute(db_conn);
+    // skip dropping: users
     let _ = diesel::delete(plant_types::dsl::plant_types).execute(db_conn);
     let _ = diesel::delete(collections::dsl::collections).execute(db_conn);
+    let _ = diesel::delete(locations::dsl::locations).execute(db_conn);
     let _ = diesel::delete(collection_items::dsl::collection_items).execute(db_conn);
+
     super::embedded_migrations::run(db_conn).unwrap();
 }
 
@@ -1699,10 +1705,12 @@ fn add_relative_value(base_value: Option<i32>, adjustment: i32) -> Option<i32> {
     None
 }
 
-#[derive(Queryable)]
+#[skip_serializing_none]
+#[derive(Serialize, Queryable)]
 pub struct CollectionItemRelative {
     pub collection_item_id: i32,
     pub location_id: Option<i32>,
+    #[serde(rename = "type")]
     pub type_: String,
 
     pub harvest_relative: Option<String>,
@@ -1805,9 +1813,11 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
     }
 }
 
-#[derive(Queryable, Debug)]
+#[skip_serializing_none]
+#[derive(Serialize, Queryable, Debug)]
 pub struct BasePlantsItemForDedupe {
     pub name_fts: String,
+    #[serde(rename = "type")]
     pub type_: String,
     pub aka_fts: Option<String>,
 }

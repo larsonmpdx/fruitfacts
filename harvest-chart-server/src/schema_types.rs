@@ -22,6 +22,7 @@ pub struct BasePlant {
     pub id: i32,
     pub name: String,
     pub name_fts: String,
+    #[serde(rename = "type")]
     pub type_: String,
 
     pub notoriety_score: Option<f32>,
@@ -52,6 +53,7 @@ pub struct CollectionItem {
     pub location_id: Option<i32>,
 
     pub name: String,
+    #[serde(rename = "type")]
     pub type_: String,
 
     pub category: Option<String>,

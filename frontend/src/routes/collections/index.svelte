@@ -1,6 +1,6 @@
 <script lang="ts">
 	//   import { onMount } from "svelte";
-	import { apiData, directories, collections } from './store';
+	import { apiData, locations, items } from './store';
 	import { page } from '$app/stores';
 	import { onMount, beforeUpdate } from 'svelte';
 
@@ -13,7 +13,6 @@
 			fetch(`http://localhost:8080/collections/${path}`)
 				.then((response) => response.json())
 				.then((data) => {
-					//    console.log(data);
 					apiData.set(data);
 				})
 				.catch((error) => {
@@ -41,34 +40,26 @@
 
 		ifPathChanged(path);
 	});
-
-	// unused but I might need this later:
-	//     import { goto } from '$app/navigation';
-	// const handleClick = path => () => {
-	//	let query = new URLSearchParams($page.query.toString());
-	//    query.set('path', path);
-	//     goto(`?${query.toString()}`);
-	//}
-
-	// used with:
-	//  <button on:click={handleClick(directory)}>
-	//     count: 1
-	// </button>
 </script>
 
 <main>
-	<h1>dirs</h1>
-	<li>
-		{#each $directories as directory}
-			<li><a href="/locations?path={encodeURIComponent(directory)}">{directory}</a></li>
+	<!--- todo header info --->
+	<h1>Locations</h1>
+	<ul>
+		{#each $locations as location}
+			<li>{location}</li>
 		{/each}
-	</li>
-	<h1>locations</h1>
-	<li>
-		{#each $collections as collection}
-			<li>{collection.title}</li>
+	</ul>
+	<h1>Plants</h1>
+	<ul>
+		{#each $items as item}
+			<li>
+				<a href="/plant?type={encodeURIComponent(item.type)}&name={encodeURIComponent(item.name)}"
+					>{item.name} {item.type}</a
+				>
+			</li>
 		{/each}
-	</li>
+	</ul>
 </main>
 
 <style>
