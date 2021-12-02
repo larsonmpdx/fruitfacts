@@ -19,25 +19,18 @@
 					console.log(error);
 					return [];
 				});
-		} else {
-			console.log('path unchanged');
 		}
 	};
 
 	onMount(async () => {
 		// needs to be in onMount because the query string isn't available in pre rendering
-		console.log(`onmount`);
 		const path = $page.query.get('path');
-		console.log(`path ${path}`);
-
 		ifPathChanged(path);
 	});
 
 	beforeUpdate(async () => {
 		// this gets back button changes
 		const path = $page.query.get('path');
-		console.log(`path from afterUpdate: ${path}`);
-
 		ifPathChanged(path);
 	});
 </script>

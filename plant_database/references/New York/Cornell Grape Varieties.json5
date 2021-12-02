@@ -357,7 +357,7 @@
         },
         {
             name: "Traminette",
-            AKA: ["NY 65.533.13 "],
+            AKA: ["NY 65.533.13"],
             type: "Grape",
             description: "J.S. 23-416 x Gewürztraminer https://ecommons.cornell.edu/handle/1813/5213",
             released: "Cornell 1996*"
@@ -425,9 +425,10 @@
             description: "https://grapesandwine.cals.cornell.edu/sites/grapesandwine.cals.cornell.edu/files/shared/%E2%80%98Arandell%E2%80%99%20FINAL.pdf",
             // todo: high disease resistance
             released: "Cornell 2013*"
-        }
+        },
         {
-            name: "NY98.0228.02", // patent name
+            name: "NY98.0228.02", // patent name. this technically qualifies as a legit code name ("no more than 10 letters+numbers in no more than four groups") but it's weird, most other Cornell varieties get a "NY xx" name
+            type: "Grape",
             AKA: ["Everest Seedless (tm)"],
             released: "Cornell 2018*",
             description: "https://news.cornell.edu/stories/2018/09/big-blue-everest-seedless-cornells-newest-grape exclusive license for 10 years https://doubleavineyards.com/everest-seedless https://youtu.be/nggBYIwzGzA?t=758",

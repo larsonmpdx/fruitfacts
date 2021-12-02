@@ -21,8 +21,6 @@
 					console.log(error);
 					return [];
 				});
-		} else {
-			console.log('path unchanged');
 		}
 	};
 
@@ -30,8 +28,6 @@
 		// needs to be in onMount because the query string isn't available in pre rendering
 		const type_ = $page.query.get('type');
 		const name = $page.query.get('name');
-		console.log(`path: ${type_}/${name}`);
-
 		ifPathChanged(type_, name);
 	});
 
@@ -39,8 +35,6 @@
 		// this gets back button changes
 		const type_ = $page.query.get('type');
 		const name = $page.query.get('name');
-		console.log(`path from afterUpdate: ${type_}/${name}`);
-
 		ifPathChanged(type_, name);
 	});
 </script>
