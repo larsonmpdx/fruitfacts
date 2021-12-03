@@ -1,6 +1,6 @@
 use super::schema_fts::*;
 use super::schema_generated::*;
-use actix_web::{get, web, Error, HttpResponse};
+use actix_web::{get, web, HttpResponse};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 use regex::Regex;
@@ -34,7 +34,7 @@ pub fn get_recent_patents_db(
 }
 
 #[get("/patents")]
-async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, Error> {
+async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
     // use web::block to offload blocking Diesel code without blocking server thread
@@ -46,6 +46,47 @@ async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, Err
         })?;
 
     Ok(HttpResponse::Ok().json(patents))
+}
+
+
+#[derive(Queryable, Debug, Serialize)]
+pub struct CollectionsForSort {
+    pub id: i32,
+
+    pub path: Option<String>,
+    pub filename: Option<String>,
+
+    pub title: Option<String>,
+
+    pub git_edit_time: Option<i64>,
+}
+
+pub fn get_sorted_collections_db(
+    conn: &SqliteConnection,
+    sort: &str,
+) -> Result<Vec<CollectionsForSort>, Box<dyn std::error::Error>> {
+
+    if sort == "age" {
+        let db_return = collections::dsl::collections
+        .select((
+            collections::id,
+            collections::path,
+            collections::filename,
+            collections::title,
+            collections::git_edit_time,
+        ))
+        .order(collections::git_edit_time.desc())
+        .load::<CollectionsForSort>(conn);
+
+    match db_return {
+        Ok(collections) => {
+            Ok(collections)
+        }
+        Err(error) => Err(Box::new(error)),
+    }
+    } else {
+        Err("error")
+    }
 }
 
 #[derive(Queryable, Debug, Serialize)]
@@ -173,17 +214,28 @@ pub fn get_collection_db(
 }
 
 #[derive(Deserialize)]
+struct GetCollectionsQuery {
+    sort: Option<String>,
+}
+
+#[derive(Deserialize)]
 struct Path {
     path: String,
 }
+
 // /collections/path/ - get subdirectories starting at this path, and collection names at this path
 // /collections/path/collection - get a single collection
 #[get("/collections/{path:.*}")] // the ":.*" part is a regex to get the entire tail of the path
 async fn get_collections(
     path: web::Path<Path>,
+    query: web::Query<GetCollectionsQuery>,
     pool: web::Data<DbPool>,
-) -> Result<HttpResponse, Error> {
+) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
+
+    if let Some(sort) = &query.sort {
+
+    }
 
     if path.path.is_empty() || path.path.ends_with('/') {
         // get all subdirectories and all collections at this path
@@ -303,7 +355,7 @@ async fn get_plant(
     path: web::Path<GetPlantPath>,
     query: web::Query<GetPlantQuery>,
     pool: web::Data<DbPool>,
-) -> Result<HttpResponse, Error> {
+) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
     if path.plant.is_empty() {
@@ -337,7 +389,7 @@ struct BuildInfo {
 }
 
 #[get("/build_info")]
-async fn get_build_info() -> Result<HttpResponse, Error> {
+async fn get_build_info() -> Result<HttpResponse, actix_web::Error> {
     Ok(HttpResponse::Ok().json(BuildInfo {
         git_hash: env!("GIT_HASH").to_string(),
         git_unix_time: env!("GIT_UNIX_TIME").to_string(),
@@ -398,7 +450,7 @@ struct VarietySearchPath {
 async fn variety_search(
     path: web::Path<VarietySearchPath>,
     pool: web::Data<DbPool>,
-) -> Result<HttpResponse, Error> {
+) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
     let results = web::block(move || variety_search_db(&conn, &path.name))
