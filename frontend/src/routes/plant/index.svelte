@@ -40,11 +40,20 @@
 </script>
 
 <main>
-	<p>{$base.name} {$base.type} {#if $base.marketing_name}(marketed as {$base.marketing_name}){/if}</p>
-	<p>{#if $base.AKA}AKA {$base.AKA}{/if}</p>
+	<p>
+		{$base.name}
+		{$base.type}
+		{#if $base.marketing_name}(marketed as {$base.marketing_name}){/if}
+	</p>
+	<p>
+		{#if $base.AKA}AKA {$base.AKA}{/if}
+	</p>
 	{#if $base.release_year || $base.released_by}
-	<!--- todo link to release collection --->
-	<p>{#if $base.release_year}{$base.release_year}{/if} {#if $base.released_by}{$base.released_by}{/if}</p>
+		<!--- todo link to release collection --->
+		<p>
+			{#if $base.release_year}{$base.release_year}{/if}
+			{#if $base.released_by}{$base.released_by}{/if}
+		</p>
 	{/if}
 	<h1>Collection Entries</h1>
 	<ul>
