@@ -343,10 +343,21 @@ async fn get_build_info() -> Result<HttpResponse, Error> {
 pub fn variety_search_db(
     conn: &SqliteConnection,
     name: &str,
-) -> Result<i32, diesel::result::Error> {
+) -> Result<Vec<BasePlant>, diesel::result::Error> {
+
+    // extra characters. leave spaces so FTS still gets to match two different words
+    // dashes get interpreted by fts. same with +*:^ AND OR NOT
+    let re = Regex::new(r"[^0-9A-Za-z ]").unwrap();
+    let cleaned = re.replace_all(name, "");
+
+    println!("input {} cleaned: {}", name, cleaned);
+
+    // todo: match extra words against our list of types. remove them or use them for a type filter
+    // like "surefire cherry" -> cherry should be removed unless we can beef up fts search to allow it
+
     let values = fts_base_plants::table
         .select((fts_base_plants::rowid, fts_base_plants::rank))
-        .filter(fts_base_plants::whole_row.eq(name))
+        .filter(fts_base_plants::whole_row.eq(cleaned))
         .order(fts_base_plants::rank.asc())
         .limit(10)
         .load::<FtsBasePlants>(conn);
@@ -367,7 +378,7 @@ pub fn variety_search_db(
 
             println!("{:?}", results);
 
-            Ok(1)
+            Ok(results)
         }
         Err(error) => Err(error),
     }
