@@ -60,7 +60,7 @@ pub struct CollectionsForPaths {
 
 #[derive(Default, Serialize)]
 pub struct CollectionsReturn {
-    directories: HashSet<String>,
+    directories: Vec<String>,
     collections: Vec<CollectionsForPaths>,
 }
 
@@ -76,11 +76,13 @@ pub fn get_collections_db(
             collections::title,
         ))
         .filter(collections::path.like(path.to_owned() + r#"%"#))
+        .order(collections::path.asc())
         .load::<CollectionsForPaths>(conn);
 
     match db_return {
         Ok(collections) => {
             let mut output: CollectionsReturn = Default::default();
+            let mut directories: HashSet<String> = Default::default();
             for collection in collections {
                 if let Some(collection_path) = &collection.path {
                     if collection_path == path {
@@ -90,14 +92,17 @@ pub fn get_collections_db(
                         let collection_path = collection_path.to_string();
                         let trimmed = crate::import_db::rem_first_n(&collection_path, path.len());
                         if trimmed.matches('/').count() == 1 {
-                            output.directories.insert(collection_path); // this is a hashset so we'll get paths de-duplicated here
+                            directories.insert(collection_path); // this is a hashset so we'll get paths de-duplicated here
                         } else {
                             // println!("excluding subdir {}", collection_path)
                         }
                     }
                 }
             }
-            // output.collections = collections;
+
+            let mut directories_vector = Vec::from_iter(directories);
+            directories_vector.sort();
+            output.directories = directories_vector;
 
             Ok(output)
         }
