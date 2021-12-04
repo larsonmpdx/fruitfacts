@@ -28,6 +28,8 @@ table! {
         id -> Integer,
         collection_id -> Integer,
         location_id -> Nullable<Integer>,
+        path_and_filename -> Nullable<Text>,
+        marketing_name -> Nullable<Text>,
         name -> Text,
         #[sql_name = "type"]
         type_ -> Text,

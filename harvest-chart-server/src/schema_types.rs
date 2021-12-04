@@ -52,6 +52,9 @@ pub struct CollectionItem {
     pub collection_id: i32,
     pub location_id: Option<i32>,
 
+    pub path_and_filename: Option<String>,
+    pub marketing_name: Option<String>,
+
     pub name: String,
     #[serde(rename = "type")]
     pub type_: String,

@@ -48,7 +48,7 @@
 		{#each $items as item}
 			<li>
 				<a href="/plant?type={encodeURIComponent(item.type)}&name={encodeURIComponent(item.name)}"
-					>{item.name} {item.type}</a
+					>{#if item.marketing_name}{item.name} {item.type} (marketed as {item.marketing_name}){:else}{item.name} {item.type}{/if}</a
 				>
 			</li>
 		{/each}

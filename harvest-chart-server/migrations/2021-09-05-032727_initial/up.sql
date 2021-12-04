@@ -98,6 +98,9 @@ CREATE TABLE collection_items (
   collection_id INTEGER NOT NULL,
   location_id INTEGER, -- this can be unset for cases where there's a random list of varieties not attached to a location
 
+  path_and_filename TEXT, -- for website display/navigation instead of looking it up
+  marketing_name TEXT, -- copied back from base plants for quicker display
+
   -- name+type don't have to exist in base plants so this could be a wholly user-created plant
   name TEXT NOT NULL,
   type TEXT NOT NULL,

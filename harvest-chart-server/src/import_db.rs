@@ -656,6 +656,8 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     println!("calculating relative harvest times");
     calculate_relative_harvest_times(db_conn);
     calculate_release_year_from_patent(db_conn);
+    println!("adding marketing names to collection items");
+    add_marketing_names(db_conn);
     println!("calculating notoriety");
     calculate_notoriety(db_conn);
     println!("rebuilding fts tables");
@@ -1037,6 +1039,7 @@ fn get_category_description(
 fn add_collection_plant(
     collection_id: i32,
     location_id: Option<i32>,
+    path_and_filename: &String,
     harvest_time: &Option<String>,
     plant_name: &str,
     plant: &CollectionPlantJson,
@@ -1137,6 +1140,7 @@ fn add_collection_plant(
         .values((
             collection_items::collection_id.eq(collection_id),
             collection_items::location_id.eq(location_id),
+            collection_items::path_and_filename.eq(path_and_filename),
             collection_items::name.eq(plant_name),
             collection_items::type_.eq(&plant.type_),
             collection_items::category.eq(&plant.category),
@@ -1332,6 +1336,7 @@ fn update_or_add_base_plant(
 
 fn add_collection_plant_by_location(
     collection_id: i32,
+    path_and_filename: String,
     plant_name: &str,
     plant: &CollectionPlantJson,
     category_description: &Option<String>,
@@ -1359,6 +1364,7 @@ fn add_collection_plant_by_location(
                         ),
                         db_conn,
                     ), // the .as_str()... nastiness is because serde wants to carry the "it's a json string!!" idea to the point of printing it a certain way in rust. as_str() tells it not to
+                    &path_and_filename,
                     &plant.harvest_time,
                     plant_name,
                     plant,
@@ -1391,6 +1397,7 @@ fn add_collection_plant_by_location(
                             get_location_name(Some(location_name), collection_locations),
                             db_conn,
                         ),
+                        &path_and_filename,
                         &Some(harvest_time),
                         plant_name,
                         plant,
@@ -1412,6 +1419,7 @@ fn add_collection_plant_by_location(
                 get_location_name(None, collection_locations),
                 db_conn,
             ),
+            &path_and_filename,
             &plant.harvest_time,
             plant_name,
             plant,
@@ -1554,6 +1562,7 @@ fn load_references(
 
                         reference_plants_added += add_collection_plant_by_location(
                             collection_id,
+                            path.clone() + filename.clone(),
                             &plant_name,
                             &plant,
                             &category_description,
@@ -1572,6 +1581,7 @@ fn load_references(
 
                     reference_plants_added += add_collection_plant_by_location(
                         collection_id,
+                        path.clone() + filename.clone(),
                         plant.name.as_ref().unwrap(),
                         &plant,
                         &category_description,
@@ -1812,6 +1822,35 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
         }
     }
 }
+
+fn add_marketing_names(db_conn: &SqliteConnection) {
+    // for each collection item, look up the base plant and copy in the marketing name if set
+    let all_collection_items = collection_items::dsl::collection_items
+    .load::<CollectionItem>(db_conn)
+    .unwrap();
+
+    for collection_item in &all_collection_items {
+        let base_plant = base_plants::dsl::base_plants
+        .filter(base_plants::name.eq(&collection_item.name))
+        .filter(base_plants::type_.eq(&collection_item.type_))
+        .first::<BasePlant>(db_conn)
+        .unwrap_or_else(|_| {
+            panic!(
+                r#"couldn't find base plant for {} {}"#,
+                collection_item.name,
+                collection_item.type_
+            )
+        });
+
+        let _updated_row =
+        diesel::update(collection_items::dsl::collection_items.filter(collection_items::id.eq(collection_item.id)))
+            .set((
+                collection_items::marketing_name.eq(base_plant.marketing_name),
+            ))
+            .execute(db_conn);
+    }
+}
+
 
 #[skip_serializing_none]
 #[derive(Serialize, Queryable, Debug)]
