@@ -388,14 +388,14 @@ async fn get_build_info(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_w
             HttpResponse::InternalServerError().finish()
         })?;
 
-    return Ok(HttpResponse::Ok().json(RecentChanges {
+    Ok(HttpResponse::Ok().json(RecentChanges {
         build_info: BuildInfo {
             git_hash: env!("GIT_HASH").to_string(),
             git_unix_time: env!("GIT_UNIX_TIME").to_string(),
             git_commit_count: env!("GIT_MAIN_COMMIT_COUNT").to_string(),
         },
         recent_updates: sorted,
-    }));
+    }))
 }
 
 pub fn variety_search_db(
