@@ -50,6 +50,11 @@
 {/if}
 {#if $recentChangesData.recent_updates}
 	{#each $recentChangesData.recent_updates as update}
-		<li><a href="/collections?path={encodeURIComponent(`${update.path}${update.filename}`)}">{update.filename}</a> {timeAgo(update.git_edit_time * 1000)}</li>
+		<li>
+			<a href="/collections?path={encodeURIComponent(`${update.path}${update.filename}`)}"
+				>{update.filename}</a
+			>
+			{timeAgo(update.git_edit_time * 1000)}
+		</li>
 	{/each}
 {/if}

@@ -446,7 +446,6 @@ struct SearchPath {
     string: String,
 }
 
-
 // searches to support:
 // plain variety search: "red" -> "redhaven" "early redhaven" ...
 // with type: "redhaven peach" -> "redhaven" and also suggest the category "peach"

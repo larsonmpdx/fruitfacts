@@ -51,24 +51,26 @@
 
 <main>
 	{#if $directories && $directories.length > 0}
-	<h1>dirs</h1>
-	<ul>
-		{#each $directories as directory}
-			<li><a href="/dirs?path={encodeURIComponent(directory)}">{directory}</a></li>
-		{/each}
-	</ul>
+		<h1>dirs</h1>
+		<ul>
+			{#each $directories as directory}
+				<li><a href="/dirs?path={encodeURIComponent(directory)}">{directory}</a></li>
+			{/each}
+		</ul>
 	{/if}
 	{#if $collections && $collections.length > 0}
-	<h1>locations</h1>
-	<ul>
-		{#each $collections as collection}
-			<li>
-				<a href="/collections?path={encodeURIComponent(`${collection.path}${collection.filename}`)}"
-					>{collection.title}</a
-				>
-			</li>
-		{/each}
-	</ul>
+		<h1>locations</h1>
+		<ul>
+			{#each $collections as collection}
+				<li>
+					<a
+						href="/collections?path={encodeURIComponent(
+							`${collection.path}${collection.filename}`
+						)}">{collection.title}</a
+					>
+				</li>
+			{/each}
+		</ul>
 	{/if}
 </main>
 

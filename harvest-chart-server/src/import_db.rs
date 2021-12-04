@@ -1826,31 +1826,29 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
 fn add_marketing_names(db_conn: &SqliteConnection) {
     // for each collection item, look up the base plant and copy in the marketing name if set
     let all_collection_items = collection_items::dsl::collection_items
-    .load::<CollectionItem>(db_conn)
-    .unwrap();
+        .load::<CollectionItem>(db_conn)
+        .unwrap();
 
     for collection_item in &all_collection_items {
         let base_plant = base_plants::dsl::base_plants
-        .filter(base_plants::name.eq(&collection_item.name))
-        .filter(base_plants::type_.eq(&collection_item.type_))
-        .first::<BasePlant>(db_conn)
-        .unwrap_or_else(|_| {
-            panic!(
-                r#"couldn't find base plant for {} {}"#,
-                collection_item.name,
-                collection_item.type_
-            )
-        });
+            .filter(base_plants::name.eq(&collection_item.name))
+            .filter(base_plants::type_.eq(&collection_item.type_))
+            .first::<BasePlant>(db_conn)
+            .unwrap_or_else(|_| {
+                panic!(
+                    r#"couldn't find base plant for {} {}"#,
+                    collection_item.name, collection_item.type_
+                )
+            });
 
-        let _updated_row =
-        diesel::update(collection_items::dsl::collection_items.filter(collection_items::id.eq(collection_item.id)))
-            .set((
-                collection_items::marketing_name.eq(base_plant.marketing_name),
-            ))
-            .execute(db_conn);
+        let _updated_row = diesel::update(
+            collection_items::dsl::collection_items
+                .filter(collection_items::id.eq(collection_item.id)),
+        )
+        .set((collection_items::marketing_name.eq(base_plant.marketing_name),))
+        .execute(db_conn);
     }
 }
-
 
 #[skip_serializing_none]
 #[derive(Serialize, Queryable, Debug)]
