@@ -442,18 +442,24 @@ pub fn variety_search_db(
 }
 
 #[derive(Deserialize)]
-struct VarietySearchPath {
-    name: String,
+struct SearchPath {
+    string: String,
 }
 
-#[get("/search/variety/{name}")]
+
+// searches to support:
+// plain variety search: "red" -> "redhaven" "early redhaven" ...
+// with type: "redhaven peach" -> "redhaven" and also suggest the category "peach"
+// rules: if we have an exact match for a type name (or type aka name) then remove that word, use it to suggest that type
+// todo - this kind of type search plus a full text search on the collections json files
+#[get("/search/{string}")]
 async fn variety_search(
-    path: web::Path<VarietySearchPath>,
+    path: web::Path<SearchPath>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    let results = web::block(move || variety_search_db(&conn, &path.name))
+    let results = web::block(move || variety_search_db(&conn, &path.string))
         .await
         .map_err(|e| {
             eprintln!("{}", e);

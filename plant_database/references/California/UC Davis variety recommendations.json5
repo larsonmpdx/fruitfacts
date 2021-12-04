@@ -887,7 +887,7 @@
         {
             name: "Montmorency",
             type: "Sour Cherry",
-            description: "The leadign sour cultivar. Medium-sized, dark red fruit",
+            description: "The leading sour cultivar. Medium-sized, dark red fruit",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
                 { "Sacramento Valley": "early Jun" },

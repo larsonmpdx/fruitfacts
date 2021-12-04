@@ -20,7 +20,7 @@
 		});
 
 	async function searchPlant(keyword) {
-		const url = 'http://localhost:8080/search/variety/' + encodeURIComponent(keyword);
+		const url = 'http://localhost:8080/search/' + encodeURIComponent(keyword);
 
 		const response = await fetch(url);
 		return await response.json();
@@ -30,7 +30,13 @@
 <AutoComplete
 	searchFunction={searchPlant}
 	bind:selectedItem={selectedPlant}
-	labelFieldName="name"
+	labelFunction={(plant) => {
+		if (plant.marketing_name) {
+			return plant.name + ' (' + plant.marketing_name + ') ' + plant.type;
+		} else {
+			return plant.name + ' ' + plant.type;
+		}
+	}}
 	localFiltering={false}
 	maxItemsToShowInList="10"
 	delay="200"
