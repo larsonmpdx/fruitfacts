@@ -1562,7 +1562,7 @@ fn load_references(
 
                         reference_plants_added += add_collection_plant_by_location(
                             collection_id,
-                            path.clone() + filename.clone(),
+                            format!("{}{}", path ,filename),
                             &plant_name,
                             &plant,
                             &category_description,
@@ -1581,7 +1581,7 @@ fn load_references(
 
                     reference_plants_added += add_collection_plant_by_location(
                         collection_id,
-                        path.clone() + filename.clone(),
+                        format!("{}{}", path ,filename),
                         plant.name.as_ref().unwrap(),
                         &plant,
                         &category_description,
