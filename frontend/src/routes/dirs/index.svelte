@@ -50,12 +50,15 @@
 </script>
 
 <main>
+	{#if $directories && $directories.length > 0}
 	<h1>dirs</h1>
 	<ul>
 		{#each $directories as directory}
 			<li><a href="/dirs?path={encodeURIComponent(directory)}">{directory}</a></li>
 		{/each}
 	</ul>
+	{/if}
+	{#if $collections && $collections.length > 0}
 	<h1>locations</h1>
 	<ul>
 		{#each $collections as collection}
@@ -66,6 +69,7 @@
 			</li>
 		{/each}
 	</ul>
+	{/if}
 </main>
 
 <style>
