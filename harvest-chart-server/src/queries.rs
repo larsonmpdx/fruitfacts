@@ -8,6 +8,7 @@ use std::collections::HashSet;
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use super::schema_types::*;
 use serde::{Deserialize, Serialize};
+use anyhow::Result;
 
 #[derive(Queryable, Debug, Serialize)]
 pub struct BasePlantsItemForPatents {
@@ -50,7 +51,7 @@ async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, act
 
 
 #[derive(Queryable, Debug, Serialize)]
-pub struct CollectionsForSort {
+pub struct CollectionsForRecent {
     pub id: i32,
 
     pub path: Option<String>,
@@ -61,31 +62,29 @@ pub struct CollectionsForSort {
     pub git_edit_time: Option<i64>,
 }
 
-pub fn get_sorted_collections_db(
-    conn: &SqliteConnection,
-    sort: &str,
-) -> Result<Vec<CollectionsForSort>, Box<dyn std::error::Error>> {
+pub fn get_recent_collections_db(
+    conn: &SqliteConnection
+) -> Result<Vec<CollectionsForRecent>> {
 
-    if sort == "age" {
-        let db_return = collections::dsl::collections
-        .select((
-            collections::id,
-            collections::path,
-            collections::filename,
-            collections::title,
-            collections::git_edit_time,
-        ))
-        .order(collections::git_edit_time.desc())
-        .load::<CollectionsForSort>(conn);
+    let db_return = collections::dsl::collections
+    .select((
+        collections::id,
+        collections::path,
+        collections::filename,
+        collections::title,
+        collections::git_edit_time,
+    ))
+    .order(collections::git_edit_time.desc())
+    .limit(10)
+    .load::<CollectionsForRecent>(conn);
+
+    // todo - limit 10
 
     match db_return {
         Ok(collections) => {
             Ok(collections)
         }
-        Err(error) => Err(Box::new(error)),
-    }
-    } else {
-        Err("error")
+        Err(error) => Err(error.into()),
     }
 }
 
@@ -214,11 +213,6 @@ pub fn get_collection_db(
 }
 
 #[derive(Deserialize)]
-struct GetCollectionsQuery {
-    sort: Option<String>,
-}
-
-#[derive(Deserialize)]
 struct Path {
     path: String,
 }
@@ -228,14 +222,9 @@ struct Path {
 #[get("/collections/{path:.*}")] // the ":.*" part is a regex to get the entire tail of the path
 async fn get_collections(
     path: web::Path<Path>,
-    query: web::Query<GetCollectionsQuery>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
-
-    if let Some(sort) = &query.sort {
-
-    }
 
     if path.path.is_empty() || path.path.ends_with('/') {
         // get all subdirectories and all collections at this path
@@ -382,19 +371,37 @@ async fn get_plant(
 }
 
 #[derive(Serialize)]
+struct RecentChanges {
+    build_info: BuildInfo,
+    recent_updates: Vec<CollectionsForRecent>,
+}
+
+#[derive(Serialize)]
 struct BuildInfo {
     git_hash: String,
     git_unix_time: String,
     git_commit_count: String,
 }
 
-#[get("/build_info")]
-async fn get_build_info() -> Result<HttpResponse, actix_web::Error> {
-    Ok(HttpResponse::Ok().json(BuildInfo {
+#[get("/recent_changes")]
+async fn get_build_info(
+    pool: web::Data<DbPool>
+) -> Result<HttpResponse, actix_web::Error> {
+    let conn = pool.get().expect("couldn't get db connection from pool");
+
+    let sorted = web::block(move || get_recent_collections_db(&conn))
+    .await
+    .map_err(|e| {
+        eprintln!("{}", e);
+        HttpResponse::InternalServerError().finish()
+    })?;
+
+    return Ok(HttpResponse::Ok().json(RecentChanges {build_info: BuildInfo {
         git_hash: env!("GIT_HASH").to_string(),
         git_unix_time: env!("GIT_UNIX_TIME").to_string(),
         git_commit_count: env!("GIT_MAIN_COMMIT_COUNT").to_string(),
-    }))
+    },
+    recent_updates: sorted}));
 }
 
 pub fn variety_search_db(
