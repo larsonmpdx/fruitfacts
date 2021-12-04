@@ -2,7 +2,7 @@
 	import { recentChangesData } from './store';
 	import { goto } from '$app/navigation';
 	import AutoComplete from 'simple-svelte-autocomplete';
-    import { format as timeAgo } from 'timeago.js';
+	import { format as timeAgo } from 'timeago.js';
 
 	let selectedPlant;
 	$: if (selectedPlant) {
@@ -38,12 +38,12 @@
 />
 <a href="/dirs?path=">browse locations</a>
 {#if $recentChangesData.build_info}
-    <p>updated {timeAgo($recentChangesData.build_info.git_unix_time * 1000)}</p>
+	<p>updated {timeAgo($recentChangesData.build_info.git_unix_time * 1000)}</p>
 	<p>build count {$recentChangesData.build_info.git_commit_count}</p>
 	<p>hash {$recentChangesData.build_info.git_hash}</p>
 {/if}
 {#if $recentChangesData.recent_updates}
-    {#each $recentChangesData.recent_updates as update}
-        <li>{update.filename} {timeAgo(update.git_edit_time * 1000)}</li>
-    {/each}
+	{#each $recentChangesData.recent_updates as update}
+		<li>{update.filename} {timeAgo(update.git_edit_time * 1000)}</li>
+	{/each}
 {/if}

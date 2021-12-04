@@ -7,8 +7,8 @@ use regex::Regex;
 use std::collections::HashSet;
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use super::schema_types::*;
-use serde::{Deserialize, Serialize};
 use anyhow::Result;
+use serde::{Deserialize, Serialize};
 
 #[derive(Queryable, Debug, Serialize)]
 pub struct BasePlantsItemForPatents {
@@ -49,7 +49,6 @@ async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, act
     Ok(HttpResponse::Ok().json(patents))
 }
 
-
 #[derive(Queryable, Debug, Serialize)]
 pub struct CollectionsForRecent {
     pub id: i32,
@@ -62,28 +61,23 @@ pub struct CollectionsForRecent {
     pub git_edit_time: Option<i64>,
 }
 
-pub fn get_recent_collections_db(
-    conn: &SqliteConnection
-) -> Result<Vec<CollectionsForRecent>> {
-
+pub fn get_recent_collections_db(conn: &SqliteConnection) -> Result<Vec<CollectionsForRecent>> {
     let db_return = collections::dsl::collections
-    .select((
-        collections::id,
-        collections::path,
-        collections::filename,
-        collections::title,
-        collections::git_edit_time,
-    ))
-    .order(collections::git_edit_time.desc())
-    .limit(10)
-    .load::<CollectionsForRecent>(conn);
+        .select((
+            collections::id,
+            collections::path,
+            collections::filename,
+            collections::title,
+            collections::git_edit_time,
+        ))
+        .order(collections::git_edit_time.desc())
+        .limit(10)
+        .load::<CollectionsForRecent>(conn);
 
     // todo - limit 10
 
     match db_return {
-        Ok(collections) => {
-            Ok(collections)
-        }
+        Ok(collections) => Ok(collections),
         Err(error) => Err(error.into()),
     }
 }
@@ -384,31 +378,30 @@ struct BuildInfo {
 }
 
 #[get("/recent_changes")]
-async fn get_build_info(
-    pool: web::Data<DbPool>
-) -> Result<HttpResponse, actix_web::Error> {
+async fn get_build_info(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
     let sorted = web::block(move || get_recent_collections_db(&conn))
-    .await
-    .map_err(|e| {
-        eprintln!("{}", e);
-        HttpResponse::InternalServerError().finish()
-    })?;
+        .await
+        .map_err(|e| {
+            eprintln!("{}", e);
+            HttpResponse::InternalServerError().finish()
+        })?;
 
-    return Ok(HttpResponse::Ok().json(RecentChanges {build_info: BuildInfo {
-        git_hash: env!("GIT_HASH").to_string(),
-        git_unix_time: env!("GIT_UNIX_TIME").to_string(),
-        git_commit_count: env!("GIT_MAIN_COMMIT_COUNT").to_string(),
-    },
-    recent_updates: sorted}));
+    return Ok(HttpResponse::Ok().json(RecentChanges {
+        build_info: BuildInfo {
+            git_hash: env!("GIT_HASH").to_string(),
+            git_unix_time: env!("GIT_UNIX_TIME").to_string(),
+            git_commit_count: env!("GIT_MAIN_COMMIT_COUNT").to_string(),
+        },
+        recent_updates: sorted,
+    }));
 }
 
 pub fn variety_search_db(
     conn: &SqliteConnection,
     name: &str,
 ) -> Result<Vec<BasePlant>, diesel::result::Error> {
-
     // extra characters. leave spaces so FTS still gets to match two different words
     // dashes get interpreted by fts. same with +*:^ AND OR NOT
     let re = Regex::new(r"[^0-9A-Za-z ]").unwrap();
