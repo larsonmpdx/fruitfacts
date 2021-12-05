@@ -58,7 +58,9 @@
 	<h1>Collection Entries</h1>
 	<ul>
 		{#each $collection_entries as entry}
-			{#if entry.description}<li>{entry.description} <a href="/collections?path={encodeURIComponent(`${entry.path_and_filename}`)}" title="{entry.path_and_filename}">[ref]</a></li>{/if}
+		<li><a href="/collections?path={encodeURIComponent(`${entry.path_and_filename}`)}">{entry.path_and_filename}</a>
+			{#if entry.description}{entry.description}{/if}
+		</li>
 		{/each}
 	</ul>
 	<h1>Harvest Times</h1>

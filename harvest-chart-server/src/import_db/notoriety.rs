@@ -14,7 +14,7 @@ pub fn collection_notoriety_text_decoder(text: &str) -> CollectionNotoriety {
         score: f32,
     }
 
-    const REFERENCE_NOTORIETY_TABLE: [NotorietyEntry; 14] = [
+    const REFERENCE_NOTORIETY_TABLE: [NotorietyEntry; 15] = [
         NotorietyEntry {
             type_: "state extension guide",
             score: 100.0,
@@ -32,16 +32,20 @@ pub fn collection_notoriety_text_decoder(text: &str) -> CollectionNotoriety {
             score: 80.0,
         },
         NotorietyEntry {
-            type_: "journal article", // not a release article for one variety - an actual growing test like the OSU table grape trial
+            type_: "journal article test", // not a release article for one variety - an actual growing test like the OSU table grape trial
             score: 50.0,
         },
         NotorietyEntry {
-            type_: "extension test", // same as "journal article" but not published in a journal
+            type_: "extension test", // same as "journal article test" but not published in a journal
             score: 50.0,
         },
         NotorietyEntry {
             type_: "localized grower or nursery recommendations",
             score: 45.0,
+        },
+        NotorietyEntry {
+            type_: "journal article", // a journal article that's more or less a survey or dictionary list
+            score: 40.0,
         },
         NotorietyEntry {
             type_: "home grower variety list",
