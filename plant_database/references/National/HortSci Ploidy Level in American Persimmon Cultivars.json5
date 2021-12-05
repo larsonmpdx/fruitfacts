@@ -14,231 +14,231 @@
     ],
     plants: [
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "100-29 Deer Magnet",
             description: "Jerry Lehman cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "100-46",
             description: "Jerry Lehman cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Brace #1 Seedless",
             description: "Selected by Lucky Pittman of Western Kentucky. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Dollywood",
             AKA: ["D-128"],
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Early Golden",
             description: "Propagated since the 1890s, from Illinois. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Elmo",
             AKA: ["A-118"],
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Ennis Seedless",
             description: "Indiana seedling. Tetraploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "F-100",
             description: "Male selection. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "F-34",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "F-62",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Garretson",
             description: "Seedling of Early Golden. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Golden Supreme",
             description: "Very old cultivar, unknown background. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Early Jewel",
             AKA: ["H-118"],
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "H-120",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "H-55A",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "H-63A Claypool",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Osage",
             AKA: ["H-69A Seedling"], // "H-63A Seedling" in the pub but I think this is a typo, based on other sources
             description: "Seedling from Wes Rice. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "I-115",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "J-127",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "J-59 Claypool",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "K1",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "K2",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "K6 Claypool",
             description: "James Claypool cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Keener",
             description: "Luther Burbank cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Keener X",
             description: "Seedling was thought to be 120 chromosomes. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Korp",
             description: "Bred by George Slate. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Meader",
             description: "Bred by Corwin Meader of New York. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Mohler",
             description: "Unknown background. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "NC-10",
             description: "Bred by Douglas Campbell of Southern Ontario. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Prairie Star",
             description: "James Claypool Cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Prairie Sun",
             description: "James Claypool Cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Prok",
             description: "Bred by George Slate and propagated by John Gordon Jr. of upper New York. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "R12T1",
             description: "Seedling from Jerry Lehman from Terre Haute, IN. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "SFES",
             description: "Selected by Lucky Pittman of Western Kentucky. Tetraploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Souvenir",
             description: "Imported in 2006 from Crimea, Ukraine. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Sugar Bear",
             description: "Seedling from Madison County, Kentucky. Tetraploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Super Sweet",
             description: "Bred by George Slate. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Szukus",
             description: "Bred by George Slate. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "U-20A",
             description: "Jerry Lehman cross. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Union Star",
             description: "Seedling from Rhodelia, Kentucky from Fred Blankenship. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Weeping",
             description: "Seedling from Kentucky. Tetraploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Wonderful",
             description: "Cross of Yates xF-100 by Clifford England. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "WS 19-10",
             description: "Selected by Jerry Lehman. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "WSA 8-10",
             description: "Selected by Jerry Lehman. Hexaploid"
         },
         {
-            type: "persimmon",
+            type: "Persimmon",
             name: "Yates",
             AKA: ["Juhl"],
             description: "Found by Ed Yates, but was mislabeled AKA Juhl (cv). Hexaploid"
