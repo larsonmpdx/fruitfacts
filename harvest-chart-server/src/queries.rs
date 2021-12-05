@@ -49,8 +49,8 @@ async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, act
     Ok(HttpResponse::Ok().json(patents))
 }
 
-#[derive(Queryable, Debug, Serialize)]
-pub struct CollectionsForRecent {
+#[derive(Default, Queryable, Debug, Serialize)]
+pub struct CollectionChanges {
     pub id: i32,
 
     pub path: Option<String>,
@@ -61,7 +61,17 @@ pub struct CollectionsForRecent {
     pub git_edit_time: Option<i64>,
 }
 
-pub fn get_recent_collections_db(conn: &SqliteConnection) -> Result<Vec<CollectionsForRecent>> {
+#[derive(Default, Serialize)]
+pub struct RecentChangesDB
+{
+    pub collection_changes: Vec<CollectionChanges>,
+    pub base_plants_count: i32,
+    pub references_count: i32,
+}
+
+pub fn get_recent_changes_db(conn: &SqliteConnection) -> Result<RecentChangesDB> {
+    let mut output: RecentChangesDB = Default::default();
+
     let db_return = collections::dsl::collections
         .select((
             collections::id,
@@ -72,14 +82,20 @@ pub fn get_recent_collections_db(conn: &SqliteConnection) -> Result<Vec<Collecti
         ))
         .order(collections::git_edit_time.desc())
         .limit(10)
-        .load::<CollectionsForRecent>(conn);
-
-    // todo - limit 10
+        .load::<CollectionChanges>(conn);
 
     match db_return {
-        Ok(collections) => Ok(collections),
-        Err(error) => Err(error.into()),
+        Ok(collections) => {
+            output.collection_changes = collections;
+        },
+        Err(error) => {
+            return Err(error.into());
+        }
     }
+
+    // todo - look up counts
+
+    return Ok(output);
 }
 
 #[derive(Queryable, Debug, Serialize)]
@@ -367,7 +383,7 @@ async fn get_plant(
 #[derive(Serialize)]
 struct RecentChanges {
     build_info: BuildInfo,
-    recent_updates: Vec<CollectionsForRecent>,
+    recent_changes: RecentChangesDB,
 }
 
 #[derive(Serialize)]
@@ -381,7 +397,7 @@ struct BuildInfo {
 async fn get_build_info(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    let sorted = web::block(move || get_recent_collections_db(&conn))
+    let changes_db = web::block(move || get_recent_changes_db(&conn))
         .await
         .map_err(|e| {
             eprintln!("{}", e);
@@ -394,7 +410,7 @@ async fn get_build_info(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_w
             git_unix_time: env!("GIT_UNIX_TIME").to_string(),
             git_commit_count: env!("GIT_MAIN_COMMIT_COUNT").to_string(),
         },
-        recent_updates: sorted,
+        recent_changes: changes_db,
     }))
 }
 
