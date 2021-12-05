@@ -1,0 +1,121 @@
+{
+    title: "HortSci: Luther Burbanks Plums",
+    author: "David Karp",
+    url: "https://journals.ashs.org/hortsci/view/journals/hortsci/50/2/article-p189.xml",
+    published: "Feb 2015",
+    accessed: "Dec 2021",
+    type: "dictionary",
+    locations: [
+        {
+            name: "Santa Rosa, CA",
+            latitude: 38.436005909083065,
+            longitude: -122.71180878876915
+        }
+    ],
+    plants: [
+        // japanese plums imported
+        {
+            type: "Japanese Plum",
+            name: "Burbank",
+            description: "imported",
+            released: "Luther Burbank 1888*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Abundance",
+            AKA: ["Botan"],
+            description: "imported",
+            released: "Luther Burbank 1888*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Satsuma",
+            description: "imported",
+            released: "Luther Burbank 1889*"
+        },
+        // japanese plums bred
+        {
+            type: "Japanese Plum",
+            name: "Wickson",
+            AKA: ["Perfection"],
+            released: "Luther Burbank 1895*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Shiro",
+            released: "Luther Burbank 1898*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Climax",
+            released: "Luther Burbank 1899*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Gaviota",
+            released: "Luther Burbank 1909*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Duarte",
+            released: "Luther Burbank 1911*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Eldorado", // AKA El Dorado
+            released: "Luther Burbank 1904*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Santa Rosa",
+            released: "Luther Burbank 1906*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Formosa",
+            released: "Luther Burbank 1907*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Beauty",
+            released: "Luther Burbank 1911*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Inca",
+            released: "Luther Burbank 1919*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Elephant Heart",
+            released: "Luther Burbank 1929*"
+        },
+        // euro plums bred
+        {
+            type: "Euro Plum",
+            name: "Splendor",
+            released: "Luther Burbank 1894*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Giant",
+            released: "Luther Burbank 1893*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Improved French",
+            AKA: ["Morganhill"],
+            released: "Luther Burbank 1898*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Sugar",
+            released: "Luther Burbank 1899*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Standard",
+            released: "Luther Burbank 1910*"
+        }
+    ]
+}
