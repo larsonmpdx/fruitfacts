@@ -1,6 +1,6 @@
 <script lang="ts">
 	//   import { onMount } from "svelte";
-	import { apiData, locations, items } from './store';
+	import { apiData, collection, locations, items } from './store';
 	import { page } from '$app/stores';
 	import { onMount, beforeUpdate } from 'svelte';
 
@@ -37,10 +37,11 @@
 
 <main>
 	<!--- todo header info --->
+	<p>{$collection.title} {#if $collection.url}<a href={$collection.url}>[ref]</a>{/if}</p>
 	<h1>Locations</h1>
 	<ul>
 		{#each $locations as location}
-			<li>{location}</li>
+			<li>{location.location_name}</li>
 		{/each}
 	</ul>
 	<h1>Plants</h1>
@@ -48,9 +49,7 @@
 		{#each $items as item}
 			<li>
 				<a href="/plant?type={encodeURIComponent(item.type)}&name={encodeURIComponent(item.name)}"
-					>{#if item.marketing_name}{item.name}
-						{item.type} (marketed as {item.marketing_name}){:else}{item.name} {item.type}{/if}</a
-				>
+				>{item.name} {item.type}</a> {#if item.marketing_name}(marketed as {item.marketing_name}){/if}
 			</li>
 		{/each}
 	</ul>

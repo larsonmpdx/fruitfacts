@@ -58,13 +58,13 @@
 	<h1>Collection Entries</h1>
 	<ul>
 		{#each $collection_entries as entry}
-			{#if entry.description}<li>{entry.description}</li>{/if}
+			{#if entry.description}<li>{entry.description} <a href="/collections?path={encodeURIComponent(`${entry.path_and_filename}`)}" title="{entry.path_and_filename}">[ref]</a></li>{/if}
 		{/each}
 	</ul>
 	<h1>Harvest Times</h1>
 	<ul>
 		{#each $collection_entries as entry}
-			{#if entry.harvest_text}<li>{entry.harvest_text}</li>{/if}
+			{#if entry.harvest_text}<li>{entry.harvest_text} <a href="/collections?path={encodeURIComponent(`${entry.path_and_filename}`)}" title="{entry.path_and_filename}">[ref]</a></li>{/if}
 		{/each}
 	</ul>
 </main>
