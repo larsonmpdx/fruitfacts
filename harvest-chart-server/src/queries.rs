@@ -62,11 +62,10 @@ pub struct CollectionChanges {
 }
 
 #[derive(Default, Serialize)]
-pub struct RecentChangesDB
-{
+pub struct RecentChangesDB {
     pub collection_changes: Vec<CollectionChanges>,
-    pub base_plants_count: i32,
-    pub references_count: i32,
+    pub base_plants_count: i64,
+    pub references_count: i64,
 }
 
 pub fn get_recent_changes_db(conn: &SqliteConnection) -> Result<RecentChangesDB> {
@@ -87,13 +86,21 @@ pub fn get_recent_changes_db(conn: &SqliteConnection) -> Result<RecentChangesDB>
     match db_return {
         Ok(collections) => {
             output.collection_changes = collections;
-        },
+        }
         Err(error) => {
             return Err(error.into());
         }
     }
 
-    // todo - look up counts
+    let collections_count = collections::dsl::collections.count().first::<i64>(conn);
+    if let Ok(count) = collections_count {
+        output.references_count = count;
+    }
+
+    let base_plants_count = base_plants::dsl::base_plants.count().first::<i64>(conn);
+    if let Ok(count) = base_plants_count {
+        output.base_plants_count = count;
+    }
 
     return Ok(output);
 }

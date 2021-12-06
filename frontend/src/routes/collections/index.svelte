@@ -37,7 +37,10 @@
 
 <main>
 	<!--- todo header info --->
-	<p>{$collection.title} {#if $collection.url}<a href={$collection.url}>[ref]</a>{/if}</p>
+	<p>
+		{$collection.title}
+		{#if $collection.url}<a href={$collection.url}>[ref]</a>{/if}
+	</p>
 	<h1>Locations</h1>
 	<ul>
 		{#each $locations as location}
@@ -49,7 +52,9 @@
 		{#each $items as item}
 			<li>
 				<a href="/plant?type={encodeURIComponent(item.type)}&name={encodeURIComponent(item.name)}"
-				>{item.name} {item.type}</a> {#if item.marketing_name}(marketed as {item.marketing_name}){/if}
+					>{item.name} {item.type}</a
+				>
+				{#if item.marketing_name}(marketed as {item.marketing_name}){/if}
 			</li>
 		{/each}
 	</ul>
