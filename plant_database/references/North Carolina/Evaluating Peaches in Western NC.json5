@@ -1,0 +1,18 @@
+{
+    title: "Evaluating Peaches in Western NC",
+    author: "",
+    url: "https://newcropsorganics.ces.ncsu.edu/specialty-crops/specialty-crops-research/evaluating-peach-cultivars-for-wnc/",
+    published: "2004",
+    accessed: "Dec 2021",
+    type: "extension test",
+    locations: [
+        {
+            name: "Mountain Horticultural Crops Research Station, Fletcher, NC",
+            latitude: 35.426614591406256,
+            longitude: -82.55837138746178
+        }
+    ],
+    plants: [
+        // todo - chill hours, description, harvest time and a rating scale
+    ]
+}

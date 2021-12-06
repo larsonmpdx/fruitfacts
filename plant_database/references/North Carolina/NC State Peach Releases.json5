@@ -1,0 +1,215 @@
+{
+    title: "NC State Peach Releases",
+    author: "",
+    url: "https://reeis.usda.gov/web/crisprojectpages/0151535-breeding-and-genetics-of-peach.html",
+    published: "",
+    accessed: "Dec 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "Horticultural Crops Research Station Castle Hayne NC",
+            latitude: 34.32048103739439,
+            longitude: -77.91984738099124
+        }
+    ],
+    plants: [
+        // breeding program ended 2005
+        // some names are from the Okie peach book
+        {
+            type: "Peach",
+            name: "Carolina Gold",
+            AKA: ["NC98-83"],
+            released: "NC State 2004*",
+            patent: "https://patents.google.com/patent/USPP17780 expires 2024-11-22"
+        },
+        {
+            type: "Peach",
+            name: "Galactica",
+            AKA: ["NC98-42"],
+            description: "flat",
+            released: "NC State 2004*",
+            patent: "https://patents.google.com/patent/USPP17118 expires 2024-12-27"
+        },
+        {
+            type: "Peach",
+            name: "Challenger",
+            released: "NC State 1999*",
+            patent: "https://patents.google.com/patent/USPP12375 expired 2019-01-19"
+        },
+        {
+            type: "Peach",
+            name: "Intrepid",
+            released: "NC State 1999*",
+            patent: "https://patents.google.com/patent/USPP12357 expired 2019-01-19"
+        },
+        {
+            type: "Peach",
+            name: "China Pearl",
+            released: "NC State 1998*",
+            patent: "https://patents.google.com/patent/USPP11914 expired 2018-09-14"
+        },
+        {
+            type: "Peach",
+            name: "Legend",
+            released: "NC State 1991*"
+        },
+        {
+            type: "Peach",
+            name: "Contender",
+            // some sources say 1989
+            released: "NC State 1987*"
+        },
+        {
+            type: "Peach",
+            name: "Carolina Belle",
+            released: "NC State 1987*"
+        },
+        {
+            type: "Peach",
+            name: "White Glory",
+            released: "NC State 1984*"
+        },
+        {
+            type: "Peach",
+            name: "Carolina Red",
+            released: "NC State 1982*"
+        },
+        // harvest dates for the remaining peaches are from:
+        // "Peach Cultviars introduced by the NC Agricultural Research Service 1965-1981" Werner and Ritchie 1983
+        // https://content.ces.ncsu.edu/pdf/peach-cultivars/2015-02-03/peach-cultivars.pdf
+        {
+            type: "Peach",
+            name: "Derby",
+            AKA: ["NCA2183"],
+            harvest_time: "5/30-6/20",
+            description: "med-large, clingstone, good flesh firmness, moderate browning. production: good",
+            disease_resistance: { BLS: "very high" },
+            released: "NC State 1978*"
+        },
+        {
+            type: "Peach",
+            name: "Correll",
+            AKA: ["NCA2699"],
+            harvest_time: "5/30-6/20",
+            description: "medium, clingstone, good flesh firmness, slow browning. production: good",
+            disease_resistance: { BLS: "moderate" },
+            released: "NC State 1976*"
+        },
+        {
+            type: "Peach",
+            name: "Hamlet",
+            AKA: ["NCA2684"],
+            harvest_time: "5/23-6/10",
+            description: "medium, clingstone, good flesh firmness, slow browning. production: very good",
+            disease_resistance: { BLS: "high" },
+            released: "NC State 1976*"
+        },
+        {
+            type: "Peach",
+            name: "Ellerbe",
+            AKA: ["NCA2705"],
+            harvest_time: "7/10-7/21",
+            description: "med-large, freestone, very good flesh firmness, moderate browning. production: very good",
+            disease_resistance: { BLS: "high" },
+            released: "NC State 1976*"
+        },
+        {
+            type: "Peach",
+            name: "Biscoe",
+            AKA: ["NC4639"],
+            harvest_time: "7/23-8/1",
+            description: "large, freestone, good flesh firmness, fast browning. production: good",
+            disease_resistance: { BLS: "high" },
+            released: "NC State 1969*"
+        },
+        {
+            type: "Peach",
+            name: "Clayton",
+            AKA: ["NCA2679"],
+            harvest_time: "6/25-7/10",
+            description: "medium, freestone, good flesh firmness, slow browning. production: excellent",
+            disease_resistance: { BLS: "very high" },
+            released: "NC State 1976*"
+        },
+        {
+            type: "Peach",
+            name: "Winblo",
+            AKA: ["NC8969"],
+            harvest_time: "7/10-7/21",
+            description: "med-large, freestone, good flesh firmness, slow browning. production: very good",
+            disease_resistance: { BLS: "moderate" },
+            released: "NC State 1972*"
+        },
+        {
+            type: "Peach",
+            name: "Rubired",
+            AKA: ["NC4911"],
+            harvest_time: "6/12-6/26",
+            description: "med-large, clingstone, very good flesh firmness, slow browning. production: good",
+            disease_resistance: { BLS: "very high" },
+            released: "NC State 1972*"
+        },
+        {
+            type: "Peach",
+            name: "Troy",
+            AKA: ["NC4640"],
+            harvest_time: "7/3-7/14",
+            description: "med-large, freestone, fair flesh firmness, moderate browning. production: fair",
+            disease_resistance: { BLS: "moderate" },
+            released: "NC State 1969*"
+        },
+        {
+            type: "Peach",
+            name: "Norman",
+            AKA: ["NC7244"],
+            harvest_time: "6/25-7/12",
+            description: "med-large, freestone, excellent flesh firmness, slow browning. production: excellent",
+            disease_resistance: { BLS: "high" },
+            released: "NC State 1969*"
+        },
+        {
+            type: "Peach",
+            name: "Whynot",
+            AKA: ["NC6753"],
+            harvest_time: "5/16-5/24",
+            description: "small size, clingstone, good flesh firmness, fast browning. production: fair-good",
+            disease_resistance: { BLS: "high" },
+            released: "NC State 1969*"
+        },
+        {
+            type: "Peach",
+            name: "Emery",
+            AKA: ["NC9062"],
+            harvest_time: "8/2-8/15",
+            description: "med-large, freestone, very good flesh firmness, fast browning. production: very good",
+            disease_resistance: { BLS: "high" },
+            released: "NC State 1969*"
+        },
+        {
+            type: "Peach",
+            name: "Pekin",
+            AKA: ["NC7366"],
+            harvest_time: "6/20-7/3",
+            description: "medium, semi-clingstone, good flesh firmness, moderate browning. production: excellent",
+            disease_resistance: { BLS: "very high" },
+            released: "NC State 1969*"
+        },
+        {
+            type: "Peach",
+            name: "Candor",
+            AKA: ["NC7422"],
+            harvest_time: "6/5-6/20",
+            description: "medium, clingstone, good flesh firmness, slow browning. production: excellent",
+            disease_resistance: { BLS: "very high" },
+            released: "NC State 1965*"
+        },
+        {
+            type: "Peach",
+            name: "Marcus",
+            released: "NC State 1959*"
+        }
+        // todo
+        // "Von" blackberry
+        // https://patents.google.com/patent/USPP27299 expires 2034-12-24
+    ]
+}

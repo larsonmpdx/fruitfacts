@@ -3,6 +3,7 @@
 	import { apiData, base, collection_entries } from './store';
 	import { page } from '$app/stores';
 	import { onMount, beforeUpdate } from 'svelte';
+	import { format as timeAgo } from 'timeago.js';
 
 	let previousPath;
 
@@ -46,7 +47,11 @@
 		{#if $base.marketing_name}(marketed as {$base.marketing_name}){/if}
 	</p>
 	<p>
-		{#if $base.AKA}AKA {$base.AKA}{/if}
+		{#if $base.uspp_number}USPP{$base.uspp_number}{/if}
+		{#if $base.uspp_expiration}{#if ($base.uspp_expiration * 1000) > new Date().getTime()}expires {:else}expired {/if}{timeAgo($base.uspp_expiration * 1000)}{/if}
+	</p>
+	<p>
+		{#if $base.aka}AKA {$base.aka}{/if}
 	</p>
 	{#if $base.release_year || $base.released_by}
 		<!--- todo link to release collection --->

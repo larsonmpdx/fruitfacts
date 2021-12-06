@@ -102,7 +102,7 @@ pub fn get_recent_changes_db(conn: &SqliteConnection) -> Result<RecentChangesDB>
         output.base_plants_count = count;
     }
 
-    return Ok(output);
+    Ok(output)
 }
 
 #[derive(Queryable, Debug, Serialize)]

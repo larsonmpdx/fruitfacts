@@ -1039,7 +1039,7 @@ fn get_category_description(
 fn add_collection_plant(
     collection_id: i32,
     location_id: Option<i32>,
-    path_and_filename: &String,
+    path_and_filename: &str,
     harvest_time: &Option<String>,
     plant_name: &str,
     plant: &CollectionPlantJson,
