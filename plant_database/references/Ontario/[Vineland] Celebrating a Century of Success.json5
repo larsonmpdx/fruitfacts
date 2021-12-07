@@ -1,0 +1,352 @@
+{
+    title: "Celebrating a Century of Success 1906-2006",
+    author: "Horticultural Experiment Station Vineland and the University of Guelph, Ed. Arthur Loughton, Richard V. Chudyk and Judy A. Wanner",
+    url: "https://atrium.lib.uoguelph.ca/xmlui/bitstream/handle/10214/2450/Celebrating_A_Century_of_Success_1906-2006.pdf?sequence=1",
+    published: "2006",
+    accessed: "Dec 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "Vineland, ON",
+            latitude: 43.19273108384379,
+            longitude: -79.39908516758658
+        }
+    ],
+    plants: [
+        // sweet cherry
+        {
+            type: "Sweet Cherry",
+            name: "Victor",
+            harvest_time_unparsed: "Mid",
+            description: "White",
+            released: "Vineland 1925*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Velvet",
+            harvest_time_unparsed: "Early-mid",
+            description: "Red",
+            released: "Vineland 1937*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Venus",
+            harvest_time_unparsed: "Early",
+            description: "Red",
+            released: "Vineland 1958*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vic",
+            harvest_time_unparsed: "Late-mid",
+            description: "Red",
+            released: "Vineland 1958*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vista",
+            harvest_time_unparsed: "Early",
+            description: "Red",
+            released: "Vineland 1958*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vega",
+            harvest_time_unparsed: "Mid",
+            description: "White",
+            released: "Vineland 1967*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Valera",
+            harvest_time_unparsed: "Early",
+            description: "Red",
+            released: "Vineland 1967*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Viva",
+            harvest_time_unparsed: "Early",
+            description: "Red",
+            released: "Vineland 1972*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vogue",
+            harvest_time_unparsed: "Mid",
+            description: "Red",
+            released: "Vineland 1974*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Viscount",
+            harvest_time_unparsed: "Mid",
+            description: "Red",
+            released: "Vineland 1984*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vandalay",
+            harvest_time_unparsed: "Early-Mid",
+            description: "Red. self-fruitful",
+            released: "Vineland 1996*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Tehranivee",
+            harvest_time_unparsed: "Late-Mid",
+            description: "Red. self-fruitful",
+            released: "Vineland 1996*"
+        },
+        // Euro Plums
+        {
+            type: "Euro Plum",
+            name: "Valor",
+            released: "Vineland 1967*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Verity",
+            released: "Vineland 1967*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Vision",
+            released: "Vineland 1967*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Veeblue",
+            released: "Vineland 1981*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Voyageur",
+            released: "Vineland 1987*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Victory",
+            released: "Vineland 1991*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Valerie",
+            released: "Vineland 1999*"
+        },
+        {
+            type: "Euro Plum",
+            name: "Vanette",
+            released: "Vineland 1999*"
+        },
+        // Japanese Plums
+        {
+            type: "Japanese Plum",
+            name: "Vanier",
+            released: "Vineland 1983*"
+        },
+        // wine grapes
+        {
+            type: "Grape",
+            name: "Veeport",
+            description: "labrusca-type wine grape",
+            released: "Vineland 1961*"
+        },
+        {
+            type: "Grape",
+            name: "Vincent",
+            description: "non-labrusca wine grape",
+            released: "Vineland 1967*"
+        },
+        {
+            type: "Grape",
+            name: "Ventura",
+            description: "winter-hardy wine grape",
+            released: "Vineland 1974*"
+        },
+        {
+            type: "Grape",
+            name: "Veeblanc",
+            description: "wine grape",
+            released: "Vineland 1977*"
+        },
+        {
+            type: "Grape",
+            name: "Vivant",
+            description: "wine grape",
+            released: "Vineland 1983*"
+        },
+        {
+            type: "Grape",
+            name: "L'Acadie",
+            description: "wine grape",
+            released: "Vineland 1993*"
+        },
+        {
+            type: "Grape",
+            name: "Vintinto",
+            description: "wine grape",
+            released: "Vineland 1999*"
+        },
+        // table grapes
+        {
+            type: "Grape",
+            name: "Vinered",
+            description: "table grape",
+            released: "Vineland 1964*"
+        },
+        {
+            type: "Grape",
+            name: "Festivee",
+            description: "table grape",
+            released: "Vineland 1976*"
+        },
+        {
+            type: "Grape",
+            name: "Vanessa",
+            description: "seedless table grape",
+            released: "Vineland 1983*"
+        },
+        // Peaches
+        {
+            type: "Peach",
+            name: "Vimy",
+            description: "Fresh market",
+            released: "Vineland 1924*"
+        },
+        {
+            type: "Peach",
+            name: "Valiant",
+            description: "Fresh market",
+            released: "Vineland 1925*"
+        },
+        {
+            type: "Peach",
+            name: "Vaughan",
+            description: "Fresh market",
+            released: "Vineland 1925*"
+        },
+        {
+            type: "Peach",
+            name: "Vedette",
+            description: "Fresh market",
+            released: "Vineland 1925*"
+        },
+        {
+            type: "Peach",
+            name: "Veteran",
+            description: "Fresh Market",
+            released: "Vineland 1928*"
+        },
+        {
+            type: "Peach",
+            name: "Viceroy",
+            description: "Fresh Market",
+            released: "Vineland 1929*"
+        },
+        {
+            type: "Peach",
+            name: "Veefreeze",
+            description: "Fresh Market",
+            released: "Vineland 1940*"
+        },
+        {
+            type: "Peach",
+            name: "Vanguard",
+            description: "Fresh Market",
+            released: "Vineland 1941*"
+        },
+        {
+            type: "Peach",
+            name: "Envoy",
+            description: "Fresh Market. note: Originated at New Brunswick, New Jersey by M. A. Blake",
+            released: "Vineland 1949*"
+        },
+        {
+            type: "Peach",
+            name: "Erlyvee",
+            description: "Fresh Market",
+            released: "Vineland 1949*"
+        },
+        {
+            type: "Peach",
+            name: "Vesper",
+            description: "Fresh Market",
+            released: "Vineland 1949*"
+        },
+        {
+            type: "Peach",
+            name: "Somervee",
+            description: "Fresh Market",
+            released: "Vineland 1951*"
+        },
+        {
+            type: "Peach",
+            name: "Royalvee",
+            description: "Fresh Market",
+            released: "Vineland 1959*"
+        },
+        {
+            type: "Peach",
+            name: "Vedoka",
+            description: "Fresh Market. note: Originated at the Horticulture Experiment Station, Vineland, introduced for British Columbia Growers",
+            released: "Vineland 1961*"
+        },
+        {
+            type: "Peach",
+            name: "Vanity",
+            description: "Fresh Market",
+            released: "Vineland 1965*"
+        },
+        {
+            type: "Peach",
+            name: "Velvet",
+            description: "Fresh Market",
+            released: "Vineland 1965*"
+        },
+        {
+            type: "Peach",
+            name: "Vivid",
+            description: "Fresh Market",
+            released: "Vineland 1974*"
+        },
+        {
+            type: "Peach",
+            name: "Veecling",
+            description: "Processing",
+            released: "Vineland 1974*"
+        },
+        {
+            type: "Peach",
+            name: "Veeglo",
+            description: "Fresh Market",
+            released: "Vineland 1981*"
+        },
+        {
+            type: "Peach",
+            name: "Vulcan",
+            description: "Processing",
+            released: "Vineland 1994*"
+        },
+        {
+            type: "Peach",
+            name: "Vinegold",
+            description: "Processing",
+            released: "Vineland 1994*"
+        },
+        {
+            type: "Peach",
+            name: "Virgil",
+            description: "Processing",
+            released: "Vineland 1997*"
+        },
+        {
+            type: "Peach",
+            name: "V75024",
+            AKA: ["Venture (tm)"],
+            description: "Processing",
+            released: "Vineland 1999*",
+            patent: "https://patents.google.com/patent/USPP16469 expires 2022-01-10"
+        }
+    ]
+}

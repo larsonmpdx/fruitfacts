@@ -101,7 +101,7 @@
         {
             type: "Peach",
             category: "Yellow non-melting flesh peach",
-            names: ["Goldnine", "Vulcan", "Venture", "Vinegold", "Virgil", "Allgold", "GoldJim"],
+            names: ["Goldnine", "Vulcan", "V75024" /*"Venture"*/, "Vinegold", "Virgil", "Allgold", "GoldJim"],
             disease_resistance: { BLS: "Good" }
         },
         {
