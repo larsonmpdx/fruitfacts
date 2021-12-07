@@ -13,305 +13,243 @@
         }
     ],
     plants: [
-        // todo - finish list and make json
         // for each variety I call out any negatives in the publication
         // White or yellow fleshed varieties
-        // Corum                July 8
         {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Corum",
+            harvest_time: "July 8"
         },
-        // Emperor Francis      July 10
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Emperor Francis",
+            harvest_time: "July 10"
         },
-        // Gold                 July 15
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Gold",
+            harvest_time: "July 15"
         },
-        // Napoleon             July 11     not_recommended_reason: severe rain cracking
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Royal Ann",
+            AKA: ["Napoleon"],
+            not_recommended_reason: "severe rain cracking",
+            harvest_time: "July 11"
         },
-        // Rainier              July 8      moderate rain cracking, bruise susceptibility
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Rainier",
+            description: "moderate rain cracking, bruise susceptibility",
+            harvest_time: "July 8"
         },
-        // 
         // Dark sweet cherries
-        // Bing                 July 10     not_recommended_reason: susceptible to canker, severe fruit splitting, sensitivity to cold
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Chinook              July 5      not_recommended_reason: severe fruit cracking
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Compact Lambert      July 18     not_recommended_reason: questions of virus status and stability of dwarfing
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Hedelfingen          July 17
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Hudson               July 25
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Lambert              July 18     not_recommended_reason: very susceptible to rain cracking. only medium hardy
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Sam                  July 6      only moderately productive. sometimes listed as canker resistant, but suscepbile to some kinds of canker
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Schmidt              July 10     not_recommended_reason: slow coming into bearing, unreliable cropping. winter tender
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Stella               July 13     moderately susceptible to rain cracking. only medium hardy
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Ulster               July 14     medium hardy
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Van                  July 14     bruising makes it unsuitable for commercial growing. Fruit develop in clusters so that brown rot control can be a problem
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Vista                July 3      Cracking is often a serious problem
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Windsor              July 16
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // 
-        // other varieties of importance: white varieties
-        // Bada                July 7
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Sweet Ann  // no harvest time given
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Vega // no harvest time given        Requires a careful spray program for the control of brown rot
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // 
-        // other varieties of importance: dark sweet cherries
-        // Black Republican     // no harvest time given        not_recommended_reason: Primarily used as a pollenizer for other sweet cherries
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Black Tartarian      // no harvest time given        not_recommended_reason: small, soft fruit of relatively poor quality are not commercially desirable
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Cavalier             June 20             slow to bear. rain crack susceptible
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Early Burlat         Bing -2 weeks       not_recommended_reason: not evaluated at Geneva
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Hardy Giant      // no harvest time given
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Kristin              July 15
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Summit               July 6          susceptible to cold and rain cracking
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Utah Giant           Bing+0          not_recommended_reason: severe cracking
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Valera               Bing-3 // given as "a few days before Bing"
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Venus                July 6      not_recommended_reason: can overbear, Valera is better
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Viscount           // no harvest time given
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Viva     July 4
-                {
-            type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
-        },
-        // Vogue        // no harvest time given
         {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Bing",
+            not_recommended_reason: "susceptible to canker, severe fruit splitting, sensitivity to cold",
+            harvest_time: "July 10"
         },
-
-    // advanced selections
-        // NY 6476 Somerset     July 14
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Chinook",
+            not_recommended_reason: "severe fruit cracking",
+            harvest_time: "July 5"
         },
-        // NY 7679 radiance pearl       July 7
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Compact Lambert",
+            not_recommended_reason: "questions of virus status and stability of dwarfing",
+            harvest_time: "July 18"
         },
-        // NY 11390 royalton        July 10
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Hedelfingen",
+            harvest_time: "July 17"
         },
-        // NY 3308 hartland     July 4
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Hudson",
+            harvest_time: "July 25"
         },
-
+        {
+            type: "Sweet Cherry",
+            name: "Lambert",
+            not_recommended_reason: "very susceptible to rain cracking. only medium hardy",
+            harvest_time: "July 18"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sam",
+            description: "only moderately productive. sometimes listed as canker resistant, but suscepbile to some kinds of canker",
+            harvest_time: "July 6"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Schmidt",
+            not_recommended_reason: "slow coming into bearing, unreliable cropping. winter tender",
+            harvest_time: "July 10"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Stella",
+            description: "moderately susceptible to rain cracking. only medium hardy",
+            harvest_time: "July 13"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Ulster",
+            description: "medium hardy",
+            harvest_time: "July 14"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Van",
+            description: "bruising makes it unsuitable for commercial growing. Fruit develop in clusters so that brown rot control can be a problem",
+            harvest_time: "July 14"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vista",
+            description: "Cracking is often a serious problem",
+            harvest_time: "July 3"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Windsor",
+            harvest_time: "July 16"
+        },
+        // other varieties of importance: white varieties
+        {
+            type: "Sweet Cherry",
+            name: "Bada",
+            harvest_time: "July 7"
+        },
+        {
+            type: "Sweet Cherry",
+            // no harvest time given
+            name: "Sweet Ann"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vega",
+            // no harvest time given
+            description: "Requires a careful spray program for the control of brown rot"
+        },
+        // other varieties of importance: dark sweet cherries
+        {
+            type: "Sweet Cherry",
+            name: "Black Republican",
+            // no harvest time given
+            not_recommended_reason: "Primarily used as a pollenizer for other sweet cherries"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Black Tartarian",
+            // no harvest time given
+            not_recommended_reason: "small, soft fruit of relatively poor quality are not commercially desirable"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Cavalier",
+            description: "slow to bear. rain crack susceptible",
+            harvest_time: "June 20"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Early Burlat",
+            not_recommended_reason: "not evaluated at Geneva",
+            harvest_time_relative: "Bing -2 weeks"
+        },
+        {
+            type: "Sweet Cherry",
+            // no harvest time given
+            name: "Hardy Giant"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Kristin",
+            harvest_time: "July 15"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Summit",
+            description: "susceptible to cold and rain cracking",
+            harvest_time: "July 6"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Utah Giant",
+            not_recommended_reason: "severe cracking",
+            harvest_time_relative: "Bing+0"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Valera",
+            // given as "a few days before Bing"
+            harvest_time_relative: "Bing-3"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Venus",
+            not_recommended_reason: "can overbear, Valera is better",
+            harvest_time: "July 6"
+        },
+        {
+            type: "Sweet Cherry",
+            // no harvest time given
+            name: "Viscount"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Viva",
+            harvest_time: "July 4"
+        },
+        {
+            type: "Sweet Cherry",
+            // no harvest time given
+            name: "Vogue"
+        },
+        // advanced selections (all of these were later named)
+        {
+            type: "Sweet Cherry",
+            name: "Somerset", // NY 6476
+            harvest_time: "July 14"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "NY 7679", // "radiance pearl"
+            harvest_time: "July 7"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royalton", // NY 11390
+            harvest_time: "July 10"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Hartland", // NY 3308
+            harvest_time: "July 4"
+        },
         // self-fertile
-        // Lapins           // no harvest time given
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Lapins",
+            // no harvest time given
+            description: "self-fertile"
         },
-        // Sunburst         // no harvest time given
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            // no harvest time given,
+            description: "self-fertile",
+            name: "Sunburst"
         },
-        // Starkrimson      // no harvest time given  extremely susceptible to rain cracking
-                {
+        {
             type: "Sweet Cherry",
-            name: "",
-            description: "",
-            harvest_time: ""
+            name: "Starkrimson",
+            // no harvest time given
+            description: "self-fertile",
+            not_recommended_reason: "extremely susceptible to rain cracking"
         }
     ]
 }
