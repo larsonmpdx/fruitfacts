@@ -235,7 +235,7 @@
             category_description: "Fair resistance to Bacterial Leaf Spot"
         },
         {
-            names: ["Elberta", "Fayette", "Flavorcrest", "Hale Haven", "Laurol", "Spring Flame", "Suncrest"],
+            names: ["Elberta", "Fayette", "Flavorcrest", "Halehaven", "Laurol", "Spring Flame", "Suncrest"],
             type: "Peach",
             tags: ["Yellow Peach"],
             category: "disease resistance note (not recommendations)",

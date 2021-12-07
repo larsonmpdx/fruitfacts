@@ -1,0 +1,18 @@
+{
+    title: "Home Fruit Variety Recommendations - 2019",
+    author: "John Strang, Rick Durham, Patsy Wilson, Shawn Wright and Daniel Becker",
+    url: "https://www.uky.edu/hort/sites/www.uky.edu.hort/files/documents/HortFact3003.pdf",
+    published: "2019",
+    accessed: "Dec 2021",
+    type: "state extension guide",
+    locations: [
+        {
+            name: "University of Kentucky (guide applies to East and West Kentucky)",
+            latitude: 38.02880058194933,
+            longitude: -84.5094817806642
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

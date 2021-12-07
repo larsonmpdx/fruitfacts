@@ -1,0 +1,36 @@
+{
+    title: "NH Peach Releases",
+    author: "unknown",
+    url: 'from "Handbook for Peach and Nectarine Varieties" Okie',
+    accessed: "Dec 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "University of New Hampshire and New Hampshire Agricultural Experiment Station, Durham NH",
+            latitude: 43.1423901377889,
+            longitude: -70.94927614507509
+        }
+    ],
+    plants: [
+        {
+            type: "Peach",
+            name: "Meredith",
+            released: "NH 1955*"
+        },
+        {
+            type: "Peach",
+            name: "Mericrest",
+            released: "NH 1971*"
+        },
+        {
+            type: "Peach",
+            name: "Reliance",
+            released: "NH 1964*"
+        },
+        {
+            type: "Peach",
+            name: "Sunapee",
+            released: "NH 1955*"
+        }
+    ]
+}

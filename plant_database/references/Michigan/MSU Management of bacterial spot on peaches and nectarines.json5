@@ -95,7 +95,7 @@
         {
             type: "Peach",
             category: "Yellow melting flesh peach",
-            names: ["Elberta", "Fayette", "Flavorcrest", "Hale Haven", "Laurol", "Spring Flame", "Suncrest"],
+            names: ["Elberta", "Fayette", "Flavorcrest", "Halehaven", "Laurol", "Spring Flame", "Suncrest"],
             disease_resistance: { BLS: "Poor" }
         },
         {

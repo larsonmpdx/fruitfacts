@@ -11,16 +11,16 @@
 // the US patented ones ARE notable and have been added
 
 {
-    title: "USDA ARS-OSU Berry Releases",
+    title: "Handbook of Peach and Nectarine Varieties: US Patent List",
     author: "",
-    url: "https://agsci.oregonstate.edu/berrycrops/research/breeding https://www.emcocal.com/usda-osu-program/ https://www.ars.usda.gov/news-events/news/research-news/2020/new-blackberries-eclipse-galaxy-and-twilight/",
+    url: "",
     published: "",
     accessed: "Oct 2021",
     type: "dictionary",
     locations: [
         {
-            name: "Corvallis, OR",
-            latitude: 44.54820212695868,
+            name: "Various, US",
+            latitude: 44.54820212695868, // todo - DC or US center
             longitude: -123.21537145957399
         }
     ],

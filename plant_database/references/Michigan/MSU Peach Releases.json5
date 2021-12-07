@@ -1,0 +1,86 @@
+{
+    title: "MSU Peach Releases",
+    author: "unknown",
+    url: 'from "Handbook for Peach and Nectarine Varieties" Okie',
+    accessed: "Dec 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "Michigan State University and Michigan Agricultural Experiment Station, East Lansing MI",
+            latitude: 42.719844733495485,
+            longitude: -84.47474227805654
+        }
+    ],
+    plants: [
+        {
+            type: "Peach",
+            name: "Cresthaven",
+            released: "MSU 1963*"
+        },
+        {
+            type: "Peach",
+            name: "Fairhaven",
+            released: "MSU 1946*"
+        },
+        {
+            type: "Peach",
+            name: "Glohaven",
+            released: "MSU 1963*"
+        },
+        {
+            type: "Peach",
+            name: "Halehaven",
+            released: "MSU 1932*"
+        },
+        {
+            type: "Peach",
+            name: "Jayhaven",
+            released: "MSU 1976*"
+        },
+        {
+            type: "Peach",
+            name: "Kalhaven",
+            released: "MSU 1936*"
+        },
+        {
+            type: "Peach",
+            name: "Late Sunhaven",
+            released: "MSU 1960*"
+        },
+        {
+            type: "Peach",
+            name: "Newhaven",
+            released: "MSU 1978*"
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            released: "MSU 1940*"
+        },
+        {
+            type: "Peach",
+            name: "Richhaven",
+            released: "MSU 1955*"
+        },
+        {
+            type: "Peach",
+            name: "Spartancling",
+            released: "MSU 1976*"
+        },
+        {
+            type: "Peach",
+            name: "Suncling",
+            released: "MSU 1961*"
+        },
+        {
+            type: "Peach",
+            name: "Sunhaven",
+            released: "MSU 1955*"
+        },
+        {
+            type: "Peach",
+            name: "Sweethaven",
+            released: "MSU 1976*"
+        }
+    ]
+}
