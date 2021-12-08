@@ -1,0 +1,147 @@
+{
+    title: "Bologna University Cherries",
+    author: "",
+    url: 'from "Cherries: Botany, Production and Uses"',
+    published: "",
+    accessed: "Dec 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "University of Bologna, Italy",
+            latitude: 44.49658803793462,
+            longitude: 11.35308490543963
+        }
+    ],
+    plants: [
+        // phase 1:
+        // https://www.actahort.org/books/667/667_3.htm "NEW SWEET CHERRY CULTIVARS DEVELOPED AT THE UNIVERSITY OF BOLOGNA" 2005
+        {
+            type: "Sweet Cherry",
+            name: "Panaro 2",
+            AKA: ["Early Star (r)"],
+            description: "self-fertile. Bigarreau Burlat × Compact Stella",
+            harvest_time_relative: "Burlat +4 to +6",
+            released: "U Bologna Italy 1997*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Blaze Star",
+            description: "self-fertile. Lapins × Durone compatto di Vignola",
+            harvest_time_relative: "Burlat +14 to +16",
+            released: "U Bologna Italy 1997*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "LaLa Star",
+            description: "self-fertile. Compact Lambert × Lapins",
+            harvest_time_relative: "Burlat +22 to +24", // or "a few days before Lapins"
+            released: "U Bologna Italy 1997*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Panaro 1",
+            AKA: ["Sweet Early (r)"],
+            description: "self-fertile. Burlat × Sunburst",
+            harvest_time_relative: "Burlat -2 to -4",
+            released: "U Bologna Italy 2000*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Grace Star",
+            description: "self-fertile. Burlat × O.P",
+            harvest_time_relative: "Burlat +10 to +12",
+            released: "U Bologna Italy 2001*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Black Star",
+            description: "self-fertile. Lapins’ × ‘Burlat",
+            harvest_time_relative: "Burlat +16 to +18",
+            released: "U Bologna Italy 2001*"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Big Star",
+            description: "self-fertile. https://www.vitrohellas.gr/en/product/big-star",
+            harvest_time_relative: "Burlat +24",
+            // approximate release time. it's not in the acta hort paper so it's likely 2005-2007 at the end of phase 1
+            released: "U Bologna Italy 2005*"
+        },
+        // phase 1 cherries appear to lack US patent protection
+
+        // phase 2:
+        // https://fdocuments.in/document/the-new-sweet-series-cherry-cultivars-from-bologna-new-sweet-series-cherry-cultivars.html
+        {
+            // https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-aryanalorenz_eng.pdf
+            type: "Sweet Cherry",
+            name: "PA1UNIBO",
+            AKA: ["Sweet Aryana (r)"],
+            description: "self-fertile. https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-aryanalorenz_eng.pdf",
+            harvest_time_relative: "Burlat +3 to +5",
+            s_allele: "S3S4'",
+            released: "U Bologna Italy *",
+            patent: "USPP25996 expires 2033-09-23"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "PA2UNIBO",
+            AKA: ["Sweet Lorenz (r)"],
+            description: "not self-fertile. https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-aryanalorenz_eng.pdf",
+            harvest_time_relative: "Burlat +8 to +10",
+            s_allele: "S3S4",
+            released: "U Bologna Italy *",
+            // patent application used "Sweet Lorenz" but was corrected to the nonsense name in the grant
+            patent: "USPP25982 expires 2033-09-22"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "PA3UNIBO",
+            AKA: ["Sweet Gabriel (r)"],
+            description: "not self-fertile https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-gabrielvalina_eng.pdf",
+            harvest_time_relative: "Burlat +11 to +14",
+            s_allele: "S3S4",
+            released: "U Bologna Italy *",
+            patent: "USPP25997 expires 2033-09-23"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "PA4UNIBO",
+            AKA: ["Sweet Valina (r)"],
+            description: "not self-fertile https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-gabrielvalina_eng.pdf",
+            harvest_time_relative: "Burlat +15 to +18",
+            s_allele: "S3S4",
+            released: "U Bologna Italy *",
+            patent: "USPP25981 expires 2033-10-04"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "PA5UNIBO",
+            AKA: ["Sweet Saretta (r)"],
+            description: "self-fertile https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-sarettastephany_eng.pdf",
+            harvest_time_relative: "Burlat +22 to +24",
+            s_allele: "S3S4'",
+            released: "U Bologna Italy *",
+            patent: "USPP25972 expires 2033-09-23"
+        },
+        {
+            type: "Sweet Cherry", // note - book gives this as a "non-sweet" cherry but I think that's wrong
+            name: "PA6UNIBO",
+            AKA: ["Marysa (r)"],
+            description: "self-fertile. https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Marysa_eng.pdf",
+            harvest_time_relative: "Burlat +10 to +12",
+            s_allele: "S3S4'",
+            released: "U Bologna Italy *",
+            patent: "USPP29677 expires 2036-09-22"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "PA7UNIBO",
+            AKA: ["Sweet Stephany (r)"],
+            description: "self-fertile. in 2021, held the record for the world's heaviest sweet cherry https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-sarettastephany_eng.pdf",
+            harvest_time_relative: "Burlat +27",
+            s_allele: "S3S4'",
+            released: "U Bologna Italy *",
+            patent: "USPP29765 expires 2036-11-14"
+        }
+    ]
+}

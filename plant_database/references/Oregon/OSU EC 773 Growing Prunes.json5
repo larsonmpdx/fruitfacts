@@ -35,6 +35,7 @@
         },
         {
             name: "Moyer",
+            AKA: ["Moyer Perfecto"],
             type: "Euro Plum",
             not_recommended_reason: "ripens too late in the Willamette Valley",
             harvest_time_relative: "Italian +10"

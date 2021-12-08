@@ -150,22 +150,22 @@
             type: "Sour Cherry",
             name: "Meteor",
             description: "Fruit size: Medium-large, Notes: Small tree, very hardy (-50°F)",
-            harvest_time: "July"
             // in the guide as "Early Summer"
+            harvest_time: "July"
         },
         {
             type: "Sour Cherry",
             name: "Montmorency",
             description: "Fruit size: Medium-large, Notes: Small tree, hardy (-40°F)",
-            harvest_time: "July"
             // in the guide as "Early Summer"
+            harvest_time: "July"
         },
         {
             type: "Sour Cherry",
             name: "North Star",
             description: "Fruit size: Large, Notes: Small tree, very hardy (-40°F)",
-            harvest_time: "July"
             // in the guide as "Early Summer"
+            harvest_time: "July"
         },
         {
             type: "Euro Pear",

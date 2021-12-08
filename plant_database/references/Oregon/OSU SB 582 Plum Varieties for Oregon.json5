@@ -25,8 +25,10 @@
         },
         {
             name: "Sugar",
+            AKA: ["Improved Sugar"],
             type: "Euro Plum",
-            harvest_time: "August 1"
+            harvest_time: "August 1",
+            description: "Burbank variety, 1899"
         },
         {
             name: "Utility",
@@ -56,7 +58,8 @@
         {
             name: "Edwards",
             type: "Euro Plum",
-            harvest_time: "September 1"
+            harvest_time: "September 1",
+            patent: "https://patents.google.com/patent/USPP1213"
         },
         {
             name: "Tragedy",
@@ -71,12 +74,15 @@
         {
             name: "Parson",
             type: "Euro Plum",
-            harvest_time: "September 1 to September 15"
+            harvest_time: "September 1 to September 15",
+            patent: "https://patents.google.com/patent/USPP872 expired",
+            description: "originated in Forest Grove, Oregon about 1930"
         },
         {
             name: "Miller Early Sweet",
             type: "Euro Plum",
-            harvest_time: "September 5"
+            harvest_time: "September 5",
+            description: "originated in Eugene, Oregon about 1930"
         },
         {
             name: "Emily",
@@ -86,6 +92,7 @@
         },
         {
             name: "Date Prune",
+            AKA: ["Coates 1418"],
             type: "Euro Plum",
             harvest_time: "September 7 to September 15"
         },
@@ -97,22 +104,26 @@
         {
             name: "Weatherspoon",
             type: "Euro Plum",
-            harvest_time: "September 10"
+            harvest_time: "September 10",
+            description: "chance seedling found near Elgin, Oregon about 1915"
         },
         {
             name: "Noble French",
             type: "Euro Plum",
-            harvest_time: "September 12"
+            harvest_time: "September 12",
+            description: "originated at Myrtle Creek, Oregon about 1925"
         },
         {
             name: "Bavay's Green Gage",
+            AKA: ["Green Gage", "Reine Claude"],
             type: "Euro Plum",
             harvest_time: "September 10 to September 20"
         },
         {
             name: "Brooks",
             type: "Euro Plum",
-            harvest_time: "September 15"
+            harvest_time: "September 15",
+            description: "originated near Lafayette, Oregon about 1930"
         },
         {
             name: "Imperial Epineuse",
@@ -121,6 +132,7 @@
         },
         {
             name: "Italian",
+            AKA: ["Fellenberg", "Italian Quetsche"],
             type: "Euro Plum",
             harvest_time: "September 20"
         },
@@ -137,7 +149,8 @@
         {
             name: "Rich Pride",
             type: "Euro Plum",
-            harvest_time: "October 1"
+            harvest_time: "October 1",
+            description: "originated at Junction City, Oregon 1946"
         },
         {
             name: "Methley",
