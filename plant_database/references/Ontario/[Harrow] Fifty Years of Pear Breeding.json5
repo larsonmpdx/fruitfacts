@@ -30,8 +30,6 @@
         },
         // Mature trees have excellent resistance to fire blight (9.5 rating on the USDA scale)
         // but this cultivar is susceptible to pear psylla
-
-
         {
             type: "Euro Pear",
             name: "Harrow Gold", // US trademark appears to be applied to the "AC" part although nurseries are pretty fuzzy on this
@@ -42,9 +40,6 @@
             harvest_time_relative: "Bartlett-10"
         },
         // fire blight resistant (9.5 rating)
-
-
-
         {
             type: "Euro Pear",
             name: "Harvest Queen",
@@ -54,9 +49,6 @@
             harvest_time_relative: "Bartlett -1 week"
         },
         // very good fire blight resistance (9.1 rating)
-
-
-
         {
             type: "Euro Pear",
             name: "Harrow Crisp", // US trademark appears to be applied to the "AC" part although nurseries are pretty fuzzy on this
@@ -67,9 +59,6 @@
             released: "Harrow 2000*"
         },
         // very good fire blight resistance (9.4 rating)
-
-
-
         {
             type: "Euro Pear",
             name: "HW624",
@@ -78,8 +67,6 @@
             released: "Harrow*"
         },
         // HW624 also has field resistance to pear psylla
-
-
         {
             type: "Euro Pear",
             name: "HW623",
@@ -87,10 +74,6 @@
             // unreleased: "Protection under the Plant Breeders Rights Act was granted in 2010, and this selection will be introduced in the near future"
             released: "Harrow*"
         },
-
-    
-
-
         {
             type: "Euro Pear",
             name: "Harovin Sundown",
@@ -99,9 +82,6 @@
             released: "Harrow 2008*"
         },
         // fire blight resistant (9.6 rating)
-
-
-
         {
             type: "Euro Pear",
             name: "Harrow Sweet", // PVM calls this "AC (tm)" but it was released in 1990 so... I'm not sure about that
@@ -111,8 +91,6 @@
             released: "Harrow 1990*"
         },
         // good fire blight resistance (9.3 rating)
-
-
         {
             type: "Euro Pear",
             name: "HW620",
