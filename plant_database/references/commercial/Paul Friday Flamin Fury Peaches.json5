@@ -1,0 +1,280 @@
+{
+    title: "Paul Friday Flamin' Fury Peaches",
+    url: "http://flaminfury.com/www.flaminfury.com/home.html https://www.goodfruit.com/37-varieties-and-counting/",
+    published: "unknown",
+    accessed: "Dec 2021",
+    type: "private breeding program list",
+    locations: [
+        {
+            name: "Coloma, MI",
+            latitude: 42.167230023185745,
+            longitude: -86.31383221776623
+        }
+    ],
+    plants: [
+        // times are from the brochure, they're up to a day or two different than the website text
+        {
+            type: "Peach",
+            name: "PF1",
+            released: "Paul Friday*",
+            harvest_time_relative: "redhaven-30"
+        },
+        {
+            type: "Peach",
+            name: "PF 5 B",
+            released: "Paul Friday*",
+            harvest_time_relative: "redhaven-23"
+        },
+        {
+            type: "Peach",
+            name: "PF5 D Big",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP17543",
+            harvest_time_relative: "redhaven-25"
+        },
+        {
+            type: "Peach",
+            name: "PF Early 8 Ball", // only in the chart in the brochure
+            released: "Paul Friday*",
+            harvest_time_relative: "redhaven-17"
+        },
+        {
+            type: "Peach",
+            name: "PF 8 Ball White", // website text claims trademark but this is the patent name
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP25616 expires 2033-04-08",
+            harvest_time_relative: "redhaven-10"
+        },
+        {
+            type: "Peach",
+            name: "PF 8 Ball", // website text claims trademark but this is the patent name
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP18534 expires 2026-08-04",
+            harvest_time_relative: "redhaven-10"
+        },
+        {
+            type: "Peach",
+            name: "PF Late 8 Ball", // website text claims trademark but this is the patent name
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP26058 expires 2032-12-24",
+            harvest_time_relative: "redhaven-5"
+        },
+        {
+            type: "Nectarine",
+            name: "PF 11 Nectarine",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP15661",
+            harvest_time_relative: "redhaven-5"
+        },
+        {
+            type: "Peach",
+            name: "PF 11 Peach", // not in the website text, only brochure
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP17054 expires 2024-11-04",
+            harvest_time_relative: "redhaven-2"
+        },
+        {
+            type: "Peach",
+            name: "PF 9A-007",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP15498",
+            harvest_time_relative: "redhaven-2"
+        },
+        {
+            type: "Peach",
+            name: "PF 15A",
+            released: "Paul Friday*",
+            harvest_time_relative: "redhaven+3"
+        },
+        {
+            type: "Peach",
+            name: "PF Lucky 13",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP14384 expires 2022-03-05",
+            harvest_time_relative: "redhaven+5"
+        },
+        {
+            type: "Peach",
+            name: "PF 17",
+            released: "Paul Friday*",
+            harvest_time_relative: "redhaven+17"
+        },
+        {
+            type: "Peach",
+            name: "PF 19-007",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP17578 expires 2024-09-08",
+            harvest_time_relative: "redhaven+16"
+        },
+        {
+            type: "Peach",
+            name: "PF 23",
+            released: "Paul Friday*",
+            harvest_time_relative: "redhaven+18"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Bubblegum (r)",
+            released: "Paul Friday*",
+            harvest_time_relative: "redhaven+20"
+        },
+        {
+            type: "Apple",
+            name: "Flamin' Early Red TM", // variety name unknown
+            released: "Paul Friday*",
+            harvest_time_relative: "honeycrisp-2 weeks"
+        },
+        {
+            type: "Peach",
+            name: "PF 22-007",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP16663 expires 2023-11-17",
+            harvest_time_relative: "redhaven+20"
+        },
+        {
+            type: "Peach",
+            name: "PF 24-007",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP9895 expired 2016-01-16",
+            harvest_time_relative: "redhaven+22"
+        },
+        {
+            type: "Peach",
+            name: "PF Paramount 24", // website claims trademark but this is the patent name
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP25094 expires 2032-11-22",
+            harvest_time_relative: "redhaven+24"
+        },
+        {
+            type: "Peach",
+            name: "PF 24-C cold hardy",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP15659 expires 2024-05-08",
+            harvest_time_relative: "redhaven+24"
+        },
+        {
+            type: "Peach",
+            name: "PF 25",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP9940 expired 2015-12-18",
+            harvest_time_relative: "redhaven+26"
+        },
+        {
+            type: "Peach",
+            name: "PF 28-007",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP14778",
+            harvest_time_relative: "redhaven+32"
+        },
+        {
+            type: "Peach",
+            name: "PF Fat Lady",
+            AKA: ["PF 35-007"], // patent name
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP14368 expires 2022-01-22",
+            harvest_time_relative: "redhaven+40"
+        },
+        {
+            type: "Peach",
+            name: "PF Legendary", // website claims trademark but this is the patent name
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP25765",
+            harvest_time_relative: "redhaven+41"
+        },
+        {
+            type: "Peach",
+            name: "PF Big George",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP19639 expires 2027-07-13",
+            harvest_time_relative: "redhaven+50"
+        },
+        {
+            type: "Nectarine",
+            name: "PF Ka-Ching",
+            released: "Paul Friday*",
+            harvest_time_relative: "redhaven +50"
+        },
+        {
+            type: "Peach",
+            name: "PF Fashionably Late", // website claims trademark but this is the patent name
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP26452",
+            harvest_time_relative: "redhaven+54"
+        },
+
+        // remaining varieties are not on the website, I found them in a patent search
+        {
+            type: "Peach",
+            name: "PF 27A",
+            released: "Paul Friday*",
+            // no harvest time given in the patent. from the name it could be about redhaven+27
+            patent: "https://patents.google.com/patent/USPP9939 expired 2015-12-18"
+        },
+        {
+            type: "Peach",
+            name: "PF 7",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP10490 expired 2016-12-19",
+            // harvest time is from the patent
+            harvest_time_relative: "redhaven-12"
+        },
+        {
+            type: "Peach",
+            name: "Lucky 12",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP17938 expires 2026-04-11",
+            // harvest time is from the patent
+            harvest_time_relative: "redhaven+3"
+        },
+        {
+            type: "Peach",
+            name: "PF 14 New Jersey",
+            released: "Paul Friday*",
+            // in the patent, "mid season after redhaven" is all we get for harvest time
+            patent: "https://patents.google.com/patent/USPP14369 expires 2022-01-22"
+        },
+        {
+            type: "Peach",
+            name: "PF 36-007",
+            released: "Paul Friday*",
+            // no harvest time given in the patent. from the name it could be about redhaven+36
+            patent: "https://patents.google.com/patent/USPP15660 expires 2024-05-08"
+        },
+        {
+            type: "Peach",
+            name: "PF 12B",
+            released: "Paul Friday*",
+            patent: "https://patents.google.com/patent/USPP12351 expired 2018-10-22",
+            // harvest time is from the patent
+            harvest_time_relative: "redhaven+3"
+        },
+        {
+            type: "Peach",
+            name: "PF 7A Freestone",
+            released: "Paul Friday*",
+            // no harvest time given in the patent
+            patent: "https://patents.google.com/patent/USPP17045 expires 2024-11-04"
+        },
+        {
+            type: "Peach",
+            name: "PF Lucky 24B",
+            released: "Paul Friday*",
+            // harvest time in the patent: cresthavent minus a few days
+            patent: "https://patents.google.com/patent/USPP14367 expires 2022-03-05"
+        },
+        {
+            type: "Peach",
+            name: "PF Lucky 21",
+            released: "Paul Friday*",
+            // harvest time in the patent: "after redhaven"
+            patent: "https://patents.google.com/patent/USPP15497 expires 2023-11-07"
+        },
+        {
+            type: "Peach",
+            name: "PF 20-007",
+            released: "Paul Friday*",
+            // no harvest time given in the patent
+            patent: "https://patents.google.com/patent/USPP12331 expired 2018-10-22"
+        }
+    ]
+}

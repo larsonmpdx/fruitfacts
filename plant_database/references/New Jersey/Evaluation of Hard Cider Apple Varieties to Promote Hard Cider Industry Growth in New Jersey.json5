@@ -1,0 +1,29 @@
+{
+    title: "Evaluation of Hard Cider Apple Varieties to Promote Hard Cider Industry Growth in New Jersey",
+    author: "Megan Muehlbauer and Rebecca Magron, Rutgers University",
+    url: 'http://www.umassfruitnotes.com/v86n1/a7.pdf',
+    accessed: "Dec 2021",
+    type: "journal article test",
+    locations: [
+        {
+            name: "Cream Ridge, NJ",
+            latitude: 40.13233771380199,
+            longitude: -74.52852612532256
+        }
+    ],
+    plants: [
+// todo
+// Calville Blanc           Cider apple: Sharp Noteworthy aroma, can be used as a single varietal cider
+// Collaos                  Cider apple: Bittersharp Ripens very late in season
+// Dabinett                 Cider apple: Bittersweet A well-balanced variety, commonly used for cider
+/// Ellis Bitter            Cider apple: Bittersweet Noteworthy for being a tip-bearer
+// Golden Russet            Cider apple: Sharp High acidity, sugar and aroma, a highly recommended cider variety
+// Harrison                 Cider apple: Sharp Noted for excellent, well balanced juice quality
+// Kingston Black           Cider apple: Sharp A well-balanced stand-alone variety
+// Margil                   Cider apple: Sharp A variety with nuance, rich, intense and aromatic
+// Rein Des Reinettes       Cider apple: Sharp Vigorous with a high sugar content
+// Roxbury Russet           Cider apple: Sharp Notable for holding well in storage
+// Stoke Red                Cider apple: Bittersharp It is used in cider blends and as a single varietal
+// Wickson                  Cider apple: Sharp Commonly grown by cider makers, notable for high sugar content
+    ]
+}
