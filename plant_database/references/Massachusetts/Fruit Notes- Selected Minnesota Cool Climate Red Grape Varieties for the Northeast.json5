@@ -1,7 +1,7 @@
 {
     title: "Selected Minnesota Cool Climate Red Grape Varieties for the Northeast",
     author: "J. Stephen Casscles, Tom Plocher, and Todd Trzaskos",
-    url: 'Fruit Notes, Volume 85, Spring, 2020 http://www.umassfruitnotes.com/v85n2/a6.pdf',
+    url: "Fruit Notes, Volume 85, Spring, 2020 http://www.umassfruitnotes.com/v85n2/a6.pdf",
     accessed: "Dec 2021",
     type: "journal article test",
     locations: [
@@ -12,35 +12,29 @@
         }
     ],
     plants: [
-// todo
-// Frontenac Noir
-// Marquette        University of Minnesota in 2006
-// Sabrevois
-// St. Croix 1978
-// Petite Pearl ( T.P. 2-1-24)          2010
-// Crimson Pearl (T.P. 2-1-17)      USPP30263  2015
-// Verona (T.P. 1-1-3 4)            USPP30631  2015
-
-// todo - add white grapes
-// http://www.umassfruitnotes.com/v85n2/a5.pdf
-
-// todo - in another doc - french white grapes
-// http://www.umassfruitnotes.com/v84n4/a1.pdf
-// and red french
-// http://www.umassfruitnotes.com/v84n3/a5.pdf
-
-// todo - heirloom white red black
-// http://www.umassfruitnotes.com/v83n4/a4.pdf
-// http://www.umassfruitnotes.com/v83n4/a5.pdf
-// http://www.umassfruitnotes.com/v83n4/a6.pdf
-
-// todo - new peaches - selena/silverglo
-// http://www.umassfruitnotes.com/v84n1/a4.pdf
-
-// briganine evelynn tiana
-// http://www.umassfruitnotes.com/v83n2/a3.pdf
-
-// clements 15-year peach trial
-// http://www.umassfruitnotes.com/v83n1/a2.pdf
+        // todo
+        // Frontenac Noir
+        // Marquette        University of Minnesota in 2006
+        // Sabrevois
+        // St. Croix 1978
+        // Petite Pearl ( T.P. 2-1-24)          2010
+        // Crimson Pearl (T.P. 2-1-17)      USPP30263  2015
+        // Verona (T.P. 1-1-3 4)            USPP30631  2015
+        // todo - add white grapes
+        // http://www.umassfruitnotes.com/v85n2/a5.pdf
+        // todo - in another doc - french white grapes
+        // http://www.umassfruitnotes.com/v84n4/a1.pdf
+        // and red french
+        // http://www.umassfruitnotes.com/v84n3/a5.pdf
+        // todo - heirloom white red black
+        // http://www.umassfruitnotes.com/v83n4/a4.pdf
+        // http://www.umassfruitnotes.com/v83n4/a5.pdf
+        // http://www.umassfruitnotes.com/v83n4/a6.pdf
+        // todo - new peaches - selena/silverglo
+        // http://www.umassfruitnotes.com/v84n1/a4.pdf
+        // briganine evelynn tiana
+        // http://www.umassfruitnotes.com/v83n2/a3.pdf
+        // clements 15-year peach trial
+        // http://www.umassfruitnotes.com/v83n1/a2.pdf
     ]
 }

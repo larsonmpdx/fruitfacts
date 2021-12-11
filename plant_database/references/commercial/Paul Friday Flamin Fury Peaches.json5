@@ -15,19 +15,19 @@
         // times are from the brochure, they're up to a day or two different than the website text
         {
             type: "Peach",
-            name: "PF1",
+            name: "PF 1",
             released: "Paul Friday*",
             harvest_time_relative: "redhaven-30"
         },
         {
             type: "Peach",
-            name: "PF 5 B",
+            name: "PF 5B",
             released: "Paul Friday*",
             harvest_time_relative: "redhaven-23"
         },
         {
             type: "Peach",
-            name: "PF5 D Big",
+            name: "PF 5D Big",
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP17543",
             harvest_time_relative: "redhaven-25"
@@ -147,7 +147,7 @@
         },
         {
             type: "Peach",
-            name: "PF 24-C cold hardy",
+            name: "PF 24C Cold Hardy",
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP15659 expires 2024-05-08",
             harvest_time_relative: "redhaven+24"
@@ -229,6 +229,7 @@
         {
             type: "Peach",
             name: "PF 14 New Jersey",
+            AKA: ["PF 14 Jersey"],
             released: "Paul Friday*",
             // in the patent, "mid season after redhaven" is all we get for harvest time
             patent: "https://patents.google.com/patent/USPP14369 expires 2022-01-22"

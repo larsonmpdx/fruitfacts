@@ -1,7 +1,7 @@
 {
     title: "Muscadine Grape Production Guide for the Southeast",
     author: "Many authors, see original document",
-    url: "https://content.ces.ncsu.edu/muscadine-grape-production-guide https://youtu.be/6NXkCNIktTA?t=1293 - a short video intro to this document in the webinar \"2020 Arkansas Virtual Muscadine Webinar Recording-Sept 17, 2020\"",
+    url: 'https://content.ces.ncsu.edu/muscadine-grape-production-guide https://youtu.be/6NXkCNIktTA?t=1293 - a short video intro to this document in the webinar "2020 Arkansas Virtual Muscadine Webinar Recording-Sept 17, 2020"',
     published: "Feb 2020",
     accessed: "Oct 2021",
     type: "state extension guide",
@@ -150,6 +150,6 @@
             name: "Triumph",
             description: "fresh market cultivar. Self-fertile Bronze Medium. moderate cold tolerance",
             harvest_time_unparsed: "Early"
-        },
+        }
     ]
 }

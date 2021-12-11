@@ -12,20 +12,20 @@
         }
     ],
     plants: [
-    // related patent "SSC induction in Vitis muscadinia" US9706726 expires 2035-05-09
-    {
-        name: "JB06-43-6-22",
-        AKA: ["Oh My!®"],
-        type: "Muscadine",
-        description: "seedless. Gardens Alive! variety",
-        patent: "https://patents.google.com/patent/USPP31010 expires 2039-02-11",
-    },
-    {
-        name: "JB05-22-3-27",
-        AKA: ["RazzMatazz®"],
-        type: "Muscadine",
-        description: "seedless. Gardens Alive! variety",
-        patent: "https://patents.google.com/patent/US9045767 expires 2033-10-23", // utility patent
-    }
+        // related patent "SSC induction in Vitis muscadinia" US9706726 expires 2035-05-09
+        {
+            name: "JB06-43-6-22",
+            AKA: ["Oh My!®"],
+            type: "Muscadine",
+            description: "seedless. Gardens Alive! variety",
+            patent: "https://patents.google.com/patent/USPP31010 expires 2039-02-11"
+        },
+        {
+            name: "JB05-22-3-27",
+            AKA: ["RazzMatazz®"],
+            type: "Muscadine",
+            description: "seedless. Gardens Alive! variety",
+            patent: "https://patents.google.com/patent/US9045767 expires 2033-10-23" // utility patent
+        }
     ]
 }

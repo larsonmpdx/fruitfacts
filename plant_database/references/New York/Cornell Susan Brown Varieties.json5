@@ -159,7 +159,7 @@
             type: "Apple",
             description: "https://cals.cornell.edu/news/2020/09/crunchy-complex-cornell-releases-three-new-apples",
             patent: "https://patents.google.com/patent/USPP30758 expires 2037-11-07",
-            released: "Cornell 2020*",
+            released: "Cornell 2020*"
         },
         {
             name: "NY 73",
@@ -167,7 +167,7 @@
             type: "Apple",
             description: "https://cals.cornell.edu/news/2020/09/crunchy-complex-cornell-releases-three-new-apples",
             patent: "https://patents.google.com/patent/USPP32702 expires 2039-08-01",
-            released: "Cornell 2020*",
+            released: "Cornell 2020*"
         },
         {
             name: "NY 109",
@@ -175,7 +175,7 @@
             type: "Apple",
             description: 'not the same as "Firecracker" crabapple https://cals.cornell.edu/news/2020/09/crunchy-complex-cornell-releases-three-new-apples',
             patent: "https://patents.google.com/patent/USPP31145 expires 2038-03-30",
-            released: "Cornell 2020*",
+            released: "Cornell 2020*"
         }
     ]
 }
