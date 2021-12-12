@@ -17,19 +17,22 @@
             // see "2011 The North American Pawpaw Variety: 'KSU-AtwoodTM'" https://www.pubhort.org/aps/65/v65_n4_a6.htm
             type: "Pawpaw",
             name: "KSU 8-2",
-            AKA: ["KSU-Atwood (tm)"]
+            AKA: ["KSU-Atwood (tm)"],
+            released: "KSU 2011*"
         },
         {
             // see "2017 KSU-BensonTM: A New Pawpaw Variety from Kentucky State University" https://ashs.confex.com/ashs/2017/webprogramarchives/Paper26393.html
             type: "Pawpaw",
             name: "KSU 7-5",
-            AKA: ["KSU-Benson (tm)"]
+            AKA: ["KSU-Benson (tm)"],
+            released: "KSU 2017*"
         },
         {
             // see "2019 KSU-Chappell™: A Unique Pawpaw Selection from Kentucky State University" https://ashs.confex.com/ashs/2019/webprogramarchives/Paper30629.html
             type: "Pawpaw",
             name: "KSU 4-1",
-            AKA: ["KSU-Chappell (tm)"]
+            AKA: ["KSU-Chappell (tm)"],
+            released: "KSU 2019*"
         }
     ]
 }
