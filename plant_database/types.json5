@@ -195,5 +195,9 @@
     {
         name: "Saskatoon",
         latin_name: "Amelanchier alnifolia"
+    },
+    {
+        name: "Pawpaw",
+        latin_name: "Asimina triloba"
     }
 ]
