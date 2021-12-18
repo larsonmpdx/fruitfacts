@@ -15,6 +15,7 @@
 * all of an individual's data should be able to be imported/exported in a simple text format
 
 # rust hints
+* copy the .env.example file and fill in secrets as needed
 * `cargo build`
 * `cargo run`
 * `cargo test` and `cargo test -- --include-ignored` (include long tests)
