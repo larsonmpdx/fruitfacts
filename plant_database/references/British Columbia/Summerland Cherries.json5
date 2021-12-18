@@ -220,10 +220,10 @@
         },
         {
             name: "SPC 103",
-            AKA: ["Sentennial (tm)"],
+            AKA: ["Sentennial (tm)", "13S-21-23"],
             type: "Sweet Cherry",
             released: "Summerland 2006*",
-            description: "Sweetheart open pollinated https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/30/SPC_103_Sentennial/",
+            description: "Sweetheart open pollinated https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/30/SPC_103_Sentennial/ https://cdnsciencepub.com/doi/pdf/10.4141/CJPS10156",
             // or Sweetheart+10
             harvest_time_relative: "Bing+29",
             patent: "https://patents.google.com/patent/USPP26645 expires 2034-07-06"

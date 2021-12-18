@@ -29,7 +29,7 @@
             type: "Peach",
             name: "PF 5D Big",
             released: "Paul Friday*",
-            patent: "https://patents.google.com/patent/USPP17543",
+            patent: "https://patents.google.com/patent/USPP17543 expires 2024-11-04",
             harvest_time_relative: "redhaven-25"
         },
         {
@@ -63,7 +63,7 @@
             type: "Nectarine",
             name: "PF 11 Nectarine",
             released: "Paul Friday*",
-            patent: "https://patents.google.com/patent/USPP15661",
+            patent: "https://patents.google.com/patent/USPP15661 expires 2023-11-25",
             harvest_time_relative: "redhaven-5"
         },
         {
@@ -77,7 +77,7 @@
             type: "Peach",
             name: "PF 9A-007",
             released: "Paul Friday*",
-            patent: "https://patents.google.com/patent/USPP15498",
+            patent: "https://patents.google.com/patent/USPP15498 expires 2023-11-07",
             harvest_time_relative: "redhaven-2"
         },
         {
@@ -163,7 +163,7 @@
             type: "Peach",
             name: "PF 28-007",
             released: "Paul Friday*",
-            patent: "https://patents.google.com/patent/USPP14778",
+            patent: "https://patents.google.com/patent/USPP14778 expires 2022-03-14",
             harvest_time_relative: "redhaven+32"
         },
         {
@@ -178,7 +178,7 @@
             type: "Peach",
             name: "PF Legendary", // website claims trademark but this is the patent name
             released: "Paul Friday*",
-            patent: "https://patents.google.com/patent/USPP25765",
+            patent: "https://patents.google.com/patent/USPP25765 expires 2032-12-30",
             harvest_time_relative: "redhaven+41"
         },
         {
@@ -198,7 +198,7 @@
             type: "Peach",
             name: "PF Fashionably Late", // website claims trademark but this is the patent name
             released: "Paul Friday*",
-            patent: "https://patents.google.com/patent/USPP26452",
+            patent: "https://patents.google.com/patent/USPP26452 expires 2032-12-19",
             harvest_time_relative: "redhaven+54"
         },
 

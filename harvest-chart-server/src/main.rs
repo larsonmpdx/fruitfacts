@@ -1,5 +1,6 @@
 use harvest_chart_server::import_db;
 use harvest_chart_server::queries;
+use harvest_chart_server::auth;
 
 use actix_cors::Cors;
 use actix_web::{App, HttpServer};
@@ -57,6 +58,7 @@ async fn main() -> std::io::Result<()> {
             .service(queries::get_build_info)
             .service(queries::get_plant)
             .service(queries::variety_search)
+            .service(auth::receive_oauth_redirect)
     })
     .bind(("127.0.0.1", 8080))?
     .run()

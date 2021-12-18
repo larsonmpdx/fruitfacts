@@ -13,6 +13,7 @@ extern crate dotenv;
 pub mod git_info;
 pub mod import_db;
 pub mod queries;
+pub mod auth;
 mod schema_fts;
 mod schema_generated;
 mod schema_types;

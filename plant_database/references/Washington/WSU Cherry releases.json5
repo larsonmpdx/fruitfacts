@@ -63,6 +63,7 @@
             type: "Sweet Cherry",
             description: "Stella x Early Burlat http://treefruit.wsu.edu/variety/tieton/ https://www.canr.msu.edu/hrt/uploads/534/82106/Tieton_Sweet_Cherry.pdf",
             s_allele: "S3S9",
+            harvest_time_relative: "Bing -6 to -9",
             patent: "https://patents.google.com/patent/USPP11385 expired 2018-04-24",
             released: "1995"
         },

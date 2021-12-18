@@ -87,7 +87,7 @@
         {
             name: "MN80",
             type: "Apple",
-            AKA: ["Triumph! (tm)"],
+            AKA: ["Triumph! (tm)", "MN1980"],
             released: "UMN 2021*",
             description: "https://mnhardy.umn.edu/triumph-apple",
             harvest_time: "mid to late September",

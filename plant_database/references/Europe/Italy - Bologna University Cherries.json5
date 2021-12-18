@@ -15,6 +15,7 @@
     plants: [
         // phase 1:
         // https://www.actahort.org/books/667/667_3.htm "NEW SWEET CHERRY CULTIVARS DEVELOPED AT THE UNIVERSITY OF BOLOGNA" 2005
+        // Burlat is Bing -14
         {
             type: "Sweet Cherry",
             name: "Panaro 2",
