@@ -12,6 +12,7 @@ doctest = false
 [dependencies]
 actix-web = "3.3.2"
 actix-cors = "0.5.4"
+actix-session = "0.4.1"
 diesel = { version = "1.4.7", features = ["sqlite", "r2d2"] }
 libsqlite3-sys = { version = "^0", features = ["bundled"] }
 diesel_migrations = "1.4"
@@ -32,3 +33,7 @@ git2 = "0.13.24"
 pathdiff = "0.2.0"
 anyhow = "1.0.51"
 oauth2 = "4.1.0"
+rand = "0.8.4"
+expiring_map = "0.1.0"
+once_cell = "0.2.2"
+base64 = "0.13.0"

@@ -5,44 +5,49 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use anyhow::Result;
 use serde::{Deserialize, Serialize};
 
-
-
+use actix_session::{CookieSession, Session};
+use rand::Rng;
 
 use oauth2::{basic::BasicClient, revocation::StandardRevocableToken, TokenResponse};
-// Alternatively, this can be oauth2::curl::http_client or a custom.
-use oauth2::reqwest::http_client;
 use oauth2::{
-    AuthUrl, AuthorizationCode, ClientId, ClientSecret, CsrfToken, PkceCodeChallenge, RedirectUrl,
-    RevocationUrl, Scope, TokenUrl,
+    AuthUrl, AuthorizationCode, ClientId, ClientSecret, CsrfToken, PkceCodeChallenge,
+    PkceCodeVerifier, RedirectUrl, RevocationUrl, Scope, TokenUrl,
 };
 use std::env;
-use std::io::{BufRead, BufReader, Write};
-use std::net::TcpListener;
-//use url::Url;
 
+// todo - session cookie first, then csrf storage and retreival in some kind of cache with expiration
+// https://security.stackexchange.com/questions/20187/oauth2-cross-site-request-forgery-and-state-parameter
 
+use once_cell::sync::Lazy; // 1.3.1
+use std::sync::Mutex;
 
+use expiring_map::ExpiringMap;
+use std::time::Duration;
 
-
-
-
-#[derive(Debug, Deserialize)]
-struct AuthQuery {
-    state: Option<String>,
-    code: Option<String>,
-    scope: Option<String>,
-    authuser: Option<String>,
-    prompt: Option<String>,
-  //  session_state: Option<String>,
-  //  hd: Option<String>,
+#[derive(Debug)]
+struct OAuthVerificationInfo {
+    pkce_code_verifier: PkceCodeVerifier,
+    csrf_state: CsrfToken,
 }
 
+static OAUTH_INFO: Lazy<Mutex<ExpiringMap<String, OAuthVerificationInfo>>> =
+    Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(60))));
 
 #[get("/authURLs")]
 async fn get_auth_URLs(
-    query: web::Query<AuthQuery>,
-  //  pool: web::Data<DbPool>,
+    session: Session, //  pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
+    let session_value;
+    if let Some(value) = session.get::<String>("key")? { // todo - could we just use the session key that actix-session creates? all we need is a random number.  I couldn't find an API to access this key though
+        println!("existing session value: {}", value);
+        session_value = value;
+    } else {
+        // set a random session
+        session_value = base64::encode(rand::thread_rng().gen::<[u8; 32]>());
+        println!("setting new session value: {}", session_value);
+        session.set::<String>("key", session_value.clone()).unwrap();
+    }
+
     let google_client_id = ClientId::new(
         env::var("GOOGLE_CLIENT_ID").expect("Missing the GOOGLE_CLIENT_ID environment variable."),
     );
@@ -62,10 +67,10 @@ async fn get_auth_URLs(
         auth_url,
         Some(token_url),
     )
-    // This example will be running its own server at localhost:8080.
-    // See below for the server implementation.
+
     .set_redirect_uri(
-        RedirectUrl::new("http://localhost:8080".to_string()).expect("Invalid redirect URL"),
+        RedirectUrl::new("http://fruitfacts.xyz:8080/authRedirect".to_string())
+            .expect("Invalid redirect URL"),
     )
     // Google supports OAuth 2.0 Token Revocation (RFC-7009)
     .set_revocation_uri(
@@ -74,18 +79,15 @@ async fn get_auth_URLs(
     );
 
     // Google supports Proof Key for Code Exchange (PKCE - https://oauth.net/2/pkce/).
-    // Create a PKCE code verifier and SHA-256 encode it as a code challenge.
+    // Create a PKCE code verifier and SHA-256 encode it as a code challenge
     let (pkce_code_challenge, pkce_code_verifier) = PkceCodeChallenge::new_random_sha256();
 
     // Generate the authorization URL to which we'll redirect the user.
     let (authorize_url, csrf_state) = client
         .authorize_url(CsrfToken::new_random)
-        // This example is requesting access to the "calendar" features and the user's profile.
+        // see https://developers.google.com/identity/protocols/oauth2/scopes#oauth2
         .add_scope(Scope::new(
-            "https://www.googleapis.com/auth/calendar".to_string(),
-        ))
-        .add_scope(Scope::new(
-            "https://www.googleapis.com/auth/plus.me".to_string(),
+            "https://www.googleapis.com/auth/userinfo.email".to_string(),
         ))
         .set_pkce_challenge(pkce_code_challenge)
         .url();
@@ -95,21 +97,36 @@ async fn get_auth_URLs(
         authorize_url.to_string()
     );
 
+    // save oauth info
+    // pkce_code_verifier, csrf_state
+    OAUTH_INFO.lock().unwrap().insert(
+        session_value,
+        OAuthVerificationInfo {
+            pkce_code_verifier,
+            csrf_state,
+        },
+    );
 
     // todo - put google url under some json or something
     Ok(HttpResponse::Ok().json(""))
-
 }
 
-
-
-
-
+#[derive(Debug, Deserialize)]
+struct GoogleAuthQuery {
+    state: Option<String>,
+    code: Option<String>,
+    scope: Option<String>,
+    authuser: Option<String>,
+    prompt: Option<String>,
+    //  session_state: Option<String>,
+    //  hd: Option<String>,
+}
 
 #[get("/authRedirect")]
 async fn receive_oauth_redirect(
-    query: web::Query<AuthQuery>,
-  //  pool: web::Data<DbPool>,
+    query: web::Query<GoogleAuthQuery>,
+    session: Session,
+    //  pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     // let conn = pool.get().expect("couldn't get db connection from pool");
 
@@ -120,6 +137,31 @@ async fn receive_oauth_redirect(
     // issue cookie (and make sure cookie security is good)
     // redirect to a post-login page
 
+    if let Some(session_value) = session.get::<String>("key")? {
+        println!("SESSION value: {}", session_value);
+
+        if let Some(oauth_info) = OAUTH_INFO.lock().unwrap().get(&session_value) {
+            if let (Some(code), Some(state)) = (&query.code, &query.state) {
+                let code = AuthorizationCode::new(code.clone());
+                let state = CsrfToken::new(state.clone());
+
+                println!("Google returned the following code:\n{}\n", code.secret());
+                println!(
+                    "Google returned the following state:\n{} (expected `{}`)\n",
+                    state.secret(),
+                    oauth_info.csrf_state.secret()
+                );
+
+                // todo - etc.
+            } else {
+                println!("query string didn't have code and state");
+            }
+        } else {
+            println!("didn't find oauth value with session value {}", session_value);
+        }
+    } else {
+        println!("didn't find session value");
+    }
 
     // we receive:
     // AuthQuery {
@@ -139,7 +181,7 @@ async fn receive_oauth_redirect(
     //   &code=[** AUTH CODE **]
     //   &client_id=[** CLIENT_ID **]
     //   &client_secret=[** CLIENT_SECRET **]
-    //   &redirect_uri=http://localhost
+    //   &redirect_uri=http://fruitfacts.xyz
     //   &state=[** STATE **]'
 
     // there are further steps to an oauth flow but we don't care because we just needed to verify the account and then transition
