@@ -38,7 +38,8 @@ async fn get_auth_URLs(
     session: Session, //  pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let session_value;
-    if let Some(value) = session.get::<String>("key")? { // todo - could we just use the session key that actix-session creates? all we need is a random number.  I couldn't find an API to access this key though
+    if let Some(value) = session.get::<String>("key")? {
+        // todo - could we just use the session key that actix-session creates? all we need is a random number.  I couldn't find an API to access this key though
         println!("existing session value: {}", value);
         session_value = value;
     } else {
@@ -49,11 +50,11 @@ async fn get_auth_URLs(
     }
 
     let google_client_id = ClientId::new(
-        env::var("GOOGLE_CLIENT_ID").expect("Missing the GOOGLE_CLIENT_ID environment variable."),
+        env::var("GOOGLE_CLIENT_ID").expect("Missing the GOOGLE_CLIENT_ID environment variable"),
     );
     let google_client_secret = ClientSecret::new(
         env::var("GOOGLE_CLIENT_SECRET")
-            .expect("Missing the GOOGLE_CLIENT_SECRET environment variable."),
+            .expect("Missing the GOOGLE_CLIENT_SECRET environment variable"),
     );
     let auth_url = AuthUrl::new("https://accounts.google.com/o/oauth2/v2/auth".to_string())
         .expect("Invalid authorization endpoint URL");
@@ -67,7 +68,6 @@ async fn get_auth_URLs(
         auth_url,
         Some(token_url),
     )
-
     .set_redirect_uri(
         RedirectUrl::new("http://fruitfacts.xyz:8080/authRedirect".to_string())
             .expect("Invalid redirect URL"),
@@ -92,13 +92,7 @@ async fn get_auth_URLs(
         .set_pkce_challenge(pkce_code_challenge)
         .url();
 
-    println!(
-        "Open this URL in your browser:\n{}\n",
-        authorize_url.to_string()
-    );
-
-    // save oauth info
-    // pkce_code_verifier, csrf_state
+    // save oauth info to verify the redirect query string that comes back
     OAUTH_INFO.lock().unwrap().insert(
         session_value,
         OAuthVerificationInfo {
@@ -108,7 +102,7 @@ async fn get_auth_URLs(
     );
 
     // todo - put google url under some json or something
-    Ok(HttpResponse::Ok().json(""))
+    Ok(HttpResponse::Ok().json(authorize_url))
 }
 
 #[derive(Debug, Deserialize)]
@@ -152,12 +146,22 @@ async fn receive_oauth_redirect(
                     oauth_info.csrf_state.secret()
                 );
 
-                // todo - etc.
+                // todo - fix up this request to get a token
+
+                //   let token_response = client
+                //  .exchange_code(code)
+                //  .set_pkce_verifier(oauth_info.pkce_code_verifier)
+                //  .request(http_client);
+
+                // todo - get user's info using this token
             } else {
                 println!("query string didn't have code and state");
             }
         } else {
-            println!("didn't find oauth value with session value {}", session_value);
+            println!(
+                "didn't find oauth value with session value {}",
+                session_value
+            );
         }
     } else {
         println!("didn't find session value");

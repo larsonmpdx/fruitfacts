@@ -1,10 +1,10 @@
+use harvest_chart_server::auth;
 use harvest_chart_server::import_db;
 use harvest_chart_server::queries;
-use harvest_chart_server::auth;
 
 use actix_cors::Cors;
+use actix_session::{CookieSession, Session};
 use actix_web::{App, HttpServer};
-use actix_session::{Session, CookieSession};
 
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
