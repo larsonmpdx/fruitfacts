@@ -1,10 +1,10 @@
 use actix_web::{get, web, HttpResponse};
 use anyhow::Result;
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
-use serde::{Deserialize};
+use serde::Deserialize;
 use std::io::Read;
 
-use actix_session::{Session};
+use actix_session::Session;
 use rand::Rng;
 
 use oauth2::reqwest::http_client;
@@ -37,7 +37,8 @@ type GoogleClientType = oauth2::Client<
     BasicTokenType,
     StandardTokenIntrospectionResponse<EmptyExtraTokenFields, BasicTokenType>,
     StandardRevocableToken,
-    oauth2::StandardErrorResponse<oauth2::RevocationErrorResponseType>>;
+    oauth2::StandardErrorResponse<oauth2::RevocationErrorResponseType>,
+>;
 
 fn get_google_client() -> GoogleClientType {
     let google_client_id = ClientId::new(
@@ -123,11 +124,11 @@ async fn get_auth_urls(
 struct GoogleAuthQuery {
     state: Option<String>,
     code: Option<String>,
- // scope: Option<String>,
- // authuser: Option<String>,
- // prompt: Option<String>,
- // session_state: Option<String>,
- // hd: Option<String>,
+    // scope: Option<String>,
+    // authuser: Option<String>,
+    // prompt: Option<String>,
+    // session_state: Option<String>,
+    // hd: Option<String>,
 }
 
 #[get("/authRedirect")]

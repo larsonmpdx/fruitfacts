@@ -3,7 +3,7 @@ use harvest_chart_server::import_db;
 use harvest_chart_server::queries;
 
 use actix_cors::Cors;
-use actix_session::{CookieSession};
+use actix_session::CookieSession;
 use actix_web::{App, HttpServer};
 
 use diesel::prelude::*;

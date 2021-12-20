@@ -1036,27 +1036,29 @@ fn get_category_description(
     category_description.clone()
 }
 
-fn add_collection_plant(
+struct Add_Collection_Plant_Type<'a> {
     collection_id: i32,
     location_id: Option<i32>,
-    path_and_filename: &str,
-    harvest_time: &Option<String>,
-    plant_name: &str,
-    plant: &CollectionPlantJson,
-    category_description: &Option<String>,
-    db_conn: &SqliteConnection,
-) -> isize {
+    path_and_filename: &'a str,
+    harvest_time: &'a Option<String>,
+    plant_name: &'a str,
+    plant: &'a CollectionPlantJson,
+    category_description: &'a Option<String>,
+    db_conn: &'a SqliteConnection,
+}
+
+fn add_collection_plant(input: Add_Collection_Plant_Type) -> isize {
     let mut harvest_start = None;
     let mut harvest_end = None;
     let mut harvest_start_is_midpoint = None;
     let mut harvest_start_2 = None; // fig breba+main
     let mut harvest_end_2 = None; // fig breba+main
     let mut harvest_start_2_is_midpoint = None; // fig breba+main
-    if let Some(harvest_time) = harvest_time {
+    if let Some(harvest_time) = input.harvest_time {
         if harvest_time.is_empty() {
             panic!(
                 r#"harvest time was an empty string for {:?}: {}"#,
-                plant, harvest_time
+                input.plant, harvest_time
             );
         }
 
@@ -1067,7 +1069,7 @@ fn add_collection_plant(
                 split.len(),
                 2,
                 r#"date string had multiple '/' {:?}: {}"#,
-                plant,
+                input.plant,
                 harvest_time
             );
 
@@ -1084,7 +1086,10 @@ fn add_collection_plant(
                     }
                 }
                 None => {
-                    panic!(r#"couldn't parse date for {:?}: {}"#, plant, harvest_time);
+                    panic!(
+                        r#"couldn't parse date for {:?}: {}"#,
+                        input.plant, harvest_time
+                    );
                 }
             }
             match string_to_day_range(split[1]) {
@@ -1100,7 +1105,10 @@ fn add_collection_plant(
                     }
                 }
                 None => {
-                    panic!(r#"couldn't parse date for {:?}: {}"#, plant, harvest_time);
+                    panic!(
+                        r#"couldn't parse date for {:?}: {}"#,
+                        input.plant, harvest_time
+                    );
                 }
             }
         } else {
@@ -1117,7 +1125,10 @@ fn add_collection_plant(
                     }
                 }
                 None => {
-                    panic!(r#"couldn't parse date for {:?}: {}"#, plant, harvest_time);
+                    panic!(
+                        r#"couldn't parse date for {:?}: {}"#,
+                        input.plant, harvest_time
+                    );
                 }
             }
         }
@@ -1125,31 +1136,31 @@ fn add_collection_plant(
 
     let harvest_time_helper_text;
     // we may get "harvest_time_unparsed" in some cases with no "harvest_time". save "harvest_time_unparsed" for the helper text
-    if harvest_time.is_none() && plant.harvest_time_unparsed.is_some() {
-        harvest_time_helper_text = Some(plant.harvest_time_unparsed.as_ref().unwrap());
+    if input.harvest_time.is_none() && input.plant.harvest_time_unparsed.is_some() {
+        harvest_time_helper_text = Some(input.plant.harvest_time_unparsed.as_ref().unwrap());
     } else {
-        harvest_time_helper_text = harvest_time.as_ref();
+        harvest_time_helper_text = input.harvest_time.as_ref();
     }
 
     println!(
         "inserting {} C {} L {:?}",
-        plant_name, collection_id, location_id
+        input.plant_name, input.collection_id, input.location_id
     );
 
     let result = diesel::insert_into(collection_items::dsl::collection_items)
         .values((
-            collection_items::collection_id.eq(collection_id),
-            collection_items::location_id.eq(location_id),
-            collection_items::path_and_filename.eq(path_and_filename),
-            collection_items::name.eq(plant_name),
-            collection_items::type_.eq(&plant.type_),
-            collection_items::category.eq(&plant.category),
-            collection_items::category_description.eq(category_description),
+            collection_items::collection_id.eq(input.collection_id),
+            collection_items::location_id.eq(input.location_id),
+            collection_items::path_and_filename.eq(input.path_and_filename),
+            collection_items::name.eq(input.plant_name),
+            collection_items::type_.eq(&input.plant.type_),
+            collection_items::category.eq(&input.plant.category),
+            collection_items::category_description.eq(input.category_description),
             collection_items::disease_resistance
-                .eq(serde_json::to_string(&plant.disease_resistance).unwrap()),
-            collection_items::disease_resistance.eq(&plant.chill),
-            collection_items::description.eq(&plant.description),
-            collection_items::harvest_relative.eq(&plant.harvest_time_relative),
+                .eq(serde_json::to_string(&input.plant.disease_resistance).unwrap()),
+            collection_items::disease_resistance.eq(&input.plant.chill),
+            collection_items::description.eq(&input.plant.description),
+            collection_items::harvest_relative.eq(&input.plant.harvest_time_relative),
             collection_items::harvest_text.eq(harvest_time_helper_text),
             collection_items::harvest_start.eq(harvest_start),
             collection_items::harvest_end.eq(harvest_end),
@@ -1158,16 +1169,16 @@ fn add_collection_plant(
             collection_items::harvest_end_2.eq(harvest_end_2),
             collection_items::harvest_start_2_is_midpoint.eq(harvest_start_2_is_midpoint),
         ))
-        .execute(db_conn);
+        .execute(input.db_conn);
     assert_eq!(
         Ok(1),
         result,
         "failed inserting {} {:?} {:?} C {} L {:?}",
-        plant_name,
+        input.plant_name,
         result,
-        plant,
-        collection_id,
-        location_id
+        input.plant,
+        input.collection_id,
+        input.location_id
     );
 
     1
@@ -1354,9 +1365,9 @@ fn add_collection_plant_by_location(
 
                 // we get harvest time for each location from the base harvest time values
 
-                plants_added += add_collection_plant(
+                plants_added += add_collection_plant(Add_Collection_Plant_Type {
                     collection_id,
-                    get_location_id(
+                    location_id: get_location_id(
                         collection_id,
                         get_location_name(
                             Some(location.as_str().unwrap().to_string()),
@@ -1364,13 +1375,13 @@ fn add_collection_plant_by_location(
                         ),
                         db_conn,
                     ), // the .as_str()... nastiness is because serde wants to carry the "it's a json string!!" idea to the point of printing it a certain way in rust. as_str() tells it not to
-                    &path_and_filename,
-                    &plant.harvest_time,
+                    path_and_filename: &path_and_filename,
+                    harvest_time: &plant.harvest_time,
                     plant_name,
                     plant,
                     category_description,
                     db_conn,
-                );
+                });
             } else {
                 // deserialize to type II like
                 //     "locations": [
@@ -1390,20 +1401,20 @@ fn add_collection_plant_by_location(
                         continue;
                     }
 
-                    plants_added += add_collection_plant(
+                    plants_added += add_collection_plant(Add_Collection_Plant_Type {
                         collection_id,
-                        get_location_id(
+                        location_id: get_location_id(
                             collection_id,
                             get_location_name(Some(location_name), collection_locations),
                             db_conn,
                         ),
-                        &path_and_filename,
-                        &Some(harvest_time),
+                        path_and_filename: &path_and_filename,
+                        harvest_time: &Some(harvest_time),
                         plant_name,
                         plant,
                         category_description,
                         db_conn,
-                    );
+                    });
                 }
             }
         }
@@ -1412,20 +1423,20 @@ fn add_collection_plant_by_location(
     } else {
         // no location given in the plant json
 
-        plants_added += add_collection_plant(
+        plants_added += add_collection_plant(Add_Collection_Plant_Type {
             collection_id,
-            get_location_id(
+            location_id: get_location_id(
                 collection_id,
                 get_location_name(None, collection_locations),
                 db_conn,
             ),
-            &path_and_filename,
-            &plant.harvest_time,
+            path_and_filename: &path_and_filename,
+            harvest_time: &plant.harvest_time,
             plant_name,
             plant,
             category_description,
             db_conn,
-        );
+        });
     }
 
     plants_added
