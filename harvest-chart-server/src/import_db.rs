@@ -1036,7 +1036,7 @@ fn get_category_description(
     category_description.clone()
 }
 
-struct Add_Collection_Plant_Type<'a> {
+struct AddCollectionPlantType<'a> {
     collection_id: i32,
     location_id: Option<i32>,
     path_and_filename: &'a str,
@@ -1047,7 +1047,7 @@ struct Add_Collection_Plant_Type<'a> {
     db_conn: &'a SqliteConnection,
 }
 
-fn add_collection_plant(input: Add_Collection_Plant_Type) -> isize {
+fn add_collection_plant(input: AddCollectionPlantType) -> isize {
     let mut harvest_start = None;
     let mut harvest_end = None;
     let mut harvest_start_is_midpoint = None;
@@ -1365,7 +1365,7 @@ fn add_collection_plant_by_location(
 
                 // we get harvest time for each location from the base harvest time values
 
-                plants_added += add_collection_plant(Add_Collection_Plant_Type {
+                plants_added += add_collection_plant(AddCollectionPlantType {
                     collection_id,
                     location_id: get_location_id(
                         collection_id,
@@ -1401,7 +1401,7 @@ fn add_collection_plant_by_location(
                         continue;
                     }
 
-                    plants_added += add_collection_plant(Add_Collection_Plant_Type {
+                    plants_added += add_collection_plant(AddCollectionPlantType {
                         collection_id,
                         location_id: get_location_id(
                             collection_id,
@@ -1423,7 +1423,7 @@ fn add_collection_plant_by_location(
     } else {
         // no location given in the plant json
 
-        plants_added += add_collection_plant(Add_Collection_Plant_Type {
+        plants_added += add_collection_plant(AddCollectionPlantType {
             collection_id,
             location_id: get_location_id(
                 collection_id,
