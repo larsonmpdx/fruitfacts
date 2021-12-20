@@ -31,14 +31,15 @@ struct OAuthVerificationInfo {
     csrf_state: CsrfToken,
 }
 
-fn get_google_client() -> oauth2::Client<
+type GoogleClientType = oauth2::Client<
     oauth2::StandardErrorResponse<BasicErrorResponseType>,
     oauth2::StandardTokenResponse<EmptyExtraTokenFields, BasicTokenType>,
     BasicTokenType,
     StandardTokenIntrospectionResponse<EmptyExtraTokenFields, BasicTokenType>,
     StandardRevocableToken,
-    oauth2::StandardErrorResponse<oauth2::RevocationErrorResponseType>,
-> {
+    oauth2::StandardErrorResponse<oauth2::RevocationErrorResponseType>>;
+
+fn get_google_client() -> GoogleClientType {
     let google_client_id = ClientId::new(
         env::var("GOOGLE_CLIENT_ID").expect("Missing the GOOGLE_CLIENT_ID environment variable"),
     );
@@ -122,11 +123,11 @@ async fn getAuthURLs(
 struct GoogleAuthQuery {
     state: Option<String>,
     code: Option<String>,
-    scope: Option<String>,
- //   authuser: Option<String>,
- //   prompt: Option<String>,
-    //  session_state: Option<String>,
-    //  hd: Option<String>,
+ // scope: Option<String>,
+ // authuser: Option<String>,
+ // prompt: Option<String>,
+ // session_state: Option<String>,
+ // hd: Option<String>,
 }
 
 #[get("/authRedirect")]
