@@ -1,7 +1,4 @@
 use actix_web::{get, web, HttpResponse};
-use diesel::prelude::*;
-use diesel::r2d2::{self, ConnectionManager};
-type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use anyhow::Result;
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
 use serde::{Deserialize};
@@ -77,7 +74,7 @@ static OAUTH_INFO: Lazy<Mutex<ExpiringMap<String, OAuthVerificationInfo>>> =
     Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(60))));
 
 #[get("/authURLs")]
-async fn get_auth_URLs(
+async fn getAuthURLs(
     session: Session, //  pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let session_value;
@@ -126,8 +123,8 @@ struct GoogleAuthQuery {
     state: Option<String>,
     code: Option<String>,
     scope: Option<String>,
-    authuser: Option<String>,
-    prompt: Option<String>,
+ //   authuser: Option<String>,
+ //   prompt: Option<String>,
     //  session_state: Option<String>,
     //  hd: Option<String>,
 }
