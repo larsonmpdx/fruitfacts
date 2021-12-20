@@ -56,7 +56,7 @@ fn get_google_client() -> oauth2::Client<
         .expect("Invalid token endpoint URL");
 
     // Set up the config for the Google OAuth2 process
-    return BasicClient::new(
+    BasicClient::new(
         google_client_id,
         Some(google_client_secret),
         auth_url,
@@ -70,7 +70,7 @@ fn get_google_client() -> oauth2::Client<
     .set_revocation_uri(
         RevocationUrl::new("https://oauth2.googleapis.com/revoke".to_string())
             .expect("Invalid revocation endpoint URL"),
-    );
+    )
 }
 
 static OAUTH_INFO: Lazy<Mutex<ExpiringMap<String, OAuthVerificationInfo>>> =
