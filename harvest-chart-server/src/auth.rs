@@ -205,9 +205,9 @@ async fn receive_oauth_redirect(
                 println!("{:#?} body: {}", resp, body);
 
                 //  {
-                //  "id": "numbers...",
-                //  "email": "email@gmail.com",
-                //  "verified_email": true,
+                //  "id": "numbers...", -> won't change, primary key
+                //  "email": "email@gmail.com", -> could change, still store it
+                //  "verified_email": true, -> require this to be true
                 //  "picture": "https://lh3.googleusercontent.com/a/default-user=s96-c"
                 //  }
 
