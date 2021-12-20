@@ -63,7 +63,7 @@ async fn main() -> std::io::Result<()> {
             .service(queries::get_build_info)
             .service(queries::get_plant)
             .service(queries::variety_search)
-            .service(auth::getAuthURLs)
+            .service(auth::get_auth_URLs)
             .service(auth::receive_oauth_redirect)
     })
     .bind(("127.0.0.1", 8080))?

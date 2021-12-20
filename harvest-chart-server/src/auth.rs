@@ -75,7 +75,7 @@ static OAUTH_INFO: Lazy<Mutex<ExpiringMap<String, OAuthVerificationInfo>>> =
     Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(60))));
 
 #[get("/authURLs")]
-async fn getAuthURLs(
+async fn get_auth_URLs(
     session: Session, //  pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let session_value;
