@@ -3,15 +3,19 @@ use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use anyhow::Result;
+use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
 use serde::{Deserialize, Serialize};
+use std::io::Read;
 
 use actix_session::{CookieSession, Session};
 use rand::Rng;
 
+use oauth2::reqwest::http_client;
 use oauth2::{basic::BasicClient, revocation::StandardRevocableToken, TokenResponse};
 use oauth2::{
-    AuthUrl, AuthorizationCode, ClientId, ClientSecret, CsrfToken, PkceCodeChallenge,
-    PkceCodeVerifier, RedirectUrl, RevocationUrl, Scope, TokenUrl,
+    AuthUrl, AuthorizationCode, ClientId, ClientSecret, CsrfToken, EmptyExtraTokenFields,
+    PkceCodeChallenge, PkceCodeVerifier, RedirectUrl, RevocationUrl, Scope,
+    StandardTokenIntrospectionResponse, TokenUrl,
 };
 use std::env;
 
@@ -26,8 +30,47 @@ use std::time::Duration;
 
 #[derive(Debug)]
 struct OAuthVerificationInfo {
-    pkce_code_verifier: PkceCodeVerifier,
+    pkce_code_verifier: Option<PkceCodeVerifier>, // Option<> because the library author is our mom and doesn't want us reusing this
     csrf_state: CsrfToken,
+}
+
+fn get_google_client() -> oauth2::Client<
+    oauth2::StandardErrorResponse<BasicErrorResponseType>,
+    oauth2::StandardTokenResponse<EmptyExtraTokenFields, BasicTokenType>,
+    BasicTokenType,
+    StandardTokenIntrospectionResponse<EmptyExtraTokenFields, BasicTokenType>,
+    StandardRevocableToken,
+    oauth2::StandardErrorResponse<oauth2::RevocationErrorResponseType>,
+> {
+    let google_client_id = ClientId::new(
+        env::var("GOOGLE_CLIENT_ID").expect("Missing the GOOGLE_CLIENT_ID environment variable"),
+    );
+    let google_client_secret = ClientSecret::new(
+        env::var("GOOGLE_CLIENT_SECRET")
+            .expect("Missing the GOOGLE_CLIENT_SECRET environment variable"),
+    );
+
+    let auth_url = AuthUrl::new("https://accounts.google.com/o/oauth2/v2/auth".to_string())
+        .expect("Invalid authorization endpoint URL");
+    let token_url = TokenUrl::new("https://www.googleapis.com/oauth2/v3/token".to_string())
+        .expect("Invalid token endpoint URL");
+
+    // Set up the config for the Google OAuth2 process
+    return BasicClient::new(
+        google_client_id,
+        Some(google_client_secret),
+        auth_url,
+        Some(token_url),
+    )
+    .set_redirect_uri(
+        RedirectUrl::new("http://fruitfacts.xyz:8080/authRedirect".to_string())
+            .expect("Invalid redirect URL"),
+    )
+    // Google supports OAuth 2.0 Token Revocation (RFC-7009)
+    .set_revocation_uri(
+        RevocationUrl::new("https://oauth2.googleapis.com/revoke".to_string())
+            .expect("Invalid revocation endpoint URL"),
+    );
 }
 
 static OAUTH_INFO: Lazy<Mutex<ExpiringMap<String, OAuthVerificationInfo>>> =
@@ -49,40 +92,13 @@ async fn get_auth_URLs(
         session.set::<String>("key", session_value.clone()).unwrap();
     }
 
-    let google_client_id = ClientId::new(
-        env::var("GOOGLE_CLIENT_ID").expect("Missing the GOOGLE_CLIENT_ID environment variable"),
-    );
-    let google_client_secret = ClientSecret::new(
-        env::var("GOOGLE_CLIENT_SECRET")
-            .expect("Missing the GOOGLE_CLIENT_SECRET environment variable"),
-    );
-    let auth_url = AuthUrl::new("https://accounts.google.com/o/oauth2/v2/auth".to_string())
-        .expect("Invalid authorization endpoint URL");
-    let token_url = TokenUrl::new("https://www.googleapis.com/oauth2/v3/token".to_string())
-        .expect("Invalid token endpoint URL");
-
-    // Set up the config for the Google OAuth2 process.
-    let client = BasicClient::new(
-        google_client_id,
-        Some(google_client_secret),
-        auth_url,
-        Some(token_url),
-    )
-    .set_redirect_uri(
-        RedirectUrl::new("http://fruitfacts.xyz:8080/authRedirect".to_string())
-            .expect("Invalid redirect URL"),
-    )
-    // Google supports OAuth 2.0 Token Revocation (RFC-7009)
-    .set_revocation_uri(
-        RevocationUrl::new("https://oauth2.googleapis.com/revoke".to_string())
-            .expect("Invalid revocation endpoint URL"),
-    );
+    let client = get_google_client();
 
     // Google supports Proof Key for Code Exchange (PKCE - https://oauth.net/2/pkce/).
     // Create a PKCE code verifier and SHA-256 encode it as a code challenge
     let (pkce_code_challenge, pkce_code_verifier) = PkceCodeChallenge::new_random_sha256();
 
-    // Generate the authorization URL to which we'll redirect the user.
+    // Generate the authorization URL to which we'll redirect the user
     let (authorize_url, csrf_state) = client
         .authorize_url(CsrfToken::new_random)
         // see https://developers.google.com/identity/protocols/oauth2/scopes#oauth2
@@ -96,7 +112,7 @@ async fn get_auth_URLs(
     OAUTH_INFO.lock().unwrap().insert(
         session_value,
         OAuthVerificationInfo {
-            pkce_code_verifier,
+            pkce_code_verifier: Some(pkce_code_verifier),
             csrf_state,
         },
     );
@@ -124,6 +140,16 @@ async fn receive_oauth_redirect(
 ) -> Result<HttpResponse, actix_web::Error> {
     // let conn = pool.get().expect("couldn't get db connection from pool");
 
+    // we receive:
+    // AuthQuery {
+    // state: Some("0eacf4d808124f15a4e127aba2e8b017"),
+    // code: Some("4/0AX4XfWjOjzN8G7iHcwUym44ARWcTJiOlU6UKrgrfVvhIUw9lJCRe3PYx_wDu2nN9wOJ4Dg"),
+    // scope: Some("email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"),
+    // authuser: Some("0"),
+    // prompt: Some("consent")
+    // }
+    println!("{:?}", query);
+
     // todo -
     // verify token
     // look up user in database
@@ -134,7 +160,7 @@ async fn receive_oauth_redirect(
     if let Some(session_value) = session.get::<String>("key")? {
         println!("SESSION value: {}", session_value);
 
-        if let Some(oauth_info) = OAUTH_INFO.lock().unwrap().get(&session_value) {
+        if let Some(oauth_info) = OAUTH_INFO.lock().unwrap().get_mut(&session_value) {
             if let (Some(code), Some(state)) = (&query.code, &query.state) {
                 let code = AuthorizationCode::new(code.clone());
                 let state = CsrfToken::new(state.clone());
@@ -146,14 +172,46 @@ async fn receive_oauth_redirect(
                     oauth_info.csrf_state.secret()
                 );
 
-                // todo - fix up this request to get a token
+                // todo - make sure we drop whatever we need to unlock OAUTH_INFO
 
-                //   let token_response = client
-                //  .exchange_code(code)
-                //  .set_pkce_verifier(oauth_info.pkce_code_verifier)
-                //  .request(http_client);
+                let client = get_google_client();
+
+                // get ownership out of the Option<>
+                let verifier = std::mem::replace(&mut oauth_info.pkce_code_verifier, None);
+
+                // todo - test whether the extracted verifier is Some()
+
+                let token_response = client
+                    .exchange_code(code)
+                    .set_pkce_verifier(verifier.unwrap())
+                    .request(http_client);
+
+                println!("token response: {:#?}", token_response);
+                let token_secret = token_response.unwrap().access_token().secret().clone();
+
+                println!("token: {:?}", token_secret);
 
                 // todo - get user's info using this token
+
+                let mut resp = reqwest::blocking::get(format!(
+                    "https://www.googleapis.com/oauth2/v1/userinfo?access_token={}",
+                    token_secret
+                ))
+                .unwrap();
+
+                let mut body = String::new();
+                resp.read_to_string(&mut body)?;
+
+                println!("{:#?} body: {}", resp, body);
+
+                //  {
+                //  "id": "numbers...",
+                //  "email": "email@gmail.com",
+                //  "verified_email": true,
+                //  "picture": "https://lh3.googleusercontent.com/a/default-user=s96-c"
+                //  }
+
+                // todo - move all of this sync stuff out of the handler here so we don't hold up actix
             } else {
                 println!("query string didn't have code and state");
             }
@@ -166,16 +224,6 @@ async fn receive_oauth_redirect(
     } else {
         println!("didn't find session value");
     }
-
-    // we receive:
-    // AuthQuery {
-    // state: Some("0eacf4d808124f15a4e127aba2e8b017"),
-    // code: Some("4/0AX4XfWjOjzN8G7iHcwUym44ARWcTJiOlU6UKrgrfVvhIUw9lJCRe3PYx_wDu2nN9wOJ4Dg"),
-    // scope: Some("email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"),
-    // authuser: Some("0"),
-    // prompt: Some("consent")
-    // }
-    println!("{:?}", query);
 
     // https://stackoverflow.com/questions/60060323/google-oauth-2-0-refresh-access-token-and-new-refresh-token
     // curl "https://www.googleapis.com/oauth2/v4/token" \
