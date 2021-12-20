@@ -4,10 +4,10 @@ use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use anyhow::Result;
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize};
 use std::io::Read;
 
-use actix_session::{CookieSession, Session};
+use actix_session::{Session};
 use rand::Rng;
 
 use oauth2::reqwest::http_client;
