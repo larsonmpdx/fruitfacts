@@ -213,11 +213,9 @@ fn receive_oauth_redirect_blocking(
     println!("{:#?} body: {:#?}", resp, account_info);
 
     // todo -
-    // associate this google user to this session
-    // look up user in database. if no user, offer to create an account
-    // create or refresh user info in the database
-    // issue cookie (and make sure cookie security is good)
-    // redirect to a post-login page
+    // - if we already have a user, associate this session to that user (database)
+    // - if we don't have a user, put them into an account offer pool (another singleton map)
+    //   redirect to a post-login page (account offer or logged-in landing page)
 
     // let conn = pool.get().expect("couldn't get db connection from pool");
 

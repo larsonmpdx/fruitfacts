@@ -28,6 +28,8 @@
   * `cargo clippy --fix`
 
 # js hints
+* install nvm (there is a related windows project)
+  * `nvm install lts` and `nvm use lts`
 * `npm run dev` run a node host (with server-side rendering)
 * `ncu -u` update package.json versions after installing `npm i -g npm-check-updates`
 
@@ -49,10 +51,6 @@
 * `diesel migration generate [new table name]`
 * `diesel migration run` - or omit this and just run all tests, there are embedded migrations
 * `diesel migration redo` (checks up+down)
-
-# js hints
-* install nvm (there is a related windows project)
-  * `nvm install lts` and `nvm use lts`
 
 ## sveltekit
 * https://kit.svelte.dev/
