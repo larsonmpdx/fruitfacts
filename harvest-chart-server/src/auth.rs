@@ -1,5 +1,5 @@
 use actix_web::{get, web, HttpResponse};
-use anyhow::Result;
+use anyhow::{anyhow, Result};
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
 use serde::Deserialize;
 use std::io::Read;
@@ -131,112 +131,119 @@ struct GoogleAuthQuery {
     // hd: Option<String>,
 }
 
+#[derive(Debug, Deserialize)]
+struct GoogleAccountInfo {
+    id: String,           // won't change, primary key
+    email: String,        // could change. store this anyway so we can greet the user correctly
+    verified_email: bool, // require true
+    picture: String,      // we don't use this
+}
+
+fn receive_oauth_redirect_blocking(
+    query: web::Query<GoogleAuthQuery>,
+    session_value: String,
+    //  pool: web::Data<DbPool>,
+) -> Result<String> {
+    println!("{:?}", query);
+
+    if query.code.is_none() || query.state.is_none() {
+        return Err(anyhow!("missing query info"));
+    }
+
+    let code = AuthorizationCode::new(query.code.as_ref().unwrap().clone());
+    let state = CsrfToken::new(query.state.as_ref().unwrap().clone());
+
+    // get these things out of OAUTH_INFO so we can drop the lock right away
+    let pkce_code_verifier;
+    let csrf_state;
+    {
+        if let Some(oauth_info) = OAUTH_INFO.lock().unwrap().get_mut(&session_value) {
+            // get ownership out of the Option<>
+            let pkce_code_verifier_option =
+                std::mem::replace(&mut oauth_info.pkce_code_verifier, None);
+            csrf_state = oauth_info.csrf_state.secret().clone();
+
+            if pkce_code_verifier_option.is_none() {
+                return Err(anyhow!("oauth info already used"));
+            }
+            pkce_code_verifier = pkce_code_verifier_option.unwrap();
+        } else {
+            return Err(anyhow!("oauth info not found"));
+        }
+    }
+
+    println!(
+        "oauth redirect returned the following code:\n{}\n",
+        code.secret()
+    );
+    println!(
+        "oauth redirect returned the following state:\n{} (expected `{}`)\n",
+        state.secret(),
+        csrf_state
+    );
+
+    let client = get_google_client();
+
+    let token_response = client
+        .exchange_code(code)
+        .set_pkce_verifier(pkce_code_verifier)
+        .request(http_client);
+
+    println!("token response: {:#?}", token_response);
+    let token_secret = token_response.unwrap().access_token().secret().clone();
+
+    println!("token: {:?}", token_secret);
+
+    let mut resp = reqwest::blocking::get(format!(
+        "https://www.googleapis.com/oauth2/v1/userinfo?access_token={}",
+        token_secret
+    ))
+    .unwrap();
+
+    let mut body = String::new();
+    let _ = resp.read_to_string(&mut body); // ignore errors, we'll catch them in json parsing
+
+    let account_info: GoogleAccountInfo = serde_json::from_str(&body)?;
+
+    println!("{:#?} body: {:#?}", resp, account_info);
+
+    // todo -
+    // associate this google user to this session
+    // look up user in database. if no user, offer to create an account
+    // create or refresh user info in the database
+    // issue cookie (and make sure cookie security is good)
+    // redirect to a post-login page
+
+    // let conn = pool.get().expect("couldn't get db connection from pool");
+
+    Ok("".to_string())
+}
+
 #[get("/authRedirect")]
 async fn receive_oauth_redirect(
     query: web::Query<GoogleAuthQuery>,
     session: Session,
     //  pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    // let conn = pool.get().expect("couldn't get db connection from pool");
-
-    // we receive:
-    // AuthQuery {
-    // state: Some("0eacf4d808124f15a4e127aba2e8b017"),
-    // code: Some("4/0AX4XfWjOjzN8G7iHcwUym44ARWcTJiOlU6UKrgrfVvhIUw9lJCRe3PYx_wDu2nN9wOJ4Dg"),
-    // scope: Some("email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email"),
-    // authuser: Some("0"),
-    // prompt: Some("consent")
-    // }
-    println!("{:?}", query);
-
-    // todo -
-    // verify token
-    // look up user in database
-    // create or refresh user info
-    // issue cookie (and make sure cookie security is good)
-    // redirect to a post-login page
-
-    if let Some(session_value) = session.get::<String>("key")? {
-        println!("SESSION value: {}", session_value);
-
-        if let Some(oauth_info) = OAUTH_INFO.lock().unwrap().get_mut(&session_value) {
-            if let (Some(code), Some(state)) = (&query.code, &query.state) {
-                let code = AuthorizationCode::new(code.clone());
-                let state = CsrfToken::new(state.clone());
-
-                println!("Google returned the following code:\n{}\n", code.secret());
-                println!(
-                    "Google returned the following state:\n{} (expected `{}`)\n",
-                    state.secret(),
-                    oauth_info.csrf_state.secret()
-                );
-
-                // todo - make sure we drop whatever we need to unlock OAUTH_INFO
-
-                let client = get_google_client();
-
-                // get ownership out of the Option<>
-                let verifier = std::mem::replace(&mut oauth_info.pkce_code_verifier, None);
-
-                // todo - test whether the extracted verifier is Some()
-
-                let token_response = client
-                    .exchange_code(code)
-                    .set_pkce_verifier(verifier.unwrap())
-                    .request(http_client);
-
-                println!("token response: {:#?}", token_response);
-                let token_secret = token_response.unwrap().access_token().secret().clone();
-
-                println!("token: {:?}", token_secret);
-
-                // todo - get user's info using this token
-
-                let mut resp = reqwest::blocking::get(format!(
-                    "https://www.googleapis.com/oauth2/v1/userinfo?access_token={}",
-                    token_secret
-                ))
-                .unwrap();
-
-                let mut body = String::new();
-                resp.read_to_string(&mut body)?;
-
-                println!("{:#?} body: {}", resp, body);
-
-                //  {
-                //  "id": "numbers...", -> won't change, primary key
-                //  "email": "email@gmail.com", -> could change, still store it
-                //  "verified_email": true, -> require this to be true
-                //  "picture": "https://lh3.googleusercontent.com/a/default-user=s96-c"
-                //  }
-
-                // todo - move all of this sync stuff out of the handler here so we don't hold up actix
-            } else {
-                println!("query string didn't have code and state");
-            }
-        } else {
-            println!(
-                "didn't find oauth value with session value {}",
-                session_value
-            );
-        }
-    } else {
+    let session_value = session.get::<String>("key");
+    if let Err(_) = session_value {
         println!("didn't find session value");
+        return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    // https://stackoverflow.com/questions/60060323/google-oauth-2-0-refresh-access-token-and-new-refresh-token
-    // curl "https://www.googleapis.com/oauth2/v4/token" \
-    // --request POST \
-    // --silent \
-    // --data 'grant_type=authorization_code
-    //   &code=[** AUTH CODE **]
-    //   &client_id=[** CLIENT_ID **]
-    //   &client_secret=[** CLIENT_SECRET **]
-    //   &redirect_uri=http://fruitfacts.xyz
-    //   &state=[** STATE **]'
+    let session_value = session_value.unwrap();
+    if session_value.is_none() {
+        println!("empty session value");
+        return Ok(HttpResponse::InternalServerError().finish());
+    }
 
-    // there are further steps to an oauth flow but we don't care because we just needed to verify the account and then transition
-    // to our own server's account plus a cookie
+    let results =
+        web::block(move || receive_oauth_redirect_blocking(query, session_value.unwrap()))
+            .await
+            .map_err(|e| {
+                eprintln!("{}", e);
+                HttpResponse::InternalServerError().finish()
+            })?;
 
-    Ok(HttpResponse::Ok().json(""))
+    Ok(HttpResponse::Ok().json(results))
 }
