@@ -194,11 +194,16 @@ fn receive_oauth_redirect_blocking(
 
     println!("token: {:?}", token_secret);
 
-    let mut resp = reqwest::blocking::get(format!(
-        "https://www.googleapis.com/oauth2/v1/userinfo?access_token={}",
-        token_secret
-    ))
-    .unwrap();
+    let client = reqwest::blocking::Client::builder()
+        .timeout(Duration::from_secs(10))
+        .build()?;
+
+    let mut resp = client
+        .get(format!(
+            "https://www.googleapis.com/oauth2/v1/userinfo?access_token={}",
+            token_secret
+        ))
+        .send()?;
 
     let mut body = String::new();
     let _ = resp.read_to_string(&mut body); // ignore errors, we'll catch them in json parsing
