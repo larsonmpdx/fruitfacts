@@ -205,7 +205,7 @@ async fn receive_oauth_redirect(
     //  pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let session_value = session.get::<String>("key");
-    if let Err(_) = session_value {
+    if session_value.is_err() {
         println!("didn't find session value");
         return Ok(HttpResponse::InternalServerError().finish());
     }

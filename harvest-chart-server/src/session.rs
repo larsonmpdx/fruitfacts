@@ -48,7 +48,7 @@ pub fn get_oauth_info(session_value: String) -> Result<(PkceCodeVerifier, String
         return Err(anyhow!("oauth info not found"));
     }
 
-    return Ok((pkce_code_verifier, csrf_state));
+    Ok((pkce_code_verifier, csrf_state))
 }
 
 // todo: session load/store and cache
@@ -71,11 +71,9 @@ pub fn get_session(db_conn: &SqliteConnection, session_value: String) -> Result<
     match db_return {
         Ok(db_return) => {
             // todo: check expiration time on the database item
-            return Ok(db_return);
+            Ok(db_return)
         }
-        Err(error) => {
-            return Err(error.into());
-        }
+        Err(error) => Err(error.into()),
     }
 }
 
