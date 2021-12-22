@@ -6,30 +6,21 @@ use std::io::Read;
 
 use actix_session::Session;
 use rand::Rng;
+use std::time::Duration;
 
 use oauth2::reqwest::http_client;
 use oauth2::{basic::BasicClient, revocation::StandardRevocableToken, TokenResponse};
 use oauth2::{
     AuthUrl, AuthorizationCode, ClientId, ClientSecret, CsrfToken, EmptyExtraTokenFields,
-    PkceCodeChallenge, PkceCodeVerifier, RedirectUrl, RevocationUrl, Scope,
-    StandardTokenIntrospectionResponse, TokenUrl,
+    PkceCodeChallenge, RedirectUrl, RevocationUrl, Scope, StandardTokenIntrospectionResponse,
+    TokenUrl,
 };
 use std::env;
 
+use crate::session;
+
 // todo - session cookie first, then csrf storage and retreival in some kind of cache with expiration
 // https://security.stackexchange.com/questions/20187/oauth2-cross-site-request-forgery-and-state-parameter
-
-use once_cell::sync::Lazy; // 1.3.1
-use std::sync::Mutex;
-
-use expiring_map::ExpiringMap;
-use std::time::Duration;
-
-#[derive(Debug)]
-struct OAuthVerificationInfo {
-    pkce_code_verifier: Option<PkceCodeVerifier>, // Option<> because the library author is our mom and doesn't want us reusing this
-    csrf_state: CsrfToken,
-}
 
 type GoogleClientType = oauth2::Client<
     oauth2::StandardErrorResponse<BasicErrorResponseType>,
@@ -72,9 +63,6 @@ fn get_google_client() -> GoogleClientType {
     )
 }
 
-static OAUTH_INFO: Lazy<Mutex<ExpiringMap<String, OAuthVerificationInfo>>> =
-    Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(60))));
-
 #[get("/authURLs")]
 async fn get_auth_urls(
     session: Session, //  pool: web::Data<DbPool>,
@@ -108,9 +96,9 @@ async fn get_auth_urls(
         .url();
 
     // save oauth info to verify the redirect query string that comes back
-    OAUTH_INFO.lock().unwrap().insert(
+    session::insert_oauth_info(
         session_value,
-        OAuthVerificationInfo {
+        session::OAuthVerificationInfo {
             pkce_code_verifier: Some(pkce_code_verifier),
             csrf_state,
         },
@@ -153,24 +141,7 @@ fn receive_oauth_redirect_blocking(
     let code = AuthorizationCode::new(query.code.as_ref().unwrap().clone());
     let state = CsrfToken::new(query.state.as_ref().unwrap().clone());
 
-    // get these things out of OAUTH_INFO so we can drop the lock right away
-    let pkce_code_verifier;
-    let csrf_state;
-    {
-        if let Some(oauth_info) = OAUTH_INFO.lock().unwrap().get_mut(&session_value) {
-            // get ownership out of the Option<>
-            let pkce_code_verifier_option =
-                std::mem::replace(&mut oauth_info.pkce_code_verifier, None);
-            csrf_state = oauth_info.csrf_state.secret().clone();
-
-            if pkce_code_verifier_option.is_none() {
-                return Err(anyhow!("oauth info already used"));
-            }
-            pkce_code_verifier = pkce_code_verifier_option.unwrap();
-        } else {
-            return Err(anyhow!("oauth info not found"));
-        }
-    }
+    let (pkce_code_verifier, csrf_state) = session::get_oauth_info(session_value).unwrap();
 
     println!(
         "oauth redirect returned the following code:\n{}\n",
@@ -214,8 +185,13 @@ fn receive_oauth_redirect_blocking(
 
     // todo -
     // - if we already have a user, associate this session to that user (database)
-    // - if we don't have a user, put them into an account offer pool (another singleton map)
+    // - if we don't have a user, put them into an account offer pool. timeout like 30 minutes (another singleton map)
     //   redirect to a post-login page (account offer or logged-in landing page)
+
+    // new APIs:
+    // - create account
+    // - check account (front end calls this to see if the user is already logged in based on an existing session)
+    // - log out
 
     // let conn = pool.get().expect("couldn't get db connection from pool");
 

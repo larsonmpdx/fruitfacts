@@ -17,3 +17,4 @@ pub mod queries;
 mod schema_fts;
 mod schema_generated;
 mod schema_types;
+pub mod session;
