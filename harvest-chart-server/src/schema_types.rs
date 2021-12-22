@@ -113,9 +113,28 @@ pub struct Location {
 }
 
 #[derive(Queryable)]
-pub struct User {
+pub struct UserOauthEntry {
+    pub id: i32,
     pub user_id: i32,
+    pub unique_id: String,
+    pub oauth_info: Option<String>,
+}
+
+#[derive(Clone, Queryable)]
+pub struct UserSession {
+    pub id: i32,
+    pub user_id: i32,
+    pub session_value: String,
+    pub created: i64,
+}
+
+#[derive(Queryable)]
+pub struct User {
+    pub id: i32,
     pub name: String,
+    pub location_name: Option<String>,
+    pub latitude: Option<f64>,
+    pub longitude: Option<f64>,
 }
 
 #[derive(Debug, Queryable)]

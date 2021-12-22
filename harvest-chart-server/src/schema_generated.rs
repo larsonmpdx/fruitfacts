@@ -88,9 +88,30 @@ table! {
 }
 
 table! {
+    user_oauth_entries (id) {
+        id -> Integer,
+        user_id -> Integer,
+        unique_id -> Text,
+        oauth_info -> Nullable<Text>,
+    }
+}
+
+table! {
+    user_sessions (id) {
+        id -> Integer,
+        user_id -> Integer,
+        session_value -> Text,
+        created -> BigInt,
+    }
+}
+
+table! {
     users (id) {
         id -> Integer,
         name -> Text,
+        location_name -> Nullable<Text>,
+        latitude -> Nullable<Double>,
+        longitude -> Nullable<Double>,
     }
 }
 
@@ -100,5 +121,7 @@ allow_tables_to_appear_in_same_query!(
     collections,
     locations,
     plant_types,
+    user_oauth_entries,
+    user_sessions,
     users,
 );

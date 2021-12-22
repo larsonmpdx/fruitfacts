@@ -1,3 +1,4 @@
+use diesel::SqliteConnection;
 // store session data in memory. could be refactored to use redis or something if we went to multiple servers
 use once_cell::sync::Lazy; // 1.3.1
 use std::sync::Mutex;
@@ -8,17 +9,24 @@ use std::time::Duration;
 use anyhow::{anyhow, Result};
 use oauth2::{CsrfToken, PkceCodeVerifier};
 
+use super::schema_generated::*;
+use super::schema_types::*;
+use diesel::prelude::*;
+
 #[derive(Debug)]
 pub struct OAuthVerificationInfo {
     pub pkce_code_verifier: Option<PkceCodeVerifier>, // Option<> because the library author is our mom and doesn't want us reusing this
     pub csrf_state: CsrfToken,
 }
 
-static OAUTH_INFO: Lazy<Mutex<ExpiringMap<String, OAuthVerificationInfo>>> =
+static OAUTH_INFO_CACHE: Lazy<Mutex<ExpiringMap<String, OAuthVerificationInfo>>> =
     Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(60))));
 
 pub fn insert_oauth_info(session_value: String, oauth_info: OAuthVerificationInfo) {
-    OAUTH_INFO.lock().unwrap().insert(session_value, oauth_info);
+    OAUTH_INFO_CACHE
+        .lock()
+        .unwrap()
+        .insert(session_value, oauth_info);
 }
 
 pub fn get_oauth_info(session_value: String) -> Result<(PkceCodeVerifier, String)> {
@@ -26,7 +34,7 @@ pub fn get_oauth_info(session_value: String) -> Result<(PkceCodeVerifier, String
     let csrf_state;
 
     // get these things out of OAUTH_INFO so we can drop the lock right away
-    if let Some(oauth_info) = OAUTH_INFO.lock().unwrap().get_mut(&session_value) {
+    if let Some(oauth_info) = OAUTH_INFO_CACHE.lock().unwrap().get_mut(&session_value) {
         // get ownership out of the Option<>
         let pkce_code_verifier_option = std::mem::replace(&mut oauth_info.pkce_code_verifier, None);
         csrf_state = oauth_info.csrf_state.secret().clone();
@@ -40,4 +48,48 @@ pub fn get_oauth_info(session_value: String) -> Result<(PkceCodeVerifier, String
     }
 
     return Ok((pkce_code_verifier, csrf_state));
+}
+
+// todo: session load/store and cache
+// #[derive(Queryable)]
+// pub struct UserSession {
+//    pub id: i32,
+//    pub user_id: i32,
+//    pub session_value: String,
+//    pub created: i64,
+// }
+
+static SESSION_CACHE: Lazy<Mutex<ExpiringMap<String, UserSession>>> =
+    Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(7 * 24 * 60 * 60))));
+
+pub fn get_session(conn: &SqliteConnection, session_value: String) -> Result<UserSession> {
+    // first look in our cache
+    if let Some(cache_return) = SESSION_CACHE.lock().unwrap().get(&session_value) {
+        return Ok(cache_return.clone());
+    }
+
+    // if not in the cache, it could be in the database (should only happen if the server was restarted)
+    // if we loaded the database into the cache on program start then this could be omitted
+    let db_return: Result<UserSession, diesel::result::Error> = user_sessions::dsl::user_sessions
+        .filter(user_sessions::session_value.eq(session_value))
+        .first(conn);
+
+    match db_return {
+        Ok(db_return) => {
+            // todo: check expiration time on the database item
+            return Ok(db_return);
+        }
+        Err(error) => {
+            return Err(error.into());
+        }
+    }
+}
+
+pub fn store_session(session_value: String, session: UserSession) {
+    // store in cache and also in our database
+    SESSION_CACHE.lock().unwrap().insert(session_value, session);
+
+    // store in the database too
+
+    // todo: every so often, delete old sessions from the database (sqlite doesn't have TTL like redis does)
 }

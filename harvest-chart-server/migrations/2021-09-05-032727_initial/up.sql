@@ -55,8 +55,35 @@ CREATE TABLE plant_types (
 
 CREATE TABLE users (
   id INTEGER PRIMARY KEY NOT NULL,
+
+  -- profile info
   name TEXT NOT NULL,
+  location_name TEXT,
+  latitude DOUBLE,
+  longitude DOUBLE,
+
   UNIQUE(name)
+);
+
+-- in case a user has multiple oauth methods associated to their account
+CREATE TABLE user_oauth_entries (
+  id INTEGER PRIMARY KEY NOT NULL,
+
+  user_id INTEGER NOT NULL,
+  unique_id TEXT NOT NULL, -- google email ID, or other oauth ID which won't change. prepended with the provider's ID like "google-1234..."
+  oauth_info TEXT, -- json which might be different for each oauth provider
+
+  UNIQUE(unique_id)
+);
+
+CREATE TABLE user_sessions (
+  id INTEGER PRIMARY KEY NOT NULL,
+
+  user_id INTEGER NOT NULL,
+  session_value TEXT NOT NULL,
+  created BigInt NOT NULL, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
+
+  UNIQUE(session_value)
 );
 
 CREATE TABLE collections (
