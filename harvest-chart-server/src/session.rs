@@ -13,6 +13,7 @@ use super::schema_generated::*;
 use super::schema_types::*;
 use diesel::prelude::*;
 
+// holds info we need to keep after sending a user off to an external oauth provider, for verification of the returned data
 #[derive(Debug)]
 pub struct OAuthVerificationInfo {
     pub pkce_code_verifier: Option<PkceCodeVerifier>, // Option<> because the library author is our mom and doesn't want us reusing this
@@ -51,18 +52,11 @@ pub fn get_oauth_info(session_value: String) -> Result<(PkceCodeVerifier, String
 }
 
 // todo: session load/store and cache
-// #[derive(Queryable)]
-// pub struct UserSession {
-//    pub id: i32,
-//    pub user_id: i32,
-//    pub session_value: String,
-//    pub created: i64,
-// }
 
 static SESSION_CACHE: Lazy<Mutex<ExpiringMap<String, UserSession>>> =
     Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(7 * 24 * 60 * 60))));
 
-pub fn get_session(conn: &SqliteConnection, session_value: String) -> Result<UserSession> {
+pub fn get_session(db_conn: &SqliteConnection, session_value: String) -> Result<UserSession> {
     // first look in our cache
     if let Some(cache_return) = SESSION_CACHE.lock().unwrap().get(&session_value) {
         return Ok(cache_return.clone());
@@ -72,7 +66,7 @@ pub fn get_session(conn: &SqliteConnection, session_value: String) -> Result<Use
     // if we loaded the database into the cache on program start then this could be omitted
     let db_return: Result<UserSession, diesel::result::Error> = user_sessions::dsl::user_sessions
         .filter(user_sessions::session_value.eq(session_value))
-        .first(conn);
+        .first(db_conn);
 
     match db_return {
         Ok(db_return) => {
@@ -85,11 +79,21 @@ pub fn get_session(conn: &SqliteConnection, session_value: String) -> Result<Use
     }
 }
 
-pub fn store_session(session_value: String, session: UserSession) {
+pub fn store_session(db_conn: &SqliteConnection, session_value: String, session: UserSession) {
     // store in cache and also in our database
-    SESSION_CACHE.lock().unwrap().insert(session_value, session);
+    SESSION_CACHE
+        .lock()
+        .unwrap()
+        .insert(session_value, session.clone());
 
     // store in the database too
+    let result = diesel::insert_into(user_sessions::dsl::user_sessions)
+        .values(session)
+        .execute(db_conn);
+
+    if result != Ok(1) {
+        println!("failed adding session to the database")
+    }
 
     // todo: every so often, delete old sessions from the database (sqlite doesn't have TTL like redis does)
 }

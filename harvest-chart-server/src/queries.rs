@@ -20,7 +20,7 @@ pub struct BasePlantsItemForPatents {
 }
 
 pub fn get_recent_patents_db(
-    conn: &SqliteConnection,
+    db_conn: &SqliteConnection,
 ) -> Result<Vec<BasePlantsItemForPatents>, diesel::result::Error> {
     base_plants::dsl::base_plants
         .select((
@@ -31,7 +31,7 @@ pub fn get_recent_patents_db(
         ))
         .filter(base_plants::uspp_expiration.is_not_null())
         .order(base_plants::uspp_expiration.desc())
-        .load::<BasePlantsItemForPatents>(conn)
+        .load::<BasePlantsItemForPatents>(db_conn)
 }
 
 #[get("/patents")]
@@ -68,7 +68,7 @@ pub struct RecentChangesDB {
     pub references_count: i64,
 }
 
-pub fn get_recent_changes_db(conn: &SqliteConnection) -> Result<RecentChangesDB> {
+pub fn get_recent_changes_db(db_conn: &SqliteConnection) -> Result<RecentChangesDB> {
     let mut output: RecentChangesDB = Default::default();
 
     let db_return = collections::dsl::collections
@@ -81,7 +81,7 @@ pub fn get_recent_changes_db(conn: &SqliteConnection) -> Result<RecentChangesDB>
         ))
         .order(collections::git_edit_time.desc())
         .limit(10)
-        .load::<CollectionChanges>(conn);
+        .load::<CollectionChanges>(db_conn);
 
     match db_return {
         Ok(collections) => {
@@ -92,12 +92,12 @@ pub fn get_recent_changes_db(conn: &SqliteConnection) -> Result<RecentChangesDB>
         }
     }
 
-    let collections_count = collections::dsl::collections.count().first::<i64>(conn);
+    let collections_count = collections::dsl::collections.count().first::<i64>(db_conn);
     if let Ok(count) = collections_count {
         output.references_count = count;
     }
 
-    let base_plants_count = base_plants::dsl::base_plants.count().first::<i64>(conn);
+    let base_plants_count = base_plants::dsl::base_plants.count().first::<i64>(db_conn);
     if let Ok(count) = base_plants_count {
         output.base_plants_count = count;
     }
@@ -122,7 +122,7 @@ pub struct CollectionsReturn {
 }
 
 pub fn get_collections_db(
-    conn: &SqliteConnection,
+    db_conn: &SqliteConnection,
     path: &str,
 ) -> Result<CollectionsReturn, diesel::result::Error> {
     let db_return = collections::dsl::collections
@@ -134,7 +134,7 @@ pub fn get_collections_db(
         ))
         .filter(collections::path.like(path.to_owned() + r#"%"#))
         .order(collections::path.asc())
-        .load::<CollectionsForPaths>(conn);
+        .load::<CollectionsForPaths>(db_conn);
 
     match db_return {
         Ok(collections) => {
@@ -175,7 +175,7 @@ pub struct CollectionReturn {
 }
 
 pub fn get_collection_db(
-    conn: &SqliteConnection,
+    db_conn: &SqliteConnection,
     path: &str,
 ) -> Result<CollectionReturn, diesel::result::Error> {
     println!("{}", path);
@@ -206,18 +206,18 @@ pub fn get_collection_db(
         .filter(collections::path.eq(dir))
         .filter(collections::filename.eq(file))
         .order(collections::id)
-        .first(conn);
+        .first(db_conn);
 
     match collection {
         Ok(collection) => {
             let mut output: CollectionReturn = Default::default();
 
             let locations = Location::belonging_to(&collection)
-                .load::<Location>(conn)
+                .load::<Location>(db_conn)
                 .expect("Error loading locations");
 
             let items = CollectionItem::belonging_to(&collection)
-                .load::<CollectionItem>(conn)
+                .load::<CollectionItem>(db_conn)
                 .expect("Error loading items");
 
             output.collection = Some(collection);
@@ -273,7 +273,7 @@ pub struct PlantsReturn {
 }
 
 pub fn get_plants_db(
-    conn: &SqliteConnection,
+    db_conn: &SqliteConnection,
     type_: &str,
     page: Option<i32>,
 ) -> Result<PlantsReturn, diesel::result::Error> {
@@ -290,7 +290,7 @@ pub fn get_plants_db(
 
     // todo - apply other things: order by, asc/desc, etc.
 
-    let plants: Result<Vec<BasePlant>, diesel::result::Error> = query.load(conn);
+    let plants: Result<Vec<BasePlant>, diesel::result::Error> = query.load(db_conn);
 
     println!("get plants: {} page {:?}", type_, page);
 
@@ -307,14 +307,14 @@ pub struct PlantReturn {
 }
 
 pub fn get_plant_db(
-    conn: &SqliteConnection,
+    db_conn: &SqliteConnection,
     type_: &str,
     name: &str,
 ) -> Result<PlantReturn, diesel::result::Error> {
     let plant: Result<BasePlant, diesel::result::Error> = base_plants::dsl::base_plants
         .filter(base_plants::type_.eq(type_))
         .filter(base_plants::name.eq(name))
-        .first(conn);
+        .first(db_conn);
 
     println!("get plant: {} {}", type_, name);
 
@@ -324,7 +324,7 @@ pub fn get_plant_db(
                 collection_items::dsl::collection_items
                     .filter(collection_items::type_.eq(type_))
                     .filter(collection_items::name.eq(name))
-                    .load(conn);
+                    .load(db_conn);
 
             // todo: limit number to maybe 10, ordered by significance, and return the total number if we were limited so we can show "see all"
 
@@ -422,7 +422,7 @@ async fn get_build_info(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_w
 }
 
 pub fn variety_search_db(
-    conn: &SqliteConnection,
+    db_conn: &SqliteConnection,
     name: &str,
 ) -> Result<Vec<BasePlant>, diesel::result::Error> {
     // extra characters. leave spaces so FTS still gets to match two different words
@@ -440,7 +440,7 @@ pub fn variety_search_db(
         .filter(fts_base_plants::whole_row.eq(cleaned))
         .order(fts_base_plants::rank.asc())
         .limit(10)
-        .load::<FtsBasePlants>(conn);
+        .load::<FtsBasePlants>(db_conn);
     // todo - maybe limit 100 or something? we want to get a bunch though in case we're limiting to only one variety later
     // todo - report total search results if limiting to N
 
@@ -453,7 +453,7 @@ pub fn variety_search_db(
 
             let results = base_plants::dsl::base_plants
                 .filter(base_plants::id.eq_any(ids_nullable))
-                .load::<BasePlant>(conn)
+                .load::<BasePlant>(db_conn)
                 .unwrap();
 
             println!("{:?}", results);

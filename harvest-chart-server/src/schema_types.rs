@@ -1,4 +1,4 @@
-use super::schema_generated::{collection_items, collections, locations};
+use super::schema_generated::{collection_items, collections, locations, user_sessions};
 use serde::Serialize;
 use serde_with::skip_serializing_none;
 
@@ -120,7 +120,8 @@ pub struct UserOauthEntry {
     pub oauth_info: Option<String>,
 }
 
-#[derive(Clone, Queryable)]
+#[derive(Clone, Queryable, Insertable)]
+#[table_name = "user_sessions"]
 pub struct UserSession {
     pub id: i32,
     pub user_id: i32,
