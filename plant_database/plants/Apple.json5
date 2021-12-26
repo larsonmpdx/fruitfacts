@@ -1,10 +1,5 @@
 [
     {
-        name: "CIVG198",
-        AKA: ["Modi"],
-        patent: "https://patents.google.com/patent/USPP18730 expires 2026-03-25"
-    },
-    {
         name: "Scarlet Sentinel",
         patent: "no US patent. Canada PBR expired 2020 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00001216e.shtml",
         tags: ["columnar apple"]

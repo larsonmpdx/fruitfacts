@@ -1,7 +1,7 @@
 {
     title: "Susan Brown and Kevin Maloney NY Fruit Quarterly Variety Lists",
     author: "Susan Brown and Kevin Maloney",
-    url: "",
+    url: "https://nyshs.org/wp-content/uploads/2016/10/1.An-Update-on-Apple-Cultivars-Brands-and-Club-Marketing.pdf https://nyshs.org/wp-content/uploads/2009/10/NYFQ-FALL-09-pp-9-12.pdf https://fruit.wisc.edu/wp-content/uploads/sites/36/2016/03/Scab-resistant-Cultivars-Varieties.pdf",
     accessed: "Oct 2021",
     type: "release article or journal overview",
     locations: [
@@ -13,17 +13,188 @@
     ],
     plants: [
         // todo
+        // https://nyshs.org/wp-content/uploads/2018/10/Brown-Pages-5-10-from-NYFQ-Book-Summer-5-27-2018.pdf
+        // 2018:
+        // Update on New Apple Varieties, Managed Varieties and Clubs
+        // Arctic Apples: The first transgenic apples offered in the US, these apples have silencing of polyphenol oxidase (PPO), to reduce flesh browning after cutting. Three apples are available:
+        //       ‘Arctic Granny, ‘Arctic Golden’, ‘Arctic Fuji’, and an ‘Arctic Gala’ is in development
+        // ‘Antietam Blush’: US plant patent 28,595 was granted in 2017. University of Maryland Professor Chris Walsh and then graduate student Julia Harshman were the creators
+        // ‘Autumn Glory’ (‘Huaguan’): exclusive to Domex Superfresh Growers® in Washington State
+        // ‘Baker’s Delight’ (MAIA8):
+        // ‘Bonita’: This scab-resistant variety from the Czech Republic
+        //  ‘Bravo’ (ANABP-1):      developed in Manjimup, Australia,
+        // ‘Cosmic Crisp’ (WA 38): USPP# 24,210 in 2014
+        // ‘Crimson Snow’: (AU): (MC28*) “ This chance seedling found in Australia will be managed by Kiku
+        // Crunch-a-Bunch’ (MAIA7): USPP 29,126,   . The patent for MAIA7 indicated that it is susceptible to powdery mildew and to soft rot (Penicillium) in storage
+        // ‘Dazzle’ (PremA129):  FruitCraft NZ obtained the worldwide rights to premA129 from Prevar, Ltd
+        // ‘Envy’ (‘Scilate’): USPP in 2008
+        // EverCrisp’® (MAIA1): USPP 24,579
+        // Gala’ sports
+        //     ‘Foxtrot’: USPP 24,664, July 2014
+        //     ‘Wildfire Gala’™ (PPAF):     3 weeks earlier than standard ‘Gala’.
+        // First Kiss’ (MN 55):
+        // ‘Franklin’ (‘Mayo’): USPP 28,791  Franklin, VT
+        // ‘Honeycrisp’ sports
+        //     ‘Cameron Select Honeycrisp’: From Cameron Nursery in Washington State, this sport has redder color
+        //     ‘Firestorm Honeycrisp’: 
+        //     Honeycrisp (MINB42): USPP#26,644     This sport originated as a limb mutation in the University of Minnesota’s research block
+        //     ‘New Zealand Honeycrisp’
+        //     ‘Premier Honeycrisp’ (DAS 10): This sport received its US plant patent #24,833 in 2011     ripens three weeks before ‘Honeycrisp’.
+        //     ‘Royal Red Honeycrisp’™ (LJ-1000):  USPP# 22,244
+        // ‘Jazz’ (‘Scifresh’): susceptible to scab, powdery mildew and very susceptible to canker (Neonectria)
+        // ‘Juici’: A hybrid of ‘Honeycrisp’ x ‘Braeburn’. Oneonta Starr ranch growers of Wenatchee, WA has the North American rights for growing, packing and marketing ‘Juici
+        // ‘Koru’® (‘Plumac’): US Plant Patent #23,418    Fire blight susceptibility in the nursery (noted in the patent), and perhaps the field, may be a concern
+        // 
+        // todo
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+
+
+        // todo - finish copy-pasting the list
         // https://nyshs.org/wp-content/uploads/2016/10/1.An-Update-on-Apple-Cultivars-Brands-and-Club-Marketing.pdf
         // 2013:
         // An Update on Apple Cultivars, Brands and Club-Marketing
         // Susan Brown and Kevin Maloney
+
+        // ‘Arctic series’: ‘Arctic Granny’ and ‘Arctic Golden’:   transgenic, created by Okanagan Specialty Fruits to have reduced browning, due to silencing of the PPO gene
+        // ‘Aurora Golden Gala™ (8S6923): A release from the breeding program in British Columbia, Canada.
+        // ‘Autumn Blush’:   ABCz international company
+        //  ‘Autumn Glory’: Offered exclusively by Domex Superfresh Growers in the Pacific Northwest
+        // ‘Blondee’: This clean yellow apple offered by Summit Sales (Integrated Plant Management, Inc.) was granted USPP# 19,007. Its susceptibility to fire blight is similar to ‘Gala’.
+        // Cameo’: A new group/club “Cameo Partners International” 
+        // ‘Crimson Snow’® (mc38 S): A variety being commercialized by Kiku Ltd in Europe and Turkey
+        // ‘DS-22’ (Trademarked name pending): Doug Sheflebine in Wisconsin  https://patents.google.com/patent/USPP23933P3/en
+        //    not in the article, found these in a patent search:
+        //     DS-3: https://patents.google.com/patent/USPP23649 2031-12-14
+        //     DS-102: https://patents.google.com/patent/USPP33271 2040-07-21
+        //     DS-41: https://patents.google.com/patent/USPP24698 2032-10-04
+        // 
+        //  todo
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+        // 
+
+
+
+
+
+
+
+
+
+
+
+        // todo - needs formatting
         // https://nyshs.org/wp-content/uploads/2009/10/NYFQ-FALL-09-pp-9-12.pdf
         // NY Fruit Quarterly Fall 2009
         // Making Sense of New Apple Varieties, Trademarks and Clubs: Current Status
         // Susan Brown and Kevin Maloney
+
+        // ‘Ambrosia’
+        // ‘Ariane’  INRA program at Angers, France
+        // ‘Ariwa’ Swiss
+        // Autento’® (‘Delcoros’)
+        // ‘Cameo’ (‘Caudle’):           chance seedling discovered in Washington State
+        //    sports: Dudek’ was granted USPP19766 in 2008 and ‘Cauflight’ has a plant application filed
+        // Choupette’ (‘Dalinette’):               scab-resistant variety being promoted by Ligonniere nursery in France
+        // ‘Enchanted’® (‘Western Dawn’) USPP18640
+        // ‘Envy’: A bicolor apple that was created by HortResearch and is being handled by ENZA
+        // ‘Evelina’: A sport of ‘ Pinova’ being marketed in Europe
+        // ‘Eva’: One of two trademarked brands (‘Eva’ and Mozart’) representing apple varieties from Austria (www.eva-apples.com/eva/eng/index.php)
+        // Galmac’: This as yet non-trademarked variety is an early apple that is a hybrid of ‘Jerseymac’ x ‘Gala.’ ‘Galmac’ is a product of the Swiss breeding program
+        // ‘Greenstar’® (‘Nicogreen’): Released by Better3Fruit in Belgium, this variety was patented in the US in 2003 (USPP#16,559). 
+        // ‘Jazz’ (‘Scifresh’): Developed in New Zealand, ‘Scifresh’ was granted USPP13888 in 2003
+        // ‘Juliet’ (Co-op 43) Exclusive rights in Europe assigned to the Escande nurseries, Saint-Vite, France
+        // Junami’® (‘Milwa’ or ‘Diwa’®): USPP#19,615 granted to ‘Milwa’ in January of 2009. Tested as FAW 5878
+        // ‘Honeycrunch’®  ‘Honeycrisp’ is marketed in Europe as Honeycrunch
+        // ‘Kanzi’® (‘Nicoter’): A release from the Belgium program Better3Fruit that has been patented in the US (USPP#17,201 in 2006).
+        //  ‘Kiku’® 8 (‘Brak’ Fuji’)
+        //‘Lady Alice’
+        // ‘Marlene’: A brand of apple, not a specific variety. Italian   
+        //  Mairac’® (‘La Flamboyante’): A hybrid of ‘Gala’ x ‘Maigold’ from Switzerland that was released in 2002
+        // Modi’® (‘Civg198’): A product developed by CIV in Ferrara, Italy  ‘Modi’ has been patented in the US (USPP#18,730)
+            {
+        name: "CIVG198",
+        AKA: ["Modi"],
+        patent: "https://patents.google.com/patent/USPP18730 expires 2026-03-25"
+    },
+        // ‘Mozart’: One of two trademarked brands (‘Eva’ and ‘Mozart’) of Austrian apples (not a specifi c variety) that are supposed to denote premium quality.
+        // ‘Opal’: A hybrid of ‘Golden Delicious x ’Topaz’, this scabresistant apple is also tolerant to mildew in Europe. Breeders in the Czech Republic have already patented this variety in the US (USPP#15,963 in 2005 as UEB 3264/2), w
+        // ‘Pacific Rose’: One in the Pacifi c series release by the New Zealand breeding program and marketed by ENZA.
+        // ‘Piñata’: (formerly ‘Pinova’, ‘Corail’, ‘Sonata’)
+        //    sport: Evelina’ sport of ‘Pinata’/’Pinova’ marketed in Europe
+        // ‘Pink Lady’® (‘Cripps Pink’):
+        // PremA17 (T17): A Prevar selection t
+        //  PremA153: Prevar
+        // PremA197: A Prevar selection again granted to a consortium called T 197.
+        // ‘Red Prince’® - same parentage as Jonagold
+        // ‘Rubens’ ® (‘Civni’): From the CIV program in Italy
+        // ‘Sonya’ (Nevson’): y. ‘Sonya’ has US plant patent #12,415 (in the name of ‘Nevson’)
+        // ‘SweeTango’® (MN 1914, ‘Minneiska’): This hybrid of ‘Honeycrisp’ x ‘Zestar’ was granted US plant patent USPP#18,812
+        // ‘Sweetie’ (Var-One or Prem1A cv)     Prevar
+        // ‘Tentation’® (‘Delblush’):           developed by Delbard Nursery in France 
+        // ‘Tunda’: From Better3Fruits 
+        // ‘Wellant’® (CPRO #47):
+        // ‘Zari’:          bred in Belgium (Better3Fruit)
+        // ‘Zonga’: Another release from Better3Fruits in Belgium
+
+
+        // todo - copied in names and resistances, need to format
         // https://fruit.wisc.edu/wp-content/uploads/sites/36/2016/03/Scab-resistant-Cultivars-Varieties.pdf
         // NY Fruit Quarterly Winter 2008
         // Scab-resistant Cultivars (Varieties)
         // Susan Brown and Kevin Maloney
+
+
+        // ‘CrimsonCrisp’™ (Co-op 39)       resistant to scab but susceptible to cedar apple rust (CAR) and to fire blight.
+        // ‘Enterprise’                     quality is poor and it has objectionably thick skin, perhaps limiting it to juice production or other processing
+        // ‘Galarina’ (x4982)
+        // Goldrush’ (Co-op 38)             very susceptible to powdery mildew and is also susceptible to cedar apple rust.
+        // ‘Juliet’™ (Co-op 43)         ‘Juliet‘ is susceptible to cedar apple rust (CAR)
+        // ‘Liberty’
+        // ‘Pixie Crunch’™’ (Co-op 33
+        // ‘Pristine’ (Co-op 32)            Fire blight has been observed in some test sites and ’Pristine’ is known to be susceptible to cedar apple rust
+        // Redfree’ (Co-op 13):             highly susceptible to rosy apple aphid infection and to fi re blight
+        // ‘Scarlet O’Hara (Co-op 25):      susceptibility to fire blight and to moldy core
+        // ‘Sundance’™ (Co-op 29):
+        // ‘Topaz   developed and named by the Czech Republic            Trees also prone to collar rot and are very susceptible to fi re blight
+        // ‘Ariane’     good resistance to powdery mildew and to fi re blight
+        // ‘Ariwa’      This scab-resistant apple from the Swiss breeding program also has good resistance to powdery mildew in European trials.
+        // ‘Ecolette’       Low susceptibility to mildew.
+        // ‘Goldstar’       This apple was developed in the Czech Republic, 
+        // ‘Modi’ (CIVG 198):
+        // ‘Otava’          This is a product of a breeding program in the Czech Republic
+        // ‘Santana’         This hybrid of ‘Elstar’ x ’Priscilla’ was developed in the Netherlands     ‘Santana’ is susceptible to powdery mildew and may defoliate
+        // The “RE” series from Dresden-Pillnitz in Germany These are available in the US as the “ReZista” series
+        // ‘Reanda’, ‘Regine’, ‘Reglindis’, ‘Relinda’, ‘Remo’, ‘Resi’, ‘Resista’ and ‘Retina
+        // 
+        // 
+        // 
+        // 
+
     ]
 }
