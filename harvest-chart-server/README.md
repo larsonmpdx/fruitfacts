@@ -62,6 +62,9 @@
   * https://github.com/diesel-rs/diesel/pull/2180
 * windows better support for long paths so references can have long names
   * https://github.com/rust-lang/rust/issues/67403
+* rust cargo: use lld on windows for faster builds. will eventually be default and I can remove the /.cargo/config.toml entry
+  * in my testing this doesn't improve full build time at all
+  * https://github.com/rust-lang/rust/issues/71520
 * sveltekit: better support for relative paths in static sites
   * https://github.com/sveltejs/kit/issues/1480
   * https://github.com/sveltejs/kit/issues/595#issuecomment-842278606
