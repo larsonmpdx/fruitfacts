@@ -286,7 +286,7 @@
         },
         {
             type: "Apple",
-            name: "Pink Lady",
+            name: "Cripps Pink", // "Pink Lady"
             disease_resistance: { scab: "VS", FB: "VS", rust: "R", PM: "R" }
         },
         {

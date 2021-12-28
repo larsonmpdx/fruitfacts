@@ -1,5 +1,5 @@
 {
-    title: "Making Sense of New Apple Varieties, Trademarks and Clubs: Current Status",
+    title: "NY Fruit Quarterly Fall 2009: Making Sense of New Apple Varieties, Trademarks and Clubs: Current Status",
     author: "Susan Brown and Kevin Maloney",
     url: "https://nyshs.org/wp-content/uploads/2009/10/NYFQ-FALL-09-pp-9-12.pdf",
     accessed: "Dec 2021",
@@ -13,58 +13,233 @@
         }
     ],
     plants: [
-        // todo - needs formatting
-        // https://nyshs.org/wp-content/uploads/2009/10/NYFQ-FALL-09-pp-9-12.pdf
-        // NY Fruit Quarterly Fall 2009
-        // Making Sense of New Apple Varieties, Trademarks and Clubs: Current Status
-        // Susan Brown and Kevin Maloney
-
-        // ‘Ambrosia’
-        // ‘Ariane’  INRA program at Angers, France
-        // ‘Ariwa’ Swiss
-        // Autento’® (‘Delcoros’)
-        // ‘Cameo’ (‘Caudle’):           chance seedling discovered in Washington State
-        //    sports: Dudek’ was granted USPP19766 in 2008 and ‘Cauflight’ has a plant application filed
-        // Choupette’ (‘Dalinette’):               scab-resistant variety being promoted by Ligonniere nursery in France
-        // ‘Enchanted’® (‘Western Dawn’) USPP18640
-        // ‘Envy’: A bicolor apple that was created by HortResearch and is being handled by ENZA
-        // ‘Evelina’: A sport of ‘ Pinova’ being marketed in Europe
-        // ‘Eva’: One of two trademarked brands (‘Eva’ and Mozart’) representing apple varieties from Austria (www.eva-apples.com/eva/eng/index.php)
-        // Galmac’: This as yet non-trademarked variety is an early apple that is a hybrid of ‘Jerseymac’ x ‘Gala.’ ‘Galmac’ is a product of the Swiss breeding program
-        // ‘Greenstar’® (‘Nicogreen’): Released by Better3Fruit in Belgium, this variety was patented in the US in 2003 (USPP#16,559).
-        // ‘Jazz’ (‘Scifresh’): Developed in New Zealand, ‘Scifresh’ was granted USPP13888 in 2003
-        // ‘Juliet’ (Co-op 43) Exclusive rights in Europe assigned to the Escande nurseries, Saint-Vite, France
-        // Junami’® (‘Milwa’ or ‘Diwa’®): USPP#19,615 granted to ‘Milwa’ in January of 2009. Tested as FAW 5878
-        // ‘Honeycrunch’®  ‘Honeycrisp’ is marketed in Europe as Honeycrunch
-        // ‘Kanzi’® (‘Nicoter’): A release from the Belgium program Better3Fruit that has been patented in the US (USPP#17,201 in 2006).
-        //  ‘Kiku’® 8 (‘Brak’ Fuji’)
-        //‘Lady Alice’
-        // ‘Marlene’: A brand of apple, not a specific variety. Italian
-        //  Mairac’® (‘La Flamboyante’): A hybrid of ‘Gala’ x ‘Maigold’ from Switzerland that was released in 2002
-        // Modi’® (‘Civg198’): A product developed by CIV in Ferrara, Italy  ‘Modi’ has been patented in the US (USPP#18,730)
+        {
+            type: "Apple",
+            name: "Ambrosia", // patent name
+            patent: "https://patents.google.com/patent/USPP10789 expired 2017-06-19"
+        },
+        {
+            type: "Apple",
+            name: "Ariane",
+            description: "INRA program at Angers, France"
+        },
+        {
+            type: "Apple",
+            name: "Ariwa",
+            description: "Swiss"
+        },
+        {
+            type: "Apple",
+            name: "Delcoros",
+            AKA: ["Autento®"]
+        },
+        {
+            type: "Apple",
+            AKA: ["Caudle"],
+            name: "Cameo",
+            description: "chance seedling discovered in Washington State",
+            patent: "https://patents.google.com/patent/USPP9068 expired 2013-08-31"
+        },
+        {
+            type: "Apple",
+            name: "Dudek",
+            description: "Cameo sport",
+            patent: "https://patents.google.com/patent/USPP19766 expires 2027-05-10"
+        },
+        {
+            type: "Apple",
+            name: "Cauflight",
+            description: "Cameo sport",
+            patent: "https://patents.google.com/patent/USPP20942 expires 2028-05-10"
+        },
+        {
+            type: "Apple",
+            name: "Dalinette",
+            AKA: ["Choupette"],
+            // todo: "scab-resistant"
+            description: "promoted by Ligonniere nursery in France"
+        },
+        {
+            type: "Apple",
+            name: "Western Dawn",
+            AKA: ["Enchanted®"],
+            patent: "USPP18640"
+        },
+        {
+            type: "Apple",
+            name: "Scilate", // "Envy (tm)"
+            description: "bicolor. created by HortResearch and is being handled by ENZA"
+        },
+        // listed below: Evelina: A sport of ‘Pinova’ being marketed in Europe
+        // Eva: One of two trademarked brands (‘Eva’ and Mozart’) representing apple varieties from Austria (www.eva-apples.com/eva/eng/index.php)
+        {
+            type: "Apple",
+            name: "Galmac",
+            description: "‘Jerseymac’ x ‘Gala’. a product of the Swiss breeding program"
+        },
+        {
+            type: "Apple",
+            name: "Nicogreen",
+            AKA: ["Greenstar®"],
+            description: "Released by Better3Fruit in Belgium",
+            patent: "https://patents.google.com/patent/USPP16559 expires 2022-11-12"
+        },
+        {
+            type: "Apple",
+            name: "Scifresh", // "Jazz"
+            patent: "https://patents.google.com/patent/USPP13888 expired 2021-06-20",
+            description: "Developed in New Zealand"
+        },
+        {
+            type: "Apple",
+            AKA: ["Co-op 43"],
+            name: "Juliet",
+            description: "Exclusive rights in Europe assigned to the Escande nurseries, Saint-Vite, France"
+        },
+        {
+            type: "Apple",
+            name: "Milwa", // patent name
+            AKA: ["Junami®", "Diwa®", "FAW 5878"],
+            patent: "https://patents.google.com/patent/USPP19615 expires 2027-04-26"
+        },
+        {
+            type: "Apple",
+            // european marketing brand "Honeycrunch"
+            name: "Honeycrisp"
+        },
+        {
+            type: "Apple",
+            name: "Nicoter",
+            AKA: ["Kanzi®"],
+            description: "from the Belgium program Better3Fruit",
+            patent: "https://patents.google.com/patent/USPP17201 expires 2023-05-15"
+        },
+        {
+            type: "Apple",
+            name: "Brak Fuji",
+            AKA: ["Kiku®"]
+        },
+        {
+            type: "Apple",
+            name: "Lady Alice"
+        },
+        // "‘Marlene’: A brand of apple, not a specific variety. Italian"
+        {
+            type: "Apple",
+            name: "La Flamboyante",
+            AKA: ["Mairac’®"],
+            description: "Switzerland. hybrid of ‘Gala’ x ‘Maigold’"
+        },
         {
             type: "Apple",
             name: "CIVG198", // "Modi (tm)"
-            patent: "https://patents.google.com/patent/USPP18730 expires 2026-03-25"
+            patent: "https://patents.google.com/patent/USPP18730 expires 2026-03-25",
+            description: "from CIV in Ferrara, Italy"
+        },
+        // "‘Mozart’: One of two trademarked brands (‘Eva’ and ‘Mozart’) of Austrian apples (not a specific variety) that are supposed to denote premium quality"
+        {
+            type: "Apple",
+            name: "UEB 3264/2",
+            AKA: ["Opal"],
+            // todo: "..scab resistant apple is also tolerant to mildew in Europe"
+            patent: "USPP15963",
+            description: "Czech Republic. ‘Golden Delicious x ’Topaz’"
+        },
+        {
+            type: "Apple",
+            name: "Pacific Rose",
+            description: "in the Pacific series released by the New Zealand breeding program"
+        },
+        {
+            type: "Apple",
+            name: "Pinova",
+            AKA: ["Piñata (r)", "Corail", "Sonata"],
+            patent: "https://patents.google.com/patent/USPP11601 expired 2018-01-06"
+        },
+        {
+            type: "Apple",
+            name: "Evelina",
+            description: "sport of ‘Pinata’/’Pinova’ marketed in Europe"
+        },
+        {
+            type: "Apple",
+            name: "Cripps Pink",
+            AKA: ["Pink Lady®"]
+        },
+        {
+            type: "Apple",
+            name: "PremA17",
+            AKA: ["Smitten™", "T17"],
+            description: "Prevar"
+        },
+        {
+            type: "Apple",
+            // patent todo
+            name: "PremA153",
+            description: "Prevar"
+        },
+        {
+            type: "Apple",
+            // patent todo
+            name: "PremA197",
+            description: "Prevar"
+        },
+        {
+            type: "Apple",
+            name: "Red Prince®",
+            description: "variety name unknown. same parentage as Jonagold"
+        },
+        {
+            type: "Apple",
+            name: "Civni",
+            AKA: ["Rubens®"],
+            description: "From the CIV program in Italy"
+        },
+        {
+            type: "Apple",
+            AKA: ["Sonya (tm)"],
+            name: "Nevson",
+            patent: "https://patents.google.com/patent/USPP12415 expired 2020-01-18",
+            description: "NZ"
+        },
+        {
+            type: "Apple",
+            name: "Minneiska", // "SweeTango®"
+            patent: "https://patents.google.com/patent/USPP18812 expires 2026-11-22"
+        },
+        {
+            type: "Apple",
+            name: "Var-One", // article claims this is marketed under "sweetie" brand but premA280 also is so I picked that one. could be both though
+            AKA: ["Prem1A"],
+            description: "Prevar"
+        },
+        {
+            type: "Apple",
+            name: "Delblush",
+            AKA: ["Tentation®"],
+            description: "developed by Delbard Nursery in France",
+            patent: "https://patents.google.com/patent/USPP10276 expired 2016-05-28"
+        },
+        // from the same breeder but not in this paper: "delkistar/regali" https://patents.google.com/patent/USPP11213 expired 2018-01-12
+        {
+            type: "Apple",
+            name: "Tunda",
+            description: "from Better3Fruits in Belgium"
+        },
+        {
+            type: "Apple",
+            name: "CPRO #47",
+            AKA: ["Wellant®"]
+        },
+        {
+            type: "Apple",
+            name: "Zari",
+            description: "from Better3Fruits in Belgium"
+        },
+        {
+            type: "Apple",
+            name: "Zonga",
+            description: "from Better3Fruits in Belgium"
         }
-        // ‘Mozart’: One of two trademarked brands (‘Eva’ and ‘Mozart’) of Austrian apples (not a specifi c variety) that are supposed to denote premium quality.
-        // ‘Opal’: A hybrid of ‘Golden Delicious x ’Topaz’, this scabresistant apple is also tolerant to mildew in Europe. Breeders in the Czech Republic have already patented this variety in the US (USPP#15,963 in 2005 as UEB 3264/2), w
-        // ‘Pacific Rose’: One in the Pacifi c series release by the New Zealand breeding program and marketed by ENZA.
-        // ‘Piñata’: (formerly ‘Pinova’, ‘Corail’, ‘Sonata’)
-        //    sport: Evelina’ sport of ‘Pinata’/’Pinova’ marketed in Europe
-        // ‘Pink Lady’® (‘Cripps Pink’):
-        // PremA17 (T17): A Prevar selection t
-        //  PremA153: Prevar
-        // PremA197: A Prevar selection again granted to a consortium called T 197.
-        // ‘Red Prince’® - same parentage as Jonagold
-        // ‘Rubens’ ® (‘Civni’): From the CIV program in Italy
-        // ‘Sonya’ (Nevson’): y. ‘Sonya’ has US plant patent #12,415 (in the name of ‘Nevson’)
-        // ‘SweeTango’® (MN 1914, ‘Minneiska’): This hybrid of ‘Honeycrisp’ x ‘Zestar’ was granted US plant patent USPP#18,812
-        // ‘Sweetie’ (Var-One or Prem1A cv)     Prevar
-        // ‘Tentation’® (‘Delblush’):           developed by Delbard Nursery in France
-        // ‘Tunda’: From Better3Fruits
-        // ‘Wellant’® (CPRO #47):
-        // ‘Zari’:          bred in Belgium (Better3Fruit)
-        // ‘Zonga’: Another release from Better3Fruits in Belgium
     ]
 }

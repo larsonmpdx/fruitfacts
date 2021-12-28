@@ -254,8 +254,7 @@
         },
         {
             type: "Apple",
-            name: "PremA17",
-            AKA: ["Smitten™"],
+            name: "PremA17", // "Smitten™"
             patent: "https://patents.google.com/patent/USPP22356 expires 2030-02-24"
         },
         {
