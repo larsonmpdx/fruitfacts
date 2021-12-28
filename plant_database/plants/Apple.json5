@@ -50,24 +50,6 @@
         description: "Red Delicious Spur"
     },
     {
-        name: "Cherry Parfait #19",
-        description: "stark variety, honeycrisp/pink lady cross",
-        AKA: ["Scarlet Crush (tm)"],
-        patent: "https://patents.google.com/patent/USPP30925 expires 2038-03-07"
-    },
-    {
-        name: "Honeysuckle Rose #1-6",
-        description: "stark variety, Honeycrisp/Gala cross",
-        AKA: ["Ruby Darling (tm)"],
-        patent: "https://patents.google.com/patent/USPP30978 expires 2038-03-07"
-    },
-    {
-        name: "Mayo",
-        description: "stark variety",
-        AKA: ["Franklin Cider (tm)"],
-        patent: "https://patents.google.com/patent/USPP28791 expires 2036-03-01"
-    },
-    {
         name: "NJ 55",
         AKA: ["Suncrisp (tm)"],
         patent: "https://patents.google.com/patent/USPP8648 expired 2012"

@@ -1,0 +1,19 @@
+{
+    title: "todo - 2015 good fruit grower apple varieties article",
+    author: "todo",
+    url: "https://www.goodfruit.com/new-apple-varieties-from-a-to-z/",
+    accessed: "Dec 2021",
+    published: "2015",
+    type: "release article or journal overview", // todo - maybe another category
+    description: "",
+    locations: [
+        {
+            name: "",
+            latitude: 0.0,
+            longitude: 0.0
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

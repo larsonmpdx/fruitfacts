@@ -14,59 +14,291 @@
     ],
     plants: [
         // todo - needs formatting
-        // https://nyshs.org/wp-content/uploads/2018/10/Brown-Pages-5-10-from-NYFQ-Book-Summer-5-27-2018.pdf
-        // 2018:
-        // Update on New Apple Varieties, Managed Varieties and Clubs
-
-        // Arctic Apples: The first transgenic apples offered in the US, these apples have silencing of polyphenol oxidase (PPO), to reduce flesh browning after cutting. Three apples are available:
-        //       ‘Arctic Granny, ‘Arctic Golden’, ‘Arctic Fuji’, and an ‘Arctic Gala’ is in development
-        // ‘Antietam Blush’: US plant patent 28,595 was granted in 2017. University of Maryland Professor Chris Walsh and then graduate student Julia Harshman were the creators
-        // ‘Autumn Glory’ (‘Huaguan’): exclusive to Domex Superfresh Growers® in Washington State
-        // ‘Baker’s Delight’ (MAIA8):
-        // ‘Bonita’: This scab-resistant variety from the Czech Republic
-        //  ‘Bravo’ (ANABP-1):      developed in Manjimup, Australia,
-        // ‘Cosmic Crisp’ (WA 38): USPP# 24,210 in 2014
-        // ‘Crimson Snow’: (AU): (MC28*) “ This chance seedling found in Australia will be managed by Kiku
-        // Crunch-a-Bunch’ (MAIA7): USPP 29,126,   . The patent for MAIA7 indicated that it is susceptible to powdery mildew and to soft rot (Penicillium) in storage
-        // ‘Dazzle’ (PremA129):  FruitCraft NZ obtained the worldwide rights to premA129 from Prevar, Ltd
-        // ‘Envy’ (‘Scilate’): USPP in 2008
-        // EverCrisp’® (MAIA1): USPP 24,579
-        // Gala’ sports
-        //     ‘Foxtrot’: USPP 24,664, July 2014
-        //     ‘Wildfire Gala’™ (PPAF):     3 weeks earlier than standard ‘Gala’.
-        // First Kiss’ (MN 55):
-        // ‘Franklin’ (‘Mayo’): USPP 28,791  Franklin, VT
-        // ‘Honeycrisp’ sports
-        //     ‘Cameron Select Honeycrisp’: From Cameron Nursery in Washington State, this sport has redder color
-        //     ‘Firestorm Honeycrisp’: 
-        //     Honeycrisp (MINB42): USPP#26,644     This sport originated as a limb mutation in the University of Minnesota’s research block
-        //     ‘New Zealand Honeycrisp’
-        //     ‘Premier Honeycrisp’ (DAS 10): This sport received its US plant patent #24,833 in 2011     ripens three weeks before ‘Honeycrisp’.
-        //     ‘Royal Red Honeycrisp’™ (LJ-1000):  USPP# 22,244
-        // ‘Jazz’ (‘Scifresh’): susceptible to scab, powdery mildew and very susceptible to canker (Neonectria)
-        // ‘Juici’: A hybrid of ‘Honeycrisp’ x ‘Braeburn’. Oneonta Starr ranch growers of Wenatchee, WA has the North American rights for growing, packing and marketing ‘Juici
-        // ‘Koru’® (‘Plumac’): US Plant Patent #23,418    Fire blight susceptibility in the nursery (noted in the patent), and perhaps the field, may be a concern
-        // ‘Lady Alice’: A chance seedling discovered in Washington State in 1978
-        // ‘Ludacrisp’ (MAIA-L):
-        // ‘Modì’ (Civg198): USPP 18,730.     Modi’ is resistant to cedar apple rust but prone to russet 
-        // ‘Natyra’ (SQ159, also branded as ‘MagicStar’® in Belgium)            Plant Research International in Wageningen, the Netherlands, 
-        // ‘Pazazz’ (DS-41): USPP# 24,698P3 granted in 2014
-        // ‘Rave’ (MN 55): USPP 26,412 (Feb, 2016).
-        // ‘Red Romance’™ (Stark®):       bred in Illinois by the Elliots (2002)
-        // ‘Riverbelle’™: Apple Varietal Development LLC. 
-        // ‘Rockit’ (PremA96): USPP # 24,946P3      small apples from NZ
-        // ‘Rosalee’ (MAIA 11):
-        // ‘Ruby Darling’ (Stark®)
-        // ‘RubyFrost’® (NY 2):
-        // ‘Scarlet Crush’™ (Stark®):
-        // ‘Smitten’™ (PremA17): USPP 22,356, from NZ
-        // SnapDragon’® (NY 1):
-        // ‘SnowSweet’ (‘Wildung’ MN): USPP#19,946. 
-        // ‘Summerset®’ (MAIA 12):
-        // ‘Sunrise Magic’ (WA 2)
-        // ‘SweetCheeks’®: This apple is exclusive to Hess brothers in Pennsylvania
-        // ‘Sweetie’ (PremA280)         First Fruits Marketing and grown by Broetjes Orchard
-        // ‘Sweet Zinger’ (MAIA-Z):
-        // ‘Yello’®     called ‘Shinano Gold’ in Japan
+        {
+            type: "Apple",
+            name: "Arctic Granny",
+            description: "transgenic in order to reduce browning"
+        },
+        {
+            type: "Apple",
+            name: "Arctic Golden",
+            description: "transgenic in order to reduce browning"
+        },
+        {
+            type: "Apple",
+            name: "Arctic Fuji",
+            description: "transgenic in order to reduce browning"
+        },
+        // "and an ‘Arctic Gala’ is in development"
+        {
+            type: "Apple",
+            name: "CP 101", // "Antietam Blush"
+            description: "University of Maryland Professor Chris Walsh and then graduate student Julia Harshman were the creators",
+            patent: "https://patents.google.com/patent/USPP28595 expires 2035-07-18"
+        },
+        {
+            type: "Apple",
+            name: "Huaguan",
+            AKA: ["Autumn Glory"],
+            description: "exclusive to Domex Superfresh Growers® in Washington State",
+            patent: "https://patents.google.com/patent/USPP11077 expired 2017-12-02"
+        },
+        {
+            type: "Apple",
+            // "Baker's Delight"
+            name: "MAIA8"
+        },
+        {
+            type: "Apple",
+            name: "Bonita",
+            // todo: "scab-resistant"
+            description: "from the Czech Republic"
+        },
+        {
+            type: "Apple",
+            name: "ANABP-1",
+            AKA: ["Bravo"],
+            description: "developed in Manjimup, Australia"
+        },
+        {
+            type: "Apple",
+            name: "WA 38", // "Cosmic Crisp"
+            patent: "https://patents.google.com/patent/USPP24210 expires 2032-05-26"
+        },
+        {
+            type: "Apple",
+            name: "MC38", // paper lists "MC28",
+            AKA: ["Crimson Snow (tm)"],
+            description: "This chance seedling found in Australia will be managed by Kiku",
+            patent: "https://patents.google.com/patent/USPP16654 expires 2022-02-21"
+        },
+        {
+            type: "Apple",
+            name: "MAIA7", // "Crunch-a-Bunch"
+            // todo: "The patent for MAIA7 indicated that it is susceptible to powdery mildew and to soft rot (Penicillium) in storage"
+            patent: "29126"
+        },
+        {
+            type: "Apple",
+            name: "PremA129",
+            AKA: ["Dazzle"],
+            description: "FruitCraft NZ obtained the worldwide rights to premA129 from Prevar, Ltd",
+            patent: "https://patents.google.com/patent/USPP29214 expires 2036-02-24"
+        },
+        {
+            type: "Apple",
+            name: "Scilate",
+            AKA: ["Envy (tm)"],
+            patent: "https://patents.google.com/patent/USPP20477 expires 2028-02-26"
+        },
+        {
+            type: "Apple",
+            name: "MAIA1", // "EverCrisp®"
+            patent: "https://patents.google.com/patent/USPP24579 expires 2032-11-14"
+        },
+        {
+            type: "Apple",
+            name: "Foxtrot",
+            description: "Gala sport",
+            patent: "https://patents.google.com/patent/USPP24664 expires 2033-01-26"
+        },
+        {
+            type: "Apple",
+            name: "RKD", // patent name
+            AKA: ["Wildfire™ Gala"],
+            // todo: "3 weeks earlier than standard Gala"
+            description: "Gala sport",
+            patent: "https://patents.google.com/patent/USPP28721 expires 2035-07-28"
+        },
+        // First Kiss (MN 55) - filed under MN55/rave below
+        {
+            type: "Apple",
+            name: "Mayo",
+            description: "stark variety. Franklin, VT",
+            AKA: ["Franklin Cider (tm)"],
+            patent: "https://patents.google.com/patent/USPP28791 expires 2036-03-01"
+        },
+        {
+            type: "Apple",
+            name: "Cameron Select Honeycrisp",
+            description: "Honeycrisp sport. From Cameron Nursery in Washington State, this sport has redder color"
+        },
+        {
+            type: "Apple",
+            name: "Firestorm Honeycrisp",
+            description: "Honeycrisp sport"
+        },
+        {
+            type: "Apple",
+            name: "MINNB42 Honeycrisp",
+            description: "Honeycrisp sport. originated as a limb mutation in the University of Minnesota's research block",
+            patent: "https://patents.google.com/patent/USPP26644 expires 2034-07-24"
+        },
+        {
+            type: "Apple",
+            name: "New Zealand Honeycrisp",
+            description: "Honeycrisp sport"
+        },
+        {
+            type: "Apple",
+            name: "DAS 10",
+            AKA: ["Premier Honeycrisp"],
+            // todo: ripens three weeks before Honeycrisp
+            patent: "https://patents.google.com/patent/USPP24833 expires 2033-03-12",
+            description: "Honeycrisp sport"
+        },
+        {
+            type: "Apple",
+            name: "LJ-1000",
+            AKA: ["Royal Red Honeycrisp™"],
+            patent: "https://patents.google.com/patent/USPP22244 expires 2030-07-06",
+            description: "Honeycrisp sport"
+        },
+        {
+            type: "Apple",
+            name: "Scifresh",
+            // todo: susceptible to scab, powdery mildew and very susceptible to canker (Neonectria)
+            AKA: ["Jazz"],
+            patent: "https://patents.google.com/patent/USPP13888 expired 2021-06-20"
+        },
+        {
+            type: "Apple",
+            name: "Regal 13-82",
+            AJA: ["Juici"], // see also https://www.goodfruit.com/new-apple-varieties-from-a-to-z/
+            description: "hybrid of Honeycrisp x Braeburn. Oneonta Starr ranch growers of Wenatchee, WA has the North American rights for growing, packing and marketing",
+            patent: "https://patents.google.com/patent/USPP25189 expires 2033-06-19"
+        },
+        {
+            type: "Apple",
+            name: "Plumac",
+            AKA: ["Koru®"],
+            // todo: Fire blight susceptibility in the nursery (noted in the patent), and perhaps the field, may be a concern
+            patent: "https://patents.google.com/patent/USPP23418 expires 2031-10-14"
+        },
+        {
+            type: "Apple",
+            name: "Lady Alice",
+            description: "A chance seedling discovered in Washington State in 1978"
+        },
+        {
+            type: "Apple",
+            // "Ludacrisp (tm)"
+            name: "MAIA-L"
+        },
+        {
+            type: "Apple",
+            name: "CIVG198",
+            AKA: ["Modi (tm)"],
+            // todo: resistant to cedar apple rust but prone to russet
+            patent: "https://patents.google.com/patent/USPP18730 expires 2026-03-25"
+        },
+        {
+            type: "Apple",
+            name: "SQ159",
+            AKA: ["Natyra (r)", "MagicStar®"],
+            description: "Plant Research International in Wageningen, the Netherlands"
+        },
+        {
+            type: "Apple",
+            name: "DS-41",
+            AKA: ["Pazazz (tm)"],
+            patent: "https://patents.google.com/patent/USPP24698 expires 2032-10-04"
+        },
+        {
+            type: "Apple",
+            name: "MN55", // rave/first kiss
+            patent: "https://patents.google.com/patent/USPP26412 expires 2034-06-09"
+        },
+        {
+            type: "Apple",
+            name: "Red Romance (tm)", // variety name unknown
+            description: "Stark. bred in Illinois by the Elliots (2002). variety name unknown",
+            patent: "stark claims PPAF. NLT 2018, I guess"
+        },
+        {
+            type: "Apple",
+            name: "Riverbelle™", // variety name unknown
+            AKA: ["Sweet Riverbelle"],
+            description: "Apple Varietal Development LLC. I think this is patented but I can't find anything to link one of the Doug Shefelbine patents (there are four granted as of 2021). I also don't know the variety name"
+        },
+        {
+            type: "Apple",
+            name: "PremA96",
+            AKA: ["Rockit"],
+            description: "small apples. NZ variety",
+            patent: "https://patents.google.com/patent/USPP24946 expires 2032-04-06"
+        },
+        {
+            type: "Apple",
+            // "Rosalee"
+            name: "MAIA11"
+        },
+        {
+            type: "Apple",
+            name: "Honeysuckle Rose #1-6",
+            description: "stark variety, Honeycrisp/Gala cross",
+            AKA: ["Ruby Darling (tm)"],
+            patent: "https://patents.google.com/patent/USPP30978 expires 2038-03-07"
+        },
+        {
+            type: "Apple",
+            // "RubyFrost"
+            name: "NY 2"
+        },
+        {
+            type: "Apple",
+            name: "Cherry Parfait #19",
+            description: "stark variety, honeycrisp/pink lady cross",
+            AKA: ["Scarlet Crush (tm)"],
+            patent: "https://patents.google.com/patent/USPP30925 expires 2038-03-07"
+        },
+        {
+            type: "Apple",
+            name: "PremA17",
+            AKA: ["Smitten™"],
+            patent: "https://patents.google.com/patent/USPP22356 expires 2030-02-24"
+        },
+        {
+            type: "Apple",
+            // "SnapDragon"
+            name: "NY 1"
+        },
+        {
+            type: "Apple",
+            name: "Wildung", // "SnowSweet"
+            patent: "https://patents.google.com/patent/USPP19446 expires 2027-02-02"
+        },
+        {
+            type: "Apple",
+            // "Summerset"
+            name: "MAIA12"
+        },
+        {
+            type: "Apple",
+            // "Sunrise Magic"
+            name: "WA 2"
+        },
+        {
+            type: "Apple",
+            name: "SweetCheeks®",
+            description: "Hess brothers in Pennsylvania"
+        },
+        {
+            type: "Apple",
+            name: "PremA280",
+            AKA: ["Sweetie (tm)"],
+            description: "First Fruits Marketing and grown by Broetjes Orchard"
+        },
+        {
+            type: "Apple",
+            // "Sweet Zinger"
+            name: "MAIA-Z"
+        },
+        {
+            type: "Apple",
+            name: "Shinano Gold",
+            AKA: ["Yello®"],
+            description: "Japan"
+        }
     ]
 }
