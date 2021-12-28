@@ -80,8 +80,7 @@
         },
         {
             type: "Apple",
-            name: "PremA129",
-            AKA: ["Dazzle"],
+            name: "PremA129", // "Dazzle (tm)"
             description: "FruitCraft NZ obtained the worldwide rights to premA129 from Prevar, Ltd",
             patent: "https://patents.google.com/patent/USPP29214 expires 2036-02-24"
         },

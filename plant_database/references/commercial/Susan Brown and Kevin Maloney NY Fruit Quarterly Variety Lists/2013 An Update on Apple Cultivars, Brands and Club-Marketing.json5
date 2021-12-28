@@ -13,19 +13,17 @@
         }
     ],
     plants: [
-
         // todo - needs formatting
         // https://nyshs.org/wp-content/uploads/2016/10/1.An-Update-on-Apple-Cultivars-Brands-and-Club-Marketing.pdf
         // 2013:
         // An Update on Apple Cultivars, Brands and Club-Marketing
         // Susan Brown and Kevin Maloney
-
         // ‘Arctic series’: ‘Arctic Granny’ and ‘Arctic Golden’:   transgenic, created by Okanagan Specialty Fruits to have reduced browning, due to silencing of the PPO gene
         // ‘Aurora Golden Gala™ (8S6923): A release from the breeding program in British Columbia, Canada.
         // ‘Autumn Blush’:   ABCz international company
         //  ‘Autumn Glory’: Offered exclusively by Domex Superfresh Growers in the Pacific Northwest
         // ‘Blondee’: This clean yellow apple offered by Summit Sales (Integrated Plant Management, Inc.) was granted USPP# 19,007. Its susceptibility to fire blight is similar to ‘Gala’.
-        // Cameo’: A new group/club “Cameo Partners International” 
+        // Cameo’: A new group/club “Cameo Partners International”
         // ‘Crimson Snow’® (mc38 S): A variety being commercialized by Kiku Ltd in Europe and Turkey
         // ‘DS-22’ (Trademarked name pending): Doug Sheflebine in Wisconsin  https://patents.google.com/patent/USPP23933P3/en
         //    not in the article, found these in a patent search:
@@ -77,7 +75,7 @@
         // ‘Smaragd’    columnar.   Serbia by breeder Prof. Ognjanov
         // ‘Smitten™’ (PremA17):        NZ hybrid from Prevar
         // ‘Sweetie™’ (PremA280): Another apple from the Prevar™ program in New Zealand
-        // Washington (WA) State University’s new apples: 
+        // Washington (WA) State University’s new apples:
         //      ‘WA 2’, a hybrid of ‘Splendour’ x ‘Gala’, that was granted USPP# 21, 710
         //      , ‘WA 5’, a hybrid of ‘Splendour’ x ‘Co-op 15’ (Evans et al., 2011)
         //      d ‘WA 38’, a hybrid of ‘Enterprise’ x ‘Honeycrisp’ (Evans et al., 2012)
@@ -118,11 +116,8 @@
         // ‘Solaris’: A yellow-skinned, scab resistant,
         // ‘Story’® (‘Inored’ cov): A new red apple from the NOVADI cooperative in France, this variety has the Vf  gene for scab resistance and also low to average susceptibility to powdery mildew. T
         // ‘Topaz sport’:
-        //          ‘Royal Crimson Topaz’ (Tupy 2 cv): 
+        //          ‘Royal Crimson Topaz’ (Tupy 2 cv):
         // ‘WineCrisp’™ (Co-op 31)
-
         // this article is referenced at the end but it doesn't have many varieties by itself https://nyshs.org/wp-content/uploads/2015/10/Brown-Pages-from-NYFQ-Book-Fall-2015.pdf
-
-
     ]
 }

@@ -1,0 +1,186 @@
+// todo https://patents.google.com/?inventor=Allan+G.+White
+// also https://patents.google.com/?q=apple&inventor=Allan+White
+//      https://patents.google.com/?q=apple&inventor=Allan+White
+//      https://patents.justia.com/assignee/prevar-limited
+{
+    title: "Prevar (NZ) US Patent List",
+    url: "https://patents.justia.com/assignee/prevar-limited and https://patents.google.com/?inventor=Allan+G.+White",
+    accessed: "Dec 2021",
+    type: "private breeding program list",
+    locations: [
+        {
+            name: "Havelock North, NZ",
+            latitude: -39.66971104159318,
+            longitude: 176.87724487437617
+        }
+    ],
+    plants: [
+        // Prevar varieties
+        {
+            name: "Prem2P",
+            AKA: ["Crispie (tm)"],
+            type: "Euro Pear",
+            patent: "https://patents.google.com/patent/USPP17387",
+            released: "Prevar*"
+        },
+        {
+            name: "Prem1P",
+            type: "Euro Pear",
+            patent: "https://patents.google.com/patent/USPP17624",
+            released: "Prevar*"
+        },
+        {
+            name: "PremA280",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP19762",
+            released: "Prevar*"
+        },
+        {
+            name: "PremA153",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP21936",
+            released: "Prevar*"
+        },
+        {
+            name: "PremA17",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP22356",
+            released: "Prevar*"
+        },
+        {
+            name: "PremA193",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP22357",
+            released: "Prevar*"
+        },
+        {
+            name: "PremP109",
+            type: "Euro Pear",
+            patent: "https://patents.google.com/patent/USPP24408",
+            released: "Prevar*"
+        },
+        {
+            name: "PremA96",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP24946",
+            released: "Prevar*"
+        },
+        {
+            name: "PremP52",
+            type: "Euro Pear",
+            patent: "https://patents.google.com/patent/USPP28335",
+            released: "Prevar*"
+        },
+        {
+            name: "PremA34",
+            AKA: ["Cherish (tm)"],
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP28366",
+            released: "Prevar*"
+        },
+        {
+            name: "PremP003",
+            type: "Euro Pear",
+            patent: "https://patents.google.com/patent/USPP28853",
+            released: "Prevar*"
+        },
+        {
+            name: "PremP027",
+            type: "Euro Pear",
+            patent: "https://patents.google.com/patent/USPP28874",
+            released: "Prevar*"
+        },
+        {
+            name: "PremA129",
+            AKA: ["Dazzle (tm)"],
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP29214",
+            released: "Prevar*"
+        },
+        {
+            name: "PremP009",
+            type: "Euro Pear",
+            patent: "https://patents.google.com/patent/USPP30552",
+            released: "Prevar*"
+        },
+        {
+            name: "PremA003",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP33545 ",
+            released: "Prevar*"
+        },
+        {
+            name: "PremA92",
+            type: "Apple",
+            description: "I think this US patent application never resulted in a patent. can't tell. maybe it was renamed for the grant and this entry is extra",
+            patent: "https://patents.google.com/patent/US20130125270"
+        },
+        {
+            name: "PremA093",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP33654 expires 2040-05-04",
+            released: "Prevar*"
+        },
+
+        // names starting with "Sci..." are generally assigned to New Zealand Insitiute for Plant and Food Research Ltd
+        // see also https://commercial.waimeanurseries.co.nz/commercial-products/apples/pacific-series/
+        {
+            name: "Scieur",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP7812 expired 2010-08-13",
+            released: "NZ Insitiute for Plant and Food Research Ltd*"
+        },
+        {
+            name: "Sciglo",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP7813 expired 2010-08-13",
+            released: "NZ Insitiute for Plant and Food Research Ltd*"
+        },
+        {
+            name: "Sciros",
+            AKA: ["Pacific Rose (r)"],
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP7814 expired 2010-08-13",
+            released: "NZ Insitiute for Plant and Food Research Ltd*"
+        },
+        {
+            name: "Sciray",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP7815 expired 2010-08-13",
+            released: "NZ Insitiute for Plant and Food Research Ltd*"
+        },
+        {
+            name: "Sciearly",
+            AKA: ["Pacific Beauty (r)"],
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP11092 expire 2017-08-05",
+            released: "NZ Insitiute for Plant and Food Research Ltd*"
+        },
+        {
+            name: "Scifresh",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP13888 expired 2021-06-20",
+            released: "NZ Insitiute for Plant and Food Research Ltd*"
+        },
+        {
+            name: "Scilate",
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP20477 expires 2028-02-26",
+            released: "NZ Insitiute for Plant and Food Research Ltd*"
+        },
+        {
+            type: "Apple",
+            name: "Scired",
+            AKA: ["Pacific Queen (r)"],
+            description: "unpatented. mentioned in the HOT84A1 patent",
+            released: "NZ Insitiute for Plant and Food Research Ltd*"
+        },
+        // from a related breeding effort: https://fruitgrowersnews.com/news/hot-climate-group-introduces-a-hot-new-apple-varieity/
+        {
+            type: "Apple",
+            name: "HOT84A1",
+            patent: "https://patents.google.com/patent/USPP32720 expires 2040-04-30",
+            released: "NZ Insitiute for Plant and Food Research Ltd*"
+        }
+    ]
+}
