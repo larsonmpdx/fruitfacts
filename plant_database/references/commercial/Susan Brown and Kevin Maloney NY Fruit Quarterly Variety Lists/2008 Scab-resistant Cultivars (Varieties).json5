@@ -1,0 +1,46 @@
+{
+    title: "Scab-resistant Cultivars (Varieties)",
+    author: "Susan Brown and Kevin Maloney",
+    url: "https://fruit.wisc.edu/wp-content/uploads/sites/36/2016/03/Scab-resistant-Cultivars-Varieties.pdf",
+    accessed: "Dec 2021",
+    published: "2008",
+    type: "release article or journal overview",
+    locations: [
+        {
+            name: "Geneva, NY",
+            latitude: 42.87719192532212,
+            longitude: -77.00783342124748
+        }
+    ],
+    plants: [
+        // todo - copied in names and resistances, need to format
+        // https://fruit.wisc.edu/wp-content/uploads/sites/36/2016/03/Scab-resistant-Cultivars-Varieties.pdf
+        // NY Fruit Quarterly Winter 2008
+        // Scab-resistant Cultivars (Varieties)
+        // Susan Brown and Kevin Maloney
+
+
+        // ‘CrimsonCrisp’™ (Co-op 39)       resistant to scab but susceptible to cedar apple rust (CAR) and to fire blight.
+        // ‘Enterprise’                     quality is poor and it has objectionably thick skin, perhaps limiting it to juice production or other processing
+        // ‘Galarina’ (x4982)
+        // Goldrush’ (Co-op 38)             very susceptible to powdery mildew and is also susceptible to cedar apple rust.
+        // ‘Juliet’™ (Co-op 43)         ‘Juliet‘ is susceptible to cedar apple rust (CAR)
+        // ‘Liberty’
+        // ‘Pixie Crunch’™’ (Co-op 33
+        // ‘Pristine’ (Co-op 32)            Fire blight has been observed in some test sites and ’Pristine’ is known to be susceptible to cedar apple rust
+        // Redfree’ (Co-op 13):             highly susceptible to rosy apple aphid infection and to fi re blight
+        // ‘Scarlet O’Hara (Co-op 25):      susceptibility to fire blight and to moldy core
+        // ‘Sundance’™ (Co-op 29):
+        // ‘Topaz   developed and named by the Czech Republic            Trees also prone to collar rot and are very susceptible to fi re blight
+        // ‘Ariane’     good resistance to powdery mildew and to fi re blight
+        // ‘Ariwa’      This scab-resistant apple from the Swiss breeding program also has good resistance to powdery mildew in European trials.
+        // ‘Ecolette’       Low susceptibility to mildew.
+        // ‘Goldstar’       This apple was developed in the Czech Republic, 
+        // ‘Modi’ (CIVG 198):
+        // ‘Otava’          This is a product of a breeding program in the Czech Republic
+        // ‘Santana’         This hybrid of ‘Elstar’ x ’Priscilla’ was developed in the Netherlands     ‘Santana’ is susceptible to powdery mildew and may defoliate
+        // The “RE” series from Dresden-Pillnitz in Germany These are available in the US as the “ReZista” series
+        // ‘Reanda’, ‘Regine’, ‘Reglindis’, ‘Relinda’, ‘Remo’, ‘Resi’, ‘Resista’ and ‘Retina
+
+    ]
+}

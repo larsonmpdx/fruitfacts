@@ -1,0 +1,72 @@
+{
+    title: "Update on New Apple Varieties, Managed Varieties and Clubs",
+    author: "Susan Brown and Kevin Maloney",
+    url: "https://nyshs.org/wp-content/uploads/2018/10/Brown-Pages-5-10-from-NYFQ-Book-Summer-5-27-2018.pdf",
+    accessed: "Dec 2021",
+    published: "2018",
+    type: "release article or journal overview",
+    locations: [
+        {
+            name: "Geneva, NY",
+            latitude: 42.87719192532212,
+            longitude: -77.00783342124748
+        }
+    ],
+    plants: [
+        // todo - needs formatting
+        // https://nyshs.org/wp-content/uploads/2018/10/Brown-Pages-5-10-from-NYFQ-Book-Summer-5-27-2018.pdf
+        // 2018:
+        // Update on New Apple Varieties, Managed Varieties and Clubs
+
+        // Arctic Apples: The first transgenic apples offered in the US, these apples have silencing of polyphenol oxidase (PPO), to reduce flesh browning after cutting. Three apples are available:
+        //       ‘Arctic Granny, ‘Arctic Golden’, ‘Arctic Fuji’, and an ‘Arctic Gala’ is in development
+        // ‘Antietam Blush’: US plant patent 28,595 was granted in 2017. University of Maryland Professor Chris Walsh and then graduate student Julia Harshman were the creators
+        // ‘Autumn Glory’ (‘Huaguan’): exclusive to Domex Superfresh Growers® in Washington State
+        // ‘Baker’s Delight’ (MAIA8):
+        // ‘Bonita’: This scab-resistant variety from the Czech Republic
+        //  ‘Bravo’ (ANABP-1):      developed in Manjimup, Australia,
+        // ‘Cosmic Crisp’ (WA 38): USPP# 24,210 in 2014
+        // ‘Crimson Snow’: (AU): (MC28*) “ This chance seedling found in Australia will be managed by Kiku
+        // Crunch-a-Bunch’ (MAIA7): USPP 29,126,   . The patent for MAIA7 indicated that it is susceptible to powdery mildew and to soft rot (Penicillium) in storage
+        // ‘Dazzle’ (PremA129):  FruitCraft NZ obtained the worldwide rights to premA129 from Prevar, Ltd
+        // ‘Envy’ (‘Scilate’): USPP in 2008
+        // EverCrisp’® (MAIA1): USPP 24,579
+        // Gala’ sports
+        //     ‘Foxtrot’: USPP 24,664, July 2014
+        //     ‘Wildfire Gala’™ (PPAF):     3 weeks earlier than standard ‘Gala’.
+        // First Kiss’ (MN 55):
+        // ‘Franklin’ (‘Mayo’): USPP 28,791  Franklin, VT
+        // ‘Honeycrisp’ sports
+        //     ‘Cameron Select Honeycrisp’: From Cameron Nursery in Washington State, this sport has redder color
+        //     ‘Firestorm Honeycrisp’: 
+        //     Honeycrisp (MINB42): USPP#26,644     This sport originated as a limb mutation in the University of Minnesota’s research block
+        //     ‘New Zealand Honeycrisp’
+        //     ‘Premier Honeycrisp’ (DAS 10): This sport received its US plant patent #24,833 in 2011     ripens three weeks before ‘Honeycrisp’.
+        //     ‘Royal Red Honeycrisp’™ (LJ-1000):  USPP# 22,244
+        // ‘Jazz’ (‘Scifresh’): susceptible to scab, powdery mildew and very susceptible to canker (Neonectria)
+        // ‘Juici’: A hybrid of ‘Honeycrisp’ x ‘Braeburn’. Oneonta Starr ranch growers of Wenatchee, WA has the North American rights for growing, packing and marketing ‘Juici
+        // ‘Koru’® (‘Plumac’): US Plant Patent #23,418    Fire blight susceptibility in the nursery (noted in the patent), and perhaps the field, may be a concern
+        // ‘Lady Alice’: A chance seedling discovered in Washington State in 1978
+        // ‘Ludacrisp’ (MAIA-L):
+        // ‘Modì’ (Civg198): USPP 18,730.     Modi’ is resistant to cedar apple rust but prone to russet 
+        // ‘Natyra’ (SQ159, also branded as ‘MagicStar’® in Belgium)            Plant Research International in Wageningen, the Netherlands, 
+        // ‘Pazazz’ (DS-41): USPP# 24,698P3 granted in 2014
+        // ‘Rave’ (MN 55): USPP 26,412 (Feb, 2016).
+        // ‘Red Romance’™ (Stark®):       bred in Illinois by the Elliots (2002)
+        // ‘Riverbelle’™: Apple Varietal Development LLC. 
+        // ‘Rockit’ (PremA96): USPP # 24,946P3      small apples from NZ
+        // ‘Rosalee’ (MAIA 11):
+        // ‘Ruby Darling’ (Stark®)
+        // ‘RubyFrost’® (NY 2):
+        // ‘Scarlet Crush’™ (Stark®):
+        // ‘Smitten’™ (PremA17): USPP 22,356, from NZ
+        // SnapDragon’® (NY 1):
+        // ‘SnowSweet’ (‘Wildung’ MN): USPP#19,946. 
+        // ‘Summerset®’ (MAIA 12):
+        // ‘Sunrise Magic’ (WA 2)
+        // ‘SweetCheeks’®: This apple is exclusive to Hess brothers in Pennsylvania
+        // ‘Sweetie’ (PremA280)         First Fruits Marketing and grown by Broetjes Orchard
+        // ‘Sweet Zinger’ (MAIA-Z):
+        // ‘Yello’®     called ‘Shinano Gold’ in Japan
+    ]
+}

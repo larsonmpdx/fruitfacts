@@ -1,0 +1,128 @@
+{
+    title: "An Update on Apple Cultivars, Brands and Club-Marketing",
+    author: "Susan Brown and Kevin Maloney",
+    url: "https://nyshs.org/wp-content/uploads/2016/10/1.An-Update-on-Apple-Cultivars-Brands-and-Club-Marketing.pdf",
+    accessed: "Dec 2021",
+    published: "2013",
+    type: "release article or journal overview",
+    locations: [
+        {
+            name: "Geneva, NY",
+            latitude: 42.87719192532212,
+            longitude: -77.00783342124748
+        }
+    ],
+    plants: [
+
+        // todo - needs formatting
+        // https://nyshs.org/wp-content/uploads/2016/10/1.An-Update-on-Apple-Cultivars-Brands-and-Club-Marketing.pdf
+        // 2013:
+        // An Update on Apple Cultivars, Brands and Club-Marketing
+        // Susan Brown and Kevin Maloney
+
+        // ‘Arctic series’: ‘Arctic Granny’ and ‘Arctic Golden’:   transgenic, created by Okanagan Specialty Fruits to have reduced browning, due to silencing of the PPO gene
+        // ‘Aurora Golden Gala™ (8S6923): A release from the breeding program in British Columbia, Canada.
+        // ‘Autumn Blush’:   ABCz international company
+        //  ‘Autumn Glory’: Offered exclusively by Domex Superfresh Growers in the Pacific Northwest
+        // ‘Blondee’: This clean yellow apple offered by Summit Sales (Integrated Plant Management, Inc.) was granted USPP# 19,007. Its susceptibility to fire blight is similar to ‘Gala’.
+        // Cameo’: A new group/club “Cameo Partners International” 
+        // ‘Crimson Snow’® (mc38 S): A variety being commercialized by Kiku Ltd in Europe and Turkey
+        // ‘DS-22’ (Trademarked name pending): Doug Sheflebine in Wisconsin  https://patents.google.com/patent/USPP23933P3/en
+        //    not in the article, found these in a patent search:
+        //     DS-3: https://patents.google.com/patent/USPP23649 2031-12-14
+        //     DS-102: https://patents.google.com/patent/USPP33271 2040-07-21
+        //     DS-41: https://patents.google.com/patent/USPP24698 2032-10-04
+        // ‘Envy’™ (‘Scilate’) - NZ
+        // ‘EverCrisp’ - MAIA
+        // ‘Fuji’ sports:
+        //     Aztec Fuji’® (DT2):
+        //     ‘Moana’ USPP # 21,450
+        // ‘Gala’ sports:
+        //     ‘Premier Star’ NZ
+        // ‘Galmac’ (®Camelot’®) switzerland
+        // ‘Genesis’™:     marketed by The Yummy Fruit Company in New Zealand
+        // ‘Gradiyel’:   USPP22974   France
+        // ‘Honeycrisp’ sport:
+        //     ‘Royal Red Honeycrisp’™ (LJ-1000):  USPP22244  washington
+        // ‘Jazz’ (‘Scifresh’) sport
+        //     ‘Southfield’: NZ  USPP22990
+        // ‘Jonagold’ sport:
+        //     ‘Jonastar’  USPP #20,590
+        // ‘Jonathan’ sport:
+        //     ‘Chrisolyn’ (‘Cambell Jonathan’): USPP # 21,300
+        // ‘Junami’® (‘Milwa’ or ‘Diwa’): Inova fruit in the Netherlands manages the varieties, ‘Junami’,  USPP# 19,615
+        //     also ‘Ruebens’ and ‘Wellant’
+        // ‘Lady Alice’: chance seedling from Washington
+        // ‘Lemonade’       Yummy Fruit Company in NZ
+        // ‘Lola’® (‘Maribelle’):       from the private breeding program of Ing de Sonnaville in the Netherlands
+        // ‘Mairac’ (‘La Flamboyante’): from the Swiss breeding program 2002
+        // ‘Maloni Lily’   A very small sized genetically dwarf apple tree from the same breeding program that developed the red-fleshed ‘Redlove’® series
+        // New York apples: ‘New York 1’ and ‘New York 2’ (Trademarked names pending):
+        //      USPP22228
+        //      USPP22207
+        // ‘Pink Lady®’ sports
+        //       ‘Maslin’ cv.: PLMAS98):    USPP# 21,412.
+        //      ‘Pflogg’ cv.)        USPP # 21,555 in 2010
+        //      ‘RGLORS         USPP # 21,272
+        // Pinova’ sport:
+        //      ‘Chantelop®’ (‘Daligris’): USPP #21,722 in 2011
+        // ‘PremA153’: USPP#21,936, offered by Brandt’s Fruit Trees, Inc.
+        // ‘Redlove’® series:   (Markus Kobelt, Lubera nursery in Switzerland
+        //      ‘Redlove® 119/06’: This selection is referred to as the “sweet line”.
+        //      ‘Redlove® Calypso’:
+        //      ‘Redlove® Circe’
+        //      ‘Redlove® Era’
+        //      ‘Redlove® Sirena’
+        // ‘Salish’™ (SPA 493       as released from Ag-Canada in Summerland, B.C. in cooperation with PICO
+        // ‘Smaragd’    columnar.   Serbia by breeder Prof. Ognjanov
+        // ‘Smitten™’ (PremA17):        NZ hybrid from Prevar
+        // ‘Sweetie™’ (PremA280): Another apple from the Prevar™ program in New Zealand
+        // Washington (WA) State University’s new apples: 
+        //      ‘WA 2’, a hybrid of ‘Splendour’ x ‘Gala’, that was granted USPP# 21, 710
+        //      , ‘WA 5’, a hybrid of ‘Splendour’ x ‘Co-op 15’ (Evans et al., 2011)
+        //      d ‘WA 38’, a hybrid of ‘Enterprise’ x ‘Honeycrisp’ (Evans et al., 2012)
+        // ‘Zari’ Better3Fruits company in Belgium
+        // ‘Zonga’ Better3Fruit breeding program in Belgium
+        //
+        // disease-resistant breeding:
+        // ‘Adore’: Delbard Nurseries in Francd
+        // ‘Antares’ (‘Dalinbel’):  France
+        // ‘Ariane’ (x 6407)  France
+        // ‘Bella’™ (‘Rebella’ cv): A disease resistant apple from the Pilnitz/ Dresden breeding disease resistance program in Germany
+        // ‘Choupette’® (‘Dalinette’)       France
+        // ‘Crimson Crisp’™ (Co-op 39): US plant patent #16, 622
+        // ‘Dalinsweet’
+        // ‘Diva’ (SJC7123-1):  Quebec, Canada.
+        // ‘Divine’: Delbard Nurseries in France
+        // Gaia’: One of five new scab resistant apples released under the “Sweet Resistance” designation in 2011 by Consorzio Italiano Vivaisti (CIV).
+        // ‘Gemini’: One of five new scab resistant apples released under the “Sweet Resistance” designation in 2011 by CIV in Italy. This variety should not be confused with the Canadian ‘Gemini’, which is a hybrid of ‘Norland’ by ‘Haralson’
+        // ‘Goldlane’:     USPP21413 columnar,  Czech Republic
+        // ‘Fujion’: One of five new scab resistant apples released under the “Sweet Resistance” designation in 2011 by CIV
+        // ‘Inored’  https://patents.google.com/patent/USPP22794 in June 2012. - see below as "story"
+        //     also, not in paper, "Inobi": https://patents.google.com/patent/USPP31287P3/en?inventor=Christelle+Pitiot
+        //           not in paper: "Inolov": https://patents.google.com/patent/US20160192554P1/en?inventor=Fran%C3%A7ois+Laurens
+        // ‘Isaaq’® (CIV323): The commercialization of ‘Isaaq’® represents a new partnership between CIV and Kiku Ltd
+        // ‘Kalei’: This first scab resistant variety from the Stanthorpe program in Australia
+        // ‘Ladina’: A ‘Topaz’ x ‘Fuji’ hybrid that is a new release from the Swiss breeding program
+        // ‘Luna’ ‘TopGold’®: US plant patent # 16,084
+        // ‘Mercury’: This hybrid of ‘Topaz’ x ‘Rajka’ was developed in the Czech Republic.
+        // ‘Modi’: ‘Modi’, a hybrid of ‘Gala’ x ‘Liberty’
+        // ‘MonaLisa’: This ‘Gala’ type apple has high resistance to apple scab and to Glomerella leaf spot and spider mites.
+        //         This is from a breeding program in Brazil and was granted USPP# 23,003
+        // ‘Moonlight’: A columnar (reduced branching), scab resistant apple, (USPP # 21, 511, 11/10), released by breeders from the Czech Republic
+        // ‘Opal’ (UEB 3264/2):  Czech Republic     USPP15963
+        // ‘Orion’: A member of “The Golden Sunshine Line™” from the Czech republic   USPP19276
+        // ‘Renoir’: One of five new scab resistant apples released under the “Sweet Resistants   2011 by Consorzio Italiano Vivaisti (CIV)  resistant to scab, ‘Renoir’ is mildly susceptible to powdery mildew.
+        // ‘Sirius’  has the Vf gene for scab resistance and it is a triploid Artevos group
+        // ‘Smeralda’ One of five new scab resistant apples released under the “Sweet Resistants” designation in 2011 by CIV in Italy. ‘Smeralda’ is a green apple ripening 30 days before ‘Granny Smith’
+        // ‘Solaris’: A yellow-skinned, scab resistant,
+        // ‘Story’® (‘Inored’ cov): A new red apple from the NOVADI cooperative in France, this variety has the Vf  gene for scab resistance and also low to average susceptibility to powdery mildew. T
+        // ‘Topaz sport’:
+        //          ‘Royal Crimson Topaz’ (Tupy 2 cv): 
+        // ‘WineCrisp’™ (Co-op 31)
+
+        // this article is referenced at the end but it doesn't have many varieties by itself https://nyshs.org/wp-content/uploads/2015/10/Brown-Pages-from-NYFQ-Book-Fall-2015.pdf
+
+
+    ]
+}
