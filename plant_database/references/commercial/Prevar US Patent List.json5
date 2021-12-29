@@ -164,6 +164,7 @@
         },
         {
             name: "Scilate",
+            AKA: ["Envy (tm)"],
             type: "Apple",
             patent: "https://patents.google.com/patent/USPP20477 expires 2028-02-26",
             released: "NZ Insitiute for Plant and Food Research Ltd*"

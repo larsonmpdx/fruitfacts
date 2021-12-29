@@ -13,6 +13,9 @@
         }
     ],
     plants: [
+        // some more background here:
+        // https://kp.eufrin.eu/fileadmin/user_upload/documents/1259-7d4a29a9778ec71eaea1096586a17145.pdf
+        // in general, communication around the generic vs. trademarked names for these has been poor, at least in the US-english sphere. I'm listing them under calypso/odysso/etc. names because of this
         {
             type: "Apple",
             name: "Everybody's",
@@ -24,7 +27,7 @@
         {
             type: "Apple",
             name: "Calypso",
-            AKA: ["Redlove® Calypso"],
+            AKA: ["Redlove® Calypso", "Luregust"],
             description: "70% dark red. most aromatic Redlove. should be stored 1-3 weeks after harvest and then it develops its full flavour. http://www.lubera.co.uk/plants/fruit-trees/apple-trees/autumn-apples/redlove-calypso https://www.youtube.com/watch?v=nN0DJohM9HE",
             harvest_time: "September 20",
             disease_resistance: {
@@ -37,7 +40,7 @@
         {
             type: "Apple",
             name: "Circe",
-            AKA: ["Redlove® Circe"],
+            AKA: ["Redlove® Circe", "Lureprec"],
             description: "80% dark red. ready to eat once picked http://www.lubera.co.uk/plants/fruit-trees/apple-trees/summer-apples/redlove-circe",
             harvest_time: "August 20",
             disease_resistance: {
@@ -47,7 +50,7 @@
         {
             type: "Apple",
             name: "Era",
-            AKA: ["Redlove® Era"],
+            AKA: ["Redlove® Era", "Lurefresh", "LUB2605"],
             description: "95% dark red http://www.lubera.co.uk/plants/fruit-trees/apple-trees/red-fleshed-apple-trees-redloves/redlove-era",
             harvest_time: "September 10-20",
             disease_resistance: {
@@ -59,7 +62,7 @@
         {
             type: "Apple",
             name: "Odysso",
-            AKA: ["Redlove® Odysso"],
+            AKA: ["Redlove® Odysso", "Redlove® 119/06", "Luresweet"],
             description: "95% dark red. the sweetest Redlove variety with nearly solid-coloured flesh. http://www.lubera.co.uk/plants/fruit-trees/apple-trees/winter-apples/redlove-odysso",
             harvest_time: "early October",
             disease_resistance: {
@@ -69,8 +72,8 @@
         },
         {
             type: "Apple",
-            name: "Sirene",
-            AKA: ["Redlove® Sirene"],
+            name: "Sirena",
+            AKA: ["Redlove® Sirena", "Sirene", "LUB0605"],
             description: "http://www.lubera.co.uk/VideoDetail/getVideoDetail/youtubeId/vYHUaqsgaTI",
             harvest_time: "mid August", // from a comment on lubera's website, couldn't find a sales page like the others
             disease_resistance: {

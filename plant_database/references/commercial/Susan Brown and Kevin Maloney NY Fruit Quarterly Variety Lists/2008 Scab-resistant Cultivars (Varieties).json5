@@ -13,7 +13,7 @@
         }
     ],
     plants: [
-        // todo - copied in names and resistances, need to format
+        // todo - format comments and disease resistances
         {
             name: "Co-op 39", // CrimsonCrisp™
             // resistant to scab but susceptible to cedar apple rust (CAR) and to fire blight
