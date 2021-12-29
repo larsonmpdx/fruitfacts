@@ -81,7 +81,7 @@
             harvest_time_relative: "Burlat +3 to +5",
             s_allele: "S3S4'",
             released: "U Bologna Italy *",
-            patent: "USPP25996 expires 2033-09-23"
+            patent: "https://patents.google.com/patent/USPP25996 expires 2033-09-23"
         },
         {
             type: "Sweet Cherry",
@@ -92,7 +92,7 @@
             s_allele: "S3S4",
             released: "U Bologna Italy *",
             // patent application used "Sweet Lorenz" but was corrected to the nonsense name in the grant
-            patent: "USPP25982 expires 2033-09-22"
+            patent: "https://patents.google.com/patent/USPP25982 expires 2033-09-22"
         },
         {
             type: "Sweet Cherry",
@@ -102,7 +102,7 @@
             harvest_time_relative: "Burlat +11 to +14",
             s_allele: "S3S4",
             released: "U Bologna Italy *",
-            patent: "USPP25997 expires 2033-09-23"
+            patent: "https://patents.google.com/patent/USPP25997 expires 2033-09-23"
         },
         {
             type: "Sweet Cherry",
@@ -112,7 +112,7 @@
             harvest_time_relative: "Burlat +15 to +18",
             s_allele: "S3S4",
             released: "U Bologna Italy *",
-            patent: "USPP25981 expires 2033-10-04"
+            patent: "https://patents.google.com/patent/USPP25981 expires 2033-10-04"
         },
         {
             type: "Sweet Cherry",
@@ -122,7 +122,7 @@
             harvest_time_relative: "Burlat +22 to +24",
             s_allele: "S3S4'",
             released: "U Bologna Italy *",
-            patent: "USPP25972 expires 2033-09-23"
+            patent: "https://patents.google.com/patent/USPP25972 expires 2033-09-23"
         },
         {
             type: "Sweet Cherry", // note - book gives this as a "non-sweet" cherry but I think that's wrong
@@ -132,7 +132,7 @@
             harvest_time_relative: "Burlat +10 to +12",
             s_allele: "S3S4'",
             released: "U Bologna Italy *",
-            patent: "USPP29677 expires 2036-09-22"
+            patent: "https://patents.google.com/patent/USPP29677 expires 2036-09-22"
         },
         {
             type: "Sweet Cherry",
@@ -142,7 +142,7 @@
             harvest_time_relative: "Burlat +27",
             s_allele: "S3S4'",
             released: "U Bologna Italy *",
-            patent: "USPP29765 expires 2036-11-14"
+            patent: "https://patents.google.com/patent/USPP29765 expires 2036-11-14"
         }
     ]
 }

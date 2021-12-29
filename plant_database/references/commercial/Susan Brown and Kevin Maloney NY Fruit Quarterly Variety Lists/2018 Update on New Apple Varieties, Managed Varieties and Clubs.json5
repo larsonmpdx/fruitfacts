@@ -67,8 +67,7 @@
         },
         {
             type: "Apple",
-            name: "MC38", // paper lists "MC28",
-            AKA: ["Crimson Snow (tm)"],
+            name: "MC38", // paper lists "MC28". "MC38" is the patent name.  "Crimson Snow (tm)"
             description: "This chance seedling found in Australia will be managed by Kiku",
             patent: "https://patents.google.com/patent/USPP16654 expires 2022-02-21"
         },
@@ -86,8 +85,7 @@
         },
         {
             type: "Apple",
-            name: "Scilate",
-            AKA: ["Envy (tm)"],
+            name: "Scilate", // "Envy (tm)"
             patent: "https://patents.google.com/patent/USPP20477 expires 2028-02-26"
         },
         {
@@ -283,8 +281,7 @@
         },
         {
             type: "Apple",
-            name: "PremA280",
-            AKA: ["Sweetie (tm)"],
+            name: "PremA280", // "Sweetie (tm)"
             description: "First Fruits Marketing and grown by Broetjes Orchard"
         },
         {

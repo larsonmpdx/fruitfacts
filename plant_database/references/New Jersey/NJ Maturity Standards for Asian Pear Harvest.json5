@@ -1,0 +1,28 @@
+{
+    title: "Fruit Notes Spring, 2014: Maturity Standards for Asian Pear Harvest?",
+    author: "Win Cowgill and Rebecca Magron New Jersey Agricultural Experiment Station",
+    url: "http://www.umassfruitnotes.com/v79n2/a6.pdf",
+    accessed: "Dec 2021",
+    published: "Spring, 2014",
+    type: "journal article test",
+    locations: [
+        {
+            name: "Rutgers Snyder Farm, Pittstown, NJ",
+            latitude: 40.55738240008956,
+            longitude: -74.96075796896541
+        }
+    ],
+    plants: [
+        // todo
+        // Nitaka           4th week of October
+        // Ya Li            3rd week of October
+        // Olympic          4th week of October
+        // Shinko           4th week of October
+        // Golden Russet    4th week of September
+        // Atago            4th week of September
+        // Yoinashi         3rd-4th week of September
+        // Hosui            2nd week of September
+        // Isiiwase         1st week of September
+        // Kosui            4th week of August
+    ]
+}

@@ -54,8 +54,7 @@
         },
         {
             type: "Apple",
-            name: "Dalinette",
-            AKA: ["Choupette"],
+            name: "Dalinette", // "Choupette"
             // todo: "scab-resistant"
             description: "promoted by Ligonniere nursery in France"
         },
@@ -63,7 +62,7 @@
             type: "Apple",
             name: "Western Dawn",
             AKA: ["Enchanted®"],
-            patent: "USPP18640"
+            patent: "https://patents.google.com/patent/USPP18640"
         },
         {
             type: "Apple",
@@ -142,7 +141,7 @@
             name: "UEB 3264/2",
             AKA: ["Opal"],
             // todo: "..scab resistant apple is also tolerant to mildew in Europe"
-            patent: "USPP15963",
+            patent: "https://patents.google.com/patent/USPP15963",
             description: "Czech Republic. ‘Golden Delicious x ’Topaz’"
         },
         {
@@ -209,7 +208,7 @@
         },
         {
             type: "Apple",
-            name: "Var-One", // article claims this is marketed under "sweetie" brand but premA280 also is so I picked that one. could be both though
+            name: "Var-One", // article claims this is marketed under "sweetie" brand but premA280 is also so I picked that one. could be both though
             AKA: ["Prem1A"],
             description: "Prevar"
         },

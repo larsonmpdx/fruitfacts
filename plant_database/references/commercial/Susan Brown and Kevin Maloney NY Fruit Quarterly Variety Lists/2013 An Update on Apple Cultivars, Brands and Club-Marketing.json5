@@ -46,7 +46,7 @@
             name: "Blondee",
             // todo: "Its susceptibility to fire blight is similar to Gala"
             description: "yellow. Summit Sales/IPM",
-            patent: "USPP# 19,007"
+            patent: "https://patents.google.com/patent/USPP# 19,007"
         },
         {
             type: "Apple",
@@ -55,8 +55,8 @@
         },
         {
             type: "Apple",
-            name: "mc38 S",
-            AKA: ["Crimson Snow®"],
+            name: "MC38",
+            AKA: ["Crimson Snow®", "MC38 S"],
             description: "being commercialized by Kiku Ltd in Europe and Turkey"
         },
         {
@@ -71,9 +71,8 @@
         //   DS-102: https://patents.google.com/patent/USPP33271 2040-07-21
         {
             type: "Apple",
-            name: "Scilate",
+            name: "Scilate", // "Envy™"
             description: "NZ",
-            AKA: ["Envy™"]
         },
         {
             type: "Apple",
@@ -89,7 +88,7 @@
             type: "Apple",
             name: "Moana",
             description: "Fuji sport",
-            patent: "USPP21450"
+            patent: "https://patents.google.com/patent/USPP21450"
         },
         {
             type: "Apple",
@@ -111,40 +110,39 @@
             type: "Apple",
             name: "Gradiyel",
             description: "France",
-            patent: "USPP22974"
+            patent: "https://patents.google.com/patent/USPP22974"
         },
         {
             type: "Apple",
             name: "LJ-1000",
             AKA: ["Royal Red Honeycrisp™"],
             description: "Honeycrisp sport. Washington",
-            patent: "USPP22244"
+            patent: "https://patents.google.com/patent/USPP22244"
         },
         {
             type: "Apple",
             name: "Southfield",
             description: "Jazz sport. NZ",
-            patent: "USPP22990"
+            patent: "https://patents.google.com/patent/USPP22990"
         },
         {
             type: "Apple",
             name: "Jonastar",
             description: "Jonagold sport",
-            patent: "USPP #20,590"
+            patent: "https://patents.google.com/patent/USPP #20,590"
         },
         {
             type: "Apple",
             name: "Chrisolyn",
             AKA: ["Cambell Jonathan"],
             description: "Jonathan sport",
-            patent: "USPP # 21,300"
+            patent: "https://patents.google.com/patent/USPP # 21,300"
         },
         {
             type: "Apple",
-            name: "Milwa",
-            AKA: ["Junami®, Diwa"],
+            name: "Milwa", // "Junami®, Diwa"
             released: "Inova fruit in the Netherlands",
-            patent: "USPP19615"
+            patent: "https://patents.google.com/patent/USPP19615"
         },
         {
             type: "Apple",
@@ -174,8 +172,7 @@
         },
         {
             type: "Apple",
-            name: "Mairac",
-            AKA: ["La Flamboyante"],
+            name: "La Flamboyante", // "Mairac"
             released: "Swiss breeding program 2002"
         },
         {
@@ -187,44 +184,43 @@
         {
             type: "Apple",
             name: "NY 1",
-            patent: "USPP22228"
+            patent: "https://patents.google.com/patent/USPP22228"
         },
         {
             type: "Apple",
             name: "NY 2",
-            patent: "USPP22207"
+            patent: "https://patents.google.com/patent/USPP22207"
         },
         {
             type: "Apple",
-            name: "Maslin",
-            AKA: "PLMAS98",
+            name: "Maslin", // "PLMAS98"
             description: "Pink Lady sport",
-            patent: "USPP21412"
+            patent: "https://patents.google.com/patent/USPP21412"
         },
         {
             type: "Apple",
             name: "Pflogg",
             description: "Pink Lady sport",
-            patent: "USPP21555"
+            patent: "https://patents.google.com/patent/USPP21555"
         },
         {
             type: "Apple",
             name: "RGLORS",
             description: "Pink Lady sport",
-            patent: "USPP21272"
+            patent: "https://patents.google.com/patent/USPP21272"
         },
         {
             type: "Apple",
             name: "Daligris",
             AKA: ["Chantelop®"],
             description: "Pinova sport",
-            patent: "USPP21722"
+            patent: "https://patents.google.com/patent/USPP21722"
         },
         {
             type: "Apple",
             name: "PremA153",
             description: "offered by Brandts Fruit Trees, Inc",
-            patent: "USPP#21936"
+            patent: "https://patents.google.com/patent/USPP#21936"
         },
         {
             type: "Apple",
@@ -251,10 +247,10 @@
             // Redlove® Sirena
             name: "Sirena"
         },
-        // Salish™ (SPA 493       as released from Ag-Canada in Summerland, B.C. in cooperation with PICO
         {
             type: "Apple",
-            name: ""
+            // "Salish™"
+            name: "SPA493"
         },
         {
             type: "Apple",
@@ -262,21 +258,21 @@
             description: "columnar. Serbia",
             released: "breeder Prof. Ognjanov"
         },
-        // Smitten™ (PremA17):        NZ hybrid from Prevar
         {
             type: "Apple",
-            name: ""
+            name: "PremA17", // "Smitten™"
+            released: "Prevar"
         },
-        // Sweetie™ (PremA280): Another apple from the Prevar™ program in New Zealand
         {
             type: "Apple",
-            name: ""
+            name: "PremA280",
+            AKA: ["Sweetie™"],
+            released: "Prevar"
         },
-        // Washington (WA) State Universitys new apples:
-        //      WA 2, a hybrid of Splendour x Gala, that was granted USPP# 21, 710
         {
             type: "Apple",
-            name: ""
+            name: "WA 2",
+            patent: "https://patents.google.com/patent/USPP21710"
         },
         {
             type: "Apple",
@@ -363,8 +359,8 @@
         },
         {
             type: "Apple",
-            name: "Goldlane",
-            patent: "USPP21413",
+            name: "Goldlane", // patent name
+            patent: "https://patents.google.com/patent/USPP21413 expires",
             description: "columnar. Czech Republic"
         },
 
@@ -389,15 +385,16 @@
             description: "This first scab resistant variety from the Stanthorpe program in Australia",
             released: "Stanthorpe in Australia"
         },
-        // Ladina: A Topaz x Fuji hybrid that is a new release from the Swiss breeding program
         {
             type: "Apple",
-            name: ""
-        },
-        // Luna TopGold®: US plant patent # 16,084
+            name: "Ladina",
+            description: "Topaz x Fuji. Swiss"
+        }, 
         {
             type: "Apple",
-            name: ""
+            name: "UEB 3375/2",
+            AKA: ["Luna TopGold®"],
+            patent: "https://patents.google.com/patent/USPP16084 expires 2024-07-30"
         },
         {
             type: "Apple",
@@ -415,27 +412,27 @@
             name: "MonaLisa",
             // todo: This Gala type apple has high resistance to apple scab and to Glomerella leaf spot and spider mites
             description: "Brazil",
-            patent: "USPP23003"
+            patent: "https://patents.google.com/patent/USPP23003"
         },
         {
             type: "Apple",
             name: "Moonlight",
             // todo: "scab resistant"
             description: "columnar. Czech Republic",
-            patent: "21511"
+            patent: "https://patents.google.com/patent/USPP21511 expires 2029-01-07"
         },
         {
             type: "Apple",
             AKA: ["Opal"],
             name: "UEB 3264/2",
             description: "Czech Republic",
-            patent: "USPP15963"
+            patent: "https://patents.google.com/patent/USPP15963"
         },
         {
             type: "Apple",
             name: "Orion",
             description: "A member of “The Golden Sunshine Line™” from the Czech republic",
-            patent: "USPP19276"
+            patent: "https://patents.google.com/patent/USPP19276"
         },
 
         {

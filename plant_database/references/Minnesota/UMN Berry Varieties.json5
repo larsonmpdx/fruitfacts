@@ -102,7 +102,7 @@
             name: "MNUS 138",
             AKA: ["Itasca™"],
             type: "Strawberry",
-            patent: "USPP17404",
+            patent: "https://patents.google.com/patent/USPP17404",
             harvest_time: "Late June-early July",
             released: "UMN 2006*",
             description: "Joint release with USDA-ARS. Hardy through Zone 3B. Productive plant with richly colored tart berries"
@@ -111,7 +111,7 @@
             name: "MNUS 248",
             AKA: ["Mesabi™"],
             type: "Strawberry",
-            patent: "USPP11116",
+            patent: "https://patents.google.com/patent/USPP11116",
             harvest_time: "Mid-late June",
             released: "UMN 1999*",
             description: "Joint release with USDA-ARS. Large, bright red glossy fruit with melting texture. Fine flavor. Winter hardy. Impressive disease resistance. Ideal for gardens with reduced pesticide use"
@@ -120,7 +120,7 @@
             name: "MNUS 210",
             AKA: ["Winona™"],
             type: "Strawberry",
-            patent: "USPP10191",
+            patent: "https://patents.google.com/patent/USPP10191",
             harvest_time: "Late June-early July",
             released: "UMN 1997*",
             description: "Joint release with USDA-ARS. Large fruit with excellent texture and hints of peach flavor. Hardy and disease resistant"

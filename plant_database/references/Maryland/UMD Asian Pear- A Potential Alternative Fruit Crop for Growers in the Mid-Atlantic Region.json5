@@ -1,0 +1,61 @@
+{
+    title: "Asian Pear: A Potential Alternative Fruit Crop for Growers in the Mid-Atlantic Region",
+    author: "Christopher S. Walsh, Julia M. Harshman, Anna E. Wallis, Amy Barton Williams, Michael J. Newell, and George R. (G.R.) Welsh",
+    url: "https://journals.ashs.org/hortsci/view/journals/hortsci/51/11/article-p1325.xml",
+    published: "Nov 2016",
+    accessed: "Dec 2021",
+    type: "journal article test",
+    locations: [
+        {
+            name: "Keedysville, MD",
+            latitude: 39.509982585072365,
+            longitude: -77.73342994064146
+        }
+    ],
+    plants: [
+        // todo
+        // Trial 1 (table 1): Field studies of precocity, productivity, and tree survival at WyeREC
+        // Shinsui                      Aug 10
+        // Hosui                        Aug 11
+        //      40% tree death
+        // Isi'iwase                    Aug 12
+        //      low yield efficiency
+        // Kosui                        Aug 17
+        //      low yield efficiency
+        // Atago                        Aug 24
+        //      40% tree death
+        // Yoinashi                     Aug 30
+        // Shinko                       Sep 11
+        // Olympic                      Oct 1
+        // Ya Li                        Oct 1
+        //      40% tree death
+
+        // Bartlett                     Sep 4
+        //      40% tree death
+        // Golden Russet                Sep 12
+        //      40% tree death
+        // Potomac
+
+
+        // table 2: fire blight rating
+        // "A score of 1 indicates a dead tree and a score of 5 indicates a healthy tree"
+        // Shinsui                      4.6
+        // Shin Li                      4.5
+        // Daisu Li                     4.4
+        // Olympic                      4.0
+        // Magness                      4.0
+        // Niitaka                      3.4/3.4
+        // Shinseiki (New Century)      2.5/3.2
+        // Okusanichi                   3.2
+        // Shinko                       3.1
+        // Shinsei                      3.1
+        // Chojuro                      2.9
+        // 20th Century (Nijisseiki)    3.0/2.8
+        // Hosui                        2.7
+        // Choju                        2.3
+        // Seigyoku                     2.2
+        // Kosui                        2.2
+        // Ya Li                        1.6
+        // Ts'e Li (Tsu Li)             1.6
+    ]
+}
