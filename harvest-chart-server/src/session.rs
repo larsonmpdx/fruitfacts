@@ -29,7 +29,7 @@ pub fn insert_oauth_info(session_value: String, oauth_info: OAuthVerificationInf
         .insert(session_value, oauth_info);
 }
 
-pub fn get_oauth_info(session_value: &String) -> Result<(PkceCodeVerifier, String)> {
+pub fn get_oauth_info(session_value: &str) -> Result<(PkceCodeVerifier, String)> {
     let pkce_code_verifier;
     let csrf_state;
 

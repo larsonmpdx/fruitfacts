@@ -273,11 +273,11 @@ fn receive_oauth_redirect_blocking(
             used: false,
         },
     );
-    return Ok(ReceiveRedirectReturn {
+    Ok(ReceiveRedirectReturn {
         user: None,
         account_info: Some(account_info),
         account_offer: true,
-    });
+    })
 }
 
 fn get_session_value(session: Session) -> Option<String> {
@@ -293,7 +293,7 @@ fn get_session_value(session: Session) -> Option<String> {
         return None;
     }
 
-    return session_value;
+    session_value
 }
 
 #[get("/authRedirect")]
@@ -355,7 +355,7 @@ pub fn create_account_blocking(
         // get the id of the newly-created user (sqlite can't return this from the creation query)
         // todo
         let new_user = users::dsl::users
-            .filter(users::name.eq(name.clone()))
+            .filter(users::name.eq(name))
             .order(users::id.desc())
             .first::<User>(db_conn)?;
 
@@ -381,9 +381,9 @@ pub fn create_account_blocking(
             },
         );
         // return the user
-        return Ok(CreateAccountReturn {
+        Ok(CreateAccountReturn {
             user: Some(new_user),
-        });
+        })
     } else {
         // no offer in the cache
         return Err(anyhow!("no account offer in cache"));
