@@ -316,7 +316,7 @@ async fn receive_oauth_redirect(
 
     // redirect to a post-login page (either account offer or logged-in landing page)
     // todo: encode our account info somewhere, I guess in a query string in the redirect?
-    if (results.account_offer) {
+    if results.account_offer {
         Ok(HttpResponse::Found()
             .header("Location", "/createAccount")
             .finish())
@@ -335,7 +335,7 @@ pub fn create_account_blocking(
     db_conn: &SqliteConnection,
 ) -> Result<CreateAccountReturn> {
     if let Some(offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get_mut(&session_value) {
-        if (offer.used) {
+        if offer.used {
             return Err(anyhow!("account offer already used"));
         }
         offer.used = true;
@@ -408,7 +408,7 @@ async fn create_account(
     let session_value = get_session_value(session);
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    let results = web::block(move || create_account_blocking(session_value.unwrap(), &db_conn))
+    let _results = web::block(move || create_account_blocking(session_value.unwrap(), &db_conn))
         .await
         .map_err(|e| {
             eprintln!("{}", e);
@@ -421,8 +421,8 @@ async fn create_account(
 
 #[get("/checkLogin")]
 async fn check_login(
-    session: Session,
-    pool: web::Data<DbPool>,
+    _session: Session,
+    _pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     // todo
 
@@ -432,8 +432,8 @@ async fn check_login(
 
 #[get("/logout")]
 async fn logout(
-    session: Session,
-    pool: web::Data<DbPool>,
+    _session: Session,
+    _pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     // todo
 
