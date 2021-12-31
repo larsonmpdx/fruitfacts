@@ -70,7 +70,7 @@ CREATE TABLE user_oauth_entries (
   id INTEGER PRIMARY KEY NOT NULL,
 
   user_id INTEGER NOT NULL,
-  unique_id TEXT NOT NULL, -- google email ID, or other oauth ID which won't change. prepended with the provider's ID like "google-1234..."
+  unique_id TEXT NOT NULL, -- google email ID, or other oauth ID which won't change. prepended with the provider's ID like "google:1234..."
   oauth_info TEXT, -- json which might be different for each oauth provider
 
   UNIQUE(unique_id)

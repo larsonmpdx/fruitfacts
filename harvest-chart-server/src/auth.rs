@@ -152,6 +152,7 @@ pub fn get_existing_user_db(
 
 #[derive(Clone)]
 pub struct AccountOffer {
+    used: bool,
     google_account_info: Option<GoogleAccountInfo>,
 }
 
@@ -165,14 +166,6 @@ pub fn insert_account_offer(session_value: String, account_offer: AccountOffer) 
         .lock()
         .unwrap()
         .insert(session_value, account_offer);
-}
-
-pub fn get_account_offer(session_value: &String) -> Result<AccountOffer> {
-    if let Some(account_offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get(session_value) {
-        return Ok(account_offer.clone());
-    } else {
-        return Err(anyhow!("account offer not found for this session"));
-    }
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -277,6 +270,7 @@ fn receive_oauth_redirect_blocking(
         session_value,
         AccountOffer {
             google_account_info: Some(account_info.clone()),
+            used: false,
         },
     );
     return Ok(ReceiveRedirectReturn {
@@ -284,11 +278,22 @@ fn receive_oauth_redirect_blocking(
         account_info: Some(account_info),
         account_offer: true,
     });
+}
 
-    // new APIs:
-    // - create account
-    // - check account (front end calls this to see if the user is already logged in based on an existing session)
-    // - log out
+fn get_session_value(session: Session) -> Option<String> {
+    let session_value = session.get::<String>("key");
+    if session_value.is_err() {
+        println!("didn't find session value");
+        return None;
+    }
+
+    let session_value = session_value.unwrap();
+    if session_value.is_none() {
+        println!("empty session value");
+        return None;
+    }
+
+    return session_value;
 }
 
 #[get("/authRedirect")]
@@ -297,18 +302,7 @@ async fn receive_oauth_redirect(
     session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let session_value = session.get::<String>("key");
-    if session_value.is_err() {
-        println!("didn't find session value");
-        return Ok(HttpResponse::InternalServerError().finish());
-    }
-
-    let session_value = session_value.unwrap();
-    if session_value.is_none() {
-        println!("empty session value");
-        return Ok(HttpResponse::InternalServerError().finish());
-    }
-
+    let session_value = get_session_value(session);
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     let results = web::block(move || {
@@ -320,8 +314,8 @@ async fn receive_oauth_redirect(
         HttpResponse::InternalServerError().finish()
     })?;
 
-    // todo: redirect to a post-login page (either account offer or logged-in landing page)
-
+    // redirect to a post-login page (either account offer or logged-in landing page)
+    // todo: encode our account info somewhere, I guess in a query string in the redirect?
     if (results.account_offer) {
         Ok(HttpResponse::Found()
             .header("Location", "/createAccount")
@@ -329,4 +323,120 @@ async fn receive_oauth_redirect(
     } else {
         Ok(HttpResponse::Found().header("Location", "/").finish())
     }
+}
+
+#[derive(Default, Serialize)]
+pub struct CreateAccountReturn {
+    user: Option<User>,
+}
+
+pub fn create_account_blocking(
+    session_value: String,
+    db_conn: &SqliteConnection,
+) -> Result<CreateAccountReturn> {
+    if let Some(offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get_mut(&session_value) {
+        if (offer.used) {
+            return Err(anyhow!("account offer already used"));
+        }
+        offer.used = true;
+        // if found, create an account in the database
+
+        let google_account = offer.google_account_info.as_ref().unwrap();
+        let name = google_account.email.clone(); // todo - allow a customized username
+                                                 // todo
+        let rows_inserted = diesel::insert_into(users::dsl::users)
+            .values((users::name.eq(name.clone()),))
+            .execute(db_conn);
+
+        if rows_inserted != Ok(1) {
+            return Err(anyhow!("couldn't create account"));
+        }
+
+        // get the id of the newly-created user (sqlite can't return this from the creation query)
+        // todo
+        let new_user = users::dsl::users
+            .filter(users::name.eq(name.clone()))
+            .order(users::id.desc())
+            .first::<User>(db_conn)?;
+
+        let rows_inserted = diesel::insert_into(user_oauth_entries::dsl::user_oauth_entries)
+            .values((
+                user_oauth_entries::user_id.eq(new_user.id),
+                user_oauth_entries::unique_id.eq(format!("google:{}", google_account.id)),
+                user_oauth_entries::oauth_info.eq(serde_json::to_string(&google_account)?), // save this for display purposes or whatever
+            ))
+            .execute(db_conn);
+
+        if rows_inserted != Ok(1) {
+            return Err(anyhow!("couldn't create oauth entry")); // todo - a transaction to cover account + oauth entry creation
+        }
+
+        // set the user logged in
+        session::store_session(
+            db_conn,
+            UserSessionToInsert {
+                user_id: new_user.id,
+                session_value,
+                created: chrono::Utc::now().timestamp(),
+            },
+        );
+        // return the user
+        return Ok(CreateAccountReturn {
+            user: Some(new_user),
+        });
+    } else {
+        // no offer in the cache
+        return Err(anyhow!("no account offer in cache"));
+    }
+}
+
+// todo new APIs:
+// - create account (after getting an account offer from an oauth redirect)
+// - check account (front end calls this to see if the user is already logged in based on an existing session)
+// - log out
+
+#[get("/createAccount")]
+async fn create_account(
+    session: Session,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    // todo
+
+    // todo - user gets to fill in other fields like nickname or whatever, maybe in the query string
+
+    // look at account offer cache for this session
+    let session_value = get_session_value(session);
+    let db_conn = pool.get().expect("couldn't get db connection from pool");
+
+    let results = web::block(move || create_account_blocking(session_value.unwrap(), &db_conn))
+        .await
+        .map_err(|e| {
+            eprintln!("{}", e);
+            HttpResponse::InternalServerError().finish()
+        })?;
+
+    // todo - returns
+    Ok(HttpResponse::InternalServerError().finish())
+}
+
+#[get("/checkLogin")]
+async fn check_login(
+    session: Session,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    // todo
+
+    // return account if this session is logged in
+    Ok(HttpResponse::Ok().json(""))
+}
+
+#[get("/logout")]
+async fn logout(
+    session: Session,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    // todo
+
+    // remove session entry
+    Ok(HttpResponse::Ok().json(""))
 }
