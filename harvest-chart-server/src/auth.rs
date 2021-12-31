@@ -321,5 +321,12 @@ async fn receive_oauth_redirect(
     })?;
 
     // todo: redirect to a post-login page (either account offer or logged-in landing page)
-    Ok(HttpResponse::Ok().json(results))
+
+    if (results.account_offer) {
+        Ok(HttpResponse::Found()
+            .header("Location", "/createAccount")
+            .finish())
+    } else {
+        Ok(HttpResponse::Found().header("Location", "/").finish())
+    }
 }
