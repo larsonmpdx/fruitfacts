@@ -1,9 +1,8 @@
 use diesel::SqliteConnection;
 // store session data in memory. could be refactored to use redis or something if we went to multiple servers
+use expiring_map::ExpiringMap;
 use once_cell::sync::Lazy; // 1.3.1
 use std::sync::Mutex;
-
-use expiring_map::ExpiringMap;
 use std::time::Duration;
 
 use anyhow::{anyhow, Result};
@@ -30,12 +29,12 @@ pub fn insert_oauth_info(session_value: String, oauth_info: OAuthVerificationInf
         .insert(session_value, oauth_info);
 }
 
-pub fn get_oauth_info(session_value: String) -> Result<(PkceCodeVerifier, String)> {
+pub fn get_oauth_info(session_value: &String) -> Result<(PkceCodeVerifier, String)> {
     let pkce_code_verifier;
     let csrf_state;
 
     // get these things out of OAUTH_INFO so we can drop the lock right away
-    if let Some(oauth_info) = OAUTH_INFO_CACHE.lock().unwrap().get_mut(&session_value) {
+    if let Some(oauth_info) = OAUTH_INFO_CACHE.lock().unwrap().get_mut(session_value) {
         // get ownership out of the Option<>
         let pkce_code_verifier_option = std::mem::replace(&mut oauth_info.pkce_code_verifier, None);
         csrf_state = oauth_info.csrf_state.secret().clone();
@@ -77,16 +76,25 @@ pub fn get_session(db_conn: &SqliteConnection, session_value: String) -> Result<
     }
 }
 
-pub fn store_session(db_conn: &SqliteConnection, session_value: String, session: UserSession) {
+pub fn store_session(db_conn: &SqliteConnection, session: UserSessionToInsert) {
     // store in cache and also in our database
-    SESSION_CACHE
-        .lock()
-        .unwrap()
-        .insert(session_value, session.clone());
+    SESSION_CACHE.lock().unwrap().insert(
+        session.session_value.clone(),
+        UserSession {
+            id: 0, // fake database row id, we don't use it
+            user_id: session.user_id,
+            session_value: session.session_value.clone(),
+            created: session.created,
+        },
+    );
 
     // store in the database too
     let result = diesel::insert_into(user_sessions::dsl::user_sessions)
-        .values(session)
+        .values((
+            user_sessions::user_id.eq(session.user_id),
+            user_sessions::session_value.eq(session.session_value),
+            user_sessions::created.eq(session.created),
+        ))
         .execute(db_conn);
 
     if result != Ok(1) {

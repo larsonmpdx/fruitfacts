@@ -221,8 +221,18 @@ fn parse_released(input: &str) -> Option<ReleasedOutput> {
             if let Some(year) = matches.get(2) {
                 output.year = Some(year.as_str().parse::<i32>().unwrap());
 
-                assert_ge!(output.year.unwrap(), 1800, "parsed release year was <1800: {}", input);
-                assert_le!(output.year.unwrap(), 2100, "parsed release year was >2100: {}", input);
+                assert_ge!(
+                    output.year.unwrap(),
+                    1800,
+                    "parsed release year was <1800: {}",
+                    input
+                );
+                assert_le!(
+                    output.year.unwrap(),
+                    2100,
+                    "parsed release year was >2100: {}",
+                    input
+                );
             }
 
             if input.ends_with('*') {

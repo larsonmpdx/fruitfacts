@@ -1,14 +1,14 @@
 use super::schema_fts::*;
 use super::schema_generated::*;
+use super::schema_types::*;
 use actix_web::{get, web, HttpResponse};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
-use regex::Regex;
-use std::collections::HashSet;
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
-use super::schema_types::*;
 use anyhow::Result;
+use regex::Regex;
 use serde::{Deserialize, Serialize};
+use std::collections::HashSet;
 
 #[derive(Queryable, Debug, Serialize)]
 pub struct BasePlantsItemForPatents {

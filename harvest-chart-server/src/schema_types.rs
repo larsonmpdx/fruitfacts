@@ -1,4 +1,6 @@
-use super::schema_generated::{collection_items, collections, locations, user_sessions};
+use super::schema_generated::{
+    collection_items, collections, locations, user_oauth_entries, user_sessions,
+};
 use serde::Serialize;
 use serde_with::skip_serializing_none;
 
@@ -112,7 +114,9 @@ pub struct Location {
     pub longitude: Option<f64>,
 }
 
-#[derive(Queryable)]
+#[derive(Queryable, Associations)]
+#[belongs_to(User)]
+#[table_name = "user_oauth_entries"]
 pub struct UserOauthEntry {
     pub id: i32,
     pub user_id: i32,
@@ -120,8 +124,9 @@ pub struct UserOauthEntry {
     pub oauth_info: Option<String>,
 }
 
-#[derive(Clone, Queryable, Insertable)]
+#[derive(Clone, Queryable, Insertable, Associations)]
 #[table_name = "user_sessions"]
+#[belongs_to(User)]
 pub struct UserSession {
     pub id: i32,
     pub user_id: i32,
@@ -129,7 +134,15 @@ pub struct UserSession {
     pub created: i64,
 }
 
-#[derive(Queryable)]
+// same but without id field
+#[derive(Clone)]
+pub struct UserSessionToInsert {
+    pub user_id: i32,
+    pub session_value: String,
+    pub created: i64,
+}
+
+#[derive(Queryable, Serialize)]
 pub struct User {
     pub id: i32,
     pub name: String,

@@ -2,11 +2,22 @@ use actix_web::{get, web, HttpResponse};
 use anyhow::{anyhow, Result};
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
 use serde::Deserialize;
+use serde::Serialize;
 use std::io::Read;
+
+use expiring_map::ExpiringMap;
+use once_cell::sync::Lazy; // 1.3.1
+use std::sync::Mutex;
+use std::time::Duration;
+
+use super::schema_generated::*;
+use super::schema_types::*;
+use diesel::prelude::*;
+use diesel::r2d2::{self, ConnectionManager};
+type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
 use actix_session::Session;
 use rand::Rng;
-use std::time::Duration;
 
 use oauth2::reqwest::http_client;
 use oauth2::{basic::BasicClient, revocation::StandardRevocableToken, TokenResponse};
@@ -119,7 +130,52 @@ struct GoogleAuthQuery {
     // hd: Option<String>,
 }
 
-#[derive(Debug, Deserialize)]
+pub fn get_existing_oauth_entry_db(
+    db_conn: &SqliteConnection,
+    unique_id: String,
+) -> Result<UserOauthEntry, diesel::result::Error> {
+    user_oauth_entries::dsl::user_oauth_entries
+        .filter(user_oauth_entries::unique_id.eq(unique_id))
+        .order(user_oauth_entries::id.desc())
+        .first::<UserOauthEntry>(db_conn)
+}
+
+pub fn get_existing_user_db(
+    db_conn: &SqliteConnection,
+    user_id: i32,
+) -> Result<User, diesel::result::Error> {
+    users::dsl::users
+        .filter(users::id.eq(user_id))
+        .order(users::id.desc())
+        .first::<User>(db_conn)
+}
+
+#[derive(Clone)]
+pub struct AccountOffer {
+    google_account_info: Option<GoogleAccountInfo>,
+}
+
+// if a user comes back from an external oauth redirect with a valid external account but no website account yet, offer to create a website account
+// cache the offer for N minutes so that the user can hit the "ok, create" API
+static ACCOUNT_OFFER_CACHE: Lazy<Mutex<ExpiringMap<String, AccountOffer>>> =
+    Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(30 * 60))));
+
+pub fn insert_account_offer(session_value: String, account_offer: AccountOffer) {
+    ACCOUNT_OFFER_CACHE
+        .lock()
+        .unwrap()
+        .insert(session_value, account_offer);
+}
+
+pub fn get_account_offer(session_value: &String) -> Result<AccountOffer> {
+    if let Some(account_offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get(session_value) {
+        return Ok(account_offer.clone());
+    } else {
+        return Err(anyhow!("account offer not found for this session"));
+    }
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
 struct GoogleAccountInfo {
     id: String,           // won't change, primary key
     email: String,        // could change. store this anyway so we can greet the user correctly
@@ -127,11 +183,18 @@ struct GoogleAccountInfo {
     picture: String,      // we don't use this
 }
 
+#[derive(Default, Serialize)]
+pub struct ReceiveRedirectReturn {
+    user: Option<User>, // give this back if we already have a matching user
+    account_info: Option<GoogleAccountInfo>, // give this back if we don't have a user created yet (with account_offer = true)
+    account_offer: bool,
+}
+
 fn receive_oauth_redirect_blocking(
     query: web::Query<GoogleAuthQuery>,
     session_value: String,
-    //  pool: web::Data<DbPool>,
-) -> Result<String> {
+    db_conn: &SqliteConnection,
+) -> Result<ReceiveRedirectReturn> {
     println!("{:?}", query);
 
     if query.code.is_none() || query.state.is_none() {
@@ -141,7 +204,8 @@ fn receive_oauth_redirect_blocking(
     let code = AuthorizationCode::new(query.code.as_ref().unwrap().clone());
     let state = CsrfToken::new(query.state.as_ref().unwrap().clone());
 
-    let (pkce_code_verifier, csrf_state) = session::get_oauth_info(session_value).unwrap();
+    // will fail if we didn't have an existing oauth request that matches this redirect
+    let (pkce_code_verifier, csrf_state) = session::get_oauth_info(&session_value).unwrap();
 
     println!(
         "oauth redirect returned the following code:\n{}\n",
@@ -185,24 +249,53 @@ fn receive_oauth_redirect_blocking(
 
     // todo -
     // - if we already have a user, associate this session to that user (database)
+    // if account_info.id is in user_oauth_entries
+    if let Ok(oauth_entry) =
+        get_existing_oauth_entry_db(db_conn, format!("google:{}", account_info.id))
+    {
+        if let Ok(user) = get_existing_user_db(db_conn, oauth_entry.user_id) {
+            session::store_session(
+                db_conn,
+                UserSessionToInsert {
+                    user_id: user.id,
+                    session_value,
+                    created: chrono::Utc::now().timestamp(),
+                },
+            );
+            return Ok(ReceiveRedirectReturn {
+                user: Some(user),
+                account_info: None,
+                account_offer: false,
+            });
+        } else {
+            // todo - have oauth entry but no user, should delete the oauth entry or print something
+        }
+    }
+
     // - if we don't have a user, put them into an account offer pool. timeout like 30 minutes (another singleton map)
-    //   redirect to a post-login page (account offer or logged-in landing page)
+    insert_account_offer(
+        session_value,
+        AccountOffer {
+            google_account_info: Some(account_info.clone()),
+        },
+    );
+    return Ok(ReceiveRedirectReturn {
+        user: None,
+        account_info: Some(account_info),
+        account_offer: true,
+    });
 
     // new APIs:
     // - create account
     // - check account (front end calls this to see if the user is already logged in based on an existing session)
     // - log out
-
-    // let conn = pool.get().expect("couldn't get db connection from pool");
-
-    Ok("".to_string())
 }
 
 #[get("/authRedirect")]
 async fn receive_oauth_redirect(
     query: web::Query<GoogleAuthQuery>,
     session: Session,
-    //  pool: web::Data<DbPool>,
+    pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let session_value = session.get::<String>("key");
     if session_value.is_err() {
@@ -216,13 +309,17 @@ async fn receive_oauth_redirect(
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    let results =
-        web::block(move || receive_oauth_redirect_blocking(query, session_value.unwrap()))
-            .await
-            .map_err(|e| {
-                eprintln!("{}", e);
-                HttpResponse::InternalServerError().finish()
-            })?;
+    let db_conn = pool.get().expect("couldn't get db connection from pool");
 
+    let results = web::block(move || {
+        receive_oauth_redirect_blocking(query, session_value.unwrap(), &db_conn)
+    })
+    .await
+    .map_err(|e| {
+        eprintln!("{}", e);
+        HttpResponse::InternalServerError().finish()
+    })?;
+
+    // todo: redirect to a post-login page (either account offer or logged-in landing page)
     Ok(HttpResponse::Ok().json(results))
 }
