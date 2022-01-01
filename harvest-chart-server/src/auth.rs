@@ -431,9 +431,7 @@ async fn check_login(
     let user = get_existing_user_db(&db_conn, session.user_id).unwrap();
 
     // return account if this session is logged in. some error otherwise
-    Ok(HttpResponse::Ok().json(UserReturn {
-        user: Some(user),
-    }))
+    Ok(HttpResponse::Ok().json(UserReturn { user: Some(user) }))
 }
 
 #[get("/logout")]

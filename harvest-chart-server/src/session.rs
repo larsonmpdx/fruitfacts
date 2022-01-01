@@ -105,8 +105,11 @@ pub fn store_session(db_conn: &SqliteConnection, session: UserSessionToInsert) {
 }
 
 pub fn remove_session(db_conn: &SqliteConnection, session_value: String) {
-
-    let _deleted = diesel::delete(user_sessions::dsl::user_sessions.filter(user_sessions::session_value.eq(session_value.clone()))).execute(db_conn);
+    let _deleted = diesel::delete(
+        user_sessions::dsl::user_sessions
+            .filter(user_sessions::session_value.eq(session_value.clone())),
+    )
+    .execute(db_conn);
     // todo - error if we didn't find anything?
     {
         SESSION_CACHE.lock().unwrap().remove(session_value);
