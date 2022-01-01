@@ -18,8 +18,8 @@ async fn main() -> std::io::Result<()> {
     let matches = ClapApp::new("")
         .version(crate_version!())
         .arg(
-            Arg::with_name("reload_db")
-                .short("r")
+            Arg::new("reload_db")
+                .short('r')
                 .long("reload_db")
                 .required(false)
                 .takes_value(false)

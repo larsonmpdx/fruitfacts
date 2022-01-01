@@ -103,3 +103,12 @@ pub fn store_session(db_conn: &SqliteConnection, session: UserSessionToInsert) {
 
     // todo: every so often, delete old sessions from the database (sqlite doesn't have TTL like redis does)
 }
+
+pub fn remove_session(db_conn: &SqliteConnection, session_value: String) {
+
+    let _deleted = diesel::delete(user_sessions::dsl::user_sessions.filter(user_sessions::session_value.eq(session_value.clone()))).execute(db_conn);
+    // todo - error if we didn't find anything?
+    {
+        SESSION_CACHE.lock().unwrap().remove(session_value);
+    }
+}

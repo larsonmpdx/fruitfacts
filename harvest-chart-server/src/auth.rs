@@ -130,6 +130,7 @@ struct GoogleAuthQuery {
     // hd: Option<String>,
 }
 
+// todo: cache
 pub fn get_existing_oauth_entry_db(
     db_conn: &SqliteConnection,
     unique_id: String,
@@ -140,6 +141,7 @@ pub fn get_existing_oauth_entry_db(
         .first::<UserOauthEntry>(db_conn)
 }
 
+// todo: cache
 pub fn get_existing_user_db(
     db_conn: &SqliteConnection,
     user_id: i32,
@@ -326,14 +328,14 @@ async fn receive_oauth_redirect(
 }
 
 #[derive(Default, Serialize)]
-pub struct CreateAccountReturn {
+pub struct UserReturn {
     user: Option<User>,
 }
 
 pub fn create_account_blocking(
     session_value: String,
     db_conn: &SqliteConnection,
-) -> Result<CreateAccountReturn> {
+) -> Result<UserReturn> {
     if let Some(offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get_mut(&session_value) {
         if offer.used {
             return Err(anyhow!("account offer already used"));
@@ -381,7 +383,7 @@ pub fn create_account_blocking(
             },
         );
         // return the user
-        Ok(CreateAccountReturn {
+        Ok(UserReturn {
             user: Some(new_user),
         })
     } else {
@@ -400,8 +402,6 @@ async fn create_account(
     session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    // todo
-
     // todo - user gets to fill in other fields like nickname or whatever, maybe in the query string
 
     // look at account offer cache for this session
@@ -421,22 +421,33 @@ async fn create_account(
 
 #[get("/checkLogin")]
 async fn check_login(
-    _session: Session,
-    _pool: web::Data<DbPool>,
+    session: Session,
+    pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    // todo
+    let session_value = get_session_value(session).unwrap();
+    let db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    // return account if this session is logged in
-    Ok(HttpResponse::Ok().json(""))
+    let session = session::get_session(&db_conn, session_value).unwrap();
+    let user = get_existing_user_db(&db_conn, session.user_id).unwrap();
+
+    // return account if this session is logged in. some error otherwise
+    Ok(HttpResponse::Ok().json(UserReturn {
+        user: Some(user),
+    }))
 }
 
 #[get("/logout")]
 async fn logout(
-    _session: Session,
-    _pool: web::Data<DbPool>,
+    session: Session,
+    pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    // todo
+    let session_value = get_session_value(session).unwrap();
+    let db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    // remove session entry
-    Ok(HttpResponse::Ok().json(""))
+    session::remove_session(&db_conn, session_value);
+    Ok(HttpResponse::Ok().json("")) // todo - better return value
 }
+
+// todo: delete user api
+//     - also delete oauth entries
+//     - also delete existing sessions and cached sessions
