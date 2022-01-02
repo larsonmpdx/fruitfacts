@@ -424,14 +424,26 @@ async fn check_login(
     session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let session_value = get_session_value(session).unwrap();
+    let session_value = get_session_value(session);
+    if session_value.is_none() {
+        return Ok(HttpResponse::NotFound().finish());
+    }
+    let session_value = session_value.unwrap();
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    let session = session::get_session(&db_conn, session_value).unwrap();
-    let user = get_existing_user_db(&db_conn, session.user_id).unwrap();
+    let session = session::get_session(&db_conn, session_value);
+    if session.is_err() {
+        return Ok(HttpResponse::NotFound().finish());
+    }
+    let session = session.unwrap();
+
+    let user = get_existing_user_db(&db_conn, session.user_id);
+    if user.is_err() {
+        return Ok(HttpResponse::NotFound().finish());
+    }
 
     // return account if this session is logged in. some error otherwise
-    Ok(HttpResponse::Ok().json(UserReturn { user: Some(user) }))
+    Ok(HttpResponse::Ok().json(UserReturn { user: Some(user.unwrap()) }))
 }
 
 #[get("/logout")]

@@ -37,7 +37,8 @@
         },
         {
             type: "Apple",
-            name: "Autumn Glory",
+            name: "Huaguan",
+            AKA: ["Autumn Glory"],
             description: "Offered exclusively by Domex Superfresh Growers in the Pacific Northwest"
         },
 
@@ -76,7 +77,7 @@
         },
         {
             type: "Apple",
-            name: "EverCrisp"
+            name: "MAIA1", // "EverCrisp®"
         },
         {
             type: "Apple",
@@ -151,7 +152,7 @@
         },
         {
             type: "Apple",
-            name: "Wellant",
+            name: "CPRO #47", // "Wellant®"
             released: "Inova fruit in the Netherlands"
         },
         {
