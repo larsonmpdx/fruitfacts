@@ -3,7 +3,6 @@ use harvest_chart_server::import_db;
 use harvest_chart_server::queries;
 
 use actix_cors::Cors;
-use actix_session::CookieSession;
 use actix_web::{App, HttpServer};
 
 use diesel::prelude::*;
@@ -46,15 +45,12 @@ async fn main() -> std::io::Result<()> {
         .build(manager)
         .expect("Failed to create pool");
 
-    let cookie_private_key = rand::thread_rng().gen::<[u8; 32]>();
-
     println!("starting http server");
     HttpServer::new(move || {
         let cors = Cors::permissive(); // todo - maybe remove this on release?
 
         App::new()
             .wrap(cors)
-            .wrap(CookieSession::signed(&cookie_private_key).secure(false)) // 32: length of key, todo: make a random key. todo: secure = true (only on https). todo: private? if we want to hide the oauth bits
             // set up DB pool to be used with web::Data<Pool> extractor
             .data(pool.clone())
             // .wrap(middleware::Logger::default())

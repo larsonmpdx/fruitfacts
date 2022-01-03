@@ -18,7 +18,6 @@ use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
-//use actix_session::Session;
 use rand::Rng;
 
 use oauth2::reqwest::http_client;
@@ -78,7 +77,6 @@ fn get_google_client() -> GoogleClientType {
 
 #[get("/authURLs")]
 async fn get_auth_urls(
-  //  session: Session,
     req: HttpRequest,
 ) -> Result<HttpResponse, actix_web::Error> {
 
@@ -116,7 +114,7 @@ async fn get_auth_urls(
         .authorize_url(CsrfToken::new_random)
         // see https://developers.google.com/identity/protocols/oauth2/scopes#oauth2
         .add_scope(Scope::new(
-            "https://www.googleapis.com/auth/userinfo.email".to_string(),
+            "https://www.googleapis.com/auth/userinfo.profile".to_string(), // todo - maybe tighten this up to only userinfo.email? 
         ))
         .set_pkce_challenge(pkce_code_challenge)
         .url();
@@ -133,8 +131,7 @@ async fn get_auth_urls(
     if let Some(outgoing_cookie) = outgoing_cookie
     {
         println!("setting cookie: {:#?}", outgoing_cookie);
-    Ok(HttpResponse::Ok().cookie(outgoing_cookie).json(authorize_url))
-    // Ok(HttpResponse::Ok().json(authorize_url))
+        Ok(HttpResponse::Ok().cookie(outgoing_cookie).json(authorize_url))
     }
     else
     {
@@ -326,7 +323,6 @@ fn get_session_value(session: Session) -> Option<String> {
 #[get("/authRedirect")]
 async fn receive_oauth_redirect(
     query: web::Query<GoogleAuthQuery>,
- //   session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
    // let session_value = get_session_value(session);
@@ -425,7 +421,6 @@ pub fn create_account_blocking(
 
 #[get("/createAccount")]
 async fn create_account(
-  //  session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     // todo - user gets to fill in other fields like nickname or whatever, maybe in the query string
@@ -448,7 +443,6 @@ async fn create_account(
 
 #[get("/checkLogin")]
 async fn check_login(
-   // session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
   //  let session_value = get_session_value(session);
@@ -476,13 +470,13 @@ async fn check_login(
 
 #[get("/logout")]
 async fn logout(
- //   session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
    // let session_value = get_session_value(session).unwrap();
    let session_value = Some("".to_owned());
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
+    // todo: actix delete cookie
   //  session::remove_session(&db_conn, session_value);
     Ok(HttpResponse::Ok().json("")) // todo - better return value
 }
