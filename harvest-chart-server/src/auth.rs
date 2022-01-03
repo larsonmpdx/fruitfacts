@@ -1,3 +1,5 @@
+use actix_web::cookie::Cookie;
+use actix_web::{HttpRequest, HttpMessage};
 use actix_web::{get, web, HttpResponse};
 use anyhow::{anyhow, Result};
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
@@ -16,7 +18,7 @@ use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
-use actix_session::Session;
+//use actix_session::Session;
 use rand::Rng;
 
 use oauth2::reqwest::http_client;
@@ -76,18 +78,31 @@ fn get_google_client() -> GoogleClientType {
 
 #[get("/authURLs")]
 async fn get_auth_urls(
-    session: Session, //  pool: web::Data<DbPool>,
+  //  session: Session,
+    req: HttpRequest,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let session_value;
-    if let Some(value) = session.get::<String>("key")? {
-        // todo - could we just use the session key that actix-session creates? all we need is a random number.  I couldn't find an API to access this key though
-        println!("existing session value: {}", value);
-        session_value = value;
+
+    println!("/authURLs");
+
+    let incoming_cookie = req.cookie("session");
+    let outgoing_cookie: Option<Cookie>;
+
+    let session_value: String;
+    if let Some(incoming_cookie) = incoming_cookie {
+        println!("existing session value: {:#?}", incoming_cookie.value());
+        session_value = incoming_cookie.value().to_string();
+        outgoing_cookie = None;
     } else {
         // set a random session
         session_value = base64::encode(rand::thread_rng().gen::<[u8; 32]>());
-        println!("setting new session value: {}", session_value);
-        session.set::<String>("key", session_value.clone()).unwrap();
+
+        outgoing_cookie = Some(Cookie::build("session", session_value.clone())
+           // .domain("fruitfacts.xyz")
+            .path("/")
+          //  .same_site(actix_web::cookie::SameSite::Strict)
+         //   .secure(true)
+            .http_only(true)
+            .finish());
     }
 
     let client = get_google_client();
@@ -115,8 +130,18 @@ async fn get_auth_urls(
         },
     );
 
-    // todo - put google url under some json or something
-    Ok(HttpResponse::Ok().json(authorize_url))
+    if let Some(outgoing_cookie) = outgoing_cookie
+    {
+        println!("setting cookie: {:#?}", outgoing_cookie);
+    Ok(HttpResponse::Ok().cookie(outgoing_cookie).json(authorize_url))
+    // Ok(HttpResponse::Ok().json(authorize_url))
+    }
+    else
+    {
+        println!("not setting cookie");
+        // todo - put google url under some json or something
+        Ok(HttpResponse::Ok().json(authorize_url))
+    }
 }
 
 #[derive(Debug, Deserialize)]
@@ -281,7 +306,7 @@ fn receive_oauth_redirect_blocking(
         account_offer: true,
     })
 }
-
+/*
 fn get_session_value(session: Session) -> Option<String> {
     let session_value = session.get::<String>("key");
     if session_value.is_err() {
@@ -297,14 +322,15 @@ fn get_session_value(session: Session) -> Option<String> {
 
     session_value
 }
-
+*/
 #[get("/authRedirect")]
 async fn receive_oauth_redirect(
     query: web::Query<GoogleAuthQuery>,
-    session: Session,
+ //   session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let session_value = get_session_value(session);
+   // let session_value = get_session_value(session);
+   let session_value = Some("".to_owned());
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     let results = web::block(move || {
@@ -399,13 +425,14 @@ pub fn create_account_blocking(
 
 #[get("/createAccount")]
 async fn create_account(
-    session: Session,
+  //  session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     // todo - user gets to fill in other fields like nickname or whatever, maybe in the query string
 
     // look at account offer cache for this session
-    let session_value = get_session_value(session);
+   // let session_value = get_session_value(session);
+   let session_value = Some("".to_owned());
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     let _results = web::block(move || create_account_blocking(session_value.unwrap(), &db_conn))
@@ -421,10 +448,11 @@ async fn create_account(
 
 #[get("/checkLogin")]
 async fn check_login(
-    session: Session,
+   // session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let session_value = get_session_value(session);
+  //  let session_value = get_session_value(session);
+  let session_value = Some("".to_owned());
     if session_value.is_none() {
         return Ok(HttpResponse::NotFound().finish());
     }
@@ -448,13 +476,14 @@ async fn check_login(
 
 #[get("/logout")]
 async fn logout(
-    session: Session,
+ //   session: Session,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let session_value = get_session_value(session).unwrap();
+   // let session_value = get_session_value(session).unwrap();
+   let session_value = Some("".to_owned());
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    session::remove_session(&db_conn, session_value);
+  //  session::remove_session(&db_conn, session_value);
     Ok(HttpResponse::Ok().json("")) // todo - better return value
 }
 

@@ -1,46 +1,59 @@
 <script lang="ts">
-	import { recentChangesData, login } from './store';
+	import { recentChangesData, login, authURL } from './store';
 	import { goto } from '$app/navigation';
 	import AutoComplete from 'simple-svelte-autocomplete';
 	import { format as timeAgo } from 'timeago.js';
-
-
+	import { browser } from '$app/env';
 
 	let selectedPlant;
 	$: if (selectedPlant) {
 		goto(`/plant?type=${selectedPlant.type}&name=${selectedPlant.name}`);
 	}
 
-	fetch(`http://localhost:8080/recent_changes`)
-		.then((response) => response.json())
-		.then((data) => {
-			recentChangesData.set(data);
+	fetch(`http://fruitfacts.xyz:8080/recent_changes`)
+		.then((response) => {
+			if (response.status === 200) {
+				recentChangesData.set(response.json());
+			}
 		})
 		.catch((error) => {
 			console.log(error);
-			return [];
 		});
 
-	fetch(`http://localhost:8080/checkLogin`)
-	.then((response) => response.json())
-	.then((data) => {
-		login.set(data);
-	})
-	.catch((error) => {
-		console.log(error);
-		return [];
-	});
+		if (browser) {
+	fetch(`http://fruitfacts.xyz:8080/checkLogin`)
+		.then((response) => {
+			if (response.status === 200) {
+				console.log("eh1");
+				login.set(response.json());
+			} else {
+				fetch(`http://fruitfacts.xyz:8080/authURLs`)
+					.then((response) => {
+						if (response.status === 200) {
+							console.log("eh2");
+							authURL.set(response.json());
+						}
+					})
+					.catch((error) => {
+						console.log(error);
+					});
+			}
+		})
+		.then((data) => {
+			login.set(data);
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+	}
 
 	async function searchPlant(keyword) {
-		const url = 'http://localhost:8080/search/' + encodeURIComponent(keyword);
+		const url = 'http://fruitfacts.xyz:8080/search/' + encodeURIComponent(keyword);
 
 		const response = await fetch(url);
 		return await response.json();
 	}
 </script>
-
-
-
 
 <AutoComplete
 	searchFunction={searchPlant}

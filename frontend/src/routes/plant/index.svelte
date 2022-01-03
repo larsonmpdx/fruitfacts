@@ -13,7 +13,7 @@
 		// needs to be in onMount because the query string isn't available in pre rendering
 		if (path != previousPath) {
 			previousPath = path;
-			fetch(`http://localhost:8080/plants/${path}`)
+			fetch(`http://fruitfacts.xyz:8080/plants/${path}`)
 				.then((response) => response.json())
 				.then((data) => {
 					apiData.set(data);
@@ -48,7 +48,9 @@
 	</p>
 	<p>
 		{#if $base.uspp_number}USPP{$base.uspp_number}{/if}
-		{#if $base.uspp_expiration}{#if ($base.uspp_expiration * 1000) > new Date().getTime()}expires {:else}expired {/if}{timeAgo($base.uspp_expiration * 1000)}{/if}
+		{#if $base.uspp_expiration}{#if $base.uspp_expiration * 1000 > new Date().getTime()}expires
+			{:else}expired
+			{/if}{timeAgo($base.uspp_expiration * 1000)}{/if}
 	</p>
 	<p>
 		{#if $base.aka}AKA {$base.aka}{/if}
