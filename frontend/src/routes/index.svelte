@@ -20,31 +20,35 @@
 			console.log(error);
 		});
 
-		if (browser) {
-	fetch(`http://fruitfacts.xyz:8080/checkLogin`)
-		.then((response) => {
-			if (response.status === 200) {
-				console.log("eh1");
-				login.set(response.json());
-			} else {
-				fetch(`http://fruitfacts.xyz:8080/authURLs`)
-					.then((response) => {
-						if (response.status === 200) {
-							console.log("eh2");
-							authURL.set(response.json());
-						}
+	if (browser) {
+		fetch(`http://fruitfacts.xyz:8080/checkLogin`, {
+			credentials: 'include'
+		})
+			.then((response) => {
+				if (response.status === 200) {
+					console.log('eh1');
+					login.set(response.json());
+				} else {
+					fetch(`http://fruitfacts.xyz:8080/authURLs`, {
+						credentials: 'include'
 					})
-					.catch((error) => {
-						console.log(error);
-					});
-			}
-		})
-		.then((data) => {
-			login.set(data);
-		})
-		.catch((error) => {
-			console.log(error);
-		});
+						.then((response) => {
+							if (response.status === 200) {
+								console.log('eh2');
+								authURL.set(response.json());
+							}
+						})
+						.catch((error) => {
+							console.log(error);
+						});
+				}
+			})
+			.then((data) => {
+				login.set(data);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
 	}
 
 	async function searchPlant(keyword) {

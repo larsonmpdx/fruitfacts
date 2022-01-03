@@ -97,10 +97,10 @@ async fn get_auth_urls(
         session_value = base64::encode(rand::thread_rng().gen::<[u8; 32]>());
 
         outgoing_cookie = Some(Cookie::build("session", session_value.clone())
-           // .domain("fruitfacts.xyz")
+            .domain(".fruitfacts.xyz")
             .path("/")
           //  .same_site(actix_web::cookie::SameSite::Strict)
-         //   .secure(true)
+          //  .secure(true)
             .http_only(true)
             .finish());
     }
