@@ -467,8 +467,8 @@ async fn check_login(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web:
 #[get("/logout")]
 async fn logout(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
     // let session_value = get_session_value(session).unwrap();
-    let session_value = Some("".to_owned());
-    let db_conn = pool.get().expect("couldn't get db connection from pool");
+    let _session_value = Some("".to_owned());
+    let _db_conn = pool.get().expect("couldn't get db connection from pool");
 
     // todo: actix delete cookie
     //  session::remove_session(&db_conn, session_value);

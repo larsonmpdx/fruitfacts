@@ -7,7 +7,7 @@ use actix_web::{App, HttpServer};
 
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
-use rand::Rng;
+
 
 extern crate clap;
 use clap::{crate_version, App as ClapApp, Arg};
