@@ -10,7 +10,7 @@
 		goto(`/plant?type=${selectedPlant.type}&name=${selectedPlant.name}`);
 	}
 
-	fetch(`http://fruitfacts.xyz:8080/recent_changes`)
+	fetch(`http://${import.meta.env.VITE_WEB_ADDRESS}:8080/recent_changes`)
 		.then((response) => {
 			if (response.status === 200) {
 				recentChangesData.set(response.json());
@@ -21,7 +21,7 @@
 		});
 
 	if (browser) {
-		fetch(`http://fruitfacts.xyz:8080/checkLogin`, {
+		fetch(`http://${import.meta.env.VITE_WEB_ADDRESS}:8080/checkLogin`, {
 			credentials: 'include'
 		})
 			.then((response) => {
@@ -29,7 +29,7 @@
 					console.log('eh1');
 					login.set(response.json());
 				} else {
-					fetch(`http://fruitfacts.xyz:8080/authURLs`, {
+					fetch(`http://${import.meta.env.VITE_WEB_ADDRESS}:8080/authURLs`, {
 						credentials: 'include'
 					})
 						.then((response) => {
@@ -52,7 +52,9 @@
 	}
 
 	async function searchPlant(keyword) {
-		const url = 'http://fruitfacts.xyz:8080/search/' + encodeURIComponent(keyword);
+		const url = `http://${import.meta.env.VITE_WEB_ADDRESS}:8080/search/${encodeURIComponent(
+			keyword
+		)}`;
 
 		const response = await fetch(url);
 		return await response.json();

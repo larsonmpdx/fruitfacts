@@ -16,7 +16,10 @@ const config = {
 		}),
 
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: '#svelte',
+		vite: {
+			envDir: '../' // look up a dir so we can share one .env file with the backend
+		}
 	}
 };
 

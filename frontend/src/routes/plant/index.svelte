@@ -13,7 +13,7 @@
 		// needs to be in onMount because the query string isn't available in pre rendering
 		if (path != previousPath) {
 			previousPath = path;
-			fetch(`http://fruitfacts.xyz:8080/plants/${path}`)
+			fetch(`http://${import.meta.env.VITE_WEB_ADDRESS}:8080/plants/${path}`)
 				.then((response) => response.json())
 				.then((data) => {
 					apiData.set(data);

@@ -8,7 +8,6 @@ use actix_web::{App, HttpServer};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 
-
 extern crate clap;
 use clap::{crate_version, App as ClapApp, Arg};
 
@@ -48,9 +47,13 @@ async fn main() -> std::io::Result<()> {
     println!("starting http server");
     HttpServer::new(move || {
         let cors = Cors::default()
-        .allowed_origin_fn(|origin, _req_head| {
-            origin.as_bytes().ends_with(b".fruitfacts.xyz")
-        });
+            .supports_credentials()
+            .allowed_origin_fn(|origin, _req_head| {
+                origin
+                    .as_bytes()
+                    .ends_with(format!("{}:3000", env!("VITE_WEB_ADDRESS")).as_bytes())
+                // todo - better handling of port for dev/release
+            });
 
         App::new()
             .wrap(cors)
