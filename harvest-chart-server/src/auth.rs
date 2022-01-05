@@ -61,7 +61,7 @@ fn get_google_client() -> GoogleClientType {
     )
     .set_redirect_uri(
         RedirectUrl::new(
-            format!("http://{}:8080/authRedirect", env!("VITE_WEB_ADDRESS")).to_string(),
+            format!("http://{}:8080/authRedirect", env!("VITE_WEB_ADDRESS")),
         )
         .expect("Invalid redirect URL"),
     )
