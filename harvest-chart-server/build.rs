@@ -1,5 +1,9 @@
+extern crate dotenv_build;
+
 use std::process::Command;
+
 fn main() {
+    dotenv_build::output(dotenv_build::Config::default()).unwrap(); // loads the .env file automatically
     {
         let output = Command::new("git")
             .args(&["rev-parse", "HEAD"])

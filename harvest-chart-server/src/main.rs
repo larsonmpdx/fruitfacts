@@ -47,7 +47,10 @@ async fn main() -> std::io::Result<()> {
 
     println!("starting http server");
     HttpServer::new(move || {
-        let cors = Cors::permissive(); // todo - maybe remove this on release?
+        let cors = Cors::default()
+        .allowed_origin_fn(|origin, _req_head| {
+            origin.as_bytes().ends_with(b".fruitfacts.xyz")
+        });
 
         App::new()
             .wrap(cors)

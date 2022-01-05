@@ -44,13 +44,8 @@ type GoogleClientType = oauth2::Client<
 >;
 
 fn get_google_client() -> GoogleClientType {
-    let google_client_id = ClientId::new(
-        env::var("GOOGLE_CLIENT_ID").expect("Missing the GOOGLE_CLIENT_ID environment variable"),
-    );
-    let google_client_secret = ClientSecret::new(
-        env::var("GOOGLE_CLIENT_SECRET")
-            .expect("Missing the GOOGLE_CLIENT_SECRET environment variable"),
-    );
+    let google_client_id = ClientId::new(env!("GOOGLE_CLIENT_ID").to_string());
+    let google_client_secret = ClientSecret::new(env!("GOOGLE_CLIENT_SECRET").to_string());
 
     let auth_url = AuthUrl::new("https://accounts.google.com/o/oauth2/v2/auth".to_string())
         .expect("Invalid authorization endpoint URL");
@@ -85,6 +80,9 @@ async fn get_auth_urls(req: HttpRequest) -> Result<HttpResponse, actix_web::Erro
     let session_value: String;
     if let Some(incoming_cookie) = incoming_cookie {
         println!("existing session value: {:#?}", incoming_cookie.value());
+
+        // todo - make sure the existing session is the right length? want to prevent users from making their own session token. or else, overwrite it when logging in or otherwise starting some auth thing with it
+
         session_value = incoming_cookie.value().to_string();
         outgoing_cookie = None;
     } else {
