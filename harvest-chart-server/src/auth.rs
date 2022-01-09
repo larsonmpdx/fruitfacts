@@ -81,31 +81,9 @@ struct AuthURLs {
 #[get("/authURLs")]
 async fn get_auth_urls(req: HttpRequest) -> Result<HttpResponse, actix_web::Error> {
     println!("/authURLs");
-
-    let incoming_cookie = req.cookie("session");
-    let outgoing_cookie: Option<Cookie>;
-
-    let session_value: String;
-    if let Some(incoming_cookie) = incoming_cookie {
-        println!("existing session value: {:#?}", incoming_cookie.value());
-
-        // todo - make sure the existing session is the right length? want to prevent users from making their own session token. or else, overwrite it when logging in or otherwise starting some auth thing with it
-
-        session_value = incoming_cookie.value().to_string();
-        outgoing_cookie = None;
-    } else {
-        // set a random session
-        session_value = base64::encode(rand::thread_rng().gen::<[u8; 32]>());
-
-        outgoing_cookie = Some(
-            Cookie::build("session", session_value.clone())
-                .domain(env!("VITE_WEB_ADDRESS"))
-                .path("/")
-                //  .same_site(actix_web::cookie::SameSite::Strict)
-                //  .secure(true)
-                .http_only(true)
-                .finish(),
-        );
+    let (session_value, outgoing_cookie) = get_session_value(req, true);
+    if session_value.is_none() {
+        HttpResponse::InternalServerError().finish();
     }
 
     let client = get_google_client();
@@ -119,14 +97,14 @@ async fn get_auth_urls(req: HttpRequest) -> Result<HttpResponse, actix_web::Erro
         .authorize_url(CsrfToken::new_random)
         // see https://developers.google.com/identity/protocols/oauth2/scopes#oauth2
         .add_scope(Scope::new(
-            "https://www.googleapis.com/auth/userinfo.profile".to_string(), // todo - maybe tighten this up to only userinfo.email?
+            "https://www.googleapis.com/auth/userinfo.email".to_string(), // todo - maybe tighten this up to only userinfo.email?
         ))
         .set_pkce_challenge(pkce_code_challenge)
         .url();
 
     // save oauth info to verify the redirect query string that comes back
     session::insert_oauth_info(
-        session_value,
+        session_value.unwrap(),
         session::OAuthVerificationInfo {
             pkce_code_verifier: Some(pkce_code_verifier),
             csrf_state,
@@ -228,7 +206,13 @@ fn receive_oauth_redirect_blocking(
     let state = CsrfToken::new(query.state.as_ref().unwrap().clone());
 
     // will fail if we didn't have an existing oauth request that matches this redirect
-    let (pkce_code_verifier, csrf_state) = session::get_oauth_info(&session_value).unwrap();
+    let oauth_info = session::get_oauth_info(&session_value);
+
+    if (oauth_info.is_err()) {
+        return Err(anyhow!("missing oauth info"));
+    }
+
+    let (pkce_code_verifier, csrf_state) = oauth_info.unwrap();
 
     println!(
         "oauth redirect returned the following code:\n{}\n",
@@ -265,7 +249,7 @@ fn receive_oauth_redirect_blocking(
 
     let mut body = String::new();
     let _ = resp.read_to_string(&mut body); // ignore errors, we'll catch them in json parsing
-
+    println!("body: {:?}", body);
     let account_info: GoogleAccountInfo = serde_json::from_str(&body)?;
 
     println!("{:#?} body: {:#?}", resp, account_info);
@@ -309,31 +293,57 @@ fn receive_oauth_redirect_blocking(
         account_offer: true,
     })
 }
-/*
-fn get_session_value(session: Session) -> Option<String> {
-    let session_value = session.get::<String>("key");
-    if session_value.is_err() {
-        println!("didn't find session value");
-        return None;
+
+fn get_session_value(
+    req: HttpRequest,
+    set_session: bool,
+) -> (Option<String>, Option<Cookie<'static>>) {
+    let incoming_cookie = req.cookie("session");
+    let outgoing_cookie: Option<Cookie>;
+
+    let session_value: Option<String>;
+    if let Some(incoming_cookie) = incoming_cookie {
+        println!("existing session value: {:#?}", incoming_cookie.value());
+
+        // todo - make sure the existing session is the right length? want to prevent users from making their own session token. or else, overwrite it when logging in or otherwise starting some auth thing with it
+
+        session_value = Some(incoming_cookie.value().to_string());
+        outgoing_cookie = None;
+    } else {
+        if (set_session) {
+            // set a random session
+            session_value = Some(base64::encode(rand::thread_rng().gen::<[u8; 32]>()));
+
+            outgoing_cookie = Some(
+                Cookie::build("session", session_value.as_ref().unwrap().clone())
+                    .domain(env!("VITE_WEB_ADDRESS"))
+                    .path("/")
+                    //  .same_site(actix_web::cookie::SameSite::Strict)
+                    //  .secure(true)
+                    .http_only(true)
+                    .finish(),
+            );
+        } else {
+            session_value = None;
+            outgoing_cookie = None;
+        }
     }
 
-    let session_value = session_value.unwrap();
-    if session_value.is_none() {
-        println!("empty session value");
-        return None;
-    }
-
-    session_value
+    (session_value, outgoing_cookie)
 }
-*/
+
 #[get("/authRedirect")]
 async fn receive_oauth_redirect(
+    req: HttpRequest,
     query: web::Query<GoogleAuthQuery>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    // let session_value = get_session_value(session);
-    let session_value = Some("".to_owned());
+    let (session_value, outgoing_cookie) = get_session_value(req, false);
     let db_conn = pool.get().expect("couldn't get db connection from pool");
+
+    if session_value.is_none() {
+        HttpResponse::InternalServerError().finish();
+    }
 
     let results = web::block(move || {
         receive_oauth_redirect_blocking(query, session_value.unwrap(), &db_conn)
@@ -426,12 +436,18 @@ pub fn create_account_blocking(
 // - log out
 
 #[get("/createAccount")]
-async fn create_account(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
+async fn create_account(
+    req: HttpRequest,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
     // todo - user gets to fill in other fields like nickname or whatever, maybe in the query string
 
     // look at account offer cache for this session
-    // let session_value = get_session_value(session);
-    let session_value = Some("".to_owned());
+    let (session_value, outgoing_cookie) = get_session_value(req, false);
+    if session_value.is_none() {
+        HttpResponse::InternalServerError().finish();
+    }
+
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     let _results = web::block(move || create_account_blocking(session_value.unwrap(), &db_conn))
@@ -446,16 +462,18 @@ async fn create_account(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_w
 }
 
 #[get("/checkLogin")]
-async fn check_login(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
-    //  let session_value = get_session_value(session);
-    let session_value = Some("".to_owned());
+async fn check_login(
+    req: HttpRequest,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    let (session_value, outgoing_cookie) = get_session_value(req, false);
     if session_value.is_none() {
-        return Ok(HttpResponse::NotFound().finish());
+        HttpResponse::InternalServerError().finish();
     }
-    let session_value = session_value.unwrap();
+
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    let session = session::get_session(&db_conn, session_value);
+    let session = session::get_session(&db_conn, session_value.unwrap());
     if session.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
@@ -473,9 +491,15 @@ async fn check_login(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web:
 }
 
 #[get("/logout")]
-async fn logout(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
-    // let session_value = get_session_value(session).unwrap();
-    let _session_value = Some("".to_owned());
+async fn logout(
+    req: HttpRequest,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    let (session_value, outgoing_cookie) = get_session_value(req, false);
+    if session_value.is_none() {
+        HttpResponse::InternalServerError().finish();
+    }
+
     let _db_conn = pool.get().expect("couldn't get db connection from pool");
 
     // todo: actix delete cookie
