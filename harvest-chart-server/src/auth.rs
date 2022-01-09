@@ -60,11 +60,8 @@ fn get_google_client() -> GoogleClientType {
         Some(token_url),
     )
     .set_redirect_uri(
-        RedirectUrl::new(format!(
-            "http://{}:8080/authRedirect",
-            env!("VITE_WEB_ADDRESS")
-        ))
-        .expect("Invalid redirect URL"),
+        RedirectUrl::new(format!("{}/authRedirect", env!("VITE_BACKEND_BASE")))
+            .expect("Invalid redirect URL"),
     )
     // Google supports OAuth 2.0 Token Revocation (RFC-7009)
     .set_revocation_uri(
@@ -315,7 +312,7 @@ fn get_session_value(
 
         outgoing_cookie = Some(
             Cookie::build("session", session_value.as_ref().unwrap().clone())
-                .domain(env!("VITE_WEB_ADDRESS"))
+                .domain(env!("VITE_COOKIE_DOMAIN"))
                 .path("/")
                 //  .same_site(actix_web::cookie::SameSite::Strict)
                 //  .secure(true)

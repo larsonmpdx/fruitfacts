@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { authURLs } from './store';
 
-	fetch(`http://${import.meta.env.VITE_WEB_ADDRESS}:8080/authURLs`, {
+	fetch(`${import.meta.env.VITE_BACKEND_BASE}/authURLs`, {
 		credentials: 'include'
 	})
 		.then((response) => response.json())

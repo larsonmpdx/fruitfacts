@@ -11,48 +11,42 @@
 		goto(`/plant?type=${selectedPlant.type}&name=${selectedPlant.name}`);
 	}
 
-	fetch(`http://${import.meta.env.VITE_WEB_ADDRESS}:8080/recent_changes`)
-		.then((response) => {
-			if (response.status === 200) {
-				recentChangesData.set(response.json());
-			}
+	fetch(`${import.meta.env.VITE_BACKEND_BASE}/recent_changes`)
+		.then((response) => response.json())
+		.then((data) => {
+			recentChangesData.set(data);
 		})
 		.catch((error) => {
 			console.log(error);
 		});
 
 	if (browser) {
-		fetch(`http://${import.meta.env.VITE_WEB_ADDRESS}:8080/checkLogin`, {
+		fetch(`${import.meta.env.VITE_BACKEND_BASE}/checkLogin`, {
 			credentials: 'include'
 		})
 			.then((response) => {
 				if (response.status === 200) {
-					login.set(response.json());
 					logged_in = true;
 				} else {
 					logged_in = false;
 				}
+				return response.json();
 			})
 			.then((data) => {
 				login.set(data);
-			})
-			.catch((error) => {
-				console.log(error);
 			});
 	}
 
 	async function searchPlant(keyword) {
-		const url = `http://${import.meta.env.VITE_WEB_ADDRESS}:8080/search/${encodeURIComponent(
-			keyword
-		)}`;
+		const url = `${import.meta.env.VITE_BACKEND_BASE}/search/${encodeURIComponent(keyword)}`;
 
 		const response = await fetch(url);
 		return await response.json();
 	}
 </script>
 
-{#if logged_in}
-	logged in as {$login.email}
+{#if $login.user}
+	logged in as {$login.user.name}
 {:else}
 	<a href="/login">log in</a>
 {/if}

@@ -51,7 +51,7 @@ async fn main() -> std::io::Result<()> {
             .allowed_origin_fn(|origin, _req_head| {
                 origin
                     .as_bytes()
-                    .ends_with(format!("{}:{}", env!("VITE_WEB_ADDRESS"), env!("VITE_FRONTEND_PORT")).as_bytes())
+                    .ends_with(format!("{}", env!("VITE_FRONTEND_BASE")).as_bytes())
                 // todo - better handling of port for dev/release
             });
 
@@ -71,7 +71,10 @@ async fn main() -> std::io::Result<()> {
             .service(auth::check_login)
             .service(auth::logout)
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind((
+        "127.0.0.1",
+        env!("VITE_BACKEND_PORT").parse::<u16>().unwrap(),
+    ))?
     .run()
     .await
 }
