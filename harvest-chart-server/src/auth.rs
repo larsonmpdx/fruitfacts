@@ -309,24 +309,22 @@ fn get_session_value(
 
         session_value = Some(incoming_cookie.value().to_string());
         outgoing_cookie = None;
-    } else {
-        if set_session {
-            // set a random session
-            session_value = Some(base64::encode(rand::thread_rng().gen::<[u8; 32]>()));
+    } else if set_session {
+        // set a random session
+        session_value = Some(base64::encode(rand::thread_rng().gen::<[u8; 32]>()));
 
-            outgoing_cookie = Some(
-                Cookie::build("session", session_value.as_ref().unwrap().clone())
-                    .domain(env!("VITE_WEB_ADDRESS"))
-                    .path("/")
-                    //  .same_site(actix_web::cookie::SameSite::Strict)
-                    //  .secure(true)
-                    .http_only(true)
-                    .finish(),
-            );
-        } else {
-            session_value = None;
-            outgoing_cookie = None;
-        }
+        outgoing_cookie = Some(
+            Cookie::build("session", session_value.as_ref().unwrap().clone())
+                .domain(env!("VITE_WEB_ADDRESS"))
+                .path("/")
+                //  .same_site(actix_web::cookie::SameSite::Strict)
+                //  .secure(true)
+                .http_only(true)
+                .finish(),
+        );
+    } else {
+        session_value = None;
+        outgoing_cookie = None;
     }
 
     (session_value, outgoing_cookie)
