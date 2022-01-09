@@ -208,7 +208,7 @@ fn receive_oauth_redirect_blocking(
     // will fail if we didn't have an existing oauth request that matches this redirect
     let oauth_info = session::get_oauth_info(&session_value);
 
-    if (oauth_info.is_err()) {
+    if oauth_info.is_err() {
         return Err(anyhow!("missing oauth info"));
     }
 
@@ -310,7 +310,7 @@ fn get_session_value(
         session_value = Some(incoming_cookie.value().to_string());
         outgoing_cookie = None;
     } else {
-        if (set_session) {
+        if set_session {
             // set a random session
             session_value = Some(base64::encode(rand::thread_rng().gen::<[u8; 32]>()));
 
@@ -338,7 +338,7 @@ async fn receive_oauth_redirect(
     query: web::Query<GoogleAuthQuery>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let (session_value, outgoing_cookie) = get_session_value(req, false);
+    let (session_value, _outgoing_cookie) = get_session_value(req, false);
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     if session_value.is_none() {
@@ -443,7 +443,7 @@ async fn create_account(
     // todo - user gets to fill in other fields like nickname or whatever, maybe in the query string
 
     // look at account offer cache for this session
-    let (session_value, outgoing_cookie) = get_session_value(req, false);
+    let (session_value, _outgoing_cookie) = get_session_value(req, false);
     if session_value.is_none() {
         HttpResponse::InternalServerError().finish();
     }
@@ -466,7 +466,7 @@ async fn check_login(
     req: HttpRequest,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let (session_value, outgoing_cookie) = get_session_value(req, false);
+    let (session_value, _outgoing_cookie) = get_session_value(req, false);
     if session_value.is_none() {
         HttpResponse::InternalServerError().finish();
     }
@@ -495,7 +495,7 @@ async fn logout(
     req: HttpRequest,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let (session_value, outgoing_cookie) = get_session_value(req, false);
+    let (session_value, _outgoing_cookie) = get_session_value(req, false);
     if session_value.is_none() {
         HttpResponse::InternalServerError().finish();
     }
