@@ -1,5 +1,5 @@
 use actix_web::cookie::Cookie;
-use actix_web::{get, web, HttpResponse};
+use actix_web::{get, web, HttpResponse, post};
 use actix_web::{HttpMessage, HttpRequest};
 use anyhow::{anyhow, Result};
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
@@ -485,7 +485,7 @@ async fn check_login(
     }))
 }
 
-#[get("/logout")]
+#[post("/logout")]
 async fn logout(
     req: HttpRequest,
     pool: web::Data<DbPool>,

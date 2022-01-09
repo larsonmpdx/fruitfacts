@@ -34,7 +34,10 @@
 			})
 			.then((data) => {
 				login.set(data);
-			});
+			})
+			.catch((error) => {
+			console.log(error);
+		});
 	}
 
 	async function searchPlant(keyword) {
@@ -43,10 +46,27 @@
 		const response = await fetch(url);
 		return await response.json();
 	}
+
+	async function logOut () {
+		fetch(`${import.meta.env.VITE_BACKEND_BASE}/post`, {
+			method: 'POST',
+		})
+		.then((response) => {
+				if (response.status === 200) {
+					logged_in = false;
+					login.set({});
+				}
+				return response.json();
+			})
+			.catch((error) => {
+			console.log(error);
+	});
+}
 </script>
 
 {#if $login.user}
 	logged in as {$login.user.name}
+	<button type="button" on:click={logOut}>log out</button>
 {:else}
 	<a href="/login">log in</a>
 {/if}
