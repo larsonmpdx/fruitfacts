@@ -1,5 +1,4 @@
 <script lang="ts">
-	//   import { onMount } from "svelte";
 	import { apiData, directories, collections } from './store';
 	import { page } from '$app/stores';
 	import { onMount, beforeUpdate } from 'svelte';

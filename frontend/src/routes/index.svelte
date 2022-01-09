@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { recentChangesData, login, authURL } from './store';
+	import { recentChangesData, login } from './store';
 	import { goto } from '$app/navigation';
 	import AutoComplete from 'simple-svelte-autocomplete';
 	import { format as timeAgo } from 'timeago.js';
 	import { browser } from '$app/env';
 
 	let selectedPlant;
+	let logged_in = false;
 	$: if (selectedPlant) {
 		goto(`/plant?type=${selectedPlant.type}&name=${selectedPlant.name}`);
 	}
@@ -26,21 +27,10 @@
 		})
 			.then((response) => {
 				if (response.status === 200) {
-					console.log('eh1');
 					login.set(response.json());
+					logged_in = true;
 				} else {
-					fetch(`http://${import.meta.env.VITE_WEB_ADDRESS}:8080/authURLs`, {
-						credentials: 'include'
-					})
-						.then((response) => {
-							if (response.status === 200) {
-								console.log('eh2');
-								authURL.set(response.json());
-							}
-						})
-						.catch((error) => {
-							console.log(error);
-						});
+					logged_in = false;
 				}
 			})
 			.then((data) => {
@@ -61,6 +51,11 @@
 	}
 </script>
 
+{#if logged_in}
+	logged in as {$login.email}
+{:else}
+	<a href="/login">log in</a>
+{/if}
 <AutoComplete
 	searchFunction={searchPlant}
 	bind:selectedItem={selectedPlant}

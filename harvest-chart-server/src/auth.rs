@@ -60,9 +60,10 @@ fn get_google_client() -> GoogleClientType {
         Some(token_url),
     )
     .set_redirect_uri(
-        RedirectUrl::new(
-            format!("http://{}:8080/authRedirect", env!("VITE_WEB_ADDRESS")),
-        )
+        RedirectUrl::new(format!(
+            "http://{}:8080/authRedirect",
+            env!("VITE_WEB_ADDRESS")
+        ))
         .expect("Invalid redirect URL"),
     )
     // Google supports OAuth 2.0 Token Revocation (RFC-7009)
@@ -70,6 +71,11 @@ fn get_google_client() -> GoogleClientType {
         RevocationUrl::new("https://oauth2.googleapis.com/revoke".to_string())
             .expect("Invalid revocation endpoint URL"),
     )
+}
+
+#[derive(Debug, Serialize)]
+struct AuthURLs {
+    google: Option<String>,
 }
 
 #[get("/authURLs")]
@@ -109,7 +115,7 @@ async fn get_auth_urls(req: HttpRequest) -> Result<HttpResponse, actix_web::Erro
     let (pkce_code_challenge, pkce_code_verifier) = PkceCodeChallenge::new_random_sha256();
 
     // Generate the authorization URL to which we'll redirect the user
-    let (authorize_url, csrf_state) = client
+    let (google_auth_url, csrf_state) = client
         .authorize_url(CsrfToken::new_random)
         // see https://developers.google.com/identity/protocols/oauth2/scopes#oauth2
         .add_scope(Scope::new(
@@ -129,13 +135,15 @@ async fn get_auth_urls(req: HttpRequest) -> Result<HttpResponse, actix_web::Erro
 
     if let Some(outgoing_cookie) = outgoing_cookie {
         println!("setting cookie: {:#?}", outgoing_cookie);
-        Ok(HttpResponse::Ok()
-            .cookie(outgoing_cookie)
-            .json(authorize_url))
+        Ok(HttpResponse::Ok().cookie(outgoing_cookie).json(AuthURLs {
+            google: Some(google_auth_url.to_string()),
+        }))
     } else {
         println!("not setting cookie");
         // todo - put google url under some json or something
-        Ok(HttpResponse::Ok().json(authorize_url))
+        Ok(HttpResponse::Ok().json(AuthURLs {
+            google: Some(google_auth_url.to_string()),
+        }))
     }
 }
 
