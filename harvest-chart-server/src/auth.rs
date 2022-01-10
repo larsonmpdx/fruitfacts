@@ -1,5 +1,5 @@
 use actix_web::cookie::Cookie;
-use actix_web::{get, web, HttpResponse, post};
+use actix_web::{get, post, web, HttpResponse};
 use actix_web::{HttpMessage, HttpRequest};
 use anyhow::{anyhow, Result};
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
@@ -10,7 +10,8 @@ use std::io::Read;
 use expiring_map::ExpiringMap;
 use once_cell::sync::Lazy; // 1.3.1
 use std::sync::Mutex;
-use std::time::Duration;
+
+extern crate time;
 
 use super::schema_generated::*;
 use super::schema_types::*;
@@ -80,7 +81,7 @@ async fn get_auth_urls(req: HttpRequest) -> Result<HttpResponse, actix_web::Erro
     println!("/authURLs");
     let (session_value, outgoing_cookie) = get_session_value(req, true);
     if session_value.is_none() {
-        HttpResponse::InternalServerError().finish();
+        return Ok(HttpResponse::InternalServerError().finish());
     }
 
     let client = get_google_client();
@@ -164,7 +165,7 @@ pub struct AccountOffer {
 // if a user comes back from an external oauth redirect with a valid external account but no website account yet, offer to create a website account
 // cache the offer for N minutes so that the user can hit the "ok, create" API
 static ACCOUNT_OFFER_CACHE: Lazy<Mutex<ExpiringMap<String, AccountOffer>>> =
-    Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(30 * 60))));
+    Lazy::new(|| Mutex::new(ExpiringMap::new(std::time::Duration::from_secs(30 * 60))));
 
 pub fn insert_account_offer(session_value: String, account_offer: AccountOffer) {
     ACCOUNT_OFFER_CACHE
@@ -234,7 +235,7 @@ fn receive_oauth_redirect_blocking(
     println!("token: {:?}", token_secret);
 
     let client = reqwest::blocking::Client::builder()
-        .timeout(Duration::from_secs(10))
+        .timeout(std::time::Duration::from_secs(10))
         .build()?;
 
     let mut resp = client
@@ -307,6 +308,7 @@ fn get_session_value(
         session_value = Some(incoming_cookie.value().to_string());
         outgoing_cookie = None;
     } else if set_session {
+        println!("no session value found, setting");
         // set a random session
         session_value = Some(base64::encode(rand::thread_rng().gen::<[u8; 32]>()));
 
@@ -320,6 +322,7 @@ fn get_session_value(
                 .finish(),
         );
     } else {
+        println!("no session value found, not setting");
         session_value = None;
         outgoing_cookie = None;
     }
@@ -337,7 +340,7 @@ async fn receive_oauth_redirect(
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     if session_value.is_none() {
-        HttpResponse::InternalServerError().finish();
+        return Ok(HttpResponse::InternalServerError().finish());
     }
 
     let results = web::block(move || {
@@ -346,7 +349,7 @@ async fn receive_oauth_redirect(
     .await
     .map_err(|e| {
         eprintln!("{}", e);
-        HttpResponse::InternalServerError().finish()
+        HttpResponse::InternalServerError().finish();
     })?;
 
     // redirect to a post-login page (either account offer or logged-in landing page)
@@ -356,7 +359,9 @@ async fn receive_oauth_redirect(
             .header("Location", "/createAccount")
             .finish())
     } else {
-        Ok(HttpResponse::Found().header("Location", "/").finish())
+        Ok(HttpResponse::Found()
+            .header("Location", env!("VITE_FRONTEND_BASE"))
+            .finish())
     }
 }
 
@@ -440,7 +445,7 @@ async fn create_account(
     // look at account offer cache for this session
     let (session_value, _outgoing_cookie) = get_session_value(req, false);
     if session_value.is_none() {
-        HttpResponse::InternalServerError().finish();
+        return Ok(HttpResponse::InternalServerError().finish());
     }
 
     let db_conn = pool.get().expect("couldn't get db connection from pool");
@@ -449,7 +454,7 @@ async fn create_account(
         .await
         .map_err(|e| {
             eprintln!("{}", e);
-            HttpResponse::InternalServerError().finish()
+            HttpResponse::InternalServerError().finish();
         })?;
 
     // todo - returns
@@ -463,7 +468,7 @@ async fn check_login(
 ) -> Result<HttpResponse, actix_web::Error> {
     let (session_value, _outgoing_cookie) = get_session_value(req, false);
     if session_value.is_none() {
-        HttpResponse::InternalServerError().finish();
+        return Ok(HttpResponse::InternalServerError().finish());
     }
 
     let db_conn = pool.get().expect("couldn't get db connection from pool");
@@ -492,14 +497,25 @@ async fn logout(
 ) -> Result<HttpResponse, actix_web::Error> {
     let (session_value, _outgoing_cookie) = get_session_value(req, false);
     if session_value.is_none() {
-        HttpResponse::InternalServerError().finish();
+        eprintln!("/logout called without a session");
+        return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    let _db_conn = pool.get().expect("couldn't get db connection from pool");
+    let db_conn = pool.get().expect("couldn't get db connection from pool");
+
+    session::remove_session(&db_conn, session_value.unwrap());
+
+    let outgoing_cookie = Cookie::build("session", "")
+        .domain(env!("VITE_COOKIE_DOMAIN"))
+        .path("/")
+        //  .same_site(actix_web::cookie::SameSite::Strict)
+        //  .secure(true)
+        .expires(time::OffsetDateTime::now_utc() - time::Duration::days(2)) // time in the past clears a cookie
+        .http_only(true)
+        .finish();
 
     // todo: actix delete cookie
-    //  session::remove_session(&db_conn, session_value);
-    Ok(HttpResponse::Ok().json("")) // todo - better return value
+    Ok(HttpResponse::Ok().cookie(outgoing_cookie).json(""))
 }
 
 // todo: delete user api

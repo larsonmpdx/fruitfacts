@@ -36,8 +36,8 @@
 				login.set(data);
 			})
 			.catch((error) => {
-			console.log(error);
-		});
+				console.log(error);
+			});
 	}
 
 	async function searchPlant(keyword) {
@@ -47,11 +47,12 @@
 		return await response.json();
 	}
 
-	async function logOut () {
-		fetch(`${import.meta.env.VITE_BACKEND_BASE}/post`, {
+	async function logOut() {
+		fetch(`${import.meta.env.VITE_BACKEND_BASE}/logout`, {
 			method: 'POST',
+			credentials: 'include'
 		})
-		.then((response) => {
+			.then((response) => {
 				if (response.status === 200) {
 					logged_in = false;
 					login.set({});
@@ -59,9 +60,9 @@
 				return response.json();
 			})
 			.catch((error) => {
-			console.log(error);
-	});
-}
+				console.log(error);
+			});
+	}
 </script>
 
 {#if $login.user}
