@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '../Header.svelte';
 	import { apiData, directories, collections } from './store';
 	import { page } from '$app/stores';
 	import { onMount, beforeUpdate } from 'svelte';
@@ -48,6 +49,7 @@
 	// </button>
 </script>
 
+<Header />
 <main>
 	{#if $directories && $directories.length > 0}
 		<h1>dirs</h1>

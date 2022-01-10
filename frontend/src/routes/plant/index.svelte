@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '../Header.svelte';
 	import { apiData, base, collection_entries } from './store';
 	import { page } from '$app/stores';
 	import { onMount, beforeUpdate } from 'svelte';
@@ -39,6 +40,7 @@
 	});
 </script>
 
+<Header />
 <main>
 	<p>
 		{$base.name}

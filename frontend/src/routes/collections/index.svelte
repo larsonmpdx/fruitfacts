@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '../Header.svelte';
 	import { apiData, collection, locations, items } from './store';
 	import { page } from '$app/stores';
 	import { onMount, beforeUpdate } from 'svelte';
@@ -34,8 +35,8 @@
 	});
 </script>
 
+<Header />
 <main>
-	<!--- todo header info --->
 	<p>
 		{$collection.title}
 		{#if $collection.url}<a href={$collection.url}>[ref]</a>{/if}
