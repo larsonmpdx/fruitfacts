@@ -51,7 +51,7 @@ async fn main() -> std::io::Result<()> {
             .allowed_origin_fn(|origin, _req_head| {
                 origin
                     .as_bytes()
-                    .ends_with(format!("{}", env!("VITE_FRONTEND_BASE")).as_bytes())
+                    .ends_with(env!("VITE_FRONTEND_BASE").to_string().as_bytes())
                 // todo - better handling of port for dev/release
             });
 
