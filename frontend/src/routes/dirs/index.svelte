@@ -53,7 +53,6 @@
 <main>
 	<div class="m-5">
 		{#if $directories && $directories.length > 0}
-			<h1>Sub-Folders</h1>
 			<ul class="list-group d-inline-block">
 				{#each $directories as directory}
 					<li class="list-group-item border border-2 rounded-lg py-1">

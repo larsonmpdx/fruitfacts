@@ -8,7 +8,7 @@
 
 {#if $login}
 	<div class="m-5">
-		<p>stored user info:</p>
+		<p>stored user info</p>
 		<code><pre>{JSON.stringify($login, null, 2)}</pre></code>
 		<!-- todo, another API call to show all oauth entries and sessions for this user -->
 	</div>

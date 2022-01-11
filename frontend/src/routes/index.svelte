@@ -17,12 +17,8 @@
 <main>
 	<div class="m-5">
 		<a href="/dirs?path=">browse locations</a>
-		{#if $recentChangesData.recent_changes}
-			<p>
-				{$recentChangesData.recent_changes.base_plants_count} plants in {$recentChangesData
-					.recent_changes.references_count} references
-			</p>
-		{/if}
+		</div>
+		<div class="m-5">
 		{#if $recentChangesData.recent_changes}
 			<ul class="list-group d-inline-block">
 				{#each $recentChangesData.recent_changes.collection_changes as update}
@@ -34,6 +30,14 @@
 					</li>
 				{/each}
 			</ul>
+		{/if}
+	</div>
+		<div class="m-5">
+			{#if $recentChangesData.recent_changes}
+			<p>
+				{$recentChangesData.recent_changes.base_plants_count} plants in {$recentChangesData
+					.recent_changes.references_count} references
+			</p>
 		{/if}
 		{#if $recentChangesData.build_info}
 			<p>
