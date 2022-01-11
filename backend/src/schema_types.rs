@@ -156,3 +156,11 @@ pub struct FtsBasePlants {
     pub rowid: i32,
     pub rank: f32,
 }
+
+#[derive(Debug, Queryable)]
+pub struct Facts {
+    pub id: i32,
+    pub contributor: String,
+    pub fact: String,
+    pub reference: String,
+}

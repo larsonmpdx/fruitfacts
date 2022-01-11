@@ -474,6 +474,18 @@ fn test_format_path() {
 }
 
 #[test]
+fn test_base_plant_notoriety_calc() {
+    assert_eq!(base_plant_notoriety_calc(&BasePlantNotorietyInput {
+        notoriety_highest_collection_score: Some(50.0),
+        notoriety_highest_collection_score_name: "collection name".to_string(),
+        current_year: 2021,
+        release_year: Some(1975),
+        number_of_references: 1,
+        uspp_number: None,
+    }), BasePlantNotoriety{score: 34.0, explanation: "50 (collection name) *0.85 (>40 years old) *0.8 (1 references) *1.0 (no uspp number)".to_string()});
+}
+
+#[test]
 #[ignore] // long runtime
 fn test_database_loading() {
     let db_conn = super::establish_connection();
@@ -493,6 +505,7 @@ fn test_database_loading() {
     println!("loaded: {:#?}", items_loaded);
 
     // update these every so often so we can check that a change doesn't cause fewer items than we expect
+    assert_ge!(items_loaded.facts_found, 4);
     assert_ge!(items_loaded.base_plants_found, 189);
     assert_ge!(items_loaded.base_types_found, 49);
     assert_ge!(items_loaded.reference_items.reference_locations_found, 188);
@@ -501,16 +514,4 @@ fn test_database_loading() {
         2994
     );
     assert_ge!(items_loaded.reference_items.reference_plants_added, 5346);
-}
-
-#[test]
-fn test_base_plant_notoriety_calc() {
-    assert_eq!(base_plant_notoriety_calc(&BasePlantNotorietyInput {
-        notoriety_highest_collection_score: Some(50.0),
-        notoriety_highest_collection_score_name: "collection name".to_string(),
-        current_year: 2021,
-        release_year: Some(1975),
-        number_of_references: 1,
-        uspp_number: None,
-    }), BasePlantNotoriety{score: 34.0, explanation: "50 (collection name) *0.85 (>40 years old) *0.8 (1 references) *1.0 (no uspp number)".to_string()});
 }

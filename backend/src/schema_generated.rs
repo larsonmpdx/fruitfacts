@@ -70,6 +70,15 @@ table! {
 }
 
 table! {
+    facts (id) {
+        id -> Integer,
+        contributor -> Text,
+        fact -> Text,
+        reference -> Text,
+    }
+}
+
+table! {
     locations (id) {
         id -> Integer,
         collection_id -> Integer,
@@ -119,6 +128,7 @@ allow_tables_to_appear_in_same_query!(
     base_plants,
     collection_items,
     collections,
+    facts,
     locations,
     plant_types,
     user_oauth_entries,

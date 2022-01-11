@@ -15,6 +15,7 @@ use crate::git_info::GitModificationTimes;
 use super::schema_generated::base_plants;
 use super::schema_generated::collection_items;
 use super::schema_generated::collections;
+use super::schema_generated::facts;
 use super::schema_generated::locations;
 use super::schema_generated::plant_types;
 use super::schema_types::*;
@@ -632,6 +633,7 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
 
 #[derive(Debug, Default)]
 pub struct LoadAllReturn {
+    pub facts_found: isize,
     pub base_plants_found: isize,
     pub base_types_found: isize,
     pub reference_items: LoadReferencesReturn,
@@ -652,6 +654,7 @@ pub fn reset_database(db_conn: &SqliteConnection) {
     let _ = diesel::delete(collections::dsl::collections).execute(db_conn);
     let _ = diesel::delete(locations::dsl::locations).execute(db_conn);
     let _ = diesel::delete(collection_items::dsl::collection_items).execute(db_conn);
+    let _ = diesel::delete(facts::dsl::facts).execute(db_conn);
 
     super::embedded_migrations::run(db_conn).unwrap();
 }
@@ -659,6 +662,7 @@ pub fn reset_database(db_conn: &SqliteConnection) {
 pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     let database_dir = get_database_dir().unwrap();
 
+    let facts_found = load_facts(db_conn, database_dir.clone());
     let base_plants_found = load_base_plants(db_conn, database_dir.clone());
     let base_types_found = load_types(db_conn, database_dir.clone());
     let load_references_return = load_references(db_conn, database_dir);
@@ -676,6 +680,7 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     check_database(db_conn);
 
     LoadAllReturn {
+        facts_found,
         base_plants_found,
         base_types_found,
         reference_items: load_references_return,
@@ -808,7 +813,7 @@ fn decode_aka_string(input: &str) -> Vec<&str> {
 }
 
 // check a new value from a collection item against something already in the database
-// the new value should be either an exact match for the database value, or it should be brand new
+// the new value should be either an exact match for the database value, or it should be brand new (replacing a "None")
 fn new_or_old<T: std::cmp::PartialEq + std::fmt::Debug>(
     old: Option<T>,
     new: Option<T>,
@@ -949,8 +954,6 @@ fn apply_top_level_fields(
 }
 
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
-    // look for a dir "plant_database/" up to three levels up so users can mess this up a little
-
     let mut plants_found = 0;
 
     let file_paths = fs::read_dir(database_dir.join("plants")).unwrap();
@@ -1734,6 +1737,36 @@ fn add_relative_value(base_value: Option<i32>, adjustment: i32) -> Option<i32> {
         return Some(base_value + adjustment);
     }
     None
+}
+
+#[skip_serializing_none]
+#[derive(Serialize, Deserialize)]
+struct FactJson {
+    contributor: String,
+    fact: String,
+    reference: String,
+}
+
+pub fn load_facts(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
+    let mut facts_found = 0;
+
+    let contents = fs::read_to_string(database_dir.join("facts.json5")).unwrap();
+
+    let facts: Vec<FactJson> = json5::from_str(&contents).unwrap();
+
+    for fact in &facts {
+        let rows_inserted = diesel::insert_into(facts::dsl::facts)
+            .values((
+                facts::contributor.eq(&fact.contributor),
+                facts::fact.eq(&fact.fact),
+                facts::reference.eq(&fact.reference),
+            ))
+            .execute(db_conn);
+        assert_eq!(Ok(1), rows_inserted);
+        facts_found += 1;
+    }
+
+    facts_found
 }
 
 #[skip_serializing_none]

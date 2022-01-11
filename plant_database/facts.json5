@@ -1,0 +1,22 @@
+[
+    {
+        contributor: "Michael",
+        fact: "Citrus is generally true to seed, but seed-grown citrus can take 15 years to bear fruit",
+        reference: "https://aces.nmsu.edu/ces/yard/2000/040800.html"
+    },
+    {
+        contributor: "Michael",
+        fact: "Peaches and Nectarines are the same species, only differentiated by a gene for fuzz",
+        reference: "https://www.rosbreed.org/breeding/dna-tests/peach/fruit-type"
+    },
+    {
+        contributor: "Michael",
+        fact: "Peaches and Almonds can be hybridized",
+        reference: "https://phys.org/news/2019-09-almond-peach-tree-genomes-differences.html"
+    },
+    {
+        contributor: "Michael",
+        fact: "Citrus varieties hybridize easily",
+        reference: "https://en.wikipedia.org/wiki/Citrus_taxonomy"
+    }
+]

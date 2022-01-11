@@ -4,3 +4,4 @@ DROP TABLE users;
 DROP TABLE collections;
 DROP TABLE locations;
 DROP TABLE collection_items;
+DROP TABLE facts;

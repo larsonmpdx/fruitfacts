@@ -153,3 +153,11 @@ CREATE TABLE collection_items (
 
   UNIQUE(collection_id, location_id, name, type) --combo of these columns must be unique
 );
+
+CREATE TABLE facts (
+  id INTEGER PRIMARY KEY NOT NULL,
+
+  contributor TEXT NOT NULL,
+  fact TEXT NOT NULL,
+  reference TEXT NOT NULL
+);
