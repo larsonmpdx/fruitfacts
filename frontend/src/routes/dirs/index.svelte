@@ -51,28 +51,32 @@
 
 <Header />
 <main>
-	{#if $directories && $directories.length > 0}
-		<h1>dirs</h1>
-		<ul>
-			{#each $directories as directory}
-				<li><a href="/dirs?path={encodeURIComponent(directory)}">{directory}</a></li>
-			{/each}
-		</ul>
-	{/if}
-	{#if $collections && $collections.length > 0}
-		<h1>locations</h1>
-		<ul>
-			{#each $collections as collection}
-				<li>
-					<a
-						href="/collections?path={encodeURIComponent(
-							`${collection.path}${collection.filename}`
-						)}">{collection.title}</a
-					>
-				</li>
-			{/each}
-		</ul>
-	{/if}
+	<div class="m-5">
+		{#if $directories && $directories.length > 0}
+			<h1>Sub-Folders</h1>
+			<ul class="list-group d-inline-block">
+				{#each $directories as directory}
+					<li class="list-group-item border border-2 rounded-lg py-1">
+						<a href="/dirs?path={encodeURIComponent(directory)}">{directory}</a>
+					</li>
+				{/each}
+			</ul>
+		{/if}
+		{#if $collections && $collections.length > 0}
+			<h1>Locations</h1>
+			<ul class="list-group d-inline-block">
+				{#each $collections as collection}
+					<li class="list-group-item border border-2 rounded-lg py-1">
+						<a
+							href="/collections?path={encodeURIComponent(
+								`${collection.path}${collection.filename}`
+							)}">{collection.title}</a
+						>
+					</li>
+				{/each}
+			</ul>
+		{/if}
+	</div>
 </main>
 
 <style>

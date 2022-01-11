@@ -15,11 +15,11 @@
 </script>
 
 <main>
-	<p>
+	<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
 		{#if $authURLs}
-			<a href={$authURLs.google}>log in with google</a>
+			<a href={$authURLs.google}>log in with google oauth</a>
 		{/if}
-	</p>
+	</div>
 </main>
 
 <style>

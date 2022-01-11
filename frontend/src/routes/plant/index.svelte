@@ -64,9 +64,9 @@
 		</p>
 	{/if}
 	<h1>Collection Entries</h1>
-	<ul>
+	<ul class="list-group d-inline-block">
 		{#each $collection_entries as entry}
-			<li>
+			<li class="list-group-item border border-2 rounded-lg py-1">
 				<a href="/collections?path={encodeURIComponent(`${entry.path_and_filename}`)}"
 					>{entry.path_and_filename}</a
 				>
