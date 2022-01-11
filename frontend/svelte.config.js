@@ -5,7 +5,13 @@ import preprocess from 'svelte-preprocess';
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess(),
+	preprocess: [
+		preprocess({
+			scss: {
+				prependData: '@use "src/variables.scss" as *;'
+			}
+		})
+	],
 
 	kit: {
 		adapter: adapter({
@@ -18,7 +24,16 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		vite: {
-			envDir: '../' // look up a dir so we can share one .env file with the backend
+			// look up a dir so we can share one .env file with the backend
+			envDir: '../',
+
+			css: {
+				preprocessorOptions: {
+					scss: {
+						additionalData: '@use "src/variables.scss" as *;'
+					}
+				}
+			}
 		}
 	}
 };
