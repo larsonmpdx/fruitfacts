@@ -1,7 +1,7 @@
 [
     {
         contributor: "Michael",
-        fact: "Citrus is generally true to seed, but seed-grown citrus can take 15 years to bear fruit",
+        fact: "Citrus is commonly true to seed, but seed-grown citrus can take 15 years to bear fruit",
         reference: "https://aces.nmsu.edu/ces/yard/2000/040800.html"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         contributor: "Michael",
-        fact: "Citrus varieties hybridize easily",
+        fact: "Many citrus varieties hybridize easily",
         reference: "https://en.wikipedia.org/wiki/Citrus_taxonomy"
     }
 ]

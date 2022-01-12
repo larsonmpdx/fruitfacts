@@ -157,8 +157,8 @@ pub struct FtsBasePlants {
     pub rank: f32,
 }
 
-#[derive(Debug, Queryable)]
-pub struct Facts {
+#[derive(Debug, Queryable, Serialize)]
+pub struct Fact {
     pub id: i32,
     pub contributor: String,
     pub fact: String,

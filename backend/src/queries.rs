@@ -49,62 +49,6 @@ async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, act
     Ok(HttpResponse::Ok().json(patents))
 }
 
-#[derive(Default, Queryable, Debug, Serialize)]
-pub struct CollectionChanges {
-    pub id: i32,
-
-    pub path: Option<String>,
-    pub filename: Option<String>,
-
-    pub title: Option<String>,
-
-    pub git_edit_time: Option<i64>,
-}
-
-#[derive(Default, Serialize)]
-pub struct RecentChangesDB {
-    pub collection_changes: Vec<CollectionChanges>,
-    pub base_plants_count: i64,
-    pub references_count: i64,
-}
-
-pub fn get_recent_changes_db(db_conn: &SqliteConnection) -> Result<RecentChangesDB> {
-    let mut output: RecentChangesDB = Default::default();
-
-    let db_return = collections::dsl::collections
-        .select((
-            collections::id,
-            collections::path,
-            collections::filename,
-            collections::title,
-            collections::git_edit_time,
-        ))
-        .order(collections::git_edit_time.desc())
-        .limit(10)
-        .load::<CollectionChanges>(db_conn);
-
-    match db_return {
-        Ok(collections) => {
-            output.collection_changes = collections;
-        }
-        Err(error) => {
-            return Err(error.into());
-        }
-    }
-
-    let collections_count = collections::dsl::collections.count().first::<i64>(db_conn);
-    if let Ok(count) = collections_count {
-        output.references_count = count;
-    }
-
-    let base_plants_count = base_plants::dsl::base_plants.count().first::<i64>(db_conn);
-    if let Ok(count) = base_plants_count {
-        output.base_plants_count = count;
-    }
-
-    Ok(output)
-}
-
 #[derive(Queryable, Debug, Serialize)]
 pub struct CollectionsForPaths {
     pub id: i32,
@@ -400,8 +344,64 @@ struct BuildInfo {
     git_commit_count: String,
 }
 
+#[derive(Default, Queryable, Debug, Serialize)]
+pub struct CollectionChanges {
+    pub id: i32,
+
+    pub path: Option<String>,
+    pub filename: Option<String>,
+
+    pub title: Option<String>,
+
+    pub git_edit_time: Option<i64>,
+}
+
+#[derive(Default, Serialize)]
+pub struct RecentChangesDB {
+    pub collection_changes: Vec<CollectionChanges>,
+    pub base_plants_count: i64,
+    pub references_count: i64,
+}
+
+pub fn get_recent_changes_db(db_conn: &SqliteConnection) -> Result<RecentChangesDB> {
+    let mut output: RecentChangesDB = Default::default();
+
+    let db_return = collections::dsl::collections
+        .select((
+            collections::id,
+            collections::path,
+            collections::filename,
+            collections::title,
+            collections::git_edit_time,
+        ))
+        .order(collections::git_edit_time.desc())
+        .limit(10)
+        .load::<CollectionChanges>(db_conn);
+
+    match db_return {
+        Ok(collections) => {
+            output.collection_changes = collections;
+        }
+        Err(error) => {
+            return Err(error.into());
+        }
+    }
+
+    let collections_count = collections::dsl::collections.count().first::<i64>(db_conn);
+    if let Ok(count) = collections_count {
+        output.references_count = count;
+    }
+
+    let base_plants_count = base_plants::dsl::base_plants.count().first::<i64>(db_conn);
+    if let Ok(count) = base_plants_count {
+        output.base_plants_count = count;
+    }
+
+    Ok(output)
+}
+
 #[get("/recent_changes")]
-async fn get_build_info(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
+async fn get_recent_changes(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
     let changes_db = web::block(move || get_recent_changes_db(&conn))
@@ -419,6 +419,27 @@ async fn get_build_info(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_w
         },
         recent_changes: changes_db,
     }))
+}
+
+no_arg_sql_function!(random, ());
+
+pub fn get_fact_db(db_conn: &SqliteConnection) -> Result<Fact, diesel::result::Error> {
+    facts::dsl::facts
+        .order(random)
+        .limit(1)
+        .first::<Fact>(db_conn)
+}
+
+#[get("/fact")]
+async fn get_fact(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
+    let conn = pool.get().expect("couldn't get db connection from pool");
+
+    let fact = web::block(move || get_fact_db(&conn)).await.map_err(|e| {
+        eprintln!("{}", e);
+        HttpResponse::InternalServerError().finish()
+    })?;
+
+    Ok(HttpResponse::Ok().json(fact))
 }
 
 pub fn variety_search_db(

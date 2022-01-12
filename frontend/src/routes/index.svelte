@@ -3,6 +3,17 @@
 	import { recentChangesData } from './store';
 	import { format as timeAgo } from 'timeago.js';
 
+	let fact: any = {};
+
+	fetch(`${import.meta.env.VITE_BACKEND_BASE}/fact`)
+		.then((response) => response.json())
+		.then((data) => {
+			fact = data;
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+
 	fetch(`${import.meta.env.VITE_BACKEND_BASE}/recent_changes`)
 		.then((response) => response.json())
 		.then((data) => {
@@ -17,8 +28,13 @@
 <main>
 	<div class="m-5">
 		<a href="/dirs?path=">browse locations</a>
-		</div>
-		<div class="m-5">
+	</div>
+	<div class="m-5">
+		{#if fact.fact}
+			<p>{fact.fact}<a href=" {fact.reference}">[ref]</a></p>
+		{/if}
+	</div>
+	<div class="m-5">
 		{#if $recentChangesData.recent_changes}
 			<ul class="list-group d-inline-block">
 				{#each $recentChangesData.recent_changes.collection_changes as update}
@@ -32,8 +48,8 @@
 			</ul>
 		{/if}
 	</div>
-		<div class="m-5">
-			{#if $recentChangesData.recent_changes}
+	<div class="m-5">
+		{#if $recentChangesData.recent_changes}
 			<p>
 				{$recentChangesData.recent_changes.base_plants_count} plants in {$recentChangesData
 					.recent_changes.references_count} references
