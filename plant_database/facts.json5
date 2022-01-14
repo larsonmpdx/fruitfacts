@@ -18,5 +18,10 @@
         contributor: "Michael",
         fact: "Many citrus varieties hybridize easily",
         reference: "https://en.wikipedia.org/wiki/Citrus_taxonomy"
+    },
+    {
+        contributor: "Michael",
+        fact: "Fresh-market sweet cherries are typically picked by hand to preserve the stem and increase shelf life",
+        reference: "https://www.nytimes.com/2020/08/12/magazine/cherry-harvest-workers.html"
     }
 ]
