@@ -545,7 +545,7 @@ fn string_to_day_number(input: &str) -> Option<u32> {
                     _ => panic!("matched a date prefix not in this match statement"),
                 }
 
-                month_and_day_string = format!("{} {}", &matches[2], day_of_month.to_string());
+                month_and_day_string = format!("{} {}", &matches[2], day_of_month);
             }
         } else {
             // try to pull a month+day string out of the middle of a bunch of text. helps us parse things that were left in some original sentence format
