@@ -27,12 +27,6 @@
 * `cargo clippy` after installing `rustup component add clippy`
   * `cargo clippy --fix`
 
-# js hints
-* install nvm (there is a related windows project)
-  * `nvm install lts` and `nvm use lts`
-* `npm run dev` run a node host (with server-side rendering)
-* `ncu -u` update package.json versions after installing `npm i -g npm-check-updates`
-
 # debugging in vs code
 * see extensions.json for recommended extensions
   * 2021: on windows vs code, `codelldb+rust-analyzer` debugger works slightly better than cppvsdbg or the official "rust" extension. see launch.json
@@ -52,10 +46,6 @@
 * `diesel migration run` - or omit this and just run all tests, there are embedded migrations
 * `diesel migration redo` (checks up+down)
 
-## sveltekit
-* https://kit.svelte.dev/
-* `npm init svelte@next frontend` - in frontend dir - `npm install`  -  `npm run dev -- -open`
-
 # external issues I'm tracking
 * support loading sqlite modules in diesel in order to use spatialite
   * https://github.com/diesel-rs/diesel/issues/1867
@@ -65,11 +55,3 @@
 * rust cargo: use lld on windows for faster builds. will eventually be default and I can remove the /.cargo/config.toml entry
   * in my testing this doesn't improve full build time at all
   * https://github.com/rust-lang/rust/issues/71520
-* sveltekit: better support for relative paths in static sites
-  * https://github.com/sveltejs/kit/issues/1480
-  * https://github.com/sveltejs/kit/issues/595#issuecomment-842278606
-* sveltekit: debug server side code
-  * https://github.com/sveltejs/kit/issues/1144
-  * https://github.com/vitejs/vite/pull/3928
-* sveltekit: routing is totally insane and broken and needs a location.ts store workaround
-  * https://github.com/sveltejs/kit/issues/552
