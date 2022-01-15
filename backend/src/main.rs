@@ -4,6 +4,7 @@ use harvest_chart_server::queries;
 
 use actix_cors::Cors;
 use actix_web::{App, HttpServer};
+use actix_files;
 
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
@@ -51,7 +52,7 @@ async fn main() -> std::io::Result<()> {
             .allowed_origin_fn(|origin, _req_head| {
                 origin
                     .as_bytes()
-                    .ends_with(env!("VITE_FRONTEND_BASE").to_string().as_bytes())
+                    .ends_with(env!("VITE_BACKEND_BASE").to_string().as_bytes())
                 // todo - better handling of port for dev/release
             });
 
@@ -71,6 +72,8 @@ async fn main() -> std::io::Result<()> {
             .service(auth::create_account)
             .service(auth::check_login)
             .service(auth::logout)
+            // keep this at the end so the API paths get tried before the SPA/static paths
+            .service(actix_files::Files::new("/", "../frontend/build/").index_file("index.html"))
     })
     .bind((
         "127.0.0.1",
