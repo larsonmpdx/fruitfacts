@@ -18,19 +18,21 @@
 	}
 
 	async function logOut() {
-		fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/logout`, {
-			method: 'POST',
-			credentials: 'include'
-		})
-			.then((response) => {
-				if (response.status === 200) {
-					login.set({});
-				}
-				return response.json();
+		if (browser) {
+			fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/logout`, {
+				method: 'POST',
+				credentials: 'include'
 			})
-			.catch((error) => {
-				console.log(error);
-			});
+				.then((response) => {
+					if (response.status === 200) {
+						login.set({});
+					}
+					return response.json();
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+		}
 	}
 
 	let selectedPlant;
@@ -41,8 +43,10 @@
 	async function searchPlant(keyword) {
 		const url = `${import.meta.env.VITE_BACKEND_BASE}/api/search/${encodeURIComponent(keyword)}`;
 
-		const response = await fetch(url);
-		return await response.json();
+		if (browser) {
+			const response = await fetch(url);
+			return await response.json();
+		}
 	}
 </script>
 
