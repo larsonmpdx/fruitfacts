@@ -61,7 +61,7 @@ fn get_google_client() -> GoogleClientType {
         Some(token_url),
     )
     .set_redirect_uri(
-        RedirectUrl::new(format!("{}/authRedirect", env!("VITE_BACKEND_BASE")))
+        RedirectUrl::new(format!("{}/api/authRedirect", env!("VITE_BACKEND_BASE")))
             .expect("Invalid redirect URL"),
     )
     // Google supports OAuth 2.0 Token Revocation (RFC-7009)
@@ -76,7 +76,7 @@ struct AuthURLs {
     google: Option<String>,
 }
 
-#[get("/authURLs")]
+#[get("/api/authURLs")]
 async fn get_auth_urls(req: HttpRequest) -> Result<HttpResponse, actix_web::Error> {
     println!("/authURLs");
     let (session_value, outgoing_cookie) = get_session_value(req, true);
@@ -330,7 +330,7 @@ fn get_session_value(
     (session_value, outgoing_cookie)
 }
 
-#[get("/authRedirect")]
+#[get("/api/authRedirect")]
 async fn receive_oauth_redirect(
     req: HttpRequest,
     query: web::Query<GoogleAuthQuery>,
@@ -360,7 +360,7 @@ async fn receive_oauth_redirect(
             .finish())
     } else {
         Ok(HttpResponse::Found()
-            .header("Location", env!("VITE_FRONTEND_BASE"))
+            .header("Location", env!("VITE_BACKEND_BASE"))
             .finish())
     }
 }
@@ -435,7 +435,7 @@ pub fn create_account_blocking(
 // - check account (front end calls this to see if the user is already logged in based on an existing session)
 // - log out
 
-#[get("/createAccount")]
+#[get("/api/createAccount")]
 async fn create_account(
     req: HttpRequest,
     pool: web::Data<DbPool>,
@@ -461,7 +461,7 @@ async fn create_account(
     Ok(HttpResponse::InternalServerError().finish())
 }
 
-#[get("/checkLogin")]
+#[get("/api/checkLogin")]
 async fn check_login(
     req: HttpRequest,
     pool: web::Data<DbPool>,
@@ -490,7 +490,7 @@ async fn check_login(
     }))
 }
 
-#[post("/logout")]
+#[post("/api/logout")]
 async fn logout(
     req: HttpRequest,
     pool: web::Data<DbPool>,

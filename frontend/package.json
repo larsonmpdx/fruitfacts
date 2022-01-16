@@ -34,7 +34,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@dopry/svelte-oidc": "github:dopry/svelte-oidc",
 		"timeago.js": "^4.0.2"
 	}
 }

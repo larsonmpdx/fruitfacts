@@ -5,7 +5,7 @@
 
 	let fact: any = {};
 
-	fetch(`${import.meta.env.VITE_BACKEND_BASE}/fact`)
+	fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/fact`)
 		.then((response) => response.json())
 		.then((data) => {
 			fact = data;
@@ -14,7 +14,7 @@
 			console.log(error);
 		});
 
-	fetch(`${import.meta.env.VITE_BACKEND_BASE}/recent_changes`)
+	fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/recent_changes`)
 		.then((response) => response.json())
 		.then((data) => {
 			recentChangesData.set(data);

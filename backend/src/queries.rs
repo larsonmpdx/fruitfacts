@@ -34,7 +34,7 @@ pub fn get_recent_patents_db(
         .load::<BasePlantsItemForPatents>(db_conn)
 }
 
-#[get("/patents")]
+#[get("/api/patents")]
 async fn get_recent_patents(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
@@ -180,7 +180,7 @@ struct Path {
 
 // /collections/path/ - get subdirectories starting at this path, and collection names at this path
 // /collections/path/collection - get a single collection
-#[get("/collections/{path:.*}")] // the ":.*" part is a regex to get the entire tail of the path
+#[get("/api/collections/{path:.*}")] // the ":.*" part is a regex to get the entire tail of the path
 async fn get_collections(
     path: web::Path<Path>,
     pool: web::Data<DbPool>,
@@ -300,7 +300,7 @@ struct GetPlantQuery {
 
 // /plants/type/ - all plants of this type. paginated?
 // /plants/type/plant name - this specific plant
-#[get("/plants/{type_}/{plant:.*}")] // the ":.*" part is a regex to get the entire tail of the path
+#[get("/api/plants/{type_}/{plant:.*}")] // the ":.*" part is a regex to get the entire tail of the path
 async fn get_plant(
     path: web::Path<GetPlantPath>,
     query: web::Query<GetPlantQuery>,
@@ -400,7 +400,7 @@ pub fn get_recent_changes_db(db_conn: &SqliteConnection) -> Result<RecentChanges
     Ok(output)
 }
 
-#[get("/recent_changes")]
+#[get("/api/recent_changes")]
 async fn get_recent_changes(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
@@ -430,7 +430,7 @@ pub fn get_fact_db(db_conn: &SqliteConnection) -> Result<Fact, diesel::result::E
         .first::<Fact>(db_conn)
 }
 
-#[get("/fact")]
+#[get("/api/fact")]
 async fn get_fact(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
@@ -495,7 +495,7 @@ struct SearchPath {
 // with type: "redhaven peach" -> "redhaven" and also suggest the category "peach"
 // rules: if we have an exact match for a type name (or type aka name) then remove that word, use it to suggest that type
 // todo - this kind of type search plus a full text search on the collections json files
-#[get("/search/{string}")]
+#[get("/api/search/{string}")]
 async fn variety_search(
     path: web::Path<SearchPath>,
     pool: web::Data<DbPool>,

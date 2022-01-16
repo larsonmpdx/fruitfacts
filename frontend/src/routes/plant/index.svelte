@@ -1,19 +1,35 @@
 <script lang="ts">
 	import Header from '../Header.svelte';
 	import { apiData, base, collection_entries } from './store';
-	import { page } from '$app/stores';
 	import { onMount, beforeUpdate } from 'svelte';
 	import { format as timeAgo } from 'timeago.js';
+	import { browser } from '$app/env';
+
+	import { page } from '$app/stores';
+	let pageLog: string = $page.path;
+	$: if (pageLog !== $page.path) {
+		pageLog = $page.path;
+		// see https://github.com/sveltejs/kit/issues/560
+		// todo - use this when it's released https://github.com/sveltejs/kit/pull/3293
+		check();
+	}
+
+	const check = async () => {
+		const query = new URLSearchParams(document.location.search);
+		const name = query.get('name'); // we can't use $page.query.get() because of https://github.com/sveltejs/kit/issues/669
+		const type_ = query.get('type');
+		ifPathChanged(type_, name);
+	};
 
 	let previousPath;
-
 	const ifPathChanged = async (type_, name) => {
+		// todo - use this when it's released https://github.com/sveltejs/kit/pull/3293
 		let path = `${type_}/${name}`;
-
+		console.log(`previous: ${previousPath} current ${path}`);
 		// needs to be in onMount because the query string isn't available in pre rendering
 		if (path != previousPath) {
 			previousPath = path;
-			fetch(`${import.meta.env.VITE_BACKEND_BASE}/plants/${path}`)
+			fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/plants/${path}`)
 				.then((response) => response.json())
 				.then((data) => {
 					apiData.set(data);
@@ -24,20 +40,17 @@
 				});
 		}
 	};
+	if (browser) {
+		onMount(async () => {
+			// needs to be in onMount because the query string isn't available in pre rendering
+			check();
+		});
 
-	onMount(async () => {
-		// needs to be in onMount because the query string isn't available in pre rendering
-		const type_ = $page.query.get('type');
-		const name = $page.query.get('name');
-		ifPathChanged(type_, name);
-	});
-
-	beforeUpdate(async () => {
-		// this gets back button changes
-		const type_ = $page.query.get('type');
-		const name = $page.query.get('name');
-		ifPathChanged(type_, name);
-	});
+		beforeUpdate(async () => {
+			// this gets back button changes
+			check();
+		});
+	}
 </script>
 
 <Header />

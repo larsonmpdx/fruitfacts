@@ -1,16 +1,32 @@
 <script lang="ts">
 	import Header from '../Header.svelte';
 	import { apiData, collection, locations, items } from './store';
-	import { page } from '$app/stores';
 	import { onMount, beforeUpdate } from 'svelte';
+	import { browser } from '$app/env';
+
+	import { page } from '$app/stores';
+	let pageLog: string = $page.path;
+	$: if (pageLog !== $page.path) {
+		pageLog = $page.path;
+		// see https://github.com/sveltejs/kit/issues/560
+		// todo - use this when it's released https://github.com/sveltejs/kit/pull/3293
+		check();
+	}
+
+	const check = async () => {
+		const query = new URLSearchParams(document.location.search);
+		const path = query.get('path'); // we can't use $page.query.get() because of https://github.com/sveltejs/kit/issues/669
+		ifPathChanged(path);
+	};
 
 	let previousPath;
-
 	const ifPathChanged = async (path) => {
+		// todo - use this when it's released https://github.com/sveltejs/kit/pull/3293
 		// needs to be in onMount because the query string isn't available in pre rendering
+		console.log(`previous: ${previousPath} current ${path}`);
 		if (path != previousPath) {
 			previousPath = path;
-			fetch(`${import.meta.env.VITE_BACKEND_BASE}/collections/${path}`)
+			fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/collections/${path}`)
 				.then((response) => response.json())
 				.then((data) => {
 					apiData.set(data);
@@ -21,18 +37,17 @@
 				});
 		}
 	};
+	if (browser) {
+		onMount(async () => {
+			// needs to be in onMount because the query string isn't available in pre rendering
+			check();
+		});
 
-	onMount(async () => {
-		// needs to be in onMount because the query string isn't available in pre rendering
-		const path = $page.query.get('path');
-		ifPathChanged(path);
-	});
-
-	beforeUpdate(async () => {
-		// this gets back button changes
-		const path = $page.query.get('path');
-		ifPathChanged(path);
-	});
+		beforeUpdate(async () => {
+			// this gets back button changes
+			check();
+		});
+	}
 </script>
 
 <Header />

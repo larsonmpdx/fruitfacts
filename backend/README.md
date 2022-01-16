@@ -27,6 +27,9 @@
 * `cargo clippy` after installing `rustup component add clippy`
   * `cargo clippy --fix`
 
+# oauth account stuff
+* google https://console.cloud.google.com/apis/dashboard?pli=1 - add an "authorized redirect URI" like http://domain.com/api/authRedirect
+
 # debugging in vs code
 * see extensions.json for recommended extensions
   * 2021: on windows vs code, `codelldb+rust-analyzer` debugger works slightly better than cppvsdbg or the official "rust" extension. see launch.json

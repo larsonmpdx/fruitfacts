@@ -5,7 +5,7 @@
 	import AutoComplete from 'simple-svelte-autocomplete';
 
 	if (browser) {
-		fetch(`${import.meta.env.VITE_BACKEND_BASE}/checkLogin`, {
+		fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/checkLogin`, {
 			credentials: 'include'
 		})
 			.then((response) => response.json())
@@ -18,7 +18,7 @@
 	}
 
 	async function logOut() {
-		fetch(`${import.meta.env.VITE_BACKEND_BASE}/logout`, {
+		fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/logout`, {
 			method: 'POST',
 			credentials: 'include'
 		})
@@ -39,7 +39,7 @@
 	}
 
 	async function searchPlant(keyword) {
-		const url = `${import.meta.env.VITE_BACKEND_BASE}/search/${encodeURIComponent(keyword)}`;
+		const url = `${import.meta.env.VITE_BACKEND_BASE}/api/search/${encodeURIComponent(keyword)}`;
 
 		const response = await fetch(url);
 		return await response.json();
