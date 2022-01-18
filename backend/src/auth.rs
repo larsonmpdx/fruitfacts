@@ -360,7 +360,7 @@ async fn receive_oauth_redirect(
             .finish())
     } else {
         Ok(HttpResponse::Found()
-            .header("Location", env!("VITE_BACKEND_BASE"))
+            .header("Location", env!("VITE_AUTH_REDIRECT"))
             .finish())
     }
 }

@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static'; // was "adapter-auto"
+import adapter from '@sveltejs/adapter-node'; // see https://github.com/sveltejs/kit/blob/master/documentation/docs/10-adapters.md
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */

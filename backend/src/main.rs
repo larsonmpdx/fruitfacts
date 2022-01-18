@@ -3,8 +3,8 @@ use harvest_chart_server::import_db;
 use harvest_chart_server::queries;
 
 use actix_cors::Cors;
-use actix_web::{App, HttpServer};
 use actix_files;
+use actix_web::{App, HttpServer};
 
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
@@ -52,7 +52,7 @@ async fn main() -> std::io::Result<()> {
             .allowed_origin_fn(|origin, _req_head| {
                 origin
                     .as_bytes()
-                    .ends_with(env!("VITE_BACKEND_BASE").to_string().as_bytes())
+                    .ends_with(env!("VITE_FRONTEND_BASE").to_string().as_bytes())
                 // todo - better handling of port for dev/release
             });
 
@@ -73,19 +73,18 @@ async fn main() -> std::io::Result<()> {
             .service(auth::check_login)
             .service(auth::logout)
             // keep this at the end so the API paths get tried before the SPA/static paths (which are at the root because svelte in early 2022 doesn't have a good static/CDN story)
-            .service(actix_files::Files::new("/", "../frontend/build/").index_file("index.html")
-        /*
-            .default_handler(|req: actix_web::dev::ServiceRequest| {
-                let (http_req, _payload) = req.into_parts();
-                
-                async {
-                    let response = actix_files::NamedFile::open("./index.html")?.into_response(&http_req)?;
-                    Ok(actix_web::dev::ServiceResponse::new(http_req, response))
-                }
-            })
-        */
-        
-        )
+            .service(
+                actix_files::Files::new("/", "../frontend/build/").index_file("index.html"), /*
+                                                                                                 .default_handler(|req: actix_web::dev::ServiceRequest| {
+                                                                                                     let (http_req, _payload) = req.into_parts();
+
+                                                                                                     async {
+                                                                                                         let response = actix_files::NamedFile::open("./index.html")?.into_response(&http_req)?;
+                                                                                                         Ok(actix_web::dev::ServiceResponse::new(http_req, response))
+                                                                                                     }
+                                                                                                 })
+                                                                                             */
+            )
     })
     .bind((
         "127.0.0.1",

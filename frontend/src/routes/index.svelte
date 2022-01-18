@@ -1,4 +1,4 @@
-<script lang="ts">
+<script context="module" lang="ts">
 	import Header from './Header.svelte';
 	import { recentChangesData } from './store';
 	import { format as timeAgo } from 'timeago.js';
@@ -39,7 +39,7 @@
 			<ul class="list-group d-inline-block">
 				{#each $recentChangesData.recent_changes.collection_changes as update}
 					<li class="list-group-item border border-2 rounded-lg py-1">
-						<a href="/collections?path={encodeURIComponent(`${update.path}${update.filename}`)}"
+						<a href="/collections/{encodeURIComponent(`${update.path}${update.filename}`)}"
 							>{update.filename}</a
 						>
 						{timeAgo(update.git_edit_time * 1000)}

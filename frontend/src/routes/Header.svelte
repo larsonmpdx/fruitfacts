@@ -1,38 +1,33 @@
 <script lang="ts">
 	import { login } from './store';
-	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
 	import AutoComplete from 'simple-svelte-autocomplete';
 
-	if (browser) {
-		fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/checkLogin`, {
+	fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/checkLogin`, {
+		credentials: 'include'
+	})
+		.then((response) => response.json())
+		.then((data) => {
+			login.set(data);
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+
+	async function logOut() {
+		fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/logout`, {
+			method: 'POST',
 			credentials: 'include'
 		})
-			.then((response) => response.json())
-			.then((data) => {
-				login.set(data);
+			.then((response) => {
+				if (response.status === 200) {
+					login.set({});
+				}
+				return response.json();
 			})
 			.catch((error) => {
 				console.log(error);
 			});
-	}
-
-	async function logOut() {
-		if (browser) {
-			fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/logout`, {
-				method: 'POST',
-				credentials: 'include'
-			})
-				.then((response) => {
-					if (response.status === 200) {
-						login.set({});
-					}
-					return response.json();
-				})
-				.catch((error) => {
-					console.log(error);
-				});
-		}
 	}
 
 	let selectedPlant;
@@ -43,10 +38,8 @@
 	async function searchPlant(keyword) {
 		const url = `${import.meta.env.VITE_BACKEND_BASE}/api/search/${encodeURIComponent(keyword)}`;
 
-		if (browser) {
-			const response = await fetch(url);
-			return await response.json();
-		}
+		const response = await fetch(url);
+		return await response.json();
 	}
 </script>
 
