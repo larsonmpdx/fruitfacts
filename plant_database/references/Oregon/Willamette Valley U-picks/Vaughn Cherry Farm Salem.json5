@@ -1,25 +1,34 @@
-/*
-https://www.facebook.com/vaughancherries/
-
-Montmorency
-lapins
-sweetheart
-starletta
-*/
-
 {
-    title: "",
+    title: "Vaughn Cherry Farm",
     author: "",
-    url: "",
+    url: "https://www.facebook.com/vaughancherries/",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Salem, OR",
+            latitude: 45.01048911637932,
+            longitude: -122.92018718744951
         }
     ],
-    plants: []
+    plants: [
+        {
+            type: "Sour Cherry",
+            name: "Montmorency"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Lapins"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sweetheart"
+        },
+        {
+            type: "Sweet Cherry",
+            // "Starletta"
+            name: "13N0739"
+        },
+    ]
 }
