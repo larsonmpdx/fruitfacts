@@ -1,13 +1,18 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "latest",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  }
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+	},
+	"dependencies": {
+		"eslint": "^8.8.0",
+		"eslint-config-prettier": "^8.3.0",
+		"next": "latest",
+		"prettier": "^2.5.1",
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
+	}
 }

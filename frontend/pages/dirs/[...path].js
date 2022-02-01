@@ -8,58 +8,59 @@
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
 
 export async function getServerSideProps(context) {
-    const { path } = context.query;
-    const data = await fetch(`${process.env.BACKEND_BASE}/api/collections/${path.join('/')}/`) // with trailing slash - directory listing
-    .then((response) => {
-        if (response.status !== 200) {
-            return [];
-        }
-        return response.json();
-    })
-    .catch((error) => {
-        console.log(error);
-        return []
-    });
+	const { path } = context.query;
+	const data = await fetch(`${process.env.BACKEND_BASE}/api/collections/${path.join('/')}/`) // with trailing slash - directory listing
+		.then((response) => {
+			if (response.status !== 200) {
+				return [];
+			}
+			return response.json();
+		})
+		.catch((error) => {
+			console.log(error);
+			return [];
+		});
 
-    return {
-      props: {
-        data
-      }
-    }
+	return {
+		props: {
+			data
+		}
+	};
 }
-
 
 export default function Home({ data }) {
+	return (
+		<div>
+			{/* multi collection (directory listing) */}
 
-    return (
-        <div>
-{/* multi collection (directory listing) */}
+			{data.directories && data.directories.length > 0 && (
+				<>
+					<ul>
+						{data.directories.map((directory) => (
+							<li>
+								<a href={`/dirs/${encodeURIComponent(directory)}`}>{directory}</a>
+							</li>
+						))}
+					</ul>
+				</>
+			)}
 
-{(data.directories && data.directories.length > 0) &&
-<>
-<ul>
-      {data.directories.map((directory) => (
-        <li>
-            <a href={`/dirs/${encodeURIComponent(directory)}`}>{directory}</a>
-		</li>
-      ))}
-    </ul>
-    </>
-}
-
-{(data.collections && data.collections.length > 0) &&
-<>
-<h1>Locations</h1>
-<ul>
-      {data.collections.map((collection) => (
-					<li>
-                    <a href={`/collections/${encodeURIComponent(collection.path + collection.filename)}`}>{collection.title}</a>
-                </li>
-      ))}
-    </ul>
-    </>
-}
-
-        </div>
-    );
+			{data.collections && data.collections.length > 0 && (
+				<>
+					<h1>Locations</h1>
+					<ul>
+						{data.collections.map((collection) => (
+							<li>
+								<a
+									href={`/collections/${encodeURIComponent(collection.path + collection.filename)}`}
+								>
+									{collection.title}
+								</a>
+							</li>
+						))}
+					</ul>
+				</>
+			)}
+		</div>
+	);
 }

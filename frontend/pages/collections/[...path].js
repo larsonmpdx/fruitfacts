@@ -8,61 +8,58 @@
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
 
 export async function getServerSideProps(context) {
-    const { path } = context.query;
-    const data = await fetch(`${process.env.BACKEND_BASE}/api/collections/${path.join('/')}`) // no trailing slash - individual collection
-    .then((response) => {
-        if (response.status !== 200) {
-            return [];
-        }
-        return response.json();
-    })
-    .catch((error) => {
-        console.log(error);
-        return []
-    });
+	const { path } = context.query;
+	const data = await fetch(`${process.env.BACKEND_BASE}/api/collections/${path.join('/')}`) // no trailing slash - individual collection
+		.then((response) => {
+			if (response.status !== 200) {
+				return [];
+			}
+			return response.json();
+		})
+		.catch((error) => {
+			console.log(error);
+			return [];
+		});
 
-    return {
-      props: {
-        data
-      }
-    }
+	return {
+		props: {
+			data
+		}
+	};
 }
-
 
 export default function Home({ data }) {
+	return (
+		<div>
+			{/* single collection */}
+			{data.collection && (
+				<>
+					<p>
+						{data.collection.title}
+						{data.collection.url && <a href={data.collection.url}>[ref]</a>}
+					</p>
+					<h1>Locations</h1>
+					<ul>
+						{data.locations.map((location) => (
+							<li>{location.location_name}</li>
+						))}
+					</ul>
+					<h1>Plants</h1>
+					<ul>
+						{data.items.map((item) => (
+							<li>
+								<a
+									href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(item.name)}`}
+								>
+									{item.name} {item.type}
+								</a>
 
-    return (
-        <div>
-
-{/* single collection */}
-{data.collection &&
-<>
-<p>
-			{data.collection.title}
-			{data.collection.url && <a href={data.collection.url}>[ref]</a>}
-</p>
-		<h1>Locations</h1>
-		<ul>
-        {data.locations.map((location) => (
-            <li>{location.location_name}</li>
-      ))}
-		</ul>
-		<h1>Plants</h1>
-		<ul>
-        {data.items.map((item) => (
-				<li>
-                <a href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(item.name)}`}>{item.name} {item.type}</a>
-
-                {item.marketing_name &&
-                <>
-                (marketed as {item.marketing_name})
-                </>
-                }
-            </li>
-      ))}
-		</ul>
-</>
-}
-        </div>
-    );
+								{item.marketing_name && <>(marketed as {item.marketing_name})</>}
+							</li>
+						))}
+					</ul>
+				</>
+			)}
+		</div>
+	);
 }
