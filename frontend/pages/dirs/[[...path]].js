@@ -9,7 +9,13 @@
 
 export async function getServerSideProps(context) {
     const { path } = context.query;
-    const data = await fetch(`${process.env.BACKEND_BASE}/api/collections/${path.join('/')}/`) // with trailing slash - directory listing
+    let pathUsed;
+    if(path) {
+        pathUsed = path.join('/') + '/'; // with trailing slash - directory listing
+    } else {
+        pathUsed = ""; // this combind with the [[...path]].js filename gets us the base path "/dirs" or "/dirs/"
+    }
+    const data = await fetch(`${process.env.BACKEND_BASE}/api/collections/${pathUsed}`)
         .then((response) => {
             if (response.status !== 200) {
                 return [];
@@ -34,13 +40,13 @@ export default function Home({ data }) {
             {/* multi collection (directory listing) */}
 
             {data.directories && data.directories.length > 0 && (
-                    <ul>
-                        {data.directories.map((directory) => (
-                            <li>
-                                <a href={`/dirs/${encodeURIComponent(directory)}`}>{directory}</a>
-                            </li>
-                        ))}
-                    </ul>
+                <ul>
+                    {data.directories.map((directory) => (
+                        <li>
+                            <a href={`/dirs/${directory}`}>{directory}</a>
+                        </li>
+                    ))}
+                </ul>
             )}
 
             {data.collections && data.collections.length > 0 && (
@@ -50,9 +56,7 @@ export default function Home({ data }) {
                         {data.collections.map((collection) => (
                             <li>
                                 <a
-                                    href={`/collections/${encodeURIComponent(
-                                        collection.path + collection.filename
-                                    )}`}
+                                    href={`/collections/${collection.path + encodeURIComponent(collection.filename)}`}
                                 >
                                     {collection.title}
                                 </a>
