@@ -61,7 +61,7 @@ fn get_google_client() -> GoogleClientType {
         Some(token_url),
     )
     .set_redirect_uri(
-        RedirectUrl::new(format!("{}/api/authRedirect", env!("VITE_BACKEND_BASE")))
+        RedirectUrl::new(format!("{}/api/authRedirect", env!("BACKEND_BASE")))
             .expect("Invalid redirect URL"),
     )
     // Google supports OAuth 2.0 Token Revocation (RFC-7009)
@@ -314,7 +314,7 @@ fn get_session_value(
 
         outgoing_cookie = Some(
             Cookie::build("session", session_value.as_ref().unwrap().clone())
-                .domain(env!("VITE_COOKIE_DOMAIN"))
+                .domain(env!("COOKIE_DOMAIN"))
                 .path("/")
                 //  .same_site(actix_web::cookie::SameSite::Strict)
                 //  .secure(true)
@@ -360,7 +360,7 @@ async fn receive_oauth_redirect(
             .finish())
     } else {
         Ok(HttpResponse::Found()
-            .header("Location", env!("VITE_AUTH_REDIRECT"))
+            .header("Location", env!("AUTH_REDIRECT"))
             .finish())
     }
 }
@@ -506,7 +506,7 @@ async fn logout(
     session::remove_session(&db_conn, session_value.unwrap());
 
     let outgoing_cookie = Cookie::build("session", "")
-        .domain(env!("VITE_COOKIE_DOMAIN"))
+        .domain(env!("COOKIE_DOMAIN"))
         .path("/")
         //  .same_site(actix_web::cookie::SameSite::Strict)
         //  .secure(true)
