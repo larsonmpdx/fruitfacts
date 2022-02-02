@@ -45,7 +45,7 @@ export default function Home({ fact, recentChangesData }) {
 
             <main>
                 <div>
-                    <a href="/dirs/">browse locations</a>
+                    <Link href="/dirs/">browse locations</Link>
                 </div>
                 <div>
                     {fact.fact && (
@@ -59,14 +59,14 @@ export default function Home({ fact, recentChangesData }) {
                     {recentChangesData.recent_changes && (
                         <ul>
                             {recentChangesData.recent_changes.collection_changes.map((update) => (
-                                <li class="list-group-item border border-2 rounded-lg py-1">
-                                    <a
+                                <li>
+                                    <Link
                                         href={`/collections/${encodeURIComponent(
                                             update.path + update.filename
                                         )}`}
                                     >
                                         {update.filename}
-                                    </a>
+                                    </Link>
                                     {timeAgo(update.git_edit_time * 1000)}
                                 </li>
                             ))}

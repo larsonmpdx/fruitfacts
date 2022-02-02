@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export async function getServerSideProps(context) {
     const { type, name } = context.query;
     const plant = await fetch(`${process.env.BACKEND_BASE}/api/plants/${type}/${name}`)
@@ -50,13 +52,13 @@ export default function Home({ plant }) {
                         {plant.collection.map((entry) => (
                             <>
                                 <li>
-                                    <a
+                                    <Link
                                         href={`/collections/${encodeURIComponent(
                                             entry.path_and_filename
                                         )}`}
                                     >
                                         {entry.path_and_filename}
-                                    </a>
+                                    </Link>
                                     {entry.description && <p>{entry.description}</p>}
                                 </li>
                             </>
@@ -74,14 +76,14 @@ export default function Home({ plant }) {
                                 {entry.harvest_text && (
                                     <p>
                                         {entry.harvest_text}
-                                        <a
+                                        <Link
                                             href={`/collections/${encodeURIComponent(
                                                 entry.path_and_filename
                                             )}`}
                                             title={entry.path_and_filename}
                                         >
                                             [ref]
-                                        </a>
+                                        </Link>
                                     </p>
                                 )}
                             </>

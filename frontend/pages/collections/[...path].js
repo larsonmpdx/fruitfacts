@@ -6,6 +6,7 @@
 // see https://github.com/vercel/next.js/discussions/23988
 
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
+import Link from 'next/link';
 
 export async function getServerSideProps(context) {
     const { path } = context.query;
@@ -36,7 +37,7 @@ export default function Home({ data }) {
                 <>
                     <p>
                         {data.collection.title}
-                        {data.collection.url && <a href={data.collection.url}>[ref]</a>}
+                        {data.collection.url && <Link href={data.collection.url}>[ref]</Link>}
                     </p>
                     <h1>Locations</h1>
                     <ul>
@@ -48,13 +49,13 @@ export default function Home({ data }) {
                     <ul>
                         {data.items.map((item) => (
                             <li>
-                                <a
+                                <Link
                                     href={`/plant/${encodeURIComponent(
                                         item.type
                                     )}/${encodeURIComponent(item.name)}`}
                                 >
-                                    {item.name} {item.type}
-                                </a>
+                                    {item.name + ' ' + item.type}
+                                </Link>
 
                                 {item.marketing_name && <>(marketed as {item.marketing_name})</>}
                             </li>

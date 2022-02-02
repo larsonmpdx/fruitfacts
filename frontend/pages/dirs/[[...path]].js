@@ -6,14 +6,15 @@
 // see https://github.com/vercel/next.js/discussions/23988
 
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
+import Link from 'next/link';
 
 export async function getServerSideProps(context) {
     const { path } = context.query;
     let pathUsed;
-    if(path) {
+    if (path) {
         pathUsed = path.join('/') + '/'; // with trailing slash - directory listing
     } else {
-        pathUsed = ""; // this combind with the [[...path]].js filename gets us the base path "/dirs" or "/dirs/"
+        pathUsed = ''; // this combind with the [[...path]].js filename gets us the base path "/dirs" or "/dirs/"
     }
     const data = await fetch(`${process.env.BACKEND_BASE}/api/collections/${pathUsed}`)
         .then((response) => {
@@ -43,7 +44,7 @@ export default function Home({ data }) {
                 <ul>
                     {data.directories.map((directory) => (
                         <li>
-                            <a href={`/dirs/${directory}`}>{directory}</a>
+                            <Link href={`/dirs/${directory}`}>{directory}</Link>
                         </li>
                     ))}
                 </ul>
@@ -55,11 +56,13 @@ export default function Home({ data }) {
                     <ul>
                         {data.collections.map((collection) => (
                             <li>
-                                <a
-                                    href={`/collections/${collection.path + encodeURIComponent(collection.filename)}`}
+                                <Link
+                                    href={`/collections/${
+                                        collection.path + encodeURIComponent(collection.filename)
+                                    }`}
                                 >
                                     {collection.title}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
