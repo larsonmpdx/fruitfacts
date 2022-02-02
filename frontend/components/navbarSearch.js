@@ -15,6 +15,9 @@ export default function Home() {
             throttle(async (searchText, callback) => {
                 console.log('hi' + JSON.stringify(searchText));
 
+                if (searchText.length < 3) {
+                    return callback([]);
+                }
                 const response = await fetch(
                     `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search/${encodeURIComponent(
                         searchText
@@ -50,9 +53,10 @@ export default function Home() {
                 let newOptions = [];
 
                 results.forEach((result) => {
-                    let entry = {link: `/plant/${result.type}/${result.name}`};
+                    let entry = { link: `/plant/${result.type}/${result.name}` };
                     if (result.marketing_name) {
-                        entry.label = result.name + ' (' + result.marketing_name + ') ' + result.type;
+                        entry.label =
+                            result.name + ' (' + result.marketing_name + ') ' + result.type;
                     } else {
                         entry.label = result.name + ' ' + result.type;
                     }
@@ -85,73 +89,7 @@ export default function Home() {
             onInputChange={(event, newInputValue) => {
                 setInputValue(newInputValue);
             }}
-
             renderInput={(params) => <TextField {...params} fullWidth />}
         />
     );
 }
-
-/* todo
-
-	fetch(`${import.meta.env.NEXT_PUBLIC_BACKEND_BASE}/api/checkLogin`, {
-		credentials: 'include'
-	})
-		.then((response) => response.json())
-		.then((data) => {
-			login.set(data);
-		})
-		.catch((error) => {
-			console.log(error);
-		});
-
-	async function logOut() {
-		fetch(`${import.meta.env.NEXT_PUBLIC_BACKEND_BASE}/api/logout`, {
-			method: 'POST',
-			credentials: 'include'
-		})
-			.then((response) => {
-				if (response.status === 200) {
-					login.set({});
-				}
-				return response.json();
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}
-
-
-		labelFunction={(plant) => {
-			if (plant.marketing_name) {
-				return plant.name + ' (' + plant.marketing_name + ') ' + plant.type;
-			} else {
-				return plant.name + ' ' + plant.type;
-			}
-		}}
-
-
-
-        minCharactersToSearch="3"
-
-
-
-        	{#if $login.user}
-		logged in as <a href="/user/">{$login.user.name}</a>
-		<button type="button" on:click={logOut}>log out</button>
-	{:else}
-		<a href="/login">log in</a>
-	{/if}
-
-
-
-
-
-
-    	let selectedPlant;
-	$: if (selectedPlant) {
-		goto(`/plant?type=${selectedPlant.type}&name=${selectedPlant.name}`);
-	}
-
-
-
-    */
