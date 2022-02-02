@@ -37,7 +37,7 @@ export default function Home({ data }) {
                 <>
                     <p>
                         {data.collection.title}
-                        {data.collection.url && <Link href={data.collection.url}>[ref]</Link>}
+                        {data.collection.url && <a href={data.collection.url}>[ref]</a>}
                     </p>
                     <h1>Locations</h1>
                     <ul>
