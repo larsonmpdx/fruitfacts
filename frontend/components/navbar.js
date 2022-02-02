@@ -6,12 +6,11 @@ import throttle from 'lodash/throttle';
 // search box: see https://mui.com/components/autocomplete/#search-as-you-type
 
 export default function Home() {
-    const [value, setValue] = React.useState(null);
     const [inputValue, setInputValue] = React.useState('');
     const [options, setOptions] = React.useState([]);
 
     const runSearch = React.useMemo(
-        // useMemo(): cache results for each input and don't re-run
+        // useMemo(): cache results for each input and don't re-run. appears to not be doing anything
         () =>
             throttle(async (searchText, callback) => {
                 console.log('hi' + JSON.stringify(searchText));
@@ -41,7 +40,6 @@ export default function Home() {
     React.useEffect(() => {
         let active = true;
         if (inputValue === '') {
-            setOptions(value ? [value] : []);
             return undefined;
         }
 
@@ -52,13 +50,13 @@ export default function Home() {
                 let newOptions = [];
 
                 results.forEach((result) => {
+                    let entry = {link: `/plant/${result.type}/${result.name}`};
                     if (result.marketing_name) {
-                        newOptions.push(
-                            result.name + ' (' + result.marketing_name + ') ' + result.type
-                        );
+                        entry.label = result.name + ' (' + result.marketing_name + ') ' + result.type;
                     } else {
-                        newOptions.push(result.name + ' ' + result.type);
+                        entry.label = result.name + ' ' + result.type;
                     }
+                    newOptions.push(entry);
                 });
 
                 setOptions(newOptions);
@@ -68,26 +66,26 @@ export default function Home() {
         return () => {
             active = false;
         };
-    }, [value, inputValue, runSearch]);
+    }, [inputValue, runSearch]);
 
     return (
         <Autocomplete
             id="search-box"
             sx={{ width: 300 }}
-            getOptionLabel={(option) => (typeof option === 'string' ? option : option.description)}
+            getOptionLabel={(option) => (typeof option === 'string' ? option : option.label)}
             filterOptions={(x) => x}
             options={options}
             autoComplete
             includeInputInList
             filterSelectedOptions
-            value={value}
-            onChange={(event, newValue) => {
-                setOptions(newValue ? [newValue, ...options] : options);
-                setValue(newValue);
+            noOptionsText={'no results'}
+            onChange={(event, option) => {
+                window.location.href = option.link;
             }}
             onInputChange={(event, newInputValue) => {
                 setInputValue(newInputValue);
             }}
+
             renderInput={(params) => <TextField {...params} fullWidth />}
         />
     );

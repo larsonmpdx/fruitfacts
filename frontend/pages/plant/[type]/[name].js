@@ -31,7 +31,7 @@ export default function Home({ plant }) {
             )}
             {plant.base?.marketing_name && <h2>marketed as {plant.base.marketing_name} </h2>}
 
-            {plant.base?.uspp_number && <p>USPP {plant.base.uspp_number}</p>}
+            {plant.base?.uspp_number && <p>USPP{plant.base.uspp_number}</p>}
 
             {plant.base?.uspp_expiration && <p>expires {plant.base.uspp_expiration}</p>}
 
