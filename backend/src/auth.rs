@@ -61,7 +61,7 @@ fn get_google_client() -> GoogleClientType {
         Some(token_url),
     )
     .set_redirect_uri(
-        RedirectUrl::new(format!("{}/api/authRedirect", env!("BACKEND_BASE")))
+        RedirectUrl::new(format!("{}/api/authRedirect", env!("NEXT_PUBLIC_BACKEND_BASE")))
             .expect("Invalid redirect URL"),
     )
     // Google supports OAuth 2.0 Token Revocation (RFC-7009)

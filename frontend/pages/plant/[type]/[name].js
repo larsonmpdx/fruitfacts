@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export async function getServerSideProps(context) {
     const { type, name } = context.query;
-    const plant = await fetch(`${process.env.BACKEND_BASE}/api/plants/${type}/${name}`)
+    const plant = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/plants/${type}/${name}`)
         .then((response) => {
             if (response.status !== 200) {
                 return {};

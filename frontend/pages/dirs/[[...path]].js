@@ -16,7 +16,7 @@ export async function getServerSideProps(context) {
     } else {
         pathUsed = ''; // this combind with the [[...path]].js filename gets us the base path "/dirs" or "/dirs/"
     }
-    const data = await fetch(`${process.env.BACKEND_BASE}/api/collections/${pathUsed}`)
+    const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathUsed}`)
         .then((response) => {
             if (response.status !== 200) {
                 return [];

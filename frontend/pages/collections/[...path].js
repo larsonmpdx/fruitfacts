@@ -10,7 +10,9 @@ import Link from 'next/link';
 
 export async function getServerSideProps(context) {
     const { path } = context.query;
-    const data = await fetch(`${process.env.BACKEND_BASE}/api/collections/${path.join('/')}`) // no trailing slash - individual collection
+    const data = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${path.join('/')}`
+    ) // no trailing slash - individual collection
         .then((response) => {
             if (response.status !== 200) {
                 return [];

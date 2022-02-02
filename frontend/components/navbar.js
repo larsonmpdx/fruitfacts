@@ -10,17 +10,30 @@ export default function Home() {
     const [inputValue, setInputValue] = React.useState('');
     const [options, setOptions] = React.useState([]);
 
-    const fetch = React.useMemo(
+    const runSearch = React.useMemo(
+        // useMemo(): cache results for each input and don't re-run
         () =>
-            throttle((request, callback) => {
-                console.log('hi');
+            throttle(async (searchText, callback) => {
+                console.log('hi' + JSON.stringify(searchText));
 
-                // todo - load data
-                // 	async function searchPlant(keyword) {
-                // const url = `${import.meta.env.VITE_BACKEND_BASE}/api/search/${encodeURIComponent(keyword)}`;
+                const response = await fetch(
+                    `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search/${encodeURIComponent(
+                        searchText
+                    )}`
+                )
+                    .then((response) => {
+                        if (response.status !== 200) {
+                            console.log(response.status);
+                            return [];
+                        }
+                        return response.json();
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                        return [];
+                    });
 
-                // const response = await fetch(url);
-                // return await response.json();
+                callback(response);
             }, 400),
         []
     );
@@ -32,17 +45,21 @@ export default function Home() {
             return undefined;
         }
 
-        fetch({ input: inputValue }, (results) => {
+        runSearch(inputValue, (results) => {
             if (active) {
+                console.log('search result: ' + JSON.stringify(results));
+
                 let newOptions = [];
 
-                if (value) {
-                    newOptions = [value];
-                }
-
-                if (results) {
-                    newOptions = [...newOptions, ...results];
-                }
+                results.forEach((result) => {
+                    if (result.marketing_name) {
+                        newOptions.push(
+                            result.name + ' (' + result.marketing_name + ') ' + result.type
+                        );
+                    } else {
+                        newOptions.push(result.name + ' ' + result.type);
+                    }
+                });
 
                 setOptions(newOptions);
             }
@@ -51,7 +68,7 @@ export default function Home() {
         return () => {
             active = false;
         };
-    }, [value, inputValue, fetch]);
+    }, [value, inputValue, runSearch]);
 
     return (
         <Autocomplete
@@ -78,7 +95,7 @@ export default function Home() {
 
 /* todo
 
-	fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/checkLogin`, {
+	fetch(`${import.meta.env.NEXT_PUBLIC_BACKEND_BASE}/api/checkLogin`, {
 		credentials: 'include'
 	})
 		.then((response) => response.json())
@@ -90,7 +107,7 @@ export default function Home() {
 		});
 
 	async function logOut() {
-		fetch(`${import.meta.env.VITE_BACKEND_BASE}/api/logout`, {
+		fetch(`${import.meta.env.NEXT_PUBLIC_BACKEND_BASE}/api/logout`, {
 			method: 'POST',
 			credentials: 'include'
 		})

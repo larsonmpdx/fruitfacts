@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { format as timeAgo } from 'timeago.js';
 
 export async function getServerSideProps(context) {
-    const fact = await fetch(`${process.env.BACKEND_BASE}/api/fact`)
+    const fact = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/fact`)
         .then((response) => {
             if (response.status !== 200) {
                 return {};
@@ -15,7 +15,9 @@ export async function getServerSideProps(context) {
             return {};
         });
 
-    const recentChangesData = await fetch(`${process.env.BACKEND_BASE}/api/recent_changes`)
+    const recentChangesData = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/recent_changes`
+    )
         .then((response) => {
             if (response.status !== 200) {
                 return {};
