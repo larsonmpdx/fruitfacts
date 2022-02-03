@@ -23,5 +23,10 @@
         contributor: "Michael",
         fact: "Fresh-market sweet cherries are typically picked by hand to preserve the stem and increase shelf life",
         reference: "https://www.nytimes.com/2020/08/12/magazine/cherry-harvest-workers.html"
+    },
+    {
+        contributor: "Michael",
+        fact: '"romance" series sour bush cherries can achieve brix (sugar) levels that rival sweet cherries',
+        reference: "https://www.goodfruit.com/new-prairie-cherry-varieties-making-an-impact/"
     }
 ]

@@ -1,39 +1,94 @@
-/*
-https://www.facebook.com/TkOrchards/
-
-
-
-- Candor        july 6, 2020
-- Garnet Beauty     july 8, 2020
-- July Elberta      July 31, 2020
-- Dixie Gem     july 20, 2020
-- Encore
-- New Haven     july 22, 2020
-- Red Haven     july 21, 2020
-- Star Fire
-- Sun High      July 23, 2020
-- Red Fury
-- Suncrest          July 31, 2020
-- Canadian Harmony      July 31, 2020
-- Veteran           August 7, 2020
-
-- unknown PF        July 23, 2020
-
-*/
-
 {
-    title: "",
+    title: "TK Orchards",
     author: "",
-    url: "",
+    url: "https://www.facebook.com/TkOrchards/",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
             name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            latitude: 45.260369005698045,
+            longitude: -122.7872459024906
         }
     ],
-    plants: []
+    plants: [
+        {
+            type: "Peach",
+            name: "Candor",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "July 6"
+        },
+        {
+            type: "Peach",
+            name: "Garnet Beauty",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "july 8"
+        },
+        {
+            type: "Peach",
+            name: "July Elberta",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "July 31"
+        },
+        {
+            type: "Peach",
+            name: "Dixie Gem",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "July 20"
+        },
+        {
+            type: "Peach",
+            // harvest time unknown - not in the 2020 facebook posts
+            name: "Encore"
+        },
+        {
+            type: "Peach",
+            name: "Newhaven",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "July 22"
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "July 21"
+        },
+        {
+            type: "Peach",
+            // harvest time unknown - not in the 2020 facebook posts
+            // "Star Fire"
+            name: "FA 11",
+        },
+        {
+            type: "Peach",
+            name: "Sun High",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "July 23"
+        },
+        {
+            type: "Peach",
+            // harvest time unknown - not in the 2020 facebook posts
+            name: "Red Fury"
+        },
+        {
+            type: "Peach",
+            name: "Suncrest",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "July 31"
+        },
+        {
+            type: "Peach",
+            name: "Canadian Harmony",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "July 31"
+        },
+        {
+            type: "Peach",
+            name: "Veteran",
+            // harvest time is from the 2020 facebook posts
+            harvest_time: "August 7"
+        }
+        // unknown PF        July 23, 2020 - can't list this because they didn't note the variety, only that it was a "PF" peach
+    ]
 }
