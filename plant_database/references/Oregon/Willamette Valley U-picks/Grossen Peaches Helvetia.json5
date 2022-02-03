@@ -1,28 +1,48 @@
-/*
-https://grossenpeaches.snappages.com/varieties.htm
-
-Red Haven
-Vivid
-Veteran
-FA 11 // "Star Fire"
-Harken
-Canadian Harmony
-
-*/
-
 {
-    title: "",
+    title: "Grossen Farms Peaches",
     author: "",
-    url: "",
+    url: "https://grossenpeaches.snappages.com/varieties.htm",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Hillsboro, OR",
+            latitude: 45.59800272456616,
+            longitude: -122.92143209219577
         }
     ],
-    plants: []
+    plants: [
+        {
+            type: "Peach",
+            name: "Redhaven"
+        },
+        {
+            type: "Peach",
+            name: "Vivid"
+        },
+        {
+            type: "Peach",
+            name: "Veteran"
+        },
+        {
+            type: "Peach",
+            // "Star Fire"
+            name: "FA 11"
+        },
+        {
+            type: "Peach",
+            name: "Harken"
+        },
+        {
+            type: "Peach",
+            // from their facebook page, 2021
+            //"Red Star"
+            name: "FA 52"
+        },
+        {
+            type: "Peach",
+            name: "Canadian Harmony"
+        },
+    ]
 }

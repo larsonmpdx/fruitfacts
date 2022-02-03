@@ -12,17 +12,66 @@
             longitude: -74.96075796896541
         }
     ],
-    plants: [
-        // todo
-        // Nitaka           4th week of October
-        // Ya Li            3rd week of October
-        // Olympic          4th week of October
-        // Shinko           4th week of October
-        // Golden Russet    4th week of September
-        // Atago            4th week of September
-        // Yoinashi         3rd-4th week of September
-        // Hosui            2nd week of September
-        // Isiiwase         1st week of September
-        // Kosui            4th week of August
+    plants: [   
+        {
+            type: "Asian Pear",
+            name: "Nitaka",
+            // 4th week of October
+            harvest_time: "Oct 22-28"
+        },
+        {
+            type: "Asian Pear",
+            name: "Ya Li",
+            // 3rd week of October
+            harvest_time: "Oct 15-21"
+        },
+        {
+            type: "Asian Pear",
+            name: "Korean Giant", // "Olympic"
+            // 4th week of October
+            harvest_time: "Oct 22-28"
+        },
+        {
+            type: "Asian Pear",
+            name: "Shinko",
+            // 4th week of October
+            harvest_time: "Oct 22-28"
+        },
+        {
+            type: "Asian Pear",
+            name: "Golden Russet",
+            // 4th week of September
+            harvest_time: "Sep 22-28"
+        },
+        {
+            type: "Asian Pear",
+            name: "Atago",
+            // 4th week of September
+            harvest_time: "Sep 22-28"
+        },
+        {
+            type: "Asian Pear",
+            name: "Yoinashi",
+            // 3rd-4th week of September
+            harvest_time: "Sep 15-28"
+        },
+        {
+            type: "Asian Pear",
+            name: "Hosui",
+            // 2nd week of September
+            harvest_time: "Sep 8-14"
+        },
+        {
+            type: "Asian Pear",
+            name: "Isiiwase",
+            // 1st week of September
+            harvest_time: "Sep 1-7"
+        },
+        {
+            type: "Asian Pear",
+            name: "Kosui",
+            // 4th week of August
+            harvest_time: "Aug 22-28"
+        }
     ]
 }

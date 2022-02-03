@@ -1,16 +1,7 @@
-/*
-early redhaven
-redhaven
-rosa
-halehaven
-veteran
-elberta
-*/
-
 {
-    title: "",
+    title: "Sauvie Island Farms Peaches",
     author: "",
-    url: "",
+    url: "http://www.sauvieislandfarms.com/#/crop_calendar", // todo - crops other than peaches
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
@@ -21,5 +12,35 @@ elberta
             longitude: -121.14213716576367
         }
     ],
-    plants: []
+    plants: [
+        {
+            type: "Peach",
+            name: "Early Redhaven"
+        },
+        {
+            type: "Peach",
+            // "Risingstar" - from their facebook page, 2021
+            name: "FA 47"
+        },
+        {
+            type: "Peach",
+            name: "Redhaven"
+        },
+        {
+            type: "Peach",
+            name: "Rosa"
+        },
+        {
+            type: "Peach",
+            name: "Halehaven"
+        },
+        {
+            type: "Peach",
+            name: "Veteran"
+        },
+        {
+            type: "Peach",
+            name: "Elberta"
+        },
+    ]
 }
