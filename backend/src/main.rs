@@ -73,10 +73,7 @@ async fn main() -> std::io::Result<()> {
             .service(auth::check_login)
             .service(auth::logout)
     })
-    .bind((
-        "127.0.0.1",
-        env!("BACKEND_PORT").parse::<u16>().unwrap(),
-    ))?
+    .bind(("127.0.0.1", env!("BACKEND_PORT").parse::<u16>().unwrap()))?
     .run()
     .await
 }
