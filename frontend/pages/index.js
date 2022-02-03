@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { format as timeAgo } from 'timeago.js';
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
     const fact = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/fact`)
         .then((response) => {
             if (response.status !== 200) {
@@ -60,18 +60,20 @@ export default function Home({ fact, recentChangesData }) {
                 <div>
                     {recentChangesData.recent_changes && (
                         <ul>
-                            {recentChangesData.recent_changes.collection_changes.map((update) => (
-                                <li>
-                                    <Link
-                                        href={`/collections/${encodeURIComponent(
-                                            update.path + update.filename
-                                        )}`}
-                                    >
-                                        {update.filename}
-                                    </Link>
-                                    {timeAgo(update.git_edit_time * 1000)}
-                                </li>
-                            ))}
+                            {recentChangesData.recent_changes.collection_changes.map(
+                                (update, index) => (
+                                    <li key={index}>
+                                        <Link
+                                            href={`/collections/${encodeURIComponent(
+                                                update.path + update.filename
+                                            )}`}
+                                        >
+                                            {update.filename}
+                                        </Link>
+                                        {timeAgo(update.git_edit_time * 1000)}
+                                    </li>
+                                )
+                            )}
                         </ul>
                     )}
                 </div>

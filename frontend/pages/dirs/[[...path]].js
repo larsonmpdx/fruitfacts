@@ -42,8 +42,8 @@ export default function Home({ data }) {
 
             {data.directories && data.directories.length > 0 && (
                 <ul>
-                    {data.directories.map((directory) => (
-                        <li>
+                    {data.directories.map((directory, index) => (
+                        <li key={index}>
                             <Link href={`/dirs/${directory}`}>{directory}</Link>
                         </li>
                     ))}
@@ -55,7 +55,7 @@ export default function Home({ data }) {
                     <h1>Locations</h1>
                     <ul>
                         {data.collections.map((collection) => (
-                            <li>
+                            <li key={collection.id}>
                                 <Link
                                     href={`/collections/${
                                         collection.path + encodeURIComponent(collection.filename)

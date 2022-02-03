@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link';
 
 export default function Home({ user, setUser }) {
     React.useEffect(() => {
@@ -22,7 +23,7 @@ export default function Home({ user, setUser }) {
         };
 
         fetchData();
-    }, []);
+    });
 
     function logOut() {
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/logout`, {
@@ -44,11 +45,11 @@ export default function Home({ user, setUser }) {
         <>
             {user.user ? (
                 <p>
-                    logged in as <a href="/user/">{user.user.name}</a>
+                    logged in as <Link href="/user/">{user.user.name}</Link>
                     <button onClick={logOut}>log out</button>
                 </p>
             ) : (
-                <a href="/login">log in</a>
+                <Link href="/login">log in</Link>
             )}
         </>
     );
