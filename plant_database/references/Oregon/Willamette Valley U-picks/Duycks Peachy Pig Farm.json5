@@ -1,36 +1,31 @@
-/*
-https://www.facebook.com/duycks.peachy.pig
-
-34840 SW Johnson School Rd, Cornelius, OR 97113
-
-45.47156684525046, -123.0415012766268
-
-Harmony, Halehaven, Veteran
-
-redhaven
-
-Lambert
-
-Shiro
-
-Gravenstein
-
-Transparent 
-*/
-
 {
-    title: "",
+    title: "Duycks Peachy Pig Farm",
     author: "",
-    url: "",
+    url: "https://www.facebook.com/duycks.peachy.pig",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Cornelius, OR",
+            latitude: 45.47156684525046,
+            longitude: -123.0415012766268
         }
     ],
-    plants: []
+    plants: [
+// todo
+// Harmony
+// Halehaven
+// Veteran
+
+// redhaven
+
+// Lambert
+
+// Shiro
+
+// Gravenstein
+
+// Transparent 
+    ]
 }

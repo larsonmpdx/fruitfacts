@@ -1,14 +1,7 @@
-/*
-http://www.meyerpeachorchard.com/
-
-redhaven
-veteran
-*/
-
 {
-    title: "",
+    title: "Meyer Peach Orchard",
     author: "",
-    url: "",
+    url: "http://www.meyerpeachorchard.com/",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
@@ -19,5 +12,14 @@ veteran
             longitude: -121.14213716576367
         }
     ],
-    plants: []
+    plants: [
+        {
+            type: "Peach",
+            name: "Redhaven"
+        },
+        {
+            type: "Peach",
+            name: "Veteran"
+        }
+    ]
 }

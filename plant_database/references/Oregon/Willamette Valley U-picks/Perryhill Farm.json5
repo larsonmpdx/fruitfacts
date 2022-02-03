@@ -1,16 +1,11 @@
 /*
-http://www.perryhillfarm.net/peaches.php
-
-5775 Perrydale Rd, Dallas, OR 97338
-
+todo
 Peach Varieties
 Old Favorites- Red Haven, Elberta, Veteran, Canadian Harmony, Glohaven
 Paul Friday Flaming Fury Series- PF-5 thru PF-31
 Stellar Series- Coral Star, Autumn Star
 
-
-
-blueberries early-July to mid-September give or take a week.
+blueberries early-July to mid-September give or take a week
 Early Blue - First of the season with nice large sweet berries
 Spartan - Very large size with excellent flavor, many peoples favorite
 Patriot- A medium sized berry, good flavor, heavy yields means easy picking
@@ -21,24 +16,35 @@ Elliot- Late season variety, with medium sized fruit, and an excellent tart flav
 
 
 cherries mid-June and runs till mid-July.
-Bing, Rainier, Lapins and Van. As well as new selections for you to try like Christilina, Sandra Rose, Regina and many others
+Bing
+Rainier
+Lapins
+Van
+
+Christilina
+Sandra Rose
+Regina
+
+and many other cherries
 
 apples
-Royal Gala, Jonagold, and Honeysrisp
+Royal Gala
+Jonagold
+Honeysrisp
 */
 
 {
-    title: "",
+    title: "Perryhill Farm",
     author: "",
-    url: "",
+    url: "http://www.perryhillfarm.net/peaches.php",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Dallas, OR",
+            latitude: 45.01148214087937,
+            longitude: -123.27827148764334
         }
     ],
     plants: []

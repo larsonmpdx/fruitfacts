@@ -1,25 +1,25 @@
-/*
-https://thistledownfarm.net/our-crops
-
-Suncrest
-
-Veteran
-
-*/
-
 {
-    title: "",
+    title: "Thistledown Farms",
     author: "",
-    url: "",
+    url: "https://thistledownfarm.net/our-crops",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Eugene, OR",
+            latitude: 44.14526918907858,
+            longitude: -123.15052630747374
         }
     ],
-    plants: []
+    plants: [
+        {
+            type: "Peach",
+            name: "Suncrest"
+        },
+        {
+            type: "Peach",
+            name: "Veteran"
+        }
+    ]
 }

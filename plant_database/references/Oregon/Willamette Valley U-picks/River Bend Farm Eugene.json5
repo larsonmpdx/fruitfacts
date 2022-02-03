@@ -1,38 +1,44 @@
-/*
-Melrose, Granny Smith, Jonagold, Idared, Mutsu, Cameo, and Braeburn
-
-20th Century, Hosui, Shinko
-
-Bosc
-
-Honeycrisp, Cameo, Jonagold, Liberty, Empire, Gala, and Mutsu
-
-Liberty, Akane, Jonagold, & Honeycrisp
-
-
-Yellow and Red Bartlett
-
-
-
-Bramleys Seedling, Dabinett, Foxwhelp, Kingston Black,  Smith’s cider, Muscat De Abernathy, and Yarlington Mill.
-
-Gravenstein 
-
-*/
-
 {
-    title: "",
+    title: "River Bend Farm",
     author: "",
-    url: "",
+    url: "https://river-bend-farm.com/",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Eugene, OR",
+            latitude: 43.987975607328465,
+            longitude: -122.97179147900825
         }
     ],
-    plants: []
+    plants: [
+        // todo
+        // Melrose
+        // Granny Smith
+        // Jonagold
+        // Idared
+        // Mutsu
+        // Cameo
+        // Braeburn
+        // Honeycrisp
+        // Liberty
+        // Empire
+        // Gala
+        // Akane
+        // Bramleys Seedling
+        // Dabinett
+        // Foxwhelp
+        // Kingston Black
+        // Smith’s cider
+        // Muscat De Abernathy
+        // Yarlington Mill
+        // Gravenstein
+        // 20th Century
+        // Hosui
+        // Shinko
+        // Bosc
+        // Yellow Bartlett
+        // Red Bartlett
+    ]
 }

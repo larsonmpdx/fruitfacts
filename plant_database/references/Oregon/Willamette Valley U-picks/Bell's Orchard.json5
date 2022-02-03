@@ -1,5 +1,19 @@
-// http://www.bellsorchard.com/fruits/peaches/
-
+{
+    title: "Bell's Orchard",
+    author: "",
+    url: "http://www.bellsorchard.com/fruits/peaches/",
+    published: "",
+    accessed: "Oct 2021",
+    type: "U-pick variety list",
+    locations: [
+        {
+            name: "Beaverton, OR",
+            latitude: 45.44643162296651,
+            longitude: -122.92796482092223
+        }
+    ],
+    plants: [
+        // todo
 // rising star
 // starfire
 // all star
@@ -17,19 +31,5 @@
 // rubinstar jonagold
 // kumeo crimson red (braeburn)
 
-{
-    title: "",
-    author: "",
-    url: "",
-    published: "",
-    accessed: "Oct 2021",
-    type: "U-pick variety list",
-    locations: [
-        {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
-        }
-    ],
-    plants: []
+    ]
 }

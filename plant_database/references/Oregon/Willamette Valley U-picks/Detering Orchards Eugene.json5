@@ -1,20 +1,20 @@
 {
-    title: "",
+    title: "Detering Orchards",
     author: "",
-    url: "",
+    url: "https://www.deteringorchards.com/produce-products/peaches/",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Eugene, OR",
+            latitude: 44.21698337402435,
+            longitude: -123.1366157542043
         }
     ],
     plants: []
 }
-
+// todo
 /*
 Yellow Bartlett
 August

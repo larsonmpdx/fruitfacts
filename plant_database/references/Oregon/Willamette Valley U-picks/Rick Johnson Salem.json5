@@ -1,31 +1,45 @@
-/*
-https://www.facebook.com/Rick-Johnson-Farm-226568897377674/
-
-Benton, Lapins, and Sweetheart
-
-elberta
-
-suncrest
-
-veteran
-
-redhaven
-
-*/
-
 {
-    title: "",
+    title: "Rick Johnson Farm", // "Farm" or "Farms"? I dunno
     author: "",
-    url: "",
+    url: "https://www.facebook.com/Rick-Johnson-Farm-226568897377674/",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Salem, OR",
+            latitude: 45.026621805407146,
+            longitude: -122.9923891468362
         }
     ],
-    plants: []
+    plants: [
+        {
+            type: "Sweet Cherry",
+            name: "Benton"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Lapins"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sweetheart"
+        },
+        {
+            type: "Peach",
+            name: "Elberta"
+        },
+        {
+            type: "Peach",
+            name: "Suncrest"
+        },
+        {
+            type: "Peach",
+            name: "Veteran"
+        },
+        {
+            type: "Peach",
+            name: "Redhaven"
+        }
+    ]
 }

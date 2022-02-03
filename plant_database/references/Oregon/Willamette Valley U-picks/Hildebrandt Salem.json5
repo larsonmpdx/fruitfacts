@@ -1,28 +1,44 @@
-/*
-https://www.facebook.com/hildebrandtcherryorchards/\
-
-regina
-rainier
-
-Benton, Regina, Rainier, Skeena, Sweetheart
-
-Rainier, Skeena, Vans, Sweetheart
-
-*/
-
 {
-    title: "",
+    title: "Hildebrandt Cherry Orchards",
     author: "",
-    url: "",
+    url: "https://www.facebook.com/hildebrandtcherryorchards/",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Salem, OR",
+            latitude: 45.116603828756645,
+            longitude: -123.03152606202767
         }
     ],
-    plants: []
+    plants: [
+        // varieties from facebook posts 2021 and earlier
+        {
+            type: "Sweet Cherry",
+            // "Benton"
+            name: "PC7146-8"
+        },
+        {
+            type: "Sweet Cherry",
+            // "Regina"
+            name: "Jork 57/201"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Rainier"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Skeena"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sweetheart"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Van"
+        }
+    ]
 }

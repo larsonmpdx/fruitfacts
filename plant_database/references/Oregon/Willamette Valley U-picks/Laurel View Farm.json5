@@ -1,25 +1,26 @@
+{
+    title: "Laurel View Farm",
+    author: "",
+    url: "http://laurelviewfarm.freewebspace.com/index.html", // I think this was sold and is now horses only?
+    published: "",
+    accessed: "Oct 2021",
+    type: "U-pick variety list",
+    locations: [
+        {
+            name: "Hillsboro, OR",
+            latitude: 45.4004773186209,
+            longitude: -123.01573231047273
+        }
+    ],
+    plants: [
 /*
-http://laurelviewfarm.freewebspace.com/index.html
 
+todo
 redhaven
 veteran
 
 asian pears
 */
 
-{
-    title: "",
-    author: "",
-    url: "",
-    published: "",
-    accessed: "Oct 2021",
-    type: "U-pick variety list",
-    locations: [
-        {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
-        }
-    ],
-    plants: []
+    ]
 }

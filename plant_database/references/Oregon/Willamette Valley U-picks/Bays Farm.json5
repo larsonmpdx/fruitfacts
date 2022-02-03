@@ -1,5 +1,20 @@
-// https://www.tricountyfarm.org/farm/bays-family-farm-llc
 
+{
+    title: "Bays Farm",
+    author: "",
+    url: "https://www.tricountyfarm.org/farm/bays-family-farm-llc",
+    published: "",
+    accessed: "Oct 2021",
+    type: "U-pick variety list",
+    locations: [
+        {
+            name: "Banks, OR",
+            latitude: 45.62641945133519,
+            longitude: -123.13127154361844
+        }
+    ],
+    plants: [
+// todo
 // Braeburn apples are ready to pick. There may still be some of the following apples that are not too ripe for U-pick: Fuji, Hidden Rose, Jonagold, Liberty, Melrose, Mutsu and Pixie Crunch
 
 // Akane, Ashmead's Kernel, Auvil Fuji, Chehalis, Famouse, Gingergold, Hidden Rose, Jonagold, Jonamac, Pink Pearl, Pixie Crunch, Red McIntosh, Red Spitzenberg, Rubinstar Jonagold, Sansa, Stearns, Summerred and a couple of very large Wealthy apples picked in the cooler.
@@ -13,20 +28,5 @@
 // suncrest
 // canadian harmony
 // veteran
-
-{
-    title: "Bays Farm",
-    author: "",
-    url: "",
-    published: "",
-    accessed: "Oct 2021",
-    type: "U-pick variety list",
-    locations: [
-        {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
-        }
-    ],
-    plants: []
+    ]
 }
