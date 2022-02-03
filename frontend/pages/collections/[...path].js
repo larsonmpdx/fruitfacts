@@ -44,13 +44,13 @@ export default function Home({ data }) {
                     <h1>Locations</h1>
                     <ul>
                         {data.locations.map((location) => (
-                            <li>{location.location_name}</li>
+                            <li key={location.id}>{location.location_name}</li>
                         ))}
                     </ul>
                     <h1>Plants</h1>
                     <ul>
                         {data.items.map((item) => (
-                            <li>
+                            <li key={item.id}>
                                 <Link
                                     href={`/plant/${encodeURIComponent(
                                         item.type
