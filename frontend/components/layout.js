@@ -11,6 +11,9 @@ export default function Layout({ children }) {
     if (router.pathname != '/login') {
         return (
             <>
+                <noscript>
+                    <p>{process.env.NEXT_PUBLIC_SITE_NAME} works better with javascript</p>
+                </noscript>
                 <Link href="/">Fruitfacts</Link>
                 <Search />
                 <Login user={user} setUser={setUser} />
@@ -22,6 +25,13 @@ export default function Layout({ children }) {
             </>
         );
     } else {
-        return <main>{children}</main>;
+        return (
+            <>
+                <noscript>
+                    <p>{process.env.NEXT_PUBLIC_SITE_NAME} works better with javascript</p>
+                </noscript>
+                <main>{children}</main>;
+            </>
+        );
     }
 }

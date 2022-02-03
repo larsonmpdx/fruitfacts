@@ -23,7 +23,7 @@ export default function Home({ user, setUser }) {
         };
 
         fetchData();
-    });
+    }, []);
 
     function logOut() {
         fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/logout`, {
