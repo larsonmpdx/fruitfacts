@@ -1,4 +1,3 @@
-
 {
     title: "Bays Farm",
     author: "",
@@ -14,19 +13,14 @@
         }
     ],
     plants: [
-// todo
-// Braeburn apples are ready to pick. There may still be some of the following apples that are not too ripe for U-pick: Fuji, Hidden Rose, Jonagold, Liberty, Melrose, Mutsu and Pixie Crunch
-
-// Akane, Ashmead's Kernel, Auvil Fuji, Chehalis, Famouse, Gingergold, Hidden Rose, Jonagold, Jonamac, Pink Pearl, Pixie Crunch, Red McIntosh, Red Spitzenberg, Rubinstar Jonagold, Sansa, Stearns, Summerred and a couple of very large Wealthy apples picked in the cooler.
-
-// Rescue, Bartlett and Red Sensation Bartlett
-
-// D'Anjou
-
-// some asian
-
-// suncrest
-// canadian harmony
-// veteran
+        // todo
+        // Braeburn apples are ready to pick. There may still be some of the following apples that are not too ripe for U-pick: Fuji, Hidden Rose, Jonagold, Liberty, Melrose, Mutsu and Pixie Crunch
+        // Akane, Ashmead's Kernel, Auvil Fuji, Chehalis, Famouse, Gingergold, Hidden Rose, Jonagold, Jonamac, Pink Pearl, Pixie Crunch, Red McIntosh, Red Spitzenberg, Rubinstar Jonagold, Sansa, Stearns, Summerred and a couple of very large Wealthy apples picked in the cooler.
+        // Rescue, Bartlett and Red Sensation Bartlett
+        // D'Anjou
+        // some asian
+        // suncrest
+        // canadian harmony
+        // veteran
     ]
 }

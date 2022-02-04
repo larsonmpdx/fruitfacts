@@ -73,11 +73,11 @@
         {
             type: "Apple",
             name: "Scilate", // "Envy™"
-            description: "NZ",
+            description: "NZ"
         },
         {
             type: "Apple",
-            name: "MAIA1", // "EverCrisp®"
+            name: "MAIA1" // "EverCrisp®"
         },
         {
             type: "Apple",
@@ -390,7 +390,7 @@
             type: "Apple",
             name: "Ladina",
             description: "Topaz x Fuji. Swiss"
-        }, 
+        },
         {
             type: "Apple",
             name: "UEB 3375/2",

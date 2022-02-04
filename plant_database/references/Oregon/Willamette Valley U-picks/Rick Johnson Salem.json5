@@ -15,7 +15,8 @@
     plants: [
         {
             type: "Sweet Cherry",
-            name: "Benton"
+            // "Benton"
+            name: "PC7146-8"
         },
         {
             type: "Sweet Cherry",
