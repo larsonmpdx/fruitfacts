@@ -27,7 +27,7 @@ pub fn get_recent_patents_db_subquery(
     start_n: i32,
     end_n: i32,
 ) -> Result<Vec<BasePlantsItemForPatents>, diesel::result::Error> {
-    const N: i32 = 50;
+    const N: i32 = 2;
 
     let mut query = base_plants::table
         .select((
@@ -49,9 +49,10 @@ pub fn get_recent_patents_db_subquery(
         query = query.order(base_plants::uspp_expiration.desc());
     }
 
-    let start = N * end_n;
-    let end = N * start_n;
-    query = query.limit((end - start).into()).offset(N.into());
+    let start = N * start_n;
+    let end = N * end_n;
+    query = query.limit((end - start).into()).offset(start.into());
+    eprintln!("{start} to {end}"); // todo - figure out off-by-1s so we aren't skipping anything between pages or overlapping
 
     query.load::<BasePlantsItemForPatents>(db_conn)
 }
