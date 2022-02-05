@@ -51,6 +51,15 @@
             type: "Euro Pear",
             description: "Knox Nomura provided for testing. https://extension.wsu.edu/maritimefruit/tree-fruit/pears/",
             released: "1987"
+        },
+        {
+            name: "Salish Summer",
+            type: "Peach",
+            AKA: ["Q-1-8"],
+            description: "not sure if this is officially a Mt Vernon release, but it was tested through this program",
+            disease_resistance: {
+                peach_leaf_curl: "resistant"
+            }
         }
     ]
 }
