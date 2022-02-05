@@ -50,6 +50,9 @@ export default function Home({ fact, recentChangesData }) {
                     <Link href="/dirs/">browse locations</Link>
                 </div>
                 <div>
+                    <Link href="/patents/0">browse US patents</Link>
+                </div>
+                <div>
                     {fact.fact && (
                         <p>
                             {fact.fact}

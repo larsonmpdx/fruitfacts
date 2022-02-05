@@ -9,14 +9,24 @@ use anyhow::Result;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
 use std::collections::HashSet;
+use serde_with::skip_serializing_none;
 
+#[skip_serializing_none]
 #[derive(Queryable, Debug, Serialize)]
 pub struct BasePlantsItemForPatents {
     pub name: String,
     #[serde(rename = "type")]
     pub type_: String,
+
+    pub notoriety_score: Option<f32>,
+    pub marketing_name: Option<String>,
+
     pub uspp_number: Option<String>,
     pub uspp_expiration: Option<i64>,
+
+    pub release_year: Option<i32>,
+    pub released_by: Option<String>,
+    pub release_collection_id: Option<i32>,
 }
 
 // get patents from start_n to end_n in either the future or past. with two queries we can get +/-N
@@ -26,16 +36,23 @@ pub fn get_recent_patents_db_subquery(
     future: bool,
     start_n: i32,
     end_n: i32,
+    n: i32,
 ) -> Result<Vec<BasePlantsItemForPatents>, diesel::result::Error> {
-    const N: i32 = 2;
-
     let mut query = base_plants::table
         .select((
             base_plants::name,
             base_plants::type_,
+            base_plants::notoriety_score,
+            base_plants::marketing_name,
             base_plants::uspp_number,
             base_plants::uspp_expiration,
-            // todo: more fields, to make the recent patents table more interesting. probably releaser if available and release collection link
+            base_plants::release_year,
+            base_plants::released_by,
+            base_plants::release_collection_id,
+            // todo: optional minimum notoriety
+            // todo: more fields, to make the recent patents table more interesting
+            // probably releaser, release year if available and release collection link
+            // marketing name
         ))
         .filter(base_plants::uspp_expiration.is_not_null())
         .into_boxed();
@@ -49,17 +66,23 @@ pub fn get_recent_patents_db_subquery(
         query = query.order(base_plants::uspp_expiration.desc());
     }
 
-    let start = N * start_n;
-    let end = N * end_n;
-    query = query.limit((end - start).into()).offset(start.into());
-    eprintln!("{start} to {end}"); // todo - figure out off-by-1s so we aren't skipping anything between pages or overlapping
+    let start = n * start_n;
+    let end = n * end_n;
+    let length = end - start;
+    query = query.limit((length).into()).offset(start.into());
+    eprintln!("{start} to {end}, length {length}"); // todo - figure out off-by-1s so we aren't skipping anything between pages or overlapping
 
     query.load::<BasePlantsItemForPatents>(db_conn)
 }
 
+// page 0: centered on now (N past patents plus N future patents)
+// page -1: the next page (2N in size) in the past
+// page 1: next future page
+// etc.
 pub fn get_recent_patents_db(
     db_conn: &SqliteConnection,
     page_in: Option<i32>,
+    per_page_in: Option<i32>,
 ) -> Result<Vec<BasePlantsItemForPatents>, diesel::result::Error> {
     let page;
     if page_in.is_none() {
@@ -68,27 +91,47 @@ pub fn get_recent_patents_db(
         page = page_in.unwrap();
     }
 
+    // N is half a page
+    const N_MAX: i32 = 50;
+    let mut n;
+    if per_page_in.is_none() {
+        n = 30;
+    } else {
+        n = per_page_in.unwrap() / 2;
+        if n > N_MAX {
+            n = N_MAX;
+        }
+    }
+
     match page {
         page if page > 0 => {
             // page 1: 1 to 3
             // page 2: 3 to 5
             // page 3: 5 to 7
             // ...
-            // (page-1)*2 + 1 to page*2 + 1
-            return get_recent_patents_db_subquery(db_conn, true, (page - 1) * 2 + 1, page * 2 + 1);
+            // page*2 -1 to page*2 + 1
+            return get_recent_patents_db_subquery(db_conn, true, page * 2 - 1, page * 2 + 1, n);
         }
         page if page < 0 => {
-            return get_recent_patents_db_subquery(
+            let result = get_recent_patents_db_subquery(
                 db_conn,
                 false,
                 (page.abs() - 1) * 2 + 1,
                 page.abs() * 2 + 1,
+                n,
             );
+
+            if result.is_err() {
+                return result;
+            }
+            let mut result = result.unwrap();
+            result.reverse();
+            return Ok(result);
         }
         _ => {
             // 0
-            let future = get_recent_patents_db_subquery(db_conn, true, 0, 1);
-            let past = get_recent_patents_db_subquery(db_conn, false, 0, 1);
+            let future = get_recent_patents_db_subquery(db_conn, true, 0, 1, n);
+            let past = get_recent_patents_db_subquery(db_conn, false, 0, 1, n);
 
             if future.is_err() {
                 return future;
@@ -110,6 +153,8 @@ pub fn get_recent_patents_db(
 #[derive(Deserialize)]
 struct GetPatentsQuery {
     page: Option<i32>,
+    #[serde(rename = "perPage")]
+    per_page: Option<i32>,
 }
 
 #[get("/api/patents")]
@@ -120,7 +165,7 @@ async fn get_recent_patents(
     let conn = pool.get().expect("couldn't get db connection from pool");
 
     // use web::block to offload blocking Diesel code without blocking server thread
-    let patents = web::block(move || get_recent_patents_db(&conn, query.page))
+    let patents = web::block(move || get_recent_patents_db(&conn, query.page, query.per_page))
         .await
         .map_err(|e| {
             eprintln!("{}", e);

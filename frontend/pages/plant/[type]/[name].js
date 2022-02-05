@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import {formatPatentDate} from '../../../components/functions'
 
 export async function getServerSideProps(context) {
     const { type, name } = context.query;
@@ -33,7 +34,7 @@ export default function Home({ plant }) {
 
             {plant.base?.uspp_number && <p>USPP{plant.base.uspp_number}</p>}
 
-            {plant.base?.uspp_expiration && <p>expires {plant.base.uspp_expiration}</p>}
+            {plant.base?.uspp_expiration && <p>until {formatPatentDate(plant.base.uspp_expiration)}</p>}
 
             {plant.base?.aka && <p>AKA {plant.base.aka}</p>}
 
