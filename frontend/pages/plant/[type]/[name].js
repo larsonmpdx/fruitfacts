@@ -27,7 +27,7 @@ export default function Home({ plant }) {
         <div>
             {plant.base && (
                 <h2>
-                    {plant.base.name} {plant.base.type}
+                    <img src={"/fruit_icons/" + plant.base.type + ".svg"} height="24"/>{plant.base.name} {plant.base.type}
                 </h2>
             )}
             {plant.base?.marketing_name && <h2>marketed as {plant.base.marketing_name} </h2>}
