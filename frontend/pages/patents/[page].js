@@ -45,6 +45,7 @@ export default function Home({ patent_list, pageNum }) {
                         {patent_list.map((item) => (
                             <>
                                 <li>
+                                <img src={"/fruit_thumbnails/" + item.type + ".svg"} height="13"/>
                                 <Link
                                     href={`/plant/${encodeURIComponent(
                                         item.type
