@@ -25,32 +25,32 @@
     },
     {
         name: "Golden Russet Bosc",
-        patent: "https://patents.google.com/patent/USPP5243 expired 2002"
+        patent: "https://patents.google.com/patent/USPP5243 expired 2002-05-28"
     },
     {
         name: "Doyenne du Comice",
-        patent: "https://patents.google.com/patent/USPP10459 expired 2017"
+        patent: "https://patents.google.com/patent/USPP10459 expired 2017-01-14"
     },
     {
         name: "Columbia Red Anjou",
-        patent: "https://patents.google.com/patent/USPP6194 expired 2006"
+        patent: "https://patents.google.com/patent/USPP6194 expired 2006-03-31"
     },
     {
         name: "Concorde",
-        patent: "https://patents.google.com/patent/USPP9192 expired 2014"
+        patent: "https://patents.google.com/patent/USPP9192 expired 2014-01-10"
     },
     {
         name: "Taylor's Gold",
-        patent: "https://patents.google.com/patent/USPP8308 expired 2011"
+        patent: "https://patents.google.com/patent/USPP8308 expired 2011-09-16"
     },
     {
         name: "Wimmer Bosc",
         AKA: ["Bronze Beauty (tm)"],
-        patent: "https://patents.google.com/patent/USPP7485 expired 2009"
+        patent: "https://patents.google.com/patent/USPP7485 expired 2009-12-21"
     },
     {
         name: "Honeysweet",
-        patent: "https://patents.google.com/patent/USPP4379 expired 1998"
+        patent: "https://patents.google.com/patent/USPP4379 expired 1998-01-03"
     },
     {
         name: "Flordahome",

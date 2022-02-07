@@ -44,10 +44,11 @@
 
         {
             type: "Apple",
-            name: "Blondee",
+            name: "McLaughlin Gala", // patent name
+            AKA: ["Blondee"],
             // todo: "Its susceptibility to fire blight is similar to Gala"
             description: "yellow. Summit Sales/IPM",
-            patent: "https://patents.google.com/patent/USPP# 19,007"
+            patent: "https://patents.google.com/patent/USPP19007 2026-10-23"
         },
         {
             type: "Apple",
@@ -64,7 +65,7 @@
             type: "Apple",
             name: "DS-22",
             released: "Doug Sheflebine in WI",
-            patent: "https://patents.google.com/patent/USPP23933"
+            patent: "https://patents.google.com/patent/USPP23933 2032-04-26"
         },
         // not in the article, found these additional DS apples in a patent search:
         //   DS-3: https://patents.google.com/patent/USPP23649 2031-12-14
@@ -77,7 +78,8 @@
         },
         {
             type: "Apple",
-            name: "MAIA1" // "EverCrisp®"
+            // "EverCrisp®"
+            name: "MAIA1"
         },
         {
             type: "Apple",
@@ -89,7 +91,7 @@
             type: "Apple",
             name: "Moana",
             description: "Fuji sport",
-            patent: "https://patents.google.com/patent/USPP21450"
+            patent: "https://patents.google.com/patent/USPP21450 2029-05-11"
         },
         {
             type: "Apple",
@@ -111,39 +113,40 @@
             type: "Apple",
             name: "Gradiyel",
             description: "France",
-            patent: "https://patents.google.com/patent/USPP22974"
+            patent: "https://patents.google.com/patent/USPP22974 2030-09-03"
         },
         {
             type: "Apple",
             name: "LJ-1000",
             AKA: ["Royal Red Honeycrisp™"],
             description: "Honeycrisp sport. Washington",
-            patent: "https://patents.google.com/patent/USPP22244"
+            patent: "https://patents.google.com/patent/USPP22244 2030-07-06"
         },
         {
             type: "Apple",
             name: "Southfield",
             description: "Jazz sport. NZ",
-            patent: "https://patents.google.com/patent/USPP22990"
+            patent: "https://patents.google.com/patent/USPP22990 2031-02-10"
         },
         {
             type: "Apple",
-            name: "Jonastar",
+            name: "Lentz Jonagold", // patent name
+            AKA: ["Jonastar (tm)"],
             description: "Jonagold sport",
-            patent: "https://patents.google.com/patent/USPP #20,590"
+            patent: "https://patents.google.com/patent/USPP20590 2028-05-20"
         },
         {
             type: "Apple",
             name: "Chrisolyn",
             AKA: ["Cambell Jonathan"],
             description: "Jonathan sport",
-            patent: "https://patents.google.com/patent/USPP # 21,300"
+            patent: "https://patents.google.com/patent/USPP21300 2029-04-28"
         },
         {
             type: "Apple",
-            name: "Milwa", // "Junami®, Diwa"
+            name: "Milwa", // "Junami®", "Diwa"
             released: "Inova fruit in the Netherlands",
-            patent: "https://patents.google.com/patent/USPP19615"
+            patent: "https://patents.google.com/patent/USPP19615 2027-04-26"
         },
         {
             type: "Apple",
@@ -185,43 +188,44 @@
         {
             type: "Apple",
             name: "NY 1",
-            patent: "https://patents.google.com/patent/USPP22228"
+            patent: "https://patents.google.com/patent/USPP22228 2030-01-13"
         },
         {
             type: "Apple",
             name: "NY 2",
-            patent: "https://patents.google.com/patent/USPP22207"
+            patent: "https://patents.google.com/patent/USPP22207 2030-01-13"
         },
         {
             type: "Apple",
             name: "Maslin", // "PLMAS98"
             description: "Pink Lady sport",
-            patent: "https://patents.google.com/patent/USPP21412"
+            patent: "https://patents.google.com/patent/USPP21412 2028-04-19"
         },
         {
             type: "Apple",
-            name: "Pflogg",
+            name: "PLFOG99",
+            AKA: ["Pink Belle (tm)"],
             description: "Pink Lady sport",
-            patent: "https://patents.google.com/patent/USPP21555"
+            patent: "https://patents.google.com/patent/USPP21555 2028-07-31"
         },
         {
             type: "Apple",
             name: "RGLORS",
             description: "Pink Lady sport",
-            patent: "https://patents.google.com/patent/USPP21272"
+            patent: "https://patents.google.com/patent/USPP21272 2029-02-12"
         },
         {
             type: "Apple",
             name: "Daligris",
             AKA: ["Chantelop®"],
             description: "Pinova sport",
-            patent: "https://patents.google.com/patent/USPP21722"
+            patent: "https://patents.google.com/patent/USPP21722 2029-04-03"
         },
         {
             type: "Apple",
             name: "PremA153",
             description: "offered by Brandts Fruit Trees, Inc",
-            patent: "https://patents.google.com/patent/USPP#21936"
+            patent: "https://patents.google.com/patent/USPP21936 2029-09-03"
         },
         {
             type: "Apple",
@@ -273,7 +277,7 @@
         {
             type: "Apple",
             name: "WA 2",
-            patent: "https://patents.google.com/patent/USPP21710"
+            patent: "https://patents.google.com/patent/USPP21710 2029-03-24"
         },
         {
             type: "Apple",
@@ -413,7 +417,7 @@
             name: "MonaLisa",
             // todo: This Gala type apple has high resistance to apple scab and to Glomerella leaf spot and spider mites
             description: "Brazil",
-            patent: "https://patents.google.com/patent/USPP23003"
+            patent: "https://patents.google.com/patent/USPP23003 2031-03-13"
         },
         {
             type: "Apple",
@@ -427,13 +431,13 @@
             AKA: ["Opal"],
             name: "UEB 3264/2",
             description: "Czech Republic",
-            patent: "https://patents.google.com/patent/USPP15963"
+            patent: "https://patents.google.com/patent/USPP15963 2024-06-11"
         },
         {
             type: "Apple",
             name: "Orion",
             description: "A member of “The Golden Sunshine Line™” from the Czech republic",
-            patent: "https://patents.google.com/patent/USPP19276"
+            patent: "https://patents.google.com/patent/USPP19276 2026-10-31"
         },
 
         {
@@ -470,7 +474,7 @@
             // todo: this variety has the Vf gene for scab resistance and also low to average susceptibility to powdery mildew
             description: "red",
             released: "NOVADI cooperative in France",
-            patent: "https://patents.google.com/patent/USPP22794"
+            patent: "https://patents.google.com/patent/USPP22794 2031-03-01"
         },
         {
             type: "Apple",

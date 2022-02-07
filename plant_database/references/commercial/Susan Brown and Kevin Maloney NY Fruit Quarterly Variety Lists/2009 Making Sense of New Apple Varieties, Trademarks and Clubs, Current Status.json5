@@ -62,7 +62,7 @@
             type: "Apple",
             name: "Western Dawn",
             AKA: ["Enchanted®"],
-            patent: "https://patents.google.com/patent/USPP18640"
+            patent: "https://patents.google.com/patent/USPP18640 2026-05-31"
         },
         {
             type: "Apple",
@@ -141,7 +141,7 @@
             name: "UEB 3264/2",
             AKA: ["Opal"],
             // todo: "..scab resistant apple is also tolerant to mildew in Europe"
-            patent: "https://patents.google.com/patent/USPP15963",
+            patent: "https://patents.google.com/patent/USPP15963 2024-06-11",
             description: "Czech Republic. ‘Golden Delicious x ’Topaz’"
         },
         {

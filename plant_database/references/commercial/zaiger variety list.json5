@@ -155,7 +155,7 @@
             type: "Apricot",
             name: "Summer Cot",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/apricot/summer_cot/",
-            patent: "https://patents.google.com/patent/USPP 23864",
+            patent: "https://patents.google.com/patent/USPP23864 2032-02-09",
             chill: "850 hours",
             harvest_time: "August 1 to August 15"
         },
@@ -218,7 +218,7 @@
             type: "Aprium",
             name: "Flavor Delight",
             description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/aprium-interspecific/flavor_delight/",
-            patent: "https://patents.google.com/patent/USPP7090 expired 2009",
+            patent: "https://patents.google.com/patent/USPP7090 expired 2009-01-23",
             chill: "less than 300 hours",
             harvest_time: "June 3 to June 17"
         },
@@ -1244,7 +1244,7 @@
             name: "Autumn Snow",
             AKA: ["Yukon King (tm)"],
             description: "zaiger. White. commercial",
-            patent: "https://patents.google.com/patent/USPP9872 expired 2016",
+            patent: "https://patents.google.com/patent/USPP9872 expired 2016-02-09",
             chill: "750-850 hours",
             harvest_time: "August 8 to August 23"
         },

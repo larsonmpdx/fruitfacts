@@ -20,93 +20,93 @@
             name: "Prem2P",
             AKA: ["Crispie (tm)"],
             type: "Euro Pear",
-            patent: "https://patents.google.com/patent/USPP17387",
+            patent: "https://patents.google.com/patent/USPP17387 2024-07-27",
             released: "Prevar*"
         },
         {
             name: "Prem1P",
             type: "Euro Pear",
-            patent: "https://patents.google.com/patent/USPP17624",
+            patent: "https://patents.google.com/patent/USPP17624 2024-07-27",
             released: "Prevar*"
         },
         {
             name: "PremA280",
             type: "Apple",
-            patent: "https://patents.google.com/patent/USPP19762",
+            patent: "https://patents.google.com/patent/USPP19762 2026-07-23",
             released: "Prevar*"
         },
         {
             name: "PremA153",
             type: "Apple",
-            patent: "https://patents.google.com/patent/USPP21936",
+            patent: "https://patents.google.com/patent/USPP21936 2029-09-03",
             released: "Prevar*"
         },
         {
             name: "PremA17",
             type: "Apple",
-            patent: "https://patents.google.com/patent/USPP22356",
+            patent: "https://patents.google.com/patent/USPP22356 2030-02-24",
             released: "Prevar*"
         },
         {
             name: "PremA193",
             type: "Apple",
-            patent: "https://patents.google.com/patent/USPP22357",
+            patent: "https://patents.google.com/patent/USPP22357 2030-02-24",
             released: "Prevar*"
         },
         {
             name: "PremP109",
             type: "Euro Pear",
-            patent: "https://patents.google.com/patent/USPP24408",
+            patent: "https://patents.google.com/patent/USPP24408 2032-04-19",
             released: "Prevar*"
         },
         {
             name: "PremA96",
             type: "Apple",
-            patent: "https://patents.google.com/patent/USPP24946",
+            patent: "https://patents.google.com/patent/USPP24946 2032-04-06",
             released: "Prevar*"
         },
         {
             name: "PremP52",
             type: "Euro Pear",
-            patent: "https://patents.google.com/patent/USPP28335",
+            patent: "https://patents.google.com/patent/USPP28335 2036-03-18",
             released: "Prevar*"
         },
         {
             name: "PremA34",
             AKA: ["Cherish (tm)"],
             type: "Apple",
-            patent: "https://patents.google.com/patent/USPP28366",
+            patent: "https://patents.google.com/patent/USPP28366 2036-04-21",
             released: "Prevar*"
         },
         {
             name: "PremP003",
             type: "Euro Pear",
-            patent: "https://patents.google.com/patent/USPP28853",
+            patent: "https://patents.google.com/patent/USPP28853 2034-12-31",
             released: "Prevar*"
         },
         {
             name: "PremP027",
             type: "Euro Pear",
-            patent: "https://patents.google.com/patent/USPP28874",
+            patent: "https://patents.google.com/patent/USPP28874 2034-12-31",
             released: "Prevar*"
         },
         {
             name: "PremA129",
             AKA: ["Dazzle (tm)"],
             type: "Apple",
-            patent: "https://patents.google.com/patent/USPP29214",
+            patent: "https://patents.google.com/patent/USPP29214 2036-02-24",
             released: "Prevar*"
         },
         {
             name: "PremP009",
             type: "Euro Pear",
-            patent: "https://patents.google.com/patent/USPP30552",
+            patent: "https://patents.google.com/patent/USPP30552 2036-07-07",
             released: "Prevar*"
         },
         {
             name: "PremA003",
             type: "Apple",
-            patent: "https://patents.google.com/patent/USPP33545 ",
+            patent: "https://patents.google.com/patent/USPP33545 2040-11-04",
             released: "Prevar*"
         },
         {

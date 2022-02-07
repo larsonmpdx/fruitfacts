@@ -641,8 +641,8 @@
             harvest_time: "January to March"
         },
         {
-            name: "Pixie Mandarin",
-            type: "Citrus",
+            name: "Pixie",
+            type: "Mandarin",
             harvest_time: "January to March"
         },
         {
@@ -1137,20 +1137,20 @@
         {
             name: "August Lady",
             type: "Peach",
-            patent: "https://patents.google.com/patent/USPP8956 expired 2013",
+            patent: "https://patents.google.com/patent/USPP8956 expired 2013-08-06",
             harvest_time_unparsed: "late"
         },
         // peaches page 3
         {
             name: "Autumn Flame",
             type: "Peach",
-            patent: "https://patents.google.com/patent/USPP9438 expired 2015",
+            patent: "https://patents.google.com/patent/USPP9438 expired 2015-01-10",
             harvest_time_unparsed: "late"
         },
         {
             name: "Burpeacheight",
             type: "Peach",
-            patent: "https://patents.google.com/patent/USPP12834 expired 2020",
+            patent: "https://patents.google.com/patent/USPP12834 expired 2020-12-12",
             harvest_time: "August 30-September 7"
         },
         {
@@ -1199,7 +1199,7 @@
             name: "Burpeachtwo",
             AKA: ["Henry II"],
             type: "Peach",
-            patent: "https://patents.google.com/patent/USPP12157 expired 2019",
+            patent: "https://patents.google.com/patent/USPP12157 expired 2019-12-07",
             harvest_time: "August 3-7"
         },
         {

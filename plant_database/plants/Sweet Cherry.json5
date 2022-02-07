@@ -16,11 +16,11 @@
     {
         name: "Brooks",
         description: "UC Variety",
-        patent: "https://patents.google.com/patent/USPP6676 expired 2007"
+        patent: "https://patents.google.com/patent/USPP6676 expired 2007-10-09"
     },
     {
         name: "Tulare",
-        patent: "https://patents.google.com/patent/USPP6407 expired 2007"
+        patent: "https://patents.google.com/patent/USPP6407 expired 2007-02-09"
     },
     {
         name: "Hedelfingen"

@@ -15,7 +15,7 @@
     {
         name: "Silken",
         description: "Summerland variety",
-        patent: "https://patents.google.com/patent/USPP10740 expired 2017"
+        patent: "https://patents.google.com/patent/USPP10740 expired 2017-06-19"
     },
     {
         name: "Millenium",
@@ -52,7 +52,7 @@
     {
         name: "NJ 55",
         AKA: ["Suncrisp (tm)"],
-        patent: "https://patents.google.com/patent/USPP8648 expired 2012"
+        patent: "https://patents.google.com/patent/USPP8648 expired 2012-06-18"
     },
     {
         name: "Florina",
