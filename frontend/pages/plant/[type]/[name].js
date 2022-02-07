@@ -30,7 +30,7 @@ export default function Home({ plant }) {
                     <img src={"/fruit_icons/" + plant.base.type + ".svg"} height="24"/>{plant.base.name} {plant.base.type}
                 </h2>
             )}
-            {plant.base?.marketing_name && <h2>marketed as {plant.base.marketing_name} </h2>}
+            {plant.base?.marketing_name && <h2>marketed under the {plant.base.marketing_name} brand </h2>}
 
             {plant.base?.uspp_number && <p>USPP{plant.base.uspp_number}</p>}
 

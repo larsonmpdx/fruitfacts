@@ -60,7 +60,7 @@ export default function Home({ data }) {
                                     {item.name + ' ' + item.type}
                                 </Link>
 
-                                {item.marketing_name && <>(marketed as {item.marketing_name})</>}
+                                {item.marketing_name && <>(marketed under the {item.marketing_name} brand)</>}
                             </li>
                         ))}
                     </ul>

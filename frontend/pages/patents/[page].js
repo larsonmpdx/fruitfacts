@@ -53,7 +53,7 @@ export default function Home({ patent_list, pageNum }) {
                                 >
                                     {item.name + ' ' + item.type}
                                 </Link>
-                                {item.marketing_name && <>(marketed as {item.marketing_name})</>} {formatPatentDate(item.uspp_expiration, item.uspp_expiration_estimated)}
+                                {item.marketing_name && <>(marketed under the {item.marketing_name} brand)</>} {formatPatentDate(item.uspp_expiration, item.uspp_expiration_estimated)}
                                 </li>
                             </>
                         ))}

@@ -359,11 +359,11 @@ async fn receive_oauth_redirect(
     // todo: encode our account info somewhere, I guess in a query string in the redirect?
     if results.account_offer {
         Ok(HttpResponse::Found()
-            .header("Location", "/createAccount")
+            .header("Location", env!("CREATE_ACCOUNT_REDIRECT"))
             .finish())
     } else {
         Ok(HttpResponse::Found()
-            .header("Location", env!("AUTH_REDIRECT"))
+            .header("Location", env!("AUTHED_REDIRECT"))
             .finish())
     }
 }
