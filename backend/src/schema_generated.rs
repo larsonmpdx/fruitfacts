@@ -16,6 +16,7 @@ table! {
         description -> Nullable<Text>,
         uspp_number -> Nullable<Text>,
         uspp_expiration -> Nullable<BigInt>,
+        uspp_expiration_estimated -> Nullable<Integer>,
         release_year -> Nullable<Integer>,
         release_year_note -> Nullable<Text>,
         released_by -> Nullable<Text>,

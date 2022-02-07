@@ -39,6 +39,7 @@ pub struct BasePlant {
     pub description: Option<String>,
     pub uspp_number: Option<String>,
     pub uspp_expiration: Option<i64>,
+    pub uspp_expiration_estimated: Option<i32>,
     pub release_year: Option<i32>,
     pub release_year_note: Option<String>,
     pub released_by: Option<String>,

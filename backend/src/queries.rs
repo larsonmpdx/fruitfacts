@@ -23,6 +23,7 @@ pub struct BasePlantsItemForPatents {
 
     pub uspp_number: Option<String>,
     pub uspp_expiration: Option<i64>,
+    pub uspp_expiration_estimated: Option<i32>,
 
     pub release_year: Option<i32>,
     pub released_by: Option<String>,
@@ -46,6 +47,7 @@ pub fn get_recent_patents_db_subquery(
             base_plants::marketing_name,
             base_plants::uspp_number,
             base_plants::uspp_expiration,
+            base_plants::uspp_expiration_estimated,
             base_plants::release_year,
             base_plants::released_by,
             base_plants::release_collection_id,

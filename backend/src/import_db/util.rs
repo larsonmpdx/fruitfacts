@@ -1,3 +1,15 @@
+use chrono::prelude::*;
+
+// output is unix timestamp. same as uspp_number_to_release_year() but it adds 17 years
+// plant patent period has varied over time but it's always been about 20 years from application or 17 years from grant
+// because we only know grant time, use 17 years
+pub fn uspp_number_to_expiration(uspp_number_input: i32) -> i64 {
+    const YEARS_AFTER_ISSUE: i32 = 17;
+
+    NaiveDate::from_ymd(uspp_number_to_release_year(uspp_number_input) + YEARS_AFTER_ISSUE, 1, 1)
+            .and_hms(12, 0, 0).timestamp()
+}
+
 // for varieties with no release year listed but a patent number given, guess at it based on their US patent number
 pub fn uspp_number_to_release_year(uspp_number_input: i32) -> i32 {
     // https://www.uspto.gov/web/offices/ac/ido/oeip/taf/issuyear.htm

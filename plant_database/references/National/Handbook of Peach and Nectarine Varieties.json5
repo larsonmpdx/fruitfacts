@@ -8,11 +8,11 @@
 // the index of names has most known peach varieties at publication, maybe about 10k unique ones:
 //  - 350 pages with maybe 45 per page and 30% synonyms ~= 10k
 // Someday I might add that but many aren't notable so it would be mostly clutter for now
-// the US patented ones ARE notable and have been added
+// the US patented ones ARE notable and have been added. there are probably a few OCR errors
 
 {
     title: "Handbook of Peach and Nectarine Varieties: US Patent List",
-    author: "",
+    author: "Okie, W.R.",
     url: "",
     published: "",
     accessed: "Oct 2021",

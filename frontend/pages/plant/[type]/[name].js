@@ -34,7 +34,7 @@ export default function Home({ plant }) {
 
             {plant.base?.uspp_number && <p>USPP{plant.base.uspp_number}</p>}
 
-            {plant.base?.uspp_expiration && <p>until {formatPatentDate(plant.base.uspp_expiration)}</p>}
+            {plant.base?.uspp_expiration && <p>until {formatPatentDate(plant.base.uspp_expiration, plant.base.uspp_expiration_estimated)}</p>}
 
             {plant.base?.aka && <p>AKA {plant.base.aka}</p>}
 

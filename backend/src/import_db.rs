@@ -669,7 +669,7 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
 
     println!("calculating relative harvest times");
     calculate_relative_harvest_times(db_conn);
-    calculate_release_year_from_patent(db_conn);
+    calculate_years_from_patent(db_conn);
     println!("adding marketing names to collection items");
     add_marketing_names(db_conn);
     println!("calculating notoriety");
@@ -1851,7 +1851,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
     }
 }
 
-fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
+fn calculate_years_from_patent(db_conn: &SqliteConnection) {
     // todo - for each base plant, if the release year isn't filled in, guess at it from the patent number if available
 
     // put in a note in a new column about how the release year was guessed at
@@ -1868,9 +1868,22 @@ fn calculate_release_year_from_patent(db_conn: &SqliteConnection) {
                 diesel::update(base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)))
                     .set((
                         base_plants::release_year.eq(util::uspp_number_to_release_year(
-                            plant.uspp_number.unwrap().parse::<i32>().unwrap(),
+                            plant.uspp_number.clone().unwrap().parse::<i32>().unwrap(),
                         )),
                         base_plants::release_year_note.eq("derived from patent number"),
+                    ))
+                    .execute(db_conn);
+        }
+
+        // estimate patent expiration
+        if plant.uspp_expiration.is_none() && plant.uspp_number.is_some() {
+            let _updated_row =
+                diesel::update(base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)))
+                    .set((
+                        base_plants::uspp_expiration.eq(util::uspp_number_to_expiration(
+                            plant.uspp_number.unwrap().parse::<i32>().unwrap(),
+                        )),
+                        base_plants::uspp_expiration_estimated.eq(1),
                     ))
                     .execute(db_conn);
         }

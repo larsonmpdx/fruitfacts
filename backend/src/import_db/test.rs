@@ -1,6 +1,6 @@
 use crate::import_db::notoriety::BasePlantNotoriety;
 use crate::import_db::notoriety::BasePlantNotorietyInput;
-use crate::import_db::{notoriety::base_plant_notoriety_calc, util::uspp_number_to_release_year};
+use crate::import_db::{notoriety::base_plant_notoriety_calc, util::uspp_number_to_release_year, util::uspp_number_to_expiration};
 use diesel::connection::SimpleConnection;
 
 use super::*;
@@ -22,6 +22,12 @@ fn test_uspp_number_to_release_year() {
     assert_eq!(uspp_number_to_release_year(4970), 1983);
     assert_eq!(uspp_number_to_release_year(4971), 1983);
     assert_eq!(uspp_number_to_release_year(33333), 2021);
+}
+
+#[test]
+fn test_uspp_number_to_expiration() {
+    assert_eq!(uspp_number_to_expiration(1), -694267200); // 1948
+    assert_eq!(uspp_number_to_expiration(33333), 2145960000); // 2038 (todo - test 2039 I guess)
 }
 
 #[test]

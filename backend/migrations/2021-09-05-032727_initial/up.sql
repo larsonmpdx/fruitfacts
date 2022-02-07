@@ -17,6 +17,7 @@ CREATE TABLE base_plants (
   description TEXT,
   uspp_number TEXT, -- text so we can store odd patent numbers - sometimes plants get non-plant patents
   uspp_expiration BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
+  uspp_expiration_estimated INTEGER, -- bool, was the expiration year guessed-at based on the patent year?
   release_year INTEGER,
   release_year_note TEXT, -- in case the release year is guessed at from a patent number, put a note here
   released_by TEXT,
