@@ -320,7 +320,7 @@
             description: "Flesh Adherence: free Fruit Quality: 3/5 Fruit Size: Excellent Cold Tolerance: Fair"
         },
         {
-            name: "Stark Encore",
+            name: "Encore", // "Stark Encore"
             type: "Peach",
             harvest_time_relative: "Redhaven +7 weeks",
             tags: ["Yellow Peach"],
@@ -408,7 +408,7 @@
             description: "Flesh Adherence: free"
         },
         {
-            name: "Redglo",
+            name: "Red Glo",
             type: "Nectarine",
             harvest_time_relative: "Redhaven +5 weeks",
             tags: ["Yellow Nectarine"],

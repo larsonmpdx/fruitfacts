@@ -160,7 +160,7 @@
                 "Mayfire",
                 "Mericrest",
                 "PF 11 Nectarine",
-                "Stark Ovation",
+                "Ovation", // "Stark Ovation"
                 "Sunbright"
             ],
             disease_resistance: { BLS: "Moderate" }
@@ -168,7 +168,7 @@
         {
             type: "Nectarine",
             category: "Yellow nectarine",
-            names: ["Flavortop", "Summer Beaut", "Sunglo", "Redg Gld", "Eastern Glo"],
+            names: ["Flavortop", "Summer Beaut", "Sunglo", "Red Gold", "Eastern Glo"],
             disease_resistance: { BLS: "Fair" }
         },
         {
