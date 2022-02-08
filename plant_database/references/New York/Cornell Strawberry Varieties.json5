@@ -136,8 +136,8 @@
             AKA: ["NY 304B"],
             type: "Strawberry",
             description: "MDUS4774 x MDUS5199",
-            released: "Cornell 2003",
-            patent: "https://patents.google.com/patent/USPP16571 expires 2024-11-11*"
+            released: "Cornell 2003*",
+            patent: "https://patents.google.com/patent/USPP16571 expires 2024-11-11"
         },
         {
             name: "Culver",

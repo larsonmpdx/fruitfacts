@@ -365,7 +365,7 @@
         {
             type: "Apple",
             name: "Goldlane", // patent name
-            patent: "https://patents.google.com/patent/USPP21413 expires",
+            patent: "https://patents.google.com/patent/USPP21413 expires 2029-01-07",
             description: "columnar. Czech Republic"
         },
 

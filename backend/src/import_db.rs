@@ -593,8 +593,8 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
 
     let uspp_regex = Regex::new(r#"USPP([0-9]+)"#).unwrap();
     let google_format_date_regex =
-        Regex::new(r#"(?:expires|expired) ([0-9]{4})-([0-9]{2})-([0-9]{2})"#).unwrap();
-    let plain_year_date_regex = Regex::new(r#"(?:expires|expired) ([0-9]{4})"#).unwrap();
+        Regex::new(r#"USPP[0-9]+.+([0-9]{4})-([0-9]{2})-([0-9]{2})$"#).unwrap();
+    let plain_year_date_regex = Regex::new(r#"USPP[0-9]+.+([0-9]{4})$"#).unwrap();
 
     if let Some(matches) = uspp_regex.captures(input) {
         if matches.len() >= 2 {

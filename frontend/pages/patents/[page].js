@@ -11,13 +11,13 @@ export async function getServerSideProps(context) {
     const patent_list = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/patents?perPage=50&page=${pageNum}`)
         .then((response) => {
             if (response.status !== 200) {
-                return {};
+                return [];
             }
             return response.json();
         })
         .catch((error) => {
             console.log(error);
-            return {};
+            return [];
         });
 
     return {

@@ -458,6 +458,15 @@ fn test_patent_parsing() {
             uspp_expiration: Some(NaiveDate::from_ymd(2038, 3, 7).and_hms(12, 0, 0))
         }
     );
+
+    // without "expired/expires"
+    assert_eq!(
+        string_to_patent_info("https://patents.google.com/patent/USPP30925 2038-03-07"),
+        PatentInfo {
+            uspp_number: Some("30925".to_string()),
+            uspp_expiration: Some(NaiveDate::from_ymd(2038, 3, 7).and_hms(12, 0, 0))
+        }
+    );
 }
 
 #[test]
