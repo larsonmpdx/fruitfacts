@@ -937,20 +937,25 @@ fn apply_top_level_fields(
         "release_collection_id",
     );
 
-    let _updated_row =
+    let updated_row_count =
         diesel::update(base_plants::dsl::base_plants.filter(base_plants::name.eq(&plant.name)))
             .filter(base_plants::type_.eq(plant_type))
             .set((
                 base_plants::aka.eq(&aka),
                 base_plants::aka_fts.eq(&aka_fts),
                 base_plants::marketing_name.eq(&marketing_name),
-                base_plants::uspp_number.eq(uspp_number),
+                base_plants::uspp_number.eq(uspp_number.clone()),
                 base_plants::uspp_expiration.eq(uspp_expiration),
                 base_plants::release_year.eq(release_year),
                 base_plants::released_by.eq(released_by),
                 base_plants::release_collection_id.eq(release_collection_id),
             ))
             .execute(db_conn);
+    assert_eq!(Ok(1), updated_row_count,
+    "failed inserting {} {:?}",
+    plant.name,
+    uspp_number
+);
 }
 
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
@@ -1328,7 +1333,7 @@ fn update_or_add_base_plant(
             new_collection_score_id = Some(current_collection_id);
         }
 
-        let _updated_row = diesel::update(
+        let updated_row_count = diesel::update(
             base_plants::dsl::base_plants.filter(base_plants::id.eq(existing_base_plant.id)),
         )
         .set((
@@ -1337,6 +1342,7 @@ fn update_or_add_base_plant(
             base_plants::notoriety_highest_collection_score_id.eq(new_collection_score_id),
         ))
         .execute(db_conn);
+        assert_eq!(Ok(1), updated_row_count);
 
         num_added = 0
     }
@@ -1830,7 +1836,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                         harvest_relative.relative_days,
                     );
 
-                    let _updated_row = diesel::update(
+                    let updated_row_count = diesel::update(
                         collection_items::dsl::collection_items
                             .filter(collection_items::id.eq(plant.collection_item_id)),
                     )
@@ -1845,6 +1851,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                             .eq(relative_plant.harvest_start_2_is_midpoint),
                     ))
                     .execute(db_conn);
+                    assert_eq!(Ok(1), updated_row_count);
                 }
             }
         }
@@ -1864,7 +1871,7 @@ fn calculate_years_from_patent(db_conn: &SqliteConnection) {
         // if release year is unset but patent number is set, fill in release year from a patent->year table
 
         if plant.release_year.is_none() && plant.uspp_number.is_some() {
-            let _updated_row =
+            let updated_row_count =
                 diesel::update(base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)))
                     .set((
                         base_plants::release_year.eq(util::uspp_number_to_release_year(
@@ -1873,11 +1880,12 @@ fn calculate_years_from_patent(db_conn: &SqliteConnection) {
                         base_plants::release_year_note.eq("derived from patent number"),
                     ))
                     .execute(db_conn);
+            assert_eq!(Ok(1), updated_row_count);
         }
 
         // estimate patent expiration
         if plant.uspp_expiration.is_none() && plant.uspp_number.is_some() {
-            let _updated_row =
+            let updated_row_count =
                 diesel::update(base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)))
                     .set((
                         base_plants::uspp_expiration.eq(util::uspp_number_to_expiration(
@@ -1886,6 +1894,7 @@ fn calculate_years_from_patent(db_conn: &SqliteConnection) {
                         base_plants::uspp_expiration_estimated.eq(1),
                     ))
                     .execute(db_conn);
+            assert_eq!(Ok(1), updated_row_count);
         }
     }
 }
@@ -1908,12 +1917,13 @@ fn add_marketing_names(db_conn: &SqliteConnection) {
                 )
             });
 
-        let _updated_row = diesel::update(
+        let updated_row_count = diesel::update(
             collection_items::dsl::collection_items
                 .filter(collection_items::id.eq(collection_item.id)),
         )
         .set((collection_items::marketing_name.eq(base_plant.marketing_name),))
         .execute(db_conn);
+        assert_eq!(Ok(1), updated_row_count);
     }
 }
 
@@ -2027,13 +2037,14 @@ fn calculate_notoriety(db_conn: &SqliteConnection) {
                 uspp_number: plant.uspp_number.as_ref(),
             });
 
-        let _updated_row =
+        let updated_row_count =
             diesel::update(base_plants::dsl::base_plants.filter(base_plants::id.eq(plant.id)))
                 .set((
                     base_plants::notoriety_score.eq(notoriety_score.score),
                     base_plants::notoriety_score_explanation.eq(notoriety_score.explanation),
                 ))
                 .execute(db_conn);
+        assert_eq!(Ok(1), updated_row_count);
     }
 }
 

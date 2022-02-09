@@ -202,7 +202,7 @@
             type: "Aprium",
             name: "Country Cot",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/coral_cot/",
-            patent: "https://patents.google.com/patent/USPP19563 expires 2027-06-22",
+            patent: "https://patents.google.com/patent/USPP23695 expires 2032-02-16",
             chill: "600 hours",
             harvest_time: "June 5 to June 20"
         },
@@ -921,7 +921,7 @@
             type: "Nectarine",
             name: "Royal Giant",
             description: "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/royal_giant/",
-            patent: "https://patents.google.com/patent/USPP4107 expired 1994-09-20",
+            patent: "https://patents.google.com/patent/USPP4107 1994-09-20",
             chill: "900-1,000 hours",
             harvest_time: "July 29 to August 14"
         },
@@ -1442,18 +1442,11 @@
         {
             type: "Peach",
             name: "Summer Amelia",
-            description: "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-yellow/summer_amelia/",
+            AKA: ["Summer Gold"], // application name: https://patents.google.com/patent/US20130263342
+            description: "patent application name \"summer gold\" but grant name \"summer gold\". zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-yellow/summer_amelia/",
             patent: "https://patents.google.com/patent/USPP24777 expires 2032-11-28",
             chill: "800 hours",
             harvest_time: "August 1 to August 15"
-        },
-        {
-            type: "Peach",
-            name: "Summer Gold",
-            description: "zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-yellow/summer_gold/",
-            patent: "https://patents.google.com/patent/USPP24777 expires 2032-11-28",
-            chill: "750 hours",
-            harvest_time: "August 3 to August 18"
         },
         {
             type: "Peach",

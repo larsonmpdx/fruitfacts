@@ -1485,7 +1485,7 @@ https://bradfordfarms.com.au/stonefruit/supersweet-nectarines/rose-sweet-new/
         },
         {
             type: "Nectarine",
-            name: "Bradcrim",
+            name: "Crimson Snow", // "Bradcrim"
             patent: "https://patents.google.com/patent/USPP8461 2013-01-14",
             released: "Bradford Farms*"
         },
