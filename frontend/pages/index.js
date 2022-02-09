@@ -99,5 +99,5 @@ export default function Home({ fact, recentChangesData }) {
 
             <footer></footer>
         </div>
-    );
+    )
 }

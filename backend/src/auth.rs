@@ -453,15 +453,15 @@ async fn create_account(
 
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    let _results = web::block(move || create_account_blocking(session_value.unwrap(), &db_conn))
+    let results = web::block(move || create_account_blocking(session_value.unwrap(), &db_conn))
         .await
         .map_err(|e| {
             eprintln!("{}", e);
             HttpResponse::InternalServerError().finish();
         })?;
 
-    // todo - returns
-    Ok(HttpResponse::InternalServerError().finish())
+    println!("created account");
+    Ok(HttpResponse::Ok().json(results))
 }
 
 #[get("/api/checkLogin")]

@@ -59,5 +59,5 @@ export default function Home({ patent_list, pageNum }) {
                         ))}
                     </ul>
         </div>
-    );
+    )
 }

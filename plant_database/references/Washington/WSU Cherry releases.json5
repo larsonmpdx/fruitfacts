@@ -78,12 +78,9 @@
             released: "2003"
         },
         {
-            color: "red",
-            name: "PC 7222-1",
+            name: "PC7222-1",
             AKA: ["Index (tm)"],
-            type: "Sweet Cherry",
-            description: "self-fertile. http://treefruit.wsu.edu/variety/index/",
-            patent: "https://patents.google.com/patent/USPP10459 expired 2017-01-14"
+            type: "Sweet Cherry"
         },
         {
             name: "Rainier",

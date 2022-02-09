@@ -87,7 +87,7 @@
             color: "red"
         },
         {
-            name: "Index",
+            name: "PC7222-1", // "Index"
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -5",
             color: "dark red",

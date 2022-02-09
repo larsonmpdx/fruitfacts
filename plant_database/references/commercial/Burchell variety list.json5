@@ -475,9 +475,8 @@
             harvest_time_unparsed: "very early"
         },
         {
-            // "Index"
             // no harvest time given
-            name: "PC 7222-1",
+            name: "PC7222-1", // "Index"
             type: "Sweet Cherry"
         },
         {

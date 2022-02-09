@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     const [user, setUser] = React.useState({});
 
     const router = useRouter();
-    if (router.pathname != '/login') {
+    if (!['/login', '/createAccount'].includes(router.pathname)) {
         return (
             <>
                 <noscript>
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
                     })}
                 </main>
             </>
-        );
+        )
     } else {
         return (
             <>
@@ -32,6 +32,6 @@ export default function Layout({ children }) {
                 </noscript>
                 <main>{children}</main>;
             </>
-        );
+        )
     }
 }
