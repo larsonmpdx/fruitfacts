@@ -211,11 +211,318 @@ type: "Apple",
 name: "Florina", // "Querina" 
 harvest_time: "Oct 5
 Requires minimal pesticides. Red. Use: All. Scab resistant, moderately resistant to powdery mildew, susceptible to cedar apple rust
-
+*/
 
 // todo - other fruit types, etc.
 
+// Apricot: Not recommended because they bloom too early and flowers are killed by frost
+// Aprium: Not recommended because they bloom too early and flowers are killed by frost
 
-        */
+// ARONIA/BLACK CHOKEBERRY
+// Nero
+// Viking
+// McKenzie
+
+// Blackberry (MP)
+// Thornless Erect - Natchez, Apache, Osage, Ouachita (Apache susceptitble to white druplet disorder)
+// Thorny Erect - Chickasaw, Kiowa
+// thornless semi-erect - - Triple Crown, susceptible to spotted wing drosophila
+// thornless primocane-fruiting - Prime-Ark® Traveler, Stark® Black Gem®, fall crop is susceptible to spotted wing drosophila
+// thorny primocane-fruiting - Prime-Ark® 45, fall crop is susceptible to spotted wing drosophila
+
+// Blueberry (MP) (Plant 2 varieties to ensure good pollination)
+// Duke, Patriot, Bluejay, Bluecrop, Draper, Chandler,
+// Brigitta, Bluegold, Ozarkblue, Nelson, Darrow, Elliott
+// Aurora
+
+// Sour Cherry
+// Jubileum, Montmorency, North Star, Balaton
+
+// Sweet Cherry (do not survive well)
+// Black Gold, Hedelfingen, Lapins, Starkrimson, Sweetheart (All but Hedelfingen are self-fertile)
+
+// Black Currant (MP)
+// Titania, Consort, Crandall (Clove currant) (All resistant to white pine blister rust)
+
+// Red Currant (MP)
+// Jonkheer van Tets, Rovada
+
+// White Currant: Very susceptible to powdery mildew and difficult to keep alive
+
+// Elderberry (MP)
+// Ranch, Adams II, Bob Gordon, Wyldewood (Need 2 varieties for pollination)
+
+// Fig (MP)
+// Celeste (for container growing only), Chicago Hardy
+
+// Gooseberry (MP)
+// Amish Red, Poorman, Hinnomaki Red
+
+// Grape: Not Generally Suitable for Minimal Pesticide Gardening
+
+// table grape: Blue: Buffalo, Steuben, Sunbelt (Concord has uneven ripening problems in KY)
+
+// table grape: White: Edelweiss, Diamond, Niagara, Golden Muscat
+
+// table grape: Red Catawba
+
+// table grape: White Seedless Marquis (Very susceptible to downy mildew), Neptune
+
+// table grape: Blue Seedless: Jupiter, Mars, Everest Seedless, (Mars has some black rot resistance)
+
+// table grape: Red Seedless: Vanessa
+
+// American wine grape: Blue: Norton/Cynthiana
+// American wine grape: Blue: White Diamond, Niagara
+
+// French Hybrid wine grape: Blue: Chambourcin
+// French Hybrid wine grape: White: Edelweiss, Golden Muscat, Cayuga White, Villard Blanc, Vidal Blanc (Very susceptible to downy mildew)
+
+// EUROPEAN (VINIFERA): Not well adapted to Kentucky growing conditions
+
+// HASKAP Early Blue, Sunrise
+
+// HARDY KIWI Not recommended. (These are different from the commercial kiwi variety, Hayward)
+
+// HONEYBERRY See Haskap section, Haskap fruit are better adapted to Kentucky and sweeter
+// Michael note: I'm not sure there's a real distinction between "honeyberry" (less sweet, less adapted) and "haskap" (more sweet, more adapted) like the editors are trying to draw
+
+// JUJUBE (CHINESE DATE) (MP)
+// Sugar Cane, Honey Jar, Lang, So (Trees have small thorns)
+
+// PAWPAW (MP) KSU-Benson™, PA Golden, Wabash, Sue, Overleese, Potomac, Sunflower, Susquehanna, KSU-Chappell™, Tallahatchie, NC-1,
+// KSU-Atwood™, Shenandoah (Need 2 varieties for pollination)
+
+// peaches/nectarines
+{
+    type: "Peach",
+    name: "Desiree",
+    harvest_time_relative: "Redhaven -3 to -4 weeks",
+    description: "Yellow Semi-Free Medium hardy Uses: Fresh",
+    disease_resistance: { BLS: "Very Good" }
+},
+{
+    type: "Peach",
+    name: "Flaming Fury PF-5D Big",
+    harvest_time_relative: "Redhaven -3 to -4 weeks",
+    description: "Yellow Semi-Free Medium hardy Uses: Fresh",
+    disease_resistance: { BLS: "Good" }
+},
+{
+    type: "Peach",
+    name: "Harrow Diamond",
+    harvest_time_relative: "Redhaven -2 to -3 weeks",
+    description: "Yellow Freestone Very hardy Uses: Fresh,Freeze",
+    disease_resistance: { BLS: "Good" }
+},
+{
+    type: "Nectarine",
+    name: "NJN 102", // Brigantine™
+    harvest_time_relative: "Redhaven -1 weeks",
+    description: "Yellow Semi-Free Medium hardy Uses: Fresh",
+    disease_resistance: { BLS: "Very Good" }
+},
+{
+    type: "Peach",
+    name: "NJ 357", // Evelynn™
+    harvest_time_relative: "Redhaven +0",
+    description: "Yellow Free Medium hardy Uses: Fresh",
+    disease_resistance: { BLS: "Good" }
+},
+{
+    type: "Peach",
+    name: "Redhaven",
+    description: "Yellow Freestone Medium hardy Uses: Fresh,Freeze,Canning. browning resistance: Very Good",
+    // Redhaven ripens around July 25 in western Kentucky and August 5 in eastern
+    disease_resistance: { BLS: "Good" }
+},
+{
+    type: "Peach",
+    name: "White Lady",
+    harvest_time_relative: "Redhaven +1 weeks",
+    description: "White. Freestone. Very hardy. Uses: Fresh,Freeze. browning resistance: Good",
+    disease_resistance: { BLS: "Very Good " }
+},
+{
+    type: "Peach",
+    name: "Ernie’s Choice",
+    harvest_time_relative: "Redhaven +2 weeks",
+    description: "Yellow. Freestone. Medium hardy. Uses: Fresh,Freeze",
+    disease_resistance: { BLS: "Good" }
+},
+{
+    type: "Peach",
+    name: "Coralstar",
+    harvest_time_relative: "Redhaven +2 to +3 weeks",
+    description: "Yellow. Freestone. Medium hardy. Uses: Fresh,Freeze,Canning. browning resistance: Very Good",
+    disease_resistance: { BLS: "Good" }
+},
+{
+    type: "Peach",
+    name: "Cresthaven",
+    harvest_time_relative: "Redhaven +3 to +4 weeks",
+    description: "Yellow. Freestone. Medium hardy. Uses: Fresh,Freeze,Canning. browning resistance: Good",
+    disease_resistance: { BLS: "Good" }
+},
+{
+    type: "Peach",
+    name: "Madison",
+    harvest_time_relative: "Redhaven +3 to +4 weeks",
+    description: "Yellow. Freestone. Very hardy. Uses: Fresh,Freeze,Canning. browning resistance: Good",
+    disease_resistance: { BLS: "Very Good" }
+},
+{
+    type: "Peach",
+    name: "Contender",
+    harvest_time_relative: "Redhaven +3 to +4 weeks",
+    description: "Yellow. Freestone. Very hardy. Uses: Fresh,Freeze. browning resistance: Good",
+    disease_resistance: { BLS: "Very Good" }
+},
+{
+    type: "Nectarine",
+    name: "Redgold",
+    harvest_time_relative: "Redhaven +3 to +4 weeks",
+    description: "Yellow. Freestone. Medium hardy. Uses: Fresh. browning resistance: Med.",
+    disease_resistance: { BLS: "Poor" }
+},
+{
+    type: "Nectarine",
+    name: "Fantasia",
+    harvest_time_relative: "Redhaven +3 to +4 weeks",
+    description: "Yellow. Freestone. Medium hardy. Uses: Fresh",
+    disease_resistance: { BLS: "Good" }
+},
+{
+    type: "Peach",
+    name: "Blushingstar",
+    harvest_time_relative: "Redhaven +3 to +4 weeks",
+    description: "White. Freestone. Very hardy. Uses: Fresh,Freeze. browning resistance: Very Good",
+    disease_resistance: { BLS: "Very Good" }
+},
+{
+    type: "Peach",
+    name: "Redskin",
+    harvest_time_relative: "Redhaven +5 to +6 weeks",
+    description: "Yellow. Freestone. Medium hardy. Uses: Fresh,Freeze,Canning. browning resistance: Good",
+    disease_resistance: { BLS: "Good" }
+},
+{
+    type: "Peach",
+    name: "Encore",
+    harvest_time_relative: "Redhaven +8 weeks",
+    description: "Yellow. Freestone. Very hardy Uses: Fresh",
+    disease_resistance: { BLS: "Very Good" }
+}
+
+// PEARS (Not Generally Suitable for Minimal Pesticide Gardening)
+
+// ASIAN PEAR
+// Niitaka Mid-August Korean Giant
+
+// Meigetsu Late September Any other Asian pear
+
+// Shinko Late September Any other Asian pear, fire blight tolerant
+
+// Korean Giant Olympic or Starking Hardy Giant
+// Early October Any other Asian pear, fire blight tolerant
+
+// EUROPEAN PEAR1 (Fire blight resistant varieties)
+// Don't plant Bartlett pears. Plant only blight resistant varieties
+
+// Summercrisp Late July Any other European pear
+
+
+// Harvest Queen Mid-August Any other European pear
+
+
+// Sunrise Mid-August Any other European pear
+
+
+// Honeysweet Late August Any other European pear
+
+
+// Blake's Pride Late August Any other European pear
+
+
+// Seckel Late August Any other European pear
+
+
+// Potomac Late August Any other European pear
+
+
+// Magness2 Early September Korean Giant, Potomac, Honeysweet
+// Magness can not be depended on to pollinate other pear varieties and is not a heavy producer.
+
+
+// Shenandoah Early September Any other European pear
+
+
+// Kieffer3 Early October Any other European pear
+// Kieffer is an heirloom, productive, easily grown variety with many stone or grit cells. Excellent for canning
+
+
+
+
+
+
+// PERSIMMONS (MP)
+// American Early Jewel (H-118), Early Golden, Prok, Lehman’s Delight (100-46),
+// Morris Burton, Valeene Beauty, Evelyn, Celebrity
+
+// American X Oriental Kasandra, Nikita’s Gift, Rosseyanka or Russian Beauty
+
+// Oriental/Asian Most varieties not hardy in Kentucky
+
+
+// PLUOT (Plum X Apricot): Not recommended because they bloom too early and flowers are killed by frost
+
+
+// PLUM EUROPEAN
+// Castleton Early August On Marianna 26-24 rootstock, Any other European type
+
+// Long John Mid-August Any other European type, large prune-type
+
+// Bluebyrd Mid-August Any other European type, resistant to black knot
+
+// NY9 Late August Self-fruitful prune-type more disease resistant than Stanley
+
+// Stanley Late August Self-fruitful prune-type, susceptible to black knot
+
+
+// PLUM JAPANESE/ASIAN: Very frost susceptible, only for exceptional sites
+// Shiro Early July Ruby Queen, juicy yellow plum
+// Ruby Queen Late August Shiro, moderately resistant to bacterial spot and bacterial canker
+
+
+// RASPBERRY (MP)
+// Black June bearing Bristol, Jewel, Mac Black
+
+
+// Red June bearing Prelude, TulaMagic, Encore (Later ripening Encore fruit may have Spotted wing drosophila problems)
+
+
+// Red fall bearing Joan J, Caroline, Himbo-Top
+// Not recommended due to Spotted wing drosophila problems
+// not_recommended_reason: Spotted wing drosophila problems
+
+
+// Purple June bearing Royalty
+
+
+// Yellow Fall bearing Double Gold, Anne
+// Not recommended due to Spotted wing drosophila problems
+// not_recommended_reason: Spotted wing drosophila problems
+
+
+// QUINCE (Not recommended due to fire blight susceptibility)
+
+
+// STRAWBERRY (MP)
+// June Bearing Earliglow, Galletta, Flavorfest, Allstar, Jewel, AC Valley Sunset
+
+// Everbearing Seascape, Albion, Tribute
+// Not recommended due to Spotted wing drosophila problems
+// not_recommended_reason: Spotted wing drosophila problems
+
     ]
 }

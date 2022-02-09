@@ -173,7 +173,7 @@
             disease_resistance: {
                 bacterial_spot: "low susceptibility"
             },
-            harvest_time: "early august", // redhaven +/- todo
+            harvest_time: "early august", // redhaven +/- todo ("with redhaven")
             released: "2017",
             description: "yellow",
             patent: "ppaf 2017"
