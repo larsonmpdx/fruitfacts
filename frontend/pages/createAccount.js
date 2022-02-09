@@ -2,6 +2,7 @@
 // it will check the login info against the database. if no account is found it redirects here
 // so the user is prompted to create an account (or not)
 import React from 'react';
+import Link from 'next/link';
 
 export default function Home (props) {
     const [user, setUser] = React.useState()
@@ -31,7 +32,7 @@ export default function Home (props) {
 
     return (
         <>
-        {!user && <p>oauth login was successful but no account was found</p>}
+        {!user && <p>external login was successful but no {process.env.NEXT_PUBLIC_SITE_NAME} account was found. create one?</p>}
             <button
                 disabled={disabled}
                 onClick={async () => {
@@ -48,6 +49,7 @@ export default function Home (props) {
                     )}
                 </>
             )}
+            <Link href="/">{`Back to ${process.env.NEXT_PUBLIC_SITE_NAME}`}</Link>
         </>
     )
 }

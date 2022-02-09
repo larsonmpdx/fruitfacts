@@ -30,7 +30,7 @@ export default function Layout({ children }) {
                 <noscript>
                     <p>{process.env.NEXT_PUBLIC_SITE_NAME} works better with javascript</p>
                 </noscript>
-                <main>{children}</main>;
+                <main>{children}</main>
             </>
         )
     }

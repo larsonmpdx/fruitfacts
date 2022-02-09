@@ -14,5 +14,208 @@
     ],
     plants: [
         // todo
+
+        /*
+"Ripening dates are generally a week earlier in Western Kentucky and a week later in Eastern Kentucky"
+
+{
+type: "Apple",
+name: "Lodi",
+harvest_time: "Jul 1
+Yellow. Use: Sauce & Freezing. Has replaced Yellow Transplant
+
+},
+{
+type: "Apple",
+name: "Pristine",
+harvest_time: "Jul 10
+Requires minimal pesticides. Yellow. Use: All. Scab and powdery mildew resistant, susceptible to cedar apple rust and fire blight; possible replacement for Lodi
+
+},
+{
+type: "Apple",
+name: "Ginger Gold",
+harvest_time: "Aug 1
+Yellow Use: All Large fruit, fine grained flesh, does not russet and stores well, fire blight susceptible
+
+},
+{
+type: "Apple",
+name: "Redfree",
+harvest_time: "Aug 5
+Requires minimal pesticides. Red. Use: All. Very resistant to scab, cedar apple rust, sooty blotch and flyspeck, susceptible to fire blight and powdery mildew
+
+},
+{
+type: "Apple",
+name: "Mollies Delicious", // todo - name harmonization
+harvest_time: "Aug 10
+Red. Use: All. Large, firm excellent quality, fire blight susceptible
+
+},
+{
+type: "Apple",
+name: "Minnewashta", //"Zestar!"
+Aug 10
+Red. Use: All. Crisp, juicy and tart
+
+},
+{
+type: "Apple",
+name: "RubyMac",
+harvest_time: "Aug 25
+Red. Use: Fresh & Sauce. High coloring strain of McIntosh
+
+},
+{
+type: "Apple",
+name: "Gala",
+harvest_time: "Aug 25
+Red. Use: All
+Excellent quality, very fire blight susceptible 
+
+},
+{
+type: "Apple",
+name: "Honeycrisp",
+harvest_time: "Aug 25
+Red. Use: All. Not recommended, very difficult to grow in Kentucky
+not_recommended_reason: very difficult to grow in Kentucky
+
+},
+{
+type: "Apple",
+name: "Liberty",
+harvest_time: "Sep 5
+Requires minimal pesticides. Red. Use: All. Resistant to scab, cedar apple rust, and fire blight, susceptible to powdery mildew, tart
+
+},
+{
+type: "Apple",
+name: "Cortland",
+harvest_time: "Sep 5
+Red. Use: All. Dependable producer; white flesh, McIntosh type; select a red strain
+
+},
+{
+type: "Apple",
+name: "MAIA8", // Baker's Delight™
+harvest_time: "Sep 5
+Red. Use: All. Dependable producer, effervescent tropical taste, long harvest period, excellent for baking
+
+},
+{
+type: "Apple",
+name: "Ruby Jon",
+harvest_time: "Sep 5
+Red. Use: All. Jonathan type; excellent red color, found in KY, fire blight susceptible
+
+},
+{
+type: "Apple",
+name: "Jonafree",
+harvest_time: "Sep 5
+Requires minimal pesticides. Red. Use: All. Very resistant to scab and powdery mildew, susceptible to fire blight and cedar apple rust
+
+},
+{
+type: "Apple",
+name: "Spartan",
+harvest_time: "Sep 5
+Requires minimal pesticides. Red. Use: All. Resistant to scab, cedar apple rust, fire blight and powdery mildew, McIntosh type, shorter storage life
+
+},
+{
+type: "Apple",
+name: "Pixie Crunch",
+harvest_time: "Sep 5
+Requires minimal pesticides. Red. Use: Fresh. Very resistant to scab, smUse: All sweet crisp apple that can be harvested for a month
+
+},
+{
+type: "Apple",
+name: "Golden Delicious",
+harvest_time: "Sep 15
+Yellow. Use: All. Dependable producer
+
+},
+{
+type: "Apple",
+name: "Grimes Golden",
+harvest_time: "Sep 15
+Requires minimal pesticides. Yellow. Use: All. Resistant to cedar apple rust, fire blight, splendid Use: All around apple
+
+},
+{
+type: "Apple",
+name: "Crimson Crisp ",
+harvest_time: "Sep 15
+Requires minimal pesticides. Red. Use: All. Very resistant to scab, susceptible to cedar apple rust, fire blight and powdery mildew
+
+},
+{
+type: "Apple",
+name: "Jonagold",
+harvest_time: "Sep 15
+Red. Use: All. Excellent quality, triploid and will not pollinate other varieties
+
+},
+{
+type: "Apple",
+name: "MAIA7", // "Crunch-a-Bunch™"
+harvest_time: "Sep 15
+Requires minimal pesticides. Yellow. Use: All. Resistant to scab and fire blight, sweet tart flavor, crisp, excellent storage
+
+},
+{
+type: "Apple",
+name: "Empire",
+harvest_time: "Sep 15
+Red. Use: All. McIntosh type, blooms early, frost prone
+},
+{
+type: "Apple",
+name: "Melrose", // todo - what is "Melrouge"? listed as AKA in the doc
+harvest_time: "Sep 20
+Red. Use: All. A replacement for Stayman
+},
+{
+type: "Apple",
+name: "Mutsu",
+AKA: ["Crispin"]
+harvest_time: "Sep 25
+Yellow. Use: All. Susceptible to blister splot; Heavy producer; triploid and will not pollinate other varieties, stores well
+},
+{
+type: "Apple",
+name: "Law Rome",
+harvest_time: "Sep 25
+Red. Use: Cooking. Blooms late & avoids frost, fire blight susceptible
+
+type: "Apple",
+name: "Blushing Golden",
+harvest_time: "Sep 25
+Yellow. Use: All. Firm, smooth finish, good quality
+
+type: "Apple",
+name: "Red Fuji",
+harvest_time: "Oct 5
+Red. Use: All. A long keeper, excellent crisp, sweet apple, fire blight susceptible
+
+type: "Apple",
+name: "Suncrisp",
+harvest_time: "Oct 5
+Yellow. Use: All. Excellent quality and flavor, a long keeper
+
+type: "Apple",
+name: "Florina", // "Querina" 
+harvest_time: "Oct 5
+Requires minimal pesticides. Red. Use: All. Scab resistant, moderately resistant to powdery mildew, susceptible to cedar apple rust
+
+
+// todo - other fruit types, etc.
+
+
+        */
     ]
 }

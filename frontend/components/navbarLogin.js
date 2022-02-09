@@ -52,5 +52,5 @@ export default function Home({ user, setUser }) {
                 <Link href="/login">log in</Link>
             )}
         </>
-    );
+    )
 }
