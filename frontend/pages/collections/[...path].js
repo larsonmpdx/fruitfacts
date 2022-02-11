@@ -51,7 +51,7 @@ export default function Home({ data }) {
                     <ul>
                         {data.items.map((item) => (
                             <li key={item.id}>
-                                <img src={"/fruit_icons/" + item.type + ".svg"} height="13"/>
+                                <img src={'/fruit_icons/' + item.type + '.svg'} height="13" />
                                 <Link
                                     href={`/plant/${encodeURIComponent(
                                         item.type
@@ -60,12 +60,14 @@ export default function Home({ data }) {
                                     {item.name + ' ' + item.type}
                                 </Link>
 
-                                {item.marketing_name && <>(marketed under the {item.marketing_name} brand)</>}
+                                {item.marketing_name && (
+                                    <>(marketed under the {item.marketing_name} brand)</>
+                                )}
                             </li>
                         ))}
                     </ul>
                 </>
             )}
         </div>
-    )
+    );
 }

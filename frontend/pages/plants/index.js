@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-export async function getStaticProps (context) {
+export async function getStaticProps(context) {
     const json5 = require('json5');
     const fs = require('fs');
     const path = require('path');
@@ -12,7 +12,7 @@ export async function getStaticProps (context) {
         props: {
             types
         }
-    }
+    };
 }
 
 export default function Home({ types }) {
@@ -22,16 +22,14 @@ export default function Home({ types }) {
                 <>
                     <h1>Plant Types</h1>
                     <ul>
-                        {types.map(type => (
+                        {types.map((type) => (
                             <li key={type.name}>
-                                <Link href={`/types/${type.name}`}>
-                                    {type.name}
-                                </Link>
+                                <Link href={`/types/${type.name}`}>{type.name}</Link>
                             </li>
                         ))}
                     </ul>
                 </>
             )}
         </>
-    )
+    );
 }

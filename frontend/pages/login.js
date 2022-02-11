@@ -27,5 +27,5 @@ export default function Home() {
         fetchData();
     }, []);
 
-    return (<>{authURLs && <a href={authURLs.google}>log in with google oauth</a>}</>)
+    return <>{authURLs && <a href={authURLs.google}>log in with google oauth</a>}</>;
 }

@@ -6,36 +6,36 @@
 // see https://github.com/vercel/next.js/discussions/23988
 
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
-import Link from 'next/link'
+import Link from 'next/link';
 
-export async function getServerSideProps (context) {
-    const { path } = context.query
-    let pathUsed
+export async function getServerSideProps(context) {
+    const { path } = context.query;
+    let pathUsed;
     if (path) {
-        pathUsed = path.join('/') + '/' // with trailing slash - directory listing
+        pathUsed = path.join('/') + '/'; // with trailing slash - directory listing
     } else {
-        pathUsed = '' // this combind with the [[...path]].js filename gets us the base path "/dirs" or "/dirs/"
+        pathUsed = ''; // this combind with the [[...path]].js filename gets us the base path "/dirs" or "/dirs/"
     }
     const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathUsed}`)
-        .then(response => {
+        .then((response) => {
             if (response.status !== 200) {
-                return []
+                return [];
             }
-            return response.json()
+            return response.json();
         })
-        .catch(error => {
-            console.log(error)
-            return []
-        })
+        .catch((error) => {
+            console.log(error);
+            return [];
+        });
 
     return {
         props: {
             data
         }
-    }
+    };
 }
 
-export default function Home ({ data }) {
+export default function Home({ data }) {
     return (
         <div>
             {/* multi collection (directory listing) */}
@@ -54,11 +54,12 @@ export default function Home ({ data }) {
                 <>
                     <h1>Locations</h1>
                     <ul>
-                        {data.collections.map(collection => (
+                        {data.collections.map((collection) => (
                             <li key={collection.id}>
                                 <Link
-                                    href={`/collections/${collection.path +
-                                        encodeURIComponent(collection.filename)}`}
+                                    href={`/collections/${
+                                        collection.path + encodeURIComponent(collection.filename)
+                                    }`}
                                 >
                                     {collection.title}
                                 </Link>
@@ -68,5 +69,5 @@ export default function Home ({ data }) {
                 </>
             )}
         </div>
-    )
+    );
 }

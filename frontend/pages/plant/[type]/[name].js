@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {formatPatentDate} from '../../../components/functions'
+import { formatPatentDate } from '../../../components/functions';
 
 export async function getServerSideProps(context) {
     const { type, name } = context.query;
@@ -27,14 +27,25 @@ export default function Home({ plant }) {
         <div>
             {plant.base && (
                 <h2>
-                    <img src={"/fruit_icons/" + plant.base.type + ".svg"} height="24"/>{plant.base.name} {plant.base.type}
+                    <img src={'/fruit_icons/' + plant.base.type + '.svg'} height="24" />
+                    {plant.base.name} {plant.base.type}
                 </h2>
             )}
-            {plant.base?.marketing_name && <h2>marketed under the {plant.base.marketing_name} brand </h2>}
+            {plant.base?.marketing_name && (
+                <h2>marketed under the {plant.base.marketing_name} brand </h2>
+            )}
 
             {plant.base?.uspp_number && <p>USPP{plant.base.uspp_number}</p>}
 
-            {plant.base?.uspp_expiration && <p>until {formatPatentDate(plant.base.uspp_expiration, plant.base.uspp_expiration_estimated)}</p>}
+            {plant.base?.uspp_expiration && (
+                <p>
+                    until{' '}
+                    {formatPatentDate(
+                        plant.base.uspp_expiration,
+                        plant.base.uspp_expiration_estimated
+                    )}
+                </p>
+            )}
 
             {plant.base?.aka && <p>AKA {plant.base.aka}</p>}
 
@@ -93,5 +104,5 @@ export default function Home({ plant }) {
                 </>
             )}
         </div>
-    )
+    );
 }

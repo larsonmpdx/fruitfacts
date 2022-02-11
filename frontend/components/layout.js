@@ -23,7 +23,7 @@ export default function Layout({ children }) {
                     })}
                 </main>
             </>
-        )
+        );
     } else {
         return (
             <>
@@ -32,6 +32,6 @@ export default function Layout({ children }) {
                 </noscript>
                 <main>{children}</main>
             </>
-        )
+        );
     }
 }

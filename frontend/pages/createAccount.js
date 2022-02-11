@@ -4,9 +4,9 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Home (props) {
-    const [user, setUser] = React.useState()
-    const [disabled, setDisabled] = React.useState()
+export default function Home(props) {
+    const [user, setUser] = React.useState();
+    const [disabled, setDisabled] = React.useState();
 
     const createAccount = async () => {
         if (disabled) {
@@ -17,27 +17,33 @@ export default function Home (props) {
         const user = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/createAccount`, {
             credentials: 'include'
         })
-            .then(response => {
+            .then((response) => {
                 if (response.status !== 200) {
-                    return { failed: response.status }
+                    return { failed: response.status };
                 }
-                return response.json()
+                return response.json();
             })
-            .catch(error => {
-                console.log(error)
-                return { failed: error }
-            })
-        setUser(user)
-    }
+            .catch((error) => {
+                console.log(error);
+                return { failed: error };
+            });
+        setUser(user);
+    };
 
     return (
         <>
-        {!user && <p>external login was successful but no {process.env.NEXT_PUBLIC_SITE_NAME} account was found. create one?</p>}
+            {!user && (
+                <p>
+                    external login was successful but no {process.env.NEXT_PUBLIC_SITE_NAME} account
+                    was found. create one?
+                </p>
+            )}
             <button
                 disabled={disabled}
                 onClick={async () => {
-                    await createAccount()
-                }}>
+                    await createAccount();
+                }}
+            >
                 create account
             </button>
             {user && (
@@ -51,5 +57,5 @@ export default function Home (props) {
             )}
             <Link href="/">{`Back to ${process.env.NEXT_PUBLIC_SITE_NAME}`}</Link>
         </>
-    )
+    );
 }

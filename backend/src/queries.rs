@@ -8,8 +8,8 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use anyhow::Result;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
-use std::collections::HashSet;
 use serde_with::skip_serializing_none;
+use std::collections::HashSet;
 
 #[skip_serializing_none]
 #[derive(Queryable, Debug, Serialize)]
