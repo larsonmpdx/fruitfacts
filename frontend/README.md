@@ -2,6 +2,7 @@
 
 -   install nvm (there is a related windows project)
     -   `nvm install lts` and `nvm use lts`
+    -   `nvm install lts` will also update to newer versions
 -   `npm run dev/build/start` next.js things
 -   `ncu -u` update package.json versions (after installing `npm i -g npm-check-updates`)
 

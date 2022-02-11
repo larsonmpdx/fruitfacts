@@ -120,12 +120,6 @@ struct CollectionPlantJson {
     released: Option<String>,
 }
 
-#[derive(Serialize, Deserialize)]
-struct TypeJson {
-    name: String,
-    latin_name: Option<String>,
-}
-
 pub fn rem_last_n(value: &str, n: usize) -> &str {
     let mut chars = value.chars();
     for _ in 0..n {
@@ -951,11 +945,13 @@ fn apply_top_level_fields(
                 base_plants::release_collection_id.eq(release_collection_id),
             ))
             .execute(db_conn);
-    assert_eq!(Ok(1), updated_row_count,
-    "failed inserting {} {:?}",
-    plant.name,
-    uspp_number
-);
+    assert_eq!(
+        Ok(1),
+        updated_row_count,
+        "failed inserting {} {:?}",
+        plant.name,
+        uspp_number
+    );
 }
 
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
@@ -1011,6 +1007,18 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
     plants_found
 }
 
+#[derive(Serialize, Deserialize)]
+struct TypeGroupsJson {
+    group_name: String,
+    types: Vec<TypeJson>,
+}
+
+#[derive(Serialize, Deserialize)]
+struct TypeJson {
+    name: String,
+    latin_name: Option<String>,
+}
+
 fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     let mut types_found = 0;
 
@@ -1021,17 +1029,20 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
 
     let contents = fs::read_to_string(types_path).unwrap();
 
-    let types_parsed: Vec<TypeJson> = json5::from_str(&contents).unwrap();
+    let types_groups_parsed: Vec<TypeGroupsJson> = json5::from_str(&contents).unwrap();
 
-    for type_element in &types_parsed {
-        let rows_inserted = diesel::insert_into(plant_types::dsl::plant_types)
-            .values((
-                plant_types::name.eq(&type_element.name),
-                plant_types::latin_name.eq(&type_element.latin_name),
-            ))
-            .execute(db_conn);
-        assert_eq!(Ok(1), rows_inserted);
-        types_found += 1;
+    for type_group in &types_groups_parsed {
+        for type_element in &type_group.types {
+            let rows_inserted = diesel::insert_into(plant_types::dsl::plant_types)
+                .values((
+                    plant_types::group_name.eq(&type_group.group_name),
+                    plant_types::name.eq(&type_element.name),
+                    plant_types::latin_name.eq(&type_element.latin_name),
+                ))
+                .execute(db_conn);
+            assert_eq!(Ok(1), rows_inserted);
+            types_found += 1;
+        }
     }
     types_found
 }

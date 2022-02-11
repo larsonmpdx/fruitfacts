@@ -1,203 +1,229 @@
 [
     {
-        name: "Apple",
-        latin_name: "Malus spp."
+        group_name: "Common Tree Fruits",
+        types: [
+            {
+                name: "Apple",
+                latin_name: "Malus spp."
+            },
+            {
+                name: "Apricot",
+                latin_name: "Prunus armeniaca"
+            },
+
+            {
+                name: "Asian Pear",
+                latin_name: "Pyrus pyrifolia"
+            },
+            {
+                name: "Euro Pear",
+                latin_name: "Pyrus communis"
+            },
+            {
+                name: "Euro Plum",
+                latin_name: "Prunus domestica"
+            },
+            {
+                name: "Japanese Plum",
+                latin_name: "Prunus salicina"
+            },
+            {
+                name: "Sour Cherry",
+                latin_name: "Prunus cerasus"
+            },
+            {
+                name: "Sweet Cherry",
+                latin_name: "Prunus avium"
+            },
+            {
+                name: "Nectarine",
+                latin_name: "Prunus persica"
+            },
+            {
+                name: "Peach",
+                latin_name: "Prunus persica"
+            },
+            {
+                name: "Fig",
+                latin_name: "Ficus carica"
+            },
+            {
+                name: "Aprium",
+                latin_name: "Prunus hybrid"
+            },
+            {
+                name: "Plumcot",
+                latin_name: "Prunus hybrid"
+            },
+            {
+                name: "Pluot",
+                latin_name: "Prunus hybrid"
+            }
+        ]
     },
     {
-        name: "Crabapple",
-        latin_name: "Malus spp."
+        group_name: "Berries",
+        types: [
+            {
+                name: "Blueberry",
+                latin_name: "Vaccinium spp."
+            },
+            {
+                name: "Hardy Kiwi",
+                latin_name: "Actinidia arguta"
+            },
+            {
+                name: "Fuzzy Kiwi",
+                latin_name: "Actinidia deliciosa"
+            },
+            {
+                name: "Muscadine",
+                latin_name: "Vitis rotundifolia"
+            },
+            {
+                name: "Grape",
+                latin_name: "Vitis vinifera"
+            },
+            {
+                name: "Elderberry",
+                latin_name: "Sambucus spp."
+            },
+            {
+                name: "Strawberry",
+                latin_name: "Fragaria × ananassa"
+            },
+            {
+                name: "Raspberry",
+                latin_name: "Rubus spp."
+            },
+            {
+                name: "Blackberry",
+                latin_name: "Rubus spp."
+            },
+            {
+                name: "Gooseberry",
+                latin_name: "Ribes spp."
+            },
+            {
+                name: "Currant",
+                latin_name: "Ribes spp."
+            },
+            {
+                name: "Saskatoon",
+                latin_name: "Amelanchier alnifolia"
+            }
+        ]
     },
     {
-        name: "Apricot",
-        latin_name: "Prunus armeniaca"
+        group_name: "Nuts",
+        types: [
+            {
+                name: "Hazelnut",
+                AKA: ["Filbert"],
+                latin_name: "Corylus spp."
+            },
+            {
+                name: "Walnut",
+                latin_name: "Juglans spp."
+            },
+            {
+                name: "Almond",
+                latin_name: "Prunus amygdalus"
+            },
+            {
+                name: "Chestnut",
+                latin_name: "Castanea spp."
+            },
+            {
+                name: "Pistachio",
+                latin_name: "Pistacia vera"
+            },
+            {
+                name: "Pecan",
+                latin_name: "Carya illinoinensis"
+            }
+        ]
     },
     {
-        name: "Asian Pear",
-        latin_name: "Pyrus pyrifolia"
+        group_name: "Citrus",
+        types: [
+            {
+                name: "Citrus",
+                latin_name: "Citrus spp."
+            },
+            {
+                name: "Sweet Orange",
+                latin_name: "Citrus × sinensis"
+            },
+            {
+                name: "Lemon",
+                latin_name: "Citrus limon"
+            },
+            {
+                name: "Lime",
+                latin_name: "Citrus spp."
+            },
+            {
+                name: "Kumquat",
+                latin_name: "Citrus japonica"
+            },
+            {
+                name: "Tangelo",
+                latin_name: "Citrus × tangelo"
+            },
+            {
+                name: "Clementine",
+                latin_name: "Citrus × clementina"
+            },
+            {
+                name: "Grapefruit",
+                latin_name: "Citrus × paradisi"
+            },
+            {
+                name: "Mandarin",
+                latin_name: "Citrus reticulata"
+            }
+        ]
     },
     {
-        name: "Blueberry",
-        latin_name: "Vaccinium spp."
-    },
-    {
-        name: "Euro Pear",
-        latin_name: "Pyrus communis"
-    },
-    {
-        name: "Euro Plum",
-        latin_name: "Prunus domestica"
-    },
-    {
-        name: "Japanese Plum",
-        latin_name: "Prunus salicina"
-    },
-    {
-        name: "Jujube",
-        latin_name: "Ziziphus jujuba"
-    },
-    {
-        name: "Persimmon",
-        latin_name: "Diospyros spp."
-    },
-    {
-        name: "Sour Cherry",
-        latin_name: "Prunus cerasus"
-    },
-    {
-        name: "Sweet Cherry",
-        latin_name: "Prunus avium"
-    },
-    {
-        name: "Nanking Cherry",
-        latin_name: "Prunus tomentosa"
-    },
-    {
-        name: "Nectarine",
-        latin_name: "Prunus persica"
-    },
-    {
-        name: "Peach",
-        latin_name: "Prunus persica"
-    },
-    {
-        name: "Fig",
-        latin_name: "Ficus carica"
-    },
-    {
-        name: "Mulberry",
-        latin_name: "Morus spp."
-    },
-    {
-        name: "Pomegranate",
-        latin_name: "Punica granatum"
-    },
-    {
-        name: "Hardy Kiwi",
-        latin_name: "Actinidia arguta"
-    },
-    {
-        name: "Fuzzy Kiwi",
-        latin_name: "Actinidia deliciosa"
-    },
-    {
-        name: "Pecan",
-        latin_name: "Carya illinoinensis"
-    },
-    {
-        name: "Olive",
-        latin_name: "Olea europaea"
-    },
-    {
-        name: "Hazelnut",
-        AKA: ["Filbert"],
-        latin_name: "Corylus spp."
-    },
-    {
-        name: "Walnut",
-        latin_name: "Juglans spp."
-    },
-    {
-        name: "Almond",
-        latin_name: "Prunus amygdalus"
-    },
-    {
-        name: "Quince",
-        latin_name: "Cydonia oblonga"
-    },
-    {
-        name: "Chestnut",
-        latin_name: "Castanea spp."
-    },
-    {
-        name: "Pistachio",
-        latin_name: "Pistacia vera"
-    },
-    {
-        name: "Aprium",
-        latin_name: "Prunus hybrid"
-    },
-    {
-        name: "Plumcot",
-        latin_name: "Prunus hybrid"
-    },
-    {
-        name: "Pluot",
-        latin_name: "Prunus hybrid"
-    },
-    {
-        name: "Citrus",
-        latin_name: "Citrus spp."
-    },
-    {
-        name: "Sweet Orange",
-        latin_name: "Citrus × sinensis"
-    },
-    {
-        name: "Lemon",
-        latin_name: "Citrus limon"
-    },
-    {
-        name: "Lime",
-        latin_name: "Citrus spp."
-    },
-    {
-        name: "Kumquat",
-        latin_name: "Citrus japonica"
-    },
-    {
-        name: "Tangelo",
-        latin_name: "Citrus × tangelo"
-    },
-    {
-        name: "Clementine",
-        latin_name: "Citrus × clementina"
-    },
-    {
-        name: "Grapefruit",
-        latin_name: "Citrus × paradisi"
-    },
-    {
-        name: "Mandarin",
-        latin_name: "Citrus reticulata"
-    },
-    {
-        name: "Muscadine",
-        latin_name: "Vitis rotundifolia"
-    },
-    {
-        name: "Grape",
-        latin_name: "Vitis vinifera"
-    },
-    {
-        name: "Elderberry",
-        latin_name: "Sambucus spp."
-    },
-    {
-        name: "Strawberry",
-        latin_name: "Fragaria × ananassa"
-    },
-    {
-        name: "Raspberry",
-        latin_name: "Rubus spp."
-    },
-    {
-        name: "Blackberry",
-        latin_name: "Rubus spp."
-    },
-    {
-        name: "Gooseberry",
-        latin_name: "Ribes spp."
-    },
-    {
-        name: "Currant",
-        latin_name: "Ribes spp."
-    },
-    {
-        name: "Saskatoon",
-        latin_name: "Amelanchier alnifolia"
-    },
-    {
-        name: "Pawpaw",
-        latin_name: "Asimina triloba"
+        group_name: "Less Common Tree Fruits",
+        types: [
+            {
+                name: "Quince",
+                latin_name: "Cydonia oblonga"
+            },
+            {
+                name: "Pawpaw",
+                latin_name: "Asimina triloba"
+            },
+            {
+                name: "Crabapple",
+                latin_name: "Malus spp."
+            },
+            {
+                name: "Jujube",
+                latin_name: "Ziziphus jujuba"
+            },
+            {
+                name: "Persimmon",
+                latin_name: "Diospyros spp."
+            },
+            {
+                name: "Nanking Cherry",
+                latin_name: "Prunus tomentosa"
+            },
+            {
+                name: "Mulberry",
+                latin_name: "Morus spp."
+            },
+            {
+                name: "Pomegranate",
+                latin_name: "Punica granatum"
+            },
+            {
+                name: "Olive",
+                latin_name: "Olea europaea"
+            }
+        ]
     }
 ]

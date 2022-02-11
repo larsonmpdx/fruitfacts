@@ -92,6 +92,7 @@ table! {
 table! {
     plant_types (id) {
         id -> Integer,
+        group_name -> Text,
         name -> Text,
         latin_name -> Nullable<Text>,
     }

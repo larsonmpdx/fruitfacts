@@ -1,8 +1,9 @@
-var fs = require('fs')
-const path = require('path')
 import * as React from 'react'
 
 export async function getStaticProps (context) {
+    var fs = require('fs')
+    const path = require('path')
+
     const icons_dir = path.join(process.cwd(), 'public', 'fruit_icons')
     return {
         props: {
@@ -38,15 +39,15 @@ export default function Custom404 (props) {
     }, [])
 
     return (
-        <>
-            {icon && <img src={'/fruit_icons/' + icon} height='72' />}
+        <center>
+            <h1>404 - Page Not Found</h1>
+            {icon && <img src={'/fruit_icons/' + icon} height='100' />}
             {fact?.fact && (
                 <p>
                     {fact.fact}
                     <a href={` ${fact.reference}`}>[ref]</a>
                 </p>
             )}
-            <h1>404 - Page Not Found</h1>
-        </>
+        </center>
     )
 }

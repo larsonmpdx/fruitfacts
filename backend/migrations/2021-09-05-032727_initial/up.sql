@@ -49,6 +49,7 @@ END;
 
 CREATE TABLE plant_types (
   id INTEGER PRIMARY KEY NOT NULL,
+  group_name TEXT NOT NULL,
   name TEXT NOT NULL,
   latin_name TEXT,
   UNIQUE(name)

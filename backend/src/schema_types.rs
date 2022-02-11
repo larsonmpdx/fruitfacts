@@ -14,6 +14,7 @@ use serde_with::skip_serializing_none;
 #[derive(Queryable)]
 pub struct PlantType {
     pub plant_type_id: i32,
+    pub group_name: String,
     pub name: String,
     pub latin_name: Option<String>,
 }
