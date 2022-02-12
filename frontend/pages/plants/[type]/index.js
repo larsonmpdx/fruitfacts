@@ -1,42 +1,41 @@
 import Link from 'next/link';
-import { formatPatentDate } from '../../components/functions';
 
 export async function getServerSideProps(context) {
-    const { page } = context.query;
+    const { type, page } = context.query;
     let pageNum = parseInt(page);
     if (isNaN(pageNum)) {
         pageNum = 0;
     }
 
-    const patent_list = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/patents?perPage=50&page=${pageNum}`
+    const plants = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/plants/${type}/?page=${pageNum}` // todo - perPage isn't in this API yet
     )
         .then((response) => {
             if (response.status !== 200) {
-                return [];
+                return;
             }
             return response.json();
         })
         .catch((error) => {
             console.log(error);
-            return [];
+            return;
         });
-
     return {
         props: {
-            patent_list,
+            plants: plants?.plants || [],
+            type,
             pageNum
         }
     };
 }
 
-export default function Home({ patent_list, pageNum }) {
+export default function Home({ plants, type, pageNum }) {
     return (
         <div>
-            <Link href={`/patents/${parseInt(pageNum) - 1}`}>previous</Link>
-            <Link href={`/patents/${parseInt(pageNum) + 1}`}>next</Link>
+            <Link href={`/plants/${type}?page=${parseInt(pageNum) - 1}`}>previous</Link>
+            <Link href={`/plants/${type}?page=${parseInt(pageNum) + 1}`}>next</Link>
             <ul>
-                {patent_list.map((item) => (
+                {plants.map((item) => (
                     <>
                         <li>
                             <img src={'/fruit_icons/' + item.type + '.svg'} height="13" />
@@ -49,8 +48,7 @@ export default function Home({ patent_list, pageNum }) {
                             </Link>
                             {item.marketing_name && (
                                 <>(marketed under the {item.marketing_name} brand)</>
-                            )}{' '}
-                            {formatPatentDate(item.uspp_expiration, item.uspp_expiration_estimated)}
+                            )}
                         </li>
                     </>
                 ))}

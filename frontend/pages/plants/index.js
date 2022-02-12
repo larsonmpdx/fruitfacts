@@ -21,13 +21,24 @@ export default function Home({ types }) {
             {types && (
                 <>
                     <h1>Plant Types</h1>
-                    <ul>
-                        {types.map((type) => (
-                            <li key={type.name}>
-                                <Link href={`/types/${type.name}`}>{type.name}</Link>
-                            </li>
-                        ))}
-                    </ul>
+                    {types.map((group) => (
+                        <>
+                            <p>{group.group_name}</p>
+                            {group.types.map((type) => (
+                                <ul>
+                                    <li key={type.name}>
+                                        <Link href={`/plants/${type.name}`}>
+                                            <img
+                                                src={'/fruit_icons/' + type.name + '.svg'}
+                                                height="50"
+                                            />
+                                        </Link>
+                                        <Link href={`/plants/${type.name}`}>{type.name}</Link>
+                                    </li>
+                                </ul>
+                            ))}
+                        </>
+                    ))}
                 </>
             )}
         </>

@@ -10,29 +10,34 @@
                 name: "Apricot",
                 latin_name: "Prunus armeniaca"
             },
-
             {
                 name: "Asian Pear",
+                name_alphabetical: "Pear, Asian",
                 latin_name: "Pyrus pyrifolia"
             },
             {
                 name: "Euro Pear",
+                name_alphabetical: "Pear, Euro",
                 latin_name: "Pyrus communis"
             },
             {
                 name: "Euro Plum",
+                name_alphabetical: "Plum, Euro",
                 latin_name: "Prunus domestica"
             },
             {
                 name: "Japanese Plum",
+                name_alphabetical: "Plum, Japanese",
                 latin_name: "Prunus salicina"
             },
             {
                 name: "Sour Cherry",
+                name_alphabetical: "Cherry, Sour",
                 latin_name: "Prunus cerasus"
             },
             {
                 name: "Sweet Cherry",
+                name_alphabetical: "Cherry, Sweet",
                 latin_name: "Prunus avium"
             },
             {
@@ -70,10 +75,12 @@
             },
             {
                 name: "Hardy Kiwi",
+                name_alphabetical: "Kiwi, Hardy",
                 latin_name: "Actinidia arguta"
             },
             {
                 name: "Fuzzy Kiwi",
+                name_alphabetical: "Kiwi, Fuzzy",
                 latin_name: "Actinidia deliciosa"
             },
             {
@@ -153,6 +160,7 @@
             },
             {
                 name: "Sweet Orange",
+                name_alphabetical: "Orange",
                 latin_name: "Citrus × sinensis"
             },
             {
@@ -210,6 +218,7 @@
             },
             {
                 name: "Nanking Cherry",
+                name_alphabetical: "Cherry, Nanking",
                 latin_name: "Prunus tomentosa"
             },
             {

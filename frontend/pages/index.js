@@ -2,6 +2,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { format as timeAgo } from 'timeago.js';
 
+// todo:
+// - flatten and sort by common name (see types.name_alphabetical)
+// - sort by latin name
+// - grid/mobile view
+
 export async function getServerSideProps() {
     const fact = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/fact`)
         .then((response) => {
@@ -48,6 +53,9 @@ export default function Home({ fact, recentChangesData }) {
             <main>
                 <div>
                     <Link href="/dirs/">browse locations</Link>
+                </div>
+                <div>
+                    <Link href="/plants">browse plants</Link>
                 </div>
                 <div>
                     <Link href="/patents/0">browse US patents</Link>

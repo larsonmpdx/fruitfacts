@@ -40,14 +40,14 @@ export default function Custom404(props) {
 
     return (
         <center>
-            <h1>404 - Page Not Found</h1>
-            {icon && <img src={'/fruit_icons/' + icon} height="100" />}
             {fact?.fact && (
                 <p>
                     {fact.fact}
                     <a href={` ${fact.reference}`}>[ref]</a>
                 </p>
             )}
+            {icon && <img src={'/fruit_icons/' + icon} height="100" />}
+            <h1>404 - Page Not Found</h1>
         </center>
     );
 }
