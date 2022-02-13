@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link';
 
 export async function getStaticProps(context) {
     var fs = require('fs');
@@ -46,7 +47,11 @@ export default function Custom404(props) {
                     <a href={` ${fact.reference}`}>[ref]</a>
                 </p>
             )}
-            {icon && <img src={'/fruit_icons/' + icon} height="100" />}
+            {icon && (
+                <Link href={`/plants/${icon.substr(0, icon.indexOf('.'))}`}>
+                    <img src={'/fruit_icons/' + icon} height="100" />
+                </Link>
+            )}
             <h1>404 - Page Not Found</h1>
         </center>
     );
