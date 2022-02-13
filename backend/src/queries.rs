@@ -38,6 +38,7 @@ pub fn get_recent_patents_db_subquery(
     start_n: i32,
     end_n: i32,
     n: i32,
+    unix_time: i64,
 ) -> Result<Vec<BasePlantsItemForPatents>, diesel::result::Error> {
     let mut query = base_plants::table
         .select((
@@ -59,12 +60,11 @@ pub fn get_recent_patents_db_subquery(
         .filter(base_plants::uspp_expiration.is_not_null())
         .into_boxed();
 
-    let now = chrono::Utc::now().timestamp();
     if future {
-        query = query.filter(base_plants::uspp_expiration.gt(now));
+        query = query.filter(base_plants::uspp_expiration.gt(unix_time)); // future
         query = query.order(base_plants::uspp_expiration.asc());
     } else {
-        query = query.filter(base_plants::uspp_expiration.lt(now));
+        query = query.filter(base_plants::uspp_expiration.lt(unix_time)); // past
         query = query.order(base_plants::uspp_expiration.desc());
     }
 
@@ -77,6 +77,13 @@ pub fn get_recent_patents_db_subquery(
     query.load::<BasePlantsItemForPatents>(db_conn)
 }
 
+// todo - struct with per_page sent out
+#[derive(Queryable, Debug, Serialize)]
+pub struct RecentPatentsReturn {
+    patents: Vec<BasePlantsItemForPatents>,
+    per_page: i32,
+}
+
 // page 0: centered on now (N past patents plus N future patents)
 // page -1: the next page (2N in size) in the past
 // page 1: next future page
@@ -85,13 +92,16 @@ pub fn get_recent_patents_db(
     db_conn: &SqliteConnection,
     page_in: Option<i32>,
     per_page_in: Option<i32>,
-) -> Result<Vec<BasePlantsItemForPatents>, diesel::result::Error> {
+    unix_time: i64,
+) -> Result<RecentPatentsReturn> {
     let page;
     if page_in.is_none() {
         page = 0;
     } else {
         page = page_in.unwrap();
     }
+
+    let per_page_out;
 
     // N is half a page
     const N_MAX: i32 = 50;
@@ -105,49 +115,126 @@ pub fn get_recent_patents_db(
         }
     }
 
+    per_page_out = n * 2;
+
     match page {
         page if page > 0 => {
+            // future query
             // page 1: 1 to 3
             // page 2: 3 to 5
             // page 3: 5 to 7
             // ...
             // page*2 -1 to page*2 + 1
-            return get_recent_patents_db_subquery(db_conn, true, page * 2 - 1, page * 2 + 1, n);
+            let patents = get_recent_patents_db_subquery(
+                db_conn,
+                true,
+                page * 2 - 1,
+                page * 2 + 1,
+                n,
+                unix_time,
+            )?;
+            return Ok(RecentPatentsReturn {
+                patents: patents,
+                per_page: per_page_out,
+            });
         }
         page if page < 0 => {
+            // only a past query
             let result = get_recent_patents_db_subquery(
                 db_conn,
                 false,
                 (page.abs() - 1) * 2 + 1,
                 page.abs() * 2 + 1,
                 n,
-            );
+                unix_time,
+            )?;
 
-            if result.is_err() {
-                return result;
-            }
-            let mut result = result.unwrap();
+            let mut result = result;
             result.reverse();
-            return Ok(result);
+            return Ok(RecentPatentsReturn {
+                patents: result,
+                per_page: per_page_out,
+            });
         }
         _ => {
-            // 0
-            let future = get_recent_patents_db_subquery(db_conn, true, 0, 1, n);
-            let past = get_recent_patents_db_subquery(db_conn, false, 0, 1, n);
+            // 0 - get half in the past and half in the future
+            let future = get_recent_patents_db_subquery(db_conn, true, 0, 1, n, unix_time)?;
+            let past = get_recent_patents_db_subquery(db_conn, false, 0, 1, n, unix_time)?;
 
-            if future.is_err() {
-                return future;
-            }
-
-            if past.is_err() {
-                return past;
-            }
-
-            let mut future_vec = future.unwrap();
-            let mut past_vec = past.unwrap();
+            let mut future_vec = future;
+            let mut past_vec = past;
             past_vec.reverse();
             past_vec.append(&mut future_vec);
-            return Ok(past_vec);
+            return Ok(RecentPatentsReturn {
+                patents: past_vec,
+                per_page: per_page_out,
+            });
+        }
+    }
+}
+
+pub struct patent_counts {
+    pub count_past: i64,
+    pub count_future: i64,
+}
+
+pub fn get_patent_counts(db_conn: &SqliteConnection, unix_time: i64) -> Result<patent_counts> {
+    let query = base_plants::table.filter(base_plants::uspp_expiration.is_not_null());
+
+    let mut query_future = query.clone().into_boxed();
+    let mut query_past = query.into_boxed();
+
+    query_future = query_future.filter(base_plants::uspp_expiration.gt(unix_time));
+    query_future = query_future.order(base_plants::uspp_expiration.asc());
+    query_past = query_past.filter(base_plants::uspp_expiration.lt(unix_time));
+    query_past = query_past.order(base_plants::uspp_expiration.desc());
+
+    // todo - handle database errors
+    let count_past = query_past.count().first::<i64>(db_conn).unwrap();
+    let count_future = query_future.count().first::<i64>(db_conn).unwrap();
+
+    Ok(patent_counts {
+        count_past,
+        count_future,
+    })
+}
+#[derive(Default, Queryable, Debug, Serialize)]
+pub struct PatentsReturn {
+    pub patents: Vec<BasePlantsItemForPatents>,
+    pub per_page: i32,
+    pub count_past: i64,
+    pub count_future: i64,
+}
+
+pub fn get_patents(
+    db_conn: &SqliteConnection,
+    page_in: Option<i32>,
+    per_page_in: Option<i32>,
+    unix_time: i64,
+) -> Result<PatentsReturn> {
+    let mut output = PatentsReturn::default();
+    let counts = get_patent_counts(db_conn, unix_time);
+
+    match counts {
+        Ok(counts) => {
+            output.count_past = counts.count_past;
+            output.count_future = counts.count_future;
+        }
+        Err(error) => {
+            return Err(error.into());
+        }
+    }
+
+    let patents = get_recent_patents_db(db_conn, page_in, per_page_in, unix_time);
+
+    match patents {
+        Ok(patents) => {
+            output.patents = patents.patents;
+            output.per_page = patents.per_page;
+            return Ok(output);
+        }
+        Err(error) => {
+            return Err(error.into());
         }
     }
 }
@@ -166,8 +253,10 @@ async fn get_recent_patents(
 ) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
+    let now = chrono::Utc::now().timestamp(); // todo - make this a parameter
+
     // use web::block to offload blocking Diesel code without blocking server thread
-    let patents = web::block(move || get_recent_patents_db(&conn, query.page, query.per_page))
+    let patents = web::block(move || get_patents(&conn, query.page, query.per_page, now))
         .await
         .map_err(|e| {
             eprintln!("{}", e);
@@ -342,6 +431,8 @@ async fn get_collections(
 #[derive(Default, Serialize)]
 pub struct PlantsReturn {
     plants: Vec<BasePlant>,
+    per_page: i32,
+    count: i64,
 }
 
 pub fn get_plants_db(
@@ -351,23 +442,32 @@ pub fn get_plants_db(
 ) -> Result<PlantsReturn, diesel::result::Error> {
     const PER_PAGE: i32 = 50;
 
-    let mut query = base_plants::table
+    let mut query_for_items = base_plants::table
         .filter(base_plants::type_.eq(type_))
         .limit(PER_PAGE.into())
         .into_boxed();
 
+    let mut query_for_count = base_plants::table
+        .filter(base_plants::type_.eq(type_))
+        .into_boxed();
+
     if let Some(page) = page {
-        query = query.offset((page * PER_PAGE).into());
+        query_for_items = query_for_items.offset((page * PER_PAGE).into());
     }
 
     // todo - apply other things: order by, asc/desc, etc.
 
-    let plants: Result<Vec<BasePlant>, diesel::result::Error> = query.load(db_conn);
+    let plants: Result<Vec<BasePlant>, diesel::result::Error> = query_for_items.load(db_conn);
+    let count = query_for_count.count().first::<i64>(db_conn).unwrap();
 
     println!("get plants: {} page {:?}", type_, page);
 
     match plants {
-        Ok(plants) => Ok(PlantsReturn { plants }),
+        Ok(plants) => Ok(PlantsReturn {
+            plants,
+            per_page: PER_PAGE,
+            count,
+        }),
         Err(error) => Err(error),
     }
 }

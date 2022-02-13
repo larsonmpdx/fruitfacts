@@ -32,7 +32,7 @@ export async function getServerSideProps(context) {
 export default function Home({ plants, type, pageNum }) {
     return (
         <div>
-            <Link href={`/plants/${type}?page=${parseInt(pageNum) - 1}`}>previous</Link>
+            {pageNum > 0 && <Link href={`/plants/${type}?page=${parseInt(pageNum) - 1}`}>previous</Link>}
             <Link href={`/plants/${type}?page=${parseInt(pageNum) + 1}`}>next</Link>
             <ul>
                 {plants.map((item) => (
