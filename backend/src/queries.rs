@@ -204,6 +204,8 @@ pub struct PatentsReturn {
     pub per_page: i32,
     pub count_past: i64,
     pub count_future: i64,
+    pub last_page_past: i64,
+    pub last_page_future: i64,
 }
 
 pub fn get_patents(
@@ -231,6 +233,30 @@ pub fn get_patents(
         Ok(patents) => {
             output.patents = patents.patents;
             output.per_page = patents.per_page;
+
+            // future pages: page starts at per_page / 2
+            // so if per_page is 50, page 0 will go from -25 to +25 (there is no 0th patent)
+            // and page 1 will go from +26 to +75
+            // last page will be based on count_future - (per_page/2)
+            // example:
+            // per_page = 50, count_future = 25, last_page_future = 0 (only the middle 0th page is needed)
+            // per_page = 50, count_future = 26, last_page_future = 1
+            // per_page = 50, count_future = 75, last_page_future = 1
+            // per_page = 50, count_future = 76, last_page_future = 2
+
+            let mut count_past_for_pages = output.count_past - i64::from(output.per_page) / 2;
+            if (count_past_for_pages < 0) {
+                count_past_for_pages = 0;
+            }
+            let mut count_future_for_pages = output.count_future - i64::from(output.per_page) / 2;
+            if (count_future_for_pages < 0) {
+                count_future_for_pages = 0;
+            }
+
+            output.last_page_past = (count_past_for_pages / i64::from(output.per_page))
+                + i64::from((count_past_for_pages % i64::from(output.per_page)) != 0);
+            output.last_page_future = (count_future_for_pages / i64::from(output.per_page))
+                + i64::from((count_future_for_pages % i64::from(output.per_page)) != 0);
             return Ok(output);
         }
         Err(error) => {
@@ -430,9 +456,10 @@ async fn get_collections(
 
 #[derive(Default, Serialize)]
 pub struct PlantsReturn {
-    plants: Vec<BasePlant>,
-    per_page: i32,
-    count: i64,
+    pub plants: Vec<BasePlant>,
+    pub per_page: i32,
+    pub count: i64,
+    pub last_page: i64,
 }
 
 pub fn get_plants_db(
@@ -463,11 +490,20 @@ pub fn get_plants_db(
     println!("get plants: {} page {:?}", type_, page);
 
     match plants {
-        Ok(plants) => Ok(PlantsReturn {
-            plants,
-            per_page: PER_PAGE,
-            count,
-        }),
+        Ok(plants) => {
+            let mut last_page =
+                (count / i64::from(PER_PAGE)) + i64::from((count % i64::from(PER_PAGE)) != 0) - 1; // -1: pages are 0-referenced
+            if (last_page < 0) {
+                last_page = 0;
+            }
+
+            return Ok(PlantsReturn {
+                plants,
+                per_page: PER_PAGE,
+                count,
+                last_page,
+            });
+        }
         Err(error) => Err(error),
     }
 }

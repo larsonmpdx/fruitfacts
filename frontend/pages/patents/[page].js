@@ -8,7 +8,7 @@ export async function getServerSideProps(context) {
         pageNum = 0;
     }
 
-    const patent_list = await fetch(
+    const patent_info = await fetch(
         `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/patents?perPage=50&page=${pageNum}`
     )
         .then((response) => {
@@ -24,19 +24,19 @@ export async function getServerSideProps(context) {
 
     return {
         props: {
-            patent_list,
+            patent_info,
             pageNum
         }
     };
 }
 
-export default function Home({ patent_list, pageNum }) {
+export default function Home({ patent_info, pageNum }) {
     return (
         <div>
             <Link href={`/patents/${parseInt(pageNum) - 1}`}>previous</Link>
             <Link href={`/patents/${parseInt(pageNum) + 1}`}>next</Link>
             <ul>
-                {patent_list.map((item) => (
+                {patent_info.patents.map((item) => (
                     <>
                         <li>
                             <img src={'/fruit_icons/' + item.type + '.svg'} height="13" />
