@@ -33,8 +33,15 @@ export async function getServerSideProps(context) {
 export default function Home({ patent_info, pageNum }) {
     return (
         <div>
-            <Link href={`/patents/${parseInt(pageNum) - 1}`}>previous</Link>
-            <Link href={`/patents/${parseInt(pageNum) + 1}`}>next</Link>
+            <Link href={`/patents/${parseInt(patent_info.last_page_past)}`}>first</Link>
+            {pageNum > patent_info.last_page_past && (
+                <Link href={`/patents/${parseInt(pageNum) - 1}`}>previous</Link>
+            )}
+            <Link href="/patents/0">current</Link>
+            {pageNum < patent_info.last_page_future && (
+                <Link href={`/patents/${parseInt(pageNum) + 1}`}>next</Link>
+            )}
+            <Link href={`/patents/${parseInt(patent_info.last_page_future)}`}>last</Link>
             <ul>
                 {patent_info.patents.map((item) => (
                     <>

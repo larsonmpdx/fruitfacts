@@ -23,19 +23,24 @@ export async function getServerSideProps(context) {
     return {
         props: {
             plants: plants?.plants || [],
+            last_page: plants?.last_page || 0,
             type,
             pageNum
         }
     };
 }
 
-export default function Home({ plants, type, pageNum }) {
+export default function Home({ plants, last_page, type, pageNum }) {
     return (
         <div>
+            <Link href={`/plants/${type}?page=0`}>first</Link>
             {pageNum > 0 && (
                 <Link href={`/plants/${type}?page=${parseInt(pageNum) - 1}`}>previous</Link>
             )}
-            <Link href={`/plants/${type}?page=${parseInt(pageNum) + 1}`}>next</Link>
+            {pageNum < last_page && (
+                <Link href={`/plants/${type}?page=${parseInt(pageNum) + 1}`}>next</Link>
+            )}
+            <Link href={`/plants/${type}?page=${parseInt(last_page)}`}>last</Link>
             <ul>
                 {plants.map((item) => (
                     <>
