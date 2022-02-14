@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Link from '../components/Link';
+import Link from 'next/link';
 import { format as timeAgo } from 'timeago.js';
 
 // todo:

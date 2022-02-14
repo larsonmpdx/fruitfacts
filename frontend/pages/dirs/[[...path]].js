@@ -6,7 +6,7 @@
 // see https://github.com/vercel/next.js/discussions/23988
 
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
-import Link from '../../components/Link';
+import Link from 'next/link';
 
 export async function getServerSideProps(context) {
     const { path } = context.query;

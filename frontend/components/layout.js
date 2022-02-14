@@ -1,4 +1,4 @@
-import Link from './Link';
+import Link from 'next/link';
 import React from 'react';
 import { useRouter } from 'next/router';
 import Search from './navbarSearch';

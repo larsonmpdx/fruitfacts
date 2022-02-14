@@ -6,10 +6,6 @@
 -   `npm run dev/build/start` next.js things
 -   `ncu -u` update package.json versions (after installing `npm i -g npm-check-updates`)
 
-# info
-
--   material ui + next.js example https://github.com/mui/material-ui/tree/master/examples/nextjs
-
 # issues I'm tracking
 
 -   Jan 2022: not enough options for redirects so we can't have nested paths with some paths ending in '/' and some not
