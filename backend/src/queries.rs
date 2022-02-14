@@ -245,11 +245,11 @@ pub fn get_patents(
             // per_page = 50, count_future = 76, last_page_future = 2
 
             let mut count_past_for_pages = output.count_past - i64::from(output.per_page) / 2;
-            if (count_past_for_pages < 0) {
+            if count_past_for_pages < 0 {
                 count_past_for_pages = 0;
             }
             let mut count_future_for_pages = output.count_future - i64::from(output.per_page) / 2;
-            if (count_future_for_pages < 0) {
+            if count_future_for_pages < 0 {
                 count_future_for_pages = 0;
             }
 
@@ -474,7 +474,7 @@ pub fn get_plants_db(
         .limit(PER_PAGE.into())
         .into_boxed();
 
-    let mut query_for_count = base_plants::table
+    let query_for_count = base_plants::table
         .filter(base_plants::type_.eq(type_))
         .into_boxed();
 
@@ -493,7 +493,7 @@ pub fn get_plants_db(
         Ok(plants) => {
             let mut last_page =
                 (count / i64::from(PER_PAGE)) + i64::from((count % i64::from(PER_PAGE)) != 0) - 1; // -1: pages are 0-referenced
-            if (last_page < 0) {
+            if last_page < 0 {
                 last_page = 0;
             }
 
