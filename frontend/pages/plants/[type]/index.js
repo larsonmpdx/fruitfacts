@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../../../components/Link';
 
 export async function getServerSideProps(context) {
     const { type, page } = context.query;

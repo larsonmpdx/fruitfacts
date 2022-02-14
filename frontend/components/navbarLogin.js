@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Link from 'next/link';
+import Link from './Link';
 
 export default function Home({ user, setUser }) {
     React.useEffect(() => {

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../../../components/Link';
 import { formatPatentDate } from '../../../components/functions';
 
 export async function getServerSideProps(context) {
