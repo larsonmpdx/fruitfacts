@@ -133,10 +133,10 @@ pub fn get_recent_patents_db(
                 n,
                 unix_time,
             )?;
-            return Ok(RecentPatentsReturn {
-                patents: patents,
+            Ok(RecentPatentsReturn {
+                patents,
                 per_page: per_page_out,
-            });
+            })
         }
         page if page < 0 => {
             // only a past query
@@ -151,10 +151,10 @@ pub fn get_recent_patents_db(
 
             let mut result = result;
             result.reverse();
-            return Ok(RecentPatentsReturn {
+            Ok(RecentPatentsReturn {
                 patents: result,
                 per_page: per_page_out,
-            });
+            })
         }
         _ => {
             // 0 - get half in the past and half in the future
@@ -165,10 +165,10 @@ pub fn get_recent_patents_db(
             let mut past_vec = past;
             past_vec.reverse();
             past_vec.append(&mut future_vec);
-            return Ok(RecentPatentsReturn {
+            Ok(RecentPatentsReturn {
                 patents: past_vec,
                 per_page: per_page_out,
-            });
+            })
         }
     }
 }
@@ -181,7 +181,7 @@ pub struct patent_counts {
 pub fn get_patent_counts(db_conn: &SqliteConnection, unix_time: i64) -> Result<patent_counts> {
     let query = base_plants::table.filter(base_plants::uspp_expiration.is_not_null());
 
-    let mut query_future = query.clone().into_boxed();
+    let mut query_future = query.into_boxed();
     let mut query_past = query.into_boxed();
 
     query_future = query_future.filter(base_plants::uspp_expiration.gt(unix_time));
@@ -223,7 +223,7 @@ pub fn get_patents(
             output.count_future = counts.count_future;
         }
         Err(error) => {
-            return Err(error.into());
+            return Err(error);
         }
     }
 
@@ -257,10 +257,10 @@ pub fn get_patents(
                 + i64::from((count_past_for_pages % i64::from(output.per_page)) != 0);
             output.last_page_future = (count_future_for_pages / i64::from(output.per_page))
                 + i64::from((count_future_for_pages % i64::from(output.per_page)) != 0);
-            return Ok(output);
+            Ok(output)
         }
         Err(error) => {
-            return Err(error.into());
+            Err(error)
         }
     }
 }
@@ -497,12 +497,12 @@ pub fn get_plants_db(
                 last_page = 0;
             }
 
-            return Ok(PlantsReturn {
+            Ok(PlantsReturn {
                 plants,
                 per_page: PER_PAGE,
                 count,
                 last_page,
-            });
+            })
         }
         Err(error) => Err(error),
     }
