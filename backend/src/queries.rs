@@ -253,16 +253,15 @@ pub fn get_patents(
                 count_future_for_pages = 0;
             }
 
-            output.last_page_past = -1*((count_past_for_pages / i64::from(output.per_page))
-                + i64::from((count_past_for_pages % i64::from(output.per_page)) != 0));
+            output.last_page_past = -1
+                * ((count_past_for_pages / i64::from(output.per_page))
+                    + i64::from((count_past_for_pages % i64::from(output.per_page)) != 0));
             output.last_page_future = (count_future_for_pages / i64::from(output.per_page))
                 + i64::from((count_future_for_pages % i64::from(output.per_page)) != 0);
 
             Ok(output)
         }
-        Err(error) => {
-            Err(error)
-        }
+        Err(error) => Err(error),
     }
 }
 

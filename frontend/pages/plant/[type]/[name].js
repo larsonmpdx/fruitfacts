@@ -24,11 +24,11 @@ export async function getServerSideProps(context) {
 
 export default function Home({ plant }) {
     return (
-        <div>
+        <article className="prose">
             {plant.base && (
                 <h2>
                     <img
-                        className="object-scale-down h-24 w-24"
+                        className="my-0 mx-2 inline h-24 w-24 object-scale-down"
                         src={'/fruit_icons/' + plant.base.type + '.svg'}
                     />
                     {plant.base.name} {plant.base.type}
@@ -63,7 +63,7 @@ export default function Home({ plant }) {
                 <>
                     {' '}
                     <h1>Collections</h1>
-                    <ul>
+                    <ul className="list-disc">
                         {plant.collection.map((entry) => (
                             <>
                                 <li>
@@ -85,7 +85,7 @@ export default function Home({ plant }) {
             {plant.collection && (
                 <>
                     <h1>Harvest Times</h1>
-                    <ul>
+                    <ul className="list-disc">
                         {plant.collection.map((entry) => (
                             <>
                                 {entry.harvest_text && (
@@ -106,6 +106,6 @@ export default function Home({ plant }) {
                     </ul>
                 </>
             )}
-        </div>
+        </article>
     );
 }

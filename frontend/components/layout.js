@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
 import { useRouter } from 'next/router';
-import Login from './navbarLogin';
 import Navbar from './navbar';
 
 export default function Layout({ children }) {
@@ -14,8 +12,7 @@ export default function Layout({ children }) {
                 <noscript>
                     <p>{process.env.NEXT_PUBLIC_SITE_NAME} works better with javascript</p>
                 </noscript>
-                <Navbar />
-                <Login user={user} setUser={setUser} />
+                <Navbar user={user} setUser={setUser} />
                 <main>
                     {React.cloneElement(children, {
                         user

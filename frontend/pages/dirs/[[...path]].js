@@ -37,11 +37,11 @@ export async function getServerSideProps(context) {
 
 export default function Home({ data }) {
     return (
-        <div>
+        <article className="prose">
             {/* multi collection (directory listing) */}
 
             {data.directories && data.directories.length > 0 && (
-                <ul>
+                <ul className="list-disc">
                     {data.directories.map((directory, index) => (
                         <li key={index}>
                             <Link href={`/dirs/${directory}`}>{directory}</Link>
@@ -53,7 +53,7 @@ export default function Home({ data }) {
             {data.collections && data.collections.length > 0 && (
                 <>
                     <h1>Locations</h1>
-                    <ul>
+                    <ul className="list-disc">
                         {data.collections.map((collection) => (
                             <li key={collection.id}>
                                 <Link
@@ -68,6 +68,6 @@ export default function Home({ data }) {
                     </ul>
                 </>
             )}
-        </div>
+        </article>
     );
 }

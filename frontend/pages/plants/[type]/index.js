@@ -41,28 +41,30 @@ export default function Home({ plants, last_page, type, pageNum }) {
                 <Link href={`/plants/${type}?page=${parseInt(pageNum) + 1}`}>next</Link>
             )}
             <Link href={`/plants/${type}?page=${parseInt(last_page)}`}>last</Link>
-            <ul>
-                {plants.map((item) => (
-                    <>
-                        <li>
-                            <img
-                                className="object-scale-down h-12 w-12"
-                                src={'/fruit_icons/' + item.type + '.svg'}
-                            />
-                            <Link
-                                href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(
-                                    item.name
-                                )}`}
-                            >
-                                {item.name + ' ' + item.type}
-                            </Link>
-                            {item.marketing_name && (
-                                <>(marketed under the {item.marketing_name} brand)</>
-                            )}
-                        </li>
-                    </>
-                ))}
-            </ul>
+            <article className="prose">
+                <ul className="list-disc">
+                    {plants.map((item) => (
+                        <>
+                            <li>
+                                <img
+                                    className="my-0 mx-2 inline h-6 w-6 object-scale-down"
+                                    src={'/fruit_icons/' + item.type + '.svg'}
+                                />
+                                <Link
+                                    href={`/plant/${encodeURIComponent(
+                                        item.type
+                                    )}/${encodeURIComponent(item.name)}`}
+                                >
+                                    {item.name + ' ' + item.type}
+                                </Link>
+                                {item.marketing_name && (
+                                    <>(marketed under the {item.marketing_name} brand)</>
+                                )}
+                            </li>
+                        </>
+                    ))}
+                </ul>
+            </article>
         </div>
     );
 }

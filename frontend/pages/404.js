@@ -40,19 +40,29 @@ export default function Custom404(props) {
     }, []);
 
     return (
-        <center>
-            {fact?.fact && (
-                <p>
-                    {fact.fact}
-                    <a href={` ${fact.reference}`}>[ref]</a>
-                </p>
-            )}
-            {icon && (
-                <Link href={`/plants/${icon.substr(0, icon.indexOf('.'))}`}>
-                    <img className="object-scale-down h-48 w-48" src={'/fruit_icons/' + icon} />
-                </Link>
-            )}
-            <h1>404 - Page Not Found</h1>
-        </center>
+        <div className="grid place-items-center">
+            <article className="prose">
+                {fact?.fact && (
+                    <div className="grid place-items-center">
+                        {fact.fact}
+                        <a href={` ${fact.reference}`}>[ref]</a>
+                    </div>
+                )}
+                {icon && (
+                    <Link
+                        className="grid place-items-center"
+                        href={`/plants/${icon.substr(0, icon.indexOf('.'))}`}
+                    >
+                        <a className="grid place-items-center">
+                            <img
+                                className="h-48 w-48 object-scale-down"
+                                src={'/fruit_icons/' + icon}
+                            />
+                        </a>
+                    </Link>
+                )}
+                <h1 className="grid place-items-center">404 - Page Not Found</h1>
+            </article>
+        </div>
     );
 }

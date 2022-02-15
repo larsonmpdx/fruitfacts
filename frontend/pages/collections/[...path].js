@@ -36,23 +36,23 @@ export default function Home({ data }) {
         <div>
             {/* single collection */}
             {data.collection && (
-                <>
+                <article className="prose">
                     <p>
                         {data.collection.title}
                         {data.collection.url && <a href={data.collection.url}>[ref]</a>}
                     </p>
                     <h1>Locations</h1>
-                    <ul>
+                    <ul className="list-disc">
                         {data.locations.map((location) => (
                             <li key={location.id}>{location.location_name}</li>
                         ))}
                     </ul>
                     <h1>Plants</h1>
-                    <ul>
+                    <ul className="list-disc">
                         {data.items.map((item) => (
                             <li key={item.id}>
                                 <img
-                                    className="object-scale-down h-12 w-12"
+                                    className="my-0 mx-2 inline h-6 w-6 object-scale-down"
                                     src={'/fruit_icons/' + item.type + '.svg'}
                                 />
                                 <Link
@@ -69,7 +69,7 @@ export default function Home({ data }) {
                             </li>
                         ))}
                     </ul>
-                </>
+                </article>
             )}
         </div>
     );

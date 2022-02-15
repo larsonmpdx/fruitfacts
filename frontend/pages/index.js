@@ -60,22 +60,24 @@ export default function Home({ fact, recentChangesData }) {
                 </div>
                 <div>
                     {recentChangesData.recent_changes && (
-                        <ul>
-                            {recentChangesData.recent_changes.collection_changes.map(
-                                (update, index) => (
-                                    <li key={index}>
-                                        <Link
-                                            href={`/collections/${encodeURIComponent(
-                                                update.path + update.filename
-                                            )}`}
-                                        >
-                                            {update.filename}
-                                        </Link>
-                                        {timeAgo(update.git_edit_time * 1000)}
-                                    </li>
-                                )
-                            )}
-                        </ul>
+                        <article className="prose">
+                            <ul className="list-disc">
+                                {recentChangesData.recent_changes.collection_changes.map(
+                                    (update, index) => (
+                                        <li key={index}>
+                                            <Link
+                                                href={`/collections/${encodeURIComponent(
+                                                    update.path + update.filename
+                                                )}`}
+                                            >
+                                                {update.filename}
+                                            </Link>
+                                            {timeAgo(update.git_edit_time * 1000)}
+                                        </li>
+                                    )
+                                )}
+                            </ul>
+                        </article>
                     )}
                 </div>
                 <div>

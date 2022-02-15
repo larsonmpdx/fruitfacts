@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Search from './navbarSearch';
+import Login from './navbarLogin';
 
 let links = [
     { name: 'locations', href: '/dirs/' },
@@ -7,44 +8,29 @@ let links = [
     { name: 'US patents', href: '/patents/0' }
 ];
 
-export default function Home() {
+export default function Home({ user, setUser }) {
     return (
-        <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-            <div className="flex items-center flex-shrink-0 text-white mr-6">
-                <Link href="/"><a className="font-semibold text-xl tracking-tight">fruitfacts</a></Link>
+        <nav className="flex flex-wrap items-center justify-between bg-teal-500 p-6">
+            <div className="mr-6 flex flex-shrink-0 items-center text-white">
+                <Link href="/">
+                    <a className="text-xl font-semibold tracking-tight">fruitfacts</a>
+                </Link>
             </div>
-            <div className="flex items-center flex-shrink-0 text-white mr-6">
-              <Search />
+            <div className="mr-6 flex flex-shrink-0 items-center text-white">
+                <Search />
             </div>
-            <div className="block lg:hidden">
-                <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-                    <svg
-                        className="fill-current h-3 w-3"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                </button>
-            </div>
-            <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div className="block w-full flex-grow lg:flex lg:w-auto lg:items-center">
                 <div className="text-sm lg:flex-grow">
                     {links.map((link) => (
                         <Link href={link.href}>
-                            <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                            <a className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block">
                                 {link.name}
                             </a>
                         </Link>
                     ))}
                 </div>
                 <div>
-                    <a
-                        href="#"
-                        className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-                    >
-                        Download
-                    </a>
+                    <Login user={user} setUser={setUser} />
                 </div>
             </div>
         </nav>
