@@ -53,7 +53,7 @@ export default function Home({ fact, recentChangesData }) {
                 <div>
                     {fact.fact && (
                         <p>
-                            <b>Fact:</b> {fact.fact}
+                            <b>Fact:</b> {`${fact.fact} `}
                             <a href={` ${fact.reference}`}>[ref]</a>
                         </p>
                     )}
@@ -89,17 +89,18 @@ export default function Home({ fact, recentChangesData }) {
                     )}
                     <p>
                         {recentChangesData.recent_changes && (
-                            <>
+                            <div className="inline">
                                 {recentChangesData.recent_changes.base_plants_count} plants in{' '}
-                                {recentChangesData.recent_changes.references_count} references
-                            </>
+                                {recentChangesData.recent_changes.references_count} references.
+                            </div>
                         )}
                         {recentChangesData.build_info && (
-                            <>
-                                updated {timeAgo(recentChangesData.build_info.git_unix_time * 1000)}{' '}
-                                build count {recentChangesData.build_info.git_commit_count} git hash{' '}
-                                {recentChangesData.build_info.git_hash.substring(0, 7)}
-                            </>
+                            <div className="m-1 inline">
+                                updated {timeAgo(recentChangesData.build_info.git_unix_time * 1000)}
+                                {', '}
+                                build count {recentChangesData.build_info.git_commit_count}, git
+                                hash {recentChangesData.build_info.git_hash.substring(0, 7)}
+                            </div>
                         )}
                     </p>
                 </div>

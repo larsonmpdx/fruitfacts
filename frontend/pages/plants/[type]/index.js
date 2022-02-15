@@ -37,9 +37,13 @@ export default function Home({ plants, last_page, type, pageNum }) {
             <h2>
                 {type} Page {pageNum + 1}/{last_page + 1}
             </h2>
-            <Link href={`/plants/${type}?page=0`}>
-                <button className={`${styles.btn} ${styles['btn-blue']}`}>first</button>
+
+            <Link href={`/plants/${type}?page=0`} passHref>
+                <button className={`${styles.btn} ${styles['btn-blue']}`}>
+                    <a>first</a>
+                </button>
             </Link>
+
             {pageNum > 0 && (
                 <Link href={`/plants/${type}?page=${parseInt(pageNum) - 1}`}>
                     <button className={`${styles.btn} ${styles['btn-blue']}`}>previous</button>
@@ -53,7 +57,7 @@ export default function Home({ plants, last_page, type, pageNum }) {
             <Link href={`/plants/${type}?page=${parseInt(last_page)}`}>
                 <button className={`${styles.btn} ${styles['btn-blue']}`}>last</button>
             </Link>
-            <ul className="list-disc">
+            <ul className="list-none">
                 {plants.map((item) => (
                     <>
                         <li>
@@ -69,7 +73,7 @@ export default function Home({ plants, last_page, type, pageNum }) {
                                 {item.name + ' ' + item.type}
                             </Link>
                             {item.marketing_name && (
-                                <>(marketed under the {item.marketing_name} brand)</>
+                                <> (marketed under the {item.marketing_name} brand)</>
                             )}
                         </li>
                     </>

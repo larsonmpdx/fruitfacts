@@ -35,27 +35,36 @@ export default function Home({ plant }) {
                 </h2>
             )}
             {plant.base?.marketing_name && (
-                <h2>marketed under the {plant.base.marketing_name} brand </h2>
+                <h2> marketed under the {plant.base.marketing_name} brand </h2>
             )}
+            <p>
+                {plant.base?.uspp_number && <>USPP{plant.base.uspp_number} </>}
 
-            {plant.base?.uspp_number && <p>USPP{plant.base.uspp_number}</p>}
+                {plant.base?.uspp_expiration && (
+                    <>
+                        until{' '}
+                        {formatPatentDate(
+                            plant.base.uspp_expiration,
+                            plant.base.uspp_expiration_estimated
+                        )}
+                    </>
+                )}
 
-            {plant.base?.uspp_expiration && (
-                <p>
-                    until{' '}
-                    {formatPatentDate(
-                        plant.base.uspp_expiration,
-                        plant.base.uspp_expiration_estimated
-                    )}
-                </p>
-            )}
-
+                {plant.base?.uspp_number && (
+                    <>
+                        {' '}
+                        <a href={`https://patents.google.com/patent/USPP${plant.base.uspp_number}`}>
+                            google patents
+                        </a>
+                    </>
+                )}
+            </p>
             {plant.base?.aka && <p>AKA {plant.base.aka}</p>}
 
             {plant.base?.release_year && plant.base?.released_by && (
                 <p>
-                    {plant.base?.release_year && <p>{plant.base.release_year}</p>}
-                    {plant.base?.released_by && <p>{plant.base.released_by}</p>}
+                    {plant.base?.release_year && <>released {plant.base.release_year}</>}
+                    {plant.base?.released_by && <> by {plant.base.released_by}</>}
                 </p>
             )}
 
@@ -90,7 +99,7 @@ export default function Home({ plant }) {
                             <>
                                 {entry.harvest_text && (
                                     <li>
-                                        {entry.harvest_text}
+                                        {`${entry.harvest_text} `}
                                         <Link
                                             href={`/collections/${encodeURIComponent(
                                                 entry.path_and_filename

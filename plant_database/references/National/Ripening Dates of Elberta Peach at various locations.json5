@@ -1,20 +1,766 @@
-// todo
-// from "Handbook of Peach and Nectarine Varieties" Okie 1998
-// page 738
-
+// todo - latitude, longitude, and ETL to allow location-per-entry
 {
     title: "Ripening Dates of Elberta Peach at Various Locations",
     author: "",
-    url: '"Handbook of Peach and Nectarine Varieties" Okie 1998',
+    url: '"Handbook of Peach and Nectarine Varieties" W.R. Okie 1998 page 733',
     published: "",
     accessed: "Oct 2021",
     type: "extension test",
-    locations: [
+    plants: [
         {
-            name: "US",
-            latitude: 38.888076929585985,
-            longitude: -77.01301046627138
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Atmore, Alabama",
+                latitude: 1,
+                longitude: 1,
+                elevation: "300ft"
+            },
+            harvest_time: "July 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Chilton, Alabama",
+                latitude: 1,
+                longitude: 1,
+                elevation: "580ft"
+            },
+            harvest_time: "July 19"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Thatcher, Arizona",
+                latitude: 1,
+                longitude: 1,
+                elevation: "3000ft"
+            },
+            harvest_time: "August 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Clarksville, Arkansas",
+                latitude: 1,
+                longitude: 1,
+                elevation: "400ft"
+            },
+            harvest_time: "August 6"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Highland, Arkansas",
+                latitude: 1,
+                longitude: 1,
+                elevation: "500-600ft"
+            },
+            harvest_time: "July 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Springdale, Arkansas",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1000-1300ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: July 25, August 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Van Buren, Arkansas",
+                latitude: 1,
+                longitude: 1,
+                elevation: "400ft"
+            },
+            harvest_time: "July 15"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Hanford, California",
+                latitude: 1,
+                longitude: 1,
+                elevation: "250ft"
+            },
+            harvest_time: "July 15"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Newcastle, California",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1000-1400ft"
+            },
+            harvest_time: "July 25"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Ontario, California",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1000ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: July 12, July 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Vacaville, California",
+                latitude: 1,
+                longitude: 1,
+                elevation: "175ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: July 1, July 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Palisades, Colorado",
+                latitude: 1,
+                longitude: 1,
+                elevation: "4750ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 20, August 31"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Paonia, Colorado",
+                latitude: 1,
+                longitude: 1,
+                elevation: "5700ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: September 1, September 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Greenwich, Connecticut",
+                latitude: 1,
+                longitude: 1,
+                elevation: "30-75ft"
+            },
+            harvest_time: "September 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "South Glastonbury, Connecticut",
+                latitude: 1,
+                longitude: 1,
+                elevation: "300-400ft"
+            },
+            harvest_time: "September 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Yalesville, Connecticut",
+                latitude: 1,
+                longitude: 1,
+                elevation: "100-250ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: September 5, September 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Wyoming, Delaware",
+                latitude: 1,
+                longitude: 1,
+                elevation: "40ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 20, August 30"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Cornelia, Georgia",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1600-1700ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: July 25, August 3"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Fort Valley, Georgia",
+                latitude: 1,
+                longitude: 1,
+                elevation: "525ft"
+            },
+            harvest_time: "July 15"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Lewiston, Idaho",
+                latitude: 1,
+                longitude: 1,
+                elevation: "800ft"
+            },
+            harvest_time: "August 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Snake River Valley, Idaho",
+                latitude: 1,
+                longitude: 1,
+                elevation: "2500ft"
+            },
+            harvest_time: "July 25"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Centralia, Illinois",
+                latitude: 1,
+                longitude: 1,
+                elevation: "500-600ft"
+            },
+            harvest_time: "August 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Carmel, Indiana",
+                latitude: 1,
+                longitude: 1,
+                elevation: "700ft"
+            },
+            harvest_time: "September 5"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Mitchell, Indiana",
+                latitude: 1,
+                longitude: 1,
+                elevation: "700ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 10, August 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Mt. Pleasant, Iowa",
+                latitude: 1,
+                longitude: 1,
+                elevation: "730ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 25, August 31"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Medicine Lodge, Kansas",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1475ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 25, August 30"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Bowling Green, Kentucky",
+                latitude: 1,
+                longitude: 1,
+                elevation: "500-550ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 8, August 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Plain Dealing, Louisiana",
+                latitude: 1,
+                longitude: 1,
+                elevation: "275ft"
+            },
+            harvest_time: "July 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Boonsboro, Maryland",
+                latitude: 1,
+                longitude: 1,
+                elevation: "500-700ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 20, September 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Salisbury, Maryland",
+                latitude: 1,
+                longitude: 1,
+                elevation: "25ft"
+            },
+            harvest_time: "August 19"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Ipswich, Massachusetts",
+                latitude: 1,
+                longitude: 1,
+                elevation: "25ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: September 15, September 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Wilbraham, Massachusetts",
+                latitude: 1,
+                longitude: 1,
+                elevation: "300-550ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: September 8, September 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Lake Region, Michigan",
+                latitude: 1,
+                longitude: 1,
+                elevation: "600ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: September 5, September 15"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Cedar Gap, Missouri",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1700ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 15, August 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Koshkonong, Missouri",
+                latitude: 1,
+                longitude: 1,
+                elevation: "975ft"
+            },
+            harvest_time: "August 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Wilton, New Hampshire",
+                latitude: 1,
+                longitude: 1,
+                elevation: "350ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: September 15, September 25"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Hammonton, New Jersey",
+                latitude: 1,
+                longitude: 1,
+                elevation: "100-200ft"
+            },
+            harvest_time: "August 25"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Marlton, New Jersey",
+                latitude: 1,
+                longitude: 1,
+                elevation: "100ft"
+            },
+            harvest_time: "August 25"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Farmington, New Mexico",
+                latitude: 1,
+                longitude: 1,
+                elevation: "6000ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: September 1, September 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "State College, New Mexico",
+                latitude: 1,
+                longitude: 1,
+                elevation: "3500-4000ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 1, August 8"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Lake Region, New York",
+                latitude: 1,
+                longitude: 1,
+                elevation: "450-525ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: September 10, September 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Marlboro, New York",
+                latitude: 1,
+                longitude: 1,
+                elevation: "300-400ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 20, September 5"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Middle River, New York",
+                latitude: 1,
+                longitude: 1,
+                elevation: "75ft"
+            },
+            harvest_time: "September 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Manteo, North Carolina",
+                latitude: 1,
+                longitude: 1,
+                elevation: "10-15ft"
+            },
+            harvest_time: "August 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Southern Pines, North Carolina",
+                latitude: 1,
+                longitude: 1,
+                elevation: "500ft"
+            },
+            harvest_time: "July 25"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Port Clinton, Ohio",
+                latitude: 1,
+                longitude: 1,
+                elevation: "600ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 25, September 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Perry, Oklahoma",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1000ft"
+            },
+            harvest_time: "August 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Stillwater, Oklahoma",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1000ft"
+            },
+            harvest_time: "August 25"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Harrow, Ontario",
+                latitude: 1,
+                longitude: 1,
+                elevation: "625ft"
+            },
+            harvest_time: "September 9"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Vineland, Ontario",
+                latitude: 1,
+                longitude: 1,
+                elevation: "250ft"
+            },
+            harvest_time: "September 18"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Ashland, Oregon",
+                latitude: 1,
+                longitude: 1,
+                elevation: "2000ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 20, August 22"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "The Dalles, Oregon",
+                latitude: 1,
+                longitude: 1,
+                elevation: "100-300ft"
+            },
+            harvest_time: "September 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Freewater, Oregon",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1000ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "August 17, August 29"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Reading, Pennsylvania",
+                latitude: 1,
+                longitude: 1,
+                elevation: "200-700ft"
+            },
+            harvest_time: "September 1"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Waymart, Pennsylvania",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1400-1500ft"
+            },
+            harvest_time: "September 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Aiken, South Carolina",
+                latitude: 1,
+                longitude: 1,
+                elevation: "300ft"
+            },
+            harvest_time: "July 15"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Clemson, South Carolina",
+                latitude: 1,
+                longitude: 1,
+                elevation: "850ft"
+            },
+            harvest_time: "July 22"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Spartanburg, South Carolina",
+                latitude: 1,
+                longitude: 1,
+                elevation: "900ft"
+            },
+            harvest_time: "July 28"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Sale Creek, Tennessee",
+                latitude: 1,
+                longitude: 1,
+                elevation: "750ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: July 15, July 18"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Mexica, Texas",
+                latitude: 1,
+                longitude: 1,
+                elevation: "540ft"
+            },
+            harvest_time: "July 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Tyler, Texas",
+                latitude: 1,
+                longitude: 1,
+                elevation: "400-550ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: July 2, July 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Ogden, Utah",
+                latitude: 1,
+                longitude: 1,
+                elevation: "4300-4600ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: September 5, September 10"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Staunton, Virginia",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1400ft"
+            },
+            harvest_time: "August 15"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Yakima Valley, Washington",
+                latitude: 1,
+                longitude: 1,
+                elevation: "650-1100ft"
+            },
+            // harvest time was given as a range
+            harvest_time: "Average of: August 15, August 30"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Alleghany Mountains, West Virginia",
+                latitude: 1,
+                longitude: 1,
+                elevation: "1000-2000ft"
+            },
+            harvest_time: "August 20"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            location: {
+                name: "Kearneysville, West Virginia",
+                latitude: 1,
+                longitude: 1,
+                elevation: "550ft"
+            },
+            harvest_time: "September 7"
         }
-    ],
-    plants: []
+    ]
 }

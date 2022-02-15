@@ -48,7 +48,7 @@ export default function Home({ data }) {
                         ))}
                     </ul>
                     <h1>Plants</h1>
-                    <ul className="list-disc">
+                    <ul className="list-none">
                         {data.items.map((item) => (
                             <li key={item.id}>
                                 <img
@@ -62,9 +62,8 @@ export default function Home({ data }) {
                                 >
                                     {item.name + ' ' + item.type}
                                 </Link>
-
                                 {item.marketing_name && (
-                                    <>(marketed under the {item.marketing_name} brand)</>
+                                    <> (marketed under the {item.marketing_name} brand)</>
                                 )}
                             </li>
                         ))}

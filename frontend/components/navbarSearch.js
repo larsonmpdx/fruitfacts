@@ -2,6 +2,7 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import throttle from 'lodash/throttle';
+import InputAdornment from '@mui/material/InputAdornment';
 
 // search box: see https://mui.com/components/autocomplete/#search-as-you-type
 
@@ -75,7 +76,7 @@ export default function Home() {
     return (
         <Autocomplete
             id="search-box"
-            sx={{ width: 300 }}
+            sx={{ width: 300, bgcolor: 'white', borderRadius: 1 }}
             getOptionLabel={(option) => (typeof option === 'string' ? option : option.label)}
             filterOptions={(x) => x}
             options={options}
@@ -89,7 +90,7 @@ export default function Home() {
             onInputChange={(event, newInputValue) => {
                 setInputValue(newInputValue);
             }}
-            renderInput={(params) => <TextField {...params} fullWidth />}
+            renderInput={(params) => <TextField {...params} fullWidth sx={{ input: {} }} />}
         />
     );
 }

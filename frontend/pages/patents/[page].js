@@ -13,13 +13,13 @@ export async function getServerSideProps(context) {
     )
         .then((response) => {
             if (response.status !== 200) {
-                return [];
+                return {};
             }
             return response.json();
         })
         .catch((error) => {
             console.log(error);
-            return [];
+            return {};
         });
 
     return {
@@ -43,31 +43,35 @@ export default function Home({ patent_info, pageNum }) {
             )}
             <Link href={`/patents/${parseInt(patent_info.last_page_future)}`}>last</Link>
             <article className="prose">
-                <ul className="list-disc">
-                    {patent_info.patents.map((item) => (
+                <ul className="list-none">
+                    {patent_info.patents && (
                         <>
-                            <li>
-                                <img
-                                    className="my-0 mx-2 inline h-6 w-6 object-scale-down"
-                                    src={'/fruit_icons/' + item.type + '.svg'}
-                                />
-                                <Link
-                                    href={`/plant/${encodeURIComponent(
-                                        item.type
-                                    )}/${encodeURIComponent(item.name)}`}
-                                >
-                                    {item.name + ' ' + item.type}
-                                </Link>
-                                {item.marketing_name && (
-                                    <>(marketed under the {item.marketing_name} brand)</>
-                                )}{' '}
-                                {formatPatentDate(
-                                    item.uspp_expiration,
-                                    item.uspp_expiration_estimated
-                                )}
-                            </li>
+                            {patent_info.patents.map((item) => (
+                                <>
+                                    <li>
+                                        <img
+                                            className="my-0 mx-2 inline h-6 w-6 object-scale-down"
+                                            src={'/fruit_icons/' + item.type + '.svg'}
+                                        />
+                                        <Link
+                                            href={`/plant/${encodeURIComponent(
+                                                item.type
+                                            )}/${encodeURIComponent(item.name)}`}
+                                        >
+                                            {item.name + ' ' + item.type}
+                                        </Link>
+                                        {item.marketing_name && (
+                                            <> (marketed under the {item.marketing_name} brand)</>
+                                        )}{' '}
+                                        {formatPatentDate(
+                                            item.uspp_expiration,
+                                            item.uspp_expiration_estimated
+                                        )}
+                                    </li>
+                                </>
+                            ))}
                         </>
-                    ))}
+                    )}
                 </ul>
             </article>
         </div>

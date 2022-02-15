@@ -21,11 +21,11 @@ export default function Home({ types }) {
             {types && (
                 <>
                     <h2>Plant Types</h2>
-                    {types.map((group) => (
-                        <>
+                    {types.map((group, index) => (
+                        <div key={index}>
                             <h3>{group.group_name}</h3>
                             {group.types.map((type, index) => (
-                                <ul key={index}>
+                                <ul key={index} className="list-none">
                                     <li key={type.name}>
                                         <Link href={`/plants/${type.name}`}>
                                             <img
@@ -37,7 +37,7 @@ export default function Home({ types }) {
                                     </li>
                                 </ul>
                             ))}
-                        </>
+                        </div>
                     ))}
                 </>
             )}

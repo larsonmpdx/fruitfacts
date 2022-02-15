@@ -13,7 +13,7 @@
         }
     ],
     plants: [
-        // from "Handbook of Peach and Nectarine Varieties" Okie 1998
+        // from "Handbook of Peach and Nectarine Varieties" W.R. Okie 1998
         {
             name: "Earlihale",
             type: "Peach",

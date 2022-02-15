@@ -6,6 +6,7 @@
 		"katjanakosic.vscode-json5",
 		"jbockle.jbockle-format-files",
 		"numso.prettier-standard-vscode",
-		"bungcip.better-toml"
+		"bungcip.better-toml",
+		"bradlc.vscode-tailwindcss"
 	]
 }

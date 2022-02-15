@@ -46,7 +46,12 @@ export default function Home({ user, setUser }) {
             {user.user ? (
                 <p>
                     logged in as <Link href="/user/">{user.user.name}</Link>
-                    <button onClick={logOut}>log out</button>
+                    <button
+                        className="mt-4 ml-1 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+                        onClick={logOut}
+                    >
+                        log out
+                    </button>
                 </p>
             ) : (
                 <Link href="/login">log in</Link>

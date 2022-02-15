@@ -315,7 +315,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("average of: July 6, June 29").unwrap(),
+        string_to_day_range("Average of: July 6, June 29").unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(184),
