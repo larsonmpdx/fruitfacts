@@ -6,14 +6,17 @@
     published: "",
     accessed: "Oct 2021",
     type: "extension test",
+    locations: [
+            // each entry has its own location
+    ],
     plants: [
         {
             type: "Peach",
             name: "Elberta",
             location: {
                 name: "Atmore, Alabama",
-                latitude: 1,
-                longitude: 1,
+                latitude: 31.037922135280777,
+                longitude: -87.49437837234458,
                 elevation: "300ft"
             },
             harvest_time: "July 1"
@@ -23,8 +26,8 @@
             name: "Elberta",
             location: {
                 name: "Chilton, Alabama",
-                latitude: 1,
-                longitude: 1,
+                latitude: 32.817613041236726,
+                longitude: -86.60890140463646,
                 elevation: "580ft"
             },
             harvest_time: "July 19"
