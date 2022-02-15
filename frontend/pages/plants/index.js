@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
     const json5 = require('json5');
     const fs = require('fs');
     const path = require('path');
@@ -24,13 +24,13 @@ export default function Home({ types }) {
                     {types.map((group) => (
                         <>
                             <p>{group.group_name}</p>
-                            {group.types.map((type) => (
-                                <ul>
+                            {group.types.map((type, index) => (
+                                <ul key={index}>
                                     <li key={type.name}>
                                         <Link href={`/plants/${type.name}`}>
                                             <img
+                                                className="object-scale-down h-24 w-24"
                                                 src={'/fruit_icons/' + type.name + '.svg'}
-                                                height="50"
                                             />
                                         </Link>
                                         <Link href={`/plants/${type.name}`}>{type.name}</Link>

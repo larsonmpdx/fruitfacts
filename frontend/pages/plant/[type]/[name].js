@@ -27,7 +27,10 @@ export default function Home({ plant }) {
         <div>
             {plant.base && (
                 <h2>
-                    <img src={'/fruit_icons/' + plant.base.type + '.svg'} height="24" />
+                    <img
+                        className="object-scale-down h-24 w-24"
+                        src={'/fruit_icons/' + plant.base.type + '.svg'}
+                    />
                     {plant.base.name} {plant.base.type}
                 </h2>
             )}

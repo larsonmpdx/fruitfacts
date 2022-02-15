@@ -45,7 +45,10 @@ export default function Home({ plants, last_page, type, pageNum }) {
                 {plants.map((item) => (
                     <>
                         <li>
-                            <img src={'/fruit_icons/' + item.type + '.svg'} height="13" />
+                            <img
+                                className="object-scale-down h-12 w-12"
+                                src={'/fruit_icons/' + item.type + '.svg'}
+                            />
                             <Link
                                 href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(
                                     item.name

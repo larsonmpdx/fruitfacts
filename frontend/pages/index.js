@@ -49,17 +49,7 @@ export default function Home({ fact, recentChangesData }) {
                 <title>fruitfacts</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
             <main>
-                <div>
-                    <Link href="/dirs/">browse locations</Link>
-                </div>
-                <div>
-                    <Link href="/plants">browse plants</Link>
-                </div>
-                <div>
-                    <Link href="/patents/0">browse US patents</Link>
-                </div>
                 <div>
                     {fact.fact && (
                         <p>

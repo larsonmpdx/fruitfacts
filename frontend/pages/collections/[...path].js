@@ -51,7 +51,10 @@ export default function Home({ data }) {
                     <ul>
                         {data.items.map((item) => (
                             <li key={item.id}>
-                                <img src={'/fruit_icons/' + item.type + '.svg'} height="13" />
+                                <img
+                                    className="object-scale-down h-12 w-12"
+                                    src={'/fruit_icons/' + item.type + '.svg'}
+                                />
                                 <Link
                                     href={`/plant/${encodeURIComponent(
                                         item.type
