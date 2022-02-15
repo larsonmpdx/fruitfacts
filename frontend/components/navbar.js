@@ -22,7 +22,7 @@ export default function Home({ user, setUser }) {
             <div className="block w-full flex-grow lg:flex lg:w-auto lg:items-center">
                 <div className="text-sm lg:flex-grow">
                     {links.map((link) => (
-                        <Link href={link.href}>
+                        <Link key={link.name} href={link.href}>
                             <a className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block">
                                 {link.name}
                             </a>

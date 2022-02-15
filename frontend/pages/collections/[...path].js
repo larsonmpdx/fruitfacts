@@ -33,7 +33,7 @@ export async function getServerSideProps(context) {
 
 export default function Home({ data }) {
     return (
-        <div>
+        <div className="m-5">
             {/* single collection */}
             {data.collection && (
                 <article className="prose">

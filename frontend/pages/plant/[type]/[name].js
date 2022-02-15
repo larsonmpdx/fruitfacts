@@ -24,7 +24,7 @@ export async function getServerSideProps(context) {
 
 export default function Home({ plant }) {
     return (
-        <article className="prose">
+        <article className="prose m-5">
             {plant.base && (
                 <h2>
                     <img
@@ -89,7 +89,7 @@ export default function Home({ plant }) {
                         {plant.collection.map((entry) => (
                             <>
                                 {entry.harvest_text && (
-                                    <p>
+                                    <li>
                                         {entry.harvest_text}
                                         <Link
                                             href={`/collections/${encodeURIComponent(
@@ -99,7 +99,7 @@ export default function Home({ plant }) {
                                         >
                                             [ref]
                                         </Link>
-                                    </p>
+                                    </li>
                                 )}
                             </>
                         ))}

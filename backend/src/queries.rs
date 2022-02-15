@@ -173,12 +173,12 @@ pub fn get_recent_patents_db(
     }
 }
 
-pub struct patent_counts {
+pub struct PatentCounts {
     pub count_past: i64,
     pub count_future: i64,
 }
 
-pub fn get_patent_counts(db_conn: &SqliteConnection, unix_time: i64) -> Result<patent_counts> {
+pub fn get_patent_counts(db_conn: &SqliteConnection, unix_time: i64) -> Result<PatentCounts> {
     let query = base_plants::table.filter(base_plants::uspp_expiration.is_not_null());
 
     let mut query_future = query.into_boxed();
@@ -193,7 +193,7 @@ pub fn get_patent_counts(db_conn: &SqliteConnection, unix_time: i64) -> Result<p
     let count_past = query_past.count().first::<i64>(db_conn).unwrap();
     let count_future = query_future.count().first::<i64>(db_conn).unwrap();
 
-    Ok(patent_counts {
+    Ok(PatentCounts {
         count_past,
         count_future,
     })

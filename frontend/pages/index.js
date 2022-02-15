@@ -44,7 +44,7 @@ export async function getServerSideProps() {
 
 export default function Home({ fact, recentChangesData }) {
     return (
-        <div className="container">
+        <article className="prose m-5">
             <Head>
                 <title>fruitfacts</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -53,14 +53,15 @@ export default function Home({ fact, recentChangesData }) {
                 <div>
                     {fact.fact && (
                         <p>
-                            {fact.fact}
+                            <b>Fact:</b> {fact.fact}
                             <a href={` ${fact.reference}`}>[ref]</a>
                         </p>
                     )}
                 </div>
                 <div>
                     {recentChangesData.recent_changes && (
-                        <article className="prose">
+                        <>
+                            <h3>Recent Changes</h3>
                             <ul className="list-disc">
                                 {recentChangesData.recent_changes.collection_changes.map(
                                     (update, index) => (
@@ -72,32 +73,39 @@ export default function Home({ fact, recentChangesData }) {
                                             >
                                                 {update.filename}
                                             </Link>
-                                            {timeAgo(update.git_edit_time * 1000)}
+                                            <div className="m-1 inline">
+                                                {timeAgo(update.git_edit_time * 1000)}
+                                            </div>
                                         </li>
                                     )
                                 )}
                             </ul>
-                        </article>
+                        </>
                     )}
                 </div>
                 <div>
-                    {recentChangesData.recent_changes && (
-                        <p>
-                            {recentChangesData.recent_changes.base_plants_count} plants in{' '}
-                            {recentChangesData.recent_changes.references_count} references
-                        </p>
+                    {(recentChangesData.recent_changes || recentChangesData.build_info) && (
+                        <h3>Build Info</h3>
                     )}
-                    {recentChangesData.build_info && (
-                        <p>
-                            updated {timeAgo(recentChangesData.build_info.git_unix_time * 1000)}{' '}
-                            build count {recentChangesData.build_info.git_commit_count} git hash{' '}
-                            {recentChangesData.build_info.git_hash.substring(0, 7)}
-                        </p>
-                    )}
+                    <p>
+                        {recentChangesData.recent_changes && (
+                            <>
+                                {recentChangesData.recent_changes.base_plants_count} plants in{' '}
+                                {recentChangesData.recent_changes.references_count} references
+                            </>
+                        )}
+                        {recentChangesData.build_info && (
+                            <>
+                                updated {timeAgo(recentChangesData.build_info.git_unix_time * 1000)}{' '}
+                                build count {recentChangesData.build_info.git_commit_count} git hash{' '}
+                                {recentChangesData.build_info.git_hash.substring(0, 7)}
+                            </>
+                        )}
+                    </p>
                 </div>
             </main>
 
             <footer></footer>
-        </div>
+        </article>
     );
 }

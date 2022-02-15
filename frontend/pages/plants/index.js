@@ -17,13 +17,13 @@ export async function getStaticProps() {
 
 export default function Home({ types }) {
     return (
-        <>
+        <article className="prose m-5">
             {types && (
                 <>
-                    <h1>Plant Types</h1>
+                    <h2>Plant Types</h2>
                     {types.map((group) => (
                         <>
-                            <p>{group.group_name}</p>
+                            <h3>{group.group_name}</h3>
                             {group.types.map((type, index) => (
                                 <ul key={index}>
                                     <li key={type.name}>
@@ -41,6 +41,6 @@ export default function Home({ types }) {
                     ))}
                 </>
             )}
-        </>
+        </article>
     );
 }
