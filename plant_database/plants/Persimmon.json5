@@ -1,36 +1,11 @@
 [
     {
-        name: "Giant Fuyu",
-        tags: "asian persimmon"
-    },
-    {
-        name: "Fuyu (Jiro)",
-        AKA: ["Jiro"],
-        tags: "asian persimmon"
-    },
-    {
-        name: "Chocolate",
-        tags: "asian persimmon"
-    },
-    {
         name: "Coffee Cake",
         AKA: ["Nishimura Wase"],
-        tags: "asian persimmon"
-    },
-    {
-        name: "Izu",
         tags: "asian persimmon"
     },
     {
         name: "Maru",
         tags: "asian persimmon"
     },
-    {
-        name: "Saijo",
-        tags: "asian persimmon"
-    },
-    {
-        name: "Tamopan",
-        tags: "asian persimmon"
-    }
 ]

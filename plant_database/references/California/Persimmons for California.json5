@@ -1,0 +1,115 @@
+{
+    title: "Persimmons for California",
+    url: "https://calag.ucanr.edu/archive/?article=ca.v042n04p7",
+    published: "July 01, 1988",
+    author: "Kay Ryugo, Charles A. Schroeder, Akira Sugiura, Keizo Yonemori",
+    description: "California Agriculture 42(4):7-9.",
+    type: "state extension guide",
+    accessed: "Sep 2021",
+    locations: [
+        {
+            name: "National Germplasm Repository on the UC Davis campus",
+            latitude: 38.52192669379002,
+            longitude: -121.76188238894662
+        },
+    ],
+    plants: [  
+        {
+            type: "Persimmon",
+            name: "California Fuyu",
+            AKA: ["Cal-Fuyu", "Fuyugaki", "PI 26491"]
+        },
+        {
+            type: "Persimmon",
+            name: "California Maru",
+            AKA: ["PI 83790"]
+        },
+        {
+            type: "Persimmon",
+            name: "Chocolate"
+        },
+        {
+            type: "Persimmon",
+            name: "Fuji"
+        },
+        {
+            type: "Persimmon",
+            name: "Fuyu"
+        },
+        {
+            type: "Persimmon",
+            name: "Gosho",
+            AKA: ["Gosho-gaki"]
+        },
+        {
+            type: "Persimmon",
+            name: "Hachiya"
+        },
+        {
+            type: "Persimmon",
+            name: "Giant Fuyu",
+            AKA: ["Hana Fuyu", "Jumbu", "Yotsudani"]
+        },
+        {
+            type: "Persimmon",
+            name: "Hyakume"
+        },
+        {
+            type: "Persimmon",
+            name: "Jiro",
+            AKA: ["Fuyu (Jiro)"]
+        },
+        {
+            type: "Persimmon",
+            name: "Saijo"
+        },
+        {
+            type: "Persimmon",
+            name: "Zenji Maru"
+        },
+// under quarantine at time of publication (listed in the last paragraph):
+        {
+            type: "Persimmon",
+            name: "Hana Gosho"
+        },
+        {
+            type: "Persimmon",
+            name: "Hiratanenashi"
+        },
+        {
+            type: "Persimmon",
+            name: "Izu"
+        },
+        {
+            type: "Persimmon",
+            name: "Maekawa Wase Jiro"
+        },
+        {
+            type: "Persimmon",
+            name: "Matsumoto Wase Fuyu"
+        },
+        {
+            type: "Persimmon",
+            name: "Suruga"
+        },
+//in the chart only:
+        {
+            type: "Persimmon",
+            name: "Tsuru"
+        },
+
+        {
+            type: "Persimmon",
+            name: "Tanenashi"
+        },
+
+        {
+            type: "Persimmon",
+            name: "Tamopan"
+        },
+        {
+            type: "Persimmon",
+            name: "O-Gosho"
+        }
+    ]
+}
