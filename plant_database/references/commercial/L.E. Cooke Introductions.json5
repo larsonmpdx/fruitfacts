@@ -302,7 +302,8 @@
         },
         {
             type: "Euro Pear",
-            name: "Flordahome"
+            name: "Flordahome",
+            AKA: ["Florida Home"]
         },
         {
             type: "Euro Pear",

@@ -1,29 +1,11 @@
 [
     {
-        name: "Redhaven"
-    },
-    {
-        name: "Suncrest"
-    },
-    {
-        name: "Frost",
-        description: "peach leaf curl resistant",
-        tags: ["peach leaf curl resistant"]
-    },
-    {
         name: "Nanaimo",
         description: "peach leaf curl resistant",
         tags: ["peach leaf curl resistant"]
     },
     {
-        name: "Indian Blood",
-        AKA: ["Indian Blood Cling"]
-    },
-    {
         name: "Indian Free",
         AKA: ["Indian Blood Free"]
     },
-    {
-        name: "Flordagrande"
-    }
 ]

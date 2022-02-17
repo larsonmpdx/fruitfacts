@@ -1441,8 +1441,8 @@
         },
         {
             type: "Peach",
-            name: "Summer Amelia",
-            AKA: ["Summer Gold"], // application name: https://patents.google.com/patent/US20130263342
+            name: "Summer Amelia", // there was already a USDA byron release "summergold" so my guess is the name had to be changed on the patent grant
+            AKA: ["Summer Gold (zaiger)"], // application name: https://patents.google.com/patent/US20130263342
             description: "patent application name \"summer gold\" but grant name \"summer gold\". zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-yellow/summer_amelia/",
             patent: "https://patents.google.com/patent/USPP24777 expires 2032-11-28",
             chill: "800 hours",
@@ -2109,6 +2109,12 @@
             patent: "https://patents.google.com/patent/USPP23983 expires 2032-05-16",
             chill: "800 hours",
             harvest_time: "September 3 to September 18"
+        },
+        // not in the original list
+        {
+            type: "Apricot",
+            name: "Gold Kist",
+            patent: "https://patents.google.com/patent/USPP2826 expired"
         }
     ]
 }

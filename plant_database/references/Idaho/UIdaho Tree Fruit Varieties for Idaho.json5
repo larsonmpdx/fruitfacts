@@ -373,6 +373,7 @@
         },
         {
             name: "Flemish Beauty",
+            AKA: ["Fondante de Boise"],
             type: "Euro Pear",
             description: "Once known as Fondante de Boise. The fruits are large, round with clear yellow skin and firm, yellowishwhite flesh that becomes sweet and aromatic when ripe. Dries well. Requires cross-pollination. The trees are vigorous and productive. Considered very cold hardy",
             locations: ["N/Central/SE", "SW"]

@@ -124,6 +124,7 @@
         },
         {
             name: "Tenn",
+            AKA: ["Tennessee"],
             locations: ["North"],
             chill: "350-400 hours",
             type: "Euro Pear",

@@ -7,28 +7,6 @@
         name: "Tennosui"
     },
     {
-        name: "Shinseiki"
-    },
-    {
-        name: "Hosui"
-    },
-    {
-        name: "Nijisseiki",
-        AKA: ["20th Century", "Twentieth Century"]
-    },
-    {
-        name: "Shinko",
-        description: "ripens a month later than other asian pears"
-    },
-    {
-        name: "Korean Giant",
-        AKA: ["Dan Bae", "Olympic", "A-Ri-Rang"],
-        description: "large size"
-    },
-    {
-        name: "Kikusui"
-    },
-    {
         name: "Peggy",
         description: "bud sport of Korean Giant. stark bros",
         patent: "https://patents.google.com/patent/USPP29880 expires 2036-02-21"

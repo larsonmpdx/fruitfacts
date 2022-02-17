@@ -1,31 +1,5 @@
 [
     {
-        name: "Early Laxton",
-        description: "One of the earliest euro plums"
-    },
-    {
-        name: "Purple Gage",
-        AKA: ["Reine Claude Violette"]
-    },
-    {
-        name: "Early Italian"
-    },
-    {
         name: "Late Italian"
-    },
-    {
-        name: "Stanley"
-    },
-    {
-        name: "President"
-    },
-    {
-        name: "Valor"
-    },
-    {
-        name: "Empress"
-    },
-    {
-        name: "Blue Damson"
     }
 ]

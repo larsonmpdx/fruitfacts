@@ -4,7 +4,7 @@
     url: "https://aggie-horticulture.tamu.edu/fruit-nut/files/2015/04/peaches_2015.pdf",
     published: "2015",
     accessed: "Oct 2021",
-    type: "public breeding program list",
+    type: "state extension guide",
     locations: [
         {
             name: "College Station, TX",
@@ -133,7 +133,7 @@
             harvest_time_relative: "Elberta -2"
         },
         {
-            name: "Flame Prince",
+            name: "Flameprince",
             type: "Peach",
             chill: "850 hours",
             description: "Free",

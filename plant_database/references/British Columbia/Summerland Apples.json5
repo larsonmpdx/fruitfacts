@@ -53,7 +53,9 @@
         {
             name: "Scarlet Sentinel",
             type: "Apple",
-            released: "Summerland 1997*"
+            released: "Summerland 1997*",
+            patent: "no US patent. Canada PBR expired 2020 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00001216e.shtml",
+            tags: ["columnar apple"]
         },
         {
             name: "Golden Sentinel",
@@ -99,7 +101,8 @@
             type: "Apple",
             harvest_time: "Early September", // in BC
             description: "https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/12/Silken/",
-            released: "Summerland 1996*"
+            released: "Summerland 1996*",
+            patent: "https://patents.google.com/patent/USPP10740 expired 2017-06-19"
         },
         {
             name: "Sunrise",

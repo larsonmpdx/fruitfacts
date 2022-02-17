@@ -170,7 +170,7 @@
             released: "USDA-OSU*",
             patent: ""
         },
-
+// todo
         // Chinook (2002)
         // Coho (1999)
         // Lewis (1998; in cooperation with HortResearch Inc. New Zealand)
@@ -198,6 +198,7 @@
             patent: ""
         },
 
+// todo
         // Sweet Sunrise (ORUS 2240-1) (2012)
         // Charm (ORUS 2262-2) (2012)
 
@@ -208,7 +209,7 @@
         // Tillamook (2002)
 
         // Firecracker (1997)
-        // Independence(1997
+        // Independence (1997)
 
         // Blueberry
         {
@@ -223,9 +224,10 @@
             type: "Blueberry",
             description: "https://www.emcocal.com/mini-blues-variety/ https://www.oregonblueberry.com/update-F2019/mini.html",
             released: "USDA-OSU 2019*",
-            patent: ""
+            tags: ["northern highbush"],
+            patent: "https://patents.google.com/patent/USPP28233 expires 2035-05-21",
         },
-        // Baby Blues blueberry ORUS 10-1 2016 https://www.ars.usda.gov/research/publications/publication/?seqNo115=328114
+        // todo Baby Blues blueberry ORUS 10-1 2016 https://www.ars.usda.gov/research/publications/publication/?seqNo115=328114
 
         {
             name: "Perpetua",

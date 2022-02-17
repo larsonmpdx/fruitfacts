@@ -154,6 +154,7 @@
         },
         {
             name: "Methley",
+            AKA: ["P.I. 31652"],
             type: "Japanese Plum",
             harvest_time: "August 1"
         },
@@ -205,13 +206,16 @@
         },
         {
             name: "Howard Miracle",
+            AKA: ["Howard Wonder"],
+            patent: "https://patents.google.com/patent/USPP721 expired",
             type: "Japanese Plum",
             harvest_time: "August 25"
         },
         {
             name: "Mariposa",
             type: "Japanese Plum",
-            harvest_time: "September 1"
+            harvest_time: "September 1",
+            patent: "https://patents.google.com/patent/USPP111 expired"
         },
         {
             name: "Elephant Heart",

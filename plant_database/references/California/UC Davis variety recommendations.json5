@@ -155,13 +155,13 @@
         },
         {
             names: [
-                "Nugget Spur",
-                "Goldspur",
+                "Nugget Spur", // Golden Delicious Spur
+                "Goldspur", // golden delicious spur
                 "Yelo Spur",
                 "Starkspur",
-                "Silverspur",
-                "Crimson Spur",
-                "Skyspur",
+                "Silverspur", // Red Delicious Spur
+                "Crimson Spur", // Red Delicious Spur
+                "Skyspur", // Red Delicious Spur
                 "Bisbee Spur",
                 "Spured Royal",
                 "Oregon Spur",
@@ -1165,7 +1165,7 @@
             ]
         },
         {
-            name: "Indian Blood",
+            name: "Indian Blood Cling",
             type: "Peach",
             description: "Cling. Red skin and flesh. Tart. Prolific",
             locations: [

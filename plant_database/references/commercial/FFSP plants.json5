@@ -15,7 +15,9 @@
     plants: [
         {
             name: "Fla. 90-3",
-            type: "Apple"
+            AKA: ["TropicSweet (tm)"],
+            type: "Apple",
+            patent: "https://patents.google.com/patent/USPP9708 expired 2015-09-05"
         },
         {
             name: "Abundance",
@@ -325,6 +327,7 @@
         },
         {
             name: "LB8-9",
+            AKA: ["Sugar Belle (tm)"],
             type: "Mandarin",
             harvest_time_unparsed: "First Harvest: Mid-November to late December, depending on season",
             description: "http://www.ffsp.net/varieties/citrus/sugar-belle-lb8-9/",

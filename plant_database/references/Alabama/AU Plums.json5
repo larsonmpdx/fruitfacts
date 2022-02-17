@@ -1,0 +1,60 @@
+// todo
+{
+    title: "AU Plums",
+    author: "",
+    url: "https://aurora.auburn.edu/handle/11200/820", // most recent release paper - but there's one for each plum
+    accessed: "Feb 2022",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "todo",
+            latitude: 29.6465645490967,
+            longitude: -82.34424313539307
+        }
+    ],
+    // tables (like disease resistance and harvest times) from each of these release papers were put into another document
+    plants: [
+        {
+            type: "Japanese Plum",
+            name: "AU-Roadside",
+            released: "AU 1984*",
+            chill_hours: "700", // from the release paper
+            description: "http://aurora.auburn.edu/xmlui/bitstream/handle/11200/2057/1268CIRC.pdf?sequence=1&isAllowed=y"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Producer",
+            released: "AU 1977*",
+            chill_hours: "750", // from the release paper
+            description: "https://aurora.auburn.edu/bitstream/handle/11200/2029/1237CIRC.pdf?sequence=1"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Amber",
+            released: "AU 1989*",
+            chill_hours: "650", // from the release paper
+            description: "https://aurora.auburn.edu/handle/11200/2081"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Rubrum",
+            released: "AU 1990*",
+            chill_hours: "700", // from the release paper
+            description: "http://aurora.auburn.edu/bitstream/handle/11200/2083/1297CIRC.pdf?sequence=1&isAllowed=y"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Rosa",
+            released: "AU 1990*",
+            chill_hours: "700", // from the release paper
+            description: "https://aurora.auburn.edu/bitstream/handle/11200/2086/1300CIRC.pdf?sequence=1&isAllowed=y"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Cherry",
+            released: "AU 1990*",
+            chill_hours: "700", // from the release paper
+            description: "https://aurora.auburn.edu/handle/11200/820"
+        }
+    ]
+}

@@ -1612,10 +1612,8 @@ fn load_references(
                         );
                     }
                 } else if plant.name.is_some() {
-
                     // todo - if this plant has its own unique location (as seen in "list of elberta ripening dates")
                     // then add this location first and then use it just for this plant
-
 
                     reference_base_plants_added += update_or_add_base_plant(
                         plant.name.as_ref().unwrap(),

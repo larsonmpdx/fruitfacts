@@ -1,0 +1,87 @@
+// todo
+{
+    title: "AU Plum Tables From Release Papers",
+    author: "",
+    url: "https://aurora.auburn.edu/handle/11200/820", // most recent release paper - but there's one for each plum
+    accessed: "Feb 2022",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "todo",
+            latitude: 29.6465645490967,
+            longitude: -82.34424313539307
+        }
+    ],
+    // tables (like disease resistance and harvest times) from each of these release papers were put into another document
+    plants: [
+
+// see AU-Cherry release paper, page 4
+// this same table appeared in other release papers but was added to with each release
+// http://aurora.auburn.edu/bitstream/handle/11200/2083/1297CIRC.pdf?sequence=1&isAllowed=y
+
+/*
+Bacterial fruit spot
+Bacterial leaf spot
+Bacterial canker
+Black knot
+Brown rot
+Plum leaf scald
+
+AU-Cherry       0 0 0 0 0 0
+AU-Rosa         0 0 0 0 0 0
+AU-Rubrum       0 0 1 0 2 1
+AU-Amber        0 0 0 5 2 0
+AU-Producer     0 0 0 1 2 1
+AU-Roadside     0 0 0 0 2 1
+Bruce           0 0 0 0 4 4
+Crimson         0 0 0 0 1 3
+Homeside        0 0 1 1 3 1
+Methley         3 5 5 5 3 4
+Morris          1 2 2 5 2 2
+Ozark Premier   0 1 1 1 3 4
+Purple          0 0 0 0 3 5
+Santa Rosa      5 5 5 0 3 5
+*/
+
+// harvest dates from AU-Rosa release paper, page 6
+// this same table appeared in other release papers but was added to with each release
+// http://aurora.auburn.edu/bitstream/handle/11200/2083/1297CIRC.pdf?sequence=1&isAllowed=y
+/*
+
+// from the AU-Cherry paper:
+AU-Cherry       6-24
+
+AU-Rosa         6-22    7-1
+
+AU-Rubrum       6-19    6-16
+
+AU-Amber        5-30    5-27
+
+AU-Producer     6-27    6-24
+
+AU-Roadside     7-4     6-29
+
+Bruce           6-29    6-26
+not_recommend_reason: "Trees short lived due to ring spot virus"
+
+Crimson         7-14    7-5
+
+Homeside        7-5     7-1
+
+Methley         6-10    6-7
+not_recommend_reason: "Trees short lived due to black knot and bacterial canker"
+
+Morris          6-17    6-14
+
+Ozark Premier   7-10    7-5
+
+Purple          7-20    7-15
+
+Santa Rosa      7-5     7-1
+not_recommend_reason: "Trees short lived due to bacterial canker"
+*/
+
+// the last table worth adding is the fruit characteristics able. fruit size, color, storability, etc.
+// most up-to-date is in the AU-Cherry paper
+    ]
+}

@@ -201,7 +201,7 @@
             harvest_time_relative: "Redhaven +8"
         },
         {
-            name: "Blaze Prince",
+            name: "Blazeprince",
             type: "Peach",
             harvest_time_relative: "Redhaven +8"
         },
@@ -306,7 +306,7 @@
             harvest_time_relative: "Redhaven +24"
         },
         {
-            name: "July Prince",
+            name: "Julyprince",
             type: "Peach",
             harvest_time_relative: "Redhaven +24"
         },
@@ -361,7 +361,7 @@
             harvest_time_relative: "Redhaven +37"
         },
         {
-            name: "Flame Prince",
+            name: "Flameprince",
             type: "Peach",
             harvest_time_relative: "Redhaven +38"
         },

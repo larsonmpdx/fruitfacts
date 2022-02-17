@@ -36,7 +36,8 @@
             name: "NJ 55",
             AKA: ["Suncrisp (tm)"], // listed as (r) registered trademark in some places but Rutgers' own website claims (tm)
             type: "Apple",
-            released: "1992"
+            released: "1992",
+            patent: "https://patents.google.com/patent/USPP8648 expired 2012-06-18"
         },
         {
             name: "NJ 150",

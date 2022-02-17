@@ -1,0 +1,53 @@
+{
+    title: "Texas Fruit and Nut Production: Persimmons",
+    author: "Larry Stein, Monte Nesbitt, and Jim Kamas, Extension Fruit Specialists, The Texas A&M University System",
+    url: "https://aggie-horticulture.tamu.edu/fruit-nut/files/2015/04/persimmons_2015.pdf",
+    published: "2015",
+    accessed: "Feb 2022",
+    type: "state extension guide",
+    locations: [
+        {
+            name: "College Station, TX",
+            latitude: 30.523604287211427,
+            longitude: -96.42788616864308
+        }
+    ],
+    plants: [
+        {
+            type: "Persimmon",
+            name: "Eureka",
+            description: "heavy producing, medium sized, flat-shaped, red persimmon of extremely high fruit quality. The tree is relatively small and self-fruitful. Fruit typically contain seeds. Eureka has proven to be the best commercial variety in Texas"
+        },
+        {
+            type: "Persimmon",
+            name: "Hachiya",
+            description: "productive, very large, coneshaped, seedless persimmon with bright orange skin. The tree is vigorous and upright. Hachiya has been an outstanding Texas variety and makes an excellent dual purpose fruit and ornamental specimen"
+        },
+        {
+            type: "Persimmon",
+            name: "Tane-nashi",
+            description: "moderately productive, cone-shaped, orange persimmon. The tree is vigorous and upright. The fruit stores extremely well on the tree and is seedless. Tane-nashi makes an excellent landscape ornamental"
+        },
+        {
+            type: "Persimmon",
+            name: "Tamopan",
+            description: "moderately productive, very large, flat, orange, persimmon with a distinctive ring constriction near the middle of the fruit. The tree is the most vigorous and upright of the varieties grown in Texas"
+        },
+        {
+            type: "Persimmon",
+            name: "Fuyu",
+            description: "medium-sized, non-astringent, self-fruitful. The fruit is rather flattened, orangecolored, and of high quality. It is best planted in the southern, milder areas of the state as it is susceptible to freeze damage"
+        },
+        {
+            type: "Persimmon",
+            name: "Izu",
+            description: "bears medium-sized, non-astringent fruit. It seems to be more cold hardy than Fuyu and ripens in September"
+        },
+        {
+            type: "Persimmon",
+            name: "Fankio",
+            description: "produces large, conical, with vivid gold fruit. It is one of the prettiest persimmons; the leaves turn bright red as the gold fruit ripens in the fall"
+        }
+    ]
+}
+

@@ -45,6 +45,8 @@
         },
         {
             name: "September Wonder",
+            AKA: ["Fiero", "Jubilee Fuji"],
+            patent: "https://patents.google.com/patent/USPP11193 expired 2017", // expiration approximate - no date in google patents
             type: "Apple",
             category: "Sweet—low to moderate in acid, moderate to high in sugar (Japanese)",
             harvest_time: "mid September to early October"
@@ -223,6 +225,7 @@
             name: "Belmac",
             type: "Apple",
             category: "Disease resistant varieties",
+            patent: "no US patent. Canada PBR expired 2015 https://www.inspection.gc.ca/english/plaveg/pbrpov/cropreport/app/app00000569e.shtml",
             harvest_time: "late October"
         },
         {
@@ -290,7 +293,8 @@
             name: "Concorde",
             type: "Euro Pear",
             category: "Winter pears—pick in September-October, store for 3-4 months",
-            harvest_time: "mid September"
+            harvest_time: "mid September",
+            patent: "https://patents.google.com/patent/USPP9192 expired 2014-01-10"
         },
         {
             name: "Comice",
@@ -326,7 +330,8 @@
             name: "Honeysweet",
             type: "Euro Pear",
             category: "Recent pear introductions",
-            harvest_time: "early October"
+            harvest_time: "early October",
+            patent: "https://patents.google.com/patent/USPP4379 expired 1998-01-03"
         },
         {
             name: "Hamese",
@@ -430,6 +435,7 @@
         },
         {
             name: "Purple Gage",
+            AKA: ["Reine Claude Violette"],
             type: "Euro Plum",
             harvest_time: "late August"
         },

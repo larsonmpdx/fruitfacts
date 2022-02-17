@@ -1,0 +1,18 @@
+// todo https://aurora.auburn.edu/bitstream/handle/11200/2541/1807BULL.pdf?sequence=1
+{
+    title: "Plum Variety Trials in Alabama, 1986-1995",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Feb 2022",
+    type: "journal article test",
+    locations: [
+        {
+            name: "todo",
+            latitude: 32.65742348055435,
+            longitude: -83.7417858800921
+        }
+    ],
+    plants: [
+    ]
+}

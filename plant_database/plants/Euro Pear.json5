@@ -1,44 +1,19 @@
 [
     {
-        name: "Bartlett"
-    },
-    {
         name: "Warren"
     },
-    {
-        name: "Blake's Pride"
-    },
-    {
-        name: "D'Anjou",
-        AKA: ["Anjou"]
-    },
-    {
-        name: "Flemish Beauty",
-        AKA: ["Fondante de Boise"]
-    },
-    {
-        name: "Comice"
-    },
-    {
-        name: "Red Clapp's Favorite",
-        AKA: ["Red Clapp's", "Kalle", "Super Red", "Starkrimson"]
-    },
-    {
+        {
         name: "Golden Russet Bosc",
         patent: "https://patents.google.com/patent/USPP5243 expired 2002-05-28"
     },
-    {
+        {
         name: "Doyenne du Comice"
     },
-    {
+        {
         name: "Columbia Red Anjou",
         patent: "https://patents.google.com/patent/USPP6194 expired 2006-03-31"
     },
-    {
-        name: "Concorde",
-        patent: "https://patents.google.com/patent/USPP9192 expired 2014-01-10"
-    },
-    {
+        {
         name: "Taylor's Gold",
         patent: "https://patents.google.com/patent/USPP8308 expired 2011-09-16"
     },
@@ -47,16 +22,4 @@
         AKA: ["Bronze Beauty (tm)"],
         patent: "https://patents.google.com/patent/USPP7485 expired 2009-12-21"
     },
-    {
-        name: "Honeysweet",
-        patent: "https://patents.google.com/patent/USPP4379 expired 1998-01-03"
-    },
-    {
-        name: "Flordahome",
-        AKA: ["Florida Home"]
-    },
-    {
-        name: "Tenn",
-        AKA: ["Tennessee"]
-    }
 ]

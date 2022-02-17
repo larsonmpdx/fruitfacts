@@ -342,7 +342,7 @@
             description: "Flesh Adherence: free Fruit Quality: 4/5 Fruit Size: Good Cold Tolerance: Good"
         },
         {
-            name: "Flame Prince",
+            name: "Flameprince",
             type: "Peach",
             harvest_time_relative: "Redhaven +8 weeks",
             tags: ["Yellow Peach"],

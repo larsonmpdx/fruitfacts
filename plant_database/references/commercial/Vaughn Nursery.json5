@@ -1,0 +1,824 @@
+{
+    title: "Vaughn Nursery",
+    url: "http://vaughnnursery.com/",
+    published: "unknown",
+    accessed: "Feb 2022",
+    type: "nursery catalog",
+    locations: [
+        {
+            name: "McMinnville, TN",
+            latitude: 35.80498291072152,
+            longitude: -85.79263326681888
+        }
+    ],
+    plants: [
+        {
+            type: "Apple",
+            name: "Arkansas Black"
+        },
+        {
+            type: "Apple",
+            name: "Braeburn"
+        },
+        {
+            type: "Apple",
+            name: "Early Red Delicious"
+        },
+        {
+            type: "Apple",
+            name: "Early Rome"
+        },
+        {
+            type: "Apple",
+            name: "Empire"
+        },
+        {
+            type: "Apple",
+            name: "Fuji"
+        },
+        {
+            type: "Apple",
+            name: "Gala"
+        },
+        {
+            type: "Apple",
+            name: "Granny Smith"
+        },
+        {
+            type: "Apple",
+            name: "Honeycrisp"
+        },
+        {
+            type: "Apple",
+            name: "Liberty"
+        },
+        {
+            type: "Apple",
+            name: "McIntosh"
+        },
+        {
+            type: "Apple",
+            name: "Mollie's Red Delicious"
+        },
+        {
+            type: "Apple",
+            name: "Cripps Pink", // "Pink Lady®"
+        },
+        {
+            type: "Apple",
+            name: "Shizuka"
+        },
+        {
+            type: "Apple",
+            name: "Stayman"
+        },
+        {
+            type: "Apple",
+            name: "Yellow Delicious"
+        },
+        {
+            type: "Apple",
+            name: "Anna",
+            description: "Low Chill"
+        },
+        {
+            type: "Apple",
+            name: "Dorsett Golden",
+            description: "Low Chill"
+        },
+        {
+            type: "Apple",
+            name: "Ein Shemer",
+            description: "Low Chill"
+        },
+        {
+            type: "Euro Pear",
+            name: "Ayers"
+        },
+        {
+            type: "Euro Pear",
+            name: "Bartlett"
+        },
+        {
+            type: "Euro Pear",
+            name: "Keiffer"
+        },
+        {
+            type: "Euro Pear",
+            name: "Moonglow"
+        },
+        {
+            type: "Euro Pear",
+            name: "Orient"
+        },
+        {
+            type: "Euro Pear",
+            name: "Pineapple"
+        },
+        // Bloom Date: Days before Santa Rosa with bloom estimate of March 11th in Byron, GA.
+        // Peak Ripe: Estimate for Byron, GA with 750 chill hours.
+        // Information based on studies from USDA in Byron, GA. Ripening dates can vary and are affected by climate and growing region.
+        {
+            type: "Japanese Plum",
+            name: "Six Weeks",
+            description: "Red/Y-R N -1 G",
+            harvest_time: "5/25"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Amber",
+            description: "R-P/Y-Amber Y -4 G&R",
+            harvest_time: "5/28"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Bruce",
+            description: "G-O-R/Y-R Y -3 G",
+            harvest_time: "5/31"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Methley",
+            description: "R-P/Blood R Y -1 R",
+            harvest_time: "6/6"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Shiro",
+            description: "Y-G/Y N -2 G&R",
+            harvest_time: "6/5"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Robusto",
+            description: "Bright Red/Red N -1 G&R",
+            harvest_time: "6/5"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Shirley",
+            description: "Dark Red/Y N -1 R",
+            harvest_time: "6/5"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Buck's Late",
+            description: "G/R N -3 R",
+            harvest_time: "6/10"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Santa Rosa",
+            description: "R-P/Red N 0 G&R",
+            harvest_time: "6/15"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Morris",
+            description: "P/Blood R N -1 G&R",
+            harvest_time: "6/16"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Cherry",
+            description: "Dark Red/Dark Red Y -2 R",
+            harvest_time: "6/17"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Rubrum",
+            description: "Maroon/Red N -1 R",
+            harvest_time: "6/19"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Roadside",
+            description: "Dark Red/Dark Red Y -2 R",
+            harvest_time: "6/19"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Producer",
+            description: "Dark Red/R N 2 R",
+            harvest_time: "6/20"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Rosa",
+            description: "R/Light Y N 0 G&R",
+            harvest_time: "6/22"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ruby Sweet",
+            description: "R-Bronze/R N -2 G&R",
+            harvest_time: "6/22"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ozark Premier",
+            description: "Magenta/Y N 1 G&R",
+            harvest_time: "6/25"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Byrongold",
+            description: "Y/Y N -3 G",
+            harvest_time: "6/30"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Gold Plum",
+            description: "Y/Y N 5 G",
+            harvest_time: "7/15"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Black Ruby",
+            description: "R-Black/Y N -3 R",
+            harvest_time: "7/15"
+        },
+        {
+            type: "Japanese Plum", // this may be euro - can't tell from googling
+            name: "Helen",
+            description: "Red/Y N -2 G&R",
+            harvest_time: "8/1"
+        },
+        {
+            type: "Euro Plum",
+            name: "Blue Damson",
+            description: "Black-P/Amber Y -5 R",
+            harvest_time: "8/15"
+        },
+        {
+            type: "Euro Plum",
+            name: "Ruby Queen",
+            description: "Red-Black/R N -3 G&R",
+            harvest_time: "8/20"
+        },
+
+        // peach - before/after elberta
+        {
+            type: "Peach",
+            name: "Early Flavorich",
+            chill_hours: "700",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-70"
+        },
+        {
+            type: "Peach",
+            name: "Flavorich",
+            chill_hours: "700",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-64"
+        },
+        {
+            type: "Peach",
+            name: "Gulfking",
+            chill_hours: "350",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-57"
+        },
+        {
+            type: "Peach",
+            name: "Flordacrest",
+            chill_hours: "425",
+            description: "Y Semi-Free",
+            harvest_time_relative: "Elberta-55"
+        },
+        {
+            type: "Peach",
+            name: "Carored",
+            chill_hours: "650",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-51"
+        },
+        {
+            type: "Peach",
+            name: "Crimson Lady",
+            chill_hours: "700",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-51"
+        },
+        {
+            type: "Peach",
+            name: "VN-D#1", // this is some kind of in-house variety
+            chill_hours: "950",
+            description: "Y Cling ",
+            harvest_time_relative: "Elberta-51"
+        },
+        {
+            type: "Peach",
+            name: "Gulfcrimson",
+            chill_hours: "400",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-51"
+        },
+        {
+            type: "Peach",
+            name: "Goldprince",
+            chill_hours: "650",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-49"
+        },
+        {
+            type: "Peach",
+            name: "Springprince",
+            chill_hours: "650",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-49"
+        },
+        {
+            type: "Peach",
+            name: "Elle Grande",
+            chill_hours: "350",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-48"
+        },
+        {
+            type: "Peach",
+            name: "June Gold",
+            chill_hours: "650",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-47"
+        },
+        {
+            type: "Peach",
+            name: "Rubyprince",
+            chill_hours: "850",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-44"
+        },
+        {
+            type: "Peach",
+            name: "Summerprince",
+            chill_hours: "850",
+            description: "Y Semi-Free",
+            harvest_time_relative: "Elberta-42"
+        },
+        {
+            type: "Peach",
+            name: "Coronet N",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-39"
+        },
+        {
+            type: "Peach",
+            name: "Juneprince",
+            chill_hours: "650",
+            description: "Y Semi-Free",
+            harvest_time_relative: "Elberta-38"
+        },
+        {
+            type: "Peach",
+            name: "Sureprince",
+            chill_hours: "950",
+            description: "Y Semi-Free",
+            harvest_time_relative: "Elberta-35"
+        },
+        {
+            type: "Peach",
+            name: "GaLa",
+            chill_hours: "700",
+            description: "Y Semi-Free",
+            harvest_time_relative: "Elberta-34"
+        },
+        {
+            type: "Peach",
+            name: "Early Redhaven",
+            chill_hours: "950",
+            description: "Y Semi-Free",
+            // this was listed as "Elberta-30" (redhaven-2) but I think it's actually -42 (redhaven-2 weeks) - maybe a typo of days vs. weeks vs. redhaven
+            harvest_time_relative: "Elberta-42"
+        },
+        {
+            type: "Peach",
+            name: "Maytime",
+            chill_hours: "750",
+            description: "Y Semi-Free",
+            harvest_time_relative: "Elberta-30"
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            chill_hours: "950",
+            description: "Y Semi-Free",
+            harvest_time_relative: "Elberta-28"
+        },
+        {
+            type: "Peach",
+            name: "Caroking",
+            chill_hours: "850",
+            description: "Y Semi-Free",
+            harvest_time_relative: "Elberta-26"
+        },
+        {
+            type: "Peach",
+            name: "Bellaire",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-25"
+        },
+        {
+            type: "Peach",
+            name: "Challenger",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-25"
+        },
+        {
+            type: "Peach",
+            name: "Suwanee",
+            chill_hours: "650",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-22"
+        },
+        {
+            type: "Peach",
+            name: "Harvester",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-21"
+        },
+        {
+            type: "Peach",
+            name: "Norman",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-21"
+        },
+        {
+            type: "Peach",
+            name: "Clemson Pride",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-21"
+        },
+        {
+            type: "Peach",
+            name: "Cary Mac",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-20"
+        },
+        {
+            type: "Peach",
+            name: "Fireprince",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-20"
+        },
+        {
+            type: "Peach",
+            name: "Blazeprince",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-19"
+        },
+        {
+            type: "Peach",
+            name: "Fiesta Gem",
+            chill_hours: "750",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta-18"
+        },
+        {
+            type: "Peach",
+            name: "Intrepid",
+            chill_hours: "1000",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-18"
+        },
+        {
+            type: "Peach",
+            name: "Winblo",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-15"
+        },
+        {
+            type: "Peach",
+            name: "Red Globe",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-13"
+        },
+        {
+            type: "Peach",
+            name: "Scarletprince",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-13"
+        },
+        {
+            type: "Peach",
+            name: "Majestic",
+            chill_hours: "800",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-12"
+        },
+        {
+            type: "Peach",
+            name: "Bounty",
+            chill_hours: "800",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-12"
+        },
+        {
+            type: "Peach",
+            name: "Loring",
+            chill_hours: "800",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-12"
+        },
+        {
+            type: "Peach",
+            name: "Summergold",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-10"
+        },
+        {
+            type: "Peach",
+            name: "Julyprince",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-8"
+        },
+        {
+            type: "Peach",
+            name: "Contender",
+            chill_hours: "1050",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-7"
+        },
+        {
+            type: "Peach",
+            name: "Ruston Red",
+            chill_hours: "800",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-5"
+        },
+        {
+            type: "Peach",
+            name: "VN-G#1", // this is some kind of in-house variety
+            chill_hours: "950",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-5"
+        },
+        {
+            type: "Peach",
+            name: "Carolina Gold",
+            chill_hours: "1050",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-4"
+        },
+        {
+            type: "Peach",
+            name: "All Red Elberta",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-4"
+        },
+        {
+            type: "Peach",
+            name: "Cresthaven",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-3"
+        },
+        {
+            type: "Peach",
+            name: "Dixiland",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-3"
+        },
+        {
+            type: "Peach",
+            name: "VN-M#1", // this is some kind of in-house variety
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-3"
+        },
+        {
+            type: "Peach",
+            name: "Augustprince",
+            chill_hours: "850",
+            description: "Y Free",
+            // Augustprince is "days after elberta" in the next table, but it's in the "before elberta" sequence in the first table. I think it's at least +5, the release paper has it at o'henry-2 which is elberta+11
+            harvest_time_relative: "Elberta+5"
+        },
+        {
+            type: "Peach",
+            name: "Reliance",
+            chill_hours: "1000",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-5"
+        },
+        {
+            type: "Peach",
+            name: "Sunprince",
+            chill_hours: "800",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-2"
+        },
+        {
+            type: "Peach",
+            name: "Redskin",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta-2"
+        },
+        // --- I think it switches to "after elberta" here but it isn't noted that way on the website
+
+        {
+            type: "Peach",
+            name: "Havis",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+0"
+        },
+        {
+            type: "Peach",
+            name: "Johnny T",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+0"
+        },
+        {
+            type: "Peach",
+            name: "Monroe",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+8"
+        },
+        {
+            type: "Peach",
+            name: "O'Henry",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+13"
+        },
+        {
+            type: "Peach",
+            name: "Flameprince",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+14"
+        },
+        {
+            type: "Peach",
+            name: "Indian Blood Cling", // "Indian Red Cling" in Vaughn's list
+            chill_hours: "850",
+            description: "Y Cling",
+            harvest_time_relative: "Elberta+15"
+        },
+        {
+            type: "Peach",
+            name: "Sweet Sue",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+17"
+        },
+        {
+            type: "Peach",
+            name: "Big Red II",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+18"
+        },
+        {
+            type: "Peach",
+            name: "Big Red",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+22"
+        },
+        {
+            type: "Peach",
+            name: "Sunny J",
+            chill_hours: "850",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+30"
+        },
+        {
+            type: "Peach",
+            name: "Fairtime",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+35"
+        },
+        {
+            type: "Peach",
+            name: "Autumnprince",
+            chill_hours: "800",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+45"
+        },
+
+        // peach - after elberta table: most are duplicates - only these two aren't
+        {
+            type: "Peach",
+            name: "August Lady",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+7"
+        },
+        {
+            type: "Peach",
+            name: "Fay Elberta",
+            chill_hours: "750",
+            description: "Y Free",
+            harvest_time_relative: "Elberta+6"
+        },
+        // white peach - before/after elberta
+        {
+            type: "Peach",
+            name: "Carolina Belle",
+            chill_hours: "750",
+            description: "white flesh. W Free",
+            harvest_time_relative: "Elberta-18"
+        },
+        {
+            type: "Peach",
+            name: "White Lady",
+            chill_hours: "800",
+            description: "white flesh. W Free",
+            harvest_time_relative: "Elberta-15"
+        },
+        {
+            type: "Peach",
+            name: "Galactica",
+            chill_hours: "800",
+            description: "white flesh. W Peento",
+            harvest_time_relative: "Elberta-12"
+        },
+        {
+            type: "Peach",
+            name: "Belle of Georgia",
+            chill_hours: "850",
+            description: "white flesh. W Free",
+            harvest_time_relative: "Elberta-3"
+        },
+        // I can't tell where this table flips from "days before" to "days after"
+        {
+            type: "Peach",
+            name: "Sugar Giant",
+            chill_hours: "800",
+            description: "white flesh. W Free",
+            harvest_time_relative: "Elberta+3"
+        },
+        {
+            type: "Peach",
+            name: "China Pearl",
+            chill_hours: "1100",
+            description: "white flesh. W Free",
+            harvest_time_relative: "Elberta+4"
+        },
+        {
+            type: "Peach",
+            name: "Snow Giant",
+            chill_hours: "800",
+            description: "white flesh. W Free",
+            harvest_time_relative: "Elberta+20"
+        },
+        // nectarine - before elberta
+        {
+            type: "Nectarine",
+            name: "Early Glo",
+            chill_hours: "750",
+            description: "Y",
+            harvest_time_relative: "Elberta-47"
+        },
+        {
+            type: "Nectarine",
+            name: "Fantasia",
+            chill_hours: "600",
+            description: "Y",
+            harvest_time_relative: "Elberta-7"
+        },
+        {
+            type: "Nectarine",
+            name: "Karla Rose",
+            chill_hours: "650",
+            description: "W",
+            harvest_time_relative: "Elberta-34"
+        },
+        {
+            type: "Nectarine",
+            name: "Red Gold",
+            chill_hours: "850",
+            description: "Y",
+            harvest_time_relative: "Elberta-5"
+        },
+        {
+            type: "Nectarine",
+            name: "Summer Beauty",
+            chill_hours: "800",
+            description: "Y",
+            harvest_time_relative: "Elberta-27"
+        }
+    ]
+}

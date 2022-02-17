@@ -27,7 +27,8 @@
         },
         {
             type: "Asian Pear",
-            name: "Korean Giant", // "Olympic"
+            name: "Korean Giant",
+            AKA: ["Dan Bae", "Olympic", "A-Ri-Rang"],
             // 4th week of October
             harvest_time: "Oct 22-28"
         },

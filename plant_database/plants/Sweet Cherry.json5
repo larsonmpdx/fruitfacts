@@ -1,17 +1,8 @@
 [
     {
-        name: "Black Tartarian"
-    },
-    {
-        name: "Early Burlat"
-    },
-    {
         name: "Coral Champagne",
         AKA: ["Coral"],
         description: '"Unreleased" UC variety. Bing-10'
-    },
-    {
-        name: "Black Republican"
     },
     {
         name: "Brooks",
@@ -23,24 +14,6 @@
         patent: "https://patents.google.com/patent/USPP6407 expired 2007-02-09"
     },
     {
-        name: "Hedelfingen"
-    },
-    {
-        name: "Utah Giant"
-    },
-    {
-        name: "Rainier"
-    },
-    {
-        name: "Bing"
-    },
-    {
-        name: "Lambert"
-    },
-    {
-        name: "Van"
-    },
-    {
         name: "Kordia",
         AKA: ["Attika"]
     },
@@ -50,24 +23,9 @@
         description: "late, Bing+10-14"
     },
     {
-        name: "Kristin"
-    },
-    {
-        name: "Summit"
-    },
-    {
-        name: "Schmidt"
-    },
-    {
-        name: "Stella"
-    },
-    {
         name: "Skeena",
         AKA: ["13S-43-48"],
         description: "Summerland variety. late, Bing+14"
-    },
-    {
-        name: "Compact Stella"
     },
     {
         name: "Lapins",
@@ -79,15 +37,6 @@
         description: "Vineland variety"
     },
     {
-        name: "Mona"
-    },
-    {
-        name: "Ulster"
-    },
-    {
-        name: "Emperor Francis"
-    },
-    {
         name: "Sandra Rose",
         description: "Summerland variety https://www.summerlandvarieties.com/varieties/product/29/Sandra_Rose/"
     },
@@ -97,7 +46,4 @@
         patent: "pending",
         description: "Rainier-7-10"
     },
-    {
-        name: "Gold"
-    }
 ]

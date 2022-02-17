@@ -16,122 +16,150 @@
         {
             name: "Bluetta",
             type: "Blueberry",
-            harvest_time: "June 22 to July 1"
+            harvest_time: "June 22 to July 1",
+            tags: ["northern highbush"]
         },
         {
             name: "Duke",
             type: "Blueberry",
-            harvest_time: "June 21 to July 10"
+            harvest_time: "June 21 to July 10",
+            tags: ["northern highbush"]
         },
         {
             name: "Earliblue",
             type: "Blueberry",
-            harvest_time: "June 21 to July 11"
+            harvest_time: "June 21 to July 11",
+            tags: ["northern highbush"]
         },
         {
             name: "Northland",
             type: "Blueberry",
-            harvest_time: "June 19 to July 14"
+            harvest_time: "June 19 to July 14",
+            tags: ["northern highbush"]
         },
         {
             name: "Bluegold",
             type: "Blueberry",
-            harvest_time: "June 21 to July 15"
+            harvest_time: "June 21 to July 15",
+            tags: ["northern highbush"]
         },
         {
             name: "Spartan",
             type: "Blueberry",
-            harvest_time: "June 22 to July 17"
+            harvest_time: "June 22 to July 17",
+            tags: ["northern highbush"]
         },
         {
             name: "Draper",
             type: "Blueberry",
-            harvest_time: "July 2 to July 14"
+            harvest_time: "July 2 to July 14",
+            patent: "https://patents.google.com/patent/USPP15103 expires 2023-01-23",
+            tags: ["northern highbush"]
         },
         {
             name: "Reka",
             type: "Blueberry",
-            harvest_time: "June 25 to July 15"
+            harvest_time: "June 25 to July 15",
+            patent: "https://patents.google.com/patent/USPP6700 expired 2007-09-28",
+            tags: ["northern highbush"]
         },
         {
             name: "Bluejay",
             type: "Blueberry",
-            harvest_time: "June 23 to July 16"
+            harvest_time: "June 23 to July 16",
+            tags: ["northern highbush"]
         },
         {
             name: "Toro",
             type: "Blueberry",
-            harvest_time: "June 27 to July 20"
+            harvest_time: "June 27 to July 20",
+            tags: ["northern highbush"]
         },
         {
             name: "Olympia",
             type: "Blueberry",
-            harvest_time: "June 30 to July 13"
+            harvest_time: "June 30 to July 13",
+            tags: ["northern highbush"]
         },
         {
             name: "Berkeley",
             type: "Blueberry",
-            harvest_time: "June 28 to July 21"
+            harvest_time: "June 28 to July 21",
+            tags: ["northern highbush"]
         },
         {
             name: "Bluecrop",
             type: "Blueberry",
-            harvest_time: "July 5 to August 1"
+            harvest_time: "July 5 to August 1",
+            tags: ["northern highbush"]
         },
         {
             name: "Rubel",
             type: "Blueberry",
-            harvest_time: "July 6 to July 28"
+            harvest_time: "July 6 to July 28",
+            tags: ["northern highbush"]
         },
         {
             name: "Jersey",
             type: "Blueberry",
-            harvest_time: "June 30 to July 25"
+            harvest_time: "June 30 to July 25",
+            tags: ["northern highbush"]
         },
         {
             name: "1613-A",
+            AKA: ["Hardyblue"], // can't figure out if this is a trademark or what
             type: "Blueberry",
-            harvest_time: "July 9 to July 24"
+            harvest_time: "July 9 to July 24",
+            tags: ["northern highbush"]
         },
         {
             name: "Legacy",
             type: "Blueberry",
-            harvest_time: "July 5 to August 2"
+            harvest_time: "July 5 to August 2",
+            tags: ["northern-southern highbush hybrid"]
         },
         {
             name: "Liberty",
             type: "Blueberry",
-            harvest_time: "July 13 to July 31"
+            harvest_time: "July 13 to July 31",
+            tags: ["northern highbush"]
         },
         {
             name: "Brigitta Blue",
             type: "Blueberry",
-            harvest_time: "July 14 to August 3"
+            harvest_time: "July 14 to August 3",
+            tags: ["northern highbush"]
         },
         {
             name: "Darrow",
             type: "Blueberry",
-            harvest_time: "July 18 to August 13"
+            harvest_time: "July 18 to August 13",
+            tags: ["northern highbush"]
         },
         {
             name: "Chandler",
             type: "Blueberry",
-            harvest_time: "July 20 to August 10"
+            harvest_time: "July 20 to August 10",
+            tags: ["northern highbush"]
         },
         {
             name: "Ozarkblue",
             type: "Blueberry",
-            harvest_time: "July 26 to August 17"
+            harvest_time: "July 26 to August 17",
+            tags: ["northern-southern highbush hybrid"]
         },
         {
             name: "Elliott",
             type: "Blueberry",
-            harvest_time: "July 26 to August 25"
+            harvest_time: "July 26 to August 25",
+            tags: ["northern highbush"]
         },
         {
             name: "Aurora",
             type: "Blueberry",
-            harvest_time: "July 29 to August 29"
+            harvest_time: "July 29 to August 29",
+            patent: "https://patents.google.com/patent/USPP15185 expires 2023-01-23",
+            tags: ["northern highbush"]
         },
         {
             name: "Ochlockonee",

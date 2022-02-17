@@ -1,50 +1,6 @@
 [
     {
-        name: "Royal Rosa",
-        description: "Zaiger variety",
-        patent: "DWN claims patented but no number"
-    },
-    {
-        name: "Katy"
-    },
-    {
-        name: "Gold Kist",
-        description: "Zaiger variety",
-        patent: "https://patents.google.com/patent/USPP2826 expired"
-    },
-    {
-        name: "Flora Gold"
-    },
-    {
-        name: "Pixie-Cot (tm)",
-        tags: "dwarf apricot",
-        patent: "claimed pending. no number forthcoming. appeared on the 2010 dwn harvest chart so patent should expire no later than 2030. no known variety name"
-    },
-    {
-        name: "Brittany Gold"
-    },
-    {
-        name: "Harcot",
-        description: "Harrow variety"
-    },
-    {
-        name: "Goldcot"
-    },
-    {
-        name: "Chinese",
-        AKA: ["Mormon"]
-    },
-    {
-        name: "Perfection"
-    },
-    {
-        name: "Wenatchee Moorpark"
-    },
-    {
         name: "Nugget"
-    },
-    {
-        name: "Rival"
     },
     {
         name: "Bongo"
@@ -53,26 +9,6 @@
         name: "Mokel"
     },
     {
-        name: "Blenheim",
-        AKA: ["Royal"]
-    },
-    {
-        name: "Tropic Gold"
-    },
-    {
-        name: "Tilton"
-    },
-    {
-        name: "Moorpark"
-    },
-    {
-        name: "Montrose"
-    },
-    {
         name: "Hunza"
     },
-    {
-        name: "Autumn Glo",
-        description: "Zaiger variety"
-    }
 ]
