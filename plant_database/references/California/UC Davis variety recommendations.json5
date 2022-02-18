@@ -757,6 +757,7 @@
         },
         {
             name: "Brooks",
+            patent: "https://patents.google.com/patent/USPP6676 expired 2007-10-09",
             type: "Sweet Cherry",
             description: "A large, dark red fruit with good flavor. Produces few doubles even in hot climates",
             locations: [

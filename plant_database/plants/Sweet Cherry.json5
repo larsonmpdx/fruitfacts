@@ -1,49 +1,8 @@
 [
     {
-        name: "Coral Champagne",
-        AKA: ["Coral"],
-        description: '"Unreleased" UC variety. Bing-10'
-    },
-    {
-        name: "Brooks",
-        description: "UC Variety",
-        patent: "https://patents.google.com/patent/USPP6676 expired 2007-10-09"
-    },
-    {
-        name: "Tulare",
-        patent: "https://patents.google.com/patent/USPP6407 expired 2007-02-09"
-    },
-    {
-        name: "Kordia",
-        AKA: ["Attika"]
-    },
-    {
-        name: "Jork 57/201",
-        AKA: ["Regina (tm)"],
-        description: "late, Bing+10-14"
-    },
-    {
-        name: "Skeena",
-        AKA: ["13S-43-48"],
-        description: "Summerland variety. late, Bing+14"
-    },
-    {
-        name: "Lapins",
-        AKA: ["13S-28-26"],
-        description: "Summerland variety. late"
-    },
-    {
-        name: "Tehranivee",
-        description: "Vineland variety"
-    },
-    {
-        name: "Sandra Rose",
-        description: "Summerland variety https://www.summerlandvarieties.com/varieties/product/29/Sandra_Rose/"
-    },
-    {
         name: "Gabriel",
         AKA: ["Vieyra"],
         patent: "pending",
-        description: "Rainier-7-10"
+        description: "Rainier -7 to -10"
     },
 ]

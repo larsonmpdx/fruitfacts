@@ -52,14 +52,50 @@
 
         // plums - see https://nyshs.org/wp-content/uploads/2016/10/Introgression-of-Prunus-Species-in-Plum.pdf
         // also https://www.pubhort.org/aps/46/v46_n2_a10.htm but I haven't gotten the pdf yet
-        // Robusto
-        // Segundo
-        // Byrongold
-        // Explorer
-        // BY69-1637P plumcot
-        // Rubysweet
-        // Black Ruby
-        // Ruby Queen
-        // Spring Satin plumcot
+        {
+            type: "Japanese Plum",
+            name: "Robusto",
+            released: "USDA Byron*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Segundo",
+            released: "USDA Byron*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Byrongold",
+            released: "USDA Byron*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Explorer",
+            released: "USDA Byron*"
+        },
+        {
+            type: "Pluot",
+            name: "BY69-1637P",
+            released: "USDA Byron*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Rubysweet",
+            released: "USDA Byron*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Black Ruby",
+            released: "USDA Byron*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ruby Queen",
+            released: "USDA Byron*"
+        },
+        {
+            type: "Pluot",
+            name: "Spring Satin",
+            released: "USDA Byron*"
+        }
     ]
 }

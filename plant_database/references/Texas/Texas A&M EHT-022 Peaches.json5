@@ -158,8 +158,8 @@
             type: "Peach",
             chill: "425 hours",
             description: "Semi-cling. listed in both medium and low chill tables",
+            // data given in the low chill table is inconsistent (medium chill table lists this as 425 chill, flordaking -4, low chill table lists this as 375 chill, flordaking +4)
             harvest_time_relative: "Elberta -55"
-            // data given in the low chill table is inconsistent (medium chill gives 425 chill, flordaking -4, low chill gives 375 chill, flordaking +4)
         },
         {
             name: "Flordaking",

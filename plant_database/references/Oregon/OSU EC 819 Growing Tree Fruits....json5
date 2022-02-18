@@ -275,6 +275,7 @@
         },
         {
             name: "Kordia",
+            AKA: ["Attika"],
             type: "Sweet Cherry",
             locations: ["I", "II"],
             harvest_time: "Late",
@@ -290,6 +291,7 @@
         {
             // "Regina"
             name: "Jork 57/201",
+            AKA: ["Regina (tm)"],
             type: "Sweet Cherry",
             locations: ["I", "II"],
             harvest_time: "Late",

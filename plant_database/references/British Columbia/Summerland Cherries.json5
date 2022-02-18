@@ -79,6 +79,7 @@
         //
         {
             name: "Lapins",
+            AKA: ["13S-28-26"],
             type: "Sweet Cherry",
             released: "Summerland 1973*",
             description: "Van x Stella https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/28/Lapins/",
@@ -144,6 +145,7 @@
         },
         {
             name: "Skeena",
+            AKA: ["13S-43-48"],
             type: "Sweet Cherry",
             released: "Summerland 1997*",
             description: "2N-60-07 x 2N-38-22 https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/page:2/product/86/Skeena/",
