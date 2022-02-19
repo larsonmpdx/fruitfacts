@@ -56,7 +56,7 @@ export default function Custom404(props) {
                         <Link href={`/plants/${icon.substr(0, icon.indexOf('.'))}`}>
                             <a>
                                 <img
-                                    className="h-48 w-48 object-scale-down"
+                                    className="object-contain h-48 w-48"
                                     src={'/fruit_icons/' + icon}
                                 />
                             </a>

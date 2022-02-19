@@ -28,7 +28,7 @@ export default function Home({ plant }) {
             {plant.base && (
                 <h2>
                     <img
-                        className="my-0 mx-2 inline h-24 w-24 object-scale-down"
+                        className="object-contain my-0 mx-2 inline h-24 w-24"
                         src={'/fruit_icons/' + plant.base.type + '.svg'}
                     />
                     {plant.base.name} {plant.base.type}

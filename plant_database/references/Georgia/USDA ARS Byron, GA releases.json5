@@ -73,13 +73,13 @@
             released: "USDA Byron*"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "BY69-1637P",
             released: "USDA Byron*"
         },
         {
             type: "Japanese Plum",
-            name: "Rubysweet",
+            name: "Ruby Sweet",
             released: "USDA Byron*"
         },
         {
@@ -93,7 +93,7 @@
             released: "USDA Byron*"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Spring Satin",
             released: "USDA Byron*"
         }

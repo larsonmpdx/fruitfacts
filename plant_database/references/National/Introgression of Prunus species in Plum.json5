@@ -1,7 +1,21 @@
-// https://nyshs.org/wp-content/uploads/2016/10/Introgression-of-Prunus-Species-in-Plum.pdf
-
-// has some tables (california commercial plums table is broken out in a separate file)
+{
+    title: "Introgression of Prunus species in Plum",
+    author: "W.R. Okie",
+    url: "https://nyshs.org/wp-content/uploads/2016/10/Introgression-of-Prunus-Species-in-Plum.pdf",
+    published: "2006",
+    description: "NEW YORK FRUIT QUARTERLY • VOLUME 14 NUMBER 1 • 2006",
+    accessed: "Feb 2022",
+    type: "dictionary",
+    locations: [
+        {
+            name: "todo",
+            latitude: 36.70703471289025,
+            longitude: -119.70001665393585
+        }
+    ],
+    plants: [
+        // has some tables (california commercial plums table is broken out in a separate file)
 // and breeding program lists
-
 // todo
-
+    ]
+}

@@ -1,8 +1,23 @@
-// from a table in "Introgression of Prunus species in Plum"
-// W. R. Okie
-//  NEW YORK FRUIT QUARTERLY • VOLUME 14 NUMBER 1 • 2006
-// percentages omitted - I just wanted to get the "released by/year" info down
-// todo
+{
+    title: "Introgression of Prunus species in Plum",
+    author: "W.R. Okie",
+    url: "https://nyshs.org/wp-content/uploads/2016/10/Introgression-of-Prunus-Species-in-Plum.pdf",
+    published: "2006",
+    description: "NEW YORK FRUIT QUARTERLY • VOLUME 14 NUMBER 1 • 2006",
+    type: "dictionary",
+    accessed: "Feb 2022",
+    locations: [
+        {
+            name: "todo - this is fresno",
+            latitude: 36.70703471289025,
+            longitude: -119.70001665393585
+        }
+    ],
+    plants: [
+        // this is one table in the article, the rest of the article is in another file
+        // percentages omitted - I just wanted to get the "released by/year" info down
+        // todo
+        /*
 Angeleno
 1967
 Garabadien
@@ -98,3 +113,6 @@ USDA-Fresno
 Autumn Giant
 1986
 Zaiger
+*/
+    ]
+}

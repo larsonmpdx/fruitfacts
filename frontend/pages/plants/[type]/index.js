@@ -39,30 +39,36 @@ export default function Home({ plants, last_page, type, pageNum }) {
             </h2>
 
             <Link href={`/plants/${type}?page=0`} passHref>
-                <button className={`${styles.btn} ${styles['btn-blue']}`}>
-                    <a>first</a>
-                </button>
+                <a>
+                    <button className={`${styles.btn} ${styles['btn-blue']}`}>first</button>
+                </a>
             </Link>
 
             {pageNum > 0 && (
                 <Link href={`/plants/${type}?page=${parseInt(pageNum) - 1}`}>
-                    <button className={`${styles.btn} ${styles['btn-blue']}`}>previous</button>
+                    <a>
+                        <button className={`${styles.btn} ${styles['btn-blue']}`}>previous</button>
+                    </a>
                 </Link>
             )}
             {pageNum < last_page && (
                 <Link href={`/plants/${type}?page=${parseInt(pageNum) + 1}`}>
-                    <button className={`${styles.btn} ${styles['btn-blue']}`}>next</button>
+                    <a>
+                        <button className={`${styles.btn} ${styles['btn-blue']}`}>next</button>
+                    </a>
                 </Link>
             )}
             <Link href={`/plants/${type}?page=${parseInt(last_page)}`}>
-                <button className={`${styles.btn} ${styles['btn-blue']}`}>last</button>
+                <a>
+                    <button className={`${styles.btn} ${styles['btn-blue']}`}>last</button>
+                </a>
             </Link>
             <ul className="list-none">
                 {plants.map((item) => (
                     <>
                         <li>
                             <img
-                                className="my-0 mx-2 inline h-6 w-6 object-scale-down"
+                                className="object-contain my-0 mx-2 inline h-6 w-6"
                                 src={'/fruit_icons/' + item.type + '.svg'}
                             />
                             <Link

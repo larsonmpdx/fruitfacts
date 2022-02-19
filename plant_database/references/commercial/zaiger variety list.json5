@@ -168,154 +168,154 @@
             harvest_time: "June 3 to June 18"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Autumn Sprite",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/autumn_sprite/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/autumn_sprite/",
             patent: "https://patents.google.com/patent/USPP16599 expires 2025-04-15",
             chill: "800 hours",
             harvest_time: "August 1 to August 15"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Betty Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/betty_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/betty_cot/",
             patent: "https://patents.google.com/patent/USPP22648 expires 2030-11-27",
             chill: "750 hours",
             harvest_time: "May 27 to June 12"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Cot-N-Candy",
-            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/aprium-interspecific/cot-n-candy/",
+            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/Apriplum-interspecific/cot-n-candy/",
             patent: "https://patents.google.com/patent/USPP17827 expires 2026-01-18",
             chill: "400 or fewer hours",
             harvest_time: "June 15 to June 28"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Coral Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/coral_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/coral_cot/",
             patent: "https://patents.google.com/patent/USPP19563 expires 2027-06-22",
             chill: "600 hours",
             harvest_time: "June 5 to June 20"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Country Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/coral_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/coral_cot/",
             patent: "https://patents.google.com/patent/USPP23695 expires 2032-02-16",
             chill: "600 hours",
             harvest_time: "June 5 to June 20"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Escort",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/escort/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/escort/",
             patent: "https://patents.google.com/patent/USPP18537 expire 2026-12-04",
             chill: "700-800 hours",
             harvest_time: "June 6 to June 21"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Flavor Delight",
-            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/aprium-interspecific/flavor_delight/",
+            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/Apriplum-interspecific/flavor_delight/",
             patent: "https://patents.google.com/patent/USPP7090 expired 2009-01-23",
             chill: "less than 300 hours",
             harvest_time: "June 3 to June 17"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Hermosa",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/hermosa/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/hermosa/",
             patent: "https://patents.google.com/patent/USPP28137 expires 2036-04-18",
             chill: "800 hours",
             harvest_time: "June 15 to July 30"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Honey Rich",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/honey_rich/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/honey_rich/",
             patent: "https://patents.google.com/patent/USPP10292 expired 2017-02-04",
             chill: "400 hours",
             harvest_time: "May 23 to June 8"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Huntington",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/huntington/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/huntington/",
             patent: "https://patents.google.com/patent/USPP26952 expires 2035-02-26",
             chill: "750 hours",
             harvest_time: "June 20 to July 5"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Kylese-Cot",
             AKA: ["Kylese"],
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/kylese-cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/kylese-cot/",
             patent: "https://patents.google.com/patent/USPP23123 expires 2031-10-24",
             chill: "450 hours",
             harvest_time: "May 7 to May 22"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Late Brittney",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/late_brittney/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/late_brittney/",
             patent: "https://patents.google.com/patent/USPP18921 expires 2027-02-24",
             chill: "800-900 hours",
             harvest_time: "August 5 to August 20"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Leah Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/leah_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/leah_cot/",
             patent: "https://patents.google.com/patent/USPP21863 expires 2029-12-24",
             chill: "800 hours",
             harvest_time: "June 1 to June 15"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Macy Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/macy_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/macy_cot/",
             patent: "https://patents.google.com/patent/USPP22730 expires 2031-01-04",
             chill: "100-150 hours",
             harvest_time: "May 29 to June 14"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Summer Delight",
-            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/aprium-interspecific/summer_delight/",
+            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/Apriplum-interspecific/summer_delight/",
             patent: "claimed ppaf, released around 2016 so expiration would be around 2036",
             chill: "500 or fewer hours",
             harvest_time: "July 25 to August 5"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Tasty Rich",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/tasty_rich/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/tasty_rich/",
             patent: "https://patents.google.com/patent/USPP12774 expired 2021-01-24",
             chill: "700 hours",
             harvest_time: "May 10 to May 25"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Trinidad",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/trinidad/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/trinidad/",
             patent: "https://patents.google.com/patent/USPP27189 expires 2035-04-29",
             chill: "300 hours",
             harvest_time: "May 20 to June 5"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Wescot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/wescot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/wescot/",
             patent: "https://patents.google.com/patent/USPP16597 expires 2025-04-07",
             chill: "650 hours",
             harvest_time: "May 20 to June 5"
         },
         {
-            type: "Aprium",
+            type: "Apriplum",
             name: "Weston",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/weston/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/weston/",
             patent: "https://patents.google.com/patent/USPP26205 expires 2034-07-14",
             chill: "900 hours",
             harvest_time: "June 10 to June 25"
@@ -1702,7 +1702,7 @@
             harvest_time: "June 1 to June 15"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavorella",
             description: 'zaiger. marketed as "plumcot". retail https://www.davewilson.com/nurseries/products/fruit-trees/plum-cot-interspecific/flavorella/',
             patent: "https://patents.google.com/patent/USPP8470 expired 2012-12-28",
@@ -1710,7 +1710,7 @@
             harvest_time: "June 5 to June 20"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Plum Parfait",
             description: 'zaiger. marketed as "plumcot". retail https://www.davewilson.com/nurseries/products/fruit-trees/plum-cot-interspecific/plum_parfait/',
             patent: "https://patents.google.com/patent/USPP4338 expired 1997-12-20",
@@ -1760,7 +1760,7 @@
             harvest_time: "June 25 to July 30"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Amigo 1",
             AKA: ["Amigo I"],
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/amigo_1/",
@@ -1769,7 +1769,7 @@
             harvest_time: "June 1 to June 15"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Amigo 2",
             AKA: ["Amigo II"],
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/amigo_2/",
@@ -1778,7 +1778,7 @@
             harvest_time: "July 12 to July 27"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Black Kat",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/black_kat/",
             patent: "https://patents.google.com/patent/USPP13134 expired 2021-07-06",
@@ -1786,7 +1786,7 @@
             harvest_time: "September 1 to September 15"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Candy Stripe",
             description: "zaiger. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/candy_stripe/",
             patent: "https://patents.google.com/patent/USPP17828 expires 2025-12-30",
@@ -1794,7 +1794,7 @@
             harvest_time: "August 5 to August 26"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Coparose",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/coparose/",
             patent: "https://patents.google.com/patent/USPP20173 expires 2028-01-30",
@@ -1802,7 +1802,7 @@
             harvest_time: "July 10 to July 25"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Crimson Heart",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/crimson_heart/",
             patent: "https://patents.google.com/patent/USPP12943 expired 2021-04-10",
@@ -1810,7 +1810,7 @@
             harvest_time: "May 25 to June 10"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Crimson Rose",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/crimson_rose/",
             patent: "https://patents.google.com/patent/USPP26204 expires 2034-07-14",
@@ -1818,7 +1818,7 @@
             harvest_time: "July 1 to July 15"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Crimson Royale",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/crimson_royale/",
             patent: "https://patents.google.com/patent/USPP18559 expires 2026-10-13",
@@ -1826,7 +1826,7 @@
             harvest_time: "July 25 to August 10"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Dapple Dandy",
             description: "zaiger. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/dapple_dandy/",
             patent: "https://patents.google.com/patent/USPP9254 expired 2014-11-28",
@@ -1834,7 +1834,7 @@
             harvest_time: "August 5 to August 28"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Dapple Fire",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/dapple_fire/",
             patent: "https://patents.google.com/patent/USPP12409 expired 2021-03-26",
@@ -1842,7 +1842,7 @@
             harvest_time: "July 5 to July 20"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Dapple Jack",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/dapple_jack/",
             patent: "https://patents.google.com/patent/USPP18178 expires 2026-05-05",
@@ -1850,7 +1850,7 @@
             harvest_time: "July 10 to July 25"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Dapple Supreme",
             description: "zaiger. commercial https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/dapple_supreme/",
             patent: "https://patents.google.com/patent/USPP16412 expires 2025-04-19",
@@ -1858,7 +1858,7 @@
             harvest_time: "July 5 to July 20"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Early Dapple",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/early_dapple/",
             patent: "https://patents.google.com/patent/USPP13530 expires 2022-01-15",
@@ -1866,7 +1866,7 @@
             harvest_time: "June 19 to July 4"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Ebony Rose",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/ebony_rose/",
             patent: "https://patents.google.com/patent/USPP24055 expires 2032-06-16",
@@ -1874,7 +1874,7 @@
             harvest_time: "June 15 to June 30"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Emerald Drop",
             AKA: ["Emerald Gem", "7HC165"],
             description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/emerald_drop/",
@@ -1883,7 +1883,7 @@
             harvest_time: "July 17 to August 5"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Fall Fiesta",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/fall_fiesta/",
             patent: "https://patents.google.com/patent/USPP22428 expires 2030-08-13",
@@ -1891,7 +1891,7 @@
             harvest_time: "September 25 to October 10"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Festival Red",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/festival_red/",
             patent: "https://patents.google.com/patent/USPP23778 expires 2032-02-22",
@@ -1899,7 +1899,7 @@
             harvest_time: "June 10 to June 25"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Blast",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/flavor_blast/",
             patent: "https://patents.google.com/patent/USPP23720 expires 2032-02-22",
@@ -1907,13 +1907,13 @@
             harvest_time: "September 1 to September 15"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Crisp",
             description: "zaiger. commercial. no dwn page",
             patent: "likely patented but I can't find the number. nlt 2021"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Fall",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/flavorfall/",
             patent: "https://patents.google.com/patent/USPP11990 expired 2019-02-08",
@@ -1921,7 +1921,7 @@
             harvest_time: "September 10 to September 25"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Finale",
             description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/flavor_finale/",
             patent: "https://patents.google.com/patent/USPP16590 expires 2025-04-14",
@@ -1929,7 +1929,7 @@
             harvest_time: "September 12 to October 22"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Fusion",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/flavor_fusion/",
             patent: "https://patents.google.com/patent/USPP23902 expires 2032-04-30",
@@ -1937,19 +1937,19 @@
             harvest_time: "June 1 to June 15"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Gem",
             description: "zaiger. commercial. no plant page",
             patent: "https://patents.google.com/patent/USPP10915 expired 2017-11-25"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Gold",
             description: "zaiger. commercial. no dwn page",
             patent: "https://patents.google.com/patent/USPP12074 expired 2020-01-31"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Grenade",
             description: "zaiger. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/flavor_grenade/",
             patent: "https://patents.google.com/patent/USPP12097 expired 2020-01-19",
@@ -1957,7 +1957,7 @@
             harvest_time: "August 30 to October 2"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Heart",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/flavor_heart/",
             patent: "https://patents.google.com/patent/USPP10608 expired 2016-04-08",
@@ -1965,7 +1965,7 @@
             harvest_time: "August 10 to August 25"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Jewel",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/flavor_jewel/",
             patent: "https://patents.google.com/patent/USPP13502 expires 2022-01-15",
@@ -1973,7 +1973,7 @@
             harvest_time: "August 5 to August 20"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor King",
             description: "zaiger. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/flavor_king/",
             patent: "https://patents.google.com/patent/USPP8026 expired 2011-06-10",
@@ -1981,7 +1981,7 @@
             harvest_time: "August 11 to September 3"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Queen",
             description: "zaiger. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/flavor_queen/",
             patent: "https://patents.google.com/patent/USPP7420 expired 2010-07-22",
@@ -1989,7 +1989,7 @@
             harvest_time: "July 27 to August 25"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Rouge",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/flavor_rouge/",
             patent: "https://patents.google.com/patent/USPP16491 expires 2025-06-14",
@@ -1997,7 +1997,7 @@
             harvest_time: "June 10 to June 25"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Royale",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/flavor_royale/",
             patent: "https://patents.google.com/patent/USPP16413 expires 2025-04-10",
@@ -2005,7 +2005,7 @@
             harvest_time: "May 25 to June 10"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Supreme",
             description: "zaiger. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/flavor_supreme/",
             patent: "https://patents.google.com/patent/USPP6763 expired 2007-12-18",
@@ -2013,13 +2013,13 @@
             harvest_time: "June 16 to July 5"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavor Treat",
             description: "zaiger. commercial. no dwn page",
             patent: "https://patents.google.com/patent/USPP12936 expired 2021-03-26"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavorich",
             description: "zaiger. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/flavorich/",
             patent: "https://patents.google.com/patent/USPP8546 expired 2013-03-22",
@@ -2028,7 +2028,7 @@
         },
         {
             // not in the zaiger list
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavorite",
             description: "zaiger. https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/flavorite/",
             patent: "https://patents.google.com/patent/USPP11609 expired 2019-01-11",
@@ -2036,7 +2036,7 @@
             harvest_time: "August 1 to August 15"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Flavorosa",
             description: "zaiger. commercial and retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/flavorosa/",
             patent: "https://patents.google.com/patent/USPP10285 2017-01-13",
@@ -2044,7 +2044,7 @@
             harvest_time: "May 26 to June 10"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Geo Pride",
             description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/geo_pride/",
             patent: "https://patents.google.com/patent/USPP10386 expired 2017-02-13",
@@ -2052,7 +2052,7 @@
             harvest_time: "July 14 to July 28"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Gypzee",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/gypzee/",
             patent: "https://patents.google.com/patent/USPP19834 expires 2028-02-14",
@@ -2060,7 +2060,7 @@
             harvest_time: "August 1 to August 15"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Honey Punch",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/honey_punch/",
             patent: "https://patents.google.com/patent/USPP19596 expires 2027-12-14",
@@ -2068,13 +2068,13 @@
             harvest_time: "July 29 to August 14"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Royal Treat",
             description: "zaiger. commercial. no dwn page",
             patent: "https://patents.google.com/patent/USPP13505 expires 2022-02-07"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Ruby Kat",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/ruby_kat/",
             patent: "https://patents.google.com/patent/USPP19619 expires 2028-02-04",
@@ -2082,13 +2082,13 @@
             harvest_time: "July 17 to August 2"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Sierra Rose",
             description: "zaiger. commercial. no dwn page",
             patent: "https://patents.google.com/patent/USPP13687 expires 2022-04-11"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Splash",
             description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/pluot-interspecific/splash/",
             patent: "https://patents.google.com/patent/USPP14583 expires 2023-04-25",
@@ -2096,7 +2096,7 @@
             harvest_time: "July 10 to July 25"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Spring Flavor",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/spring_flavor/",
             patent: "https://patents.google.com/patent/USPP14571 expires 2023-01-06",
@@ -2104,7 +2104,7 @@
             harvest_time: "May 18 to June 3"
         },
         {
-            type: "Pluot",
+            type: "Plumcot",
             name: "Sunset Delight",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/sunset_delight/",
             patent: "https://patents.google.com/patent/USPP23983 expires 2032-05-16",

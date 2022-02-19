@@ -1658,7 +1658,7 @@
         },
         {
             name: "Flavor Supreme",
-            type: "Pluot",
+            type: "Plumcot",
             description: "Pluot. Green to brown skin. Red, juicy flesh. Excellent size and flavor",
             locations: [
                 { "San Joaquin Valley": "early Jun" },
@@ -1671,7 +1671,7 @@
         },
         {
             name: "Flavor King",
-            type: "Pluot",
+            type: "Plumcot",
             description: "low chill. Pluot. Red-purple skin. Good size, irregular ripening, sweet flavor. Cross-pollinated with Flavor Grenade, Beauty Plum, or Burgundy Plum",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
@@ -1684,7 +1684,7 @@
         },
         {
             name: "Flavor Queen",
-            type: "Pluot",
+            type: "Plumcot",
             description: "Pluot. Green-golden skin. Yellow, firm flesh. Good size. Excellent, very sweet flavor",
             locations: [
                 { "San Joaquin Valley": "late Jul" },
@@ -1697,7 +1697,7 @@
         },
         {
             name: "Flavor Grenade",
-            type: "Pluot",
+            type: "Plumcot",
             description: "low chill. Pluot. Green skin with red blush. Elongated shape, excellent flavor. Best pollinated with Burgundy plum",
             locations: [
                 { "San Joaquin Valley": "early Aug" },
@@ -1723,8 +1723,8 @@
         },
         {
             name: "Flavor Ann",
-            type: "Aprium",
-            description: "Aprium. Golden skin and flesh. Strong, sweet apricot flavor",
+            type: "Apriplum",
+            description: "Apriplum. Golden skin and flesh. Strong, sweet apricot flavor",
             locations: [
                 { "San Joaquin Valley": "mid May" },
                 { "Sacramento Valley": "mid May" },
@@ -1736,8 +1736,8 @@
         },
         {
             name: "Flavor Delight",
-            type: "Aprium",
-            description: "low chill. Aprium. Golden skin and flesh. Strong, sweet apricot flavor. Reliable production. Sets best with cross-pollination from an apricot",
+            type: "Apriplum",
+            description: "low chill. Apriplum. Golden skin and flesh. Strong, sweet apricot flavor. Reliable production. Sets best with cross-pollination from an apricot",
             locations: [
                 { "San Joaquin Valley": "mid May" },
                 { "Sacramento Valley": "late May" },

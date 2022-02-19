@@ -468,7 +468,7 @@
         },
         {
             name: "Dapple Dandy",
-            type: "Pluot",
+            type: "Plumcot",
             description: "Pluots are complex interspecific hybrids made up of 75% plum and 25% apricot parentage. Several named varieties are available. Dapple Dandy has large, firm fruit with distinctive, mottled skin color and pink to red flesh. Good acid to sugar balance with excellent flavor. Grown commercially in southwestern Idaho",
             locations: ["N/Central/SE", "SW"]
         }

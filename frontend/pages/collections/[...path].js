@@ -52,7 +52,7 @@ export default function Home({ data }) {
                         {data.items.map((item) => (
                             <li key={item.id}>
                                 <img
-                                    className="my-0 mx-2 inline h-6 w-6 object-scale-down"
+                                    className="object-contain my-0 mx-2 inline h-6 w-6"
                                     src={'/fruit_icons/' + item.type + '.svg'}
                                 />
                                 <Link
