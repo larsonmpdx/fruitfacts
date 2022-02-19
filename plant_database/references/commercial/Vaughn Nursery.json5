@@ -62,7 +62,8 @@
         },
         {
             type: "Apple",
-            name: "Cripps Pink", // "Pink Lady®"
+            // "Pink Lady®"
+            name: "Cripps Pink"
         },
         {
             type: "Apple",

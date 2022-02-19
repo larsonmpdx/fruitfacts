@@ -13,6 +13,62 @@
         }
     ],
     plants: [
-        // todo
+        // todo - things other than persimmon
+        {
+            type: "Persimmon",
+            name: "Fuyu (Imoto)",
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Jiro", // in the chart as "Fuyu (Jiro)"
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Hachiya",
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Gosho", // in the chart as "Giant Fuyu (Gosho)"
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Giant Fuyu", // in the chart as "Hana Fuyu",
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Chocolate",
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Saijo",
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Maru",
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Izu",
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Tamopan",
+            tags: "asian persimmon"
+        },
+        {
+            type: "Persimmon",
+            name: "Coffee Cake",
+            AKA: ["Nishimura Wase"],
+            tags: "asian persimmon"
+        }
     ]
 }

@@ -1,0 +1,139 @@
+{
+    title: "MSU HNI 114 - Using, Storing and Preserving Plums",
+    author: "Laurie Messing, Extension educator",
+    url: "https://www.canr.msu.edu/uploads/236/60754/Plums.pdf",
+    published: "April 2013",
+    accessed: "Feb 2022",
+    type: "state extension guide",
+    locations: [
+        {
+            name: "Michigan State University",
+            latitude: 42.719844733495485,
+            longitude: -84.47474227805654
+        }
+    ],
+    plants: [
+        // these appear to be in ripening order, but the list is given without any extra info. other than "recommended"
+        // I'd like to find the true origin of this list as I think there's more to it than what this pamphlet shows
+        {
+            type: "Japanese Plum",
+            name: "Early Magic"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Early Golden"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Methley"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Shiro"
+        },
+        {
+            type: "Euro Plum",
+            name: "Vibrant", // todo - source for this
+            AKA: ["V70034"]
+        },
+        {
+            type: "Euro Plum",
+            name: "Vanette"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Santa Rosa"
+        },
+        {
+            type: "Japanese Plum",
+            // todo - is there a better name for this?
+            name: "Starking Delicious"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ozark Premier"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Burbank"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Red Heart"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ruby Queen"
+        },
+        {
+            type: "Euro Plum",
+            name: "Castleton"
+        },
+        {
+            type: "Euro Plum",
+            name: "Jayfree" // "NY6"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Fortune"
+        },
+        {
+            type: "Euro Plum",
+            name: "Early Italian"
+        },
+        {
+            type: "Euro Plum",
+            name: "Stanley"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Lydecker",
+            AKA: ["Black Ice (tm)"],
+            patent: "https://patents.google.com/patent/USPP16621 expires 2024-12-03"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Simka"
+        },
+        {
+            type: "Euro Plum",
+            name: "Valor"
+        },
+        {
+            type: "Euro Plum",
+            name: "Kenmore" // "NY9"
+        },
+        {
+            type: "Euro Plum",
+            name: "Bluefire"
+        },
+        {
+            type: "Euro Plum",
+            name: "Longjohn"
+        },
+        {
+            type: "Euro Plum",
+            name: "Autumn Sweet"
+        },
+        {
+            type: "Euro Plum",
+            name: "Blue Damson"
+        },
+        {
+            type: "Euro Plum",
+            name: "Italian"
+        },
+        {
+            type: "Euro Plum",
+            name: "Tulare Giant"
+        },
+        {
+            type: "Euro Plum",
+            name: "Empress"
+        },
+        {
+            type: "Euro Plum",
+            name: "Alderman"
+        }
+    ]
+}

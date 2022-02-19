@@ -2,18 +2,18 @@
     {
         name: "Warren"
     },
-        {
+    {
         name: "Golden Russet Bosc",
         patent: "https://patents.google.com/patent/USPP5243 expired 2002-05-28"
     },
-        {
+    {
         name: "Doyenne du Comice"
     },
-        {
+    {
         name: "Columbia Red Anjou",
         patent: "https://patents.google.com/patent/USPP6194 expired 2006-03-31"
     },
-        {
+    {
         name: "Taylor's Gold",
         patent: "https://patents.google.com/patent/USPP8308 expired 2011-09-16"
     },
@@ -21,5 +21,5 @@
         name: "Wimmer Bosc",
         AKA: ["Bronze Beauty (tm)"],
         patent: "https://patents.google.com/patent/USPP7485 expired 2009-12-21"
-    },
+    }
 ]

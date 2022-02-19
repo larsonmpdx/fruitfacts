@@ -81,8 +81,18 @@
         { patent: "https://patents.google.com/patent/USPP624", type: "Peach", name: "McGuigan" },
         { patent: "https://patents.google.com/patent/USPP651", type: "Peach", name: "Curlew" },
         { patent: "https://patents.google.com/patent/USPP661", type: "Peach", name: "Flamingo" },
-        { patent: "https://patents.google.com/patent/USPP670", type: "Peach", name: "Surecrop", AKA: ["Stark (r) Surecrop"] },
-        { patent: "https://patents.google.com/patent/USPP759", type: "Nectarine", name: "Early Flame", AKA: ["Stark (r) Early Flame"] },
+        {
+            patent: "https://patents.google.com/patent/USPP670",
+            type: "Peach",
+            name: "Surecrop",
+            AKA: ["Stark (r) Surecrop"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP759",
+            type: "Nectarine",
+            name: "Early Flame",
+            AKA: ["Stark (r) Early Flame"]
+        },
         { patent: "https://patents.google.com/patent/USPP760", type: "Peach", name: "Pearson Hiley" },
         { patent: "https://patents.google.com/patent/USPP787", type: "Nectarine", name: "Pioneer" },
         // 619-620 page break
@@ -90,7 +100,12 @@
         // todo - peach->nectarine
         { patent: "https://patents.google.com/patent/USPP795", type: "Peach", name: "Royal Fay" },
         { patent: "https://patents.google.com/patent/USPP798", type: "Peach", name: "R.L. Stoner" },
-        { patent: "https://patents.google.com/patent/USPP803", type: "Peach", name: "Delicious", AKA: ["Starking (r) Delicious"] },
+        {
+            patent: "https://patents.google.com/patent/USPP803",
+            type: "Peach",
+            name: "Delicious",
+            AKA: ["Starking (r) Delicious"]
+        },
         { patent: "https://patents.google.com/patent/USPP813", type: "Peach", name: "Albru" },
         { patent: "https://patents.google.com/patent/USPP814", type: "Peach", name: "Hale Harrison Brilliant" },
         { patent: "https://patents.google.com/patent/USPP821", type: "Peach", name: "WIckershann" },
@@ -214,7 +229,12 @@
         { patent: "https://patents.google.com/patent/USPP1883", type: "Peach", name: "Earligold" },
         { patent: "https://patents.google.com/patent/USPP1884", type: "Peach", name: "June Gold" },
         { patent: "https://patents.google.com/patent/USPP1901", type: "Peach", name: "Carol" },
-        { patent: "https://patents.google.com/patent/USPP1921", type: "Nectarine", name: "Delicious", AKA: ["Stark (r) Delicious"] },
+        {
+            patent: "https://patents.google.com/patent/USPP1921",
+            type: "Nectarine",
+            name: "Delicious",
+            AKA: ["Stark (r) Delicious"]
+        },
         { patent: "https://patents.google.com/patent/USPP1925", type: "Peach", name: "Tremmel" },
         { patent: "https://patents.google.com/patent/USPP1929", type: "Peach", name: "SunGlo" },
         { patent: "https://patents.google.com/patent/USPP1935", type: "Peach", name: "Clinton" },
@@ -233,7 +253,12 @@
         { patent: "https://patents.google.com/patent/USPP2048", type: "Peach", name: "Pat's Pride" },
         { patent: "https://patents.google.com/patent/USPP2071", type: "Peach", name: "Toreador" },
         { patent: "https://patents.google.com/patent/USPP2102", type: "Peach", name: "Pat's Redhaven" },
-        { patent: "https://patents.google.com/patent/USPP2124", type: "Peach", name: "LateGlo", AKA: ["Stark (r) LateGlo"] },
+        {
+            patent: "https://patents.google.com/patent/USPP2124",
+            type: "Peach",
+            name: "LateGlo",
+            AKA: ["Stark (r) LateGlo"]
+        },
         { patent: "https://patents.google.com/patent/USPP2135", type: "Peach", name: "Lindy" },
         { patent: "https://patents.google.com/patent/USPP2138", type: "Peach", name: "Sunbright 1" },
         { patent: "https://patents.google.com/patent/USPP2144", type: "Peach", name: "Carnival" },
@@ -379,10 +404,25 @@
         { patent: "https://patents.google.com/patent/USPP4055 1994-05-17", type: "Peach", name: "Redkist" },
         { patent: "https://patents.google.com/patent/USPP4064 1994-06-21", type: "Peach", name: "Maycrest" },
         { patent: "https://patents.google.com/patent/USPP4072 1994-07-05", type: "Peach", name: "Early Top" },
-        { patent: "https://patents.google.com/patent/USPP4075 1994-07-12", type: "Peach", name: "Yosemite", description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP4075 1994-07-12",
+            type: "Peach",
+            name: "Yosemite",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP4076 1994-07-12", type: "Peach", name: "Early Bird" },
-        { patent: "https://patents.google.com/patent/USPP4078 1994-07-19", type: "Peach", name: "Mono", description: "genetic dwarf" },
-        { patent: "https://patents.google.com/patent/USPP4079 1994-07-19", type: "Peach", name: "Grand Melody", description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP4078 1994-07-19",
+            type: "Peach",
+            name: "Mono",
+            description: "genetic dwarf"
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP4079 1994-07-19",
+            type: "Peach",
+            name: "Grand Melody",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP4081 1994-07-19", type: "Peach", name: "Del Rio Rey" },
         { patent: "https://patents.google.com/patent/USPP4084 1994-07-26", type: "Peach", name: "Maybelle" },
         { patent: "https://patents.google.com/patent/USPP4093 1994-08-23", type: "Peach", name: "Summer Beaut" },
@@ -399,21 +439,51 @@
         { patent: "https://patents.google.com/patent/USPP4171 1994-12-27", type: "Peach", name: "EarliRio" },
         { patent: "https://patents.google.com/patent/USPP4195 1995-01-24", type: "Peach", name: "Red Baron" },
         { patent: "https://patents.google.com/patent/USPP4295 1997-07-29", type: "Peach", name: "Golden Lady" },
-        { patent: "https://patents.google.com/patent/USPP4314 1998-01-06", type: "Peach", name: "Sparkling Red", /* patent name: */ AKA: ["48-G-140"] },
-        { patent: "https://patents.google.com/patent/USPP4317 1998-01-06", type: "Peach", name: "54-P-455", description: "genetic dwarf" },
-        { patent: "https://patents.google.com/patent/USPP4318 1998-01-06", type: "Peach", name: "Grand Time", /* patent name: */ AKA: ["44-G-520"] },
+        {
+            patent: "https://patents.google.com/patent/USPP4314 1998-01-06",
+            type: "Peach",
+            name: "Sparkling Red",
+            /* patent name: */ AKA: ["48-G-140"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP4317 1998-01-06",
+            type: "Peach",
+            name: "54-P-455",
+            description: "genetic dwarf"
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP4318 1998-01-06",
+            type: "Peach",
+            name: "Grand Time",
+            /* patent name: */ AKA: ["44-G-520"]
+        },
         { patent: "https://patents.google.com/patent/USPP4362 1997-12-12", type: "Peach", name: "Autumn Delight" },
         { patent: "https://patents.google.com/patent/USPP4370 1997-12-21", type: "Peach", name: "Com-Pact Elberta" },
         { patent: "https://patents.google.com/patent/USPP4395 1997-12-20", type: "Peach", name: "Bit-O-Honey" },
         { patent: "https://patents.google.com/patent/USPP4398 1998-03-20", type: "Peach", name: "Autumn Lady" },
         { patent: "https://patents.google.com/patent/USPP4399 1998-03-20", type: "Peach", name: "Elegant Lady" },
-        { patent: "https://patents.google.com/patent/USPP4403 1997-10-26", type: "Peach", name: "Bonanza 11", description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP4403 1997-10-26",
+            type: "Peach",
+            name: "Bonanza 11",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP4406 1998-06-02", type: "Peach", name: "Casellaqueen" },
         { patent: "https://patents.google.com/patent/USPP4418 1998-03-15", type: "Peach", name: "New Generation" },
         { patent: "https://patents.google.com/patent/USPP4423 1998-04-20", type: "Peach", name: "Kurakata Yellow" },
-        { patent: "https://patents.google.com/patent/USPP4435 1998-08-17", type: "Peach", name: "Early May Grand", /* patent name: */ AKA: ["43-G-587"] },
+        {
+            patent: "https://patents.google.com/patent/USPP4435 1998-08-17",
+            type: "Peach",
+            name: "Early May Grand",
+            /* patent name: */ AKA: ["43-G-587"]
+        },
         // 625-626 page break
-        { patent: "https://patents.google.com/patent/USPP4451 1996-10-28", type: "Peach", name: "Sweet Sue", /* patent name: */ AKA: ["WH215"]},
+        {
+            patent: "https://patents.google.com/patent/USPP4451 1996-10-28",
+            type: "Peach",
+            name: "Sweet Sue",
+            /* patent name: */ AKA: ["WH215"]
+        },
         { patent: "https://patents.google.com/patent/USPP4508 1998-12-19", type: "Peach", name: "Lacey" },
         { patent: "https://patents.google.com/patent/USPP4518 1998-09-18", type: "Peach", name: "Red Jim" },
         { patent: "https://patents.google.com/patent/USPP4566 1999-02-12", type: "Peach", name: "USPP4566 unnamed" },
@@ -426,37 +496,99 @@
         { patent: "https://patents.google.com/patent/USPP4652 2000-01-04", type: "Peach", name: "Jim Wilson" },
         { patent: "https://patents.google.com/patent/USPP4661 2000-01-11", type: "Peach", name: "Spring Lady" },
         { patent: "https://patents.google.com/patent/USPP4674 1999-11-23", type: "Peach", name: "Lingrand" },
-        { patent: "https://patents.google.com/patent/USPP4748 2000-05-01", type: "Peach", name: "Silverado", /* patent name */ AKA: ["W-110"], description: "genetic dwarf" },
-        { patent: "https://patents.google.com/patent/USPP4780 2000-05-01", type: "Peach", name: "Eldorado", /* patent name */ AKA: ["W-114"], description: "genetic dwarf" },
-        { patent: "https://patents.google.com/patent/USPP4789 2000-09-22", type: "Nectarine", name: "HoneyGlo", description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP4748 2000-05-01",
+            type: "Peach",
+            name: "Silverado",
+            /* patent name */ AKA: ["W-110"],
+            description: "genetic dwarf"
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP4780 2000-05-01",
+            type: "Peach",
+            name: "Eldorado",
+            /* patent name */ AKA: ["W-114"],
+            description: "genetic dwarf"
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP4789 2000-09-22",
+            type: "Nectarine",
+            name: "HoneyGlo",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP4790 2000-09-15", type: "Peach", name: "June Diamond" },
         { patent: "https://patents.google.com/patent/USPP4791 2000-09-15", type: "Peach", name: "Mike Grand" },
         { patent: "https://patents.google.com/patent/USPP4792 2000-09-22", type: "Peach", name: "Aurora Grand" },
         { patent: "https://patents.google.com/patent/USPP4827 2000-06-13", type: "Peach", name: "Morning Sun" },
-        { patent: "https://patents.google.com/patent/USPP4861 2000-10-20", type: "Peach", name: "Dr. Davis", /* patent name */ AKA: ["7-7-52"] },
-        { patent: "https://patents.google.com/patent/USPP4863 2000-10-20", type: "Peach", name: "Ross", /* patent name */ AKA: ["N30-12E"] },
+        {
+            patent: "https://patents.google.com/patent/USPP4861 2000-10-20",
+            type: "Peach",
+            name: "Dr. Davis",
+            /* patent name */ AKA: ["7-7-52"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP4863 2000-10-20",
+            type: "Peach",
+            name: "Ross",
+            /* patent name */ AKA: ["N30-12E"]
+        },
         { patent: "https://patents.google.com/patent/USPP4865 2000-10-10", type: "Peach", name: "Champagne" },
         { patent: "https://patents.google.com/patent/USPP4893 2001-01-12", type: "Peach", name: "Pacific Star" },
         { patent: "https://patents.google.com/patent/USPP4894 2001-02-09", type: "Nectarine", name: "Superstar" },
         { patent: "https://patents.google.com/patent/USPP4903 2001-04-10", type: "Peach", name: "Golden Crest" },
-        { patent: "https://patents.google.com/patent/USPP4915 2001-05-04", type: "Nectarine", name: "USPP4915 unnamed" },
+        {
+            patent: "https://patents.google.com/patent/USPP4915 2001-05-04",
+            type: "Nectarine",
+            name: "USPP4915 unnamed"
+        },
         { patent: "https://patents.google.com/patent/USPP4916 2001-02-23", type: "Peach", name: "Clyde Wilson" },
         { patent: "https://patents.google.com/patent/USPP4917 2001-04-20", type: "Peach", name: "Flavor Red" },
-        { patent: "https://patents.google.com/patent/USPP4927 2001-06-08", type: "Nectarine", name: "Star Bright", /* patent name */ AKA: ["83-50"]  },
-        { patent: "https://patents.google.com/patent/USPP4942 2001-07-13", type: "Peach", name: "Crimson Star", /* patent name */ AKA: ["87-101"] },
+        {
+            patent: "https://patents.google.com/patent/USPP4927 2001-06-08",
+            type: "Nectarine",
+            name: "Star Bright",
+            /* patent name */ AKA: ["83-50"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP4942 2001-07-13",
+            type: "Peach",
+            name: "Crimson Star",
+            /* patent name */ AKA: ["87-101"]
+        },
         { patent: "https://patents.google.com/patent/USPP4970 2001-07-20", type: "Peach", name: "A3-10" },
         { patent: "https://patents.google.com/patent/USPP4980 2001-08-13", type: "Peach", name: "Kern Sun" },
         { patent: "https://patents.google.com/patent/USPP4984 2001-08-17", type: "Nectarine", name: "Alishir Red" },
         { patent: "https://patents.google.com/patent/USPP4985 2001-07-27", type: "Peach", name: "Eloise" },
         { patent: "https://patents.google.com/patent/USPP5103 2001-11-23", type: "Peach", name: "Ryan Sun" },
-        { patent: "https://patents.google.com/patent/USPP5123 2002-04-07", type: "Peach", name: "Saturn", AKA: ["Stark (r) Saturn", /* patent name */ "NJF2"] },
-        { patent: "https://patents.google.com/patent/USPP5124 2002-02-12", type: "Peach", name: "Sensation", AKA: ["Stark (r) Sensation", /* patent name */ "Andergen"], description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP5123 2002-04-07",
+            type: "Peach",
+            name: "Saturn",
+            AKA: ["Stark (r) Saturn", /* patent name */ "NJF2"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP5124 2002-02-12",
+            type: "Peach",
+            name: "Sensation",
+            AKA: ["Stark (r) Sensation", /* patent name */ "Andergen"],
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP5139 2004-01-02", type: "Peach", name: "July Sun" },
         { patent: "https://patents.google.com/patent/USPP5140 2001-11-23", type: "Peach", name: "August Sun" },
         { patent: "https://patents.google.com/patent/USPP5147 2002-06-28", type: "Peach", name: "Peppermint" },
         { patent: "https://patents.google.com/patent/USPP5211 2002-12-03", type: "Nectarine", name: "Summer Red" },
-        { patent: "https://patents.google.com/patent/USPP5223 2001-12-21", type: "Peach", name: "Jim Dandee", AKA: ["JF-232"] },
-        { patent: "https://patents.google.com/patent/USPP5228 2002-12-13", type: "Nectarine", name: "Juneglo", /* patent name */ AKA: ["2w68c"] },
+        {
+            patent: "https://patents.google.com/patent/USPP5223 2001-12-21",
+            type: "Peach",
+            name: "Jim Dandee",
+            AKA: ["JF-232"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP5228 2002-12-13",
+            type: "Nectarine",
+            name: "Juneglo",
+            /* patent name */ AKA: ["2w68c"]
+        },
         { patent: "https://patents.google.com/patent/USPP5241 2002-12-15", type: "Nectarine", name: "Ama Lin" },
         { patent: "https://patents.google.com/patent/USPP5245 2002-12-14", type: "Nectarine", name: "Mayglo" },
         { patent: "https://patents.google.com/patent/USPP5251 2002-09-28", type: "Peach", name: "Snowflame" },
@@ -471,27 +603,71 @@
         { patent: "https://patents.google.com/patent/USPP5454 2003-09-23", type: "Nectarine", name: "May Diamond" },
         { patent: "https://patents.google.com/patent/USPP5455 2003-09-23", type: "Nectarine", name: "Spring Diamond" },
         { patent: "https://patents.google.com/patent/USPP5456 2003-09-23", type: "Nectarine", name: "Sun Diamond" },
-        { patent: "https://patents.google.com/patent/USPP5461 2003-08-22", type: "Peach", name: "Gulf Pride", AKA: ["Stark (r) Gulf Pride", /* patent name */ "Zaipride"] },
+        {
+            patent: "https://patents.google.com/patent/USPP5461 2003-08-22",
+            type: "Peach",
+            name: "Gulf Pride",
+            AKA: ["Stark (r) Gulf Pride", /* patent name */ "Zaipride"]
+        },
         { patent: "https://patents.google.com/patent/USPP5462 2003-10-03", type: "Nectarine", name: "Island Delight" },
-        { patent: "https://patents.google.com/patent/USPP5463 2003-08-22", type: "Peach", name: "Gulf Queen", AKA: ["Stark (r) Gulf Queen", /* patent name */ "Zaiqueen"] },
-        { patent: "https://patents.google.com/patent/USPP5473 2003-11-25", type: "Peach", name: "Summer Star", AKA: [/* patent name */ "Sunecttwelve"] },
+        {
+            patent: "https://patents.google.com/patent/USPP5463 2003-08-22",
+            type: "Peach",
+            name: "Gulf Queen",
+            AKA: ["Stark (r) Gulf Queen", /* patent name */ "Zaiqueen"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP5473 2003-11-25",
+            type: "Peach",
+            name: "Summer Star",
+            AKA: [/* patent name */ "Sunecttwelve"]
+        },
         { patent: "https://patents.google.com/patent/USPP5474 2002-12-13", type: "Peach", name: "June Maid" },
-        { patent: "https://patents.google.com/patent/USPP5480 2003-09-26", type: "Nectarine", name: "Flaming Red", AKA: [/* patent name */"N15500"] },
-        { patent: "https://patents.google.com/patent/USPP5503 2003-11-25", type: "Peach", name: "Ambercrest", AKA: [/* patent name */"Supechfour"] },
-        { patent: "https://patents.google.com/patent/USPP5581 2004-02-17", type: "Peach", name: "Pampaian's Late Babcock" },
+        {
+            patent: "https://patents.google.com/patent/USPP5480 2003-09-26",
+            type: "Nectarine",
+            name: "Flaming Red",
+            AKA: [/* patent name */ "N15500"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP5503 2003-11-25",
+            type: "Peach",
+            name: "Ambercrest",
+            AKA: [/* patent name */ "Supechfour"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP5581 2004-02-17",
+            type: "Peach",
+            name: "Pampaian's Late Babcock"
+        },
         { patent: "https://patents.google.com/patent/USPP5586 2004-03-01", type: "Nectarine", name: "Star Brite" },
         { patent: "https://patents.google.com/patent/USPP5587 2004-03-01", type: "Nectarine", name: "Mike's Grand" },
         { patent: "https://patents.google.com/patent/USPP5591 2004-02-10", type: "Nectarine", name: "Red Lion" },
         { patent: "https://patents.google.com/patent/USPP5623 2004-04-12", type: "Nectarine", name: "Tasty Gold" },
         { patent: "https://patents.google.com/patent/USPP5641 2003-11-14", type: "Peach", name: "June Crest" },
-        { patent: "https://patents.google.com/patent/USPP5653 2004-06-18", type: "Nectarine", name: "Red Fantastic", description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP5653 2004-06-18",
+            type: "Nectarine",
+            name: "Red Fantastic",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP5654 2004-06-18", type: "Nectarine", name: "Summer Diamond" },
-        { patent: "https://patents.google.com/patent/USPP5655 2004-03-29", type: "Peach", name: "Finale", AKA: [/* patent name */ "Tyson 820"] },
+        {
+            patent: "https://patents.google.com/patent/USPP5655 2004-03-29",
+            type: "Peach",
+            name: "Finale",
+            AKA: [/* patent name */ "Tyson 820"]
+        },
         { patent: "https://patents.google.com/patent/USPP5663 2004-06-18", type: "Nectarine", name: "July Red" },
         { patent: "https://patents.google.com/patent/USPP5664 2004-06-18", type: "Nectarine", name: "September Red" },
         { patent: "https://patents.google.com/patent/USPP5665 2004-06-18", type: "Nectarine", name: "Scarlet Red" },
         { patent: "https://patents.google.com/patent/USPP5666 2004-06-18", type: "Nectarine", name: "Kism Grand" },
-        { patent: "https://patents.google.com/patent/USPP5709 2004-10-19", type: "Peach", name: "Michaelian", AKA: [/* patent name */ "Rs-2"]},
+        {
+            patent: "https://patents.google.com/patent/USPP5709 2004-10-19",
+            type: "Peach",
+            name: "Michaelian",
+            AKA: [/* patent name */ "Rs-2"]
+        },
         { patent: "https://patents.google.com/patent/USPP5710 2004-11-26", type: "Peach", name: "Chan" },
         { patent: "https://patents.google.com/patent/USPP5715 2004-11-01", type: "Peach", name: "AP-4" },
         { patent: "https://patents.google.com/patent/USPP5745 2004-11-16", type: "Peach", name: "Topcrest" },
@@ -504,21 +680,46 @@
         { patent: "https://patents.google.com/patent/USPP5874 2005-05-29", type: "Peach", name: "David Sun" },
         { patent: "https://patents.google.com/patent/USPP6007 2005-10-16", type: "Peach", name: "Summer Sun" },
         { patent: "https://patents.google.com/patent/USPP6008 2005-10-11", type: "Peach", name: "September Sun" },
-        { patent: "https://patents.google.com/patent/USPP6024 2005-12-16", type: "Nectarine", name: "Red Delight", AKA: [/* patent name */ "51G110S"] },
-        { patent: "https://patents.google.com/patent/USPP6025 2005-09-05", type: "Peach", name: "Queencrest", AKA: [/* patent name */ "B-41871"] },
+        {
+            patent: "https://patents.google.com/patent/USPP6024 2005-12-16",
+            type: "Nectarine",
+            name: "Red Delight",
+            AKA: [/* patent name */ "51G110S"]
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP6025 2005-09-05",
+            type: "Peach",
+            name: "Queencrest",
+            AKA: [/* patent name */ "B-41871"]
+        },
         { patent: "https://patents.google.com/patent/USPP6045 2005-12-06", type: "Peach", name: "Sierra Lady" },
         { patent: "https://patents.google.com/patent/USPP6078 2005-01-05", type: "Nectarine", name: "June Brite" },
         { patent: "https://patents.google.com/patent/USPP6119 2006-04-24", type: "Peach", name: "Last Chance" },
         { patent: "https://patents.google.com/patent/USPP6122 2005-11-05", type: "Peach", name: "Delmass" },
-        { patent: "https://patents.google.com/patent/USPP6158 2006-06-02", type: "Nectarine", name: "Sierra Star", AKA: [/* patent name */ "Sunectthirteen"]},
+        {
+            patent: "https://patents.google.com/patent/USPP6158 2006-06-02",
+            type: "Nectarine",
+            name: "Sierra Star",
+            AKA: [/* patent name */ "Sunectthirteen"]
+        },
         { patent: "https://patents.google.com/patent/USPP6229 2006-07-11", type: "Peach", name: "Early Maycrest" },
         { patent: "https://patents.google.com/patent/USPP6230 2006-08-15", type: "Peach", name: "Haig Arakelian, Sr." },
         { patent: "https://patents.google.com/patent/USPP6248 2006-09-02", type: "Nectarine", name: "Olympia" },
         { patent: "https://patents.google.com/patent/USPP6267 2006-06-24", type: "Peach", name: "Salem" },
-        { patent: "https://patents.google.com/patent/USPP6283 2006-03-26", type: "Nectarine", name: "Necta Zee", description: "genetic dwarf"},
+        {
+            patent: "https://patents.google.com/patent/USPP6283 2006-03-26",
+            type: "Nectarine",
+            name: "Necta Zee",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP6347 2006-12-24", type: "Peach", name: "Tra-Zee" },
         { patent: "https://patents.google.com/patent/USPP6363 2007-05-07", type: "Nectarine", name: "August Red" },
-        { patent: "https://patents.google.com/patent/USPP6364 2006-12-29", type: "Peach", name: "Pix Zee", description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP6364 2006-12-29",
+            type: "Peach",
+            name: "Pix Zee",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP6387 2007-01-12", type: "Peach", name: "Starcrest" },
         // 627-628 page break
         { patent: "https://patents.google.com/patent/USPP6408 2006-12-12", type: "Nectarine", name: "Zee Glo" },
@@ -528,24 +729,52 @@
         { patent: "https://patents.google.com/patent/USPP6472 2007-04-13", type: "Peach", name: "Amparo" },
         { patent: "https://patents.google.com/patent/USPP6488 2007-04-06", type: "Nectarine", name: "P-R Red" },
         { patent: "https://patents.google.com/patent/USPP6540 2007-03-13", type: "Peach", name: "Chiyohimi" },
-        { patent: "https://patents.google.com/patent/USPP6541 2007-11-13", type: "Nectarine", name: "Summer Lion Three" },
+        {
+            patent: "https://patents.google.com/patent/USPP6541 2007-11-13",
+            type: "Nectarine",
+            name: "Summer Lion Three"
+        },
         { patent: "https://patents.google.com/patent/USPP6542 2007-11-13", type: "Nectarine", name: "May Lion" },
         { patent: "https://patents.google.com/patent/USPP6543 2007-11-13", type: "Nectarine", name: "Summer Lion" },
         { patent: "https://patents.google.com/patent/USPP6544 2007-11-13", type: "Nectarine", name: "Summer Lion Two" },
-        { patent: "https://patents.google.com/patent/USPP6671 2007-10-09", type: "Peach", name: "Valley Red", description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP6671 2007-10-09",
+            type: "Peach",
+            name: "Valley Red",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP6675 2007-11-16", type: "Nectarine", name: "Sparkling May" },
         { patent: "https://patents.google.com/patent/USPP6747 2007-12-07", type: "Peach", name: "June Pride" },
         { patent: "https://patents.google.com/patent/USPP6753 2008-01-13", type: "Nectarine", name: "Mid Glo" },
         { patent: "https://patents.google.com/patent/USPP6759 2007-12-28", type: "Peach", name: "Flavor Queen" },
-        { patent: "https://patents.google.com/patent/USPP6806 2007-12-22", type: "Nectarine", name: "USPP6806 unnamed" },
+        {
+            patent: "https://patents.google.com/patent/USPP6806 2007-12-22",
+            type: "Nectarine",
+            name: "USPP6806 unnamed"
+        },
         { patent: "https://patents.google.com/patent/USPP6827 2008-03-10", type: "Peach", name: "John Boy" },
         { patent: "https://patents.google.com/patent/USPP6828 2008-03-10", type: "Peach", name: "Som-Mor" },
         { patent: "https://patents.google.com/patent/USPP6864 2008-05-16", type: "Nectarine", name: "Kam Red" },
-        { patent: "https://patents.google.com/patent/USPP6912 2007-10-09", type: "Peach", name: "Valley Sun", description: "genetic dwarf"},
+        {
+            patent: "https://patents.google.com/patent/USPP6912 2007-10-09",
+            type: "Peach",
+            name: "Valley Sun",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP6940 2008-08-29", type: "Peach", name: "Lady Lou" },
-        { patent: "https://patents.google.com/patent/USPP6976 2007-10-09", type: "Peach", name: "Valley Gem", description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP6976 2007-10-09",
+            type: "Peach",
+            name: "Valley Gem",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP6981 2006-08-15", type: "Nectarine", name: "Sparkling June" },
-        { patent: "https://patents.google.com/patent/USPP6982 2006-08-15", type: "Nectarine", name: "Red Sunset", description: "genetic dwarf" },
+        {
+            patent: "https://patents.google.com/patent/USPP6982 2006-08-15",
+            type: "Nectarine",
+            name: "Red Sunset",
+            description: "genetic dwarf"
+        },
         { patent: "https://patents.google.com/patent/USPP6992 2008-08-22", type: "Peach", name: "May Sun" },
         { patent: "https://patents.google.com/patent/USPP7003 2008-10-17", type: "Peach", name: "Jefferson Sun" },
         { patent: "https://patents.google.com/patent/USPP7012 2008-10-24", type: "Nectarine", name: "Harvest Sun" },
@@ -598,7 +827,11 @@
         { patent: "https://patents.google.com/patent/USPP7890 2010-12-21", type: "Nectarine", name: "Eastern Glo" },
         { patent: "https://patents.google.com/patent/USPP7891 2010-12-14", type: "Nectarine", name: "Desert Delight" },
         { patent: "https://patents.google.com/patent/USPP7918 2011-02-04", type: "Nectarine", name: "Ruby Diamond" },
-        { patent: "https://patents.google.com/patent/USPP7920 2011-02-05", type: "Nectarine", /* google's OCR has this as "arctic show" */ name: "Arctic Snow" },
+        {
+            patent: "https://patents.google.com/patent/USPP7920 2011-02-05",
+            type: "Nectarine",
+            /* google's OCR has this as "arctic show" */ name: "Arctic Snow"
+        },
         { patent: "https://patents.google.com/patent/USPP7947 2011-01-14", type: "Nectarine", name: "Jolly Red Giant" },
         { patent: "https://patents.google.com/patent/USPP7952 2011-01-07", type: "Peach", name: "Sweet Gem" },
         { patent: "https://patents.google.com/patent/USPP7953 2011-01-28", type: "Peach", name: "Crimson Lady" },
@@ -627,7 +860,12 @@
         { patent: "https://patents.google.com/patent/USPP8255 2011-06-03", type: "Nectarine", name: "Gransun" },
         { patent: "https://patents.google.com/patent/USPP8281 2012-05-06", type: "Nectarine", name: "Royal Glo" },
         { patent: "https://patents.google.com/patent/USPP8332 2011-12-18", type: "Peach", name: "Hesse" },
-        { patent: "https://patents.google.com/patent/USPP8336 2012-02-25", type: "Nectarine", name: "How Red", AKA: [/* patent name */ "Sunectnineteen"] },
+        {
+            patent: "https://patents.google.com/patent/USPP8336 2012-02-25",
+            type: "Nectarine",
+            name: "How Red",
+            AKA: [/* patent name */ "Sunectnineteen"]
+        },
         { patent: "https://patents.google.com/patent/USPP8376 2012-12-21", type: "Peach", name: "Stanislaus" },
         { patent: "https://patents.google.com/patent/USPP8393 2012-12-28", type: "Peach", name: "Tri-Lite" },
         { patent: "https://patents.google.com/patent/USPP8394 2012-10-26", type: "Peach", name: "RizzI" },
@@ -636,12 +874,28 @@
         { patent: "https://patents.google.com/patent/USPP8441 2013-01-15", type: "Nectarine", name: "Flame Glo" },
         { patent: "https://patents.google.com/patent/USPP8442 2013-01-25", type: "Peach", name: "Sugar Giant" },
         { patent: "https://patents.google.com/patent/USPP8450 2013-01-11", type: "Nectarine", name: "Arctic Pride" },
-        { patent: "https://patents.google.com/patent/USPP8461 2013-01-14", type: "Nectarine", name: "Crimson Snow", AKA: ["Stark (r) Crimson Snow", /* patent name */ "Bradcrim"] },
+        {
+            patent: "https://patents.google.com/patent/USPP8461 2013-01-14",
+            type: "Nectarine",
+            name: "Crimson Snow",
+            AKA: ["Stark (r) Crimson Snow", /* patent name */ "Bradcrim"]
+        },
         // 629-630 page break
         { patent: "https://patents.google.com/patent/USPP8485 2012-09-08", type: "Nectarine", name: "Santa Maria" },
         { patent: "https://patents.google.com/patent/USPP8486 2012-10-09", type: "Nectarine", name: "Pinta" },
-        { patent: "https://patents.google.com/patent/USPP8508 2012-09-30", type: "Nectarine", name: "Leprechaun", description: "ornamental genetic dwarf" },
-        { patent: "https://patents.google.com/patent/USPP8509 2012-09-28", type: "Peach", name: "Bonfire", AKA: ["Tom Thumb Bonfire"], description: "ornamental genetic dwarf. USPP 306 is also named \"Tom Thumb\" and is also a genetic dwarf peach" },
+        {
+            patent: "https://patents.google.com/patent/USPP8508 2012-09-30",
+            type: "Nectarine",
+            name: "Leprechaun",
+            description: "ornamental genetic dwarf"
+        },
+        {
+            patent: "https://patents.google.com/patent/USPP8509 2012-09-28",
+            type: "Peach",
+            name: "Bonfire",
+            AKA: ["Tom Thumb Bonfire"],
+            description: 'ornamental genetic dwarf. USPP 306 is also named "Tom Thumb" and is also a genetic dwarf peach'
+        },
         { patent: "https://patents.google.com/patent/USPP8534 2012-10-22", type: "Nectarine", name: "Sunny Red" },
         { patent: "https://patents.google.com/patent/USPP8558 2013-02-22", type: "Peach", name: "Laurol" },
         { patent: "https://patents.google.com/patent/USPP8570 2012-11-19", type: "Nectarine", name: "Marshall Rose" },
@@ -650,7 +904,12 @@
         { patent: "https://patents.google.com/patent/USPP8923 2014-01-19", type: "Nectarine", name: "Kay Diamond" },
         { patent: "https://patents.google.com/patent/USPP8947 2014-01-31", type: "Nectarine", name: "August Snow" },
         { patent: "https://patents.google.com/patent/USPP8948 2014-01-19", type: "Nectarine", name: "Diamond Ray" },
-        { patent: "https://patents.google.com/patent/USPP8949 2013-11-19", type: "Nectarine", name: "Encore", AKA: ["Stark (r) Encore", /* patent name */ "Elliott"] },
+        {
+            patent: "https://patents.google.com/patent/USPP8949 2013-11-19",
+            type: "Nectarine",
+            name: "Encore",
+            AKA: ["Stark (r) Encore", /* patent name */ "Elliott"]
+        },
         { patent: "https://patents.google.com/patent/USPP8950 2013-07-26", type: "Peach", name: "PF 12A" },
         { patent: "https://patents.google.com/patent/USPP8956 2013-08-06", type: "Peach", name: "August Lady" },
         { patent: "https://patents.google.com/patent/USPP8978 2013-11-29", type: "Peach", name: "PF 15A" },
@@ -666,7 +925,12 @@
         { patent: "https://patents.google.com/patent/USPP9129 2014-06-24", type: "Peach", name: "PF 1" },
         { patent: "https://patents.google.com/patent/USPP9199 2014-06-16", type: "Peach", name: "Island King" },
         { patent: "https://patents.google.com/patent/USPP9240 2014-08-08", type: "Nectarine", name: "Summer Jim" },
-        { patent: "https://patents.google.com/patent/USPP9263 2014-11-28", type: "Nectarine", name: "Ovation", AKA: ["Stark (r) Ovation", /* patent name */ "Pollok"] },
+        {
+            patent: "https://patents.google.com/patent/USPP9263 2014-11-28",
+            type: "Nectarine",
+            name: "Ovation",
+            AKA: ["Stark (r) Ovation", /* patent name */ "Pollok"]
+        },
         { patent: "https://patents.google.com/patent/USPP9264 2014-12-02", type: "Nectarine", name: "Scarlet Sun" },
         { patent: "https://patents.google.com/patent/USPP9332 2014-12-27", type: "Nectarine", name: "Arctic Star" },
         { patent: "https://patents.google.com/patent/USPP9333 2014-12-22", type: "Nectarine", name: "Honey Kist" },

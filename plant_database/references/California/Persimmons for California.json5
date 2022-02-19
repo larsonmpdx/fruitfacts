@@ -11,9 +11,9 @@
             name: "National Germplasm Repository on the UC Davis campus",
             latitude: 38.52192669379002,
             longitude: -121.76188238894662
-        },
+        }
     ],
-    plants: [  
+    plants: [
         {
             type: "Persimmon",
             name: "California Fuyu",
@@ -67,7 +67,7 @@
             type: "Persimmon",
             name: "Zenji Maru"
         },
-// under quarantine at time of publication (listed in the last paragraph):
+        // under quarantine at time of publication (listed in the last paragraph):
         {
             type: "Persimmon",
             name: "Hana Gosho"
@@ -92,7 +92,7 @@
             type: "Persimmon",
             name: "Suruga"
         },
-//in the chart only:
+        //in the chart only:
         {
             type: "Persimmon",
             name: "Tsuru"

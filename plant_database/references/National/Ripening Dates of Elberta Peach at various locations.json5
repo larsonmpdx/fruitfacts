@@ -7,7 +7,7 @@
     accessed: "Oct 2021",
     type: "extension test",
     locations: [
-            // each entry has its own location
+        // each entry has its own location
     ],
     plants: [
         {

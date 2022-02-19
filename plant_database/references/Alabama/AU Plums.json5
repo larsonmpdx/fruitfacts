@@ -14,12 +14,21 @@
     ],
     // tables (like disease resistance and harvest times) from each of these release papers were put into another document
     plants: [
+        // for the first three: see https://nyshs.org/wp-content/uploads/2016/10/Introgression-of-Prunus-Species-in-Plum.pdf
         {
             type: "Japanese Plum",
-            name: "AU-Roadside",
-            released: "AU 1984*",
-            chill_hours: "700", // from the release paper
-            description: "http://aurora.auburn.edu/xmlui/bitstream/handle/11200/2057/1268CIRC.pdf?sequence=1&isAllowed=y"
+            name: "Crimson",
+            released: "AU 1973*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Purple",
+            released: "AU 1973*"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Homeside",
+            released: "AU 1975*"
         },
         {
             type: "Japanese Plum",
@@ -27,6 +36,13 @@
             released: "AU 1977*",
             chill_hours: "750", // from the release paper
             description: "https://aurora.auburn.edu/bitstream/handle/11200/2029/1237CIRC.pdf?sequence=1"
+        },
+        {
+            type: "Japanese Plum",
+            name: "AU-Roadside",
+            released: "AU 1984*",
+            chill_hours: "700", // from the release paper
+            description: "http://aurora.auburn.edu/xmlui/bitstream/handle/11200/2057/1268CIRC.pdf?sequence=1&isAllowed=y"
         },
         {
             type: "Japanese Plum",

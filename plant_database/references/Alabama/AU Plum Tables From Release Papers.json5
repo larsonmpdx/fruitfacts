@@ -14,12 +14,10 @@
     ],
     // tables (like disease resistance and harvest times) from each of these release papers were put into another document
     plants: [
-
-// see AU-Cherry release paper, page 4
-// this same table appeared in other release papers but was added to with each release
-// http://aurora.auburn.edu/bitstream/handle/11200/2083/1297CIRC.pdf?sequence=1&isAllowed=y
-
-/*
+        // see AU-Cherry release paper, page 4
+        // this same table appeared in other release papers but was added to with each release
+        // http://aurora.auburn.edu/bitstream/handle/11200/2083/1297CIRC.pdf?sequence=1&isAllowed=y
+        /*
 Bacterial fruit spot
 Bacterial leaf spot
 Bacterial canker
@@ -42,11 +40,10 @@ Ozark Premier   0 1 1 1 3 4
 Purple          0 0 0 0 3 5
 Santa Rosa      5 5 5 0 3 5
 */
-
-// harvest dates from AU-Rosa release paper, page 6
-// this same table appeared in other release papers but was added to with each release
-// http://aurora.auburn.edu/bitstream/handle/11200/2083/1297CIRC.pdf?sequence=1&isAllowed=y
-/*
+        // harvest dates from AU-Rosa release paper, page 6
+        // this same table appeared in other release papers but was added to with each release
+        // http://aurora.auburn.edu/bitstream/handle/11200/2083/1297CIRC.pdf?sequence=1&isAllowed=y
+        /*
 
 // from the AU-Cherry paper:
 AU-Cherry       6-24
@@ -80,8 +77,7 @@ Purple          7-20    7-15
 Santa Rosa      7-5     7-1
 not_recommend_reason: "Trees short lived due to bacterial canker"
 */
-
-// the last table worth adding is the fruit characteristics able. fruit size, color, storability, etc.
-// most up-to-date is in the AU-Cherry paper
+        // the last table worth adding is the fruit characteristics able. fruit size, color, storability, etc.
+        // most up-to-date is in the AU-Cherry paper
     ]
 }
