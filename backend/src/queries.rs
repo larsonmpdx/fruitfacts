@@ -95,10 +95,11 @@ pub fn get_recent_patents_db(
     unix_time: i64,
 ) -> Result<RecentPatentsReturn> {
     let page;
-    if page_in.is_none() {
-        page = 0;
+
+    if let Some(page_in) = page_in {
+        page = page_in;
     } else {
-        page = page_in.unwrap();
+        page = 0;
     }
 
     let per_page_out;
@@ -106,13 +107,14 @@ pub fn get_recent_patents_db(
     // N is half a page
     const N_MAX: i32 = 50;
     let mut n;
-    if per_page_in.is_none() {
-        n = 30;
-    } else {
-        n = per_page_in.unwrap() / 2;
+
+    if let Some(per_page_in) = per_page_in {
+        n = per_page_in / 2;
         if n > N_MAX {
             n = N_MAX;
         }
+    } else {
+        n = 30;
     }
 
     per_page_out = n * 2;
@@ -253,9 +255,8 @@ pub fn get_patents(
                 count_future_for_pages = 0;
             }
 
-            output.last_page_past = -1
-                * ((count_past_for_pages / i64::from(output.per_page))
-                    + i64::from((count_past_for_pages % i64::from(output.per_page)) != 0));
+            output.last_page_past = -((count_past_for_pages / i64::from(output.per_page))
+                + i64::from((count_past_for_pages % i64::from(output.per_page)) != 0));
             output.last_page_future = (count_future_for_pages / i64::from(output.per_page))
                 + i64::from((count_future_for_pages % i64::from(output.per_page)) != 0);
 
