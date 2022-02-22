@@ -42,7 +42,7 @@ export default function Custom404(props) {
     return (
         <div className="grid place-items-center">
             <article className="prose">
-                <div className="inline-flex grid place-items-center">
+                <div className="grid place-items-center">
                     <p>
                         <b>Fact:</b> This is a 404 page
                     </p>
@@ -56,7 +56,7 @@ export default function Custom404(props) {
                         <Link href={`/plants/${icon.substr(0, icon.indexOf('.'))}`}>
                             <a>
                                 <img
-                                    className="object-contain h-48 w-48"
+                                    className="h-48 w-48 object-contain"
                                     src={'/fruit_icons/' + icon}
                                 />
                             </a>

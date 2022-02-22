@@ -1,15 +1,15 @@
 import Link from 'next/link';
-import styles from '../../../styles/Button.module.css';
+import Button from '../../../components/button';
 
 export async function getServerSideProps(context) {
     const { type, page } = context.query;
     let pageNum = parseInt(page);
     if (isNaN(pageNum)) {
-        pageNum = 0;
+        pageNum = 1;
     }
 
     const plants = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/plants/${type}/?page=${pageNum}` // todo - perPage isn't in this API yet
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/plants/${type}/?page=${pageNum - 1}` // todo - perPage isn't in this API yet, add it when the backend gets it
     )
         .then((response) => {
             if (response.status !== 200) {
@@ -24,7 +24,7 @@ export async function getServerSideProps(context) {
     return {
         props: {
             plants: plants?.plants || [],
-            last_page: plants?.last_page || 0,
+            last_page: plants?.last_page + 1 || 1,
             type,
             pageNum
         }
@@ -35,40 +35,32 @@ export default function Home({ plants, last_page, type, pageNum }) {
     return (
         <article className="prose m-5">
             <h2>
-                {type} Page {pageNum + 1}/{last_page + 1}
+                {type} Page {pageNum}/{last_page}
             </h2>
 
-            <Link href={`/plants/${type}?page=0`} passHref>
-                <a>
-                    <button className={`${styles.btn} ${styles['btn-blue']}`}>first</button>
-                </a>
-            </Link>
+            <Button href={`/plants/${type}?page=1`} enabled={pageNum != 1} label="first" />
+            <Button
+                href={`/plants/${type}?page=${parseInt(pageNum) - 1}`}
+                enabled={pageNum > 1}
+                label="previous"
+            />
+            <Button
+                href={`/plants/${type}?page=${parseInt(pageNum) + 1}`}
+                enabled={pageNum < last_page}
+                label="next"
+            />
+            <Button
+                href={`/plants/${type}?page=${parseInt(last_page)}`}
+                enabled={pageNum != last_page}
+                label="last"
+            />
 
-            {pageNum > 0 && (
-                <Link href={`/plants/${type}?page=${parseInt(pageNum) - 1}`}>
-                    <a>
-                        <button className={`${styles.btn} ${styles['btn-blue']}`}>previous</button>
-                    </a>
-                </Link>
-            )}
-            {pageNum < last_page && (
-                <Link href={`/plants/${type}?page=${parseInt(pageNum) + 1}`}>
-                    <a>
-                        <button className={`${styles.btn} ${styles['btn-blue']}`}>next</button>
-                    </a>
-                </Link>
-            )}
-            <Link href={`/plants/${type}?page=${parseInt(last_page)}`}>
-                <a>
-                    <button className={`${styles.btn} ${styles['btn-blue']}`}>last</button>
-                </a>
-            </Link>
             <ul className="list-none">
                 {plants.map((item) => (
                     <>
                         <li>
                             <img
-                                className="object-contain my-0 mx-2 inline h-6 w-6"
+                                className="my-0 mx-2 inline h-6 w-6 object-contain"
                                 src={'/fruit_icons/' + item.type + '.svg'}
                             />
                             <Link

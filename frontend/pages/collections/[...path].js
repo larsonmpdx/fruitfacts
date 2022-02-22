@@ -33,10 +33,10 @@ export async function getServerSideProps(context) {
 
 export default function Home({ data }) {
     return (
-        <div className="m-5">
+        <article className="prose m-5">
             {/* single collection */}
             {data.collection && (
-                <article className="prose">
+                <>
                     <p>
                         {data.collection.title}
                         {data.collection.url && <a href={data.collection.url}>[ref]</a>}
@@ -52,7 +52,7 @@ export default function Home({ data }) {
                         {data.items.map((item) => (
                             <li key={item.id}>
                                 <img
-                                    className="object-contain my-0 mx-2 inline h-6 w-6"
+                                    className="my-0 mx-2 inline h-6 w-6 object-contain"
                                     src={'/fruit_icons/' + item.type + '.svg'}
                                 />
                                 <Link
@@ -68,8 +68,8 @@ export default function Home({ data }) {
                             </li>
                         ))}
                     </ul>
-                </article>
+                </>
             )}
-        </div>
+        </article>
     );
 }

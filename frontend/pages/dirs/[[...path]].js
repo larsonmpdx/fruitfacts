@@ -37,7 +37,7 @@ export async function getServerSideProps(context) {
 
 export default function Home({ data }) {
     return (
-        <article className="prose">
+        <article className="prose m-5">
             {/* multi collection (directory listing) */}
 
             {data.directories && data.directories.length > 0 && (

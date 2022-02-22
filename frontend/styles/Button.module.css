@@ -7,3 +7,6 @@
 .btn-blue:hover {
     @apply bg-blue-700;
 }
+.btn-disabled {
+    @apply bg-blue-500 text-white opacity-50;
+}

@@ -29,7 +29,7 @@ export default function Home({ types }) {
                                     <li key={type.name}>
                                         <Link href={`/plants/${type.name}`}>
                                             <img
-                                                className="object-contain my-0 mx-2 inline h-24 w-24"
+                                                className="my-0 mx-2 inline h-24 w-24 object-contain"
                                                 src={'/fruit_icons/' + type.name + '.svg'}
                                             />
                                         </Link>
