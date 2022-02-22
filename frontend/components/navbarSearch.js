@@ -2,7 +2,6 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import throttle from 'lodash/throttle';
-import InputAdornment from '@mui/material/InputAdornment';
 
 // search box: see https://mui.com/components/autocomplete/#search-as-you-type
 
