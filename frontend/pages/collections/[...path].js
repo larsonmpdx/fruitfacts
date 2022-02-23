@@ -7,6 +7,7 @@
 
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
 import Link from 'next/link';
+import Chart from '../../components/chart';
 
 export async function getServerSideProps(context) {
     const { path } = context.query;
@@ -47,6 +48,8 @@ export default function Home({ data }) {
                             <li key={location.id}>{location.location_name}</li>
                         ))}
                     </ul>
+                    <h1>Chart</h1>
+                    <Chart items={data.items} />
                     <h1>Plants</h1>
                     <ul className="list-none">
                         {data.items.map((item) => (
