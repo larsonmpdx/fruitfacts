@@ -49,7 +49,7 @@ export default function Home({ data }) {
                         ))}
                     </ul>
                     <h1>Chart</h1>
-                    <Chart items={data.items} />
+                    <Chart items={data.items}/>
                     <h1>Plants</h1>
                     <ul className="list-none">
                         {data.items.map((item) => (
