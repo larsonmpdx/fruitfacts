@@ -15,11 +15,13 @@ export function minAndMaxDate(items) {
     return { min_harvest_start, max_harvest_end };
 }
 
+const DEFAULT_HARVEST_LENGTH = 10;
+
 export function getValidChartItems({ items, sort, auto_width }) {
     if (auto_width) {
         items = items.map((item) => {
             if (item.harvest_start && !item.harvest_end) {
-                return { ...item, harvest_end: item.harvest_start + 7 };
+                return { ...item, harvest_end: item.harvest_start + DEFAULT_HARVEST_LENGTH };
             } else {
                 return item;
             }
@@ -81,7 +83,7 @@ export function getBars(items) {
     let y = MARGIN_Y;
     return items.map((item) => {
         let output = {
-            x: item.harvest_start * PIXEL_SCALE,
+            x: (item.harvest_start + MARGIN_X_DAYS) * PIXEL_SCALE,
             width: (item.harvest_end - item.harvest_start) * PIXEL_SCALE,
             y: y * PIXEL_SCALE,
             height: PER_ITEM_HEIGHT * PIXEL_SCALE,
