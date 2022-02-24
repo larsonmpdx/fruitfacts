@@ -1,22 +1,24 @@
 import { MONTH_START_DAYS, FRUIT_BAR_COLORS } from './constants';
 
-export function minAndMaxDate(items) {
+export function minAndMaxDate(sequences) {
     let min_harvest_start = 180;
     let max_harvest_end = 190;
-    items.forEach((item) => {
-        if (item.harvest_start && item.harvest_start < min_harvest_start) {
-            min_harvest_start = item.harvest_start;
-        }
-        if (item.harvest_end && item.harvest_end > max_harvest_end) {
-            max_harvest_end = item.harvest_end;
-        }
+    sequences.forEach((sequence) => {
+        sequence.sequence.forEach((item) => {
+            if (item.harvest_start && item.harvest_start < min_harvest_start) {
+                min_harvest_start = item.harvest_start;
+            }
+            if (item.harvest_end && item.harvest_end > max_harvest_end) {
+                max_harvest_end = item.harvest_end;
+            }
+        });
     });
 
     return { min_harvest_start, max_harvest_end };
 }
 
-function applySort({items, sort}) {
-    switch (sort) {
+function applySort(items, sortType) {
+    switch (sortType) {
         case 'harvest_start':
             return items.sort((a, b) => {
                 if (a.harvest_start == b.harvest_start) {
@@ -32,10 +34,10 @@ function applySort({items, sort}) {
 function typeFromSequence(items) {
     let output = '';
     for (const item of items) {
-        if(output == '') {
+        if (output == '') {
             output = item.type;
         } else {
-            if(output != item.type) {
+            if (output != item.type) {
                 return 'Mixed';
             }
         }
@@ -43,7 +45,7 @@ function typeFromSequence(items) {
     return output;
 }
 
-const MAX_SEQUENCE_HEIGHT = 50;
+const MAX_SEQUENCE_HEIGHT = 40;
 
 function getSequences(items) {
     // phase 1: break items into types
@@ -51,9 +53,9 @@ function getSequences(items) {
     let output_object = {};
     for (const item of items) {
         if (!(item.type in output_object)) {
-            output_object[type] = [];
+            output_object[item.type] = [];
         }
-        output_object[type].push(item);
+        output_object[item.type].push(item);
     }
 
     for (const [key, value] of Object.entries(output_object)) {
@@ -81,50 +83,32 @@ export function getValidChartItems({ items, sortType, auto_width }) {
         return item.harvest_start && item.harvest_end;
     });
 
-    if(filtered.length <= MAX_SEQUENCE_HEIGHT_FOR_A_SINGLE_SEQUENCE) {
-        return [{type: typeFromSequence(filtered), sequence: applySort(filtered, sortType)}];
+    if (filtered.length <= MAX_SEQUENCE_HEIGHT_FOR_A_SINGLE_SEQUENCE) {
+        return [{ type: typeFromSequence(filtered), sequence: applySort(filtered, sortType) }];
     }
 
     const sequences = getSequences(filtered);
     const output = [];
-    
+
     sequences.forEach((sequence) => {
-        output.push({type: typeFromSequence(sequence), sequence: applySort(sequence, sortType)});
+        output.push({ type: typeFromSequence(sequence), sequence: applySort(sequence, sortType) });
     });
 
     // after sorting, break any single types that are too long into multiple sequences
     let multi_sequence_holder = [];
     for (const sequence of output) {
         // todo - make sure we don't leave sequences of a single item. trimmed parts must be N items large
-        if(sequence.sequence.length > MAX_SEQUENCE_HEIGHT) {
-            while(sequence.sequence.length > MAX_SEQUENCE_HEIGHT) {
-                multi_sequence_holder.push({type: sequence.type, sequence: sequence.sequence.slice(0, MAX_SEQUENCE_HEIGHT)});
+        if (sequence.sequence.length > MAX_SEQUENCE_HEIGHT) {
+            while (sequence.sequence.length > MAX_SEQUENCE_HEIGHT) {
+                multi_sequence_holder.push({
+                    type: sequence.type,
+                    sequence: sequence.sequence.splice(0, MAX_SEQUENCE_HEIGHT)
+                });
             }
         }
     }
 
     return output.concat(multi_sequence_holder);
-}
-
-const MARGIN_X_DAYS = 5;
-const PER_ITEM_HEIGHT = 5;
-const MARGIN_Y = 5;
-const PIXEL_SCALE = 10; // how many pixels per day (or height unit)? use this so our "1px = 1 day" lines don't look so thick on small charts
-
-export function height_px(count) {
-    return count * PER_ITEM_HEIGHT + MARGIN_Y * 2;
-}
-
-export function getExtents({ min_harvest_start, max_harvest_end, count }) {
-    const min_x = (min_harvest_start - MARGIN_X_DAYS) * PIXEL_SCALE;
-    const max_x = (max_harvest_end + MARGIN_X_DAYS) * PIXEL_SCALE;
-    const width = max_x - min_x;
-
-    const min_y = 0;
-    const max_y = height_px(count) * PIXEL_SCALE;
-    const height = max_y - min_y;
-
-    return { min_harvest_start, max_harvest_end, min_x, max_x, min_y, max_y, width, height };
 }
 
 function getFruitFillColor(type) {
@@ -135,25 +119,94 @@ function getFruitFillColor(type) {
     }
 }
 
-// todo: auto colors by variety
-// todo: break into variety blocks, or don't
 // todo: fixed dimensions with a ratio for days instead of pixel-per-day
 
+const MARGIN_X_DAYS = 5;
+const PER_ITEM_HEIGHT = 5;
+const MARGIN_Y = 5;
+const PIXEL_SCALE = 10; // how many pixels per day (or height unit)? use this so our "1px = 1 day" lines don't look so thick on small charts
+
 // create one bar for each item. x is days
-export function getBars(items) {
-    let y = MARGIN_Y;
-    return items.map((item) => {
-        let output = {
-            x: (item.harvest_start + MARGIN_X_DAYS) * PIXEL_SCALE,
-            width: (item.harvest_end - item.harvest_start) * PIXEL_SCALE,
-            y: y * PIXEL_SCALE,
-            height: PER_ITEM_HEIGHT * PIXEL_SCALE,
-            fill: getFruitFillColor(item.type),
-            ...item
-        };
-        y = y + PER_ITEM_HEIGHT;
-        return output;
+export function getBars(sequences) {
+    // we want this sort function to be as stable as possible, so it's a little complicated
+    const sorted_by_length = sequences.sort((a, b) => {
+        if (a.sequence.length == b.sequence.length) {
+            if (a.type == b.type) {
+                if (a.sequence[0].harvest_start == b.sequence[0].harvest_start) {
+                    // tiebreaker - sort by name of the first element
+                    // names are unique within a given type
+                    if (a.sequence[0].name < b.sequence[0].name) {
+                        return -1;
+                    }
+                    if (a.sequence[0].name > b.sequence[0].name) {
+                        return 1;
+                    }
+                    return 0;
+                } else {
+                    // sort by harvest_start
+                    return a.sequence[0].harvest_start - b.sequence[0].harvest_start;
+                }
+            } else {
+                // sort by alphabetical type name
+                if (a.type < b.type) {
+                    return -1;
+                }
+                if (a.type > b.type) {
+                    return 1;
+                }
+                return 0;
+            }
+        }
+        return a.harvest_start - b.harvest_start;
     });
+
+    // placement algorithm:
+    // place the first sequence at the top
+    // place the Nth sequence at the top and look for overlap with any previous sequence
+
+    // todo: for now, just place all elements on top of each other
+
+    let overall_output = [];
+    for (const sequence of sequences) {
+        let y = MARGIN_Y;
+        overall_output = overall_output.concat(
+            sequence.sequence.map((item) => {
+                let output = {
+                    x: (item.harvest_start + MARGIN_X_DAYS) * PIXEL_SCALE,
+                    width: (item.harvest_end - item.harvest_start) * PIXEL_SCALE,
+                    y: y * PIXEL_SCALE,
+                    height: PER_ITEM_HEIGHT * PIXEL_SCALE,
+                    fill: getFruitFillColor(item.type),
+                    ...item
+                };
+                y = y + PER_ITEM_HEIGHT;
+                return output;
+            })
+        );
+    }
+
+    // todo: move Nth element down as needed to fit
+
+
+    const { min_harvest_start, max_harvest_end } = minAndMaxDate(sequences);
+
+    const min_x = (min_harvest_start - MARGIN_X_DAYS) * PIXEL_SCALE;
+    const max_x = (max_harvest_end + MARGIN_X_DAYS) * PIXEL_SCALE;
+
+    const min_y = 0;
+    let max_y = 0;
+
+    for (const bar of overall_output) {
+        if((bar.y + bar.height) > max_y) {
+            max_y = bar.y + bar.height;
+        }
+    }
+    max_y = max_y + MARGIN_Y * PIXEL_SCALE;
+
+    const width = max_x - min_x;
+    const height = max_y - min_y;
+
+    return {bars: overall_output, extents: {min_harvest_start, max_harvest_end, min_x, max_x, min_y, max_y, width, height}};
 }
 
 const MONTH_LABEL_HEIGHT_OFFSET = 2;

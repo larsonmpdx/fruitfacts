@@ -1,7 +1,6 @@
 import {
     minAndMaxDate,
     getValidChartItems,
-    height_px,
     getBars,
     getExtents,
     getMonthLines
@@ -9,17 +8,9 @@ import {
 
 export default function Home({ items }) {
     const valid_items = getValidChartItems({ items, sortType: 'harvest_start', auto_width: true });
-    const { min_harvest_start, max_harvest_end } = minAndMaxDate(valid_items); // todo - work with new array of sequences
-    const bars = getBars(valid_items); // todo - probably get height from this which is doing placement
-
-    const extents = getExtents({
-        min_harvest_start,
-        max_harvest_end,
-        count: valid_items.length // todo - new height assessment after placement
-    });
+    const {bars, extents} = getBars(valid_items); // todo - probably get height from this which is doing placement
     const { monthLines, labels } = getMonthLines(extents);
 
-    console.dir(monthLines);
     return (
         <div>
             <svg viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}>
