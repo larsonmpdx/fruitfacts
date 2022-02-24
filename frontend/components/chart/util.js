@@ -15,9 +15,58 @@ export function minAndMaxDate(items) {
     return { min_harvest_start, max_harvest_end };
 }
 
-const DEFAULT_HARVEST_LENGTH = 10;
+function applySort({items, sort}) {
+    switch (sort) {
+        case 'harvest_start':
+            return items.sort((a, b) => {
+                if (a.harvest_start == b.harvest_start) {
+                    return a.harvest_end - b.harvest_end; // tiebreaker - put varieties with longer windows 2nd
+                }
+                return a.harvest_start - b.harvest_start;
+            });
+        default:
+            return items;
+    }
+}
 
-export function getValidChartItems({ items, sort, auto_width }) {
+function typeFromSequence(items) {
+    let output = '';
+    for (const item of items) {
+        if(output == '') {
+            output = item.type;
+        } else {
+            if(output != item.type) {
+                return 'Mixed';
+            }
+        }
+    }
+    return output;
+}
+
+const MAX_SEQUENCE_HEIGHT = 50;
+
+function getSequences(items) {
+    // phase 1: break items into types
+    let output_array = [];
+    let output_object = {};
+    for (const item of items) {
+        if (!(item.type in output_object)) {
+            output_object[type] = [];
+        }
+        output_object[type].push(item);
+    }
+
+    for (const [key, value] of Object.entries(output_object)) {
+        output_array.push(value);
+    }
+
+    return output_array;
+}
+
+const DEFAULT_HARVEST_LENGTH = 10;
+const MAX_SEQUENCE_HEIGHT_FOR_A_SINGLE_SEQUENCE = 30;
+
+export function getValidChartItems({ items, sortType, auto_width }) {
     if (auto_width) {
         items = items.map((item) => {
             if (item.harvest_start && !item.harvest_end) {
@@ -32,17 +81,29 @@ export function getValidChartItems({ items, sort, auto_width }) {
         return item.harvest_start && item.harvest_end;
     });
 
-    switch (sort) {
-        case 'harvest_start':
-            return filtered.sort((a, b) => {
-                if (a.harvest_start == b.harvest_start) {
-                    return a.harvest_end - b.harvest_end; // tiebreaker - put varieties with longer windows 2nd
-                }
-                return a.harvest_start - b.harvest_start;
-            });
-        default:
-            return filtered;
+    if(filtered.length <= MAX_SEQUENCE_HEIGHT_FOR_A_SINGLE_SEQUENCE) {
+        return [{type: typeFromSequence(filtered), sequence: applySort(filtered, sortType)}];
     }
+
+    const sequences = getSequences(filtered);
+    const output = [];
+    
+    sequences.forEach((sequence) => {
+        output.push({type: typeFromSequence(sequence), sequence: applySort(sequence, sortType)});
+    });
+
+    // after sorting, break any single types that are too long into multiple sequences
+    let multi_sequence_holder = [];
+    for (const sequence of output) {
+        // todo - make sure we don't leave sequences of a single item. trimmed parts must be N items large
+        if(sequence.sequence.length > MAX_SEQUENCE_HEIGHT) {
+            while(sequence.sequence.length > MAX_SEQUENCE_HEIGHT) {
+                multi_sequence_holder.push({type: sequence.type, sequence: sequence.sequence.slice(0, MAX_SEQUENCE_HEIGHT)});
+            }
+        }
+    }
+
+    return output.concat(multi_sequence_holder);
 }
 
 const MARGIN_X_DAYS = 5;
