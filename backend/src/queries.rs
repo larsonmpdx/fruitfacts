@@ -94,15 +94,12 @@ pub fn get_recent_patents_db(
     per_page_in: Option<i32>,
     unix_time: i64,
 ) -> Result<RecentPatentsReturn> {
-    let page;
 
-    if let Some(page_in) = page_in {
-        page = page_in;
+    let page = if let Some(page_in) = page_in {
+        page_in
     } else {
-        page = 0;
-    }
-
-    let per_page_out;
+        0
+    };
 
     // N is half a page
     const N_MAX: i32 = 50;
@@ -117,7 +114,7 @@ pub fn get_recent_patents_db(
         n = 30;
     }
 
-    per_page_out = n * 2;
+    let per_page_out = n * 2;
 
     match page {
         page if page > 0 => {

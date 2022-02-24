@@ -171,7 +171,7 @@ pub fn base_plant_notoriety_calc(input: &BasePlantNotorietyInput) -> BasePlantNo
         output.score *= patent_multiplier;
         output.explanation += &format!(" *{} (uspp)", patent_multiplier);
     } else {
-        output.explanation += &" *1.0 (no uspp number)".to_string();
+        output.explanation += " *1.0 (no uspp number)";
     }
 
     output

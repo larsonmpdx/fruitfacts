@@ -1,7 +1,7 @@
 // import_db.rs: ETL for a set of json files that comprise all of the built-in reference plants, bringing them into the database
 // this lets the database's files be viewed on github and edited by hand as text files,
-// allowing a wider audience of contributors and easier maintenance
-// the ETL rules get complex in a few places, the goal is to allow the json references to be as simple and close to plain
+// allowing a wider audience of contributors and easier database maintenance
+// the ETL rules get complex in a few places. the goal is to allow the json references to be as simple and close to plain
 // copy-paste imports as possible, with this file doing things like parsing a wide range of date formats
 
 #[cfg(test)]
@@ -257,13 +257,12 @@ fn parse_released(input: &str) -> Option<ReleasedOutput> {
 // we're looking to distinguish this from regular start dates which, when charted,
 // would have a window *after* the date instead of *centered on* the date
 fn is_a_midpoint(input: &str) -> bool {
-    let month: String;
     let no_whitespace: String = input.chars().filter(|c| !c.is_whitespace()).collect();
-    if no_whitespace.to_lowercase().starts_with("mid") {
-        month = no_whitespace.chars().skip(3).collect();
+    let month: String = if no_whitespace.to_lowercase().starts_with("mid") {
+        no_whitespace.chars().skip(3).collect()
     } else {
-        month = input.to_string();
-    }
+        input.to_string()
+    };
 
     // month name abbreviations with any chars other than numbers after
     let month_names_regex =
@@ -717,16 +716,15 @@ fn format_path(input: &str) -> String {
     let after_references = v.last().unwrap();
     // println!("split result: {}", after_references);
 
-    let mutable: &str;
-    if after_references.is_empty() {
-        mutable = after_references;
+    let mutable: &str = if after_references.is_empty() {
+        after_references
     } else {
-        mutable = match after_references.chars().next().unwrap() {
+        match after_references.chars().next().unwrap() {
             '/' => rem_first_n(after_references, 1),
             '\\' => rem_first_n(after_references, 1),
             _ => after_references,
         }
-    }
+    };
 
     let mut string_mutable = str::replace(mutable, r#"\"#, "/");
     string_mutable.push('/');
@@ -783,7 +781,7 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
                 } else {
                     // multiple marketing names are very rare, see rave/first kiss apple
                     marketing_name =
-                        Some(marketing_name.unwrap() + " and " + &aka_element.to_string());
+                        Some(marketing_name.unwrap() + " and " + aka_element);
                 }
             }
         }
@@ -979,12 +977,11 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
             for plant in &plants {
                 // for the "Oddball.json5" file, get type from each item's json
                 // all others get type from the filename
-                let plant_type;
-                if filename.starts_with("Oddball") {
-                    plant_type = plant.type_.clone();
+                let plant_type = if filename.starts_with("Oddball") {
+                    plant.type_.clone()
                 } else {
-                    plant_type = Some(filename.to_string());
-                }
+                    Some(filename.to_string())
+                };
 
                 // println!("inserting");
                 let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
@@ -1163,13 +1160,12 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
         }
     }
 
-    let harvest_time_helper_text;
     // we may get "harvest_time_unparsed" in some cases with no "harvest_time". save "harvest_time_unparsed" for the helper text
-    if input.harvest_time.is_none() && input.plant.harvest_time_unparsed.is_some() {
-        harvest_time_helper_text = Some(input.plant.harvest_time_unparsed.as_ref().unwrap());
+    let harvest_time_helper_text = if input.harvest_time.is_none() && input.plant.harvest_time_unparsed.is_some() {
+        Some(input.plant.harvest_time_unparsed.as_ref().unwrap())
     } else {
-        harvest_time_helper_text = input.harvest_time.as_ref();
-    }
+        input.harvest_time.as_ref()
+    };
 
     println!(
         "inserting {} C {} L {:?}",
@@ -1295,20 +1291,20 @@ fn update_or_add_base_plant(
     current_collection_id: i32,
     current_collection_score: f32,
 ) -> isize {
-    let num_added;
+    
 
     let existing_base_plant = base_plants::dsl::base_plants
         .filter(base_plants::name.eq(&plant_name))
         .filter(base_plants::type_.eq(&plant.type_))
         .first::<BasePlant>(db_conn);
 
-    if existing_base_plant.is_err() {
+        let num_added = if existing_base_plant.is_err() {
         // a plant in a reference that isn't already in base_plants - need to add
 
         let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)
             .values((
                 base_plants::name.eq(&plant_name),
-                base_plants::name_fts.eq(format_name_fts_string(&plant_name.to_string())),
+                base_plants::name_fts.eq(format_name_fts_string(plant_name)),
                 base_plants::type_.eq(&plant.type_),
                 base_plants::number_of_references.eq(1),
                 base_plants::notoriety_highest_collection_score.eq(current_collection_score),
@@ -1323,7 +1319,7 @@ fn update_or_add_base_plant(
             plant.type_
         );
 
-        num_added = 1
+        1
     } else {
         let existing_base_plant = existing_base_plant.as_ref().unwrap();
 
@@ -1355,8 +1351,8 @@ fn update_or_add_base_plant(
         .execute(db_conn);
         assert_eq!(Ok(1), updated_row_count);
 
-        num_added = 0
-    }
+        0
+    };
 
     let base_plant = BasePlantJson {
         name: plant_name.to_string(),
@@ -1517,12 +1513,11 @@ fn load_references(
                 println!("no git mod time for: {}", file_git_path.display());
             }
 
-            let git_edit_time;
-            if let Some(path_git_info) = path_git_info {
-                git_edit_time = Some(path_git_info.seconds());
+            let git_edit_time = if let Some(path_git_info) = path_git_info {
+                Some(path_git_info.seconds())
             } else {
-                git_edit_time = None;
-            }
+                None
+            };
 
             let contents = fs::read_to_string(path_).unwrap();
 
