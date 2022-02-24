@@ -110,4 +110,4 @@ module.exports = Object.freeze({
         Olive: { fill: '#E6E6FA' },
         'Prunus Rootstock': { fill: '#E6E6FA' }
     }
-})
+});
