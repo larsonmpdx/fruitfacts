@@ -661,6 +661,7 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     let load_references_return = load_references(db_conn, database_dir);
 
     println!("calculating relative harvest times");
+    relative_to_absolute_harvest_times(db_conn);
     calculate_relative_harvest_times(db_conn);
     calculate_years_from_patent(db_conn);
     println!("adding marketing names to collection items");
@@ -1794,7 +1795,7 @@ pub struct CollectionItemRelative {
     pub harvest_start: Option<i32>,
 }
 
-fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
+fn relative_to_absolute_harvest_times(db_conn: &SqliteConnection) {
     // look for all plants with only a relative harvest time and try to fill in their absolute times
     // example is an extension publication listing peaches as redhaven+5 or whatever,
     // but also giving an absolute time for redhaven in the same pub
@@ -1932,6 +1933,17 @@ fn add_marketing_names(db_conn: &SqliteConnection) {
         .execute(db_conn);
         assert_eq!(Ok(1), updated_row_count);
     }
+}
+
+fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
+    // todo: for each collection item, see if it has an imported harvest_relative field, and check that against
+    // the list of standard candles using type_to_standard_candle() and parse the days/weeks. then put an integer
+    // into the standardize relative column
+    // put a note that it was a direct parse
+
+    // phase 2: for every collection, see if the collection includes a standard candle with an absolute time
+    // if it does, check others in the same collection for their own absolute times and calcualte a relative time
+    // put a note in another field that it was calculated
 }
 
 #[skip_serializing_none]

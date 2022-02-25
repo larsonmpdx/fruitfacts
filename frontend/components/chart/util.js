@@ -262,6 +262,7 @@ export function getMonthLines(extents) {
     let labels = [];
     const HALF_MONTH = 15;
     const QUARTER_MONTH = 7.5;
+    let first_month = true;
     MONTH_START_DAYS.forEach((month) => {
         if (
             month.day > extents.min_harvest_start - 20 &&
@@ -273,13 +274,17 @@ export function getMonthLines(extents) {
                 y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
                 y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
             });
-            interLines.push(
-                {
+            if(first_month) {
+                // only put the midpoint line in before a month one time, the rest of the time it'll come from the after-month midpoint
+                interLines.push({
                     x1: (month.day - month.minus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
                     x2: (month.day - month.minus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
                     y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
                     y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
-                },
+                });
+                first_month = false;
+            }
+            interLines.push(
                 {
                     x1: (month.day - month.minus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,
                     x2: (month.day - month.minus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,

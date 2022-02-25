@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 use chrono::prelude::*;
 
 // output is unix timestamp. same as uspp_number_to_release_year() but it adds 17 years
@@ -13,6 +15,25 @@ pub fn uspp_number_to_expiration(uspp_number_input: i32) -> i64 {
     )
     .and_hms(12, 0, 0)
     .timestamp()
+}
+
+pub fn type_to_standard_candle(type_input: &str) -> Option<String> {
+    let type_to_candle = HashMap::from([
+        ("Peach", "Redhaven"),
+        ("Nectarine", "Redhaven"),
+        ("Sweet Cherry", "Bing"),
+        ("Sour Cherry", "Montmorency"),
+        ("Euro Plum", "Italian"),
+        ("Apple", "Red Delicious"),
+        ("Grape", "Concord"),
+        ("Euro Pear", "Bartlett"),
+    ]);
+
+    if let Some(value) = type_to_candle.get(type_input) {
+        return Some(value.to_string());
+    } else {
+        None
+    }
 }
 
 // for varieties with no release year listed but a patent number given, guess at it based on their US patent number
