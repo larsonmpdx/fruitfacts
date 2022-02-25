@@ -780,8 +780,7 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
                     marketing_name = Some(aka_element.to_string());
                 } else {
                     // multiple marketing names are very rare, see rave/first kiss apple
-                    marketing_name =
-                        Some(marketing_name.unwrap() + " and " + aka_element);
+                    marketing_name = Some(marketing_name.unwrap() + " and " + aka_element);
                 }
             }
         }
@@ -1161,11 +1160,12 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
     }
 
     // we may get "harvest_time_unparsed" in some cases with no "harvest_time". save "harvest_time_unparsed" for the helper text
-    let harvest_time_helper_text = if input.harvest_time.is_none() && input.plant.harvest_time_unparsed.is_some() {
-        Some(input.plant.harvest_time_unparsed.as_ref().unwrap())
-    } else {
-        input.harvest_time.as_ref()
-    };
+    let harvest_time_helper_text =
+        if input.harvest_time.is_none() && input.plant.harvest_time_unparsed.is_some() {
+            Some(input.plant.harvest_time_unparsed.as_ref().unwrap())
+        } else {
+            input.harvest_time.as_ref()
+        };
 
     println!(
         "inserting {} C {} L {:?}",
@@ -1291,14 +1291,12 @@ fn update_or_add_base_plant(
     current_collection_id: i32,
     current_collection_score: f32,
 ) -> isize {
-    
-
     let existing_base_plant = base_plants::dsl::base_plants
         .filter(base_plants::name.eq(&plant_name))
         .filter(base_plants::type_.eq(&plant.type_))
         .first::<BasePlant>(db_conn);
 
-        let num_added = if existing_base_plant.is_err() {
+    let num_added = if existing_base_plant.is_err() {
         // a plant in a reference that isn't already in base_plants - need to add
 
         let rows_inserted = diesel::insert_into(base_plants::dsl::base_plants)

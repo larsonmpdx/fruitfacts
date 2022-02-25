@@ -19,7 +19,14 @@
             name: "Van",
             type: "Sweet Cherry",
             released: "Summerland 1944*",
+            harvest_time_relative: "Bing+0", // "with van and bing" is a common enough listing in patents for these
             description: "Empress Eugenie open pollinated"
+        },
+        {
+            name: "Bing",
+            type: "Sweet Cherry",
+            harvest_time: "July 13",
+            description: "not a summerland variety, used as a harvest time reference"
         },
         {
             name: "Sparkle",
@@ -218,6 +225,8 @@
             description: "Sweetheart open pollinated https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/27/13S2101_Sovereign/",
             // or Sweetheart+10
             harvest_time_relative: "Bing+29",
+            // from patent: Harvest date - Very late harvest season; August 11th in Summerland, BC, Canada, 31 days after Bing
+            // from this we can get Bing (or Van) @ July 13
             patent: "https://patents.google.com/patent/USPP26646 expires 2034-07-06"
         },
         {
@@ -228,6 +237,7 @@
             description: "Sweetheart open pollinated https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/30/SPC_103_Sentennial/ https://cdnsciencepub.com/doi/pdf/10.4141/CJPS10156",
             // or Sweetheart+10
             harvest_time_relative: "Bing+29",
+            // from patent: Harvest date - Very late harvest season; August 12th in Summerland, B.C., Canada
             patent: "https://patents.google.com/patent/USPP26645 expires 2034-07-06"
         },
         {
@@ -244,6 +254,8 @@
             type: "Sweet Cherry",
             released: "Summerland 2012*",
             description: "2S-36-36 x Summit",
+            // from patent: Harvest date - Very early to early; July 9 in Summerland, BC, Canada
+            harvest_time: "July 9",
             patent: "https://patents.google.com/patent/USPP26680 expires 2034-07-08"
         },
         {
@@ -268,12 +280,16 @@
             name: "SPC342",
             type: "Sweet Cherry",
             description: "exclusive to ANFIC https://anfic.com.au/variety/spc342-cherry/",
+            harvest_time: "July 10",
+            // from patent: Harvest date - Mid harvest season; July 10 in Summerland, BC, Canada
             patent: "https://patents.google.com/patent/USPP29788 expires 2036-12-22"
         },
         {
             name: "SPC243",
             type: "Sweet Cherry",
-            description: "exclusive to ANFIC  https://anfic.com.au/variety/spc243-cv-13s-21-14-cherry/",
+            description: "exclusive to ANFIC https://anfic.com.au/variety/spc243-cv-13s-21-14-cherry/",
+            harvest_time: "August 24",
+            // from patent: Harvest date - Very late harvest season; last week in August in Summerland, BC, Canada
             patent: "https://patents.google.com/patent/USPP27927 expires 2035-09-17"
         }
     ]

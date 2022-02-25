@@ -94,7 +94,6 @@ pub fn get_recent_patents_db(
     per_page_in: Option<i32>,
     unix_time: i64,
 ) -> Result<RecentPatentsReturn> {
-
     let page = if let Some(page_in) = page_in {
         page_in
     } else {

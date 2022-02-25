@@ -3,70 +3,94 @@ module.exports = Object.freeze({
     MONTH_START_DAYS: [
         {
             name: 'Jan',
-            day: 1
+            minus_quarter: 7.75,
+            day: 1,
+            plus_quarter: 7.75
         },
         {
             name: 'Feb',
-            day: 32
+            minus_quarter: 7.75,
+            day: 32,
+            plus_quarter: 7.25
         },
         {
             name: 'Mar',
-            day: 61
+            minus_quarter: 7.25,
+            day: 61,
+            plus_quarter: 7.25
         },
         {
             name: 'Apr',
-            day: 92
+            minus_quarter: 7.75,
+            day: 92,
+            plus_quarter: 7.5
         },
         {
             name: 'May',
-            day: 122
+            minus_quarter: 7.5,
+            day: 122,
+            plus_quarter: 7.75
         },
         {
             name: 'Jun',
-            day: 153
+            minus_quarter: 7.75,
+            day: 153,
+            plus_quarter: 7.5
         },
         {
             name: 'Jul',
-            day: 183
+            minus_quarter: 7.5,
+            day: 183,
+            plus_quarter: 7.75
         },
         {
             name: 'Aug',
-            day: 214
+            minus_quarter: 7.75,
+            day: 214,
+            plus_quarter: 7.75
         },
         {
             name: 'Sep',
-            day: 245
+            minus_quarter: 7.75,
+            day: 245,
+            plus_quarter: 7.5
         },
         {
             name: 'Oct',
-            day: 275
+            minus_quarter: 7.5,
+            day: 275,
+            plus_quarter: 7.75
         },
         {
             name: 'Nov',
-            day: 306
+            minus_quarter: 7.75,
+            day: 306,
+            plus_quarter: 7.5
         },
         {
             name: 'Dec',
-            day: 336
+            minus_quarter: 7.5,
+            day: 336,
+            plus_quarter: 7.75
         }
     ],
 
     FRUIT_BAR_COLORS: {
-        Apple: { fill: '#AA6269' },
+        Apple: { fill: '#D1D783' },
         Apricot: { fill: '#F3870E' },
         'Asian Pear': { fill: '#DDBF56' },
         'Euro Pear': { fill: '#BCCC52' },
         'Euro Plum': { fill: '#4F3D4B' },
-        'Japanese Plum': { fill: '#67202C' },
+        'Japanese Plum': { fill: '#df96a2' },
         'Sour Cherry': { fill: '#FF0223' },
-        'Sweet Cherry': { fill: '#7B0615' },
-        Nectarine: { fill: '#CE433D' },
+        'Sweet Cherry': { fill: '#f98a99' },
+        Nectarine: { fill: '#db7470' },
         Peach: { fill: '#FCDC75' },
         Fig: {
             fill: '#664D57' // todo - match the icon when it's made
         },
-        Apriplum: { fill: '#B5630C' },
-        Plumcot: { fill: '#913028' },
+        Apriplum: { fill: '#f3a149' },
+        Plumcot: { fill: '#e29d97' },
         Blueberry: { fill: '#527BCD' },
         'Hardy Kiwi': {
             fill: '#91AE2E' // todo - match the icon when it's made
@@ -86,7 +110,7 @@ module.exports = Object.freeze({
         Saskatoon: { fill: '#E6E6FA' },
         Hazelnut: { fill: '#E6E6FA' },
         Walnut: { fill: '#E6E6FA' },
-        Almond: { fill: '#E6E6FA' },
+        Almond: { fill: '#E4813C' },
         Chestnut: { fill: '#E6E6FA' },
         Pistachio: { fill: '#E6E6FA' },
         Pecan: { fill: '#E6E6FA' },

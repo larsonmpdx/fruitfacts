@@ -1,15 +1,9 @@
-import {
-    minAndMaxDate,
-    getValidChartItems,
-    getBars,
-    getExtents,
-    getMonthLines
-} from './util';
+import { getValidChartItems, getBars, getMonthLines } from './util';
 
 export default function Home({ items }) {
     const valid_items = getValidChartItems({ items, sortType: 'harvest_start', auto_width: true });
-    const {bars, extents} = getBars(valid_items); // todo - probably get height from this which is doing placement
-    const { monthLines, labels } = getMonthLines(extents);
+    const { bars, extents } = getBars(valid_items); // todo - probably get height from this which is doing placement
+    const { monthLines, interLines, labels } = getMonthLines(extents);
 
     return (
         <div>
@@ -21,6 +15,16 @@ export default function Home({ items }) {
                         x2={line.x2}
                         y2={line.y2}
                         stroke="black"
+                        stroke-width="1"
+                    />
+                ))}
+                {interLines.map((line) => (
+                    <line
+                        x1={line.x1}
+                        y1={line.y1}
+                        x2={line.x2}
+                        y2={line.y2}
+                        stroke="#dbdbdb"
                         stroke-width="1"
                     />
                 ))}
@@ -37,7 +41,7 @@ export default function Home({ items }) {
                         />
                         <text
                             x={bar.x + 20}
-                            y={bar.y + 30}
+                            y={bar.y + 22}
                             fontFamily="Verdana"
                             fontSize="20"
                             fill="blue"

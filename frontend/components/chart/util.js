@@ -119,10 +119,49 @@ function getFruitFillColor(type) {
     }
 }
 
+// given a set of new chart bars, and all of the existing chart bars, detect overlaps
+// and then add vertical space as needed until there is no overlap
+function setVerticalOffset(new_bars, existing_bars) {
+    let y_offset = 0;
+    let re_run = false;
+
+    const BUFFER = 2 * PIXEL_SCALE;
+
+    while (true) {
+        //   console.log(`testing y offset ${y_offset}`);
+        outer: for (const barA of new_bars) {
+            for (const barB of existing_bars) {
+                if (
+                    barA.x - BUFFER < barB.x + barB.width &&
+                    barA.x + barA.width + BUFFER > barB.x &&
+                    barA.y + barA.height + y_offset + BUFFER > barB.y &&
+                    barA.y + y_offset - BUFFER < barB.y + barB.height
+                ) {
+                    y_offset += PER_ITEM_HEIGHT * PIXEL_SCALE;
+                    //   console.log(`y offset is now ${y_offset}`);
+                    re_run = true;
+                    break outer;
+                }
+            }
+        }
+        if (re_run) {
+            re_run = false;
+        } else {
+            break;
+        }
+    }
+
+    if (y_offset != 0) {
+        for (const bar of new_bars) {
+            bar.y += y_offset;
+        }
+    }
+}
+
 // todo: fixed dimensions with a ratio for days instead of pixel-per-day
 
 const MARGIN_X_DAYS = 5;
-const PER_ITEM_HEIGHT = 5;
+const PER_ITEM_HEIGHT = 3;
 const MARGIN_Y = 5;
 const PIXEL_SCALE = 10; // how many pixels per day (or height unit)? use this so our "1px = 1 day" lines don't look so thick on small charts
 
@@ -164,30 +203,31 @@ export function getBars(sequences) {
     // place the first sequence at the top
     // place the Nth sequence at the top and look for overlap with any previous sequence
 
-    // todo: for now, just place all elements on top of each other
-
     let overall_output = [];
     for (const sequence of sequences) {
         let y = MARGIN_Y;
-        overall_output = overall_output.concat(
-            sequence.sequence.map((item) => {
-                let output = {
-                    x: (item.harvest_start + MARGIN_X_DAYS) * PIXEL_SCALE,
-                    width: (item.harvest_end - item.harvest_start) * PIXEL_SCALE,
-                    y: y * PIXEL_SCALE,
-                    height: PER_ITEM_HEIGHT * PIXEL_SCALE,
-                    fill: getFruitFillColor(item.type),
-                    ...item
-                };
-                y = y + PER_ITEM_HEIGHT;
-                return output;
-            })
-        );
+
+        const this_sequence_output = sequence.sequence.map((item) => {
+            let output = {
+                x: (item.harvest_start + MARGIN_X_DAYS) * PIXEL_SCALE,
+                width: (item.harvest_end - item.harvest_start) * PIXEL_SCALE,
+                y: y * PIXEL_SCALE,
+                height: PER_ITEM_HEIGHT * PIXEL_SCALE,
+                fill: getFruitFillColor(item.type),
+                ...item
+            };
+            y = y + PER_ITEM_HEIGHT;
+            return output;
+        });
+
+        setVerticalOffset(this_sequence_output, overall_output);
+
+        overall_output = overall_output.concat(this_sequence_output);
     }
 
     // todo: move Nth element down as needed to fit
 
-
+    // get extents from bars as-placed
     const { min_harvest_start, max_harvest_end } = minAndMaxDate(sequences);
 
     const min_x = (min_harvest_start - MARGIN_X_DAYS) * PIXEL_SCALE;
@@ -197,7 +237,7 @@ export function getBars(sequences) {
     let max_y = 0;
 
     for (const bar of overall_output) {
-        if((bar.y + bar.height) > max_y) {
+        if (bar.y + bar.height > max_y) {
             max_y = bar.y + bar.height;
         }
     }
@@ -206,7 +246,10 @@ export function getBars(sequences) {
     const width = max_x - min_x;
     const height = max_y - min_y;
 
-    return {bars: overall_output, extents: {min_harvest_start, max_harvest_end, min_x, max_x, min_y, max_y, width, height}};
+    return {
+        bars: overall_output,
+        extents: { min_harvest_start, max_harvest_end, min_x, max_x, min_y, max_y, width, height }
+    };
 }
 
 const MONTH_LABEL_HEIGHT_OFFSET = 2;
@@ -215,15 +258,47 @@ const MONTH_LABEL_HEIGHT_OFFSET = 2;
 // todo: optional ligher week lines for 1/4 through each month
 export function getMonthLines(extents) {
     let monthLines = [];
+    let interLines = [];
     let labels = [];
+    const HALF_MONTH = 15;
+    const QUARTER_MONTH = 7.5;
     MONTH_START_DAYS.forEach((month) => {
-        if (month.day > extents.min_harvest_start && month.day < extents.max_harvest_end) {
+        if (
+            month.day > extents.min_harvest_start - 20 &&
+            month.day < extents.max_harvest_end + 20
+        ) {
             monthLines.push({
                 x1: (month.day + MARGIN_X_DAYS) * PIXEL_SCALE,
                 x2: (month.day + MARGIN_X_DAYS) * PIXEL_SCALE,
                 y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
                 y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
             });
+            interLines.push(
+                {
+                    x1: (month.day - month.minus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
+                    x2: (month.day - month.minus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
+                    y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                },
+                {
+                    x1: (month.day - month.minus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,
+                    x2: (month.day - month.minus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,
+                    y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                },
+                {
+                    x1: (month.day + month.plus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,
+                    x2: (month.day + month.plus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,
+                    y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                },
+                {
+                    x1: (month.day + month.plus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
+                    x2: (month.day + month.plus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
+                    y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                }
+            );
             labels.push({
                 x: (month.day + 15 + MARGIN_X_DAYS) * PIXEL_SCALE,
                 y: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
@@ -237,5 +312,5 @@ export function getMonthLines(extents) {
         }
     });
 
-    return { monthLines, labels };
+    return { monthLines, interLines, labels };
 }
