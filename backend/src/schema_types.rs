@@ -45,6 +45,10 @@ pub struct BasePlant {
     pub release_year_note: Option<String>,
     pub released_by: Option<String>,
     pub release_collection_id: Option<i32>,
+
+    pub harvest_relative: Option<i32>,
+    pub harvest_relative_to: Option<String>,
+    pub harvest_relative_explanation: Option<String>,
 }
 
 #[skip_serializing_none]
@@ -75,6 +79,10 @@ pub struct CollectionItem {
     pub harvest_start: Option<i32>,
     pub harvest_end: Option<i32>,
     pub harvest_start_is_midpoint: Option<i32>,
+
+    pub calc_harvest_relative: Option<i32>,
+    pub calc_harvest_relative_round: Option<i32>,
+    pub calc_harvest_relative_explanation: Option<String>,
 
     pub harvest_start_2: Option<i32>,
     pub harvest_end_2: Option<i32>,

@@ -1812,8 +1812,8 @@ fn relative_to_absolute_harvest_times(db_conn: &SqliteConnection) {
         .unwrap();
 
     // if harvest_start is unset and harvest_relative is set, parse harvest_relative
-    // and see if it refers to another plant in the same location. if so, create offset dates from the base plant
-    // and store those
+    // and see if it refers to another plant in the same location. if so, create absoluate dates
+    // relative to the base plant and store those
 
     for plant in all_plants {
         if plant.harvest_relative.is_some() && plant.harvest_start.is_none() {
@@ -1936,14 +1936,85 @@ fn add_marketing_names(db_conn: &SqliteConnection) {
 }
 
 fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
-    // todo: for each collection item, see if it has an imported harvest_relative field, and check that against
+    let all_plants = collection_items::dsl::collection_items
+        .select((
+            collection_items::id,
+            collection_items::location_id,
+            collection_items::type_,
+            collection_items::harvest_relative,
+            collection_items::harvest_start,
+        ))
+        .load::<CollectionItemRelative>(db_conn)
+        .unwrap();
+
+    // if harvest_start is unset and harvest_relative is set, parse harvest_relative
+    // and see if it refers to another plant in the same location. if so, create absoluate dates
+    // relative to the base plant and store those
+
+    for plant in all_plants {
+        if plant.harvest_relative.is_some() && plant.harvest_start.is_none() {
+            if let Some(harvest_relative) = parse_relative_harvest(&plant.harvest_relative.unwrap())
+            {
+    // todo: 
+    // phase 1: for each collection item, see if it has an imported harvest_relative field, and check that against
     // the list of standard candles using type_to_standard_candle() and parse the days/weeks. then put an integer
     // into the standardize relative column
-    // put a note that it was a direct parse
+    // and put a note that it was a direct parse
 
-    // phase 2: for every collection, see if the collection includes a standard candle with an absolute time
+    
+
+
+
+
+
+
+
+
+                // todo
+
+                if let Ok(relative_plant) = collection_items::dsl::collection_items
+                    .filter(collection_items::location_id.eq(plant.location_id))
+                    .filter(collection_items::name.eq(harvest_relative.name))
+                    .filter(collection_items::type_.eq(plant.type_))
+                    .first::<CollectionItem>(db_conn)
+                {
+
+/*
+                    let updated_row_count = diesel::update(
+                        collection_items::dsl::collection_items
+                            .filter(collection_items::id.eq(plant.collection_item_id)),
+                    )
+                    .set((
+                        collection_items::harvest_start.eq(harvest_start),
+                        collection_items::harvest_end.eq(harvest_end),
+                        collection_items::harvest_start_is_midpoint
+                            .eq(relative_plant.harvest_start_is_midpoint),
+                        collection_items::harvest_start_2.eq(harvest_start_2),
+                        collection_items::harvest_end_2.eq(harvest_end_2),
+                        collection_items::harvest_start_is_midpoint
+                            .eq(relative_plant.harvest_start_2_is_midpoint),
+                    ))
+                    .execute(db_conn);
+                    assert_eq!(Ok(1), updated_row_count);
+                    */
+                }
+            } else {
+// make sure the standard candles themselves get tagged as +0 in the 0th round (even if they don't have a relative harvest field)
+// todo
+            }
+        }
+    }
+
+
+    // phase 2-N: for every collection, see if the collection includes a standard candle with an absolute time
     // if it does, check others in the same collection for their own absolute times and calcualte a relative time
     // put a note in another field that it was calculated
+
+    // a trick for collections which use a different relative plant (like vaughn nursery using elberta for peaches, when we'd like to use redhaven)
+    // if we have a calculated relative harvest tagged into that collection (as we will in round 1 for redhaven)
+    // then when we compare a variety to redhaven in that collection, detect that redhaven has elberta-28 and allow elberta+/- for the others in that collection
+
+    // todo - make sure this also works for the euro burlat cherries, etc.
 }
 
 #[skip_serializing_none]

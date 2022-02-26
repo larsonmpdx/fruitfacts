@@ -23,6 +23,11 @@ CREATE TABLE base_plants (
   released_by TEXT,
   release_collection_id INTEGER,
 
+  -- calculated from all of the other data
+  harvest_relative INTEGER, -- + or - days vs the chosen reference plant for this type
+  harvest_relative_to TEXT, -- "Redhaven" for peaches for example
+  harvest_relative_explanation TEXT, -- include weights etc.
+
   UNIQUE(uspp_number)
   UNIQUE(name_fts, type) --combo of these columns must be unique.  example: name "Co-op 32" type "Apple"
   UNIQUE(name, type)
@@ -147,6 +152,12 @@ CREATE TABLE collection_items (
   harvest_start INTEGER, --ordinal (day of the year)
   harvest_end INTEGER,
   harvest_start_is_midpoint INTEGER, -- bool: if this is a start-only harvest window, should the window be treated as a midpoint instead of a start when building a window around it?
+
+  -- these are set after import either by parsing harvest_relative text
+  -- or by using a delta from another variety with an already-calculated relative harvest
+  calc_harvest_relative INTEGER,
+  calc_harvest_relative_round INTEGER, -- 0: directly parsed from harvest_relative text 1: set based on absolute harvest difference to a known variety 2+: successive rounds of this as more varieties get filled in
+  calc_harvest_relative_explanation TEXT, -- which plant and value was referenced?
 
   -- pretty much only for figs with breba+main crop
   harvest_start_2 INTEGER,

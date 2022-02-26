@@ -21,6 +21,9 @@ table! {
         release_year_note -> Nullable<Text>,
         released_by -> Nullable<Text>,
         release_collection_id -> Nullable<Integer>,
+        harvest_relative -> Nullable<Integer>,
+        harvest_relative_to -> Nullable<Text>,
+        harvest_relative_explanation -> Nullable<Text>,
     }
 }
 
@@ -44,6 +47,9 @@ table! {
         harvest_start -> Nullable<Integer>,
         harvest_end -> Nullable<Integer>,
         harvest_start_is_midpoint -> Nullable<Integer>,
+        calc_harvest_relative -> Nullable<Integer>,
+        calc_harvest_relative_round -> Nullable<Integer>,
+        calc_harvest_relative_explanation -> Nullable<Text>,
         harvest_start_2 -> Nullable<Integer>,
         harvest_end_2 -> Nullable<Integer>,
         harvest_start_2_is_midpoint -> Nullable<Integer>,

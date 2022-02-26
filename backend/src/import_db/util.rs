@@ -20,10 +20,11 @@ pub fn uspp_number_to_expiration(uspp_number_input: i32) -> i64 {
 pub fn type_to_standard_candle(type_input: &str) -> Option<String> {
     let type_to_candle = HashMap::from([
         ("Peach", "Redhaven"),
-        ("Nectarine", "Redhaven"),
+        ("Nectarine", "Redhaven"), // todo - mark this as a peach somehow
+        ("Japanese Plum", "Santa Rosa"),
+        ("Euro Plum", "Italian"),
         ("Sweet Cherry", "Bing"),
         ("Sour Cherry", "Montmorency"),
-        ("Euro Plum", "Italian"),
         ("Apple", "Red Delicious"),
         ("Grape", "Concord"),
         ("Euro Pear", "Bartlett"),
