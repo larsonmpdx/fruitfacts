@@ -10,7 +10,7 @@ use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 
 extern crate clap;
-use clap::{crate_version, Command as ClapApp, Arg};
+use clap::{crate_version, Arg, Command as ClapApp};
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {

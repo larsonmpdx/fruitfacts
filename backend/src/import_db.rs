@@ -1790,6 +1790,7 @@ pub struct CollectionItemRelative {
     pub location_id: Option<i32>,
     #[serde(rename = "type")]
     pub type_: String,
+    pub name: String,
 
     pub harvest_relative: Option<String>,
     pub harvest_start: Option<i32>,
@@ -1805,6 +1806,7 @@ fn relative_to_absolute_harvest_times(db_conn: &SqliteConnection) {
             collection_items::id,
             collection_items::location_id,
             collection_items::type_,
+            collection_items::name,
             collection_items::harvest_relative,
             collection_items::harvest_start,
         ))
@@ -1941,6 +1943,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             collection_items::id,
             collection_items::location_id,
             collection_items::type_,
+            collection_items::name,
             collection_items::harvest_relative,
             collection_items::harvest_start,
         ))
@@ -1952,23 +1955,30 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
     // relative to the base plant and store those
 
     for plant in all_plants {
-        if plant.harvest_relative.is_some() && plant.harvest_start.is_none() {
+        if util::is_standard_candle(&plant.type_, &plant.name) {
+            // make sure the standard candles themselves get tagged as +0 in the 0th round
+            // (even if they don't have a relative harvest field)
+            // todo
+
+            let updated_row_count = diesel::update(
+                collection_items::dsl::collection_items
+                    .filter(collection_items::id.eq(plant.collection_item_id)),
+            )
+            .set((
+                collection_items::calc_harvest_relative.eq(0),
+                collection_items::calc_harvest_relative_round.eq(0), // set in the 0th round of searches
+                collection_items::calc_harvest_relative_explanation.eq("standard candle"),
+            ))
+            .execute(db_conn);
+            assert_eq!(Ok(1), updated_row_count);
+        }
+        if plant.harvest_relative.is_some() {
             if let Some(harvest_relative) = parse_relative_harvest(&plant.harvest_relative.unwrap())
             {
-    // todo: 
-    // phase 1: for each collection item, see if it has an imported harvest_relative field, and check that against
-    // the list of standard candles using type_to_standard_candle() and parse the days/weeks. then put an integer
-    // into the standardize relative column
-    // and put a note that it was a direct parse
-
-    
-
-
-
-
-
-
-
+                // todo:
+                // phase 0: for each collection item, see if it has an imported harvest_relative field, and check that against
+                // the list of standard candles using type_to_standard_candle() and parse the days/weeks. then put an integer
+                // into the calculated relative harvest column, and put a note that it was a direct parse
 
                 // todo
 
@@ -1979,7 +1989,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                     .first::<CollectionItem>(db_conn)
                 {
 
-/*
+                    /*
                     let updated_row_count = diesel::update(
                         collection_items::dsl::collection_items
                             .filter(collection_items::id.eq(plant.collection_item_id)),
@@ -1998,13 +2008,9 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                     assert_eq!(Ok(1), updated_row_count);
                     */
                 }
-            } else {
-// make sure the standard candles themselves get tagged as +0 in the 0th round (even if they don't have a relative harvest field)
-// todo
             }
         }
     }
-
 
     // phase 2-N: for every collection, see if the collection includes a standard candle with an absolute time
     // if it does, check others in the same collection for their own absolute times and calcualte a relative time

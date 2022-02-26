@@ -17,24 +17,91 @@ pub fn uspp_number_to_expiration(uspp_number_input: i32) -> i64 {
     .timestamp()
 }
 
+pub fn is_standard_candle(type_input: &str, name: &str) -> bool {
+    if let Some(candle_name) = type_to_standard_candle(type_input) {
+        return name == candle_name;
+    }
+    return false;
+}
+
 pub fn type_to_standard_candle(type_input: &str) -> Option<String> {
+    struct CandleTarget {
+        type_: String,
+        name: String,
+    }
+
     let type_to_candle = HashMap::from([
-        ("Peach", "Redhaven"),
-        ("Nectarine", "Redhaven"), // todo - mark this as a peach somehow
-        ("Japanese Plum", "Santa Rosa"),
-        ("Euro Plum", "Italian"),
-        ("Sweet Cherry", "Bing"),
-        ("Sour Cherry", "Montmorency"),
-        ("Apple", "Red Delicious"),
-        ("Grape", "Concord"),
-        ("Euro Pear", "Bartlett"),
+        (
+            "Peach",
+            CandleTarget {
+                type_: "Peach".to_string(),
+                name: "Redhaven".to_string(),
+            },
+        ),
+        (
+            "Nectarine",
+            CandleTarget {
+                type_: "Peach".to_string(),
+                name: "Redhaven".to_string(),
+            },
+        ), // note this points at redhaven peach, not a nectarine
+        (
+            "Japanese Plum",
+            CandleTarget {
+                type_: "Japanese Plum".to_string(),
+                name: "Santa Rosa".to_string(),
+            },
+        ),
+        (
+            "Euro Plum",
+            CandleTarget {
+                type_: "Euro Plum".to_string(),
+                name: "Italian".to_string(),
+            },
+        ),
+        (
+            "Sweet Cherry",
+            CandleTarget {
+                type_: "Sweet Cherry".to_string(),
+                name: "Bing".to_string(),
+            },
+        ),
+        (
+            "Sour Cherry",
+            CandleTarget {
+                type_: "Sour Cherry".to_string(),
+                name: "Montmorency".to_string(),
+            },
+        ),
+        (
+            "Apple",
+            CandleTarget {
+                type_: "Apple".to_string(),
+                name: "Red Delicious".to_string(), // todo - this is just "delicious" in many references and should probably be switched to "red delicious" to get picked up by this
+            },
+        ),
+        (
+            "Grape",
+            CandleTarget {
+                type_: "Grape".to_string(),
+                name: "Concord".to_string(),
+            },
+        ),
+        (
+            "Euro Pear",
+            CandleTarget {
+                type_: "Euro Pear".to_string(),
+                name: "Bartlett".to_string(),
+            },
+        ),
     ]);
 
     if let Some(value) = type_to_candle.get(type_input) {
-        return Some(value.to_string());
-    } else {
-        None
+        if value.type_ == type_input {
+            return Some(value.name.clone()); // only return this if the type lines up. this skips nectarine which points to a peach
+        }
     }
+    None
 }
 
 // for varieties with no release year listed but a patent number given, guess at it based on their US patent number
