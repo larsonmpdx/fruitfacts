@@ -48,6 +48,7 @@ table! {
         harvest_end -> Nullable<Integer>,
         harvest_start_is_midpoint -> Nullable<Integer>,
         calc_harvest_relative -> Nullable<Integer>,
+        calc_harvest_relative_to -> Nullable<Text>,
         calc_harvest_relative_round -> Nullable<Integer>,
         calc_harvest_relative_explanation -> Nullable<Text>,
         harvest_start_2 -> Nullable<Integer>,

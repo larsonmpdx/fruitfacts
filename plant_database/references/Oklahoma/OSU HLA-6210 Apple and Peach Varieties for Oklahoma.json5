@@ -366,7 +366,7 @@
         {
             name: "Earliblaze",
             type: "Nectarine",
-            harvest_time_relative: "Redhaven +0",
+            harvest_time_relative: "Peach: Redhaven +0",
             tags: ["Yellow Nectarine"],
             disease_resistance: {
                 BLS: "tolerant",
@@ -377,7 +377,7 @@
         {
             name: "Redchief",
             type: "Nectarine",
-            harvest_time_relative: "Redhaven +2 weeks",
+            harvest_time_relative: "Peach: Redhaven +2 weeks",
             tags: ["Yellow Nectarine"],
             disease_resistance: {
                 BLS: "resistant",
@@ -388,7 +388,7 @@
         {
             name: "Cavalier",
             type: "Nectarine",
-            harvest_time_relative: "Redhaven +3 weeks",
+            harvest_time_relative: "Peach: Redhaven +3 weeks",
             tags: ["Yellow Nectarine"],
             disease_resistance: {
                 BLS: "tolerant",
@@ -399,7 +399,7 @@
         {
             name: "Sunglo",
             type: "Nectarine",
-            harvest_time_relative: "Redhaven +4 weeks",
+            harvest_time_relative: "Peach: Redhaven +4 weeks",
             tags: ["Yellow Nectarine"],
             disease_resistance: {
                 BLS: "tolerant",
@@ -410,7 +410,7 @@
         {
             name: "Red Glo",
             type: "Nectarine",
-            harvest_time_relative: "Redhaven +5 weeks",
+            harvest_time_relative: "Peach: Redhaven +5 weeks",
             tags: ["Yellow Nectarine"],
             disease_resistance: {
                 BLS: "tolerant",

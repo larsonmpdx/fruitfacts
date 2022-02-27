@@ -70,7 +70,7 @@
             name: "PF 11 Nectarine",
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP15661 expires 2023-11-25",
-            harvest_time_relative: "Redhaven-5"
+            harvest_time_relative: "Peach: Redhaven-5"
         },
         {
             type: "Peach",
@@ -122,7 +122,7 @@
             type: "Japanese Plum",
             name: "Bubblegum (r)",
             released: "Paul Friday*",
-            harvest_time_relative: "Redhaven+20"
+            harvest_time_relative: "Peach: Redhaven+20"
         },
         {
             type: "Apple",
@@ -198,7 +198,7 @@
             type: "Nectarine",
             name: "PF Ka-Ching",
             released: "Paul Friday*",
-            harvest_time_relative: "Redhaven +50"
+            harvest_time_relative: "Peach: Redhaven +50"
         },
         {
             type: "Peach",

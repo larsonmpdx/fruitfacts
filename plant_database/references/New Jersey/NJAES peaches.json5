@@ -32,7 +32,7 @@
             disease_resistance: {
                 bacterial_spot: "Low susceptibility"
             },
-            harvest_time_relative: "Redhaven -10",
+            harvest_time_relative: "Peach: Redhaven -10",
             description: "yellow melting. https://agproducts.rutgers.edu/fruit-trees/avalon-nectarine.html",
             patent: "https://patents.google.com/patent/USPP23882 expires 2031-09-16"
         },
@@ -132,7 +132,7 @@
             disease_resistance: {
                 bacterial_spot: "Low susceptibility"
             },
-            harvest_time_relative: "Redhaven -14",
+            harvest_time_relative: "Peach: Redhaven -14",
             description: "white. https://agproducts.rutgers.edu/fruit-trees/silver-gem-nectarine.html",
             patent: "https://patents.google.com/patent/USPP18147 expires 2026-03-29"
         },

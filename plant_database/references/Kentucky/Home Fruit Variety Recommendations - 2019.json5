@@ -311,7 +311,7 @@
         {
             type: "Nectarine",
             name: "NJN 102", // Brigantine™
-            harvest_time_relative: "Redhaven -1 weeks",
+            harvest_time_relative: "Peach: Redhaven -1 weeks",
             description: "Yellow Semi-Free Medium hardy Uses: Fresh",
             disease_resistance: { BLS: "Very Good" }
         },
@@ -375,14 +375,14 @@
         {
             type: "Nectarine",
             name: "Red Gold",
-            harvest_time_relative: "Redhaven +3 to +4 weeks",
+            harvest_time_relative: "Peach: Redhaven +3 to +4 weeks",
             description: "Yellow. Freestone. Medium hardy. Uses: Fresh. browning resistance: Med.",
             disease_resistance: { BLS: "Poor" }
         },
         {
             type: "Nectarine",
             name: "Fantasia",
-            harvest_time_relative: "Redhaven +3 to +4 weeks",
+            harvest_time_relative: "Peach: Redhaven +3 to +4 weeks",
             description: "Yellow. Freestone. Medium hardy. Uses: Fresh",
             disease_resistance: { BLS: "Good" }
         },

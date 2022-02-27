@@ -347,6 +347,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Redhaven -32"),
         Some(HarvestRelativeParsed {
             name: "Redhaven".to_string(),
+            type_: None,
             relative_days: -32
         })
     );
@@ -354,6 +355,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Redhaven +0"),
         Some(HarvestRelativeParsed {
             name: "Redhaven".to_string(),
+            type_: None,
             relative_days: 0
         })
     );
@@ -361,6 +363,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Redhaven +45"),
         Some(HarvestRelativeParsed {
             name: "Redhaven".to_string(),
+            type_: None,
             relative_days: 45
         })
     );
@@ -368,6 +371,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Redhaven -2 weeks"),
         Some(HarvestRelativeParsed {
             name: "Redhaven".to_string(),
+            type_: None,
             relative_days: -14
         })
     );
@@ -375,6 +379,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Redhaven +0.5 weeks"),
         Some(HarvestRelativeParsed {
             name: "Redhaven".to_string(),
+            type_: None,
             relative_days: 4
         })
     );
@@ -382,6 +387,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Redhaven -1.5 weeks"),
         Some(HarvestRelativeParsed {
             name: "Redhaven".to_string(),
+            type_: None,
             relative_days: -11
         })
     );
@@ -389,6 +395,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Redhaven +9 weeks"),
         Some(HarvestRelativeParsed {
             name: "Redhaven".to_string(),
+            type_: None,
             relative_days: 63
         })
     );
@@ -396,6 +403,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest(" with spaces-42"),
         Some(HarvestRelativeParsed {
             name: "with spaces".to_string(),
+            type_: None,
             relative_days: -42
         })
     );
@@ -403,6 +411,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Bing -10 to -12"),
         Some(HarvestRelativeParsed {
             name: "Bing".to_string(),
+            type_: None,
             relative_days: -11
         })
     );
@@ -410,6 +419,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Bing +14 to +15"),
         Some(HarvestRelativeParsed {
             name: "Bing".to_string(),
+            type_: None,
             relative_days: 14
         })
     );
@@ -417,6 +427,7 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Concord -6 weeks"),
         Some(HarvestRelativeParsed {
             name: "Concord".to_string(),
+            type_: None,
             relative_days: -42
         })
     );
@@ -424,13 +435,31 @@ fn test_parse_relative_harvest() {
         parse_relative_harvest("Concord -4 to -5 weeks"),
         Some(HarvestRelativeParsed {
             name: "Concord".to_string(),
+            type_: None,
             relative_days: -31
         })
     );
     assert_eq!(
-        parse_relative_harvest("Delicious -5 to -4 weeks"),
+        parse_relative_harvest("Red Delicious -5 to -4 weeks"),
         Some(HarvestRelativeParsed {
-            name: "Delicious".to_string(),
+            name: "Red Delicious".to_string(),
+            type_: None,
+            relative_days: -31
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Peach: Redhaven -32"),
+        Some(HarvestRelativeParsed {
+            name: "Redhaven".to_string(),
+            type_: Some("Peach".to_string()),
+            relative_days: -32
+        })
+    );
+    assert_eq!(
+        parse_relative_harvest("Apple: Red Delicious -5 to -4 weeks"),
+        Some(HarvestRelativeParsed {
+            name: "Red Delicious".to_string(),
+            type_: Some("Apple".to_string()),
             relative_days: -31
         })
     );

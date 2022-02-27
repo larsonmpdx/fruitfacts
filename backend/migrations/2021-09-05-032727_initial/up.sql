@@ -156,6 +156,7 @@ CREATE TABLE collection_items (
   -- these are set after import either by parsing harvest_relative text
   -- or by using a delta from another variety with an already-calculated relative harvest
   calc_harvest_relative INTEGER,
+  calc_harvest_relative_to TEXT, -- "Redhaven" for peaches for example
   calc_harvest_relative_round INTEGER, -- 0: directly parsed from harvest_relative text 1: set based on absolute harvest difference to a known variety 2+: successive rounds of this as more varieties get filled in
   calc_harvest_relative_explanation TEXT, -- which plant and value was referenced?
 

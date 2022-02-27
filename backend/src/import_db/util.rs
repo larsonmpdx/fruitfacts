@@ -94,6 +94,20 @@ pub fn type_to_standard_candle(type_input: &str) -> Option<String> {
                 name: "Bartlett".to_string(),
             },
         ),
+        (
+            "Almond",
+            CandleTarget {
+                type_: "Almond".to_string(),
+                name: "Nonpariel".to_string(),
+            },
+        ),
+        (
+            "Walnut",
+            CandleTarget {
+                type_: "Walnut".to_string(),
+                name: "Chandler".to_string(),
+            },
+        ),
     ]);
 
     if let Some(value) = type_to_candle.get(type_input) {

@@ -799,7 +799,7 @@ fn format_aka_strings(aka_array: &Option<Vec<String>>) -> AkaFormatted {
     }
 }
 
-// reverses a string like "20th Century,Twentieth Centry,..."
+// splits apart a string like "20th Century,Twentieth Centry,..."
 fn decode_aka_string(input: &str) -> Vec<&str> {
     input.split(',').collect::<Vec<_>>()
 }
@@ -1671,15 +1671,31 @@ fn get_relative_days(
 #[derive(Default, Debug, PartialEq, Eq)]
 pub struct HarvestRelativeParsed {
     pub name: String,
+    pub type_: Option<String>, // for types other than the base type, for example Nectarines typically use redhaven peach
     pub relative_days: i32,
 }
 
 fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
+ // first, see if there's a ':' character which would mean we have a type like "Peach:" at the beginning
+ // this is optional and if omitted the type of the relative plant will be assumed to be the same as this plant
+    let split = input.split(':').collect::<Vec<&str>>();
+    let edited;
+    let type_: Option<String>;
+    if split.len() == 2 {
+        type_ = Some(split[0].to_string());
+        edited = split[1];
+    }
+    else
+    {
+        type_ = None;
+        edited = input;
+    }
+
     let relative_harvest_x_to_y_regex =
         Regex::new(r#"(.+)([-+])([0-9.]+)(?: to )([-+])([0-9.]+)(.*(?:week|Week))?"#).unwrap();
     let relative_harvest_regex = Regex::new(r#"(.+)([-+])([0-9.]+)(.*(?:week|Week))?"#).unwrap();
 
-    if let Some(matches) = relative_harvest_x_to_y_regex.captures(input) {
+    if let Some(matches) = relative_harvest_x_to_y_regex.captures(edited) {
         let weeks;
         if matches.len() >= 7 {
             if let Some(week_match) = matches.get(6) {
@@ -1694,6 +1710,7 @@ fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
 
             let mut output = HarvestRelativeParsed {
                 name: matches[1].trim().to_string(),
+                type_: type_.clone(),
                 ..Default::default()
             };
 
@@ -1714,7 +1731,7 @@ fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
         }
     }
 
-    if let Some(matches) = relative_harvest_regex.captures(input) {
+    if let Some(matches) = relative_harvest_regex.captures(edited) {
         let weeks;
         if matches.len() >= 5 {
             if let Some(week_match) = matches.get(4) {
@@ -1729,6 +1746,7 @@ fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
 
             let mut output = HarvestRelativeParsed {
                 name: matches[1].trim().to_string(),
+                type_,
                 ..Default::default()
             };
 
@@ -1958,7 +1976,6 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
         if util::is_standard_candle(&plant.type_, &plant.name) {
             // make sure the standard candles themselves get tagged as +0 in the 0th round
             // (even if they don't have a relative harvest field)
-            // todo
 
             let updated_row_count = diesel::update(
                 collection_items::dsl::collection_items
@@ -1966,6 +1983,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             )
             .set((
                 collection_items::calc_harvest_relative.eq(0),
+                collection_items::calc_harvest_relative_to.eq(plant.name),
                 collection_items::calc_harvest_relative_round.eq(0), // set in the 0th round of searches
                 collection_items::calc_harvest_relative_explanation.eq("standard candle"),
             ))
@@ -1975,46 +1993,39 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
         if plant.harvest_relative.is_some() {
             if let Some(harvest_relative) = parse_relative_harvest(&plant.harvest_relative.unwrap())
             {
-                // todo:
                 // phase 0: for each collection item, see if it has an imported harvest_relative field, and check that against
                 // the list of standard candles using type_to_standard_candle() and parse the days/weeks. then put an integer
                 // into the calculated relative harvest column, and put a note that it was a direct parse
 
-                // todo
-
-                if let Ok(relative_plant) = collection_items::dsl::collection_items
-                    .filter(collection_items::location_id.eq(plant.location_id))
-                    .filter(collection_items::name.eq(harvest_relative.name))
-                    .filter(collection_items::type_.eq(plant.type_))
-                    .first::<CollectionItem>(db_conn)
-                {
-
-                    /*
-                    let updated_row_count = diesel::update(
-                        collection_items::dsl::collection_items
-                            .filter(collection_items::id.eq(plant.collection_item_id)),
-                    )
-                    .set((
-                        collection_items::harvest_start.eq(harvest_start),
-                        collection_items::harvest_end.eq(harvest_end),
-                        collection_items::harvest_start_is_midpoint
-                            .eq(relative_plant.harvest_start_is_midpoint),
-                        collection_items::harvest_start_2.eq(harvest_start_2),
-                        collection_items::harvest_end_2.eq(harvest_end_2),
-                        collection_items::harvest_start_is_midpoint
-                            .eq(relative_plant.harvest_start_2_is_midpoint),
-                    ))
-                    .execute(db_conn);
-                    assert_eq!(Ok(1), updated_row_count);
-                    */
+                let type_maybe_parsed;
+                if let Some(type_) = harvest_relative.type_ {
+                    type_maybe_parsed = type_; // type overridden, maybe this is a nectarine referencing redhaving peach or something
+                } else {
+                    type_maybe_parsed = plant.type_; // no type in harvest_relative field, use the type of the plant
                 }
+
+                if util::is_standard_candle(&type_maybe_parsed, &harvest_relative.name) {
+                let updated_row_count = diesel::update(
+                    collection_items::dsl::collection_items
+                        .filter(collection_items::id.eq(plant.collection_item_id)),
+                )
+                .set((
+                    collection_items::calc_harvest_relative.eq(harvest_relative.relative_days),
+                    collection_items::calc_harvest_relative_to.eq(harvest_relative.name),
+                    collection_items::calc_harvest_relative_round.eq(0), // set in the 0th round of searches
+                    collection_items::calc_harvest_relative_explanation.eq("parsed from harvest_relative"),
+                ))
+                .execute(db_conn);
+                assert_eq!(Ok(1), updated_row_count);
+            }
             }
         }
     }
 
-    // phase 2-N: for every collection, see if the collection includes a standard candle with an absolute time
-    // if it does, check others in the same collection for their own absolute times and calcualte a relative time
-    // put a note in another field that it was calculated
+    // phase 2-N: for every collection item, if it has an absolute time but not a relative time,
+    //  see if its collection includes any same-type or associated-type plant (like nectarine->peach) with an absolute time
+    // if it does, calculate a relative time based on asbsolute1 - absolute2 + relative2
+    // create a note that it was calculated this way
 
     // a trick for collections which use a different relative plant (like vaughn nursery using elberta for peaches, when we'd like to use redhaven)
     // if we have a calculated relative harvest tagged into that collection (as we will in round 1 for redhaven)

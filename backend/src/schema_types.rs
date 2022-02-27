@@ -81,6 +81,7 @@ pub struct CollectionItem {
     pub harvest_start_is_midpoint: Option<i32>,
 
     pub calc_harvest_relative: Option<i32>,
+    pub calc_harvest_relative_to: Option<String>,
     pub calc_harvest_relative_round: Option<i32>,
     pub calc_harvest_relative_explanation: Option<String>,
 
