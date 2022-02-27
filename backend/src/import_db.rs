@@ -1676,17 +1676,15 @@ pub struct HarvestRelativeParsed {
 }
 
 fn parse_relative_harvest(input: &str) -> Option<HarvestRelativeParsed> {
- // first, see if there's a ':' character which would mean we have a type like "Peach:" at the beginning
- // this is optional and if omitted the type of the relative plant will be assumed to be the same as this plant
+    // first, see if there's a ':' character which would mean we have a type like "Peach:" at the beginning
+    // this is optional and if omitted the type of the relative plant will be assumed to be the same as this plant
     let split = input.split(':').collect::<Vec<&str>>();
     let edited;
     let type_: Option<String>;
     if split.len() == 2 {
         type_ = Some(split[0].to_string());
         edited = split[1];
-    }
-    else
-    {
+    } else {
         type_ = None;
         edited = input;
     }
@@ -1957,15 +1955,7 @@ fn add_marketing_names(db_conn: &SqliteConnection) {
 
 fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
     let all_plants = collection_items::dsl::collection_items
-        .select((
-            collection_items::id,
-            collection_items::location_id,
-            collection_items::type_,
-            collection_items::name,
-            collection_items::harvest_relative,
-            collection_items::harvest_start,
-        ))
-        .load::<CollectionItemRelative>(db_conn)
+        .load::<CollectionItem>(db_conn)
         .unwrap();
 
     // if harvest_start is unset and harvest_relative is set, parse harvest_relative
@@ -1978,12 +1968,12 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             // (even if they don't have a relative harvest field)
 
             let updated_row_count = diesel::update(
-                collection_items::dsl::collection_items
-                    .filter(collection_items::id.eq(plant.collection_item_id)),
+                collection_items::dsl::collection_items.filter(collection_items::id.eq(plant.id)),
             )
             .set((
                 collection_items::calc_harvest_relative.eq(0),
                 collection_items::calc_harvest_relative_to.eq(plant.name),
+                collection_items::calc_harvest_relative_to_type.eq(plant.type_.clone()),
                 collection_items::calc_harvest_relative_round.eq(0), // set in the 0th round of searches
                 collection_items::calc_harvest_relative_explanation.eq("standard candle"),
             ))
@@ -1993,7 +1983,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
         if plant.harvest_relative.is_some() {
             if let Some(harvest_relative) = parse_relative_harvest(&plant.harvest_relative.unwrap())
             {
-                // phase 0: for each collection item, see if it has an imported harvest_relative field, and check that against
+                // round 0: for each collection item, see if it has an imported harvest_relative field, and check that against
                 // the list of standard candles using type_to_standard_candle() and parse the days/weeks. then put an integer
                 // into the calculated relative harvest column, and put a note that it was a direct parse
 
@@ -2005,28 +1995,94 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                 }
 
                 if util::is_standard_candle(&type_maybe_parsed, &harvest_relative.name) {
-                let updated_row_count = diesel::update(
-                    collection_items::dsl::collection_items
-                        .filter(collection_items::id.eq(plant.collection_item_id)),
-                )
-                .set((
-                    collection_items::calc_harvest_relative.eq(harvest_relative.relative_days),
-                    collection_items::calc_harvest_relative_to.eq(harvest_relative.name),
-                    collection_items::calc_harvest_relative_round.eq(0), // set in the 0th round of searches
-                    collection_items::calc_harvest_relative_explanation.eq("parsed from harvest_relative"),
-                ))
-                .execute(db_conn);
-                assert_eq!(Ok(1), updated_row_count);
-            }
+                    let updated_row_count = diesel::update(
+                        collection_items::dsl::collection_items
+                            .filter(collection_items::id.eq(plant.id)),
+                    )
+                    .set((
+                        collection_items::calc_harvest_relative.eq(harvest_relative.relative_days),
+                        collection_items::calc_harvest_relative_to.eq(harvest_relative.name),
+                        collection_items::calc_harvest_relative_to_type.eq(type_maybe_parsed),
+                        collection_items::calc_harvest_relative_round.eq(0), // set in the 0th round of searches
+                        collection_items::calc_harvest_relative_explanation
+                            .eq("parsed from harvest_relative"),
+                    ))
+                    .execute(db_conn);
+                    assert_eq!(Ok(1), updated_row_count);
+                }
             }
         }
     }
 
-    // phase 2-N: for every collection item, if it has an absolute time but not a relative time,
-    //  see if its collection includes any same-type or associated-type plant (like nectarine->peach) with an absolute time
-    // if it does, calculate a relative time based on asbsolute1 - absolute2 + relative2
-    // create a note that it was calculated this way
+    for round in 1..10 {
+        println!("relative harvest inference round {round}");
 
+        let all_plants = collection_items::dsl::collection_items
+            .load::<CollectionItem>(db_conn)
+            .unwrap();
+
+        let mut num_inferred = 0;
+        for plant in all_plants {
+            if (plant.calc_harvest_relative.is_none() && plant.harvest_start.is_some()) {
+                if let Some(candle) = util::type_to_standard_candle(&plant.type_) {
+                    // round 2-N: for every collection item, if it has an absolute time but not a relative time,
+                    // see if its collection includes any same-type with an absolute time AND a relative time
+                    // if it does, calculate a relative time based on asbsolute1 - absolute2 + relative2
+                    // create a note that it was calculated this way
+                    // todo
+
+                    let potential_relative_plants = collection_items::dsl::collection_items
+                        .filter(collection_items::location_id.eq(plant.location_id))
+                        .filter(collection_items::calc_harvest_relative_to.eq(&candle.name))
+                        .filter(collection_items::calc_harvest_relative_to_type.eq(&candle.type_))
+                        .filter(collection_items::calc_harvest_relative.is_not_null())
+                        .filter(collection_items::harvest_start.is_not_null())
+                        .filter(collection_items::calc_harvest_relative.is_not_null())
+                        .load::<CollectionItem>(db_conn)
+                        .unwrap();
+
+                    for base_relative_plant in potential_relative_plants {
+                        let new_relative_harvest = plant.harvest_start.unwrap()
+                            - base_relative_plant.harvest_start.unwrap()
+                            + base_relative_plant.calc_harvest_relative.unwrap();
+
+                        // todo - prefer the standard candle if it's present instead of just taking the first one out of the list
+
+                        let updated_row_count = diesel::update(
+                            collection_items::dsl::collection_items
+                                .filter(collection_items::id.eq(plant.id)),
+                        )
+                        .set((
+                            collection_items::calc_harvest_relative.eq(new_relative_harvest),
+                            collection_items::calc_harvest_relative_to
+                                .eq(base_relative_plant.calc_harvest_relative_to),
+                            collection_items::calc_harvest_relative_to_type
+                                .eq(base_relative_plant.calc_harvest_relative_to_type),
+                            collection_items::calc_harvest_relative_round.eq(round), // set in the 0th round of searches
+                            collection_items::calc_harvest_relative_explanation.eq(format!(
+                                "relative to {} in this location",
+                                base_relative_plant.name
+                            )),
+                        ))
+                        .execute(db_conn);
+                        assert_eq!(Ok(1), updated_row_count);
+                        num_inferred += 1;
+                        break;
+                    }
+
+                    // next:
+                    // 1. calc the best time for each base plant from the existing relative values
+                    // 2. try to fill in more, but using the base plant values
+                    // 3. think about whether further rounds of this will get anywhere with an iterative solution or if this is it
+                }
+            }
+        }
+        println!("inference {num_inferred} in round {round}");
+    }
+
+    //     todo: or associated-type plant (like nectarine->peach) with an absolute time
+
+    // todo -
     // a trick for collections which use a different relative plant (like vaughn nursery using elberta for peaches, when we'd like to use redhaven)
     // if we have a calculated relative harvest tagged into that collection (as we will in round 1 for redhaven)
     // then when we compare a variety to redhaven in that collection, detect that redhaven has elberta-28 and allow elberta+/- for the others in that collection

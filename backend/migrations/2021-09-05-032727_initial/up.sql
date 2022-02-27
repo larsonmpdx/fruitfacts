@@ -26,6 +26,7 @@ CREATE TABLE base_plants (
   -- calculated from all of the other data
   harvest_relative INTEGER, -- + or - days vs the chosen reference plant for this type
   harvest_relative_to TEXT, -- "Redhaven" for peaches for example
+  harvest_relative_to_type TEXT, -- "Peach" for nectarines. should be same type for everything else
   harvest_relative_explanation TEXT, -- include weights etc.
 
   UNIQUE(uspp_number)
@@ -157,6 +158,7 @@ CREATE TABLE collection_items (
   -- or by using a delta from another variety with an already-calculated relative harvest
   calc_harvest_relative INTEGER,
   calc_harvest_relative_to TEXT, -- "Redhaven" for peaches for example
+  calc_harvest_relative_to_type TEXT, -- "Peach" for nectarines. should be same type for everything else
   calc_harvest_relative_round INTEGER, -- 0: directly parsed from harvest_relative text 1: set based on absolute harvest difference to a known variety 2+: successive rounds of this as more varieties get filled in
   calc_harvest_relative_explanation TEXT, -- which plant and value was referenced?
 

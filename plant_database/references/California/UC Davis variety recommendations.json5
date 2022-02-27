@@ -2185,7 +2185,7 @@
         {
             name: "Mayette",
             type: "Walnut",
-            description: "Old-time cultivar. PLant as a pollenizer for late-blooming cultivars. Poor producer. Leafs out late. Blooms late. Large tree",
+            description: "Old-time cultivar. Plant as a pollenizer for late-blooming cultivars. Poor producer. Leafs out late. Blooms late. Large tree",
             locations: [
                 { "San Joaquin Valley": "Oct" },
                 { "Sacramento Valley": "late Oct" },

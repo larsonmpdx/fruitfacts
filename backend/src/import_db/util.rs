@@ -1,3 +1,4 @@
+use lazy_static::lazy_static;
 use std::collections::HashMap;
 
 use chrono::prelude::*;
@@ -18,19 +19,25 @@ pub fn uspp_number_to_expiration(uspp_number_input: i32) -> i64 {
 }
 
 pub fn is_standard_candle(type_input: &str, name: &str) -> bool {
-    if let Some(candle_name) = type_to_standard_candle(type_input) {
-        return name == candle_name;
+    if let Some(candle) = type_to_standard_candle(type_input) {
+        if candle.type_ != type_input {
+            return false; // todo - figure out exactly what to do with nectarines - this ignores them
+        }
+
+        return name == candle.name;
     }
     return false;
 }
 
-pub fn type_to_standard_candle(type_input: &str) -> Option<String> {
-    struct CandleTarget {
-        type_: String,
-        name: String,
-    }
+pub struct CandleTarget {
+    pub type_: String,
+    pub name: String,
+}
 
-    let type_to_candle = HashMap::from([
+lazy_static! {
+    static ref TYPE_TO_CANDLE: HashMap<&'static str, CandleTarget> = {
+
+    HashMap::from([
         (
             "Peach",
             CandleTarget {
@@ -108,14 +115,12 @@ pub fn type_to_standard_candle(type_input: &str) -> Option<String> {
                 name: "Chandler".to_string(),
             },
         ),
-    ]);
+    ])
+    };
+}
 
-    if let Some(value) = type_to_candle.get(type_input) {
-        if value.type_ == type_input {
-            return Some(value.name.clone()); // only return this if the type lines up. this skips nectarine which points to a peach
-        }
-    }
-    None
+pub fn type_to_standard_candle(type_input: &str) -> Option<&CandleTarget> {
+    TYPE_TO_CANDLE.get(type_input)
 }
 
 // for varieties with no release year listed but a patent number given, guess at it based on their US patent number
