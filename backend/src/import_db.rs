@@ -1953,6 +1953,35 @@ fn add_marketing_names(db_conn: &SqliteConnection) {
     }
 }
 
+fn set_relative_vs_existing(
+    db_conn: &SqliteConnection,
+    plant: &CollectionItem,
+    base_plant: &CollectionItem,
+    round: i32,
+) {
+    let new_relative_harvest = plant.harvest_start.unwrap() - base_plant.harvest_start.unwrap()
+        + base_plant.calc_harvest_relative.unwrap();
+
+    // todo - prefer the standard candle if it's present instead of just taking the first one out of the list
+
+    // todo - get a better absolute date that just looking at harvest start (incorporate "is midpoint" if available)
+
+    let updated_row_count = diesel::update(
+        collection_items::dsl::collection_items.filter(collection_items::id.eq(plant.id)),
+    )
+    .set((
+        collection_items::calc_harvest_relative.eq(new_relative_harvest),
+        collection_items::calc_harvest_relative_to.eq(base_plant.calc_harvest_relative_to.clone()),
+        collection_items::calc_harvest_relative_to_type
+            .eq(base_plant.calc_harvest_relative_to_type.clone()),
+        collection_items::calc_harvest_relative_round.eq(round), // set in the 0th round of searches
+        collection_items::calc_harvest_relative_explanation
+            .eq(format!("relative to {} in this location", base_plant.name)),
+    ))
+    .execute(db_conn);
+    assert_eq!(Ok(1), updated_row_count);
+}
+
 fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
     let all_plants = collection_items::dsl::collection_items
         .load::<CollectionItem>(db_conn)
@@ -2031,43 +2060,43 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                     // create a note that it was calculated this way
                     // todo
 
-                    let potential_relative_plants = collection_items::dsl::collection_items
+                    // first look for the candle itself, prefer that
+                    let standard_candle = collection_items::dsl::collection_items
                         .filter(collection_items::location_id.eq(plant.location_id))
                         .filter(collection_items::calc_harvest_relative_to.eq(&candle.name))
                         .filter(collection_items::calc_harvest_relative_to_type.eq(&candle.type_))
                         .filter(collection_items::calc_harvest_relative.is_not_null())
                         .filter(collection_items::harvest_start.is_not_null())
                         .filter(collection_items::calc_harvest_relative.is_not_null())
-                        .load::<CollectionItem>(db_conn)
-                        .unwrap();
+                        .filter(collection_items::name.eq(&candle.name))
+                        .filter(collection_items::type_.eq(&candle.type_))
+                        .first::<CollectionItem>(db_conn);
 
-                    for base_relative_plant in potential_relative_plants {
-                        let new_relative_harvest = plant.harvest_start.unwrap()
-                            - base_relative_plant.harvest_start.unwrap()
-                            + base_relative_plant.calc_harvest_relative.unwrap();
-
-                        // todo - prefer the standard candle if it's present instead of just taking the first one out of the list
-
-                        let updated_row_count = diesel::update(
-                            collection_items::dsl::collection_items
-                                .filter(collection_items::id.eq(plant.id)),
-                        )
-                        .set((
-                            collection_items::calc_harvest_relative.eq(new_relative_harvest),
-                            collection_items::calc_harvest_relative_to
-                                .eq(base_relative_plant.calc_harvest_relative_to),
-                            collection_items::calc_harvest_relative_to_type
-                                .eq(base_relative_plant.calc_harvest_relative_to_type),
-                            collection_items::calc_harvest_relative_round.eq(round), // set in the 0th round of searches
-                            collection_items::calc_harvest_relative_explanation.eq(format!(
-                                "relative to {} in this location",
-                                base_relative_plant.name
-                            )),
-                        ))
-                        .execute(db_conn);
-                        assert_eq!(Ok(1), updated_row_count);
+                    if let Ok(standard_candle) = standard_candle {
+                        set_relative_vs_existing(db_conn, &plant, &standard_candle, round);
                         num_inferred += 1;
-                        break;
+                        continue;
+                    }
+
+                    // if we don't have a standard candle then just pick any same-location plant
+                    let alternative_relative_plant = collection_items::dsl::collection_items
+                        .filter(collection_items::location_id.eq(plant.location_id))
+                        .filter(collection_items::calc_harvest_relative_to.eq(&candle.name))
+                        .filter(collection_items::calc_harvest_relative_to_type.eq(&candle.type_))
+                        .filter(collection_items::calc_harvest_relative.is_not_null())
+                        .filter(collection_items::harvest_start.is_not_null())
+                        .filter(collection_items::calc_harvest_relative.is_not_null())
+                        .first::<CollectionItem>(db_conn);
+
+                    if let Ok(alternative_relative_plant) = alternative_relative_plant {
+                        set_relative_vs_existing(
+                            db_conn,
+                            &plant,
+                            &alternative_relative_plant,
+                            round,
+                        );
+                        num_inferred += 1;
+                        continue;
                     }
 
                     // next:

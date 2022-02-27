@@ -1,0 +1,291 @@
+// this table has all of the co-op selections and harvest times, I didn't want to try to integrate it into the other file
+// which is only the named releases
+{
+    title: "PRI Disease Resistant Apple Breeding Program",
+    author: "unknown",
+    url: "https://www.hort.purdue.edu/newcrop/pri/cultivars.html",
+    published: "unknown",
+    accessed: "Feb 2022",
+    type: "dictionary", // downgrade the category vs. the main list
+    locations: [
+        {
+            name: "Lafayette, IN",
+            latitude: 40.44043598397219,
+            longitude: -86.93564277629406
+        }
+    ],
+    plants: [
+        {
+            name: "Co-op 1",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -6 weeks"
+        },
+        {
+            name: "Prima", // "Co-op 2"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -4 weeks"
+        },
+        {
+            name: "Co-op 3",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -5 weeks"
+        },
+        {
+            name: "Priscilla", // "Co-op 4"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -2 weeks"
+        },
+        {
+            name: "Sir Prize", // "Co-op 5"
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious 0 weeks"
+        },
+        {
+            name: "Co-op 6",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -5.5 weeks"
+        },
+        {
+            name: "Co-op 7",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -5 weeks"
+        },
+        {
+            name: "Co-op 8",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -2.5 weeks"
+        },
+        {
+            name: "Co-op 9",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -1 weeks"
+        },
+        {
+            name: "Co-op 10",
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious 0 weeks"
+        },
+        {
+            name: "Co-op 11",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious +2 weeks"
+        },
+        {
+            name: "Co-op 12",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -8 weeks"
+        },
+        {
+            name: "Redfree", // "Co-op 13"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -7 weeks"
+        },
+        {
+            name: "Co-op 14",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -6 weeks"
+        },
+        {
+            name: "Co-op 15",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -3 weeks"
+        },
+        {
+            name: "Co-op 16",
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious 0 weeks"
+        },
+        {
+            name: "Co-op 17",
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious +3 weeks"
+        },
+        {
+            name: "Co-op 18",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious +1 weeks"
+        },
+        {
+            name: "Co-op 19",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -8 weeks"
+        },
+        {
+            name: "Co-op 20",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -6 weeks"
+        },
+        {
+            name: "Dayton", // "Co-op 21"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -1 weeks"
+        },
+        {
+            name: "Jonafree", // "Co-op 22"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -1 weeks"
+        },
+        {
+            name: "Williams' Pride", // "Co-op 23"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -7 weeks"
+        },
+        {
+            name: "Co-op 24",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -1 weeks"
+        },
+        {
+            name: "Co-op 25", // "Scarlett O'Hara (tm)"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -1 weeks"
+        },
+        {
+            name: "Co-op 26",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious 0 weeks"
+        },
+        {
+            name: "Co-op 27",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious +1 weeks"
+        },
+        {
+            name: "Co-op 28",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -1.5 weeks"
+        },
+        {
+            name: "Co-op 29", // "Sundance" (tm)
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious +2.5 weeks"
+        },
+        {
+            name: "Enterprise", // "Co-op 30"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious +2.5 weeks"
+        },
+        {
+            name: "Co-op 31", // "WineCrisp (tm)"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious +2 weeks"
+        },
+        {
+            name: "Co-op 32", // "Pristine" (tm)
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious -8.5 weeks"
+        },
+        {
+            name: "Co-op 33", // "Pixie Crunch" (tm)
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -1 weeks"
+        },
+        {
+            name: "Co-op 34",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious +1.5 weeks"
+        },
+        {
+            name: "Co-op 35",
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious +2 weeks"
+        },
+        {
+            name: "Co-op 36",
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious +2.5 weeks"
+        },
+        {
+            name: "Co-op 37",
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious +2.5 weeks"
+        },
+        {
+            name: "GoldRush", // "Co-op 38"
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious +3.5 weeks"
+        },
+        {
+            name: "Co-op 39", // "CrimsonCrisp" (tm)
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious -1.5 weeks"
+        },
+        {
+            name: "Co-op 40",
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious -0.5 weeks"
+        },
+        {
+            name: "Co-op 41",
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious +1 weeks"
+        },
+        {
+            name: "Primiera", // "Co-op 42"
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious +1.5 weeks"
+        },
+        {
+            name: "Juliet", // "Co-op 43"
+            type: "Apple",
+            color: "Red",
+            harvest_time_relative: "Red Delicious +2 weeks"
+        },
+        {
+            name: "Co-op 44",
+            type: "Apple",
+            color: "Yellow",
+            harvest_time_relative: "Red Delicious +2 weeks"
+        },
+        {
+            name: "Red Delicious",
+            type: "Apple",
+            harvest_time: "September 25", // "Average maturity date (eating ripe) of 'Starking Delicious' at Lafayette, Indiana is September 25"
+            description: "included for a reference harvest time"
+        }
+
+        // not in the table: priam and mcshay (not given co-op numbers)
+    ]
+}
