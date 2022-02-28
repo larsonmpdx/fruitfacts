@@ -2235,6 +2235,8 @@ fn calculate_relative_harvest(base_plant: &BasePlant) -> Option<RelativeHarvest>
     // add the value to an average based on a weight of the round score * the reference notoriety score
     // then figure the average and return it
     // todo: a summary of the average calculation? it could run long though
+    // todo: only run this update if one of the collection items has been updated in a round newer than the base plant?
+    // that could help avoid progressive averaging of the base plant's date without having new data
     None
 }
 
