@@ -282,8 +282,8 @@
         {
             name: "Red Delicious",
             type: "Apple",
-            harvest_time: "September 25", // "Average maturity date (eating ripe) of 'Starking Delicious' at Lafayette, Indiana is September 25"
-            description: "included for a reference harvest time"
+            harvest_time: "September 25", // from the chart: "Average maturity date (eating ripe) of 'Starking Delicious' at Lafayette, Indiana is September 25"
+            description: "included for a harvest time reference"
         }
 
         // not in the table: priam and mcshay (not given co-op numbers)

@@ -2061,6 +2061,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                     // todo
 
                     // first look for the candle itself, prefer that
+                    // I don't think I can remove this with an order-by-round thing, unless I make standard candles 0.0 and parsed directly 0.1 or something
                     let standard_candle = collection_items::dsl::collection_items
                         .filter(collection_items::location_id.eq(plant.location_id))
                         .filter(collection_items::harvest_start.is_not_null())
@@ -2089,6 +2090,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                         .filter(collection_items::calc_harvest_relative_to_type.eq(&candle.type_))
                         .filter(collection_items::harvest_start.is_not_null())
                         .filter(collection_items::calc_harvest_relative.is_not_null())
+                        .order(collection_items::calc_harvest_relative_round.asc()) // best results first
                         .first::<CollectionItem>(db_conn);
 
                     if let Ok(alternative_relative_plant) = alternative_relative_plant {
@@ -2105,11 +2107,6 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                         num_inferred += 1;
                         continue;
                     }
-
-                    // next:
-                    // 1. calc the best time for each base plant from the existing relative values
-                    // 2. propagate the base plant values out to collections for any plants that are as-yet unmarked, and mark them as such
-                    // 3. end of round, repeat for N times (need to test to see how many rounds make sense)
                 }
             }
         }
@@ -2170,11 +2167,75 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             }
         }
 
+        // next:
+        // 1. calc the best time for each base plant from the existing relative values
+        // 2. propagate the base plant values out to collections for any plants that are as-yet unmarked, and mark them as such
+        // 3. end of round, repeat for N times (need to test to see how many rounds make sense)
+
+        let base_plants = base_plants::dsl::base_plants
+            .load::<BasePlant>(db_conn)
+            .unwrap();
+
+        for base_plant in base_plants {
+            if let Some(calculated) = calculate_relative_harvest(&base_plant) {
+                let updated_row_count = diesel::update(
+                    base_plants::dsl::base_plants.filter(base_plants::id.eq(base_plant.id)),
+                )
+                .set((
+                    base_plants::harvest_relative.eq(calculated.harvest_relative),
+                    base_plants::harvest_relative_to.eq(calculated.harvest_relative_to.clone()),
+                    base_plants::harvest_relative_to_type
+                        .eq(calculated.harvest_relative_to_type.clone()),
+                    base_plants::harvest_relative_explanation
+                        .eq(calculated.harvest_relative_explanation.clone()),
+                ))
+                .execute(db_conn);
+                assert_eq!(Ok(1), updated_row_count);
+
+                // todo: also set this on all previously un-set collection items (of this type+name)
+                // and note the round as round + offset to devalue it vs. simpler forms
+                let updated_row_count = diesel::update(
+                    collection_items::dsl::collection_items
+                        .filter(collection_items::type_.eq(base_plant.type_))
+                        .filter(collection_items::name.eq(base_plant.name)),
+                )
+                .set((
+                    collection_items::calc_harvest_relative.eq(calculated.harvest_relative),
+                    collection_items::calc_harvest_relative_to.eq(calculated.harvest_relative_to),
+                    collection_items::calc_harvest_relative_to_type
+                        .eq(calculated.harvest_relative_to_type),
+                    collection_items::calc_harvest_relative_round.eq(0.0),
+                    collection_items::calc_harvest_relative_explanation
+                        .eq(calculated.harvest_relative_explanation),
+                ))
+                .execute(db_conn)
+                .expect("updating collection items with calculated harvest relative");
+                assert_ge!(updated_row_count, 1);
+            }
+        }
+
         println!("inference {num_inferred} in round {round}");
         // todo - maybe quit early if num_inferred is 0 for this round?
     }
 
     //     todo: or associated-type plant (like nectarine->peach) with an absolute time
+}
+
+struct RelativeHarvest {
+    pub harvest_relative: i32,
+    pub harvest_relative_to: String,
+    pub harvest_relative_to_type: String,
+    pub harvest_relative_explanation: String,
+}
+
+fn calculate_relative_harvest(base_plant: &BasePlant) -> Option<RelativeHarvest> {
+    // todo
+    // get all collection items matching this type+name
+    // if their calculated collection stuff matches the standard candle for this type,
+    // add the value to an average based on a weight of the round score * the reference notoriety score
+    // then figure the average and return it
+    // todo: a summary of the average calculation? it could run long though
+    None
 }
 
 #[skip_serializing_none]
