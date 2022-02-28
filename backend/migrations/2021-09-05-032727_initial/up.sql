@@ -159,7 +159,7 @@ CREATE TABLE collection_items (
   calc_harvest_relative INTEGER,
   calc_harvest_relative_to TEXT, -- "Redhaven" for peaches for example
   calc_harvest_relative_to_type TEXT, -- "Peach" for nectarines. should be same type for everything else
-  calc_harvest_relative_round INTEGER, -- 0: directly parsed from harvest_relative text 1: set based on absolute harvest difference to a known variety 2+: successive rounds of this as more varieties get filled in
+  calc_harvest_relative_round DOUBLE, -- 0: directly parsed from harvest_relative text 1: set based on absolute harvest difference to a known variety 2+: successive rounds of this as more varieties get filled in
   calc_harvest_relative_explanation TEXT, -- which plant and value was referenced?
 
   -- pretty much only for figs with breba+main crop

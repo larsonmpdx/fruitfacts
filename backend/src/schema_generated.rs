@@ -51,7 +51,7 @@ table! {
         calc_harvest_relative -> Nullable<Integer>,
         calc_harvest_relative_to -> Nullable<Text>,
         calc_harvest_relative_to_type -> Nullable<Text>,
-        calc_harvest_relative_round -> Nullable<Integer>,
+        calc_harvest_relative_round -> Nullable<Double>,
         calc_harvest_relative_explanation -> Nullable<Text>,
         harvest_start_2 -> Nullable<Integer>,
         harvest_end_2 -> Nullable<Integer>,

@@ -84,7 +84,7 @@ pub struct CollectionItem {
     pub calc_harvest_relative: Option<i32>,
     pub calc_harvest_relative_to: Option<String>,
     pub calc_harvest_relative_to_type: Option<String>,
-    pub calc_harvest_relative_round: Option<i32>,
+    pub calc_harvest_relative_round: Option<f64>,
     pub calc_harvest_relative_explanation: Option<String>,
 
     pub harvest_start_2: Option<i32>,

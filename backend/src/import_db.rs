@@ -1957,13 +1957,10 @@ fn set_relative_vs_existing(
     db_conn: &SqliteConnection,
     plant: &CollectionItem,
     base_plant: &CollectionItem,
-    round: i32,
+    round: f64,
+    new_relative_harvest: i32,
+    explanation_text_prefix: String,
 ) {
-    let new_relative_harvest = plant.harvest_start.unwrap() - base_plant.harvest_start.unwrap()
-        + base_plant.calc_harvest_relative.unwrap();
-
-    // todo - prefer the standard candle if it's present instead of just taking the first one out of the list
-
     // todo - get a better absolute date that just looking at harvest start (incorporate "is midpoint" if available)
 
     let updated_row_count = diesel::update(
@@ -1975,8 +1972,10 @@ fn set_relative_vs_existing(
         collection_items::calc_harvest_relative_to_type
             .eq(base_plant.calc_harvest_relative_to_type.clone()),
         collection_items::calc_harvest_relative_round.eq(round), // set in the 0th round of searches
-        collection_items::calc_harvest_relative_explanation
-            .eq(format!("relative to {} in this location", base_plant.name)),
+        collection_items::calc_harvest_relative_explanation.eq(format!(
+            "{explanation_text_prefix}relative to {} in this location",
+            base_plant.name
+        )),
     ))
     .execute(db_conn);
     assert_eq!(Ok(1), updated_row_count);
@@ -2003,7 +2002,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                 collection_items::calc_harvest_relative.eq(0),
                 collection_items::calc_harvest_relative_to.eq(plant.name),
                 collection_items::calc_harvest_relative_to_type.eq(plant.type_.clone()),
-                collection_items::calc_harvest_relative_round.eq(0), // set in the 0th round of searches
+                collection_items::calc_harvest_relative_round.eq(0.0), // set in the 0th round of searches
                 collection_items::calc_harvest_relative_explanation.eq("standard candle"),
             ))
             .execute(db_conn);
@@ -2032,9 +2031,9 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                         collection_items::calc_harvest_relative.eq(harvest_relative.relative_days),
                         collection_items::calc_harvest_relative_to.eq(harvest_relative.name),
                         collection_items::calc_harvest_relative_to_type.eq(type_maybe_parsed),
-                        collection_items::calc_harvest_relative_round.eq(0), // set in the 0th round of searches
+                        collection_items::calc_harvest_relative_round.eq(0.0), // set in the 0th round of searches
                         collection_items::calc_harvest_relative_explanation
-                            .eq("parsed from harvest_relative"),
+                            .eq("parsed directly from collection entry"),
                     ))
                     .execute(db_conn);
                     assert_eq!(Ok(1), updated_row_count);
@@ -2043,16 +2042,17 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
         }
     }
 
-    for round in 1..10 {
+    for round in 1..=10 {
         println!("relative harvest inference round {round}");
 
         let all_plants = collection_items::dsl::collection_items
+            .filter(collection_items::calc_harvest_relative.is_null())
             .load::<CollectionItem>(db_conn)
             .unwrap();
 
         let mut num_inferred = 0;
         for plant in all_plants {
-            if (plant.calc_harvest_relative.is_none() && plant.harvest_start.is_some()) {
+            if plant.calc_harvest_relative.is_none() && plant.harvest_start.is_some() {
                 if let Some(candle) = util::type_to_standard_candle(&plant.type_) {
                     // round 2-N: for every collection item, if it has an absolute time but not a relative time,
                     // see if its collection includes any same-type with an absolute time AND a relative time
@@ -2063,17 +2063,21 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                     // first look for the candle itself, prefer that
                     let standard_candle = collection_items::dsl::collection_items
                         .filter(collection_items::location_id.eq(plant.location_id))
-                        .filter(collection_items::calc_harvest_relative_to.eq(&candle.name))
-                        .filter(collection_items::calc_harvest_relative_to_type.eq(&candle.type_))
-                        .filter(collection_items::calc_harvest_relative.is_not_null())
                         .filter(collection_items::harvest_start.is_not_null())
-                        .filter(collection_items::calc_harvest_relative.is_not_null())
                         .filter(collection_items::name.eq(&candle.name))
                         .filter(collection_items::type_.eq(&candle.type_))
                         .first::<CollectionItem>(db_conn);
 
                     if let Ok(standard_candle) = standard_candle {
-                        set_relative_vs_existing(db_conn, &plant, &standard_candle, round);
+                        set_relative_vs_existing(
+                            db_conn,
+                            &plant,
+                            &standard_candle,
+                            round as f64,
+                            plant.harvest_start.unwrap() - standard_candle.harvest_start.unwrap()
+                                + standard_candle.calc_harvest_relative.unwrap(), // todo - account for midpoints
+                            "".to_string(),
+                        );
                         num_inferred += 1;
                         continue;
                     }
@@ -2083,7 +2087,6 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                         .filter(collection_items::location_id.eq(plant.location_id))
                         .filter(collection_items::calc_harvest_relative_to.eq(&candle.name))
                         .filter(collection_items::calc_harvest_relative_to_type.eq(&candle.type_))
-                        .filter(collection_items::calc_harvest_relative.is_not_null())
                         .filter(collection_items::harvest_start.is_not_null())
                         .filter(collection_items::calc_harvest_relative.is_not_null())
                         .first::<CollectionItem>(db_conn);
@@ -2093,7 +2096,11 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                             db_conn,
                             &plant,
                             &alternative_relative_plant,
-                            round,
+                            round as f64 + 0.1, // 0.1: give a small penalty for it not being a standard candle reference
+                            plant.harvest_start.unwrap()
+                                - alternative_relative_plant.harvest_start.unwrap()
+                                + alternative_relative_plant.calc_harvest_relative.unwrap(), // todo - account for midpoints
+                            "".to_string(),
                         );
                         num_inferred += 1;
                         continue;
@@ -2101,22 +2108,73 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
 
                     // next:
                     // 1. calc the best time for each base plant from the existing relative values
-                    // 2. try to fill in more, but using the base plant values
-                    // 3. think about whether further rounds of this will get anywhere with an iterative solution or if this is it
+                    // 2. propagate the base plant values out to collections for any plants that are as-yet unmarked, and mark them as such
+                    // 3. end of round, repeat for N times (need to test to see how many rounds make sense)
                 }
             }
         }
+
+        // we need a 2nd loop so we can pick up plants that have already been tagged as standard candles above
+        // I think this should only be run in round 1 as it won't pick up anything additional later, it relies on harvest_relative fields only
+        let all_plants2 = collection_items::dsl::collection_items
+            .filter(collection_items::calc_harvest_relative.is_null())
+            .load::<CollectionItem>(db_conn)
+            .unwrap();
+
+        'outer: for plant in all_plants2 {
+            // a special case for collections which use a different relative plant (like vaughn nursery using elberta for peaches, when we'd like to use redhaven)
+            // if we have a calculated relative harvest tagged into that collection (as we will in round 1 for redhaven)
+            // then when we compare a variety to redhaven in that collection, detect that redhaven has elberta-28 and allow elberta+/- for the others in that collection
+            if plant.harvest_relative.is_some() {
+                if let Some(harvest_relative) =
+                    parse_relative_harvest(&plant.harvest_relative.clone().unwrap())
+                {
+                    // todo - make sure this also works for the euro burlat cherries, etc.
+                    let alt_references = collection_items::dsl::collection_items
+                        .filter(collection_items::location_id.eq(plant.location_id))
+                        .filter(collection_items::harvest_relative.is_not_null())
+                        .filter(collection_items::calc_harvest_relative.is_not_null())
+                        .filter(collection_items::calc_harvest_relative_to.is_not_null())
+                        .filter(collection_items::calc_harvest_relative_to_type.is_not_null())
+                        .order(collection_items::calc_harvest_relative_round.asc()) // this will prefer standard candles and higher quality things in general
+                        .load::<CollectionItem>(db_conn)
+                        .unwrap();
+
+                    // see if any of these has a harvest_relative that parses to the same thing as our plant in question
+                    for alt_reference in alt_references {
+                        if let Some(alt_reference_harvest_relative) =
+                            parse_relative_harvest(&alt_reference.harvest_relative.clone().unwrap())
+                        {
+                            if alt_reference_harvest_relative.name == harvest_relative.name
+                                && alt_reference_harvest_relative.type_ == harvest_relative.type_
+                            {
+                                set_relative_vs_existing(
+                                    db_conn,
+                                    &plant,
+                                    &alt_reference,
+                                    round as f64,
+                                    // example: we're importing elberta which is "elberta+0"
+                                    // we already have redhaven, tagged as a standard candle "redhaven+0", but it's "elberta-42" in the reference
+                                    // we want to label elberta as "redhaven+42" so we take "redhaven+0", add "elberta+0", and subtract "elberta-42" => "redhaven+42"
+                                    alt_reference.calc_harvest_relative.unwrap()
+                                        + harvest_relative.relative_days
+                                        - alt_reference_harvest_relative.relative_days,
+                                    "relative-to-relative: ".to_string(),
+                                );
+                                num_inferred += 1;
+                                continue 'outer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         println!("inference {num_inferred} in round {round}");
+        // todo - maybe quit early if num_inferred is 0 for this round?
     }
 
     //     todo: or associated-type plant (like nectarine->peach) with an absolute time
-
-    // todo -
-    // a trick for collections which use a different relative plant (like vaughn nursery using elberta for peaches, when we'd like to use redhaven)
-    // if we have a calculated relative harvest tagged into that collection (as we will in round 1 for redhaven)
-    // then when we compare a variety to redhaven in that collection, detect that redhaven has elberta-28 and allow elberta+/- for the others in that collection
-
-    // todo - make sure this also works for the euro burlat cherries, etc.
 }
 
 #[skip_serializing_none]
