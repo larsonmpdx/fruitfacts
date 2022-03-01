@@ -274,7 +274,7 @@ export function getMonthLines(extents) {
                 y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
                 y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
             });
-            if(first_month) {
+            if (first_month) {
                 // only put the midpoint line in before a month one time, the rest of the time it'll come from the after-month midpoint
                 interLines.push({
                     x1: (month.day - month.minus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,

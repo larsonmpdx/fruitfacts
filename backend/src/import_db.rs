@@ -1,8 +1,9 @@
 // import_db.rs: ETL for a set of json files that comprise all of the built-in reference plants, bringing them into the database
 // this lets the database's files be viewed on github and edited by hand as text files,
 // allowing a wider audience of contributors and easier database maintenance
-// the ETL rules get complex in a few places. the goal is to allow the json references to be as simple and close to plain
+// the ETL stuff gets complex in a few places. the goal is to allow the json references to be as simple and close to plain
 // copy-paste imports as possible, with this file doing things like parsing a wide range of date formats
+// and then doing follow-on data analysis like calculating relative harvest times a few different ways
 
 #[cfg(test)]
 mod test;
@@ -1512,11 +1513,7 @@ fn load_references(
                 println!("no git mod time for: {}", file_git_path.display());
             }
 
-            let git_edit_time = if let Some(path_git_info) = path_git_info {
-                Some(path_git_info.seconds())
-            } else {
-                None
-            };
+            let git_edit_time = path_git_info.map(|path_git_info| path_git_info.seconds());
 
             let contents = fs::read_to_string(path_).unwrap();
 
@@ -2016,12 +2013,11 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                 // the list of standard candles using type_to_standard_candle() and parse the days/weeks. then put an integer
                 // into the calculated relative harvest column, and put a note that it was a direct parse
 
-                let type_maybe_parsed;
-                if let Some(type_) = harvest_relative.type_ {
-                    type_maybe_parsed = type_; // type overridden, maybe this is a nectarine referencing redhaving peach or something
+                let type_maybe_parsed = if let Some(type_) = harvest_relative.type_ {
+                    type_ // type overridden, maybe this is a nectarine referencing redhaving peach or something
                 } else {
-                    type_maybe_parsed = plant.type_; // no type in harvest_relative field, use the type of the plant
-                }
+                    plant.type_ // no type in harvest_relative field, use the type of the plant
+                };
 
                 if util::is_standard_candle(&type_maybe_parsed, &harvest_relative.name) {
                     let updated_row_count = diesel::update(
@@ -2233,12 +2229,11 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             {
                 // if base_plants has this name+type and has calc_harvest_relative, use it to get a value here
                 // todo: probably move this logic into a helper and apply it everywhere parse_relative_harvest() is used
-                let type_maybe_parsed;
-                if let Some(type_) = harvest_relative.type_ {
-                    type_maybe_parsed = type_; // type overridden, maybe this is a nectarine referencing redhaving peach or something
+                let type_maybe_parsed = if let Some(type_) = harvest_relative.type_ {
+                    type_ // type overridden, maybe this is a nectarine referencing redhaving peach or something
                 } else {
-                    type_maybe_parsed = un_calced_plant.type_.clone(); // no type in harvest_relative field, use the type of the plant
-                }
+                    un_calced_plant.type_.clone() // no type in harvest_relative field, use the type of the plant
+                };
 
                 // look for the thing pointed to by this orphaned relative harvest text. if found, use its value pointing to the standard candle
                 // to get an orphan->standard candle value
@@ -2312,7 +2307,7 @@ fn calculate_relative_harvest_from_references(
     let mut divisor = 0.0;
     let mut any_reference_updated = false;
     let mut num_references_used = 0;
-    let mut harvest_relative_explanation = format!("round {current_round}: ").to_string();
+    let mut harvest_relative_explanation = format!("round {current_round}: ");
 
     if let Some(candle) = util::type_to_standard_candle(&base_plant.type_) {
         for reference in all_references {
@@ -2341,7 +2336,7 @@ fn calculate_relative_harvest_from_references(
 
                 harvest_relative_explanation += &format!(
                     " [{}] {} ({:.1}*{:.1})",
-                    reference.collection_id.to_string(),
+                    reference.collection_id,
                     reference.calc_harvest_relative.unwrap(),
                     notoriety_score,
                     round_score
@@ -2375,7 +2370,7 @@ fn get_notoriety(collection_id: i32, db_conn: &SqliteConnection) -> f32 {
         .select(collections::notoriety_score)
         .filter(collections::id.eq(collection_id))
         .first::<f32>(db_conn)
-        .expect(&format!("no collection found {}", collection_id))
+        .unwrap_or_else(|_| panic!("no collection found {}", collection_id))
 }
 
 #[skip_serializing_none]

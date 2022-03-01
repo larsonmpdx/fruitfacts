@@ -26,7 +26,7 @@ pub fn is_standard_candle(type_input: &str, name: &str) -> bool {
 
         return name == candle.name;
     }
-    return false;
+    false
 }
 
 pub struct CandleTarget {
