@@ -139,13 +139,13 @@
         {
             name: "Sweet Ann",
             type: "Sweet Cherry",
-            harvest_time_relative: "Bing 0",
+            harvest_time_relative: "Bing +0",
             color: "yellow w/ blush"
         },
         {
             name: "Van",
             type: "Sweet Cherry",
-            harvest_time_relative: "Bing 0",
+            harvest_time_relative: "Bing +0",
             color: "black",
             description: "partially incompatible on Mahaleb"
         },

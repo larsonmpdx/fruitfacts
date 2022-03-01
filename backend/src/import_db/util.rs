@@ -60,6 +60,20 @@ lazy_static! {
             },
         ),
         (
+            "Plumcot",
+            CandleTarget {
+                type_: "Japanese Plum".to_string(),
+                name: "Santa Rosa".to_string(), // note this is a different type
+            },
+        ),
+        (
+            "Apriplum",
+            CandleTarget {
+                type_: "Japanese Plum".to_string(),
+                name: "Santa Rosa".to_string(), // note this is a different type
+            },
+        ),
+        (
             "Euro Plum",
             CandleTarget {
                 type_: "Euro Plum".to_string(),
@@ -102,10 +116,17 @@ lazy_static! {
             },
         ),
         (
+            "Apricot",
+            CandleTarget {
+                type_: "Apricot".to_string(),
+                name: "Harcot".to_string(),
+            },
+        ),
+        (
             "Almond",
             CandleTarget {
                 type_: "Almond".to_string(),
-                name: "Nonpariel".to_string(),
+                name: "Nonpareil".to_string(),
             },
         ),
         (
@@ -115,6 +136,23 @@ lazy_static! {
                 name: "Chandler".to_string(),
             },
         ),
+        (
+            "Blueberry",
+            CandleTarget {
+                type_: "Blueberry".to_string(),
+                name: "Legacy".to_string(),
+            },
+        ),
+        (
+            "Asian Pear",
+            CandleTarget {
+                type_: "Asian Pear".to_string(),
+                name: "Shinseiki".to_string(),
+            },
+        ),
+
+        // todo: Fuyu Persimmon? Pineapple Quince?
+        // Olive, Chestnut, Hazelnut (I think Chestnut and Hazelnut probably have standard candles in the literature already)
     ])
     };
 }

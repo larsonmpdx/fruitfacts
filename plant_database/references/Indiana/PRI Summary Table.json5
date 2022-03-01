@@ -43,7 +43,7 @@
             name: "Sir Prize", // "Co-op 5"
             type: "Apple",
             color: "Yellow",
-            harvest_time_relative: "Red Delicious 0 weeks"
+            harvest_time_relative: "Red Delicious +0 weeks"
         },
         {
             name: "Co-op 6",
@@ -73,7 +73,7 @@
             name: "Co-op 10",
             type: "Apple",
             color: "Yellow",
-            harvest_time_relative: "Red Delicious 0 weeks"
+            harvest_time_relative: "Red Delicious +0 weeks"
         },
         {
             name: "Co-op 11",
@@ -109,7 +109,7 @@
             name: "Co-op 16",
             type: "Apple",
             color: "Yellow",
-            harvest_time_relative: "Red Delicious 0 weeks"
+            harvest_time_relative: "Red Delicious +0 weeks"
         },
         {
             name: "Co-op 17",
@@ -169,7 +169,7 @@
             name: "Co-op 26",
             type: "Apple",
             color: "Red",
-            harvest_time_relative: "Red Delicious 0 weeks"
+            harvest_time_relative: "Red Delicious +0 weeks"
         },
         {
             name: "Co-op 27",

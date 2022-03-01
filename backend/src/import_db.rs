@@ -1830,7 +1830,7 @@ fn relative_to_absolute_harvest_times(db_conn: &SqliteConnection) {
         .unwrap();
 
     // if harvest_start is unset and harvest_relative is set, parse harvest_relative
-    // and see if it refers to another plant in the same location. if so, create absoluate dates
+    // and see if it refers to another plant in the same location. if so, create absolute dates
     // relative to the base plant and store those
 
     for plant in all_plants {
@@ -1838,6 +1838,7 @@ fn relative_to_absolute_harvest_times(db_conn: &SqliteConnection) {
             if let Some(harvest_relative) = parse_relative_harvest(&plant.harvest_relative.unwrap())
             {
                 // look for this variety name in the same location
+                // todo: look at harvest_relative's "type" field in case it's pointing across types
 
                 if let Ok(relative_plant) = collection_items::dsl::collection_items
                     .filter(collection_items::location_id.eq(plant.location_id))
@@ -2219,6 +2220,67 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
 
         // todo: if any plants are STILL untagged, and have a harvest_relative field but no calced fields,
         // see if the base plant value can be used to fill in their calced fields
+        let un_calced_plants = collection_items::dsl::collection_items
+            .filter(collection_items::calc_harvest_relative.is_null())
+            .filter(collection_items::harvest_relative.is_not_null())
+            .load::<CollectionItem>(db_conn)
+            .unwrap();
+
+        for un_calced_plant in un_calced_plants {
+            // if this plant's harvest_time_relative parses
+            if let Some(harvest_relative) =
+                parse_relative_harvest(&un_calced_plant.harvest_relative.clone().unwrap())
+            {
+                // if base_plants has this name+type and has calc_harvest_relative, use it to get a value here
+                // todo: probably move this logic into a helper and apply it everywhere parse_relative_harvest() is used
+                let type_maybe_parsed;
+                if let Some(type_) = harvest_relative.type_ {
+                    type_maybe_parsed = type_; // type overridden, maybe this is a nectarine referencing redhaving peach or something
+                } else {
+                    type_maybe_parsed = un_calced_plant.type_.clone(); // no type in harvest_relative field, use the type of the plant
+                }
+
+                // look for the thing pointed to by this orphaned relative harvest text. if found, use its value pointing to the standard candle
+                // to get an orphan->standard candle value
+                let base_plant = base_plants::dsl::base_plants
+                    .filter(base_plants::name.eq(&harvest_relative.name))
+                    .filter(base_plants::type_.eq(&type_maybe_parsed))
+                    .first::<BasePlant>(db_conn);
+
+                // the thing pointed to in the relative harvest text might not exist
+                if let Ok(base_plant) = base_plant {
+                    if base_plant.harvest_relative.is_some()
+                        && base_plant.harvest_relative_to.is_some()
+                        && base_plant.harvest_relative_to_type.is_some()
+                    {
+                        // we have a value for "relative to this base plant"
+                        // and then we have a value for "base plant relative to standard candle"
+                        // so we just add the two: uncalced -> base plant -> standard candle
+
+                        let updated_row_count = diesel::update(
+                            collection_items::dsl::collection_items
+                                .filter(collection_items::id.eq(un_calced_plant.id)),
+                        )
+                        .set((
+                            collection_items::calc_harvest_relative
+                                .eq(base_plant.harvest_relative.unwrap()
+                                    + harvest_relative.relative_days),
+                            collection_items::calc_harvest_relative_to
+                                .eq(base_plant.harvest_relative_to.unwrap()),
+                            collection_items::calc_harvest_relative_to_type
+                                .eq(base_plant.harvest_relative_to_type.unwrap()),
+                            collection_items::calc_harvest_relative_round.eq(round as f64 + 0.95),
+                            collection_items::calc_harvest_relative_explanation
+                                .eq(&format!("round {round}: set vs. base plant average")
+                                    .to_string()),
+                        ))
+                        .execute(db_conn)
+                        .expect("updating collection items with calculated harvest relative");
+                        assert_eq!(1, updated_row_count);
+                    }
+                }
+            }
+        }
 
         println!("inference {num_inferred} in round {round}");
         // todo - maybe quit early if num_inferred is 0 for this round?

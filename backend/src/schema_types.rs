@@ -53,7 +53,7 @@ pub struct BasePlant {
 }
 
 #[skip_serializing_none]
-#[derive(Identifiable, Serialize, Queryable, Associations)]
+#[derive(Identifiable, Serialize, Queryable, Associations, Debug)]
 #[belongs_to(Collection)]
 pub struct CollectionItem {
     pub id: i32,
