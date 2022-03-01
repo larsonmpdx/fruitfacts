@@ -21,21 +21,21 @@
             name: "Panaro 2",
             AKA: ["Early Star (r)"],
             description: "self-fertile. Bigarreau Burlat × Compact Stella",
-            harvest_time_relative: "Burlat +4 to +6",
+            harvest_time_relative: "Early Burlat +4 to +6",
             released: "U Bologna Italy 1997*"
         },
         {
             type: "Sweet Cherry",
             name: "Blaze Star",
             description: "self-fertile. Lapins × Durone compatto di Vignola",
-            harvest_time_relative: "Burlat +14 to +16",
+            harvest_time_relative: "Early Burlat +14 to +16",
             released: "U Bologna Italy 1997*"
         },
         {
             type: "Sweet Cherry",
             name: "LaLa Star",
             description: "self-fertile. Compact Lambert × Lapins",
-            harvest_time_relative: "Burlat +22 to +24", // or "a few days before Lapins"
+            harvest_time_relative: "Early Burlat +22 to +24", // or "a few days before Lapins"
             released: "U Bologna Italy 1997*"
         },
         {
@@ -43,28 +43,28 @@
             name: "Panaro 1",
             AKA: ["Sweet Early (r)"],
             description: "self-fertile. Burlat × Sunburst",
-            harvest_time_relative: "Burlat -2 to -4",
+            harvest_time_relative: "Early Burlat -2 to -4",
             released: "U Bologna Italy 2000*"
         },
         {
             type: "Sweet Cherry",
             name: "Grace Star",
             description: "self-fertile. Burlat × O.P",
-            harvest_time_relative: "Burlat +10 to +12",
+            harvest_time_relative: "Early Burlat +10 to +12",
             released: "U Bologna Italy 2001*"
         },
         {
             type: "Sweet Cherry",
             name: "Black Star",
             description: "self-fertile. Lapins’ × ‘Burlat",
-            harvest_time_relative: "Burlat +16 to +18",
+            harvest_time_relative: "Early Burlat +16 to +18",
             released: "U Bologna Italy 2001*"
         },
         {
             type: "Sweet Cherry",
             name: "Big Star",
             description: "self-fertile. https://www.vitrohellas.gr/en/product/big-star",
-            harvest_time_relative: "Burlat +24",
+            harvest_time_relative: "Early Burlat +24",
             // approximate release time. it's not in the acta hort paper so it's likely 2005-2007 at the end of phase 1
             released: "U Bologna Italy 2005*"
         },
@@ -78,7 +78,7 @@
             name: "PA1UNIBO",
             AKA: ["Sweet Aryana (r)"],
             description: "self-fertile. https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-aryanalorenz_eng.pdf",
-            harvest_time_relative: "Burlat +3 to +5",
+            harvest_time_relative: "Early Burlat +3 to +5",
             s_allele: "S3S4'",
             released: "U Bologna Italy *",
             patent: "https://patents.google.com/patent/USPP25996 expires 2033-09-23"
@@ -88,7 +88,7 @@
             name: "PA2UNIBO",
             AKA: ["Sweet Lorenz (r)"],
             description: "not self-fertile. https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-aryanalorenz_eng.pdf",
-            harvest_time_relative: "Burlat +8 to +10",
+            harvest_time_relative: "Early Burlat +8 to +10",
             s_allele: "S3S4",
             released: "U Bologna Italy *",
             // patent application used "Sweet Lorenz" but was corrected to the nonsense name in the grant
@@ -99,7 +99,7 @@
             name: "PA3UNIBO",
             AKA: ["Sweet Gabriel (r)"],
             description: "not self-fertile https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-gabrielvalina_eng.pdf",
-            harvest_time_relative: "Burlat +11 to +14",
+            harvest_time_relative: "Early Burlat +11 to +14",
             s_allele: "S3S4",
             released: "U Bologna Italy *",
             patent: "https://patents.google.com/patent/USPP25997 expires 2033-09-23"
@@ -109,7 +109,7 @@
             name: "PA4UNIBO",
             AKA: ["Sweet Valina (r)"],
             description: "not self-fertile https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-gabrielvalina_eng.pdf",
-            harvest_time_relative: "Burlat +15 to +18",
+            harvest_time_relative: "Early Burlat +15 to +18",
             s_allele: "S3S4",
             released: "U Bologna Italy *",
             patent: "https://patents.google.com/patent/USPP25981 expires 2033-10-04"
@@ -119,7 +119,7 @@
             name: "PA5UNIBO",
             AKA: ["Sweet Saretta (r)"],
             description: "self-fertile https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-sarettastephany_eng.pdf",
-            harvest_time_relative: "Burlat +22 to +24",
+            harvest_time_relative: "Early Burlat +22 to +24",
             s_allele: "S3S4'",
             released: "U Bologna Italy *",
             patent: "https://patents.google.com/patent/USPP25972 expires 2033-09-23"
@@ -129,7 +129,7 @@
             name: "PA6UNIBO",
             AKA: ["Marysa (r)"],
             description: "self-fertile. https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Marysa_eng.pdf",
-            harvest_time_relative: "Burlat +10 to +12",
+            harvest_time_relative: "Early Burlat +10 to +12",
             s_allele: "S3S4'",
             released: "U Bologna Italy *",
             patent: "https://patents.google.com/patent/USPP29677 expires 2036-09-22"
@@ -139,7 +139,7 @@
             name: "PA7UNIBO",
             AKA: ["Sweet Stephany (r)"],
             description: "self-fertile. in 2021, held the record for the world's heaviest sweet cherry https://www.salvivivai.it/wp-content/uploads/2019/04/SALVIVIVAI_CILIEGIO_Sweet-sarettastephany_eng.pdf",
-            harvest_time_relative: "Burlat +27",
+            harvest_time_relative: "Early Burlat +27",
             s_allele: "S3S4'",
             released: "U Bologna Italy *",
             patent: "https://patents.google.com/patent/USPP29765 expires 2036-11-14"

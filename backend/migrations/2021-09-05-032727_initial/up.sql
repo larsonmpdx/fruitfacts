@@ -104,8 +104,8 @@ CREATE TABLE collections (
   filename TEXT,
 
   notoriety_type TEXT NOT NULL,
-  notoriety_score REAL,
-  notoriety_score_explanation TEXT,
+  notoriety_score REAL NOT NULL,
+  notoriety_score_explanation TEXT NOT NULL,
 
   title TEXT,
   author TEXT,

@@ -1547,8 +1547,8 @@ fn load_references(
                     collections::reviewed.eq(&collection.reviewed),
                     collections::accessed.eq(&collection.accessed),
                     collections::notoriety_type.eq(&collection.type_.to_lowercase()),
-                    collections::notoriety_score.eq(Some(notoriety_info.score)),
-                    collections::notoriety_score_explanation.eq(Some(notoriety_info.explanation)),
+                    collections::notoriety_score.eq(notoriety_info.score),
+                    collections::notoriety_score_explanation.eq(notoriety_info.explanation),
                 ))
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
@@ -2177,7 +2177,9 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             .unwrap();
 
         for base_plant in base_plants {
-            if let Some(calculated) = calculate_relative_harvest(&base_plant) {
+            if let Some(calculated) =
+                calculate_relative_harvest_from_references(&base_plant, round, db_conn)
+            {
                 let updated_row_count = diesel::update(
                     base_plants::dsl::base_plants.filter(base_plants::id.eq(base_plant.id)),
                 )
@@ -2197,22 +2199,26 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                 let updated_row_count = diesel::update(
                     collection_items::dsl::collection_items
                         .filter(collection_items::type_.eq(base_plant.type_))
-                        .filter(collection_items::name.eq(base_plant.name)),
+                        .filter(collection_items::name.eq(base_plant.name))
+                        .filter(collection_items::calc_harvest_relative.is_null()),
                 )
                 .set((
                     collection_items::calc_harvest_relative.eq(calculated.harvest_relative),
                     collection_items::calc_harvest_relative_to.eq(calculated.harvest_relative_to),
                     collection_items::calc_harvest_relative_to_type
                         .eq(calculated.harvest_relative_to_type),
-                    collection_items::calc_harvest_relative_round.eq(0.0),
+                    collection_items::calc_harvest_relative_round.eq(round as f64 + 0.9),
                     collection_items::calc_harvest_relative_explanation
                         .eq(calculated.harvest_relative_explanation),
                 ))
                 .execute(db_conn)
                 .expect("updating collection items with calculated harvest relative");
-                assert_ge!(updated_row_count, 1);
+                // the above query will commonly affect zero rows - don't check return row count
             }
         }
+
+        // todo: if any plants are STILL untagged, and have a harvest_relative field but no calced fields,
+        // see if the base plant value can be used to fill in their calced fields
 
         println!("inference {num_inferred} in round {round}");
         // todo - maybe quit early if num_inferred is 0 for this round?
@@ -2228,16 +2234,86 @@ struct RelativeHarvest {
     pub harvest_relative_explanation: String,
 }
 
-fn calculate_relative_harvest(base_plant: &BasePlant) -> Option<RelativeHarvest> {
-    // todo
+fn calculate_relative_harvest_from_references(
+    base_plant: &BasePlant,
+    current_round: i32,
+    db_conn: &SqliteConnection,
+) -> Option<RelativeHarvest> {
     // get all collection items matching this type+name
-    // if their calculated collection stuff matches the standard candle for this type,
-    // add the value to an average based on a weight of the round score * the reference notoriety score
-    // then figure the average and return it
-    // todo: a summary of the average calculation? it could run long though
-    // todo: only run this update if one of the collection items has been updated in a round newer than the base plant?
-    // that could help avoid progressive averaging of the base plant's date without having new data
+    let all_references = collection_items::dsl::collection_items
+        .filter(collection_items::type_.eq(&base_plant.type_))
+        .filter(collection_items::name.eq(&base_plant.name))
+        .load::<CollectionItem>(db_conn)
+        .unwrap();
+
+    let mut sum = 0.0;
+    let mut divisor = 0.0;
+    let mut any_reference_updated = false;
+    let mut num_references_used = 0;
+    let mut harvest_relative_explanation = format!("round {current_round}: ").to_string();
+
+    if let Some(candle) = util::type_to_standard_candle(&base_plant.type_) {
+        for reference in all_references {
+            // if their calculated collection stuff matches the standard candle for this type,
+            if reference.calc_harvest_relative.is_some()
+                && reference.calc_harvest_relative_to == Some(candle.name.clone())
+                && reference.calc_harvest_relative_to_type == Some(candle.type_.clone())
+                && reference.calc_harvest_relative_round.is_some()
+            {
+                if reference.calc_harvest_relative_round.unwrap() >= current_round as f64 {
+                    any_reference_updated = true; // todo - we could do one loop looking for updated references then a 2nd loop to do the calculations if we have any. could save a little time
+                }
+
+                num_references_used += 1;
+
+                // add the value to an average based on a weight of the round score * the reference notoriety score
+                let round_score = match reference.calc_harvest_relative_round.unwrap() {
+                    value if value < 0.1 => 1.0,    // for round 0
+                    value => 1.0 / value.powf(2.0), // round 1: 1, round 2: .5, round 3: .25 etc. (give a sharply reduced score as rounds progress)
+                };
+                let notoriety_score = get_notoriety(reference.collection_id, db_conn) as f64;
+                let overall_score = notoriety_score * round_score; // todo - maybe copy notoriety into each reference to save time here?
+
+                sum += reference.calc_harvest_relative.unwrap() as f64 * overall_score;
+                divisor += overall_score;
+
+                harvest_relative_explanation += &format!(
+                    " [{}] {} ({:.1}*{:.1})",
+                    reference.collection_id.to_string(),
+                    reference.calc_harvest_relative.unwrap(),
+                    notoriety_score,
+                    round_score
+                )
+                .to_string();
+
+                // then figure the average and return it
+                // create a summary of the average calculation. [L16]: -23 (93*.5) [L17]: -33 (93*.5) etc. with some length cutoff
+                // only run this 1. in the first round or 2. if one of the collection items has been updated in the current round
+                // that could help avoid progressive averaging of the base plant's date without having new data
+            }
+        }
+
+        if num_references_used > 0 && (current_round <= 1 || any_reference_updated) {
+            return Some(RelativeHarvest {
+                harvest_relative: (sum / divisor).round() as i32,
+                harvest_relative_to: candle.name.clone(),
+                harvest_relative_to_type: candle.type_.clone(),
+                harvest_relative_explanation,
+            });
+        } else {
+            return None;
+        }
+    }
+
     None
+}
+
+fn get_notoriety(collection_id: i32, db_conn: &SqliteConnection) -> f32 {
+    collections::dsl::collections
+        .select(collections::notoriety_score)
+        .filter(collections::id.eq(collection_id))
+        .first::<f32>(db_conn)
+        .expect(&format!("no collection found {}", collection_id))
 }
 
 #[skip_serializing_none]

@@ -103,8 +103,8 @@ pub struct Collection {
     pub filename: Option<String>,
 
     pub notoriety_type: String,
-    pub notoriety_score: Option<f32>,
-    pub notoriety_score_explanation: Option<String>,
+    pub notoriety_score: f32,
+    pub notoriety_score_explanation: String,
 
     pub title: Option<String>,
     pub author: Option<String>,
