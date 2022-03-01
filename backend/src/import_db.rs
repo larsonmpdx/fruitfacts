@@ -2197,7 +2197,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
 
                 // todo: also set this on all previously un-set collection items (of this type+name)
                 // and note the round as round + offset to devalue it vs. simpler forms
-                let updated_row_count = diesel::update(
+                let _updated_row_count = diesel::update(
                     collection_items::dsl::collection_items
                         .filter(collection_items::type_.eq(base_plant.type_))
                         .filter(collection_items::name.eq(base_plant.name))
