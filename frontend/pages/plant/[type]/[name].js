@@ -68,6 +68,14 @@ export default function Home({ plant }) {
                 </p>
             )}
 
+            {plant.base?.harvest_relative_to && plant.base?.harvest_relative != undefined && (
+                <p>
+                    {`${plant.base.harvest_relative_to} ${
+                        plant.base.harvest_relative >= 0 ? '+' : ''
+                    }${plant.base.harvest_relative}`}
+                </p>
+            )}
+
             {plant.collection && (
                 <>
                     {' '}
