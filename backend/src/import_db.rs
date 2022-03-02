@@ -143,7 +143,6 @@ enum DateParseType {
     Undefined,
     Unparsed,
     StartOnly,
-    Midpoint,
     TwoDates,
 }
 
@@ -282,6 +281,7 @@ fn average(numbers: &[u32]) -> u32 {
 // "Sep 20-30" -> "Sep 20" and "Sep 30"
 // "Sep 25-Oct 5" -> "Sep 25" and "Oct 5"
 // if none of these match, maybe it's a single date, pass it through to string_to_day_number() unchanged
+// window_size is how big of a window to build (half before and half after) if we parse this as a midpoint
 
 // special case: "average of: July 6, June 29"
 // this is for extension pubs that give a set of dates based on measurements in multiple years
@@ -289,13 +289,13 @@ fn average(numbers: &[u32]) -> u32 {
 
 // report the way it was parsed:
 // * as a start date (like peaches, "September 15", "early September")
-// * midpoint ("September" or "mid September") where we'd like the graphed date range to also be centered
-// * two dates ("September 15-30")
-// single dates get a window put after them (window size configured outside this import), midpoints get a window centered on them, two dates stay as they are
+// * two dates ("September 15-30") - this can also come out of a "midpoint" parse, which would take something like "september" and return Sept 10-20, the middle 10 days of September
+// single dates get a window put after them (window size configured outside this import), two dates stay as they are
 
-// also parse "early/mid/late" and "0%,50%,100%" relative ripening times (return a percentage)
+// todo: also parse "early/mid/late" and "0%,50%,100%" relative ripening times (return a percentage)
+const DEFAULT_WINDOW_SIZE: u32 = 10;
 
-fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
+fn string_to_day_range(input: &str, window_size: u32) -> Option<DayRangeOutput> {
     let mut output = DayRangeOutput::default();
 
     // escape hatch for "time within season" strings which we aren't parsing for now
@@ -353,8 +353,9 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
 
     if input.to_lowercase().starts_with("50% harvest:") {
         if let Some(parsed) = string_to_day_number(input) {
-            output.parse_type = DateParseType::Midpoint;
-            output.start = Some(parsed);
+            output.parse_type = DateParseType::TwoDates; // treat as a midpoint
+            output.start = Some(parsed - window_size/2);
+            output.end = Some(parsed + window_size/2);
             return Some(output);
         }
     }
@@ -466,15 +467,18 @@ fn string_to_day_range(input: &str) -> Option<DayRangeOutput> {
     // if no "to" or "-" then it's a single date
     // detect bare months or mid month to set the midpoint enum, otherwise it's a start only
 
-    if is_a_midpoint(input) {
-        output.parse_type = DateParseType::Midpoint;
-    } else {
-        output.parse_type = DateParseType::StartOnly;
-    }
     match string_to_day_number(input) {
         Some(start) => {
-            output.start = Some(start);
-            Some(output)
+            if is_a_midpoint(input) {
+                output.parse_type = DateParseType::TwoDates;
+                output.start = Some(start - window_size / 2);
+                output.end = Some(start + window_size / 2);
+                Some(output)
+            } else {
+                output.parse_type = DateParseType::StartOnly;
+                output.start = Some(start);
+                Some(output)
+            }
         }
         None => None,
     }
@@ -1078,10 +1082,8 @@ struct AddCollectionPlantType<'a> {
 fn add_collection_plant(input: AddCollectionPlantType) -> isize {
     let mut harvest_start = None;
     let mut harvest_end = None;
-    let mut harvest_start_is_midpoint = None;
     let mut harvest_start_2 = None; // fig breba+main
     let mut harvest_end_2 = None; // fig breba+main
-    let mut harvest_start_2_is_midpoint = None; // fig breba+main
     if let Some(harvest_time) = input.harvest_time {
         if harvest_time.is_empty() {
             panic!(
@@ -1101,16 +1103,13 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
                 harvest_time
             );
 
-            match string_to_day_range(split[0]) {
+            match string_to_day_range(split[0], DEFAULT_WINDOW_SIZE) {
                 Some(day_range) => {
                     if let Some(start) = day_range.start {
                         harvest_start = Some(i32::try_from(start).unwrap());
                     }
                     if let Some(end) = day_range.end {
                         harvest_end = Some(i32::try_from(end).unwrap());
-                    }
-                    if day_range.parse_type == DateParseType::Midpoint {
-                        harvest_start_is_midpoint = Some(1);
                     }
                 }
                 None => {
@@ -1120,16 +1119,13 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
                     );
                 }
             }
-            match string_to_day_range(split[1]) {
+            match string_to_day_range(split[1], DEFAULT_WINDOW_SIZE) {
                 Some(day_range) => {
                     if let Some(start) = day_range.start {
                         harvest_start_2 = Some(i32::try_from(start).unwrap());
                     }
                     if let Some(end) = day_range.end {
                         harvest_end_2 = Some(i32::try_from(end).unwrap());
-                    }
-                    if day_range.parse_type == DateParseType::Midpoint {
-                        harvest_start_2_is_midpoint = Some(1);
                     }
                 }
                 None => {
@@ -1140,16 +1136,13 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
                 }
             }
         } else {
-            match string_to_day_range(harvest_time) {
+            match string_to_day_range(harvest_time, DEFAULT_WINDOW_SIZE) {
                 Some(day_range) => {
                     if let Some(start) = day_range.start {
                         harvest_start = Some(i32::try_from(start).unwrap());
                     }
                     if let Some(end) = day_range.end {
                         harvest_end = Some(i32::try_from(end).unwrap());
-                    }
-                    if day_range.parse_type == DateParseType::Midpoint {
-                        harvest_start_is_midpoint = Some(1);
                     }
                 }
                 None => {
@@ -1192,10 +1185,8 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
             collection_items::harvest_text.eq(harvest_time_helper_text),
             collection_items::harvest_start.eq(harvest_start),
             collection_items::harvest_end.eq(harvest_end),
-            collection_items::harvest_start_is_midpoint.eq(harvest_start_is_midpoint),
             collection_items::harvest_start_2.eq(harvest_start_2),
             collection_items::harvest_end_2.eq(harvest_end_2),
-            collection_items::harvest_start_2_is_midpoint.eq(harvest_start_2_is_midpoint),
         ))
         .execute(input.db_conn);
     assert_eq!(
@@ -1870,12 +1861,8 @@ fn relative_to_absolute_harvest_times(db_conn: &SqliteConnection) {
                     .set((
                         collection_items::harvest_start.eq(harvest_start),
                         collection_items::harvest_end.eq(harvest_end),
-                        collection_items::harvest_start_is_midpoint
-                            .eq(relative_plant.harvest_start_is_midpoint),
                         collection_items::harvest_start_2.eq(harvest_start_2),
                         collection_items::harvest_end_2.eq(harvest_end_2),
-                        collection_items::harvest_start_is_midpoint
-                            .eq(relative_plant.harvest_start_2_is_midpoint),
                     ))
                     .execute(db_conn);
                     assert_eq!(Ok(1), updated_row_count);

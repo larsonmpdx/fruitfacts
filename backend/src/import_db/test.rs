@@ -160,15 +160,15 @@ fn test_parse_released_panic() {
 fn test_parse_released_panic_2() {
     parse_released("2101");
 }
-
+const TEST_WINDOW_SIZE: u32 = 10;
 #[test]
 fn test_day_range() {
     assert_eq!(
-        string_to_day_range("eary Jun"), // misspelled - parse error
+        string_to_day_range("eary Jun", TEST_WINDOW_SIZE), // misspelled - parse error
         None
     );
     assert_eq!(
-        string_to_day_range("Early").unwrap(), // this refers to "early within season" and we're not parsing it for now, just store the text
+        string_to_day_range("Early", TEST_WINDOW_SIZE).unwrap(), // this refers to "early within season" and we're not parsing it for now, just store the text
         DayRangeOutput {
             parse_type: DateParseType::Unparsed,
             start: None,
@@ -176,7 +176,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("Early August").unwrap(),
+        string_to_day_range("Early August", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(218),
@@ -184,7 +184,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("August 7").unwrap(),
+        string_to_day_range("August 7", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(220),
@@ -192,7 +192,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("August 15").unwrap(), // not midpoint, even though it's mid month, because it's an exact date
+        string_to_day_range("August 15", TEST_WINDOW_SIZE).unwrap(), // not midpoint, even though it's mid month, because it's an exact date
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(228),
@@ -200,7 +200,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("mid-late August").unwrap(), // not a recommended format because the '-' gets it parsed as two dates
+        string_to_day_range("mid-late August", TEST_WINDOW_SIZE).unwrap(), // not a recommended format because the '-' gets it parsed as two dates
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(228),
@@ -208,7 +208,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("mid to late August").unwrap(), // same
+        string_to_day_range("mid to late August", TEST_WINDOW_SIZE).unwrap(), // same
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(228),
@@ -216,24 +216,24 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("August").unwrap(),
+        string_to_day_range("August", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
-            parse_type: DateParseType::Midpoint,
-            start: Some(228),
-            end: None
+            parse_type: DateParseType::TwoDates, // this becomes two dates because we build a window around it, +/- half the window size, in order to preserve it being listed like a midpoint in the reference
+            start: Some(223),
+            end: Some(233),
         }
     );
     assert_eq!(
-        string_to_day_range("mid September").unwrap(),
+        string_to_day_range("mid September", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
-            parse_type: DateParseType::Midpoint,
-            start: Some(259),
-            end: None
+            parse_type: DateParseType::TwoDates, // same as above, this is a midpoint
+            start: Some(254),
+            end: Some(264),
         }
     );
 
     assert_eq!(
-        string_to_day_range("early to late August").unwrap(),
+        string_to_day_range("early to late August", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(218),
@@ -242,7 +242,7 @@ fn test_day_range() {
     );
 
     assert_eq!(
-        string_to_day_range("late August to mid September").unwrap(),
+        string_to_day_range("late August to mid September", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(238),
@@ -251,7 +251,7 @@ fn test_day_range() {
     );
 
     assert_eq!(
-        string_to_day_range("Sep 20-30").unwrap(),
+        string_to_day_range("Sep 20-30", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(264),
@@ -259,7 +259,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("Sep 25-Oct 5").unwrap(),
+        string_to_day_range("Sep 25-Oct 5", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(269),
@@ -267,7 +267,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("June 21 to July 10").unwrap(),
+        string_to_day_range("June 21 to July 10", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(173),
@@ -275,7 +275,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("Oct-Nov").unwrap(),
+        string_to_day_range("Oct-Nov", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(289),
@@ -283,7 +283,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("late Oct-Nov").unwrap(),
+        string_to_day_range("late Oct-Nov", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,
             start: Some(299),
@@ -291,7 +291,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("July 6").unwrap(),
+        string_to_day_range("July 6", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(188),
@@ -299,7 +299,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("June 29").unwrap(),
+        string_to_day_range("June 29", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(181),
@@ -307,7 +307,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("10/15").unwrap(),
+        string_to_day_range("10/15", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(289),
@@ -315,7 +315,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("Average of: July 6, June 29").unwrap(),
+        string_to_day_range("Average of: July 6, June 29", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(184),
@@ -323,7 +323,7 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("First Harvest: Around April 30 (Gainesville, FL)").unwrap(),
+        string_to_day_range("First Harvest: Around April 30 (Gainesville, FL)", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(121),
@@ -331,11 +331,11 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("50% Harvest: Around April 25 (Gainesville, FL)").unwrap(),
+        string_to_day_range("50% Harvest: Around April 25 (Gainesville, FL)", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
-            parse_type: DateParseType::Midpoint,
-            start: Some(116),
-            end: None
+            parse_type: DateParseType::TwoDates, // treated as a midpoint
+            start: Some(111),
+            end: Some(121),
         }
     );
 }

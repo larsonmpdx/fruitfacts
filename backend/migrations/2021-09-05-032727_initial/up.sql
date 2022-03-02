@@ -153,7 +153,6 @@ CREATE TABLE collection_items (
   harvest_relative TEXT, --used for things like "redhaven+5"
   harvest_start INTEGER, --ordinal (day of the year)
   harvest_end INTEGER,
-  harvest_start_is_midpoint INTEGER, -- bool: if this is a start-only harvest window, should the window be treated as a midpoint instead of a start when building a window around it?
 
   -- these are set after import either by parsing harvest_relative text
   -- or by using a delta from another variety with an already-calculated relative harvest
@@ -166,7 +165,6 @@ CREATE TABLE collection_items (
   -- pretty much only for figs with breba+main crop
   harvest_start_2 INTEGER,
   harvest_end_2 INTEGER,
-  harvest_start_2_is_midpoint INTEGER,
 
   UNIQUE(collection_id, location_id, name, type) --combo of these columns must be unique
 );
