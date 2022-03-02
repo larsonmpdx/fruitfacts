@@ -1,12 +1,12 @@
 {
-	"recommendations": [
-        "rust-lang.rust",
-		"vadimcn.vscode-lldb",
-        "matklad.rust-analyzer",
-		"katjanakosic.vscode-json5",
-		"jbockle.jbockle-format-files",
-		"numso.prettier-standard-vscode",
-		"bungcip.better-toml",
-		"bradlc.vscode-tailwindcss"
-	]
+  "recommendations": [
+    "rust-lang.rust",
+    "vadimcn.vscode-lldb",
+    "matklad.rust-analyzer",
+    "katjanakosic.vscode-json5",
+    "jbockle.jbockle-format-files",
+    "numso.prettier-standard-vscode",
+    "bungcip.better-toml",
+    "bradlc.vscode-tailwindcss"
+  ]
 }
