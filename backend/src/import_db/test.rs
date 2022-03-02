@@ -323,7 +323,11 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("First Harvest: Around April 30 (Gainesville, FL)", TEST_WINDOW_SIZE).unwrap(),
+        string_to_day_range(
+            "First Harvest: Around April 30 (Gainesville, FL)",
+            TEST_WINDOW_SIZE
+        )
+        .unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::StartOnly,
             start: Some(121),
@@ -331,7 +335,11 @@ fn test_day_range() {
         }
     );
     assert_eq!(
-        string_to_day_range("50% Harvest: Around April 25 (Gainesville, FL)", TEST_WINDOW_SIZE).unwrap(),
+        string_to_day_range(
+            "50% Harvest: Around April 25 (Gainesville, FL)",
+            TEST_WINDOW_SIZE
+        )
+        .unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::TwoDates, // treated as a midpoint
             start: Some(111),

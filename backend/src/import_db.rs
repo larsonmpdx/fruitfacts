@@ -354,8 +354,8 @@ fn string_to_day_range(input: &str, window_size: u32) -> Option<DayRangeOutput> 
     if input.to_lowercase().starts_with("50% harvest:") {
         if let Some(parsed) = string_to_day_number(input) {
             output.parse_type = DateParseType::TwoDates; // treat as a midpoint
-            output.start = Some(parsed - window_size/2);
-            output.end = Some(parsed + window_size/2);
+            output.start = Some(parsed - window_size / 2);
+            output.end = Some(parsed + window_size / 2);
             return Some(output);
         }
     }
