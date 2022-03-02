@@ -69,6 +69,7 @@ table! {
         notoriety_type -> Text,
         notoriety_score -> Float,
         notoriety_score_explanation -> Text,
+        harvest_time_devalue_factor -> Nullable<Double>,
         title -> Nullable<Text>,
         author -> Nullable<Text>,
         description -> Nullable<Text>,

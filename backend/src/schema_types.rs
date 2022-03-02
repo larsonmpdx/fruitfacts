@@ -105,6 +105,7 @@ pub struct Collection {
     pub notoriety_type: String,
     pub notoriety_score: f32,
     pub notoriety_score_explanation: String,
+    pub harvest_time_devalue_factor: Option<f64>,
 
     pub title: Option<String>,
     pub author: Option<String>,

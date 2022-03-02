@@ -106,6 +106,7 @@ CREATE TABLE collections (
   notoriety_type TEXT NOT NULL,
   notoriety_score REAL NOT NULL,
   notoriety_score_explanation TEXT NOT NULL,
+  harvest_time_devalue_factor DOUBLE,
 
   title TEXT,
   author TEXT,

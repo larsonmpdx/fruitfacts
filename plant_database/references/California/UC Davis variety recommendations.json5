@@ -5,6 +5,7 @@
     author: "Paul M. Vossen and Deborah Silva",
     description: "the same tables are reproduced as individual PDFs and also in the California Master Gardener Handbook (2015)",
     type: "state extension guide",
+    harvest_time_devalue_factor: 3, // the harvest times in this guide are really low quality and we also want to correct for multiple locations being added in
     accessed: "Sep 2021",
     locations: [
         {

@@ -65,6 +65,7 @@ struct CollectionJson {
     accessed: Option<String>,
     #[serde(rename = "type")] // notoriety type like "extension publication"
     type_: String,
+    harvest_time_devalue_factor: Option<f64>, // an option to reduce the weight of harvest times because of an editorial decision that they're low quality
 
     locations: Vec<CollectionLocationJson>,
     categories: Option<Vec<CollectionCategoryJson>>,
@@ -1546,6 +1547,7 @@ fn load_references(
                     collections::notoriety_type.eq(&collection.type_.to_lowercase()),
                     collections::notoriety_score.eq(notoriety_info.score),
                     collections::notoriety_score_explanation.eq(notoriety_info.explanation),
+                    collections::harvest_time_devalue_factor.eq(collection.harvest_time_devalue_factor),
                 ))
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
