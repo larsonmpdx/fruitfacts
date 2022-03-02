@@ -119,7 +119,7 @@ lazy_static! {
             "Apricot",
             CandleTarget {
                 type_: "Apricot".to_string(),
-                name: "Harcot".to_string(),
+                name: "Blenheim".to_string(),
             },
         ),
         (

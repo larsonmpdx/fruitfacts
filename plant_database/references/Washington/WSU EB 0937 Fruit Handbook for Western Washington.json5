@@ -5,6 +5,7 @@
     published: "2008",
     accessed: "Sep 2021",
     type: "state extension guide",
+    harvest_time_devalue_factor: 4, // harvest times are pretty bad (for example this has frost before redhaven, which is wrong)
     locations: [
         {
             name: "Mt. Vernon, WA",

@@ -65,7 +65,7 @@ struct CollectionJson {
     accessed: Option<String>,
     #[serde(rename = "type")] // notoriety type like "extension publication"
     type_: String,
-    harvest_time_devalue_factor: Option<f64>, // an option to reduce the weight of harvest times because of an editorial decision that they're low quality
+    harvest_time_devalue_factor: Option<f32>, // an option to reduce the weight of harvest times because of an editorial decision that they're low quality
 
     locations: Vec<CollectionLocationJson>,
     categories: Option<Vec<CollectionCategoryJson>>,
@@ -1547,7 +1547,8 @@ fn load_references(
                     collections::notoriety_type.eq(&collection.type_.to_lowercase()),
                     collections::notoriety_score.eq(notoriety_info.score),
                     collections::notoriety_score_explanation.eq(notoriety_info.explanation),
-                    collections::harvest_time_devalue_factor.eq(collection.harvest_time_devalue_factor),
+                    collections::harvest_time_devalue_factor
+                        .eq(collection.harvest_time_devalue_factor),
                 ))
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
@@ -2325,23 +2326,32 @@ fn calculate_relative_harvest_from_references(
 
                 num_references_used += 1;
 
-                // add the value to an average based on a weight of the round score * the reference notoriety score
-                let round_score = match reference.calc_harvest_relative_round.unwrap() {
-                    value if value < 0.1 => 1.0,    // for round 0
-                    value => 1.0 / value.powf(2.0), // round 1: 1, round 2: .5, round 3: .25 etc. (give a sharply reduced score as rounds progress)
+                let notoriety_and_devalue_score =
+                    get_notoriety_and_devalue_scores(reference.collection_id, db_conn);
+                let devalue_score = match notoriety_and_devalue_score.harvest_time_devalue_factor {
+                    Some(score) => score,
+                    _ => 0.0,
                 };
-                let notoriety_score = get_notoriety(reference.collection_id, db_conn) as f64;
-                let overall_score = notoriety_score * round_score; // todo - maybe copy notoriety into each reference to save time here?
+
+                // add the value to an average based on a weight of the round score * the reference notoriety score
+                // the devalue_score get treated as being additional rounds behind
+                let round_score = 1.0
+                    / (2.0_f64).powf(
+                        reference.calc_harvest_relative_round.unwrap() + devalue_score as f64,
+                    ); // round 0: 1, round 1: .5, round 2: .25 etc. (give a sharply reduced score as rounds progress)
+
+                let overall_score =
+                    notoriety_and_devalue_score.notoriety_score as f64 * round_score; // todo - maybe copy notoriety into each reference to save time here?
 
                 sum += reference.calc_harvest_relative.unwrap() as f64 * overall_score;
                 divisor += overall_score;
 
                 harvest_relative_explanation += &format!(
-                    " [{}] {} ({:.1}*{:.1})",
+                    " [{}] {} ({:.2}*{:.2})",
                     reference.collection_id,
                     reference.calc_harvest_relative.unwrap(),
-                    notoriety_score,
-                    round_score
+                    notoriety_and_devalue_score.notoriety_score,
+                    round_score,
                 )
                 .to_string();
 
@@ -2367,11 +2377,24 @@ fn calculate_relative_harvest_from_references(
     None
 }
 
-fn get_notoriety(collection_id: i32, db_conn: &SqliteConnection) -> f32 {
+#[skip_serializing_none]
+#[derive(Serialize, Queryable, Debug)]
+pub struct NotorietyAndDevalueScores {
+    pub notoriety_score: f32,
+    pub harvest_time_devalue_factor: Option<f32>,
+}
+
+fn get_notoriety_and_devalue_scores(
+    collection_id: i32,
+    db_conn: &SqliteConnection,
+) -> NotorietyAndDevalueScores {
     collections::dsl::collections
-        .select(collections::notoriety_score)
+        .select((
+            collections::notoriety_score,
+            collections::harvest_time_devalue_factor,
+        ))
         .filter(collections::id.eq(collection_id))
-        .first::<f32>(db_conn)
+        .first::<NotorietyAndDevalueScores>(db_conn)
         .unwrap_or_else(|_| panic!("no collection found {}", collection_id))
 }
 
