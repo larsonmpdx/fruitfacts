@@ -5,7 +5,7 @@
     published: "2008",
     accessed: "Sep 2021",
     type: "state extension guide",
-    harvest_time_devalue_factor: 4, // harvest times are pretty bad (for example this has frost before redhaven, which is wrong)
+    harvest_time_devalue_factor: 3, // harvest times are pretty rough. for example frost is a bit later than redhaven but this has them both "mid august"
     locations: [
         {
             name: "Mt. Vernon, WA",
@@ -585,7 +585,7 @@
             name: "Frost",
             type: "Peach",
             tags: ["Yellow Peach"],
-            harvest_time: "early August"
+            harvest_time: "mid August"
         },
         {
             name: "Redhaven",

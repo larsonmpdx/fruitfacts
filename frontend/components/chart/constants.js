@@ -1,5 +1,5 @@
 module.exports = Object.freeze({
-    // julian days for the first day of each month, for leap years
+    // julian days for the first day of each month (for leap years)
     MONTH_START_DAYS: [
         {
             name: 'Jan',
@@ -80,9 +80,9 @@ module.exports = Object.freeze({
         Apricot: { fill: '#F3870E' },
         'Asian Pear': { fill: '#DDBF56' },
         'Euro Pear': { fill: '#BCCC52' },
-        'Euro Plum': { fill: '#4F3D4B' },
+        'Euro Plum': { fill: '#a68ca1' },
         'Japanese Plum': { fill: '#df96a2' },
-        'Sour Cherry': { fill: '#FF0223' },
+        'Sour Cherry': { fill: '#ff4d64' },
         'Sweet Cherry': { fill: '#f98a99' },
         Nectarine: { fill: '#db7470' },
         Peach: { fill: '#FCDC75' },

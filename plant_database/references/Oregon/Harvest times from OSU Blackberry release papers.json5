@@ -1,0 +1,100 @@
+{
+    title: "Harvest times from OSU Blackberry release papers",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "Corvallis, OR",
+            latitude: 44.54820212695868,
+            longitude: -123.21537145957399
+        }
+    ],
+    plants: [
+        // 2014: ‘Columbia Star’ Thornless Trailing Blackberry
+        // https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/90_finn_et_al_columbia_star_hs_2014.pdf
+        // "trials planted in 2009 and evaluated in 2011–13 at Oregon State University’s
+        //    North Willamette Research and Extension Center (Aurora, OR)"
+        // harvest times are 5%, 50%, 95%
+        // Columbia Star        3 July      12 July     24 July
+        // Marion               8 July      15 July     24 July
+        // Black Diamond        3 July      17 July     26 July
+        // Chester Thornless    5 Aug.      28 Aug.     25 Sept
+
+        // 2018: ‘Columbia Sunrise’ Thornless Trailing Blackberry
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/53/2/article-p256.xml
+        // "trials planted in 2012 and evaluated in 2014–16 at Oregon State University’s
+        //    North Willamette Research and Extension Center"
+        // harvest times are 5%, 50%, 95%
+        // Columbia Sunrise     11 June     18 June     2 July
+        // Black Diamond        18 June     29 June     3 July
+        // Marion               23 June     2 July      12 July
+        // Chester Thornless    18 July     3 Aug.      24 Aug.
+        // Prime-Ark Freedom    20 Aug.     27 Aug.     19 Sept.
+        // Prime-Ark Traveler   24 Aug.     3 Sept.     24 Sept.
+
+        // 2018: ‘Columbia Giant’ Thornless Trailing Blackberry
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/53/2/article-p251.xml
+        // "trials planted in 2011 and evaluated in 2013–15 at Oregon State University’s
+        //    North Willamette Research and Extension Center"
+        // harvest times are 5%, 50%, 95%
+        // Columbia Giant       22 June     3 July      17 July
+        // Black Diamond        24 June     3 July      17 July
+        // Marion               26 June     5 July      15 July
+        // Navaho               26 June     5 July      15 July
+        // Chester Thornless    31 July     12 Aug.     30 Aug
+
+        // 2020: ‘Eclipse’ Thornless Semi-erect Blackberry
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/55/5/article-p749.xml
+        // "at Oregon State University’s North Willamette Research and Extension Center (Aurora, OR); planted in 2013" evaluated 2015–17
+        // harvest times are 5%, 50%, 95%
+        // Columbia Star        20 June     26 June     7 July
+        // Hall’s Beauty        22 June     26 June     10 July
+        // Black Diamond        20 June     30 June     17 July
+        // Marion               24 June     30 June     15 July
+        // Von                  10 July     17 July     4 Aug.
+        // Eclipse              15 July     17 July     7 Aug.
+        // Triple Crown         17 July     31 July     9 Aug.
+        // Chester Thornless    17 July     2 Aug.      21 Aug.
+        // Prime-Ark 45         25 Aug.     13 Sept.    29 Sept.
+
+        // 2020: ‘Galaxy’ Thornless Semierect Blackberry
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p967.xml
+        // "total yield in 2007–09 ... at Oregon State University’s North Willamette Research
+        //   and Extension Center (Aurora, OR)"
+        // harvest times are 5%, 50%, 95%
+        // Marion               3 July      13 July     24 July
+        // Black Diamond        1 July      15 July     29 July
+        // Galaxy               22 July     5 Aug.      28 Aug.
+        // Eclipse              20 July     7 Aug.      31 Aug.
+        // Navaho               27 July     14 Aug.     14 Sept.
+        // Cacanska Bestrna     3 Aug.      19 Aug.     12 Sept.
+        // Prime-Ark 45         13 Sept.    29 Sept.    13 Oct.
+
+        // 2020: ‘Twilight’ Thornless Semi-erect Blackberry
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/55/7/article-p1148.xml
+        // "total yield in 2015–17 ...at Oregon State University’s North Willamette Research and Extension Center
+        //   (Aurora, OR); planted in 2013"
+        // harvest times are 5%, 50%, 95%
+        // Chester Thornless    17 July     2 Aug.      21 Aug.
+        // Eclipse              15 July     17 July     7 Aug.
+        // Triple Crown         17 July     31 July     9 Aug.
+        // Twilight             10 July     21 July     9 Aug.
+        // Von                  10 July     17 July     4 Aug.
+        // Black Diamond        20 June     30 June     17 July
+        // Columbia Star        20 June     26 June     7 July
+        // Hall’s Beauty        22 June     26 June     10 July
+        // Marion               24 June     30 June     15 July
+        // Prime-Ark 45         25 Aug.     13 Sept.    29 Sept.
+
+        // Hall's Beauty todo
+
+        // todo - older ones, see the other doc
+
+
+
+        // todo
+    ]
+}

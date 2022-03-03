@@ -144,6 +144,13 @@ lazy_static! {
             },
         ),
         (
+            "Blackberry",
+            CandleTarget {
+                type_: "Blackberry".to_string(),
+                name: "Marion".to_string(),
+            },
+        ),
+        (
             "Asian Pear",
             CandleTarget {
                 type_: "Asian Pear".to_string(),
