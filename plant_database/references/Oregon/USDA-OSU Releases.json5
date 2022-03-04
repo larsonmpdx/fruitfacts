@@ -143,7 +143,7 @@
             patent: ""
         },
         // todo - other programs:
-        // todo - Triple Crown(1996; USDA-ARS, Beltsville, primary releasing institution)
+        // todo - Triple Crown (1996; USDA-ARS, Beltsville, primary releasing institution)
         // todo - Saanich (2006; Agric. and Agri-Food Canada primary releasing institution)
         // todo - Esquimalt (2005; Agric. and Agri-Food Canada primary releasing institution)
         // todo - Stolo (2007; Agriculture and Agri-Foods Canada primary releasing institution)
@@ -184,57 +184,90 @@
         // Strawberry
         {
             name: "Charm",
+            AKA: ["ORUS 2262-2"],
             type: "Strawberry",
             description: "https://journals.ashs.org/hortsci/view/journals/hortsci/48/9/article-p1184.xml",
-            released: "USDA-OSU*",
+            released: "USDA-OSU 2012*",
             patent: "https://patents.google.com/patent/USPP25300 expires 2033-01-22"
         },
         {
             name: "Sweet Sunrise",
+            AKA: ["ORUS 2240-1"],
             type: "Strawberry",
-            description: "",
-            released: "USDA-OSU*",
+            description: "https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/91_finn_et_al_sweet_sunrise_strawberry_hs_2014.pdf",
+            released: "USDA-OSU 2012*",
             patent: "https://patents.google.com/patent/USPP25223 expires 2033-02-01"
         },
         {
             name: "Marys Peak",
             type: "Strawberry",
-            description: "https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p395.xml", // todo - has harvest dates of a few things
-            released: "USDA-OSU*",
+            description: "https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p395.xml",
+            released: "USDA-OSU 2018*", // release year is wrong I think - 2018 is the hortsci publication year
+            patent: "https://patents.google.com/patent/USPP29370"
+        },
+        // todo - strawberry patents and release publications
+        {
+            name: "Sweet Bliss",
+            type: "Strawberry",
+            description: "june-bearing. https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2011/HortSci_46-12-1701-1705.pdf",
+            released: "USDA-OSU 2011*",
             patent: ""
         },
-
-        // todo
-        // Sweet Sunrise (ORUS 2240-1) (2012)
-        // Charm (ORUS 2262-2) (2012)
-
-        // Sweet Bliss (2011)
-        // Valley Red (2009) https://journals.ashs.org/hortsci/view/journals/hortsci/44/5/article-p1468.xml
-
-        // Pinnacle (2002)
-        // Tillamook (2002)
-
-        // Firecracker (1997)
-        // Independence (1997)
+        {
+            name: "Valley Red",
+            type: "Strawberry",
+            description: "june-bearing. https://journals.ashs.org/hortsci/view/journals/hortsci/44/5/article-p1468.xml",
+            // not patented
+            released: "USDA-OSU 2009*",
+        },
+        {
+            name: "Pinnacle",
+            type: "Strawberry",
+            description: "https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2004/TillamookandPinnacleStrawberries(Finnetal.2004).pdf",
+            released: "USDA-OSU 2002*",
+            patent: ""
+        },
+        {
+            name: "Tillamook",
+            type: "Strawberry",
+            description: "https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2004/TillamookandPinnacleStrawberries(Finnetal.2004).pdf",
+            released: "USDA-OSU 2002*",
+            patent: ""
+        },
+        {
+            name: "Firecracker",
+            type: "Strawberry",
+            description: "can't find a release paper",
+            released: "USDA-OSU 1997*",
+            harvest_time: "July 4", // https://agresearchmag.ars.usda.gov/1998/jan/berr
+            patent: ""
+        },
+        {
+            name: "Independence",
+            type: "Strawberry",
+            description: "can't find a release paper",
+            released: "USDA-OSU 1997*",
+            harvest_time: "July 4", // https://agresearchmag.ars.usda.gov/1998/jan/berr
+            patent: ""
+        },
 
         // Blueberry
         {
             name: "Echo",
             type: "Blueberry",
-            description: "https://journals.ashs.org/hortsci/view/journals/hortsci/54/2/article-p368.xml",
+            description: "two crops. https://journals.ashs.org/hortsci/view/journals/hortsci/54/2/article-p368.xml",
             released: "USDA-OSU 2019*",
             patent: "https://patents.google.com/patent/USPP29787 expires 2037-03-28"
         },
         {
             name: "Mini Blues",
+            AKA: ["Baby Blues"],
             type: "Blueberry",
-            description: "https://www.emcocal.com/mini-blues-variety/ https://www.oregonblueberry.com/update-F2019/mini.html",
+            description: "https://www.emcocal.com/mini-blues-variety/ https://www.oregonblueberry.com/update-F2019/mini.html https://www.ars.usda.gov/research/publications/publication/?seqNo115=328114",
             released: "USDA-OSU 2019*",
             tags: ["northern highbush"],
             patent: "https://patents.google.com/patent/USPP28233 expires 2035-05-21"
         },
-        // todo Baby Blues blueberry ORUS 10-1 2016 https://www.ars.usda.gov/research/publications/publication/?seqNo115=328114
-
         {
             name: "Perpetua",
             type: "Blueberry",
@@ -242,14 +275,20 @@
             released: "USDA-OSU 2015*",
             patent: "https://patents.google.com/patent/USPP24209 expires 2032-06-26"
         }
-
+        // todo
         // Pink Champagne  pink, highbush (2007)
         // Pink Lemonade  pink rabbiteye (2007)
-
         // https://extension.oregonstate.edu/crop-production/berries/usda-ars-osu-cooperative-breeding-program-nwrec-trials
 
-        // 'Ananasnaya' hardy kiwifruit
+        {
+            name: "Ananasnaya",
+            type: "Hardy Kiwi",
+            description: "https://www.ars.usda.gov/research/publications/publication/?seqNo115=192122",
+            released: "USDA-OSU 2006*",
 
+        }
+
+        // todo
         // usda release? https://oregon-berries.com/variety/kotata-blackberry/
         // ?? https://oregon-berries.com/variety/boysenberry/
         //

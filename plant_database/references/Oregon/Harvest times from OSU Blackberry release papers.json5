@@ -331,5 +331,85 @@
         // Tillamook        17 Jun      29 Jun      11 Jul
         // Puget Summer     21 Jun       1 Jul      11 July
         // Puget Crimson    22 Jun       4 Jul      17 July
+
+        // 2014: ‘Sweet Sunrise’ Strawberry
+        // https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/91_finn_et_al_sweet_sunrise_strawberry_hs_2014.pdf
+        // "... at Oregon State University’s North Willamette Research and Extension Center (OSU-NWREC; Aurora, OR)
+        //   and at Washington State University (WSU)–Puyallup Research and Extension Center"
+
+        // OSU-NWREC (Aurora, OR) (2-5 years averaged)
+        // Sweet Sunrise    29 May       7 Jun      20 Jun
+        // Stolo             1 Jun       8 Jun      26 Jun
+        // Charm             5 Jun      12 Jun      21 Jun
+        // Totem             6 Jun      14 Jun      22 Jun
+        // Tillamook         5 Jun      15 Jun      23 Jun
+
+        // WSU-Puyallup (Puyallup, WA) (2 years averaged)
+        // Sweet Sunrise    11 Jun      18 Jun      29 Jun
+        // Stolo            12 Jun      21 Jun       1 Jul
+        // Hood             12 Jun      22 Jun       4 Jul
+        // Totem            15 Jun      23 Jun       5 Jul
+        // Puget Reliance   16 Jun      24 Jun       6 Jul
+
+
+        // 2018: ‘Marys Peak’ Strawberry
+        // https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p395.xml
+
+        // OSU-NWREC
+        // Sweet Sunrise    22 May       1 Jun      14 Jun
+        // Hood             28 May       3 Jun      14 Jun
+        // Benton           31 May       7 Jun      17 Jun
+        // Puget Reliance   31 May       7 Jun      17 Jun
+        // Shuksan           3 Jun       7 Jun      14 Jun
+        // Galletta          6 Jun       9 Jun      20 Jun
+        // Charm             2 Jun      10 Jun      20 Jun
+        // Totem             4 Jun      10 Jun      20 Jun
+        // Tillamook         3 Jun      12 Jun      22 Jun
+        // Stolo             6 Jun      13 Jun       5 Jul
+        // Marys Peak        7 Jun      14 Jun      26 Jun
+        // Rainier          15 Jun      18 Jun      25 Jun
+
+        // WSU–Puyallup (only 50% harvest times)
+        // Sweet Sunrise         7 Jun
+        // Charm                 9 Jun
+        // Hood                 10 Jun
+        // Puget Reliance       12 Jun
+        // Marys Peak           12 Jun
+        // Tillamook            13 Jun
+        // Totem                14 Jun
+        // Puget Crimson        21 Jun
+        // Valley Sunset        23 Jun
+
+        // Sweet Bliss strawberry - no harvest times in the hortsci paper. june-bearing
+        // Valley Red strawberry - no harvest times in the hortsci paper. june-bearing
+
+        // 2002: ‘Tillamook’ and ‘Pinnacle’ Strawberries
+        // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2004/TillamookandPinnacleStrawberries(Finnetal.2004).pdf
+        // "...planted in 1999 at the Oregon State University–North Willamette Research
+        //   and Extension Center (Aurora, Ore.) and in 2002 for four strawberry cultivars
+        //   planted in 2001 at WSU–Puyallup, Wash"
+
+        // 1999-Planted trial (Aurora, Ore.), harvest years 2000 and 2001
+        // Pinnacle          5 Jun      12 Jun      26 Jun            
+        //    2nd year      30 May      11 Jun      18 June
+        // Puget Reliance    5 Jun      12 Jun      26 Jun            
+        //    2nd year       4 Jun      11 Jun      18 June
+        // Tillamook         5 Jun      12 Jun      29 Jun            
+        //    2nd year       4 Jun      11 Jun      18 June
+        // Totem             5 Jun      15 Jun      26 Jun            
+        //    2nd year       4 Jun      11 Jun      25 June
+        // Redcrest         12 Jun      19 Jun       5 Jul            
+        //    2nd year      11 Jun      18 Jun      25 June
+        // Puget Summer     15 Jun      19 Jun      29 Jun            
+        //    2nd year      11 Jun      18 Jun      25 June
+
+        // 2001-Planted replicated trial (Puyallup, Wash.), harvest year 2002
+        // Pinnacle         11 Jun      18 Jun       1 Jul
+        // Puget Reliance   11 Jun      20 Jun       1 Jul
+        // Hood             11 Jun      21 Jun       1 Jul
+        // Tillamook        11 Jun      21 Jun       2 Jul
+
+        // Firecracker strawberry: can't find a release paper
+        // Independence strawberry: can't find a release paper
     ]
 }
