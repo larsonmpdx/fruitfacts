@@ -76,7 +76,7 @@
             type: "Blackberry",
             description: "https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/72_finn_et_al_onyx_blackberry_hs_2011.pdf",
             released: "USDA-OSU 2010*",
-            patent: "22358"
+            patent: "https://patents.google.com/patent/USPP22358"
         },
         {
             name: "Newberry",
@@ -109,28 +109,21 @@
         {
             name: "Black Pearl",
             type: "Blackberry",
-            description: "",
+            description: "https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/49_finn_et_al_black_pearl_blackberry_hs_2005_1.pdf",
             released: "USDA-OSU 2005*",
             patent: ""
         },
         {
             name: "Nightfall",
             type: "Blackberry",
-            description: "",
-            released: "USDA-OSU 2005*",
-            patent: ""
-        },
-        {
-            name: "",
-            type: "Blackberry",
-            description: "",
+            description: "https://journals.ashs.org/hortsci/view/journals/hortsci/40/7/article-p2182.xml",
             released: "USDA-OSU 2005*",
             patent: ""
         },
         {
             name: "Siskiyou",
             type: "Blackberry",
-            description: "",
+            description: "https://www.ars.usda.gov/ARSUserFiles/1718/PDF/1996to1999/SiskiyouHortScienceRelease.pdf",
             released: "USDA-OSU 1997*",
             patent: ""
         },
@@ -157,29 +150,42 @@
 
         // Red Raspberry
         {
+            name: "Kokanee",
+            type: "Raspberry",
+            description: "https://www.emcocal.com/kokanee-variety/ https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p380.xml",
+            released: "USDA-OSU 2018*",
+            patent: "https://patents.google.com/patent/USPP28666"
+        },
+        {
             name: "Vintage",
             type: "Raspberry",
             description: "https://journals.ashs.org/hortsci/view/journals/hortsci/48/9/article-p1181.xml",
-            released: "USDA-OSU 2013",
-            patent: ""
+            released: "USDA-OSU 2013*",
+            patent: "https://patents.google.com/patent/USPP24198"
         },
         {
-            name: "Kokanee",
+            name: "Chinook",
             type: "Raspberry",
-            description: "https://www.emcocal.com/kokanee-variety/",
-            released: "USDA-OSU*",
-            patent: ""
+            description: "https://www.ars.usda.gov/ARSUserFiles/20721000/SmallFruitBreeding/manuscripts/Chinook.pdf",
+            // not patented
+            released: "USDA-OSU 2002*"
         },
+        {
+            name: "Coho",
+            type: "Raspberry",
+            description: "https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2001/Cohomanuscript.pdf",
+            // not patented
+            released: "USDA-OSU 1999*"
+        },
+
         // todo
-        // Chinook (2002)
-        // Coho (1999)
         // Lewis (1998; in cooperation with HortResearch Inc. New Zealand)
 
         // Strawberry
         {
             name: "Charm",
             type: "Strawberry",
-            description: "",
+            description: "https://journals.ashs.org/hortsci/view/journals/hortsci/48/9/article-p1184.xml",
             released: "USDA-OSU*",
             patent: "https://patents.google.com/patent/USPP25300 expires 2033-01-22"
         },
