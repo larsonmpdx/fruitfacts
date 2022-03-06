@@ -674,6 +674,7 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     add_marketing_names(db_conn);
     println!("calculating notoriety");
     calculate_notoriety(db_conn);
+    get_relative_day_offsets(db_conn);
     println!("rebuilding fts tables");
     rebuild_fts(db_conn);
     println!("checking database");
@@ -2518,4 +2519,27 @@ pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {
         .select(diesel::dsl::count(base_plants::name))
         .first(db_conn)
         .unwrap()
+}
+
+pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
+    // todo
+    // create an array with all of the standard candles in it
+
+    // for each location, get the average absolute day for each standard candle and read it into a memory structure
+    // then step through each set of pairings and add them into the candle array as a running average, weighted by notoriety
+    // if they can't be added to the running tally, mark them as unused so we can step through another round of averaging
+
+    // go through the location memory structure and count the most frequent standard candle. set that as the 0-point
+    // sort location memory structures by number of candle entries and process the most first
+
+    // averaging: if we have types A, B, C and we're using A as the inital 0-point
+    // and we have A at 0, B at 10, and C at 20,
+    // and we go to add a data point: B->C is 12
+    // this should attribute half of the correction to B and half to C
+    // so B-> 9 and C-> 11 (?) - how does this work with notoriety scores?
+
+    // then normalize to the earliest standard candle within tha array (so it's 0 and all the others are +days)
+
+    // write all of them out to a file for the frontend to use to make relative-only charts
+
 }
