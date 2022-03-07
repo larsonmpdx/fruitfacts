@@ -300,7 +300,7 @@ fn string_to_day_range(input: &str, window_size: u32) -> Option<DayRangeOutput> 
 
     // escape hatch for "time within season" strings which we aren't parsing for now
     let time_within_season_regex =
-        Regex::new(r#"^(early-mid|mid-late|early|mid|late|early season|mid season|late season)$"#)
+        Regex::new(r#"^(very early|early-mid|mid-late|early|mid|late|early season|mid season|late season|very late)$"#)
             .unwrap();
 
     if time_within_season_regex
@@ -2525,12 +2525,35 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
     // todo
     // create an array with all of the standard candles in it
 
+    #[derive(Debug, Default)]
+    struct AverageOffset {
+        pub sum: f64,
+        pub divisor: f64,
+    }
+
+    #[derive(Debug, Default)]
+    struct AverageDay {
+        pub sum: f64,
+        pub divisor: f64,
+    }
+
+    let candle_list = util::get_standard_candles();
+    let mut candles = HashMap::new();
+    let mut location_averages = HashMap::new();
+    for (value) in candle_list {
+        candles.insert(value.clone(), AverageOffset::default());
+        location_averages.insert(value, AverageDay::default());
+    }
+
     // for each location, get the average absolute day for each standard candle and read it into a memory structure
-    // then step through each set of pairings and add them into the candle array as a running average, weighted by notoriety
-    // if they can't be added to the running tally, mark them as unused so we can step through another round of averaging
+    // (this is based on a plant entry having both a relative-to-candle entry and an absolute date of its own, and taking the difference)
+    // (in most locations these will all be the same date because of the way the relative days were derived in the first place)
 
     // go through the location memory structure and count the most frequent standard candle. set that as the 0-point
     // sort location memory structures by number of candle entries and process the most first
+
+    // then step through each set of pairings and add them into the candle array as a running average, weighted by notoriety
+    // if they can't be added to the running tally, mark them as unused so we can step through another round of averaging
 
     // averaging: if we have types A, B, C and we're using A as the inital 0-point
     // and we have A at 0, B at 10, and C at 20,
@@ -2541,5 +2564,4 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
     // then normalize to the earliest standard candle within tha array (so it's 0 and all the others are +days)
 
     // write all of them out to a file for the frontend to use to make relative-only charts
-
 }

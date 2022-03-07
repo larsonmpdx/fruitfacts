@@ -1,5 +1,5 @@
 use lazy_static::lazy_static;
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 use chrono::prelude::*;
 
@@ -162,6 +162,26 @@ lazy_static! {
         // Olive, Chestnut, Hazelnut (I think Chestnut and Hazelnut probably have standard candles in the literature already)
     ])
     };
+}
+
+#[derive(Clone, Hash, Eq, PartialEq, Debug)]
+pub struct Candle {
+    pub type_: String,
+    pub name: String,
+}
+
+// returns a set of type+name based on the static table above
+// will remove overlaps like peach and nectarine both pointing to redhaven
+pub fn get_standard_candles() -> HashSet<Candle> {
+    let mut output = HashSet::new();
+    for (_, value) in &*TYPE_TO_CANDLE {
+        output.insert(Candle {
+            type_: value.type_.clone(),
+            name: value.name.clone(),
+        });
+    }
+
+    output
 }
 
 pub fn type_to_standard_candle(type_input: &str) -> Option<&CandleTarget> {

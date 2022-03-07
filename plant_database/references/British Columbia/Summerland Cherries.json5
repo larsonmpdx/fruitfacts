@@ -266,6 +266,16 @@
             description: "OSC #6 x 2S-28-39",
             harvest_time_relative: "Bing+4"
         },
+        // another cherry not in the article:
+        {
+            name: "SPC207",
+            AKA: ["Starblush™"],
+            type: "Sweet Cherry",
+            // year is approx.
+            released: "Summerland 2012*",
+            description: "https://www.goodfruit.com/b-c-releases-blush-cherries/ and https://www.summerlandvarieties.com/budwood/catalogue/", // note that the names for SPC207 and 13N0739 were transposed in this artcile; good fruit grower issued a correction later, see http://cpas.wsu.edu/wp-content/uploads/2012/12/20120828-Good-Fruit-Grower.pdf
+            patent: "can't find a US patent. I think this one went mainly to spain"
+        },
         // post-2013 (not in the gfg article):
         {
             name: "13N0739",

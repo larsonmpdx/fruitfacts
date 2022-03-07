@@ -1,0 +1,221 @@
+{
+    title: "Cherry Varieties at WSU Mount Vernon NWREC 2012",
+    author: "",
+    url: "https://extension.wsu.edu/maritimefruit/wp-content/uploads/sites/71/2014/12/CherryVarieties2012-2.pdf",
+    // todo: 2007 version: https://s3.wp.wsu.edu/uploads/sites/2109/2014/12/CherryCultivars.pdf
+    published: "various",
+    accessed: "Oct 2021",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "WSU-TFREC Wenatchee WA",
+            latitude: 47.43797869140167,
+            longitude: -120.34750055765679
+        }
+    ],
+    plants: [
+        {
+            type: "Sour Cherry", // actually, duke
+            name: "Almaden Duke",
+            harvest_time: "Late",
+            description: "duke cherry (sweet-sour hybrid). Origin San Jose, CA; seedling combination of sweet and tart cherries, amorelle type; self fertile, early-mid bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "NY 9295", // "Andersen (tm)"
+            harvest_time: "Mid",
+            description: "dark swt. Origin Cornell (NY 9295, 2006);more tart than most sweet cherries, productive, low cracking; mid to late bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Angela",
+            harvest_time: "Mid",
+            description: "dark swt. Origin Utah; reliable producer but fruit tends to be small, tolerant to rain cracking; mid season bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Bing",
+            harvest_time: "Mid",
+            description: "dark swt. Origin Oregon (1875); standard commercial variety, susceptible to rain cracking; mid season bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Ridgewood", // "Black Gold"
+            harvest_time: "mid-late",
+            description: "dark swt. Origin Cornell (NY 13791, 2001), AKA Ridgewood; ripe late mid-season, moderately tolerant of rain; self-fertile, mid to late bloom"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Érdi Botermo", // in the pdf as "Danube Erdi B"
+            harvest_time: "Mid",
+            description: "Origin Michigan State U., morello type pie cherry sweeter than Montmorency; self-fertile, late mid bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Early Burlat",
+            harvest_time: "Very Early",
+            description: "dark swt. Origin Morocco (1936), introduced by USDA; early ripening, needs protection from birds, low cracking; mid season bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "NY 32", // "Ebony Pearl"
+            // harvest time in the chart as "?"
+            description: "dark swt. Origin Cornell (NY 32, 2008), recent introduction; not fully tested at Mount Vernon"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Emperor Francis",
+            harvest_time: "Mid",
+            description: "white swt. Origin Austria, c. 1860; ripe just after Rainier, productive, resistant to fruit cracking. Self-infertile; mid early bloom"
+        },
+        {
+            type: "Sour Cherry", // actually, Duke
+            name: "Governor Wood",
+            harvest_time: "mid-late",
+            description: "duke cherry (sweet-sour hybrid). Origin U.S. (1842), old variety; sweeter than Montmorency; self fertile, mid to late bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Hardy Giant",
+            harvest_time: "Mid",
+            description: "dark swt. Origin U.S.; productivity variable, low rain cracking; self-infertile, early bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Hartland",
+            harvest_time: "Early-Mid",
+            description: "dark swt. Origin Cornell (1992); productive, softer than Bing; mid season bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Hudson",
+            harvest_time: "Very Late",
+            description: "dark swt. Origin Cornell (1964); tolerant to bacterial canker, resistant to fruit cracking. Productivity better on G5 rootstock. Self-infertile, mid to late bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Kristin",
+            harvest_time: "Early-Mid",
+            description: "dark swt. Origin Cornell, tested for Norway; moderate to good resistance to rain-cracking. Self-infertile, mid season bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Lapins",
+            harvest_time: "mid-late",
+            description: "dark swt. Origin Summerland, B.C.; large fruit, tolerant to rain cracking; productive, well adapted locally. Self fertile, early bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "NY 518", // "Nugent"
+            harvest_time: "Very Late",
+            description: "white swt. Origin Cornell (NY 518, 2006); non-blush yellow skin, white flesh, little cracking; self-infertile, early bloom"
+        },
+        /*
+// I can't associate this to any actual release, or other notes, or anything really
+{
+    type: "Sweet Cherry",
+    name: "NY 119",
+    // harvest time in the chart as "?"
+    description: "dark swt. Origin Cornell; selection not fully tested at Mount Vernon"
+},
+// I can't associate this to any actual release, or other notes, or anything really
+{
+    type: "Sweet Cherry",
+    name: "NY 205",
+    harvest_time: "Mid",
+    description: "dark swt. Origin Cornell; fruits tend to large, low cracking; self-infertile, early bloom"
+},
+// I can't associate this to any actual release, or other notes, or anything really
+{
+    type: "Sour Cherry",
+    name: "NY 242",
+    harvest_time: "mid-late",
+    description: "Origin Cornell; Montmorency type, clear juice (amorelle), productive; self- fertile, mid season bloom"
+},
+// I can't associate this to any actual release, or other notes, or anything really
+{
+    type: "Sweet Cherry",
+    name: "NY 5288",
+    harvest_time: "Mid",
+    description: "dark swt. Origin Cornell; moderately productive, little rain cracking; self-infertile, early bloom"
+},
+// I can't associate this to any actual release, or other notes, or anything really
+{
+    type: "Sweet Cherry",
+    name: "NY 7315",
+    // harvest time in the chart as "?"
+    description: "dark swt. Origin Cornell; selection not fully tested at Mount Vernon"
+},
+// this one I can find notes on, but still...
+{
+    type: "Sweet Cherry",
+    name: "NY 7855",
+    // harvest time in the chart as "?"
+    description: "white swt. Origin Cornell; selection not fully tested at Mount Vernon"
+},
+*/
+        {
+            type: "Sweet Cherry",
+            name: "Rainier",
+            harvest_time: "Mid",
+            description: "white swt. Origin WSU-USDA (1960); large fruit but can be unproductive, moderately susceptible to rain cracking; self-infertile, early bloom"
+        },
+        /*
+// I can't associate this to any actual release, or other notes, or anything really
+{
+    type: "Sweet Cherry",
+    name: "RN02-4-242", 
+    harvest_time: "Late",
+    description: "dark swt. Origin Cornell; test selection not yet introduced; mid-late bloom"
+},
+*/
+        {
+            type: "Sweet Cherry",
+            name: "Schneider",
+            harvest_time: "Mid",
+            description: "dark swt. Origin Germany, old variety; large fruit, ripe mid season, late bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Skeena",
+            harvest_time: "mid-late",
+            description: "dark swt. Origin Summerland, B.C.; moderate tolerance to rain; self-fertile, mid to late bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "SPC207", // given as "Starblush (BC 13N-7-39)" - this is a typo: "starblush" is SPC207 and "starletta" is 13N0739. these names were mixed up in a goodfruitgrower article too. who knows which one they actually have
+            harvest_time: "Late",
+            description: "white swt. Origin Summerland, B.C. (2007); very large Rainier-type cherry, productive, very sweet; self-fertile, early-mid bloom"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Surefire",
+            harvest_time: "Early-Mid",
+            description: "Origin Cornell (1993); productive pie cherry, not highly vigorous; self-fertile, late bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sweetheart",
+            harvest_time: "Very Late",
+            description: "dark swt. Origin Summerland, B.C.; grower-friendly tree, heavy cropping on all rootstocks; moderately susceptible to cracking. Self-fertile, mid bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Tehranivee",
+            harvest_time: "mid-late",
+            description: "dark swt. Origin Vineland, Ontario; very productive, may need thinning for best quality. Self fertile; mid to late bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vandalay",
+            harvest_time: "Mid",
+            description: "dark swt. Origin Vineland, Ontario; very productive, may need thinning for best quality. Self-fertile, early bloom"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Newfane", // "White Gold"
+            harvest_time: "Mid",
+            description: "white swt. Origin Cornell (NY 13688, 2001), AKA Newfane; large fruit, moderate tolerance to rain cracking; self-fertile, mid-to-late bloom"
+        }
+    ]
+}
