@@ -1,9 +1,9 @@
 {
     title: "USDA ARS Chatsworth NJ Releases",
     author: "",
-    url: "",
+    url: "https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/people/mark-ehlenfeldt/",
     published: "",
-    accessed: "Oct 2021",
+    accessed: "March 2022",
     type: "public breeding program list",
     locations: [
         {
@@ -13,24 +13,102 @@
         }
     ],
     plants: [
-        // todo - Nocturne Blueberry AKA: ["US 1056"]  https://agresearchmag.ars.usda.gov/2015/jun/blueberry/
-        // todo - Chandler (1994;USDA-ARS, Chatsworth, primary releasing institution)
-        //        Chandler was initially selected and developed by Arlen Draper at the ARS Fruit Laboratory in Beltsville, Maryland. Mark K. Ehlenfeldt, a geneticist at the ARS Blueberry/Cranberry Research Laboratory in Chatsworth, New Jersey, completed its development and cooperative release with ARS in Oregon.
-        // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2007/EhlenfeldtandFinnHortScience2007.pdf
-        // todo -
-        // https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/people/mark-ehlenfeldt/
-        // Dr. Ehlenfeldt's Blueberry Variety Releases!
-        // TH-682  AKA: ["Blue Suede (tm)"]  https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/blue-suede-tm/
-        // Cara's Choice 2000    G-695 and ARS 95-5    https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/caras-choice/
-        // Chanticleer   G-481   https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/chanticleer/
-        // Hannah's Choice  G-805 and ARS 95-4   https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/hannahs-choice/
-        // Legacy  G-290     https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/legacy/
-        // Little Giant  AKA: ["US 57"] https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/little-giant/
-        // Pink Champagne   G-435    https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/pink-champagne/
-        //        G-435 (2005; USDA-ARS, Chatsworth, primary releasing institution)
-        // Pink Lemonade   ARS 96-138      https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/pink-lemonade-1/
-        // todo -  (2005; USDA-ARS, Chatsworth, primary releasing institution)
-        // Razz   11-104    https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/razz/
-        // Sweetheart    ARS 99-88      https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/sweetheart/
+        {
+            type: "Blueberry",
+            name: "Nocturne",
+            AKA: ["US 1056"],
+            harvest_time: "mid-late", // from the article - "late midseason to late season"
+            description: "https://agresearchmag.ars.usda.gov/2015/jun/blueberry/",
+            released: "USDA-Chatsworth 2015*"
+        },
+        {
+            type: "Blueberry",
+            name: "Chandler",
+            description: "1994;USDA-ARS, Chatsworth, primary releasing institution",
+            released: "USDA-Chatsworth 1994*"
+        },
+        // see https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/people/mark-ehlenfeldt/
+        // "Dr. Ehlenfeldt's Blueberry Variety Releases"
+        {
+            type: "Blueberry",
+            name: "TH-682",
+            AKA: ["Blue Suede (tm)"],
+            harvest_time: "mid", // from the linked doc
+            description: "southern highbush. https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/blue-suede-tm/",
+            released: "USDA-Chatsworth 2008*",
+            chill_hours: "500 to 550"
+        },
+        {
+            type: "Blueberry",
+            name: "Cara's Choice",
+            AKA: ["G-695", "ARS 95-5"],
+            harvest_time_relative: "Duke+7", // from the 50% date in the table in the linked doc
+            description: "https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/caras-choice/",
+            released: "USDA-Chatsworth 2000*"
+        },
+        {
+            type: "Blueberry",
+            name: "Chanticleer",
+            AKA: ["G-481"],
+            harvest_time_relative: "Duke-6", // from the 50% date in the table in the linked doc
+            description: "https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/chanticleer/",
+            released: "USDA-Chatsworth 1997*"
+        },
+        {
+            type: "Blueberry",
+            name: "Hannah's Choice",
+            harvest_time_relative: "Duke-2", // from the linked doc
+            AKA: ["G-805", "ARS 95-4"],
+            description: "in NJ, production about 60-65% of Duke and 70% of bluecrop. low yields in oregon. https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/hannahs-choice/",
+            released: "USDA-Chatsworth*"
+        },
+        {
+            type: "Blueberry",
+            name: "Legacy",
+            AKA: ["G-290"],
+            harvest_time: "mid-late", // from linked doc
+            description: "https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/legacy/",
+            released: "USDA-Chatsworth 1993*"
+        },
+        {
+            type: "Blueberry",
+            name: "Little Giant",
+            AKA: ["US 57"],
+            harvest_time_relative: "Bluecrop +2 weeks", // from the linked doc
+            description: "https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/little-giant/",
+            released: "USDA-Chatsworth 1995*"
+        },
+        {
+            type: "Blueberry",
+            name: "Pink Champagne",
+            AKA: ["G-435"],
+            harvest_time: "early-mid", // "early- to mid-season ripening"
+            description: " https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/pink-champagne/",
+            released: "USDA-Chatsworth 2005*"
+        },
+        {
+            type: "Blueberry",
+            name: "Pink Lemonade",
+            AKA: ["ARS 96-138"],
+            harvest_time: "mid-late", // "mid-late- to late-season ripening"
+            description: "https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/pink-lemonade-1/",
+            released: "USDA-Chatsworth 2005*"
+        },
+        {
+            type: "Blueberry",
+            name: "Razz",
+            AKA: ["11-104"],
+            harvest_time: "mid", // from the linked doc - "slightly later than 'Bluecrop'"
+            description: "2005; USDA-ARS, Chatsworth, primary releasing institution https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/razz/",
+            released: "USDA-Chatsworth 2005*"
+        },
+        {
+            type: "Blueberry",
+            name: "Sweetheart",
+            AKA: ["ARS 99-88"],
+            harvest_time: "early", // from the linked doc
+            description: "https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/sweetheart/",
+            released: "USDA-Chatsworth 2010*"
+        }
     ]
 }

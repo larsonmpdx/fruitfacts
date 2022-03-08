@@ -2545,6 +2545,20 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
         location_averages.insert(value, AverageDay::default());
     }
 
+    let location_IDs = collection_items::dsl::collection_items
+        .select(collection_items::id)
+        .distinct()
+        .load::<i32>(db_conn).unwrap();
+
+    for location_ID in location_IDs {
+        let plants_in_location = collection_items::dsl::collection_items
+        .filter(collection_items::location_id.eq(location_ID))
+        .load::<CollectionItem>(db_conn)
+        .unwrap();
+
+        // todo
+    }
+
     // for each location, get the average absolute day for each standard candle and read it into a memory structure
     // (this is based on a plant entry having both a relative-to-candle entry and an absolute date of its own, and taking the difference)
     // (in most locations these will all be the same date because of the way the relative days were derived in the first place)

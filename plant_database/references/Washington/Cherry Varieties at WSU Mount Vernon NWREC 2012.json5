@@ -5,12 +5,12 @@
     // todo: 2007 version: https://s3.wp.wsu.edu/uploads/sites/2109/2014/12/CherryCultivars.pdf
     published: "various",
     accessed: "Oct 2021",
-    type: "public breeding program list",
+    type: "public garden guide",
     locations: [
         {
-            name: "WSU-TFREC Wenatchee WA",
-            latitude: 47.43797869140167,
-            longitude: -120.34750055765679
+            name: "NWREC, Mt. Vernon, WA",
+            latitude: 48.439906165067555,
+            longitude: -122.38861565365134
         }
     ],
     plants: [
