@@ -2651,8 +2651,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
                 // if we get here we have a pair of unused relative times
                 let candle_a = first_location_average.as_ref().unwrap().0;
-                let yep = &first_location_average.as_ref().unwrap().1;
-                //        let mut average_a = &mut first_location_average.as_ref().unwrap().1;
+                let average_a = &first_location_average.as_ref().unwrap().1;
                 let candle_b = average.0;
                 let average_b = average.1;
 
@@ -2664,7 +2663,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     // example: A is bing, B is redhaven. redhaven (B) is bing (A) +30 or something
                     // we have an existing bing (A) but we're missing redhaven (B)
                     // take the existing bing day and add (redhaven (B) - bing (A)) which will be a positive number
-                    let difference = average_b.average - yep.average;
+                    let difference = average_b.average - average_a.average;
                     candles_output.insert(
                         candle_b.clone(),
                         AverageOffset {
@@ -2690,7 +2689,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     // example: A is bing, B is redhaven. redhaven (B) is bing (A) +30 or something
                     // we have an existing redhaven (B) but we're missing bing (A)
                     // take the existing redhaven day and add (bing (A) - redhaven (B)) which will be a negative number
-                    let difference = yep.average - average_b.average;
+                    let difference = average_a.average - average_b.average;
                     candles_output.insert(
                         candle_a.clone(),
                         AverageOffset {
