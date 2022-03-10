@@ -2543,7 +2543,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
     #[derive(Debug, Default, Clone)]
     struct Location {
-        pub location_id: i32,
+        pub _location_id: i32,
         pub averages: HashMap<util::Candle, AverageDay>,
     }
 
@@ -2601,7 +2601,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
         if this_location_averages.len() > 0 {
             all_locations.push(Location {
-                location_id: location_id.unwrap(),
+                _location_id: location_id.unwrap(),
                 averages: this_location_averages.clone(),
             });
         }
@@ -2620,7 +2620,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
     for round in 1..=10 {
         println!("relative->relative round {}", round);
 
-        for mut location in all_locations.iter_mut() {
+        for location in all_locations.iter_mut() {
             if !initial_values_set {
                 initial_values_set = true;
                 for (candle, mut average_day) in location.averages.iter_mut() {
@@ -2637,7 +2637,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
             }
 
             let mut first_location_average = None;
-            for mut average in location.averages.iter_mut() {
+            for average in location.averages.iter_mut() {
                 if first_location_average.is_none() {
                     if !average.1.used {
                         first_location_average = Some(average);
@@ -2666,7 +2666,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     // take the existing bing day and add (redhaven (B) - bing (A)) which will be a positive number
                     let difference = average_b.average - yep.average;
                     candles_output.insert(
-                        (candle_b.clone()),
+                        candle_b.clone(),
                         AverageOffset {
                             sum: existing_day + difference,
                             divisor: 1.0,
