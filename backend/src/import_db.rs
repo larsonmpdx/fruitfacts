@@ -2599,7 +2599,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
             average.average = average.sum as f64 / average.divisor as f64;
         }
 
-        if this_location_averages.len() > 0 {
+        if !this_location_averages.is_empty() {
             all_locations.push(Location {
                 _location_id: location_id.unwrap(),
                 averages: this_location_averages.clone(),
@@ -2609,7 +2609,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
     // sort locations by number of candle entries and process the most first, it'll be a scaffold for the rest
     all_locations.sort_by(|a, b| {
-        return b.averages.len().cmp(&a.averages.len()); // b.cmp(a) will sort most-first
+        b.averages.len().cmp(&a.averages.len()) // b.cmp(a) will sort most-first
     });
 
     println!("{:#?}", all_locations);
@@ -2627,7 +2627,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     candles_output.insert(
                         candle.clone(),
                         AverageOffset {
-                            sum: average_day.average.clone(),
+                            sum: average_day.average,
                             divisor: 1.0,
                         },
                     );
@@ -2655,9 +2655,9 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                 let candle_b = average.0;
                 let average_b = average.1;
 
-                if candles_output.contains_key(&candle_a) && !candles_output.contains_key(&candle_b)
+                if candles_output.contains_key(candle_a) && !candles_output.contains_key(candle_b)
                 {
-                    let existing_entry = candles_output.get(&candle_a).unwrap();
+                    let existing_entry = candles_output.get(candle_a).unwrap();
                     let existing_day = existing_entry.sum / existing_entry.divisor;
 
                     // example: A is bing, B is redhaven. redhaven (B) is bing (A) +30 or something
@@ -2681,9 +2681,9 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     continue;
                 }
 
-                if !candles_output.contains_key(&candle_a) && candles_output.contains_key(&candle_b)
+                if !candles_output.contains_key(candle_a) && candles_output.contains_key(candle_b)
                 {
-                    let existing_entry = candles_output.get(&candle_b).unwrap();
+                    let existing_entry = candles_output.get(candle_b).unwrap();
                     let existing_day = existing_entry.sum / existing_entry.divisor;
 
                     // example: A is bing, B is redhaven. redhaven (B) is bing (A) +30 or something
@@ -2707,7 +2707,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     continue;
                 }
 
-                if candles_output.contains_key(&candle_a) && candles_output.contains_key(&candle_b)
+                if candles_output.contains_key(candle_a) && candles_output.contains_key(candle_b)
                 {
                     // weird average math - todo
                     first_location_average.unwrap().1.used = true;
