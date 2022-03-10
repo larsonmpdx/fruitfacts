@@ -1164,10 +1164,10 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
             input.harvest_time.as_ref()
         };
 
-    println!(
-        "inserting {} C {} L {:?}",
-        input.plant_name, input.collection_id, input.location_id
-    );
+    // println!(
+    //     "inserting {} C {} L {:?}",
+    //     input.plant_name, input.collection_id, input.location_id
+    // );
 
     let result = diesel::insert_into(collection_items::dsl::collection_items)
         .values((
@@ -1268,7 +1268,7 @@ fn get_location_id(
         .filter(locations::location_name.eq(&location_name))
         .load::<Location>(db_conn);
 
-    println!("{:#?} {:#?}", location_name, locations); // todo remove
+    // println!("{:#?} {:#?}", location_name, locations); // todo remove
 
     if let Ok(locations) = locations {
         if locations.len() == 1 {
@@ -2271,7 +2271,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
             }
         }
 
-        println!("inference {num_inferred} in round {round}");
+        println!("added {num_inferred} relative values in round {round}");
         // todo - maybe quit early if num_inferred is 0 for this round?
         if num_inferred == 0 {
             println!("ending early because the previous round had 0 changes");
@@ -2522,6 +2522,8 @@ pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {
 }
 
 pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
+    // looks at the database and tries to figure out the relative days between all of the standard candles, using locations
+    // that have multiple candles to do the math
     // todo
     // create an array with all of the standard candles in it
 
@@ -2531,40 +2533,204 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
         pub divisor: f64,
     }
 
-    #[derive(Debug, Default)]
+    #[derive(Debug, Default, Clone, Copy)]
     struct AverageDay {
-        pub sum: f64,
-        pub divisor: f64,
+        pub sum: i32,
+        pub divisor: i32,
+        pub average: f64,
+        pub used: bool,
+    }
+
+    #[derive(Debug, Default, Clone)]
+    struct Location {
+        pub location_id: i32,
+        pub averages: HashMap<util::Candle, AverageDay>,
     }
 
     let candle_list = util::get_standard_candles();
-    let mut candles = HashMap::new();
     let mut location_averages = HashMap::new();
-    for (value) in candle_list {
-        candles.insert(value.clone(), AverageOffset::default());
+    let mut all_locations = Vec::new();
+    for value in candle_list {
         location_averages.insert(value, AverageDay::default());
-    }
-
-    let location_IDs = collection_items::dsl::collection_items
-        .select(collection_items::id)
-        .distinct()
-        .load::<i32>(db_conn).unwrap();
-
-    for location_ID in location_IDs {
-        let plants_in_location = collection_items::dsl::collection_items
-        .filter(collection_items::location_id.eq(location_ID))
-        .load::<CollectionItem>(db_conn)
-        .unwrap();
-
-        // todo
     }
 
     // for each location, get the average absolute day for each standard candle and read it into a memory structure
     // (this is based on a plant entry having both a relative-to-candle entry and an absolute date of its own, and taking the difference)
     // (in most locations these will all be the same date because of the way the relative days were derived in the first place)
+    let location_ids = collection_items::dsl::collection_items
+        .filter(collection_items::location_id.is_not_null())
+        .select(collection_items::location_id)
+        .distinct()
+        .load::<Option<i32>>(db_conn)
+        .unwrap();
 
-    // go through the location memory structure and count the most frequent standard candle. set that as the 0-point
-    // sort location memory structures by number of candle entries and process the most first
+    for location_id in location_ids {
+        let plants_in_location = collection_items::dsl::collection_items
+            .filter(collection_items::location_id.eq(location_id))
+            .load::<CollectionItem>(db_conn)
+            .unwrap();
+
+        let mut this_location_averages = HashMap::new();
+
+        for plant in plants_in_location {
+            if plant.calc_harvest_relative_to.is_some()
+                && plant.calc_harvest_relative_to_type.is_some()
+                && plant.calc_harvest_relative.is_some()
+                && plant.harvest_start.is_some()
+            {
+                let candle = util::Candle {
+                    type_: plant.type_,
+                    name: plant.name,
+                };
+                if location_averages.contains_key(&candle) {
+                    if !this_location_averages.contains_key(&candle) {
+                        this_location_averages.insert(candle.clone(), AverageDay::default());
+                    }
+
+                    let entry = this_location_averages.get_mut(&candle).unwrap();
+                    entry.sum +=
+                        plant.harvest_start.unwrap() - plant.calc_harvest_relative.unwrap();
+                    entry.divisor += 1;
+                }
+            }
+        }
+
+        for (_, mut average) in &mut this_location_averages {
+            average.average = average.sum as f64 / average.divisor as f64;
+        }
+
+        if this_location_averages.len() > 0 {
+            all_locations.push(Location {
+                location_id: location_id.unwrap(),
+                averages: this_location_averages.clone(),
+            });
+        }
+    }
+
+    // sort locations by number of candle entries and process the most first, it'll be a scaffold for the rest
+    all_locations.sort_by(|a, b| {
+        return b.averages.len().cmp(&a.averages.len()); // b.cmp(a) will sort most-first
+    });
+
+    println!("{:#?}", all_locations);
+
+    let mut candles_output = HashMap::new();
+    let mut initial_values_set = false;
+
+    for round in 1..=10 {
+        println!("relative->relative round {}", round);
+
+        for mut location in all_locations.iter_mut() {
+            if !initial_values_set {
+                initial_values_set = true;
+                for (candle, mut average_day) in location.averages.iter_mut() {
+                    candles_output.insert(
+                        candle.clone(),
+                        AverageOffset {
+                            sum: average_day.average.clone(),
+                            divisor: 1.0,
+                        },
+                    );
+                    average_day.used = true;
+                }
+                continue;
+            }
+
+            let mut first_location_average = None;
+            for mut average in location.averages.iter_mut() {
+                if first_location_average.is_none() {
+                    if !average.1.used {
+                        first_location_average = Some(average);
+                    }
+                    continue;
+                }
+
+                if average.1.used {
+                    continue;
+                }
+
+                // if we get here we have a pair of unused relative times
+                let candle_a = first_location_average.as_ref().unwrap().0;
+                let yep = &first_location_average.as_ref().unwrap().1;
+                //        let mut average_a = &mut first_location_average.as_ref().unwrap().1;
+                let candle_b = average.0;
+                let average_b = average.1;
+
+                if candles_output.contains_key(&candle_a) && !candles_output.contains_key(&candle_b)
+                {
+                    let existing_entry = candles_output.get(&candle_a).unwrap();
+                    let existing_day = existing_entry.sum / existing_entry.divisor;
+
+                    // example: A is bing, B is redhaven. redhaven (B) is bing (A) +30 or something
+                    // we have an existing bing (A) but we're missing redhaven (B)
+                    // take the existing bing day and add (redhaven (B) - bing (A)) which will be a positive number
+                    let difference = average_b.average - yep.average;
+                    candles_output.insert(
+                        (candle_b.clone()),
+                        AverageOffset {
+                            sum: existing_day + difference,
+                            divisor: 1.0,
+                        },
+                    );
+                    first_location_average.unwrap().1.used = true;
+                    average_b.used = true;
+                    first_location_average = None;
+                    println!(
+                        "added a new relative->relative bit: {} {} {}",
+                        candle_a.name, candle_b.name, difference
+                    );
+                    continue;
+                }
+
+                if !candles_output.contains_key(&candle_a) && candles_output.contains_key(&candle_b)
+                {
+                    let existing_entry = candles_output.get(&candle_b).unwrap();
+                    let existing_day = existing_entry.sum / existing_entry.divisor;
+
+                    // example: A is bing, B is redhaven. redhaven (B) is bing (A) +30 or something
+                    // we have an existing redhaven (B) but we're missing bing (A)
+                    // take the existing redhaven day and add (bing (A) - redhaven (B)) which will be a negative number
+                    let difference = yep.average - average_b.average;
+                    candles_output.insert(
+                        candle_a.clone(),
+                        AverageOffset {
+                            sum: existing_day + difference,
+                            divisor: 1.0,
+                        },
+                    );
+                    first_location_average.unwrap().1.used = true;
+                    average_b.used = true;
+                    first_location_average = None;
+                    println!(
+                        "added a new relative->relative bit: {} {} {}",
+                        candle_b.name, candle_a.name, difference
+                    );
+                    continue;
+                }
+
+                if candles_output.contains_key(&candle_a) && candles_output.contains_key(&candle_b)
+                {
+                    // weird average math - todo
+                    first_location_average.unwrap().1.used = true;
+                    average_b.used = true;
+                    first_location_average = None;
+                    println!(
+                        "need to do weird average math on: {} {}",
+                        candle_a.name, candle_b.name
+                    );
+                    continue;
+                }
+            }
+
+            // for each pair of candles in this set
+            // see if both exist in the output structure
+            // if yes, add this average value to the average value in the output structure - math below
+            // if no, but one exists, add the unknown one in as a new value based on the first one that did exist
+            // if neither exists, do nothing
+
+            // loop until we make no progress
+        }
+    }
 
     // then step through each set of pairings and add them into the candle array as a running average, weighted by notoriety
     // if they can't be added to the running tally, mark them as unused so we can step through another round of averaging

@@ -1,0 +1,178 @@
+{
+    title: "FS1203 White-Fleshed Peach Varieties for New Jersey Commercial and Home Orchardists",
+    author: "Jerry Frecon, Daniel Ward",
+    url: "https://njaes.rutgers.edu/fs1203/",
+    published: "March 2013",
+    accessed: "Mar 2022",
+    type: "extension test",
+    locations: [
+        {
+            name: "Cream Ridge, NJ",
+            latitude: 40.13233771380199,
+            longitude: -74.52852612532256
+        }
+    ],
+    plants: [
+        // todo: figure out how to show this table of specific home orchard endorsements:
+        // Scarlet Pearl
+        // Southern Pearl
+        // Raritan Rose
+        // Carolina Belle
+        // Blushing Star
+        {
+            type: "Peach",
+            name: "Spring Snow",
+            harvest_time_relative: "Redhaven-27",
+            description: "white flesh",
+            disease_resistance: { BLS: "medium susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Manon",
+            harvest_time_relative: "Redhaven-21",
+            description: "white flesh",
+            // the same note makes both "low" and "medium" bac spot claims. who knows
+            disease_resistance: { BLS: "low to medium susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Scarlet Pearl",
+            harvest_time_relative: "Redhaven-18",
+            description: "white flesh. Scarlet Pearl is suggested for home orchard plantings because of it early maturity and productivity",
+            disease_resistance: { BLS: "low susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Sugar May",
+            harvest_time_relative: "Redhaven-15",
+            description: "white flesh",
+            disease_resistance: { BLS: "medium susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Southern Pearl",
+            harvest_time_relative: "Redhaven-6",
+            description: "white flesh. Southern Pearl is suggested for home orchard plantings",
+            disease_resistance: { BLS: "low susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Snow Bride",
+            harvest_time_relative: "Redhaven-5",
+            description: "white flesh",
+            disease_resistance: { BLS: "high susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "White Cloud",
+            harvest_time_relative: "Redhaven-3", // in the guide as "a few days before Redhaven"
+            description: "white flesh",
+            disease_resistance: { BLS: "low susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Raritan Rose",
+            harvest_time_relative: "Redhaven+0",
+            description: "white flesh. This is an old favorite in New Jersey and is suggested for home orchard plantings",
+            disease_resistance: { BLS: "medium susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            harvest_time: "average of: July 25, July 28", // from Raritan Rose as "July 25-28, with Redhaven"
+            description: "not in this guide - added as a harvest time reference"
+        },
+        {
+            type: "Peach",
+            name: "White Lady",
+            harvest_time_relative: "Redhaven+5",
+            description: "white flesh",
+            disease_resistance: { BLS: "medium susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Snow Beauty",
+            harvest_time_relative: "Redhaven+7",
+            description: "white flesh",
+            disease_resistance: { BLS: "high to very high susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Klondike White",
+            harvest_time_relative: "Redhaven+10",
+            description: "white flesh",
+            disease_resistance: { BLS: "high susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Carolina Belle",
+            harvest_time_relative: "Redhaven+15",
+            description: "white flesh. This peach has some of the characteristics of Georgia Belle but with better size, firmness and color; it is suggested for home orchard plantings",
+            disease_resistance: { BLS: "low susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "FA 18", // "Blushingstar"
+            harvest_time_relative: "Redhaven+19",
+            description: "white flesh. A nice peach all around, it is also suggested for home orchard plantings",
+            disease_resistance: { BLS: "medium susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Sugar Giant",
+            harvest_time_relative: "Redhaven+22",
+            description: "white flesh",
+            disease_resistance: { BLS: "high susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Opale",
+            harvest_time_relative: "Redhaven+28",
+            description: "white flesh",
+            disease_resistance: { BLS: "high susceptibility", brown_rot: "very susceptible" }
+        },
+        {
+            type: "Peach",
+            name: "Snow Fire",
+            harvest_time_relative: "Redhaven+28",
+            description: "white flesh",
+            disease_resistance: { BLS: "high susceptibility", brown_rot: "high susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Benedicte",
+            harvest_time_relative: "Redhaven+30",
+            description: "white flesh",
+            disease_resistance: { BLS: "medium to high susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Lady Nancy",
+            harvest_time_relative: "Redhaven+31",
+            description: "white flesh",
+            disease_resistance: { BLS: "high to medium susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Snow King",
+            harvest_time_relative: "Redhaven+33",
+            description: "white flesh. Snow King is a challenge to grow in New Jersey due to high susceptibility to bacterial spot and brown rot",
+            disease_resistance: { BLS: "high susceptibility", brown_rot: "high susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Snow Giant",
+            harvest_time_relative: "Redhaven+40",
+            description: "white flesh",
+            disease_resistance: { BLS: "high susceptibility" }
+        },
+        {
+            type: "Peach",
+            name: "Autumn Snow",
+            AKA: ["Yukon King (tm)"],
+            harvest_time_relative: "Redhaven+43",
+            description: "white flesh",
+            disease_resistance: { BLS: "high susceptibility" }
+        }
+    ]
+}
