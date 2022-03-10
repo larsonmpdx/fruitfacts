@@ -2561,12 +2561,15 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
         .filter(collection_items::location_id.is_not_null())
         .select(collection_items::location_id)
         .distinct()
+        .order(collection_items::location_id.asc())
         .load::<Option<i32>>(db_conn)
         .unwrap();
 
     for location_id in location_ids {
         let plants_in_location = collection_items::dsl::collection_items
             .filter(collection_items::location_id.eq(location_id))
+            .order(collection_items::type_.asc())
+            .then_order_by(collection_items::name.asc())
             .load::<CollectionItem>(db_conn)
             .unwrap();
 
@@ -2595,7 +2598,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
             }
         }
 
-        for (_, mut average) in &mut this_location_averages {
+        for mut average in this_location_averages.values_mut() {
             average.average = average.sum as f64 / average.divisor as f64;
         }
 
@@ -2675,8 +2678,8 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     average_b.used = true;
                     first_location_average = None;
                     println!(
-                        "added a new relative->relative bit: {} {} {}",
-                        candle_a.name, candle_b.name, difference
+                        "added a new relative->relative value: {} is {} + {} days",
+                        candle_b.name, candle_a.name, difference
                     );
                     continue;
                 }
@@ -2701,8 +2704,8 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     average_b.used = true;
                     first_location_average = None;
                     println!(
-                        "added a new relative->relative bit: {} {} {}",
-                        candle_b.name, candle_a.name, difference
+                        "added a new relative->relative value: {} is {} + {} days",
+                        candle_a.name, candle_b.name, difference
                     );
                     continue;
                 }
@@ -2717,6 +2720,8 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                         "need to do weird average math on: {} {}",
                         candle_a.name, candle_b.name
                     );
+
+                    // todo - print something like "type A to type B adjustment: before {}... new gap {}... after {}"
                     continue;
                 }
             }
