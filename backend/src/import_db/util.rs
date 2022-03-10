@@ -174,7 +174,7 @@ pub struct Candle {
 // will remove overlaps like peach and nectarine both pointing to redhaven
 pub fn get_standard_candles() -> HashSet<Candle> {
     let mut output = HashSet::new();
-    for (_, value) in &*TYPE_TO_CANDLE {
+    for value in (*TYPE_TO_CANDLE).values() {
         output.insert(Candle {
             type_: value.type_.clone(),
             name: value.name.clone(),
