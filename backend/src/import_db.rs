@@ -2535,7 +2535,13 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
     impl std::fmt::Display for AverageOffset {
         fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-            write!(f, "sum {:.1} divisor {:.1} average {:.1}", self.sum, self.divisor, self.sum / self.divisor)
+            write!(
+                f,
+                "sum {:.1} divisor {:.1} average {:.1}",
+                self.sum,
+                self.divisor,
+                self.sum / self.divisor
+            )
         }
     }
 
@@ -2562,12 +2568,8 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
     fn print_candles(candles_output: &HashMap<util::Candle, AverageOffset>) {
         for candle in candles_output {
-            println!(
-                "{:?} {}",
-               candle.0, candle.1
-            );
+            println!("{:?} {}", candle.0, candle.1);
         }
- 
     }
 
     // for each location, get the average absolute day for each standard candle and read it into a memory structure
@@ -2675,8 +2677,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                 let candle_b = average.0;
                 let average_b = average.1;
 
-                if candles_output.contains_key(candle_a) && !candles_output.contains_key(candle_b)
-                {
+                if candles_output.contains_key(candle_a) && !candles_output.contains_key(candle_b) {
                     let existing_entry = candles_output.get(candle_a).unwrap();
                     let existing_day = existing_entry.sum / existing_entry.divisor;
 
@@ -2703,8 +2704,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     continue;
                 }
 
-                if !candles_output.contains_key(candle_a) && candles_output.contains_key(candle_b)
-                {
+                if !candles_output.contains_key(candle_a) && candles_output.contains_key(candle_b) {
                     let existing_entry = candles_output.get(candle_b).unwrap();
                     let existing_day = existing_entry.sum / existing_entry.divisor;
 
@@ -2731,8 +2731,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     continue;
                 }
 
-                if candles_output.contains_key(candle_a) && candles_output.contains_key(candle_b)
-                {
+                if candles_output.contains_key(candle_a) && candles_output.contains_key(candle_b) {
                     let existing_entry_a = candles_output.get(candle_a).unwrap();
                     let existing_day_a = existing_entry_a.sum / existing_entry_a.divisor;
                     let existing_entry_b = candles_output.get(candle_b).unwrap();
@@ -2752,7 +2751,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     let adjustment = new_difference - existing_difference;
 
                     let subtract_from_a = adjustment * 0.5;
-                    let new_day_to_average_with_a = existing_day_a *0.5 - subtract_from_a;
+                    let new_day_to_average_with_a = existing_day_a * 0.5 - subtract_from_a;
 
                     let add_to_b = adjustment * 0.5;
                     let new_day_to_average_with_b = existing_day_b * 0.5 + add_to_b;
@@ -2814,18 +2813,18 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
         #[serde(rename = "type")]
         pub type_: String,
         pub name: String,
-        pub day: i32
+        pub day: i32,
     }
     let mut output = Vec::new();
     for (candle, offset) in &candles_output {
-        output.push(CandleOutput{type_: candle.type_.clone(), name: candle.name.clone(), day: 
-            (offset.sum / offset.divisor) as i32 - lowest_day.unwrap()
-            });
+        output.push(CandleOutput {
+            type_: candle.type_.clone(),
+            name: candle.name.clone(),
+            day: (offset.sum / offset.divisor) as i32 - lowest_day.unwrap(),
+        });
     }
 
-    output.sort_by(|a, b| {
-        a.day.cmp(&b.day)
-    });
+    output.sort_by(|a, b| a.day.cmp(&b.day));
 
     println!("calculated relative-relative times: {:#?}", output);
 
@@ -2833,5 +2832,6 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
     path = path.join("./generated/relative-relative.json");
 
     // this file is used by the frontend to make relative-only charts, and we might use it for predictions in the future
-    fs::write(path, serde_json::to_string_pretty(&output).unwrap()).expect("Unable to write relative-relative file");
+    fs::write(path, serde_json::to_string_pretty(&output).unwrap())
+        .expect("Unable to write relative-relative file");
 }
