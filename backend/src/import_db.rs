@@ -2794,14 +2794,12 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
     // normalize to the earliest standard candle
     let mut lowest_day = None;
-    for (_, offset) in &candles_output {
+    for offset in candles_output.values() {
         let day = (offset.sum / offset.divisor) as i32;
         if lowest_day.is_none() {
             lowest_day = Some(day);
-        } else {
-            if lowest_day.unwrap() > day {
-                lowest_day = Some(day);
-            }
+        } else if lowest_day.unwrap() > day {
+            lowest_day = Some(day);
         }
     }
     if lowest_day.is_none() {
