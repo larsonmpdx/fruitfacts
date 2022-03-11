@@ -5,53 +5,53 @@
     "day": 0
   },
   {
-    "type": "Apricot",
-    "name": "Blenheim",
-    "day": 3
-  },
-  {
     "type": "Sweet Cherry",
     "name": "Bing",
-    "day": 5
+    "day": 4
+  },
+  {
+    "type": "Apricot",
+    "name": "Blenheim",
+    "day": 6
   },
   {
     "type": "Japanese Plum",
     "name": "Santa Rosa",
-    "day": 28
+    "day": 26
   },
   {
     "type": "Peach",
     "name": "Redhaven",
-    "day": 32
+    "day": 29
   },
   {
     "type": "Euro Pear",
     "name": "Bartlett",
-    "day": 53
+    "day": 57
   },
   {
     "type": "Asian Pear",
     "name": "Shinseiki",
-    "day": 56
+    "day": 60
   },
   {
     "type": "Euro Plum",
     "name": "Italian",
-    "day": 64
+    "day": 66
   },
   {
     "type": "Almond",
     "name": "Nonpareil",
-    "day": 68
+    "day": 67
   },
   {
     "type": "Apple",
     "name": "Red Delicious",
-    "day": 82
+    "day": 81
   },
   {
     "type": "Walnut",
     "name": "Chandler",
-    "day": 127
+    "day": 117
   }
 ]

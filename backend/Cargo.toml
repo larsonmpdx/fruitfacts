@@ -38,6 +38,7 @@ once_cell = "1.9.0"
 base64 = "0.13.0"
 reqwest = "0.11.7"
 time = "0.2.27" # held back to match something in I think actix. error with 0.3.5 when I tried
+indexmap = "1.8.0"
 
 [build-dependencies]
 dotenv-build = "0.1"

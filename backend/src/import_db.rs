@@ -31,6 +31,7 @@ use std::collections::HashSet;
 use std::convert::TryFrom;
 use std::fs;
 use walkdir::WalkDir;
+use indexmap::IndexMap;
 
 extern crate pathdiff;
 extern crate regex;
@@ -2526,6 +2527,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
     // using locations that have multiple candles to do the math
     // it starts with the location with the most candles and adds more candle->candle times as it steps through other locations
     // the new gaps are averaged with previous gaps. the whole thing is pretty naive but it works ok
+    // because of the naivete, we use sorting and IndexMap<> to keep some order and get a more repeatable result
 
     #[derive(Debug, Default)]
     struct AverageOffset {
@@ -2556,17 +2558,17 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
     #[derive(Debug, Default, Clone)]
     struct Location {
         pub _location_id: i32,
-        pub averages: HashMap<util::Candle, AverageDay>,
+        pub averages: IndexMap<util::Candle, AverageDay>,
     }
 
     let candle_list = util::get_standard_candles();
-    let mut location_averages = HashMap::new();
+    let mut location_averages = IndexMap::new();
     let mut all_locations = Vec::new();
     for value in candle_list {
         location_averages.insert(value, AverageDay::default());
     }
 
-    fn print_candles(candles_output: &HashMap<util::Candle, AverageOffset>) {
+    fn print_candles(candles_output: &IndexMap<util::Candle, AverageOffset>) {
         for candle in candles_output {
             println!("{:?} {}", candle.0, candle.1);
         }
@@ -2591,7 +2593,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
             .load::<CollectionItem>(db_conn)
             .unwrap();
 
-        let mut this_location_averages = HashMap::new();
+        let mut this_location_averages = IndexMap::new();
 
         for plant in plants_in_location {
             if plant.calc_harvest_relative_to.is_some()
@@ -2635,7 +2637,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
     println!("{:#?}", all_locations);
 
-    let mut candles_output = HashMap::new();
+    let mut candles_output = IndexMap::new();
     let mut initial_values_set = false;
 
     for round in 1..=10 {
