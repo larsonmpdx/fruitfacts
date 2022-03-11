@@ -2522,15 +2522,21 @@ pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {
 }
 
 pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
-    // looks at the database and tries to figure out the relative days between all of the standard candles, using locations
-    // that have multiple candles to do the math
-    // todo
-    // create an array with all of the standard candles in it
+    // looks at the database and tries to figure out the relative days between all of the standard candles,
+    // using locations that have multiple candles to do the math
+    // it starts with the location with the most candles and adds more candle->candle times as it steps through other locations
+    // the new gaps are averaged with previous gaps. the whole thing is pretty naive but it works ok
 
     #[derive(Debug, Default)]
     struct AverageOffset {
         pub sum: f64,
         pub divisor: f64,
+    }
+
+    impl std::fmt::Display for AverageOffset {
+        fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+            write!(f, "sum {:.1} divisor {:.1} average {:.1}", self.sum, self.divisor, self.sum / self.divisor)
+        }
     }
 
     #[derive(Debug, Default, Clone, Copy)]
@@ -2552,6 +2558,16 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
     let mut all_locations = Vec::new();
     for value in candle_list {
         location_averages.insert(value, AverageDay::default());
+    }
+
+    fn print_candles(candles_output: &HashMap<util::Candle, AverageOffset>) {
+        for candle in candles_output {
+            println!(
+                "{:?} {}",
+               candle.0, candle.1
+            );
+        }
+ 
     }
 
     // for each location, get the average absolute day for each standard candle and read it into a memory structure
@@ -2622,6 +2638,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
     for round in 1..=10 {
         println!("relative->relative round {}", round);
+        let mut num_changed = 0;
 
         for location in all_locations.iter_mut() {
             if !initial_values_set {
@@ -2681,6 +2698,8 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                         "added a new relative->relative value: {} is {} + {} days",
                         candle_b.name, candle_a.name, difference
                     );
+                    print_candles(&candles_output);
+                    num_changed += 1;
                     continue;
                 }
 
@@ -2707,45 +2726,112 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                         "added a new relative->relative value: {} is {} + {} days",
                         candle_a.name, candle_b.name, difference
                     );
+                    print_candles(&candles_output);
+                    num_changed += 1;
                     continue;
                 }
 
                 if candles_output.contains_key(candle_a) && candles_output.contains_key(candle_b)
                 {
-                    // weird average math - todo
+                    let existing_entry_a = candles_output.get(candle_a).unwrap();
+                    let existing_day_a = existing_entry_a.sum / existing_entry_a.divisor;
+                    let existing_entry_b = candles_output.get(candle_b).unwrap();
+                    let existing_day_b = existing_entry_b.sum / existing_entry_b.divisor;
+                    let existing_difference = existing_day_b - existing_day_a;
+
+                    let new_difference = average_b.average - average_a.average;
+
+                    println!(
+                        "{} to {}: was {:.1}, new value {:.1}",
+                        candle_a.name, candle_b.name, existing_difference, new_difference
+                    );
+
+                    // if new_difference bigger or equal to existing_difference: add half to B and subtract half from A
+                    // if the difference is negative then add/subtract will get flipped automatically
+
+                    let adjustment = new_difference - existing_difference;
+
+                    let subtract_from_a = adjustment * 0.5;
+                    let new_day_to_average_with_a = existing_day_a *0.5 - subtract_from_a;
+
+                    let add_to_b = adjustment * 0.5;
+                    let new_day_to_average_with_b = existing_day_b * 0.5 + add_to_b;
+
+                    {
+                        let existing_entry_a = candles_output.get_mut(candle_a).unwrap();
+                        println!("changing {existing_entry_a}");
+                        existing_entry_a.sum += new_day_to_average_with_a;
+                        existing_entry_a.divisor += 0.5;
+                        println!("to {existing_entry_a}");
+                    }
+
+                    {
+                        let mut existing_entry_b = candles_output.get_mut(candle_b).unwrap();
+                        println!("changing {existing_entry_b}");
+                        existing_entry_b.sum += new_day_to_average_with_b;
+                        existing_entry_b.divisor += 0.5;
+                        println!("to {existing_entry_b}");
+                    }
+
                     first_location_average.unwrap().1.used = true;
                     average_b.used = true;
                     first_location_average = None;
-                    println!(
-                        "need to do weird average math on: {} {}",
-                        candle_a.name, candle_b.name
-                    );
 
-                    // todo - print something like "type A to type B adjustment: before {}... new gap {}... after {}"
+                    print_candles(&candles_output);
+                    num_changed += 1;
                     continue;
                 }
             }
-
-            // for each pair of candles in this set
-            // see if both exist in the output structure
-            // if yes, add this average value to the average value in the output structure - math below
-            // if no, but one exists, add the unknown one in as a new value based on the first one that did exist
-            // if neither exists, do nothing
-
-            // loop until we make no progress
         }
+
+        if num_changed == 0 {
+            println!("ending relative->relative rounds, none changed");
+            break;
+        } else {
+            println!("round {} changed {}", round, num_changed);
+        }
+        // loop until we make no progress
     }
 
-    // then step through each set of pairings and add them into the candle array as a running average, weighted by notoriety
-    // if they can't be added to the running tally, mark them as unused so we can step through another round of averaging
+    // normalize to the earliest standard candle
+    let mut lowest_day = None;
+    for (_, offset) in &candles_output {
+        let day = (offset.sum / offset.divisor) as i32;
+        if lowest_day.is_none() {
+            lowest_day = Some(day);
+        } else {
+            if lowest_day.unwrap() > day {
+                lowest_day = Some(day);
+            }
+        }
+    }
+    if lowest_day.is_none() {
+        lowest_day = Some(0); // error - didn't find anything
+    }
 
-    // averaging: if we have types A, B, C and we're using A as the inital 0-point
-    // and we have A at 0, B at 10, and C at 20,
-    // and we go to add a data point: B->C is 12
-    // this should attribute half of the correction to B and half to C
-    // so B-> 9 and C-> 11 (?) - how does this work with notoriety scores?
+    #[derive(Debug, Serialize, Deserialize)]
+    struct CandleOutput {
+        #[serde(rename = "type")]
+        pub type_: String,
+        pub name: String,
+        pub day: i32
+    }
+    let mut output = Vec::new();
+    for (candle, offset) in &candles_output {
+        output.push(CandleOutput{type_: candle.type_.clone(), name: candle.name.clone(), day: 
+            (offset.sum / offset.divisor) as i32 - lowest_day.unwrap()
+            });
+    }
 
-    // then normalize to the earliest standard candle within tha array (so it's 0 and all the others are +days)
+    output.sort_by(|a, b| {
+        a.day.cmp(&b.day)
+    });
 
-    // write all of them out to a file for the frontend to use to make relative-only charts
+    println!("calculated relative-relative times: {:#?}", output);
+
+    let mut path = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    path = path.join("./generated/relative-relative.json");
+
+    // this file is used by the frontend to make relative-only charts, and we might use it for predictions in the future
+    fs::write(path, serde_json::to_string_pretty(&output).unwrap()).expect("Unable to write relative-relative file");
 }
