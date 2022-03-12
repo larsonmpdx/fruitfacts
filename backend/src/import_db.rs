@@ -2695,8 +2695,8 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                         },
                     );
                     first_location_average.unwrap().1.used = true;
-                    average_b.used = true;
                     first_location_average = None;
+                    // average_b.used = true; // invalidate only one - maybe using the other in other possible pairs will lead to better averages
                     println!(
                         "added a new relative->relative value: {} is {} + {} days",
                         candle_b.name, candle_a.name, difference
@@ -2722,8 +2722,9 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                         },
                     );
                     first_location_average.unwrap().1.used = true;
-                    average_b.used = true;
                     first_location_average = None;
+                    // average_b.used = true; // invalidate only one - maybe using the other in other possible pairs will lead to better averages
+
                     println!(
                         "added a new relative->relative value: {} is {} + {} days",
                         candle_a.name, candle_b.name, difference
@@ -2775,8 +2776,8 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
                     }
 
                     first_location_average.unwrap().1.used = true;
-                    average_b.used = true;
                     first_location_average = None;
+                 //   average_b.used = true; // invalidate only one - maybe using the other in other possible pairs will lead to better averages
 
                     print_candles(&candles_output);
                     num_changed += 1;
