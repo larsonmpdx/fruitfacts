@@ -1,0 +1,30 @@
+{
+    title: "MSU Blueberries",
+    author: "James Hancock", // breeder for the newer ones
+    url: "https://www.canr.msu.edu/news/blueberry-bonus-msu-scientist-s-blueberry-varieties-reach-new-heights",
+    published: "2018",
+    accessed: "March 2022",
+    type: "journal article",
+    locations: [
+        {
+            name: "MSU (East Lansing MI)",
+            latitude: 42.72157812886984, 
+            longitude: -84.47413474411984
+        }
+    ],
+    plants: [
+        {
+            type: "Blueberry",
+            name: "Aurora",
+            released: "MSU 2004*"
+        },
+
+        // todo
+        // see https://www.canr.msu.edu/news/blueberry-bonus-msu-scientist-s-blueberry-varieties-reach-new-heights
+        // "Aurora, Draper, Liberty, Huron, Calypso and Osorno"
+
+        // then bonus
+
+        // previously - nelson? Northland?
+    ]
+}
