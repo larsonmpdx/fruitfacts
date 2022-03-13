@@ -8,7 +8,7 @@
     locations: [
         {
             name: "MSU (East Lansing MI)",
-            latitude: 42.72157812886984, 
+            latitude: 42.72157812886984,
             longitude: -84.47413474411984
         }
     ],
@@ -18,12 +18,52 @@
             name: "Aurora",
             released: "MSU 2004*"
         },
-
         // todo
         // see https://www.canr.msu.edu/news/blueberry-bonus-msu-scientist-s-blueberry-varieties-reach-new-heights
-        // "Aurora, Draper, Liberty, Huron, Calypso and Osorno"
-
-        // then bonus
+        {
+            type: "Blueberry",
+            name: "Liberty",
+            patent: "https://patents.google.com/patent/USPP15146",
+            released: "MSU*"
+        },
+        {
+            type: "Blueberry",
+            name: "Draper",
+            patent: "https://patents.google.com/patent/USPP15103",
+            released: "MSU*"
+        },
+        {
+            type: "Blueberry",
+            name: "Osorno",
+            patent: "https://patents.google.com/patent/USPP26031",
+            harvest_time: "late July to early August", // from patent
+            released: "MSU*"
+        },
+        {
+            type: "Blueberry",
+            name: "Aurora",
+            patent: "https://patents.google.com/patent/USPP15185",
+            released: "MSU*"
+        },
+        {
+            type: "Blueberry",
+            name: "Katahdin",
+            patent: "https://patents.google.com/patent/USPP32110",
+            released: "MSU*"
+        },
+        {
+            type: "Blueberry",
+            name: "Huron",
+            patent: "https://patents.google.com/patent/USPP21777",
+            released: "MSU*"
+        },
+        {
+            type: "Blueberry",
+            name: "Calypso",
+            patent: "https://patents.google.com/patent/USPP25995",
+            released: "MSU*"
+        }
+        // then Bonus
 
         // previously - nelson? Northland?
     ]

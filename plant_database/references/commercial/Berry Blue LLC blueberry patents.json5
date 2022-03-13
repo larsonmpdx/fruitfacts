@@ -1,0 +1,129 @@
+{
+    title: "Berry Blue LLC (hortifruit) Blueberry varieties",
+    url: "https://hortifrut.com/innovation/genetic-development/",
+    published: "unknown",
+    accessed: "March 2022",
+    desription: "I started pulling this thread after finding patents assigned to berry blue from a search for James F. Hancock from MSU",
+    type: "IP company list",
+    locations: [
+        {
+            name: "Michigan Blueberry Growers, Grand Junction, MI",
+            latitude: 42.40188138293272,
+            longitude: -86.07395222825545
+        }
+    ],
+    plants: [
+        // note that many of these test/selection numbers are not legitimate names because they have more than ten digits,
+        // which would likely invalidate the trademark on their trade names
+        // some of these names are from https://journals.ashs.org/hortsci/view/journals/hortsci/51/6/article-p620.xml
+        {
+            type: "Blueberry",
+            name: "BB05-251MI-14",
+            AKA: ["Keepsake"],
+            patent: "https://patents.google.com/patent/USPP24807"
+        },
+        {
+            type: "Blueberry",
+            name: "BB05-58GA-1",
+            AKA: ["Robust"],
+            patent: "https://patents.google.com/patent/USPP24808"
+        },
+        {
+            type: "Blueberry",
+            name: "BB05-274MI-139",
+            AKA: ["Sensation"],
+            patent: "https://patents.google.com/patent/USPP24809"
+        },
+        {
+            type: "Blueberry",
+            name: "BB06-540FL-12",
+            AKA: ["Prelude"],
+            patent: "https://patents.google.com/patent/USPP24831"
+        },
+        {
+            type: "Blueberry",
+            name: "BB05-61GA-61",
+            AKA: ["Temptation"],
+            patent: "https://patents.google.com/patent/USPP24874"
+        },
+        {
+            type: "Blueberry",
+            name: "BB05-185GA",
+            AKA: ["Bliss"],
+            patent: "https://patents.google.com/patent/USPP24875"
+        },
+        {
+            type: "Blueberry",
+            name: "BB07-210FL-18",
+            AKA: ["Daybreak"],
+            patent: "https://patents.google.com/patent/USPP24876"
+        },
+        {
+            type: "Blueberry",
+            name: "BB07-7FL-4",
+            AKA: ["Presto"],
+            description: "https://hortifrut.com/innovation/genetic-development/presto/",
+            patent: "https://patents.google.com/patent/USPP30421"
+        },
+        {
+            type: "Blueberry",
+            name: "BB06-507MI-52",
+            AKA: ["Envy"], // "Envoy" on canadian website
+            patent: "https://patents.google.com/patent/USPP30422"
+        },
+        {
+            type: "Blueberry",
+            name: "BB06-50FL-1",
+            AKA: ["Stellar"],
+            description: "https://hortifrut.com/innovation/genetic-development/stellar/",
+            patent: "https://patents.google.com/patent/USPP30445"
+        },
+        {
+            type: "Blueberry",
+            name: "BB06-126VC-4",
+            AKA: ["Apollo"],
+            description: "https://hortifrut.com/innovation/genetic-development/apolo/",
+            patent: "https://patents.google.com/patent/USPP31648"
+        },
+        // I can't figure out trade names for the rest of these, maybe they're too new. a bunch of links on the hortifruit website are broken. who knows
+        {
+            type: "Blueberry",
+            name: "BB05-35FL-10",
+            patent: "https://patents.google.com/patent/USPP31231"
+        },
+        {
+            type: "Blueberry",
+            name: "BB06-426MI-84",
+            patent: "https://patents.google.com/patent/USPP31257"
+        },
+        {
+            type: "Blueberry",
+            name: "BB06-343MI-16",
+            patent: "https://patents.google.com/patent/USPP31524"
+        },
+        {
+            type: "Blueberry",
+            name: "BB05-259MI-15",
+            patent: "https://patents.google.com/patent/USPP32574"
+        },
+        {
+            type: "Blueberry",
+            name: "BB05-268MI-152",
+            patent: "https://patents.google.com/patent/USPP32575"
+        },
+        {
+            type: "Blueberry",
+            name: "BB07-249GA-3",
+            patent: "https://patents.google.com/patent/USPP33110"
+        },
+        {
+            type: "Blueberry",
+            name: "BB15-214PO-3",
+            description: 'zero chill, growth controlled by pruning. "tropical highbush"',
+            patent: "https://patents.google.com/patent/USPP33111"
+        }
+
+        // BB06-507MI-15 - I think this was an abandoned application? it's not the same as BB06-507MI-52 "Envy", they have the same breeding but the description is different
+        // https://patents.google.com/patent/US20140109270
+    ]
+}

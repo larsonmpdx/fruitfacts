@@ -109,6 +109,19 @@
             harvest_time: "early", // from the linked doc
             description: "https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/genetic-improvement-for-fruits-vegetables-laboratory/docs/sweetheart/",
             released: "USDA-Chatsworth 2010*"
+        },
+        {
+            type: "Blueberry",
+            name: "Nelson",
+            released: "USDA-Chatsworth 1988*"
+        },
+        {
+            type: "Blueberry",
+            name: "Talisman",
+            description: "https://journals.ashs.org/hortsci/view/journals/hortsci/56/1/article-p101.xml",
+            patent: "not patented",
+            harvest_time_unparsed: "concentrated period in late-midseason (Liberty/Jersey season)",
+            released: "USDA ARS 2020*"
         }
     ]
 }

@@ -1,0 +1,22 @@
+{
+    title: "USDA Beltsville ARS Releases",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "March 2022",
+    type: "public breeding program list",
+    locations: [
+        {
+            name: "USDA ARS Beltsville, MD",
+            latitude: 39.025139309981164, 
+            longitude: -76.92486135672756
+        }
+    ],
+    plants: [
+        {
+            type: "Blueberry",
+            name: "Duke",
+            released: "USDA Beltsville 1987* "
+        }
+    ]
+}
