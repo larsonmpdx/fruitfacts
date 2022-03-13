@@ -13,19 +13,7 @@
         }
     ],
     plants: [
-        {
-            type: "Blueberry",
-            name: "Aurora",
-            released: "MSU 2004*"
-        },
-        // todo
         // see https://www.canr.msu.edu/news/blueberry-bonus-msu-scientist-s-blueberry-varieties-reach-new-heights
-        {
-            type: "Blueberry",
-            name: "Liberty",
-            patent: "https://patents.google.com/patent/USPP15146",
-            released: "MSU*"
-        },
         {
             type: "Blueberry",
             name: "Draper",
@@ -34,22 +22,15 @@
         },
         {
             type: "Blueberry",
-            name: "Osorno",
-            patent: "https://patents.google.com/patent/USPP26031",
-            harvest_time: "late July to early August", // from patent
+            name: "Liberty",
+            patent: "https://patents.google.com/patent/USPP15146",
             released: "MSU*"
         },
         {
             type: "Blueberry",
             name: "Aurora",
             patent: "https://patents.google.com/patent/USPP15185",
-            released: "MSU*"
-        },
-        {
-            type: "Blueberry",
-            name: "Katahdin",
-            patent: "https://patents.google.com/patent/USPP32110",
-            released: "MSU*"
+            released: "MSU 2004*"
         },
         {
             type: "Blueberry",
@@ -62,9 +43,22 @@
             name: "Calypso",
             patent: "https://patents.google.com/patent/USPP25995",
             released: "MSU*"
+        },
+        {
+            type: "Blueberry",
+            name: "Osorno",
+            patent: "https://patents.google.com/patent/USPP26031",
+            harvest_time: "late July to early August", // from patent
+            released: "MSU*"
+        },
+        {
+            type: "Blueberry",
+            name: "Katahdin",
+            patent: "https://patents.google.com/patent/USPP32110",
+            released: "MSU*"
         }
-        // then Bonus
+        // todo - Bonus?
 
-        // previously - nelson? Northland?
+        // previously - Northland?
     ]
 }
