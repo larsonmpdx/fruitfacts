@@ -1,10 +1,26 @@
-import { getValidChartItems, getBars, getMonthLines } from './util';
+import { countChartItemsAbsolute, countChartItemsRelativeForComparison, countChartItemsRelative, getChartItemsAbsolute, getAbsoluteBars, getRelativeBars, getMonthLines } from './util';
 
 export default function Home({ items }) {
-    const valid_items = getValidChartItems({ items, sortType: 'harvest_start', auto_width: true });
-    const { bars, extents } = getBars(valid_items); // todo - probably get height from this which is doing placement
-    const { monthLines, interLines, labels } = getMonthLines(extents);
 
+    let absolute_count = countChartItemsAbsolute(items);
+    let relative_count = countChartItemsRelativeForComparison(items);
+    let relative_count_maximal = countChartItemsRelative(items);
+
+    let sequences = [];
+    let not_charted = [];
+    let bars = [];
+    let extents, monthLines, interLines, labels;
+
+    if(absolute_count >= relative_count) {
+        ({sequences, not_charted} = getChartItemsAbsolute({ items, sortType: 'harvest_start', auto_width: true }));
+        ({ bars, extents } = getAbsoluteBars(sequences)); // todo - probably get a recommended div height from this which is doing placement
+        ({ monthLines, interLines, labels } = getMonthLines(extents));
+    } else {
+        ({sequences, not_charted, typeLines} = getChartItemsRelative({ items, sortType: 'harvest_start', auto_width: true }));
+        ({ bars, extents } = getRelativeBars(sequences));
+    }
+
+    if(bars.length > 0) {
     return (
         <div>
             <svg viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}>
@@ -58,4 +74,11 @@ export default function Home({ items }) {
             </svg>
         </div>
     );
+                }
+                else {
+                    // todo - show a grid of un-charted items
+                    return (
+                        <div></div>
+                    );
+                }
 }

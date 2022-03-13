@@ -47,7 +47,7 @@ function typeFromSequence(items) {
 
 const MAX_SEQUENCE_HEIGHT = 40;
 
-function getSequences(items) {
+function getTypedSequences(items) {
     // phase 1: break items into types
     let output_array = [];
     let output_object = {};
@@ -68,7 +68,62 @@ function getSequences(items) {
 const DEFAULT_HARVEST_LENGTH = 10;
 const MAX_SEQUENCE_HEIGHT_FOR_A_SINGLE_SEQUENCE = 30;
 
-export function getValidChartItems({ items, sortType, auto_width }) {
+export function countChartItemsAbsolute(items) {
+    const has_absolute_time = items.filter((item) => {
+        return item.harvest_start && item.harvest_end;
+    });
+
+    return has_absolute_time.length;
+}
+
+export function countChartItemsRelativeForComparison(items) {
+    // we're trying to answer the question - was this chart intended to be relative or absolute? so we only want to look at
+    // round == 0.0 which is a direct parse. relative harvest times are filled in from other charts too so we can't just count
+    // all values as many charts would become relative when they should be absolute
+    const has_relative_time = items.filter((item) => {
+        return item.calc_harvest_relative && item.calc_harvest_relative_to && item.calc_harvest_relative_to_type &&
+        item.calc_harvest_relative_round == 0.0;
+    });
+
+    return has_relative_time.length;
+}
+
+export function countChartItemsRelative(items) {
+    // in this count, get all relative items, even if not round 0
+    const has_relative_time = items.filter((item) => {
+        return item.calc_harvest_relative && item.calc_harvest_relative_to && item.calc_harvest_relative_to_type;
+    });
+
+    return has_relative_time.length;
+}
+
+function countUnique(iterable) {
+    return new Set(iterable).size;
+};
+
+export function getChartItemsAbsolute({ items }) {
+    const has_relative_time = items.filter((item) => {
+        return item.calc_harvest_relative && item.calc_harvest_relative_to && item.calc_harvest_relative_to_type;
+    });
+
+    // if we have only one type, we don't care if it's listed in /backend/generated/relative-relative.json,
+    // we can put a 0-line on the chart for it regardless
+    // if we have multiple types, we need to filter for only those types in relative-relative.json so we can chart them together
+    // in a sensible way
+
+    let type_count = countUnique(items.map(item => item.type));
+
+    if(type_count <= 1) {
+
+    } else {
+        // todo: select only types that are in relative-relative.json, then make a vertical line for each and place bars
+        // based on the value relative to the earliest type
+    }
+}
+
+
+// sortType: only option is "harvest_start" but may include "midpoint" in the future
+export function getChartItemsAbsolute({ items, sortType, auto_width }) {
     if (auto_width) {
         items = items.map((item) => {
             if (item.harvest_start && !item.harvest_end) {
@@ -77,17 +132,25 @@ export function getValidChartItems({ items, sortType, auto_width }) {
                 return item;
             }
         });
+    } else {
+        // todo
     }
 
-    const filtered = items.filter((item) => {
+    const has_absolute_time = items.filter((item) => {
         return item.harvest_start && item.harvest_end;
     });
 
-    if (filtered.length <= MAX_SEQUENCE_HEIGHT_FOR_A_SINGLE_SEQUENCE) {
-        return [{ type: typeFromSequence(filtered), sequence: applySort(filtered, sortType) }];
+    const no_absolute_time = items.filter((item) => {
+        return !(item.harvest_start && item.harvest_end);
+    });
+
+    // if we have few enough items, return them mixed together
+    if (has_absolute_time.length <= MAX_SEQUENCE_HEIGHT_FOR_A_SINGLE_SEQUENCE) {
+        return {sequences: [{ type: typeFromSequence(has_absolute_time), sequence: applySort(has_absolute_time, sortType) }],
+                not_charted: no_absolute_time};
     }
 
-    const sequences = getSequences(filtered);
+    const sequences = getTypedSequences(has_absolute_time);
     const output = [];
 
     sequences.forEach((sequence) => {
@@ -108,7 +171,7 @@ export function getValidChartItems({ items, sortType, auto_width }) {
         }
     }
 
-    return output.concat(multi_sequence_holder);
+    return {sequences: output.concat(multi_sequence_holder), not_charted: no_absolute_time};
 }
 
 function getFruitFillColor(type) {
@@ -166,7 +229,7 @@ const MARGIN_Y = 5;
 const PIXEL_SCALE = 10; // how many pixels per day (or height unit)? use this so our "1px = 1 day" lines don't look so thick on small charts
 
 // create one bar for each item. x is days
-export function getBars(sequences) {
+export function getAbsoluteBars(sequences) {
     // we want this sort function to be as stable as possible, so it's a little complicated
     const sorted_by_length = sequences.sort((a, b) => {
         if (a.sequence.length == b.sequence.length) {
@@ -250,6 +313,10 @@ export function getBars(sequences) {
         bars: overall_output,
         extents: { min_harvest_start, max_harvest_end, min_x, max_x, min_y, max_y, width, height }
     };
+}
+
+export function getRelativeBars(sequences) {
+    // todo
 }
 
 const MONTH_LABEL_HEIGHT_OFFSET = 2;
