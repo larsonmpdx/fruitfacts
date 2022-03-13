@@ -16,8 +16,29 @@ export function minAndMaxDate(sequences) {
 
     return { min_harvest_start, max_harvest_end };
 }
+function applySortRelative(items, sortType) {
+    switch (sortType) {
+        case 'harvest_start':
+            return items.sort((a, b) => {
+                if (a.calc_harvest_relative == b.calc_harvest_relative) {
+                    // tiebreaker - sort by name. names are unique within a given type
+                    if (a.name < b.name) {
+                        return -1;
+                    }
+                    if (a.name > b.name) {
+                        return 1;
+                    }
+                    return 0;
+                }
+                return a.calc_harvest_relative - b.calc_harvest_relative;
+            });
+        default:
+            return items;
+    }
+}
 
-function applySort(items, sortType) {
+
+function applySortAbsolute(items, sortType) {
     switch (sortType) {
         case 'harvest_start':
             return items.sort((a, b) => {
@@ -106,17 +127,48 @@ export function getChartItemsAbsolute({ items }) {
         return item.calc_harvest_relative && item.calc_harvest_relative_to && item.calc_harvest_relative_to_type;
     });
 
+    const no_relative_time = items.filter((item) => {
+        return !(item.calc_harvest_relative && item.calc_harvest_relative_to && item.calc_harvest_relative_to_type);
+    });
+
     // if we have only one type, we don't care if it's listed in /backend/generated/relative-relative.json,
     // we can put a 0-line on the chart for it regardless
     // if we have multiple types, we need to filter for only those types in relative-relative.json so we can chart them together
     // in a sensible way
 
-    let type_count = countUnique(items.map(item => item.type));
+    let types = items.map(item => item.type);
+    let type_count = countUnique(types);
 
-    if(type_count <= 1) {
+    const sequences = getTypedSequences(has_relative_time);
+    const output = [];
 
+    sequences.forEach((sequence) => {
+        output.push({ type: typeFromSequence(sequence), sequence: applySortRelative(sequence, sortType) });
+    });
+
+
+    let multi_sequence_holder = [];
+    for (const sequence of output) {
+        // todo - make sure we don't leave sequences of a single item. trimmed parts must be N items large
+        if (sequence.sequence.length > MAX_SEQUENCE_HEIGHT) {
+            while (sequence.sequence.length > MAX_SEQUENCE_HEIGHT) {
+                multi_sequence_holder.push({
+                    type: sequence.type,
+                    sequence: sequence.sequence.splice(0, MAX_SEQUENCE_HEIGHT)
+                });
+            }
+        }
+    }
+
+    let typeDays = [];
+    if(type_count == 0) {
+        // todo - think about what to return in this case?
+        return {typeDays, not_charted: no_relative_time};
+    }
+    if(type_count == 1) {
+        return {typeDays: [{type: types[0], x: 0}], sequences: output.concat(multi_sequence_holder), not_charted: no_absolute_time};
     } else {
-        // todo: select only types that are in relative-relative.json, then make a vertical line for each and place bars
+        // todo: select only types that are in relative-relative.json, then make a vertical line for each and edit other types' days
         // based on the value relative to the earliest type
     }
 }
@@ -133,7 +185,7 @@ export function getChartItemsAbsolute({ items, sortType, auto_width }) {
             }
         });
     } else {
-        // todo
+        // todo, I guess omit items that don't have a start+end date?
     }
 
     const has_absolute_time = items.filter((item) => {
@@ -146,7 +198,7 @@ export function getChartItemsAbsolute({ items, sortType, auto_width }) {
 
     // if we have few enough items, return them mixed together
     if (has_absolute_time.length <= MAX_SEQUENCE_HEIGHT_FOR_A_SINGLE_SEQUENCE) {
-        return {sequences: [{ type: typeFromSequence(has_absolute_time), sequence: applySort(has_absolute_time, sortType) }],
+        return {sequences: [{ type: typeFromSequence(has_absolute_time), sequence: applySortAbsolute(has_absolute_time, sortType) }],
                 not_charted: no_absolute_time};
     }
 
@@ -154,7 +206,7 @@ export function getChartItemsAbsolute({ items, sortType, auto_width }) {
     const output = [];
 
     sequences.forEach((sequence) => {
-        output.push({ type: typeFromSequence(sequence), sequence: applySort(sequence, sortType) });
+        output.push({ type: typeFromSequence(sequence), sequence: applySortAbsolute(sequence, sortType) });
     });
 
     // after sorting, break any single types that are too long into multiple sequences
