@@ -98,9 +98,13 @@ export function countChartItemsAbsolute(items) {
     return has_absolute_time.length;
 }
 
-var isNumber = function isNumber(value) {
+function isNumber(value) {
     return typeof value === 'number' && isFinite(value);
-};
+}
+
+function countUnique(iterable) {
+    return new Set(iterable).size;
+}
 
 export function countChartItemsRelativeForComparison(items) {
     // we're trying to answer the question - was this chart intended to be relative or absolute? so we only want to look at
@@ -129,10 +133,6 @@ export function countChartItemsRelative(items) {
     });
 
     return has_relative_time.length;
-}
-
-function countUnique(iterable) {
-    return new Set(iterable).size;
 }
 
 export function getChartItemsRelative({ items, sortType, auto_width }) {
@@ -196,7 +196,7 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
     }
     if (type_count == 1) {
         return {
-            typeDays: [{ type: types[0], x: 0 }],
+            typeDays: [{ type: types[0], x: 0 }], // todo - return relative type too. probably handle different relative types better as well
             sequences: output.concat(multi_sequence_holder),
             not_charted: no_relative_time
         };
@@ -442,8 +442,6 @@ export function getTypeLines(extents, typeDays) {
     });
 
     // then create interlines at ...-10, +10, +20... days from the first type line
-
-
 
     return { majorLines, interLines, labels };
 }
