@@ -1,24 +1,26 @@
 import { MONTH_START_DAYS, FRUIT_BAR_COLORS } from './constants';
 
-export function minAndMaxDate(sequences) {
-    let min_harvest_start = 180;
-    let max_harvest_end = 190;
-    sequences.forEach((sequence) => {
-        sequence.sequence.forEach((item) => {
-            if (item.harvest_start && item.harvest_start < min_harvest_start) {
-                min_harvest_start = item.harvest_start;
-            }
-            if (item.harvest_end && item.harvest_end > max_harvest_end) {
-                max_harvest_end = item.harvest_end;
-            }
-        });
+export function minAndMaxX(items) {
+    let min_x = 0;
+    let min_x_set = false;
+    let max_x = 0;
+    let max_x_set = false;
+    items.forEach((item) => {
+        if ((item.x && !min_x_set) || item.x < min_x) {
+            min_x_set = true;
+            min_x = item.x;
+        }
+        if (item.x && item.width && (!max_x_set || item.x + item.width > max_x)) {
+            max_x_set = true;
+            max_x = item.x + item.width;
+        }
     });
 
-    return { min_harvest_start, max_harvest_end };
+    return { min_x, max_x };
 }
 function applySortRelative(items, sortType) {
     switch (sortType) {
-        case 'harvest_start':
+        case 'start':
             return items.sort((a, b) => {
                 if (a.calc_harvest_relative == b.calc_harvest_relative) {
                     // tiebreaker - sort by name. names are unique within a given type
@@ -37,10 +39,9 @@ function applySortRelative(items, sortType) {
     }
 }
 
-
 function applySortAbsolute(items, sortType) {
     switch (sortType) {
-        case 'harvest_start':
+        case 'start':
             return items.sort((a, b) => {
                 if (a.harvest_start == b.harvest_start) {
                     return a.harvest_end - b.harvest_end; // tiebreaker - put varieties with longer windows 2nd
@@ -97,13 +98,21 @@ export function countChartItemsAbsolute(items) {
     return has_absolute_time.length;
 }
 
+var isNumber = function isNumber(value) {
+    return typeof value === 'number' && isFinite(value);
+};
+
 export function countChartItemsRelativeForComparison(items) {
     // we're trying to answer the question - was this chart intended to be relative or absolute? so we only want to look at
     // round == 0.0 which is a direct parse. relative harvest times are filled in from other charts too so we can't just count
     // all values as many charts would become relative when they should be absolute
     const has_relative_time = items.filter((item) => {
-        return item.calc_harvest_relative && item.calc_harvest_relative_to && item.calc_harvest_relative_to_type &&
-        item.calc_harvest_relative_round == 0.0;
+        return (
+            isNumber(item.calc_harvest_relative) &&
+            item.calc_harvest_relative_to &&
+            item.calc_harvest_relative_to_type &&
+            item.calc_harvest_relative_round == 0.0
+        );
     });
 
     return has_relative_time.length;
@@ -112,7 +121,11 @@ export function countChartItemsRelativeForComparison(items) {
 export function countChartItemsRelative(items) {
     // in this count, get all relative items, even if not round 0
     const has_relative_time = items.filter((item) => {
-        return item.calc_harvest_relative && item.calc_harvest_relative_to && item.calc_harvest_relative_to_type;
+        return (
+            item.calc_harvest_relative &&
+            item.calc_harvest_relative_to &&
+            item.calc_harvest_relative_to_type
+        );
     });
 
     return has_relative_time.length;
@@ -120,15 +133,23 @@ export function countChartItemsRelative(items) {
 
 function countUnique(iterable) {
     return new Set(iterable).size;
-};
+}
 
-export function getChartItemsAbsolute({ items }) {
-    const has_relative_time = items.filter((item) => {
-        return item.calc_harvest_relative && item.calc_harvest_relative_to && item.calc_harvest_relative_to_type;
+export function getChartItemsRelative({ items, sortType, auto_width }) {
+    let has_relative_time = items.filter((item) => {
+        return (
+            isNumber(item.calc_harvest_relative) &&
+            item.calc_harvest_relative_to &&
+            item.calc_harvest_relative_to_type
+        );
     });
 
     const no_relative_time = items.filter((item) => {
-        return !(item.calc_harvest_relative && item.calc_harvest_relative_to && item.calc_harvest_relative_to_type);
+        return !(
+            isNumber(item.calc_harvest_relative) &&
+            item.calc_harvest_relative_to &&
+            item.calc_harvest_relative_to_type
+        );
     });
 
     // if we have only one type, we don't care if it's listed in /backend/generated/relative-relative.json,
@@ -136,16 +157,24 @@ export function getChartItemsAbsolute({ items }) {
     // if we have multiple types, we need to filter for only those types in relative-relative.json so we can chart them together
     // in a sensible way
 
-    let types = items.map(item => item.type);
+    let types = items.map((item) => item.type);
     let type_count = countUnique(types);
+
+    // set x and width which will be used for follow-on functions
+    // todo: set width based on regular harvest times if available
+    has_relative_time = has_relative_time.map((item) => {
+        return { ...item, x: item.calc_harvest_relative, width: 10 };
+    });
 
     const sequences = getTypedSequences(has_relative_time);
     const output = [];
 
     sequences.forEach((sequence) => {
-        output.push({ type: typeFromSequence(sequence), sequence: applySortRelative(sequence, sortType) });
+        output.push({
+            type: typeFromSequence(sequence),
+            sequence: applySortRelative(sequence, sortType)
+        });
     });
-
 
     let multi_sequence_holder = [];
     for (const sequence of output) {
@@ -161,18 +190,21 @@ export function getChartItemsAbsolute({ items }) {
     }
 
     let typeDays = [];
-    if(type_count == 0) {
+    if (type_count == 0) {
         // todo - think about what to return in this case?
-        return {typeDays, not_charted: no_relative_time};
+        return { typeDays, not_charted: no_relative_time };
     }
-    if(type_count == 1) {
-        return {typeDays: [{type: types[0], x: 0}], sequences: output.concat(multi_sequence_holder), not_charted: no_absolute_time};
+    if (type_count == 1) {
+        return {
+            typeDays: [{ type: types[0], x: 0 }],
+            sequences: output.concat(multi_sequence_holder),
+            not_charted: no_relative_time
+        };
     } else {
         // todo: select only types that are in relative-relative.json, then make a vertical line for each and edit other types' days
         // based on the value relative to the earliest type
     }
 }
-
 
 // sortType: only option is "harvest_start" but may include "midpoint" in the future
 export function getChartItemsAbsolute({ items, sortType, auto_width }) {
@@ -188,7 +220,7 @@ export function getChartItemsAbsolute({ items, sortType, auto_width }) {
         // todo, I guess omit items that don't have a start+end date?
     }
 
-    const has_absolute_time = items.filter((item) => {
+    let has_absolute_time = items.filter((item) => {
         return item.harvest_start && item.harvest_end;
     });
 
@@ -196,17 +228,33 @@ export function getChartItemsAbsolute({ items, sortType, auto_width }) {
         return !(item.harvest_start && item.harvest_end);
     });
 
+    // set x and width which will be used for follow-on functions
+    has_absolute_time = has_absolute_time.map((item) => {
+        return { ...item, x: item.harvest_start, width: item.harvest_end - item.harvest_start };
+    });
+    //  console.log(JSON.stringify(has_absolute_time, null, 2));
+
     // if we have few enough items, return them mixed together
     if (has_absolute_time.length <= MAX_SEQUENCE_HEIGHT_FOR_A_SINGLE_SEQUENCE) {
-        return {sequences: [{ type: typeFromSequence(has_absolute_time), sequence: applySortAbsolute(has_absolute_time, sortType) }],
-                not_charted: no_absolute_time};
+        return {
+            sequences: [
+                {
+                    type: typeFromSequence(has_absolute_time),
+                    sequence: applySortAbsolute(has_absolute_time, sortType)
+                }
+            ],
+            not_charted: no_absolute_time
+        };
     }
 
     const sequences = getTypedSequences(has_absolute_time);
     const output = [];
 
     sequences.forEach((sequence) => {
-        output.push({ type: typeFromSequence(sequence), sequence: applySortAbsolute(sequence, sortType) });
+        output.push({
+            type: typeFromSequence(sequence),
+            sequence: applySortAbsolute(sequence, sortType)
+        });
     });
 
     // after sorting, break any single types that are too long into multiple sequences
@@ -223,7 +271,7 @@ export function getChartItemsAbsolute({ items, sortType, auto_width }) {
         }
     }
 
-    return {sequences: output.concat(multi_sequence_holder), not_charted: no_absolute_time};
+    return { sequences: output.concat(multi_sequence_holder), not_charted: no_absolute_time };
 }
 
 function getFruitFillColor(type) {
@@ -281,12 +329,13 @@ const MARGIN_Y = 5;
 const PIXEL_SCALE = 10; // how many pixels per day (or height unit)? use this so our "1px = 1 day" lines don't look so thick on small charts
 
 // create one bar for each item. x is days
-export function getAbsoluteBars(sequences) {
+export function getBars(sequences) {
     // we want this sort function to be as stable as possible, so it's a little complicated
-    const sorted_by_length = sequences.sort((a, b) => {
+    sequences.sort((a, b) => {
         if (a.sequence.length == b.sequence.length) {
+            // sort by longest sequence first
             if (a.type == b.type) {
-                if (a.sequence[0].harvest_start == b.sequence[0].harvest_start) {
+                if (a.sequence[0].x == b.sequence[0].x) {
                     // tiebreaker - sort by name of the first element
                     // names are unique within a given type
                     if (a.sequence[0].name < b.sequence[0].name) {
@@ -297,8 +346,8 @@ export function getAbsoluteBars(sequences) {
                     }
                     return 0;
                 } else {
-                    // sort by harvest_start
-                    return a.sequence[0].harvest_start - b.sequence[0].harvest_start;
+                    // sort by start
+                    return a.sequence[0].x - b.sequence[0].x;
                 }
             } else {
                 // sort by alphabetical type name
@@ -311,7 +360,7 @@ export function getAbsoluteBars(sequences) {
                 return 0;
             }
         }
-        return a.harvest_start - b.harvest_start;
+        return a.x - b.x;
     });
 
     // placement algorithm:
@@ -324,12 +373,12 @@ export function getAbsoluteBars(sequences) {
 
         const this_sequence_output = sequence.sequence.map((item) => {
             let output = {
-                x: (item.harvest_start + MARGIN_X_DAYS) * PIXEL_SCALE,
-                width: (item.harvest_end - item.harvest_start) * PIXEL_SCALE,
+                ...item,
+                x: (item.x + MARGIN_X_DAYS) * PIXEL_SCALE,
+                width: item.width * PIXEL_SCALE,
                 y: y * PIXEL_SCALE,
                 height: PER_ITEM_HEIGHT * PIXEL_SCALE,
-                fill: getFruitFillColor(item.type),
-                ...item
+                fill: getFruitFillColor(item.type)
             };
             y = y + PER_ITEM_HEIGHT;
             return output;
@@ -340,13 +389,13 @@ export function getAbsoluteBars(sequences) {
         overall_output = overall_output.concat(this_sequence_output);
     }
 
-    // todo: move Nth element down as needed to fit
-
     // get extents from bars as-placed
-    const { min_harvest_start, max_harvest_end } = minAndMaxDate(sequences);
+    // console.log(JSON.stringify(overall_output, null, 2));
+    const { min_x, max_x } = minAndMaxX(overall_output);
+    // console.log(`min x ${min_x} max x ${max_x}`);
 
-    const min_x = (min_harvest_start - MARGIN_X_DAYS) * PIXEL_SCALE;
-    const max_x = (max_harvest_end + MARGIN_X_DAYS) * PIXEL_SCALE;
+    const min_x_scaled = (min_x - MARGIN_X_DAYS) * PIXEL_SCALE;
+    const max_x_scaled = (max_x + MARGIN_X_DAYS) * PIXEL_SCALE;
 
     const min_y = 0;
     let max_y = 0;
@@ -363,12 +412,25 @@ export function getAbsoluteBars(sequences) {
 
     return {
         bars: overall_output,
-        extents: { min_harvest_start, max_harvest_end, min_x, max_x, min_y, max_y, width, height }
+        extents: {
+            min_x: min_x_scaled,
+            max_x: max_x_scaled,
+            min_x,
+            max_x,
+            min_y,
+            max_y,
+            width,
+            height
+        }
     };
 }
 
-export function getRelativeBars(sequences) {
-    // todo
+export function getTypeLines(extents) {
+    let typeLines = [];
+    let interLines = [];
+    let labels = [];
+
+    return { typeLines, interLines, labels };
 }
 
 const MONTH_LABEL_HEIGHT_OFFSET = 2;
@@ -379,8 +441,7 @@ export function getMonthLines(extents) {
     let monthLines = [];
     let interLines = [];
     let labels = [];
-    const HALF_MONTH = 15;
-    const QUARTER_MONTH = 7.5;
+
     let first_month = true;
     MONTH_START_DAYS.forEach((month) => {
         if (
