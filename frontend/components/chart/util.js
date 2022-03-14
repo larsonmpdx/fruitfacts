@@ -425,12 +425,27 @@ export function getBars(sequences) {
     };
 }
 
-export function getTypeLines(extents) {
-    let typeLines = [];
+export function getTypeLines(extents, typeDays) {
+    let majorLines = [];
     let interLines = [];
     let labels = [];
 
-    return { typeLines, interLines, labels };
+    // create one line per type, with a label
+    typeDays.forEach((typeDay) => {
+        console.log(typeDay);
+        majorLines.push({
+            x1: (typeDay.x + MARGIN_X_DAYS) * PIXEL_SCALE,
+            x2: (typeDay.x + MARGIN_X_DAYS) * PIXEL_SCALE,
+            y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+            y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+        });
+    });
+
+    // then create interlines at ...-10, +10, +20... days from the first type line
+
+
+
+    return { majorLines, interLines, labels };
 }
 
 const MONTH_LABEL_HEIGHT_OFFSET = 2;
@@ -438,7 +453,7 @@ const MONTH_LABEL_HEIGHT_OFFSET = 2;
 // a dark line for each month. and text
 // todo: optional ligher week lines for 1/4 through each month
 export function getMonthLines(extents) {
-    let monthLines = [];
+    let majorLines = [];
     let interLines = [];
     let labels = [];
 
@@ -448,7 +463,7 @@ export function getMonthLines(extents) {
             month.day > extents.min_harvest_start - 20 &&
             month.day < extents.max_harvest_end + 20
         ) {
-            monthLines.push({
+            majorLines.push({
                 x1: (month.day + MARGIN_X_DAYS) * PIXEL_SCALE,
                 x2: (month.day + MARGIN_X_DAYS) * PIXEL_SCALE,
                 y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
@@ -497,5 +512,5 @@ export function getMonthLines(extents) {
         }
     });
 
-    return { monthLines, interLines, labels };
+    return { majorLines, interLines, labels };
 }

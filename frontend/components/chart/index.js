@@ -17,9 +17,8 @@ export default function Home({ items }) {
     let sequences = [];
     let not_charted = [];
     let bars = [];
-    let monthLines = [];
+    let majorLines = [];
     let interLines = [];
-    let typeLines = [];
     let extents = {};
     let labels = [];
 
@@ -33,7 +32,7 @@ export default function Home({ items }) {
         ({ bars, extents } = getBars(sequences)); // todo - probably get a recommended div height from this which is doing placement
         //   console.log(JSON.stringify(bars, null, 2));
         //   console.log(JSON.stringify(extents, null, 2));
-        ({ monthLines, interLines, labels } = getMonthLines(extents));
+        ({ majorLines, interLines, labels } = getMonthLines(extents));
     } else {
         let typeDays = [];
         ({ sequences, not_charted, typeDays } = getChartItemsRelative({
@@ -42,8 +41,8 @@ export default function Home({ items }) {
             auto_width: true
         }));
         ({ bars, extents } = getBars(sequences));
-        ({ typeLines, interLines, labels } = getTypeLines(extents, typeDays));
-        console.log(JSON.stringify(typeLines, null, 2));
+        ({ majorLines, interLines, labels } = getTypeLines(extents, typeDays));
+        console.log(JSON.stringify(majorLines, null, 2));
     }
 
     if (bars.length > 0) {
@@ -52,7 +51,7 @@ export default function Home({ items }) {
                 <svg
                     viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}
                 >
-                    {monthLines.map((line) => (
+                    {majorLines.map((line) => (
                         <line
                             x1={line.x1}
                             y1={line.y1}
