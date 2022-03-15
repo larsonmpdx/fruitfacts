@@ -33,15 +33,16 @@ export default function Home({ items }) {
         //   console.log(JSON.stringify(bars, null, 2));
         //   console.log(JSON.stringify(extents, null, 2));
         ({ majorLines, interLines, labels } = getMonthLines(extents));
+        console.log(JSON.stringify(majorLines, null, 2));
     } else {
-        let typeDays = [];
-        ({ sequences, not_charted, typeDays } = getChartItemsRelative({
+        let types = [];
+        ({ sequences, not_charted, types } = getChartItemsRelative({
             items,
             sortType: 'start',
             auto_width: true
         }));
         ({ bars, extents } = getBars(sequences));
-        ({ majorLines, interLines, labels } = getTypeLines(extents, typeDays));
+        ({ majorLines, interLines, labels } = getTypeLines(extents, types));
         console.log(JSON.stringify(majorLines, null, 2));
     }
 
@@ -98,7 +99,7 @@ export default function Home({ items }) {
                             x={label.x}
                             y={label.y}
                             fontFamily="Verdana"
-                            fontSize="20"
+                            fontSize={label.fontSize}
                             fill="blue"
                         >
                             {label.name}

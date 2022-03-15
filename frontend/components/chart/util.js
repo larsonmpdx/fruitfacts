@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 import { MONTH_START_DAYS, FRUIT_BAR_COLORS } from './constants';
 
 export function minAndMaxX(items) {
@@ -106,6 +108,10 @@ function countUnique(iterable) {
     return new Set(iterable).size;
 }
 
+function getUnique(iterable) {
+    return _.uniqWith(iterable, _.isEqual);
+}
+
 export function countChartItemsRelativeForComparison(items) {
     // we're trying to answer the question - was this chart intended to be relative or absolute? so we only want to look at
     // round == 0.0 which is a direct parse. relative harvest times are filled in from other charts too so we can't just count
@@ -157,8 +163,14 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
     // if we have multiple types, we need to filter for only those types in relative-relative.json so we can chart them together
     // in a sensible way
 
-    let types = items.map((item) => item.type);
-    let type_count = countUnique(types);
+    let types = getUnique(
+        has_relative_time.map((item) => {
+            return {
+                relative_to: item.calc_harvest_relative_to,
+                relative_to_type: item.calc_harvest_relative_to_type
+            };
+        })
+    );
 
     // set x and width which will be used for follow-on functions
     // todo: set width based on regular harvest times if available
@@ -189,20 +201,20 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
         }
     }
 
-    let typeDays = [];
-    if (type_count == 0) {
+    if (types.length == 0) {
         // todo - think about what to return in this case?
-        return { typeDays, not_charted: no_relative_time };
+        return { types, not_charted: no_relative_time };
     }
-    if (type_count == 1) {
+    if (types.length == 1) {
         return {
-            typeDays: [{ type: types[0], x: 0 }], // todo - return relative type too. probably handle different relative types better as well
+            types: [{ ...types[0], x: 0 }], // todo - return relative type too. probably handle different relative types better as well
             sequences: output.concat(multi_sequence_holder),
             not_charted: no_relative_time
         };
     } else {
         // todo: select only types that are in relative-relative.json, then make a vertical line for each and edit other types' days
         // based on the value relative to the earliest type
+        // and remove items with types that didn't make it into the chart (should probably do this earlier)
     }
 }
 
@@ -425,28 +437,95 @@ export function getBars(sequences) {
     };
 }
 
-export function getTypeLines(extents, typeDays) {
+const TOP_LABEL_HEIGHT_OFFSET = 2;
+const LABEL_CENTERING_OFFSET = 25;
+
+export function getTypeLines(extents, types) {
     let majorLines = [];
     let interLines = [];
     let labels = [];
 
     // create one line per type, with a label
-    typeDays.forEach((typeDay) => {
-        console.log(typeDay);
+    types.forEach((type, i) => {
+        console.log(type);
         majorLines.push({
-            x1: (typeDay.x + MARGIN_X_DAYS) * PIXEL_SCALE,
-            x2: (typeDay.x + MARGIN_X_DAYS) * PIXEL_SCALE,
-            y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
-            y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+            x1: (type.x + MARGIN_X_DAYS) * PIXEL_SCALE,
+            x2: (type.x + MARGIN_X_DAYS) * PIXEL_SCALE,
+            y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+            y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
         });
-    });
 
-    // then create interlines at ...-10, +10, +20... days from the first type line
+        labels.push({
+            x: (type.x + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
+            y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+            name: type.relative_to,
+            fontSize: 20
+        });
+        labels.push({
+            x: (type.x + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
+            y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+            name: type.relative_to,
+            fontSize: 20
+        });
+
+        if (i == 0) {
+            // create interlines at ...-10, +10, +20... days from the first type line
+            const TYPE_INTERLINE_SPACING = 10;
+
+            let negative_x = (type.x + MARGIN_X_DAYS - TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
+            while (negative_x >= extents.min_x) {
+                interLines.push({
+                    x1: negative_x,
+                    x2: negative_x,
+                    y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                });
+
+                labels.push({
+                    x: negative_x - LABEL_CENTERING_OFFSET,
+                    y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                    name: `${type.relative_to}${negative_x / PIXEL_SCALE}`,
+                    fontSize: 10
+                });
+                labels.push({
+                    x: negative_x - LABEL_CENTERING_OFFSET,
+                    y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                    name: `${type.relative_to}${negative_x / PIXEL_SCALE}`,
+                    fontSize: 10
+                });
+
+                negative_x = negative_x - TYPE_INTERLINE_SPACING * PIXEL_SCALE;
+            }
+
+            let positive_x = (type.x + MARGIN_X_DAYS + TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
+            while (positive_x <= extents.max_x) {
+                interLines.push({
+                    x1: positive_x,
+                    x2: positive_x,
+                    y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                });
+
+                labels.push({
+                    x: positive_x - LABEL_CENTERING_OFFSET,
+                    y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                    name: `${type.relative_to}+${positive_x / PIXEL_SCALE - MARGIN_X_DAYS}`,
+                    fontSize: 10
+                });
+                labels.push({
+                    x: positive_x - LABEL_CENTERING_OFFSET,
+                    y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                    name: `${type.relative_to}+${positive_x / PIXEL_SCALE - MARGIN_X_DAYS}`,
+                    fontSize: 10
+                });
+
+                positive_x = positive_x + TYPE_INTERLINE_SPACING * PIXEL_SCALE;
+            }
+        }
+    });
 
     return { majorLines, interLines, labels };
 }
-
-const MONTH_LABEL_HEIGHT_OFFSET = 2;
 
 // a dark line for each month. and text
 // todo: optional ligher week lines for 1/4 through each month
@@ -458,22 +537,22 @@ export function getMonthLines(extents) {
     let first_month = true;
     MONTH_START_DAYS.forEach((month) => {
         if (
-            month.day > extents.min_harvest_start - 20 &&
-            month.day < extents.max_harvest_end + 20
+            (month.day + MARGIN_X_DAYS) * PIXEL_SCALE > extents.min_x - 20 &&
+            (month.day + MARGIN_X_DAYS) * PIXEL_SCALE < extents.max_x + 20
         ) {
             majorLines.push({
                 x1: (month.day + MARGIN_X_DAYS) * PIXEL_SCALE,
                 x2: (month.day + MARGIN_X_DAYS) * PIXEL_SCALE,
-                y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
-                y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
             });
             if (first_month) {
                 // only put the midpoint line in before a month one time, the rest of the time it'll come from the after-month midpoint
                 interLines.push({
                     x1: (month.day - month.minus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
                     x2: (month.day - month.minus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
-                    y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
-                    y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                    y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
                 });
                 first_month = false;
             }
@@ -481,31 +560,33 @@ export function getMonthLines(extents) {
                 {
                     x1: (month.day - month.minus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,
                     x2: (month.day - month.minus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,
-                    y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
-                    y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                    y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
                 },
                 {
                     x1: (month.day + month.plus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,
                     x2: (month.day + month.plus_quarter + MARGIN_X_DAYS) * PIXEL_SCALE,
-                    y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
-                    y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                    y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
                 },
                 {
                     x1: (month.day + month.plus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
                     x2: (month.day + month.plus_quarter * 2 + MARGIN_X_DAYS) * PIXEL_SCALE,
-                    y1: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
-                    y2: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                    y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                    y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
                 }
             );
             labels.push({
                 x: (month.day + 15 + MARGIN_X_DAYS) * PIXEL_SCALE,
-                y: extents.min_y + MONTH_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-                name: month.name
+                y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                name: month.name,
+                fontSize: 20
             });
             labels.push({
                 x: (month.day + 15 + MARGIN_X_DAYS) * PIXEL_SCALE,
-                y: extents.max_y - MONTH_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-                name: month.name
+                y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                name: month.name,
+                fontSize: 20
             });
         }
     });
