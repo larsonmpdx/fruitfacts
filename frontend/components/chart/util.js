@@ -1,5 +1,5 @@
 const _ = require('lodash');
-import relative_days from ('../../../backend/generated/relative-relative.json')
+import relative_days from '../../../backend/generated/relative-relative.json';
 
 import { MONTH_START_DAYS, FRUIT_BAR_COLORS } from './constants';
 
@@ -179,12 +179,23 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
         has_relative_time = has_relative_time.map((item) => {
             return { ...item, x: item.calc_harvest_relative, width: 10 };
         });
-    }
-    else
-    {
-        // todo
+    } else {
         // remove any types not found in relative_days
+        console.log(JSON.stringify(types, null, 2));
+        types = types.filter((type) => {
+            return _.some(
+                relative_days.map((entry) => {
+                    return _.pick(entry, ['type', 'name']);
+                }),
+                {
+                    type: type.relative_to_type,
+                    name: type.relative_to
+                }
+            );
+        });
+        console.log(JSON.stringify(types, null, 2));
 
+        // todo
         // find the earliest type, this will be our main reference and 0-point
         // for each item, if its type isn't in our types array, remove it and add to a not_charted array
         // if its type is found, set x = item.calc_harvest_relative for the base type or
