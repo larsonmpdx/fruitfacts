@@ -1,4 +1,5 @@
 const _ = require('lodash');
+import relative_days from ('../../../backend/generated/relative-relative.json')
 
 import { MONTH_START_DAYS, FRUIT_BAR_COLORS } from './constants';
 
@@ -172,11 +173,23 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
         })
     );
 
-    // set x and width which will be used for follow-on functions
-    // todo: set width based on regular harvest times if available
-    has_relative_time = has_relative_time.map((item) => {
-        return { ...item, x: item.calc_harvest_relative, width: 10 };
-    });
+    if (types.length <= 1) {
+        // set x and width which will be used for follow-on functions
+        // todo: set width based on regular harvest times if available
+        has_relative_time = has_relative_time.map((item) => {
+            return { ...item, x: item.calc_harvest_relative, width: 10 };
+        });
+    }
+    else
+    {
+        // todo
+        // remove any types not found in relative_days
+
+        // find the earliest type, this will be our main reference and 0-point
+        // for each item, if its type isn't in our types array, remove it and add to a not_charted array
+        // if its type is found, set x = item.calc_harvest_relative for the base type or
+        // x = item.calc_harvest_relative + type offset for others
+    }
 
     const sequences = getTypedSequences(has_relative_time);
     const output = [];
