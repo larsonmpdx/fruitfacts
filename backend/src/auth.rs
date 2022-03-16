@@ -11,8 +11,6 @@ use expiring_map::ExpiringMap;
 use once_cell::sync::Lazy; // 1.3.1
 use std::sync::Mutex;
 
-extern crate time;
-
 use super::schema_generated::*;
 use super::schema_types::*;
 use diesel::prelude::*;
@@ -338,32 +336,37 @@ async fn receive_oauth_redirect(
     req: HttpRequest,
     query: web::Query<GoogleAuthQuery>,
     pool: web::Data<DbPool>,
-) -> Result<HttpResponse, actix_web::Error> {
+) -> actix_web::Result<impl actix_web::Responder> {
     let (session_value, _outgoing_cookie) = get_session_value(req, false);
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     if session_value.is_none() {
-        return Ok(HttpResponse::InternalServerError().finish());
+        return Err(actix_web::error::ErrorInternalServerError(""));
     }
 
     let results = web::block(move || {
         receive_oauth_redirect_blocking(query, session_value.unwrap(), &db_conn)
     })
     .await
-    .map_err(|e| {
-        eprintln!("{}", e);
-        HttpResponse::InternalServerError().finish();
-    })?;
+    .unwrap();
+
+    let results = match results {
+        Ok(results) => results,
+        Err(e) => {
+            eprintln!("{}", e);
+            return Err(actix_web::error::ErrorInternalServerError(""));
+        }
+    };
 
     // redirect to a post-login page (either account offer or logged-in landing page)
     // todo: encode our account info somewhere, I guess in a query string in the redirect?
     if results.account_offer {
         Ok(HttpResponse::Found()
-            .header("Location", env!("CREATE_ACCOUNT_REDIRECT"))
+            .append_header(("Location", env!("CREATE_ACCOUNT_REDIRECT")))
             .finish())
     } else {
         Ok(HttpResponse::Found()
-            .header("Location", env!("AUTHED_REDIRECT"))
+            .append_header(("Location", env!("AUTHED_REDIRECT")))
             .finish())
     }
 }
@@ -442,7 +445,7 @@ pub fn create_account_blocking(
 async fn create_account(
     req: HttpRequest,
     pool: web::Data<DbPool>,
-) -> Result<HttpResponse, actix_web::Error> {
+) -> actix_web::Result<impl actix_web::Responder> {
     // todo - user gets to fill in other fields like nickname or whatever, maybe in the query string
 
     // look at account offer cache for this session
@@ -455,10 +458,15 @@ async fn create_account(
 
     let results = web::block(move || create_account_blocking(session_value.unwrap(), &db_conn))
         .await
-        .map_err(|e| {
+        .unwrap(); // todo - blockingerror unwrap?
+
+    let results = match results {
+        Ok(results) => results,
+        Err(e) => {
             eprintln!("{}", e);
-            HttpResponse::InternalServerError().finish();
-        })?;
+            return Err(actix_web::error::ErrorInternalServerError(""));
+        }
+    };
 
     println!("created account");
     Ok(HttpResponse::Ok().json(results))
@@ -507,13 +515,14 @@ async fn logout(
     let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     session::remove_session(&db_conn, session_value.unwrap());
-
     let outgoing_cookie = Cookie::build("session", "")
         .domain(env!("COOKIE_DOMAIN"))
         .path("/")
         //  .same_site(actix_web::cookie::SameSite::Strict)
         //  .secure(true)
-        .expires(time::OffsetDateTime::now_utc() - time::Duration::days(2)) // time in the past clears a cookie
+        .expires(actix_web::cookie::Expiration::from(
+            actix_web::cookie::time::OffsetDateTime::now_utc(),
+        )) // time in the past clears a cookie
         .http_only(true)
         .finish();
 

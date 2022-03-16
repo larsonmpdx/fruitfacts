@@ -4,7 +4,7 @@ use harvest_chart_server::queries;
 
 use actix_cors::Cors;
 
-use actix_web::{App, HttpServer, middleware::Logger};
+use actix_web::{middleware::Logger, App, HttpServer};
 
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
@@ -44,7 +44,7 @@ async fn main() -> std::io::Result<()> {
     let pool = r2d2::Pool::builder()
         .build(manager)
         .expect("Failed to create pool");
-        env_logger::init_from_env(env_logger::Env::new().default_filter_or("info"));
+    env_logger::init_from_env(env_logger::Env::new().default_filter_or("info"));
     println!("starting http server");
     HttpServer::new(move || {
         let cors = Cors::default()
@@ -54,7 +54,7 @@ async fn main() -> std::io::Result<()> {
                     .as_bytes()
                     .ends_with(env!("FRONTEND_BASE").to_string().as_bytes())
                 // todo - better handling of port for dev/release
-            });        
+            });
 
         App::new()
             .wrap(Logger::default())

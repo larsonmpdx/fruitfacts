@@ -10,8 +10,8 @@ doctest = false
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-web = "3.3.2"
-actix-cors = "0.5.4"
+actix-web = "4.0.1"
+actix-cors = "0.6.1"
 diesel = { version = "1.4.7", features = ["sqlite", "r2d2"] }
 libsqlite3-sys = { version = "^0", features = ["bundled"] }
 diesel_migrations = "1.4"
@@ -37,7 +37,6 @@ expiring_map = { git = "https://github.com/larsonmpdx/expiring_map/", branch = "
 once_cell = "1.9.0"
 base64 = "0.13.0"
 reqwest = "0.11.7"
-time = "0.2.27" # held back to match something in I think actix. error with 0.3.5 when I tried
 indexmap = "1.8.0"
 env_logger = "0.9.0"
 

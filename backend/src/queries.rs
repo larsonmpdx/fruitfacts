@@ -273,7 +273,7 @@ struct GetPatentsQuery {
 async fn get_recent_patents(
     query: web::Query<GetPatentsQuery>,
     pool: web::Data<DbPool>,
-) -> Result<HttpResponse, actix_web::Error> {
+) -> actix_web::Result<impl actix_web::Responder> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
     let now = chrono::Utc::now().timestamp(); // todo - make this a parameter
@@ -281,10 +281,15 @@ async fn get_recent_patents(
     // use web::block to offload blocking Diesel code without blocking server thread
     let patents = web::block(move || get_patents(&conn, query.page, query.per_page, now))
         .await
-        .map_err(|e| {
+        .unwrap(); // todo - blocking error unwrap()?
+
+    let patents = match patents {
+        Ok(patents) => patents,
+        Err(e) => {
             eprintln!("{}", e);
-            HttpResponse::InternalServerError().finish()
-        })?;
+            return Err(actix_web::error::ErrorInternalServerError(""));
+        }
+    };
 
     Ok(HttpResponse::Ok().json(patents))
 }
@@ -431,10 +436,15 @@ async fn get_collections(
         // get all subdirectories and all collections at this path
         let collections = web::block(move || get_collections_db(&conn, &path.path))
             .await
-            .map_err(|e| {
+            .unwrap(); // todo - blockingerror unwrap?
+
+        let collections = match collections {
+            Ok(collections) => collections,
+            Err(e) => {
                 eprintln!("{}", e);
-                HttpResponse::InternalServerError().finish()
-            })?;
+                return Err(actix_web::error::ErrorInternalServerError(""));
+            }
+        };
 
         Ok(HttpResponse::Ok().json(collections))
     } else {
@@ -442,10 +452,15 @@ async fn get_collections(
 
         let collection = web::block(move || get_collection_db(&conn, &path.path))
             .await
-            .map_err(|e| {
+            .unwrap(); // todo - blockingerror unwrap?
+
+        let collection = match collection {
+            Ok(collection) => collection,
+            Err(e) => {
                 eprintln!("{}", e);
-                HttpResponse::InternalServerError().finish()
-            })?;
+                return Err(actix_web::error::ErrorInternalServerError(""));
+            }
+        };
 
         Ok(HttpResponse::Ok().json(collection))
     }
@@ -570,25 +585,35 @@ async fn get_plant(
     let conn = pool.get().expect("couldn't get db connection from pool");
     println!("/plant/ {} page {:?}", path.type_, query.page);
     if path.plant.is_empty() {
-        let collection = web::block(move || get_plants_db(&conn, &path.type_, query.page))
+        let plants = web::block(move || get_plants_db(&conn, &path.type_, query.page))
             .await
-            .map_err(|e| {
-                eprintln!("{}", e);
-                HttpResponse::InternalServerError().finish()
-            })?;
+            .unwrap(); // todo - blockingerror unwrap?
 
-        Ok(HttpResponse::Ok().json(collection))
+        let plants = match plants {
+            Ok(plants) => plants,
+            Err(e) => {
+                eprintln!("{}", e);
+                return Err(actix_web::error::ErrorInternalServerError(""));
+            }
+        };
+
+        Ok(HttpResponse::Ok().json(plants))
     } else {
         // one plant
 
-        let collection = web::block(move || get_plant_db(&conn, &path.type_, &path.plant))
+        let plant = web::block(move || get_plant_db(&conn, &path.type_, &path.plant))
             .await
-            .map_err(|e| {
-                eprintln!("{}", e);
-                HttpResponse::InternalServerError().finish()
-            })?;
+            .unwrap(); // todo - blockingerror unwrap?
 
-        Ok(HttpResponse::Ok().json(collection))
+        let plant = match plant {
+            Ok(plant) => plant,
+            Err(e) => {
+                eprintln!("{}", e);
+                return Err(actix_web::error::ErrorInternalServerError(""));
+            }
+        };
+
+        Ok(HttpResponse::Ok().json(plant))
     }
 }
 
@@ -667,10 +692,15 @@ async fn get_recent_changes(pool: web::Data<DbPool>) -> Result<HttpResponse, act
 
     let changes_db = web::block(move || get_recent_changes_db(&conn))
         .await
-        .map_err(|e| {
+        .unwrap(); // todo - blockingerror unwrap?
+
+    let changes_db = match changes_db {
+        Ok(changes_db) => changes_db,
+        Err(e) => {
             eprintln!("{}", e);
-            HttpResponse::InternalServerError().finish()
-        })?;
+            return Err(actix_web::error::ErrorInternalServerError(""));
+        }
+    };
 
     Ok(HttpResponse::Ok().json(RecentChanges {
         build_info: BuildInfo {
@@ -695,10 +725,15 @@ pub fn get_fact_db(db_conn: &SqliteConnection) -> Result<Fact, diesel::result::E
 async fn get_fact(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    let fact = web::block(move || get_fact_db(&conn)).await.map_err(|e| {
-        eprintln!("{}", e);
-        HttpResponse::InternalServerError().finish()
-    })?;
+    let fact = web::block(move || get_fact_db(&conn)).await.unwrap(); // todo - blockingerror unwrap?
+
+    let fact = match fact {
+        Ok(fact) => fact,
+        Err(e) => {
+            eprintln!("{}", e);
+            return Err(actix_web::error::ErrorInternalServerError(""));
+        }
+    };
 
     Ok(HttpResponse::Ok().json(fact))
 }
@@ -765,10 +800,15 @@ async fn variety_search(
 
     let results = web::block(move || variety_search_db(&conn, &path.string))
         .await
-        .map_err(|e| {
+        .unwrap(); // todo - blockingerror unwrap?
+
+    let results = match results {
+        Ok(results) => results,
+        Err(e) => {
             eprintln!("{}", e);
-            HttpResponse::InternalServerError().finish()
-        })?;
+            return Err(actix_web::error::ErrorInternalServerError(""));
+        }
+    };
 
     Ok(HttpResponse::Ok().json(results))
 }

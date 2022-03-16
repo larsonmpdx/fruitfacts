@@ -25,13 +25,13 @@ use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
 use dotenv::dotenv;
 
+use indexmap::IndexMap;
 use lazy_static::lazy_static;
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::convert::TryFrom;
 use std::fs;
 use walkdir::WalkDir;
-use indexmap::IndexMap;
 
 extern crate pathdiff;
 extern crate regex;
@@ -2777,7 +2777,7 @@ pub fn get_relative_day_offsets(db_conn: &SqliteConnection) {
 
                     first_location_average.unwrap().1.used = true;
                     first_location_average = None;
-                 //   average_b.used = true; // invalidate only one - maybe using the other in other possible pairs will lead to better averages
+                    //   average_b.used = true; // invalidate only one - maybe using the other in other possible pairs will lead to better averages
 
                     print_candles(&candles_output);
                     num_changed += 1;
