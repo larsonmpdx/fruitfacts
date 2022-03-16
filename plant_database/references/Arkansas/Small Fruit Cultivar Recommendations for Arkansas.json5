@@ -1,0 +1,85 @@
+{
+    title: "Small Fruit Cultivar Recommendations for Arkansas",
+    author: "Amanda L. McWhirt, John R. Clark, Margaret Worthington, Renee Threlfall, Matt Bertucci",
+    url: "https://grapes.extension.org/arkansas-table-grape-cultivars/ https://aaes.uada.edu/fruit-breeding/grapes/",
+    published: "March 2021", // this date isn't in the pdf but I saw a tweet announcing it at this time
+    accessed: "March 2022",
+    type: "extension test",
+    locations: [
+        {
+            name: "Fruit Research Station, Clarksville", // most harvest times are given as either "west-central arkansas" or "northwest arkansas".  I think clarksville would be NW?
+            latitude: 35.532778,
+            longitude: -93.403333
+        }
+    ],
+    plants: [
+        // todo - stuff other than grapes
+        {
+            type: "Grape",
+            name: "Campbells Early",
+            harvest_time: "early", // "Early-ripening"
+            description: "Early-ripening, seeded, Concord-type grape, also known as “Island Belle.” This Vitis labrusca originated in Arkansas in 1892 and is a large, purple, slipskin grape. Highly productive grapevine. Grows well in west-central Arkansas. Used for jelly, juice and wine production."
+        },
+        {
+            type: "Grape",
+            name: "Compassion",
+            harvest_time: "August 22", // "in west-central Arkansas"
+            description: "White (green) seedless. Crisp texture with fruity and aspects of muscat flavor. Medium cluster size with large berries. Mid-season ripening, average harvest date of August 22 in west-central Arkansas. Clusters are well filled and tight. Reduced susceptibility to fruit cracking. Some occurrence of powdery and downy mildew."
+        },
+        {
+            type: "Grape",
+            name: "Faith",
+            harvest_time: "late July to early August", // "in west-central Arkansas"
+            description: "Blue seedless, non-slipskin neutral to slight fruity flavor. Early ripening in late July to early August in west-central Arkansas. Uneven set in some years resulting in reduced cluster fill, occasional seed traces in some years, and occasionally slight skin astringency."
+        },
+        {
+            type: "Grape",
+            name: "Hope",
+            harvest_time: "August 20", // "in west-central Arkansas"
+            description: "White (green) seedless. Fruity flavor, non-slipskin. Very tight clusters with small to medium berry size. Ready for harvest on average August 20 in west-central Arkansas. High yield potential. Only slight fruit cracking."
+        },
+        {
+            type: "Grape",
+            name: "Gratitude",
+            harvest_time: "late August to early September", // "in west-central Arkansas"
+            description: "White (green) seedless. Neutral flavor similar to Vitis vinifera table grapes. Medium berry continued size, with large and very tight clusters. Non-slipskin; exceptionally crisp texture with very thin skins. Harvested late August to early September in west-central Arkansas. Susceptible to occasional winter injury."
+        },
+        {
+            type: "Grape",
+            name: "Joy",
+            harvest_time: "August 11", // "in west-central Arkansas"
+            description: "Blue seedless, non-slipskin with exceptional fruit flavor. Soft texture and thinnest skin of University of Arkansas-developed table grapes. Moderate vine vigor, good resistance to cracking. Ready for harvest on average August 11 in west-central Arkansas. Occasional occurrence of “shot” berries resulting from variable berry set, and shatter of ripe berries at maturity in some years."
+        },
+        {
+            type: "Grape",
+            name: "Jupiter",
+            harvest_time: "late July", // "in west-central Arkansas"
+            description: "Reddish-blue to blue seedless grape with a mild muscat flavor. Large, non-slipskin berries in a medium to large cluster. Early maturity (ripens late July in west-central Arkansas). Moderate susceptibility to most fungal diseases but more susceptible to downy mildew than other cultivars and requires sprays for successful production."
+        },
+        {
+            type: "Grape",
+            name: "Mars",
+            harvest_time: "mid August", // "in west-central Arkansas"
+            description: "Blue seedless, slipskin grape with labrusca flavors similar to Concord. Mid-season maturity (mid-August in west-central Arkansas). Very hardy, high vine vigor. Medium clusters with medium size berries. Highest resistance to fungal diseases among University of Arkansas developments but does require very careful attention to sprays for successful production."
+        },
+        {
+            type: "Grape",
+            name: "Neptune",
+            harvest_time: "August 20", // "in west-central Arkansas"
+            description: "Yellow-green, non-slipskin grape. Hardy and medium-low vigor. Large clusters with medium size berries. Mid-season maturity (Ripens on average August 20 in west-central Arkansas). Moderate susceptibility to fungal diseases."
+        },
+        {
+            type: "Grape",
+            name: "Reliance",
+            harvest_time: "August 15", // "in west-central Arkansas"
+            description: "Pink, slipskin seedless grape. Highest flavor rating of all Arkansas cultivars. Very hardy, medium vigor. Early to mid-season maturity (Ripens on average August 15 in west-central Arkansas). Moderate resistance to fungal diseases but does require sprays. Used to produce grape juice, jelly, sweet-finished wines, and eaten fresh. Harvest date in northwest Arkansas is typically September 1. Has high susceptibility to skin cracking and post-harvest shelling. Displays uneven ripening in excessively hot growing season. Not recommended to be grown outside of Northwest Arkansas."
+        },
+        {
+            type: "Grape",
+            name: "Venus",
+            harvest_time: "July 25", // "in west-central Arkansas"
+            description: "Blue seedless, slipskin grape with labrusca and muscat flavors. Early maturity (Ripens on average July 25 in west-central Arkansas). Moderate hardiness and medium vigor. Moderately resistant to fungal diseases but does require sprays for successful production."
+        }
+        // todo other types
+    ]
+}

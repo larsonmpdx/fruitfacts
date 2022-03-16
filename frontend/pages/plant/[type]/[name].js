@@ -61,9 +61,10 @@ export default function Home({ plant }) {
             </p>
             {plant.base?.aka && <p>AKA {plant.base.aka}</p>}
 
-            {plant.base?.release_year && plant.base?.released_by && (
+            {(plant.base?.release_year || plant.base?.released_by) && (
                 <p>
-                    {plant.base?.release_year && <>released {plant.base.release_year}</>}
+                    released
+                    {plant.base?.release_year && <> {plant.base.release_year}</>}
                     {plant.base?.released_by && <> by {plant.base.released_by}</>}
                 </p>
             )}
