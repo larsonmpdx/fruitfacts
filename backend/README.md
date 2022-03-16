@@ -58,5 +58,3 @@
 * rust cargo: use lld on windows for faster builds. will eventually be default and I can remove the /.cargo/config.toml entry
   * in my testing this doesn't improve full build time at all
   * https://github.com/rust-lang/rust/issues/71520
-* actix: decode + and / in url parameters correctly https://github.com/actix/actix-web/pull/2566
-  * this should be available as soon as I upgrade actix
