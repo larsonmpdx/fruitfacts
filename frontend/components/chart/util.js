@@ -248,10 +248,10 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
         for (const item of has_relative_time) {
             const type_found = _.find(types, {
                 relative_to_type: item.calc_harvest_relative_to_type,
-                relative_to: item.calc_harvest_relative_to,
+                relative_to: item.calc_harvest_relative_to
             });
 
-            if(type_found) {
+            if (type_found) {
                 // if it's in the types array, set its x based on the type
                 item.x = item.calc_harvest_relative - earliest_day;
                 item.width = 10;
@@ -264,7 +264,7 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
 
         // remove the tagged items
         has_relative_time = has_relative_time.filter((item) => !item.to_remove);
-        console.log(JSON.stringify(has_relative_time, null, 2))
+        console.log(JSON.stringify(has_relative_time, null, 2));
     }
 
     const sequences = getTypedSequences(has_relative_time);
