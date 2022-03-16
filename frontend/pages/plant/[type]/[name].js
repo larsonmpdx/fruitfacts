@@ -3,7 +3,7 @@ import { formatPatentDate } from '../../../components/functions';
 
 export async function getServerSideProps(context) {
     const { type, name } = context.query;
-    const plant = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/plants/${type}/${name}`)
+    const plant = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/plants/${type}/${encodeURIComponent(name)}`)
         .then((response) => {
             if (response.status !== 200) {
                 return {};

@@ -568,7 +568,7 @@ async fn get_plant(
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
-    println!("/plants/ {} page {:?}", path.type_, query.page);
+    println!("/plant/ {} page {:?}", path.type_, query.page);
     if path.plant.is_empty() {
         let collection = web::block(move || get_plants_db(&conn, &path.type_, query.page))
             .await

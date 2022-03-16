@@ -428,6 +428,10 @@ const PER_ITEM_HEIGHT = 3;
 const MARGIN_Y = 5;
 const PIXEL_SCALE = 10; // how many pixels per day (or height unit)? use this so our "1px = 1 day" lines don't look so thick on small charts
 
+const MINIMUM_DAY_WIDTH = 60; // in case we only have a couple items, we want to stil show enough width so we get some labels
+const MINIMUM_HEIGHT = 30; // set this so our label lines have enough height to be visible in charts with only a couple items
+
+
 // create one bar for each item. x is days
 export function getBars(sequences) {
     // we want this sort function to be as stable as possible, so it's a little complicated
@@ -491,13 +495,10 @@ export function getBars(sequences) {
 
     // get extents from bars as-placed
     // console.log(JSON.stringify(overall_output, null, 2));
-    const { min_x, max_x } = minAndMaxX(overall_output);
+    let { min_x, max_x } = minAndMaxX(overall_output);
     // console.log(`min x ${min_x} max x ${max_x}`);
 
-    const min_x_scaled = (min_x - MARGIN_X_DAYS) * PIXEL_SCALE;
-    const max_x_scaled = (max_x + MARGIN_X_DAYS) * PIXEL_SCALE;
-
-    const min_y = 0;
+    let min_y = 0;
     let max_y = 0;
 
     for (const bar of overall_output) {
@@ -507,14 +508,26 @@ export function getBars(sequences) {
     }
     max_y = max_y + MARGIN_Y * PIXEL_SCALE;
 
-    const width = max_x - min_x;
-    const height = max_y - min_y;
+    let width = max_x - min_x;
+    let height = max_y - min_y;
+
+    if((width / PIXEL_SCALE) < MINIMUM_DAY_WIDTH) {
+        const days_to_add = Math.round((MINIMUM_DAY_WIDTH - (width / PIXEL_SCALE)) / 2);
+        min_x = min_x - days_to_add * PIXEL_SCALE;
+        max_x = max_x + days_to_add * PIXEL_SCALE;
+        width = max_x - min_x;
+    }
+
+    if((height / PIXEL_SCALE) < MINIMUM_HEIGHT) {
+        const height_units_to_add = Math.round((MINIMUM_HEIGHT - (height / PIXEL_SCALE)) / 2);
+        min_y = min_y - height_units_to_add * PIXEL_SCALE;
+        max_y = max_y + height_units_to_add * PIXEL_SCALE;
+        height = max_y - min_y;
+    }
 
     return {
         bars: overall_output,
         extents: {
-            min_x: min_x_scaled,
-            max_x: max_x_scaled,
             min_x,
             max_x,
             min_y,
