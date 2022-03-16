@@ -173,12 +173,17 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
         })
     );
 
+    let removed_items = [];
     if (types.length <= 1) {
         // set x and width which will be used for follow-on functions
         // todo: set width based on regular harvest times if available
         has_relative_time = has_relative_time.map((item) => {
             return { ...item, x: item.calc_harvest_relative, width: 10 };
         });
+        if (types.length == 1) {
+            types[0].day = 0;
+            types[0].earliest = true;
+        }
     } else {
         // remove any types not found in relative_days
         console.log(JSON.stringify(types, null, 2));
@@ -196,10 +201,70 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
         console.log(JSON.stringify(types, null, 2));
 
         // todo
+        // add day value from relative_days into our type list
         // find the earliest type, this will be our main reference and 0-point
-        // for each item, if its type isn't in our types array, remove it and add to a not_charted array
+        let earliest_day, earliest_type;
+        types.forEach((type) => {
+            const relative_day_entry = _.find(relative_days, {
+                type: type.relative_to_type,
+                name: type.relative_to
+            });
+            type.day = relative_day_entry.day;
+            if (!earliest_day) {
+                earliest_day = type.day;
+                earliest_type = type;
+            } else {
+                if (type.day == earliest_day) {
+                    // tiebreaker for two types with the same day, we want to have a stable choice for our graph's labels
+                    // - use alphabetical name
+                    if (type.relative_to_type < earliest_type.relative_to_type) {
+                        earliest_type = type;
+                    }
+                } else if (type.day < earliest_day) {
+                    earliest_day = type.day;
+                    earliest_type = type;
+                }
+            }
+        });
+        // edit types - subtract earliest_day from all of them and mark the earliest type so the label function can find it
+        types.forEach((type) => {
+            type.day = type.day - earliest_day;
+
+            if (
+                type.relative_to_type == earliest_type.relative_to_type &&
+                type.relative_to == earliest_type.relative_to
+            ) {
+                type.earliest = true;
+            }
+        });
+
+        console.log(JSON.stringify(types, null, 2));
+
+        // todo
+        // for each item, if its type isn't in our types array, mark it for removal and add to a not_charted array
         // if its type is found, set x = item.calc_harvest_relative for the base type or
         // x = item.calc_harvest_relative + type offset for others
+
+        for (const item of has_relative_time) {
+            const type_found = _.find(types, {
+                relative_to_type: item.calc_harvest_relative_to_type,
+                relative_to: item.calc_harvest_relative_to,
+            });
+
+            if(type_found) {
+                // if it's in the types array, set its x based on the type
+                item.x = item.calc_harvest_relative - earliest_day;
+                item.width = 10;
+            } else {
+                // if it isn't, add it to our "removed" array and tag it for removal
+                item.to_remove = true;
+                removed_items.push(item);
+            }
+        }
+
+        // remove the tagged items
+        has_relative_time = has_relative_time.filter((item) => !item.to_remove);
+        console.log(JSON.stringify(has_relative_time, null, 2))
     }
 
     const sequences = getTypedSequences(has_relative_time);
@@ -228,17 +293,16 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
     if (types.length == 0) {
         // todo - think about what to return in this case?
         return { types, not_charted: no_relative_time };
-    }
-    if (types.length == 1) {
-        return {
-            types: [{ ...types[0], x: 0 }], // todo - return relative type too. probably handle different relative types better as well
-            sequences: output.concat(multi_sequence_holder),
-            not_charted: no_relative_time
-        };
     } else {
         // todo: select only types that are in relative-relative.json, then make a vertical line for each and edit other types' days
         // based on the value relative to the earliest type
         // and remove items with types that didn't make it into the chart (should probably do this earlier)
+
+        return {
+            types,
+            sequences: output.concat(multi_sequence_holder),
+            not_charted: no_relative_time.concat(removed_items)
+        };
     }
 }
 
@@ -473,20 +537,20 @@ export function getTypeLines(extents, types) {
     types.forEach((type, i) => {
         console.log(type);
         majorLines.push({
-            x1: (type.x + MARGIN_X_DAYS) * PIXEL_SCALE,
-            x2: (type.x + MARGIN_X_DAYS) * PIXEL_SCALE,
+            x1: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE,
+            x2: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE,
             y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
             y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
         });
 
         labels.push({
-            x: (type.x + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
+            x: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
             y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
             name: type.relative_to,
             fontSize: 20
         });
         labels.push({
-            x: (type.x + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
+            x: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
             y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
             name: type.relative_to,
             fontSize: 20
@@ -496,7 +560,7 @@ export function getTypeLines(extents, types) {
             // create interlines at ...-10, +10, +20... days from the first type line
             const TYPE_INTERLINE_SPACING = 10;
 
-            let negative_x = (type.x + MARGIN_X_DAYS - TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
+            let negative_x = (type.day + MARGIN_X_DAYS - TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
             while (negative_x >= extents.min_x) {
                 interLines.push({
                     x1: negative_x,
@@ -508,20 +572,20 @@ export function getTypeLines(extents, types) {
                 labels.push({
                     x: negative_x - LABEL_CENTERING_OFFSET,
                     y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-                    name: `${type.relative_to}${negative_x / PIXEL_SCALE}`,
+                    name: `${type.relative_to}${negative_x / PIXEL_SCALE - MARGIN_X_DAYS}`,
                     fontSize: 10
                 });
                 labels.push({
                     x: negative_x - LABEL_CENTERING_OFFSET,
                     y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-                    name: `${type.relative_to}${negative_x / PIXEL_SCALE}`,
+                    name: `${type.relative_to}${negative_x / PIXEL_SCALE - MARGIN_X_DAYS}`,
                     fontSize: 10
                 });
 
                 negative_x = negative_x - TYPE_INTERLINE_SPACING * PIXEL_SCALE;
             }
 
-            let positive_x = (type.x + MARGIN_X_DAYS + TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
+            let positive_x = (type.day + MARGIN_X_DAYS + TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
             while (positive_x <= extents.max_x) {
                 interLines.push({
                     x1: positive_x,
