@@ -183,6 +183,7 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
         if (types.length == 1) {
             types[0].day = 0;
             types[0].earliest = true;
+            types[0].most_numerous = true;
         }
     } else {
         // remove any types not found in relative_days
@@ -226,10 +227,11 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
                 }
             }
         });
+
         // edit types - subtract earliest_day from all of them and mark the earliest type so the label function can find it
         types.forEach((type) => {
+            type.count = 0;
             type.day = type.day - earliest_day;
-
             if (
                 type.relative_to_type == earliest_type.relative_to_type &&
                 type.relative_to == earliest_type.relative_to
@@ -245,6 +247,9 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
         // if its type is found, set x = item.calc_harvest_relative for the base type or
         // x = item.calc_harvest_relative + type offset for others
 
+        // if we have redhaven (30) and red delicious (78) then we subtract 30 from both, we have redhaven (0) and red delicious (48)
+        // we then need to add 48 to any red delicious-referenced items
+
         for (const item of has_relative_time) {
             const type_found = _.find(types, {
                 relative_to_type: item.calc_harvest_relative_to_type,
@@ -253,7 +258,8 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
 
             if (type_found) {
                 // if it's in the types array, set its x based on the type
-                item.x = item.calc_harvest_relative - earliest_day;
+                item.x = item.calc_harvest_relative + type_found.day; // this day has already been 0-referenced to the first type which gets the chart's overall day scale
+                type_found.count = type_found.count + 1;
                 item.width = 10;
             } else {
                 // if it isn't, add it to our "removed" array and tag it for removal
@@ -261,6 +267,28 @@ export function getChartItemsRelative({ items, sortType, auto_width }) {
                 removed_items.push(item);
             }
         }
+
+        let highest_count;
+        let most_numerious_type;
+        types.forEach((type) => {
+            if (!highest_count) {
+                highest_count = type.count;
+                most_numerious_type = type;
+            } else {
+                if (type.count == highest_count) {
+                    // tiebreaker for two types with the same count, we want to have a stable choice for our graph's labels
+                    // - use alphabetical name
+                    if (type.relative_to_type < earliest_type.relative_to_type) {
+                        most_numerious_type = type;
+                    }
+                } else if (type.day > highest_count) {
+                    highest_count = type.count;
+                    most_numerious_type = type;
+                }
+            }
+        });
+
+        most_numerious_type.most_numerous = true;
 
         // remove the tagged items
         has_relative_time = has_relative_time.filter((item) => !item.to_remove);
@@ -431,7 +459,6 @@ const PIXEL_SCALE = 10; // how many pixels per day (or height unit)? use this so
 const MINIMUM_DAY_WIDTH = 60; // in case we only have a couple items, we want to stil show enough width so we get some labels
 const MINIMUM_HEIGHT = 30; // set this so our label lines have enough height to be visible in charts with only a couple items
 
-
 // create one bar for each item. x is days
 export function getBars(sequences) {
     // we want this sort function to be as stable as possible, so it's a little complicated
@@ -511,15 +538,15 @@ export function getBars(sequences) {
     let width = max_x - min_x;
     let height = max_y - min_y;
 
-    if((width / PIXEL_SCALE) < MINIMUM_DAY_WIDTH) {
-        const days_to_add = Math.round((MINIMUM_DAY_WIDTH - (width / PIXEL_SCALE)) / 2);
+    if (width / PIXEL_SCALE < MINIMUM_DAY_WIDTH) {
+        const days_to_add = Math.round((MINIMUM_DAY_WIDTH - width / PIXEL_SCALE) / 2);
         min_x = min_x - days_to_add * PIXEL_SCALE;
         max_x = max_x + days_to_add * PIXEL_SCALE;
         width = max_x - min_x;
     }
 
-    if((height / PIXEL_SCALE) < MINIMUM_HEIGHT) {
-        const height_units_to_add = Math.round((MINIMUM_HEIGHT - (height / PIXEL_SCALE)) / 2);
+    if (height / PIXEL_SCALE < MINIMUM_HEIGHT) {
+        const height_units_to_add = Math.round((MINIMUM_HEIGHT - height / PIXEL_SCALE) / 2);
         min_y = min_y - height_units_to_add * PIXEL_SCALE;
         max_y = max_y + height_units_to_add * PIXEL_SCALE;
         height = max_y - min_y;
@@ -546,81 +573,83 @@ export function getTypeLines(extents, types) {
     let interLines = [];
     let labels = [];
 
-    // create one line per type, with a label
     types.forEach((type, i) => {
         console.log(type);
-        majorLines.push({
-            x1: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE,
-            x2: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE,
-            y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
-            y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
-        });
+        // todo - do we put in labels for types other than the earliest one? maybe?
+        if (type.most_numerous) {
+            majorLines.push({
+                x1: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE,
+                x2: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE,
+                y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+            });
 
-        labels.push({
-            x: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
-            y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-            name: type.relative_to,
-            fontSize: 20
-        });
-        labels.push({
-            x: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
-            y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-            name: type.relative_to,
-            fontSize: 20
-        });
+            labels.push({
+                x: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
+                y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                name: type.relative_to,
+                fontSize: 20
+            });
+            labels.push({
+                x: (type.day + MARGIN_X_DAYS) * PIXEL_SCALE - LABEL_CENTERING_OFFSET,
+                y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                name: type.relative_to,
+                fontSize: 20
+            });
 
-        if (i == 0) {
-            // create interlines at ...-10, +10, +20... days from the first type line
-            const TYPE_INTERLINE_SPACING = 10;
+            if (i == 0) {
+                // create interlines at ...-10, +10, +20... days from the first type line
+                const TYPE_INTERLINE_SPACING = 10;
 
-            let negative_x = (type.day + MARGIN_X_DAYS - TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
-            while (negative_x >= extents.min_x) {
-                interLines.push({
-                    x1: negative_x,
-                    x2: negative_x,
-                    y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
-                    y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
-                });
+                let negative_x = (type.day + MARGIN_X_DAYS - TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
+                while (negative_x >= extents.min_x) {
+                    interLines.push({
+                        x1: negative_x,
+                        x2: negative_x,
+                        y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                        y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                    });
 
-                labels.push({
-                    x: negative_x - LABEL_CENTERING_OFFSET,
-                    y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-                    name: `${type.relative_to}${negative_x / PIXEL_SCALE - MARGIN_X_DAYS}`,
-                    fontSize: 10
-                });
-                labels.push({
-                    x: negative_x - LABEL_CENTERING_OFFSET,
-                    y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-                    name: `${type.relative_to}${negative_x / PIXEL_SCALE - MARGIN_X_DAYS}`,
-                    fontSize: 10
-                });
+                    labels.push({
+                        x: negative_x - LABEL_CENTERING_OFFSET,
+                        y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                        name: `${negative_x / PIXEL_SCALE - MARGIN_X_DAYS - type.day}`,
+                        fontSize: 10
+                    });
+                    labels.push({
+                        x: negative_x - LABEL_CENTERING_OFFSET,
+                        y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                        name: `${negative_x / PIXEL_SCALE - MARGIN_X_DAYS - type.day}`,
+                        fontSize: 10
+                    });
 
-                negative_x = negative_x - TYPE_INTERLINE_SPACING * PIXEL_SCALE;
-            }
+                    negative_x = negative_x - TYPE_INTERLINE_SPACING * PIXEL_SCALE;
+                }
 
-            let positive_x = (type.day + MARGIN_X_DAYS + TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
-            while (positive_x <= extents.max_x) {
-                interLines.push({
-                    x1: positive_x,
-                    x2: positive_x,
-                    y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
-                    y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
-                });
+                let positive_x = (type.day + MARGIN_X_DAYS + TYPE_INTERLINE_SPACING) * PIXEL_SCALE;
+                while (positive_x <= extents.max_x) {
+                    interLines.push({
+                        x1: positive_x,
+                        x2: positive_x,
+                        y1: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE,
+                        y2: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * 2.5 * PIXEL_SCALE
+                    });
 
-                labels.push({
-                    x: positive_x - LABEL_CENTERING_OFFSET,
-                    y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-                    name: `${type.relative_to}+${positive_x / PIXEL_SCALE - MARGIN_X_DAYS}`,
-                    fontSize: 10
-                });
-                labels.push({
-                    x: positive_x - LABEL_CENTERING_OFFSET,
-                    y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
-                    name: `${type.relative_to}+${positive_x / PIXEL_SCALE - MARGIN_X_DAYS}`,
-                    fontSize: 10
-                });
+                    labels.push({
+                        x: positive_x - LABEL_CENTERING_OFFSET,
+                        y: extents.min_y + TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                        name: `+${positive_x / PIXEL_SCALE - MARGIN_X_DAYS - type.day}`,
+                        fontSize: 10
+                    });
+                    labels.push({
+                        x: positive_x - LABEL_CENTERING_OFFSET,
+                        y: extents.max_y - TOP_LABEL_HEIGHT_OFFSET * PIXEL_SCALE,
+                        name: `+${positive_x / PIXEL_SCALE - MARGIN_X_DAYS - type.day}`,
+                        fontSize: 10
+                    });
 
-                positive_x = positive_x + TYPE_INTERLINE_SPACING * PIXEL_SCALE;
+                    positive_x = positive_x + TYPE_INTERLINE_SPACING * PIXEL_SCALE;
+                }
             }
         }
     });

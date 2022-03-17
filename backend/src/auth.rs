@@ -1,6 +1,6 @@
 use actix_web::cookie::Cookie;
+use actix_web::HttpRequest;
 use actix_web::{get, post, web, HttpResponse};
-use actix_web::{HttpRequest};
 use anyhow::{anyhow, Result};
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
 use serde::Deserialize;

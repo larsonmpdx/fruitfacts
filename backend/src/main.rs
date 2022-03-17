@@ -60,6 +60,7 @@ async fn main() -> std::io::Result<()> {
             .wrap(Logger::default())
             .wrap(cors)
             // set up DB pool to be used with web::Data<Pool> extractor
+            // todo - app_data() here but it's not a straight swap
             .data(pool.clone())
             // .wrap(middleware::Logger::default())
             .service(queries::get_recent_patents)
