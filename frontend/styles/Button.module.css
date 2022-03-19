@@ -1,12 +1,12 @@
 .btn {
-    @apply rounded py-2 px-4 font-bold;
+  @apply rounded py-2 px-4 font-bold;
 }
 .btn-blue {
-    @apply bg-blue-500 text-white;
+  @apply bg-blue-500 text-white;
 }
 .btn-blue:hover {
-    @apply bg-blue-700;
+  @apply bg-blue-700;
 }
 .btn-disabled {
-    @apply bg-blue-500 text-white opacity-50;
+  @apply bg-blue-500 text-white opacity-50;
 }

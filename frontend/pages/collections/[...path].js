@@ -11,75 +11,73 @@ import Head from 'next/head';
 import Chart from '../../components/chart';
 
 export async function getServerSideProps(context) {
-    const { path } = context.query;
-    const data = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${path.join('/')}`
-    ) // no trailing slash - individual collection
-        .then((response) => {
-            if (response.status !== 200) {
-                return [];
-            }
-            return response.json();
-        })
-        .catch((error) => {
-            console.log(error);
-            return [];
-        });
+  const { path } = context.query;
+  const data = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${path.join('/')}`
+  ) // no trailing slash - individual collection
+    .then((response) => {
+      if (response.status !== 200) {
+        return [];
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      console.log(error);
+      return [];
+    });
 
-    return {
-        props: {
-            data,
-            path
-        }
-    };
+  return {
+    props: {
+      data,
+      path
+    }
+  };
 }
 
 export default function Home({ data, path }) {
-    return (
-        <>
-            <Head>
-                <title>{`Collection: ${path}`}</title>
-            </Head>
-            <article className="prose m-5">
-                {/* single collection */}
-                {data.collection && (
-                    <>
-                        <p>
-                            {data.collection.title}
-                            {data.collection.url && <a href={data.collection.url}>[ref]</a>}
-                        </p>
-                        <h1>Locations</h1>
-                        <ul className="list-disc">
-                            {data.locations.map((location) => (
-                                <li key={location.id}>{location.location_name}</li>
-                            ))}
-                        </ul>
-                        <h1>Chart</h1>
-                        <Chart items={data.items} />
-                        <h1>Plants</h1>
-                        <ul className="list-none">
-                            {data.items.map((item) => (
-                                <li key={item.id}>
-                                    <img
-                                        className="my-0 mx-2 inline h-6 w-6 object-contain"
-                                        src={'/fruit_icons/' + item.type + '.svg'}
-                                    />
-                                    <Link
-                                        href={`/plant/${encodeURIComponent(
-                                            item.type
-                                        )}/${encodeURIComponent(item.name)}`}
-                                    >
-                                        {item.name + ' ' + item.type}
-                                    </Link>
-                                    {item.marketing_name && (
-                                        <> (marketed under the {item.marketing_name} brand)</>
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
-                    </>
-                )}
-            </article>
-        </>
-    );
+  return (
+    <>
+      <Head>
+        <title>{`Collection: ${path}`}</title>
+      </Head>
+      <article className="prose m-5">
+        {/* single collection */}
+        {data.collection && (
+          <>
+            <p>
+              {data.collection.title}
+              {data.collection.url && <a href={data.collection.url}>[ref]</a>}
+            </p>
+            <h1>Locations</h1>
+            <ul className="list-disc">
+              {data.locations.map((location) => (
+                <li key={location.id}>{location.location_name}</li>
+              ))}
+            </ul>
+            <h1>Chart</h1>
+            <Chart items={data.items} />
+            <h1>Plants</h1>
+            <ul className="list-none">
+              {data.items.map((item) => (
+                <li key={item.id}>
+                  <img
+                    className="my-0 mx-2 inline h-6 w-6 object-contain"
+                    src={'/fruit_icons/' + item.type + '.svg'}
+                  />
+                  <Link
+                    href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(
+                      item.name
+                    )}`}
+                  >
+                    {item.name + ' ' + item.type}
+                  </Link>
+                  {item.marketing_name && <> (marketed under the {item.marketing_name} brand)</>}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </article>
+    </>
+  );
 }
