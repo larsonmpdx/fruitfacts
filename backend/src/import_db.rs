@@ -1073,6 +1073,7 @@ fn get_category_description(
 struct AddCollectionPlantType<'a> {
     collection_id: i32,
     location_id: Option<i32>,
+    location_number: i32,
     path_and_filename: &'a str,
     harvest_time: &'a Option<String>,
     plant_name: &'a str,
@@ -1174,6 +1175,7 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
         .values((
             collection_items::collection_id.eq(input.collection_id),
             collection_items::location_id.eq(input.location_id),
+            collection_items::location_number.eq(input.location_number),
             collection_items::path_and_filename.eq(input.path_and_filename),
             collection_items::name.eq(input.plant_name),
             collection_items::type_.eq(&input.plant.type_),
@@ -1258,11 +1260,16 @@ fn get_location_name(
     }
 }
 
-fn get_location_id(
+struct LocationNumbers {
+    location_id: Option<i32>,
+    location_number: i32,
+}
+
+fn get_location_numbers(
     collection_id: i32,
     location_name: Option<String>,
     db_conn: &SqliteConnection,
-) -> Option<i32> {
+) -> LocationNumbers {
     // either look up this location ID by (collection ID + name) or look it up with only collection ID and expect only one result
     let locations = locations::dsl::locations
         .filter(locations::collection_id.eq(collection_id))
@@ -1273,11 +1280,17 @@ fn get_location_id(
 
     if let Ok(locations) = locations {
         if locations.len() == 1 {
-            return Some(locations[0].id);
+            return LocationNumbers {
+                location_id: Some(locations[0].id),
+                location_number: locations[0].location_number,
+            }; // todo
         }
     }
 
-    None
+    LocationNumbers {
+        location_id: None,
+        location_number: 0,
+    }
 }
 
 fn update_or_add_base_plant(
@@ -1385,16 +1398,18 @@ fn add_collection_plant_by_location(
 
                 // we get harvest time for each location from the base harvest time values
 
+                let location_numbers = get_location_numbers(
+                    collection_id,
+                    get_location_name(
+                        Some(location.as_str().unwrap().to_string()), // the .as_str()... nastiness is because serde wants to carry the "it's a json string!!" idea to the point of printing it a certain way in rust. as_str() tells it not to
+                        collection_locations,
+                    ),
+                    db_conn,
+                );
                 plants_added += add_collection_plant(AddCollectionPlantType {
                     collection_id,
-                    location_id: get_location_id(
-                        collection_id,
-                        get_location_name(
-                            Some(location.as_str().unwrap().to_string()),
-                            collection_locations,
-                        ),
-                        db_conn,
-                    ), // the .as_str()... nastiness is because serde wants to carry the "it's a json string!!" idea to the point of printing it a certain way in rust. as_str() tells it not to
+                    location_id: location_numbers.location_id,
+                    location_number: location_numbers.location_number,
                     path_and_filename: &path_and_filename,
                     harvest_time: &plant.harvest_time,
                     plant_name,
@@ -1421,13 +1436,16 @@ fn add_collection_plant_by_location(
                         continue;
                     }
 
+                    let location_numbers = get_location_numbers(
+                        collection_id,
+                        get_location_name(Some(location_name), collection_locations),
+                        db_conn,
+                    );
+
                     plants_added += add_collection_plant(AddCollectionPlantType {
                         collection_id,
-                        location_id: get_location_id(
-                            collection_id,
-                            get_location_name(Some(location_name), collection_locations),
-                            db_conn,
-                        ),
+                        location_id: location_numbers.location_id,
+                        location_number: location_numbers.location_number,
                         path_and_filename: &path_and_filename,
                         harvest_time: &Some(harvest_time),
                         plant_name,
@@ -1443,13 +1461,16 @@ fn add_collection_plant_by_location(
     } else {
         // no location given in the plant json
 
+        let location_numbers = get_location_numbers(
+            collection_id,
+            get_location_name(None, collection_locations),
+            db_conn,
+        );
+
         plants_added += add_collection_plant(AddCollectionPlantType {
             collection_id,
-            location_id: get_location_id(
-                collection_id,
-                get_location_name(None, collection_locations),
-                db_conn,
-            ),
+            location_id: location_numbers.location_id,
+            location_number: location_numbers.location_number,
             path_and_filename: &path_and_filename,
             harvest_time: &plant.harvest_time,
             plant_name,
@@ -1546,11 +1567,12 @@ fn load_references(
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
 
-            for location in &collection.locations {
+            for (i, location) in collection.locations.iter().enumerate() {
                 //    println!("inserting");
                 let rows_inserted = diesel::insert_into(locations::dsl::locations)
                     .values((
                         locations::collection_id.eq(collection_id),
+                        locations::location_number.eq((i + 1) as i32),
                         locations::location_name.eq(&location.name),
                         locations::latitude.eq(&location.latitude),
                         locations::longitude.eq(&location.longitude),

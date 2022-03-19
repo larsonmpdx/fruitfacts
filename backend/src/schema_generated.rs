@@ -33,6 +33,7 @@ table! {
         id -> Integer,
         collection_id -> Integer,
         location_id -> Nullable<Integer>,
+        location_number -> Integer,
         path_and_filename -> Nullable<Text>,
         marketing_name -> Nullable<Text>,
         name -> Text,
@@ -90,6 +91,7 @@ table! {
 table! {
     locations (id) {
         id -> Integer,
+        location_number -> Integer,
         collection_id -> Integer,
         location_name -> Nullable<Text>,
         latitude -> Nullable<Double>,
