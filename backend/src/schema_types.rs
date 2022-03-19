@@ -120,7 +120,7 @@ pub struct Collection {
 #[belongs_to(Collection)]
 pub struct Location {
     pub id: i32,
-    pub location_number: i32,   // which location within the collection is this? 0 is no location, 1 is the first location
+    pub location_number: i32, // which location within the collection is this? 0 is no location, 1 is the first location
     pub collection_id: i32,
 
     pub location_name: Option<String>,
