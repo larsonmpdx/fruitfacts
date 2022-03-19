@@ -7,6 +7,7 @@
 
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
 import Link from 'next/link';
+import Head from 'next/head';
 
 export async function getServerSideProps(context) {
     const { path } = context.query;
@@ -30,44 +31,51 @@ export async function getServerSideProps(context) {
 
     return {
         props: {
-            data
+            data,
+            pathUsed
         }
     };
 }
 
-export default function Home({ data }) {
+export default function Home({ data, pathUsed }) {
     return (
-        <article className="prose m-5">
-            {/* multi collection (directory listing) */}
+        <>
+            <Head>
+                <title>{`dir: ${pathUsed}`}</title>
+            </Head>
+            <article className="prose m-5">
+                {/* multi collection (directory listing) */}
 
-            {data.directories && data.directories.length > 0 && (
-                <ul className="list-disc">
-                    {data.directories.map((directory, index) => (
-                        <li key={index}>
-                            <Link href={`/dirs/${directory}`}>{directory}</Link>
-                        </li>
-                    ))}
-                </ul>
-            )}
-
-            {data.collections && data.collections.length > 0 && (
-                <>
-                    <h1>Locations</h1>
+                {data.directories && data.directories.length > 0 && (
                     <ul className="list-disc">
-                        {data.collections.map((collection) => (
-                            <li key={collection.id}>
-                                <Link
-                                    href={`/collections/${
-                                        collection.path + encodeURIComponent(collection.filename)
-                                    }`}
-                                >
-                                    {collection.title}
-                                </Link>
+                        {data.directories.map((directory, index) => (
+                            <li key={index}>
+                                <Link href={`/dirs/${directory}`}>{directory}</Link>
                             </li>
                         ))}
                     </ul>
-                </>
-            )}
-        </article>
+                )}
+
+                {data.collections && data.collections.length > 0 && (
+                    <>
+                        <h1>Locations</h1>
+                        <ul className="list-disc">
+                            {data.collections.map((collection) => (
+                                <li key={collection.id}>
+                                    <Link
+                                        href={`/collections/${
+                                            collection.path +
+                                            encodeURIComponent(collection.filename)
+                                        }`}
+                                    >
+                                        {collection.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </>
+                )}
+            </article>
+        </>
     );
 }
