@@ -1562,7 +1562,7 @@
             ]
         },
         {
-            name: "Sprite Cherry Plum",
+            name: "Sprite cherry plum",
             type: "Japanese Plum",
             description: "Black, sweet skin. Exotic flavor. Small",
             locations: [
@@ -1591,7 +1591,7 @@
             names: [
                 "Beauty",
                 "Burgundy",
-                "Delight",
+                "Delight cherry plum",
                 "Howard Miracle",
                 "Kelsey",
                 "Mariposa",
@@ -1599,7 +1599,7 @@
                 "Methley",
                 "Santa Rosa",
                 "Satsuma",
-                "Sprite"
+                "Sprite cherry plum"
             ],
             type: "Japanese Plum",
             category: "low chill",

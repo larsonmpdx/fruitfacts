@@ -11,7 +11,12 @@ import Head from 'next/head';
 import Chart from '../../components/chart';
 
 export async function getServerSideProps(context) {
-  const { path } = context.query;
+  const { path, loc } = context.query;
+  let location_number = parseInt(loc);
+  if (isNaN(location_number)) {
+    location_number = 1;
+  }
+
   const data = await fetch(
     `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${path.join('/')}`
   ) // no trailing slash - individual collection
@@ -26,15 +31,31 @@ export async function getServerSideProps(context) {
       return [];
     });
 
+  console.log(JSON.stringify(data.locations, null, 2));
+
+  // cut down data to only this location or location #1 if not specified
+  if(data.items) {
+    data.items = data.items.filter((item) => {
+      return item.location_number == location_number;
+    });
+  } else {
+    data.items = [];
+  }
+
+  const location = data.locations.find((location) => {
+    return location.location_number == location_number;
+  }) || {location_name: `unknown location #${location_number}`};
+
   return {
     props: {
       data,
+      location,
       path
     }
   };
 }
 
-export default function Home({ data, path }) {
+export default function Home({ data, location, path }) {
   return (
     <>
       <Head>
@@ -50,13 +71,27 @@ export default function Home({ data, path }) {
             </p>
             <h1>Locations</h1>
             <ul className="list-disc">
-              {data.locations.map((location) => (
-                <li key={location.id}>{location.location_name}</li>
-              ))}
+              {data.locations.length > 1 ? (
+                <>
+                {data.locations.map((location) => (
+                  <li key={location.id}><Link
+                    href={`/collections/${path.join('/')}?loc=${location.location_number}`}
+                  >
+                    {location.location_name}
+                  </Link></li>
+                ))}
+              </>
+              ) : (
+                <>
+                {data.locations.map((location) => (
+                  <li key={location.id}>{location.location_name}</li>
+                ))}
+              </>
+              )}
             </ul>
-            <h1>Chart</h1>
+            {data.locations.length > 1 ? (<h1>{`Chart (${location.location_name})`}</h1>) : (<h1>Chart</h1>)}
             <Chart items={data.items} />
-            <h1>Plants</h1>
+            {data.locations.length > 1 ? (<h1>{`Plants (${location.location_name})`}</h1>) : (<h1>Plants</h1>)}
             <ul className="list-none">
               {data.items.map((item) => (
                 <li key={item.id}>

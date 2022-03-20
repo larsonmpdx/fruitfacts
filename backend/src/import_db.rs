@@ -1283,7 +1283,7 @@ fn get_location_numbers(
             return LocationNumbers {
                 location_id: Some(locations[0].id),
                 location_number: locations[0].location_number,
-            }; // todo
+            };
         }
     }
 
