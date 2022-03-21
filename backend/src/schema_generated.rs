@@ -96,6 +96,10 @@ table! {
         location_name -> Nullable<Text>,
         latitude -> Nullable<Double>,
         longitude -> Nullable<Double>,
+        notoriety_score -> Float,
+        collection_path -> Nullable<Text>,
+        collection_filename -> Nullable<Text>,
+        collection_title -> Nullable<Text>,
     }
 }
 

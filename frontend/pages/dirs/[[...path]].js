@@ -46,6 +46,37 @@ export async function getServerSideProps(context) {
 export default function Home({ data, pathUsed }) {
   const [click_lonlat, setClick] = React.useState({});
   const [extents, setExtents] = React.useState({});
+  const [locations, setLocations] = React.useState([]);
+
+  React.useEffect(() => {
+    console.log(JSON.stringify(extents, null, 2));
+    const fetchData = async () => {
+      const locations_fetched = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/locations?` +
+          new URLSearchParams({
+            // extents are "[minx, miny, maxx, maxy]"
+            min_lon: extents[0],
+            min_lat: extents[1],
+            max_lon: extents[2],
+            max_lat: extents[3]
+          })
+      )
+        .then((response) => {
+          if (response.status !== 200) {
+            return;
+          }
+          return response.json();
+        })
+        .catch((error) => {
+          console.log(error);
+          return;
+        });
+      console.log(JSON.stringify(locations_fetched, null, 2));
+      setLocations(locations_fetched);
+    };
+
+    fetchData();
+  }, [extents]);
 
   return (
     <>
@@ -54,7 +85,7 @@ export default function Home({ data, pathUsed }) {
       </Head>
       <article className="prose m-5">
         {/* multi collection (directory listing) */}
-        <Map locations={data.items} setClick={setClick} setExtents={setExtents} />
+        <Map locations={locations} setClick={setClick} setExtents={setExtents} />
         <p>click: {`${JSON.stringify(click_lonlat, null, 2)}`}</p>
         <p>extents: {`${JSON.stringify(extents, null, 2)}`}</p>
         {data.directories && data.directories.length > 0 && (

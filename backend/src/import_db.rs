@@ -1576,6 +1576,12 @@ fn load_references(
                         locations::location_name.eq(&location.name),
                         locations::latitude.eq(&location.latitude),
                         locations::longitude.eq(&location.longitude),
+
+                        // stuff from the collection
+                        locations::notoriety_score.eq(notoriety_info.score),
+                        locations::collection_path.eq(&path),
+                        locations::collection_filename.eq(&filename),
+                        locations::collection_title.eq(&collection.title),
                     ))
                     .execute(db_conn);
                 assert_eq!(Ok(1), rows_inserted);

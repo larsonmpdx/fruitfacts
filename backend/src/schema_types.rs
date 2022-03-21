@@ -126,6 +126,11 @@ pub struct Location {
     pub location_name: Option<String>,
     pub latitude: Option<f64>,
     pub longitude: Option<f64>,
+
+    pub notoriety_score: f32,
+    pub collection_path: Option<String>,
+    pub collection_filename: Option<String>,
+    pub collection_title: Option<String>,
 }
 
 #[derive(Queryable, Associations)]

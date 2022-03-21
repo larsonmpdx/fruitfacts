@@ -6,14 +6,6 @@ use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use serde::Deserialize;
 
-#[derive(Deserialize)]
-struct GetLocationsQuery {
-    min_lat: Option<f64>,
-    max_lat: Option<f64>,
-    min_lon: Option<f64>,
-    max_lon: Option<f64>,
-}
-
 // clamp latitude between -180 and +180
 pub fn latitude_normalize(latitude: f64) -> f64 {
     let remainder = (latitude + 180.0) % 360.0;
@@ -23,6 +15,39 @@ pub fn latitude_normalize(latitude: f64) -> f64 {
     } else {
         remainder - 180.0
     }
+}
+
+
+#[derive(Deserialize)]
+struct GetLocationsQuery {
+    min_lat: Option<f64>,
+    max_lat: Option<f64>,
+    min_lon: Option<f64>,
+    max_lon: Option<f64>,
+}
+
+// search for locations within a bounding box
+// todo: limit results to categories like user locations, extension guides, u-picks, etc.
+#[get("/api/locations")]
+async fn locations_search(
+    query: web::Query<GetLocationsQuery>,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    let conn = pool.get().expect("couldn't get db connection from pool");
+
+    let results = web::block(move || locations_search_db(&conn, &query))
+        .await
+        .unwrap(); // todo - blockingerror unwrap?
+
+    let results = match results {
+        Ok(results) => results,
+        Err(e) => {
+            eprintln!("{}", e);
+            return Err(actix_web::error::ErrorInternalServerError(""));
+        }
+    };
+
+    Ok(HttpResponse::Ok().json(results))
 }
 
 // we should be using spatialite but rust-diesel has no way to load modules currently
@@ -70,13 +95,15 @@ fn locations_search_db(
         // these shouldn't wrap or be out of order. at least with the front end map library we're using
         db_query = db_query.filter(locations::latitude.gt(min_lat));
         db_query = db_query.filter(locations::latitude.lt(max_lat));
-
-        // todo order by notoriety
-
-        // todo filter for only extension pubs, u-picks, etc.
-
-        // todo limit
     }
+
+    db_query = db_query.order(locations::notoriety_score.desc());
+    db_query = db_query.then_order_by(locations::location_name.asc());
+
+    // todo filter for only extension pubs, u-picks, etc.
+
+    // todo limit
+    db_query = db_query.limit(30);
 
     let locations = db_query.load::<Location>(db_conn);
 
@@ -84,28 +111,4 @@ fn locations_search_db(
         Ok(location) => Ok(location),
         Err(error) => Err(error),
     }
-}
-
-// search for locations within a bounding box
-// todo: limit results to categories like user locations, extension guides, u-picks, etc.
-#[get("/api/locations")]
-async fn locations_search(
-    query: web::Query<GetLocationsQuery>,
-    pool: web::Data<DbPool>,
-) -> Result<HttpResponse, actix_web::Error> {
-    let conn = pool.get().expect("couldn't get db connection from pool");
-
-    let results = web::block(move || locations_search_db(&conn, &query))
-        .await
-        .unwrap(); // todo - blockingerror unwrap?
-
-    let results = match results {
-        Ok(results) => results,
-        Err(e) => {
-            eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(""));
-        }
-    };
-
-    Ok(HttpResponse::Ok().json(results))
 }

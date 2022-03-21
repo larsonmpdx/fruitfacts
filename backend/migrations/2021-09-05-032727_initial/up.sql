@@ -101,7 +101,7 @@ CREATE TABLE collections (
   git_edit_time BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
 
   path TEXT, -- directory that we found this in, like "Oregon" or "Oregon/Willamette Valley"
-  filename TEXT,
+  filename TEXT, -- todo path+filename can probably be "not null"
 
   notoriety_type TEXT NOT NULL,
   notoriety_score REAL NOT NULL,
@@ -125,8 +125,14 @@ CREATE TABLE locations (
   collection_id INTEGER NOT NULL,
 
   location_name TEXT,
-  latitude DOUBLE,
-  longitude DOUBLE
+  latitude DOUBLE, -- todo these can probably be "not null"
+  longitude DOUBLE,
+
+  -- copied from the collection to save a lookup
+  notoriety_score REAL NOT NULL,
+  collection_path TEXT,
+  collection_filename TEXT,
+  collection_title TEXT
 );
 
 CREATE TABLE collection_items (

@@ -1,8 +1,10 @@
 import React, { useCallback } from 'react';
+import { Point } from 'ol/geom';
 import { fromLonLat, toLonLat, transformExtent } from 'ol/proj';
 import 'ol/ol.css';
+import { RMap, ROSM, RLayerVector, RFeature, RPopup, RStyle, RFill, RStroke } from 'rlayers';
+import {} from 'rlayers/style';
 
-import { RMap, ROSM } from 'rlayers';
 export default function Home({ locations, setClick, setExtents }) {
   const center = fromLonLat([-100, 40.5]);
 
@@ -32,6 +34,30 @@ export default function Home({ locations, setClick, setExtents }) {
         }, [])}
       >
         <ROSM />
+        {locations && (
+          <RLayerVector zIndex={10}>
+            <RStyle.RStyle>
+              <RStyle.RIcon src={'/fruit_icons/Apple.svg'} anchor={[0.5, 0.8]} />
+            </RStyle.RStyle>
+            {locations.map((location) => (
+              <RFeature
+                geometry={new Point(fromLonLat([location.longitude, location.latitude]))}
+                onClick={(e) =>
+                  e.map.getView().fit(e.target.getGeometry().getExtent(), {
+                    duration: 250,
+                    maxZoom: 8
+                  })
+                }
+              >
+                <RPopup trigger={'hover'} className="example-overlay">
+                  <p>
+                    <strong>{location.collection_title}</strong>
+                  </p>
+                </RPopup>
+              </RFeature>
+            ))}
+          </RLayerVector>
+        )}
       </RMap>
     </>
   );
