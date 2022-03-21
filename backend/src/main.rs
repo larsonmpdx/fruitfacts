@@ -68,7 +68,7 @@ async fn main() -> std::io::Result<()> {
             .service(queries::get_recent_changes)
             .service(queries::get_fact)
             .service(queries::get_plant)
-            .service(queries::variety_search)
+            .service(queries::search::variety_search)
             .service(auth::get_auth_urls)
             .service(auth::receive_oauth_redirect)
             .service(auth::create_account)
