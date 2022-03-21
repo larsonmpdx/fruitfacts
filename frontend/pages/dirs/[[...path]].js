@@ -10,6 +10,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
+// see https://nextjs.org/docs/advanced-features/dynamic-import
 const Map = dynamic(() => import('../../components/map'), { ssr: false });
 
 export async function getServerSideProps(context) {
@@ -32,6 +33,7 @@ export async function getServerSideProps(context) {
       return [];
     });
 
+  //  console.log(JSON.stringify(data, null, 2));
   return {
     props: {
       data,
@@ -48,7 +50,7 @@ export default function Home({ data, pathUsed }) {
       </Head>
       <article className="prose m-5">
         {/* multi collection (directory listing) */}
-        <Map></Map>
+        <Map locations={data.items} />
         {data.directories && data.directories.length > 0 && (
           <ul className="list-disc">
             {data.directories.map((directory, index) => (
