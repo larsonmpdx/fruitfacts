@@ -19,9 +19,9 @@ pub fn latitude_normalize(latitude: f64) -> f64 {
     let remainder = (latitude + 180.0) % 360.0;
 
     if remainder < 0.0 {
-        return remainder + 360.0 - 180.0;
+        remainder + 360.0 - 180.0
     } else {
-        return remainder - 180.0;
+        remainder - 180.0
     }
 }
 
