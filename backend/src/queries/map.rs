@@ -1,4 +1,3 @@
-use super::super::schema_fts::*;
 use super::super::schema_generated::*;
 use super::super::schema_types::*;
 use actix_web::{get, web, HttpResponse};
