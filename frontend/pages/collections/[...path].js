@@ -34,7 +34,7 @@ export async function getServerSideProps(context) {
   console.log(JSON.stringify(data.locations, null, 2));
 
   // cut down data to only this location or location #1 if not specified
-  if(data.items) {
+  if (data.items) {
     data.items = data.items.filter((item) => {
       return item.location_number == location_number;
     });
@@ -44,7 +44,7 @@ export async function getServerSideProps(context) {
 
   const location = data.locations.find((location) => {
     return location.location_number == location_number;
-  }) || {location_name: `unknown location #${location_number}`};
+  }) || { location_name: `unknown location #${location_number}` };
 
   return {
     props: {
@@ -73,25 +73,33 @@ export default function Home({ data, location, path }) {
             <ul className="list-disc">
               {data.locations.length > 1 ? (
                 <>
-                {data.locations.map((location) => (
-                  <li key={location.id}><Link
-                    href={`/collections/${path.join('/')}?loc=${location.location_number}`}
-                  >
-                    {location.location_name}
-                  </Link></li>
-                ))}
-              </>
+                  {data.locations.map((location) => (
+                    <li key={location.id}>
+                      <Link href={`/collections/${path.join('/')}?loc=${location.location_number}`}>
+                        {location.location_name}
+                      </Link>
+                    </li>
+                  ))}
+                </>
               ) : (
                 <>
-                {data.locations.map((location) => (
-                  <li key={location.id}>{location.location_name}</li>
-                ))}
-              </>
+                  {data.locations.map((location) => (
+                    <li key={location.id}>{location.location_name}</li>
+                  ))}
+                </>
               )}
             </ul>
-            {data.locations.length > 1 ? (<h1>{`Chart (${location.location_name})`}</h1>) : (<h1>Chart</h1>)}
+            {data.locations.length > 1 ? (
+              <h1>{`Chart (${location.location_name})`}</h1>
+            ) : (
+              <h1>Chart</h1>
+            )}
             <Chart items={data.items} />
-            {data.locations.length > 1 ? (<h1>{`Plants (${location.location_name})`}</h1>) : (<h1>Plants</h1>)}
+            {data.locations.length > 1 ? (
+              <h1>{`Plants (${location.location_name})`}</h1>
+            ) : (
+              <h1>Plants</h1>
+            )}
             <ul className="list-none">
               {data.items.map((item) => (
                 <li key={item.id}>

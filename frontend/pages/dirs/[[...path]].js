@@ -8,6 +8,9 @@
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
 import Link from 'next/link';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('../../components/map'), { ssr: false });
 
 export async function getServerSideProps(context) {
   const { path } = context.query;
@@ -45,7 +48,7 @@ export default function Home({ data, pathUsed }) {
       </Head>
       <article className="prose m-5">
         {/* multi collection (directory listing) */}
-
+        <Map></Map>
         {data.directories && data.directories.length > 0 && (
           <ul className="list-disc">
             {data.directories.map((directory, index) => (
