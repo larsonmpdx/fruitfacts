@@ -9,6 +9,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import React from 'react';
 
 // see https://nextjs.org/docs/advanced-features/dynamic-import
 const Map = dynamic(() => import('../../components/map'), { ssr: false });
@@ -43,6 +44,9 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home({ data, pathUsed }) {
+  const [click_lonlat, setClick] = React.useState({});
+  const [extents, setExtents] = React.useState({});
+
   return (
     <>
       <Head>
@@ -50,7 +54,9 @@ export default function Home({ data, pathUsed }) {
       </Head>
       <article className="prose m-5">
         {/* multi collection (directory listing) */}
-        <Map locations={data.items} />
+        <Map locations={data.items} setClick={setClick} setExtents={setExtents} />
+        <p>click: {`${JSON.stringify(click_lonlat, null, 2)}`}</p>
+        <p>extents: {`${JSON.stringify(extents, null, 2)}`}</p>
         {data.directories && data.directories.length > 0 && (
           <ul className="list-disc">
             {data.directories.map((directory, index) => (
