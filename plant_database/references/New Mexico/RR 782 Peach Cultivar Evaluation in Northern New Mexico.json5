@@ -1,0 +1,18 @@
+{
+    title: "RR 782 Peach Cultivar Evaluation in Northern New Mexico",
+    author: "Shengrui Yao and Ron Walser",
+    url: "http://contentdm.nmsu.edu/cdm/ref/collection/AgCircs/id/73025",
+    published: "2013",
+    accessed: "March 2022",
+    type: "extension test",
+    locations: [
+        {
+            name: "NMSU Sustainable Agriculture Science Center at Alcalde NM",
+            latitude: 36.090817435793284,
+            longitude: -106.05530138705959
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

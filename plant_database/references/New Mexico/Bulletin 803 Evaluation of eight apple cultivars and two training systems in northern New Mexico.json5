@@ -1,0 +1,18 @@
+{
+    title: "Bulletin 803 Evaluation of eight apple cultivars and two training systems in northern New Mexico",
+    author: "Shengrui Yao, Ron Walser and Charles Martin",
+    url: "http://contentdm.nmsu.edu/cdm/compoundobject/collection/AgCircs/id/71892/rec/16",
+    published: "2012",
+    accessed: "March 2022",
+    type: "journal article",
+    locations: [
+        {
+            name: "NMSU Sustainable Agriculture Science Center at Alcalde NM",
+            latitude: 36.090817435793284,
+            longitude: -106.05530138705959
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}
