@@ -1,7 +1,7 @@
 # Code and Data for www.fruitfacts.xyz
 
-[Backend README](backend/README.md)
-[Frontend README](frontend/README.md)
+* [Backend README](backend/README.md)
+* [Frontend README](frontend/README.md)
 
 # fruitfacts
 1. a project to track typical harvest times for crops, especially tree fruits, which have consistent harvest times year to year

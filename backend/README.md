@@ -7,7 +7,7 @@
 * `cargo fetch` install packages
 * `cargo outdated -d1` (direct only) or `cargo outdated` (all) after installing `cargo install --locked cargo-outdated` (same command to update)
 * `cargo fmt` after installing `rustup component add rustfmt`
-* `cargo fix`a
+* `cargo fix`
 * `cargo clippy` after installing `rustup component add clippy`
   * `cargo clippy --fix`
 
