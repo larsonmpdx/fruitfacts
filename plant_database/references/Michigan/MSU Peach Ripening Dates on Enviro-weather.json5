@@ -366,7 +366,7 @@
             harvest_time_relative: "Redhaven +38"
         },
         {
-            name: "PF 35-007 Fat Lady",
+            name: "PF Fat Lady", // "PF 35-007"
             type: "Peach",
             harvest_time_relative: "Redhaven +40"
         },

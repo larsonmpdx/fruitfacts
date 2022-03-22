@@ -1,9 +1,10 @@
 import React, { useCallback } from 'react';
+import Link from 'next/link';
 import { Point } from 'ol/geom';
 import { fromLonLat, toLonLat, transformExtent } from 'ol/proj';
 import 'ol/ol.css';
-import { RMap, ROSM, RLayerVector, RFeature, RPopup, RStyle, RFill, RStroke } from 'rlayers';
-import {} from 'rlayers/style';
+import { RMap, ROSM, RLayerVector, RFeature, ROverlay, RStyle } from 'rlayers';
+import styles from '../../styles/Map.module.css';
 
 export default function Home({ locations, setClick, setExtents }) {
   const center = fromLonLat([-100, 40.5]);
@@ -42,18 +43,16 @@ export default function Home({ locations, setClick, setExtents }) {
             {locations.map((location) => (
               <RFeature
                 geometry={new Point(fromLonLat([location.longitude, location.latitude]))}
-                onClick={(e) =>
-                  e.map.getView().fit(e.target.getGeometry().getExtent(), {
-                    duration: 250,
-                    maxZoom: 8
-                  })
-                }
               >
-                <RPopup trigger={'hover'} className="example-overlay">
-                  <p>
-                    <strong>{location.collection_title}</strong>
-                  </p>
-                </RPopup>
+                <ROverlay className={`${styles['map-overlay']}`}>
+                    <Link
+                      href={`/collections/${encodeURIComponent(location.collection_path)}${encodeURIComponent(
+                        location.collection_filename
+                      )}`}
+                    >
+                      {location.collection_title}
+                    </Link>
+                </ROverlay>
               </RFeature>
             ))}
           </RLayerVector>
