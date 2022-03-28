@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Point } from 'ol/geom';
 import { fromLonLat, toLonLat, transformExtent } from 'ol/proj';
 import 'ol/ol.css';
-import { RMap, ROSM, RLayerVector, RFeature, ROverlay, RStyle } from 'rlayers';
+import { RMap, ROSM, RLayerVector, RFeature, ROverlay, RStyle, RPopup } from 'rlayers';
 import styles from '../../styles/Map.module.css';
 
 export default function Home({ locations, setClick, setExtents }) {
@@ -44,7 +44,7 @@ export default function Home({ locations, setClick, setExtents }) {
               <RFeature
                 geometry={new Point(fromLonLat([location.longitude, location.latitude]))}
               >
-                <ROverlay className={`${styles['map-overlay']}`}>
+                <RPopup trigger={'click'} className={`${styles['map-overlay']}`}>
                     <Link
                       href={`/collections/${encodeURIComponent(location.collection_path)}${encodeURIComponent(
                         location.collection_filename
@@ -52,7 +52,7 @@ export default function Home({ locations, setClick, setExtents }) {
                     >
                       {location.collection_title}
                     </Link>
-                </ROverlay>
+                </RPopup>
               </RFeature>
             ))}
           </RLayerVector>
