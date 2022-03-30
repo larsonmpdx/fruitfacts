@@ -1,0 +1,4036 @@
+{
+    title: "Self-incompatibility (S) genotypes of cultivated sweet cherries - An overview update 2020",
+    author: "Mirko Schuster, Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, Institute for Breeding Research on Fruit Crops, Pillnitzer Platz 3a, 01326 Dresden, Germany",
+    url: "https://www.julius-kuehn.de/en/zo/staff/p/s/mirko-schuster/",
+    published: "2020",
+    accessed: "March 2022",
+    type: "dictionary",
+    locations: [
+        {
+            name: "no location",
+            latitude: 51.01056478367895,
+            longitude: 13.872889860222235
+        }
+    ],
+    plants: [
+/*
+
+        // table 1, page 2
+
+0900 Ziraat
+S3S12
+TR
+Manisa, Aegean region
+
+20 de Mayo
+S2S6
+ES55
+
+Abardeh
+S3S4
+IR
+
+Abdullah
+S6S9
+TR
+
+Abenavoli bianco
+S6S10
+IT
+
+Aborigenka (Аборигенка)
+S1S3
+UA
+
+Abouriou
+S1S6
+FR 71
+
+Abundance
+S1S3
+US
+Napoleon open pollinated
+
+Aci Bursa
+S3S7
+TR
+
+Aci Kara 0922
+S2S3
+TR
+
+Adelina (Аделина)
+S3S5
+RU
+
+AdeliseTM (Masdel)
+S1S3
+FR
+Gobet VSP4
+
+Adélka
+S1S6
+CZ
+Knauffs Schwarze Granat
+
+Adriana
+S1S14
+IT
+ISF 123 Mora di Cazzano
+
+Agila
+S4S9
+LT
+Leningradskaya chernaya Priusadebnaya
+
+Agiorgitiko Lilantiou
+S4S9
+GR
+
+Agostina
+S3S13
+IT
+local cultivar, Sicily
+
+Agris
+S1S2
+LV
+
+Aida (IV-13/20)
+S6S12
+HU
+Moldvai fekete (Moldavian black) H 236 (Germersdorfer x o.p.)
+
+Aiya
+S1S7
+LV
+
+Akşehir Napolyonu
+S3S12
+TR
+
+Alaya (Алая) S1S?
+RU Melitopolskaya chernaya (Мелитополкаячерная) open pollinated
+
+Alexus
+S1S2
+EO
+Lijana open pollinated
+
+Alfa
+S1S6
+CH Basler Adler Erstfrühe
+Alfa
+S3S4
+CH
+Basler Adler Erstfrühe
+
+Alienuszka S2S5 VII UA 64
+
+Allahdiyen S3S12 XXII TR 44
+
+Allers Späte S1S5 XIV DE 2, 91
+
+Allmän Gulröd S2S3
+IV SE 4, 15
+
+Alma S1S5 XIV DE Rube Allers Späte 9, 91
+
+Almaznaya (Алмазная) S3S3 XVI RU 109
+
+Almore S1S6 XX SE Napoleon Frogmore 36
+
+Alpine de Provence S1S3
+II FR 71
+
+Altenburger Melonen-kirsche (Büttners Späte Rote Knorpelkirsche)
+S3S4
+DE
+seedling of Büttner from Halle (Saale)
+
+Althof (Graf)
+S4S5
+DE
+local cultivar, Baden region
+
+Amarena grecanica S1S14 XXXIII IT 45
+
+Amarena grecanica S3S14 LIV IT 79
+
+Amazonka S4S5 V UA 77
+
+Ambrunes S3S6 VI ES local cultivar, Extremadura 55
+
+Ambrunes de Garganta S3S6 VI ES55
+
+Ambrunes Rabo S1S5 XIV ES55
+
+Ambrunesa S3S6 VI ES25, 26
+
+Amfurter Kirsche S1S2
+I DE 4
+
+Amid S3S4
+III CZ Kordia Vic 64, 77, 91
+
+Ampfurter Knorpelkirsche S3S4
+III DE 38
+
+AndersonTM (NY 9295)
+S3S6
+US
+Wederscher Markt open pollinated
+
+Angela
+S3S4
+US Nepa Longstem Bing open pollinated
+
+Anita (IV-3/41)
+S3S6
+HU
+Trusenszkaja 2 H 3 (Germersdorfer x o.p.)
+
+Annabella
+S1S5
+DE
+Rube Allers Späte Knorpel
+
+// table 1, page 3
+
+Annushka (Аннушка) S3S4
+
+III UA Donchanka Valerii Chkalov 64, 77, 89
+Anons (Анонс) S5S9 XXXVII UA Bigarreau Napoleon Blanc Pollen mix of 13 sweet cherry
+
+cv's
+
+64, 89, 108
+Anshlag (Аншлаг) S1S9 XVIII UA Zöschener Oktober Knorpel Presryzhna 89
+Anta S6S16 XXXIX LT Zemaiciu rozine pollen mix (Napoleon +
+Dniprovka)
+
+30
+Antuono S10S16 0 IT 79
+
+Aranka S1S3
+II CZ Kaštanka (Early Rivers) Moreau 77, 91
+
+Areko (Hamid) S1S3
+II DE Kordia Regina 38
+
+Artvin 4
+S3S6
+TR
+
+Artvin 43
+S3S12
+TR
+
+Artvin 45
+S1S7m 0 TR 52
+
+Artvin 5
+S14S37
+0 TR 52
+
+Asenova rana
+S3S9
+RS
+Drogans Gelbe Majova rana
+
+Astrid (Späte von Wedler)
+S3S4
+DE
+
+Agustinas S3S7 XLIV ES local cultivar, Galicia (North Western Spain) 90
+
+Augustkirsche S3S7 XLIV DE 31
+
+Augusztus Elején Érő B S1S6 XX HU 34
+
+Augusztus Elején Érő A S3S4
+HU
+
+Augusztusi Fehér
+S3S5
+HU
+
+Avorio (Capo di serpe,
+Corittu, Durona di
+Matterello, Gavorgnana,
+Nerona, Ravenna precoce,
+Roma, )
+
+S3S13 XIX IT 79
+
+Axel (Alex, III-16/45) S3S3' SC HU Van JI 2420 21, 22
+Aydin Kirazi 0890 S2S3
+
+IV TR 52
+Aydin Siyahi S2S10 XLII TR 52
+Bada S1S4
+
+IX US Ord unknown 16
+
+Badacsoner Schwarze
+(Badacsoner Riesenkirsche)
+S3S4
+
+III HU north-east border of Lake Balaton 9, 91
+
+Badacsony S3S6 VI HU 24
+Badacsonyi S3S12 XXII HU 71
+Badacsonyi orias S3S12 XXII HU 71
+Badeborner S3S5 VII DE local cultivar from Badeborn near Ballenstedt (Harz) 31
+Badeborner Schwarze
+Knorpelkirsche
+
+S3S4
+
+III DE 91
+Bademil 0898 S2S10 XLII TR 44
+Bakirtzeika S3S4
+
+III GR 65
+
+Baltavarská S3S4
+
+III HU 91
+Balzams S2S5 VIII LV 36
+Barkhatnaya (Бархатная) S5S6 XV RU Bigarreau Napoleon Blanc
+(Наполеон белый)
+
+Anadolskaya (Анадольская) 110
+Baschimeiri S1S6 XX CH 24
+Basler Adlerkirsche S1S5 XIV CH local cultivar, Nothwest SwisS28, 91
+Basler Langstieler S1S2
+
+I CH 38, 91
+
+Baumanns May A S1S2
+
+I GB 4, 15
+Beata S3S9 XVI DE Lambert compact open pollinated 38
+Beaulieu S3S9 XVI FR 71
+Bedford Prolific A S1S2
+
+I GB 4, 15
+
+Bela (Бела) S2S3
+
+IV RU 109
+
+Belge S3S4
+
+III FR 25
+Belge (Ferrovia) S3S12 XXII FR 71
+
+
+// table 1, page 4
+
+
+Belle Agathe S1S3
+
+II GB 15
+Bella di Firenze S13S16 LV IT 79
+Bella di Garbagna S6S13 XII IT 79
+Bella di Pistoia A (Noble) S6S13 XII IT 79
+Bella di Pistoia B S3S13 XIX IT 79
+Belliquette S5S6 XV FR 71
+BelliseTM (Bedel) S1S9 XVIII FR Starking Hardy Giant Burlat 31
+Benedetta S3S6 VI IT Lambert Compact Mora di Cazzano x Napoleon 31, 79
+Benisayaka S1S6 XX JP Satonishiki Seneka 13
+Benishuho S4S6 XVII JP Satonishiki Tenkonishiki 13
+Benjaminler S1S7 XXVIII DE local cultivar, Baden region 29, 31
+BentonTM (PC 7146-8) S4'S9 SC US Stella Beaulieu 59
+Bereket (Берекет) S1S7 XXVIII RU 109
+Bertiello S6S10 XLVIII IT 79
+Beta S1S5 XIV CH Zweitfrühe Basler Adlerkirsche 28, 91
+Bianca S1S5 XIV DE Rube Allers Späte Knorpel 2, 93, 91
+Biancona di Garbagna S3S13 XIX IT 79
+Bigalise (Enjidel) S2S3
+
+IV FR 24, 35
+
+Bigarrå fröplanta från E.
+Petterss
+
+S3S6 VI SE 36
+
+Bigarreau de Mezel (Mezel,
+Schwarze Knorpel von Mezel)
+
+S3S9 XVI FR 15
+
+Bigarreau de Schrecken
+(Schreckens Kirsche)
+
+S1S3
+
+II DE 4, 15, 78
+
+Bigarreau Esperen (Esperens
+Knorpelkirsche)
+
+S3S4
+III BE 15
+
+Bigarreau Gaucher (Gauchers
+Knorpelkirsche)
+
+S3S5 VII DE 15
+
+Bigarreau Kracinskogo
+(Биггаро Красиского)
+
+S1S3
+
+II RU 109
+Bigarreau Noir S2S4 XIII FR 71
+Bigarreau Noir de Winkler S1S3
+
+II DE 4
+Bigarreau Pelisser S3S13 XIX FR 71
+Big Dragon S1S5 XIV CN 88
+Binam S4S14 XXXI IR 3
+Bing S3S4
+
+III US Black Republican Napoleon 4, 6, 10, 16, 17,
+25,
+
+Bing S1S3
+
+II US Black Republican open pollinated 91
+
+Black Downton S1S2
+
+I GB 4, 15
+
+Black Eagle (Eagle) S1S2
+
+I GB Yellow Spanish May Duke 4
+Black Eagle A S3S5 VII US15
+Black Elton (Elton) S1S3
+
+II GB Yellow Spanish White Heart 4, 15
+
+Black Giant S1S4
+
+IX US5, 16
+Black GoldTM (Ridgewood) S4'S6 SC US Starks Gold Stella 88
+Black PearlTM (NY
+8139)
+
+S4S13 XXXIV US75, 81
+
+Black Republican S1S4
+
+IX US Black Eagle open pollinated 16
+
+Black Star S1S3
+
+II IT Lapins Burlat 39
+
+Black Tartarian S1S2
+
+I GB 4, 16
+Black Tartarian E S6S9 X US15, 88
+Black YorkTM (Haas, NY 1725) S1S4
+
+IX US Gaint Emperor FranciS69
+
+
+// table 1, page 5
+
+Bladorózowa S4S13 XLV PL 64, 91
+Blaietes S2S3
+
+IV ES35
+
+Blanca S3S4
+
+III ES55
+Blanca de Anca S14S16 LXII ES local cultivar, Galicia (North Western Spain) 90
+Blanca de Provenza (Blanche
+de Provence)
+
+S1S5 XIV ES55
+Blanca Italiana S3S6 VI ES55
+Blancal S3S4
+
+III ES35, 90
+
+Blancale Precoce S1S3
+
+II FR 71
+Blanchere S6S12 XXIV FR 71
+Blanco S3S4
+
+III ES55
+Banco de Cedo S3S9 XVI ES local cultivar, Galicia (North Western Spain) 90
+Blankenburger S2S3
+
+IV DE local cultivar, Harz region 31
+Blaser S3S13 XIX CH 40
+Blaze Star S4'S6 SC IT Lapins Durone compatto di Vignola 21, 88
+Bleyhls Braune S3S5 VII DE 2
+BlushingGoldTM (Pendleton,
+NY 8182)
+
+S1S6 XX US Yellow Glass Emperor FranciS69
+Boambe de Cotnari S2S7 XI RO 104
+Bombardune S6S16 XXXIX IT 45, 79
+Bopparder Frühkirsche
+(Frühe von Boppard)
+
+S3S6 VI DE 91
+
+Botond S3S4
+
+III HU 22
+Bouargoub S2S10 SC TN local cultivar 95
+Bowery Heart (Bowyer Early
+Heart)
+
+S1S6 XX GB 15
+
+Bradbourne Black (maybe
+syn. for Hedelfinger)
+
+S3S5 VII GB 7, 15, 17
+Braune Herzkirsche S3S5 VII DE 40
+Braune Prinzer
+(Prinzenkirsche)
+
+S1S3
+
+II DE 31
+Brennkirsche Doll S6S7 XXX DE local cultivar, Baden region 31
+Brigitte S3S4
+
+III DE Van Werdersche Frühe x Büttners
+
+Rote Knorpel
+
+38
+Brooks S1S9 XVIII US Rainier Early Burlat 25, 88
+Bruelles S1S3
+
+II FR 71
+Bryanskaya rozovaya S3S6 VI RU Muskatnaya Chornaya open pollinated 36
+Bucium S3S6 VI RO Van Boambe de Cotnari 104
+Buholzer S6S13 XII CH local cultivar, Affoltern, Sihltal 40
+Bujnakska Chjornaya
+(Буйнакская чёрная)
+
+S3S4
+
+III RU 109
+Buketova S1S16 0 CZ 91
+Burgandy PearlTM (NY 38L) S3S4
+
+III US75, 80
+Burlat S3S9 XVI FR selected by Leonard Burlat, from Rhone valley 15, 18, 25, 91
+Büttners Späte Rote
+Knorpelkirsche
+
+S3S4
+
+III DE seedling from Büttner, Halle/S. 2, 4, 15, 20, 91
+
+Buynayskaya S2S3
+
+IV UA 53
+Cáceres S1S9 XVIII ES55
+Cacouanne S3S6 VI FR 71
+Caddusa (Cappuccia Chiusa
+Sclafani)
+
+S13S22 LIII IT local cultivar, Sicily 32, 79
+Caihong S3S9 XVI CN 88
+Caillou S6S17 0 FR 71
+
+// table 1, page 6
+
+Caixia S3S6 VI CN 88
+California S1S3
+
+II 62
+Calusetto Tuma S4S6 XVII IT 79
+Cambrina S1S13 LI US Prosser I 633 NY 5656 68
+Camponica S13S16 LV IT 79
+Camus S9S13 LX FR 71
+Camus de Venasque S9S13 LX FR 71
+Canada GiantTM (Sumgita) S1S2
+
+I CA 21
+Canaima S3S9 XVI ES55
+Cappuccia Bivona S6S22 XL IT local cultivar, Sicily 32
+Cappucciarica Cardeto
+(Cappucciarica San Lorenzo)
+
+S3S10 XLIX IT 79
+Cappuccia Castelbuono S3S6 VI IT local cultivar, Sicily 32, 79
+Cappuccia Doppia S6S22 XL IT local cultivar, Sicily 32
+Cappuccia Etna S6S22 XL IT local cultivar, Sicily 32
+Cappuccia Imperiale S6S16 XXXIX IT local cultivar, Sicily 32, 79
+Cappucciarica /
+Cappucciarica San
+
+S3S10 XLIX IT local cultivar, Sicily 45
+Carammendula 2 S6S16 XXXIX IT 79
+Carlotta S3S14 LIV IT Lambert comp. Mora di cazzano x Napoleon 31, 79
+Carly O'Lory S1S9 XVIII 60
+Carmen (III-42/114) S4S5 V HU Yellow Dragan (Drogans Gelbe) H 203 (Germersdorfer x o.p.) 22, 83
+Čarna S1S4
+
+IX RS Majova rana Bigarreau de Schrecken 78, 104
+
+Carnation C S1S2
+
+I GB 4, 15
+
+Caroon B S1S3
+
+II GB 4, 15
+Carraffune S6S16 XXXIX IT 79
+Carraffune bianco /
+Lombardune
+
+S6S14 L IT 45, 79
+
+Carrammendula2 /
+Carraffune
+
+S6S16 XXXIX IT 45
+Carrubbedda S3S22 XXXVIII IT local cultivar, Sicily 32, 79
+Cashmere (PC 7144-3) S4'S9 SC US Stella Early Burlat 31, 35
+Castañera S3S4
+
+III ES54, 55
+Castor S1S12 XXXII NL Schneiders Späte Knorpelkirsche open pollinated 28
+Cavalier (Rynbrandt) S2S3
+
+IV US seedling from a orchard of 'Schmidt' cherry 18
+Cavaliere S6S10 XLVIII IT 79
+Cavallaro S5S9 XXXVII IT local cultivar, Sicily 32
+CelesteTM (Sumpaca, 13S-24-
+28)
+
+S1S4' SC CA Van Newstar 16, 17, 25
+
+Cemal S3S4
+
+III TR 44
+Ceresa Colombe S3S13 XIX IT 79
+Ceresa Montecastello S3S13 XIX IT 79
+Černá špička S1S3
+
+II CZ 91
+Černá z Hořan S4S12 XXVII CZ 91
+Černá H 21/40 S1S6 XX CZ 91
+Cerise Petite Precoce S1S6 XX FR 71
+Chalonnaise N 2 S3S4
+
+III FR 71
+
+Changbahong S1S4
+
+IX CN 27
+Changbahong S4S9 XXI CN 105
+Chapata (Xapata) S3S14 LIV FR 71
+Charger S1S7 XXVIII GB P. avium F1/3 open pollinated 17, 18, 25
+Chelan S3S9 XVI US Stella Beaulieu 18, 88
+
+// table 1, page 7
+
+Cherry BlushTM (IFG Cher-
+four)
+
+S1S6 XX US 87
+
+Cherry BurstTM (IFG Cher-
+two)
+
+S9S ?
+
+US 87
+
+Cherry CrunchTM (IFG Cher-
+three)
+
+S3S6 VI US 87
+Cherry GlowTM (IFG Cher-six) S1S6 XX US 87
+
+Cherry GrantTM (IFG Cher-
+one)
+
+S6S9 X US 87
+
+Cherry MoonTM (IFG Cher-
+seven)
+
+S4S9 XXI US 87
+
+Cherry TreatTM (IFG Cher-
+five)
+
+S1S ?
+
+US 87
+Cherovina Primerenca S12S22 XLI ES35
+Cherovina Tardana S3S22 XXXVIII ES35
+Chinook S1S4
+
+IX US Bing Gil Peck 1, 4, 16, 25
+Chispas S12S21 0 ES55
+Chlumecká pozdni S3S5 VII CZ 77
+Chlumecká Černá S1S3
+
+II CZ 91
+
+Christiana S3S6 VI CZ Van Kordia
+Chunhui S1S9 XVIII CN Van open pollinated 88
+Chunjiao S1S9 XVIII CN Van Longguan 88
+Chunlei S3S9 XVI CN Hongdeng Van 88
+Chunlu S1S6 XX CN Van open pollinated 88
+Chunxiao S3S9 XVI CN Rubinovaya rannaya mutant 88
+Chunxiu S4S6 XVII CN Bing open pollinated 68, 88
+Chunyan S3S9 XVI CN Bigarreau Moreau Van 88
+Ciauzara S3S10 XLIX IT 79
+Ciliegia Bianche Marostegane S3S14 LIV IT 79
+Ciliegia di Udine S6S13 XII IT 79
+Citra S3S10 XLIX IT 45, 79
+Coe S1S2
+
+I US Ox Heart open pollinated 4
+
+Coeur de Noyon S3S4
+
+III FR 71
+Coeur de Pigeon Tardif S1S6 XX FR 71
+Cognac S3S13 XIX FR 31
+Colafemmina S13S16 LV IT 79
+Colney S5S6 XV GB 7, 15, 16
+Coloradilla S3S6 VI ES26, 55
+Columbia (Benton) S4'S9 SC US Stella Beaulieu 21, 88
+Comiola di Montecatini S3S13 XIX IT 79
+Compact Lambert S3S4
+
+III CA Mutant from Lambert 71
+Compact Stella S3S4' SC CA irradiated Stella 10, 25
+Cor de Colom S3S13 XIX ES55
+Coral S1S3
+
+II 51
+
+Coral Champagne S1S3
+
+II US Rainier Burlat 68, 81
+
+CoraliseTM (Gardel) S2S3
+
+IV FR 24, 25
+Cordada Niedda S16S22 XLVII IT 79
+Cornaiola S6S13 XII IT 79
+Corniola S1S6 XX IT local cultivar province Forli 31
+Corniola CI 508 (Corniola CI
+523, Corniola CI 79)
+
+S3S6 VI IT 79
+
+// table 1, page 8
+
+Corniola A / Corniola B S3S6 VI IT 45
+Corum S2S4 XIII US25, 51
+Courte Queue S3S9 XVI FR 71
+CowicheTM (PC 7903-2) S5S9 XXXVII US PC 7147-4 (Stella x Hollander or
+Starking Hardy Giant)
+
+PC 7146-11 (Stella x Beaulien) 33, 58
+CREA_ro2_sel_40 S3S14 LIV IT irradiating budsticks of Mora di Cazzano (Italian landrace) 71
+Creska S3S12 XXII HR 82
+Crevalcore (Lingua de fori) S3S14 LIV IT 79
+CristalinaTM (Sumnue, 2C-61-
+22)
+
+S1S3
+
+II CA Star Van 16, 17, 25
+Cristallina S3S9 XVI IT 79
+Cristobalina S3S6 SC ES25
+Crognolina di Maenza S6S10 XLVIII IT 79
+Crognolo S3S14 LIV IT 79
+Cryall's Seedling S2S7 XI GB 5, 15
+Crystal Champaing S3S5 VII 60
+Csákvári Korai S3S4
+
+III HU 34
+Cserkeszőlő 2 S6S9 X HU 34
+Cserkeszőlő 4 S6S13 XII HU 34
+Cserkeszőlő 7 S3S5 VII HU 34
+Cua Llarga S6S9 X ES55
+Cuore (Di Guglielmo,
+Usignano)
+
+S9S13 LX IT 79
+Cuore Aspromonte S3S13 XIX IT 45, 79
+Cypres S1S3
+
+II FR 71
+
+Czarna pozna S3S4
+
+III PL 38
+
+Czersnia - pozna
+ciemnoczerwona
+
+S3S4
+
+III PL 38
+D 44-1 S4S5 V UA 64
+D 48-52 S2S5 VIII UA 64
+D 49-1 S3S5 VII UA 64
+Da Cortina S3S16 XXIII ES local cultivar, Galicia (North Western Spain) 90
+Dagestanka (Дагестанка) S3S9 XVI RU Aprelka chernaya (Апрелка
+
+чернная)
+
+Drogans Gelbe 53, 109
+
+Dagestanskaya rannayay
+(Дагестаная ранняя)
+
+S2S3
+IV RU 109
+
+Dame Nancy (FB 420) S2S3
+
+IV AU Stella open pollinated 38
+Dame Roma (FB 1111) S4'S13 SC AU Black Douglas Stella 38, 94
+Danners Späte B 17 S1S19 0 DE local cultivar, Baden region 31
+Danners Späte B 18 S4S22 0 DE local cultivar, Baden region 31
+Dányi Cseresznye S6S9 X HU 34
+Dar Izobiliya (Дар изобилия) S6S ?
+
+RU Melitopolskaya chernaya
+(Мелитополкаячерная)
+
+Frantsuzkaya chernaya
+(Французская черная)
+110
+Dar Mliyeva (Дар Млієва) S5S6 XV UA Lyubskaya open pollinated 89
+Dawson S1S4
+
+IX AU 16
+Dazi S1S6 XX CN 27
+De Angelin S1S4
+
+IX ES55
+De Capella Primerenca S4S6 XVII ES55
+De la Casa S3S6 VI ES26
+De la Pinta (CITA) S1S3
+
+II ES55
+
+De la Pinta (EEAD) S3S4
+
+III ES55
+De la Rosa S1S6 XX ES55
+
+// table 1, page 9
+
+De Mango Largo S3S22 XXXVIII ES55
+De Vino S1S2
+
+I ES local cultivar, Galicia (North Western Spain) 90
+Deacon S2S4 XIII US16, 91
+Debanka S1S6 XX UA 31
+Debora S4S6 XVII CZ Kordia Merton Reward 64
+Dĕkanka S3S6 VI CZ 91
+Del Cardito S3S24 XLVI ES25, 55
+Del Cubeto S3S13 XIX ES55
+Del cuore S1S3
+
+II IT 79
+Del Gordo S3S6 VI ES26
+Del Monte S6S13 XII IT 79
+Del Pollo S6S9 X ES26
+Del Terreno S3S22 XXXVIII ES55
+Della Recca S13S16 LV IT 79
+Delta S5S6 XV CH Basler Adler Zweitfrühe 40, 91
+Demetra (Деметра) S3S ?
+
+RU 110
+Dicke Braune S3S12 XXII DE 38
+Di Giardino (Vallescura 1,
+Vallescura 2)
+
+S3S9 XVI IT 79
+Di Nello S3S12 XXII IT 79
+Didi S3S4
+
+III DE local cultivar, Baden region 31
+Dikkeloen S5S14 XXXV GB 15
+Disznódi Fűszeres S3S4
+
+III HU 34
+Do Rabo Courto S2S16 LXI ES local cultivar, Galicia (North Western Spain) 90
+Dollenseppler S1S7 XXVIII DE Pflugwirt
+(from Mösbach, Baden)
+
+open pollinated 29, 31
+
+Dollenseppler B 5 S1S4
+
+IX DE local cultivar, nursery Kiefer, Baden region 24, 31
+
+Dolls Langstieler S1S4
+
+IX DE local cultivar, Baden region 31
+Dolores (Долорес) S2S5 VIII RU 109
+Donchanka (Дончанка) S4S5 V UA Drogans Gelbe Knorpel open pollinated 89
+Donetska krasavitsa
+(Донецька красавиця)
+
+S3S9 XVI UA Drohana rozova Valerii Chkalov 64, 89
+
+Donetsiy ugolok (Донецький
+угольок)
+
+S3S5 VII UA 64, 77, 89
+Dönissens Gelbe Knorpel S3S6 VI DE seedling from Guben/Neiße 4, 9, 16, 28, 31,
+91
+Don Vincenzo S3S13 XIX IT 79
+Don Antoni S16S22 XLVII IT local cultivar, Sicily 32, 79
+Donnanka (Donchanka) S3S6 VI UA 77
+Drogans Gelbe S1S5 XIV DE Seedling selected from Drogan near Guben 31, 36, 77
+Drogans Gelbe S19S x 0 DE 91
+Drushba (Дружба) S1S9 XVIII UA Drogans Gelbe pollen mix (Mrelitopolska
+krapchasta+Melitopolska
+chorna+Big. Oratovskoho)
+88a
+
+Dunabogdányi Szív Alakú
+Cseresznye
+
+S1S4
+
+IX HU 34
+Dura del reddito S3S6 VI IT 79
+Dura Succosa S1S5 XIV IT local cultivar, Sicily 32, 36,
+Durdevka (Ritopek) S3S6 VI RS 83
+Duroncino de Costasvina S3S13 XIX IT 79
+Durella di Cesena (Durella A,
+Morandina)
+
+S3S13 XIX IT old local landrace (Emilia-Romagna, Italy) 45, 79
+Durella di Cesena S1S13 LI IT 79
+Durona di Bisceglie S6S16 XXXIX IT 79
+Durona di San Giovanni S1S13 LI IT old local landrace (Emilia-Romagna, Italy) 71, 79
+
+// table 1, page 10
+
+Durona di Vignola (Nero I di
+Vignola)
+
+S6S13 XII IT local cultivar, Vignola region 28
+Durona Misciano S9S13 LX IT 79
+Durona Sangiovanni S1S13 LI IT 45
+Durone compatto di Vignola S6S13 XII IT obtained irradiating budsticks of Durone Nero II 71, 79
+Durone di Cesena S6S13 XII IT local landrace (Emilia-Romagna, Italy) 71
+Durone di Cesena CI 255 S3S6 VI IT 79
+Durone di Cesena CI 514
+(Durone nero II CI 201)
+
+S6S13 XII IT 79
+
+Durone di Coredo S1S3
+
+II IT 79
+
+Durone di Verona (Mora di
+Cazzano)
+
+S3S14 LIV IT local cultivar, Veneto region 31
+
+Durone milanese (Mora di
+Cazzano 40)
+
+S3S14 LIV IT 79
+
+Durone Nero 1 S1S3
+
+II IT 91
+Durone Nero 3 (Duroni 3) S3S6 VI IT local cultivar, Vignola region 22, 25
+Durone Nero I (Durone di
+Modena, Durone di Vignola)
+
+S3S13 XIX IT old local landrace (Vignola, Province Modena, Italy) 45, 79
+
+Durone Nero II (Big. Tardif de
+Vignola, Durone di Vignola II)
+
+S6S13 XII IT old local landrace (Vignola, Province Modena, Italy) 45
+Durone Nero PILL S3S9 XVI IT 31
+Durone Tardivo de
+Valstaffora
+
+S1S4
+
+IX IT 31
+Dzherelo (Джерело) S6S9 X UA 89
+EarliseTM (Early Lory, Rivedel) S1S9 XVIII FR Starking Hardy Giant Burlat 25, 31
+Early Amber S3S6 VI GB 4, 16
+Early Bigi® (Bigi Sol) S1S9 XVIII FR 35
+Early Burlat S3S5 VII US10, 13, 16, 20
+Early Cherry (Prislonica 3) S3S4
+
+III RS 83
+
+Early GarnetTM (Maraly, Early
+Red )
+
+S1S9 XVIII US Garnet Ruby 39
+Early Korvik S2S6 XXV CZ mutant of Korvik (Kordia x Vic) 38, 68
+Early Korvik S3S4
+
+III CZ mutant of Korvik (Kordia x Vic) 64
+Early Lory (Earlise, Rivedel) S1S9 XVIII FR Starking Hardy Giant Burlat 68, 83
+Early Lyons S5S6 XV FR 20
+Early Lyons BC S1S4
+
+IX US16
+Early Lyons NY (Jaboulay) S6S9 X US12
+Early Magyar S3S6 VI HU 35
+Early Purple (Hinode) S2S7 XI GB 28
+Early Rivers S1S2
+
+I GB Early Purple open pollinated 6, 10, 13, 16,
+17, 18, 91
+
+Early RobinTM (Doty) S1S3
+
+II US mutation of ‘Rainier’ but unlikely (inconsistent S -alleles) 27, 69
+Early StarTM (Panaro 2) S4'S9 SC IT Burlat Stella compact 21
+Early Van Compact S1S3
+
+II CA irriated cultivar Van 25
+
+Ebony PearlTM (NY 32, Ebony) S1S4
+
+IX US Lambert Republican (probably) 75, 81
+
+Edime S2S3
+
+IV TR 44
+
+Eisenbraune S3S4
+
+III DE 38
+Elfrida S5S6 XV LV 36
+Elifli S3S4
+
+III TR 44
+
+// table 1, page 11
+
+Elton Heart BC (Eltonkirsche,
+Sercova)
+
+S4S6 XVII CA Yellow Spanish White Heart 16
+
+Elton Heart EM (Eltonkirsche,
+Sercova)
+
+S3S6 VI GB Yellow Spanish White Heart 4, 15, 27
+Elza S1S6 XX CZ Kordia Starking Hardy Giant 102
+Emma S1S6 XX DE 85, 97
+Emperor Francis (Kaiser Franz
+Kirsche, Kaiser Franz)
+
+S3S4
+
+III AT/DE 51, 91
+
+Emperor Francis B S1S2
+
+I GB 15
+Endiablà S3S3 SC ES35
+Erianne S5S6 XV GB 15
+Erika S1S3
+
+II DE Rube Stechmanns Bunte 2, 8
+Erika S4S6 XVII 91
+Ermstaler I S7S14 LVII DE local cultivar, Baden region 38
+Ermstaler II S5S6 XV DE local cultivar, Baden region 38
+Erstfrühe S1S6 XX DE 40
+Eryataği Amasya 0849 S4S7m 0 TR 52
+Este Brognolico S3S6 VI IT 79
+Etienne Thuileaux S1S7 XXVIII FR 71
+F 98 Caroon (Caroon B?) S1S3
+
+II GB 71
+
+F1/3 S1S2
+I
+
+99
+F12/1 S7S14 0 IT 79
+Fabiola S1S6 XX CZ Van Kordia 64, 77, 91
+Farmosi Cseresznye S3S12 XXII HU 34
+Farnstädter Schwarze ( -
+Knorpelkirsche)
+
+S3S5 VII DE local cultivar from Querfurt (Farnstädt, Gatterstädt) 9, 31
+Fehér Cseresznye VK S3S6 VI HU 34
+Fehér Ropogós Pollenadó S3S6 VI HU 34
+Fehér Cseresznye S3S6 VI HU 34
+Fekete Helyi Cseresznye S5S9 XXXVII HU 34
+Feldes Frühe Schwarze S7S14 0 DE 91
+Felicita S4'S9 SC CZ Krupnoplodnaya Stella 102, 103
+Fengjin S4S9 XXI CN 41, 105
+Ferbolus (Vernel) S5S13 XXVI FR Hedelfinger Reverchon 28, 31
+Feras S6S7 XXX ES local cultivar, Galicia (North Western Spain) 90
+Fercer® (Arcina) S2S6 XXV FR Stark Hardy Giant open pollinated 25
+Ferdiva S3S6 VI FR Fercer open pollinated 39
+Ferdouce S1S2
+
+I FR Rainier Fercer 39
+Feria S2S4 XIII FR Fercer open pollinated 31
+Ferlizac S2S13 LXIII FR Fercer open pollinated 71
+Fermina S1S14 XXXIII FR Vittoria open pollinated 31
+Fernier S1S6 XX FR Tardif de Vignola Rainier 31
+Fernola S3S6 VI FR 71
+Ferobri S6S9 X FR Burlat Fercer 31
+Ferpact S1S6 XX FR Fercer open pollinated 31
+Ferpin S2S9 XLIII FR Sue LapinS71
+Ferprime (Primulat) S2S9 XLIII FR Fercer open pollinated 31, 35
+Ferrovia (Belge, Maiatica di
+Taurasi, Noire de Meched)
+
+S3S12 XXII IT local cultuivar, similar to Bella di Pistoia, Bari region 25, 79
+Ferrovia Spur S3S12 XXII IT Mutant of Ferrovia 71
+Fertard S3S6 VI FR Sunburst open pollinated 31
+Fertille S3S6 VI FR Fercer Van 39
+
+// table 1, page 12
+
+Fertődi Csüngő S6S13 XII HU 34
+Feuerkirsche S4S14 XXXI DE local cultivar, Baden region 29, 31
+Ficktaler Rotstieler S1S2
+
+I CH local cultivar, Baden region 40
+
+Fiesenhofer S1S4
+
+IX DE local cultivar, Baden region 31
+
+Fiore A / Fiore B (Ciliegia del
+Fiore, Forli, Precoce del
+Fiore)
+
+S3S13 XIX IT local cultivar, Forli 45, 79
+Final 10.4 (4132) S3S4' SC DE 97, 112
+Final 11.3 (3161) S3S4' SC DE 97, 112
+Final 12.1 (1151) S3S4' SC DE 97, 112
+Final 13.1 (6111) S3S4' SC DE 97, 122
+Firm Red (Late GarnetTM) S1S9 XVIII US Large Red Garnet 31
+Flamentiner S6S12 XXIV FR? 15
+Folfer S6S9 X FR Fercer open pollinated 39
+Forli S3S13 XIX IT 79
+Forma di Cuore S6S16 XXXIX IT local cultivar, Sicily 32
+Franc Tellier S6S13 XII FR 71
+Francesina (Francia, Siso) S6S9 X IT 79
+Frantsis (Францис) S3S4
+
+III RU 110
+
+Fraoula Volou S3S4
+
+III GR 46
+
+Frisco S1S4
+
+IX US43
+
+Frogmore Early (Frogmore
+Bigarreau)
+
+S1S3
+
+II GB 4, 15
+
+Fromms Herzkirsche
+(Fromms Schwarze
+Herzkirsche)
+
+S1S3
+
+II DE seedling of Fromm from Guben/Neiße 4
+
+Frühe Luxburger S3S5 VII CH 15
+Frühe Rosmarin S1S3
+
+II CH 40
+
+Frühe von Boppard
+(Bopparder Frühe)
+
+S3S6 VI DE 91
+
+Frühe von der Weid S3S4
+
+III CH 40
+
+Früheste der Mark (Küppers
+Frühkirsche)
+
+S2S3
+IV DE seedling of Küppers from Guben/Neiße 31
+Fryksås S2S6 XXV SE 36
+Fuchen S1S9 XVIII CN Summit Hongdeng 88
+Fuciletta nostrale S6S13 XII IT 79
+Furistera Napoleona S3S9 XVI IT local cultivar, Sicily 32
+Fuxing S1S3
+
+II CN Summit Van 88
+
+Furticchiara (Limone,
+Napoleon, Sardinia I)
+
+S3S4
+
+III IT 45, 79
+Galucio S6S13 XII IT 79
+Gambolungo di Garbagna S3S12 XXII IT 79
+Gamma S3S5 VII CH Mischler Zweitfrühe 8
+Gamma S1S6 XX 91
+Gårdebo S3S6 VI SE 36
+Garganteña S3S6 VI ES55
+Garnet S1S4
+
+IX US Hardy Giant Bing 25, 31
+Garonowskaya S3S9 XVI BG 31
+Garrafal S3S24 XLVI ES25
+Garrafal de Lérida S9S13 LX ES55
+Garrafal del Jerte S3S22 XXXVIII ES55
+Garrafal Monzón S3S4
+
+III ES55
+
+Garrns Bunte S1S3
+
+II DE 2
+Gascogne Double S3S7 XLIV FR 71
+
+// table 1, page 13
+
+Gascogne Seninghem
+(Gascogne Tardive de
+Seninghern)
+
+S3S7 XLIV FR 71
+Gaucher S3S5 VII GB 18
+Gege S3S12 XXII FR 71
+Geisenheimer Braune S3S5 VII DE 2
+Gel S1S3
+
+II RO 91
+Gemele S2S9 XLIII 60
+Gemella S1S5 XIV IT local landrace, Emilia-Romagna 45, 79
+Generalskaya S2S4 XIII RU/UA Solotaja FranziS31
+Germa S4S9 XXI LT No. 1106 Sam 30
+GG S1S4
+
+IX US99
+
+Ghermez Rezayieh S3S4
+
+III IR 3
+
+Giant S1S4
+
+IX US1, 4
+
+Giant RedTM (Mariant) S1S3
+
+II US Large Red Ruby 31
+
+Gil Peck S1S3
+
+II US Napoleon Giant 1, 4, 10, 25, 91
+Giniusa S3S6 VI IT local cultivar, Sicily 32
+Giorgia S1S13 LI IT ISF 123 Caccianese 31
+Glacier (PC 7144-7) S4'S9 SC US Stella Early Burlat 21
+Glenred (SequoiaTM) S1S2
+
+I US Tulare BrookS100
+
+Gomilička S2S3
+
+IV HR 5, 82
+Goodnestone Black S5S13 XXVI GB local cultivar, Kent 15
+Goodnestone Black S2S6 XXV 79
+Goryanka (Горянка) S3S6 VI RU 106
+Governor Wood (Wood) S3S6 VI GB 4, 6, 10, 15, 17
+Grace Star S4'S9 SC IT Burlat open pollinated 38
+Graffiona S6S10 XLVIII IT 79
+Graffioni del Piemonte
+(Graffione bianco, Lazio)
+
+S3S13 XIX IT 79
+Grammendula 1 (A) S3S6 VI IT 45, 79
+Grammendula 2 (B) S3S6 VI IT 45, 79
+Gran Catalunya S3S6 VI ES35
+Granat S3S6 VI CZ 77
+Great Black Delicious EM S2S6 XXV GB 28
+Grolls Schwarze
+Knorpelkirsche
+
+S1S5 XIV DE local cultivar, Guben/Neiße region 31
+
+Grollova (Grolls Schwarze
+Knorpelkirsche)
+
+S3S4
+
+III DE 91
+
+Grossa di Pistoia S3S6 VI IT 31
+Grossa di Pistoia S1S3
+
+II IT 79
+Große Braune S2S6 XXV DE from Silesia 31
+Große Germersdorfer
+(Germersdorfi 1,
+Germersdorfi 3)
+
+S3S12 XXII DE/HU 22, 91
+
+Große Prinzessin (Groote
+Prinzess, Napoleon,
+Lauermanns Kirsche)
+
+S3S4
+
+III NL old local culivar from Netherland 31
+
+Große Schwarze Knorpel S3S5 VII FR/DE cultivar from Diemitz (cv. group Cerise Coeur Noir) 2, 31
+Grosszweiete S6S14 L CH 40
+Guadalupe S3S6 VI ES55
+
+// table 1, page 14
+
+Guigne d'Annonay S2S7 XI ES5, 15, 18
+Guigne Douce de Champ de l
+Ait (Guigne douce du Champ)
+S3S4
+
+III FR 71
+
+Guillaume S1S6 XX FR local cultivar, Rhone 31
+Guillaume S4S6 XVII FR local cultivar, Rhone 71
+Gumpp Runz S1S7 XXVIII DE local cultivar, Baden region 31
+H 209 S4S12 XXVII HU 98
+Habunt S3S4' SC DE Valeska Sunburst 38
+Haj yousefi S3S4
+
+III IR 3
+Hakkonishiki S4S6 XVII JP Satonishiki Napoleon 88
+Halbhaslacher S5S7 0 DE local cultivar Baden region 31
+Halil Efendi S1S6 XX TR 44
+Halka S1S4' SC CZ Van Stella 77, 91
+Hamedan S3S4
+
+III IR 3
+HartlandTM (NY 3308) S3S6 VI US Windsor open pollinated 25, 88
+Hartwälder S4S7 XXIX DE local cultivar, Baden region 31
+Hasong S4S9 XXI CN 88
+Hedelfingeni Orias S3S4
+
+III HU 22
+
+Hedelfinger
+( - Riesenkirsche)
+
+S3S5 VII DE Seedling from Hedelfingen (Württemberg) 2, 15, 17, 18,
+25, 36, 88
+
+Hedelfingenská S1S3
+
+II 91
+Hedemora S4S6 XVII SE 36
+Heidegger S1S5 XIV CH Muskateller open pollinated 24
+Heidi S1S3
+
+II SE Allmän Gulröd Heinrichs Riesen 31
+Heidi S4S6 XVII SE Allmän Gulröd Heinrichs Riesen 36
+Heinrichs Riesen S3S4
+
+III DE 15, 36
+
+Helga S1S3
+
+II CZ Kaštanka (Early Rivers) Moreau 38, 64, 91
+Hemmiker S4S6 XVII CH 24
+Henriette S1S6 XX DE 38
+Hermesberg S3S7 XLIV DE 38
+Hertford S1S6 XX GB 28
+Herzkirschen S5S14 XXXV DE local cultivar, Baden region 31
+Hildesheim S1S3
+
+II DE 91
+
+HL 10072 S1S3
+
+II CZ 64
+
+HL 10726 S1S3
+
+II CZ 64
+
+HL 15361 S2S3
+
+IV CZ 64
+HL 16165 S4S9 XXI CZ 64
+Hofkirsche S3S6 VI CH 40
+Holovouská chrupka S1S3
+
+II CZ Hedelfinger open pollinated 91
+Hongdeng S3S9 XVI CN Napoleon Governor Wood 41, 88, 105
+Hongfeng S3S4
+
+III CN 27
+
+Hongmanao S1S4
+
+IX CN 88
+Hongmi S3S6 VI CN Napoleon Governor Wood 41, 88, 105
+Hongyan S3S9 XVI CN Napoleon Governor Wood 88
+Hongyan S1S3
+
+II CN 27
+Hookers Black S3S5 VII GB local cultivar, Kent 15, 17
+Horka S9S13 LX CZ Van open pollinated 57
+Horka S1S6 XX CZ Van open pollinated 91
+Hrebnickio1 S12S16 LIX LT 30
+Hudson S1S4
+
+IX US Oswego Giant 1, 4, 36, 91
+
+Huldra S1S3
+
+II SE Erianne Allmän Gulröd 31
+Huldra S3S6 VI 91
+Iancuzza Napoletana S3S6 VI IT 45, 79
+
+// table 1, page 15
+
+Ibiza S6S16 XXXIX ES55
+Imperiale Blancale
+(Imperiale)
+
+S6S13 XII IT 71
+Imperiale di Caserta S6S13 XII IT 79
+Index S3S4' SC US Stella open pollinated 21
+Inge S4S9 XXI GB Hedelfinger x Jaboulay open pollinated 7, 15, 17, 18
+INRA V0566 ('Abbesse
+d'Oignies')
+
+S2S4 XIII FR 71
+
+INRA V2392 ('Bigarreau
+Orleans')
+
+S2S4 XIII FR 71
+INRA V3694 ('Dure de Sauve') S6S9 X FR 71
+INRA V3855 ('Bigarreau de
+Mezel')
+
+S6S9 X FR 71
+
+INRA V3858 ('Bigarreau
+Coeur de Pigeon')
+
+S1S6 XX FR 71
+
+INRA V4063 ('Cerise Guin
+Doux des Charentes')
+
+S1S3
+
+II FR 71
+
+INRA V4092 ('Gezia Beltza
+C022')
+
+S7S14 LVII FR 71
+
+Iputj S3S13 XIX RU Zhabule (Leningradska chornaya
+
+x Pobeda)
+
+open pollinated M
+Irena S4S6 XVII CZ Kordia Merton Reward 77, 113
+Isabella S2S4' SC IT Starking Hardy Giant Stella 88
+Itala S. Mela S3S6 VI IT 45
+Italy 1 S2S3
+
+IV IT 88
+Italy 2 S4S9 XXI IT 88
+Jaboulay (Bigarreau de
+Jaboulay, Early Lyons)
+
+S6S9 X FR seedling of A. Jaboulay from Oullins/Rhone 15
+
+Jacinta S3S4
+
+III CZ Vega open pollinated 38, 64, 91
+
+János Cseresznye S3S4
+
+III HU 34
+Jarandilla S3S6 VI ES26, 55
+Jaroslawna S3S5 VII UA 64
+Jedina (Єдина) S6S17 0 UA 89
+JI 2420 S4S4' SC GB Emperor Francis Napoleon X-ray pollen 11
+JI 2434 (AHR) S3S3' SC DE origin Ahrensburg, Emperor
+
+Francis
+
+Napoleon X-ray pollen 11
+
+JI 2434 (EM) S3'S4 SC GB origin East Malling, Emperor
+
+Francis
+
+Napoleon X-ray pollen 11
+
+JI 2538 S1S3' SC GB Merton 42 (Schrecken x
+Governor Wood S3S6)
+
+self-pollinated 99
+Jiahong S4S6 XVII CN Bing Xiang Jiao 41, 105
+Johanna S1S12 XXXII DE Schneiders Späte Knorpel Rube 31
+Jubilee S1S3
+
+II US Lambert Napa Long Stem Bing 1, 5
+Jueze S3S9 XVI CN 41, 105
+Jueze S3S4
+
+III CN 27
+Juhong S4S9 XXI CN 41, 88, 105
+Juin ('Bigarreau de Juin') S3S21 LVI FR 71
+Julia S3S6 VI RU 31
+Junskaya rannaya S4S5 V UA 47, 53
+Jurga S6S16 XXXIX LT Dniprovka Hedelfinger 30
+Jurgita S6S9 X LT Hedelfinger Dniprovka 30
+Justyna S1S3
+
+II CZ Kordia Starking Hardy Giant 64, 77, 91
+
+Juwanhong S1S2
+
+I CN 88
+Kadi 0878 S6S9 X TR 44
+Kaiser Franz S2S4 XIII DE 38
+
+// table 1, page 16
+
+Kaiser Franz (Emperor Francis, Kaiser Franz Josef) S3S4
+
+III DE 4, 36
+Klara (H 1) S3S12 XXII DE 97
+Kaman Cayiri 0895 S2S6 XXV TR 44
+Kanarkowa S6S13 XII PL 64
+Kapsiotika S2S5 VIII GR 46
+Kara 0908 S2S3
+
+IV TR 44
+Kara Gevrek S3S5 VII TR 52
+Kara Turani 0888 S2S9 XLIII TR 44
+Karakiraz S3S12 XXII TR 44
+Karešova S1S3
+
+II CZ local cultivar, North Bohemia 9, 91
+
+Karina S3S4
+
+III DE Schneiders Späte Knorpel Rube 31, 83
+Karl S1S6 XX DE local cultivar, Baden region 38
+Karls Große S1S4
+
+IX DE local cultivar, Baden region 31
+
+Kasandra S1S3
+
+II CZ Burlat Sunburst 38, 64, 91
+Kasberger Schwarze S2S4 XIII DE local cultivar, Baden region 31
+Kassins Frühe S2S3
+
+IV DE seedling of W.L. Kassins from Werder (Havel) 4, 9, 31, 91
+
+Kaštanka (Early Rivers) S1S2
+
+I CZ local cultivar, Central Bohemia 28
+Katalin S4S12 XXVII HU Germersdorfer Podyebrad 22, 88
+Kati S4S5 V EE Nord open pollinated 36
+Kavics (H 165) S3S4
+
+III HU Germersdorfer Budakalászi 22
+Kavics (H 165) S4S12 XXVII HU Germersdorfer Budakalászi 35
+Kavkazskaya (Кавказская) S3S6 VI RU Bigarreau Napoleon Blanc
+(Наполеон белая)
+
+P. cerausus cv. Anadolckaya
+(вишня Анадольская)
+108
+
+Kavkazskaya Ylychshennaya
+(Кавказская улучшеная)
+
+S3S6 VI RU derived variety of Kavkazskaya (Кавказская) 110
+Kazancioğlu S3S12 XXII TR 44
+Kazka (Казка) S1S9 XVIII UA Drogans Gelbe Knorpel Valerii Chkalov 89
+Kecskecsöcsű S3S6 VI HU 34
+Kentish Bigarreau (Kent
+Bigarreau)
+
+S2S3
+IV GB 4, 2015
+
+Késői Fekete Nagy S3S4
+
+III HU 34
+
+Késői Helyi Fekete A S3S4
+
+III HU 34
+
+Késői Tarka S1S4
+
+IX HU 34
+
+Késői Vadcseresznye S1S3
+
+II HU 34
+Kiechlingsberger Kracher S1S22 0 DE 31
+Kifisias S4S9 XXI GR 46
+Kijewlianka S6S9 X UA 64
+King S1S4
+
+IX ES35
+
+KionaTM (PC 8007-2) S4'S9 SC US Glacier, PC7144-7 (Stella x Early
+
+Burlat)
+
+Cashmere, PC7144-3 (Stella x
+Early Burlat)
+
+93
+Kira S3S9 XVI HU 114
+Kirdar S2S6 XXV TR 44
+Kišiněvskaja S1S3
+
+II MD 91
+Kitajewskaja S2S5 VIII UA 64
+Kitajewskaja cziornaja S6S9 X UA 64
+Klara S3S12 XXII DE 85, 113
+Knauffs Schwarze (Knauffs
+Riesenkirsche)
+
+S2S6 XXV DE selection from W.L. Kassins, Bornim near Werder/Havel 9, 15, 91
+
+Knights Bigarreau S2S3
+
+IV GB May Duke Yellow Spanish 15, 20
+
+Knight's Early Black A S1S2
+
+I GB 4, 15
+Kodrinskaya S4S5 V UA 47, 53
+Kokkino Anastasia S3S4
+
+III GR 46
+Könningerle S1S7 XXVIII DE local cultivar, Baden region 31
+
+// table 1, page 17
+
+Korai Ropogós A S3S9 XVI HU 34
+Korai Ropogós B S3S12 XXII HU 34
+Kordia (Techlovicka II,
+Attika®)
+
+S3S6 VI CZ 9
+Korolova (Королова) S1S6 XX UA 89
+Korvik S2S6 XXV CZ Kordia Vic 38
+Kosmichna (Космічна) S3S6 VI UA Prysadybna Skorospilka 88a
+Kossara S2S9 XLIII BG Ranna Tcherna Bigareau Burlat 104
+Kouka-Nishiki S1S3
+
+II JA 13
+
+Kozerska (Schneiders Späte
+Knorpelkirsche)
+
+S3S12 XXII PL Polish syn. for Schneiders Späte Knorpel 31
+Kracher S4S6 XVII DE local cultivar, Baden region 31
+Krächerle S1S4
+
+IX DE local cultivar, Baden region 31
+Krasa Kubani (Краса Кубани) S1S6 XX RU 108, 110
+Krasawica kijewa S6S9 X UA 64
+Krasna devitsa (Красна
+девица)
+
+S6S ?
+
+RU Dajbera tsernaya (Дайбера
+черная)
+
+open pollinated 110
+
+Krasnodarskaya rannyaya
+(Каснодарская ранняя)
+
+S3S ?
+
+RU Melitopolckaya chernaya
+(Мелитопольская чёрная)
+
+open pollinated 110
+
+Kristin (NY 1599) S3S4
+
+III US Emperor Francis Gil Peck 16, 91
+Kronio S5'S6 SC IT local cultivar, Sicily 32
+Kronprinz von Hannover S2S4 XIII DE Seedling form Hildesheim, Prussia 31
+Krupnoplidna
+(Крупноплідна,
+Krupnoplodnaya)
+
+S5S9 XXXVII UA Bigarreau Napoleon Blanc (Valerij Chkalov + Elton +
+
+Jaboulay)
+
+22, 31, 47, 89,
+108
+
+Krymskaya noch S1S3
+
+II UA Bigarreau Goshe Chernyi orel 53
+Kutjevačka crna S3S12 XXII HR 5, 82
+Kutuzovka S3S5 VII UA Bigarreau Goshe Chernaya rannaya Naita 53
+La Pinta (Barrado) S1S3
+
+II ES55
+
+Ladeho pozdni S1S3
+
+II CZ 31, 91
+Ladzanská S1S13 LI SK 91
+LaLa Star S1S3
+
+II IT Lambert compact LapinS17
+
+Lambert S3S4
+
+III US Napoleon Black Heart 4, 9, 16, 25, 36
+
+Lambert Spur S3S4
+
+III US Mutant of 'Lambert' 71
+
+Lamida S1S3
+
+II US Lambert open pollinated 4, 25
+
+Lampe Tornavacas S3S4
+
+III ES55
+Lampnästler S4S13 XLV DE local cultivar, Baden region 40
+Langstieler B 33 S3S4
+
+III DE local cultivar, Baden region 31
+
+Langstieler B 34 S1S4
+
+IX DE local cultivar, Baden region 31
+Lapins S1S4' SC CA Van Stella 16, 17, 25
+Larian S4S6 XVII US Lambert UCD 50 (Bing x Bush Tartarian) 25, 31
+Lasunya (Ласуня) S5S6 XV UA Zöschener Oktober Knorpel Prestyzhna 89
+Late Amber (Amber Gean) S2S3
+
+IV US4, 15
+Late Black Bigarreau S4S5 V GB 9, 15, 17
+Late Maria S3S4
+
+III US21
+Lattacci S3S10 XLIX IT 79
+Lauerzer (Rigikirsche) S1S6 XX CH local cultivar, Cenral SwisS24
+Lauretana S2S16 LXI IT 79
+Legenda Mliyeva (Легенда
+Млієва)
+
+S6S9 X UA Krupnoplodnaya open pollinated 89
+Leipziger Lotkirsche S2S4 XIII DE 31
+
+// table 1, page 18
+
+Lemonidi S3S13 XIX GR 46
+Leningradskaya Gvargejskaya
+(Гвардейская
+Ленинградская)
+
+S4S5 V RU 109
+
+Leningradska slodka S3S6 VI RU 64
+Leopoldskirsche S2S4 XIII DE 91
+Libějovická raná S3S4
+
+III CZ 91
+Liberty Bell S1S1/13 US (Rainier x Bing) Stella 62
+Lijana S1S6 XX RU 31
+Linda S3S12 XXII HU Hedelfinger Germersdorfer 22
+Livia S2S6 XXV CZ Těchlovicka I (Ziklova) open pollinated 77
+Livia S3S4
+
+III CZ 91
+Lizhu S1S4' SC CN 88
+Llucmajor S6S16 XXXIX ES55
+Lombardune S6S14 L IT 79
+Longbao S4S6 XVII CN Napoleon Black Tartarian 88
+Longguan S4S9 XXI CN Napoleon Black Tartarian 68, 88
+Lorenzo / San Pietro Cardeto S3S10 XLIX IT 45
+Louis S1S6 XX DE 38
+Luciens Kirsche S1S2
+
+I DE selection of Uellner at Gut Alt Luneberg near Bremerhaven 4
+
+Lucinio S2S3
+
+IV ES55
+
+Ludwig's Bigarreau S2S3
+
+IV GB 4, 15
+Luke S2S6 XXV LT N21106 Sam 30
+Lyons (Jaboulay) S6S9 X FR 51, 91
+Lyubava (Любава) S1S3
+
+II UA 64
+Lyubava (Любава) S4S5 V UA Drogans Gelbe Knorpel 89
+Lyubimitsa Korvatskogo
+(Любимица Корвацкого)
+
+S3S9 XVI RU 109
+
+Maddison S3S4
+
+III US mutation of Bing 33
+Madonna (Мадонна) S1S9 XVIII RU 110
+Madrileña S3S13 XIX ES55
+Magda S1S3
+
+II CH Basler Adlerkirsche open pollinated 91
+Maggiola S3S14 LIV IT 79
+Maggiolina S1S6 XX IT 79
+Mahagony från Näsum S2S6 XXV SE 36
+Mai ('Belle de Mai') S6S9 X FR 71
+Maiatica S3S9 XVI IT 45, 79
+Maiatica rossa S6S13 XII IT 45, 79
+Maibigarreau S2S4 XIII DE selected local culrivar from Querfurt 28
+Maiolina a rappu S3S5 VII IT local cultivar, Sicily 32
+Maiolina Castelbuono S3S6 VI IT local cultivar, Sicily 32
+Maiolina Etna S6S9 X IT local cultivar, Sicily 32, 79
+Maiolina Messina S3S6 VI IT local cultivar, Sicily 32
+Maiolina S.Mela (Sardinia 11,
+Nera di Nuchis)
+
+S3S5' SC IT 79
+Maisenbühler S4S5 V DE local cultivar, Baden region 31
+Maisenbühler Schlapper S2S4 XIII DE local cultivar, Baden region 31
+Majova rana S1S4
+
+IX RS76, 78
+Májusi Korai Cseresznye S4S5 V HU 34
+
+// table 1, page 19
+
+Malizia (Malizia fasa, San
+Giorgio)
+
+S3S13 XIX IT 79
+Malling Black Eagle S2S5 VIII GB 15
+Malysh (Малыш) S6S17/30? RU 111
+Mak S1S ?
+
+RU Melitopolskaya chernaya
+(Мелитополкаячерная)
+
+Frantsuzkaya chernaya
+(Французская черная)
+110
+
+Manola S3S4
+
+III ES55
+
+Maral (Марал) S1S4
+
+IX RU 109
+Marfatana S6S13 XII IT 79
+Margit S4S12 XXVII HU Germersdorfer open pollinated 22
+Margonia S5S6 XV RO Van open pollinated 104
+Maria S1S4'/
+S3S4'
+SC RO Van Stella 68
+Maria Gaucher S4S6 XVII FR 71
+Marmotte S3S4
+
+III FR 25
+Marostegana S3S13 XIX IT 79
+Marquardter Frühe S4S13 XLV DE 31
+Marta S1S3
+
+II CZ Kordia Kaštanka (Early Rivers) 64, 77
+Martini Piemonte S6S13 XII IT 79
+Martioni Roma S6S13 XII IT 79
+Marvin (Niran, 4-70) S1S9 XVIII US25
+MarysaTM (PA6UNIBO) S3S4' SC IT 103
+Mavro Anastasias S4S30 0 GR 46
+Meckenheimer Frühe S1S4
+
+IX DE 31
+
+Meckenheimer Frühe S3S4
+
+III 91
+Meda S3S5 VII LT Belobokaya rannyaya Hedelfinger 30
+Medge (Blancale Tardive
+Medge)
+
+S3S7 XLIV FR 71
+Medňanská S4S6 XVII SK 91
+Meelika S4S6 XVII EE Leningradskaya tchernaya open pollinated 36
+Meiguodahuang S3S6 VI CN 88
+Melitopolska rannya
+(Mелітополъсъка Рання)
+
+S5S14 XXXV UA Emeror Francis Früheste der Mark 31
+Melitopolskaya krapchataya S3S5 VII UA Frantsis Vilgelmina Kleidinst 47, 53
+Melitopolskaya chernaya
+(Мелитополкая черная)
+
+S5S ?
+
+UA Fruntsuzka chorna open pollinated 110
+
+Merchant S4S9 XXI GB Merton Glory open pollinated 21, 30, 83, 91
+Merla S1S6 XX GB Merton Late open pollinated 28, 91
+Mermat S1S6 XX GB Merton Glory open pollinated 8
+Mermat S3S6 VI GB Merton Glory open pollinated 91
+Merpet S4S9 XXI GB Merton Glory open pollinated 21
+Merton Bigarreau S1S3
+
+II GB Knight's Early Black Napoleon 4, 31
+
+Merton Bounty S1S3
+
+II GB Elton Heart Bigarreau de Schrecken 4, 9
+
+Merton Crane S1S3
+
+II GB Bigarreau Napoleon Bigarreau de Schrecken 4, 6, 15, 17
+
+Merton Favourite S1S3
+
+II GB Knight's Early Black Bigarreau de Schrecken 4, 9
+Merton Favourite S3S6 VI GB Knight's Early Black Bigarreau de Schrecken 91
+Merton Glory S4S6 XVII GB Ursula Rivers Noble 9, 13, 15, 91
+Merton Heart S3S6 VI GB Bigarreau de Schrecken Elton Heart 4, 6, 16, 17
+Merton Late S1S4
+
+IX GB Hildesheim (Belle Agathe) Bigarreau Napoleon 4, 6, 17,
+Merton Marvel S3S6 VI GB Nobel White Bigarreau 15
+Merton Premier S2S3
+
+IV GB Emperor Francis Bedford Prolific 4, 9, 15, 91
+
+// table 1, page 20
+
+Merton Reward S1S4
+
+IX GB Emporor Francis Bedford Prolific 4, 15
+Meuredda die Merli S12S22 0 IT 79
+Miaolina S. Mela S3 S5' SC IT 45
+Michaude S3S9 XVI FR 71
+Mindauge S3S6 VI LT Severnaya Jurgita 30
+Mingzhu S3S9 XVI CN 88
+Minnie Royal S4S6 XVII US Seedling 6HB480 open pollinated 100
+Minnulare S3S16 XXIII IT local cultivar, Sicily 32
+Mister Early S1S3
+
+II 62
+Moddacchia Aspromonte S2S10 XLII IT 45, 79
+Moissons ('Cerise des
+Moissons')
+
+S6S9 X FR 71
+
+Mojtahedi S3S4
+
+III IR 3
+
+Molarinas Lourenza S1S3
+
+II ES local cultivar, Galicia (North Western Spain) 90
+Mollar S3S6 VI ES26, 54
+Mollar de Cáceres S3S22 XXXVIII ES55
+Mollar de Cáceres
+Tornavacas
+
+S3S6 VI ES55
+Mollar de Telesforo S3S9 XVI ES55
+Mona BC S2S5 VIII US LaCima Chapman 21
+Mona MI S3S9 XVI US LaCima Chapman 18, 21
+Mona Cherry S3S4
+
+III US91
+Montagnola S6S16 XXXIX IT 79
+Montenero S3S13 XIX IT 79
+Monzon Tornavacas S3S4
+
+III ES55
+Mora di Cazzano sel. 40 S3S14 LIV IT 71
+Morandina S3S12 XXII IT 71, 79
+Moreau (Big. Moreau,
+Souvenir des Charmes, St.
+Charmes)
+
+S3S9 XVI FR 15, 25, 71, 88
+Mora piacentina S3S13 XIX IT 79
+Moravská rychlice S2S3
+
+IV CZ 91
+Moreau NY S3S5 VII US20
+Morella S3S19 0 IT 79
+Morellona S6S13 XII IT 79
+Morena (Morette) S3S13 XIX IT 45, 79
+Moretta S3S9 XVI IT local cultivar, Veneto region and partly Trento 32
+Móri K Cseresznye S3S12 XXII HU 34
+Moscatella Chiusa
+(Moscatella)
+
+S17S21 0 IT local cultivar, Arezzo 32, 79
+Moser S6S13 XII DE 77, 91
+Moural S1S6 XX ES local cultivar, Galicia (North Western Spain) 90
+Mpakirtzeika S3S4
+
+III GR 46
+Mramorovaná chrupka S1S5 XIV CZ 91
+Muddisa S3S6 VI IT local cultivar, Sicily 32
+Mulegnana nera S3S16 XXIII IT 79
+Mulegnana riccia S6S13 XII IT 79
+Müncheberger Frühe
+(Munchebergi Korai)
+
+S3S4
+
+III DE Flamentiner Früheste der Mark 22, 91
+Na 19 S1S13 II DE Altländer Spitze open pollinated 38
+Na 29 S3S12 XXII DE Badeborner Schneiders Schwarze
+Knorpelkirsche
+
+38
+Na 407 S4S9 XXI DE Badeborner Souvenir des CharmeS38
+Nabigos S3S9 XVI DE Querfurter Königskirsche Souvenir des CharmeS9
+Nabuca S3S5 VII ES55
+
+// table 1, page 21
+
+Nadal S3S12 XXII ES35
+Nadal Tendre S12S22 XLI ES35
+Nadino S3S5 VII DE Spansche Knorpel open pollinated 9, 18, 31
+Nafrina S3S6 VI DE Werdersche Frühe BüttnerS31
+Nalina S3S9 XVI DE Braunauer open pollinated 9
+Namada S2S4 XIII DE Badeborner Early RiverS9
+Namare S3S4
+
+III DE Große Schwarze Knorpel open pollinated 9
+
+Namati S1S4
+
+IX DE Bopparder Kracher open pollinated 38
+
+Namosa S3S4
+
+III DE Farnstädter Schwarze open pollinated 9
+
+Nanni S1S2
+
+I DE Uhlhorns Wunderkirsche open pollinated 9
+Nanyo S3S6 VI JA Napoleon open pollinated 10, 13, 88
+Napoleon (Royal Ann,
+Oxheart)
+
+S3S4
+
+III DE 4, 6, 10, 13, 16,
+17, 18, 25, 36,
+88
+NapoleonMUT S3S4' SC US99
+Napoleon Karamela S3S13 XIX GR 46
+Napoleona Precoce S3S6 VI IT local cultivar, Sicily 32
+Napoleona Tardiva S3S9 XVI IT local cultivar, Sicily 32
+Napoleona Virifica (Raffiuna
+Etna)
+
+S6S9 X IT local cultivar, Sicily 32
+
+Napoletana (Precococe della
+Marca, Precoce di Cevoli,
+Primaticcia)
+
+S3S12 XXII IT 79
+Napoletana Castelbuono S3S9 XVI IT local cultivar, Sicily 32
+Napoletana Etna (Durona) S3S16 XXIII IT local cultivar, Sicily 32
+Naprumi S3S9 XVI DE Hedelfinger Souvenir des CharmeS9, 31
+Narana S2S9 XLIII DE Knauffs Schwarze Souvenir des CharmeS38
+Naremi S1S4
+
+IX DE Uhlhorns Wunderkirsche open pollinated 38
+
+Naresa S2S3
+
+IV DE Große Germersdorfer Werdersche Frühe 9
+
+Nasenkirsche (Schneiders
+Späte Knorpelkirsche)
+
+S3S12 XXII DE 31
+Navalinda S3S9 XVI ES26
+Navon S4S9 XXI DE Badeborner Souvenir de CharmeS38
+Navona S3S4
+
+III CZ 57
+
+Negra de Dorona S1S2
+
+I ES local cultivar, Galicia (North Western Spain) 90
+
+Negra de Eiris S1S2
+
+I ES local cultivar, Galicia (North Western Spain) 90
+Negra Picuda de Anca S6S7 XXX ES local cultivar, Galicia (North Western Spain) 90
+Negras de Fene S6S7 XXX ES local cultivar, Galicia (North Western Spain) 90
+Negras do San Cristobo S6S7 XXX ES local cultivar, Galicia (North Western Spain) 90
+Nektarnaja S5S6 XV UA 64
+Nelson S2S4 XIII US75
+Německá rychlice S2S3
+
+IV DE 91
+
+Nero 1 S1S3
+
+II IT 91
+
+Nero 2 S3S4
+
+III IT 91
+Nero inferno S3S9 XVI IT 79
+New York 200 S4S6 XVII US77
+NewmoonTM (Sumini) S2S3
+
+IV CA Van Stella 21
+New Star S3 S4' SC CA Van Stella 16, 17, 25, 88
+Niedda Laconi S6S13 XII IT 79
+Nieznost S4S5 V UA 64
+Niğde S4S7 XXIX TR 44
+Nike (Нике) S1S5 XIV RU 109
+Nimba (SMS290) S2S3
+
+IV US63, 113
+Niredda S3S6 VI IT 45, 79
+
+// table 1, page 22
+
+Niredda Cappuccia S16S22 XLVII IT 79
+Niura dell'Etna S3S22 XXXVIII IT 32
+Nizhnisty (Ніжністъ) S4S5 V UA 89
+Noble EM S6S13 XII GB 5, 15, 18, 21,
+25
+Noble NY S1S6 XX GB 20, 21
+Noir Ecully S1S3
+
+II FR 71
+
+Noire de Boccard ('Noir
+Boccard')
+
+S4S9 XXI FR 71
+Noire de Chlumac S3S5 VII FR 71
+Noire de Meched S3S12 XXII IR 28, 31
+Noire de Pitfam S6S9 X FR 71
+Noire de Schmidt (Schmidt) S2S4 XIII DE from Casekow, Prussia 16
+Norbury's Early Black S1S9 XVIII GB 15
+Nordwunder (Schneider
+Späte Knorpelkirsche)
+
+S3S12 XXII DE 28, 31
+Norta S2S9 XLIII LT 30
+Nucigliara S14S16 LXII IT local cultivar, Sicily 32
+NugentTM (NY 518) S1S6 XX US Germersdorfer open pollinated 70
+Nutberry Black S4S6 XVII GB local cultivar, Kent 15, 19
+Ochsenherzkirsche S3S4
+
+III DE 4, 9
+Ogier S3S9 XVI FR 71
+Ohio Beauty S3S6 VI US4
+Ohio Beauty S1S3
+
+II US95
+Ohridska Crna S3S12 XXII HR 5, 83
+Okicka S3S12 XXII HR 82
+Oktavia S1S3
+
+II DE Schneiders Späte Knorpel Rube 8, 91
+
+Olivette S3S4
+
+III FR 71
+Olpina Desulo S6S12 XXIV IT 79
+Olympus S1S3
+
+II US Lambert Van 17
+Önsbacher S1S7 XXVIII DE local cultivar, Baden region 31
+Ord S2S4 XIII US15
+OrleanS171 S7S10 0 FR 21
+Orlovskaya feya (Орловская
+фея)
+
+S3S5 VII RU 111
+
+Orlovskaya yantarnaya
+(Орловская янтарная)
+
+S6S17/30? RU 110
+Orondo Ruby S1S13 LII US100
+Ortenauer S1S7 XXVIII DE local cultivar, Baden region 31
+Otrada (Отрада) S3S5 VII UA Annushka Anons 89
+Otto S1S3
+
+II DE Kordia open pollinated 113
+Ovale Frühe Herzkirsche S3S6 VI CH 40
+Pacific Red S4'S9 SC US63
+Paesanella S6S10 XLVIII IT 79
+Pagliarella S4S13 XLV IT 79
+Pákozdi Fehér S3S6 VI HU 34
+Palermina S9S13 LX IT 79
+Pamyat Pokrovskoj (Память
+Покровской)
+
+S2S3
+IV RU 109
+Panaro 1 (Sweet Early) S1S9 XVIII IT Burlat Sunburst 31, 35
+Panaro 2 (Early Star) S4'S9 SC IT Burlat Stella compact 21
+Papale S3S12 XXII IT 79
+Papalona S3S13 XIX IT 79
+Papillon® (Pillango, VI 2/101 S6S12 XXIV HU 113
+
+// table 1, page 23
+
+Passguai S6S12 XXIV IT 79
+Pat (JI 11339) S3S6 VI GB Merton Glory open pollinated 31
+Patanara S3S6 VI IT 79
+Patricia S2S4 XIII US16
+Paulis S1S7 XXVIII DE local cultivar, Baden region 31
+Paulus (Pál, IV-6/39) S4'S9 SC HU Burlat Stella 22
+Pavesi S1S6 XX IT local cultivar, province Piacenza 31
+PC 7147-4 S1S4' SC US99
+PC 7147-9 S1S4' SC US99
+PC 9816-104 S1S4
+
+IX US99
+PC 9816-114 S4S9 XXI US99
+PC 9816-69 S4S9 XXI US99
+PC 9816-79 S4S9 XXI US99
+PC 9817-97 S1S4
+
+IX US99
+PC 8007-2 S4S9 XXI US99
+PC 8011-3 S1S3
+
+II US PC 7147 PC 66138-2 69
+Péceli S3S13 XIX HU 34
+Petrolas S3S4
+
+III ES local cultivar, Galicia (North Western Spain) 90
+
+Pedro Merino S1S3
+
+II ES26, 55
+Peggy Rivers S2S4 XIII GB 13, 15, 17
+Penny S6S9 X GB Colney Inge 21
+Pepe Garcia S3S4
+
+III ES local cultivar, Galicia (North Western Spain) 90
+
+Perspektivnaya S1S2
+
+I UA Chernaya daibera (Büttners Rote Knorpel +
+Chernyi orel)
+
+53
+Petrocca S3S6 VI IT 79
+Petrokeraso Axaias S3S4
+III GR 46
+
+Petrus (Péter, IV-6/5)
+S3S4'
+HU
+Burlat Stella
+
+Pflugwirtle B 10
+S3S4
+DE
+local cultivar, Baden region
+
+Pflugwirtle B 11 S3S6 VI DE local cultivar, Baden region 31
+
+Pflugwirtle B 12 S7S19 XXXVI DE local cultivar, Baden region 31
+
+Pflugwirtle B 13 S1S5 XIV DE local cultivar, Baden region 29
+
+Pico Colorado S6S24 LII ES25
+
+Pico Colorado S6S22 XL ES55
+
+Pico Colorado Especial Cirino S6S22 XL ES55
+
+Pico Limon Colorado S3S6 VI ES26, 55
+
+Pico Limon Negro S3S6 VI ES26
+
+Pico Negro S3S6 VI ES25, 26, 55
+
+Pico Negro Barrado S3S6 VI ES26
+
+Pico Negro Chata S3S6 VI ES55
+
+Pico Negro Fernando S3S6 VI ES55
+
+Pico Negro Tio Aurelio S3S22 XXXVIII ES55
+
+Picota S6S22 XL ES55
+
+Picota Luis Cobo S1S6 XX ES55
+
+Piede Corto S13S14 0 IT 45
+
+PiSue 106
+S6S9
+DE
+Kordia Krupnoplodnaya
+
+PiSue 149
+S1S9
+DE
+Namati Krupnoplodnaya
+
+PiSue 161 (Bolero)
+S1S9
+DE
+Krupnoplodnaya Moldavskaya chernaya
+
+PiSue 177
+S1S9
+DE
+Krupnoplodnaya Moldavskaya chernaya
+
+PiSue 206
+S6S9
+DE
+Krupnoplodnaya Moldavskaya chernaya
+
+PiSue 213
+S1S2
+DE
+Namati Summit
+
+PiSue 232
+S3S9
+DE
+Krupnoplodnaya Moldavskaya chernaya
+
+PiSue 234
+S1S2
+DE
+Namati Summit 107
+
+PiSue 262
+S1S2
+DE
+Regina Summit
+
+// table 1, page 24
+
+PiSue 321
+S1S4
+DE
+Büttners LapinS
+
+PiSue 376
+S6S9
+DE
+Krupnoplodnaya open pollinated
+
+PiSue 435
+S1S4
+DE
+Büttners LapinS
+
+PiSue 458
+S1S3
+D
+Büttners LapinS
+
+PiSue 561
+S3S4
+DE
+Namada K15,190 (Nabigos x Stella)
+
+PiSue 812
+S3S4'
+DE
+Kordia LapinS
+
+PiSue 1117
+S2S6
+DE
+Kordia Viktor
+
+PiSue 1143
+S1S2
+DE
+Namati Summit
+
+PiSue 1166
+S1S2
+DE
+Namati Summit
+
+PiSue 1285 S3S9 XVI DE Kordia K8c,228 (Krupnoplodnaya x Moldavskaya chernya)
+
+PiSue 1288 S6S9 X DE Kordia K8c,228 (Krupnoplodnaya x Moldavskaya chernya)
+
+PiSue 1293 S3S9 XVI DE Kordia K8c,228 (Krupnoplodnaya x Moldavskaya chernya)
+
+PiSue 1361 S4S9 XXI DE Namati Na 407 (Badeborner x St. Charmes)
+
+PiSue 1489 S3S9 XVI DE Valerij Chkalov open pollinated
+
+PiSue 1589 S4'S6 SC DE Namati Sunburst 107
+
+PiSue 1843
+S1S2
+DE
+Namati Summit
+
+PiSue 7164
+S5S6
+DE
+Kordia Krupnoplodnaya
+
+PiSue 9143
+S4S6
+DE
+Namada Naprumi
+
+PiSue 9144
+S4S6
+DE
+Namada Naprumi
+
+PiSue 11101
+S1S9
+DE
+Regina K15,190 (Nabigos x Stella)
+
+PiSue 14144
+S1S6 XX DE Namati K8c,228 (Krupnoplodnaya x Moldavskaya chernya)
+
+Pivka
+S1S3
+CZ
+
+Pivovka
+S3S7
+CZ
+
+Planera
+S6S9
+ES
+
+Planera Menuda
+S6S9
+ES
+
+Plavečský granát
+S3S6
+CZ
+
+Podbelskaya
+S1S3
+UA
+
+Poehziya (Поэзия) S3S5 VII RU 111
+
+Poisdel
+S1S3
+FR
+
+Pola
+S3S4
+PL
+
+Polenkirsche
+S1S7
+DE
+
+Polka (PiSue 194)
+S6S9
+DE
+Krupnoplodnaya Moldavskaya chernaya
+
+Pollux
+S2S3
+NL
+
+Pomázi Középérésű
+S1S6
+HU
+
+Pomella
+S3S16
+IT
+
+Poponcina
+S3S13
+IT
+
+Pozdnyaya Lermontova (ПоздняяЛермонтова)
+S1S5
+RU
+
+Prdresas
+S6S7
+ES
+local cultivar, Galicia (North Western Spain)
+
+Précoce Bernard
+S3S9
+FR
+
+Précoce de Isigny
+S3S5
+FR
+
+Précoce du Oays du Blanc
+S1S6
+FR
+
+Prestizhna (Престижна)
+S5S9
+UA
+Big. Napoléon blanc Valerii Chkalov
+
+Pretera
+S3S6
+ES
+
+Prime Giant (Giant Red, Mariant, Gaint RubyTM)
+S1S3
+US
+181LB359 (Lody x Ruby) open pollinated
+
+Prim 2.1 (D021)
+S3S9
+DE
+
+Prim 2.3 (C041)
+S1S9
+DE
+
+Prim 3.1 (B062)
+S1S4
+DE
+
+Primerenca d' Abril
+S3S22
+ES
+
+// table 1, page 25
+
+Primulat (Ferprime)
+S2S9
+
+Princess (Prinzesskirsche)
+S3S12
+DE
+
+Pryazovska (Приазовсъка)
+S6S9
+UA
+Dönissens Gelbe Bigarreau Jaboulay
+
+Pryazovska (Приазовсъка)
+S5S9
+UA
+Dönissens Gelbe Bigarreau Jaboulay 88a
+
+Probla (SIMCOE Probla)
+S1S3
+US Stella Starking Hardy Giant
+
+Proimo Axaias
+S3S4
+GR
+
+Proimo Kolidrou
+S3S4
+GR
+
+Proimo Vitalou
+S3S4
+GR
+
+Proszczalna
+S2S9
+UA
+
+Proshchalna Taranenko (Прощальна Тараненко)
+S5S9
+UA
+D 54-82 (Donchanka x Valerii Chkalov)
+
+Dzherelo 89
+Protiva S3S4
+IR
+
+Ptačka z Plzně
+S5S16
+0 CZ wild random seedling
+
+Puente Viesgo
+S3S9
+ES55
+
+Puntalazzese
+S1S3
+IT
+local cultivar, Sicily
+
+Puntalazzese
+S1S2
+IT
+
+Qihao
+S1S9
+CN
+
+Quarantana
+S2S3
+IT
+local cultivar, Sicily
+
+Querfurter Königskirsche
+S3S4
+DE
+local cultivar, Querfurt
+
+Radiance PearlTM
+S1S13
+US
+
+Raffiuna S. Mela
+S6S16
+IT
+
+Rainier S1S4
+US
+Bing Van
+
+Ramillete
+S3S4
+ES
+
+Ramon Oliva (Cerisier à port pleureur)
+S6S9
+FR
+
+Raná Černá Edra / Ranna Tcherna
+S1S2
+BG
+
+Raná Laskovská
+S1S5
+BG
+
+Rannaya krupnoplodna
+S1S9
+UA
+
+Rannaya rozowinka
+S3S5
+UA
+
+Ravenna tardiva
+S3S13
+IT
+
+Rebekka
+S1S3
+DE
+Rube Schubacks Frühe Schwarze
+
+Red Pacific
+S4'S9
+US
+
+Redstone
+S1S3
+101
+
+Regina
+S1S3
+DE
+Schneiders Späte Knorpel Rube
+
+Reginal
+S6S22
+ES
+
+Rekord
+S3S12
+RU
+
+Rekordiska
+S2S6
+RU
+Schwarze Napoleon Franz. Schwarze
+
+Remstäler
+S2S4
+DE
+
+Republican (Black Republican)
+S1S4
+US
+Eagle or Napoleon Black Tartarian
+
+Reverchon
+S3S13
+FR/IT maybe Italian cultivar, from Reverchon spread, Lyon (FR)
+
+Ripoll
+S3S22
+ES
+
+Ripoll
+S3S6
+SC
+ES
+
+Rita (IV-5/62)
+S5S22
+HU Trusenszkaya 2 H 2 (Germersdorfer x o.p.)
+
+Ritterkirsche
+S4S7
+DE
+local selection of Knühl in Bühl (Baden)
+
+Rival
+S3S6
+AU
+St. Margret open pollinated
+
+Rivan
+S1S2
+RU
+
+Rivan
+S2S4
+SE
+Erarly Rivers Van
+
+Rivedel (Early Lory, EarliseTM)
+S1S9
+FR
+Starking Hardy Giant Burlat
+
+// table 1, page 26
+
+Roana
+S3S13
+IT
+
+Rocket
+S1S9
+US
+
+Rockport Bigarreau (Taksago)
+S1S6
+US
+Yellow Spanish open pollinated
+
+Rodmersham Seedling
+S3S16
+GB
+local cultivar, Kent
+
+Ronald's Heart
+S1S2
+GB
+local cultivar, Buckinghamshire and Hertfordshire
+
+Ropogós cseresznye B
+S4S12
+HU
+
+Ropogós cseresznye A
+S3S12
+HU
+
+Rosalina
+S3S9
+BG
+Van open pollinated
+
+Rosie
+S1S3
+US
+181LB359 x o.p. open pollinated
+
+Rosita
+S2S9
+BG
+Bigareau Burlat open pollinated
+
+Rote Herrbach
+S4S14
+DE
+local cultivar, Baden region
+
+Rote Kirsche
+S7S19
+DE
+local cultivar, Baden region
+
+Rotstieler
+S4S14
+DE
+local cultivar, Baden region 31
+
+Roundel Heart
+S1S2
+GB
+local cultivar, Kent
+
+Royal AnselTM (cv. Royal Bailey)
+S1S3
+US22ZB383 (Royal Dawn x Minnie Royal) open pollinated
+
+Royal Brynn
+S1S4
+US
+
+Royal Down
+S3S4
+UA
+32G500 open pollinated
+
+Royal Edie
+S1S4'
+US
+92LB341 (Bing o.p. x Royal Dawn) open pollinated
+
+Royal Elaine
+S3S4'
+US
+
+Royal Hazel S4S6 XVII US25Z116 (Bing o.p. x Bing o.p.) open pollinated
+
+Royal Helen S1S4' SC US92LB341 (Bing o.p. x Royal Dawn) open pollinated
+
+Royal LeeTM (Regal Lee)
+S1S3
+US
+
+Royal Lynn
+S1S4
+US
+91LA460 Royal Lee
+
+Royal TenayaTM (cv. Royal Marie)
+S4S6
+US
+
+Royal Tioga
+S1S4'
+US25Z134 (Bing o.p. x Royal Lee) 6GM73 (Bing o.p. x Minnie Royal)
+
+RoyaltonTM (NY 11390)
+S2S4
+US
+NY 1725 (Gaint x Emperor Francis) open pollinated
+
+Rube
+S1S4
+DE
+local cultivar, Altes Land near Hamburg
+
+Rubin
+S3S12
+RO
+Hedelfinger Germersdorfer
+
+Rubinovaya Kubani (Рубиновая Кубани)
+S3S ?
+RU
+Kassins Frühe pollen mixture
+
+Ruby
+S1S3
+US
+Hardy Giant Bush Tartarian
+
+Ruefler
+S2S4
+DE
+local cultivar, Baden region
+
+Ruide
+S1S6
+CN
+Summit 13-33
+
+Ruiliang
+S1S3
+CN
+Rannaya krupnoplodna Chunxiao
+
+Ruishan S1S9 XVIII CN Rannaya krupnoplodna Chunxiao
+
+Ruixian S4'S9 SC CN Santina Chunxiao
+
+Ruizhe S1S9 XVIII CN Santina Chunxiao
+
+Ruizhi
+S1S3
+CN
+Rainier Chunxiao
+
+Ruksandra
+S3S4
+UA
+
+Runar S3S3 SC ES35
+
+Runde Grosse S3S6 VI 62
+
+S. Angelo S. Mela S3S16 XXIII IT 79
+
+S. Anna S6S13 XII IT 79
+
+S. Giovanni S3S22 XXXVIII IT 79
+
+Saint Grorges S5S6 XV FR 71
+
+Sainte Marie
+S1S2
+FR
+
+Šakvická
+S1S6
+CZ
+
+// table 1, page 27
+
+Salmo
+S1S4
+CA
+Lambert Van
+
+Sam
+S2S4
+CA
+V160140 (Windsor x o.p.) open pollinated
+
+SambaTM (Sumste, 13S-36-18)
+S1S3
+CA 2S-84-10 (Stella 35A x o.p.) Stella 16A-7 16, 25, 31
+
+Samocwiet
+S5S6
+UA
+
+Samofertilni
+S3S4
+CZ
+
+Samou
+S3S4
+GR
+
+San Cidre S6S9 X ES local cultivar, Galicia (North Western Spain) 90
+
+San Nicola S3S12 XXII IT 79
+
+San Petro Cardeto S3S10 XLIX IT 79
+
+San Petro San Lorenzo S16S22 XLVII IT 45, 79
+
+San Pritisa A S3S16 XXIII IT local cultivar, Sicily 32
+
+San Pritisa B S6S13 XII IT local cultivar, Sicily 32
+
+San Xoan S3S16 XXIII ES local cultivar, Galicia (North Western Spain) 90
+
+Sandor (IV-6/12) S4'S9 SC HU Burlat Stella 22
+
+Sandra
+S3S4
+CZ
+Kordia Seedling
+
+Sandra Rose (13S-10-40)
+S3S4'
+CA
+2C-61-18 (Star x Van) Sunburst
+
+Sant Angelo S. Mela
+S3S16
+IT
+
+Sant Pere
+S3S4
+III ES55
+
+Santina (13S-5-22)
+S1S4'
+CA
+Stella Summit
+
+Sardinia5
+S13S22
+IT
+
+Sari
+S2S3
+TR
+
+Sasha
+S3S6
+GB
+
+Sashenka (Сашенька) S3S ?
+
+RU Kavkazskaya (Кавказская) Melitopolskaya chernaya
+(Мелитополкаячерная)
+110
+Saslonovskaja S3S6 VI RU 31
+
+SatinTM (Sumele) S1S3
+II CA LapinS2N-39-05 (Van x Stella) 17
+
+Satonishiki S3S6 VI JA Royal Ann Governor Wood 10, 13, 88
+
+Sauerhäner
+S4S5
+CH
+
+Schauenburger S1S5 XIV CH origineted from a tree introduced into CH from Lebanon 24, 31, 36
+
+Schlesische Braune S3S6 VI DE local cultivar, Silesia 31
+
+Schmalfelds Schwarze S3S5 VII DE selection from Schmalfeld, Werder/Havel 31
+
+Schmidt S2S4 XIII DE Schwarze Knorpelkirsche open pollinated 12, 15, 20, 36
+
+Schneiders Späte
+
+Knorpelkirsche (Kozerska)
+S3S12
+DE
+local cultivar, Guben/Neiße
+
+Schöne von Einigen
+S4S6
+CH
+
+Schöne von Marien
+S1S2
+CH
+
+Schubacks Frühe Schwarze
+S1S3
+DE
+local cultivar, orchard Schuback, Altes Land near Hamburg
+
+Schüttler vom Albtrauf S3S6 VI DE 31
+
+Schwarze Bohlsbacher Weg S4S5 V DE local cultivar, Baden region 31
+
+Schwarze der Lobenroth S5S13 XXVI DE 31
+
+Schwarze Schüttler S6S7 XXX CH local cultivar, Baden region 31
+
+Seda
+S3S4
+LT
+Hedelfinger Rozine
+
+Seedling no. 13 (Semenáč č.13)
+S4S12
+CZ
+
+Sefid Rezayieh
+S3S4
+IR
+
+Segliņu
+S5S6
+LV
+
+Segorbina
+S6S12
+ES35
+
+Şekerpare
+S3S9
+TR
+
+Sekunda
+S1S5
+DE
+Flamentiner Früheste der Mark 28
+
+Selah (PC7064-3)
+S3S4'
+US
+P8-79 (Rainier x Bing) Stella 63
+
+Semenzale morbido
+S6S16
+IT
+
+Semi Hatif S3S9 XVI FR 71
+
+// table 1, page 28
+
+Seneca S1S5 XIV US Early Purple Guigne open pollinated 18, 91
+
+SentennialTM (SPC 103)
+S3S4'
+CA
+Sweetheart open pollinated
+
+Senyoreta Primerenca
+S3S6 SC ES35
+
+Senyoreta Tardana
+S3S12
+ES35
+
+Sestrenka S3S5 VII UA 77
+
+Sgorlri (Сгорлри) S1S9 XVIII UA 88a
+
+Shans (Шанс) S3S6 VI UA 89
+
+Shoa al Saltaneh
+S3S4
+IR
+
+Shuijing
+S1S2
+CN
+
+Siah Daneshkadeh S3S5 VII IR 56
+
+Siah Ghazvin S4S14 XXXI IR 3
+
+Siah Mashhad S3S12 XXII IR 56
+
+Siah Shabestar S3S12 XXII IR 56
+
+Silvestre S3S16 XXIII IT 79
+
+Simonis S3S4
+III DE 91
+
+Sir Don (FB 1138) S4'S13 SC AU Black Douglas Stella 21, 94
+
+Sir Douglas (FB 122) S1S3
+II AU Stella Vega 38
+
+Sir Hans (FB 45) S2S4' SC AU Stella Vega 38
+
+Sir Tom (FB 1143) S3S13 XIX AU Black Douglas Stella 21, 94
+
+Siyana (Сияна) S3S6 VI RU 111
+
+Skazka S1S9 XVIII UA 64
+
+Skedes S5S6 XV LV 36
+
+SkeenaTM (13S-42-48) S1S4' SC CA 2N60-07 (Bing x Stella) 2N-38-32 (Van x Stella) 16, 17, 88
+
+Skierniewice 1 S2S3
+IV PL 91
+
+Skierniewice 3 S2S3
+IV PL 91
+Skorospelka (Сороспелка) S5S9 XXXVII UA Emperor Francis Früheste der Mark 88a
+
+Skorospielka
+S2S3
+RU
+
+Skylar Rae S1S4
+IX US100
+Smoky Dun S1S9 XVIII GB local cultivar, West MidlandS15
+
+SMS1 S3S9 XVI 103
+
+SMS6 S3S9 XVI 103
+
+SMS16 S3S4' SC 103
+
+Sodus S1S3
+II US Napoleon Giant 1, 4, 9
+
+SofiaTM (SPC 106) S2S4' SC CA Van Stella 103
+
+Solymari S4S12 XXVII RU 88
+
+Solymári Gömbölyű S3S4
+III HU local cultivar, Budavidek 22
+
+Solymari Scinscersznye S3S4
+III HU local cultivar, Budavidek 31
+
+Somerset S3S4
+III US Van Vic 25, 31
+
+Son Llobet (CITA) S3S6 SC ES55
+
+Son Llobet (IRFAP) S6S16 XXXIX ES55
+
+Son Miro S6S16 SC ES55
+
+Son Perot Manera S6S16 SC ES55
+
+SonataTM (Sumleta, 13N-6-59)
+S3S4'
+CA
+LapinS2N-39-5 (Van x Stella)
+
+Sonnet
+S1S3
+CA
+2N-49-02
+
+Van
+2N-63-31
+Stella
+16
+
+Sorati Hamedan
+S4S14
+IR
+
+Sorede (Suite Note)
+S3S9
+FR
+
+Sotto l'acquavite
+S9S13
+IT
+
+Souvenir des Charmes (St. Charmes, Big. Moreau)
+S3S9
+FR
+
+// table 1, page 29
+
+SovereignTM (13S-21-01)
+S3S4'
+CA
+Sweetheart open pollinated
+
+Spalding
+S2S4
+US
+Bing (probably) Deacon 25
+
+Spansche Knorpel
+S3S5
+DE
+cultivar from Werder/Havel, selected by Span
+
+Sparkle
+S1S2
+CA
+Empress Eugenie open pollinated
+
+SPC 232
+S1S4'
+CA
+Lapins open pollinated
+
+SPC 234
+S1S4
+CA 103
+
+SPC 235
+S1S3
+CA 103
+
+SPC 342
+S1S5
+CA
+
+SPC 411
+S3S4
+CA
+
+SPC 414
+S3S4
+CA
+
+SPC 424
+S3S4
+CA
+
+Spitze Braune
+S3S14
+DE
+
+Spraul (Früh)
+S4S5
+DE
+local cultivar, Baden region
+
+Srdcovka přeúrodná
+S3S6
+CZ
+
+Staccato® (Summer Charm, 13S-20-09)
+S3S4'
+CA
+Sweetheart open pollinated
+
+Star
+S3S4
+CA
+Deacon open pollinated
+
+StarblushTM (SPC 207)
+S3S4'
+CA
+Stella 2S-84-10 74, 106
+
+StardustTM (13N-07-70)
+S1S4'
+CA
+2N-63-20 Stella
+
+StarlettaTM (13N-07-39)
+S1S4'
+CA
+2N-63-20 Stella
+
+Starking Hardy Giant (Meyer) S1S2
+I US selection of O.R. Meyer in Cedarburg/Wisconsin 28, 31, 91
+
+Starkrimson
+S3S4'
+US
+Garden Bing Stella
+
+Starks Gold
+S3S6
+US
+
+Stella S3S4' SC CA Lambert JI 2420 (Emperor Francis x Napoleon X-rayed pollen)
+
+Stöckemer Rote S4S14 XXXI DE local cultivar, Baden region 31
+
+Stolzer S4S7 XXIX DE local cultivar, Baden region 31
+
+Stonska S6S9 X HR 5, 82
+
+Strawberry Heart S3S16 XXIII GB local cultivar, King's Langley district 21
+
+Sture Holmberg S1S5 XIV SE 36
+
+Suandazi S4S9 XXI CN 88
+
+Sue
+S2S3
+CA Bing Schmidt
+
+Suite NoteTM (SPC 136)
+S2S4
+CA
+2S-36-36 Summit
+
+Sujan
+S4S9
+DE
+
+Sultan
+S4S7
+TR
+
+Sultan Hisar
+S3S4
+TR
+
+Sumbigo
+S1S3
+CA
+Lapins Van x Stella
+
+Sumbola
+S1S3
+CA
+Star clone 2S41-27
+
+Sumesi
+S3S4'
+CA
+Van 2S-22-05 (Stella x o.p.) 21
+
+Sumini
+S2S3
+CA
+Van Stella
+
+Summer Jewel
+S1S4
+CA
+2N-61-18 2S-28-30 (Van x Stella)
+
+Summer Sun S4S9 XXI GB Merton Glory open pollinated 21
+
+Summerland S5S17 0 60
+
+Summertime S1S9 XVIII DE 38
+
+Summit S1S2
+CA
+Van Sam
+
+Sumste S1S3
+II CA 2S 84-10 (Stella 35A x o.p.) Stella 16 A7 71
+
+Sunburst S3S4' SC CA Van Stella 16, 17, 25, 88
+
+Sunset BingTM (Brown) S3S4
+III US mutation of Bing 69, 84
+
+Švestičková S1S5 XIV CZ 91
+
+// table 1, page 30
+
+Sweet AryanaTM (PA1UNIBO)
+S3S4'
+IT
+
+Sweet EarlyTM (Panaro 1)
+S1S9
+IT
+Burlat Sunburst
+
+Sweet GabrielTM (PA3UNIBO)
+S1S4
+IT
+
+Sweet LorenzTM (PA2UNIBO)
+S3S4
+IT
+
+Sweet MarysaTM (PA6UNIBO)
+S3S4'
+IT
+
+Sweet SarettaTM (PA5UNIBO)
+S3S4'
+IT
+
+Sweet September
+S1S3
+US
+local cultivar, Orrville, Wayne, OH
+
+Sweet StephanyTM
+(PA7UNIBO)
+S3S4'
+IT
+
+Sweet ValinaTM (PA4UNIBO)
+S3S4
+IT
+
+SweetheartTM (Sumtare, 13S- 22-8)
+S3S4'
+CA
+Van Van x LapinS
+
+SwingTM (PiSue 192)
+S4'S9
+DE Nabigos Stella
+
+Sylvana
+S1S6
+CZ
+Knauffs Schwarze Granat
+
+Sylvia (4C-17-31) S1S4
+
+IX CA Van Sam 12, 16, 17, 20,
+25, 31
+
+Symphony (Selina, 13S-25-
+25)
+
+S1S4' SC CA Lapins Bing 16, 17
+
+Szeptember
+S1S3
+HU
+
+Szőlősi Pollenadó
+S3S4
+HU
+
+Szomolai Fekete
+S2S4
+HU
+
+Szwecija
+S2S13
+SE
+
+Tabanli
+S19S21/25 0 TR 52
+
+Taishanzhaoyang
+S4S6
+CN
+Napoleon Black Tartarian
+
+Taishonishiki
+S1S4
+JA
+
+Takdaneh Mashhad S3S12 XXII IR 56
+
+Talegal Ahim S6S22 SC ES54, 55
+
+Talegal Almedijar S3S22 XXXVIII ES55
+
+Taleguera Brillante S21S22 XXXIV ES55
+
+Talsu - 1 S5S6 XV LV 36
+
+Talsu Sãrtais S1S6 XX LV 36
+
+Tamara S1S9 XVIII CZ Krupnoplodnaya Van 38, 64
+
+Tápiósági Cseresznye S3S6 VI HU 34
+
+Tardive Gauthier S6S13 XII FR 71
+
+Targonnais S1S3
+
+II FR 71
+
+Tarka Cseresznye S3S4
+III HU 34
+
+Tasziló S6S13 XII HU 34
+
+Těchlovan S3S6 VI CZ Van Kordia 31, 35, 91
+
+Těchlovická S4S x
+CZ
+
+Tehranivee (V690620) S3S4' SC CA Van Stella 17
+Teickners Schwarze
+Herzkirsche
+S3S4
+III DE seedling from Gernrode (Harz), selected by W. Teickner 31
+
+Telegal S3S22 XXXVIII ES35
+
+Tempio Bonannaro S13S22 LIII IT 79
+
+Temporion (Темпоріон) S3S4
+III UA Drogans Gelbe Knorpel (Valerij Chkalov + Soniachnyi shar)
+
+Temprana de Sot S3S6 SC ES25
+
+Temprana Negra S1S6 XX ES26
+
+Tenalgi Gulza S12S16 LIX IT 79
+
+Terra do vino S3S7 XLIV ES local cultivar, Galicia (North Western Spain) 90
+
+// table 1, page 31
+
+Tezce 0912 S2S18 LVIII TR 52
+
+Thurn Taxis (Schneiders)
+S3S12
+DE
+
+TietonTM (PC 7144-6)
+S3S9
+US
+Stella Early Burlat
+
+Tigré S1S3
+II ES25
+
+Tilau S6S9 X ES35
+
+Tim S4S5 V CZ Krupnoplodnaya Van 64, 77, 91
+
+Tokonishiki S1S4
+JA
+Napoleon open pollinated
+
+Tombret S6S13 XII FR 71
+
+Torbágyi Késői Fekete S4S6 XVII HU 34
+
+Toscana S3S6 VI IT local cultivar, Sicily 32
+
+Toscanella S3S22 XXXVIII IT local cultivar, Sicily 32
+
+Tragana d'Edessa S2S4 XIII GR local cultivar, Macedonia 19
+
+Tragana Edessis
+S3S4
+GR
+
+Tragana Edessis - Naousis
+S2S4
+GR
+local cultivar, Macedonia
+
+Transportabelnaya (Corvinus Uni.)
+S1S3
+UA
+Franzis Vilgelmina Kleindinst
+
+Transportabelnaya (JKI) S3S4
+UA
+Franzis Wilgemina
+
+Trocnyanskaya (Тросняская) S5S6 XV RU 111
+
+Troprichterova (Troprichters Schwarze Knorpelkirsche)
+S1S3
+DE
+
+Trusenszkaja 2 S5S6 XV HU Hungarian clone selection from Russian cv. Trusenszkaya 22
+
+Truzhenitsa stepi S2S5 VIII UA Vinklera Krasnaya Pozdnaya open pollinated 53
+
+Tsharna (Čarna) S1S4
+RS
+
+Tsolakeiko S4'S4 SC GR 61
+
+Tugarka S3S12 XXII HR 5, 82
+
+Tulare S1S2
+I US (Bing x o.p.) open pollinated 68, 101, 103
+
+Tulare S1S4
+IX US (Bing x o.p.) open pollinated 84
+
+Tünde (IV-13/51) S3S5 VII HU Drogans Gelbe Burlat 22
+
+Turca S6S13 XII IT local cultivar, Firenze / Pistoia 28
+Turca S3S13 XIX IT 79
+
+Turfanda S6S9 X TR 44
+
+Turfanda Kara S4S7m 0 TR 52
+
+Turkey Heart S4S5 V GB 9, 15, 17
+
+Turkey Heart B S3S4
+US
+
+Türkine (Flamentiner, Flämische Kirsche)
+S2S4 XIII FR cultivar from AngerS31
+
+Turkish Black S3S6 VI GB 4, 15
+
+Újszászi Cseresznye S2S3
+HU 34
+
+Ulrich S1S3
+DE
+local cultivar, Baden region
+
+Ulrichs Braune S3S4
+
+III DE cultivar from Neinstedt near Quedlinburg 31
+
+Ulster S3S4
+
+III US Schmidt Lambert 12, 15, 16, 17,
+20, 88, 91
+Uluborlu S3S12 XXII TR 44
+Unterländer S5S13 XXVI DE cultivar from Esslingen (Württemberg) 38
+Ursula Rivers S1S2
+GB
+
+Valenta
+S3S12
+ES
+
+Valera
+S1S5
+CA
+Hedelfinger Windsor
+
+Valeriya (Валерія)
+S1S4
+UA
+
+Valerii Chkalov (Valerij Chkalov, Валерій Чкалов)
+S1S9
+UA
+Rozovaya (Cherry Rose) open pollinated
+
+// table 1, page 32
+
+Valerii Chkalov (Valerij
+Chkalov, Валерій Чкалов)
+S3S9 XVI UA Rozovaya (Cherry Rose) open pollinated 91
+
+Valeska S1S3
+II DE Rube Stechmanns Bunte 8, 9, 91
+
+Vallescura A / Vallescura B
+S3S21
+IT
+
+Van
+S1S3
+CA
+Empress Eugenie open pollinated
+
+Vanda S1S6 XX CZ Van Kordia 31, 91
+
+Vandalay (V690618) S3S4' SC CA Van Stella 17
+
+Vasare S4S9 XXI LT Leningradskaya ciornaya Priusadebnaya 30
+
+Vasiliadi S4S9 XXI GR selected in a orchord of 'Tragana
+Edessis'
+46, 66
+
+Vasilisa S3S9 XVI RU 108, 110
+
+Vasilisa prekrasna (Василиса
+прекрасна)
+S5S9 XXXVII RU Donetskyi uholok Donetska krasavytsia 89
+
+Vega S2S3
+IV CA Bing Victor 16, 17, 20, 25,
+91
+
+Velká Černá Chrupka (Große
+Schwarze Knorpel?)
+S1S6 XX 91
+
+Velvet S2S3
+IV CA Windsor open pollinated 4, 9, 10, 13, 15,
+16, 91
+
+Venancio S3S6 VI ES26, 55
+
+Venus S1S3
+
+II CA Hedelfinger Windsor 4, 9, 15, 16, 91
+
+Vera (III-15/6) S1S3
+II HU Ljana (Trusenszkaya 6) Van 21, 22, 83
+
+Verchocq S1S3
+II FR 71
+
+Verdee (Cerise Verdée) S1S6 XX FR 71
+
+Verdel v 1360 S5S13 XXVI BE 77
+
+Vernon S3S4
+III CA Windsor open pollinated 1, 4, 9, 15
+
+Vic S2S4 XIII CA Bing Schmidt 4, 6, 12, 16, 17,
+20, 25, 91
+
+Victor S2S3
+IV CA Windsor open pollinated 1, 4, 6, 10, 15,
+16, 17
+
+Victor Black A S1S3
+II GB 4, 15
+
+Vigevano S1S3
+II IT 79
+
+Villalengua S3S6 VI ES55
+
+Vilma S2S6 XXV CZ Kordia Vic 77, 91
+
+Vineland S3S6 VI CA 91
+
+Vinka (Винка) S3S6 VI UA Emperor Francis Früheste der Mark 31
+
+Viola S3S6 VI DE Schneiders Späte Knorpel Rube 31
+
+Viola S4S12 XXVII 91
+
+Virgo Juliana S6S24 LII ES25
+
+Virgo Juliana S6S22 XL ES55
+
+Viscount S1S4
+IX CA V35024 (Hedelfinger x Bing) V35029 (Hedelfinger x Bing) 9, 21, 25
+
+Vista S2S5 VIII CA Hedelfinger Victor 21
+
+Vit Spansk S2S3
+IV SE 36
+
+Vitaby S2S4 XIII SE 36
+
+Vittona S13S22 LIII IT 79
+
+Vittoria S3S14 LIV IT Moretta di Cazzano Durona di Padova 25, 31
+
+Vittoria S3S5 VII IT Moretta di Cazzano Durona di Padova 79
+
+Viva S2S3
+
+IV CA Hedelfinger Windsor 9, 16, 91
+
+Vlachova S1S2
+
+I CZ 91
+
+Voge S2S3
+
+IV CA Hedelfinger Windsor 9, 16, 51
+
+Vogue S2S3
+
+IV CA Hedelfinger Windsor 9, 16, 91
+
+Voloshebnitsa
+(Волшебница)
+
+S3S ?
+
+RU Drogans Gelbe Knorpel Frantsuzkaya chernaya
+(Французская черная)
+110
+Vosenka S2S4 XIII CZ 91
+
+// table 1, page 33
+
+Vospominanje S5S13 XXVI UA 64
+
+Vytenų juodoji
+S1S9
+LT
+Zemaiciu raudonoji Dniprovka
+
+Vytenų rožine
+S3S6
+LT
+Hedelfinger Rozine
+
+Wahtanka
+S1S4
+UA
+
+Waiyin No. 7 S3S4' SC CN 27
+
+Walter (K 54) S3S9 XVI DE 85, 113
+
+Wanhongzhu S6S9 X CN Bing Sunrise 67, 88
+
+Wasilisa S3S9 XVI UA 64
+
+Waterloo S1S3
+II GB 4, 15
+
+Weiße Herzkirsche S3S5 VII DE 40
+
+Wellington A S3S13 XIX GB 15
+
+Werdersche Braune S3S4
+DE
+local cultivar from Querfurt, origin unknown 31
+
+Wesselhöfts S1S3
+II DE 2
+
+White GoldTM (Newfane) S3S4' SC US Emperor Francis Stella 75, 103
+
+White Spanish
+S2S3
+IV DE 4, 9
+
+Windsor S1S3
+CA
+selected from J. Dougall, Winsor, Ontario 4, 9, 15, 16
+
+Winklerova (Winkler's Frühe)
+S2S3
+IV DE 91
+
+Winklerova Rana (Winklers
+Frühe Schwarze)
+S3S9
+DE selected from Winkler, Guben in Germany 28
+
+Winterbacher S1S4
+IX DE local cultivar, Baden region 31
+
+Witzenhausener Frühe S3S5 VII DE local cultivar, Witzenhausen near Kassel 31
+
+Wölflisteiner CH S1S6 XX CH cultivar, FAW Wädenswil 24
+
+Wölflisteiner DE S3S6 VI DE local cultivar, Baden region 31
+
+Wspleska S3S6 VI UA 64
+
+Xapata S3S14 XXXIV 95
+
+Xiangquan 1 S3S4' SC CN Van Stella 68, 88
+
+Xiangquan 2 S3S9 XVI CN 88
+
+Yabani 0889 S3S6 VI TR 44
+
+Yakacik S2S18 LVIII TR 52
+
+Yalanci Napolyon S1S5 XIV TR 44
+
+Yaroslavna (Ярославна) S3S5 VII UA Drogans Gelbe Knorpel open pollinated 89
+
+Yellow Spanish S3S4
+III ES15
+
+Yingji S4S9 XXI JP 88
+
+Yizhu S3S6 VI CN 88
+
+Youyi S4S9 XXI CN 41, 105
+
+Yutakanishiki S1S9 XVIII JP 88
+
+Yuzhou S3S9 XVI CN 41, 105
+
+Žalanka S1S4
+IX CZ 91
+
+Zambana S3S14 LIV IT 79
+
+Zaodan S5S6 XV CN Xesphye mutant 88
+
+Zaohongbaoshi S3S9 XVI CN 41, 105
+
+Zaohongzhu S4S9 XXI CN Bing open pollinated 88
+
+Zaolu S4S6 XVII CN Napoleon open pollinated 88
+
+Zard Daneshkadeh S3S4
+III IR 3
+
+Zeisberger S2S4 XIII DE 91
+
+Žemaičių geltonoji S3S16 XXIII LT 30
+
+Žemaičių juodoji S1S13 LI LT 30
+
+Žemaičių rožine
+S1S3
+LT
+
+Zeyitali 0960
+S2S3
+TR
+
+Zimmermänner
+S1S3
+CH
+
+Zoe
+S1S9
+GB
+
+Zolotaja Lashitskaja
+S3S6
+BY
+
+// table 1, page 34
+
+Zopf
+S1S6
+CH
+
+Zuccaredda
+S3S22
+IT
+
+Zuccarenella
+S3S10
+IT
+
+Zuccarigna
+S6S10
+IT
+
+Zucchero
+S3S10
+IT
+
+Zukunft
+S1S3
+DE
+
+Zweitfrühe
+S5S6
+CH
+*/
+
+    ]
+}

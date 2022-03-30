@@ -22,25 +22,21 @@ export async function getServerSideProps(context) {
   ) // no trailing slash - individual collection
     .then((response) => {
       if (response.status !== 200) {
-        return [];
+        return { items: [], locations: [] };
       }
       return response.json();
     })
     .catch((error) => {
       console.log(error);
-      return [];
+      return { items: [], locations: [] };
     });
 
   console.log(JSON.stringify(data.locations, null, 2));
 
   // cut down data to only this location or location #1 if not specified
-  if (data.items) {
-    data.items = data.items.filter((item) => {
-      return item.location_number == location_number;
-    });
-  } else {
-    data.items = [];
-  }
+  data.items = data.items.filter((item) => {
+    return item.location_number == location_number;
+  });
 
   const location = data.locations.find((location) => {
     return location.location_number == location_number;

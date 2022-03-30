@@ -41,17 +41,15 @@ export default function Home({ locations, setClick, setExtents }) {
               <RStyle.RIcon src={'/fruit_icons/Apple.svg'} anchor={[0.5, 0.8]} />
             </RStyle.RStyle>
             {locations.map((location) => (
-              <RFeature
-                geometry={new Point(fromLonLat([location.longitude, location.latitude]))}
-              >
+              <RFeature geometry={new Point(fromLonLat([location.longitude, location.latitude]))}>
                 <RPopup trigger={'click'} className={`${styles['map-overlay']}`}>
-                    <Link
-                      href={`/collections/${encodeURIComponent(location.collection_path)}${encodeURIComponent(
-                        location.collection_filename
-                      )}`}
-                    >
-                      {location.collection_title}
-                    </Link>
+                  <Link
+                    href={`/collections/${encodeURIComponent(
+                      location.collection_path
+                    )}${encodeURIComponent(location.collection_filename)}`}
+                  >
+                    {location.collection_title}
+                  </Link>
                 </RPopup>
               </RFeature>
             ))}

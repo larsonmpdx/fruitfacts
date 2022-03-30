@@ -257,7 +257,18 @@
             description: "Red-Black/R N -3 G&R",
             harvest_time: "8/20"
         },
-
+        // plumcot
+        {
+            type: "Plumcot",
+            name: "Spring Satin",
+            description: "Red/Black N 0",
+            // todo - make this parse as it was originally given, as "Peach: Elberta-43"
+            // for now I'm manually changing it to a vs. santa rosa time
+            // Santa Rosa is Redhaven-2
+            // Redhaven is Elberta-28
+            // so this would be Redhaven-15 -> Santa Rosa-13
+            harvest_time_relative: "Japanese Plum: Santa Rosa-13"
+        },
         // peach - before/after elberta
         {
             type: "Peach",
