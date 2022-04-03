@@ -488,7 +488,6 @@
         },
         {
             name: "Early Burlat",
-            AKA: ["Burlat"], // generally known as just "Burlat" in europe and commonly used as the early season ripening time reference
             type: "Sweet Cherry",
             category: "needs pollinizer",
             harvest_time: "mid to late June"
