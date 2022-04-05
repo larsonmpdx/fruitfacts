@@ -47,6 +47,7 @@ pub struct BasePlant {
     pub release_collection_id: Option<i32>,
 
     pub ignore_unless_in_others: i32,
+    pub s_allele: Option<String>,
 
     pub harvest_relative: Option<i32>,
     pub harvest_relative_to: Option<String>,
@@ -76,6 +77,7 @@ pub struct CollectionItem {
 
     pub disease_resistance: Option<String>,
     pub chill: Option<String>,
+    pub s_allele: Option<String>,
 
     pub description: Option<String>,
     pub harvest_text: Option<String>,

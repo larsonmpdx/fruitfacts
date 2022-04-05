@@ -24,6 +24,7 @@ CREATE TABLE base_plants (
   release_collection_id INTEGER,
   
   ignore_unless_in_others INTEGER NOT NULL, -- bool, was this plant generated only by a low-information collection? if so remove it after import
+  s_allele TEXT,
 
   -- calculated from all of the other data
   harvest_relative INTEGER, -- + or - days vs the chosen reference plant for this type
@@ -156,6 +157,7 @@ CREATE TABLE collection_items (
 
   disease_resistance TEXT, -- json string like "{"FB":"moderate","PM":"high"}"
   chill TEXT,
+  s_allele TEXT,
 
   -- the actual unique data from the imported guide
   description TEXT,

@@ -52,6 +52,7 @@ struct BasePlantJson {
     aka: Option<Vec<String>>,
     patent: Option<String>,
     released: Option<String>,
+    s_allele: Option<String>,
 }
 
 #[skip_serializing_none]
@@ -116,6 +117,7 @@ struct CollectionPlantJson {
     harvest_time_unparsed: Option<String>,
     disease_resistance: Option<HashMap<String, String>>,
     chill: Option<String>,
+    s_allele: Option<String>,
 
     // top-level fields that may be lifted into base plants if they aren't already set
     #[serde(rename = "AKA")]
@@ -815,6 +817,17 @@ fn decode_aka_string(input: &str) -> Vec<&str> {
     input.split(',').collect::<Vec<_>>()
 }
 
+fn format_s_allele(existing: Option<String>, new: &Option<String>) -> Option<String> {
+    // if we have an existing s allele entry, compare it to the new one
+    // if there's a difference then we want to extend it, for example
+    // existing: "S3S6"
+    // new: "S1S4"
+    // output: "S3S6 or S1S4 (conflicting sources)"
+
+    // todo
+    None
+}
+
 // check a new value from a collection item against something already in the database
 // the new value should be either an exact match for the database value, or it should be brand new (replacing a "None")
 fn new_or_old<T: std::cmp::PartialEq + std::fmt::Debug>(
@@ -855,6 +868,8 @@ fn apply_top_level_fields(
                 plant
             )
         });
+
+    let s_allele = format_s_allele(existing_base_plant.s_allele, &plant.s_allele);
 
     let aka_formatted = format_aka_strings(&plant.aka);
 
@@ -952,6 +967,7 @@ fn apply_top_level_fields(
                 base_plants::release_year.eq(release_year),
                 base_plants::released_by.eq(released_by),
                 base_plants::release_collection_id.eq(release_collection_id),
+                base_plants::s_allele.eq(s_allele),
             ))
             .execute(db_conn);
     assert_eq!(
@@ -1002,6 +1018,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                         base_plants::name_fts.eq(format_name_fts_string(&plant.name)),
                         base_plants::type_.eq(&plant_type.clone().unwrap()),
                         base_plants::description.eq(&plant.description),
+                        base_plants::s_allele.eq(&plant.s_allele),
                         base_plants::number_of_references.eq(0),
                         base_plants::ignore_unless_in_others.eq(0),
                     ))
@@ -1189,6 +1206,7 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
             collection_items::disease_resistance
                 .eq(serde_json::to_string(&input.plant.disease_resistance).unwrap()),
             collection_items::disease_resistance.eq(&input.plant.chill),
+            collection_items::s_allele.eq(&input.plant.s_allele),
             collection_items::description.eq(&input.plant.description),
             collection_items::harvest_relative.eq(&input.plant.harvest_time_relative),
             collection_items::harvest_text.eq(harvest_time_helper_text),
@@ -1392,6 +1410,7 @@ fn update_or_add_base_plant(
         aka: plant.aka.clone(),
         patent: plant.patent.clone(),
         released: plant.released.clone(),
+        s_allele: plant.s_allele.clone(),
     };
     apply_top_level_fields(
         db_conn,

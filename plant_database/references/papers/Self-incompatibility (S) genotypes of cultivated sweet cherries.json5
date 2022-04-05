@@ -3261,7 +3261,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "HartlandTM (NY 3308)",
+            name: "Hartland", // "NY 3308"
             s_allele: "S3S6",
             description: "country of origin: US Windsor open pollinated"
         },
