@@ -67,6 +67,7 @@ struct CollectionJson {
     #[serde(rename = "type")] // notoriety type like "extension publication"
     type_: String,
     harvest_time_devalue_factor: Option<f32>, // an option to reduce the weight of harvest times because of an editorial decision that they're low quality
+    ignore_unless_in_others: Option<bool>, // option to skip creating entries based on this file unless they're also in another file
 
     locations: Vec<CollectionLocationJson>,
     categories: Option<Vec<CollectionCategoryJson>>,
@@ -667,6 +668,8 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     let base_types_found = load_types(db_conn, database_dir.clone());
     let load_references_return = load_references(db_conn, database_dir);
 
+    println!("removing ignored base plants");
+    remove_ignored_base_plants(db_conn);
     println!("calculating relative harvest times");
     relative_to_absolute_harvest_times(db_conn);
     calculate_relative_harvest_times(db_conn);
@@ -960,6 +963,7 @@ fn apply_top_level_fields(
     );
 }
 
+// todo: remove the notion of a set of base plants files, we can cover all of them through collections instead
 pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     let mut plants_found = 0;
 
@@ -999,6 +1003,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
                         base_plants::type_.eq(&plant_type.clone().unwrap()),
                         base_plants::description.eq(&plant.description),
                         base_plants::number_of_references.eq(0),
+                        base_plants::ignore_unless_in_others.eq(0),
                     ))
                     .execute(db_conn);
                 assert_eq!(Ok(1), rows_inserted);
@@ -1299,11 +1304,23 @@ fn update_or_add_base_plant(
     db_conn: &SqliteConnection,
     current_collection_id: i32,
     current_collection_score: f32,
+    ignore_unless_in_others: Option<bool>,
 ) -> isize {
     let existing_base_plant = base_plants::dsl::base_plants
         .filter(base_plants::name.eq(&plant_name))
         .filter(base_plants::type_.eq(&plant.type_))
         .first::<BasePlant>(db_conn);
+
+    let mut new_ignore_unless_in_others: i32;
+    if let Some(ignore_unless_in_others) = ignore_unless_in_others {
+        if ignore_unless_in_others {
+            new_ignore_unless_in_others = 1;
+        } else {
+            new_ignore_unless_in_others = 0;
+        }
+    } else {
+        new_ignore_unless_in_others = 0
+    }
 
     let num_added = if existing_base_plant.is_err() {
         // a plant in a reference that isn't already in base_plants - need to add
@@ -1316,6 +1333,7 @@ fn update_or_add_base_plant(
                 base_plants::number_of_references.eq(1),
                 base_plants::notoriety_highest_collection_score.eq(current_collection_score),
                 base_plants::notoriety_highest_collection_score_id.eq(current_collection_id),
+                base_plants::ignore_unless_in_others.eq(new_ignore_unless_in_others),
             ))
             .execute(db_conn);
         assert_eq!(
@@ -1347,6 +1365,11 @@ fn update_or_add_base_plant(
             new_collection_score_id = Some(current_collection_id);
         }
 
+        // ignore state: don't overwrite an existing "false" with a new "true"
+        if new_ignore_unless_in_others == 1 && existing_base_plant.ignore_unless_in_others == 0 {
+            new_ignore_unless_in_others = 0;
+        }
+
         let updated_row_count = diesel::update(
             base_plants::dsl::base_plants.filter(base_plants::id.eq(existing_base_plant.id)),
         )
@@ -1354,6 +1377,7 @@ fn update_or_add_base_plant(
             base_plants::number_of_references.eq(new_references_count),
             base_plants::notoriety_highest_collection_score.eq(new_collection_score),
             base_plants::notoriety_highest_collection_score_id.eq(new_collection_score_id),
+            base_plants::ignore_unless_in_others.eq(new_ignore_unless_in_others),
         ))
         .execute(db_conn);
         assert_eq!(Ok(1), updated_row_count);
@@ -1576,7 +1600,6 @@ fn load_references(
                         locations::location_name.eq(&location.name),
                         locations::latitude.eq(&location.latitude),
                         locations::longitude.eq(&location.longitude),
-
                         // stuff from the collection
                         locations::notoriety_score.eq(notoriety_info.score),
                         locations::collection_path.eq(&path),
@@ -1614,6 +1637,7 @@ fn load_references(
                             db_conn,
                             collection_id,
                             notoriety_info.score,
+                            collection.ignore_unless_in_others,
                         );
 
                         reference_plants_added += add_collection_plant_by_location(
@@ -1636,6 +1660,7 @@ fn load_references(
                         db_conn,
                         collection_id,
                         notoriety_info.score,
+                        collection.ignore_unless_in_others,
                     );
 
                     reference_plants_added += add_collection_plant_by_location(
@@ -1820,6 +1845,15 @@ pub fn load_facts(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) 
     facts_found
 }
 
+fn remove_ignored_base_plants(db_conn: &SqliteConnection) {
+    let _ = diesel::delete(
+        base_plants::dsl::base_plants.filter(base_plants::ignore_unless_in_others.eq(1)),
+    )
+    .execute(db_conn);
+
+    // todo - should we also delete the collection items? I think no, they could be nice to look at in the specific references
+}
+
 #[skip_serializing_none]
 #[derive(Serialize, Queryable)]
 pub struct CollectionItemRelative {
@@ -1950,24 +1984,19 @@ fn add_marketing_names(db_conn: &SqliteConnection) {
         .unwrap();
 
     for collection_item in &all_collection_items {
-        let base_plant = base_plants::dsl::base_plants
+        if let Ok(base_plant) = base_plants::dsl::base_plants
             .filter(base_plants::name.eq(&collection_item.name))
             .filter(base_plants::type_.eq(&collection_item.type_))
             .first::<BasePlant>(db_conn)
-            .unwrap_or_else(|_| {
-                panic!(
-                    r#"couldn't find base plant for {} {}"#,
-                    collection_item.name, collection_item.type_
-                )
-            });
-
-        let updated_row_count = diesel::update(
-            collection_items::dsl::collection_items
-                .filter(collection_items::id.eq(collection_item.id)),
-        )
-        .set((collection_items::marketing_name.eq(base_plant.marketing_name),))
-        .execute(db_conn);
-        assert_eq!(Ok(1), updated_row_count);
+        {
+            let updated_row_count = diesel::update(
+                collection_items::dsl::collection_items
+                    .filter(collection_items::id.eq(collection_item.id)),
+            )
+            .set((collection_items::marketing_name.eq(base_plant.marketing_name),))
+            .execute(db_conn);
+            assert_eq!(Ok(1), updated_row_count);
+        }
     }
 }
 

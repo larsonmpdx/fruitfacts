@@ -22,6 +22,8 @@ CREATE TABLE base_plants (
   release_year_note TEXT, -- in case the release year is guessed at from a patent number, put a note here
   released_by TEXT,
   release_collection_id INTEGER,
+  
+  ignore_unless_in_others INTEGER NOT NULL, -- bool, was this plant generated only by a low-information collection? if so remove it after import
 
   -- calculated from all of the other data
   harvest_relative INTEGER, -- + or - days vs the chosen reference plant for this type

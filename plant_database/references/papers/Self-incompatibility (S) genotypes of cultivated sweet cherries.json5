@@ -5,6 +5,7 @@
     published: "2020",
     accessed: "March 2022",
     type: "dictionary",
+    ignore_unless_in_others: true, // *don't* create entries based on this file unless they were also created by a regular file, because many of these entries are obscure
     locations: [
         {
             name: "no location",

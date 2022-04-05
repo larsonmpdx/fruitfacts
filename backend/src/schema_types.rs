@@ -46,6 +46,8 @@ pub struct BasePlant {
     pub released_by: Option<String>,
     pub release_collection_id: Option<i32>,
 
+    pub ignore_unless_in_others: i32,
+
     pub harvest_relative: Option<i32>,
     pub harvest_relative_to: Option<String>,
     pub harvest_relative_to_type: Option<String>,

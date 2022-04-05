@@ -17,7 +17,6 @@ pub fn latitude_normalize(latitude: f64) -> f64 {
     }
 }
 
-
 #[derive(Deserialize)]
 struct GetLocationsQuery {
     min_lat: Option<f64>,

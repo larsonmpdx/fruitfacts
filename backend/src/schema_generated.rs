@@ -21,6 +21,7 @@ table! {
         release_year_note -> Nullable<Text>,
         released_by -> Nullable<Text>,
         release_collection_id -> Nullable<Integer>,
+        ignore_unless_in_others -> Integer,
         harvest_relative -> Nullable<Integer>,
         harvest_relative_to -> Nullable<Text>,
         harvest_relative_to_type -> Nullable<Text>,
