@@ -817,7 +817,7 @@ fn decode_aka_string(input: &str) -> Vec<&str> {
     input.split(',').collect::<Vec<_>>()
 }
 
-fn format_s_allele(existing: Option<String>, new: &Option<String>) -> Option<String> {
+fn format_s_allele(_existing: Option<String>, _new: &Option<String>) -> Option<String> {
     // if we have an existing s allele entry, compare it to the new one
     // if there's a difference then we want to extend it, for example
     // existing: "S3S6"
