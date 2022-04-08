@@ -82,7 +82,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "AdeliseTM (Masdel)",
+            name: "Masdel",
+            AKA: ["Adelise (tm)"],
             s_allele: "S1S3",
             description: "country of origin: FR Gobet VSP4"
         },
@@ -273,7 +274,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "AndersonTM (NY 9295)",
+            name: "NY 9295", // "Andersen (tm)"
             s_allele: "S3S6",
             description: "country of origin: US Wederscher Markt open pollinated"
         },
@@ -602,7 +603,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "BelliseTM (Bedel)",
+            name: "Bedel",
+            AKA: ["Bellise (tm)"],
             s_allele: "S1S9",
             description: "country of origin: FR Starking Hardy Giant Burlat"
         },
@@ -632,7 +634,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "BentonTM (PC 7146-8)",
+            // "Benton"
+            name: "PC7146-8",
             s_allele: "S4'S9",
             description: "country of origin: US Stella Beaulieu"
         },
@@ -776,13 +779,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Black GoldTM (Ridgewood)",
+            name: "Ridgewood",
+            AKA: ["Blackgold (tm)", "NY 13791"],
             s_allele: "S4'S6",
             description: "country of origin: US Starks Gold Stella"
         },
         {
             type: "Sweet Cherry",
-            name: "Black PearlTM (NY 8139)",
+            // "Blackpearl"
+            name: "NY 8139",
             s_allele: "S4S13",
             description: "country of origin: US"
         },
@@ -812,7 +817,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Black YorkTM (Haas, NY 1725)",
+            name: "Haas",
+            AKA: ["BlackYork™", "NY 1725"],
             s_allele: "S1S4",
             description: "country of origin: US Gaint Emperor Francis"
         },
@@ -911,7 +917,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "BlushingGoldTM (Pendleton, NY 8182)",
+            name: "Pendleton",
+            AKA: ["BlushingGold (tm)", "NY 8182"],
             s_allele: "S1S6",
             description: "country of origin: US Yellow Glass Emperor Francis"
         },
@@ -1025,7 +1032,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Burgandy PearlTM (NY 38L)",
+            name: "NY 38L",
+            AKA: ["BurgundyPearl (tm)"],
             s_allele: "S3S4",
             description: "country of origin: US"
         },
@@ -1123,7 +1131,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Canada GiantTM (Sumgita)",
+            name: "Sumgita",
+            AKA: ["Canada Giant (tm)"],
             s_allele: "S1S2",
             description: "country of origin: CA"
         },
@@ -1277,7 +1286,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "CelesteTM (Sumpaca, 13S-24-28)",
+            name: "Celeste",
+            AKA: ["Sumpaca", "13S-24-28"],
             s_allele: "S1S4'",
             description: "country of origin: CA Van Newstar"
         },
@@ -1358,43 +1368,50 @@
 
         {
             type: "Sweet Cherry",
-            name: "Cherry BlushTM (IFG Cher-four)",
+            name: "IFG Cher-four",
+            AKA: ["Cherry Blush (tm)"],
             s_allele: "S1S6",
             description: "country of origin: US"
         },
         {
             type: "Sweet Cherry",
-            name: "Cherry BurstTM (IFG Cher-two)",
+            name: "IFG Cher-two",
+            AKA: ["Cherry Burst (tm)"],
             s_allele: "S9S?",
             description: "country of origin: US"
         },
         {
             type: "Sweet Cherry",
-            name: "Cherry CrunchTM (IFG Cher-three)",
+            name: "IFG Cher-three",
+            AKA: ["Cherry Crunch (tm)"],
             s_allele: "S3S6",
             description: "country of origin: US"
         },
         {
             type: "Sweet Cherry",
-            name: "Cherry GlowTM (IFG Cher-six)",
+            name: "IFG Cher-six",
+            AKA: ["Cherry Glow (tm)"],
             s_allele: "S1S6",
             description: "country of origin: US"
         },
         {
             type: "Sweet Cherry",
-            name: "Cherry GrantTM (IFG Cher-one)",
+            name: "IFG Cher-one",
+            AKA: ["Cherry Grant (tm)"],
             s_allele: "S6S9",
             description: "country of origin: US"
         },
         {
             type: "Sweet Cherry",
-            name: "Cherry MoonTM (IFG Cher-seven)",
+            name: "IFG Cher-seven",
+            AKA: ["Cherry Moon (tm)"],
             s_allele: "S4S9",
             description: "country of origin: US"
         },
         {
             type: "Sweet Cherry",
-            name: "Cherry TreatTM (IFG Cher-five)",
+            name: "IFG Cher-five",
+            AKA: ["Cherry Treat (tm)"],
             s_allele: "S1S?",
             description: "country of origin: US"
         },
@@ -1587,7 +1604,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "CoraliseTM (Gardel)",
+            name: "Gardel",
+            AKA: ["Coralise (tm)"],
             s_allele: "S2S3",
             description: "country of origin: FR"
         },
@@ -1638,7 +1656,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "CowicheTM (PC 7903-2)",
+            name: "PC7903-2",
+            AKA: ["Cowiche (tm)"],
             s_allele: "S5S9",
             description: "country of origin: US PC 7147-4 (Stella x Hollander or Starking Hardy Giant) PC 7146-11 (Stella x Beaulien)"
         },
@@ -1656,13 +1675,14 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Crevalcore (Lingua de fori)",
+            name: "Crevalcore",
+            AKA: ["Lingua de fori"],
             s_allele: "S3S14",
             description: "country of origin: IT"
         },
         {
             type: "Sweet Cherry",
-            name: "CristalinaTM (Sumnue, 2C-61-22)",
+            name: "Sumnue", // Cristalina, 2C-61-22
             s_allele: "S1S3",
             description: "country of origin: CA Star Van"
         },
@@ -2267,7 +2287,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "EarliseTM (Early Lory, Rivedel)",
+            name: "Early Lory",
+            AKA: ["Earlise (tm)", "Rivedel"],
             s_allele: "S1S9",
             description: "country of origin: FR Starking Hardy Giant Burlat"
         },
@@ -2297,7 +2318,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Early GarnetTM (Maraly, Early Red)",
+            name: "Maraly",
+            AKA: ["Early Garnet (tm)", "Early Red"],
             s_allele: "S1S9",
             description: "country of origin: US Garnet Ruby"
         },
@@ -2351,13 +2373,14 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Early RobinTM (Doty)",
+            name: "Doty", 
+            AKA: ["Early Robin (r)"],
             s_allele: "S1S3",
-            description: "country of origin: US mutation of ‘Rainier’ but unlikely (inconsistent S -alleles)"
+            description: "country of origin: US mutation of ‘Rainier’ but unlikely (inconsistent S-alleles)"
         },
         {
             type: "Sweet Cherry",
-            name: "Early StarTM (Panaro 2)",
+            name: "Panaro 2", // "Early Star"
             s_allele: "S4'S9",
             description: "country of origin: IT Burlat Stella compact"
         },
@@ -2369,7 +2392,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Ebony PearlTM (NY 32, Ebony)",
+            name: "NY 32", // EbonyPearl
             s_allele: "S1S4",
             description: "country of origin: US Lambert Republican (probably)"
         },
@@ -2734,7 +2757,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Firm Red (Late GarnetTM)",
+            name: "Firm Red",
+            AKA: ["Late Garnet (tm)"],
             s_allele: "S1S9",
             description: "country of origin: US Large Red Garnet"
         },
@@ -3024,9 +3048,10 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Giant RedTM (Mariant)",
+            name: "Prime Giant",
+            AKA: ["Giant Red (tm)", "Gaint Ruby", "Mariant"],
             s_allele: "S1S3",
-            description: "country of origin: US Large Red Ruby"
+            description: "country of origin: US 181LB359 (Lody x Ruby) open pollinated"
         },
         {
             type: "Sweet Cherry",
@@ -3054,7 +3079,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Glenred (SequoiaTM)",
+            name: "Glenred", // "Sequoia"
             s_allele: "S1S2",
             description: "country of origin: US Tulare BrookS"
         },
@@ -3924,7 +3949,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "KionaTM (PC 8007-2)",
+            name: "PC8007-2", // "Kiona"
             s_allele: "S4'S9",
             description: "country of origin: US Glacier, PC7144-7 (Stella x Early Burlat), Cashmere, PC7144-3 (Stella x Early Burlat)"
         },
@@ -4300,12 +4325,7 @@
             s_allele: "S3S4",
             description: "country of origin: CZ"
         },
-        {
-            type: "Sweet Cherry",
-            name: "PC7064-3", // "Selah (r)", "Liberty Bell"
-            s_allele: "S1S1/13",
-            description: "country of origin: US (Rainier x Bing) Stella"
-        },
+        // there's an entry here for liberty bell/selah but it's wrong and also a duplicate. the original paper has it as s3s4'
         {
             type: "Sweet Cherry",
             name: "Lijana",
@@ -4637,12 +4657,7 @@
             s_allele: "S1S9",
             description: "country of origin: US"
         },
-        {
-            type: "Sweet Cherry",
-            name: "MarysaTM (PA6UNIBO)",
-            s_allele: "S3S4'",
-            description: "country of origin: IT"
-        },
+        // duplicate entry for PA6UNIBO / Marysa
         {
             type: "Sweet Cherry",
             name: "Mavro Anastasias",
@@ -5315,7 +5330,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "NewmoonTM (Sumini)",
+            name: "Sumini",
+            AKA: ["Newmoon (tm)"],
             s_allele: "S2S3",
             description: "country of origin: CA Van Stella"
         },
@@ -5456,7 +5472,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "NugentTM (NY 518)",
+            name: "NY 518",
+            AKA: ["Nugent™"],
             s_allele: "S1S6",
             description: "country of origin: US Germersdorfer open pollinated"
         },
@@ -5618,16 +5635,12 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Panaro 1 (Sweet Early)",
+            name: "Panaro 1",
+            AKA: ["Sweet Early (r)"],
             s_allele: "S1S9",
             description: "country of origin: IT Burlat Sunburst"
         },
-        {
-            type: "Sweet Cherry",
-            name: "Panaro 2 (Early Star)",
-            s_allele: "S4'S9",
-            description: "country of origin: IT Burlat Stella compact"
-        },
+        // duplicate entry for panaro 2 / early star
         {
             type: "Sweet Cherry",
             name: "Papale",
@@ -5733,12 +5746,7 @@
             s_allele: "S1S4",
             description: "country of origin: US"
         },
-        {
-            type: "Sweet Cherry",
-            name: "PC8007-2",
-            s_allele: "S4S9",
-            description: "country of origin: US"
-        },
+        // duplicate entry for kiona. had the wrong s-alleles, it's s4's9 in the original paper
         {
             type: "Sweet Cherry",
             name: "PC8011-3",
@@ -6216,12 +6224,7 @@
             s_allele: "S3S6",
             description: "country of origin: ES"
         },
-        {
-            type: "Sweet Cherry",
-            name: "Prime Giant (Giant Red, Mariant, Gaint RubyTM)",
-            s_allele: "S1S3",
-            description: "country of origin: US 181LB359 (Lody x Ruby) open pollinated"
-        },
+        // duplicate entry for giant red
         {
             type: "Sweet Cherry",
             name: "Prim 2.1 (D021)",
@@ -6346,7 +6349,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Radiance PearlTM",
+            name: "NY 7679",
+            AKA: ["Radiance Pearl™"],
             s_allele: "S1S13",
             description: "country of origin: US"
         },
@@ -6493,12 +6497,7 @@
             s_allele: "S1S2 or S2S4", // both are in the pdf
             description: "country of origin: RU or SE Erarly Rivers Van"
         },
-        {
-            type: "Sweet Cherry",
-            name: "Rivedel (Early Lory, EarliseTM)",
-            s_allele: "S1S9",
-            description: "country of origin: FR Starking Hardy Giant Burlat"
-        },
+        // duplicate entry for rivedel, early lory, earlise
 
         // table 1, page 26
 
@@ -6588,7 +6587,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Royal AnselTM (cv. Royal Bailey)",
+            name: "Royal Ansel",
+            AKA: ["Royal Bailey"],
             s_allele: "S1S3",
             description: "country of origin: US 22ZB383 (Royal Dawn x Minnie Royal) open pollinated"
         },
@@ -6630,7 +6630,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Royal LeeTM (Regal Lee)",
+            name: "Royal Lee", // "Regal Lee"
             s_allele: "S1S3",
             description: "country of origin: US"
         },
@@ -6642,7 +6642,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Royal TenayaTM (cv. Royal Marie)",
+            name: "Royal Tenaya", // "Royal Marie"
             s_allele: "S4S6",
             description: "country of origin: US"
         },
@@ -6654,7 +6654,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "RoyaltonTM (NY 11390)",
+            name: "Royalton",
+            AKA: ["NY 11390"],
             s_allele: "S2S4",
             description: "country of origin: US NY 1725 (Gaint x Emperor Francis) open pollinated"
         },
@@ -6795,7 +6796,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "SambaTM (Sumste, 13S-36-18)",
+            name: "Sumste",
+            AKA: ["Samba (tm)", "13S-36-18"],
             s_allele: "S1S3",
             description: "country of origin: CA 2S-84-10 (Stella 35A x o.p.) Stella 16A-7"
         },
@@ -6927,7 +6929,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "SatinTM (Sumele)",
+            name: "Satin",
+            AKA: ["Sumele"],
             s_allele: "S1S3",
             description: "country of origin: CA Lapins 2N-39-05 (Van x Stella)"
         },
@@ -7059,7 +7062,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Selah (PC7064-3)",
+            name: "PC7064-3", // "Selah",
             s_allele: "S3S4'",
             description: "country of origin: US P8-79 (Rainier x Bing) Stella"
         },
@@ -7086,7 +7089,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "SentennialTM (SPC 103)",
+            name: "SPC 103",
+            AKA: ["Sentennial (tm)", "13S-21-23"],
             s_allele: "S3S4'",
             description: "country of origin: CA Sweetheart open pollinated"
         },
@@ -7213,7 +7217,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "SkeenaTM (13S-42-48)",
+            name: "Skeena",
+            AKA: ["13S-43-48"],
             s_allele: "S1S4'",
             description: "country of origin: CA 2N60-07 (Bing x Stella) 2N-38-32 (Van x Stella)"
         },
@@ -7270,7 +7275,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "SofiaTM (SPC 106)",
+            name: "SPC 106",
+            AKA: ["Sofia (tm)"],
             s_allele: "S2S4'",
             description: "country of origin: CA Van Stella"
         },
@@ -7327,7 +7333,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "SonataTM (Sumleta, 13N-6-59)",
+            name: "Sumleta",
+            AKA: ["Sonata (tm)", "13N-6-59"],
             s_allele: "S3S4'",
             description: "country of origin: CA LapinS2N-39-5 (Van x Stella)"
         },
@@ -7366,7 +7373,8 @@
 
         {
             type: "Sweet Cherry",
-            name: "SovereignTM (13S-21-01)",
+            name: "13S2101",
+            AKA: ["Sovereign (tm)"],
             s_allele: "S3S4'",
             description: "country of origin: CA Sweetheart open pollinated"
         },
@@ -7450,7 +7458,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Staccato® (Summer Charm, 13S-20-09)",
+            name: "13S2009",
+            AKA: ["Staccato (r)", "Summer Charm"],
             s_allele: "S3S4'",
             description: "country of origin: CA Sweetheart open pollinated"
         },
@@ -7462,19 +7471,22 @@
         },
         {
             type: "Sweet Cherry",
-            name: "StarblushTM (SPC 207)",
+            name: "SPC207",
+            AKA: ["Starblush™"],
             s_allele: "S3S4'",
             description: "country of origin: CA Stella 2S-84-10 74, 106"
         },
         {
             type: "Sweet Cherry",
-            name: "StardustTM (13N-07-70)",
+            name: "13N0770",
+            AKA: ["Stardust (tm)"],
             s_allele: "S1S4'",
             description: "country of origin: CA 2N-63-20 Stella"
         },
         {
             type: "Sweet Cherry",
-            name: "StarlettaTM (13N-07-39)",
+            name: "13N0739",
+            AKA: ["Starletta™"],
             s_allele: "S1S4'",
             description: "country of origin: CA 2N-63-20 Stella"
         },
@@ -7546,7 +7558,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Suite NoteTM (SPC 136)",
+            name: "SPC 136",
+            AKA: ["Suite Note (tm)"],
             s_allele: "S2S4",
             description: "country of origin: CA 2S-36-36 Summit"
         },
@@ -7586,12 +7599,7 @@
             s_allele: "S3S4'",
             description: "country of origin: CA Van 2S-22-05 (Stella x o.p.) 21"
         },
-        {
-            type: "Sweet Cherry",
-            name: "Sumini",
-            s_allele: "S2S3",
-            description: "country of origin: CA Van Stella"
-        },
+        // duplicate entry for sumini/newmoon
         {
             type: "Sweet Cherry",
             name: "Summer Jewel",
@@ -7620,12 +7628,7 @@
             name: "Summit S1S2",
             description: "country of origin: CA Van Sam"
         },
-        {
-            type: "Sweet Cherry",
-            name: "Sumste",
-            s_allele: "S1S3",
-            description: "country of origin: CA 2S 84-10 (Stella 35A x o.p.) Stella"
-        },
+        // duplicate entry for sumste/samba
         {
             type: "Sweet Cherry",
             name: "Sunburst",
@@ -7634,9 +7637,11 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sunset BingTM (Brown)",
+            name: "Brown",
+            AKA: ["Sunset Bing (tm)"],
             s_allele: "S3S4",
-            description: "country of origin: US mutation of Bing"
+            description: "country of origin: US mutation of Bing",
+            patent: "https://patents.google.com/patent/USPP15386 expires 2023-12-11"
         },
         {
             type: "Sweet Cherry",
@@ -7649,37 +7654,37 @@
 
         {
             type: "Sweet Cherry",
-            name: "Sweet AryanaTM (PA1UNIBO)",
+            name: "PA1UNIBO",
+            AKA: ["Sweet Aryana (r)"],
             s_allele: "S3S4'",
             description: "country of origin: IT"
         },
+        // duplicate entry for panaro 1 sweet early
         {
             type: "Sweet Cherry",
-            name: "Sweet EarlyTM (Panaro 1)",
-            s_allele: "S1S9",
-            description: "country of origin: IT Burlat Sunburst"
-        },
-        {
-            type: "Sweet Cherry",
-            name: "Sweet GabrielTM (PA3UNIBO)",
+            name: "PA3UNIBO",
+            AKA: ["Sweet Gabriel (r)"],
             s_allele: "S1S4",
             description: "country of origin: IT"
         },
         {
             type: "Sweet Cherry",
-            name: "Sweet LorenzTM (PA2UNIBO)",
+            name: "PA2UNIBO",
+            AKA: ["Sweet Lorenz (r)"],
             s_allele: "S3S4",
             description: "country of origin: IT"
         },
         {
             type: "Sweet Cherry",
-            name: "Sweet MarysaTM (PA6UNIBO)",
+            name: "PA6UNIBO",
+            AKA: ["Marysa (r)"],
             s_allele: "S3S4'",
             description: "country of origin: IT"
         },
         {
             type: "Sweet Cherry",
-            name: "Sweet SarettaTM (PA5UNIBO)",
+            name: "PA5UNIBO",
+            AKA: ["Sweet Saretta (r)"],
             s_allele: "S3S4'",
             description: "country of origin: IT"
         },
@@ -7691,25 +7696,29 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sweet StephanyTM (PA7UNIBO)",
+            name: "PA7UNIBO",
+            AKA: ["Sweet Stephany (r)"],
             s_allele: "S3S4'",
             description: "country of origin: IT"
         },
         {
             type: "Sweet Cherry",
-            name: "Sweet ValinaTM (PA4UNIBO)",
+            name: "PA4UNIBO",
+            AKA: ["Sweet Valina (r)"],
             s_allele: "S3S4",
             description: "country of origin: IT"
         },
         {
             type: "Sweet Cherry",
-            name: "SweetheartTM (Sumtare, 13S- 22-8)",
+            name: "Sweetheart",
+            AKA: ["Sumtare", "13S-22-08"],
             s_allele: "S3S4'",
             description: "country of origin: CA Van Van x Lapins"
         },
         {
             type: "Sweet Cherry",
-            name: "SwingTM (PiSue 192)",
+            name: "PiSue 192",
+            AKA: ["Swing (tm)"],
             s_allele: "S4'S9",
             description: "country of origin: DE Nabigos Stella"
         },
@@ -7930,7 +7939,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "TietonTM (PC 7144-6)",
+            name: "PC7144-6",
+            AKA: ["Tieton (r)"],
             s_allele: "S3S9",
             description: "country of origin: US Stella Early Burlat"
         },
@@ -8507,7 +8517,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "White GoldTM (Newfane)",
+            name: "Newfane", // "White Gold"
             s_allele: "S3S4'",
             description: "country of origin: US Emperor Francis Stella"
         },

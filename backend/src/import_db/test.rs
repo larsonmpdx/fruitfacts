@@ -15,6 +15,10 @@ fn test_format_s_allele() {
         ""
     );
     assert_eq!(
+        format_s_allele(&Some("".to_string()), &Some("S4'S9 [1]".to_string())),
+        "S4'S9 [1]"
+    );
+    assert_eq!(
         format_s_allele(&Some("S1S4' [1]".to_string()), &Some("".to_string())),
         "S1S4' [1]"
     );

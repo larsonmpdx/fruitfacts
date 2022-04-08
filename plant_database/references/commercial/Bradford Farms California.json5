@@ -1267,6 +1267,7 @@ https://bradfordfarms.com.au/stonefruit/supersweet-nectarines/rose-sweet-new/
         {
             type: "Sweet Cherry",
             name: "Glenred",
+            AKA: ["Sequoia (tm)"],
             patent: "https://patents.google.com/patent/USPP12859 2021-01-19",
             released: "Bradford Farms*"
         },

@@ -124,10 +124,11 @@
             description: "Self-fertile"
         },
         {
-            name: "Early Robin",
+            name: "Doty", // "Early Robin"
             type: "Sweet Cherry",
             harvest_time_relative: "Rainier -10 to -14",
-            description: "blush. S1S3"
+            description: "blush. S1S3",
+            patent: "https://patents.google.com/patent/USPP13951 expired 2021-07-13"
         },
         {
             name: "NY 7679", //"Radiance Pearl"

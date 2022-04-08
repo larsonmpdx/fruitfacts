@@ -401,6 +401,7 @@
         {
             type: "Sweet Cherry",
             name: "Royal Ansel",
+            AKA: ["Royal Bailey"], // patent name
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/cherry/royal_ansel/",
             patent: "https://patents.google.com/patent/USPP21835 expires 2029-11-04",
             chill: "750 hours",

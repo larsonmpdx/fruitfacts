@@ -852,15 +852,13 @@ fn parse_s_allele_string(input: &Option<String>) -> HashMap<String, HashSet<i32>
     output
 }
 
+// S-allele data is stored in a plain string in the database, during database loading we may need to combine data
+// from multiple sources and build this string up. so it gets parsed into a struct, the struct edited, then written
+// back to a string to put in the database
+// examples:
+// existing: "S3S6 [12]" new: "S1S4 [13]" -> "S3S6 [12] or S1S4 [13] (conflicting sources)"
+// existing: "S3S6 [12]" new: "S3S6 [13]" -> "S3S6 [12,13]"
 fn format_s_allele(existing: &Option<String>, new: &Option<String>) -> String {
-    // if we have an existing s allele entry, compare it to the new one
-    // if there's a difference then we want to extend it, for example
-    // existing: "S3S6 [12]"
-    // new: "S1S4 [13]"
-    // output: "S3S6 [12] or S1S4 [13] (conflicting sources)"
-
-    // or "S3S6 [12]" and new "S3S6 [13]"" -> "S3S6 [12,13]"
-
     let mut existing = parse_s_allele_string(existing);
     let new = parse_s_allele_string(new);
 
@@ -943,8 +941,20 @@ fn apply_top_level_fields(
             )
         });
 
-        // todo - add collection number into the new s_allele string. only run this if we have a new s_allele entry (is_some())
-    let s_allele = format_s_allele(&existing_base_plant.s_allele, &plant.s_allele);
+    // make an s-allele update if we have one
+    let s_allele = if plant.s_allele.is_some() && current_collection_id.is_some() {
+        let new_s_allele = format!(
+            "{} [{}]",
+            plant.s_allele.as_ref().unwrap(),
+            current_collection_id.unwrap()
+        );
+        Some(format_s_allele(
+            &existing_base_plant.s_allele,
+            &Some(new_s_allele),
+        ))
+    } else {
+        existing_base_plant.s_allele
+    };
 
     let aka_formatted = format_aka_strings(&plant.aka);
 

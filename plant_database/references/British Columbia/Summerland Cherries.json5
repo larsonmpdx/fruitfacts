@@ -120,7 +120,7 @@
         },
         {
             name: "Celeste", // I don't think any trademark is defended in the US on this. it appears to be an NZ/GB variety mainly
-            AKA: ["Sumpaca"],
+            AKA: ["Sumpaca", "13S-24-28"],
             type: "Sweet Cherry",
             // date is approx
             released: "Summerland 1990*",
@@ -160,7 +160,7 @@
         },
         {
             name: "Sumleta",
-            AKA: ["Sonata (tm)"],
+            AKA: ["Sonata (tm)", "13N-6-59"],
             type: "Sweet Cherry",
             released: "Summerland 1997*",
             description: "Lapins x 2n-39-05 https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/32/Sumleta_Sonata/",
@@ -182,7 +182,7 @@
         },
         {
             name: "Sumste",
-            AKA: ["Samba (tm)"],
+            AKA: ["Samba (tm)", "13S-36-18"],
             type: "Sweet Cherry",
             released: "Summerland 1997*",
             description: "2S-84-10 x Stella 16A-7 https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/24/Sumste_Samba/",
@@ -203,7 +203,7 @@
         },
         {
             name: "13S2009",
-            AKA: ["Staccato (r)"],
+            AKA: ["Staccato (r)", "Summer Charm"],
             type: "Sweet Cherry",
             released: "Summerland 2000*",
             description: "Sweetheart open pollinated https://www.summerlandvarieties.com/varieties/category/1/Select_Cherries/product/26/13S2009_Staccato/",

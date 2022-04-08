@@ -58,7 +58,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "NY 32", // "Ebony Pearl"
+            name: "NY 32", // EbonyPearl
             // harvest time in the chart as "?"
             description: "dark swt. Origin Cornell (NY 32, 2008), recent introduction; not fully tested at Mount Vernon"
         },
