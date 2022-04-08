@@ -859,7 +859,7 @@ fn format_s_allele(existing: &Option<String>, new: &Option<String>) -> String {
     // new: "S1S4 [13]"
     // output: "S3S6 [12] or S1S4 [13] (conflicting sources)"
 
-    // or "S3S6 [12]" and new "S1S4" [13] -> "S3S6 [12,13]"
+    // or "S3S6 [12]" and new "S3S6 [13]"" -> "S3S6 [12,13]"
 
     let mut existing = parse_s_allele_string(existing);
     let new = parse_s_allele_string(new);
@@ -943,6 +943,7 @@ fn apply_top_level_fields(
             )
         });
 
+        // todo - add collection number into the new s_allele string. only run this if we have a new s_allele entry (is_some())
     let s_allele = format_s_allele(&existing_base_plant.s_allele, &plant.s_allele);
 
     let aka_formatted = format_aka_strings(&plant.aka);
