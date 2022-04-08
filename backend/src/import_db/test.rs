@@ -7,6 +7,37 @@ use crate::import_db::{
 use diesel::connection::SimpleConnection;
 
 use super::*;
+
+#[test]
+fn test_format_s_allele() {
+    assert_eq!(
+        format_s_allele(&Some("".to_string()), &Some("".to_string())),
+        ""
+    );
+    assert_eq!(
+        format_s_allele(&Some("S1S4' [1]".to_string()), &Some("".to_string())),
+        "S1S4' [1]"
+    );
+    assert_eq!(
+        format_s_allele(&Some("S1S4 [1]".to_string()), &Some("S1S4 [2]".to_string())),
+        "S1S4 [1,2]"
+    );
+    assert_eq!(
+        format_s_allele(
+            &Some("S1S4' [1]".to_string()),
+            &Some("S1S4 [2]".to_string())
+        ),
+        "S1S4 [2] or S1S4' [1] (conflicting sources)"
+    );
+    assert_eq!(
+        format_s_allele(
+            &Some("S1S4 [2] or S1S4' [1] (conflicting sources)".to_string()),
+            &Some("S1S4' [3]".to_string())
+        ),
+        "S1S4 [2] or S1S4' [1,3] (conflicting sources)"
+    );
+}
+
 #[test]
 fn test_is_a_midpoint() {
     assert!(!is_a_midpoint(""));

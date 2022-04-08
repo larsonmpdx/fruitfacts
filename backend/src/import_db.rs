@@ -24,6 +24,7 @@ use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
 use dotenv::dotenv;
+use itertools::Itertools;
 
 use indexmap::IndexMap;
 use lazy_static::lazy_static;
@@ -817,15 +818,88 @@ fn decode_aka_string(input: &str) -> Vec<&str> {
     input.split(',').collect::<Vec<_>>()
 }
 
-fn format_s_allele(_existing: Option<String>, _new: &Option<String>) -> Option<String> {
-    // if we have an existing s allele entry, compare it to the new one
-    // if there's a difference then we want to extend it, for example
-    // existing: "S3S6"
-    // new: "S1S4"
-    // output: "S3S6 or S1S4 (conflicting sources)"
+// given strings like "S1S4 [13]" or "S3S6 [12,13]" or "S1S4' [12] or S3S6 [13,14] (conflicting sources)"
+// parse these and break them into:
+// S-allele string -> [set of collection numbers]
+fn parse_s_allele_string(input: &Option<String>) -> HashMap<String, HashSet<i32>> {
+    let mut output = Default::default();
+
+    if input.is_none() {
+        return output;
+    }
+    // gets pairs of text-before-brackets plus the bracket contents
+    let s_allele_regex_1 = Regex::new(r#"([a-zA-Z0-9']+) +\[([0-9,]+)\]"#).unwrap();
 
     // todo
-    None
+    for cap in s_allele_regex_1.captures_iter(input.as_ref().unwrap()) {
+        // todo - 2nd regex to break up multiple S-alleles in the first patch
+        // println!("Month: {} Day: {} Year: {}", &cap[2], &cap[3], &cap[1]);
+
+        let s_allele = &cap[1]; // like "S1S4'"
+        let collections = &cap[2]; // like "12" or "12,13"
+
+        let collections: Vec<i32> = collections
+            .split(",")
+            .map(|x| x.parse::<i32>().unwrap())
+            .collect();
+
+        output.insert(
+            s_allele.to_string(),
+            HashSet::from_iter(collections.iter().cloned()),
+        );
+    }
+
+    return output;
+}
+
+fn format_s_allele(existing: &Option<String>, new: &Option<String>) -> String {
+    // if we have an existing s allele entry, compare it to the new one
+    // if there's a difference then we want to extend it, for example
+    // existing: "S3S6 [12]"
+    // new: "S1S4 [13]"
+    // output: "S3S6 [12] or S1S4 [13] (conflicting sources)"
+
+    // or "S3S6 [12]" and new "S1S4" [13] -> "S3S6 [12,13]"
+
+    let mut existing = parse_s_allele_string(existing);
+    let new = parse_s_allele_string(new);
+
+    // for each S-allele in the new one, see if it's in the existing one, if so combine their collection lists
+
+    // add new s-alleles to old
+    for (key, value) in new.into_iter() {
+        if existing.contains_key(&key) {
+            let existing_value = existing.get_mut(&key).unwrap();
+
+            existing_value.extend(&value);
+        } else {
+            existing.insert(key, value);
+        }
+    }
+
+    let mut strings: Vec<String> = Default::default();
+    for (key, value) in existing.into_iter() {
+        strings.push(format!(
+            "{key} [{}]",
+            value
+                .iter()
+                .map(|x| x.to_string())
+                .collect::<Vec<_>>()
+                .iter()
+                .sorted()
+                .join(",")
+        ));
+    }
+
+    let mut output = strings.iter().sorted().join(" or ");
+    // write output back as a string
+    // add "(conflicting sources)" if there are multiple S-alleles
+    // todo
+    if strings.len() > 1 {
+        output += " (conflicting sources)"
+    }
+
+    output
 }
 
 // check a new value from a collection item against something already in the database
@@ -869,7 +943,7 @@ fn apply_top_level_fields(
             )
         });
 
-    let s_allele = format_s_allele(existing_base_plant.s_allele, &plant.s_allele);
+    let s_allele = format_s_allele(&existing_base_plant.s_allele, &plant.s_allele);
 
     let aka_formatted = format_aka_strings(&plant.aka);
 
