@@ -839,7 +839,7 @@ fn parse_s_allele_string(input: &Option<String>) -> HashMap<String, HashSet<i32>
         let collections = &cap[2]; // like "12" or "12,13"
 
         let collections: Vec<i32> = collections
-            .split(",")
+            .split(',')
             .map(|x| x.parse::<i32>().unwrap())
             .collect();
 
@@ -849,7 +849,7 @@ fn parse_s_allele_string(input: &Option<String>) -> HashMap<String, HashSet<i32>
         );
     }
 
-    return output;
+    output
 }
 
 fn format_s_allele(existing: &Option<String>, new: &Option<String>) -> String {
@@ -868,12 +868,12 @@ fn format_s_allele(existing: &Option<String>, new: &Option<String>) -> String {
 
     // add new s-alleles to old
     for (key, value) in new.into_iter() {
-        if existing.contains_key(&key) {
+        if let std::collections::hash_map::Entry::Vacant(e) = existing.entry(key.clone()) {
+            e.insert(value);
+        } else {
             let existing_value = existing.get_mut(&key).unwrap();
 
             existing_value.extend(&value);
-        } else {
-            existing.insert(key, value);
         }
     }
 
