@@ -1,61 +1,55 @@
-import React, { useCallback } from 'react';
-import Link from 'next/link';
-import { Point } from 'ol/geom';
-import { fromLonLat, toLonLat, transformExtent } from 'ol/proj';
-import 'ol/ol.css';
-import { RMap, ROSM, RLayerVector, RFeature, ROverlay, RStyle, RPopup } from 'rlayers';
-import styles from '../../styles/Map.module.css';
+import React, { useCallback } from 'react'
+import Link from 'next/link'
+import { MapContainer, Marker, Popup, TileLayer, useMapEvents, useMap } from 'react-leaflet'
+import L from 'leaflet'
+import 'leaflet/dist/leaflet.css'
+import styles from '../../styles/Map.module.css'
 
-export default function Home({ locations, setClick, setExtents }) {
-  const center = fromLonLat([-100, 40.5]);
+import { locations_to_geoJSON } from './util'
+
+function GetLocations ({ map, setClick, setExtents }) {
+  useMapEvents({
+    click (e) {
+      setClick(e.latlng)
+    },
+    locationfound (e) {
+      console.log("got user's location") // todo
+    }
+  })
+
+  const [bounds, setBounds] = React.useState([])
+
+  React.useEffect(() => {
+    if (!map) return
+
+    setExtents(map.getBounds()) // initial
+
+    map.on('moveend zoomend', () => {
+      setExtents(map.getBounds())
+    })
+  }, [map])
+
+  return <></>
+}
+
+export default function Home ({ locations, setClick, setExtents }) {
+  let locations_geoJSON = locations_to_geoJSON(locations)
+
+  const [map, setMap] = React.useState(null)
 
   return (
-    <>
-      <RMap
-        height={'500px'}
-        initial={{ center: center, zoom: 4 }}
-        onClick={useCallback((e) => {
-          const coords = e.map.getCoordinateFromPixel(e.pixel);
-          const lonlat = toLonLat(coords);
-
-          console.log(JSON.stringify(lonlat, null, 2));
-          if (typeof setClick === 'function') {
-            setClick(lonlat);
-          }
-        }, [])}
-        onMoveEnd={useCallback((e) => {
-          const extents = e.map.getView().calculateExtent(e.map.getSize());
-          console.log(JSON.stringify(extents, null, 2));
-
-          var extents_lonlat = transformExtent(extents, 'EPSG:3857', 'EPSG:4326'); // EPSG:4326 is like wgs84, lat/lon
-          console.log(JSON.stringify(extents_lonlat, null, 2));
-          if (typeof setExtents === 'function') {
-            setExtents(extents_lonlat);
-          }
-        }, [])}
-      >
-        <ROSM />
-        {locations && (
-          <RLayerVector zIndex={10}>
-            <RStyle.RStyle>
-              <RStyle.RIcon src={'/fruit_icons/Apple.svg'} anchor={[0.5, 0.8]} />
-            </RStyle.RStyle>
-            {locations.map((location) => (
-              <RFeature geometry={new Point(fromLonLat([location.longitude, location.latitude]))}>
-                <RPopup trigger={'click'} className={`${styles['map-overlay']}`}>
-                  <Link
-                    href={`/collections/${encodeURIComponent(
-                      location.collection_path
-                    )}${encodeURIComponent(location.collection_filename)}`}
-                  >
-                    {location.collection_title}
-                  </Link>
-                </RPopup>
-              </RFeature>
-            ))}
-          </RLayerVector>
-        )}
-      </RMap>
-    </>
-  );
+    <MapContainer
+      zoom={3}
+      scrollWheelZoom={true}
+      style={{ height: 400, width: '100%' }}
+      center={[40.5, -100]}
+      whenCreated={setMap}
+    >
+      <TileLayer
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+      />
+      <GetLocations map={map} setClick={setClick} setExtents={setExtents} />
+    </MapContainer>
+  )
 }
