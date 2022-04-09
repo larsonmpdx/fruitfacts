@@ -17,25 +17,29 @@
             name: "PC7146-23", // "Chelan"
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -10 to -12",
-            description: "S3S9"
+            s_allele: "S3S9",
+            description: ""
         },
         {
             name: "Royal Hazel",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -9 to -10",
-            description: "S4S6"
+            s_allele: "S4S6",
+            description: ""
         },
         {
             // "Blackpearl"
             name: "NY 8139",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -7 to -9",
-            description: "S4S13"
+            s_allele: "S4S13",
+            description: ""
         },
         {
             name: "Santina",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -5 to -7",
+            s_allele: "S1S4'",
             description: "Self-fertile"
         },
         {
@@ -43,71 +47,82 @@
             AKA: ["Coral"],
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -4 to -6",
-            description: "S1S3"
+            s_allele: "S1S3",
+            description: ""
         },
         {
             // "Burgundypearl"
             name: "NY 38L",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -3 to -5",
-            description: "S3S4"
+            s_allele: "S3S4",
+            description: ""
         },
         {
             // "Benton"
             name: "PC7146-8",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -2 to -3",
+            s_allele: "S4'S9",
             description: "Self-fertile"
         },
         {
             name: "Bing",
             type: "Sweet Cherry",
             harvest_time: "June 13",
+            s_allele: "S3S4",
             // harvest time not originally in the chart - this is a typical upper Willamette valley time
-            description: "S3S4"
+            description: ""
         },
         {
             name: "NY 32",
             AKA: ["EbonyPearl (tm)"],
             type: "Sweet Cherry",
             harvest_time_relative: "Bing -3 to +2",
-            description: "S1S4"
+            s_allele: "S1S4",
+            description: ""
         },
         {
             name: "Tamara",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing +4 to +7",
-            description: "S1S9"
+            s_allele: "S1S9",
+            description: ""
         },
         {
             name: "Kordia",
             // in the table as: Attika (Kordia)
             type: "Sweet Cherry",
             harvest_time_relative: "Bing +6 to +7",
-            description: "S3S6"
+            s_allele: "S3S6",
+            description: ""
         },
         {
             name: "Royal Edie",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing +9 to +12",
+            s_allele: "S1S4'",
             description: "Self-fertile"
         },
         {
             name: "Royal Helen",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing +9 to +12",
+            s_allele: "S1S4'",
             description: "Self-fertile"
         },
         {
             name: "Lapins",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing +10 to +14",
+            s_allele: "S1S4'",
             description: "Self-fertile"
         },
         {
             name: "Skeena",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing +12 to +14",
+            s_allele: "S1S4'",
             description: "Self-fertile"
         },
         {
@@ -115,31 +130,36 @@
             name: "Jork 57/201",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing +14 to +15",
-            description: "S1S3"
+            s_allele: "S1S3",
+            description: ""
         },
         {
             name: "Sweetheart",
             type: "Sweet Cherry",
             harvest_time_relative: "Bing +18 to +20",
+            s_allele: "S3S4'",
             description: "Self-fertile"
         },
         {
             name: "Doty", // "Early Robin"
             type: "Sweet Cherry",
             harvest_time_relative: "Rainier -10 to -14",
-            description: "blush. S1S3",
+            s_allele: "S1S3",
+            description: "blush",
             patent: "https://patents.google.com/patent/USPP13951 expired 2021-07-13"
         },
         {
             name: "NY 7679", //"Radiance Pearl"
             type: "Sweet Cherry",
             harvest_time_relative: "Rainier -4 to -7",
-            description: "blush. S1S13"
+            s_allele: "S1S13",
+            description: "blush"
         },
         {
             name: "Rainier",
             type: "Sweet Cherry",
             harvest_time: "June 19",
+            s_allele: "S1S4",
             // harvest time not originally in the chart - this is a typical upper Willamette valley time
             description: "blush"
         }

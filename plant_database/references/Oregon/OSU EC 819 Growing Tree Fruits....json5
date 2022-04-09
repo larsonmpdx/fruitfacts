@@ -276,7 +276,7 @@
         },
         {
             name: "Kordia",
-            AKA: ["Attika"],
+            AKA: ["Techlovicka II", "Attika®"],
             type: "Sweet Cherry",
             locations: ["I", "II"],
             harvest_time: "Late",

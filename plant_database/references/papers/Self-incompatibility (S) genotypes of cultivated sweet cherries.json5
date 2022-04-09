@@ -46,7 +46,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Aborigenka (Аборигенка)",
+            name: "Aborigenka",
+            AKA: ["Аборигенка"],
             s_allele: "S1S3",
             description: "country of origin: UA"
         },
@@ -76,7 +77,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Adelina (Аделина)",
+            name: "Adelina",
+            AKA: ["Аделина"],
             s_allele: "S3S5",
             description: "country of origin: RU"
         },
@@ -125,7 +127,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Aida (IV-13/20)",
+            name: "Aida",
+            AKA: ["IV-13/20"],
             s_allele: "S6S12",
             description: "country of origin: HU Moldvai fekete (Moldavian black) H 236 (Germersdorfer x o.p.)"
         },
@@ -190,7 +193,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Almaznaya (Алмазная)",
+            name: "Almaznaya",
+            AKA: ["Алмазная"],
             s_allele: "S3S3",
             description: "country of origin: RU"
         },
@@ -208,13 +212,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Altenburger Melonen-kirsche (Büttners Späte Rote Knorpelkirsche)",
+            name: "Altenburger Melonen-kirsche",
+            AKA: ["Büttners Späte Rote Knorpelkirsche"],
             s_allele: "S3S4",
             description: "country of origin: DE seedling of Büttner from Halle (Saale)"
         },
         {
             type: "Sweet Cherry",
-            name: "Althof (Graf)",
+            name: "Althof",
+            AKA: ["Graf"],
             s_allele: "S4S5",
             description: "country of origin: DE local cultivar, Baden region"
         },
@@ -286,7 +292,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Anita (IV-3/41)",
+            name: "Anita",
+            AKA: ["IV-3/41"],
             s_allele: "S3S6",
             description: "country of origin: HU Trusenszkaja 2 H 3 (Germersdorfer x o.p.)"
         },
@@ -301,19 +308,22 @@
 
         {
             type: "Sweet Cherry",
-            name: "Annushka (Аннушка)",
+            name: "Annushka",
+            AKA: ["Аннушка"],
             s_allele: "S3S4",
             description: "country of origin: UA Donchanka Valerii Chkalov"
         },
         {
             type: "Sweet Cherry",
-            name: "Anons (Анонс)",
+            name: "Anons",
+            AKA: ["Анонс"],
             s_allele: "S5S9",
             description: "country of origin: UA Bigarreau Napoleon Blanc Pollen mix of 13 sweet cherry cv's"
         },
         {
             type: "Sweet Cherry",
-            name: "Anshlag (Аншлаг)",
+            name: "Anshlag",
+            AKA: ["Аншлаг"],
             s_allele: "S1S9",
             description: "country of origin: UA Zöschener Oktober Knorpel Presryzhna"
         },
@@ -337,7 +347,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Areko (Hamid)",
+            name: "Areko",
+            AKA: ["Hamid"],
             s_allele: "S1S3",
             description: "country of origin: DE Kordia Regina"
         },
@@ -372,7 +383,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Astrid (Späte von Wedler)",
+            name: "Astrid",
+            AKA: ["Späte von Wedler"],
             s_allele: "S3S4",
             description: "country of origin: DE"
         },
@@ -414,7 +426,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Axel (Alex, III-16/45)",
+            name: "Axel",
+            AKA: ["Alex", "III-16/45"],
             s_allele: "S3S3'",
             description: "country of origin: HU Van JI 2420"
         },
@@ -438,7 +451,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Badacsoner Schwarze (Badacsoner Riesenkirsche)",
+            name: "Badacsoner Schwarze",
+            AKA: ["Badacsoner Riesenkirsche"],
             s_allele: "S3S4",
             description: "country of origin: HU north-east border of Lake Balaton"
         },
@@ -498,7 +512,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Barkhatnaya (Бархатная)",
+            name: "Barkhatnaya",
+            AKA: ["Бархатная"],
             s_allele: "S5S6",
             description: "country of origin: RU Bigarreau Napoleon Blanc (Наполеон белый)"
         },
@@ -546,22 +561,18 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Bela (Бела)",
+            name: "Bela",
+            AKA: ["Бела"],
             s_allele: "S2S3",
             description: "country of origin: RU"
         },
         {
             type: "Sweet Cherry",
-            name: "Belge",
+            name: "Belge (entry 2)",
             s_allele: "S3S4",
             description: "country of origin: FR"
         },
-        {
-            type: "Sweet Cherry",
-            name: "Belge (Ferrovia)",
-            s_allele: "S3S12",
-            description: "country of origin: FR"
-        },
+        // duplicate entry for Belge / Ferrovia
 
         // table 1, page 4
 
@@ -585,7 +596,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Bella di Pistoia A (Noble)",
+            name: "Bella di Pistoia A",
+            AKA: ["Noble"],
             s_allele: "S6S13",
             description: "country of origin: IT"
         },
@@ -641,7 +653,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Bereket (Берекет)",
+            name: "Bereket",
+            AKA: ["Берекет"],
             s_allele: "S1S7",
             description: "country of origin: RU"
         },
@@ -671,7 +684,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Bigalise (Enjidel)",
+            name: "Bigalise",
+            AKA: ["Enjidel"],
             s_allele: "S2S3",
             description: "country of origin: FR"
         },
@@ -683,31 +697,36 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Bigarreau de Mezel (Mezel, Schwarze Knorpel von Mezel)",
+            name: "Bigarreau de Mezel",
+            AKA: ["Mezel", "Schwarze Knorpel von Mezel"],
             s_allele: "S3S9",
             description: "country of origin: FR"
         },
         {
             type: "Sweet Cherry",
-            name: "Bigarreau de Schrecken (Schreckens Kirsche)",
+            name: "Bigarreau de Schrecken",
+            AKA: ["Schreckens Kirsche"],
             s_allele: "S1S3",
             description: "country of origin: DE"
         },
         {
             type: "Sweet Cherry",
-            name: "Bigarreau Esperen (Esperens Knorpelkirsche)",
+            name: "Bigarreau Esperen",
+            AKA: ["Esperens Knorpelkirsche"],
             s_allele: "S3S4",
             description: "country of origin: BE"
         },
         {
             type: "Sweet Cherry",
-            name: "Bigarreau Gaucher (Gauchers Knorpelkirsche)",
+            name: "Bigarreau Gaucher",
+            AKA: ["Gauchers Knorpelkirsche"],
             s_allele: "S3S5",
             description: "country of origin: DE"
         },
         {
             type: "Sweet Cherry",
-            name: "Bigarreau Kracinskogo (Биггаро Красиского)",
+            name: "Bigarreau Kracinskogo",
+            AKA: ["Биггаро Красиского"],
             s_allele: "S1S3",
             description: "country of origin: RU"
         },
@@ -755,7 +774,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Black Eagle (Eagle)",
+            name: "Black Eagle",
+            AKA: ["Eagle"],
             s_allele: "S1S2",
             description: "country of origin: GB Yellow Spanish May Duke"
         },
@@ -767,7 +787,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Black Elton (Elton)",
+            name: "Black Elton",
+            AKA: ["Elton"],
             s_allele: "S1S3",
             description: "country of origin: GB Yellow Spanish White Heart"
         },
@@ -791,12 +812,7 @@
             s_allele: "S4S13",
             description: "country of origin: US"
         },
-        {
-            type: "Sweet Cherry",
-            name: "Black Republican",
-            s_allele: "S1S4",
-            description: "country of origin: US Black Eagle open pollinated"
-        },
+        // duplicate entry for Black Republican
         {
             type: "Sweet Cherry",
             name: "Black Star",
@@ -851,7 +867,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Blanca de Provenza (Blanche de Provence)",
+            name: "Blanca de Provenza",
+            AKA: ["Blanche de Provence"],
             s_allele: "S1S5",
             description: "country of origin: ES"
         },
@@ -936,7 +953,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Bopparder Frühkirsche (Frühe von Boppard)",
+            name: "Bopparder Frühkirsche",
+            AKA: ["Frühe von Boppard"],
             s_allele: "S3S6",
             description: "country of origin: DE"
         },
@@ -954,13 +972,14 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Bowery Heart (Bowyer Early Heart)",
+            name: "Bowery Heart",
+            AKA: ["Bowyer Early Heart"],
             s_allele: "S1S6",
             description: "country of origin: GB"
         },
         {
             type: "Sweet Cherry",
-            name: "Bradbourne Black (maybe syn. for Hedelfinger)",
+            name: "Bradbourne Black", // "maybe syn. for Hedelfinger"
             s_allele: "S3S5",
             description: "country of origin: GB"
         },
@@ -972,7 +991,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Braune Prinzer (Prinzenkirsche)",
+            name: "Braune Prinzer",
+            AKA: ["Prinzenkirsche"],
             s_allele: "S1S3",
             description: "country of origin: DE"
         },
@@ -1020,7 +1040,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Bujnakska Chjornaya (Буйнакская чёрная)",
+            name: "Bujnakska Chjornaya",
+            AKA: ["Буйнакская чёрная"],
             s_allele: "S3S4",
             description: "country of origin: RU"
         },
@@ -1069,7 +1090,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Caddusa (Cappuccia Chiusa Sclafani)",
+            name: "Caddusa",
+            AKA: ["Cappuccia Chiusa Sclafani"],
             s_allele: "S13S22",
             description: "country of origin: IT local cultivar, Sicily"
         },
@@ -1150,7 +1172,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Cappucciarica Cardeto (Cappucciarica San Lorenzo)",
+            name: "Cappucciarica Cardeto",
+            AKA: ["Cappucciarica San Lorenzo"],
             s_allele: "S3S10",
             description: "country of origin: IT"
         },
@@ -1203,7 +1226,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Carmen (III-42/114)",
+            name: "Carmen",
+            AKA: ["III-42/114"],
             s_allele: "S4S5",
             description: "country of origin: HU Yellow Dragan (Drogans Gelbe) H 203 (Germersdorfer x o.p.)"
         },
@@ -1250,7 +1274,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Cashmere (PC 7144-3)",
+            name: "Cashmere",
+            AKA: ["PC 7144-3"],
             s_allele: "S4'S9",
             description: "country of origin: US Stella Early Burlat"
         },
@@ -1268,7 +1293,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Cavalier (Rynbrandt)",
+            name: "Cavalier",
+            AKA: ["Rynbrandt"],
             s_allele: "S2S3",
             description: "country of origin: US seedling from a orchard of 'Schmidt' cherry"
         },
@@ -1347,7 +1373,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Chapata (Xapata)",
+            name: "Chapata",
+            AKA: ["Xapata"],
             s_allele: "S3S14",
             description: "country of origin: FR"
         },
@@ -1567,7 +1594,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Columbia (Benton)",
+            name: "Columbia",
+            AKA: ["Benton"],
             s_allele: "S4'S9",
             description: "country of origin: US Stella Beaulieu"
         },
@@ -1629,7 +1657,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Corniola CI 508 (Corniola CI 523, Corniola CI 79)",
+            name: "Corniola CI 508",
+            AKA: ["Corniola CI 523", "Corniola CI 79"], // ML note: I don't get this, are these all the same variety?
             s_allele: "S3S6",
             description: "country of origin: IT"
         },
@@ -1753,7 +1782,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Cuore (Di Guglielmo, Usignano)",
+            name: "Cuore",
+            AKA: ["Di Guglielmo", "Usignano"],
             s_allele: "S9S13",
             description: "country of origin: IT"
         },
@@ -1807,25 +1837,29 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Dagestanka (Дагестанка)",
+            name: "Dagestanka",
+            AKA: ["Дагестанка"],
             s_allele: "S3S9",
             description: "country of origin: RU Aprelka chernaya (Апрелка чернная) Drogans Gelbe"
         },
         {
             type: "Sweet Cherry",
-            name: "Dagestanskaya rannayay (Дагестаная ранняя)",
+            name: "Dagestanskaya rannayay",
+            AKA: ["Дагестаная ранняя"],
             s_allele: "S2S3",
             description: "country of origin: RU"
         },
         {
             type: "Sweet Cherry",
-            name: "Dame Nancy (FB 420)",
+            name: "Dame Nancy",
+            AKA: ["FB 420"],
             s_allele: "S2S3",
             description: "country of origin: AU Stella open pollinated"
         },
         {
             type: "Sweet Cherry",
-            name: "Dame Roma (FB 1111)",
+            name: "Dame Roma",
+            AKA: ["FB 1111"],
             s_allele: "S4'S13",
             description: "country of origin: AU Black Douglas Stella"
         },
@@ -1849,13 +1883,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Dar Izobiliya (Дар изобилия)",
+            name: "Dar Izobiliya",
+            AKA: ["Дар изобилия"],
             s_allele: "S6S?",
             description: "country of origin: RU Melitopolskaya chernaya (Мелитополкаячерная)"
         },
         {
             type: "Sweet Cherry",
             name: "Frantsuzkaya chernaya (Французская черная) 110 Dar Mliyeva (Дар Млієва)",
+            // AKA todo?
             s_allele: "S5S6",
             description: "country of origin: UA Lyubskaya open pollinated"
         },
@@ -2002,7 +2038,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Demetra (Деметра)",
+            name: "Demetra",
+            AKA: ["Деметра"],
             s_allele: "S3S?",
             description: "country of origin: RU"
         },
@@ -2014,7 +2051,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Di Giardino (Vallescura 1, Vallescura 2)",
+            name: "Di Giardino",
+            AKA: ["Vallescura 1", "Vallescura 2"],
             s_allele: "S3S9",
             description: "country of origin: IT"
         },
@@ -2068,25 +2106,29 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Dolores (Долорес)",
+            name: "Dolores",
+            AKA: ["Долорес"],
             s_allele: "S2S5",
             description: "country of origin: RU"
         },
         {
             type: "Sweet Cherry",
-            name: "Donchanka (Дончанка)",
+            name: "Donchanka",
+            AKA: ["Дончанка"],
             s_allele: "S4S5",
             description: "country of origin: UA Drogans Gelbe Knorpel open pollinated"
         },
         {
             type: "Sweet Cherry",
-            name: "Donetska krasavitsa (Донецька красавиця)",
+            name: "Donetska krasavitsa",
+            AKA: ["Донецька красавиця"],
             s_allele: "S3S9",
             description: "country of origin: UA Drohana rozova Valerii Chkalov"
         },
         {
             type: "Sweet Cherry",
-            name: "Donetsiy ugolok (Донецький угольок)",
+            name: "Donetsiy ugolok",
+            AKA: ["Донецький угольок"],
             s_allele: "S3S5",
             description: "country of origin: UA"
         },
@@ -2110,7 +2152,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Donnanka (Donchanka)",
+            name: "Donnanka",
+            AKA: ["Donchanka"],
             s_allele: "S3S6",
             description: "country of origin: UA"
         },
@@ -2122,7 +2165,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Drushba (Дружба)",
+            name: "Drushba",
+            AKA: ["Дружба"],
             s_allele: "S1S9",
             description: "country of origin: UA Drogans Gelbe pollen mix (Mrelitopolska krapchasta+Melitopolska chorna+Big. Oratovskoho)"
         },
@@ -2146,7 +2190,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Durdevka (Ritopek)",
+            name: "Durdevka",
+            AKA: ["Ritopek"],
             s_allele: "S3S6",
             description: "country of origin: RS"
         },
@@ -2158,16 +2203,12 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Durella di Cesena (Durella A, Morandina)",
+            name: "Durella di Cesena",
+            AKA: ["Durella A", "Morandina"],
             s_allele: "S3S13",
             description: "country of origin: IT old local landrace (Emilia-Romagna, Italy)"
         },
-        {
-            type: "Sweet Cherry",
-            name: "Durella di Cesena",
-            s_allele: "S1S13",
-            description: "country of origin: IT"
-        },
+        // duplicate entry for Durella di Cesena
         {
             type: "Sweet Cherry",
             name: "Durona di Bisceglie",
@@ -2185,7 +2226,8 @@
 
         {
             type: "Sweet Cherry",
-            name: "Durona di Vignola (Nero I di Vignola)",
+            name: "Durona di Vignola",
+            AKA: ["Nero I di Vignola"],
             s_allele: "S6S13",
             description: "country of origin: IT local cultivar, Vignola region"
         },
@@ -2221,7 +2263,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Durone di Cesena CI 514 (Durone nero II CI 201)",
+            name: "Durone di Cesena CI 514",
+            AKA: ["Durone nero II CI 201"],
             s_allele: "S6S13",
             description: "country of origin: IT"
         },
@@ -2233,13 +2276,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Durone di Verona (Mora di Cazzano)",
+            name: "Durone di Verona",
+            AKA: ["Mora di Cazzano"],
             s_allele: "S3S14",
             description: "country of origin: IT local cultivar, Veneto region"
         },
         {
             type: "Sweet Cherry",
-            name: "Durone milanese (Mora di Cazzano 40)",
+            name: "Durone milanese",
+            AKA: ["Mora di Cazzano 40"],
             s_allele: "S3S14",
             description: "country of origin: IT"
         },
@@ -2251,19 +2296,22 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Durone Nero 3 (Duroni 3)",
+            name: "Durone Nero 3",
+            AKA: ["Duroni 3"],
             s_allele: "S3S6",
             description: "country of origin: IT local cultivar, Vignola region"
         },
         {
             type: "Sweet Cherry",
-            name: "Durone Nero I (Durone di Modena, Durone di Vignola)",
+            name: "Durone Nero I",
+            AKA: ["Durone di Modena", "Durone di Vignola"],
             s_allele: "S3S13",
             description: "country of origin: IT old local landrace (Vignola, Province Modena, Italy)"
         },
         {
             type: "Sweet Cherry",
-            name: "Durone Nero II (Big. Tardif de Vignola, Durone di Vignola II)",
+            name: "Durone Nero II",
+            AKA: ["Big. Tardif de Vignola", "Durone di Vignola II"],
             s_allele: "S6S13",
             description: "country of origin: IT old local landrace (Vignola, Province Modena, Italy)"
         },
@@ -2281,7 +2329,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Dzherelo (Джерело)",
+            name: "Dzherelo",
+            AKA: ["Джерело"],
             s_allele: "S6S9",
             description: "country of origin: UA"
         },
@@ -2300,7 +2349,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Early Bigi® (Bigi Sol)",
+            name: "Bigi Sol",
+            AKA: ["Early Bigi®"],
             s_allele: "S1S9",
             description: "country of origin: FR"
         },
@@ -2312,7 +2362,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Early Cherry (Prislonica 3)",
+            name: "Prislonica 3", // listed as "Early Cherry", uh...
             s_allele: "S3S4",
             description: "country of origin: RS"
         },
@@ -2329,15 +2379,10 @@
             s_allele: "S2S6 or S3S4", // both are in the pdf
             description: "country of origin: CZ mutant of Korvik (Kordia x Vic)"
         },
+        // duplicate entry for Early Lory / Earlise / Rivedel
         {
             type: "Sweet Cherry",
-            name: "Early Lory (Earlise, Rivedel)",
-            s_allele: "S1S9",
-            description: "country of origin: FR Starking Hardy Giant Burlat"
-        },
-        {
-            type: "Sweet Cherry",
-            name: "Early Lyons",
+            name: "Early Lyons FR",
             s_allele: "S5S6",
             description: "country of origin: FR"
         },
@@ -2349,7 +2394,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Early Lyons NY (Jaboulay)",
+            name: "Early Lyons",
+            AKA: ["Jaboulay"],
             s_allele: "S6S9",
             description: "country of origin: US"
         },
@@ -2361,7 +2407,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Early Purple (Hinode)",
+            name: "Early Purple",
+            AKA: ["Hinode"],
             s_allele: "S2S7",
             description: "country of origin: GB"
         },
@@ -2425,13 +2472,15 @@
 
         {
             type: "Sweet Cherry",
-            name: "Elton Heart BC (Eltonkirsche, Sercova)",
+            name: "Elton Heart BC",
+            AKA: ["Eltonkirsche BC", "Sercova BC"],
             s_allele: "S4S6",
             description: "country of origin: CA Yellow Spanish White Heart"
         },
         {
             type: "Sweet Cherry",
-            name: "Elton Heart EM (Eltonkirsche, Sercova)",
+            name: "Elton Heart EM",
+            AKA: ["Eltonkirsche EM", "Sercova EM"],
             s_allele: "S3S6",
             description: "country of origin: GB Yellow Spanish White Heart"
         },
@@ -2449,7 +2498,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Emperor Francis (Kaiser Franz Kirsche, Kaiser Franz)",
+            name: "Emperor Francis",
+            AKA: ["Kaiser Franz Kirsche", "Kaiser Franz"],
             s_allele: "S3S4",
             description: "country of origin: AT/DE"
         },
@@ -2516,7 +2566,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "F 98 Caroon (Caroon B?)",
+            name: "F 98 Caroon", // "Caroon B?"
             s_allele: "S1S3",
             description: "country of origin: GB"
         },
@@ -2545,7 +2595,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Farnstädter Schwarze ( -Knorpelkirsche)",
+            name: "Farnstädter Schwarze",
+            AKA: ["Knorpelkirsche"], // not sure if this is a different suffix or what, it has a "-" before it in the pdf
             s_allele: "S3S5",
             description: "country of origin: DE local cultivar from Querfurt (Farnstädt, Gatterstädt)"
         },
@@ -2593,7 +2644,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Ferbolus (Vernel)",
+            name: "Ferbolus",
+            AKA: ["Vernel"],
             s_allele: "S5S13",
             description: "country of origin: FR Hedelfinger Reverchon"
         },
@@ -2605,7 +2657,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Fercer® (Arcina)",
+            name: "Arcina",
+            AKA: ["Fercer®"],
             s_allele: "S2S6",
             description: "country of origin: FR Stark Hardy Giant open pollinated"
         },
@@ -2670,13 +2723,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Ferprime (Primulat)",
+            name: "Ferprime",
+            AKA: ["Primulat"],
             s_allele: "S2S9",
             description: "country of origin: FR Fercer open pollinated"
         },
         {
             type: "Sweet Cherry",
-            name: "Ferrovia (Belge, Maiatica di Taurasi, Noire de Meched)",
+            name: "Ferrovia",
+            AKA: ["Belge", "Maiatica di Taurasi", "Noire de Meched"],
             s_allele: "S3S12",
             description: "country of origin: IT local cultuivar, similar to Bella di Pistoia, Bari region"
         },
@@ -2727,31 +2782,36 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Fiore A / Fiore B (Ciliegia del Fiore, Forli, Precoce del Fiore)",
+            name: "Fiore A",
+            AKA: ["Fiore B", "Ciliegia del Fiore", "Forli", "Precoce del Fiore"],
             s_allele: "S3S13",
             description: "country of origin: IT local cultivar, Forli"
         },
         {
             type: "Sweet Cherry",
-            name: "Final 10.4 (4132)",
+            name: "Final 10.4",
+            AKA: ["4132"],
             s_allele: "S3S4'",
             description: "country of origin: DE"
         },
         {
             type: "Sweet Cherry",
-            name: "Final 11.3 (3161)",
+            name: "Final 11.3",
+            AKA: ["3161"],
             s_allele: "S3S4'",
             description: "country of origin: DE"
         },
         {
             type: "Sweet Cherry",
-            name: "Final 12.1 (1151)",
+            name: "Final 12.1",
+            AKA: ["1151"],
             s_allele: "S3S4'",
             description: "country of origin: DE"
         },
         {
             type: "Sweet Cherry",
-            name: "Final 13.1 (6111)",
+            name: "Final 13.1",
+            AKA: ["6111"],
             s_allele: "S3S4'",
             description: "country of origin: DE"
         },
@@ -2794,13 +2854,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Francesina (Francia, Siso)",
+            name: "Francesina",
+            AKA: ["Francia", "Siso"],
             s_allele: "S6S9",
             description: "country of origin: IT"
         },
         {
             type: "Sweet Cherry",
-            name: "Frantsis (Францис)",
+            name: "Frantsis",
+            AKA: ["Францис"],
             s_allele: "S3S4",
             description: "country of origin: RU"
         },
@@ -2818,13 +2880,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Frogmore Early (Frogmore Bigarreau)",
+            name: "Frogmore Early",
+            AKA: ["Frogmore Bigarreau"],
             s_allele: "S1S3",
             description: "country of origin: GB"
         },
         {
             type: "Sweet Cherry",
-            name: "Fromms Herzkirsche (Fromms Schwarze Herzkirsche)",
+            name: "Fromms Herzkirsche",
+            AKA: ["Fromms Schwarze Herzkirsche"],
             s_allele: "S1S3",
             description: "country of origin: DE seedling of Fromm from Guben/Neiße"
         },
@@ -2842,7 +2906,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Frühe von Boppard (Bopparder Frühe)",
+            name: "Frühe von Boppard",
+            AKA: ["Bopparder Frühe"],
             s_allele: "S3S6",
             description: "country of origin: DE"
         },
@@ -2854,7 +2919,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Früheste der Mark (Küppers Frühkirsche)",
+            name: "Früheste der Mark",
+            AKA: ["Küppers Frühkirsche"],
             s_allele: "S2S3",
             description: "country of origin: DE seedling of Küppers from Guben/Neiße"
         },
@@ -2890,7 +2956,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Furticchiara (Limone, Napoleon, Sardinia I)",
+            name: "Furticchiara",
+            AKA: ["Limone", "Napoleon", "Sardinia I"],
             s_allele: "S3S4",
             description: "country of origin: IT"
         },
@@ -2977,7 +3044,8 @@
 
         {
             type: "Sweet Cherry",
-            name: "Gascogne Seninghem (Gascogne Tardive de Seninghern)",
+            name: "Gascogne Seninghem",
+            AKA: ["Gascogne Tardive de Seninghern"],
             s_allele: "S3S7",
             description: "country of origin: FR"
         },
@@ -3073,7 +3141,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Glacier (PC 7144-7)",
+            name: "Glacier",
+            AKA: ["PC7144-7"],
             s_allele: "S4'S9",
             description: "country of origin: US Stella Early Burlat"
         },
@@ -3097,13 +3166,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Goryanka (Горянка)",
+            name: "Goryanka",
+            AKA: ["Горянка"],
             s_allele: "S3S6",
             description: "country of origin: RU"
         },
         {
             type: "Sweet Cherry",
-            name: "Governor Wood (Wood)",
+            name: "Governor Wood",
+            AKA: ["Wood"],
             s_allele: "S3S6",
             description: "country of origin: GB"
         },
@@ -3163,7 +3234,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Grollova (Grolls Schwarze Knorpelkirsche)",
+            name: "Grollova (Grolls Schwarze Knorpelkirsche)", // todo - matches the name above
             s_allele: "S3S4",
             description: "country of origin: DE"
         },
@@ -3181,13 +3252,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Große Germersdorfer (Germersdorfi 1, Germersdorfi 3)",
+            name: "Große Germersdorfer",
+            AKA: ["Germersdorfi 1", "Germersdorfi 3"],
             s_allele: "S3S12",
             description: "country of origin: DE/HU"
         },
         {
             type: "Sweet Cherry",
-            name: "Große Prinzessin (Groote Prinzess, Napoleon, Lauermanns Kirsche)",
+            name: "Große Prinzessin",
+            AKA: ["Groote Prinzess", "Napoleon", "Lauermanns Kirsche"],
             s_allele: "S3S4",
             description: "country of origin: NL old local culivar from Netherland"
         },
@@ -3220,7 +3293,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Guigne Douce de Champ de l Ait (Guigne douce du Champ)",
+            name: "Guigne Douce de Champ de l Ait",
+            AKA: ["Guigne douce du Champ"],
             s_allele: "S3S4",
             description: "country of origin: FR"
         },
@@ -3310,7 +3384,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Hedelfinger ( -Riesenkirsche)",
+            name: "Hedelfinger",
+            AKA: ["Riesenkirsche"],
             s_allele: "S3S5",
             description: "country of origin: DE Seedling from Hedelfingen (Württemberg)"
         },
@@ -3497,7 +3572,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Imperiale Blancale (Imperiale)",
+            name: "Imperiale Blancale",
+            AKA: ["Imperiale"],
             s_allele: "S6S13",
             description: "country of origin: IT"
         },
@@ -3521,43 +3597,50 @@
         },
         {
             type: "Sweet Cherry",
-            name: "INRA V0566 ('Abbesse d'Oignies')",
+            name: "INRA V0566",
+            AKA: ["Abbesse d'Oignies"],
             s_allele: "S2S4",
             description: "country of origin: FR"
         },
         {
             type: "Sweet Cherry",
-            name: "INRA V2392 ('Bigarreau Orleans')",
+            name: "INRA V2392",
+            AKA: ["Bigarreau Orleans"],
             s_allele: "S2S4",
             description: "country of origin: FR"
         },
         {
             type: "Sweet Cherry",
-            name: "INRA V3694 ('Dure de Sauve')",
+            name: "INRA V3694",
+            AKA: ["Dure de Sauve"],
             s_allele: "S6S9",
             description: "country of origin: FR"
         },
         {
             type: "Sweet Cherry",
-            name: "INRA V3855 ('Bigarreau de Mezel')",
+            name: "INRA V3855",
+            AKA: ["Bigarreau de Mezel"],
             s_allele: "S6S9",
             description: "country of origin: FR"
         },
         {
             type: "Sweet Cherry",
-            name: "INRA V3858 ('Bigarreau Coeur de Pigeon')",
+            name: "INRA V3858",
+            AKA: ["Bigarreau Coeur de Pigeon"],
             s_allele: "S1S6",
             description: "country of origin: FR"
         },
         {
             type: "Sweet Cherry",
-            name: "INRA V4063 ('Cerise Guin Doux des Charentes')",
+            name: "INRA V4063",
+            AKA: ["Cerise Guin Doux des Charentes"],
             s_allele: "S1S3",
             description: "country of origin: FR"
         },
         {
             type: "Sweet Cherry",
-            name: "INRA V4092 ('Gezia Beltza C022')",
+            name: "INRA V4092",
+            AKA: ["Gezia Beltza C022"],
             s_allele: "S7S14",
             description: "country of origin: FR"
         },
@@ -3599,7 +3682,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Jaboulay (Bigarreau de Jaboulay, Early Lyons)",
+            name: "Jaboulay",
+            AKA: ["Bigarreau de Jaboulay", "Early Lyons"],
             s_allele: "S6S9",
             description: "country of origin: FR seedling of A. Jaboulay from Oullins/Rhone"
         },
@@ -3629,7 +3713,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Jedina (Єдина)",
+            name: "Jedina",
+            AKA: ["Єдина"],
             s_allele: "S6S17",
             description: "country of origin: UA"
         },
@@ -3641,7 +3726,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "JI 2434 (AHR)",
+            name: "JI 2434",
+            AKA: ["AHR"],
             s_allele: "S3S3'",
             description: "country of origin: DE origin Ahrensburg, Emperor Francis Napoleon X-ray pollen"
         },
@@ -3688,7 +3774,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Juin ('Bigarreau de Juin')",
+            name: "Juin",
+            AKA: ["Bigarreau de Juin"],
             s_allele: "S3S21",
             description: "country of origin: FR"
         },
@@ -3736,19 +3823,14 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Kaiser Franz",
+            name: "Kaiser Franz (entry 2)",
             s_allele: "S2S4",
             description: "country of origin: DE"
         },
 
         // table 1, page 16
 
-        {
-            type: "Sweet Cherry",
-            name: "Kaiser Franz (Emperor Francis, Kaiser Franz Josef)",
-            s_allele: "S3S4",
-            description: "country of origin: DE"
-        },
+        // duplicate entry for Kaiser Franz / Emperor Francis / Kaiser Franz Josef
         {
             type: "Sweet Cherry",
             name: "Klara (H 1)",
@@ -3841,7 +3923,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Kaštanka (Early Rivers)",
+            name: "Kaštanka",
+            AKA: ["Early Rivers"],
             s_allele: "S1S2",
             description: "country of origin: CZ local cultivar, Central Bohemia"
         },
@@ -3859,7 +3942,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Kavics (H 165)",
+            name: "Kavics",
+            AKA: ["H 165"],
             s_allele: "S3S4 or S4S12", // both are in the pdf
             description: "country of origin: HU Germersdorfer Budakalászi"
         },
@@ -3871,7 +3955,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Kavkazskaya Ylychshennaya (Кавказская улучшеная)",
+            name: "Kavkazskaya Ylychshennaya",
+            AKA: ["Кавказская улучшеная"],
             s_allele: "S3S6",
             description: "country of origin: RU derived variety of Kavkazskaya (Кавказская)"
         },
@@ -3883,7 +3968,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Kazka (Казка)",
+            name: "Kazka",
+            AKA: ["Казка"],
             s_allele: "S1S9",
             description: "country of origin: UA Drogans Gelbe Knorpel Valerii Chkalov"
         },
@@ -3895,7 +3981,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Kentish Bigarreau (Kent Bigarreau)",
+            name: "Kentish Bigarreau",
+            AKA: ["Kent Bigarreau"],
             s_allele: "S2S3",
             description: "country of origin: GB"
         },
@@ -3991,7 +4078,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Knauffs Schwarze (Knauffs Riesenkirsche)",
+            name: "Knauffs Schwarze",
+            AKA: ["Knauffs Riesenkirsche"],
             s_allele: "S2S6",
             description: "country of origin: DE selection from W.L. Kassins, Bornim near Werder/Havel"
         },
@@ -4042,13 +4130,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Kordia (Techlovicka II, Attika®)",
+            name: "Kordia",
+            AKA: ["Techlovicka II", "Attika®"],
             s_allele: "S3S6",
             description: "country of origin: CZ"
         },
         {
             type: "Sweet Cherry",
-            name: "Korolova (Королова)",
+            name: "Korolova",
+            AKA: ["Королова"],
             s_allele: "S1S6",
             description: "country of origin: UA"
         },
@@ -4060,7 +4150,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Kosmichna (Космічна)",
+            name: "Kosmichna",
+            AKA: ["Космічна"],
             s_allele: "S3S6",
             description: "country of origin: UA Prysadybna Skorospilka 88a"
         },
@@ -4078,7 +4169,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Kozerska (Schneiders Späte Knorpelkirsche)",
+            name: "Kozerska",
+            AKA: ["Schneiders Späte Knorpelkirsche"],
             s_allele: "S3S12",
             description: "country of origin: PL Polish syn. for Schneiders Späte Knorpel"
         },
@@ -4096,7 +4188,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Krasa Kubani (Краса Кубани)",
+            name: "Krasa Kubani",
+            AKA: ["Краса Кубани"],
             s_allele: "S1S6",
             description: "country of origin: RU"
         },
@@ -4108,19 +4201,22 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Krasna devitsa (Красна девица)",
+            name: "Krasna devitsa",
+            AKA: ["Красна девица"],
             s_allele: "S6S?",
             description: "country of origin: RU Dajbera tsernaya (Дайбера черная) open pollinated"
         },
         {
             type: "Sweet Cherry",
-            name: "Krasnodarskaya rannyaya (Каснодарская ранняя)",
+            name: "Krasnodarskaya rannyaya",
+            AKA: ["Каснодарская ранняя"],
             s_allele: "S3S?",
             description: "country of origin: RU Melitopolckaya chernaya (Мелитопольская чёрная) open pollinated"
         },
         {
             type: "Sweet Cherry",
-            name: "Kristin (NY 1599)",
+            name: "Kristin",
+            AKA: ["NY 1599"],
             s_allele: "S3S4",
             description: "country of origin: US Emperor Francis Gil Peck"
         },
@@ -4138,7 +4234,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Krupnoplidna (Крупноплідна, Krupnoplodnaya)",
+            name: "Krupnoplidna",
+            AKA: ["Крупноплідна", "Krupnoplodnaya"],
             s_allele: "S5S9",
             description: "country of origin: UA Bigarreau Napoleon Blanc (Valerij Chkalov + Elton + Jaboulay)"
         },
@@ -4162,7 +4259,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "La Pinta (Barrado)",
+            name: "La Pinta",
+            AKA: ["Barrado"],
             s_allele: "S1S3",
             description: "country of origin: ES"
         },
@@ -4240,13 +4338,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Lasunya (Ласуня)",
+            name: "Lasunya",
+            AKA: ["Ласуня"],
             s_allele: "S5S6",
             description: "country of origin: UA Zöschener Oktober Knorpel Prestyzhna"
         },
         {
             type: "Sweet Cherry",
-            name: "Late Amber (Amber Gean)",
+            name: "Late Amber",
+            AKA: ["Amber Gean"],
             s_allele: "S2S3",
             description: "country of origin: US"
         },
@@ -4270,7 +4370,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Lauerzer (Rigikirsche)",
+            name: "Lauerzer",
+            AKA: ["Rigikirsche"],
             s_allele: "S1S6",
             description: "country of origin: CH local cultivar, Cenral Swiss"
         },
@@ -4282,7 +4383,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Legenda Mliyeva (Легенда Млієва)",
+            name: "Legenda Mliyeva",
+            AKA: ["Легенда Млієва"],
             s_allele: "S6S9",
             description: "country of origin: UA Krupnoplodnaya open pollinated"
         },
@@ -4303,7 +4405,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Leningradskaya Gvargejskaya (Гвардейская Ленинградская)",
+            name: "Leningradskaya Gvargejskaya",
+            AKA: ["Гвардейская Ленинградская"],
             s_allele: "S4S5",
             description: "country of origin: RU"
         },
@@ -4412,19 +4515,22 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Lyons (Jaboulay)",
+            name: "Lyons",
+            AKA: ["Jaboulay"],
             s_allele: "S6S9",
             description: "country of origin: FR"
         },
         {
             type: "Sweet Cherry",
-            name: "Lyubava (Любава)",
+            name: "Lyubava",
+            AKA: ["Любава"],
             s_allele: "S4S5 or S1S3", // both are in the pdf
             description: "country of origin: UA Drogans Gelbe Knorpel or unknown"
         },
         {
             type: "Sweet Cherry",
-            name: "Lyubimitsa Korvatskogo (Любимица Корвацкого)",
+            name: "Lyubimitsa Korvatskogo",
+            AKA: ["Любимица Корвацкого"],
             s_allele: "S3S9",
             description: "country of origin: RU"
         },
@@ -4436,7 +4542,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Madonna (Мадонна)",
+            name: "Madonna",
+            AKA: ["Мадонна"],
             s_allele: "S1S9",
             description: "country of origin: RU"
         },
@@ -4472,7 +4579,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Mai ('Belle de Mai')",
+            name: "Mai",
+            AKA: ["Belle de Mai"],
             s_allele: "S6S9",
             description: "country of origin: FR"
         },
@@ -4518,7 +4626,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Maiolina S.Mela (Sardinia 11, Nera di Nuchis)",
+            name: "Maiolina S.Mela",
+            AKA: ["Sardinia 11", "Nera di Nuchis"],
             s_allele: "S3S5'",
             description: "country of origin: IT"
         },
@@ -4551,7 +4660,8 @@
 
         {
             type: "Sweet Cherry",
-            name: "Malizia (Malizia fasa, San Giorgio)",
+            name: "Malizia",
+            AKA: ["Malizia fasa", "San Giorgio"],
             s_allele: "S3S13",
             description: "country of origin: IT"
         },
@@ -4563,7 +4673,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Malysh (Малыш)",
+            name: "Malysh",
+            AKA: ["Малыш"],
             s_allele: "S6S17/30?",
             description: "country of origin: RU"
         },
@@ -4581,7 +4692,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Maral (Марал)",
+            name: "Maral",
+            AKA: ["Марал"],
             s_allele: "S1S4",
             description: "country of origin: RU"
         },
@@ -4653,7 +4765,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Marvin (Niran, 4-70)",
+            name: "Marvin",
+            AKA: ["Niran", "4-70"],
             s_allele: "S1S9",
             description: "country of origin: US"
         },
@@ -4677,7 +4790,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Medge (Blancale Tardive Medge)",
+            name: "Medge",
+            AKA: ["Blancale Tardive Medge"],
             s_allele: "S3S7",
             description: "country of origin: FR"
         },
@@ -4701,7 +4815,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Melitopolska rannya (Mелітополъсъка Рання)",
+            name: "Melitopolska rannya",
+            AKA: ["Mелітополъсъка Рання"],
             s_allele: "S5S14",
             description: "country of origin: UA Emeror Francis Früheste der Mark"
         },
@@ -4713,7 +4828,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Melitopolskaya chernaya (Мелитополкая черная)",
+            name: "Melitopolskaya chernaya",
+            AKA: ["Мелитополкая черная"],
             s_allele: "S5S?",
             description: "country of origin: UA Fruntsuzka chorna open pollinated"
         },
@@ -4859,7 +4975,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Moissons ('Cerise des Moissons')",
+            name: "Moissons",
+            AKA: ["Cerise des Moissons"],
             s_allele: "S6S9",
             description: "country of origin: FR"
         },
@@ -4949,7 +5066,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Moreau (Big. Moreau, Souvenir des Charmes, St. Charmes)",
+            name: "Moreau",
+            AKA: ["Big. Moreau", "Souvenir des Charmes", "St. Charmes"],
             s_allele: "S3S9",
             description: "country of origin: FR"
         },
@@ -4985,7 +5103,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Morena (Morette)",
+            name: "Morena",
+            AKA: ["Morette"],
             s_allele: "S3S13",
             description: "country of origin: IT"
         },
@@ -5003,7 +5122,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Moscatella Chiusa (Moscatella)",
+            name: "Moscatella Chiusa",
+            AKA: ["Moscatella"],
             s_allele: "S17S21",
             description: "country of origin: IT local cultivar, Arezzo"
         },
@@ -5051,7 +5171,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Müncheberger Frühe (Munchebergi Korai)",
+            name: "Müncheberger Frühe",
+            AKA: ["Munchebergi Korai"],
             s_allele: "S3S4",
             description: "country of origin: DE Flamentiner Früheste der Mark"
         },
@@ -5156,7 +5277,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Napoleon (Royal Ann, Oxheart)",
+            name: "Napoleon",
+            AKA: ["Royal Ann", "Oxheart"],
             s_allele: "S3S4",
             description: "country of origin: DE"
         },
@@ -5186,13 +5308,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Napoleona Virifica (Raffiuna Etna)",
+            name: "Napoleona Virifica",
+            AKA: ["Raffiuna Etna"],
             s_allele: "S6S9",
             description: "country of origin: IT local cultivar, Sicily"
         },
         {
             type: "Sweet Cherry",
-            name: "Napoletana (Precococe della Marca, Precoce di Cevoli, Primaticcia)",
+            name: "Napoletana",
+            AKA: ["Precococe della Marca", "Precoce di Cevoli", "Primaticcia"],
             s_allele: "S3S12",
             description: "country of origin: IT"
         },
@@ -5204,7 +5328,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Napoletana Etna (Durona)",
+            name: "Napoletana Etna",
+            AKA: ["Durona"],
             s_allele: "S3S16",
             description: "country of origin: IT local cultivar, Sicily"
         },
@@ -5234,7 +5359,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Nasenkirsche (Schneiders Späte Knorpelkirsche)",
+            name: "Nasenkirsche",
+            AKA: ["Schneiders Späte Knorpelkirsche"],
             s_allele: "S3S12",
             description: "country of origin: DE"
         },
@@ -5361,13 +5487,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Nike (Нике)",
+            name: "Nike",
+            AKA: ["Нике"],
             s_allele: "S1S5",
             description: "country of origin: RU"
         },
         {
             type: "Sweet Cherry",
-            name: "Nimba (SMS290)",
+            name: "Nimba",
+            AKA: ["SMS290"],
             s_allele: "S2S3",
             description: "country of origin: US"
         },
@@ -5394,7 +5522,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Nizhnisty (Ніжністъ)",
+            name: "Nizhnisty",
+            AKA: ["Ніжністъ"],
             s_allele: "S4S5",
             description: "country of origin: UA"
         },
@@ -5418,7 +5547,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Noire de Boccard ('Noir Boccard')",
+            name: "Noire de Boccard",
+            AKA: ["Noir Boccard"],
             s_allele: "S4S9",
             description: "country of origin: FR"
         },
@@ -5442,9 +5572,10 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Noire de Schmidt (Schmidt)",
+            name: "Noire de Schmidt",
+            AKA: ["Schmidt"],
             s_allele: "S2S4",
-            description: "country of origin: DE from Casekow, Prussia"
+            description: "country of origin: DE from Casekow, Prussia, Schwarze Knorpelkirsche open pollinated"
         },
         {
             type: "Sweet Cherry",
@@ -5454,7 +5585,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Nordwunder (Schneider Späte Knorpelkirsche)",
+            name: "Nordwunder",
+            AKA: ["Schneider Späte Knorpelkirsche"],
             s_allele: "S3S12",
             description: "country of origin: DE"
         },
@@ -5557,13 +5689,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Orlovskaya feya (Орловская фея)",
+            name: "Orlovskaya feya",
+            AKA: ["Орловская фея"],
             s_allele: "S3S5",
             description: "country of origin: RU"
         },
         {
             type: "Sweet Cherry",
-            name: "Orlovskaya yantarnaya (Орловская янтарная)",
+            name: "Orlovskaya yantarnaya",
+            AKA: ["Орловская янтарная"],
             s_allele: "S6S17/30?",
             description: "country of origin: RU"
         },
@@ -5581,7 +5715,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Otrada (Отрада)",
+            name: "Otrada",
+            AKA: ["Отрада"],
             s_allele: "S3S5",
             description: "country of origin: UA Annushka Anons 89"
         },
@@ -5629,7 +5764,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Pamyat Pokrovskoj (Память Покровской)",
+            name: "Pamyat Pokrovskoj",
+            AKA: ["Память Покровской"],
             s_allele: "S2S3",
             description: "country of origin: RU"
         },
@@ -5670,7 +5806,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Pat (JI 11339)",
+            name: "Pat",
+            AKA: ["JI 11339"],
             s_allele: "S3S6",
             description: "country of origin: GB Merton Glory open pollinated"
         },
@@ -5694,7 +5831,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Paulus (Pál, IV-6/39)",
+            name: "Paulus",
+            AKA: ["Pál", "IV-6/39"],
             s_allele: "S4'S9",
             description: "country of origin: HU Burlat Stella"
         },
@@ -5809,7 +5947,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Petrus (Péter, IV-6/5)",
+            name: "Petrus",
+            AKA: ["Péter", "IV-6/5"],
             s_allele: "S3S4'",
             description: "country of origin: HU Burlat Stella"
         },
@@ -5923,7 +6062,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "PiSue 161 (Bolero)",
+            name: "PiSue 161",
+            AKA: ["Bolero"],
             s_allele: "S1S9",
             description: "country of origin: DE Krupnoplodnaya Moldavskaya chernaya"
         },
@@ -6130,7 +6270,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Poehziya (Поэзия)",
+            name: "Poehziya",
+            AKA: ["Поэзия"],
             s_allele: "S3S5",
             description: "country of origin: RU"
         },
@@ -6154,7 +6295,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Polka (PiSue 194)",
+            name: "Polka",
+            AKA: ["PiSue 194"],
             s_allele: "S6S9",
             description: "country of origin: DE Krupnoplodnaya Moldavskaya chernaya"
         },
@@ -6184,7 +6326,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Pozdnyaya Lermontova (ПоздняяЛермонтова)",
+            name: "Pozdnyaya Lermontova",
+            AKA: ["ПоздняяЛермонтова"],
             s_allele: "S1S5",
             description: "country of origin: RU"
         },
@@ -6214,7 +6357,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Prestizhna (Престижна)",
+            name: "Prestizhna",
+            AKA: ["Престижна"],
             s_allele: "S5S9",
             description: "country of origin: UA Big. Napoléon blanc Valerii Chkalov"
         },
@@ -6227,19 +6371,22 @@
         // duplicate entry for giant red
         {
             type: "Sweet Cherry",
-            name: "Prim 2.1 (D021)",
+            name: "Prim 2.1",
+            AKA: ["D021"],
             s_allele: "S3S9",
             description: "country of origin: DE"
         },
         {
             type: "Sweet Cherry",
-            name: "Prim 2.3 (C041)",
+            name: "Prim 2.3",
+            AKA: ["C041"],
             s_allele: "S1S9",
             description: "country of origin: DE"
         },
         {
             type: "Sweet Cherry",
-            name: "Prim 3.1 (B062)",
+            name: "Prim 3.1",
+            AKA: ["B062"],
             s_allele: "S1S4",
             description: "country of origin: DE"
         },
@@ -6254,24 +6401,28 @@
 
         {
             type: "Sweet Cherry",
-            name: "Primulat (Ferprime)",
+            name: "Primulat",
+            AKA: ["Ferprime"],
             s_allele: "S2S9"
         },
         {
             type: "Sweet Cherry",
-            name: "Princess (Prinzesskirsche)",
+            name: "Princess",
+            AKA: ["Prinzesskirsche"],
             s_allele: "S3S12",
             description: "country of origin: DE"
         },
         {
             type: "Sweet Cherry",
-            name: "Pryazovska (Приазовсъка)",
+            name: "Pryazovska",
+            AKA: ["Приазовсъка"],
             s_allele: "S6S9 or S5S9", // both are in the pdf
             description: "country of origin: UA Dönissens Gelbe Bigarreau Jaboulay"
         },
         {
             type: "Sweet Cherry",
-            name: "Probla (SIMCOE Probla)",
+            name: "Probla",
+            AKA: ["SIMCOE Probla"],
             s_allele: "S1S3",
             description: "country of origin: US Stella Starking Hardy Giant"
         },
@@ -6301,7 +6452,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Proshchalna Taranenko (Прощальна Тараненко)",
+            name: "Proshchalna Taranenko",
+            AKA: ["Прощальна Тараненко"],
             s_allele: "S5S9",
             description: "country of origin: UA D 54-82 (Donchanka x Valerii Chkalov) x Dzherelo"
         },
@@ -6362,7 +6514,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Rainier S1S4",
+            name: "Rainier",
+            s_allele: "S1S4",
             description: "country of origin: US Bing Van"
         },
         {
@@ -6373,7 +6526,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Ramon Oliva (Cerisier à port pleureur)",
+            name: "Ramon Oliva",
+            AKA: ["Cerisier à port pleureur"],
             s_allele: "S6S9",
             description: "country of origin: FR"
         },
@@ -6456,7 +6610,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Republican (Black Republican)",
+            name: "Black Republican",
+            AKA: ["Republican"],
             s_allele: "S1S4",
             description: "country of origin: US Eagle or Napoleon Black Tartarian"
         },
@@ -6475,7 +6630,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Rita (IV-5/62)",
+            name: "Rita",
+            AKA: ["IV-5/62"],
             s_allele: "S5S22",
             description: "country of origin: HU Trusenszkaya 2 H 2 (Germersdorfer x o.p.)"
         },
@@ -6497,7 +6653,7 @@
             s_allele: "S1S2 or S2S4", // both are in the pdf
             description: "country of origin: RU or SE Erarly Rivers Van"
         },
-        // duplicate entry for rivedel, early lory, earlise
+        // duplicate entry for Early Lory / Earlise / Rivedel
 
         // table 1, page 26
 
@@ -6515,7 +6671,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Rockport Bigarreau (Taksago)",
+            name: "Rockport Bigarreau",
+            AKA: ["Taksago"],
             s_allele: "S1S6",
             description: "country of origin: US Yellow Spanish open pollinated"
         },
@@ -6673,7 +6830,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Rubinovaya Kubani (Рубиновая Кубани)",
+            name: "Rubinovaya Kubani",
+            AKA: ["Рубиновая Кубани"],
             s_allele: "S3S?",
             description: "country of origin: RU Kassins Frühe pollen mixture"
         },
@@ -6863,7 +7021,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sandor (IV-6/12)",
+            name: "Sandor",
+            AKA: ["IV-6/12"],
             s_allele: "S4'S9",
             description: "country of origin: HU Burlat Stella"
         },
@@ -6875,7 +7034,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sandra Rose (13S-10-40)",
+            name: "Sandra Rose",
+            AKA: ["13S-10-40"],
             s_allele: "S3S4'",
             description: "country of origin: CA 2C-61-18 (Star x Van) Sunburst"
         },
@@ -6893,7 +7053,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Santina (13S-5-22)",
+            name: "Santina",
+            AKA: ["13S-5-22"],
             s_allele: "S1S4'",
             description: "country of origin: CA Stella Summit"
         },
@@ -6917,7 +7078,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sashenka (Сашенька)",
+            name: "Sashenka",
+            AKA: ["Сашенька"],
             s_allele: "S3S?",
             description: "country of origin: RU Kavkazskaya (Кавказская) Melitopolskaya chernaya (Мелитополкаячерная)"
         },
@@ -6964,15 +7126,11 @@
             s_allele: "S3S5",
             description: "country of origin: DE selection from Schmalfeld, Werder/Havel"
         },
+        // duplicate entry for Schmidt
         {
             type: "Sweet Cherry",
-            name: "Schmidt",
-            s_allele: "S2S4",
-            description: "country of origin: DE Schwarze Knorpelkirsche open pollinated"
-        },
-        {
-            type: "Sweet Cherry",
-            name: "Schneiders Späte Knorpelkirsche (Kozerska)",
+            name: "Schneiders Späte Knorpelkirsche",
+            AKA: ["Kozerska"],
             s_allele: "S3S12",
             description: "country of origin: DE local cultivar, Guben/Neiße"
         },
@@ -7026,7 +7184,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Seedling no. 13 (Semenáč č.13)",
+            name: "Seedling no. 13",
+            AKA: ["Semenáč č.13"],
             s_allele: "S4S12",
             description: "country of origin: CZ"
         },
@@ -7115,13 +7274,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sgorlri (Сгорлри)",
+            name: "Sgorlri",
+            AKA: ["Сгорлри"],
             s_allele: "S1S9",
             description: "country of origin: UA"
         },
         {
             type: "Sweet Cherry",
-            name: "Shans (Шанс)",
+            name: "Shans",
+            AKA: ["Шанс"],
             s_allele: "S3S6",
             description: "country of origin: UA"
         },
@@ -7175,31 +7336,36 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sir Don (FB 1138)",
+            name: "Sir Don",
+            AKA: ["FB 1138"],
             s_allele: "S4'S13",
             description: "country of origin: AU Black Douglas Stella"
         },
         {
             type: "Sweet Cherry",
-            name: "Sir Douglas (FB 122)",
+            name: "Sir Douglas",
+            AKA: ["FB 122"],
             s_allele: "S1S3",
             description: "country of origin: AU Stella Vega"
         },
         {
             type: "Sweet Cherry",
-            name: "Sir Hans (FB 45)",
+            name: "Sir Hans",
+            AKA: ["FB 45"],
             s_allele: "S2S4'",
             description: "country of origin: AU Stella Vega"
         },
         {
             type: "Sweet Cherry",
-            name: "Sir Tom (FB 1143)",
+            name: "Sir Tom",
+            AKA: ["FB 1143"],
             s_allele: "S3S13",
             description: "country of origin: AU Black Douglas Stella"
         },
         {
             type: "Sweet Cherry",
-            name: "Siyana (Сияна)",
+            name: "Siyana",
+            AKA: ["Сияна"],
             s_allele: "S3S6",
             description: "country of origin: RU"
         },
@@ -7352,7 +7518,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sorede (Suite Note)",
+            name: "Sorede",
+            AKA: ["Suite Note"],
             s_allele: "S3S9",
             description: "country of origin: FR"
         },
@@ -7364,7 +7531,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Souvenir des Charmes (St. Charmes, Big. Moreau)",
+            name: "Souvenir des Charmes",
+            AKA: ["St. Charmes", "Big. Moreau"],
             s_allele: "S3S9",
             description: "country of origin: FR"
         },
@@ -7446,7 +7614,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Spraul (Früh)",
+            name: "Spraul",
+            AKA: ["Früh"],
             s_allele: "S4S5",
             description: "country of origin: DE local cultivar, Baden region"
         },
@@ -7492,7 +7661,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Starking Hardy Giant (Meyer)",
+            name: "Starking Hardy Giant",
+            AKA: ["Meyer"],
             s_allele: "S1S2",
             description: "country of origin: US selection of O.R. Meyer in Cedarburg/Wisconsin"
         },
@@ -7625,7 +7795,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Summit S1S2",
+            name: "Summit",
+            s_allele: "S1S2",
             description: "country of origin: CA Van Sam"
         },
         // duplicate entry for sumste/samba
@@ -7730,13 +7901,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sylvia (4C-17-31)",
+            name: "Sylvia",
+            AKA: ["4C-17-31"],
             s_allele: "S1S4",
             description: "country of origin: CA Van Sam"
         },
         {
             type: "Sweet Cherry",
-            name: "Symphony (Selina, 13S-25-25)",
+            name: "Symphony",
+            AKA: ["Selina", "13S-25-25"],
             s_allele: "S1S4'",
             description: "country of origin: CA Lapins Bing"
         },
@@ -7869,7 +8042,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Tehranivee (V690620)",
+            name: "Tehranivee",
+            AKA: ["V690620"],
             s_allele: "S3S4'",
             description: "country of origin: CA Van Stella"
         },
@@ -7893,7 +8067,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Temporion (Темпоріон)",
+            name: "Temporion",
+            AKA: ["Темпоріон"],
             s_allele: "S3S4",
             description: "country of origin: UA Drogans Gelbe Knorpel (Valerij Chkalov + Soniachnyi shar)"
         },
@@ -7933,7 +8108,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Thurn Taxis (Schneiders)",
+            name: "Thurn Taxis",
+            AKA: ["Schneiders"],
             s_allele: "S3S12",
             description: "country of origin: DE"
         },
@@ -8012,7 +8188,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Transportabelnaya (Corvinus Uni.)",
+            name: "Transportabelnaya",
+            AKA: ["Corvinus Uni."],
             s_allele: "S1S3",
             description: "country of origin: UA Franzis Vilgelmina Kleindinst"
         },
@@ -8024,13 +8201,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Trocnyanskaya (Тросняская)",
+            name: "Trocnyanskaya",
+            AKA: ["Тросняская"],
             s_allele: "S5S6",
             description: "country of origin: RU"
         },
         {
             type: "Sweet Cherry",
-            name: "Troprichterova (Troprichters Schwarze Knorpelkirsche)",
+            name: "Troprichterova",
+            AKA: ["Troprichters Schwarze Knorpelkirsche"],
             s_allele: "S1S3",
             description: "country of origin: DE"
         },
@@ -8048,7 +8227,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Tsharna (Čarna)",
+            name: "Tsharna",
+            AKA: ["Čarna"],
             s_allele: "S1S4",
             description: "country of origin: RS"
         },
@@ -8072,7 +8252,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Tünde (IV-13/51)",
+            name: "Tünde",
+            AKA: ["IV-13/51"],
             s_allele: "S3S5",
             description: "country of origin: HU Drogans Gelbe Burlat"
         },
@@ -8108,7 +8289,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Türkine (Flamentiner, Flämische Kirsche)",
+            name: "Türkine",
+            AKA: ["Flamentiner", "Flämische Kirsche"],
             s_allele: "S2S4",
             description: "country of origin: FR cultivar from AngerS"
         },
@@ -8173,13 +8355,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Valeriya (Валерія)",
+            name: "Valeriya",
+            AKA: ["Валерія"],
             s_allele: "S1S4",
             description: "country of origin: UA"
         },
         {
             type: "Sweet Cherry",
-            name: "Valerii Chkalov (Valerij Chkalov, Валерій Чкалов)",
+            name: "Valerii Chkalov",
+            AKA: ["Valerij Chkalov", "Валерій Чкалов"],
             s_allele: "S1S9 or S3S9", // both are in the pdf
             description: "country of origin: UA Rozovaya (Cherry Rose) open pollinated"
         },
@@ -8212,7 +8396,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Vandalay (V690618)",
+            name: "Vandalay",
+            AKA: ["V690618"],
             s_allele: "S3S4'",
             description: "country of origin: CA Van Stella"
         },
@@ -8236,7 +8421,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Vasilisa prekrasna (Василиса прекрасна)",
+            name: "Vasilisa prekrasna",
+            AKA: ["Василиса прекрасна"],
             s_allele: "S5S9",
             description: "country of origin: RU Donetskyi uholok Donetska krasavytsia"
         },
@@ -8248,7 +8434,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Velká Černá Chrupka (Große Schwarze Knorpel?)",
+            name: "Velká Černá Chrupka", // "Große Schwarze Knorpel?"
             s_allele: "S1S6"
         },
         {
@@ -8271,7 +8457,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Vera (III-15/6)",
+            name: "Vera",
+            AKA: ["III-15/6"],
             s_allele: "S1S3",
             description: "country of origin: HU Ljana (Trusenszkaya 6) Van"
         },
@@ -8283,7 +8470,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Verdee (Cerise Verdée)",
+            name: "Verdee",
+            AKA: ["Cerise Verdée"],
             s_allele: "S1S6",
             description: "country of origin: FR"
         },
@@ -8343,7 +8531,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Vinka (Винка)",
+            name: "Vinka",
+            AKA: ["Винка"],
             s_allele: "S3S6",
             description: "country of origin: UA Emperor Francis Früheste der Mark"
         },
@@ -8425,7 +8614,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Voloshebnitsa (Волшебница)",
+            name: "Voloshebnitsa",
+            AKA: ["Волшебница"],
             s_allele: "S3S?",
             description: "country of origin: RU Drogans Gelbe Knorpel Frantsuzkaya chernaya (Французская черная)"
         },
@@ -8470,7 +8660,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Walter (K 54)",
+            name: "Walter",
+            AKA: ["K 54"],
             s_allele: "S3S9",
             description: "country of origin: DE"
         },
@@ -8534,13 +8725,15 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Winklerova (Winkler's Frühe)",
+            name: "Winklerova",
+            AKA: ["Winkler's Frühe"],
             s_allele: "S2S3",
             description: "country of origin: DE"
         },
         {
             type: "Sweet Cherry",
-            name: "Winklerova Rana (Winklers Frühe Schwarze)",
+            name: "Winklerova Rana",
+            AKA: ["Winklers Frühe Schwarze"],
             s_allele: "S3S9",
             description: "country of origin: DE selected from Winkler, Guben in Germany"
         },
@@ -8611,7 +8804,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Yaroslavna (Ярославна)",
+            name: "Yaroslavna",
+            AKA: ["Ярославна"],
             s_allele: "S3S5",
             description: "country of origin: UA Drogans Gelbe Knorpel open pollinated"
         },
