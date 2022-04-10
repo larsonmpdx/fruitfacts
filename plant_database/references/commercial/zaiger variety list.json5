@@ -418,10 +418,11 @@
         {
             type: "Sweet Cherry",
             name: "Royal Crimson",
-            AKA: ["6GM25", "Royal Fran"],
+            AKA: ["Royal Fran", "6GM25"],
             description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/cherry/royal_crimson/",
             patent: "https://patents.google.com/patent/USPP30121",
             chill: "200-300 hours",
+            s_allele: "S3S4'", // provided in an email to a gf.org member, see https://growingfruit.org/t/2022-socal-cherry-observations-and-tests/42028/43
             harvest_time: "May 5 to May 20"
         },
         {

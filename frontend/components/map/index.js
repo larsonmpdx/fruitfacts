@@ -20,8 +20,6 @@ function GetLocations ({ map, setClick, setExtents, setZoom }) {
     }
   })
 
-  const [bounds, setBounds] = React.useState([])
-
   React.useEffect(() => {
     if (!map) return
 
@@ -50,14 +48,13 @@ const getClusterIcon = (count, size) => {
 };
 
 const getFruitIcon = (type, size) => {
-  if (!icons[type]) {
-    icons[type] = L.divIcon({
-      html: `<svg src={'/fruit_icons/${type}.svg'} style="width: ${size}px; height: ${size}px;">
-        ${type}
-      </svg>`
+  if (!icons.type) {
+    icons.type = L.divIcon({
+      html: `<img src="/fruit_icons/${type}.svg" style="width: ${size}px; height: ${size}px;" />`
     });
   }
-  return icons[type];
+  console.log(icons.type);
+  return icons.type;
 };
 
 export default function Home ({ locations, setClick, setExtentsForFetch }) {
@@ -127,7 +124,7 @@ export default function Home ({ locations, setClick, setExtentsForFetch }) {
 
         return (
           <Marker
-            key={`point-${cluster.properties.collection_path}`}
+            key={`point-${cluster.properties.collection_path}${cluster.properties.collection_title}/${cluster.properties.location_number}`}
             position={[latitude, longitude]}
             icon={getFruitIcon(
               "Apple",
