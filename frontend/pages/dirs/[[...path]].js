@@ -45,7 +45,7 @@ export async function getServerSideProps(context) {
 
 export default function Home({ data, pathUsed }) {
   const [click_lonlat, setClick] = React.useState({});
-  const [extents, setExtents] = React.useState({});
+  const [extents, setExtentsForFetch] = React.useState({});
   const [locations, setLocations] = React.useState([]);
 
   React.useEffect(() => {
@@ -85,7 +85,7 @@ export default function Home({ data, pathUsed }) {
       </Head>
       <article className="prose m-5">
         {/* multi collection (directory listing) */}
-        <Map locations={locations} setClick={setClick} setExtents={setExtents} />
+        <Map locations={locations} setClick={setClick} setExtentsForFetch={setExtentsForFetch}/>
         <p>click: {`${JSON.stringify(click_lonlat, null, 2)}`}</p>
         <p>extents: {`${JSON.stringify(extents, null, 2)}`}</p>
         {data.directories && data.directories.length > 0 && (
