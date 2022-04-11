@@ -83,11 +83,7 @@ export default function Home({ plant, type, name }) {
           </p>
         )}
 
-        {plant.base?.s_allele && (
-          <p>
-            {`S-Allele: ${plant.base?.s_allele}`}
-          </p>
-        )}
+        {plant.base?.s_allele && <p>{`S-Allele: ${plant.base?.s_allele}`}</p>}
 
         {plant.collection && (
           <>

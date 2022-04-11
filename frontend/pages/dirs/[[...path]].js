@@ -10,6 +10,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import React from 'react';
+import throttle from 'lodash/throttle';
 
 // see https://nextjs.org/docs/advanced-features/dynamic-import
 const Map = dynamic(() => import('../../components/map'), { ssr: false });
@@ -48,35 +49,44 @@ export default function Home({ data, pathUsed }) {
   const [extents, setExtentsForFetch] = React.useState({});
   const [locations, setLocations] = React.useState([]);
 
-  React.useEffect(() => {
-  //  console.log(JSON.stringify(extents, null, 2));
-    const fetchData = async () => {
-      const locations_fetched = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/locations?` +
-          new URLSearchParams({
-            // extents are "[minx, miny, maxx, maxy]"
-            min_lon: extents[0],
-            min_lat: extents[1],
-            max_lon: extents[2],
-            max_lat: extents[3]
-          })
-      )
-        .then((response) => {
-          if (response.status !== 200) {
-            return;
-          }
-          return response.json();
-        })
-        .catch((error) => {
-          console.log(error);
-          return;
-        });
-      console.log(JSON.stringify(locations_fetched, null, 2));
-      setLocations(locations_fetched);
-    };
+  const runFetchLocations = React.useMemo(
+    // useMemo(): cache results for each input and don't re-run. appears to not be doing anything
+    () =>
+      throttle(async (extents, callback) => {
+        console.log('hi' + JSON.stringify(extents));
 
-    fetchData();
-  }, [extents]);
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/locations?` +
+            new URLSearchParams({
+              // extents are "[minx, miny, maxx, maxy]"
+              min_lon: extents[0],
+              min_lat: extents[1],
+              max_lon: extents[2],
+              max_lat: extents[3]
+            })
+        )
+          .then((response) => {
+            if (response.status !== 200) {
+              return;
+            }
+            return response.json();
+          })
+          .catch((error) => {
+            console.log(error);
+            return;
+          });
+
+        callback(response);
+      }, 650 /* ms to wait */),
+    []
+  );
+
+  React.useEffect(() => {
+    runFetchLocations(extents, (results) => {
+      setLocations(results);
+      console.log(JSON.stringify(results, null, 2));
+    });
+  }, [extents, runFetchLocations]);
 
   return (
     <>
@@ -85,7 +95,7 @@ export default function Home({ data, pathUsed }) {
       </Head>
       <article className="prose m-5">
         {/* multi collection (directory listing) */}
-        <Map locations={locations} setClick={setClick} setExtentsForFetch={setExtentsForFetch}/>
+        <Map locations={locations} setClick={setClick} setExtentsForFetch={setExtentsForFetch} />
         <p>click: {`${JSON.stringify(click_lonlat, null, 2)}`}</p>
         <p>extents: {`${JSON.stringify(extents, null, 2)}`}</p>
         {data.directories && data.directories.length > 0 && (
@@ -105,9 +115,8 @@ export default function Home({ data, pathUsed }) {
               {data.collections.map((collection) => (
                 <li key={collection.id}>
                   <Link
-                    href={`/collections/${
-                      collection.path + encodeURIComponent(collection.filename)
-                    }`}
+                    href={`/collections/${collection.path}${encodeURIComponent(collection.filename)}
+                    `}
                   >
                     {collection.title}
                   </Link>

@@ -1,41 +1,41 @@
 // see react-leaflet examples here https://tomik23.github.io/react-leaflet-examples/#/simple-map
 
-import React, { useCallback } from 'react'
-import Link from 'next/link'
-import { MapContainer, Marker, Popup, TileLayer, useMapEvents, useMap } from 'react-leaflet'
-import L from 'leaflet'
-import useSupercluster from 'use-supercluster'
-import 'leaflet/dist/leaflet.css'
-import styles from '../../styles/Map.module.css'
+import React, { useCallback } from 'react';
+import Link from 'next/link';
+import { MapContainer, Marker, Popup, TileLayer, useMapEvents, useMap } from 'react-leaflet';
+import L from 'leaflet';
+import useSupercluster from 'use-supercluster';
+import 'leaflet/dist/leaflet.css';
+import styles from '../../styles/Map.module.css';
 
-import { locations_to_geoJSON } from './util'
+import { locations_to_geoJSON } from './util';
 
-function GetLocations ({ map, setClick, setExtents, setZoom }) {
+function GetLocations({ map, setClick, setExtents, setZoom }) {
   useMapEvents({
-    click (e) {
-      setClick(e.latlng)
+    click(e) {
+      setClick(e.latlng);
     },
-    locationfound (e) {
-      console.log("got user's location") // todo
+    locationfound(e) {
+      console.log("got user's location"); // todo
     }
-  })
+  });
 
   React.useEffect(() => {
-    if (!map) return
+    if (!map) return;
 
-    setExtents(map.getBounds()) // initial
-    setZoom(map.getZoom())
+    setExtents(map.getBounds()); // initial
+    setZoom(map.getZoom());
 
     map.on('moveend zoomend', () => {
-      setExtents(map.getBounds())
-      setZoom(map.getZoom())
-    })
-  }, [map])
+      setExtents(map.getBounds());
+      setZoom(map.getZoom());
+    });
+  }, [map]);
 
-  return <></>
+  return <></>;
 }
 
-const icons = {}
+const icons = {};
 const getClusterIcon = (count, size) => {
   if (!icons[count]) {
     icons[count] = new L.DivIcon({
@@ -48,10 +48,10 @@ const getClusterIcon = (count, size) => {
         <circle cx="50" cy="50" r="20" stroke="black" stroke-width="2" fill="none" />
         <text x="35" y="55" font-size="2em">${count}</text>
       </svg>`
-    })
+    });
   }
-  return icons[count]
-}
+  return icons[count];
+};
 
 const getFruitIcon = (type, size) => {
   if (!icons[type]) {
@@ -61,19 +61,19 @@ const getFruitIcon = (type, size) => {
       iconAnchor: [12, 24],
       popupAnchor: [7, -16],
       html: `<img src="/fruit_icons/${type}.svg" style="width: ${size}px; height: ${size}px;" />`
-    })
+    });
   }
-  return icons[type]
-}
+  return icons[type];
+};
 
-export default function Home ({ locations, setClick, setExtentsForFetch }) {
-  const [extents, setExtents] = React.useState(null)
-  const [clusterBounds, setClusterBounds] = React.useState(null)
-  const [zoom, setZoom] = React.useState(3)
+export default function Home({ locations, setClick, setExtentsForFetch }) {
+  const [extents, setExtents] = React.useState(null);
+  const [clusterBounds, setClusterBounds] = React.useState(null);
+  const [zoom, setZoom] = React.useState(3);
 
   React.useEffect(() => {
     if (!extents) {
-      return
+      return;
     }
 
     let bounds = [
@@ -81,23 +81,23 @@ export default function Home ({ locations, setClick, setExtentsForFetch }) {
       extents._southWest.lat,
       extents._northEast.lng,
       extents._northEast.lat
-    ]
-    setExtentsForFetch(bounds)
+    ];
+    setExtentsForFetch(bounds);
 
     // convert leaflet extents to the bounds format supercluster wants
-    setClusterBounds(bounds)
-  }, [extents])
+    setClusterBounds(bounds);
+  }, [extents]);
 
   const { clusters, supercluster } = useSupercluster({
     points: locations_to_geoJSON(locations),
     bounds: clusterBounds,
     zoom,
     options: { radius: 75, maxZoom: 20 }
-  })
+  });
 
   // console.log('clusters: ' + JSON.stringify(clusters, null, 2))
 
-  const [map, setMap] = React.useState(null)
+  const [map, setMap] = React.useState(null);
 
   return (
     <MapContainer
@@ -109,13 +109,13 @@ export default function Home ({ locations, setClick, setExtentsForFetch }) {
     >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <GetLocations map={map} setClick={setClick} setExtents={setExtents} setZoom={setZoom} />
 
-      {clusters.map(cluster => {
-        const [longitude, latitude] = cluster.geometry.coordinates
-        const { cluster: isCluster, point_count: pointCount } = cluster.properties
+      {clusters.map((cluster) => {
+        const [longitude, latitude] = cluster.geometry.coordinates;
+        const { cluster: isCluster, point_count: pointCount } = cluster.properties;
 
         if (isCluster) {
           return (
@@ -123,8 +123,13 @@ export default function Home ({ locations, setClick, setExtentsForFetch }) {
               key={`cluster-${cluster.id}`}
               position={[latitude, longitude]}
               icon={getClusterIcon(pointCount, 40)}
+              eventHandlers={{
+                click(e) {
+                  map.panTo(e.target.getLatLng());
+                }
+              }}
             />
-          )
+          );
         }
 
         return (
@@ -132,9 +137,24 @@ export default function Home ({ locations, setClick, setExtentsForFetch }) {
             key={`point-${cluster.properties.collection_path}${cluster.properties.collection_title}/${cluster.properties.location_number}`}
             position={[latitude, longitude]}
             icon={getFruitIcon('Apple', 20)}
-          />
-        )
+            eventHandlers={{
+              click(e) {
+                map.panTo(e.target.getLatLng());
+              }
+            }}
+          >
+            <Popup autoPan={false}>
+              <Link
+                href={`/collections/${cluster.properties.collection_path}${encodeURIComponent(
+                  cluster.properties.collection_filename
+                )}?loc=${cluster.properties.location_number}`}
+              >
+                <a className="text-m font-semibold tracking-tight">{`${cluster.properties.location_name}: ${cluster.properties.collection_title}`}</a>
+              </Link>
+            </Popup>
+          </Marker>
+        );
       })}
     </MapContainer>
-  )
+  );
 }

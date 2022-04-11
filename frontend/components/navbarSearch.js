@@ -34,7 +34,7 @@ export default function Home() {
           });
 
         callback(response);
-      }, 400),
+      }, 400 /* ms to wait */),
     []
   );
 
