@@ -7,8 +7,7 @@ export function locations_to_geoJSON (locations) {
       type: 'Feature',
       properties: {
         cluster: false,
-        collection_path: location.collection_path,
-        collection_title: location.collection_title
+        ...location
       },
       geometry: {
         type: 'Point',

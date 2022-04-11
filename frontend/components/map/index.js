@@ -35,27 +35,36 @@ function GetLocations ({ map, setClick, setExtents, setZoom }) {
   return <></>
 }
 
-const icons = {};
+const icons = {}
 const getClusterIcon = (count, size) => {
   if (!icons[count]) {
-    icons[count] = L.divIcon({
-      html: `<div class="cluster-marker" style="width: ${size}px; height: ${size}px;">
-        ${count}
-      </div>`
-    });
+    icons[count] = new L.DivIcon({
+      className: 'clustericon',
+      iconSize: [size, size],
+      iconAnchor: [12, 24],
+      popupAnchor: [7, -16],
+      html: `
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="20" stroke="black" stroke-width="2" fill="none" />
+        <text x="35" y="55" font-size="2em">${count}</text>
+      </svg>`
+    })
   }
-  return icons[count];
-};
+  return icons[count]
+}
 
 const getFruitIcon = (type, size) => {
-  if (!icons.type) {
-    icons.type = L.divIcon({
+  if (!icons[type]) {
+    icons[type] = new L.DivIcon({
+      className: 'fruiticon',
+      iconSize: [size, size],
+      iconAnchor: [12, 24],
+      popupAnchor: [7, -16],
       html: `<img src="/fruit_icons/${type}.svg" style="width: ${size}px; height: ${size}px;" />`
-    });
+    })
   }
-  console.log(icons.type);
-  return icons.type;
-};
+  return icons[type]
+}
 
 export default function Home ({ locations, setClick, setExtentsForFetch }) {
   const [extents, setExtents] = React.useState(null)
@@ -79,15 +88,14 @@ export default function Home ({ locations, setClick, setExtentsForFetch }) {
     setClusterBounds(bounds)
   }, [extents])
 
-  let locations_geoJSON = locations_to_geoJSON(locations)
   const { clusters, supercluster } = useSupercluster({
-    points: locations_geoJSON,
+    points: locations_to_geoJSON(locations),
     bounds: clusterBounds,
     zoom,
     options: { radius: 75, maxZoom: 20 }
   })
 
-  console.log('clusters: ' + JSON.stringify(clusters, null, 2))
+  // console.log('clusters: ' + JSON.stringify(clusters, null, 2))
 
   const [map, setMap] = React.useState(null)
 
@@ -114,10 +122,7 @@ export default function Home ({ locations, setClick, setExtentsForFetch }) {
             <Marker
               key={`cluster-${cluster.id}`}
               position={[latitude, longitude]}
-               icon={getClusterIcon(
-                pointCount,
-                 10 + (pointCount / locations_geoJSON.length) * 40
-               )}
+              icon={getClusterIcon(pointCount, 40)}
             />
           )
         }
@@ -126,10 +131,7 @@ export default function Home ({ locations, setClick, setExtentsForFetch }) {
           <Marker
             key={`point-${cluster.properties.collection_path}${cluster.properties.collection_title}/${cluster.properties.location_number}`}
             position={[latitude, longitude]}
-            icon={getFruitIcon(
-              "Apple",
-               20
-             )}
+            icon={getFruitIcon('Apple', 20)}
           />
         )
       })}

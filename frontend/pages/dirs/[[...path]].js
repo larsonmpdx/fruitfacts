@@ -49,7 +49,7 @@ export default function Home({ data, pathUsed }) {
   const [locations, setLocations] = React.useState([]);
 
   React.useEffect(() => {
-    console.log(JSON.stringify(extents, null, 2));
+  //  console.log(JSON.stringify(extents, null, 2));
     const fetchData = async () => {
       const locations_fetched = await fetch(
         `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/locations?` +
