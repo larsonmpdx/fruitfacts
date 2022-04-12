@@ -62,7 +62,8 @@ export default function Home({ data, pathUsed }) {
               min_lon: extents[0],
               min_lat: extents[1],
               max_lon: extents[2],
-              max_lat: extents[3]
+              max_lat: extents[3],
+              limit: 50
             })
         )
           .then((response) => {
@@ -84,7 +85,7 @@ export default function Home({ data, pathUsed }) {
   React.useEffect(() => {
     runFetchLocations(extents, (results) => {
       setLocations(results);
-      console.log(JSON.stringify(results, null, 2));
+      //  console.log(JSON.stringify(results, null, 2));
     });
   }, [extents, runFetchLocations]);
 

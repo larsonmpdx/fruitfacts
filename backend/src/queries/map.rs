@@ -23,6 +23,7 @@ struct GetLocationsQuery {
     max_lat: Option<f64>,
     min_lon: Option<f64>,
     max_lon: Option<f64>,
+    limit: Option<i32>,
 }
 
 // search for locations within a bounding box
@@ -102,7 +103,19 @@ fn locations_search_db(
     // todo filter for only extension pubs, u-picks, etc.
 
     // todo limit
-    db_query = db_query.limit(30);
+    const MAX_LIMIT: i32 = 100;
+    let limit = if query.limit.is_some() {
+        let limit = query.limit.unwrap();
+        if limit > MAX_LIMIT {
+            MAX_LIMIT
+        } else {
+            limit
+        }
+    } else {
+        MAX_LIMIT
+    };
+    
+    db_query = db_query.limit(limit as i64);
 
     let locations = db_query.load::<Location>(db_conn);
 
