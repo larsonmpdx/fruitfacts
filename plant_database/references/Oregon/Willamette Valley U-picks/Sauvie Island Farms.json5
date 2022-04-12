@@ -7,9 +7,9 @@
     type: "U-pick variety list",
     locations: [
         {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
+            name: "Sauvie Island, OR",
+            latitude: 45.66792134576391,
+            longitude: -122.8436658563749
         }
     ],
     plants: [

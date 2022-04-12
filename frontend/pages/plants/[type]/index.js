@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Button from '../../../components/button';
+import Button from '../../../components/buttonLink';
 
 export async function getServerSideProps(context) {
   const { type, page } = context.query;

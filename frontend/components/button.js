@@ -1,17 +1,18 @@
-import Link from 'next/link';
+// a regular button that's handled with onClick() or something externally
+
 import styles from '../styles/Button.module.css';
 
-export default function Button({ href, enabled, label, ...rest }) {
+export default function Button({ enabled, label, ...rest }) {
   return (
     <>
       {enabled ? (
-        <Link href={`${href}`}>
-          <a>
-            <button {...rest} className={`${styles.btn} ${styles['btn-blue']}`}>{label}</button>
-          </a>
-        </Link>
+        <button {...rest} className={`${styles.btn} ${styles['btn-blue']}`}>
+          {label}
+        </button>
       ) : (
-        <button {...rest} className={`${styles.btn} ${styles['btn-disabled']} disabled`}>{label}</button>
+        <button {...rest} disabled className={`${styles.btn} ${styles['btn-disabled']} disabled`}>
+          {label}
+        </button>
       )}
     </>
   );
