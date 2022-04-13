@@ -11,6 +11,7 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import React from 'react';
 import throttle from 'lodash/throttle';
+import { useRouter } from 'next/router';
 
 // see https://nextjs.org/docs/advanced-features/dynamic-import
 const Map = dynamic(() => import('../../components/map'), { ssr: false });
@@ -46,6 +47,8 @@ export async function getServerSideProps(context) {
 
 export default function Home({ data, pathUsed }) {
   const [click_lonlat, setClick] = React.useState({});
+  const [center, setCenterForQuery] = React.useState({});
+  const [zoom, setZoomForQuery] = React.useState({});
   const [extents, setExtentsForFetch] = React.useState({});
   const [locations, setLocations] = React.useState([]);
 
@@ -89,14 +92,36 @@ export default function Home({ data, pathUsed }) {
     });
   }, [extents, runFetchLocations]);
 
+  const router = useRouter();
+  React.useEffect(() => {
+    console.log(`got center ${JSON.stringify(center, null, 2)} and zoom ${zoom}`);
+
+    if (center?.lat && center?.lng && zoom) {
+      router.push(
+        {
+          pathname: pathUsed,
+          query: { lat: center.lat.toFixed(6), lon: center.lng.toFixed(6), zoom }
+        },
+        undefined,
+        { shallow: true }
+      );
+    }
+  }, [center, zoom]);
+
   return (
     <>
       <Head>
         <title>{`dir: ${pathUsed}`}</title>
       </Head>
+      <Map
+        locations={locations}
+        setClick={setClick}
+        setExtentsForFetch={setExtentsForFetch}
+        setZoomForQuery={setZoomForQuery}
+        setCenterForQuery={setCenterForQuery}
+      />
       <article className="prose m-5">
         {/* multi collection (directory listing) */}
-        <Map locations={locations} setClick={setClick} setExtentsForFetch={setExtentsForFetch} />
         <p>click: {`${JSON.stringify(click_lonlat, null, 2)}`}</p>
         <p>extents: {`${JSON.stringify(extents, null, 2)}`}</p>
         {data.directories && data.directories.length > 0 && (

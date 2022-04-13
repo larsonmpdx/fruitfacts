@@ -11,7 +11,7 @@ import styles from '../../styles/Map.module.css';
 
 import { locations_to_geoJSON } from './util';
 
-function GetLocations({ map, setClick, setExtents, setZoom }) {
+function GetLocations({ map, setClick, setExtents, setZoom, setCenter }) {
   useMapEvents({
     click(e) {
       setClick(e.latlng);
@@ -26,10 +26,12 @@ function GetLocations({ map, setClick, setExtents, setZoom }) {
 
     setExtents(map.getBounds()); // initial
     setZoom(map.getZoom());
+    setCenter(map.getCenter());
 
     map.on('moveend zoomend', () => {
       setExtents(map.getBounds());
       setZoom(map.getZoom());
+      setCenter(map.getCenter());
     });
   }, [map]);
 
@@ -120,10 +122,17 @@ const getFruitIcon = (type, size) => {
   return icons[type];
 };
 
-export default function Home({ locations, setClick, setExtentsForFetch }) {
+export default function Home({
+  locations,
+  setClick,
+  setExtentsForFetch,
+  setZoomForQuery,
+  setCenterForQuery
+}) {
   const [extents, setExtents] = React.useState(null);
   const [clusterBounds, setClusterBounds] = React.useState(null);
   const [zoom, setZoom] = React.useState(3);
+  const [center, setCenter] = React.useState({});
 
   React.useEffect(() => {
     if (!extents) {
@@ -142,6 +151,20 @@ export default function Home({ locations, setClick, setExtentsForFetch }) {
     setClusterBounds(bounds);
   }, [extents]);
 
+  React.useEffect(() => {
+    if (!zoom) {
+      return;
+    }
+    setZoomForQuery(zoom);
+  }, [zoom]);
+
+  React.useEffect(() => {
+    if (!center) {
+      return;
+    }
+    setCenterForQuery(center);
+  }, [center]);
+
   const { clusters, supercluster } = useSupercluster({
     points: locations_to_geoJSON(locations),
     bounds: clusterBounds,
@@ -157,7 +180,7 @@ export default function Home({ locations, setClick, setExtentsForFetch }) {
     <MapContainer
       zoom={3}
       scrollWheelZoom={true}
-      style={{ height: 400, width: '100%' }}
+      style={{ height: '80vh', width: '100%' }}
       center={[40.5, -100]}
       whenCreated={setMap}
     >
@@ -165,7 +188,13 @@ export default function Home({ locations, setClick, setExtentsForFetch }) {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <GetLocations map={map} setClick={setClick} setExtents={setExtents} setZoom={setZoom} />
+      <GetLocations
+        map={map}
+        setClick={setClick}
+        setExtents={setExtents}
+        setZoom={setZoom}
+        setCenter={setCenter}
+      />
 
       {clusters.map((cluster) => {
         const [longitude, latitude] = cluster.geometry.coordinates;
@@ -179,7 +208,7 @@ export default function Home({ locations, setClick, setExtentsForFetch }) {
               icon={getClusterIcon(pointCount, 40)}
               eventHandlers={{
                 click(e) {
-                  //   map.panTo(e.target.getLatLng());
+                  // map.panTo(e.target.getLatLng());
                 }
               }}
             >
@@ -197,7 +226,7 @@ export default function Home({ locations, setClick, setExtentsForFetch }) {
             icon={getFruitIcon('Apple', 20)}
             eventHandlers={{
               click(e) {
-                //      map.panTo(e.target.getLatLng());
+                // map.panTo(e.target.getLatLng());
               }
             }}
           >
