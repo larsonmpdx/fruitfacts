@@ -99,8 +99,7 @@ export default function Home({ data, pathUsed }) {
     if (center?.lat && center?.lng && zoom) {
       router.push(
         {
-          pathname: pathUsed,
-          query: { lat: center.lat.toFixed(6), lon: center.lng.toFixed(6), zoom }
+          pathname: pathUsed + `@${center.lat.toFixed(7)},${center.lng.toFixed(6)},${zoom}z`,
         },
         undefined,
         { shallow: true }
