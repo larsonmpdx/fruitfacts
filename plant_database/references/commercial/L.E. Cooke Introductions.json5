@@ -6,6 +6,7 @@
     accessed: "Oct 2021",
     type: "nursery catalog",
     description: "",
+    needs_help: true,
     locations: [
         {
             name: "",

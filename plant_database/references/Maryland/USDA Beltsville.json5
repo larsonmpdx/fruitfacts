@@ -8,7 +8,7 @@
     locations: [
         {
             name: "USDA ARS Beltsville, MD",
-            latitude: 39.025139309981164, 
+            latitude: 39.025139309981164,
             longitude: -76.92486135672756
         }
     ],

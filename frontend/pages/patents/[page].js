@@ -4,6 +4,7 @@ import Button from '../../components/button';
 import { formatPatentDate } from '../../components/functions';
 
 export async function getServerSideProps(context) {
+  let errorMessage = null;
   const { page } = context.query;
   let pageNum = parseInt(page);
   if (isNaN(pageNum)) {
@@ -15,11 +16,13 @@ export async function getServerSideProps(context) {
   )
     .then((response) => {
       if (response.status !== 200) {
+        errorMessage = "can't reach backend";
         return {};
       }
       return response.json();
     })
     .catch((error) => {
+      errorMessage = `can't reach backend: ${error.message}`;
       console.log(error);
       return {};
     });
@@ -27,12 +30,14 @@ export async function getServerSideProps(context) {
   return {
     props: {
       patent_info,
-      pageNum
+      pageNum,
+      errorMessage
     }
   };
 }
 
-export default function Home({ patent_info, pageNum }) {
+export default function Home({ patent_info, pageNum, errorMessage, setErrorMessage }) {
+  setErrorMessage(errorMessage);
   return (
     <>
       <Head>

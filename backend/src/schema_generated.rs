@@ -79,6 +79,7 @@ table! {
         published -> Nullable<Text>,
         reviewed -> Nullable<Text>,
         accessed -> Nullable<Text>,
+        needs_help -> Integer,
     }
 }
 

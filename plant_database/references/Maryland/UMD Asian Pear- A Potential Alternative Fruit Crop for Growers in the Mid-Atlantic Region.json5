@@ -5,6 +5,7 @@
     published: "Nov 2016",
     accessed: "Dec 2021",
     type: "journal article test",
+    needs_help: true,
     locations: [
         {
             name: "Keedysville, MD",

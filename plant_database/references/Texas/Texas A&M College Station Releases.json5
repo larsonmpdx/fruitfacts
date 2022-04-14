@@ -5,6 +5,7 @@
     published: "",
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true,
     locations: [
         {
             name: "College Station, TX",

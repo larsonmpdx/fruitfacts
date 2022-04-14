@@ -5,6 +5,7 @@
     published: "Nov 2019",
     accessed: "Feb 2022",
     type: "journal article",
+    needs_help: true,
     locations: [
         {
             name: "NMSU, Las Cruces NM",
@@ -12,10 +13,9 @@
             longitude: -106.75678369515053
         }
     ],
-    plants: []
-}
-// todo
-/*
+    plants: [
+        // todo
+        /*
 
 
 
@@ -41,3 +41,5 @@ Zaocuiwang          China           AmeriZao (r) series
 // see also https://aces.nmsu.edu/jujube/eating.html
 
 */
+    ]
+}

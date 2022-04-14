@@ -5,6 +5,7 @@
     accessed: "Dec 2021",
     published: "2008",
     type: "release article or journal overview",
+    needs_help: true, // todo - format comments and disease resistances
     locations: [
         {
             name: "Geneva, NY",
@@ -13,7 +14,6 @@
         }
     ],
     plants: [
-        // todo - format comments and disease resistances
         {
             name: "Co-op 39", // CrimsonCrisp™
             // resistant to scab but susceptible to cedar apple rust (CAR) and to fire blight

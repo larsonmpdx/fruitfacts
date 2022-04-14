@@ -6,6 +6,7 @@
     published: "July 2000",
     accessed: "Oct 2021",
     type: "state extension guide",
+    needs_help: true,
     locations: [
         {
             name: "NMSU, Las Cruces NM",

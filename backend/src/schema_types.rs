@@ -117,6 +117,7 @@ pub struct Collection {
     pub published: Option<String>,
     pub reviewed: Option<String>,
     pub accessed: Option<String>,
+    pub needs_help: i32,
 }
 
 #[skip_serializing_none]

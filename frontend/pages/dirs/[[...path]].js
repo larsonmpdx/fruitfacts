@@ -19,19 +19,47 @@ const Map = dynamic(() => import('../../components/map'), { ssr: false });
 export async function getServerSideProps(context) {
   const { path } = context.query;
   let pathUsed;
+  let initialLocation = {};
+  let errorMessage = null;
   if (path) {
-    pathUsed = path.join('/') + '/'; // with trailing slash - directory listing
+    const pathCombined = path.join('/');
+
+    // remove the part after the '@' and break it down
+    // will look like "...@45.1234,-123.1234,4z"
+    const location_regex = /@([0-9.-]+),([0-9.-]+),([0-9]+)z/;
+    const match = pathCombined.match(location_regex);
+    if (match && match.length >= 4) {
+      initialLocation.lat = match[1];
+      initialLocation.lon = match[2];
+      initialLocation.zoom = match[3];
+      console.log(`match: ${JSON.stringify(initialLocation, null, 2)}`);
+    }
+
+    pathUsed = pathCombined.split('@')[0];
+
+    console.log(`pathused 1: ${pathUsed}`);
+    if (!pathUsed.endsWith('/')) {
+      pathUsed += '/';
+    }
+    console.log(`pathused 2: ${pathUsed}`);
+    pathUsed = pathUsed.replace(/(\/)\/+/g, '$1'); // remove repeated forward slashes
+    console.log(`pathused 3: ${pathUsed}`);
+    if (pathUsed == '/') {
+      pathUsed = ''; // special case - would like to not need this but the backend wants it in the /api/collections/ call
+    }
   } else {
     pathUsed = ''; // this combind with the [[...path]].js filename gets us the base path "/dirs" or "/dirs/"
   }
   const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathUsed}`)
     .then((response) => {
       if (response.status !== 200) {
+        errorMessage = "can't reach backend";
         return [];
       }
       return response.json();
     })
     .catch((error) => {
+      errorMessage = `can't reach backend: ${error.message}`;
       console.log(error);
       return [];
     });
@@ -40,17 +68,21 @@ export async function getServerSideProps(context) {
   return {
     props: {
       data,
-      pathUsed
+      pathUsed,
+      initialLocation,
+      errorMessage
     }
   };
 }
 
-export default function Home({ data, pathUsed }) {
+export default function Home({ data, pathUsed, initialLocation, errorMessage, setErrorMessage }) {
   const [click_lonlat, setClick] = React.useState({});
   const [center, setCenterForQuery] = React.useState({});
   const [zoom, setZoomForQuery] = React.useState({});
   const [extents, setExtentsForFetch] = React.useState({});
   const [locations, setLocations] = React.useState([]);
+
+  setErrorMessage(errorMessage);
 
   const runFetchLocations = React.useMemo(
     // useMemo(): cache results for each input and don't re-run. appears to not be doing anything
@@ -71,11 +103,13 @@ export default function Home({ data, pathUsed }) {
         )
           .then((response) => {
             if (response.status !== 200) {
+              setErrorMessage("can't reach backend");
               return;
             }
             return response.json();
           })
           .catch((error) => {
+            errorMessage = `can't reach backend: ${error.message}`;
             console.log(error);
             return;
           });
@@ -99,7 +133,7 @@ export default function Home({ data, pathUsed }) {
     if (center?.lat && center?.lng && zoom) {
       router.push(
         {
-          pathname: pathUsed + `@${center.lat.toFixed(7)},${center.lng.toFixed(6)},${zoom}z`,
+          pathname: pathUsed + `@${center.lat.toFixed(7)},${center.lng.toFixed(6)},${zoom}z`
         },
         undefined,
         { shallow: true }
@@ -114,12 +148,13 @@ export default function Home({ data, pathUsed }) {
       </Head>
       <Map
         locations={locations}
+        initialLocation={initialLocation}
         setClick={setClick}
         setExtentsForFetch={setExtentsForFetch}
         setZoomForQuery={setZoomForQuery}
         setCenterForQuery={setCenterForQuery}
       />
-      <article className="prose m-5">
+      <article className="prose m-5" id="dirs">
         {/* multi collection (directory listing) */}
         <p>click: {`${JSON.stringify(click_lonlat, null, 2)}`}</p>
         <p>extents: {`${JSON.stringify(extents, null, 2)}`}</p>
@@ -127,7 +162,7 @@ export default function Home({ data, pathUsed }) {
           <ul className="list-disc">
             {data.directories.map((directory, index) => (
               <li key={index}>
-                <Link href={`/dirs/${directory}`}>{directory}</Link>
+                <Link href={`/dirs/${directory}#dirs`}>{directory}</Link>
               </li>
             ))}
           </ul>
@@ -140,8 +175,9 @@ export default function Home({ data, pathUsed }) {
               {data.collections.map((collection) => (
                 <li key={collection.id}>
                   <Link
-                    href={`/collections/${collection.path}${encodeURIComponent(collection.filename)}
-                    `}
+                    href={`/collections/${collection.path}${encodeURIComponent(
+                      collection.filename
+                    )}`}
                   >
                     {collection.title}
                   </Link>

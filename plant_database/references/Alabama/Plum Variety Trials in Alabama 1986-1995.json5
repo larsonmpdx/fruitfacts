@@ -6,6 +6,7 @@
     published: "",
     accessed: "Feb 2022",
     type: "journal article test",
+    needs_help: true,
     locations: [
         {
             name: "todo",

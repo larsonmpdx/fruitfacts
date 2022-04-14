@@ -5,6 +5,7 @@
     published: "",
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true,
     locations: [
         {
             name: "Corvallis, OR",
@@ -22,7 +23,6 @@
         // Marion               8 Jul       15 Jul      24 Jul
         // Black Diamond        3 Jul       17 Jul      26 Jul
         // Chester Thornless    5 Aug       28 Aug      25 Sep
-
         // 2018: ‘Columbia Sunrise’ Thornless Trailing Blackberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/53/2/article-p256.xml
         // "trials planted in 2012 and evaluated in 2014–16 at Oregon State University’s
@@ -34,18 +34,16 @@
         // Chester Thornless    18 Jul       3 Aug      24 Aug
         // Prime-Ark Freedom    20 Aug      27 Aug      19 Sep
         // Prime-Ark Traveler   24 Aug       3 Sep      24 Sep
-
         // 2018: ‘Columbia Giant’ Thornless Trailing Blackberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/53/2/article-p251.xml
         // "trials planted in 2011 and evaluated in 2013–15 at Oregon State University’s
         //    North Willamette Research and Extension Center"
         // harvest times are 5%, 50%, 95%
-        // Columbia Giant       22 Jun       3 Jul       17 Jul 
-        // Black Diamond        24 Jun       3 Jul       17 Jul 
-        // Marion               26 Jun       5 Jul       15 Jul 
-        // Navaho               26 Jun       5 Jul       15 Jul 
+        // Columbia Giant       22 Jun       3 Jul       17 Jul
+        // Black Diamond        24 Jun       3 Jul       17 Jul
+        // Marion               26 Jun       5 Jul       15 Jul
+        // Navaho               26 Jun       5 Jul       15 Jul
         // Chester Thornless    31 Jul      12 Aug      30 Aug
-
         // 2020: ‘Eclipse’ Thornless Semi-erect Blackberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/55/5/article-p749.xml
         // "at Oregon State University’s North Willamette Research and Extension Center (Aurora, OR); planted in 2013" evaluated 2015–17
@@ -59,7 +57,6 @@
         // Triple Crown         17 Jul      31 Jul       9 Aug
         // Chester Thornless    17 Jul       2 Aug      21 Aug
         // Prime-Ark 45         25 Aug      13 Sep      29 Sep
-
         // 2020: ‘Galaxy’ Thornless Semierect Blackberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p967.xml
         // "total yield in 2007–09 ... at Oregon State University’s North Willamette Research
@@ -72,7 +69,6 @@
         // Navaho               27 Jul      14 Aug      14 Sep
         // Cacanska Bestrna     3 Aug       19 Aug      12 Sep
         // Prime-Ark 45         13 Sep      29 Sep      13 Oct
-
         // 2020: ‘Twilight’ Thornless Semi-erect Blackberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/55/7/article-p1148.xml
         // "total yield in 2015–17 ...at Oregon State University’s North Willamette Research and Extension Center
@@ -88,7 +84,6 @@
         // Hall’s Beauty        22 Jun      26 Jun      10 Jul
         // Marion               24 Jun      30 Jun      15 Jul
         // Prime-Ark 45         25 Aug      13 Sep      29 Sep
-
         // 2019: ‘Hall’s Beauty’ Thornless Trailing Blackberry
         // https://journals.ashs.org/hortsci/abstract/journals/hortsci/54/2/article-p371.xml
         // "trials planted in 2009 and 2014 and harvested in 2011–13 and 2016–17, respectively at
@@ -108,16 +103,12 @@
         // Black Diamond        18 Jun       4 Jul      18 Jul
         // Triple Crown         18 Jul       5 Aug      12 Aug
         // Chester Thornless    22 Jul       8 Aug      26 Aug
-
-
         // 2011: ‘Onyx’ Trailing Blackberry
         // https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/72_finn_et_al_onyx_blackberry_hs_2011.pdf
         // "The harvest season for ‘Onyx’ is in the late season for a trailing blackberry,
-        //    beginning in early Jul  and ending 1 Aug  with the 50% harvest date on 15 to 16 Jul 
+        //    beginning in early Jul  and ending 1 Aug  with the 50% harvest date on 15 to 16 Jul
         //    (data not shown). This harvest season is 3 to 7 d later than ‘Marion’ and 7 d later
         //    than ‘Black Diamond’ but 21 to 28 d before ‘Chickasaw’ and ‘Navaho’"
-
-
         // 2010: ‘Newberry’ Trailing Blackberry
         // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2010/2010_HortScience_45_437_440.pdf
         // Newberry              6 Jul      14 Jul      26 Jul
@@ -125,7 +116,6 @@
         // Kotata                6 Jul      16 Jul      30 Jul
         // Waldo                14 Jul      29 Jul      20 Aug
         // Douglass              8 Jul      14 Jul      28 Jul
-
         // 2010: ‘Wild Treasure’ Thornless Trailing Blackberry
         // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2010/2010_HortScience_43_434_436.pdf
         // "The fruit ripening season in Oregon was characterized by the dates
@@ -133,8 +123,6 @@
         // "The harvest season for ‘Wild Treasure’ begins and ends slightly before ‘Marion’ but
         //    peaks at the same time (data not shown)."
         // todo - make an educated guess as to what that means and fill in a harvest time
-
-
         // 2005: ‘Obsidian’ trailing blackberry
         // https://www.ars.usda.gov/ARSUserFiles/3602/manuscripts/ObsidianBlackberryHortSciene.pdf
         // "...planting at the Oregon State University–North Willamette Research and Extension
@@ -148,7 +136,6 @@
         // Marion                        3 Jul      10 Jul      22 Jul
         // Waldo                         8 Jul      22 Jul       7 Aug
         // Willamette red raspberry     27 Jun       7 Jul      21 Jul
-
         // 2004: ‘Metolius’ Trailing Blackberry
         // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2005/Metolius.pdf
         // Table 2. "...at the Oregon State University–North Willamette Research and Extension
@@ -162,7 +149,6 @@
         // Marion                        3 Jul      10 Jul      22 Jul
         // Waldo                         8 Jul      22 Jul       7 Aug
         // Willamette red raspberry     27 Jun       7 Jul      21 Jul
-
         // NOTE: this is a different location! probably don't mix in this data
         // Table 3. "...in 2001 and 2002 at Enfield Farms in Lynden, Wash..."
         // harvest times are 5%, 50%, 95%
@@ -174,7 +160,6 @@
         // Boysen                       16 Jul      25 Jul      31 Jul
         // Metolius                     11 Jul      11 Jul      25 Jul
         // Waldo                        21 Jul      31 Jul       6 Aug
-
         // 2005: ‘Black Pearl’ Thornless Trailing Blackberry
         // https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/49_finn_et_al_black_pearl_blackberry_hs_2005_1.pdf
         // Table 2: "... in 1999–2000 for four blackberry cultivars in an unreplicated trial planted in
@@ -196,8 +181,6 @@
         // Black Pearl       3 Jul      10 Jul      24 Jul
         // Nightfall         3 Jul      11 Jul      23 Jul
         // Waldo             8 Jul      22 Jul       7 Aug
-
-
         // 2005: 'Nightfall' Thornless Trailing Blackberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/40/7/article-p2182.xml
         // Table 2. "...at the Oregon State University–North Willamette Research and Extension Center in Aurora.
@@ -211,7 +194,6 @@
         // Black Pearl       3 Jul      10 Jul      24 Jul
         // Nightfall         3 Jul      11 Jul      23 Jul
         // Waldo             8 Jul      22 Jul       7 Aug
-
         // NOTE: this is a different location! probably don't mix in this data
         // Table 3. "planted... in 2001 and 2002 at Enfield Farms (Lynden, Wash.)"
         // Black Diamond    11 Jul      21 Jul       6 Aug
@@ -222,7 +204,6 @@
         // Boysen           16 Jul      25 Jul      31 Jul
         // Metolius         11 Jul      11 Jul      25 Jul
         // Waldo            21 Jul      31 Jul       6 Aug
-
         // 1999: ‘Siskiyou’ Trailing Blackberry
         // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/1996to1999/SiskiyouHortScienceRelease.pdf
         //  "...at Oregon State Univ.– North Willamette Research and Extension Center (Aurora, Ore.)"
@@ -241,14 +222,9 @@
         // Marion           30 Jun      15 Jul      21 Jul
         // Ranui            19 Jun      30 Jun      15 Jul
         // Waldo             7 Jul      15 Jul      28 Jul
-
         // black butte (1996) - can't find a release paper
-
-
         // todo - older ones, see the other doc
         // todo
-
-
         // 2018: ‘Kokanee’ Primocane-fruiting Red Raspberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p380.xml
         // "from trials at Oregon State University’s North Willamette Research and Extension Center"
@@ -261,8 +237,6 @@
         // Vintage                       2 Aug      16 Aug      30 Aug
         // Kokanee                       9 Aug      23 Aug      13 Sep
         // Heritage                     16 Aug      23 Aug      30 Aug
-
-
         // 2013: ‘Vintage’ Red Raspberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/48/9/article-p1181.xml
         // "harvest season (2008–10) ... planted in 2007 at the Oregon State University’s
@@ -270,9 +244,6 @@
         // harvest times are 5%, 50%, 95%
         // Vintage      18 Aug      10 Sep       5 Oct
         // Heritage      8 Sep      29 Sep      15 Oct
-
-
-
         // 2004: ʻChinookʼ Red Raspberry
         // https://www.ars.usda.gov/ARSUserFiles/20721000/SmallFruitBreeding/manuscripts/Chinook.pdf
         // Table 2. "...harvested in 2000 and 2001...planted in 1999 at the OSU–North Willamette
@@ -283,7 +254,6 @@
         // 2001
         // Heritage        20 Aug       7 Sep       2 Oct
         // Chinook         13 Aug      27 Aug      13 Sep
-
         // 2001: ‘Coho’ Red Raspberry
         // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2001/Cohomanuscript.pdf
         // Table 2. "... in 1996 and 1997 for nine red raspberry cultivars planted in 1994 at
@@ -308,7 +278,6 @@
         // Meeker        8 Jul      20 Jun      21 Jul
         // Kitsilano     8 Jul      20 Jun      28 Jul
         // Coho          8 Jul      26 Jun      21 Jul
-
         // 2013: ‘Charm’ Strawberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/48/9/article-p1184.xml
         // "... at Oregon State University’s North Willamette Research (OSU-NWREC) and Extension Center (Aurora, OR)
@@ -321,7 +290,6 @@
         // Totem             6 Jun      14 Jun      24 Jun
         // Tillamook         8 Jun      16 Jun      27 Jun
         // Puget Crimson    21 Jun      28 Jun      12 Jul
-
         // WSU–Puyallup (Puyallup, WA)
         // Valley Red       11 Jun      19 Jun       1 Jul
         // Hood             10 Jun      21 Jun       4 Jul
@@ -331,30 +299,24 @@
         // Tillamook        17 Jun      29 Jun      11 Jul
         // Puget Summer     21 Jun       1 Jul      11 July
         // Puget Crimson    22 Jun       4 Jul      17 July
-
         // 2014: ‘Sweet Sunrise’ Strawberry
         // https://horticulture.oregonstate.edu/sites/agscid7/files/horticulture/attachments/91_finn_et_al_sweet_sunrise_strawberry_hs_2014.pdf
         // "... at Oregon State University’s North Willamette Research and Extension Center (OSU-NWREC; Aurora, OR)
         //   and at Washington State University (WSU)–Puyallup Research and Extension Center"
-
         // OSU-NWREC (Aurora, OR) (2-5 years averaged)
         // Sweet Sunrise    29 May       7 Jun      20 Jun
         // Stolo             1 Jun       8 Jun      26 Jun
         // Charm             5 Jun      12 Jun      21 Jun
         // Totem             6 Jun      14 Jun      22 Jun
         // Tillamook         5 Jun      15 Jun      23 Jun
-
         // WSU-Puyallup (Puyallup, WA) (2 years averaged)
         // Sweet Sunrise    11 Jun      18 Jun      29 Jun
         // Stolo            12 Jun      21 Jun       1 Jul
         // Hood             12 Jun      22 Jun       4 Jul
         // Totem            15 Jun      23 Jun       5 Jul
         // Puget Reliance   16 Jun      24 Jun       6 Jul
-
-
         // 2018: ‘Marys Peak’ Strawberry
         // https://journals.ashs.org/hortsci/view/journals/hortsci/53/3/article-p395.xml
-
         // OSU-NWREC
         // Sweet Sunrise    22 May       1 Jun      14 Jun
         // Hood             28 May       3 Jun      14 Jun
@@ -368,7 +330,6 @@
         // Stolo             6 Jun      13 Jun       5 Jul
         // Marys Peak        7 Jun      14 Jun      26 Jun
         // Rainier          15 Jun      18 Jun      25 Jun
-
         // WSU–Puyallup (only 50% harvest times)
         // Sweet Sunrise         7 Jun
         // Charm                 9 Jun
@@ -379,36 +340,31 @@
         // Totem                14 Jun
         // Puget Crimson        21 Jun
         // Valley Sunset        23 Jun
-
         // Sweet Bliss strawberry - no harvest times in the hortsci paper. june-bearing
         // Valley Red strawberry - no harvest times in the hortsci paper. june-bearing
-
         // 2002: ‘Tillamook’ and ‘Pinnacle’ Strawberries
         // https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2004/TillamookandPinnacleStrawberries(Finnetal.2004).pdf
         // "...planted in 1999 at the Oregon State University–North Willamette Research
         //   and Extension Center (Aurora, Ore.) and in 2002 for four strawberry cultivars
         //   planted in 2001 at WSU–Puyallup, Wash"
-
         // 1999-Planted trial (Aurora, Ore.), harvest years 2000 and 2001
-        // Pinnacle          5 Jun      12 Jun      26 Jun            
+        // Pinnacle          5 Jun      12 Jun      26 Jun
         //    2nd year      30 May      11 Jun      18 June
-        // Puget Reliance    5 Jun      12 Jun      26 Jun            
+        // Puget Reliance    5 Jun      12 Jun      26 Jun
         //    2nd year       4 Jun      11 Jun      18 June
-        // Tillamook         5 Jun      12 Jun      29 Jun            
+        // Tillamook         5 Jun      12 Jun      29 Jun
         //    2nd year       4 Jun      11 Jun      18 June
-        // Totem             5 Jun      15 Jun      26 Jun            
+        // Totem             5 Jun      15 Jun      26 Jun
         //    2nd year       4 Jun      11 Jun      25 June
-        // Redcrest         12 Jun      19 Jun       5 Jul            
+        // Redcrest         12 Jun      19 Jun       5 Jul
         //    2nd year      11 Jun      18 Jun      25 June
-        // Puget Summer     15 Jun      19 Jun      29 Jun            
+        // Puget Summer     15 Jun      19 Jun      29 Jun
         //    2nd year      11 Jun      18 Jun      25 June
-
         // 2001-Planted replicated trial (Puyallup, Wash.), harvest year 2002
         // Pinnacle         11 Jun      18 Jun       1 Jul
         // Puget Reliance   11 Jun      20 Jun       1 Jul
         // Hood             11 Jun      21 Jun       1 Jul
         // Tillamook        11 Jun      21 Jun       2 Jul
-
         // Firecracker strawberry: can't find a release paper
         // Independence strawberry: can't find a release paper
     ]

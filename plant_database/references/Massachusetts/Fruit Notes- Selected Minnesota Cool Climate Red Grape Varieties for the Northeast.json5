@@ -4,6 +4,7 @@
     url: "Fruit Notes, Volume 85, Spring, 2020 http://www.umassfruitnotes.com/v85n2/a6.pdf",
     accessed: "Dec 2021",
     type: "journal article test",
+    needs_help: true,
     locations: [
         {
             name: "UMass Cold Springs (and others)",

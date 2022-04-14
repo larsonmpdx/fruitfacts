@@ -4,6 +4,7 @@
     published: "unknown",
     accessed: "Oct 2021",
     type: "private breeding program list",
+    needs_help: true,
     locations: [
         {
             name: "La Grand, CA",

@@ -1,6 +1,3 @@
-//
-// todo
-
 {
     title: "UMN Jim Luby Variety Picks (youtube)",
     author: "",
@@ -8,6 +5,7 @@
     published: "Aug 2021",
     accessed: "Oct 2021",
     type: "extension test",
+    needs_help: true,
     locations: [
         {
             name: "UMN North Central Research and Outreach Center",
@@ -15,5 +13,7 @@
             longitude: -93.49415474228559
         }
     ],
-    plants: []
+    plants: [
+        // todo
+    ]
 }

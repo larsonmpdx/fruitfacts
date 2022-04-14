@@ -16,7 +16,8 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ types }) {
+export default function Home({ types, setErrorMessage }) {
+  setErrorMessage(null);
   return (
     <>
       <Head>

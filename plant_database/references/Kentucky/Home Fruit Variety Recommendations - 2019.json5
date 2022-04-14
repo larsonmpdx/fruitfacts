@@ -5,6 +5,7 @@
     published: "2019",
     accessed: "Dec 2021",
     type: "state extension guide",
+    needs_help: true,
     locations: [
         {
             name: "University of Kentucky (guide applies to East and West Kentucky)",

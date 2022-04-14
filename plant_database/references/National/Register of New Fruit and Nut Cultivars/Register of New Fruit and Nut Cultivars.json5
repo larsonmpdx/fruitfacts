@@ -5,6 +5,7 @@
     published: "",
     accessed: "Oct 2021",
     type: "dictionary",
+    needs_help: true,
     locations: [
         {
             name: "USDA Washington, DC",

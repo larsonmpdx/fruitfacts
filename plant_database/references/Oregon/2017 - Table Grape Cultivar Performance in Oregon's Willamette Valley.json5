@@ -5,6 +5,7 @@
     published: "2017",
     accessed: "Oct 2021",
     type: "extension test",
+    needs_help: true,
     locations: [
         {
             name: "Corvallis, OR", // todo - change to farm and nwrec

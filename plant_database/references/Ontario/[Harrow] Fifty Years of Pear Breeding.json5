@@ -5,6 +5,7 @@
     published: "2016",
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true, // todo - incorporate disease resistance notes
     locations: [
         {
             name: "Harrow RDC, Ontario CA",
@@ -13,7 +14,6 @@
         }
     ],
     plants: [
-        // todo - incorporate disease resistance notes
         {
             type: "Euro Pear",
             name: "Bartlett",

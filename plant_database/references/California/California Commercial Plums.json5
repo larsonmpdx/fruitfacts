@@ -6,6 +6,7 @@
     description: "NEW YORK FRUIT QUARTERLY • VOLUME 14 NUMBER 1 • 2006",
     type: "dictionary",
     accessed: "Feb 2022",
+    needs_help: true,
     locations: [
         {
             name: "todo - this is fresno",

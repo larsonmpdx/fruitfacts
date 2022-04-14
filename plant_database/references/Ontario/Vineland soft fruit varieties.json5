@@ -5,6 +5,7 @@
     published: "Mar 2020", // date from url
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true,
     locations: [
         {
             name: "Vineland, ON",

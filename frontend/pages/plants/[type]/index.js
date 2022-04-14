@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Button from '../../../components/buttonLink';
 
 export async function getServerSideProps(context) {
+  let errorMessage = null;
   const { type, page } = context.query;
   let pageNum = parseInt(page);
   if (isNaN(pageNum)) {
@@ -14,11 +15,13 @@ export async function getServerSideProps(context) {
   )
     .then((response) => {
       if (response.status !== 200) {
+        errorMessage = "couldn't reach backend";
         return;
       }
       return response.json();
     })
     .catch((error) => {
+      errorMessage = `couldn't reach backend: ${error.message}`;
       console.log(error);
       return;
     });
@@ -27,12 +30,14 @@ export async function getServerSideProps(context) {
       plants: plants?.plants || [],
       last_page: plants?.last_page + 1 || 1,
       type,
-      pageNum
+      pageNum,
+      errorMessage
     }
   };
 }
 
-export default function Home({ plants, last_page, type, pageNum }) {
+export default function Home({ plants, last_page, type, pageNum, errorMessage, setErrorMessage }) {
+  setErrorMessage(errorMessage);
   return (
     <>
       <Head>

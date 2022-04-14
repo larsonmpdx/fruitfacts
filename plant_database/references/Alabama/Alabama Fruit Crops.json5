@@ -7,6 +7,7 @@
     url: "https://ssl.acesag.auburn.edu/department/peaches/index.html",
     accessed: "Feb 2022",
     type: "state extension guide",
+    needs_help: true,
     locations: [
         {
             name: "todo",

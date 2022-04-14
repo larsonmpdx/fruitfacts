@@ -4,6 +4,7 @@
     url: "http://www.umassfruitnotes.com/v86n1/a7.pdf",
     accessed: "Dec 2021",
     type: "journal article test",
+    needs_help: true,
     locations: [
         {
             name: "Cream Ridge, NJ",

@@ -1,10 +1,10 @@
-// todo "released by" on each
 {
     title: "Zaiger Varieties",
     url: "https://www.davewilson.com/about/zaiger-genetics-partnership/",
     published: "unknown",
     accessed: "Oct 2021",
     type: "private breeding program list",
+    needs_help: true, // todo "released by" on each
     locations: [
         {
             name: "Modesto, CA",

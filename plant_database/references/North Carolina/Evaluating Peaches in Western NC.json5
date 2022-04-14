@@ -5,6 +5,7 @@
     published: "2004",
     accessed: "Dec 2021",
     type: "extension test",
+    needs_help: true,
     locations: [
         {
             name: "Mountain Horticultural Crops Research Station, Fletcher, NC",

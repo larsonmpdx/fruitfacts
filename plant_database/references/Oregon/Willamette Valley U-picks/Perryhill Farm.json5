@@ -1,4 +1,20 @@
-/*
+{
+    title: "Perryhill Farm",
+    author: "",
+    url: "http://www.perryhillfarm.net/peaches.php",
+    published: "",
+    accessed: "Oct 2021",
+    type: "U-pick variety list",
+    needs_help: true,
+    locations: [
+        {
+            name: "Dallas, OR",
+            latitude: 45.01148214087937,
+            longitude: -123.27827148764334
+        }
+    ],
+    plants: [
+        /*
 todo
 Peach Varieties
 Old Favorites- Red Haven, Elberta, Veteran, Canadian Harmony, Glohaven
@@ -32,20 +48,5 @@ Royal Gala
 Jonagold
 Honeysrisp
 */
-
-{
-    title: "Perryhill Farm",
-    author: "",
-    url: "http://www.perryhillfarm.net/peaches.php",
-    published: "",
-    accessed: "Oct 2021",
-    type: "U-pick variety list",
-    locations: [
-        {
-            name: "Dallas, OR",
-            latitude: 45.01148214087937,
-            longitude: -123.27827148764334
-        }
-    ],
-    plants: []
+    ]
 }

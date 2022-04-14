@@ -1,9 +1,11 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Navbar from './navbar';
+import Errorbar from './errorbar';
 
 export default function Layout({ children }) {
   const [user, setUser] = React.useState({});
+  const [errorMessage, setErrorMessage] = React.useState(null);
 
   const router = useRouter();
   if (!['/login', '/createAccount'].includes(router.pathname)) {
@@ -13,9 +15,11 @@ export default function Layout({ children }) {
           <p>{process.env.NEXT_PUBLIC_SITE_NAME} works better with javascript</p>
         </noscript>
         <Navbar user={user} setUser={setUser} />
+        <Errorbar errorMessage={errorMessage} />
         <main>
           {React.cloneElement(children, {
-            user
+            user,
+            setErrorMessage // share these to every other thing within <main>
           })}
         </main>
       </>
@@ -26,7 +30,12 @@ export default function Layout({ children }) {
         <noscript>
           <p>{process.env.NEXT_PUBLIC_SITE_NAME} works better with javascript</p>
         </noscript>
-        <main>{children}</main>
+        <Errorbar errorMessage={errorMessage} />
+        <main>
+          {React.cloneElement(children, {
+            setErrorMessage // share this to every other thing within <main>
+          })}
+        </main>
       </>
     );
   }

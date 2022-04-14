@@ -6,6 +6,7 @@
     description: "NEW YORK FRUIT QUARTERLY • VOLUME 14 NUMBER 1 • 2006",
     accessed: "Feb 2022",
     type: "dictionary",
+    needs_help: true,
     locations: [
         {
             name: "todo",

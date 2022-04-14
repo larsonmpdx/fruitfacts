@@ -1,4 +1,19 @@
-/*
+{
+    title: "Olson Farms",
+    author: "",
+    url: "",
+    published: "",
+    accessed: "Oct 2021",
+    type: "U-pick variety list",
+    locations: [
+        {
+            name: "Salem, OR",
+            latitude: 44.88547356270915,
+            longitude: -122.91934053181215
+        }
+    ],
+    plants: [
+        /*
 olson farms salem
 
 suncrest
@@ -36,20 +51,5 @@ akane
 early italian
 
 */
-
-{
-    title: "",
-    author: "",
-    url: "",
-    published: "",
-    accessed: "Oct 2021",
-    type: "U-pick variety list",
-    locations: [
-        {
-            name: "todo",
-            latitude: 44.36728083819834,
-            longitude: -121.14213716576367
-        }
-    ],
-    plants: []
+    ]
 }

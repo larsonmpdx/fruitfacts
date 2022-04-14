@@ -4,6 +4,7 @@
     url: 'various, this breeding program shut down some time ago and Rutgers lacks a good history page. "Apples, Botany, Production and Uses" 2003 Ed. Feree and Warrington. https://njaes.rutgers.edu/fs1303/',
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true,
     locations: [
         {
             name: "Cream Ridge, NJ",

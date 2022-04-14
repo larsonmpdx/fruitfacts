@@ -5,6 +5,7 @@
     published: "March 2021", // this date isn't in the pdf but I saw a tweet announcing it at this time
     accessed: "March 2022",
     type: "extension test",
+    needs_help: true,
     locations: [
         {
             name: "Fruit Research Station, Clarksville", // most harvest times are given as either "west-central arkansas" or "northwest arkansas".  I think clarksville would be NW?

@@ -4,6 +4,7 @@
     url: "http://www.hort.cornell.edu/brown/pdfs/newfruitimpact.pdf",
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true,
     locations: [
         {
             name: "Geneva, NY",

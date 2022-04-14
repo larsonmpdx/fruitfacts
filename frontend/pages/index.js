@@ -8,14 +8,17 @@ import { format as timeAgo } from 'timeago.js';
 // - grid/mobile view
 
 export async function getServerSideProps() {
+  let errorMessage = null;
   const fact = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/fact`)
     .then((response) => {
       if (response.status !== 200) {
+        errorMessage = "can't reach backend";
         return {};
       }
       return response.json();
     })
     .catch((error) => {
+      errorMessage = `can't reach backend: ${error.message}`;
       console.log(error);
       return {};
     });
@@ -25,11 +28,13 @@ export async function getServerSideProps() {
   )
     .then((response) => {
       if (response.status !== 200) {
+        errorMessage = "can't reach backend";
         return {};
       }
       return response.json();
     })
     .catch((error) => {
+      errorMessage = `can't reach backend: ${error.message}`;
       console.log(error);
       return {};
     });
@@ -37,12 +42,14 @@ export async function getServerSideProps() {
   return {
     props: {
       fact,
-      recentChangesData
+      recentChangesData,
+      errorMessage
     }
   };
 }
 
-export default function Home({ fact, recentChangesData }) {
+export default function Home({ fact, recentChangesData, errorMessage, setErrorMessage }) {
+  setErrorMessage(errorMessage);
   return (
     <article className="prose m-5">
       <Head>

@@ -11,6 +11,7 @@ import Head from 'next/head';
 import Chart from '../../components/chart';
 
 export async function getServerSideProps(context) {
+  let errorMessage = null;
   const { path, loc } = context.query;
   let location_number = parseInt(loc);
   if (isNaN(location_number)) {
@@ -22,11 +23,13 @@ export async function getServerSideProps(context) {
   ) // no trailing slash - individual collection
     .then((response) => {
       if (response.status !== 200) {
+        errorMessage = "can't reach backend";
         return { items: [], locations: [] };
       }
       return response.json();
     })
     .catch((error) => {
+      errorMessage = `can't reach backend: ${error.message}`;
       console.log(error);
       return { items: [], locations: [] };
     });
@@ -46,24 +49,34 @@ export async function getServerSideProps(context) {
     props: {
       data,
       location,
-      path
+      path,
+      errorMessage
     }
   };
 }
 
-export default function Home({ data, location, path }) {
+// github link example
+// plant_database/references/Oregon/2017%20-%20Table%20Grape%20Cultivar%20Performance%20in%20Oregon's%20Willamette%20Valley.json5
+
+export default function Home({ data, location, path, errorMessage, setErrorMessage }) {
+  setErrorMessage(errorMessage);
+  let github_link = `${process.env.NEXT_PUBLIC_GITHUB_BASE}plant_database/references/${path
+    .map((x) => encodeURIComponent(x))
+    .join('/')}.json5`;
   return (
     <>
       <Head>
-        <title>{`Collection: ${path}`}</title>
+        <title>{`Collection: ${path.join('/')}`}</title>
       </Head>
       <article className="prose m-5">
-        {/* single collection */}
         {data.collection && (
           <>
             <p>
               {data.collection.title}
               {data.collection.url && <a href={data.collection.url}>[ref]</a>}
+            </p>
+            <p>
+              <a href={github_link}>view/edit on github</a>
             </p>
             <h1>Locations</h1>
             <ul className="list-disc">

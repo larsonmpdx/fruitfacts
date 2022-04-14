@@ -5,6 +5,7 @@
     accessed: "Dec 2021",
     published: "2018",
     type: "release article or journal overview",
+    needs_help: true, // todo - needs formatting
     locations: [
         {
             name: "Geneva, NY",
@@ -13,7 +14,6 @@
         }
     ],
     plants: [
-        // todo - needs formatting
         {
             type: "Apple",
             name: "Arctic Granny",

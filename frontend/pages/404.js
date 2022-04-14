@@ -14,21 +14,23 @@ export async function getStaticProps() {
 }
 
 // next.js advises keeping logic client-side in 404s so we can limit server load. ok?
-export default function Custom404(props) {
+export default function Custom404({ icons, setErrorMessage }) {
   const [icon, setIcon] = React.useState();
   const [fact, setFact] = React.useState();
   React.useEffect(() => {
-    setIcon(props.icons[Math.floor(Math.random() * props.icons.length)]);
+    setIcon(icons[Math.floor(Math.random() * icons.length)]);
 
     const fetchData = async () => {
       const fact = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/fact`)
         .then((response) => {
           if (response.status !== 200) {
+            setErrorMessage("can't reach the backend to fetch a fact");
             return;
           }
           return response.json();
         })
         .catch((error) => {
+          setErrorMessage("can't reach the backend to fetch a fact");
           console.log(error);
           return;
         });

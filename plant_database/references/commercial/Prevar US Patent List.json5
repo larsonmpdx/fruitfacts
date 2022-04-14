@@ -1,12 +1,9 @@
-// todo https://patents.google.com/?inventor=Allan+G.+White
-// also https://patents.google.com/?q=apple&inventor=Allan+White
-//      https://patents.google.com/?q=apple&inventor=Allan+White
-//      https://patents.justia.com/assignee/prevar-limited
 {
     title: "Prevar (NZ) US Patent List",
     url: "https://patents.justia.com/assignee/prevar-limited and https://patents.google.com/?inventor=Allan+G.+White",
     accessed: "Dec 2021",
     type: "private breeding program list",
+    needs_help: true,
     locations: [
         {
             name: "Havelock North, NZ",
@@ -15,6 +12,11 @@
         }
     ],
     plants: [
+        // todo https://patents.google.com/?inventor=Allan+G.+White
+        // also https://patents.google.com/?q=apple&inventor=Allan+White
+        //      https://patents.google.com/?q=apple&inventor=Allan+White
+        //      https://patents.justia.com/assignee/prevar-limited
+
         // Prevar varieties
         {
             name: "Prem2P",

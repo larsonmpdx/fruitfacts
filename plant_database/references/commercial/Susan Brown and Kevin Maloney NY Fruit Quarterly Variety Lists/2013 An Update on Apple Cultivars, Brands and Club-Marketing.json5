@@ -5,6 +5,7 @@
     accessed: "Dec 2021",
     published: "2013",
     type: "release article or journal overview",
+    needs_help: true, // todo - needs formatting and disease resistance editing
     locations: [
         {
             name: "Geneva, NY",
@@ -13,7 +14,6 @@
         }
     ],
     plants: [
-        // todo - needs formatting and disease resistance editing
         {
             type: "Apple",
             name: "Arctic Granny",

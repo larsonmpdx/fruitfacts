@@ -124,6 +124,7 @@ const getFruitIcon = (type, size) => {
 
 export default function Home({
   locations,
+  initialLocation,
   setClick,
   setExtentsForFetch,
   setZoomForQuery,
@@ -176,12 +177,21 @@ export default function Home({
 
   const [map, setMap] = React.useState(null);
 
+  let initialLat = 40.5;
+  let initialLon = -100;
+  let initialZoom = 3;
+  if (initialLocation?.lat && initialLocation?.lon && initialLocation?.zoom) {
+    initialLat = initialLocation.lat;
+    initialLon = initialLocation.lon;
+    initialZoom = initialLocation.zoom;
+  }
+
   return (
     <MapContainer
-      zoom={3}
       scrollWheelZoom={true}
       style={{ height: '80vh', width: '100%' }}
-      center={[40.5, -100]}
+      center={[initialLat, initialLon]}
+      zoom={initialZoom}
       whenCreated={setMap}
     >
       <TileLayer

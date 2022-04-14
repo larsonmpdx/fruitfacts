@@ -1,5 +1,5 @@
-// a button that actually works using a nextjs Link and an html <a> tag (used for link navigation)
-// use the other button component for onClick() buttons
+// a button that actually works using a nextjs Link and an html <a> tag
+// use the other button component for regular onClick() buttons styled the same way
 
 import Link from 'next/link';
 import styles from '../styles/Button.module.css';

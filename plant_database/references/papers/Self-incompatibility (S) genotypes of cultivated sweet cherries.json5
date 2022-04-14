@@ -2420,7 +2420,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Doty", 
+            name: "Doty",
             AKA: ["Early Robin (r)"],
             s_allele: "S1S3",
             description: "country of origin: US mutation of ‘Rainier’ but unlikely (inconsistent S-alleles)"

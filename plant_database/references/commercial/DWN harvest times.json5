@@ -4,6 +4,7 @@
     published: "2021",
     accessed: "March 2022",
     type: "nursery catalog",
+    needs_help: true,
     locations: [
         {
             name: "Hickman, CA",

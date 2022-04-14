@@ -4,7 +4,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Home() {
+export default function Home({ setErrorMessage }) {
   const [user, setUser] = React.useState();
   const [disabled, setDisabled] = React.useState();
 
@@ -19,11 +19,13 @@ export default function Home() {
     })
       .then((response) => {
         if (response.status !== 200) {
+          setErrorMessage('failed creating user');
           return { failed: response.status };
         }
         return response.json();
       })
       .catch((error) => {
+        setErrorMessage(`failed creating user: ${error.message}`);
         console.log(error);
         return { failed: error };
       });

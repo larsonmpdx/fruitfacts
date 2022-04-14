@@ -9,6 +9,7 @@
     published: "",
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true,
     locations: [
         {
             name: "Corvallis, OR",
@@ -218,7 +219,7 @@
             type: "Strawberry",
             description: "june-bearing. https://journals.ashs.org/hortsci/view/journals/hortsci/44/5/article-p1468.xml",
             // not patented
-            released: "USDA-OSU 2009*",
+            released: "USDA-OSU 2009*"
         },
         {
             name: "Pinnacle",
@@ -284,8 +285,7 @@
             name: "Ananasnaya",
             type: "Hardy Kiwi",
             description: "https://www.ars.usda.gov/research/publications/publication/?seqNo115=192122",
-            released: "USDA-OSU 2006*",
-
+            released: "USDA-OSU 2006*"
         }
 
         // todo

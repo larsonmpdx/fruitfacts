@@ -3,17 +3,20 @@ import Head from 'next/head';
 import { formatPatentDate } from '../../../components/functions';
 
 export async function getServerSideProps(context) {
+  let errorMessage = null;
   const { type, name } = context.query;
   const plant = await fetch(
     `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/plants/${type}/${encodeURIComponent(name)}`
   )
     .then((response) => {
       if (response.status !== 200) {
+        errorMessage = "can't reach backend";
         return {};
       }
       return response.json();
     })
     .catch((error) => {
+      errorMessage = `can't reach backend: ${error.message}`;
       console.log(error);
       return {};
     });
@@ -22,12 +25,14 @@ export async function getServerSideProps(context) {
     props: {
       plant,
       type,
-      name
+      name,
+      errorMessage
     }
   };
 }
 
-export default function Home({ plant, type, name }) {
+export default function Home({ plant, type, name, errorMessage, setErrorMessage }) {
+  setErrorMessage(errorMessage);
   return (
     <>
       <Head>

@@ -66,6 +66,7 @@ struct CollectionJson {
     published: Option<String>,
     reviewed: Option<String>,
     accessed: Option<String>,
+    needs_help: Option<bool>,
     #[serde(rename = "type")] // notoriety type like "extension publication"
     type_: String,
     harvest_time_devalue_factor: Option<f32>, // an option to reduce the weight of harvest times because of an editorial decision that they're low quality
@@ -1671,6 +1672,12 @@ fn load_references(
 
             collection_id += 1;
 
+            let needs_help = if collection.needs_help.is_some() {
+                collection.needs_help.unwrap()
+            } else {
+                false
+            };
+
             //    println!("inserting");
             let rows_inserted = diesel::insert_into(collections::dsl::collections)
                 .values((
@@ -1686,6 +1693,7 @@ fn load_references(
                     collections::published.eq(&collection.published),
                     collections::reviewed.eq(&collection.reviewed),
                     collections::accessed.eq(&collection.accessed),
+                    collections::needs_help.eq(needs_help as i32),
                     collections::notoriety_type.eq(&collection.type_.to_lowercase()),
                     collections::notoriety_score.eq(notoriety_info.score),
                     collections::notoriety_score_explanation.eq(notoriety_info.explanation),

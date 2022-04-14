@@ -5,6 +5,7 @@
     accessed: "Dec 2021",
     published: "2015",
     type: "release article or journal overview", // todo - maybe another category
+    needs_help: true,
     description: "",
     locations: [
         {

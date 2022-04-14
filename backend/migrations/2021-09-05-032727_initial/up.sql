@@ -118,6 +118,7 @@ CREATE TABLE collections (
   published TEXT,
   reviewed TEXT,
   accessed TEXT,
+  needs_help INTEGER NOT NULL, -- bool
 
   UNIQUE(path, filename)
 );

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function Home() {
+export default function Home({ setErrorMessage }) {
   const [authURLs, setAuthURLs] = React.useState(null);
 
   React.useEffect(() => {
@@ -13,10 +13,12 @@ export default function Home() {
           if (response.status === 200) {
             return response.json();
           } else {
+            setErrorMessage("couldn't log in");
             return null;
           }
         })
         .catch((error) => {
+          setErrorMessage(`couldn't log in: ${error.message}`);
           console.log(error);
           return null;
         });

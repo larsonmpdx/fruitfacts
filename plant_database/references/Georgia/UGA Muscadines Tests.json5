@@ -5,6 +5,7 @@
     published: "",
     accessed: "Oct 2021",
     type: "state extension guide",
+    needs_help: true,
     locations: [
         {
             name: "todo",

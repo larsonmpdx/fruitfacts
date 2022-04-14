@@ -5,6 +5,7 @@
     published: "2012",
     accessed: "March 2022",
     type: "extension test",
+    needs_help: true,
     locations: [
         {
             name: "NMSU Sustainable Agriculture Science Center at Alcalde NM",
