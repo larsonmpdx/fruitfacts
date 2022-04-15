@@ -4,7 +4,7 @@
     url: "https://thistledownfarm.net/our-crops",
     published: "",
     accessed: "Oct 2021",
-    type: "U-pick variety list",
+    type: "U-pick variety list", // todo - this is actually a farm stand, I don't think they do u-pick peaches
     locations: [
         {
             name: "Eugene, OR",

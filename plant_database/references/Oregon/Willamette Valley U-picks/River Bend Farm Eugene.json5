@@ -5,6 +5,7 @@
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",
+    needs_help: true,
     locations: [
         {
             name: "Eugene, OR",

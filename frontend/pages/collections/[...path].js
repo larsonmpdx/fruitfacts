@@ -67,10 +67,13 @@ export default function Home({
   setErrorMessage,
   setContributingLinks
 }) {
+  let data_link = `plant_database/references/${path
+    .map((x) => encodeURIComponent(x))
+    .join('/')}.json5`;
   React.useEffect(() => {
     setContributingLinks([
       {
-        link: `plant_database/references/${path.map((x) => encodeURIComponent(x)).join('/')}.json5`,
+        link: data_link,
         description: `data for this collection`
       },
       {
@@ -90,6 +93,14 @@ export default function Home({
       <article className="prose m-5">
         {data.collection && (
           <>
+            {data.collection.needs_help == 1 && (
+              <p>
+                the data for this collection is marked "needs help".{' '}
+                <a href={`${process.env.NEXT_PUBLIC_GITHUB_BASE}${data_link}`}>
+                  click here to view it on github
+                </a>
+              </p>
+            )}
             <p>
               {data.collection.title}
               {data.collection.url && <a href={data.collection.url}>[ref]</a>}
