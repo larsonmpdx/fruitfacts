@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Search from './navbarSearch';
 import Login from './navbarLogin';
 import Tooltip from '@mui/material/Tooltip';
-import * as React from 'react';
+import React from 'react';
 
 let links = [
   { name: 'locations', href: '/dirs/' },
@@ -10,12 +10,12 @@ let links = [
   { name: 'US patents', href: '/patents/0' }
 ];
 
-export default function Home({ user, setUser }) {
+export default function Home({ user, setUser, contributingLinks }) {
   const [open, setOpen] = React.useState(false);
   const [holdOpen, setHoldOpen] = React.useState(false);
 
   const handleClose = () => {
-    if(!holdOpen) {
+    if (!holdOpen) {
       setOpen(false);
     }
   };
@@ -49,17 +49,31 @@ export default function Home({ user, setUser }) {
           ))}
         </div>
         <div className="mr-6">
-        <Tooltip
-         open={open} onClose={handleClose} onOpen={handleOpen}
-        title={
-          <React.Fragment>
-            <p>Contributing</p>
-            <p>a list of github links (todo)</p>
-          </React.Fragment>
-        }
-      >
-        <button onClick={handleHoldOpen}>Edit this page</button>
-      </Tooltip>
+          <Tooltip
+            open={open}
+            onClose={handleClose}
+            onOpen={handleOpen}
+            title={
+              <React.Fragment>
+                <a href={`${process.env.NEXT_PUBLIC_GITHUB_HOMEPAGE}`}>fruitfacts on github</a>
+                <ul className="list-disc">
+                  {contributingLinks && (
+                    <>
+                      {contributingLinks.map((link, index) => (
+                        <li key={index}>
+                          <a href={`${process.env.NEXT_PUBLIC_GITHUB_BASE}${link.link}`}>
+                            {link.description}
+                          </a>
+                        </li>
+                      ))}
+                    </>
+                  )}
+                </ul>
+              </React.Fragment>
+            }
+          >
+            <button onClick={handleHoldOpen}>edit this page</button>
+          </Tooltip>
         </div>
         <div>
           <Login user={user} setUser={setUser} />

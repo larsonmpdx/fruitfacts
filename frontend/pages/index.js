@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { format as timeAgo } from 'timeago.js';
@@ -48,7 +49,17 @@ export async function getServerSideProps() {
   };
 }
 
-export default function Home({ fact, recentChangesData, errorMessage, setErrorMessage }) {
+export default function Home({
+  fact,
+  recentChangesData,
+  errorMessage,
+  setErrorMessage,
+  setContributingLinks
+}) {
+  React.useEffect(() => {
+    setContributingLinks([{ link: `/frontend/pages/index.js`, description: `index.js` }]);
+  }, []);
+
   setErrorMessage(errorMessage);
   return (
     <article className="prose m-5">

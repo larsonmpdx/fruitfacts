@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Button from '../../../components/buttonLink';
@@ -36,7 +37,24 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default function Home({ plants, last_page, type, pageNum, errorMessage, setErrorMessage }) {
+export default function Home({
+  plants,
+  last_page,
+  type,
+  pageNum,
+  errorMessage,
+  setErrorMessage,
+  setContributingLinks
+}) {
+  React.useEffect(() => {
+    setContributingLinks([
+      {
+        link: `/frontend/pages/plants/[type]/index.js`,
+        description: `plants/[type]/index.js`
+      }
+    ]);
+  }, []);
+
   setErrorMessage(errorMessage);
   return (
     <>

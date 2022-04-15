@@ -1,7 +1,9 @@
 # Code and Data for www.fruitfacts.xyz
 
 * [Backend README](backend/README.md)
+  * written in rust using a sqlite database
 * [Frontend README](frontend/README.md)
+  * written in javascript with next.js and react
 
 # contributing
 * [a list of data files that need help](plant_database/help_needed.md)

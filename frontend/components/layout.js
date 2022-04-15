@@ -6,6 +6,7 @@ import Errorbar from './errorbar';
 export default function Layout({ children }) {
   const [user, setUser] = React.useState({});
   const [errorMessage, setErrorMessage] = React.useState(null);
+  const [contributingLinks, setContributingLinks] = React.useState([]);
 
   const router = useRouter();
   if (!['/login', '/createAccount'].includes(router.pathname)) {
@@ -14,12 +15,13 @@ export default function Layout({ children }) {
         <noscript>
           <p>{process.env.NEXT_PUBLIC_SITE_NAME} works better with javascript</p>
         </noscript>
-        <Navbar user={user} setUser={setUser} />
+        <Navbar user={user} setUser={setUser} contributingLinks={contributingLinks} />
         <Errorbar errorMessage={errorMessage} />
         <main>
           {React.cloneElement(children, {
             user,
-            setErrorMessage // share these to every other thing within <main>
+            setErrorMessage, // share these to every other thing within <main>
+            setContributingLinks
           })}
         </main>
       </>

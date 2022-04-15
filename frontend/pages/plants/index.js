@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -16,7 +17,15 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ types, setErrorMessage }) {
+export default function Home({ types, setErrorMessage, setContributingLinks }) {
+  React.useEffect(() => {
+    setContributingLinks([
+      { link: `/frontend/pages/plants/index.js`, description: `plants/index.js` },
+      { link: `/plant_database/types.json5`, description: `plant types` },
+      { link: `/frontend/public/fruit_icons/`, description: `fruit icons` }
+    ]);
+  }, []);
+
   setErrorMessage(null);
   return (
     <>

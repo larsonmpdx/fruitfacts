@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 export async function getStaticProps() {
@@ -14,7 +14,11 @@ export async function getStaticProps() {
 }
 
 // next.js advises keeping logic client-side in 404s so we can limit server load. ok?
-export default function Custom404({ icons, setErrorMessage }) {
+export default function Custom404({ icons, setErrorMessage, setContributingLinks }) {
+  React.useEffect(() => {
+    setContributingLinks([{ link: `/frontend/pages/404.js`, description: `404.js` }]);
+  }, []);
+
   const [icon, setIcon] = React.useState();
   const [fact, setFact] = React.useState();
   React.useEffect(() => {

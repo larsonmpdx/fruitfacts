@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Button from '../../components/button';
@@ -36,7 +37,19 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default function Home({ patent_info, pageNum, errorMessage, setErrorMessage }) {
+export default function Home({
+  patent_info,
+  pageNum,
+  errorMessage,
+  setErrorMessage,
+  setContributingLinks
+}) {
+  React.useEffect(() => {
+    setContributingLinks([
+      { link: `/frontend/pages/patents/[page].js`, description: `patents/[page].js` }
+    ]);
+  }, []);
+
   setErrorMessage(errorMessage);
   return (
     <>

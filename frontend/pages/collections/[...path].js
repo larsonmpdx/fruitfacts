@@ -6,6 +6,7 @@
 // see https://github.com/vercel/next.js/discussions/23988
 
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Chart from '../../components/chart';
@@ -58,11 +59,29 @@ export async function getServerSideProps(context) {
 // github link example
 // plant_database/references/Oregon/2017%20-%20Table%20Grape%20Cultivar%20Performance%20in%20Oregon's%20Willamette%20Valley.json5
 
-export default function Home({ data, location, path, errorMessage, setErrorMessage }) {
+export default function Home({
+  data,
+  location,
+  path,
+  errorMessage,
+  setErrorMessage,
+  setContributingLinks
+}) {
+  React.useEffect(() => {
+    setContributingLinks([
+      {
+        link: `plant_database/references/${path.map((x) => encodeURIComponent(x)).join('/')}.json5`,
+        description: `data for this collection`
+      },
+      {
+        link: `/frontend/pages/collections/[...path].js`,
+        description: `collections/[...path].js`
+      },
+      { link: `/frontend/components/chart/`, description: `chart component` }
+    ]);
+  }, []);
+
   setErrorMessage(errorMessage);
-  let github_link = `${process.env.NEXT_PUBLIC_GITHUB_BASE}plant_database/references/${path
-    .map((x) => encodeURIComponent(x))
-    .join('/')}.json5`;
   return (
     <>
       <Head>
@@ -74,9 +93,6 @@ export default function Home({ data, location, path, errorMessage, setErrorMessa
             <p>
               {data.collection.title}
               {data.collection.url && <a href={data.collection.url}>[ref]</a>}
-            </p>
-            <p>
-              <a href={github_link}>view/edit on github</a>
             </p>
             <h1>Locations</h1>
             <ul className="list-disc">

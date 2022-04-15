@@ -6,12 +6,13 @@
 // see https://github.com/vercel/next.js/discussions/23988
 
 // so we have this split between /dirs/[...path].js (directory listings) and /collections/[...path].js (individual collections)
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import React from 'react';
 import throttle from 'lodash/throttle';
 import { useRouter } from 'next/router';
+import { map } from 'lodash';
 
 // see https://nextjs.org/docs/advanced-features/dynamic-import
 const Map = dynamic(() => import('../../components/map'), { ssr: false });
@@ -75,7 +76,22 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default function Home({ data, pathUsed, initialLocation, errorMessage, setErrorMessage }) {
+export default function Home({
+  data,
+  pathUsed,
+  initialLocation,
+  errorMessage,
+  setErrorMessage,
+  setContributingLinks
+}) {
+  React.useEffect(() => {
+    setContributingLinks([
+      { link: `/frontend/pages/dirs/[[...path]].js`, description: `dirs/[[...path]].js` },
+      { link: `/frontend/components/map/`, description: `map component` },
+      { link: `/backend/src/queries/map.rs`, description: `map APIs` }
+    ]);
+  }, []);
+
   const [click_lonlat, setClick] = React.useState({});
   const [center, setCenterForQuery] = React.useState({});
   const [zoom, setZoomForQuery] = React.useState({});

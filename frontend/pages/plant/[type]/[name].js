@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { formatPatentDate } from '../../../components/functions';
@@ -31,7 +32,20 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default function Home({ plant, type, name, errorMessage, setErrorMessage }) {
+export default function Home({
+  plant,
+  type,
+  name,
+  errorMessage,
+  setErrorMessage,
+  setContributingLinks
+}) {
+  React.useEffect(() => {
+    setContributingLinks([
+      { link: `/frontend/pages/plant/[type]/[name].js`, description: `plant/type/[name].js` }
+    ]);
+  }, []);
+
   setErrorMessage(errorMessage);
   return (
     <>
