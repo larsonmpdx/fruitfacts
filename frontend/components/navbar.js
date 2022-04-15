@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Search from './navbarSearch';
 import Login from './navbarLogin';
+import Tooltip from '@mui/material/Tooltip';
+import * as React from 'react';
 
 let links = [
   { name: 'locations', href: '/dirs/' },
@@ -9,6 +11,23 @@ let links = [
 ];
 
 export default function Home({ user, setUser }) {
+  const [open, setOpen] = React.useState(false);
+  const [holdOpen, setHoldOpen] = React.useState(false);
+
+  const handleClose = () => {
+    if(!holdOpen) {
+      setOpen(false);
+    }
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleHoldOpen = () => {
+    setHoldOpen(!holdOpen);
+  };
+
   return (
     <nav className="flex flex-wrap items-center justify-between bg-teal-500 p-6">
       <div className="mr-6 flex flex-shrink-0 items-center text-white">
@@ -28,6 +47,19 @@ export default function Home({ user, setUser }) {
               </a>
             </Link>
           ))}
+        </div>
+        <div className="mr-6">
+        <Tooltip
+         open={open} onClose={handleClose} onOpen={handleOpen}
+        title={
+          <React.Fragment>
+            <p>Contributing</p>
+            <p>a list of github links (todo)</p>
+          </React.Fragment>
+        }
+      >
+        <button onClick={handleHoldOpen}>Edit this page</button>
+      </Tooltip>
         </div>
         <div>
           <Login user={user} setUser={setUser} />
