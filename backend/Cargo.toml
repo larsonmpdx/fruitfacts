@@ -39,6 +39,7 @@ base64 = "0.13.0"
 reqwest = "0.11.7"
 indexmap = "1.8.1"
 env_logger = "0.9.0"
+urlencoding = "2.1.0"
 
 [build-dependencies]
 dotenv-build = "0.1"

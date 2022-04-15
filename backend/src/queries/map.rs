@@ -114,7 +114,7 @@ fn locations_search_db(
     } else {
         MAX_LIMIT
     };
-    
+
     db_query = db_query.limit(limit as i64);
 
     let locations = db_query.load::<Location>(db_conn);

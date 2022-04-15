@@ -3,6 +3,9 @@
 * [Backend README](backend/README.md)
 * [Frontend README](frontend/README.md)
 
+# contributing
+* [a list of data files that need help](plant_database/help_needed.md)
+
 # fruitfacts
 1. a project to track typical harvest times for crops, especially tree fruits which have consistent harvest times year to year
 2. a cross-referencing system for common tree fruits, with an emphasis on information from university agricultural extension publications and other evidence-based sources so gardeners can quickly research the best varieties for their situation

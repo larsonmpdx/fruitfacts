@@ -102,8 +102,8 @@ pub struct Collection {
     pub user_id: i32,
     pub git_edit_time: Option<i64>,
 
-    pub path: Option<String>,
-    pub filename: Option<String>,
+    pub path: String,
+    pub filename: String,
 
     pub notoriety_type: String,
     pub notoriety_score: f32,
