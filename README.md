@@ -7,6 +7,7 @@
 
 # contributing
 * [a list of data files that need help](plant_database/help_needed.md)
+* [help wanted code projects](help%20wanted.md)
 
 # fruitfacts
 1. a project to track typical harvest times for crops, especially tree fruits which have consistent harvest times year-to-year
