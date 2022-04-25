@@ -1,3 +1,5 @@
+# diagnose failures by manually running as www-data like "sudo -u www-data cargo run"
+
 [Unit]
 Description=fruitfacts backend
 After=network.target

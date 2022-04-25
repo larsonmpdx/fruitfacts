@@ -2,5 +2,6 @@
 set -e
 
 cd ..
-sudo chown -R root:www-data .
+sudo chown -R www-data:www-data .
+cd -
 

@@ -1,4 +1,5 @@
 # see https://stackoverflow.com/questions/61861930/nextjs-deployment-how-can-i-simply-deploy-nextjs-like-nodejs-on-ubuntu-server
+# diagnose failures by manually running as www-data like "sudo -u www-data npm start"
 
 [Unit]
 Description=fruitfacts frontend
