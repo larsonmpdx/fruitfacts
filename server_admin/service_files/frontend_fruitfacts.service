@@ -10,8 +10,8 @@ User=www-data
 Group=www-data
 Restart=on-failure
 RestartSec=10
-WorkingDirectory=/www/fruitfacts/frontend/
-ExecStart=npm run start
+WorkingDirectory=/var/www/fruitfacts/frontend/
+ExecStart=npm start
 
 [Install]
 WantedBy=multi-user.target
