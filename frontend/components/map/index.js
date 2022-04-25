@@ -1,13 +1,12 @@
 // see react-leaflet examples here https://tomik23.github.io/react-leaflet-examples/#/simple-map
 
-import React, { useCallback } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { MapContainer, Marker, Popup, TileLayer, useMapEvents, useMap } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import useSupercluster from 'use-supercluster';
 import 'leaflet/dist/leaflet.css';
 import Button from '../button';
-import styles from '../../styles/Map.module.css';
 
 import { locations_to_geoJSON } from './util';
 
@@ -16,7 +15,7 @@ function GetLocations({ map, setClick, setExtents, setZoom, setCenter }) {
     click(e) {
       setClick(e.latlng);
     },
-    locationfound(e) {
+    locationfound() {
       console.log("got user's location"); // todo
     }
   });
@@ -217,7 +216,7 @@ export default function Home({
               position={[latitude, longitude]}
               icon={getClusterIcon(pointCount, 40)}
               eventHandlers={{
-                click(e) {
+                click() {
                   // map.panTo(e.target.getLatLng());
                 }
               }}
@@ -235,7 +234,7 @@ export default function Home({
             position={[latitude, longitude]}
             icon={getFruitIcon('Apple', 20)}
             eventHandlers={{
-              click(e) {
+              click() {
                 // map.panTo(e.target.getLatLng());
               }
             }}

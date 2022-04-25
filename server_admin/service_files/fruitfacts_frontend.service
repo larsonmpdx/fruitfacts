@@ -1,0 +1,17 @@
+# see https://stackoverflow.com/questions/61861930/nextjs-deployment-how-can-i-simply-deploy-nextjs-like-nodejs-on-ubuntu-server
+
+[Unit]
+Description=fruitfacts frontend
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+Restart=on-failure
+RestartSec=10
+WorkingDirectory=/root/fruitfacts/frontend/
+ExecStart=npm run start
+
+[Install]
+WantedBy=multi-user.target

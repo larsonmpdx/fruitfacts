@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 80",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
     "lint": "next lint",
     "postinstall": "npx next telemetry disable"

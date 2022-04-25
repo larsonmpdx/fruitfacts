@@ -43,3 +43,6 @@ urlencoding = "2.1.0"
 
 [build-dependencies]
 dotenv-build = "0.1"
+
+# todo make this build-time-only
+dotenv = "0.15"

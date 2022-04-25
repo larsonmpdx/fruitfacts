@@ -1,0 +1,15 @@
+[Unit]
+Description=fruitfacts backend
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+Restart=on-failure
+RestartSec=10
+WorkingDirectory=/root/fruitfacts/backend/
+ExecStart=cargo run
+
+[Install]
+WantedBy=multi-user.target

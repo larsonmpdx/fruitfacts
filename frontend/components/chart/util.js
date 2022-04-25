@@ -83,7 +83,7 @@ function getTypedSequences(items) {
     output_object[item.type].push(item);
   }
 
-  for (const [key, value] of Object.entries(output_object)) {
+  for (const [, value] of Object.entries(output_object)) {
     output_array.push(value);
   }
 
@@ -103,10 +103,6 @@ export function countChartItemsAbsolute(items) {
 
 function isNumber(value) {
   return typeof value === 'number' && isFinite(value);
-}
-
-function countUnique(iterable) {
-  return new Set(iterable).size;
 }
 
 function getUnique(iterable) {
@@ -142,7 +138,7 @@ export function countChartItemsRelative(items) {
   return has_relative_time.length;
 }
 
-export function getChartItemsRelative({ items, sortType, auto_width }) {
+export function getChartItemsRelative({ items, sortType }) {
   let has_relative_time = items.filter((item) => {
     return (
       isNumber(item.calc_harvest_relative) &&
@@ -418,7 +414,7 @@ function setVerticalOffset(new_bars, existing_bars) {
 
   const BUFFER = 2 * PIXEL_SCALE;
 
-  while (true) {
+  for (;;) {
     //   console.log(`testing y offset ${y_offset}`);
     outer: for (const barA of new_bars) {
       for (const barB of existing_bars) {

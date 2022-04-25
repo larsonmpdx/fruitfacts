@@ -35,7 +35,9 @@
                 powdery_mildew: "less prone"
             },
             // release year based on when Markus's youtube video came out
-            released: "2011"
+            released: "2011",
+            // patent: I found this by searching for "Luregust" which is associated with the name Calypso in european lists
+            patent: "https://patents.google.com/patent/USPP27624 expires 2035-02-07"
         },
         {
             type: "Apple",
@@ -68,7 +70,9 @@
             disease_resistance: {
                 scab: "resistant",
                 powdery_mildew: "little"
-            }
+            },
+            // patent: I found this by searching for "Luresweet" which is associated with the name Odysso in european lists
+            patent: "https://patents.google.com/patent/USPP27502 expires 2035-02-06"
         },
         {
             type: "Apple",
@@ -101,6 +105,12 @@
                 scab: "resistant",
                 powdery_mildew: "slightly susceptible"
             }
+        }
+        {
+            type: "Apple",
+            name: "Lurechild",
+            description: "I think this is either Era or Circe but I can't tell like the other two that are US patented",
+            patent: "https://patents.google.com/patent/USPP27625 expires 2035-02-06"
         }
     ]
 }

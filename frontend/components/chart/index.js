@@ -1,7 +1,7 @@
 import {
   countChartItemsAbsolute,
   countChartItemsRelativeForComparison,
-  countChartItemsRelative,
+  // countChartItemsRelative,
   getChartItemsRelative,
   getChartItemsAbsolute,
   getBars,
@@ -12,10 +12,9 @@ import {
 export default function Home({ items }) {
   let absolute_count = countChartItemsAbsolute(items);
   let relative_count = countChartItemsRelativeForComparison(items);
-  let relative_count_maximal = countChartItemsRelative(items);
+  // let relative_count_maximal = countChartItemsRelative(items);
 
   let sequences = [];
-  let not_charted = [];
   let bars = [];
   let majorLines = [];
   let interLines = [];
@@ -23,7 +22,7 @@ export default function Home({ items }) {
   let labels = [];
 
   if (absolute_count >= relative_count) {
-    ({ sequences, not_charted } = getChartItemsAbsolute({
+    ({ sequences } = getChartItemsAbsolute({
       items,
       sortType: 'start',
       auto_width: true
@@ -36,10 +35,10 @@ export default function Home({ items }) {
     console.log(JSON.stringify(majorLines, null, 2));
   } else {
     let types = [];
-    ({ sequences, not_charted, types } = getChartItemsRelative({
+    ({ sequences, types } = getChartItemsRelative({
       items,
-      sortType: 'start',
-      auto_width: true
+      sortType: 'start'
+      // todo - auto_width: true
     }));
     ({ bars, extents } = getBars(sequences));
     ({ majorLines, interLines, labels } = getTypeLines(extents, types));
@@ -53,28 +52,30 @@ export default function Home({ items }) {
           className="max-h-screen"
           viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}
         >
-          {majorLines.map((line) => (
+          {majorLines.map((line, index) => (
             <line
+              key={index}
               x1={line.x1}
               y1={line.y1}
               x2={line.x2}
               y2={line.y2}
               stroke="black"
-              stroke-width="1"
+              strokeWidth="1"
             />
           ))}
-          {interLines.map((line) => (
+          {interLines.map((line, index) => (
             <line
+              key={index}
               x1={line.x1}
               y1={line.y1}
               x2={line.x2}
               y2={line.y2}
               stroke="#dbdbdb"
-              stroke-width="1"
+              strokeWidth="1"
             />
           ))}
-          {bars.map((bar) => (
-            <g>
+          {bars.map((bar, index) => (
+            <g key={index}>
               <rect
                 x={bar.x}
                 y={bar.y}
@@ -89,8 +90,9 @@ export default function Home({ items }) {
               </text>
             </g>
           ))}
-          {labels.map((label) => (
+          {labels.map((label, index) => (
             <text
+              key={index}
               x={label.x}
               y={label.y}
               fontFamily="Verdana"

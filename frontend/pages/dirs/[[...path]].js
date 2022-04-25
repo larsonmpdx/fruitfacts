@@ -12,7 +12,6 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import throttle from 'lodash/throttle';
 import { useRouter } from 'next/router';
-import { map } from 'lodash';
 
 // see https://nextjs.org/docs/advanced-features/dynamic-import
 const Map = dynamic(() => import('../../components/map'), { ssr: false });

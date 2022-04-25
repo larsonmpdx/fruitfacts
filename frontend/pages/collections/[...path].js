@@ -95,7 +95,7 @@ export default function Home({
           <>
             {data.collection.needs_help == 1 && (
               <p>
-                the data for this collection is marked "needs help".{' '}
+                {'the data for this collection is marked "needs help". '}
                 <a href={`${process.env.NEXT_PUBLIC_GITHUB_BASE}${data_link}`}>
                   click here to view it on github
                 </a>
