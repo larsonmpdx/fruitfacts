@@ -16,10 +16,16 @@ sudo apt-get -y install clang-14 lldb-14 lld-14 # llvm 14 released march 2022
 ln -s /usr/bin/clang-14 /usr/bin/clang
 ln -s /usr/bin/lld-14 /usr/bin/lld
 
-# https://forge.rust-lang.org/infra/other-installation-methods.html#rustup
-curl https://sh.rustup.rs -sSf | sh
+# use this method so it's installed for all users (rustup is only for one user)
+# https://forge.rust-lang.org/infra/other-installation-methods.html#standalone-installers
+wget https://static.rust-lang.org/dist/rust-1.60.0-x86_64-unknown-linux-gnu.tar.gz
+tar -xf ./rust*.tar.gz
+cd ./rust*/
+sudo ./install.sh
+cd ..
 
+# use this method so it's installed for all users (nvm is only for one user)
 # https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
-# https://github.com/nvm-sh/nvm#install--update-script
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-
+curl -o- https://deb.nodesource.com/setup_16.x | bash
+sudo apt install -y nodejs
+node -v

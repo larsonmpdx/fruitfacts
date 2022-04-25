@@ -8,7 +8,7 @@ User=www-data
 Group=www-data
 Restart=on-failure
 RestartSec=10
-WorkingDirectory=/root/fruitfacts/backend/
+WorkingDirectory=/www/fruitfacts/backend/
 ExecStart=cargo run
 
 [Install]

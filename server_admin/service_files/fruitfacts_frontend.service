@@ -10,7 +10,7 @@ User=www-data
 Group=www-data
 Restart=on-failure
 RestartSec=10
-WorkingDirectory=/root/fruitfacts/frontend/
+WorkingDirectory=/www/fruitfacts/frontend/
 ExecStart=npm run start
 
 [Install]
