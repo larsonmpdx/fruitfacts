@@ -75,7 +75,7 @@ async fn main() -> std::io::Result<()> {
             .service(queries::search::variety_search)
             .service(queries::map::locations_search)
     })
-    .bind(("127.0.0.1", env!("BACKEND_PORT").parse::<u16>().unwrap()))?
+    .bind(("0.0.0.0", env!("BACKEND_PORT").parse::<u16>().unwrap()))? // 0.0.0.0 is actix-speak for "all local IPs"
     .run()
     .await
 }
