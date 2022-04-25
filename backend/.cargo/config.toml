@@ -1,3 +1,6 @@
+# 2022 note: these are a little faster and lower memory use than the defaults
+# rust keeps changing though
+
 [target.x86_64-pc-windows-msvc]
 linker = "rust-lld"
 rustflags = ["-C", "link-arg=-fuse-ld=lld"]

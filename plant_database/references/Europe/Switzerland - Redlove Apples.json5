@@ -105,7 +105,7 @@
                 scab: "resistant",
                 powdery_mildew: "slightly susceptible"
             }
-        }
+        },
         {
             type: "Apple",
             name: "Lurechild",
