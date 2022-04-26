@@ -11,3 +11,5 @@ cargo build --release
 systemctl stop backend_fruitfacts.service || true
 cargo run -- --reload_db
 systemctl start backend_fruitfacts.service
+
+./set_folder_permissions_for_www-data.sh

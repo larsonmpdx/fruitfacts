@@ -51,7 +51,7 @@ async fn main() -> std::io::Result<()> {
         let cors = Cors::default()
             .supports_credentials()
             .allowed_origin_fn(|origin, _req_head| {
-                println!("cors {:?}", origin);
+                println!("cors {:?} {:?}", origin.as_bytes(), env!("FRONTEND_BASE").to_string().as_bytes());
 
                 origin
                     .as_bytes()
