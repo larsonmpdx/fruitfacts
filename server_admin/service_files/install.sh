@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+cd "$(dirname "${BASH_SOURCE[0]}")"
 
 cp ./*.service /etc/systemd/system/
 systemctl daemon-reload
