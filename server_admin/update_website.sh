@@ -3,13 +3,13 @@ set -e
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 cd ../frontend/
-npm install
-npm run build
+sudo -u www-data npm install
+sudo -u www-data npm run build
 
 cd ../backend/
-cargo build --release
+sudo -u www-data cargo build --release
 systemctl stop backend_fruitfacts.service || true
-cargo run -- --reload_db
+sudo -u www-data cargo run -- --reload_db
 systemctl start backend_fruitfacts.service
 
-./set_folder_permissions_for_www-data.sh
+# ./set_folder_permissions_for_www-data.sh

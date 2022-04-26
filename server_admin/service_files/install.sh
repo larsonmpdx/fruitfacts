@@ -10,3 +10,6 @@ systemctl enable backend_fruitfacts.service
 # run like:
 # sudo systemctl start fruitfacts_frontend.service
 #  - start/stop/status/ etc.
+
+# live logs:
+# journalctl -u backend_fruitfacts.service -f
