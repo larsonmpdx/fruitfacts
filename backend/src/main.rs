@@ -51,11 +51,14 @@ async fn main() -> std::io::Result<()> {
         let cors = Cors::default()
             .supports_credentials()
             .allowed_origin_fn(|origin, _req_head| {
-                println!("cors {:?} {:?}", origin.as_bytes(), env!("FRONTEND_BASE").to_string().as_bytes());
-
-                origin
+                let matched = origin
                     .as_bytes()
-                    .ends_with(env!("FRONTEND_BASE").to_string().as_bytes())
+                    .ends_with(env!("FRONTEND_BASE").to_string().as_bytes());
+
+                    if !matched {
+                        println!("cors failed, got {:?} expected {:?}", origin, env!("FRONTEND_BASE"));
+                    }
+                    matched
                 // todo - better handling of port for dev/release
             });
 
