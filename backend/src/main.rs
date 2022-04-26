@@ -50,6 +50,8 @@ async fn main() -> std::io::Result<()> {
         let cors = Cors::default()
             .supports_credentials()
             .allowed_origin_fn(|origin, _req_head| {
+                println!("cors {:?}", origin);
+
                 origin
                     .as_bytes()
                     .ends_with(env!("FRONTEND_BASE").to_string().as_bytes())
@@ -61,7 +63,6 @@ async fn main() -> std::io::Result<()> {
             .wrap(cors)
             // set up DB pool to be used with web::Data<Pool> extractor
             .app_data(actix_web::web::Data::new(pool.clone()))
-            // .wrap(middleware::Logger::default())
             .service(queries::get_recent_patents)
             .service(queries::get_collections)
             .service(queries::get_recent_changes)
