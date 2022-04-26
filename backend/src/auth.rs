@@ -61,7 +61,7 @@ fn get_google_client() -> GoogleClientType {
     .set_redirect_uri(
         RedirectUrl::new(format!(
             "{}/api/authRedirect",
-            env!("NEXT_PUBLIC_BACKEND_BASE")
+            env!("BACKEND_BASE")
         ))
         .expect("Invalid redirect URL"),
     )

@@ -15,3 +15,5 @@ Cargo.lock
 
 database.sqlite3
 database.sqlite3-journal
+
+/.env
