@@ -9,5 +9,5 @@ npm run build
 cd ../backend/
 cargo build --release
 systemctl stop backend_fruitfacts.service || true
-cargo run -- -reload_db
+cargo run -- --reload_db
 systemctl start backend_fruitfacts.service
