@@ -3,7 +3,6 @@ mod test;
 
 pub mod map;
 pub mod search;
-
 use super::schema_generated::*;
 use super::schema_types::*;
 use actix_web::{get, web, HttpResponse};

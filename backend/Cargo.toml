@@ -27,7 +27,7 @@ regex = "1.5.4"
 walkdir = "2"
 lazy_static = "1.4.0"
 itertools = "0.10.1"
-dotenv = "0.15"
+dotenv-build = "0.1.1"
 git2 = "0.14"
 pathdiff = "0.2.0"
 anyhow = "1.0.55"
@@ -42,7 +42,4 @@ env_logger = "0.9.0"
 urlencoding = "2.1.0"
 
 [build-dependencies]
-dotenv-build = "0.1"
-
-# todo make this build-time-only
-dotenv = "0.15"
+dotenv-build = "0.1.1"

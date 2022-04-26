@@ -55,10 +55,14 @@ async fn main() -> std::io::Result<()> {
                     .as_bytes()
                     .ends_with(env!("FRONTEND_BASE").to_string().as_bytes());
 
-                    if !matched {
-                        println!("cors failed, got {:?} expected {:?}", origin, env!("FRONTEND_BASE"));
-                    }
-                    matched
+                if !matched {
+                    println!(
+                        "cors failed, got {:?} expected {:?}",
+                        origin,
+                        env!("FRONTEND_BASE")
+                    );
+                }
+                matched
                 // todo - better handling of port for dev/release
             });
 

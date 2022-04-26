@@ -4,6 +4,7 @@ please contact me if you want to help and I can give more details and make sure 
 * cherry and apple pollination checking
   * I already have s-allele data imported for cherries, it needs some kind of calculator page
 * additional OAuth sources, especially github.  my initial version is google-only
+  * an interesting project may be to break the OAuth code into a reusable crate (without database code), it may be useful to other projects
 * better search:
   * add locations, types, pages, and full text search of the original json data files
   * some kind of advanced search page with results there instead of only having a search box and dropdown

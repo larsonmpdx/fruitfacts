@@ -1,13 +1,34 @@
-extern crate dotenv_build;
-extern crate dotenv;
-use dotenv::dotenv;
+//extern crate dotenv_build;
 use std::process::Command;
 
-// gather build-time data and put it into some env vars
 fn main() {
-    dotenv().ok(); // load env vars
+    // set up env vars for this build based on env files, which are then picked up by the std::env!() compile time macro
+    // this saves having to load env files with some kind of cross-platform script
 
-    dotenv_build::output(dotenv_build::Config::default()).unwrap(); // loads the .env file automatically
+    // detecting debug/release: see https://stackoverflow.com/questions/57296104/how-to-access-current-cargo-profile-debug-release-from-the-build-script-bu
+    let profile = std::env::var("PROFILE").unwrap();
+    match profile.as_str() {
+        profile if profile == "release" || profile == "debug" => {
+            dotenv_build::output_multiple(vec![
+                dotenv_build::Config {
+                    filename: std::path::Path::new(&format!(".env.{profile}")),
+                    fail_if_missing_dotenv: true,
+                    ..Default::default()
+                },
+                // load .env
+                dotenv_build::Config {
+                    fail_if_missing_dotenv: true,
+                    ..Default::default()
+                },
+            ])
+            .unwrap();
+        }
+        profile => {
+            panic!("unknown build profile {profile}")
+        }
+    }
+
+    // also gather build-time data and put it into some extra env vars
     {
         let output = Command::new("git")
             .args(&["rev-parse", "HEAD"])

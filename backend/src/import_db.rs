@@ -23,7 +23,6 @@ use super::schema_types::*;
 use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
-use dotenv::dotenv;
 use itertools::Itertools;
 
 use indexmap::IndexMap;
@@ -645,8 +644,6 @@ pub struct LoadAllReturn {
 }
 
 pub fn establish_connection() -> SqliteConnection {
-    dotenv().ok();
-
     let database_url = "database.sqlite3";
     SqliteConnection::establish(database_url)
         .unwrap_or_else(|_| panic!("Error connecting to {}", database_url))
