@@ -14,17 +14,20 @@ export default function Home({ user, setUser, contributingLinks }) {
   const [open, setOpen] = React.useState(false);
   const [holdOpen, setHoldOpen] = React.useState(false);
 
-  const handleClose = () => {
+  const handleEditClose = () => {
     if (!holdOpen) {
       setOpen(false);
     }
   };
 
-  const handleOpen = () => {
+  const handleEditOpen = () => {
     setOpen(true);
   };
 
-  const handleHoldOpen = () => {
+  const handleEditClick = () => {
+    if (!open) {
+      setOpen(true);
+    }
     setHoldOpen(!holdOpen);
   };
 
@@ -51,8 +54,8 @@ export default function Home({ user, setUser, contributingLinks }) {
         <div className="mr-6">
           <Tooltip
             open={open}
-            onClose={handleClose}
-            onOpen={handleOpen}
+            onClose={handleEditClose}
+            onOpen={handleEditOpen}
             title={
               <React.Fragment>
                 <a href={`${process.env.NEXT_PUBLIC_GITHUB_HOMEPAGE}`}>fruitfacts on github</a>
@@ -72,7 +75,7 @@ export default function Home({ user, setUser, contributingLinks }) {
               </React.Fragment>
             }
           >
-            <button onClick={handleHoldOpen}>edit this page</button>
+            <button onClick={handleEditClick}>edit this page</button>
           </Tooltip>
         </div>
         <div>
