@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import Button from '../../components/button';
+import Button from '../../components/buttonLink';
 import { formatPatentDate } from '../../components/functions';
 
 export async function getServerSideProps(context) {
