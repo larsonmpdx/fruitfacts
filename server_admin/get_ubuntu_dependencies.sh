@@ -30,3 +30,10 @@ cd ..
 curl -o- https://deb.nodesource.com/setup_16.x | bash
 sudo apt install -y nodejs
 node -v
+
+# certbot / let's encrypt stuff
+sudo snap install core; sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
+sudo apt install -y nginx
