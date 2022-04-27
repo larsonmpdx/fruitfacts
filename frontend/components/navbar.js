@@ -12,12 +12,9 @@ let links = [
 
 export default function Home({ user, setUser, contributingLinks }) {
   const [open, setOpen] = React.useState(false);
-  const [holdOpen, setHoldOpen] = React.useState(false);
 
   const handleEditClose = () => {
-    if (!holdOpen) {
       setOpen(false);
-    }
   };
 
   const handleEditOpen = () => {
@@ -26,7 +23,6 @@ export default function Home({ user, setUser, contributingLinks }) {
 
   const handleEditClick = () => {
     setOpen(!open);
-    setHoldOpen(!holdOpen);
   };
 
   return (
