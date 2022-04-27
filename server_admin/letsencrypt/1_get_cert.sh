@@ -5,7 +5,10 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 # digitalocean credentials file notes (needs to be manually created)
 # https://certbot-dns-digitalocean.readthedocs.io/en/stable/
 
-# first create an ini file (see page)
+# first create an ini file:
+# https://www.digitalocean.com/community/tutorials/how-to-acquire-a-let-s-encrypt-certificate-using-dns-validation-with-certbot-dns-digitalocean-on-ubuntu-20-04
+# -> save to ~/digitalocean.ini
+chmod go-rwx ~/digitalocean.ini
 
 # then run this
 certbot certonly \
@@ -13,3 +16,5 @@ certbot certonly \
   --dns-digitalocean-credentials ~/digitalocean.ini \
   -d fruitfacts.xyz \
   -d www.fruitfacts.xyz
+
+# ... there will be interactive stuff to do here
