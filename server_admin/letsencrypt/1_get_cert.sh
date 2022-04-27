@@ -15,6 +15,7 @@ certbot certonly \
   --dns-digitalocean \
   --dns-digitalocean-credentials ~/digitalocean.ini \
   -d fruitfacts.xyz \
-  -d www.fruitfacts.xyz
+  -d www.fruitfacts.xyz \
+  -d api.fruitfacts.xyz
 
 # ... there will be interactive stuff to do here
