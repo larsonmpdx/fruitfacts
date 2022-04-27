@@ -37,3 +37,7 @@ sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
 sudo apt install -y nginx
+
+# https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
+sudo snap set certbot trust-plugin-with-root=ok
+sudo snap install certbot-dns-digitalocean
