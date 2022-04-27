@@ -25,9 +25,7 @@ export default function Home({ user, setUser, contributingLinks }) {
   };
 
   const handleEditClick = () => {
-    if (!open) {
-      setOpen(true);
-    }
+    setOpen(!open);
     setHoldOpen(!holdOpen);
   };
 
