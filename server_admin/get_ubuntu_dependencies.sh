@@ -9,7 +9,7 @@ sudo apt upgrade -y
 sudo apt install -y build-essential pkg-config libssl-dev software-properties-common
 
 # install llvm so we can link with lld
-# it takes less memory so it can be done right on the server
+# it takes less memory so builds can then be done right on the 1GB server
 # https://apt.llvm.org/
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add
 sudo add-apt-repository 'deb http://apt.llvm.org/focal/ llvm-toolchain-focal-14 main' # focal is ubuntu 20.04 (lts)
@@ -31,12 +31,12 @@ curl -o- https://deb.nodesource.com/setup_16.x | bash
 sudo apt install -y nodejs
 node -v
 
-# certbot / let's encrypt stuff
+# ssl proxy / certbot / let's encrypt stuff
+sudo apt install -y nginx
+
 sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
-
-sudo apt install -y nginx
 
 # https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
 sudo snap set certbot trust-plugin-with-root=ok

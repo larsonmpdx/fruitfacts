@@ -15,3 +15,4 @@ please contact me if you want to help and I can give more details and make sure 
 * user data import/export
 * chart customization (colors, sorting, etc.)
 * scion exchange support (trade calculations, search, notifications etc.)
+* break backend and frontend into separate users and tighten up folder permissions, consider chroot type stuff

@@ -3,6 +3,8 @@ set -e
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 cp ./*.service /etc/systemd/system/
+
+echo "enabling systemd services"
 systemctl daemon-reload
 systemctl enable frontend_fruitfacts.service
 systemctl enable backend_fruitfacts.service

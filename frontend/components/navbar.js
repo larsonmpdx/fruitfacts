@@ -12,15 +12,6 @@ let links = [
 
 export default function Home({ user, setUser, contributingLinks }) {
   const [open, setOpen] = React.useState(false);
-
-  const handleEditClose = () => {
-      setOpen(false);
-  };
-
-  const handleEditOpen = () => {
-    setOpen(true);
-  };
-
   const handleEditClick = () => {
     setOpen(!open);
   };
@@ -48,8 +39,6 @@ export default function Home({ user, setUser, contributingLinks }) {
         <div className="mr-6">
           <Tooltip
             open={open}
-            onClose={handleEditClose}
-            onOpen={handleEditOpen}
             title={
               <React.Fragment>
                 <a href={`${process.env.NEXT_PUBLIC_GITHUB_HOMEPAGE}`}>fruitfacts on github</a>
