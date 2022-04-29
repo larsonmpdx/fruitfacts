@@ -28,5 +28,10 @@
         contributor: "Michael",
         fact: '"romance" series sour bush cherries can achieve brix (sugar) levels that rival sweet cherries',
         reference: "https://www.goodfruit.com/new-prairie-cherry-varieties-making-an-impact/"
+    },
+    {
+        contributor: "Michael",
+        fact: "The major genes for self-fertility in sweet cherries were created using atomic gardening in the 1950s",
+        reference: "https://www.nature.com/articles/hdy195438"
     }
 ]

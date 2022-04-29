@@ -16,7 +16,10 @@ export async function getStaticProps() {
 // next.js advises keeping logic client-side in 404s so we can limit server load. ok?
 export default function Custom404({ icons, setErrorMessage, setContributingLinks }) {
   React.useEffect(() => {
-    setContributingLinks([{ link: `/frontend/pages/404.js`, description: `404.js` }]);
+    setContributingLinks([
+      { link: `/frontend/pages/404.js`, description: `404.js` },
+      { link: `/plant_database/facts.json5`, description: `fact list` }
+    ]);
   }, []);
 
   const [icon, setIcon] = React.useState();
