@@ -5,7 +5,6 @@
     published: "2013",
     accessed: "March 2022",
     type: "extension test",
-    needs_help: true,
     locations: [
         {
             name: "NMSU Sustainable Agriculture Science Center at Alcalde NM",
@@ -14,6 +13,151 @@
         }
     ],
     plants: [
-        // todo
+        // from the PDF: "‘PF 1’, ‘Surecrop’, ‘Blazingstar’, ‘Intrepid’, ‘Contender’, ‘Blushingstar’,
+        //   ‘China Pearl’, and ‘Encore’ are recommended for northern NM."
+        //  - I used this list to tag the remaining varieties as "not recommended"
+        {
+            type: "Peach",
+            name: "PF 1",
+            harvest_time: "7/3",
+            description: "average weight 143.7g, yield/tree 12.1kg"
+        },
+        {
+            type: "Peach",
+            name: "Surecrop",
+            harvest_time: "7/13",
+            description: "average weight 148.2g, yield/tree 41.1kg"
+        },
+        {
+            type: "Peach",
+            name: "FA 47", // "Risingstar"
+            harvest_time: "7/13",
+            description: "average weight 189.8g, yield/tree 11.5kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "low yield?"
+        },
+        {
+            type: "Peach",
+            name: "Sureprince",
+            harvest_time: "7/9",
+            description: "average weight 171.3g, yield/tree 20.4kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "low yield?"
+        },
+        {
+            type: "Peach",
+            name: "FA 12", // "Blazingstar"
+            harvest_time: "7/25",
+            description: "average weight 139.3g, yield/tree 41.6kg"
+        },
+        {
+            type: "Peach",
+            name: "Challenger",
+            harvest_time: "7/31",
+            description: "average weight 165.9g, yield/tree 43.9kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "not sure - maybe compared poorly to others in season?"
+        },
+        {
+            type: "Peach",
+            name: "Saturn",
+            harvest_time: "7/24",
+            description: "average weight 109.3g, yield/tree 16.6kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "low yield?"
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            harvest_time: "7/24",
+            description: "average weight 141.3g, yield/tree 32.8kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "not sure - maybe compared poorly to others in season?"
+        },
+        {
+            type: "Peach",
+            name: "Nectar",
+            harvest_time: "7/31",
+            description: "average weight 160.6g, yield/tree 30.5kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "not sure - maybe compared poorly to others in season?"
+        },
+        {
+            type: "Peach",
+            name: "Ark 9",
+            harvest_time: "8/2",
+            description: "average weight 121.5g, yield/tree 35.0kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "poor taste?"
+        },
+        {
+            type: "Peach",
+            name: "Intrepid",
+            harvest_time: "8/13",
+            description: "average weight 212.6g, yield/tree 29.1kg"
+        },
+        {
+            type: "Peach",
+            name: "FA 59", // "Coralstar"
+            harvest_time: "8/7",
+            description: "average weight 284.1g, yield/tree 47.0kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "not sure - maybe compared poorly to others in season?"
+        },
+        {
+            type: "Peach",
+            name: "FA 18", // "Blushingstar"
+            harvest_time: "8/13",
+            description: "average weight 158.3g, yield/tree 67.2kg"
+        },
+        {
+            type: "Peach",
+            name: "PF 17", // this was in the pdf's last table as "pf-17a" but the "a" is a typo
+            description: "not evaluated, 3/4 trees died",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "trees died?"
+        },
+        {
+            type: "Peach",
+            name: "Ruston Red",
+            harvest_time: "8/21",
+            description: "average weight 160.0g, yield/tree 12.2kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "low yield?"
+        },
+        {
+            type: "Peach",
+            name: "Contender",
+            harvest_time: "8/13",
+            description: "average weight 165.0g, yield/tree 55.0kg"
+        },
+        {
+            type: "Peach",
+            name: "China Pearl",
+            harvest_time: "8/28",
+            description: "average weight 141.8g, yield/tree 34.4kg"
+        },
+        {
+            type: "Peach",
+            name: "PF 27A",
+            harvest_time: "8/24",
+            description: "average weight 186.0g, yield/tree 32.1kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "low yield?"
+        },
+        {
+            type: "Peach",
+            name: "Encore",
+            harvest_time: "9/5",
+            description: "average weight 143.9g, yield/tree 46.7kg"
+        },
+        {
+            type: "Peach",
+            name: "Crimson Rocket",
+            harvest_time: "8/8",
+            description: "average weight 185.0g, yield/tree 27.3kg",
+            // not_recommended_reason: my guess, it wasn't in the recommedations list
+            not_recommend_reason: "low yield?"
+        }
     ]
 }
