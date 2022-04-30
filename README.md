@@ -1,4 +1,4 @@
-# Code and Data for www.fruitfacts.xyz
+# Code and Data for [www.fruitfacts.xyz](https://www.fruitfacts.xyz)
 
 * [Backend README](backend/README.md)
   * written in rust using a sqlite database

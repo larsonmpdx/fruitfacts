@@ -11,8 +11,8 @@ use expiring_map::ExpiringMap;
 use once_cell::sync::Lazy; // 1.3.1
 use std::sync::Mutex;
 
-use super::schema_generated::*;
-use super::schema_types::*;
+use super::super::schema_generated::*;
+use super::super::schema_types::*;
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
@@ -467,6 +467,37 @@ async fn create_account(
 
     println!("created account");
     Ok(HttpResponse::Ok().json(results))
+}
+
+#[get("/api/getFullUser")]
+async fn get_full_user(
+    req: HttpRequest,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    let (session_value, _outgoing_cookie) = get_session_value(req, false);
+    if session_value.is_none() {
+        return Ok(HttpResponse::InternalServerError().finish());
+    }
+
+    let db_conn = pool.get().expect("couldn't get db connection from pool");
+
+    let session = session::get_session(&db_conn, session_value.unwrap());
+    if session.is_err() {
+        return Ok(HttpResponse::NotFound().finish());
+    }
+    let session = session.unwrap();
+
+    let user = get_existing_user_db(&db_conn, session.user_id);
+    if user.is_err() {
+        return Ok(HttpResponse::NotFound().finish());
+    }
+
+    // todo - get user_oauth_entries and user_sessions also
+
+    // return account if this session is logged in. some error otherwise
+    Ok(HttpResponse::Ok().json(UserReturn {
+        user: Some(user.unwrap()),
+    }))
 }
 
 #[get("/api/checkLogin")]

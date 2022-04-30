@@ -8,7 +8,6 @@ extern crate diesel;
 extern crate diesel_migrations;
 embed_migrations!();
 
-pub mod auth;
 pub mod git_info;
 pub mod import_db;
 pub mod queries;

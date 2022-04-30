@@ -1,4 +1,3 @@
-use harvest_chart_server::auth;
 use harvest_chart_server::import_db;
 use harvest_chart_server::queries;
 
@@ -76,11 +75,12 @@ async fn main() -> std::io::Result<()> {
             .service(queries::get_recent_changes)
             .service(queries::get_fact)
             .service(queries::get_plant)
-            .service(auth::get_auth_urls)
-            .service(auth::receive_oauth_redirect)
-            .service(auth::create_account)
-            .service(auth::check_login)
-            .service(auth::logout)
+            .service(queries::auth::get_auth_urls)
+            .service(queries::auth::receive_oauth_redirect)
+            .service(queries::auth::create_account)
+            .service(queries::auth::get_full_user)
+            .service(queries::auth::check_login)
+            .service(queries::auth::logout)
             .service(queries::search::variety_search)
             .service(queries::map::locations_search)
     })

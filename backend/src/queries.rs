@@ -1,6 +1,7 @@
 #[cfg(test)]
 mod test;
 
+pub mod auth;
 pub mod map;
 pub mod search;
 use super::schema_generated::*;
