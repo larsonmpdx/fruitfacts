@@ -459,7 +459,7 @@ pub fn create_account_blocking(
             Ok(fulluser) => {
                 return Ok(fulluser);
             }
-            Err(e) => {
+            Err(_e) => {
                 return Err(anyhow!("error getting account after creation")); // todo maybe convert the error?
             }
         }
