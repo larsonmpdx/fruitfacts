@@ -10,21 +10,32 @@ use serde::Deserialize;
 
 pub fn variety_search_db(
     db_conn: &SqliteConnection,
-    name: &str,
+    input: &str,
 ) -> Result<Vec<BasePlant>, diesel::result::Error> {
-    // extra characters. leave spaces so FTS still gets to match two different words
+    // remove extra characters. leave spaces so we can treat separate words as separate
     // dashes get interpreted by fts. same with +*:^ AND OR NOT
     let re = Regex::new(r"[^0-9A-Za-z ]").unwrap();
-    let cleaned = re.replace_all(name, "");
+    let cleaned = re.replace_all(input.trim(), ""); // also trim() for leading/trailing whitespace
 
-    println!("input {} cleaned: {}", name, cleaned);
+    // replace multiple spaces with a single space
+    let re = Regex::new(r"\s+").unwrap();
+    let multiple_spaces_removed = re.replace_all(&cleaned, " ");
 
-    // todo: match extra words against our list of types. remove them or use them for a type filter
-    // like "surefire cherry" -> cherry should be removed unless we can beef up fts search to allow it
+    // split on whitespace and insert OR statements for each space
+    let statement = multiple_spaces_removed
+        .split(' ')
+        .collect::<Vec<&str>>()
+        .join(" OR ");
+
+    println!("input {input} cleaned: {cleaned} ORed: {statement}");
+
+    // if string ends with an exact match for a type we have, then add a limit to the search
+    // for example "pristine apple" should remove the word apple from the search (or maybe not?) and then add a filter for only apples
+    // todo
 
     let values = fts_base_plants::table
         .select((fts_base_plants::rowid, fts_base_plants::rank))
-        .filter(fts_base_plants::whole_row.eq(cleaned))
+        .filter(fts_base_plants::whole_row.eq(statement))
         .order(fts_base_plants::rank.asc())
         .limit(10)
         .load::<FtsBasePlants>(db_conn);
