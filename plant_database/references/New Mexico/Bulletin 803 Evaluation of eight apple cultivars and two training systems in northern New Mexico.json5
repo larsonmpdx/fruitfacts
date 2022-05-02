@@ -5,7 +5,6 @@
     published: "2012",
     accessed: "March 2022",
     type: "extension test",
-    needs_help: true,
     locations: [
         {
             name: "NMSU Sustainable Agriculture Science Center at Alcalde NM",
@@ -14,6 +13,45 @@
         }
     ],
     plants: [
-        // todo
+        {
+            type: "Apple",
+            name: "Imperial Gala",
+            description: "four year cumulative yield: 141.3kg"
+        },
+        {
+            type: "Apple",
+            name: "Ginger Gold",
+            description: "four year cumulative yield: 77.2kg"
+        },
+        {
+            type: "Apple",
+            name: "Lucky Jon",
+            description: "four year cumulative yield: 75.6kg"
+        },
+        {
+            type: "Apple",
+            name: "Red Fuji",
+            description: "four year cumulative yield: 64.4kg"
+        },
+        {
+            type: "Apple",
+            name: "Redfree",
+            description: "four year cumulative yield: 61.5kg"
+        },
+        {
+            type: "Apple",
+            name: "Golden Supreme",
+            description: "four year cumulative yield: 54.3kg"
+        },
+        {
+            type: "Apple",
+            name: "Akane",
+            description: "four year cumulative yield: 49.9kg"
+        },
+        {
+            type: "Apple",
+            name: "Red Chief",
+            description: "four year cumulative yield: 32.7kg"
+        }
     ]
 }
