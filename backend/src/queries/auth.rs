@@ -177,7 +177,7 @@ pub fn get_full_user_db(
                 .load::<UserOauthEntry>(db_conn);
 
             let mut output = FullUser {
-                user: user,
+                user,
                 ..Default::default()
             };
 
