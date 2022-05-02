@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Home({ user, setContributingLinks }) {
+export default function Home({ setContributingLinks, setErrorMessage }) {
   React.useEffect(() => {
     setContributingLinks([{ link: `/frontend/pages/user.js`, description: `user.js` }]);
   }, []);
@@ -27,7 +27,7 @@ export default function Home({ user, setContributingLinks }) {
           return null;
         });
 
-        setFullUser(data);
+      setFullUser(data);
     };
 
     fetchData();
