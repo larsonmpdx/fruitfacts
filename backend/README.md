@@ -12,7 +12,7 @@
   * `cargo clippy --fix`
 
 # oauth account stuff
-* google https://console.cloud.google.com/apis/dashboard?pli=1 - add an "authorized redirect URI" like http://domain.com/api/authRedirect
+* google https://console.cloud.google.com/apis/dashboard?pli=1 click credentials, click the edit pen, add an "authorized redirect URI" like http://domain.com/api/authRedirect
 
 # debugging in vs code
 * see extensions.json for recommended extensions

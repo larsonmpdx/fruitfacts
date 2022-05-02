@@ -154,6 +154,42 @@ pub fn get_existing_user_db(
         .first::<User>(db_conn)
 }
 
+#[derive(Default, Serialize)]
+pub struct FullUser {
+    user: User,
+    oauth: Vec<UserOauthEntry>,
+    // sessions: Vec<UserSession>, // not sure I want to share this out to expose all session keys based on one session
+}
+
+pub fn get_full_user_db(
+    db_conn: &SqliteConnection,
+    user_id: i32,
+) -> Result<FullUser, diesel::result::Error> {
+    let user = users::dsl::users
+        .filter(users::id.eq(user_id))
+        .order(users::id.desc())
+        .first::<User>(db_conn);
+
+    match user {
+        Ok(user) => {
+            let oauth = user_oauth_entries::dsl::user_oauth_entries
+                .filter(user_oauth_entries::user_id.eq(user_id))
+                .load::<UserOauthEntry>(db_conn);
+
+            let mut output = FullUser::default();
+
+            output.user = user;
+
+            if let Ok(oauth) = oauth {
+                output.oauth = oauth;
+            }
+
+            Ok(output)
+        }
+        Err(e) => return Err(e),
+    }
+}
+
 #[derive(Clone)]
 pub struct AccountOffer {
     used: bool,
@@ -368,15 +404,10 @@ async fn receive_oauth_redirect(
     }
 }
 
-#[derive(Default, Serialize)]
-pub struct UserReturn {
-    user: Option<User>,
-}
-
 pub fn create_account_blocking(
     session_value: String,
     db_conn: &SqliteConnection,
-) -> Result<UserReturn> {
+) -> Result<FullUser> {
     if let Some(offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get_mut(&session_value) {
         if offer.used {
             return Err(anyhow!("account offer already used"));
@@ -424,19 +455,19 @@ pub fn create_account_blocking(
             },
         );
         // return the user
-        Ok(UserReturn {
-            user: Some(new_user),
-        })
+        match get_full_user_db(db_conn, new_user.id) {
+            Ok(fulluser) => {
+                return Ok(fulluser);
+            }
+            Err(e) => {
+                return Err(anyhow!("error getting account after creation")); // todo maybe convert the error?
+            }
+        }
     } else {
         // no offer in the cache
         return Err(anyhow!("no account offer in cache"));
     }
 }
-
-// todo new APIs:
-// - create account (after getting an account offer from an oauth redirect)
-// - check account (front end calls this to see if the user is already logged in based on an existing session)
-// - log out
 
 #[get("/api/createAccount")]
 async fn create_account(
@@ -457,16 +488,13 @@ async fn create_account(
         .await
         .unwrap(); // todo - blockingerror unwrap?
 
-    let results = match results {
-        Ok(results) => results,
+    return match results {
+        Ok(results) => Ok(HttpResponse::Ok().json(results)),
         Err(e) => {
             eprintln!("{}", e);
             return Err(actix_web::error::ErrorInternalServerError(""));
         }
     };
-
-    println!("created account");
-    Ok(HttpResponse::Ok().json(results))
 }
 
 #[get("/api/getFullUser")]
@@ -487,17 +515,12 @@ async fn get_full_user(
     }
     let session = session.unwrap();
 
-    let user = get_existing_user_db(&db_conn, session.user_id);
-    if user.is_err() {
+    let info = get_full_user_db(&db_conn, session.user_id);
+    if info.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
 
-    // todo - get user_oauth_entries and user_sessions also
-
-    // return account if this session is logged in. some error otherwise
-    Ok(HttpResponse::Ok().json(UserReturn {
-        user: Some(user.unwrap()),
-    }))
+    Ok(HttpResponse::Ok().json(info.unwrap()))
 }
 
 #[get("/api/checkLogin")]
@@ -524,9 +547,7 @@ async fn check_login(
     }
 
     // return account if this session is logged in. some error otherwise
-    Ok(HttpResponse::Ok().json(UserReturn {
-        user: Some(user.unwrap()),
-    }))
+    Ok(HttpResponse::Ok().json(user.unwrap()))
 }
 
 #[post("/api/logout")]

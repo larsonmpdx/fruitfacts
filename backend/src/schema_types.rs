@@ -138,7 +138,7 @@ pub struct Location {
     pub collection_title: Option<String>,
 }
 
-#[derive(Queryable, Associations)]
+#[derive(Queryable, Associations, Serialize)]
 #[belongs_to(User)]
 #[table_name = "user_oauth_entries"]
 pub struct UserOauthEntry {
@@ -166,7 +166,7 @@ pub struct UserSessionToInsert {
     pub created: i64,
 }
 
-#[derive(Queryable, Serialize)]
+#[derive(Queryable, Serialize, Default)]
 pub struct User {
     pub id: i32,
     pub name: String,
