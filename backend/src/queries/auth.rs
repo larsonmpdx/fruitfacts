@@ -176,9 +176,10 @@ pub fn get_full_user_db(
                 .filter(user_oauth_entries::user_id.eq(user_id))
                 .load::<UserOauthEntry>(db_conn);
 
-            let mut output = FullUser::default();
-
-            output.user = user;
+            let mut output = FullUser {
+                user: user,
+                ..Default::default()
+            };
 
             if let Ok(oauth) = oauth {
                 output.oauth = oauth;
@@ -186,7 +187,7 @@ pub fn get_full_user_db(
 
             Ok(output)
         }
-        Err(e) => return Err(e),
+        Err(e) => Err(e),
     }
 }
 
@@ -456,9 +457,7 @@ pub fn create_account_blocking(
         );
         // return the user
         match get_full_user_db(db_conn, new_user.id) {
-            Ok(fulluser) => {
-                return Ok(fulluser);
-            }
+            Ok(fulluser) => Ok(fulluser),
             Err(_e) => {
                 return Err(anyhow!("error getting account after creation")); // todo maybe convert the error?
             }
