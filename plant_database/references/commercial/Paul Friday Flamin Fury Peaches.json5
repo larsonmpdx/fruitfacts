@@ -74,7 +74,7 @@
         },
         {
             type: "Peach",
-            name: "PF 11 Peach", // not in the website text, only brochure
+            name: "PF 11", // not in the website text, only brochure
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP17054 expires 2024-11-04",
             harvest_time_relative: "Redhaven-2"

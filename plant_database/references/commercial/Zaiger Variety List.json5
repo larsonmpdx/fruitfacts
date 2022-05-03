@@ -1446,7 +1446,7 @@
             type: "Peach",
             name: "Summer Amelia", // there was already a USDA byron release "summergold" so my guess is the name had to be changed on the patent grant
             AKA: ["Summer Gold (zaiger)"], // application name: https://patents.google.com/patent/US20130263342
-            description: 'patent application name "summer gold" but grant name "summer gold". zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-yellow/summer_amelia/',
+            description: 'patent application name "Summer Gold" but grant name "Summer Amelia". zaiger. Yellow. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-yellow/summer_amelia/',
             patent: "https://patents.google.com/patent/USPP24777 expires 2032-11-28",
             chill: "800 hours",
             harvest_time: "August 1 to August 15"

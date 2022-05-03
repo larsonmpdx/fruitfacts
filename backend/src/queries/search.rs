@@ -21,11 +21,9 @@ pub fn variety_search_db(
     let re = Regex::new(r"\s+").unwrap();
     let multiple_spaces_removed = re.replace_all(&cleaned, " ");
 
-    // split on whitespace and insert OR statements for each space
     let mut statement = multiple_spaces_removed
         .split(' ')
-        .map(|x| format!("\"{x}\"")) // double quote each element - allows searching for special characters or keywords like "OR"
-        .collect::<Vec<String>>();
+        .collect::<Vec<&str>>();
 
     // if we have multiple search words, also add a search element which is all of them concatenated
     // allows searching for "pf 11" which would otherwise be two chars
@@ -42,15 +40,22 @@ pub fn variety_search_db(
         }
     }
 
-    let mut statement_string;
-    if restrict_to_type.is_none() {
-        statement_string = statement.join(" OR ");
-    } else {
+    if restrict_to_type.is_some() {
         statement.pop(); // we got a type by matching on the last search element, remove it from the FTS search words
-        statement_string = statement.join(" OR ");
+    }
+
+    let mut statement_string = statement.clone()
+        .into_iter()
+        .map(|x| format!("\"{x}\"")) // double quote each element - allows searching for special characters or keywords like "OR"
+        .collect::<Vec<String>>()
+        .join(" OR ");
+
+    // if we have multiple words, try adding one last search term which is all of them concatenated
+    // this helps us with "pf 1" for example
+    if split_for_count.len() >= 2 {
         statement_string.push_str(&format!(
             " OR \"{}\"",
-            multiple_spaces_removed.replace(' ', "")
+            statement.join("")
         ));
     }
 
@@ -135,6 +140,7 @@ struct SearchPath {
 // "pf 11" -> should find pf 11 peach, treating this as two words wouldn't find it because of fts searching based on trigraphs
 // "pf 1" -> pf 1 peach
 // "pf-11" -> pf 11 peach
+// "pf 1 peach" -> pf 1 peach (multiple search terms, short, etc.)
 // "liberty apple" -> should be an exact match, and not return "dapple dandy" (contains the word apple)
 //    may also suggest the apple page
 // "liberty peach" -> should be an exact match, not finding "burpeachwhatever"
