@@ -32,7 +32,7 @@ pub fn variety_search_db(
     // allows searching for "pf 11" which would otherwise be two chars
     let split_for_count = multiple_spaces_removed.split(' ').collect::<Vec<&str>>();
 
-    if (split_for_count.len() > 0) {
+    if split_for_count.len() > 0 {
         statement.push_str(&format!(
             " OR \"{}\"",
             multiple_spaces_removed.replace(" ", "")
@@ -41,16 +41,16 @@ pub fn variety_search_db(
 
     // look at the last element to see if one of our types starts with this - if so we'll restrict results to this type
     let mut restrict_to_type: Option<String> = None;
-    if (split_for_count.len() >= 2) {
+    if split_for_count.len() >= 2 {
         for type_ in crate::import_db::generated::TYPES.iter() {
-            if (*type_ == split_for_count.last().unwrap().to_lowercase()) {
+            if *type_ == split_for_count.last().unwrap().to_lowercase() {
                 restrict_to_type = Some(type_.to_string());
                 break;
             }
         }
     }
 
-    if (split_for_count.len() > 0) {
+    if split_for_count.len() > 0 {
         statement.push_str(&format!(
             " OR \"{}\"",
             multiple_spaces_removed.replace(" ", "")
