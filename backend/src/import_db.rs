@@ -8,6 +8,7 @@
 #[cfg(test)]
 mod test;
 
+pub mod generated;
 mod notoriety;
 mod util;
 

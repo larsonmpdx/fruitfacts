@@ -22,37 +22,83 @@ pub fn variety_search_db(
     let multiple_spaces_removed = re.replace_all(&cleaned, " ");
 
     // split on whitespace and insert OR statements for each space
-    let statement = multiple_spaces_removed
+    let mut statement = multiple_spaces_removed
         .split(' ')
-        .collect::<Vec<&str>>()
+        .map(|x| format!("\"{x}\"")) // double quote each element - allows searching for special characters or keywords like "OR"
+        .collect::<Vec<String>>()
         .join(" OR ");
+
+    // if we have multiple search words, also add a search element which is all of them concatenated
+    // allows searching for "pf 11" which would otherwise be two chars
+    let split_for_count = multiple_spaces_removed.split(' ').collect::<Vec<&str>>();
+
+    if (split_for_count.len() > 0) {
+        statement.push_str(&format!(
+            " OR \"{}\"",
+            multiple_spaces_removed.replace(" ", "")
+        ));
+    }
+
+    // look at the last element to see if one of our types starts with this - if so we'll restrict results to this type
+    let mut restrict_to_type: Option<String> = None;
+    if (split_for_count.len() >= 2) {
+        for type_ in crate::import_db::generated::TYPES.iter() {
+            if (*type_ == split_for_count.last().unwrap().to_lowercase()) {
+                restrict_to_type = Some(type_.to_string());
+                break;
+            }
+        }
+    }
+
+    if (split_for_count.len() > 0) {
+        statement.push_str(&format!(
+            " OR \"{}\"",
+            multiple_spaces_removed.replace(" ", "")
+        ));
+    }
 
     println!("input {input} cleaned: {cleaned} ORed: {statement}");
 
-    // if string ends with an exact match for a type we have, then add a limit to the search
-    // for example "pristine apple" should remove the word apple from the search (or maybe not?) and then add a filter for only apples
-    // todo
+    const N_MAX: i64 = 10;
 
-    let values = fts_base_plants::table
+    let mut query = fts_base_plants::table
         .select((fts_base_plants::rowid, fts_base_plants::rank))
         .filter(fts_base_plants::whole_row.eq(statement))
         .order(fts_base_plants::rank.asc())
-        .limit(10)
-        .load::<FtsBasePlants>(db_conn);
+        .into_boxed();
+
+    match restrict_to_type {
+        None => {
+            query = query.limit(N_MAX);
+        }
+        _ => {
+            query = query.limit(N_MAX * 10); // we gather more if we're going to later restrict by type
+        }
+    }
+
+    let values = query.load::<FtsBasePlants>(db_conn);
     // todo - maybe limit 100 or something? we want to get a bunch though in case we're limiting to only one variety later
     // todo - report total search results if limiting to N
 
     println!("{:?}", values);
 
-    // todo: filter by type, order or limit notoriety
+    // todo: order or limit by notoriety
     match values {
         Ok(values) => {
             let ids_nullable: Vec<_> = values.iter().map(|x| x.rowid).collect();
 
-            let results = base_plants::dsl::base_plants
-                .filter(base_plants::id.eq_any(ids_nullable))
-                .load::<BasePlant>(db_conn)
-                .unwrap();
+            let results = match restrict_to_type {
+                None => base_plants::dsl::base_plants
+                    .filter(base_plants::id.eq_any(ids_nullable))
+                    .load::<BasePlant>(db_conn)
+                    .unwrap(),
+                Some(type_) => base_plants::dsl::base_plants
+                    .filter(base_plants::id.eq_any(ids_nullable))
+                    .filter(base_plants::type_.eq(type_))
+                    .limit(N_MAX)
+                    .load::<BasePlant>(db_conn)
+                    .unwrap(),
+            };
 
             println!("{:?}", results);
 
@@ -67,10 +113,15 @@ struct SearchPath {
     string: String,
 }
 
-// searches to support:
-// plain variety search: "red" -> "redhaven" "early redhaven" ...
-// with type: "redhaven peach" -> "redhaven" and also suggest the category "peach"
-// rules: if we have an exact match for a type name (or type aka name) then remove that word, use it to suggest that type
+// search test cases:
+// "red" -> "redhaven" "early redhaven" ...
+// "pf 11" -> should find pf 11 peach, treating this as two words wouldn't find it because of fts searching based on trigraphs
+// "pf 1" -> pf 1 peach
+// "pf-11" -> pf 11 peach
+// "liberty apple" -> should be an exact match, and not return "dapple dandy" (contains the word apple)
+//    may also suggest the apple page
+
+// todo: if we have an exact match for a type name (or type aka name) then remove that word, use it to suggest that type
 // todo - this kind of type search plus a full text search on the collections json files
 #[get("/api/search/{string}")]
 async fn variety_search(
