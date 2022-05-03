@@ -1736,7 +1736,7 @@
             harvest_time: "July 15 to August 10"
         },
         {
-            type: "Japanese Plum",
+            type: "Plumcot",
             name: "Candy Heart",
             AKA: ["Sweet Pixie 5"],
             description: 'zaiger. marketed as "pluerry". retail https://www.davewilson.com/nurseries/products/fruit-trees/pluerry-interspecific/candy_heart/',
@@ -1745,7 +1745,7 @@
             harvest_time: "July 28 to August 23"
         },
         {
-            type: "Japanese Plum",
+            type: "Plumcot",
             name: "Flavor Punch",
             description: 'zaiger. marketed as "pluerry". retail https://www.davewilson.com/nurseries/products/fruit-trees/pluerry-interspecific/flavor_punch/',
             patent: "https://patents.google.com/patent/USPP27030 expires 2035-03-20",
@@ -1753,7 +1753,7 @@
             harvest_time: "September 5 to October 5"
         },
         {
-            type: "Japanese Plum",
+            type: "Plumcot",
             name: "Sweet Treat",
             AKA: ["46MB583", "Sweet Pixzee 2"],
             description: 'zaiger. marketed as "pluerry". retail https://www.davewilson.com/nurseries/products/fruit-trees/pluerry-interspecific/sweet_treat/',
