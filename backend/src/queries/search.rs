@@ -32,10 +32,10 @@ pub fn variety_search_db(
     // allows searching for "pf 11" which would otherwise be two chars
     let split_for_count = multiple_spaces_removed.split(' ').collect::<Vec<&str>>();
 
-    if split_for_count.len() > 0 {
+    if !split_for_count.is_empty() {
         statement.push_str(&format!(
             " OR \"{}\"",
-            multiple_spaces_removed.replace(" ", "")
+            multiple_spaces_removed.replace(' ', "")
         ));
     }
 
@@ -50,10 +50,10 @@ pub fn variety_search_db(
         }
     }
 
-    if split_for_count.len() > 0 {
+    if !split_for_count.is_empty() {
         statement.push_str(&format!(
             " OR \"{}\"",
-            multiple_spaces_removed.replace(" ", "")
+            multiple_spaces_removed.replace(' ', "")
         ));
     }
 
