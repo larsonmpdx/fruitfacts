@@ -25,45 +25,42 @@ pub fn variety_search_db(
     let mut statement = multiple_spaces_removed
         .split(' ')
         .map(|x| format!("\"{x}\"")) // double quote each element - allows searching for special characters or keywords like "OR"
-        .collect::<Vec<String>>()
-        .join(" OR ");
+        .collect::<Vec<String>>();
 
     // if we have multiple search words, also add a search element which is all of them concatenated
     // allows searching for "pf 11" which would otherwise be two chars
     let split_for_count = multiple_spaces_removed.split(' ').collect::<Vec<&str>>();
 
-    if !split_for_count.is_empty() {
-        statement.push_str(&format!(
-            " OR \"{}\"",
-            multiple_spaces_removed.replace(' ', "")
-        ));
-    }
-
     // look at the last element to see if one of our types starts with this - if so we'll restrict results to this type
     let mut restrict_to_type: Option<String> = None;
     if split_for_count.len() >= 2 {
         for type_ in crate::import_db::generated::TYPES.iter() {
-            if *type_ == split_for_count.last().unwrap().to_lowercase() {
+            if *type_.to_lowercase() == split_for_count.last().unwrap().to_lowercase() {
                 restrict_to_type = Some(type_.to_string());
                 break;
             }
         }
     }
 
-    if !split_for_count.is_empty() {
-        statement.push_str(&format!(
+    let mut statement_string;
+    if restrict_to_type.is_none() {
+        statement_string = statement.join(" OR ");
+    } else {
+        statement.pop(); // we got a type by matching on the last search element, remove it from the FTS search words
+        statement_string = statement.join(" OR ");
+        statement_string.push_str(&format!(
             " OR \"{}\"",
             multiple_spaces_removed.replace(' ', "")
         ));
     }
 
-    println!("input {input} cleaned: {cleaned} ORed: {statement}");
+    println!("input {input} cleaned: {cleaned} ORed: {statement_string}");
 
     const N_MAX: i64 = 10;
 
     let mut query = fts_base_plants::table
         .select((fts_base_plants::rowid, fts_base_plants::rank))
-        .filter(fts_base_plants::whole_row.eq(statement))
+        .filter(fts_base_plants::whole_row.eq(statement_string))
         .order(fts_base_plants::rank.asc())
         .into_boxed();
 
@@ -87,17 +84,37 @@ pub fn variety_search_db(
         Ok(values) => {
             let ids_nullable: Vec<_> = values.iter().map(|x| x.rowid).collect();
 
-            let results = match restrict_to_type {
-                None => base_plants::dsl::base_plants
-                    .filter(base_plants::id.eq_any(ids_nullable))
-                    .load::<BasePlant>(db_conn)
-                    .unwrap(),
-                Some(type_) => base_plants::dsl::base_plants
-                    .filter(base_plants::id.eq_any(ids_nullable))
-                    .filter(base_plants::type_.eq(type_))
-                    .limit(N_MAX)
-                    .load::<BasePlant>(db_conn)
-                    .unwrap(),
+            // step through IDs and get the original row
+            // this lets us preserve FTS ranking
+            let mut results: Vec<BasePlant> = Default::default();
+
+            match restrict_to_type {
+                None => {
+                    for id in &ids_nullable {
+                        let result = base_plants::dsl::base_plants
+                            .filter(base_plants::id.eq(id))
+                            .first::<BasePlant>(db_conn)
+                            .unwrap();
+
+                        results.push(result);
+                    }
+                }
+
+                Some(type_) => {
+                    for id in &ids_nullable {
+                        let result = base_plants::dsl::base_plants
+                            .filter(base_plants::id.eq(id))
+                            .filter(base_plants::type_.eq(&type_))
+                            .first::<BasePlant>(db_conn); // this row may or may not match our type filter
+
+                        if result.is_ok() {
+                            results.push(result.unwrap());
+                            if results.len() as i64 >= N_MAX {
+                                break; // we limit here because our fts search was allowed to be for more results before we did our type filter
+                            }
+                        }
+                    }
+                }
             };
 
             println!("{:?}", results);
@@ -120,6 +137,7 @@ struct SearchPath {
 // "pf-11" -> pf 11 peach
 // "liberty apple" -> should be an exact match, and not return "dapple dandy" (contains the word apple)
 //    may also suggest the apple page
+// "liberty peach" -> should be an exact match, not finding "burpeachwhatever"
 
 // todo: if we have an exact match for a type name (or type aka name) then remove that word, use it to suggest that type
 // todo - this kind of type search plus a full text search on the collections json files
