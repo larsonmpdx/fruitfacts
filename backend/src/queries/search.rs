@@ -107,8 +107,8 @@ pub fn variety_search_db(
                             .filter(base_plants::type_.eq(&type_))
                             .first::<BasePlant>(db_conn); // this row may or may not match our type filter
 
-                        if result.is_ok() {
-                            results.push(result.unwrap());
+                        if let Ok(result) = result {
+                            results.push(result);
                             if results.len() as i64 >= N_MAX {
                                 break; // we limit here because our fts search was allowed to be for more results before we did our type filter
                             }
