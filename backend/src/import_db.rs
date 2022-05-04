@@ -1164,7 +1164,8 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
 
     let header = r#"// created by import_db.rs - don't edit
 
-pub const TYPES: &[&str] = &["#;
+pub const TYPES: &[&str] = &[
+"#;
 
     let data: String = types_for_generated
         .into_iter()
