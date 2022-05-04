@@ -8,8 +8,8 @@
 #[cfg(test)]
 mod test;
 
-pub mod types_generated;
 mod notoriety;
+pub mod types_generated;
 mod util;
 
 use crate::git_info::GitModificationTimes;
@@ -1167,17 +1167,18 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
 pub const TYPES: &[&str] = &["#;
 
     let data: String = types_for_generated
-    .into_iter()
-    .map(|type_| format!("\"{type_}\","))
-    .collect::<String>();
+        .into_iter()
+        .map(|type_| format!("    \"{type_}\",\n"))
+        .collect::<String>();
 
-    let footer = r#"
-];"#;
+    let footer = r#"];
+"#;
 
     let mut path = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-    path = path.join("./src/import_db/generated.rs");
+    path = path.join("./src/import_db/types_generated.rs");
 
-    fs::write(path, header.to_owned() + &data + &footer.to_owned()).expect("Unable to write import_db/generated.rs");
+    fs::write(path, header.to_owned() + &data + &footer.to_owned())
+        .expect("Unable to write import_db/types_generated.rs");
 
     types_found
 }
