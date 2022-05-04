@@ -1157,7 +1157,6 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
             assert_eq!(Ok(1), rows_inserted);
             types_found += 1;
 
-            // for types_generated.rs
             types_for_generated.push(type_element.name.clone());
         }
     }
