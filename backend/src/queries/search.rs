@@ -30,7 +30,7 @@ pub fn variety_search_db(
     // look at the last element to see if one of our types starts with this - if so we'll restrict results to this type
     let mut restrict_to_type: Option<String> = None;
     if split_for_count.len() >= 2 {
-        for type_ in crate::import_db::generated::TYPES.iter() {
+        for type_ in crate::import_db::types_generated::TYPES.iter() {
             if *type_.to_lowercase() == split_for_count.last().unwrap().to_lowercase() {
                 restrict_to_type = Some(type_.to_string());
                 break;
@@ -140,6 +140,9 @@ struct SearchPath {
 // "liberty apple" -> should be an exact match, and not return "dapple dandy" (contains the word apple)
 //    may also suggest the apple page
 // "liberty peach" -> should be an exact match, not finding "burpeachwhatever"
+// "delight cherry plum"
+// "delight plum"
+// "valor plum"
 
 // todo: if we have an exact match for a type name (or type aka name) then remove that word, use it to suggest that type
 // todo - this kind of type search plus a full text search on the collections json files

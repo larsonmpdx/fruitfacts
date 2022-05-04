@@ -8,7 +8,7 @@
 #[cfg(test)]
 mod test;
 
-pub mod generated;
+pub mod types_generated;
 mod notoriety;
 mod util;
 
@@ -1143,6 +1143,8 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
 
     let types_groups_parsed: Vec<TypeGroupsJson> = json5::from_str(&contents).unwrap();
 
+    let mut types_for_generated: Vec<String> = Default::default();
+
     for type_group in &types_groups_parsed {
         for type_element in &type_group.types {
             let rows_inserted = diesel::insert_into(plant_types::dsl::plant_types)
@@ -1154,8 +1156,29 @@ fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> i
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
             types_found += 1;
+
+            // for types_generated.rs
+            types_for_generated.push(type_element.name.clone());
         }
     }
+
+    let header = r#"// created by import_db.rs - don't edit
+
+pub const TYPES: &[&str] = &["#;
+
+    let data: String = types_for_generated
+    .into_iter()
+    .map(|type_| format!("\"{type_}\","))
+    .collect::<String>();
+
+    let footer = r#"
+];"#;
+
+    let mut path = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    path = path.join("./src/import_db/generated.rs");
+
+    fs::write(path, header.to_owned() + &data + &footer.to_owned()).expect("Unable to write import_db/generated.rs");
+
     types_found
 }
 

@@ -6,7 +6,9 @@
   * written in javascript with next.js and react
 
 # contributing
+* The plant database is based on imported publications.  Please search in your local area and see if any useful publications aren't yet imported or look at this list:
 * [a list of data files that need help](plant_database/help_needed.md)
+* I need software help too:
 * [help wanted code projects](help%20wanted.md)
 
 # fruitfacts
