@@ -110,8 +110,12 @@ export default function Home({
               <div className="m-1 inline">
                 updated {timeAgo(recentChangesData.build_info.git_unix_time * 1000)}
                 {', '}
-                build count {recentChangesData.build_info.git_commit_count}, git hash{' '}
-                {recentChangesData.build_info.git_hash.substring(0, 7)}
+                build count {recentChangesData.build_info.git_commit_count},{' '}
+                <a
+                  href={` ${`${process.env.NEXT_PUBLIC_GITHUB_HOMEPAGE}/tree/${recentChangesData.build_info.git_hash}`}`}
+                >
+                  git hash {recentChangesData.build_info.git_hash.substring(0, 7)}
+                </a>
               </div>
             )}
           </p>
