@@ -1177,7 +1177,7 @@ pub const TYPES: &[&str] = &[
     let mut path = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     path = path.join("./src/import_db/types_generated.rs");
 
-    fs::write(path, header.to_owned() + &data + &footer.to_owned())
+    fs::write(path, header.to_owned() + &data + footer)
         .expect("Unable to write import_db/types_generated.rs");
 
     types_found
