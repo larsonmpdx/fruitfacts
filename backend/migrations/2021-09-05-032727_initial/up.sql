@@ -99,7 +99,6 @@ CREATE TABLE user_sessions (
 
 CREATE TABLE collections (
   id INTEGER PRIMARY KEY NOT NULL,
-  user_id INTEGER NOT NULL,
 
   git_edit_time BigInt, -- unix seconds. bigint to get diesel to match this to i64 for the 2038 problem
 
@@ -149,7 +148,6 @@ CREATE TABLE collection_items (
   path_and_filename TEXT, -- for website display/navigation instead of looking it up
   marketing_name TEXT, -- copied back from base plants for quicker display
 
-  -- name+type don't have to exist in base plants so this could be a wholly user-created plant
   name TEXT NOT NULL,
   type TEXT NOT NULL,
 
@@ -167,6 +165,10 @@ CREATE TABLE collection_items (
   harvest_start INTEGER, --ordinal (day of the year)
   harvest_end INTEGER,
 
+  -- pretty much only for figs with breba+main crop
+  harvest_start_2 INTEGER,
+  harvest_end_2 INTEGER,
+
   -- these are set after import either by parsing harvest_relative text
   -- or by using a delta from another variety with an already-calculated relative harvest
   calc_harvest_relative INTEGER,
@@ -174,10 +176,6 @@ CREATE TABLE collection_items (
   calc_harvest_relative_to_type TEXT, -- "Peach" for nectarines. should be same type for everything else
   calc_harvest_relative_round DOUBLE, -- 0: directly parsed from harvest_relative text 1: set based on absolute harvest difference to a known variety 2+: successive rounds of this as more varieties get filled in
   calc_harvest_relative_explanation TEXT, -- which plant and value was referenced?
-
-  -- pretty much only for figs with breba+main crop
-  harvest_start_2 INTEGER,
-  harvest_end_2 INTEGER,
 
   UNIQUE(collection_id, location_id, name, type) --combo of these columns must be unique
 );
@@ -188,4 +186,45 @@ CREATE TABLE facts (
   contributor TEXT NOT NULL,
   fact TEXT NOT NULL,
   reference TEXT NOT NULL
+);
+
+CREATE TABLE user_collections (
+  id INTEGER PRIMARY KEY NOT NULL,
+  user_id INTEGER NOT NULL,
+
+  title TEXT,
+  description TEXT,
+
+  location_name TEXT,
+  latitude DOUBLE,
+  longitude DOUBLE
+);
+
+CREATE TABLE user_collection_items (
+  id INTEGER PRIMARY KEY NOT NULL,
+  user_id INTEGER NOT NULL,
+  user_collection_id INTEGER NOT NULL,
+
+  marketing_name TEXT, -- copied from base plants for quicker display
+
+  -- name+type don't have to exist in base plants so this could be a wholly user-created plant
+  name TEXT NOT NULL,
+  type TEXT NOT NULL,
+
+  category TEXT, -- for user-created groups of plants
+
+  description TEXT,
+
+  harvest_start INTEGER, --ordinal (day of the year)
+  harvest_end INTEGER,
+
+  -- pretty much only for figs with breba+main crop
+  harvest_start_2 INTEGER,
+  harvest_end_2 INTEGER,
+
+  harvest_relative INTEGER,
+  harvest_relative_to TEXT, -- "Redhaven" for peaches for example
+  harvest_relative_to_type TEXT, -- "Peach" for nectarines. should be same type for everything else
+
+  UNIQUE(user_collection_id, name, type) --combo of these columns must be unique
 );

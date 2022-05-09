@@ -1705,7 +1705,6 @@ fn load_references(
             let rows_inserted = diesel::insert_into(collections::dsl::collections)
                 .values((
                     collections::id.eq(collection_id),
-                    collections::user_id.eq(0), // todo - codify this as the root/fake user
                     collections::git_edit_time.eq(git_edit_time),
                     collections::path.eq(&path),
                     collections::filename.eq(&filename),

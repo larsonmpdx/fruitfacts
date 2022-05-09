@@ -51,20 +51,19 @@ table! {
         harvest_relative -> Nullable<Text>,
         harvest_start -> Nullable<Integer>,
         harvest_end -> Nullable<Integer>,
+        harvest_start_2 -> Nullable<Integer>,
+        harvest_end_2 -> Nullable<Integer>,
         calc_harvest_relative -> Nullable<Integer>,
         calc_harvest_relative_to -> Nullable<Text>,
         calc_harvest_relative_to_type -> Nullable<Text>,
         calc_harvest_relative_round -> Nullable<Double>,
         calc_harvest_relative_explanation -> Nullable<Text>,
-        harvest_start_2 -> Nullable<Integer>,
-        harvest_end_2 -> Nullable<Integer>,
     }
 }
 
 table! {
     collections (id) {
         id -> Integer,
-        user_id -> Integer,
         git_edit_time -> Nullable<BigInt>,
         path -> Text,
         filename -> Text,
@@ -117,6 +116,39 @@ table! {
 }
 
 table! {
+    user_collection_items (id) {
+        id -> Integer,
+        user_id -> Integer,
+        user_collection_id -> Integer,
+        marketing_name -> Nullable<Text>,
+        name -> Text,
+        #[sql_name = "type"]
+        type_ -> Text,
+        category -> Nullable<Text>,
+        description -> Nullable<Text>,
+        harvest_start -> Nullable<Integer>,
+        harvest_end -> Nullable<Integer>,
+        harvest_start_2 -> Nullable<Integer>,
+        harvest_end_2 -> Nullable<Integer>,
+        harvest_relative -> Nullable<Integer>,
+        harvest_relative_to -> Nullable<Text>,
+        harvest_relative_to_type -> Nullable<Text>,
+    }
+}
+
+table! {
+    user_collections (id) {
+        id -> Integer,
+        user_id -> Integer,
+        title -> Nullable<Text>,
+        description -> Nullable<Text>,
+        location_name -> Nullable<Text>,
+        latitude -> Nullable<Double>,
+        longitude -> Nullable<Double>,
+    }
+}
+
+table! {
     user_oauth_entries (id) {
         id -> Integer,
         user_id -> Integer,
@@ -151,6 +183,8 @@ allow_tables_to_appear_in_same_query!(
     facts,
     locations,
     plant_types,
+    user_collection_items,
+    user_collections,
     user_oauth_entries,
     user_sessions,
     users,

@@ -42,3 +42,5 @@
 * rust cargo: use lld on windows for faster builds. will eventually be default and I can remove the /.cargo/config.toml entry
   * in my testing this doesn't improve full build time at all
   * https://github.com/rust-lang/rust/issues/71520
+* git2 dependency has some kind of broken build something-or-other
+  * https://github.com/rust-lang/git2-rs/issues/838
