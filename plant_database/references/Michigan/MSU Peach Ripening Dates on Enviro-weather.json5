@@ -236,7 +236,7 @@
             harvest_time_relative: "Redhaven +12"
         },
         {
-            name: "Sweetstar",
+            name: "FA 1566", //"Sweetstar"
             type: "Peach",
             harvest_time_relative: "Redhaven +14"
         },
