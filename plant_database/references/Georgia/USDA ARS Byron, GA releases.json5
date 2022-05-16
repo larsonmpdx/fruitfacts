@@ -14,16 +14,47 @@
         }
     ],
     plants: [
-        /*
+        // https://ssl.acesag.auburn.edu/department/peaches/newpchvar98.html
         {
-            name: "",
+            name: "Springprince",
+            AKA: ["BY82P5972"],
             type: "Peach",
-            description: "",
-            released: "2020",
-            patent: ""
+            released: "1998 USDA Byron*",
+            description: "a very firm peach ripening with Springcrest that is well adapted to the Southeast https://ssl.acesag.auburn.edu/department/peaches/newpchvar98.html",
+            harvest_time_relative: "Elberta -49 days", // or "with springcrest"
+            disease_resistance: { BLS: "moderate" },
+            chill_hours: "650"
         },
-
-*/
+        {
+            name: "Sureprince",
+            AKA: ["BY81P1216"],
+            type: "Peach",
+            released: "1998 USDA Byron*",
+            description: "a firm peach ripening about with Sentinel or slightly after Juneprince https://ssl.acesag.auburn.edu/department/peaches/newpchvar98.html",
+            harvest_time_relative: "Elberta -35 days", // or "about with Sentinel or slightly after Juneprince"
+            disease_resistance: { BLS: "moderate" },
+            chill_hours: "900-950"
+        },
+        {
+            name: "Autumnprince",
+            AKA: ["BY85P325"],
+            type: "Peach",
+            released: "1998 USDA Byron*",
+            description: "very late ripening peach adapted to the Southeast. It resulted from a cross of O'Henry X BY79P670 https://ssl.acesag.auburn.edu/department/peaches/newpchvar98.html",
+            harvest_time_relative: "Elberta +6 to +7 weeks",
+            disease_resistance: { BLS: "moderate" },
+            chill_hours: "750 to 800"
+        },
+        {
+            name: "Gulfprince", // joint release with UF
+            AKA: ["FL93-14C"],
+            type: "Peach",
+            released: "1998",
+            description: "a non-melting peach that ripens approximately 1 week after June Gold in southern Georgia https://ssl.acesag.auburn.edu/department/peaches/newpchvar98.html",
+            harvest_time_relative: "June Gold +1 week",
+            disease_resistance: { BLS: "moderate" },
+            chill_hours: "400"
+        },
         // https://www.growingproduce.com/fruits/3-new-peaches-growers-should-know-about/
         // Crimson Joy  2000
         //         https://journals.ashs.org/hortsci/view/journals/hortsci/55/6/article-p972.xml

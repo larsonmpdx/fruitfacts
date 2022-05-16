@@ -167,7 +167,8 @@
             AKA: ["NY 66.609.4"],
             type: "Euro Plum",
             description: "Valor x Iroquois",
-            released: "Cornell 1993*"
+            released: "Cornell 1993*",
+            patent: "https://patents.google.com/patent/USPP9638 expired 2013-11-04"
         },
         {
             name: "NY 858",
