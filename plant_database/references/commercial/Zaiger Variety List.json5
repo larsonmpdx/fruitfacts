@@ -776,7 +776,8 @@
             type: "Nectarine",
             name: "Honey Blaze",
             description: "zaiger. Yellow. commercial and retail https://www.davewilson.com/growers/products/fruit-trees/nectarine-yellow/honey_blaze/",
-            patent: "https://patents.google.com/patent/USPP10250 expired 2016-12-27"
+            patent: "https://patents.google.com/patent/USPP10250 expired 2016-12-27",
+            harvest_time: "June 13 to June 28"
         },
         {
             type: "Nectarine",
