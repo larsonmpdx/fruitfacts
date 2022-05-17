@@ -8,7 +8,7 @@
     needs_help: true,
     locations: [
         {
-            name: "todo",
+            name: "Aurora, OR",
             latitude: 45.260369005698045,
             longitude: -122.7872459024906
         }
