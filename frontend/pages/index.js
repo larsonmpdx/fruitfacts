@@ -99,7 +99,7 @@ export default function Home({
           {(recentChangesData.recent_changes || recentChangesData.build_info) && (
             <h3>Build Info</h3>
           )}
-          <p>
+          <>
             {recentChangesData.recent_changes && (
               <div className="inline">
                 {recentChangesData.recent_changes.base_plants_count} plants in{' '}
@@ -118,7 +118,7 @@ export default function Home({
                 </a>
               </div>
             )}
-          </p>
+          </>
         </div>
       </main>
 

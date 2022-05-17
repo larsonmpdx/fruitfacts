@@ -1,0 +1,126 @@
+{
+    title: "Performance of Peach Varieties in Alabama",
+    author: "JL. TURNER and H. J. AMLING, Dept. of Horticulture; C. C. CARLTON, Supt. Chilton Area Horticulture Substation",
+    url: "https://aurora.auburn.edu/handle/11200/1240",
+    accessed: "Feb 1963",
+    type: "state extension guide",
+    needs_help: true, // todo southern alabama. needs a 2nd location added and to figure out overlap with 1st location
+    locations: [
+        {
+            name: "Central and Northern Alabama",
+            latitude: 33.98157722881445,
+            longitude: -86.89138627184546
+        }
+    ],
+    plants: [
+        {
+            type: "Peach",
+            name: "Hiland",
+            harvest_time: "June 4",
+            chill_hours: "750",
+            description: "Yellow; Cling; good quality"
+        },
+        {
+            type: "Peach",
+            name: "Cardinal",
+            harvest_time: "June 4",
+            chill_hours: "900",
+            description: "Yellow; Cling; good quality"
+        },
+        {
+            type: "Peach",
+            name: "Redcap",
+            harvest_time: "June 5",
+            chill_hours: "750",
+            description: "Yelow; Cling; good quality"
+        },
+        {
+            type: "Peach",
+            name: "Dixired",
+            harvest_time: "June 7",
+            chill_hours: "900",
+            description: "Yellow; Cling; good quality"
+        },
+        {
+            type: "Peach",
+            name: "Coronet",
+            harvest_time: "June 14",
+            chill_hours: "800",
+            description: "Yellow; Semi-freestone; excellent quality"
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            harvest_time: "June 21",
+            chill_hours: "950",
+            description: "Yellow; Freestone; excellent quality"
+        },
+        {
+            type: "Peach",
+            name: "Ranger",
+            harvest_time: "June 24",
+            chill_hours: "950",
+            description: "Yellow; Freestone; excellent quality"
+        },
+        {
+            type: "Peach",
+            name: "Keystone",
+            harvest_time: "June 28",
+            chill_hours: "750",
+            description: "Yellow; Freestone; good quality"
+        },
+        {
+            type: "Peach",
+            name: "Southland",
+            harvest_time: "July 5",
+            chill_hours: "750",
+            description: "Yellow; Freestone; good quality"
+        },
+        {
+            type: "Peach",
+            name: "Red Globe",
+            harvest_time: "July 5",
+            chill_hours: "900",
+            description: "Yellow; Freestone; good quality"
+        },
+        {
+            type: "Peach",
+            name: "Loring",
+            harvest_time: "July 9",
+            chill_hours: "750",
+            description: "Yellow; Freestone; good quality"
+        },
+        {
+            type: "Peach",
+            name: "Blake",
+            harvest_time: "July 15",
+            chill_hours: "750",
+            description: "Yellow; Freestone; excellent quality"
+        },
+        {
+            type: "Peach",
+            name: "Redskin",
+            harvest_time: "July 19",
+            chill_hours: "750",
+            description: "Yellow; Freestone; excellent quality"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            harvest_time: "July 19",
+            chill_hours: "900",
+            description: "Yellow; Freestone; excellent quality"
+        },
+        {
+            type: "Peach",
+            name: "Rio Oso Gem",
+            harvest_time: "July 26",
+            chill_hours: "850",
+            description: "Yellow; Freestone; good quality"
+        }
+
+        // todo - page 5 has varieties for trial planting in southern alabama
+
+        // todo - "tested varieties not recommended" along with which of those are recommended for home use
+    ]
+}

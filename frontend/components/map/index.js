@@ -191,7 +191,7 @@ export default function Home({
       style={{ height: '80vh', width: '100%' }}
       center={[initialLat, initialLon]}
       zoom={initialZoom}
-      whenCreated={setMap}
+      ref={setMap}
     >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
