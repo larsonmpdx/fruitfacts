@@ -19,6 +19,7 @@ ln -s /usr/bin/lld-14 /usr/bin/lld
 
 # use this method so it's installed for all users (rustup is only for one user)
 # https://forge.rust-lang.org/infra/other-installation-methods.html#standalone-installers
+# this *doesn't* include updates. todo, handle that somehow
 wget https://static.rust-lang.org/dist/rust-1.60.0-x86_64-unknown-linux-gnu.tar.gz
 tar -xf ./rust*.tar.gz
 cd ./rust*/
@@ -27,6 +28,7 @@ cd ..
 
 # use this method so it's installed for all users (nvm is only for one user)
 # https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
+# I *think* this will include updates because it's a PPA
 curl -o- https://deb.nodesource.com/setup_16.x | bash
 sudo apt install -y nodejs
 node -v
