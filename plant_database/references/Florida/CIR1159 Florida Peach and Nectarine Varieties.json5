@@ -5,6 +5,7 @@
     published: "2018-09-13",
     accessed: "Oct 2021",
     type: "state extension guide",
+    needs_help: true, // would be nice to get a redhaven+days time for one of these and put in relative times based on that instead of the "fruit development period" times
     locations: [
         {
             name: "Florida (various locations)",

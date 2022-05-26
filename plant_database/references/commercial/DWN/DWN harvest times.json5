@@ -46,7 +46,7 @@
         {
             type: "Plumcot",
             name: "Emerald Drop",
-            harvest_time: "July 18 to April 5"
+            harvest_time: "July 18 to August 5"
         },
         {
             type: "Plumcot",
@@ -261,7 +261,7 @@
         {
             type: "Asian Pear",
             name: "Ichiban Nashi",
-            harvest_time: "July 15 to July 21"
+            harvest_time: "July 15 to July 26"
         },
         {
             type: "Asian Pear",
@@ -373,110 +373,115 @@
             name: "Tamopan",
             harvest_time: "November 22 to December 10"
         },
-/*
         // white peach
         {
             type: "Peach",
             name: "Sauzee Swirl",
-            harvest_time: ""
+            harvest_time: "May 11 to May 22"
         },
         {
             type: "Peach",
             name: "Sugar May",
-            harvest_time: ""
+            harvest_time: "June 16 to June 30"
         },
         {
             type: "Peach",
-            name: "Tropic Snow",
-            harvest_time: ""
+            name: "TropicSnow",
+            harvest_time: "June 20 to July 5"
+        },
+        {
+            type: "Peach",
+            name: "Saturn",
+            // AKA: ["Stark (r) Saturn"
+            harvest_time: "July 1 to July 16"
         },
         {
             type: "Peach",
             name: "Strawberry Free",
-            harvest_time: ""
+            harvest_time: "July 5 to July 22"
         },
         {
             type: "Peach",
             name: "Snow Beauty",
-            harvest_time: ""
+            harvest_time: "July 10 to July 25"
         },
         {
             type: "Peach",
             name: "Nectar",
-            harvest_time: ""
+            harvest_time: "July 11 to July 24"
         },
-        //
         {
             type: "Peach",
             name: "White Lady",
-            harvest_time: ""
-        },
-        {
-            type: "Peach",
-            name: "Babcock",
-            harvest_time: ""
+            harvest_time: "July 11 to July 26"
         },
         {
             type: "Peach",
             name: "George IV",
-            harvest_time: ""
+            harvest_time: "July 12 to July 27"
         },
         {
             type: "Peach",
-            name: "Q-1-8",
-            harvest_time: ""
+            name: "Babcock",
+            harvest_time: "July 13 to July 27"
+        },
+        {
+            type: "Peach",
+            name: "Salish Summer",
+            // AKA: ["Q-1-8"]
+            harvest_time: "July 13 to July 27"
         },
         {
             type: "Peach",
             name: "Polly",
-            harvest_time: ""
+            harvest_time: "July 18 to August 2"
         },
         {
             type: "Peach",
             name: "Giant Babcock",
-            harvest_time: ""
+            harvest_time: "July 18 to August 3"
         },
         {
             type: "Peach",
             name: "Sugar Lady",
-            harvest_time: ""
+            harvest_time: "July 19 to August 6"
         },
         {
             type: "Peach",
             name: "Arctic Supreme",
-            harvest_time: ""
+            harvest_time: "July 25 to August 11"
         },
         {
             type: "Peach",
             name: "Champagne",
-            harvest_time: ""
+            harvest_time: "August 9 to August 26"
         },
         {
             type: "Peach",
             name: "Indian Blood Cling",
-            harvest_time: ""
+            harvest_time: "August 15 to August 27"
         },
         {
             type: "Peach",
             name: "Snow King",
-            harvest_time: ""
+            harvest_time: "August 21 to September 7"
         },
         {
             type: "Peach",
             name: "Snow Giant",
-            harvest_time: ""
+            harvest_time: "August 25 to September 11"
         },
         {
             type: "Peach",
-            name: "Indian Blood Free",
-            harvest_time: ""
+            name: "Indian Free", // AKA "Indian Blood Free",
+            harvest_time: "September 1 to September 16"
         },
         {
             type: "Peach",
             name: "White Heath",
-            harvest_time: ""
-        },
-
+            harvest_time: "September 25 to October 7"
+        }
+        /*
         // japanese plum
         {
             type: "Japanese Plum",
@@ -1142,7 +1147,7 @@
         },
         {
             type: "Peach",
-            name: "Saturn",
+            name: "Saturn (yellow)",
             harvest_time: ""
         },
         {
