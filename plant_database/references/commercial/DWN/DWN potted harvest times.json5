@@ -1,0 +1,18 @@
+{
+    title: "DWN Potted Harvest Times",
+    url: "https://www.davewilson.com/img/content/potted-fruit-harvestdates-hg-2022.pdf",
+    published: "2021",
+    accessed: "March 2022",
+    type: "nursery catalog",
+    needs_help: true,
+    locations: [
+        {
+            name: "Hickman, CA",
+            latitude: 37.616126319028794,
+            longitude: -120.63743995941972
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

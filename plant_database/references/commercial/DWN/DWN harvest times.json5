@@ -1,0 +1,1620 @@
+{
+    title: "DWN Harvest Times",
+    url: "https://www.davewilson.com/img/content/harvestdates-bareroot-hg-2021.pdf",
+    published: "2021",
+    accessed: "March 2022",
+    type: "nursery catalog",
+    needs_help: true,
+    locations: [
+        {
+            name: "Hickman, CA",
+            latitude: 37.616126319028794,
+            longitude: -120.63743995941972
+        }
+    ],
+    plants: [
+        // todo - because some of the dates on the DWN individual variety pages are from mixed locations,
+        // this chart is an important source because they're all from Hickman, CA
+        // this is also one of the charts I want to be sure to be able to replicate (in terms of features and quality)
+
+        // pluot
+        {
+            type: "Plumcot",
+            name: "Flavorosa",
+            harvest_time: "May 27 to June 11"
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Supreme",
+            harvest_time: "June 17 to July 6"
+        },
+        {
+            type: "Plumcot",
+            name: "Dapple Supreme",
+            harvest_time: "June 23 to July 13"
+        },
+        {
+            type: "Plumcot",
+            name: "Splash",
+            harvest_time: "July 9 to July 25"
+        },
+        {
+            type: "Plumcot",
+            name: "Geo Pride",
+            harvest_time: "July 13 to July 28"
+        },
+        {
+            type: "Plumcot",
+            name: "Emerald Drop",
+            harvest_time: "July 18 to April 5"
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Queen",
+            harvest_time: "July 28 to August 25"
+        },
+        {
+            type: "Plumcot",
+            name: "Dapple Dandy",
+            harvest_time: "August 5 to August 29"
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor King",
+            harvest_time: "August 11 to September 3"
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Grenade",
+            harvest_time: "August 31 to October 2"
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Finale",
+            harvest_time: "September 11 to October 13"
+        },
+
+        // pecan
+        {
+            type: "Pecan",
+            name: "Pawnee",
+            harvest_time: "October 5 to October 31"
+        },
+        {
+            type: "Pecan",
+            name: "Tejas",
+            harvest_time: "October 15 to November 15"
+        },
+        {
+            type: "Pecan",
+            name: "Mohawk",
+            harvest_time: "October 15 to November 15"
+        },
+        {
+            type: "Pecan",
+            name: "Western Schley",
+            harvest_time: "November 1 to November 30"
+        },
+        {
+            type: "Pecan",
+            name: "Mahan",
+            harvest_time: "November 14 to December 10"
+        },
+
+        // aprium
+        {
+            type: "Apriplum",
+            name: "Flavor Delight",
+            harvest_time: "June 3 to June 16"
+        },
+        {
+            type: "Apriplum",
+            name: "Leah Cot",
+            harvest_time: "June 8 to June 22"
+        },
+        {
+            type: "Apriplum",
+            name: "Summer Delight",
+            harvest_time: "July 15 to July 28"
+        },
+        {
+            type: "Apriplum",
+            name: "Cot-N-Candy", // "white aprium"
+            harvest_time: "June 16 to June 28"
+        },
+
+        // "peacotum"
+        {
+            type: "Apricot",
+            name: "Bella Gold",
+            harvest_time: "June 22 to July 5"
+        },
+
+        // euro pear
+        {
+            type: "Euro Pear",
+            name: "Harrow Delight",
+            harvest_time: "July 14 to July 31"
+        },
+        {
+            type: "Euro Pear",
+            name: "Moonglow",
+            harvest_time: "July 23 to August 11"
+        },
+        {
+            type: "Euro Pear",
+            name: "Rescue",
+            harvest_time: "July 25 to August 10"
+        },
+        {
+            type: "Euro Pear",
+            name: "Hood",
+            harvest_time: "July 25 to August 10"
+        },
+        {
+            type: "Euro Pear",
+            name: "California",
+            harvest_time: "July 29 to August 16"
+        },
+        {
+            type: "Euro Pear",
+            name: "Flordahome",
+            harvest_time: "August 2 to August 16"
+        },
+        {
+            type: "Euro Pear",
+            name: "Bartlett",
+            harvest_time: "August 2 to August 20"
+        },
+        {
+            type: "Euro Pear",
+            name: "Pineapple",
+            harvest_time: "August 3 to August 22"
+        },
+        {
+            type: "Euro Pear",
+            name: "Orient",
+            harvest_time: "August 5 to August 25"
+        },
+        {
+            type: "Euro Pear",
+            name: "Warren",
+            harvest_time: "August 8 to August 28"
+        },
+        {
+            type: "Euro Pear",
+            name: "Sensation Red Bartlett",
+            harvest_time: "August 9 to August 31"
+        },
+        {
+            type: "Euro Pear",
+            name: "Seckel",
+            harvest_time: "August 9 to August 31"
+        },
+        {
+            type: "Euro Pear",
+            name: "Sugar",
+            harvest_time: "August 15 to September 1"
+        },
+        {
+            type: "Euro Pear",
+            name: "Magness",
+            harvest_time: "August 20 to September 10"
+        },
+        {
+            type: "Euro Pear",
+            name: "Potomac",
+            harvest_time: "August 20 to September 10"
+        },
+        {
+            type: "Euro Pear",
+            name: "Fan-Stil",
+            harvest_time: "August 23 to September 13"
+        },
+        {
+            type: "Euro Pear",
+            name: "Monterrey",
+            harvest_time: "August 24 to September 14"
+        },
+        {
+            type: "Euro Pear",
+            name: "D'Anjou",
+            harvest_time: "August 25 to September 15"
+        },
+        {
+            type: "Euro Pear",
+            name: "Southern Bartlett",
+            harvest_time: "August 25 to September 20"
+        },
+        {
+            type: "Euro Pear",
+            name: "Southern King",
+            harvest_time: "August 25 to September 20"
+        },
+        {
+            type: "Euro Pear",
+            name: "Bosc",
+            harvest_time: "September 10 to October 1"
+        },
+        {
+            type: "Euro Pear",
+            name: "Comice",
+            harvest_time: "September 15 to October 5"
+        },
+        {
+            type: "Euro Pear",
+            name: "Blake's Pride",
+            harvest_time: "September 15 to October 9"
+        },
+        {
+            type: "Euro Pear",
+            name: "Kieffer",
+            harvest_time: "September 15 to October 10"
+        },
+        {
+            type: "Euro Pear",
+            name: "Winter Nelis",
+            harvest_time: "September 19 to October 15"
+        },
+
+        // asian pear
+        {
+            type: "Asian Pear",
+            name: "Ichiban Nashi",
+            harvest_time: "July 15 to July 21"
+        },
+        {
+            type: "Asian Pear",
+            name: "Shinseiki",
+            harvest_time: "July 25 to August 11"
+        },
+        {
+            type: "Asian Pear",
+            name: "Hosui",
+            harvest_time: "August 1 to August 12"
+        },
+        {
+            type: "Asian Pear",
+            name: "Ishiiwase",
+            harvest_time: "August 4 to August 13"
+        },
+        {
+            type: "Asian Pear",
+            name: "Chojuro",
+            harvest_time: "August 5 to August 20"
+        },
+        {
+            type: "Asian Pear",
+            name: "Kikusui",
+            harvest_time: "August 6 to August 21"
+        },
+        {
+            type: "Asian Pear",
+            name: "Nijisseiki", // AKA 20th Century
+            harvest_time: "August 8 to August 23"
+        },
+        {
+            type: "Asian Pear",
+            name: "Yoinashi",
+            harvest_time: "August 15 to September 1"
+        },
+        {
+            type: "Asian Pear",
+            name: "Shinko",
+            harvest_time: "September 4 to September 21"
+        },
+        {
+            type: "Asian Pear",
+            name: "Ya Li",
+            harvest_time: "September 7 to September 21"
+        },
+        {
+            type: "Asian Pear",
+            name: "Tsu Li",
+            harvest_time: "September 10 to September 25"
+        },
+        {
+            type: "Asian Pear",
+            name: "Late Korean",
+            harvest_time: "September 15 to September 30"
+        },
+
+        // persimmon
+        {
+            type: "Persimmon",
+            name: "Coffee Cake", // this was an LE Cooke variety I think - so was it trademarked by them, except they never claimed it was trademarked. was the nonexistent trademark transferred? is the claimd dwn trademark illegitimate?
+            AKA: ["Nishimura Wase"],
+            harvest_time: "September 14 to October 15"
+        },
+        {
+            type: "Persimmon",
+            name: "Izu",
+            harvest_time: "September 25 to October 25"
+        },
+        {
+            type: "Persimmon",
+            name: "Maru",
+            harvest_time: "October 5 to October 31"
+        },
+        {
+            type: "Persimmon",
+            name: "Giant Fuyu",
+            harvest_time: "October 11 to November 10"
+        },
+        {
+            type: "Persimmon",
+            name: "Jiro",
+            AKA: ["Fuyu (Jiro)"],
+            harvest_time: "October 16 to December 1"
+        },
+        {
+            type: "Persimmon",
+            name: "Chocolate",
+            harvest_time: "October 25 to December 1"
+        },
+        {
+            type: "Persimmon",
+            name: "Fuyu (Imoto)",
+            AKA: ["Imoto"],
+            harvest_time: "November 1 to December 2"
+        },
+        {
+            type: "Persimmon",
+            name: "Saijo",
+            harvest_time: "November 3 to December 3"
+        },
+        {
+            type: "Persimmon",
+            name: "Hachiya",
+            harvest_time: "November 13 to December 9"
+        },
+        {
+            type: "Persimmon",
+            name: "Tamopan",
+            harvest_time: "November 22 to December 10"
+        },
+/*
+        // white peach
+        {
+            type: "Peach",
+            name: "Sauzee Swirl",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sugar May",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Tropic Snow",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Strawberry Free",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Beauty",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Nectar",
+            harvest_time: ""
+        },
+        //
+        {
+            type: "Peach",
+            name: "White Lady",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Babcock",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "George IV",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Q-1-8",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Polly",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Giant Babcock",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sugar Lady",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Arctic Supreme",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Champagne",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Indian Blood Cling",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow King",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Giant",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Indian Blood Free",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "White Heath",
+            harvest_time: ""
+        },
+
+        // japanese plum
+        {
+            type: "Japanese Plum",
+            name: "Methley",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Beauty",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Shiro",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Santa Rosa",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Hollywood",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Wickson",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Sprite",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Delight",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Burbank",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Catalina",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Burgundy",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Nubiana",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Mariposa",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Laroda",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Late Santa Rosa",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Satsuma",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Superior",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Inca",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Golden Nectar",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Emerald Beaut",
+            harvest_time: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Elephant Heart",
+            harvest_time: ""
+        },
+
+        // jujube
+        {
+            type: "Jujube",
+            name: "Lang",
+            harvest_time: ""
+        },
+        {
+            type: "Jujube",
+            name: "Li",
+            harvest_time: ""
+        },
+        {
+            type: "Jujube",
+            name: "Shanxi Li",
+            harvest_time: ""
+        },
+        {
+            type: "Jujube",
+            name: "Honey Jar",
+            harvest_time: ""
+        },
+        {
+            type: "Jujube",
+            name: "GA 866",
+            harvest_time: ""
+        },
+        {
+            type: "Jujube",
+            name: "Chico",
+            harvest_time: ""
+        },
+        {
+            type: "Jujube",
+            name: "Sugar Cane",
+            harvest_time: ""
+        },
+        {
+            type: "Jujube",
+            name: "Contorted",
+            harvest_time: ""
+        },
+
+        // nectarine
+        {
+            type: "Nectarine",
+            name: "Desert Dawn",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Desert Delight",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Juneglo",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Independence",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Kist",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Harko",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Double Delight",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Mericrest",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Flavortop",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Jolly Red Giant",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Panamint",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Cavalier",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Fantasia",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Zee Glo",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Late Legrand",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Flamekist",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Liz's Late",
+            harvest_time: ""
+        },
+
+        // white nectarine
+        {
+            type: "Nectarine",
+            name: "Arctic Star",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Snow Queen",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Glo",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Atomic Red",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Jay",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Rose",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Heavenly White",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Queen",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Goldmine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Blaze",
+            harvest_time: ""
+        },
+
+        // plumcot
+        {
+            type: "Plumcot",
+            name: "Plum Parfait",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavorella",
+            harvest_time: ""
+        },
+
+        // pluerry
+        {
+            type: "Plumcot",
+            name: "Sugar Twist",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Sweet Treat",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Candy Heart",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Punch",
+            harvest_time: ""
+        },
+
+        // apricot
+        {
+            type: "Apricot",
+            name: "Royal Rosa",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Katy",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Gold Kist",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Flora Gold",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Pixie-Cot",
+            description: "genetic dwarf",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Flavor Giant",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Harcot",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Goldcot",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Chinese",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Tomcot",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Perfection",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Wenatchee Moorpark",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Nugget",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Rival",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Harglow",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Tropic Gold",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Blenheim",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Tilton",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Moorpark",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Brittany Gold",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Montrose",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Puget Gold",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Hunza",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Earli-Autumn",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Autumn Glo",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Autumn Royal",
+            harvest_time: ""
+        },
+
+        // white apricot
+        {
+            type: "Apricot",
+            name: "Canadian White Blenheim",
+            harvest_time: ""
+        },
+
+        // nectaplum
+        {
+            type: "Nectarine",
+            name: "Spice Zee",
+            harvest_time: ""
+        },
+
+        // walnut
+        {
+            type: "Walnut",
+            name: "Payne",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Serr",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Ambassador",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Placentia",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Eureka",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Pedro",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Idaho",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Carmelo",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Mesa",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Hartley",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Chandler",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Livermore Red",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Franquette",
+            harvest_time: ""
+        },
+
+        // peach
+        {
+            type: "Peach",
+            name: "Earlitreat",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Desert Gold",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Flordaprince",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "May Pride",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Earligrande",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Gold Dust",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sam Houston",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Texking",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "June Gold",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Double Jewel",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Eva's Pride",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Texstar",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Peachy Keen",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "June Pride",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Harken",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Mid-Pride",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Reliance",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Suncrest",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Canadian Harmony",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Frost",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Halehaven",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Veteran",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Santa Barbara",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "July Elberta",
+            AKA: ["Kim Elberta"],
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Saturn",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Loring",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Harvester",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Scarlet Robe",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Improved Elberta",
+            AKA: ["Gleason Elberta", "Lemon Elberta"],
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Red Baron",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Cresthaven",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Fortyniner",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Baby Crawford",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Muir",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Ranger",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Bonita",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "J.H. Hale",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Redskin Elberta",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Fantastic Elberta",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Fay Elberta",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Peregrine",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Dixon Cling",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "August Pride",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Rio Oso Gem",
+            harvest_time: ""
+        },
+        //
+        {
+            type: "Peach",
+            name: "Orange Cling",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "O'Henry",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Kaweah",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Tropi-Berta",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Contender",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Belle Of Georgia",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sweet Bagel",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Halford Cling",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Summerset",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Fairtime",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Carnival",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Octoberfest",
+            harvest_time: ""
+        },
+
+        // sour cherry
+        {
+            type: "Sour Cherry",
+            name: "Early Richmond",
+            harvest_time: ""
+        },
+        {
+            type: "Sour Cherry",
+            name: "North Star",
+            harvest_time: ""
+        },
+        {
+            type: "Sour Cherry",
+            name: "Montmorency",
+            harvest_time: ""
+        },
+        {
+            type: "Sour Cherry",
+            name: "Meteor",
+            harvest_time: ""
+        },
+        {
+            type: "Sour Cherry",
+            name: "English Morello",
+            harvest_time: ""
+        },
+        {
+            type: "Sour Cherry",
+            name: "Kansas Sweet",
+            harvest_time: ""
+        },
+        {
+            type: "Sour Cherry",
+            name: "Bali",
+            harvest_time: ""
+        },
+
+        // euro plum
+        {
+            type: "Euro Plum",
+            name: "Bavay's Green Gage",
+            harvest_time: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Early Italian",
+            harvest_time: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "French Improved",
+            harvest_time: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Stanley",
+            harvest_time: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Italian",
+            harvest_time: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Blue Damson",
+            harvest_time: ""
+        },
+
+        // quince
+        {
+            type: "Quince",
+            name: "Orange",
+            harvest_time: ""
+        },
+        {
+            type: "Quince",
+            name: "Pineapple",
+            harvest_time: ""
+        },
+        {
+            type: "Quince",
+            name: "Smyrna",
+            harvest_time: ""
+        },
+
+        // almond
+        {
+            type: "Almond",
+            name: "Non Pareil",
+            harvest_time: ""
+        },
+        {
+            type: "Almond",
+            name: "Price",
+            harvest_time: ""
+        },
+        {
+            type: "Almond",
+            name: "Neplus",
+            harvest_time: ""
+        },
+        {
+            type: "Almond",
+            name: "Peerless",
+            harvest_time: ""
+        },
+        {
+            type: "Almond",
+            name: "Butte",
+            harvest_time: ""
+        },
+        {
+            type: "Almond",
+            name: "Mission",
+            harvest_time: ""
+        },
+        {
+            type: "Almond",
+            name: "All-In-One",
+            harvest_time: ""
+        },
+        {
+            type: "Almond",
+            name: "Garden Prince",
+            harvest_time: ""
+        },
+
+        // sweet cherry
+        {
+            type: "Sweet Cherry",
+            name: "Minnie Royal",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Black Tartarian",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Crimson",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Lee",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Craig's Crimson",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Brooks",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Rainier",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Brooks",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Utah Giant",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Rainier",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Bing",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Compact Stella",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Ann",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Van",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Stella",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Lambert",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Lapins",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sweetheart",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Mona",
+            // this is almost certainly mis-placed on the chart, other sources have it as "with black tartarian"
+            harvest_time: ""
+        },
+
+        // "peach plum"
+        {
+            type: "Peach",
+            name: "Tri-Lite",
+            harvest_time: ""
+        },
+
+        // genetic dwarf peach
+        {
+            type: "Peach",
+            name: "Eldorado",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Bonanza",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Pix Zee",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Honey Babe",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Babe",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Flory",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Garden Sun",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Garden Gold",
+            harvest_time: ""
+        },
+
+        // genetic dwarf nectarine
+        {
+            type: "Nectarine",
+            name: "Arctic Babe",
+            description: "white flesh",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Necta Zee",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Sol Dorado",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Nectar Babe",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Garden Delight",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Sprite",
+            harvest_time: ""
+        }
+        */
+    ]
+}
