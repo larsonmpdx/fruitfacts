@@ -12,12 +12,12 @@
   {
     "type": "Apricot",
     "name": "Blenheim",
-    "day": 6
+    "day": 8
   },
   {
     "type": "Japanese Plum",
     "name": "Santa Rosa",
-    "day": 28
+    "day": 29
   },
   {
     "type": "Peach",
@@ -27,12 +27,12 @@
   {
     "type": "Euro Pear",
     "name": "Bartlett",
-    "day": 58
+    "day": 57
   },
   {
     "type": "Asian Pear",
     "name": "Shinseiki",
-    "day": 64
+    "day": 62
   },
   {
     "type": "Euro Plum",
@@ -47,7 +47,7 @@
   {
     "type": "Apple",
     "name": "Red Delicious",
-    "day": 78
+    "day": 77
   },
   {
     "type": "Walnut",

@@ -392,7 +392,7 @@
         {
             type: "Peach",
             name: "Saturn",
-            // AKA: ["Stark (r) Saturn"
+            // AKA: "Stark (r) Saturn"
             harvest_time: "July 1 to July 16"
         },
         {
@@ -480,584 +480,588 @@
             type: "Peach",
             name: "White Heath",
             harvest_time: "September 25 to October 7"
-        }
-        /*
+        },
         // japanese plum
         {
             type: "Japanese Plum",
             name: "Methley",
-            harvest_time: ""
+            harvest_time: "June 5 to June 25"
         },
         {
             type: "Japanese Plum",
             name: "Beauty",
-            harvest_time: ""
+            harvest_time: "June 15 to June 25"
         },
         {
             type: "Japanese Plum",
             name: "Shiro",
-            harvest_time: ""
+            harvest_time: "June 25 to July 5"
         },
         {
             type: "Japanese Plum",
             name: "Santa Rosa",
-            harvest_time: ""
+            harvest_time: "June 25 to July 5"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Weeping Santa Rosa",
+            harvest_time: "July 1 to July 15"
         },
         {
             type: "Japanese Plum",
             name: "Hollywood",
-            harvest_time: ""
+            harvest_time: "July 13 to August 2"
         },
         {
             type: "Japanese Plum",
             name: "Wickson",
-            harvest_time: ""
+            harvest_time: "July 15 to July 31"
         },
         {
             type: "Japanese Plum",
             name: "Sprite",
-            harvest_time: ""
+            harvest_time: "July 15 to August 10"
         },
         {
             type: "Japanese Plum",
             name: "Delight",
-            harvest_time: ""
+            harvest_time: "July 15 to August 10"
         },
         {
             type: "Japanese Plum",
             name: "Burbank",
-            harvest_time: ""
+            harvest_time: "July 19 to August 6"
         },
         {
             type: "Japanese Plum",
             name: "Catalina",
-            harvest_time: ""
+            harvest_time: "July 20 to August 5"
         },
         {
             type: "Japanese Plum",
             name: "Burgundy",
-            harvest_time: ""
+            harvest_time: "July 20 to August 8"
         },
         {
             type: "Japanese Plum",
             name: "Nubiana",
-            harvest_time: ""
+            harvest_time: "July 24 to August 10"
         },
         {
             type: "Japanese Plum",
             name: "Mariposa",
-            harvest_time: ""
+            harvest_time: "July 28 to August 14"
         },
         {
             type: "Japanese Plum",
             name: "Laroda",
-            harvest_time: ""
+            harvest_time: "July 28 to August 17"
         },
         {
             type: "Japanese Plum",
             name: "Late Santa Rosa",
-            harvest_time: ""
+            harvest_time: "August 5 to August 20"
         },
         {
             type: "Japanese Plum",
             name: "Satsuma",
-            harvest_time: ""
-        },
-        {
-            type: "Japanese Plum",
-            name: "Superior",
-            harvest_time: ""
+            harvest_time: "August 5 to August 26"
         },
         {
             type: "Japanese Plum",
             name: "Inca",
-            harvest_time: ""
+            harvest_time: "August 8 to August 21"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Superior",
+            harvest_time: "August 8 to August 21"
         },
         {
             type: "Japanese Plum",
             name: "Golden Nectar",
-            harvest_time: ""
+            harvest_time: "August 15 to August 31"
         },
         {
             type: "Japanese Plum",
             name: "Emerald Beaut",
-            harvest_time: ""
+            harvest_time: "August 18 to October 8"
         },
         {
             type: "Japanese Plum",
             name: "Elephant Heart",
-            harvest_time: ""
+            harvest_time: "August 30 to September 30"
         },
 
         // jujube
         {
             type: "Jujube",
             name: "Lang",
-            harvest_time: ""
+            harvest_time: "September 2 to October 13"
         },
         {
             type: "Jujube",
             name: "Li",
-            harvest_time: ""
+            harvest_time: "September 7 to October 18"
         },
         {
             type: "Jujube",
             name: "Shanxi Li",
-            harvest_time: ""
+            harvest_time: "September 10 to October 19"
         },
         {
             type: "Jujube",
             name: "Honey Jar",
-            harvest_time: ""
+            harvest_time: "September 12 to October 21"
         },
         {
             type: "Jujube",
-            name: "GA 866",
-            harvest_time: ""
+            name: "GA866",
+            harvest_time: "September 14 to October 23"
         },
         {
             type: "Jujube",
             name: "Chico",
-            harvest_time: ""
+            harvest_time: "September 27 to October 26"
         },
         {
             type: "Jujube",
-            name: "Sugar Cane",
-            harvest_time: ""
+            name: "Sugarcane",
+            harvest_time: "September 21 to October 27"
         },
         {
             type: "Jujube",
             name: "Contorted",
-            harvest_time: ""
+            harvest_time: "September 22 to October 28"
         },
 
         // nectarine
         {
             type: "Nectarine",
             name: "Desert Dawn",
-            harvest_time: ""
+            harvest_time: "May 14 to May 29"
         },
         {
             type: "Nectarine",
             name: "Desert Delight",
-            harvest_time: ""
+            harvest_time: "June 4 to June 24"
         },
         {
             type: "Nectarine",
             name: "Juneglo",
-            harvest_time: ""
+            harvest_time: "June 18 to July 5"
         },
         {
             type: "Nectarine",
             name: "Independence",
-            harvest_time: ""
+            harvest_time: "June 26 to July 11"
         },
         {
             type: "Nectarine",
             name: "Honey Kist",
-            harvest_time: ""
+            harvest_time: "June 28 to July 14"
         },
         {
             type: "Nectarine",
             name: "Harko",
-            harvest_time: ""
+            harvest_time: "June 30 to July 15"
         },
         {
             type: "Nectarine",
             name: "Double Delight",
-            harvest_time: ""
+            harvest_time: "July 3 to July 20"
         },
         {
             type: "Nectarine",
             name: "Mericrest",
-            harvest_time: ""
+            harvest_time: "July 8 to July 21"
         },
         {
             type: "Nectarine",
             name: "Flavortop",
-            harvest_time: ""
+            harvest_time: "July 12 to July 28"
         },
         {
             type: "Nectarine",
             name: "Jolly Red Giant",
-            harvest_time: ""
+            harvest_time: "July 14 to July 31"
         },
         {
             type: "Nectarine",
             name: "Panamint",
-            harvest_time: ""
+            harvest_time: "July 20 to August 5"
         },
         {
             type: "Nectarine",
             name: "Cavalier",
-            harvest_time: ""
+            harvest_time: "July 20 to August 5"
         },
         {
             type: "Nectarine",
             name: "Fantasia",
-            harvest_time: ""
+            harvest_time: "July 24 to August 11"
         },
         {
             type: "Nectarine",
             name: "Zee Glo",
-            harvest_time: ""
+            harvest_time: "August 5 to August 25"
         },
         {
             type: "Nectarine",
             name: "Late Legrand",
-            harvest_time: ""
+            harvest_time: "August 13 to August 28"
         },
         {
             type: "Nectarine",
             name: "Flamekist",
-            harvest_time: ""
+            harvest_time: "August 20 to September 10"
         },
         {
             type: "Nectarine",
             name: "Liz's Late",
-            harvest_time: ""
+            harvest_time: "August 26 to September 11"
         },
 
         // white nectarine
         {
             type: "Nectarine",
             name: "Arctic Star",
-            harvest_time: ""
+            harvest_time: "June 7 to June 24"
         },
         {
             type: "Nectarine",
             name: "Snow Queen",
-            harvest_time: ""
+            harvest_time: "June 18 to July 1"
         },
         {
             type: "Nectarine",
             name: "Arctic Glo",
-            harvest_time: ""
+            harvest_time: "June 22 to July 8"
         },
         {
             type: "Nectarine",
             name: "Atomic Red",
-            harvest_time: ""
+            harvest_time: "June 30 to July 15"
         },
         {
             type: "Nectarine",
             name: "Arctic Jay",
-            harvest_time: ""
+            harvest_time: "July 10 to July 25"
         },
         {
             type: "Nectarine",
             name: "Arctic Rose",
-            harvest_time: ""
+            harvest_time: "July 10 to July 25"
         },
         {
             type: "Nectarine",
             name: "Heavenly White",
-            harvest_time: ""
+            harvest_time: "July 14 to July 31"
         },
         {
             type: "Nectarine",
             name: "Arctic Queen",
-            harvest_time: ""
+            harvest_time: "August 6 to August 26"
         },
         {
             type: "Nectarine",
             name: "Goldmine",
-            harvest_time: ""
+            harvest_time: "August 8 to August 20"
         },
         {
             type: "Nectarine",
             name: "Arctic Blaze",
-            harvest_time: ""
+            harvest_time: "August 19 to September 7"
         },
 
         // plumcot
         {
             type: "Plumcot",
             name: "Plum Parfait",
-            harvest_time: ""
+            harvest_time: "May 30 to June 10"
         },
         {
             type: "Plumcot",
             name: "Flavorella",
-            harvest_time: ""
+            harvest_time: "June 5 to June 20"
         },
 
         // pluerry
         {
             type: "Plumcot",
             name: "Sugar Twist",
-            harvest_time: ""
+            harvest_time: "June 15 to July 10"
         },
         {
             type: "Plumcot",
             name: "Sweet Treat",
-            harvest_time: ""
+            harvest_time: "July 10 to August 5"
         },
         {
             type: "Plumcot",
             name: "Candy Heart",
-            harvest_time: ""
+            harvest_time: "August 13 to September 6"
         },
         {
             type: "Plumcot",
             name: "Flavor Punch",
-            harvest_time: ""
+            harvest_time: "August 30 to September 21"
         },
 
         // apricot
         {
             type: "Apricot",
             name: "Royal Rosa",
-            harvest_time: ""
+            harvest_time: "May 20 to June 5"
         },
         {
             type: "Apricot",
             name: "Katy",
-            harvest_time: ""
+            harvest_time: "May 25 to June 5"
+        },
+        {
+            type: "Apricot",
+            name: "Flavor Giant",
+            harvest_time: "May 25 to June 5"
         },
         {
             type: "Apricot",
             name: "Gold Kist",
-            harvest_time: ""
+            harvest_time: "May 26 to June 5"
         },
         {
             type: "Apricot",
             name: "Flora Gold",
-            harvest_time: ""
+            harvest_time: "May 30 to June 9"
         },
         {
             type: "Apricot",
             name: "Pixie-Cot",
             description: "genetic dwarf",
-            harvest_time: ""
-        },
-        {
-            type: "Apricot",
-            name: "Flavor Giant",
-            harvest_time: ""
+            harvest_time: "May 30 to June 9"
         },
         {
             type: "Apricot",
             name: "Harcot",
-            harvest_time: ""
+            harvest_time: "June 5 to June 17"
         },
         {
             type: "Apricot",
             name: "Goldcot",
-            harvest_time: ""
+            harvest_time: "June 8 to June 21"
         },
         {
             type: "Apricot",
             name: "Chinese",
-            harvest_time: ""
+            harvest_time: "June 10 to June 21"
         },
         {
             type: "Apricot",
-            name: "Tomcot",
-            harvest_time: ""
+            name: "PA7005-8", // AKA: "Tomcot (tm)"
+            harvest_time: "June 10 to June 21"
         },
         {
             type: "Apricot",
             name: "Perfection",
-            harvest_time: ""
+            harvest_time: "June 10 to June 21"
         },
         {
             type: "Apricot",
             name: "Wenatchee Moorpark",
-            harvest_time: ""
+            harvest_time: "June 10 to June 21"
         },
         {
             type: "Apricot",
             name: "Nugget",
-            harvest_time: ""
+            harvest_time: "June 15 to June 28"
         },
         {
             type: "Apricot",
             name: "Rival",
-            harvest_time: ""
+            harvest_time: "June 15 to June 28"
         },
         {
             type: "Apricot",
             name: "Harglow",
-            harvest_time: ""
+            harvest_time: "June 15 to June 27"
         },
         {
             type: "Apricot",
             name: "Tropic Gold",
-            harvest_time: ""
+            harvest_time: "June 19 to June 30"
         },
         {
             type: "Apricot",
             name: "Blenheim",
-            harvest_time: ""
+            harvest_time: "June 25 to July 6"
         },
         {
             type: "Apricot",
             name: "Tilton",
-            harvest_time: ""
+            harvest_time: "July 1 to July 10"
         },
         {
             type: "Apricot",
             name: "Moorpark",
-            harvest_time: ""
+            harvest_time: "July 5 to July 15"
         },
         {
             type: "Apricot",
             name: "Brittany Gold",
-            harvest_time: ""
+            harvest_time: "July 5 to July 30"
         },
         {
             type: "Apricot",
             name: "Montrose",
-            harvest_time: ""
+            harvest_time: "July 13 to August 2"
         },
         {
             type: "Apricot",
             name: "Puget Gold",
-            harvest_time: ""
+            harvest_time: "July 30 to August 9"
         },
         {
             type: "Apricot",
             name: "Hunza",
-            harvest_time: ""
+            harvest_time: "August 1 to August 17"
         },
         {
             type: "Apricot",
             name: "Earli-Autumn",
-            harvest_time: ""
+            harvest_time: "August 2 to August 25"
         },
         {
             type: "Apricot",
             name: "Autumn Glo",
-            harvest_time: ""
+            harvest_time: "August 7 to September 1"
         },
         {
             type: "Apricot",
             name: "Autumn Royal",
-            harvest_time: ""
+            harvest_time: "September 1 to September 25"
         },
 
         // white apricot
         {
             type: "Apricot",
             name: "Canadian White Blenheim",
-            harvest_time: ""
+            harvest_time: "June 25 to July 11"
         },
 
-        // nectaplum
+        // "nectaplum"
         {
             type: "Nectarine",
             name: "Spice Zee",
-            harvest_time: ""
+            harvest_time: "July 16 to August 7"
         },
 
         // walnut
         {
             type: "Walnut",
             name: "Payne",
-            harvest_time: ""
+            harvest_time: "September 14 to October 1"
         },
         {
             type: "Walnut",
             name: "Serr",
-            harvest_time: ""
+            harvest_time: "September 17 to October 2"
         },
         {
             type: "Walnut",
             name: "Ambassador",
-            harvest_time: ""
+            harvest_time: "September 19 to October 5"
         },
         {
             type: "Walnut",
             name: "Placentia",
-            harvest_time: ""
+            harvest_time: "September 19 to October 5"
         },
         {
             type: "Walnut",
             name: "Eureka",
-            harvest_time: ""
+            harvest_time: "September 20 to October 6"
         },
         {
             type: "Walnut",
             name: "Pedro",
-            harvest_time: ""
+            harvest_time: "September 20 to October 6"
         },
         {
             type: "Walnut",
             name: "Idaho",
-            harvest_time: ""
+            harvest_time: "September 22 to October 9"
         },
         {
             type: "Walnut",
             name: "Carmelo",
-            harvest_time: ""
+            harvest_time: "September 22 to October 9"
         },
         {
             type: "Walnut",
             name: "Mesa",
-            harvest_time: ""
+            harvest_time: "September 22 to October 9"
         },
         {
             type: "Walnut",
             name: "Hartley",
-            harvest_time: ""
+            harvest_time: "September 22 to October 9"
         },
         {
             type: "Walnut",
             name: "Chandler",
-            harvest_time: ""
+            harvest_time: "September 25 to October 11"
         },
         {
             type: "Walnut",
             name: "Livermore Red",
-            harvest_time: ""
+            harvest_time: "September 26 to October 14"
         },
         {
             type: "Walnut",
             name: "Franquette",
-            harvest_time: ""
-        },
+            harvest_time: "October 8 to October 25"
+        }
 
         // peach
         {
             type: "Peach",
             name: "Earlitreat",
-            harvest_time: ""
+            harvest_time: "May 10 to May 20"
         },
         {
             type: "Peach",
             name: "Desert Gold",
-            harvest_time: ""
+            harvest_time: "May 24 to June 5"
         },
         {
             type: "Peach",
             name: "Flordaprince",
-            harvest_time: ""
+            harvest_time: "May 25 to June 7"
         },
         {
             type: "Peach",
             name: "May Pride",
-            harvest_time: ""
+            harvest_time: "May 26 to June 7"
         },
         {
             type: "Peach",
             name: "Earligrande",
-            harvest_time: ""
-        },
-        {
-            type: "Peach",
-            name: "Gold Dust",
-            harvest_time: ""
-        },
-        {
-            type: "Peach",
-            name: "Sam Houston",
-            harvest_time: ""
+            harvest_time: "May 26 to June 7"
         },
         {
             type: "Peach",
             name: "Texking",
-            harvest_time: ""
+            harvest_time: "June 5 to June 17"
+        },
+        {
+            type: "Peach",
+            name: "Gold Dust",
+            harvest_time: "June 8 to June 26"
+        },
+        {
+            type: "Peach",
+            name: "Sam Houston",
+            harvest_time: "June 15 to July 2"
         },
         {
             type: "Peach",

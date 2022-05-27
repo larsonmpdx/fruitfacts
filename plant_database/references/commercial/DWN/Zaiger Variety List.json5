@@ -131,7 +131,7 @@
         },
         {
             type: "Apricot",
-            name: "Pixie-Cot (tm)",
+            name: "Pixie-Cot", // claimed tm in some references but no variety name provided
             description: "zaiger. no variety name known. genetic dwarf. retail https://www.davewilson.com/nurseries/products/fruit-trees/apricot/pixie-cot/",
             patent: "claimed ppaf but no patent number known. released nlt 2012 which sets an upper limit on patent duration",
             chill: "500 hours",
