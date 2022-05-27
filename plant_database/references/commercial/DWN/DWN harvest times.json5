@@ -1319,136 +1319,142 @@
             type: "Peach",
             name: "Octoberfest",
             harvest_time: "September 25 to October 15"
-        }
-/*
+        },
+
         // sour cherry
         {
             type: "Sour Cherry",
             name: "Early Richmond",
-            harvest_time: ""
+            harvest_time: "May 21 to June 8"
         },
         {
             type: "Sour Cherry",
             name: "North Star",
-            harvest_time: ""
+            harvest_time: "May 27 to June 12"
         },
         {
             type: "Sour Cherry",
             name: "Montmorency",
-            harvest_time: ""
+            harvest_time: "May 27 to June 18"
         },
         {
             type: "Sour Cherry",
             name: "Meteor",
-            harvest_time: ""
+            harvest_time: "June 5 to June 20"
         },
         {
             type: "Sour Cherry",
             name: "English Morello",
-            harvest_time: ""
+            harvest_time: "June 8 to June 22"
         },
         {
             type: "Sour Cherry",
             name: "Kansas Sweet",
-            harvest_time: ""
+            harvest_time: "June 19 to July 2"
         },
         {
             type: "Sour Cherry",
-            name: "Bali",
-            harvest_time: ""
+            name: "Evans",
+            AKA: ["Bali"],
+            harvest_time: "August 15 to August 30"
         },
 
         // euro plum
         {
             type: "Euro Plum",
             name: "Bavay's Green Gage",
-            harvest_time: ""
+            harvest_time: "July 31 to August 15"
+        },
+        {
+            type: "Euro Plum",
+            name: "Sugar",
+            harvest_time: "August 5 to August 26"
         },
         {
             type: "Euro Plum",
             name: "Early Italian",
-            harvest_time: ""
+            harvest_time: "August 13 to August 28"
         },
         {
             type: "Euro Plum",
-            name: "French Improved",
-            harvest_time: ""
+            name: "Improved French", // "French Improved"
+            harvest_time: "August 15 to September 1"
         },
         {
             type: "Euro Plum",
             name: "Stanley",
-            harvest_time: ""
+            harvest_time: "August 20 to September 1"
         },
         {
             type: "Euro Plum",
             name: "Italian",
-            harvest_time: ""
+            harvest_time: "August 25 to September 6"
         },
         {
             type: "Euro Plum",
             name: "Blue Damson",
-            harvest_time: ""
+            harvest_time: "August 25 to September 6"
         },
 
         // quince
         {
             type: "Quince",
             name: "Orange",
-            harvest_time: ""
+            harvest_time: "September 25 to OCtober 15"
         },
         {
             type: "Quince",
             name: "Pineapple",
-            harvest_time: ""
+            harvest_time: "September 25 to OCtober 15"
         },
         {
             type: "Quince",
             name: "Smyrna",
-            harvest_time: ""
+            harvest_time: "September 25 to OCtober 15"
         },
 
         // almond
         {
             type: "Almond",
-            name: "Non Pareil",
-            harvest_time: ""
+            name: "Nonpareil",
+            harvest_time: "August 20 to September 8"
         },
         {
             type: "Almond",
             name: "Price",
-            harvest_time: ""
+            harvest_time: "August 22 to September 11"
         },
         {
             type: "Almond",
-            name: "Neplus",
-            harvest_time: ""
+            name: "Ne Plus",
+            harvest_time: "September 4 to September 25"
         },
         {
             type: "Almond",
             name: "Peerless",
-            harvest_time: ""
+            harvest_time: "September 7 to September 26"
         },
         {
             type: "Almond",
             name: "Butte",
-            harvest_time: ""
+            harvest_time: "September 16 to October 5"
         },
         {
             type: "Almond",
             name: "Mission",
-            harvest_time: ""
+            harvest_time: "September 20 to October 10"
         },
         {
             type: "Almond",
-            name: "All-In-One",
-            harvest_time: ""
+            name: "All-in-One",
+            harvest_time: "September 20 to October 10"
         },
         {
             type: "Almond",
             name: "Garden Prince",
-            harvest_time: ""
-        },
-
+            harvest_time: "October 1 to Otober 20"
+        }
+/*
         // sweet cherry
         {
             type: "Sweet Cherry",

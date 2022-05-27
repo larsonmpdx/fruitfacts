@@ -2,7 +2,7 @@
   "recommendations": [
     "rust-lang.rust",
     "vadimcn.vscode-lldb",
-    "matklad.rust-analyzer",
+    "rust-lang.rust-analyzer",
     "katjanakosic.vscode-json5",
     "jbockle.jbockle-format-files",
     "numso.prettier-standard-vscode",
