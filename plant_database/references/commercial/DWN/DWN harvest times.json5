@@ -998,7 +998,7 @@
         },
         {
             type: "Walnut",
-            name: "Mesa",
+            name: "Carpathian", // AKA "Mesa"
             harvest_time: "September 22 to October 9"
         },
         {
@@ -1020,7 +1020,7 @@
             type: "Walnut",
             name: "Franquette",
             harvest_time: "October 8 to October 25"
-        }
+        },
 
         // peach
         {
@@ -1030,7 +1030,7 @@
         },
         {
             type: "Peach",
-            name: "Desert Gold",
+            name: "Desertgold",
             harvest_time: "May 24 to June 5"
         },
         {
@@ -1050,7 +1050,7 @@
         },
         {
             type: "Peach",
-            name: "Texking",
+            name: "TexKing",
             harvest_time: "June 5 to June 17"
         },
         {
@@ -1066,257 +1066,261 @@
         {
             type: "Peach",
             name: "June Gold",
-            harvest_time: ""
+            harvest_time: "June 14 to July 3"
         },
         {
             type: "Peach",
             name: "Double Jewel",
-            harvest_time: ""
+            harvest_time: "June 21 to July 5"
         },
         {
             type: "Peach",
             name: "Eva's Pride",
-            harvest_time: ""
-        },
-        {
-            type: "Peach",
-            name: "Redhaven",
-            harvest_time: ""
+            harvest_time: "June 21 to July 9"
         },
         {
             type: "Peach",
             name: "Texstar",
-            harvest_time: ""
+            harvest_time: "June 25 to July 12"
         },
         {
             type: "Peach",
-            name: "Peachy Keen",
-            harvest_time: ""
+            name: "Redhaven",
+            harvest_time: "June 28 to July 10"
+        },
+        {
+            type: "Peach",
+            name: "Chapman", // AKA: "Peachy Keen (r)"
+            harvest_time: "June 30 to July 19"
         },
         {
             type: "Peach",
             name: "June Pride",
-            harvest_time: ""
+            harvest_time: "July 2 to July 19"
         },
         {
             type: "Peach",
             name: "Harken",
-            harvest_time: ""
+            harvest_time: "July 3 to July 18"
         },
         {
             type: "Peach",
             name: "Mid-Pride",
-            harvest_time: ""
+            harvest_time: "July 8 to July 28"
         },
         {
             type: "Peach",
             name: "Reliance",
-            harvest_time: ""
+            harvest_time: "July 11 to July 25"
         },
         {
             type: "Peach",
             name: "Suncrest",
-            harvest_time: ""
+            harvest_time: "July 11 to July 25"
         },
         {
             type: "Peach",
             name: "Canadian Harmony",
-            harvest_time: ""
+            harvest_time: "July 11 to July 26"
         },
         {
             type: "Peach",
             name: "Frost",
-            harvest_time: ""
+            harvest_time: "July 11 to July 26"
         },
         {
             type: "Peach",
             name: "Halehaven",
-            harvest_time: ""
+            harvest_time: "July 13 to July 23"
         },
         {
             type: "Peach",
             name: "Veteran",
-            harvest_time: ""
+            harvest_time: "July 13 to July 25"
         },
         {
             type: "Peach",
             name: "Santa Barbara",
-            harvest_time: ""
+            harvest_time: "July 13 to July 26"
         },
         {
             type: "Peach",
             name: "July Elberta",
             AKA: ["Kim Elberta"],
-            harvest_time: ""
+            harvest_time: "July 13 to July 28"
         },
         {
             type: "Peach",
             name: "Saturn (yellow)",
-            harvest_time: ""
+            harvest_time: "July 14 to July 24"
         },
         {
             type: "Peach",
             name: "Loring",
-            harvest_time: ""
+            harvest_time: "July 14 to July 31"
         },
         {
             type: "Peach",
             name: "Harvester",
-            harvest_time: ""
+            harvest_time: "July 15 to July 31"
         },
         {
             type: "Peach",
             name: "Scarlet Robe",
-            harvest_time: ""
+            harvest_time: "July 16 to July 31"
         },
         {
             type: "Peach",
             name: "Improved Elberta",
             AKA: ["Gleason Elberta", "Lemon Elberta"],
-            harvest_time: ""
-        },
-        {
-            type: "Peach",
-            name: "Red Baron",
-            harvest_time: ""
+            harvest_time: "July 18 to July 28"
         },
         {
             type: "Peach",
             name: "Cresthaven",
-            harvest_time: ""
+            harvest_time: "July 18 to August 5"
         },
         {
             type: "Peach",
-            name: "Fortyniner",
-            harvest_time: ""
+            name: "Red Baron",
+            harvest_time: "July 18 to August 1"
+        },
+        {
+            type: "Peach",
+            name: "Forty-Niner",
+            harvest_time: "July 18 to August 6"
         },
         {
             type: "Peach",
             name: "Baby Crawford",
-            harvest_time: ""
+            harvest_time: "July 20 to August 6"
         },
         {
             type: "Peach",
             name: "Muir",
-            harvest_time: ""
+            harvest_time: "July 20 to August 4"
+        },
+        {
+            type: "Peach",
+            name: "John Fanick",
+            harvest_time: "July 21 to August 4"
         },
         {
             type: "Peach",
             name: "Ranger",
-            harvest_time: ""
+            harvest_time: "July 22 to August 4"
         },
         {
             type: "Peach",
             name: "Bonita",
-            harvest_time: ""
+            harvest_time: "July 24 to August 6"
         },
         {
             type: "Peach",
             name: "J.H. Hale",
-            harvest_time: ""
+            harvest_time: "July 25 to August 10"
         },
         {
             type: "Peach",
             name: "Redskin Elberta",
-            harvest_time: ""
+            harvest_time: "July 25 to August 10"
         },
         {
             type: "Peach",
             name: "Elberta",
-            harvest_time: ""
+            harvest_time: "July 27 to August 13"
         },
         {
             type: "Peach",
             name: "Fantastic Elberta",
-            harvest_time: ""
+            harvest_time: "July 29 to August 15"
         },
         {
             type: "Peach",
             name: "Fay Elberta",
-            harvest_time: ""
+            harvest_time: "July 29 to August 15"
         },
         {
             type: "Peach",
             name: "Peregrine",
-            harvest_time: ""
+            harvest_time: "August 1 to August 15"
         },
         {
             type: "Peach",
             name: "Dixon Cling",
-            harvest_time: ""
+            harvest_time: "August 1 to August 15"
         },
         {
             type: "Peach",
             name: "August Pride",
-            harvest_time: ""
+            harvest_time: "August 4 to August 18"
         },
         {
             type: "Peach",
             name: "Rio Oso Gem",
-            harvest_time: ""
+            harvest_time: "August 10 to August 26"
         },
-        //
         {
             type: "Peach",
             name: "Orange Cling",
-            harvest_time: ""
+            harvest_time: "August 13 to August 27"
         },
         {
             type: "Peach",
             name: "O'Henry",
-            harvest_time: ""
+            harvest_time: "August 13 to August 28"
         },
         {
             type: "Peach",
             name: "Kaweah",
-            harvest_time: ""
+            harvest_time: "August 14 to September 3"
         },
         {
             type: "Peach",
-            name: "Tropi-Berta",
-            harvest_time: ""
+            name: "Belle of Georgia",
+            harvest_time: "August 14 to September 2"
         },
         {
             type: "Peach",
             name: "Contender",
-            harvest_time: ""
+            harvest_time: "August 15 to September 3"
         },
         {
             type: "Peach",
-            name: "Belle Of Georgia",
-            harvest_time: ""
+            name: "Tropi-Berta",
+            harvest_time: "August 15 to September 3"
         },
         {
             type: "Peach",
             name: "Sweet Bagel",
-            harvest_time: ""
+            harvest_time: "August 20 to September 10"
         },
         {
             type: "Peach",
             name: "Halford Cling",
-            harvest_time: ""
+            harvest_time: "August 23 to September 6"
         },
         {
             type: "Peach",
             name: "Summerset",
-            harvest_time: ""
+            harvest_time: "August 23 to September 10"
         },
         {
             type: "Peach",
             name: "Fairtime",
-            harvest_time: ""
+            harvest_time: "September 10 to September 25"
         },
         {
             type: "Peach",
             name: "Carnival",
-            harvest_time: ""
+            harvest_time: "September 25 to October 9"
         },
         {
             type: "Peach",
             name: "Octoberfest",
-            harvest_time: ""
-        },
-
+            harvest_time: "September 25 to October 15"
+        }
+/*
         // sour cherry
         {
             type: "Sour Cherry",
