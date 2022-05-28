@@ -1,0 +1,277 @@
+{
+    title: "ACN Maturity Chart",
+    url: "https://www.acnursery.com/doc/8/ACN-maturity-chart.pdf",
+    published: "2021",
+    accessed: "May 2022",
+    type: "nursery catalog",
+    needs_help: true,
+    locations: [
+        {
+            name: "Aspers, PA",
+            latitude: 39.97124597962969,
+            longitude: -77.21505276527739
+        }
+    ],
+    plants: [
+        {
+            // yellow peaches
+Rich May
+Desiree®
+Pf 5D Big
+Earlystar®
+Sentry
+Garnet Beauty
+Summer Serenade®
+Glenglo™
+Gala Peach
+Pf 8 Ball
+Reliance
+Starfire®
+Evelynn™
+Redhaven
+Felicia™
+Pf 9a-007
+Blazingstar®
+Bellaire
+PF Lucky 13
+John Boy®
+John Boy® Ii
+PF 17
+Crimson Rocket
+Sunhigh
+Glohaven
+Coralstar®
+Veteran
+Bounty
+Allstar™
+Flavrburst™
+Contender
+PF 19-007
+Loring
+PF24-007
+Canadian Harmony
+Sweet-n-Up
+PF 23
+Julyprince
+Gloria®
+Madison
+Glowingstar®
+Messina®
+Cresthaven
+Redskin
+Jerseyqueen
+PF 27A
+Selena™
+Summerfest™
+Tiana™
+PF 28-007
+Encore
+Autumnstar®
+Laurol
+Victoria®
+
+// Apples
+Yellow Transparent
+Lodi
+Pristine
+
+Wildfire™ Gala
+Ginger Gold®
+Zestar!®
+Premier Honeycrisp®
+Dandee Red
+Sansa
+
+Initial™
+Summer Rambo
+Jonamac
+Fulford Gala
+Blondee®
+Crimson® Gala
+Gale® Gala
+Gala (Simmons Cultivar)
+Ultima Gala®
+Rubymac®
+Marshall Mcintosh
+Pioneer™ Mac
+Honeycrisp
+Honeycrisp (Minnb42)
+Royal Red Honeycrisp®
+Firestorm™
+Daybreak™ Fuji
+Crimsoncrisp®
+Crimson® Gold
+Royal Court®
+Cortland
+Autumn Crisp
+Improved Red Jonathan
+Wolf River
+Macoun
+Liberty
+Golden Delicious
+Bonita™
+Rubyrush™
+Da Rosa®
+Super Chief® Red Delicious
+Grimes Golden
+Ambrosia
+Galarina™
+Crown™ Empire
+Royal® Empire
+Hampshire™ Mac
+Freedom
+Smerelda Cltv.
+Wilton's® Red Jonaprince
+MAIA11
+Keepsake
+Shizuka
+Idared
+Melrose
+Autumn Gala
+Story®
+Northern Spy
+Smokehouse
+Nova Spy
+MAIA-L
+Cameo™
+Red Cameo™
+Law Red Rome
+Nittany
+Albemarle Pippin
+Querina®
+Winecrisp™
+Mutsu
+Suncrisp®
+Pink Lady® (Barnsby Cultivar)
+Snapp™ Stayman
+Red Yorking
+Red Winesap
+Enterprise™
+Taylor Spur Rome
+Kumeu Crimson® Braeburn
+MAIA1
+Aztec Fuji®
+Arkansas Black
+Granny Smith
+Goldrush
+Pink Lady® (Ruby Pink)
+Pink Lady® (Cripps Pink)
+
+
+// apricot
+Early Blush
+Ilona™
+Goldrich
+Robada
+Orangered®
+Harcot
+Harostar
+Hargrande
+Harogem
+Harlayne
+
+// white peaches
+Spring Snow
+Erly Red Fre
+Sugar May
+July Rose™
+Anna Rose™
+White Lady
+Raritan Rose
+Klondike White
+Sugar Giant
+Blushingstar®
+August Rose™
+Snow Giant
+September Snow
+
+// euro/asian pears
+Sunrise
+Red Clapp's
+Shinsui
+AC™ Harrow Crisp
+Bartlett
+Bell
+Red Bartlett
+Shinseiki
+Kosui
+Hosui
+Blake's Pride
+Potomac
+Seckel
+Harrow Sweet
+Shenandoah
+Cold Snap®
+Magness
+Beurre D'anjou
+Golden Russet Bosc
+Niitaka
+Yoinashi™
+Atago
+Shinko
+Olympic
+
+// plums and plum hybrids
+Spring Satin Plumcot
+Early Golden
+Methley
+Shiro
+Au Rosa
+Green Gage
+Santa Rosa
+Castleton™
+Black Amber
+Wickson
+Satsuma
+Vanier
+Queen Rosa
+Flavor Queen Pluot®
+Dapple Dandy Pluot®
+Long John
+NY9®
+Flavor King Pluot®
+Fortune
+Stanley
+Bluebyrd
+Valor
+Ruby Queen
+Flavor Grenade Pluot®
+Flavor Heart Pluot®
+Victory
+Vision
+President
+Flavorich Pluot®
+
+// flat peaches
+Orion™
+Buenos™
+Buenos™ II
+Galaxy
+Saturn
+Galactica
+Tangos®
+Tangos® II
+
+// yellow nectarines
+Easternglo
+Avalon™
+Brigantine™
+Nectafest
+Summer Beaut
+Sunglo
+Flavortop
+Redgold
+Fantasia
+Ambre™
+
+// white nectarines
+Jade™
+Silvergem®
+Arctic Sweet
+Silverglo™
+Emeraude™
+Zephyr™
+
+        }
+    ]
+}

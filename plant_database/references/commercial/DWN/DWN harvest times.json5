@@ -5,6 +5,7 @@
     accessed: "March 2022",
     type: "nursery catalog",
     needs_help: true,
+    harvest_time_devalue_factor: 1.6, // this is mostly good, but I knocked it down a bit based on the cherry harvest times being a few days out-of-order compared to every other reference I have
     locations: [
         {
             name: "Hickman, CA",
@@ -13,8 +14,8 @@
         }
     ],
     plants: [
-        // todo - because some of the dates on the DWN individual variety pages are from mixed locations,
-        // this chart is an important source because they're all from Hickman, CA
+        //  because some of the dates on the DWN individual variety pages are from mixed locations,
+        // this chart is an important source because they're all (in theory) from Hickman, CA
         // this is also one of the charts I want to be sure to be able to replicate (in terms of features and quality)
 
         // pluot
@@ -1453,153 +1454,148 @@
             type: "Almond",
             name: "Garden Prince",
             harvest_time: "October 1 to Otober 20"
-        }
-/*
+        },
+
         // sweet cherry
         {
             type: "Sweet Cherry",
             name: "Minnie Royal",
-            harvest_time: ""
+            harvest_time: "May 10 to May 23"
         },
         {
             type: "Sweet Cherry",
             name: "Black Tartarian",
-            harvest_time: ""
+            harvest_time: "May 10 to May 30"
         },
         {
             type: "Sweet Cherry",
             name: "Royal Crimson",
-            harvest_time: ""
+            harvest_time: "May 11 to May 31"
         },
         {
             type: "Sweet Cherry",
             name: "Royal Lee",
-            harvest_time: ""
+            harvest_time: "May 12 to May 31"
         },
         {
             type: "Sweet Cherry",
             name: "Craig's Crimson",
-            harvest_time: ""
+            harvest_time: "May 13 to May 31"
         },
         {
             type: "Sweet Cherry",
             name: "Brooks",
-            harvest_time: ""
+            harvest_time: "May 15 to May 31"
         },
         {
             type: "Sweet Cherry",
             name: "Royal Rainier",
-            harvest_time: ""
-        },
-        {
-            type: "Sweet Cherry",
-            name: "Brooks",
-            harvest_time: ""
+            harvest_time: "May 18 to June 4"
         },
         {
             type: "Sweet Cherry",
             name: "Utah Giant",
-            harvest_time: ""
+            harvest_time: "May 19 to June 6"
         },
         {
             type: "Sweet Cherry",
             name: "Rainier",
-            harvest_time: ""
+            harvest_time: "May 22 to June 9"
         },
         {
             type: "Sweet Cherry",
             name: "Bing",
-            harvest_time: ""
+            harvest_time: "May 22 to June 9"
         },
         {
             type: "Sweet Cherry",
             name: "Compact Stella",
-            harvest_time: ""
+            harvest_time: "May 24 to June 11"
         },
         {
             type: "Sweet Cherry",
             name: "Royal Ann",
-            harvest_time: ""
+            harvest_time: "May 26 to June 12"
         },
         {
             type: "Sweet Cherry",
             name: "Van",
-            harvest_time: ""
+            harvest_time: "May 26 to June 12"
         },
         {
             type: "Sweet Cherry",
             name: "Stella",
-            harvest_time: ""
+            harvest_time: "May 30 to June 13"
         },
         {
             type: "Sweet Cherry",
             name: "Lambert",
-            harvest_time: ""
+            harvest_time: "May 30 to June 13"
         },
         {
             type: "Sweet Cherry",
             name: "Lapins",
-            harvest_time: ""
+            harvest_time: "May 30 to June 13"
         },
         {
             type: "Sweet Cherry",
             name: "Sweetheart",
-            harvest_time: ""
+            harvest_time: "June 3 to June 20"
         },
         {
             type: "Sweet Cherry",
             name: "Mona",
-            // this is almost certainly mis-placed on the chart, other sources have it as "with black tartarian"
-            harvest_time: ""
+            // this is almost certainly mis-placed on the chart, other sources have it as "with black tartarian" so I changed it to that time
+            harvest_time: "May 10 to May 30"
         },
 
         // "peach plum"
         {
             type: "Peach",
             name: "Tri-Lite",
-            harvest_time: ""
+            harvest_time: "July 5 to July 28"
         },
 
         // genetic dwarf peach
         {
             type: "Peach",
             name: "Eldorado",
-            harvest_time: ""
+            harvest_time: "May 30 to June 15"
         },
         {
             type: "Peach",
             name: "Bonanza",
-            harvest_time: ""
+            harvest_time: "June 17 to June 28"
         },
         {
             type: "Peach",
             name: "Pix Zee",
-            harvest_time: ""
+            harvest_time: "JUne 25 to July 10"
         },
         {
             type: "Peach",
             name: "Honey Babe",
-            harvest_time: ""
+            harvest_time: "July 1 to July 15"
         },
         {
             type: "Peach",
             name: "Snow Babe",
-            harvest_time: ""
+            harvest_time: "July 16 to August 2"
         },
         {
             type: "Peach",
             name: "Flory",
-            harvest_time: ""
+            harvest_time: "July 18 to August 3"
         },
         {
             type: "Peach",
             name: "Garden Sun",
-            harvest_time: ""
+            harvest_time: "August 5 to August 18"
         },
         {
             type: "Peach",
             name: "Garden Gold",
-            harvest_time: ""
+            harvest_time: "August 10 to August 27"
         },
 
         // genetic dwarf nectarine
@@ -1607,33 +1603,316 @@
             type: "Nectarine",
             name: "Arctic Babe",
             description: "white flesh",
-            harvest_time: ""
+            harvest_time: "June 2 to June 15"
         },
         {
             type: "Nectarine",
             name: "Necta Zee",
-            harvest_time: ""
+            harvest_time: "June 18 to June 29"
         },
         {
             type: "Nectarine",
             name: "Sol Dorado",
-            harvest_time: ""
+            harvest_time: "July 1 to July 10"
         },
         {
             type: "Nectarine",
             name: "Nectar Babe",
-            harvest_time: ""
+            harvest_time: "July 3 to July 14"
         },
         {
             type: "Nectarine",
             name: "Garden Delight",
-            harvest_time: ""
+            harvest_time: "August 10 to August 25"
         },
         {
             type: "Nectarine",
             name: "Arctic Sprite",
-            harvest_time: ""
+            harvest_time: "August 10 to August 25"
+        },
+
+        // apples
+        {
+            type: "Apple",
+            name: "Yellow Transparent",
+            harvest_time: "June 8 to June 28"
+        },
+        {
+            type: "Apple",
+            name: "Ein Shemer",
+            harvest_time: "June 20 to July 1"
+        },
+        {
+            type: "Apple",
+            name: "Dorsett Golden",
+            harvest_time: "June 25 to July 10"
+        },
+        {
+            type: "Apple",
+            name: "Anna",
+            harvest_time: "June 30 to July 25"
+        },
+        {
+            type: "Apple",
+            name: "Ghost",
+            harvest_time: "July 2 to July 22"
+        },
+        {
+            type: "Crabapple",
+            name: "Dolgo",
+            harvest_time: "July 2 to July 20"
+        },
+        {
+            type: "Apple",
+            name: "Beverly Hills",
+            harvest_time: "July 10 to July 25"
+        },
+        {
+            type: "Apple",
+            name: "Red Gravenstein",
+            harvest_time: "July 15 to July 31"
+        },
+        {
+            type: "Apple",
+            name: "Gravenstein",
+            harvest_time: "July 19 to August 5"
+        },
+        {
+            type: "Apple",
+            name: "Honeycrisp", // the chart slaps a "tm" on this, but a trivial amount of research shows that honeycrisp is actually the poster child of failed trademarking
+            harvest_time: "August 3 to August 18"
+        },
+        {
+            type: "Apple",
+            name: "Akane",
+            harvest_time: "August 6 to August 22"
+        },
+        {
+            type: "Apple",
+            name: "Apple Babe",
+            harvest_time: "August 10 to AUgust 24"
+        },
+        {
+            type: "Apple",
+            name: "Gala",
+            harvest_time: "August 10 to August 27"
+        },
+        {
+            type: "Apple",
+            name: "Mollie's Delicious",
+            harvest_time: "August 14 to August 27"
+        },
+        {
+            type: "Apple",
+            name: "Cortland",
+            harvest_time: "August 15 to August 31"
+        },
+        {
+            type: "Apple",
+            name: "McIntosh",
+            harvest_time: "August 15 to August 31"
+        },
+        {
+            type: "Apple",
+            name: "Cox's Orange Pippin",
+            harvest_time: "August 18 to September 4"
+        },
+        {
+            type: "Apple",
+            name: "Empire",
+            harvest_time: "August 18 to September 4"
+        },
+        {
+            type: "Apple",
+            name: "Jonathan",
+            harvest_time: "August 20 to September 6"
+        },
+        {
+            type: "Apple",
+            name: "Red Delicious (Bisbee)",
+            harvest_time: "August 22 to September 7"
+        },
+        {
+            type: "Apple",
+            name: "Red Delicious (Harrold)",
+            harvest_time: "August 22 to September 7"
+        },
+        {
+            type: "Apple",
+            name: "Wealthy",
+            harvest_time: "August 25 to September 10"
+        },
+        {
+            type: "Apple",
+            name: "Garden Delicious",
+            harvest_time: "August 25 to September 10"
+        },
+        {
+            type: "Apple",
+            name: "Snow",
+            AKA: ["Snow Fameuse", "Fameuse"],
+            harvest_time: "August 25 to September 14"
+        },
+        {
+            type: "Apple",
+            name: "Gordon",
+            harvest_time: "August 31 to September 20"
+        },
+        {
+            type: "Apple",
+            name: "Liberty",
+            harvest_time: "September 2 to September 20"
+        },
+        {
+            type: "Apple",
+            name: "Golden Delicious",
+            harvest_time: "September 5 to September 20"
+        },
+        {
+            type: "Apple",
+            name: "Ashmead's Kernel",
+            harvest_time: "September 5 to September 20"
+        },
+        {
+            type: "Apple",
+            name: "Bramley's Seedling",
+            harvest_time: "September 5 to September 20"
+        },
+        {
+            type: "Apple",
+            name: "King",
+            AKA: ["Tompkins", "King of Tompkins"],
+            harvest_time: "September 5 to September 20"
+        },
+        {
+            type: "Apple",
+            name: "Jonagold",
+            harvest_time: "September 10 to September 25"
+        },
+        {
+            type: "Apple",
+            name: "Winter Banana",
+            harvest_time: "September 10 to September 25"
+        },
+        {
+            type: "Apple",
+            name: "Calville Blanc",
+            harvest_time: "September 13 to September 27"
+        },
+        {
+            type: "Apple",
+            name: "Northern Spy",
+            harvest_time: "September 15 to September 30"
+        },
+        {
+            type: "Apple",
+            name: "Hudson's Golden Gem",
+            harvest_time: "September 15 to October 3"
+        },
+        {
+            type: "Apple",
+            name: "Mutsu", // AKA "Crispin"
+            harvest_time: "September 15 to October 7"
+        },
+        {
+            type: "Apple",
+            name: "Spitzenburg",
+            harvest_time: "September 20 to October 5"
+        },
+        {
+            type: "Apple",
+            name: "Stayman Winesap",
+            harvest_time: "September 20 to October 5"
+        },
+        {
+            type: "Apple",
+            name: "Golden Russet",
+            harvest_time: "September 20 to October 5"
+        },
+        {
+            type: "Apple",
+            name: "Pettingill",
+            harvest_time: "September 20 to October 5"
+        },
+        {
+            type: "Apple",
+            name: "White Winter Pearmain",
+            harvest_time: "September 20 to October 7"
+        },
+        {
+            type: "Apple",
+            name: "Fuji",
+            harvest_time: "September 20 to October 11"
+        },
+        {
+            type: "Apple",
+            name: "Red Fuji",
+            harvest_time: "September 25 to October 10"
+        },
+        {
+            type: "Apple",
+            name: "Lady Williams",
+            harvest_time: "September 25 to October 16"
+        },
+        {
+            type: "Apple",
+            name: "Belle de Boskoop",
+            harvest_time: "October 4 to October 25"
+        },
+        {
+            type: "Apple",
+            name: "Arkansas Black Spur",
+            harvest_time: "October 5 to October 25"
+        },
+        {
+            type: "Apple",
+            name: "Braeburn",
+            harvest_time: "October 5 to October 25"
+        },
+        {
+            type: "Apple",
+            name: "Sierra Beauty",
+            harvest_time: "October 5 to October 25"
+        },
+        {
+            type: "Apple",
+            name: "King David",
+            harvest_time: "October 5 to October 31"
+        },
+        {
+            type: "Apple",
+            name: "Yellow Newton Pippin",
+            harvest_time: "October 5 to November 5"
+        },
+        {
+            type: "Apple",
+            name: "Pink Pearl",
+            harvest_time: "October 10 to November 5"
+        },
+        {
+            type: "Apple",
+            name: "Rome Beauty",
+            harvest_time: "October 10 to November 5"
+        },
+        {
+            type: "Apple",
+            name: "Granny Smith",
+            harvest_time: "October 10 to November 10"
+        },
+        {
+            type: "Apple",
+            name: "Cripps Pink", // AKA "Pink Lady®
+            harvest_time: "October 15 to November 10"
+        },
+        {
+            type: "Apple",
+            name: "Sundowner",
+            harvest_time: "October 16 to November 11"
+        },
+        {
+            type: "Apple",
+            name: "Waltana",
+            harvest_time: "October 22 to November 7"
         }
-        */
     ]
 }

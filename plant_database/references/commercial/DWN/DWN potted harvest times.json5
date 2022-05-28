@@ -4,7 +4,10 @@
     published: "2021",
     accessed: "March 2022",
     type: "nursery catalog",
-    needs_help: true,
+    needs_help: true, // todo
+    harvest_time_devalue_factor: 3,
+    // I lowered this because the blueberry harvest times are pretty rough compared to other references (legacy and elliot shouldn't be at the same time, for example)
+    // this indicates the whole chart is suspect
     locations: [
         {
             name: "Hickman, CA",
@@ -13,6 +16,630 @@
         }
     ],
     plants: [
-        // todo
+        // blueberry
+        {
+            type: "Blueberry",
+            name: "O'Neal",
+            harvest_time: "May 2 to May 16"
+        },
+        {
+            type: "Blueberry",
+            name: "Jubilee",
+            harvest_time: "May 10 to May 26"
+        },
+        {
+            type: "Blueberry",
+            name: "Misty",
+            harvest_time: "May 10 to May 26"
+        },
+        {
+            type: "Blueberry",
+            name: "Blueray",
+            harvest_time: "May 23 to June 9"
+        },
+        {
+            type: "Blueberry",
+            name: "Bluecrop",
+            harvest_time: "June 2 to June 17"
+        },
+        {
+            type: "Blueberry",
+            name: "Tophat",
+            harvest_time: ""
+        },
+        {
+            type: "Blueberry",
+            name: "Reveille",
+            harvest_time: "June 2 to June 17"
+        },
+        {
+            type: "Blueberry",
+            name: "Sharpblue",
+            harvest_time: "June 2 to June 17"
+        },
+        {
+            type: "Blueberry",
+            name: "Southmoon",
+            harvest_time: "June 2 to June 17"
+        },
+        {
+            type: "Blueberry",
+            name: "Pink Lemonade",
+            harvest_time: "June 2 to June 17"
+        },
+        {
+            type: "Blueberry",
+            name: "Sunshine Blue",
+            harvest_time: "June 12 to June 27"
+        },
+        {
+            type: "Blueberry",
+            name: "Emerald",
+            harvest_time: "June 12 to June 27"
+        },
+        {
+            type: "Blueberry",
+            name: "Jewell",
+            harvest_time: "June 12 to June 27"
+        },
+        {
+            type: "Blueberry",
+            name: "Elliott",
+            harvest_time: "June 23 to July 14"
+        },
+        {
+            type: "Blueberry",
+            name: "Legacy",
+            harvest_time: "June 23 to July 14"
+        },
+
+// bushel and berry - todo - figure out variety names
+        {
+            type: "Blueberry",
+            name: "ZF06-079",
+            AKA: ["Pink Icing®"], // "bushel and berry"
+            description: "https://www.bushelandberry.com/pink-icing", // todo - a page just for "bushel and berry" stuff?
+            patent: "https://patents.google.com/patent/USPP23336 expires 2031-09-14", // todo - other fall creek blueberry patents
+            harvest_time: "June 15 to July 15"
+        },
+        {
+            type: "Blueberry",
+            name: "ZF06-043",
+            AKA: ["Peach Sorbet®"], // "bushel and berry"
+            description: "https://www.bushelandberry.com/peach-sorbet",
+            patent: "https://patents.google.com/patent/USPP23325 expires 2031-09-14",
+            harvest_time: "June 15 to July 15"
+        },
+        {
+            type: "Blueberry",
+            name: "ZF06-179",
+            AKA: ["Jelly Bean®"], // "bushel and berry"
+            description: "https://www.bushelandberry.com/jelly-bean",
+            patent: "https://patents.google.com/patent/USPP24662 expires 2032-08-09",
+            harvest_time: "June 25 to July 25"
+        },
+                {
+            type: "Blackberry",
+            name: "APF-236T",
+            AKA: ["Baby Cakes®"], // "bushel and berry"
+            description: "https://www.bushelandberry.com/baby-cakes",
+            patent: "https://patents.google.com/patent/USPP27032 expires 2035-03-08",
+            harvest_time: "July 15 to August 15"
+        },
+        {
+            type: "Raspberry",
+            name: "NR7", // todo - look at other raspberries from this program under inventor "harvey k. hall"
+            AKA: ["Raspberry Shortcake®", "Ruby Beauty®"], // "bushel and berry"
+            description: "https://www.bushelandberry.com/raspberry-shortcake https://journals.ashs.org/hortsci/view/journals/hortsci/51/1/article-p112.xml",
+            patent: "https://patents.google.com/patent/USPP22141 expires 2030-02-26",
+            harvest_time: "July 15 to August 15"
+        },
+
+// euro table grapes
+        {
+            type: "Grape",
+            name: "Black Monukka Seedless",
+            harvest_time: "August 4 to August 30",
+            description: "euro table grape"
+        },
+        {
+            type: "Grape",
+            name: "Crimson Seedless",
+            harvest_time: "August 6 to August 31",
+            description: "euro table grape"
+        },
+        {
+            type: "Grape",
+            name: "Flame Seedless",
+            harvest_time: "August 6 to September 1",
+            description: "euro table grape"
+        },
+        {
+            type: "Grape",
+            name: "Golden Muscat",
+            harvest_time: "August 6 to September 2",
+            description: "euro table grape"
+        },
+        {
+            type: "Grape",
+            name: "Princess Seedless",
+            harvest_time: "August 6 to September 2",
+            description: "euro table grape"
+        },
+        {
+            type: "Grape",
+            name: "Ruby Seedless",
+            harvest_time: "August 10 to September 1",
+            description: "euro table grape"
+        },
+        {
+            type: "Grape",
+            name: "Red Globe",
+            harvest_time: "August 11 to September 1",
+            description: "euro table grape"
+        },
+        {
+            type: "Grape",
+            name: "Thompson Seedless",
+            harvest_time: "August 12 to September 8",
+            description: "euro table grape"
+        },
+
+// hops
+        {
+            type: "Hops",
+            name: "Cascade",
+            harvest_time: "August 22 to September 7"
+        },
+        {
+            type: "Hops",
+            name: "Centennial",
+            harvest_time: "August 24 to September 9"
+        },
+
+// fig
+        {
+            type: "Fig",
+            name: "Black Mission",
+            harvest_time: "August 18 to September 7"
+        },
+        {
+            type: "Fig",
+            name: "Conadria",
+            harvest_time: "August 21 to September 10"
+        },
+        {
+            type: "Fig",
+            name: "Ischia",
+            harvest_time: "August 21 to September 10"
+        },
+        {
+            type: "Fig",
+            name: "White Genoa",
+            harvest_time: "August 21 to September 10"
+        },
+        {
+            type: "Fig",
+            name: "Excel",
+            harvest_time: "August 21 to September 10"
+        },
+        {
+            type: "Fig",
+            name: "Violette de Bordeaux",
+            harvest_time: "August 26 to September 14"
+        },
+        {
+            type: "Fig",
+            name: "Black Jack",
+            harvest_time: "August 27 to September 16"
+        },
+        {
+            type: "Fig",
+            name: "Flanders",
+            harvest_time: "August 29 to September 17"
+        },
+        {
+            type: "Fig",
+            name: "Desert King",
+            harvest_time: "September 1 to September 19"
+        },
+        {
+            type: "Fig",
+            name: "Panache 'Tiger'",
+            harvest_time: "September 6 to September 25"
+        },
+        {
+            type: "Fig",
+            name: "Janice Seedless",
+            harvest_time: "September 13 to October 1"
+        },
+        {
+            type: "Fig",
+            name: "Kadota",
+            harvest_time: "September 13 to October 1"
+        },
+        {
+            type: "Fig",
+            name: "Lattarula",
+            harvest_time: "September 14 to October 2"
+        },
+        {
+            type: "Fig",
+            name: "Osbourne Prolific",
+            harvest_time: "September 15 to October 3"
+        },
+        {
+            type: "Fig",
+            name: "Brown Turkey",
+            harvest_time: "September 15 to October 4"
+        },
+        {
+            type: "Fig",
+            name: "Peter's Honey",
+            harvest_time: "September 16 to October 5"
+        },
+        {
+            type: "Fig",
+            name: "Texas Blue Giant",
+            harvest_time: "September 16 to October 5"
+        },
+        {
+            type: "Fig",
+            name: "Texas Everbearing",
+            harvest_time: "September 17 to October 7"
+        },
+        {
+            type: "Fig",
+            name: "Celestial",
+            harvest_time: "September 19 to October 7"
+        },
+        {
+            type: "Fig",
+            name: "Chicago Hardy",
+            harvest_time: "September 19 to October 8"
+        }
+
+// Blackberry
+
+        {
+            type: "Blackberry",
+            name: "Navajo",
+            harvest_time: "May 20 to June 20"
+        },
+        {
+            type: "Blackberry",
+            name: "Kiowa",
+            harvest_time: "June 3 to July 3"
+        },
+        {
+            type: "Blackberry",
+            name: "Prime Ark Freedom",
+            harvest_time: "June 5 to July 5"
+        },
+        {
+            type: "Blackberry",
+            name: "Olallie",
+            harvest_time: "June 20 to July 20"
+        },
+        {
+            type: "Blackberry",
+            name: "Black Satin",
+            harvest_time: "July 5 to August 5"
+        },
+        {
+            type: "Blackberry",
+            name: "Triple Crown",
+            harvest_time: "July 15 to August 15"
+        },
+        {
+            type: "Blackberry",
+            name: "Snowbank",
+            harvest_time: "July 15 to August 15"
+        },
+        {
+            type: "Blackberry",
+            name: "Marion",
+            harvest_time: "July 20 to August 20"
+        },
+        {
+            type: "Blackberry",
+            name: "Chester",
+            harvest_time: "August 5 to September 5"
+        },
+
+// gooseberry
+        {
+            type: "Gooseberry",
+            name: "Hinnommaki Red",
+            harvest_time: "July 5 to July 25"
+        },
+        {
+            type: "Gooseberry",
+            name: "Pixwell",
+            harvest_time: "July 5 to July 25"
+        },
+        {
+            type: "Gooseberry",
+            name: "Black Velvet",
+            harvest_time: "July 15 to August 5"
+        },
+
+// American hybrid grape
+        {
+            type: "Grape",
+            name: "Blueberry", // DWN claims a trademark but I think it's invalid due to genericization (they provide no variety name)
+            harvest_time: "August 8 to September 44",
+            description: "American hybrid grape"
+        },
+        {
+            type: "Grape",
+            name: "Canadice Seedless",
+            harvest_time: "August 11 to September 5",
+            description: "American hybrid grape"
+        },
+        {
+            type: "Grape",
+            name: "Eastern Concord",
+            harvest_time: "August 11 to September 5",
+            description: "American hybrid grape"
+        },
+        {
+            type: "Grape",
+            name: "Concord Seedless",
+            harvest_time: "August 11 to September 6",
+            description: "American hybrid grape"
+        },
+        {
+            type: "Grape",
+            name: "Himrod Seedless",
+            harvest_time: "August 11 to September 7",
+            description: "American hybrid grape"
+        },
+        {
+            type: "Grape",
+            name: "Interlaken Seedless",
+            harvest_time: "August 14 to September 9",
+            description: "American hybrid grape"
+        },
+        {
+            type: "Grape",
+            name: "Lady Finger",
+            harvest_time: "August 15 to September 5",
+            description: "American hybrid grape"
+        },
+        {
+            type: "Grape",
+            name: "Niagara",
+            harvest_time: "August 17 to September 13",
+            description: "American hybrid grape"
+        },
+        {
+            type: "Grape",
+            name: "Ruby Seedless",
+            harvest_time: "August 18 to September 14",
+            description: "American hybrid grape"
+        },
+        {
+            type: "Grape",
+            name: "Suffolk Red Seedless",
+            harvest_time: "August 18 to September 15",
+            description: "American hybrid grape"
+        },
+
+// pomegranate
+        {
+            type: "Pomegranate",
+            name: "Ambrosia",
+            harvest_time: "September 12 to September 27"
+        },
+        {
+            type: "Pomegranate",
+            name: "Wonderful",
+            harvest_time: "September 15 to September 29"
+        },
+        {
+            type: "Pomegranate",
+            name: "Sweet",
+            harvest_time: "September 15 to September 29"
+        },
+        {
+            type: "Pomegranate",
+            name: "Eversweet",
+            harvest_time: "September 15 to September 29"
+        },
+        {
+            type: "Pomegranate",
+            name: "Grenada",
+            harvest_time: "September 15 to September 29"
+        },
+        {
+            type: "Pomegranate",
+            name: "Garnet Sash",
+            harvest_time: "September 18 to October 3"
+        },
+        {
+            type: "Pomegranate",
+            name: "Red Silk",
+            harvest_time: "September 20 to October 4"
+        },
+        {
+            type: "Pomegranate",
+            name: "Parfianka",
+            harvest_time: "September 20 to October 5"
+        },
+        {
+            type: "Pomegranate",
+            name: "Pink Satin",
+            harvest_time: "September 22 to October 7"
+        },
+        {
+            type: "Pomegranate",
+            name: "Kashmir",
+            harvest_time: "September 27 to October 12"
+        },
+        {
+            type: "Pomegranate",
+            name: "Sharp Velvet",
+            harvest_time: "October 2 to October 16"
+        },
+
+// raspberry
+        {
+            type: "Raspberry",
+            name: "Baba",
+            harvest_time: "June 7 to July 2"
+        },
+        {
+            type: "Raspberry",
+            name: "Caroline",
+            harvest_time: "June 22 to July 25"
+        },
+        {
+            type: "Raspberry",
+            name: "Jewel Black",
+            harvest_time: "June 27 to July 26"
+        },
+        {
+            type: "Raspberry",
+            name: "Nova Red",
+            harvest_time: "June 30 to July 28"
+        },
+        {
+            type: "Raspberry",
+            name: "Canby",
+            harvest_time: "July 1 to July 28"
+        },
+        {
+            type: "Raspberry",
+            name: "Willamette",
+            harvest_time: "July 2 to July 31"
+        },
+        {
+            type: "Raspberry",
+            name: "Anne",
+            harvest_time: "July 7 to August 4"
+        },
+        {
+            type: "Raspberry",
+            name: "Heritage",
+            harvest_time: "July 18 to August 11"
+        },
+        {
+            type: "Raspberry",
+            name: "Fall Gold",
+            harvest_time: "August 3 to September 3"
+        },
+
+// Boysenberry
+        {
+            type: "Blackberry",
+            name: "Boysenberry (thornless trailing)",
+            harvest_time: "June 5 to July 24"
+        },
+
+// wine grape
+        {
+            type: "Grape",
+            name: "Cabernet Sauvignon",
+            harvest_time: "",
+            description: "wine grape"
+        },
+        {
+            type: "Grape",
+            name: "Chardonnay",
+            harvest_time: "",
+            description: "wine grape"
+        },
+        {
+            type: "Grape",
+            name: "Gewurztraminer",
+            harvest_time: "",
+            description: "wine grape"
+        },
+        {
+            type: "Grape",
+            name: "Merlot",
+            harvest_time: "",
+            description: "wine grape"
+        },
+        {
+            type: "Grape",
+            name: "Pinot Noir",
+            harvest_time: "",
+            description: "wine grape"
+        },
+        {
+            type: "Grape",
+            name: "Syrah",
+            harvest_time: "",
+            description: "wine grape"
+        },
+        {
+            type: "Grape",
+            name: "Zinfandel",
+            harvest_time: "",
+            description: "wine grape"
+        },
+
+// kiwifruit
+        {
+            type: "Fuzzy Kiwi",
+            name: "Jenny",
+            harvest_time: "",
+            description: "self fertile"
+        },
+        {
+            type: "Fuzzy Kiwi",
+            name: "Vincent",
+            harvest_time: ""
+        },
+        {
+            type: "Hardy Kiwi",
+            name: "Ken's Red",
+            harvest_time: ""
+        },
+        {
+            type: "Hardy Kiwi",
+            name: "Issai",
+            harvest_time: ""
+        },
+
+// Olive
+        {
+            type: "Olive",
+            name: "Arbequina",
+            harvest_time: ""
+        },
+        {
+            type: "Olive",
+            name: "Arbosana",
+            harvest_time: ""
+        },
+        {
+            type: "Olive",
+            name: "Frantoio",
+            harvest_time: ""
+        },
+        {
+            type: "Olive",
+            name: "Koroneiki",
+            harvest_time: ""
+        },
+        {
+            type: "Olive",
+            name: "Manzanillo",
+            harvest_time: ""
+        },
+        {
+            type: "Olive",
+            name: "Mission",
+            harvest_time: ""
+        },
+        {
+            type: "Olive",
+            name: "Pendolino",
+            harvest_time: ""
+        }
+        */
     ]
 }
