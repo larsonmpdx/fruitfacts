@@ -15,232 +15,1208 @@
     plants: [
         {
             // yellow peaches
-Rich May
-Desiree®
-Pf 5D Big
-Earlystar®
-Sentry
-Garnet Beauty
-Summer Serenade®
-Glenglo™
-Gala Peach
-Pf 8 Ball
-Reliance
-Starfire®
-Evelynn™
-Redhaven
-Felicia™
-Pf 9a-007
-Blazingstar®
-Bellaire
-PF Lucky 13
-John Boy®
-John Boy® Ii
-PF 17
-Crimson Rocket
-Sunhigh
-Glohaven
-Coralstar®
-Veteran
-Bounty
-Allstar™
-Flavrburst™
-Contender
-PF 19-007
-Loring
-PF24-007
-Canadian Harmony
-Sweet-n-Up
-PF 23
-Julyprince
-Gloria®
-Madison
-Glowingstar®
-Messina®
-Cresthaven
-Redskin
-Jerseyqueen
-PF 27A
-Selena™
-Summerfest™
-Tiana™
-PF 28-007
-Encore
-Autumnstar®
-Laurol
-Victoria®
-
+{
+    type: "Peach",
+    name: "Rich May",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Desiree®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Pf 5D Big",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Earlystar®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Sentry",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Garnet Beauty",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Summer Serenade®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Glenglo™",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Pf 8 Ball",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Reliance",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Starfire®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Evelynn™",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Redhaven",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Felicia™",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Pf 9A-007",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Blazingstar®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Bellaire",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "PF Lucky 13",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "John Boy®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "John Boy® II",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "PF 17",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Crimson Rocket",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Sunhigh",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Glohaven",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Coralstar®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Veteran",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Bounty",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Allstar™",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Flavrburst™",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Contender",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "PF 19-007",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Loring",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "PF24-007",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Canadian Harmony",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Sweet-n-Up",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "PF 23",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Julyprince",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Gloria®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Madison",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Glowingstar®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Messina®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Cresthaven",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Redskin",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Jerseyqueen",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "PF 27A",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Selena™",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Summerfest™",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Tiana™",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "PF 28-007",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Encore",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Autumnstar®",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Laurol",
+    harvest_time: ""
+},
+{
+    type: "Peach",
+    name: "Victoria®",
+    harvest_time: ""
+},
 // Apples
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Yellow Transparent
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Lodi
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Pristine
 
+
 Wildfire™ Gala
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Ginger Gold®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Zestar!®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Premier Honeycrisp®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Dandee Red
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Sansa
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 
 Initial™
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Summer Rambo
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Jonamac
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Fulford Gala
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Blondee®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Crimson® Gala
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Gale® Gala
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Gala (Simmons Cultivar)
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Ultima Gala®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Rubymac®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Marshall Mcintosh
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Pioneer™ Mac
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Honeycrisp
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Honeycrisp (Minnb42)
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Royal Red Honeycrisp®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Firestorm™
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Daybreak™ Fuji
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Crimsoncrisp®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Crimson® Gold
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Royal Court®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Cortland
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Autumn Crisp
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Improved Red Jonathan
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Wolf River
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Macoun
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Liberty
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Golden Delicious
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Bonita™
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Rubyrush™
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Da Rosa®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Super Chief® Red Delicious
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Grimes Golden
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Ambrosia
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Galarina™
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Crown™ Empire
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Royal® Empire
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Hampshire™ Mac
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Freedom
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Smerelda Cltv.
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Wilton's® Red Jonaprince
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 MAIA11
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Keepsake
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Shizuka
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Idared
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Melrose
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Autumn Gala
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Story®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Northern Spy
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Smokehouse
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Nova Spy
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 MAIA-L
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Cameo™
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Red Cameo™
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Law Red Rome
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Nittany
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Albemarle Pippin
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Querina®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Winecrisp™
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Mutsu
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Suncrisp®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Pink Lady® (Barnsby Cultivar)
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Snapp™ Stayman
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Red Yorking
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Red Winesap
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Enterprise™
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Taylor Spur Rome
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Kumeu Crimson® Braeburn
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 MAIA1
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Aztec Fuji®
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Arkansas Black
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Granny Smith
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Goldrush
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Pink Lady® (Ruby Pink)
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 Pink Lady® (Cripps Pink)
-
+{
+    type: "Apple",
+    name: "",
+    harvest_time: ""
+},
 
 // apricot
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Early Blush
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Ilona™
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Goldrich
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Robada
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Orangered®
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Harcot
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Harostar
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Hargrande
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Harogem
+{
+    type: "Apricot",
+    name: "",
+    harvest_time: ""
+},
 Harlayne
 
 // white peaches
 Spring Snow
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
+
 Erly Red Fre
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 Sugar May
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 July Rose™
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 Anna Rose™
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 White Lady
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 Raritan Rose
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 Klondike White
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 Sugar Giant
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 Blushingstar®
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 August Rose™
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 Snow Giant
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 September Snow
+{
+    type: "Peach",
+    name: "",
+    harvest_time: "",
+    description: "white peach"
+},
 
 // euro/asian pears
-Sunrise
-Red Clapp's
-Shinsui
-AC™ Harrow Crisp
-Bartlett
-Bell
-Red Bartlett
-Shinseiki
-Kosui
-Hosui
-Blake's Pride
-Potomac
-Seckel
-Harrow Sweet
-Shenandoah
-Cold Snap®
-Magness
-Beurre D'anjou
-Golden Russet Bosc
-Niitaka
-Yoinashi™
-Atago
-Shinko
-Olympic
+{
+    type: "Euro Pear",
+    name: "Sunrise",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Red Clapp's",
+    harvest_time: ""
+},
+
+{
+    type: "Asian Pear",
+    name: "Shinsui",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "AC™ Harrow Crisp",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Bartlett",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Bell",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Red Bartlett",
+    harvest_time: ""
+},
+
+{
+    type: "Asian Pear",
+    name: "Shinseiki",
+    harvest_time: ""
+},
+
+{
+    type: "Asian Pear",
+    name: "Kosui",
+    harvest_time: ""
+},
+
+{
+    type: "Asian Pear",
+    name: "Hosui",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Blake's Pride",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Potomac",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Seckel",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Harrow Sweet",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Shenandoah",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Cold Snap®",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Magness",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Beurre D'anjou",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Pear",
+    name: "Golden Russet Bosc",
+    harvest_time: ""
+},
+
+{
+    type: "Asian Pear",
+    name: "Niitaka",
+    harvest_time: ""
+},
+
+{
+    type: "Asian Pear",
+    name: "Yoinashi™",
+    harvest_time: ""
+},
+
+{
+    type: "Asian Pear",
+    name: "Atago",
+    harvest_time: ""
+},
+
+{
+    type: "Asian Pear",
+    name: "Shinko",
+    harvest_time: ""
+},
+
+{
+    type: "Asian Pear",
+    name: "Olympic",
+    harvest_time: ""
+},
+
 
 // plums and plum hybrids
-Spring Satin Plumcot
-Early Golden
-Methley
-Shiro
-Au Rosa
-Green Gage
-Santa Rosa
-Castleton™
-Black Amber
-Wickson
-Satsuma
-Vanier
-Queen Rosa
-Flavor Queen Pluot®
-Dapple Dandy Pluot®
-Long John
-NY9®
-Flavor King Pluot®
+{
+    type: "Plumcot",
+    name: "Spring Satin",
+    harvest_time: ""
+},
+{
+    type: "Japanese Plum",
+    name: "Early Golden",
+    harvest_time: ""
+},
+
+{
+    type: "Japanese Plum",
+    name: "Methley",
+    harvest_time: ""
+},
+
+{
+    type: "Japanese Plum",
+    name: "Shiro",
+    harvest_time: ""
+},
+
+{
+    type: "Japanese Plum",
+    name: "AU Rosa",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Plum",
+    name: "Green Gage",
+    harvest_time: ""
+},
+
+{
+    type: "Japanese Plum",
+    name: "Santa Rosa",
+    harvest_time: ""
+},
+
+{
+    type: "Euro Plum",
+    name: "Castleton™",
+    harvest_time: ""
+},
+
+{
+    type: "Japanese Plum",
+    name: "Black Amber",
+    harvest_time: ""
+},
+
+{
+    type: "Japanese Plum",
+    name: "Wickson",
+    harvest_time: ""
+},
+
+{
+    type: "Japanese Plum",
+    name: "Satsuma",
+    harvest_time: ""
+},
+
+{
+    type: "Japanese Plum",
+    name: "Vanier",
+    harvest_time: ""
+},
+
+{
+    type: "Japanese Plum",
+    name: "Queen Rosa",
+    harvest_time: ""
+},
+
+{
+    type: "Plumcot",
+    name: "Flavor Queen",
+    harvest_time: ""
+},
+{
+    type: "Plumcot",
+    name: "Dapple Dandy",
+    harvest_time: ""
+},
+{
+    type: "Euro Plum",
+    name: "Long John",
+    harvest_time: ""
+},
+{
+    type: "Euro Plum",
+    name: "NY9®",
+    harvest_time: ""
+},
+
+{
+    type: "Plumcot",
+    name: "Flavor King",
+    harvest_time: ""
+},
 Fortune
 Stanley
 Bluebyrd
 Valor
 Ruby Queen
-Flavor Grenade Pluot®
-Flavor Heart Pluot®
+{
+    type: "Plumcot",
+    name: "Flavor Grenade",
+    harvest_time: ""
+},
+{
+    type: "Plumcot",
+    name: "Flavor Heart",
+    harvest_time: ""
+},
 Victory
 Vision
 President
-Flavorich Pluot®
+{
+    type: "Plumcot",
+    name: "Flavorich",
+    harvest_time: ""
+},
 
 // flat peaches
 Orion™
