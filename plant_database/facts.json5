@@ -33,5 +33,15 @@
         contributor: "Michael",
         fact: "The major genes for self-fertility in sweet cherries were created using atomic gardening in the 1950s",
         reference: "https://www.nature.com/articles/hdy195438"
+    },
+    {
+        contributor: "Michael",
+        fact: "Peach seeds should be \"cold stratified\" in order to germinate",
+        reference: "https://ask2.extension.org/kb/faq.php?id=157040"
+    },
+    {
+        contributor: "Michael",
+        fact: "Peach seeds achieve higher germination rates after being carefully removed from the stone",
+        reference: "https://patents.google.com/patent/USPP32854"
     }
 ]

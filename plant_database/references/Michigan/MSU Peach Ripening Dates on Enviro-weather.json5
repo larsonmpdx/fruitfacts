@@ -161,7 +161,7 @@
             harvest_time_relative: "Redhaven +3"
         },
         {
-            name: "John Boy",
+            name: "Clendening", // "John Boy"
             type: "Peach",
             harvest_time_relative: "Redhaven +3"
         },
@@ -191,7 +191,7 @@
             harvest_time_relative: "Redhaven +6"
         },
         {
-            name: "John Boy II",
+            name: "Janel", // "John Boy II"
             type: "Peach",
             harvest_time_relative: "Redhaven +8"
         },

@@ -95,7 +95,7 @@
         },
         {
             name: "NJ 353",
-            AKA: ["Victoria (r)"],
+            AKA: ["Victoria®"],
             type: "Peach",
             disease_resistance: {
                 bacterial_spot: "High tolerance"
@@ -230,5 +230,6 @@
 
         // todo NJ 360 "anna rose (tm) PPAF from ACN https://www.acnursery.com/fruit-trees/peach-trees/460/anna-rose
         // todo - patent search starting with NJN 103
+        // todo NJ 361 "Felicia™" acn ppaf 2022
     ]
 }

@@ -13,7 +13,6 @@
         }
     ],
     plants: [
-        /* todo scrub peach names
         // yellow peaches
         {
             type: "Peach",
@@ -22,7 +21,7 @@
         },
         {
             type: "Peach",
-            name: "Desiree®",
+            name: "NJ 350", //"Desiree"
             // harvest_time: ""
         },
         {
@@ -32,7 +31,7 @@
         },
         {
             type: "Peach",
-            name: "Earlystar®",
+            name: "FA 102", // "Earlystar"
             // harvest_time: ""
         },
         {
@@ -47,12 +46,12 @@
         },
         {
             type: "Peach",
-            name: "Summer Serenade®",
+            name: "Summer Serenade", // ACN claims this is trademarked but there's no variety name provided anywhere
             // harvest_time: ""
         },
         {
             type: "Peach",
-            name: "Glenglo™",
+            name: "GW115", // "Glenglo™"
             // harvest_time: ""
         },
         {
@@ -67,12 +66,12 @@
         },
         {
             type: "Peach",
-            name: "Starfire®",
+            name: "FA 11", // "Starfire"
             // harvest_time: ""
         },
         {
             type: "Peach",
-            name: "Evelynn™",
+            name: "NJ 357", // Evelynn™
             // harvest_time: ""
         },
         {
@@ -82,8 +81,10 @@
         },
         {
             type: "Peach",
-            name: "Felicia™",
+            name: "NJ 361",
+            AKA: ["Felicia™"],
             // harvest_time: ""
+            patent: "ppaf 2022"
         },
         {
             type: "Peach",
@@ -92,7 +93,7 @@
         },
         {
             type: "Peach",
-            name: "Blazingstar®",
+            name: "FA 12", //"Blazingstar"
             // harvest_time: ""
         },
         {
@@ -107,12 +108,14 @@
         },
         {
             type: "Peach",
-            name: "John Boy®",
+            name: "Clendening",
+            AKA: ["John Boy®"],
             // harvest_time: ""
         },
         {
             type: "Peach",
-            name: "John Boy® II",
+            name: "Janel",
+            AKA: ["John Boy® II"],
             // harvest_time: ""
         },
         {
@@ -122,8 +125,9 @@
         },
         {
             type: "Peach",
-            name: "Crimson Rocket",
-            // harvest_time: ""
+            name: "Crimson Rocket", // patent name
+            // harvest_time: "",
+            patent: "https://patents.google.com/patent/USPP15216 expired 2021-10-30"
         },
         {
             type: "Peach",
@@ -137,7 +141,7 @@
         },
         {
             type: "Peach",
-            name: "Coralstar®",
+            name: "FA 59", // "Coralstar"
             // harvest_time: ""
         },
         {
@@ -152,7 +156,7 @@
         },
         {
             type: "Peach",
-            name: "Allstar™",
+            name: "FA 80", //"Allstar"
             // harvest_time: ""
         },
         {
@@ -187,8 +191,9 @@
         },
         {
             type: "Peach",
-            name: "Sweet-n-Up",
-            // harvest_time: ""
+            name: "Sweet-N-UP", // capitalization from the patent
+            // harvest_time: "",
+            patent: "https://patents.google.com/patent/USPP15063 expired 2021-10-30"
         },
         {
             type: "Peach",
@@ -202,7 +207,7 @@
         },
         {
             type: "Peach",
-            name: "Gloria®",
+            name: "NJ 351", //"Gloria"
             // harvest_time: ""
         },
         {
@@ -212,12 +217,12 @@
         },
         {
             type: "Peach",
-            name: "Glowingstar®",
+            name: "FA 17", // "Glowingstar"
             // harvest_time: ""
         },
         {
             type: "Peach",
-            name: "Messina®",
+            name: "NJ 352", //"Messina"
             // harvest_time: ""
         },
         {
@@ -242,17 +247,19 @@
         },
         {
             type: "Peach",
-            name: "Selena™",
+            name: "NJ 358", // "Selena™"
             // harvest_time: ""
         },
         {
             type: "Peach",
-            name: "Summerfest™",
+            name: "KV981175",
+            AKA: ["Summerfest™"],
             // harvest_time: ""
+            patent: "https://patents.google.com/patent/USPP21379 expires 2028-12-09"
         },
         {
             type: "Peach",
-            name: "Tiana™",
+            name: "NJ 359", // AKA "Tiana™"
             // harvest_time: ""
         },
         {
@@ -267,7 +274,7 @@
         },
         {
             type: "Peach",
-            name: "Autumnstar®",
+            name: "FA 42", //"Autumnstar"
             // harvest_time: ""
         },
         {
@@ -277,10 +284,11 @@
         },
         {
             type: "Peach",
-            name: "Victoria®",
-            // harvest_time: ""
+            name: "NJ 353", // AKA "Victoria®"
+            // harvest_time: "",
+            description: "https://www.acnursery.com/fruit-trees/peach-trees/170/victoria"
         },
-        */
+
         // Apples
         {
             type: "Apple",
@@ -1252,7 +1260,8 @@
         {
             type: "Nectarine",
             name: "Nectafest",
-            // harvest_time: ""
+            // harvest_time: "",
+            patent: "https://patents.google.com/patent/USPP25694 expires 2033-06-28"
         },
         {
             type: "Nectarine",

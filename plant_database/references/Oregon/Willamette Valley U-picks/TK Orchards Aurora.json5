@@ -63,7 +63,7 @@
         },
         {
             type: "Peach",
-            name: "Sun High",
+            name: "Sunhigh",
             // harvest time is from the 2020 facebook posts
             harvest_time: "July 23"
         },
