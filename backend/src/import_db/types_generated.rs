@@ -51,4 +51,5 @@ pub const TYPES: &[&str] = &[
     "Pomegranate",
     "Olive",
     "Prunus Rootstock",
+    "Hops",
 ];

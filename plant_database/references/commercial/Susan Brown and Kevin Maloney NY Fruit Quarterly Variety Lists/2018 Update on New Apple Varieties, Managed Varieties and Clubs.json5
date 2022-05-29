@@ -139,8 +139,8 @@
         },
         {
             type: "Apple",
-            name: "DAS 10",
-            AKA: ["Premier Honeycrisp"],
+            name: "DAS-10 Honeycrisp", // patent name
+            AKA: ["Premier® Honeycrisp"],
             // todo: ripens three weeks before Honeycrisp
             patent: "https://patents.google.com/patent/USPP24833 expires 2033-03-12",
             description: "Honeycrisp sport"

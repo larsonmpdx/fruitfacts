@@ -31,7 +31,7 @@
         },
         {
             type: "Apple",
-            name: "Ginger Gold",
+            name: "Mountain Cove", // "Ginger Gold®"
             harvest_time: "Aug 1",
             // fire blight susceptible
             description: "Yellow Use: All Large fruit, fine grained flesh, does not russet and stores well"
@@ -201,7 +201,7 @@
         },
         {
             type: "Apple",
-            name: "Florina", // "Querina"
+            name: "Florina", // "Querina®"
             harvest_time: "Oct 5",
             // Scab resistant, moderately resistant to powdery mildew, susceptible to cedar apple rust
             description: "Requires minimal pesticides. Red. Use: All"

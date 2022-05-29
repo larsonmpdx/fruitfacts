@@ -28,7 +28,7 @@
         },
         {
             name: "NJN 101",
-            AKA: ["Avalon (tm)"],
+            AKA: ["Avalon™"],
             type: "Nectarine",
             disease_resistance: {
                 bacterial_spot: "Low susceptibility"
@@ -106,7 +106,7 @@
         },
         {
             name: "NJF 15",
-            AKA: ["BuenOs II (tm)"],
+            AKA: ["BuenOs™ II"],
             type: "Peach",
             disease_resistance: {
                 bacterial_spot: "resistant"
@@ -117,7 +117,7 @@
         },
         {
             name: "NJF 18",
-            AKA: ["BuenOs (tm)"],
+            AKA: ["BuenOs™"],
             type: "Peach",
             disease_resistance: {
                 bacterial_spot: "Low susceptibility"
@@ -127,7 +127,7 @@
             patent: "https://patents.google.com/patent/USPP19273 expires 2027-03-16"
         },
         {
-            name: "NJN100",
+            name: "NJN 100",
             AKA: ["Silver Gem (r)"],
             type: "Nectarine",
             disease_resistance: {
@@ -139,7 +139,7 @@
         },
         {
             name: "NJF 17",
-            AKA: ["TangOs II (r)"],
+            AKA: ["TangOs® II"],
             type: "Peach",
             disease_resistance: {
                 bacterial_spot: "resistant"
@@ -150,7 +150,7 @@
         },
         {
             name: "NJF 16",
-            AKA: ["TangOs (r)"],
+            AKA: ["TangOs®"],
             type: "Peach",
             disease_resistance: {
                 bacterial_spot: "resistant"
@@ -205,7 +205,7 @@
         },
         {
             name: "NJN 102",
-            AKA: ["Brigantine (tm)", "NJH21-44"],
+            AKA: ["Brigantine™", "NJH21-44"],
             type: "Nectarine",
             disease_resistance: {
                 bacterial_spot: "moderate susceptibility"
@@ -225,11 +225,10 @@
             harvest_time: "early august", // redhaven +/- todo
             released: "2017",
             description: "white",
-            patent: "https://patents.google.com/patent/USPP30123 expires 2037-01-30
-"
+            patent: "https://patents.google.com/patent/USPP30123 expires 2037-01-30"
         }
 
-        // todo NJ360 "anna rose (tm) PPAF from ACN https://www.acnursery.com/fruit-trees/peach-trees/460/anna-rose
-        // todo - patent search starting with NJN103
+        // todo NJ 360 "anna rose (tm) PPAF from ACN https://www.acnursery.com/fruit-trees/peach-trees/460/anna-rose
+        // todo - patent search starting with NJN 103
     ]
 }

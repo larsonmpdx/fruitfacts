@@ -94,7 +94,7 @@
             strains: ["Rogers McIntosh", "Marshall McIntosh", "Mac Spur", "Redmax"]
         },
         {
-            name: "Ginger Gold",
+            name: "Mountain Cove", // "Ginger Gold®"
             type: "Apple",
             harvest_time: "September 18",
             description: "Yellow. Coarse. Sweet, spicy. Uses: fresh. 2 months storage. Very good yellow-skinned apple",

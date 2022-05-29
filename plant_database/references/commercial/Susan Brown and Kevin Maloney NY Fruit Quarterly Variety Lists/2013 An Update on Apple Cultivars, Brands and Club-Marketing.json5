@@ -45,14 +45,14 @@
         {
             type: "Apple",
             name: "McLaughlin Gala", // patent name
-            AKA: ["Blondee"],
+            AKA: ["Blondee® Gala"],
             // todo: "Its susceptibility to fire blight is similar to Gala"
             description: "yellow. Summit Sales/IPM",
             patent: "https://patents.google.com/patent/USPP19007 2026-10-23"
         },
         {
             type: "Apple",
-            name: "Cameo",
+            name: "Caudle", // "Cameo (tm)"
             description: "Cameo Partners International"
         },
         {
@@ -197,7 +197,7 @@
         },
         {
             type: "Apple",
-            name: "Maslin", // "PLMAS98"
+            name: "Maslin Pink", // "PLMAS98"
             description: "Pink Lady sport",
             patent: "https://patents.google.com/patent/USPP21412 2028-04-19"
         },

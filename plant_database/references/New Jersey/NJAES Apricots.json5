@@ -13,7 +13,7 @@
     ],
     plants: [
         {
-            name: "NJA152",
+            name: "NJA 152",
             AKA: ['Honey Pearls™ "nectacot"'],
             type: "Apricot",
             description: "gurney's exclusive",
@@ -21,7 +21,7 @@
             patent: "https://patents.google.com/patent/USPP27166 expires 2034-09-17"
         },
         {
-            name: "NJA151",
+            name: "NJA 151",
             AKA: ["Ilona™"],
             type: "Apricot",
             description: "",
@@ -29,7 +29,7 @@
             patent: "https://patents.google.com/patent/USPP25862 expires 2033-10-20"
         },
         {
-            name: "NJA150",
+            name: "NJA 150",
             AKA: ["Sugar Pearls (tm)"],
             type: "Apricot",
             description: "self-fertile but better crops with a pollinator. https://agproducts.rutgers.edu/fruit-trees/sugar-pearls-apricot.html",
@@ -37,7 +37,7 @@
             patent: "https://patents.google.com/patent/USPP18639 expires 2026-07-06"
         },
         {
-            name: "NJA54",
+            name: "NJA 54",
             AKA: ["SunGem®"],
             type: "Apricot",
             description: "NJA2 x RR17-62",
@@ -46,7 +46,7 @@
             patent: "https://patents.google.com/patent/USPP8674 expired 2012-11-18"
         },
         {
-            name: "NJA53",
+            name: "NJA 53",
             AKA: ["Early Blush®"],
             type: "Apricot",
             description: "RR17-62 x NJA13",
@@ -55,7 +55,7 @@
             patent: "https://patents.google.com/patent/USPP9255 expired 2012-11-18"
         },
         {
-            name: "NJA32", // patent name
+            name: "NJA 32", // patent name
             AKA: ["Orangered®", "Bhart"],
             type: "Apricot",
             description: "Lasgerdi Mashhad x NJA2",

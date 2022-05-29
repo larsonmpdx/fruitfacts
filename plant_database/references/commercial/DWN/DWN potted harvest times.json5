@@ -6,8 +6,9 @@
     type: "nursery catalog",
     needs_help: true, // todo
     harvest_time_devalue_factor: 3,
-    // I lowered this because the blueberry harvest times are pretty rough compared to other references (legacy and elliot shouldn't be at the same time, for example)
-    // this indicates the whole chart is suspect
+    // I lowered this because the blueberry harvest times stood out to me as being pretty rough
+    // compared to other references (legacy and elliot shouldn't be at the same time, for example)
+    // so I think the whole chart is suspect
     locations: [
         {
             name: "Hickman, CA",
@@ -44,8 +45,8 @@
         },
         {
             type: "Blueberry",
-            name: "Tophat",
-            harvest_time: ""
+            name: "Tophat"
+            // harvest_time: ""
         },
         {
             type: "Blueberry",
@@ -93,7 +94,7 @@
             harvest_time: "June 23 to July 14"
         },
 
-// bushel and berry - todo - figure out variety names
+        // bushel and berry - todo - figure out variety names
         {
             type: "Blueberry",
             name: "ZF06-079",
@@ -118,7 +119,7 @@
             patent: "https://patents.google.com/patent/USPP24662 expires 2032-08-09",
             harvest_time: "June 25 to July 25"
         },
-                {
+        {
             type: "Blackberry",
             name: "APF-236T",
             AKA: ["Baby Cakes®"], // "bushel and berry"
@@ -135,7 +136,7 @@
             harvest_time: "July 15 to August 15"
         },
 
-// euro table grapes
+        // euro table grapes
         {
             type: "Grape",
             name: "Black Monukka Seedless",
@@ -185,7 +186,7 @@
             description: "euro table grape"
         },
 
-// hops
+        // hops
         {
             type: "Hops",
             name: "Cascade",
@@ -197,7 +198,7 @@
             harvest_time: "August 24 to September 9"
         },
 
-// fig
+        // fig
         {
             type: "Fig",
             name: "Black Mission",
@@ -297,9 +298,9 @@
             type: "Fig",
             name: "Chicago Hardy",
             harvest_time: "September 19 to October 8"
-        }
+        },
 
-// Blackberry
+        // Blackberry
 
         {
             type: "Blackberry",
@@ -347,7 +348,7 @@
             harvest_time: "August 5 to September 5"
         },
 
-// gooseberry
+        // gooseberry
         {
             type: "Gooseberry",
             name: "Hinnommaki Red",
@@ -364,16 +365,16 @@
             harvest_time: "July 15 to August 5"
         },
 
-// American hybrid grape
+        // American hybrid grape
         {
             type: "Grape",
             name: "Blueberry", // DWN claims a trademark but I think it's invalid due to genericization (they provide no variety name)
-            harvest_time: "August 8 to September 44",
+            harvest_time: "August 8 to September 4",
             description: "American hybrid grape"
         },
         {
             type: "Grape",
-            name: "Canadice Seedless",
+            name: "Canadice",
             harvest_time: "August 11 to September 5",
             description: "American hybrid grape"
         },
@@ -413,12 +414,13 @@
             harvest_time: "August 17 to September 13",
             description: "American hybrid grape"
         },
-        {
-            type: "Grape",
-            name: "Ruby Seedless",
-            harvest_time: "August 18 to September 14",
-            description: "American hybrid grape"
-        },
+        // ruby seedless is in this chart twice, once as a euro grape and once as american/hybrid. I deleted this entry to make things work, I can't tell if they're actually two different varieties
+        //   {
+        //       type: "Grape",
+        //       name: "Ruby Seedless",
+        //       harvest_time: "August 18 to September 14",
+        //       description: "American hybrid grape"
+        //   },
         {
             type: "Grape",
             name: "Suffolk Red Seedless",
@@ -426,7 +428,7 @@
             description: "American hybrid grape"
         },
 
-// pomegranate
+        // pomegranate
         {
             type: "Pomegranate",
             name: "Ambrosia",
@@ -483,7 +485,7 @@
             harvest_time: "October 2 to October 16"
         },
 
-// raspberry
+        // raspberry
         {
             type: "Raspberry",
             name: "Baba",
@@ -526,120 +528,119 @@
         },
         {
             type: "Raspberry",
-            name: "Fall Gold",
+            name: "Fallgold",
             harvest_time: "August 3 to September 3"
         },
 
-// Boysenberry
+        // Boysenberry
         {
             type: "Blackberry",
             name: "Boysenberry (thornless trailing)",
             harvest_time: "June 5 to July 24"
         },
-
-// wine grape
+        // todo - remaining times
+        // wine grape
         {
             type: "Grape",
             name: "Cabernet Sauvignon",
-            harvest_time: "",
+            // harvest_time: ""
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Chardonnay",
-            harvest_time: "",
+            // harvest_time: ""
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Gewurztraminer",
-            harvest_time: "",
+            // harvest_time: ""
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Merlot",
-            harvest_time: "",
+            // harvest_time: ""
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Pinot Noir",
-            harvest_time: "",
+            // harvest_time: ""
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Syrah",
-            harvest_time: "",
+            // harvest_time: ""
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Zinfandel",
-            harvest_time: "",
+            // harvest_time: ""
             description: "wine grape"
         },
 
-// kiwifruit
+        // kiwifruit
         {
             type: "Fuzzy Kiwi",
             name: "Jenny",
-            harvest_time: "",
+            // harvest_time: ""
             description: "self fertile"
         },
         {
             type: "Fuzzy Kiwi",
-            name: "Vincent",
-            harvest_time: ""
+            name: "Vincent"
+            // harvest_time: ""
         },
         {
             type: "Hardy Kiwi",
-            name: "Ken's Red",
-            harvest_time: ""
+            name: "Ken's Red"
+            // harvest_time: ""
         },
         {
             type: "Hardy Kiwi",
-            name: "Issai",
-            harvest_time: ""
+            name: "Issai"
+            // harvest_time: ""
         },
 
-// Olive
+        // Olive
         {
             type: "Olive",
-            name: "Arbequina",
-            harvest_time: ""
+            name: "Arbequina"
+            // harvest_time: ""
         },
         {
             type: "Olive",
-            name: "Arbosana",
-            harvest_time: ""
+            name: "Arbosana"
+            // harvest_time: ""
         },
         {
             type: "Olive",
-            name: "Frantoio",
-            harvest_time: ""
+            name: "Frantoio"
+            // harvest_time: ""
         },
         {
             type: "Olive",
-            name: "Koroneiki",
-            harvest_time: ""
+            name: "Koroneiki"
+            // harvest_time: ""
         },
         {
             type: "Olive",
-            name: "Manzanillo",
-            harvest_time: ""
+            name: "Manzanillo"
+            // harvest_time: ""
         },
         {
             type: "Olive",
-            name: "Mission",
-            harvest_time: ""
+            name: "Mission"
+            // harvest_time: ""
         },
         {
             type: "Olive",
-            name: "Pendolino",
-            harvest_time: ""
+            name: "Pendolino"
+            // harvest_time: ""
         }
-        */
     ]
 }

@@ -245,5 +245,14 @@
                 latin_name: "Prunus spp. or hybrid"
             }
         ]
+    },
+    {
+        group_name: "Other",
+        types: [
+            {
+                name: "Hops",
+                latin_name: "Humulus lupulus"
+            }
+        ]
     }
 ]

@@ -180,13 +180,13 @@
         {
             type: "Nectarine",
             category: "White nectarine",
-            names: ["Emeraude"],
+            names: ["Monnude" /* Emeraude™ */],
             disease_resistance: { BLS: "Good" }
         },
         {
             type: "Nectarine",
             category: "White nectarine",
-            names: ["Jade"],
+            names: ["Momee" /* "Jade" */],
             disease_resistance: { BLS: "Moderate" }
         },
         {
@@ -198,7 +198,7 @@
         {
             type: "Nectarine",
             category: "White nectarine",
-            names: ["Scarlet Pearl", "Arctic Belle", "Arctic Jay", "Arctic Gold", "Zephyr", "Arctic Pride"],
+            names: ["Scarlet Pearl", "Arctic Belle", "Arctic Jay", "Arctic Gold", "Monphir" /* "Zephyr" */, "Arctic Pride"],
             disease_resistance: { BLS: "Poor" }
         }
     ]

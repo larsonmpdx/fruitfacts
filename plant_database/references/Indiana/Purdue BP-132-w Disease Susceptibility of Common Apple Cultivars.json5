@@ -61,7 +61,7 @@
         },
         {
             type: "Apple",
-            name: "Cameo",
+            name: "Caudle", // "Cameo (tm)"
             disease_resistance: { scab: "S", FB: "S", rust: "S", PM: "R" }
         },
         {
@@ -121,7 +121,7 @@
         },
         {
             type: "Apple",
-            name: "Ginger Gold",
+            name: "Mountain Cove", // "Ginger Gold®"
             disease_resistance: { scab: "VS", FB: "VS", rust: "VS", PM: "S" }
         },
         {
@@ -256,7 +256,7 @@
         },
         {
             type: "Apple",
-            name: "NJ90",
+            name: "NJ 90",
             disease_resistance: { scab: "MR", FB: "S", rust: "R", PM: "R" }
         },
         {

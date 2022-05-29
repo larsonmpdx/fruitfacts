@@ -15,7 +15,7 @@
     plants: [
         {
             name: "Alvina",
-            AKA: ["Crimson (tm) Gala"],
+            AKA: ["Crimson (tm) Gala (Alvina)"],
             type: "Apple",
             harvest_time_unparsed: "Approximately one to two weeks earlier harvest than Royal Gala",
             patent: "https://patents.google.com/patent/USPP19604 expires 2027-07-16"
@@ -34,15 +34,15 @@
             patent: "https://patents.google.com/patent/USPP20190 expires 2028-02-26"
         },
         {
-            name: "Maslin",
+            name: "Maslin Pink",
             AKA: ["Wild Pink™ Maslin", "PLMAS98"],
             type: "Apple",
             harvest_time_unparsed: "matures three to four weeks earlier than Cripps Pink",
             patent: "https://patents.google.com/patent/USPP21412 expires 2028-04-19"
         },
         {
-            name: "Barnsby",
-            AKA: ["Wild Pink™ Barnsby", "PLBARB1"],
+            name: "Barnsby Pink",
+            AKA: ["Pink Lady® (Barnsby)", "Wild Pink™ Barnsby", "PLBARB1"],
             type: "Apple",
             harvest_time_unparsed: "matures three to four weeks earlier than Cripps Pink",
             patent: "https://patents.google.com/patent/USPP21606 expires 2028-07-31"
