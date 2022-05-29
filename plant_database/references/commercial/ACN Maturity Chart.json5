@@ -342,12 +342,12 @@
         {
             type: "Apple",
             name: "Dandee Red",
-            harvest_time: "August 13 to August 22"
+            harvest_time: "August 13 to August 27"
         },
         {
             type: "Apple",
             name: "Sansa",
-            harvest_time: "August 13 to August 19"
+            harvest_time: "August 13 to August 24"
         },
 
         {
@@ -678,7 +678,7 @@
         {
             type: "Apple",
             name: "Albemarle Pippin",
-            harvest_time: "October 10 to September 1"
+            harvest_time: "October 10 to November 1"
         },
         {
             type: "Apple",
@@ -903,7 +903,7 @@
             type: "Peach",
             name: "NJ 356",
             AKA: ["August Rose (tm)"],
-            harvest_time: "August 28 to August 13",
+            harvest_time: "August 28 to September 13",
             description: "white peach"
         },
         {
