@@ -45,8 +45,8 @@
         },
         {
             type: "Blueberry",
-            name: "Tophat"
-            // harvest_time: ""
+            name: "Tophat",
+            harvest_time: "June 2 to June 17"
         },
         {
             type: "Blueberry",
@@ -94,7 +94,7 @@
             harvest_time: "June 23 to July 14"
         },
 
-        // bushel and berry - todo - figure out variety names
+        // bushel and berry
         {
             type: "Blueberry",
             name: "ZF06-079",
@@ -543,43 +543,43 @@
         {
             type: "Grape",
             name: "Cabernet Sauvignon",
-            // harvest_time: ""
+            harvest_time: "August 19 to September 15",
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Chardonnay",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 15",
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Gewurztraminer",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 15",
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Merlot",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 17",
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Pinot Noir",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 17",
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Syrah",
-            // harvest_time: ""
+            harvest_time: "August 25 to September 16",
             description: "wine grape"
         },
         {
             type: "Grape",
             name: "Zinfandel",
-            // harvest_time: ""
+            harvest_time: "August 26 to September 16",
             description: "wine grape"
         },
 
@@ -587,60 +587,60 @@
         {
             type: "Fuzzy Kiwi",
             name: "Jenny",
-            // harvest_time: ""
+            harvest_time: "September 2 to September 18",
             description: "self fertile"
         },
         {
             type: "Fuzzy Kiwi",
-            name: "Vincent"
-            // harvest_time: ""
+            name: "Vincent",
+            harvest_time: "September 2 to September 19"
         },
         {
             type: "Hardy Kiwi",
-            name: "Ken's Red"
-            // harvest_time: ""
+            name: "Ken's Red",
+            harvest_time: "September 4 to September 23"
         },
         {
             type: "Hardy Kiwi",
-            name: "Issai"
-            // harvest_time: ""
+            name: "Issai",
+            harvest_time: "September 5 to September 23"
         },
 
         // Olive
         {
             type: "Olive",
-            name: "Arbequina"
-            // harvest_time: ""
+            name: "Arbequina",
+            harvest_time: "September 29 to October 13"
         },
         {
             type: "Olive",
-            name: "Arbosana"
-            // harvest_time: ""
+            name: "Arbosana",
+            harvest_time: "October 2 to October 16"
         },
         {
             type: "Olive",
-            name: "Frantoio"
-            // harvest_time: ""
+            name: "Frantoio",
+            harvest_time: "October 2 to October 16"
         },
         {
             type: "Olive",
-            name: "Koroneiki"
-            // harvest_time: ""
+            name: "Koroneiki",
+            harvest_time: "October 2 to October 16"
         },
         {
             type: "Olive",
-            name: "Manzanillo"
-            // harvest_time: ""
+            name: "Manzanillo",
+            harvest_time: "October 2 to October 16"
         },
         {
             type: "Olive",
-            name: "Mission"
-            // harvest_time: ""
+            name: "Mission",
+            harvest_time: "October 5 to October 20"
         },
         {
             type: "Olive",
-            name: "Pendolino"
-            // harvest_time: ""
+            name: "Pendolino",
+            harvest_time: "October 6 to October 21"
         }
     ]
 }

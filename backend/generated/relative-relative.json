@@ -17,7 +17,7 @@
   {
     "type": "Japanese Plum",
     "name": "Santa Rosa",
-    "day": 25
+    "day": 26
   },
   {
     "type": "Peach",
@@ -27,7 +27,7 @@
   {
     "type": "Euro Pear",
     "name": "Bartlett",
-    "day": 57
+    "day": 56
   },
   {
     "type": "Asian Pear",
@@ -52,6 +52,6 @@
   {
     "type": "Walnut",
     "name": "Chandler",
-    "day": 126
+    "day": 125
   }
 ]

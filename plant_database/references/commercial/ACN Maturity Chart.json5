@@ -17,275 +17,280 @@
         {
             type: "Peach",
             name: "Rich May",
-            // harvest_time: ""
+            harvest_time: "June 25 to July 13"
         },
         {
             type: "Peach",
             name: "NJ 350", //"Desiree"
-            // harvest_time: ""
+            harvest_time: "July 5 to July 18"
         },
         {
             type: "Peach",
             name: "PF 5D Big",
-            // harvest_time: ""
+            harvest_time: "July 5 to July 18"
         },
         {
             type: "Peach",
             name: "FA 102", // "Earlystar"
-            // harvest_time: ""
+            harvest_time: "July 9 to July 22"
         },
         {
             type: "Peach",
             name: "Sentry",
-            // harvest_time: ""
+            harvest_time: "July 19 to August 3"
         },
         {
             type: "Peach",
             name: "Garnet Beauty",
-            // harvest_time: ""
+            harvest_time: "July 20 to August 8"
         },
         {
             type: "Peach",
             name: "Summer Serenade", // ACN claims this is trademarked but there's no variety name provided anywhere
-            // harvest_time: ""
+            harvest_time: "July 20 to August 8"
         },
         {
             type: "Peach",
             name: "GW115", // "Glenglo™"
-            // harvest_time: ""
+            harvest_time: "July 25 to August 9"
+        },
+        {
+            type: "Peach",
+            name: "GaLa",
+            harvest_time: "July 25 to August 9"
         },
         {
             type: "Peach",
             name: "PF 8 Ball",
-            // harvest_time: ""
+            harvest_time: "July 26 to August 11"
         },
         {
             type: "Peach",
             name: "Reliance",
-            // harvest_time: ""
+            harvest_time: "July 30 to August 14"
         },
         {
             type: "Peach",
             name: "FA 11", // "Starfire"
-            // harvest_time: ""
+            harvest_time: "August 2 to August 15"
         },
         {
             type: "Peach",
             name: "NJ 357", // Evelynn™
-            // harvest_time: ""
+            harvest_time: "August 2 to August 15"
         },
         {
             type: "Peach",
             name: "Redhaven",
-            // harvest_time: ""
+            harvest_time: "August 2 to August 15"
         },
         {
             type: "Peach",
             name: "NJ 361",
             AKA: ["Felicia™"],
-            // harvest_time: ""
+            harvest_time: "August 2 to August 15",
             patent: "ppaf 2022"
         },
         {
             type: "Peach",
             name: "PF 9A-007",
-            // harvest_time: ""
+            harvest_time: "August 2 to August 16"
         },
         {
             type: "Peach",
             name: "FA 12", //"Blazingstar"
-            // harvest_time: ""
+            harvest_time: "August 2 to August 16"
         },
         {
             type: "Peach",
             name: "Bellaire",
-            // harvest_time: ""
+            harvest_time: "August 7 to August 19"
         },
         {
             type: "Peach",
             name: "PF Lucky 13",
-            // harvest_time: ""
+            harvest_time: "August 8 to August 21"
         },
         {
             type: "Peach",
             name: "Clendening",
             AKA: ["John Boy®"],
-            // harvest_time: ""
+            harvest_time: "August 8 to August 21"
         },
         {
             type: "Peach",
             name: "Janel",
             AKA: ["John Boy® II"],
-            // harvest_time: ""
+            harvest_time: "August 12 to August 25"
         },
         {
             type: "Peach",
             name: "PF 17",
-            // harvest_time: ""
+            harvest_time: "August 14 to August 25"
         },
         {
             type: "Peach",
             name: "Crimson Rocket", // patent name
-            // harvest_time: "",
+            harvest_time: "August 14 to August 27",
             patent: "https://patents.google.com/patent/USPP15216 expired 2021-10-30"
         },
         {
             type: "Peach",
             name: "Sunhigh",
-            // harvest_time: ""
+            harvest_time: "August 15 to August 31"
         },
         {
             type: "Peach",
             name: "Glohaven",
-            // harvest_time: ""
+            harvest_time: "August 18 to September 3"
         },
         {
             type: "Peach",
             name: "FA 59", // "Coralstar"
-            // harvest_time: ""
+            harvest_time: "August 19 to September 6"
         },
         {
             type: "Peach",
             name: "Veteran",
-            // harvest_time: ""
+            harvest_time: "August 19 to September 6"
         },
         {
             type: "Peach",
             name: "Bounty",
-            // harvest_time: ""
+            harvest_time: "August 20 to September 6"
         },
         {
             type: "Peach",
             name: "FA 80", //"Allstar"
-            // harvest_time: ""
+            harvest_time: "August 20 to September 6"
         },
         {
             type: "Peach",
             name: "Flavrburst™",
-            // harvest_time: ""
+            harvest_time: "August 20 to September 4"
         },
         {
             type: "Peach",
             name: "Contender",
-            // harvest_time: ""
+            harvest_time: "August 20 to September 6"
         },
         {
             type: "Peach",
             name: "PF 19-007",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 5"
         },
         {
             type: "Peach",
             name: "Loring",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 6"
         },
         {
             type: "Peach",
             name: "PF 24-007",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 8"
         },
         {
             type: "Peach",
             name: "Canadian Harmony",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 8"
         },
         {
             type: "Peach",
             name: "Sweet-N-UP", // capitalization from the patent
-            // harvest_time: "",
+            harvest_time: "August 22 to September 8",
             patent: "https://patents.google.com/patent/USPP15063 expired 2021-10-30"
         },
         {
             type: "Peach",
             name: "PF 23",
-            // harvest_time: ""
+            harvest_time: "August 24 to September 10"
         },
         {
             type: "Peach",
             name: "Julyprince",
-            // harvest_time: ""
+            harvest_time: "August 24 to September 10"
         },
         {
             type: "Peach",
             name: "NJ 351", //"Gloria"
-            // harvest_time: ""
+            harvest_time: "August 25 to September 10"
         },
         {
             type: "Peach",
             name: "Madison",
-            // harvest_time: ""
+            harvest_time: "August 25 to September 10"
         },
         {
             type: "Peach",
             name: "FA 17", // "Glowingstar"
-            // harvest_time: ""
+            harvest_time: "August 27 to September 15"
         },
         {
             type: "Peach",
             name: "NJ 352", //"Messina"
-            // harvest_time: ""
+            harvest_time: "August 27 to September 11"
         },
         {
             type: "Peach",
             name: "Cresthaven",
-            // harvest_time: ""
+            harvest_time: "August 27 to September 12"
         },
         {
             type: "Peach",
             name: "Redskin",
-            // harvest_time: ""
+            harvest_time: "August 30 to September 12"
         },
         {
             type: "Peach",
             name: "Jerseyqueen",
-            // harvest_time: ""
+            harvest_time: "September 1 to September 16"
         },
         {
             type: "Peach",
             name: "PF 27A",
-            // harvest_time: ""
+            harvest_time: "September 1 to September 16"
         },
         {
             type: "Peach",
             name: "NJ 358", // "Selena™"
-            // harvest_time: ""
+            harvest_time: "September 1 to September 18"
         },
         {
             type: "Peach",
             name: "KV981175",
             AKA: ["Summerfest™"],
-            // harvest_time: ""
+            harvest_time: "September 1 to September 18",
             patent: "https://patents.google.com/patent/USPP21379 expires 2028-12-09"
         },
         {
             type: "Peach",
             name: "NJ 359", // AKA "Tiana™"
-            // harvest_time: ""
+            harvest_time: "September 1 to September 15"
         },
         {
             type: "Peach",
             name: "PF 28-007",
-            // harvest_time: ""
+            harvest_time: "September 1 to September 16"
         },
         {
             type: "Peach",
             name: "Encore",
-            // harvest_time: ""
+            harvest_time: "September 3 to September 18"
         },
         {
             type: "Peach",
             name: "FA 42", //"Autumnstar"
-            // harvest_time: ""
+            harvest_time: "September 5 to September 19"
         },
         {
             type: "Peach",
             name: "Laurol",
-            // harvest_time: ""
+            harvest_time: "September 8 to September 20"
         },
         {
             type: "Peach",
             name: "NJ 353", // AKA "Victoria®"
-            // harvest_time: "",
+            harvest_time: "September 14 to September 28",
             description: "https://www.acnursery.com/fruit-trees/peach-trees/170/victoria"
         },
 
@@ -293,24 +298,24 @@
         {
             type: "Apple",
             name: "Yellow Transparent",
-            // harvest_time: ""
+            harvest_time: "July 1 to July 31"
         },
         {
             type: "Apple",
             name: "Lodi",
-            // harvest_time: ""
+            harvest_time: "July 4 to July 17"
         },
         {
             type: "Apple",
             name: "Co-op 32", // "Pristine"
-            // harvest_time: ""
+            harvest_time: "July 8 to July 24"
         },
 
         {
             type: "Apple",
             name: "RKD", // patent name
             AKA: ["Wildfire™ Gala"],
-            // harvest_time: "",
+            harvest_time: "August 5 to August 17",
             patent: "https://patents.google.com/patent/USPP28721 expires 2035-07-28",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/442/wildfire-gala"
         },
@@ -318,61 +323,61 @@
             type: "Apple",
             name: "Mountain Cove",
             AKA: ["Ginger Gold®"],
-            // harvest_time: "",
+            harvest_time: "August 8 to August 23",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/47/ginger-gold"
         },
         {
             type: "Apple",
             name: "Minnewashta", //"Zestar!"
-            // harvest_time: ""
+            harvest_time: "August 12 to August 24"
         },
         {
             type: "Apple",
             name: "DAS-10 Honeycrisp",
             AKA: ["Premier® Honeycrisp"],
-            // harvest_time: "",
+            harvest_time: "August 12 to August 28",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/402/premier-honeycrisp",
             patent: "https://patents.google.com/patent/USPP24833 expires 2033-03-12"
         },
         {
             type: "Apple",
             name: "Dandee Red",
-            // harvest_time: ""
+            harvest_time: "August 13 to August 22"
         },
         {
             type: "Apple",
             name: "Sansa",
-            // harvest_time: ""
+            harvest_time: "August 13 to August 19"
         },
 
         {
             type: "Apple",
             name: "X-6163",
             AKA: ["Initial™"],
-            // harvest_time: "",
+            harvest_time: "August 21 to September 4",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/44/initial"
         },
         {
             type: "Apple",
             name: "Summer Rambo",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 13"
         },
         {
             type: "Apple",
             name: "Jonamac",
-            // harvest_time: ""
+            harvest_time: "August 23 to September 10"
         },
         {
             type: "Apple",
             name: "Fulford Gala",
-            // harvest_time: "",
+            harvest_time: "August 23 to September 10",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/33/fulford-gala"
         },
         {
             type: "Apple",
             name: "McLaughlin Gala", // misspelled on the ACN page, this is the spelling from the patent
             AKA: ["Blondee® Gala"],
-            // harvest_time: "",
+            harvest_time: "August 25 to September 14",
             patent: "https://patents.google.com/patent/USPP19007 expires 2026-10-23",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/38/blondee"
         },
@@ -380,28 +385,28 @@
             type: "Apple",
             name: "Waliser Gala",
             AKA: ["Crimson® Gala (Waliser)"],
-            // harvest_time: "",
+            harvest_time: "September 2 to September 16",
             patent: "https://patents.google.com/patent/USPP8673 expired 2012-01-03"
         },
         {
             type: "Apple",
             name: "Gale Gala", // patent name
             AKA: ["Malaga Gala"],
-            // harvest_time: "",
+            harvest_time: "September 2 to September 14",
             patent: "https://patents.google.com/patent/USPP10114 expired 2016-01-16",
             description: 'patent name is "Gale Gala" so that name can\'t be trademarked https://www.acnursery.com/fruit-trees/apple-trees/32/gale-gala'
         },
         {
             type: "Apple",
             name: "Simmons Gala",
-            // harvest_time: "",
+            harvest_time: "September 2 to September 16",
             patent: "https://patents.google.com/patent/USPP10840 expired 2016-09-05"
         },
         {
             type: "Apple",
             name: "Banning Gala",
             AKA: ["Ultima® Gala"],
-            // harvest_time: "",
+            harvest_time: "September 2 to September 14",
             patent: "https://patents.google.com/patent/USPP13753 expired 2021-09-25",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/35/ultima-gala"
         },
@@ -409,30 +414,30 @@
             type: "Apple",
             name: "B.Thome McIntosh",
             AKA: ["Rubymac® McIntosh"],
-            // harvest_time: "",
+            harvest_time: "September 2 to September 16",
             patent: "https://patents.google.com/patent/USPP19891",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/21/rubymac"
         },
         {
             type: "Apple",
-            name: "Marshall Mcintosh",
-            // harvest_time: ""
+            name: "Marshall McIntosh",
+            harvest_time: "September 6 to September 22"
         },
         {
             type: "Apple",
             name: "Greiner Mac",
             AKA: ["Pioneer™ Mac"],
-            // harvest_time: ""
+            harvest_time: "September 8 to September 21"
         },
         {
             type: "Apple",
             name: "Honeycrisp",
-            // harvest_time: ""
+            harvest_time: "September 10 to September 23"
         },
         {
             type: "Apple",
             name: "MINNB42 Honeycrisp",
-            // harvest_time: "",
+            harvest_time: "September 10 to September 29",
             patent: "https://patents.google.com/patent/USPP26644 expired 2034-07-24",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/447/honeycrisp"
         },
@@ -440,32 +445,32 @@
             type: "Apple",
             name: "LJ-1000 Honeycrisp",
             AKA: ["Royal Red® Honeycrisp"],
-            // harvest_time: "",
+            harvest_time: "September 10 to September 29",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/449/royal-red-honeycrisp",
             patent: "https://patents.google.com/patent/USPP22244"
         },
         {
             type: "Apple",
             name: "Firestorm™",
-            // harvest_time: ""
+            harvest_time: "September 10 to September 22"
         },
         {
             type: "Apple",
             name: "Rankin Red Fuji",
             AKA: ["Daybreak™ Fuji"],
-            // harvest_time: "",
+            harvest_time: "September 10 to September 25",
             patent: "https://patents.google.com/patent/USPP12551 expired 2020-12-04"
         },
         {
             type: "Apple",
             name: "Co-op 39", // "Crimsoncrisp®"
-            // harvest_time: ""
+            harvest_time: "September 13 to September 30"
         },
         {
             type: "Apple",
             name: "Svatava",
             AKA: ["Crimson® Gold"],
-            // harvest_time: "",
+            harvest_time: "September 13 to September 30",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/45/crimson-gold"
         },
         {
@@ -473,62 +478,62 @@
             name: "Hartencourt Cortland",
             AKA: ["Royal Court® Cortland", "NS-911"],
             description: "https://www.acnursery.com/fruit-trees/apple-trees/28/royal-court",
-            // harvest_time: "",
+            harvest_time: "September 13 to September 28",
             patent: "https://patents.google.com/patent/USPP10049 expired 2015-01-25"
         },
         {
             type: "Apple",
             name: "Cortland",
-            // harvest_time: ""
+            harvest_time: "September 13 to September 28"
         },
         {
             type: "Apple",
             name: "Autumncrisp",
-            // harvest_time: ""
+            harvest_time: "September 15 to September 30"
         },
         {
             type: "Apple",
             name: "Improved Red Jonathan",
-            // harvest_time: ""
+            harvest_time: "September 15 to October 2"
         },
         {
             type: "Apple",
             name: "Wolf River",
-            // harvest_time: ""
+            harvest_time: "September 15 to September 30"
         },
         {
             type: "Apple",
             name: "Macoun",
-            // harvest_time: ""
+            harvest_time: "September 17 to October 2"
         },
         {
             type: "Apple",
             name: "Liberty",
-            // harvest_time: ""
+            harvest_time: "September 17 to October 2"
         },
         {
             type: "Apple",
             name: "Golden Delicious",
-            // harvest_time: ""
+            harvest_time: "September 21 to October 8"
         },
         {
             type: "Apple",
             name: "UEB 406/1",
             AKA: ["Bonita™"],
             patent: "https://patents.google.com/patent/USPP29959 2037-03-30",
-            // harvest_time: "",
+            harvest_time: "September 21 to October 8",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/453/bonita"
         },
         {
             type: "Apple",
             name: "NJ 150", // AKA "Rubyrush™"
-            // harvest_time: ""
+            harvest_time: "September 23 to October 8"
         },
         {
             type: "Apple",
             name: "Golden Parsi Golden Delicious",
             AKA: ["Da Rosa® Golden Delicious"],
-            // harvest_time: "",
+            harvest_time: "September 23 to October 11",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/444/da-rosa",
             patent: "https://patents.google.com/patent/USPP22859 expires 2030-04-13"
         },
@@ -536,240 +541,241 @@
             type: "Apple",
             name: "Sandidge Red Delicious",
             AKA: ["Super Chief® Red Delicious"],
-            // harvest_time: "",
+            harvest_time: "September 24 to October 19",
             patent: "https://patents.google.com/patent/USPP6190 expired 2006-04-16"
         },
         {
             type: "Apple",
             name: "Grimes Golden",
-            // harvest_time: ""
+            harvest_time: "September 24 to October 10"
         },
         {
             type: "Apple",
             name: "Ambrosia",
-            // harvest_time: ""
+            harvest_time: "September 26 to October 10"
         },
         {
             type: "Apple",
             name: "X-4982", // AKA "Galarina™"
-            // harvest_time: ""
+            harvest_time: "September 26 to October 10"
         },
         {
             type: "Apple",
-            name: "Crown™ Empire",
-            // harvest_time: ""
+            name: "Crist Empire",
+            AKA: ["Crown™ Empire"],
+            harvest_time: "September 26 to October 15"
         },
         {
             type: "Apple",
             name: "Teeple Red Empire", // AKA "Royal® Empire"
-            // harvest_time: ""
+            harvest_time: "September 26 to October 15"
         },
         {
             type: "Apple",
             name: "Hampshire Mac", // no variety name provided, so I'm deleting the "tm" in "Hampshire™ Mac"
-            // harvest_time: "",
+            harvest_time: "September 27 to October 17",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/49/hampshire-mac"
         },
         {
             type: "Apple",
             name: "Freedom",
-            // harvest_time: ""
+            harvest_time: "September 27 to October 12"
         },
         {
             type: "Apple",
             name: "Smerelda", // patent name
-            // harvest_time: "",
+            harvest_time: "October 1 to October 16",
             patent: "https://patents.google.com/patent/USPP24137 expires 2032-01-25"
         },
         {
             type: "Apple",
             name: "Red Jonaprince", // patent name
             AKA: ["Wilton's® Red Jonaprince"],
-            // harvest_time: "",
+            harvest_time: "October 2 to October 24",
             patent: "https://patents.google.com/patent/USPP11112 expired 2017-08-19",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/57/wilton's-red-jonaprince"
         },
         {
             type: "Apple",
             name: "MAIA11",
-            // harvest_time: ""
+            harvest_time: "October 2 to October 15"
         },
         {
             type: "Apple",
             name: "Keepsake",
-            // harvest_time: ""
+            harvest_time: "October 2 to October 15"
         },
         {
             type: "Apple",
             name: "Shizuka",
-            // harvest_time: ""
+            harvest_time: "October 2 to October 15"
         },
         {
             type: "Apple",
             name: "Idared",
-            // harvest_time: ""
+            harvest_time: "October 2 to October 15"
         },
         {
             type: "Apple",
             name: "Melrose",
-            // harvest_time: ""
+            harvest_time: "October 2 to October 15"
         },
         {
             type: "Apple",
             name: "Autumn Gala",
-            // harvest_time: ""
+            harvest_time: "October 2 to October 20"
         },
         {
             type: "Apple",
             name: "Inored",
             AKA: ["Story®"],
-            // harvest_time: ""
+            harvest_time: "Ocober 2 to October 17"
         },
         {
             type: "Apple",
             name: "Northern Spy",
-            // harvest_time: ""
+            harvest_time: "October 5 to October 18"
         },
         {
             type: "Apple",
             name: "Smokehouse",
-            // harvest_time: ""
+            harvest_time: "October 5 to October 18"
         },
         {
             type: "Apple",
             name: "Nova Spy",
-            // harvest_time: ""
+            harvest_time: "October 5 to October 18"
         },
         {
             type: "Apple",
             name: "MAIA-L",
-            // harvest_time: ""
+            harvest_time: "October 7 to October 20"
         },
         {
             type: "Apple",
             name: "Caudle",
             AKA: ["Cameo (tm)"],
-            // harvest_time: "",
+            harvest_time: "October 9 to Ocober 22",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/65/cameo"
         },
         {
             type: "Apple",
             name: "Dudek",
             AKA: ["Red Cameo™"],
-            // harvest_time: "",
+            harvest_time: "October 9 to Ocober 22",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/403/red-cameo"
         },
         {
             type: "Apple",
             name: "Law Red Rome",
-            // harvest_time: ""
+            harvest_time: "October 10 to October 25"
         },
         {
             type: "Apple",
             name: "Nittany",
-            // harvest_time: ""
+            harvest_time: "October 10 to October 25"
         },
         {
             type: "Apple",
             name: "Albemarle Pippin",
-            // harvest_time: ""
+            harvest_time: "October 10 to September 1"
         },
         {
             type: "Apple",
             name: "Florina",
             AKA: ["Querina®"],
-            // harvest_time: ""
+            harvest_time: "October 10 to October 25"
         },
         {
             type: "Apple",
             name: "Co-op 31", // AKA "Winecrisp™"
-            // harvest_time: ""
+            harvest_time: "October 12 to October 25"
         },
         {
             type: "Apple",
             name: "Mutsu",
-            // harvest_time: ""
+            harvest_time: "October 13 to October 25"
         },
         {
             type: "Apple",
             name: "NJ 55", // AKA "Suncrisp®"
-            // harvest_time: ""
+            harvest_time: "October 14 to October 31"
         },
         {
             type: "Apple",
             name: "Barnsby Pink", // AKA: "Pink Lady® (Barnsby)"
-            // harvest_time: ""
+            harvest_time: "October 17 to November 11"
         },
         {
             type: "Apple",
-            name: "Stayman (AS510)",
-            AKA: ["Stayman (Snapp™)"],
-            // harvest_time: "",
+            name: "AS510 Stayman",
+            AKA: ["Snapp™ Stayman"],
+            harvest_time: "October 17 to November 8",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/11/snapp-stayman"
         },
         {
             type: "Apple",
             name: "Red Yorking",
-            // harvest_time: ""
+            harvest_time: "October 17 to November 4"
         },
         {
             type: "Apple",
             name: "Red Winesap",
-            // harvest_time: ""
+            harvest_time: "October 22 to November 8"
         },
         {
             type: "Apple",
             name: "Enterprise", // ACN slapped a "tm" on this but PRI doesn't claim a trademark as far as I can tell
-            // harvest_time: ""
+            harvest_time: "October 22 to November 8"
         },
         {
             type: "Apple",
             name: "Taylor Spur Rome",
-            // harvest_time: ""
+            harvest_time: "October 23 to November 14"
         },
         {
             type: "Apple",
-            name: "Braeburn (AMG 1016)",
-            AKA: ["Braeburn (Kumeu Crimson®)"],
-            // harvest_time: "",
+            name: "AMG 1016 Braeburn",
+            AKA: ["Kumeu Crimson® Braeburn"],
+            harvest_time: "November 1 to November 25",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/13/kumeu-crimson-braeburn"
         },
         {
             type: "Apple",
             name: "MAIA1",
-            // harvest_time: ""
+            harvest_time: "November 1 to November 15"
         },
         {
             type: "Apple",
             name: "DT2",
             AKA: ["Aztec Fuji®"],
-            // harvest_time: ""
+            harvest_time: "November 2 to November 18"
         },
         {
             type: "Apple",
             name: "Arkansas Black",
-            // harvest_time: ""
+            harvest_time: "November 2 to November 18"
         },
         {
             type: "Apple",
             name: "Granny Smith",
-            // harvest_time: ""
+            harvest_time: "November 7 to November 21"
         },
         {
             type: "Apple",
             name: "GoldRush",
-            // harvest_time: ""
+            harvest_time: "November 8 to November 24"
         },
         {
             type: "Apple",
             name: "Ruby Pink",
             AKA: ["Pink Lady® (Ruby Pink)"],
-            // harvest_time: ""
+            harvest_time: "November 10 to November 27"
         },
         {
             type: "Apple",
             name: "Cripps Pink", // AKA "Pink Lady®"
-            // harvest_time: ""
+            harvest_time: "November 11 to November 28"
         },
 
         // apricot
@@ -777,54 +783,54 @@
             type: "Apricot",
             name: "NJA 53",
             AKA: ["Early Blush®"],
-            // harvest_time: ""
+            harvest_time: "June 17 to June 30"
         },
         {
             type: "Apricot",
             name: "NJA 151", // AKA "Ilona™"
-            // harvest_time: "",
+            harvest_time: "June 24 to July 10",
             description: "https://www.acnursery.com/fruit-trees/apricot-trees/357/ilona"
         },
         {
             type: "Apricot",
             name: "Goldrich",
-            // harvest_time: ""
+            harvest_time: "June 26 to July 10"
         },
         {
             type: "Apricot",
             name: "Robada",
-            // harvest_time: ""
+            harvest_time: "June 26 to July 10"
         },
         {
             type: "Apricot",
             name: "NJA 32", // AKA "Orangered®"
-            // harvest_time: "",
+            harvest_time: "July 2 to July 20",
             description: "https://www.acnursery.com/fruit-trees/apricot-trees/257/orangered"
         },
         {
             type: "Apricot",
             name: "Harcot",
-            // harvest_time: ""
+            harvest_time: "July 7 to July 22"
         },
         {
             type: "Apricot",
             name: "Harostar",
-            // harvest_time: ""
+            harvest_time: "July 8 to July 23"
         },
         {
             type: "Apricot",
             name: "Hargrande",
-            // harvest_time: ""
+            harvest_time: "July 15 to July 31"
         },
         {
             type: "Apricot",
             name: "Harogem",
-            // harvest_time: ""
+            harvest_time: "July 18 to August 4"
         },
         {
             type: "Apricot",
             name: "Harlayne",
-            // harvest_time: ""
+            harvest_time: "July 19 to August 10"
         },
 
         // white peaches
@@ -832,84 +838,84 @@
         {
             type: "Peach",
             name: "Spring Snow",
-            // harvest_time: "",
+            harvest_time: "July 8 to July 23",
             description: "white peach"
         },
 
         {
             type: "Peach",
             name: "Erly-red-fre",
-            // harvest_time: "",
+            harvest_time: "July 13 to July 27",
             description: "white peach https://www.acnursery.com/fruit-trees/peach-trees/172/erly-red-fre"
         },
         {
             type: "Peach",
             name: "Sugar May",
-            // harvest_time: "",
+            harvest_time: "July 13 to July 27",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "NJ 354",
             // AKA "July Rose™"
-            // harvest_time: "",
+            harvest_time: "July 23 to August 8",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "NJ 360",
             AKA: ["Anna Rose™"],
-            // harvest_time: "",
+            harvest_time: "August 2 to August 16",
             patent: "ppaf 2022",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "White Lady",
-            // harvest_time: "",
+            harvest_time: "August 3 to August 17",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "Raritan Rose",
-            // harvest_time: "",
+            harvest_time: "August 6 to August 19",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "Klondike White",
-            // harvest_time: "",
+            harvest_time: "August 11 to August 26",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "Sugar Giant",
-            // harvest_time: "",
+            harvest_time: "August 21 to September 6",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "FA 18", // "Blushingstar®"
-            // harvest_time: "",
+            harvest_time: "August 25 to September 10",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "NJ 356",
             AKA: ["August Rose (tm)"],
-            // harvest_time: "",
+            harvest_time: "August 28 to August 13",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "Snow Giant",
-            // harvest_time: "",
+            harvest_time: "September 12 to September 25",
             description: "white peach"
         },
         {
             type: "Peach",
             name: "September Snow",
-            // harvest_time: "",
+            harvest_time: "September 23 to October 12",
             description: "white peach"
         },
 
@@ -917,272 +923,272 @@
         {
             type: "Euro Pear",
             name: "Sunrise",
-            // harvest_time: ""
+            harvest_time: "August 10 to August 25"
         },
         {
             type: "Euro Pear",
             name: "Red Clapp's Favorite",
-            // harvest_time: ""
+            harvest_time: "August 10 to August 25"
         },
         {
             type: "Asian Pear",
             name: "Shinsui",
-            // harvest_time: ""
+            harvest_time: "August 15 to August 31"
         },
         {
             type: "Euro Pear",
             name: "Harrow Crisp",
             // AKA "AC™ Harrow Crisp"
-            // harvest_time: ""
+            harvest_time: "August 18 to september 6"
         },
         {
             type: "Euro Pear",
             name: "Bartlett",
-            // harvest_time: ""
+            harvest_time: "August 18 to September 5"
         },
         {
             type: "Euro Pear",
             name: "Bell",
-            // harvest_time: ""
+            harvest_time: "August 18 to September 5"
         },
         {
             type: "Euro Pear",
             name: "Red Bartlett",
-            // harvest_time: ""
+            harvest_time: "August 18 to September 9"
         },
         {
             type: "Asian Pear",
             name: "Shinseiki",
-            // harvest_time: ""
+            harvest_time: "August 18 to September 5"
         },
         {
             type: "Asian Pear",
             name: "Kosui",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 8"
         },
         {
             type: "Asian Pear",
             name: "Hosui",
-            // harvest_time: ""
+            harvest_time: "August 25 to September 11"
         },
         {
             type: "Euro Pear",
             name: "Blake's Pride",
-            // harvest_time: ""
+            harvest_time: "August 25 to September 12"
         },
         {
             type: "Euro Pear",
             name: "Potomac",
-            // harvest_time: ""
+            harvest_time: "September 8 to September 22"
         },
         {
             type: "Euro Pear",
             name: "Seckel",
-            // harvest_time: ""
+            harvest_time: "September 11 to September 22"
         },
         {
             type: "Euro Pear",
             name: "Harrow Sweet",
-            // harvest_time: ""
+            harvest_time: "September 11 to September 26"
         },
         {
             type: "Euro Pear",
             name: "Shenandoah",
-            // harvest_time: ""
+            harvest_time: "September 13 to September 24"
         },
         {
             type: "Euro Pear",
             name: "Harovin Sundown",
             // AKA "Cold Snap®"
-            // harvest_time: ""
+            harvest_time: "September 13 to September 24"
         },
         {
             type: "Euro Pear",
             name: "Magness",
-            // harvest_time: ""
+            harvest_time: "September 13 to September 25"
         },
         {
             type: "Euro Pear",
             name: "Beurre D'anjou",
-            // harvest_time: ""
+            harvest_time: "September 14 to September 30"
         },
         {
             type: "Euro Pear",
             name: "Bosc (Golden Russet)",
-            // harvest_time: ""
+            harvest_time: "September 14 to October 2"
         },
         {
             type: "Asian Pear",
             name: "Niitaka",
-            // harvest_time: ""
+            harvest_time: "September 16 to October 2"
         },
         {
             type: "Asian Pear",
             name: "Yoinashi", // "trade name of fowler nurseries" but they don't provide a variety name
-            // harvest_time: "",
+            harvest_time: "September 17 to October 5",
             description: "https://www.acnursery.com/fruit-trees/pear-trees/105/yoinashi"
         },
         {
             type: "Asian Pear",
             name: "Atago",
-            // harvest_time: ""
+            harvest_time: "September 23 to October 8"
         },
         {
             type: "Asian Pear",
             name: "Shinko",
-            // harvest_time: ""
+            harvest_time: "September 26 to October11 "
         },
         {
             type: "Asian Pear",
             name: "Korean Giant", // "Olympic"
-            // harvest_time: ""
+            harvest_time: "October 9 to October 22"
         },
 
         // plums and plum hybrids
         {
             type: "Plumcot",
             name: "Spring Satin",
-            // harvest_time: ""
+            harvest_time: "July 5 to July 24"
         },
         {
             type: "Japanese Plum",
             name: "Early Golden",
-            // harvest_time: ""
+            harvest_time: "July 9 to July 23"
         },
         {
             type: "Japanese Plum",
             name: "Methley",
-            // harvest_time: ""
+            harvest_time: "July 14 to July 27"
         },
         {
             type: "Japanese Plum",
             name: "Shiro",
-            // harvest_time: ""
+            harvest_time: "July 18 to August 4"
         },
         {
             type: "Japanese Plum",
             name: "AU-Rosa",
-            // harvest_time: ""
+            harvest_time: "July 21 to August 6"
         },
         {
             type: "Euro Plum",
             name: "Green Gage",
-            // harvest_time: ""
+            harvest_time: "August 5 to August 18"
         },
         {
             type: "Japanese Plum",
             name: "Santa Rosa",
-            // harvest_time: ""
+            harvest_time: "August 10 to August 23"
         },
         {
             type: "Euro Plum",
             name: "Castleton", // ACN slaps a "tm" on this but I don't think cornell does
-            // harvest_time: ""
+            harvest_time: "August 10 to August 23"
         },
         {
             type: "Japanese Plum",
             name: "Black Amber",
-            // harvest_time: ""
+            harvest_time: "August 12 to August 25"
         },
         {
             type: "Japanese Plum",
             name: "Wickson",
-            // harvest_time: ""
+            harvest_time: "August 14 to August 28"
         },
         {
             type: "Japanese Plum",
             name: "Satsuma",
-            // harvest_time: ""
+            harvest_time: "August 15 to August 31"
         },
         {
             type: "Japanese Plum",
             name: "Vanier",
-            // harvest_time: ""
+            harvest_time: "August 15 to August 31"
         },
         {
             type: "Japanese Plum",
             name: "Queen Rosa",
-            // harvest_time: ""
+            harvest_time: "August 15 to August 31"
         },
         {
             type: "Plumcot",
             name: "Flavor Queen",
-            // harvest_time: ""
+            harvest_time: "August 21 to September 14"
         },
         {
             type: "Plumcot",
             name: "Dapple Dandy",
-            // harvest_time: ""
+            harvest_time: "August 27 to September 18"
         },
         {
             type: "Euro Plum",
             name: "Longjohn",
-            // harvest_time: ""
+            harvest_time: "August 30 to September 14"
         },
         {
             type: "Euro Plum",
             name: "Kenmore", // AKA "NY9®"
-            // harvest_time: ""
+            harvest_time: "August 30 to September 14"
         },
         {
             type: "Plumcot",
             name: "Flavor King",
-            // harvest_time: ""
+            harvest_time: "September 1 to September 20"
         },
         {
             type: "Japanese Plum",
             name: "Fortune",
-            // harvest_time: ""
+            harvest_time: "September 1 to September 15"
         },
         {
             type: "Euro Plum",
             name: "Stanley",
-            // harvest_time: ""
+            harvest_time: "September 2 to September 15"
         },
         {
             type: "Euro Plum",
             name: "Bluebyrd",
-            // harvest_time: ""
+            harvest_time: "September 2 to September 15"
         },
         {
             type: "Euro Plum",
             name: "Valor",
-            // harvest_time: ""
+            harvest_time: "September 3 to September 16"
         },
         {
             type: "Japanese Plum",
             name: "Ruby Queen",
-            // harvest_time: ""
+            harvest_time: "September 3 to September 25"
         },
         {
             type: "Plumcot",
             name: "Flavor Grenade",
-            // harvest_time: ""
+            harvest_time: "September 3 to September 25"
         },
         {
             type: "Plumcot",
             name: "Flavor Heart",
-            // harvest_time: ""
+            harvest_time: "September 5 to September 27"
         },
         {
             type: "Euro Plum",
             name: "Victory",
-            // harvest_time: ""
+            harvest_time: "September 7 to September 21"
         },
         {
             type: "Euro Plum",
             name: "Vision",
-            // harvest_time: ""
+            harvest_time: "September 13 to September 27"
         },
         {
             type: "Euro Plum",
             name: "President",
-            // harvest_time: ""
+            harvest_time: "September 18 to October 5"
         },
         {
             type: "Plumcot",
             name: "Flavorich",
-            // harvest_time: ""
+            harvest_time: "September 22 to October 8"
         },
 
         // flat peaches
@@ -1190,53 +1196,53 @@
         {
             type: "Peach",
             name: "Orion™", // ACN claims trademark but I can't find a variety name, and they usually know better
-            // harvest_time: "",
+            harvest_time: "July 20 to August 8",
             description: "flat peach"
         },
         {
             type: "Peach",
             name: "NJF 18",
             AKA: ["BuenOs™"],
-            // harvest_time: "",
+            harvest_time: "July 25 to August 12",
             description: "flat peach https://www.acnursery.com/fruit-trees/peach-trees/185/buenos"
         },
         {
             type: "Peach",
             name: "NJF 15",
             AKA: ["BuenOs™ II"],
-            // harvest_time: "",
+            harvest_time: "July 27 to August 13",
             description: "flat peach https://www.acnursery.com/fruit-trees/peach-trees/186/buenos-ii"
         },
         {
             type: "Peach",
             name: "Galaxy",
-            // harvest_time: "",
+            harvest_time: "July 27 to August 16",
             description: "flat peach https://www.acnursery.com/fruit-trees/peach-trees/187/galaxy"
         },
         {
             type: "Peach",
             name: "Saturn",
-            // harvest_time: "",
+            harvest_time: "August 3 to August 18",
             description: "flat peach https://www.acnursery.com/fruit-trees/peach-trees/188/saturn"
         },
         {
             type: "Peach",
             name: "Galactica",
-            // harvest_time: "",
+            harvest_time: "August 4 to August 22",
             description: "flat peach"
         },
         {
             type: "Peach",
             name: "NJF 16",
             AKA: ["TangOs®"],
-            // harvest_time: "",
+            harvest_time: "August 6 to August 20",
             description: "flat peach https://www.acnursery.com/fruit-trees/peach-trees/189/tangos"
         },
         {
             type: "Peach",
             name: "NJF 17",
             AKA: ["TangOs® II"],
-            // harvest_time: "",
+            harvest_time: "August 8 to August 24",
             description: "flat peach https://www.acnursery.com/fruit-trees/peach-trees/190/tangos-ii"
         },
 
@@ -1244,55 +1250,55 @@
         {
             type: "Nectarine",
             name: "Eastern Glo",
-            // harvest_time: ""
+            harvest_time: "July 15 to July 31"
         },
         {
             type: "Nectarine",
             name: "NJN 101",
             AKA: ["Avalon™"],
-            // harvest_time: ""
-        },
-        {
-            type: "Nectarine",
-            name: "NJN 102", // AKA "Brigantine™"
-            // harvest_time: ""
+            harvest_time: "July 20 to August 6"
         },
         {
             type: "Nectarine",
             name: "Nectafest",
-            // harvest_time: "",
+            harvest_time: "July 22 to August 7",
             patent: "https://patents.google.com/patent/USPP25694 expires 2033-06-28"
         },
         {
             type: "Nectarine",
+            name: "NJN 102", // AKA "Brigantine™"
+            harvest_time: "August 1 to August 12"
+        },
+        {
+            type: "Nectarine",
             name: "Summer Beaut",
-            // harvest_time: ""
+            harvest_time: "August 4 to August 18"
         },
         {
             type: "Nectarine",
             name: "Sunglo",
-            // harvest_time: ""
+            harvest_time: "August 11 to August 24"
         },
         {
             type: "Nectarine",
             name: "Flavortop",
-            // harvest_time: ""
+            harvest_time: "August 24 to September 2"
         },
         {
             type: "Nectarine",
             name: "Red Gold",
-            // harvest_time: ""
+            harvest_time: "August 22 to September 8"
         },
         {
             type: "Nectarine",
             name: "Fantasia",
-            // harvest_time: ""
+            harvest_time: "August 25 to September 12"
         },
         {
             type: "Nectarine",
             name: "Monam",
             AKA: ["Ambre™"],
-            // harvest_time: ""
+            harvest_time: "September 8 to September 23"
         },
 
         // white nectarines
@@ -1300,41 +1306,41 @@
             type: "Nectarine",
             name: "Momee",
             AKA: ["Jade™"],
-            // harvest_time: "",
+            harvest_time: "July 16 to August 2",
             description: "white nectarine"
         },
         {
             type: "Nectarine",
             name: "NJN 100",
             // AKA: ["Silver Gem®"]
-            // harvest_time: "",
+            harvest_time: "July 18 to August 3",
             description: "white nectarine"
         },
         {
             type: "Nectarine",
             name: "Arctic Sweet",
-            // harvest_time: "",
+            harvest_time: "July 22 to August 10",
             description: "white nectarine"
         },
         {
             type: "Nectarine",
             name: "NJN 103",
             // AKA: ["Silverglo™"]
-            // harvest_time: "",
+            harvest_time: "July 26 to August 11",
             description: "white nectarine"
         },
         {
             type: "Nectarine",
             name: "Monnude",
             AKA: ["Emeraude™"],
-            // harvest_time: "",
+            harvest_time: "August 5 to August 19",
             description: "white nectarine"
         },
         {
             type: "Nectarine",
             name: "Monphir",
             AKA: ["Zephyr™"],
-            // harvest_time: "",
+            harvest_time: "August 28 to September 14",
             description: "white nectarine https://www.acnursery.com/fruit-trees/nectarine-trees/206/zephyr"
         }
     ]
