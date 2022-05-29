@@ -50,7 +50,8 @@
         },
         {
             type: "Apple",
-            name: "Bonita",
+            name: "UEB 406/1",
+            AKA: ["Bonita™"],
             // todo: "scab-resistant"
             description: "from the Czech Republic"
         },
@@ -146,8 +147,8 @@
         },
         {
             type: "Apple",
-            name: "LJ-1000",
-            AKA: ["Royal Red Honeycrisp™"],
+            name: "LJ-1000 Honeycrisp",
+            AKA: ["Royal Red® Honeycrisp"],
             patent: "https://patents.google.com/patent/USPP22244 expires 2030-07-06",
             description: "Honeycrisp sport"
         },

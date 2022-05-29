@@ -78,7 +78,7 @@
             type: "Euro Pear",
             name: "Harovin Sundown",
             harvest_time_relative: "Bartlett +3 weeks", // "3 weeks after Bartlet"
-            AKA: ["HW614"],
+            AKA: ["Cold Snap®", "HW614"],
             released: "Harrow 2008*"
         },
         // fire blight resistant (9.6 rating)

@@ -117,8 +117,8 @@
         },
         {
             type: "Apple",
-            name: "LJ-1000",
-            AKA: ["Royal Red Honeycrisp™"],
+            name: "LJ-1000 Honeycrisp",
+            AKA: ["Royal Red® Honeycrisp"],
             description: "Honeycrisp sport. Washington",
             patent: "https://patents.google.com/patent/USPP22244 2030-07-06"
         },

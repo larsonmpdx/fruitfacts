@@ -35,8 +35,8 @@
         },
         {
             type: "Apple",
-            AKA: ["Caudle"],
-            name: "Cameo",
+            name: "Caudle",
+            AKA: ["Cameo (tm)"],
             description: "chance seedling discovered in Washington State",
             patent: "https://patents.google.com/patent/USPP9068 expired 2013-08-31"
         },

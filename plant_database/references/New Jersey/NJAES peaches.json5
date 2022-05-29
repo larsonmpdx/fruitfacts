@@ -4,6 +4,7 @@
     url: "https://agproducts.rutgers.edu/fruit-trees/varieties.html and https://njaes.rutgers.edu/fs1300/ and https://njaes.rutgers.edu/peach/postharvest/pdfs/New-Peach-Varieties-and-Post-Harvest-Fruit-Quality.pdf",
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true, // patents for the newer varieties, and a patent search. tighten up names (njn100 or "njn 100" with a space?)
     locations: [
         {
             name: "Cream Ridge, NJ",
@@ -224,7 +225,11 @@
             harvest_time: "early august", // redhaven +/- todo
             released: "2017",
             description: "white",
-            patent: "ppaf 2017"
+            patent: "https://patents.google.com/patent/USPP30123 expires 2037-01-30
+"
         }
+
+        // todo NJ360 "anna rose (tm) PPAF from ACN https://www.acnursery.com/fruit-trees/peach-trees/460/anna-rose
+        // todo - patent search starting with NJN103
     ]
 }

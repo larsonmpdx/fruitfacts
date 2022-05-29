@@ -119,8 +119,8 @@
             patent: "https://patents.google.com/patent/USPP9681 expired 2015-01-23"
         },
         {
-            name: "LJ-1000",
-            AKA: ["Royal Red Honeycrisp™"],
+            name: "LJ-1000 Honeycrisp",
+            AKA: ["Royal Red® Honeycrisp"],
             type: "Apple",
             description: "not a summerland variety. https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/54/Royal_Red_Honeycrisp/",
             patent: "https://patents.google.com/patent/USPP22244 expires 2030-07-06"
@@ -131,8 +131,8 @@
             description: "not a summerland variety. McIntosh sport https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/57/VK71"
         },
         {
-            name: "Greiner",
-            AKA: ["Pioneer Mac (tm)"],
+            name: "Greiner Mac",
+            AKA: ["Pioneer™ Mac"],
             type: "Apple",
             description: "not a summerland variety. https://www.summerlandvarieties.com/varieties/category/0/Select_Apples/product/58/Pioneer_Mac_TM/",
             patent: "https://patents.google.com/patent/USPP7002 expired 2008-07-20"
