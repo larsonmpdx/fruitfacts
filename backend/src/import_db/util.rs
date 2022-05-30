@@ -157,7 +157,34 @@ lazy_static! {
                 name: "Shinseiki".to_string(),
             },
         ),
-
+        (
+            "Raspberry",
+            CandleTarget {
+                type_: "Raspberry".to_string(),
+                name: "Heritage".to_string(),
+            },
+        ),
+        (
+            "Hardy Kiwi",
+            CandleTarget {
+                type_: "Hardy Kiwi".to_string(),
+                name: "Ken's Red".to_string(),
+            },
+        ),
+        (
+            "Fuzzy Kiwi",
+            CandleTarget {
+                type_: "Fuzzy Kiwi".to_string(),
+                name: "Hayward".to_string(),
+            },
+        ),
+        (
+            "Pomegranate",
+            CandleTarget {
+                type_: "Pomegranate".to_string(),
+                name: "Wonderful".to_string(),
+            },
+        ),
         // todo: Fuyu Persimmon? Pineapple Quince?
         // Olive, Chestnut, Hazelnut (I think Chestnut and Hazelnut probably have standard candles in the literature already)
     ])

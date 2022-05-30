@@ -7,51 +7,81 @@
   {
     "type": "Sweet Cherry",
     "name": "Bing",
-    "day": 0
+    "day": 4
   },
   {
     "type": "Apricot",
     "name": "Blenheim",
-    "day": 6
+    "day": 12
   },
   {
     "type": "Japanese Plum",
     "name": "Santa Rosa",
-    "day": 26
+    "day": 31
   },
   {
     "type": "Peach",
     "name": "Redhaven",
-    "day": 30
+    "day": 37
+  },
+  {
+    "type": "Blueberry",
+    "name": "Legacy",
+    "day": 38
+  },
+  {
+    "type": "Raspberry",
+    "name": "Heritage",
+    "day": 51
+  },
+  {
+    "type": "Blackberry",
+    "name": "Marion",
+    "day": 60
   },
   {
     "type": "Euro Pear",
     "name": "Bartlett",
-    "day": 56
+    "day": 61
   },
   {
     "type": "Asian Pear",
     "name": "Shinseiki",
-    "day": 63
+    "day": 67
   },
   {
     "type": "Almond",
     "name": "Nonpareil",
-    "day": 65
+    "day": 70
   },
   {
     "type": "Euro Plum",
     "name": "Italian",
-    "day": 67
+    "day": 70
   },
   {
     "type": "Apple",
     "name": "Red Delicious",
-    "day": 77
+    "day": 82
+  },
+  {
+    "type": "Pomegranate",
+    "name": "Wonderful",
+    "day": 103
+  },
+  {
+    "type": "Hardy Kiwi",
+    "name": "Ken's Red",
+    "day": 110
   },
   {
     "type": "Walnut",
     "name": "Chandler",
-    "day": 125
+    "day": 130
+  },
+  {
+    "type": "Fuzzy Kiwi",
+    "name": "Hayward",
+    "day": 138
   }
 ]
