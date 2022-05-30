@@ -87,10 +87,10 @@ export default function Home({
   setErrorMessage(errorMessage);
   return (
     <>
-    <article className="prose m-5">
-      <Head>
-        <title>{`Collection: ${path.join('/')}`}</title>
-      </Head>
+      <article className="prose m-5">
+        <Head>
+          <title>{`Collection: ${path.join('/')}`}</title>
+        </Head>
         {data.collection && (
           <>
             {data.collection.needs_help == 1 && (
@@ -156,7 +156,7 @@ export default function Home({
             </ul>
           </>
         )}
-        </article>
+      </article>
     </>
   );
 }

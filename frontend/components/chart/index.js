@@ -9,6 +9,8 @@ import {
   getTypeLines
 } from './util';
 
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+
 export default function Home({ items }) {
   let absolute_count = countChartItemsAbsolute(items);
   let relative_count = countChartItemsRelativeForComparison(items);
@@ -47,62 +49,70 @@ export default function Home({ items }) {
 
   if (bars.length > 0) {
     return (
-      <div className="w-[800px]">
-        <svg
-          viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}
-        >
-          {majorLines.map((line, index) => (
-            <line
-              key={index}
-              x1={line.x1}
-              y1={line.y1}
-              x2={line.x2}
-              y2={line.y2}
-              stroke="black"
-              strokeWidth="1"
-            />
-          ))}
-          {interLines.map((line, index) => (
-            <line
-              key={index}
-              x1={line.x1}
-              y1={line.y1}
-              x2={line.x2}
-              y2={line.y2}
-              stroke="#dbdbdb"
-              strokeWidth="1"
-            />
-          ))}
-          {bars.map((bar, index) => (
-            <g key={index}>
-              <rect
-                x={bar.x}
-                y={bar.y}
-                width={bar.width}
-                height={bar.height}
-                rx={20}
-                ry={20}
-                fill={bar.fill}
-              />
-              <text x={bar.x + 20} y={bar.y + 22} fontFamily="Verdana" fontSize="20" fill="blue">
-                {bar.name}
-              </text>
-            </g>
-          ))}
-          {labels.map((label, index) => (
-            <text
-              key={index}
-              x={label.x}
-              y={label.y}
-              fontFamily="Verdana"
-              fontSize={label.fontSize}
-              fill="blue"
-            >
-              {label.name}
-            </text>
-          ))}
-        </svg>
-      </div>
+      <TransformWrapper>
+        <TransformComponent>
+          <div className="w-screen">
+            <svg viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}>
+              {majorLines.map((line, index) => (
+                <line
+                  key={index}
+                  x1={line.x1}
+                  y1={line.y1}
+                  x2={line.x2}
+                  y2={line.y2}
+                  stroke="black"
+                  strokeWidth="1"
+                />
+              ))}
+              {interLines.map((line, index) => (
+                <line
+                  key={index}
+                  x1={line.x1}
+                  y1={line.y1}
+                  x2={line.x2}
+                  y2={line.y2}
+                  stroke="#dbdbdb"
+                  strokeWidth="1"
+                />
+              ))}
+              {bars.map((bar, index) => (
+                <g key={index}>
+                  <rect
+                    x={bar.x}
+                    y={bar.y}
+                    width={bar.width}
+                    height={bar.height}
+                    rx={20}
+                    ry={20}
+                    fill={bar.fill}
+                  />
+                  <text
+                    x={bar.x + 20}
+                    y={bar.y + 22}
+                    fontFamily="Verdana"
+                    fontSize="20"
+                    fill="blue"
+                  >
+                    {bar.name}
+                  </text>
+                </g>
+              ))}
+              {labels.map((label, index) => (
+                <text
+                  key={index}
+                  x={label.x}
+                  y={label.y}
+                  fontFamily="Verdana"
+                  fontSize={label.fontSize}
+                  fill="blue"
+                >
+                  {label.name}
+                </text>
+              ))}
+            </svg>
+          </div>
+        </TransformComponent>
+      </TransformWrapper>
     );
   } else {
     // todo - show a grid of un-charted items

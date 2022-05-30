@@ -446,11 +446,6 @@
         },
         {
             type: "Walnut",
-            name: "",
-            released: "LE Cooke*"
-        },
-        {
-            type: "Walnut",
             name: "Carpathian",
             AKA: ["Mesa"],
             released: "LE Cooke*"
