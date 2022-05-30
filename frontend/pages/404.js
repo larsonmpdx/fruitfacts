@@ -50,7 +50,7 @@ export default function Custom404({ icons, setErrorMessage, setContributingLinks
 
   return (
     <div className="grid place-items-center">
-      <article className="prose">
+      <article className="prose m-5">
         <div className="grid place-items-center">
           <p>
             <b>Fact:</b> This is a 404 page

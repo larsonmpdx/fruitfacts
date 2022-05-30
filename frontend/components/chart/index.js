@@ -47,9 +47,8 @@ export default function Home({ items }) {
 
   if (bars.length > 0) {
     return (
-      <div>
+      <div class="w-[800px]">
         <svg
-          className="max-h-screen"
           viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}
         >
           {majorLines.map((line, index) => (

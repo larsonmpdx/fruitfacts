@@ -155,10 +155,10 @@
             type: "Walnut"
         },
         {
-            name: "Durham (PPAF)",
+            name: "Durham",
             type: "Walnut",
             harvest_time_relative: "Chandler-10",
-            patent: "PPAF (nlt 2021)"
+            patent: "https://patents.google.com/patent/USPP28529 expires 2036-05-07"
         },
         {
             name: "Eureka",
@@ -169,7 +169,7 @@
             name: "Forde",
             type: "Walnut",
             harvest_time_relative: "Chandler-5",
-            patent: "https://patents.google.com/patent/USPP16495 expired 2024-10-24"
+            patent: "https://patents.google.com/patent/USPP16495 expires 2024-10-24"
         },
         {
             name: "Fredrick",
@@ -220,7 +220,7 @@
         {
             name: "Solano",
             type: "Walnut",
-            patent: "https://patents.google.com/patent/USPP25466 expires 2033-05-28",
+            patent: "https://patents.google.com/patent/USPP25466 expires 2033-05-28", // todo other patents by this discoverer
             harvest_time_unparsed: "Harvests early to mid"
         },
         {
