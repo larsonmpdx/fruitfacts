@@ -195,7 +195,7 @@
         {
             type: "Apriplum",
             name: "Coral Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/coral_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/coral_cot/",
             patent: "https://patents.google.com/patent/USPP19563 expires 2027-06-22",
             chill: "600 hours",
             harvest_time: "June 5 to June 20"
@@ -203,7 +203,7 @@
         {
             type: "Apriplum",
             name: "Country Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/coral_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/country_cot/",
             patent: "https://patents.google.com/patent/USPP23695 expires 2032-02-16",
             chill: "600 hours",
             harvest_time: "June 5 to June 20"
@@ -211,7 +211,7 @@
         {
             type: "Apriplum",
             name: "Escort",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/escort/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/escort/",
             patent: "https://patents.google.com/patent/USPP18537 expire 2026-12-04",
             chill: "700-800 hours",
             harvest_time: "June 6 to June 21"
@@ -219,7 +219,7 @@
         {
             type: "Apriplum",
             name: "Flavor Delight",
-            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/Apriplum-interspecific/flavor_delight/",
+            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/aprium-interspecific/flavor_delight/",
             patent: "https://patents.google.com/patent/USPP7090 expired 2009-01-23",
             chill: "less than 300 hours",
             harvest_time: "June 3 to June 17"
@@ -227,7 +227,7 @@
         {
             type: "Apriplum",
             name: "Hermosa",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/hermosa/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/hermosa/",
             patent: "https://patents.google.com/patent/USPP28137 expires 2036-04-18",
             chill: "800 hours",
             harvest_time: "June 15 to July 30"
@@ -235,7 +235,7 @@
         {
             type: "Apriplum",
             name: "Honey Rich",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/honey_rich/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/honey_rich/",
             patent: "https://patents.google.com/patent/USPP10292 expired 2017-02-04",
             chill: "400 hours",
             harvest_time: "May 23 to June 8"
@@ -243,7 +243,7 @@
         {
             type: "Apriplum",
             name: "Huntington",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/huntington/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/huntington/",
             patent: "https://patents.google.com/patent/USPP26952 expires 2035-02-26",
             chill: "750 hours",
             harvest_time: "June 20 to July 5"
@@ -252,7 +252,7 @@
             type: "Apriplum",
             name: "Kylese-Cot",
             AKA: ["Kylese"],
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/kylese-cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/kylese-cot/",
             patent: "https://patents.google.com/patent/USPP23123 expires 2031-10-24",
             chill: "450 hours",
             harvest_time: "May 7 to May 22"
@@ -260,7 +260,7 @@
         {
             type: "Apriplum",
             name: "Late Brittney",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/late_brittney/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/late_brittney/",
             patent: "https://patents.google.com/patent/USPP18921 expires 2027-02-24",
             chill: "800-900 hours",
             harvest_time: "August 5 to August 20"
@@ -268,7 +268,7 @@
         {
             type: "Apriplum",
             name: "Leah Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/leah_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/leah_cot/",
             patent: "https://patents.google.com/patent/USPP21863 expires 2029-12-24",
             chill: "800 hours",
             harvest_time: "June 1 to June 15"
@@ -276,7 +276,7 @@
         {
             type: "Apriplum",
             name: "Macy Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/macy_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/macy_cot/",
             patent: "https://patents.google.com/patent/USPP22730 expires 2031-01-04",
             chill: "100-150 hours",
             harvest_time: "May 29 to June 14"
@@ -284,15 +284,15 @@
         {
             type: "Apriplum",
             name: "Summer Delight",
-            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/Apriplum-interspecific/summer_delight/",
-            patent: "claimed ppaf, released around 2016 so expiration would be around 2036",
+            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/aprium-interspecific/summer_delight/",
+            patent: "https://patents.google.com/patent/USPP22730 expires 2031-01-04",
             chill: "500 or fewer hours",
             harvest_time: "July 25 to August 5"
         },
         {
             type: "Apriplum",
             name: "Tasty Rich",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/tasty_rich/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/tasty_rich/",
             patent: "https://patents.google.com/patent/USPP12774 expired 2021-01-24",
             chill: "700 hours",
             harvest_time: "May 10 to May 25"
@@ -300,7 +300,7 @@
         {
             type: "Apriplum",
             name: "Trinidad",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/trinidad/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/trinidad/",
             patent: "https://patents.google.com/patent/USPP27189 expires 2035-04-29",
             chill: "300 hours",
             harvest_time: "May 20 to June 5"
@@ -308,7 +308,7 @@
         {
             type: "Apriplum",
             name: "Wescot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/wescot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/wescot/",
             patent: "https://patents.google.com/patent/USPP16597 expires 2025-04-07",
             chill: "650 hours",
             harvest_time: "May 20 to June 5"
@@ -316,7 +316,7 @@
         {
             type: "Apriplum",
             name: "Weston",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/weston/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/weston/",
             patent: "https://patents.google.com/patent/USPP26205 expires 2034-07-14",
             chill: "900 hours",
             harvest_time: "June 10 to June 25"

@@ -51,8 +51,11 @@ export default function Home({ items }) {
     return (
       <TransformWrapper>
         <TransformComponent>
-          <div className="w-screen">
-            <svg viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}>
+          <div className="max-w-screen flex h-4/5 max-h-[80vh] w-4/5 flex-col border-2 border-solid object-contain">
+            <svg
+              className={`min-h-0 object-contain`}
+              viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}
+            >
               {majorLines.map((line, index) => (
                 <line
                   key={index}

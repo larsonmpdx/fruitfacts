@@ -35,7 +35,9 @@ async fn main() -> std::io::Result<()> {
         }
         std::process::exit(0);
     } else if import_db::count_base_plants(&db_conn) == 0 {
-        panic!(r#"no plants found in database, import the database first with "cargo run -- --reload_db""#)
+        panic!(
+            r#"no plants found in database, import the database first with "cargo run -- --reload_db""#
+        )
     }
 
     let connspec = "database.sqlite3";

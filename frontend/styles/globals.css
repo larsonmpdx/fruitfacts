@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* see https://github.com/prc5/react-zoom-pan-pinch/issues/112#issuecomment-629555109 */
+/* with some work this could be put in a css module or inline in the component, */
+/* but I couldn't figure it out in the time I gave myself */
+.react-transform-component {
+  width: unset !important;
+  height: unset !important;
+}
+
+.react-transform-wrapper {
+  width: unset !important;
+  height: unset !important;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
