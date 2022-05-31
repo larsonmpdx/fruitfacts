@@ -56,7 +56,12 @@ export default function Home({ items }) {
               className={`min-h-0 object-contain`}
               viewBox={`${extents.min_x} ${extents.min_y} ${extents.width} ${extents.height}`}
             >
-              <rect width="10000%" height="10000%" fill="#ebf9f5"/>
+              <rect 
+                x={extents.min_x - 50}
+                y={extents.min_y}
+                width={extents.width + 100}
+                height={extents.height}
+                fill="#ebf9f5"/>
               {majorLines.map((line, index) => (
                 <line
                   key={index}
