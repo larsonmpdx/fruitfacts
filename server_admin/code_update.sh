@@ -5,7 +5,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 # rebuild and restart the frontend and backend after a code update
 
 cd ../frontend/
-sudo -u www-data npm install --force
+sudo -u www-data npm install --force # "--force" is only for this one broken package, see frontend README, remove it asap
 sudo -u www-data npm run build
 
 echo "restarting frontend"
