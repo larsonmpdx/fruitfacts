@@ -19,7 +19,7 @@
             name: "Santa Rosa",
             type: "Japanese Plum",
             // not in the table - used as a standard candle, fresno date was given in a table note
-            // I think this date is a little early, other sources say "early june" but maybe the table was quoting the date for shipping ripe (hard)
+            // I think this date is a little early, other sources say "early June" but maybe the table was quoting the date for shipping ripe (hard)
             harvest_time: "May 31"
         },
         // 1995 or later

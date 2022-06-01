@@ -36,12 +36,17 @@
     },
     {
         contributor: "Michael",
-        fact: "Peach seeds should be \"cold stratified\" in order to germinate",
+        fact: 'Peach seeds should be "cold stratified" in order to germinate',
         reference: "https://ask2.extension.org/kb/faq.php?id=157040"
     },
     {
         contributor: "Michael",
         fact: "Peach seeds achieve higher germination rates after being carefully removed from the stone",
         reference: "https://patents.google.com/patent/USPP32854"
+    },
+    {
+        contributor: "Michael",
+        fact: "lime sulfur shouldn't be sprayed on apricot trees",
+        reference: "https://flathead.msuextension.org/documents/ag/yard-garden/Spray%20schedule%20for%20peaches%20and%20apricots%20-%20WSU.pdf"
     }
 ]

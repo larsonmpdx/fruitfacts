@@ -5,7 +5,7 @@
     published: "2008",
     accessed: "Sep 2021",
     type: "state extension guide",
-    harvest_time_devalue_factor: 3, // harvest times are pretty rough. for example frost is a bit later than redhaven but this has them both "mid august"
+    harvest_time_devalue_factor: 3, // harvest times are pretty rough. for example frost is a bit later than redhaven but this has them both "mid August"
     locations: [
         {
             name: "Mt. Vernon, WA",

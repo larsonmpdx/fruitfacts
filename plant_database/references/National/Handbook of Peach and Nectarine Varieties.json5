@@ -752,7 +752,11 @@
             type: "Nectarine",
             name: "USPP6806 unnamed"
         },
-        { patent: "https://patents.google.com/patent/USPP6827 2008-03-10", type: "Peach", name: "Clendening", /* "John Boy" */ },
+        {
+            patent: "https://patents.google.com/patent/USPP6827 2008-03-10",
+            type: "Peach",
+            name: "Clendening" /* "John Boy" */
+        },
         { patent: "https://patents.google.com/patent/USPP6828 2008-03-10", type: "Peach", name: "Som-Mor" },
         { patent: "https://patents.google.com/patent/USPP6864 2008-05-16", type: "Nectarine", name: "Kam Red" },
         {

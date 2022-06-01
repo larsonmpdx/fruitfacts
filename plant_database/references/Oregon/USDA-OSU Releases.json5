@@ -210,14 +210,14 @@
         {
             name: "Sweet Bliss",
             type: "Strawberry",
-            description: "june-bearing. https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2011/HortSci_46-12-1701-1705.pdf",
+            description: "June-bearing. https://www.ars.usda.gov/ARSUserFiles/1718/PDF/2011/HortSci_46-12-1701-1705.pdf",
             released: "USDA-OSU 2011*",
             patent: ""
         },
         {
             name: "Valley Red",
             type: "Strawberry",
-            description: "june-bearing. https://journals.ashs.org/hortsci/view/journals/hortsci/44/5/article-p1468.xml",
+            description: "June-bearing. https://journals.ashs.org/hortsci/view/journals/hortsci/44/5/article-p1468.xml",
             // not patented
             released: "USDA-OSU 2009*"
         },

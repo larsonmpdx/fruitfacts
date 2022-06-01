@@ -174,7 +174,7 @@
             disease_resistance: {
                 bacterial_spot: "low susceptibility"
             },
-            harvest_time: "early august", // redhaven +/- todo ("with redhaven")
+            harvest_time: "early August", // redhaven +/- todo ("with redhaven")
             released: "2017",
             description: "yellow",
             patent: "ppaf 2017"
@@ -186,7 +186,7 @@
             disease_resistance: {
                 bacterial_spot: "low susceptibility"
             },
-            harvest_time: "early september", // redhaven +/- todo
+            harvest_time: "early September", // redhaven +/- todo
             released: "2017",
             description: "yellow",
             patent: "ppaf 2017"
@@ -198,7 +198,7 @@
             disease_resistance: {
                 bacterial_spot: "low susceptibility"
             },
-            harvest_time: "mid september", // redhaven +/- todo
+            harvest_time: "mid September", // redhaven +/- todo
             released: "2017",
             description: "yellow",
             patent: "ppaf 2017"
@@ -210,7 +210,7 @@
             disease_resistance: {
                 bacterial_spot: "moderate susceptibility"
             },
-            harvest_time: "late july", // redhaven +/- todo
+            harvest_time: "late July", // redhaven +/- todo
             released: "2017",
             description: "yellow",
             patent: "ppaf 2017"
@@ -222,7 +222,7 @@
             disease_resistance: {
                 bacterial_spot: "low susceptibility"
             },
-            harvest_time: "early august", // redhaven +/- todo
+            harvest_time: "early August", // redhaven +/- todo
             released: "2017",
             description: "white",
             patent: "https://patents.google.com/patent/USPP30123 expires 2037-01-30"

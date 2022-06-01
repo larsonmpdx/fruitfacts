@@ -40,7 +40,7 @@
                 "Garnet Beauty",
                 "NJ 351" /*"Gloria"*/,
                 "FA 17" /*"Glowingstar"*/,
-                "Clendening", /*"John Boy"*/
+                "Clendening" /*"John Boy"*/,
                 "NJ 352" /*"Messina"*/,
                 "PF 5B",
                 "PF 14 New Jersey",
@@ -198,7 +198,14 @@
         {
             type: "Nectarine",
             category: "White nectarine",
-            names: ["Scarlet Pearl", "Arctic Belle", "Arctic Jay", "Arctic Gold", "Monphir" /* "Zephyr" */, "Arctic Pride"],
+            names: [
+                "Scarlet Pearl",
+                "Arctic Belle",
+                "Arctic Jay",
+                "Arctic Gold",
+                "Monphir" /* "Zephyr" */,
+                "Arctic Pride"
+            ],
             disease_resistance: { BLS: "Poor" }
         }
     ]

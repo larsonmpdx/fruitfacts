@@ -130,7 +130,9 @@ export default function Home({
             ) : (
               <h1>Chart</h1>
             )}
+            <div className="border-2 border-solid">
             <Chart items={data.items} />
+            </div>
             {data.locations.length > 1 ? (
               <h1>{`Plants (${location.location_name})`}</h1>
             ) : (
