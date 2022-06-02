@@ -87,11 +87,11 @@ module.exports = Object.freeze({
     Nectarine: { fill: '#db7470' },
     Peach: { fill: '#FCDC75' },
     Fig: {
-      fill: '#664D57' // todo - match the icon when it's made
+      fill: '#a78b96' // todo - match the icon when it's made
     },
     Apriplum: { fill: '#f3a149' },
     Plumcot: { fill: '#e29d97' },
-    Blueberry: { fill: '#527BCD' },
+    Blueberry: { fill: '#88a4dd' },
     'Hardy Kiwi': {
       fill: '#91AE2E' // todo - match the icon when it's made
     },
@@ -99,13 +99,13 @@ module.exports = Object.freeze({
       fill: '#86BF09' // todo - match the icon when it's made
     },
     // todo - finish remainder of colors
-    Muscadine: { fill: '#E6E6FA' },
-    Grape: { fill: '#E6E6FA' },
+    Muscadine: { fill: '#dbc3bd' },
+    Grape: { fill: '#e2a19d' },
     Elderberry: { fill: '#E6E6FA' },
     Strawberry: { fill: '#E6E6FA' },
-    Raspberry: { fill: '#E6E6FA' },
-    Blackberry: { fill: '#E6E6FA' },
-    Gooseberry: { fill: '#E6E6FA' },
+    Raspberry: { fill: '#f2c0c7' },
+    Blackberry: { fill: '#b9bfc6' },
+    Gooseberry: { fill: '#feca81' },
     Currant: { fill: '#E6E6FA' },
     Saskatoon: { fill: '#E6E6FA' },
     Hazelnut: { fill: '#E6E6FA' },
@@ -130,8 +130,9 @@ module.exports = Object.freeze({
     Persimmon: { fill: '#E6E6FA' },
     'Nanking Cherry': { fill: '#E6E6FA' },
     Mulberry: { fill: '#E6E6FA' },
-    Pomegranate: { fill: '#E6E6FA' },
-    Olive: { fill: '#E6E6FA' },
-    'Prunus Rootstock': { fill: '#E6E6FA' }
+    Pomegranate: { fill: '#f986b6' },
+    Olive: { fill: '#cbe368' },
+    'Prunus Rootstock': { fill: '#E6E6FA' },
+    Hops: { fill: '#C9D274' }
   }
 });

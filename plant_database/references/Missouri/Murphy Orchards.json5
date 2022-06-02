@@ -1,0 +1,268 @@
+{
+    title: "Murphy Orchards",
+    author: "",
+    url: "https://murphyorchard.com/",
+    accessed: "June 2022",
+    type: "U-pick variety list",
+    locations: [
+        {
+            name: "Marionville, MO",
+            latitude: 37.005211975532845,
+            longitude: -93.62366478889614
+        }
+    ],
+    plants: [
+        // peaches and nectarines https://murphyorchard.com/peaches.html
+        // peaches
+        {
+            name: "Harbinger",
+            type: "Peach",
+            description: "clingstone",
+            harvest_time: "June 14"
+        },
+        {
+            name: "Flavorich",
+            type: "Peach",
+            description: "clingstone",
+            harvest_time: "June 20"
+        },
+        {
+            name: "Candor",
+            type: "Peach",
+            description: "semi-freestone",
+            harvest_time: "June 26"
+        },
+        {
+            name: "Ruby Prince",
+            type: "Peach",
+            description: "semi-freestone",
+            harvest_time: "July 1"
+        },
+        {
+            name: "Earliglo",
+            type: "Nectarine", // this was in the table as a peach - I dunno
+            description: "semi-freestone",
+            harvest_time: "July 2"
+        },
+        {
+            name: "PF 7",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "July 7"
+        },
+        {
+            name: "Sureprince",
+            type: "Peach",
+            description: "semi-freestone",
+            harvest_time: "July 8"
+        },
+        {
+            name: "GaLa",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "July 10"
+        },
+
+        {
+            name: "Redhaven",
+            type: "Peach",
+            description: "semi-freestone",
+            harvest_time: "July 15"
+        },
+        {
+            name: "Saturn",
+            type: "Peach",
+            description: "white flat. freestone",
+            // time is July 14 in the flat peach paragraph text and July 15 in the table
+            harvest_time: "July 15"
+        },
+        {
+            name: "Newhaven",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "July 19"
+        },
+        {
+            name: "Early Loring",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "July 20"
+        },
+        {
+            name: "FA 11", // "Star Fire"
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "July 20"
+        },
+        {
+            name: "Carolina Belle",
+            type: "Peach",
+            description: "flat peach. freestone",
+            harvest_time: "July 24"
+        },
+        {
+            name: "Blazeprince",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "July 24"
+        },
+        {
+            name: "Sun Bright",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "July 29"
+        },
+        {
+            name: "Loring",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "August 1"
+        },
+        {
+            name: "Contender",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "August 2"
+        },
+        {
+            name: "Canadian Harmony",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "August 5"
+        },
+        {
+            name: "Summer Pearl",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "August 10"
+        },
+        {
+            name: "Cresthaven",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "August 10"
+        },
+        {
+            name: "Harcrest",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "August 15"
+        },
+        {
+            name: "Redskin",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "August 18"
+        },
+        {
+            name: "China Pearl",
+            type: "Peach",
+            description: "flat peach. freestone",
+            harvest_time: "August 24"
+        },
+        {
+            name: "Encore",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "August 27"
+        },
+        {
+            name: "Flameprince",
+            type: "Peach",
+            description: "freestone",
+            harvest_time: "September 2"
+        },
+
+        // nectarines
+        {
+            name: "Juneglo",
+            type: "Nectarine",
+            description: "clingstone",
+            harvest_time: "July 8"
+        },
+        {
+            name: "Rose Princess",
+            type: "Nectarine",
+            description: "white nectarine",
+            harvest_time: "July 24"
+        },
+        {
+            name: "Red Gold",
+            type: "Nectarine",
+            description: "freestone",
+            harvest_time: "August 12"
+        },
+
+        // apples https://murphyorchard.com/apples.html
+        {
+            name: "Lura Red",
+            type: "Apple",
+            harvest_time: "August 15"
+        },
+        {
+            name: "Golden Supreme",
+            type: "Apple",
+            harvest_time: "August 20"
+        },
+        {
+            name: "Gala",
+            type: "Apple",
+            harvest_time: "August 20"
+        },
+        {
+            name: "Jonathan",
+            type: "Apple",
+            harvest_time: "August 25"
+        },
+        {
+            name: "Empire",
+            type: "Apple",
+            harvest_time: "September 1"
+        },
+        {
+            name: "Red Delicious",
+            type: "Apple",
+            harvest_time: "September 5"
+        },
+        {
+            name: "Golden Delicious",
+            type: "Apple",
+            harvest_time: "September 5"
+        },
+        {
+            name: "Caudle", // "Cameo (tm)"
+            type: "Apple",
+            harvest_time: "September 10"
+        },
+        {
+            name: "Jonagold",
+            type: "Apple",
+            harvest_time: "September 10"
+        },
+        {
+            name: "Stellar",
+            type: "Apple",
+            harvest_time: "September 20"
+        },
+        {
+            name: "Early Fuji",
+            type: "Apple",
+            harvest_time: "September 20"
+        },
+        {
+            name: "Braeburn",
+            type: "Apple",
+            harvest_time: "October 1"
+        },
+        {
+            name: "Fuji",
+            type: "Apple",
+            harvest_time: "October 5"
+        },
+        {
+            name: "Arkansas Black",
+            type: "Apple",
+            harvest_time: "October 10"
+        }
+    ]
+}

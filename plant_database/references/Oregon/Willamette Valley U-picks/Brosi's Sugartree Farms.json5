@@ -15,10 +15,6 @@
     ],
     plants: [
         // plant list was gathered from their facebook page going back to 2012
-        {
-            name: "",
-            type: "Peach"
-        }
     ]
 }
 
@@ -54,7 +50,7 @@ Sunglo
 
 peach list 2015
 
-PF-5
+PF 5
 Garnet Beauty           June 27     July 3  July 11
 Spring Crest
 Red Haven               June 30

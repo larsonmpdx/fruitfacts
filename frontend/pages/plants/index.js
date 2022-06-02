@@ -32,26 +32,28 @@ export default function Home({ types, setErrorMessage, setContributingLinks }) {
       <Head>
         <title>{`Plant Categories`}</title>
       </Head>
-      <article className="prose m-5">
+      <article className="prose m-5 flex max-w-none flex-col items-center">
         {types && (
           <>
             <h2>Plant Types</h2>
             {types.map((group, index) => (
               <div key={index}>
-                <h3>{group.group_name}</h3>
-                {group.types.map((type, index) => (
-                  <ul key={index} className="list-none">
-                    <li key={type.name}>
-                      <Link href={`/plants/${type.name}`}>
-                        <img
-                          className="my-0 mx-2 inline h-24 w-24 object-contain"
-                          src={'/fruit_icons/' + type.name + '.svg'}
-                        />
-                      </Link>
-                      <Link href={`/plants/${type.name}`}>{type.name}</Link>
-                    </li>
-                  </ul>
-                ))}
+                <div>
+                  <h3>{group.group_name}</h3>
+                  <div key={index} className="grid grid-flow-row-dense grid-cols-4">
+                    {group.types.map((type, index) => (
+                      <div key={index} className="flex flex-col items-center">
+                        <Link href={`/plants/${type.name}`}>
+                          <img
+                            className="my-0 mx-2 inline h-24 w-24 object-contain"
+                            src={'/fruit_icons/' + type.name + '.svg'}
+                          />
+                        </Link>
+                        <Link href={`/plants/${type.name}`}>{type.name}</Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </>

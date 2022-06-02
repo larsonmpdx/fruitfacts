@@ -171,8 +171,6 @@ export default function Home({
       />
       <article className="prose m-5" id="dirs">
         {/* multi collection (directory listing) */}
-        <p>click: {`${JSON.stringify(click_lonlat, null, 2)}`}</p>
-        <p>extents: {`${JSON.stringify(extents, null, 2)}`}</p>
         {data.directories && data.directories.length > 0 && (
           <ul className="list-disc">
             {data.directories.map((directory, index) => (

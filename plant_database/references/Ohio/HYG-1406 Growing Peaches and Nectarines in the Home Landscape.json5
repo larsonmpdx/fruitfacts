@@ -1,0 +1,139 @@
+{
+    title: "HYG-1406 Growing Peaches and Nectarines in the Home Landscape",
+    author: "Gary Gao, Ph.D., Associate Professor and Small-Fruit Extension Specialist, OSU South Centers and Adjunct Associate Professor, Department of Horticulture and Crop Science, The Ohio State University",
+    url: "https://ohioline.osu.edu/factsheet/hyg-1406",
+    published: "Jan 12, 2017",
+    accessed: "June 2022",
+    type: "state extension guide",
+    locations: [
+        {
+            name: "OSU South Centers, Piketon, OH",
+            latitude: 39.049112794609925,
+            longitude: -82.99424252152453
+        }
+    ],
+    plants: [
+        {
+            name: "Harbinger",
+            type: "Peach",
+            harvest_time_unparsed: "Very Early",
+            description: "Freestone, Yellow, Medium size, Good quality, Hardy"
+        },
+        {
+            name: "Garnet Beauty",
+            type: "Peach",
+            harvest_time_unparsed: "Very Early",
+            description: "Semi-freestone, Yellow, Medium to large size, Good quality, Hardy"
+        },
+        {
+            name: "Sunhaven",
+            type: "Peach",
+            harvest_time_unparsed: "Very Early",
+            description: "Freestone, Yellow, Large size, Excellent quality, Productive"
+        },
+        {
+            name: "Harken",
+            type: "Peach",
+            harvest_time_unparsed: "Early",
+            description: "Freestone, Yellow, Medium size, Excellent quality, Hardy"
+        },
+        {
+            name: "Redhaven",
+            type: "Peach",
+            harvest_time_unparsed: "Very Early",
+            description: "Freestone, Yellow, Medium size, Excellent quality, Hardy"
+        },
+        {
+            name: "Reliance",
+            type: "Peach",
+            harvest_time_unparsed: "Early",
+            description: "Freestone, Yellow, Medium size, Good quality, Very hardy"
+        },
+        {
+            name: "Glohaven",
+            type: "Peach",
+            harvest_time_unparsed: "Midseason",
+            description: "Freestone, Yellow, Large size, Excellent quality, Vigorous and productive"
+        },
+        {
+            name: "Canadian Harmony",
+            type: "Peach",
+            harvest_time_unparsed: "Midseason",
+            description: "Freestone, Yellow, Large size, Excellent quality, Hardy"
+        },
+        {
+            name: "Cresthaven",
+            type: "Peach",
+            harvest_time_unparsed: "Midseason",
+            description: "Freestone, Yellow, Large size, Excellent quality, Hardy"
+        },
+        {
+            name: "Harcrest",
+            type: "Peach",
+            harvest_time_unparsed: "Midseason",
+            description: "Freestone, Yellow, Medium size, Excellent quality, Hardy"
+        },
+        {
+            name: "Madison",
+            type: "Peach",
+            harvest_time_unparsed: "Late",
+            description: "Freestone, Yellow, Medium size, Excellent quality, Hardy"
+        },
+        {
+            name: "Redskin",
+            type: "Peach",
+            harvest_time_unparsed: "Late",
+            description: "Freestone, Yellow, Large size, Excellent quality, Heavy producer"
+        },
+        {
+            name: "Belle of Georgia",
+            type: "Peach",
+            harvest_time_unparsed: "Late",
+            description: "Freestone, White, Large size, Excellent quality, Very hardy"
+        },
+        {
+            name: "White Hale",
+            type: "Peach",
+            harvest_time_unparsed: "Late",
+            description: "Freestone, White, Large size, Excellent quality, Hardy"
+        },
+
+// nectarines
+        {
+            name: "Independence",
+            type: "Nectarine",
+            harvest_time_unparsed: "Early",
+            description: "Clingstone, Yellow, Large size, Excellent quality, Fairly hardy"
+        },
+        {
+            name: "Summer Beaut",
+            type: "Nectarine",
+            harvest_time_unparsed: "Early",
+            description: "Freestone, Yellow, Large size, Excellent quality, Hardy and productive"
+        },
+        {
+            name: "Hardired",
+            type: "Nectarine",
+            harvest_time_unparsed: "Midseason",
+            description: "Freestone, Yellow, Medium size, Good quality, Vigorous and productive"
+        },
+        {
+            name: "Mericrest",
+            type: "Nectarine",
+            harvest_time_unparsed: "Midseason",
+            description: "Freestone, Yellow, Medium size, Excellent quality, The hardiest nectarine"
+        },
+        {
+            name: "Red Gold",
+            type: "Nectarine",
+            harvest_time_unparsed: "Late",
+            description: "Freestone, Yellow, Large size, Excellent quality, Productive and most widely planted"
+        },
+        {
+            name: "Fantasia",
+            type: "Nectarine",
+            harvest_time_unparsed: "Late",
+            description: "Freestone, Yellow, Large size, Excellent quality, Productive and relatively hardy"
+        }
+    ]
+}

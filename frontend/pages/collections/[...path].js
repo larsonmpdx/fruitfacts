@@ -87,7 +87,7 @@ export default function Home({
   setErrorMessage(errorMessage);
   return (
     <>
-      <article className="prose m-5">
+      <article className="prose m-5 max-w-none">
         <Head>
           <title>{`Collection: ${path.join('/')}`}</title>
         </Head>
@@ -102,7 +102,7 @@ export default function Home({
               </p>
             )}
             <p>
-              {data.collection.title}
+              {`${data.collection.title} `}
               {data.collection.url && <a href={data.collection.url}>[ref]</a>}
             </p>
             <h1>Locations</h1>
@@ -131,7 +131,7 @@ export default function Home({
               <h1>Chart</h1>
             )}
             <div className="border-2 border-solid">
-            <Chart items={data.items} />
+              <Chart items={data.items} />
             </div>
             {data.locations.length > 1 ? (
               <h1>{`Plants (${location.location_name})`}</h1>
