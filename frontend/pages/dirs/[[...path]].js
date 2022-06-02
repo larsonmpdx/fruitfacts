@@ -91,7 +91,6 @@ export default function Home({
     ]);
   }, []);
 
-  const [click_lonlat, setClick] = React.useState({});
   const [center, setCenterForQuery] = React.useState({});
   const [zoom, setZoomForQuery] = React.useState({});
   const [extents, setExtentsForFetch] = React.useState({});
@@ -164,7 +163,7 @@ export default function Home({
       <Map
         locations={locations}
         initialLocation={initialLocation}
-        setClick={setClick}
+        //  setClick={setClick} // unused but this is how to get click point
         setExtentsForFetch={setExtentsForFetch}
         setZoomForQuery={setZoomForQuery}
         setCenterForQuery={setCenterForQuery}
