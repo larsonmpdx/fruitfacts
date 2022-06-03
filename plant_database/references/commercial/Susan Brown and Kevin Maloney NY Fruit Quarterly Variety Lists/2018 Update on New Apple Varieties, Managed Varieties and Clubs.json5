@@ -123,7 +123,8 @@
         },
         {
             type: "Apple",
-            name: "Firestorm Honeycrisp",
+            name: "BAB2000 Honeycrisp",
+            AKA: ["Firestorm™ Honeycrisp"],
             description: "Honeycrisp sport"
         },
         {

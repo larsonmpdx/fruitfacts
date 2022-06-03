@@ -451,8 +451,11 @@
         },
         {
             type: "Apple",
-            name: "Firestorm™",
-            harvest_time: "September 10 to September 22"
+            name: "BAB2000 Honeycrisp",
+            AKA: ["Firestorm™ Honeycrisp"],
+            descriptio: "https://www.acnursery.com/fruit-trees/apple-trees/441/firestorm",
+            harvest_time: "September 10 to September 22",
+            patent: "not US patented. patent application abandoned: https://patents.google.com/patent/US20140283236"
         },
         {
             type: "Apple",
