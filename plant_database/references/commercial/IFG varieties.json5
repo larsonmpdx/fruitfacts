@@ -1,0 +1,19 @@
+{
+    title: "IFG Varieties",
+    author: "",
+    url: "https://www.ifg.world/index.php",
+    accessed: "Jun 2022",
+    type: "IP company list",
+    locations: [
+        {
+            name: "USPTO Washington, DC", // actually global
+            latitude: 38.80120033149053,
+            longitude: -77.06387079665417
+        }
+    ],
+    plants: [
+        // todo
+        // https://www.ifg.world/index.php/grapes
+        // https://www.ifg.world/index.php/cherries
+    ]
+}
