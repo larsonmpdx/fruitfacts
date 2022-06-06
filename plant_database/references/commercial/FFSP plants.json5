@@ -12,6 +12,7 @@
         }
     ],
     // rootstocks such as MP-29 omitted
+    // todo - include references to NVDMC - http://nvdmc.org/nvdmc-varieties/
     plants: [
         {
             name: "Fla. 90-3",
