@@ -11555,10 +11555,10 @@
             uspp_issued: "9/1/09"
         },
         {
-            type: "Kiwi",
+            type: "Golden Kiwi",
             name: "Skelton X78",
             uspp_title: "Kiwi plant named SKELTON X78",
-            patent: "http://www.google.com/patents?q=US12/005037 2027-12-21",
+            patent: "https://patents.google.com/patent/USPP20699 2027-12-21",
             uspp_filed: "12/21/07"
         },
         {
@@ -11670,28 +11670,28 @@
             type: "Chestnut",
             name: "AU Encore",
             uspp_title: "CHESTNUT PLANT NAMED 'AU ENCORE'",
-            patent: "http://www.google.com/patents?q=US12012017 2028-01-30",
+            patent: "https://patents.google.com/patent/USPP20336 2028-01-30",
             uspp_filed: "1/30/08"
         },
         {
             type: "Chestnut",
             name: "AU Buck II",
             uspp_title: "CHESTNUT PLANT NAMED 'AU BUCK II'",
-            patent: "http://www.google.com/patents?q=US12012025 2028-01-30",
+            patent: "https://patents.google.com/patent/USPP20337 2028-01-30",
             uspp_filed: "1/30/08"
         },
         {
             type: "Chestnut",
             name: "AU Gobbler I",
             uspp_title: "CHESTNUT PLANT NAMED 'AU GOBBLER I'",
-            patent: "http://www.google.com/patents?q=US12012030 2028-01-30",
+            patent: "https://patents.google.com/patent/USPP20338 2028-01-30",
             uspp_filed: "1/30/08"
         },
         {
             type: "Chestnut",
             name: "AU Buck I",
             uspp_title: "CHESTNUT PLANT NAMED 'AU BUCK I'",
-            patent: "http://www.google.com/patents?q=US12012091 2028-01-30",
+            patent: "https://patents.google.com/patent/USPP20588 2028-01-30",
             uspp_filed: "1/30/08"
         },
         {

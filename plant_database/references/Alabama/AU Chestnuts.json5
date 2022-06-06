@@ -1,0 +1,18 @@
+{
+    title: "AU Chestnuts",
+    author: "",
+    url: "todo",
+    accessed: "Jun 2022",
+    type: "public breeding program list",
+    needs_help: true,
+    locations: [
+        {
+            name: "todo",
+            latitude: 29.6465645490967,
+            longitude: -82.34424313539307
+        }
+    ],
+    plants: [
+        // todo - see "AU BUCK II" and "AU Gobbler" for example in the patent list
+    ]
+}
