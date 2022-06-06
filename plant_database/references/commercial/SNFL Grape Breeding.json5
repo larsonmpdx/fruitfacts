@@ -1,0 +1,18 @@
+{
+    title: "SNFL Grape Breeding",
+    url: "https://snflgroup.com/all_locations/north-america/",
+    published: "unknown",
+    accessed: "Jun 2022",
+    type: "private breeding program list",
+    needs_help: true,
+    locations: [
+        {
+            name: "SNFL Fresno, CA",
+            latitude: 36.700439085532636,
+            longitude: -119.67870101242023,
+        }
+    ],
+    plants: [
+        // todo - many are in the US patent list already. the website lists maturity times vs. thomson
+    ]
+}

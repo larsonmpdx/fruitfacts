@@ -8978,14 +8978,14 @@
             type: "Apple",
             name: "8S6923",
             uspp_title: "Apple tree named '8S6923'",
-            patent: "http://www.google.com/patents?q=US11003323 2006-05-18",
+            patent: "https://patents.google.com/patent/US20060107428 application abandoned",
             uspp_filed: "12/6/04"
         },
         {
             type: "Apple",
             name: "8S2743",
             uspp_title: "Apple tree named 8S2743",
-            patent: "http://www.google.com/patents?q=US11003357 2006-06-08",
+            patent: "https://patents.google.com/patent/US20060123520 application abandoned",
             uspp_filed: "12/6/04"
         },
         {
@@ -9487,7 +9487,7 @@
             name: "Neal",
             name_common: "Neal",
             uspp_title: "Neal avocado",
-            patent: "http://www.google.com/patents?q=US11205834 0200-02-22",
+            patent: "https://patents.google.com/patent/US20070044184 application abandoned",
             uspp_filed: "8/17/05"
         },
         {
@@ -9755,10 +9755,10 @@
         },
         {
             type: "Nectarine",
-            name: "Dragon Pearl",
-            name_common: "Dragon Pearl",
+            name: "MAY PEARL II", // patent name
+            AKA: ["Dragon Pearl"], // application name
             uspp_title: "NECTARINE TREE NAMED 'DRAGON PEARL'",
-            patent: "http://www.google.com/patents?q=US11311241 2025-12-20",
+            patent: "https://patents.google.com/patent/USPP17825 2025-12-20",
             uspp_filed: "12/20/05"
         },
         {
@@ -10327,10 +10327,11 @@
         },
         {
             type: "Almond",
-            name: "Bright's Hybrid #5",
+            name: "Arthur V", // patent name
+            AKA: ["Bright's Hybrid #5"], // application name
             name_common: "Bright's Hybrid",
             uspp_title: "Peach-almond hybrid tree named 'BRIGHT'S HYBRID #5'",
-            patent: "http://www.google.com/patents?q=US11474320 2026-06-26",
+            patent: "https://patents.google.com/patent/USPP18782 2026-08-11",
             uspp_filed: "6/26/06"
         },
         {
@@ -10354,7 +10355,7 @@
             type: "Cranberry",
             name: "CNJ97-105-4",
             uspp_title: "Cranberry variety named 'CNJ97-105-4'",
-            patent: "http://www.google.com/patents?q=US11483065 2026-07-07",
+            patent: "https://patents.google.com/patent/USPP19434 2026-11-03",
             uspp_filed: "7/7/06"
         },
         {
@@ -10458,7 +10459,7 @@
             type: "Plum",
             name: "VIBEHU99-1",
             uspp_title: "'VIBEHU99-1' plum tree",
-            patent: "http://www.google.com/patents?q=US11541104 2026-09-29",
+            patent: "https://patents.google.com/patent/US20080134378 application abandoned",
             uspp_filed: "9/29/06"
         },
         {
@@ -10482,7 +10483,7 @@
             type: "Grape",
             name: "Marquette",
             uspp_title: "Grape plant named 'Marquette'",
-            patent: "http://www.google.com/patents?q=US11580356 2026-10-13",
+            patent: "https://patents.google.com/patent/USPP19579 2027-01-31",
             uspp_filed: "10/13/06"
         },
         {
@@ -10830,11 +10831,11 @@
             uspp_issued: "6/17/08"
         },
         {
-            type: "Citrus",
+            type: "Lemon",
             name: "Eureka Seedless",
             name_common: "Eureka Seedless",
             uspp_title: 'Lemon tree named "Eureka Seedless"',
-            patent: "http://www.google.com/patents?q=US11641610 2026-12-18",
+            patent: "https://patents.google.com/patent/US20080148438 application abandoned",
             uspp_filed: "12/18/06"
         },
         {
@@ -10855,11 +10856,11 @@
             uspp_issued: "5/26/09"
         },
         {
-            type: "Kiwi",
+            type: "Golden Kiwi",
             name: "Hongyang",
             name_common: "Red Kiwi",
             uspp_title: "Kiwi plant named 'Hongyang'",
-            patent: "http://www.google.com/patents?q=US11645130 2026-12-22",
+            patent: "https://patents.google.com/patent/US20080155721 application abandoned",
             uspp_filed: "12/22/06"
         },
         {
@@ -10970,7 +10971,7 @@
             type: "Grape",
             name: "Sheegene-15",
             uspp_title: "Grapevine (Sheegene-15)",
-            patent: "http://www.google.com/patents?q=US11708798 2027-02-20",
+            patent: "https://patents.google.com/patent/US20080201809 application abandoned",
             uspp_filed: "2/20/07"
         },
         {
@@ -11017,7 +11018,7 @@
             type: "Grape",
             name: "Cara Seedless",
             uspp_title: "Grapevine plant named 'Cara Seedless'",
-            patent: "http://www.google.com/patents?q=US11711771 2027-02-28",
+            patent: "https://patents.google.com/patent/USPP19429 2027-02-28",
             uspp_filed: "2/28/07"
         },
         {
@@ -11032,7 +11033,7 @@
             type: "Apple",
             name: "Fujiko",
             uspp_title: "Apple tree named 'Fujiko'",
-            patent: "http://www.google.com/patents?q=US11727223 2027-03-26",
+            patent: "https://patents.google.com/patent/USPP19054 2027-03-26",
             uspp_filed: "3/26/07"
         },
         {
@@ -11044,19 +11045,19 @@
             uspp_issued: "5/26/09"
         },
         {
-            type: "Citrus",
+            type: "Mandarin",
             name: "Merbeingold 2336",
             name_common: "Merbeingold 2336",
             uspp_title: "Mandarin plant named Merbeingold 2336",
-            patent: "http://www.google.com/patents?q=US11729003 2027-03-27",
+            patent: "https://patents.google.com/patent/USPP23068 2027-03-27",
             uspp_filed: "3/27/07"
         },
         {
-            type: "Citrus",
+            type: "Mandarin",
             name: "Merbeingold 2350",
             name_common: "Merbeingold 2350",
             uspp_title: "Mandarin plant named Merbeingold 2350",
-            patent: "http://www.google.com/patents?q=US11729049 2027-03-27",
+            patent: "https://patents.google.com/patent/USPP23092 2027-03-27",
             uspp_filed: "3/27/07"
         },
         {
@@ -11144,7 +11145,7 @@
             type: "Apple",
             name: "AB17",
             uspp_title: "Apple tree named 'AB17'",
-            patent: "http://www.google.com/patents?q=US11799787 2027-05-02",
+            patent: "https://patents.google.com/patent/USPP20016 2027-05-02",
             uspp_filed: "5/2/07"
         },
         {
@@ -11241,7 +11242,7 @@
             type: "Apple",
             name: "Alvina",
             uspp_title: "APPLE TREE NAMED 'ALVINA'",
-            patent: "http://www.google.com/patents?q=US11879420 2027-07-16",
+            patent: "https://patents.google.com/patent/USPP19604 2027-07-16",
             uspp_filed: "7/16/07"
         },
         {
@@ -11275,7 +11276,7 @@
             type: "Grape",
             name: "Sheegene-13",
             uspp_title: "Grapevine (Sheegene-13)",
-            patent: "http://www.google.com/patents?q=US11897629 2027-08-30",
+            patent: "https://patents.google.com/patent/USPP20110 2027-08-30",
             uspp_filed: "8/30/07"
         },
         {
@@ -11525,7 +11526,7 @@
             type: "Apricot",
             name: "AC1",
             uspp_title: "APRICOT TREE, 'AC1'",
-            patent: "http://www.google.com/patents?q=US12002402 2027-12-17",
+            patent: "https://patents.google.com/patent/USPP20226 2028-01-17",
             uspp_filed: "12/17/07"
         },
         {
