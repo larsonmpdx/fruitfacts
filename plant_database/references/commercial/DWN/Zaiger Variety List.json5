@@ -1191,6 +1191,7 @@
         {
             type: "Peach",
             name: "Snow Lady",
+            AKA: ["Snow Lady Rose"], // patent name
             description: "zaiger. White. commercial https://www.davewilson.com/growers/products/fruit-trees/peach-white/snow_lady/",
             patent: "https://patents.google.com/patent/USPP25093 expires 2033-04-19",
             chill: "300 hours",
