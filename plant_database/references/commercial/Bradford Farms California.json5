@@ -895,9 +895,10 @@ https://bradfordfarms.com.au/stonefruit/supersweet-nectarines/rose-sweet-new/
         },
         {
             type: "Japanese Plum",
-            name: "REDYUMMY®",
+            name: "REDYUMMY",
             patent: "https://patents.google.com/patent/USPP18663 2026-12-07",
-            released: "Bradford Farms*"
+            released: "Bradford Farms*",
+            description: "patent name has a registered trademark symbol in it, but that's clearly illegitimate"
         },
         {
             type: "Peach",
@@ -1021,9 +1022,10 @@ https://bradfordfarms.com.au/stonefruit/supersweet-nectarines/rose-sweet-new/
         },
         {
             type: "Japanese Plum",
-            name: "Yummy®gem",
+            name: "Yummygem",
             patent: "https://patents.google.com/patent/USPP15809 2024-04-15",
-            released: "Bradford Farms*"
+            released: "Bradford Farms*",
+            description: "patent name has a registered trademark symbol in it, but that's clearly illegitimate"
         },
         {
             type: "Apriplum",
@@ -1111,9 +1113,10 @@ https://bradfordfarms.com.au/stonefruit/supersweet-nectarines/rose-sweet-new/
         },
         {
             type: "Japanese Plum",
-            name: "September Yummy®",
+            name: "September Yummy",
             patent: "https://patents.google.com/patent/USPP14220 2022-11-21",
-            released: "Bradford Farms*"
+            released: "Bradford Farms*",
+            description: "patent name has a registered trademark symbol in it, but that's clearly illegitimate"
         },
         {
             type: "Japanese Plum",
