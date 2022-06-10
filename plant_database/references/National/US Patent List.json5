@@ -82,7 +82,7 @@
             uspp_issued: "5/4/93"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Compact Friar",
             name_common: "Compact Friar",
             uspp_title: "Plum tree named 'Compact Friar'",
@@ -127,7 +127,7 @@
             uspp_issued: "9/29/92"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // the patent gives few hints about japanese vs. euro. this is a guess based on the picture (it's round) and the fact that it's a california release
             name: "Green jade",
             name_common: "Green jade",
             uspp_title: "Plum tree 'green jade'",
@@ -145,9 +145,8 @@
             uspp_issued: "4/27/93"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Red Noble",
-            name_common: "Red Noble",
             uspp_title: "Plum tree (Red Noble)",
             patent: "https://patents.google.com/patent/USPP7975 2011-04-15",
             uspp_filed: "4/15/91",
@@ -251,7 +250,7 @@
             uspp_issued: "8/3/93"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavor King",
             name_common: "Flavor King",
             uspp_title: 'Interspecific tree "Flavor King"',
@@ -294,22 +293,26 @@
             uspp_issued: "10/27/92"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent compares this to santa rosa    
             name: "Showtime",
             name_common: "Showtime",
             uspp_title: "'Showtime' plum tree",
             patent: "https://patents.google.com/patent/USPP8037 2011-06-24",
             uspp_filed: "6/24/91",
-            uspp_issued: "11/24/92"
+            uspp_issued: "11/24/92",
+            // harvest time from the patent
+            harvest_time_relative: "Santa Rosa+0"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent compares this to Red Beaut
             name: "Crimson Nugget",
             name_common: "Crimson Nugget",
             uspp_title: "Crimson Nugget plum tree",
             patent: "https://patents.google.com/patent/USPP8038 2011-06-27",
             uspp_filed: "6/27/91",
-            uspp_issued: "11/24/92"
+            uspp_issued: "11/24/92",
+            // harvest time from the patent
+            harvest_time_relative: "Red Beaut-5"
         },
         {
             type: "Peach",
@@ -397,7 +400,7 @@
             uspp_issued: "5/25/93"
         },
         {
-            type: "Plum",
+            type: "Euro Plum", // patent says euro
             name: "Emperor",
             name_common: "Emperor",
             uspp_title: "Plum tree called 'Emperor'",
@@ -617,9 +620,8 @@
             uspp_issued: "5/24/94"
         },
         {
-            type: "Plum",
-            name: "Autumn Beaut",
-            name_common: "Autumn Beaut",
+            type: "Japanese Plum",
+            name: "Autumn Beaut", // todo zaiger
             uspp_title: "Autumn Beaut",
             patent: "https://patents.google.com/patent/USPP8189 2012-02-03",
             uspp_filed: "2/3/92",
@@ -705,7 +707,7 @@
             uspp_issued: "1/25/94"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumtwenty",
             name_common: "Suplumtwenty",
             uspp_title: "Hybrid plum tree cv. Suplumtwenty",
@@ -944,7 +946,7 @@
             uspp_issued: "1/18/94"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Summer Treat",
             name_common: "Summer Treat",
             uspp_title: "Plum tree named 'Summer Treat'",
@@ -1031,7 +1033,7 @@
             uspp_issued: "9/28/93"
         },
         {
-            type: "Interspecific",
+            type: "Peach",
             name: "Tri-lite",
             name_common: "Tri-Lite",
             uspp_title: 'Interspecific tree "Tri-lite"',
@@ -1048,7 +1050,7 @@
             uspp_issued: "10/26/93"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavorella",
             name_common: "Flavorella",
             uspp_title: 'Plum cot tree "Flavorella"',
@@ -1057,7 +1059,7 @@
             uspp_issued: "11/23/93"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Bradgreen",
             name_common: "Bradgreen",
             uspp_title: "Plum tree (Bradgreen)",
@@ -1119,7 +1121,7 @@
             uspp_issued: "11/2/93"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Betty Anne",
             name_common: "Betty Anne",
             uspp_title: 'Plum tree "Betty Anne"',
@@ -1152,7 +1154,7 @@
             uspp_issued: "3/22/94"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Sweet Queen",
             name_common: "Sweet Queen",
             uspp_title: "Sween Queen plum tree",
@@ -1169,7 +1171,7 @@
             uspp_issued: "1/18/94"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavorich",
             name_common: "Flavorich",
             uspp_title: 'Interspecific tree "Flavorich"',
@@ -1234,7 +1236,7 @@
             uspp_issued: "5/3/94"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Earliqueen",
             name_common: "Earliqueen",
             uspp_title: 'Plum tree "Earliqueen"',
@@ -1351,7 +1353,7 @@
             uspp_issued: "11/29/94"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Early Rosa",
             name_common: "Early Rosa",
             uspp_title: "Early Rosa plum tree",
@@ -1360,7 +1362,7 @@
             uspp_issued: "10/25/94"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent: "Date of bloom: Bloom is early in relation to other Japanese plum cultivars (Prunus salicina)"
             name: "Melrose",
             name_common: "Melrose",
             uspp_title: "Melrose plum tree",
@@ -1369,7 +1371,7 @@
             uspp_issued: "8/16/94"
         },
         {
-            type: "Plum",
+            type: "Euro Plum",
             name: "Castleton",
             name_common: "Castleton",
             uspp_title: "Plum cultivar 'Castleton'",
@@ -1427,7 +1429,7 @@
             uspp_issued: "4/4/95"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Primetime",
             name_common: "Primetime",
             uspp_title: "Primetime plum tree",
@@ -1496,7 +1498,7 @@
             uspp_issued: "10/11/94"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavorglo",
             name_common: "Flavorglo",
             uspp_title: 'Plum Cot tree "Flavorglo"',
@@ -1522,7 +1524,7 @@
             uspp_issued: "12/6/94"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Bradprune",
             name_common: "Sierra Sweet",
             uspp_title: "Plum tree (Bradprune)",
@@ -1731,7 +1733,7 @@
         },
         */
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Emerald Beaut",
             name_common: "Emerald Beaut",
             uspp_title: "Plum tree 'Emerald Beaut'",
@@ -1740,7 +1742,7 @@
             uspp_issued: "6/13/95"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Dapple Dandy",
             name_common: "Dapple Dandy",
             uspp_title: "Interspecific tree named 'Dapple Dandy'",
@@ -1825,8 +1827,8 @@
             uspp_issued: "10/17/95"
         },
         {
-            type: "Plum",
-            name: "Blue Gusto",
+            type: "Japanese Plum",
+            name: "Blue Gusto", // todo zaiger
             name_common: "Blue Gusto",
             uspp_title: "Plum tree 'Blue Gusto'",
             patent: "https://patents.google.com/patent/USPP9331 2014-12-30",
@@ -1982,7 +1984,7 @@
             uspp_issued: "5/7/96"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "September King",
             name_common: "September King",
             uspp_title: "'September King' plum tree",
@@ -2039,9 +2041,8 @@
             uspp_issued: "11/26/96"
         },
         {
-            type: "Plum",
-            name: "Murietta",
-            name_common: "Murietta",
+            type: "Japanese Plum",
+            name: "Murietta", // todo zaiger
             uspp_title: "Plum tree Murietta",
             patent: "https://patents.google.com/patent/USPP9568 2015-06-01",
             uspp_filed: "6/1/95",
@@ -2050,7 +2051,6 @@
         {
             type: "Apricot",
             name: "Poppy",
-            name_common: "Poppy",
             uspp_title: 'Apricot tree "Poppy"',
             patent: "https://patents.google.com/patent/USPP9593 2015-06-05",
             uspp_filed: "6/5/95",
@@ -2409,13 +2409,15 @@
             uspp_issued: "5/6/97"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent compares it to santa rosa
             name: "Matinee",
             name_common: "Matinee",
             uspp_title: "Matinee plum tree",
             patent: "https://patents.google.com/patent/USPP9836 2016-01-03",
             uspp_filed: "1/3/96",
-            uspp_issued: "3/25/97"
+            uspp_issued: "3/25/97",
+            // harvest time from the patent
+            harvest_time_relative: "Santa Rosa-1 week"
         },
         {
             type: "Apple",
@@ -2476,9 +2478,8 @@
             uspp_issued: "4/8/97"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Hiromi Red",
-            name_common: "Hiromi Red",
             uspp_title: 'Plum tree "Hiromi Red"',
             patent: "https://patents.google.com/patent/USPP9858 2016-01-16",
             uspp_filed: "1/16/96",
@@ -2519,7 +2520,7 @@
             uspp_issued: "10/28/97"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent header text "prunus salicina"
             name: "7-B",
             name_common: "7-B",
             uspp_title: "7-B plum tree",
@@ -2613,7 +2614,7 @@
             uspp_issued: "7/1/97"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent header calls it "prunus salicina"
             name: "Teak Gold",
             name_common: "Amber Jewel",
             uspp_title: "Plum tree 'Teak Gold'",
@@ -2639,7 +2640,7 @@
             uspp_issued: "11/11/97"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavor Heart",
             name_common: "Flavor Heart",
             uspp_title: 'Interspecific tree "Flavor Heart"',
@@ -3076,7 +3077,7 @@
             uspp_issued: "9/12/00"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Joanna Red",
             name_common: "Joanna Red",
             uspp_title: 'Plum tree "Joanna Red"',
@@ -3146,7 +3147,7 @@
             uspp_issued: "2/24/98"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavorosa",
             name_common: "Flavorosa",
             uspp_title: 'Interspecific tree "Flavorosa"',
@@ -3231,7 +3232,7 @@
             uspp_issued: "4/14/98"
         },
         {
-            type: "Interspecific",
+            type: "Apriplum",
             name: "Honey Rich",
             name_common: "Honey Rich",
             uspp_title: 'Interspecific tree "Honey Rich"',
@@ -3240,7 +3241,7 @@
             uspp_issued: "3/24/98"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Geo Pride",
             name_common: "Geo Pride",
             uspp_title: 'Interspecific tree "Geo Pride"',
@@ -3547,7 +3548,7 @@
             uspp_issued: "3/7/00"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Gulfblaze",
             name_common: "Gulfblaze",
             uspp_title: "Plum tree named 'Gulfblaze'",
@@ -3564,7 +3565,7 @@
             uspp_issued: "10/12/99"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Miwang",
             name_common: "Miwang",
             uspp_title: "Plumcot tree named 'Miwang'",
@@ -3590,7 +3591,7 @@
             uspp_issued: "11/2/99"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Gulfbeauty",
             name_common: "Gulfbeauty",
             uspp_title: "Plum tree named 'Gulfbeauty'",
@@ -3686,7 +3687,7 @@
             uspp_issued: "1/25/00"
         },
         {
-            type: "Interspecific",
+            type: "Apriplum", // zaiger literature calls this an "aprium"
             name: "Flavor Ann",
             name_common: "Flavor Anne",
             uspp_title: "Interspecific tree 'Flavor Ann'",
@@ -3769,7 +3770,7 @@
             uspp_issued: "5/25/99"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavor Gem",
             name_common: "Flavor Gem",
             uspp_title: "Interspecific tree 'Flavor Gem'",
@@ -3847,7 +3848,7 @@
             uspp_issued: "10/5/99"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent doesn't directly admit it's a japanese-type plum but it seems clear to me
             name: "Yellow #503",
             name_common: "Yellow #503",
             uspp_title: "Plum tree named 'Yellow #503'",
@@ -4018,7 +4019,7 @@
             uspp_issued: "9/28/99"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent claims "prunus domestica" but it sure looks and reads like a j. plum to me
             name: "315-80-67",
             name_common: "Red Sun",
             uspp_title: "Plum tree named '315-80-67'",
@@ -4126,7 +4127,7 @@
             uspp_issued: "7/4/00"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent says "Prunus salicina"
             name: "Sir George",
             name_common: "Sir George",
             uspp_title: "Plum tree named 'Sir George'",
@@ -4522,7 +4523,7 @@
             uspp_issued: "11/7/00"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavorite",
             name_common: "Flavorite",
             uspp_title: "Interspecific tree named 'Flavorite'",
@@ -4625,7 +4626,7 @@
             uspp_issued: "5/15/01"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavorfall",
             name_common: "Flavorfall",
             uspp_title: "Interspecific tree named 'Flavorfall'",
@@ -4978,7 +4979,7 @@
             uspp_issued: "4/23/02"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavor Grenade",
             name_common: "Flavor Grenade",
             uspp_title: "Interspecific tree named 'Flavor Grenade'",
@@ -4987,7 +4988,7 @@
             uspp_issued: "9/18/01"
         },
         {
-            type: "Plum",
+            type: "Euro Plum",
             name: "Tulare Giant",
             name_common: "Tulare Giant",
             uspp_title: "Prune tree named 'Tulare Giant'",
@@ -4996,7 +4997,7 @@
             uspp_issued: "11/27/01"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavor Gold",
             name_common: "Flavor Gold",
             uspp_title: "Interspecific tree named 'Flavor Gold'",
@@ -5106,9 +5107,8 @@
             uspp_issued: "9/10/02"
         },
         {
-            type: "Plum",
+            type: "Euro Plum",
             name: "Sutter",
-            name_common: "Sutter",
             uspp_title: 'Prune tree named "Sutter"',
             patent: "https://patents.google.com/patent/USPP12398 2020-03-28",
             uspp_filed: "3/28/00",
@@ -5165,7 +5165,7 @@
             uspp_issued: "7/2/02"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent says "Prunus salicina"
             name: "Sunlite Nugget",
             name_common: "Sunlite Nugget",
             uspp_title: 'Plum tree named "Sunlite Nugget"',
@@ -5182,9 +5182,8 @@
             uspp_issued: "9/25/01"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // patent claims "prunus domestica"
             name: "Rosy Jewel",
-            name_common: "Rosy Jewel",
             uspp_title: 'Variety of plum tree named "Rosy Jewel"',
             patent: "https://patents.google.com/patent/USPP13052 2020-06-16",
             uspp_filed: "6/16/00",
@@ -5215,9 +5214,8 @@
             uspp_issued: "2/26/02"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Gulfrose",
-            name_common: "Gulfrose",
             uspp_title: 'Plum tree named "Gulfrose"',
             patent: "https://patents.google.com/patent/USPP12833 2020-07-12",
             uspp_filed: "7/12/00",
@@ -5522,14 +5520,14 @@
             uspp_issued: "10/29/02"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum", // "salicina" in the application text
             name: "Laetitia",
             uspp_title: 'Plum tree named "Laetitia"',
             patent: "https://patents.google.com/patent/US20020144320 application abandoned",
             uspp_filed: "1/16/01"
         },
         {
-            type: "Interspecific",
+            type: "Apriplum",
             name: "Tasty Rich",
             name_common: "Tasty Rich",
             uspp_title: 'Interspecific tree named "Tasty Rich"',
@@ -5689,7 +5687,7 @@
             uspp_issued: "11/5/02"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumtwentyfour",
             name_common: "Black Diamond brand",
             uspp_title: 'Plum tree named "Suplumtwentyfour"',
@@ -5707,7 +5705,7 @@
             uspp_issued: "10/29/02"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumtwentythree",
             name_common: "Black Diamond brand",
             uspp_title: 'Plum tree named "Suplumtwentythree"',
@@ -5716,7 +5714,7 @@
             uspp_issued: "11/5/02"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumtwentytwo",
             name_common: "Black Diamond brand",
             uspp_title: 'Plum tree named "Suplumtwentytwo"',
@@ -5763,7 +5761,7 @@
             uspp_issued: "8/27/02"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Dapple Fire",
             name_common: "Dapple Fire",
             uspp_title: 'Interspecific tree named: "Dapple Fire"',
@@ -5772,7 +5770,7 @@
             uspp_issued: "2/12/02"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavor Treat",
             name_common: "Flavor Treat",
             uspp_title: 'Interspecific tree named "Flavor Treat"',
@@ -6471,7 +6469,7 @@
             uspp_issued: "1/21/03"
         },
         {
-            type: "Interspecific",
+            type: "Nectarine",
             name: "Spicezee",
             name_common: "Spice Zee",
             uspp_title: 'Interspecific tree named "Spicezee"',
@@ -6530,7 +6528,7 @@
             uspp_issued: "1/21/03"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Flavor Jewel",
             name_common: "Flavor Jewel",
             uspp_title: 'Interspecific tree named "Flavor Jewel"',
@@ -6539,7 +6537,7 @@
             uspp_issued: "1/21/03"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Early Dapple",
             name_common: "Early Dapple",
             uspp_title: 'Interspecific tree named: "Early Dapple"',
@@ -6566,7 +6564,7 @@
             uspp_issued: "12/16/03"
         },
         {
-            type: "Interspecific",
+            type: "Peach", // this is a canning peach based on the "summary of..." paragraph in the patent
             name: "Yuba Gold",
             name_common: "Yuba Gold",
             uspp_title: 'Interspecific tree named "Yuba Gold"',
@@ -6611,7 +6609,7 @@
             uspp_issued: "2/18/03"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Royal Treat",
             name_common: "Royal Treat",
             uspp_title: 'Interspecific tree named "Royal Treat"',
@@ -6789,7 +6787,7 @@
             uspp_issued: "11/25/03"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Sierra Rose",
             name_common: "Sierra Rose",
             uspp_title: 'Interspecific tree name "Sierra Rose"',
@@ -7134,7 +7132,7 @@
             uspp_issued: "9/23/03"
         },
         {
-            type: "Plum",
+            type: "Plumcot",
             name: "Plumsweettwo",
             uspp_title: 'Plum tree named "PLUMSWEETTWO"',
             patent: "https://patents.google.com/patent/USPP14196 2022-11-21",
@@ -7142,7 +7140,7 @@
             uspp_issued: "9/30/03"
         },
         {
-            type: "Plum",
+            type: "Plumcot",
             name: "Plumsweetone",
             uspp_title: 'Plum tree named "Plumsweetone"',
             patent: "https://patents.google.com/patent/USPP14219 2022-11-21",
@@ -7361,11 +7359,11 @@
             uspp_issued: "2/3/04"
         },
         {
-            type: "Interspecific",
-            name: "Flavor Wynne",
+            type: "Plumcot", // compared to "santa rosa" (japanese plum) in the "summary of..." paragraph, so it's probably more or less a plum, but zaiger always upgrades these to "plumcot"
+            name: "Flavor Wynne", // todo zaiger
             name_common: "Flavor Wynne",
             uspp_title: "Interspecific tree named: Flavor Wynne",
-            patent: "https://patents.google.com/patent/USPP15762 2022-12-10",
+            patent: "https://patents.google.com/patent/USPP15762 2024-03-16",
             uspp_filed: "12/10/02",
             uspp_issued: "5/17/05"
         },
@@ -7379,7 +7377,7 @@
             uspp_issued: "1/6/04"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Spring Flavor",
             name_common: "Spring Flavor",
             uspp_title: 'Interspecific tree named "Spring Flavor"',
@@ -7388,8 +7386,8 @@
             uspp_issued: "3/2/04"
         },
         {
-            type: "Interspecific",
-            name: "Marcia's Flavor",
+            type: "Plumcot", // patent's "summary of..." paragraph compares it to other plumcots and some internet searches turn up references to zaiger marketing material listing it a a plumcot
+            name: "Marcia's Flavor", // todo zaiger
             name_common: "Marcia's Flavor",
             uspp_title: "Interspecific tree named: Marcia's Flavor",
             patent: "https://patents.google.com/patent/USPP15088 2022-12-23",
@@ -7643,7 +7641,7 @@
             uspp_issued: "1/20/04"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Splash",
             name_common: "Splash",
             uspp_title: 'Interspecific tree named: "Splash"',
@@ -7652,7 +7650,7 @@
             uspp_issued: "3/9/04"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Emerald Gem",
             name_common: "Emerald Drop",
             uspp_title: 'Interspecific tree named "Emerald Gem"',
@@ -7670,7 +7668,7 @@
             uspp_issued: "6/8/04"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumtwentyeight",
             name_common: "Black Diamond brand",
             uspp_title: 'Plum tree named "Suplumtwentyeight"',
@@ -7679,7 +7677,7 @@
             uspp_issued: "6/22/04"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumthirtythree",
             uspp_title: 'Plum tree named "Suplumthirtythree"',
             patent: "https://patents.google.com/patent/USPP15068 2023-06-16",
@@ -7687,7 +7685,7 @@
             uspp_issued: "8/3/04"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumtwentynine",
             uspp_title: 'Plum tree named "Suplumtwentynine"',
             patent: "https://patents.google.com/patent/USPP14880 2023-06-17",
@@ -7695,7 +7693,7 @@
             uspp_issued: "6/8/04"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumthirtyfour",
             name_common: "Red Giant brand",
             uspp_title: 'Plum tree named "Suplumthirtyfour"',
@@ -8212,7 +8210,7 @@
             uspp_issued: "8/8/06"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Plumsweetthree",
             name_common: "Plumsweetthree",
             uspp_title: 'Interspecific plum tree named "Plumsweetthree"',
@@ -8246,7 +8244,7 @@
             uspp_issued: "11/23/04"
         },
         {
-            type: "Interspecific",
+            type: "Apriplum",
             name: "Sweetcot",
             name_common: "Sweetcot",
             uspp_title: "Interspecific tree 'Sweetcot'",
@@ -8558,7 +8556,7 @@
             uspp_filed: "6/8/04"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumtwentyfive",
             uspp_title: "Plum tree named 'Suplumtwentyfive'",
             patent: "https://patents.google.com/patent/USPP15888 2024-06-14",
@@ -8566,7 +8564,7 @@
             uspp_issued: "7/19/05"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumthirtyfive",
             name_common: "Black Giant brand",
             uspp_title: "Plum tree named 'Suplumthirtyfive'",
@@ -8575,7 +8573,7 @@
             uspp_issued: "7/26/05"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumtwentysix",
             uspp_title: "Plum tree named 'Suplumtwentysix'",
             patent: "https://patents.google.com/patent/USPP15976 2024-06-14",
@@ -8583,7 +8581,7 @@
             uspp_issued: "9/20/05"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumtwentyseven",
             uspp_title: "Plum tree named 'Suplumtwentyseven'",
             patent: "https://patents.google.com/patent/USPP16006 2024-06-14",
@@ -9937,7 +9935,7 @@
             uspp_issued: "10/9/07"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumthirtysix",
             name_common: "Black Giant brand",
             uspp_title: "Plum tree named 'Suplumthirtysix'",
@@ -9955,7 +9953,7 @@
             uspp_issued: "7/15/08"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumthirtyone",
             uspp_title: "Plum tree named 'suplumthirtyone'",
             patent: "https://patents.google.com/patent/USPP19064 2026-01-10",
@@ -10119,7 +10117,7 @@
             uspp_issued: "10/21/08"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumthirtyseven",
             name_common: "Black Giant brand",
             uspp_title: "Plum tree named 'Suplumthirtyseven'",
@@ -10449,7 +10447,7 @@
             uspp_issued: "9/30/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Crimson Royale",
             name_common: "Crimson Royale",
             uspp_title: "Interspecific Prunus tree named 'Crimson Royale'",
@@ -10524,7 +10522,7 @@
             uspp_issued: "7/8/08"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumthirtyeight",
             name_common: "Black Giant brand",
             uspp_title: "Plum tree named 'Suplumthirtyeight'",
@@ -10615,7 +10613,7 @@
             uspp_issued: "3/25/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Plumred I",
             name_common: "Plumred I",
             uspp_title: "Interspecific tree named 'PLUMRED I'",
@@ -10624,7 +10622,7 @@
             uspp_issued: "3/25/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Plumsweet IX",
             name_common: "Plumsweet IX",
             uspp_title: "Interspecific tree named 'PLUMSWEET IX'",
@@ -10633,7 +10631,7 @@
             uspp_issued: "3/25/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Plumsweet VII",
             name_common: "Plumsweet VII",
             uspp_title: "Interspecific tree named 'Plumsweet VII'",
@@ -10642,7 +10640,7 @@
             uspp_issued: "3/25/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Blackred III",
             name_common: "Blackred III",
             uspp_title: "Interspecific tree named 'BLACKRED III'",
@@ -10651,7 +10649,7 @@
             uspp_issued: "3/25/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Yellowsweet X",
             name_common: "Yellowsweet X",
             uspp_title: "Interspecific tree named 'YELLOWSWEET X'",
@@ -10660,7 +10658,7 @@
             uspp_issued: "3/25/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Plumsweet VIII",
             name_common: "Plumsweet VIII",
             uspp_title: "Interspecific tree named 'PLUMSWEET VIII'",
@@ -10669,7 +10667,7 @@
             uspp_issued: "3/25/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Plumsweet VI",
             name_common: "Plumsweet VI",
             uspp_title: "Interspecific tree named 'Plumsweet VI'",
@@ -10899,9 +10897,8 @@
             uspp_issued: "11/25/08"
         },
         {
-            type: "Interspecific",
-            name: "Coral-Cot",
-            name_common: "Coral Cot",
+            type: "Apriplum",
+            name: "Coral Cot",
             uspp_title: "Interspecific tree named 'Coral-Cot'",
             patent: "https://patents.google.com/patent/USPP19563 2027-01-22",
             uspp_filed: "1/22/07",
@@ -10917,7 +10914,7 @@
             uspp_issued: "12/23/08"
         },
         {
-            type: "Interspecific",
+            type: "Apriplum",
             name: "Late Brittney",
             name_common: "Late Brittney",
             uspp_title: "Interspecific tree 'Late Brittney'",
@@ -10926,7 +10923,7 @@
             uspp_issued: "6/10/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Amigo I",
             name_common: "Amigo 1",
             uspp_title: "Interspecific tree named 'Amigo I'",
@@ -11247,7 +11244,8 @@
             uspp_filed: "7/16/07"
         },
         {
-            type: "Interspecific",
+            type: "Japanese Plum",
+            display_type: "Cherry Plum",
             name: "Nadia",
             name_common: "Nadia",
             uspp_title: "Plum×cherry interspecific hybrid tree named 'Nadia'",
@@ -11427,7 +11425,7 @@
             uspp_issued: "1/26/10"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Yellowsweet II",
             name_common: "Yellowsweet II",
             uspp_title: "Interspecific tree named 'Yellowsweet II'",
@@ -11436,7 +11434,7 @@
             uspp_issued: "12/2/08"
         },
         {
-            type: "Interspecific",
+            type: "Apriplum",
             name: "Apriplum III",
             name_common: "Apriplum III",
             uspp_title: "Interspecific tree named 'Apriplum III'",
@@ -11454,7 +11452,7 @@
             uspp_issued: "12/2/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Plumsweet X",
             name_common: "Plumsweet X",
             uspp_title: "Interspecific tree named 'Plumsweet X'",
@@ -11472,7 +11470,7 @@
             uspp_issued: "12/2/08"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Plumsweet XII",
             name_common: "Plumsweet XII",
             uspp_title: "Interspecific tree named 'PLUMSWEET XII'",
@@ -11515,7 +11513,7 @@
             uspp_issued: "5/25/10"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Honey Punch",
             name_common: "Honey Punch",
             uspp_title: "Interspecific Prunus tree named 'Honey Punch'",
@@ -11643,7 +11641,7 @@
             uspp_issued: "1/20/09"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Coparose",
             name_common: "Coparose",
             uspp_title: "Interspecific prunus tree named 'Coparose'",
@@ -12474,7 +12472,7 @@
             uspp_issued: "11/23/10"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot",
             name: "Plumred VI",
             name_common: "Red Red VI",
             uspp_title: "Interspecific tree named 'Plumred VI'",
@@ -13052,14 +13050,14 @@
             uspp_filed: "10/27/09"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumforty",
             uspp_title: "PLUM TREE NAMED 'SUPLUMFORTY'",
             patent: "https://patents.google.com/patent/USPP21864 2029-10-29",
             uspp_filed: "10/29/09"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumthirtynine",
             uspp_title: "PLUM TREE NAMED 'SUPLUMTHIRTYNINE'",
             patent: "https://patents.google.com/patent/USPP21865 2029-10-29",
@@ -13192,7 +13190,7 @@
             uspp_filed: "12/28/09"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumfortyone",
             uspp_title: "Plum tree named 'Suplumfortyone'",
             patent: "https://patents.google.com/patent/USPP22430 2030-08-15",
@@ -13206,7 +13204,7 @@
             uspp_filed: "1/19/10"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumfortytwo",
             uspp_title: "Plum tree named 'Suplumfortytwo'",
             patent: "https://patents.google.com/patent/USPP22403 2030-05-23",
@@ -13787,7 +13785,7 @@
             uspp_filed: "1/10/11"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot", // the other sweet pixies are also plumcots (zaiger calls them "pluerries")
             name: "Sweet Pixie", // todo - not in the zaiger list
             uspp_title: "Interspecific tree",
             patent: "https://patents.google.com/patent/USPP23211 2031-05-15",
@@ -13808,7 +13806,7 @@
             uspp_filed: "1/18/11"
         },
         {
-            type: "Interspecific",
+            type: "Apriplum",
             name: "Country Cot",
             uspp_title: "Interspecific tree named 'Country Cot'",
             patent: "https://patents.google.com/patent/USPP23695 2032-02-16",
@@ -14244,14 +14242,14 @@
             uspp_filed: "11/4/11"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumfortyfour",
             uspp_title: "PLUM TREE NAMED 'SUPLUMFORTYFOUR'",
             patent: "https://patents.google.com/patent/USPP23722 2032-01-16",
             uspp_filed: "11/10/11"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumfortythree",
             uspp_title: "PLUM TREE NAMED 'SUPLUMFORTYTTHREE'",
             patent: "https://patents.google.com/patent/USPP23780 2031-11-10",
@@ -14301,9 +14299,9 @@
             uspp_filed: "11/28/11"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot", // patent's "summary of..." paragraph compares this to "flavorfall" (plumcot)
             name: "Glory Red",
-            uspp_title: "INTERSPECIFIC TREE NAMED 'GLORY RED'",
+            uspp_title: "Interspecific tree named 'Glory Red'",
             patent: "https://patents.google.com/patent/USPP23668 2032-02-01",
             uspp_filed: "12/1/11"
         },
@@ -16116,7 +16114,7 @@
             uspp_filed: "4/22/13"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot", // compared to "flavor fall" (plumcot) in the "summary of..." patent paragraph
             name: "Autumn Zee", // todo zaiger
             uspp_title: "Interspecific tree named 'Autumn Zee'",
             patent: "https://patents.google.com/patent/USPP25090 2033-04-19",
@@ -16439,7 +16437,7 @@
             uspp_filed: "10/8/14"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumfortysix",
             uspp_title: "Plum tree named 'Suplumfortysix'",
             patent: "https://patents.google.com/patent/USPP26174 2034-01-18",
@@ -16509,7 +16507,7 @@
             uspp_filed: "7/2/14"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumfortyfive",
             uspp_title: "Plum tree named Suplumfortyfive",
             patent: "https://patents.google.com/patent/USPP26175 2034-01-23",
@@ -17227,8 +17225,8 @@
             uspp_filed: "3/28/14"
         },
         {
-            type: "Interspecific",
-            name: "Amber Glo",
+            type: "Plumcot", // patent's "summary of" paragraph: smooth skin and compared to "fall fiesta" (plumcot)
+            name: "Amber Glo", // todo zaiger
             uspp_title: "Interspecific tree named 'AMBER GLO'",
             patent: "https://patents.google.com/patent/USPP26203 2034-07-04",
             uspp_filed: "3/31/14"
@@ -17680,14 +17678,14 @@
             uspp_filed: "10/31/14"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumfortyseven",
             uspp_title: "Plum tree named 'Suplumfortyseven'",
             patent: "https://patents.google.com/patent/USPP27503 2035-04-15",
             uspp_filed: "10/31/14"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "SUPLUMFORTYEIGHT",
             uspp_title: "Plum tree named 'SUPLUMFORTYEIGHT'",
             patent: "https://patents.google.com/patent/USPP27449 2035-04-15",
@@ -18515,14 +18513,14 @@
             uspp_filed: "4/27/15"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumfortynine",
             uspp_title: "Plum Tree Named 'Suplumfortynine'",
             patent: "https://patents.google.com/patent/USPP27326 2035-05-12",
             uspp_filed: "4/27/15"
         },
         {
-            type: "Plum",
+            type: "Japanese Plum",
             name: "Suplumfifty",
             uspp_title: "Plum tree named 'Suplumfifty'",
             patent: "https://patents.google.com/patent/USPP27327 2035-05-18",
@@ -18716,7 +18714,7 @@
             uspp_filed: "8/10/15"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot", // patent's "summary of..." paragraph compares this to "flavorosa" and "flavor fusion" (plumcots)
             name: "Kings Kat", // todo zaiger
             uspp_title: "Interspecific tree named 'Kings Kat'",
             patent: "https://patents.google.com/patent/USPP27824 2035-11-12",
@@ -18821,7 +18819,7 @@
             uspp_filed: "9/16/16"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot", // patent's "summary of" paragraph compares this to "dapple supreme" (plumcot)
             name: "Zweet Bettzee", // todo zaiger
             uspp_title: "Interspecific tree named 'Zweet Bettzee'",
             patent: "https://patents.google.com/patent/USPP28136 2036-02-11",
@@ -18877,7 +18875,7 @@
             uspp_filed: "10/25/16"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot", // patent's "summary of..." paragraph compares this to "emerald gem" ("emerald drop") (plumcot)
             name: "Flavor Baby", // todo zaiger
             uspp_title: "Interspecific tree named 'FLAVOR BABY'",
             patent: "https://patents.google.com/patent/USPP28219 2036-02-18",
@@ -19048,28 +19046,28 @@
             uspp_filed: "12/11/15"
         },
         {
-            type: "Plum",
+            type: "Plumcot",
             name: "Plumsweet XVII",
             uspp_title: "Plum tree named 'Plumsweet XVII'",
             patent: "https://patents.google.com/patent/USPP28504 2036-01-06",
             uspp_filed: "12/11/15"
         },
         {
-            type: "Plum",
+            type: "Plumcot",
             name: "PLUMSWEET XIX",
             uspp_title: "Plum tree named 'PLUMSWEET XIX'",
             patent: "https://patents.google.com/patent/USPP28596 2036-01-03",
             uspp_filed: "12/11/15"
         },
         {
-            type: "Plum",
+            type: "Plumcot",
             name: "PLUMSWEET XVIII",
             uspp_title: "Plum tree named 'PLUMSWEET XVIII'",
             patent: "https://patents.google.com/patent/USPP28469 2036-01-17",
             uspp_filed: "12/11/15"
         },
         {
-            type: "Plum",
+            type: "Plumcot",
             name: "Plumred XII",
             uspp_title: "Plum tree named 'Plumred XII'",
             patent: "https://patents.google.com/patent/USPP28400 2036-01-14",
@@ -19139,14 +19137,14 @@
             uspp_filed: "12/15/15"
         },
         {
-            type: "Interspecific",
+            type: "Apriplum", // patent's "summary of..." paragraph compares this to "kylese" (apriplum or apricot)
             name: "Carlsbad", // todo zaiger
             uspp_title: "Interspecific tree named 'Carlsbad'",
             patent: "https://patents.google.com/patent/USPP28367 2036-04-07",
             uspp_filed: "12/21/15"
         },
         {
-            type: "Interspecific",
+            type: "Plumcot", // patent's "summary of..." paragraph compares this to "honey punch" (plumcot)
             name: "Dapple Delight", // todo zaiger
             uspp_title: "Interspecific tree named 'Dapple Delight'",
             patent: "https://patents.google.com/patent/USPP28368 2036-04-06",

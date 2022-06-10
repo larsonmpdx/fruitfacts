@@ -57,7 +57,7 @@
         },
         {
             patent: "https://patents.google.com/patent/USPP9568 expired ",
-            name: "Muriettato",
+            name: "Murietta",
             type: "Japanese Plum",
             // no harvest time, no description
             released: "Zaiger"
@@ -192,7 +192,7 @@
         {
             patent: "https://patents.google.com/patent/USPP8922 expired ",
             name: "Flavorglo",
-            type: "Japanese Plum",
+            type: "Plumcot",
             harvest_time: "May 22",
             description: "y/y, Red Beaut op op",
             released: "Zaiger"
