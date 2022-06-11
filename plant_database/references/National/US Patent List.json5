@@ -10,7 +10,8 @@
 
     needs_help: true,
     // todo:
-    // - patents newer than this list
+    // - many, maybe most, of the patent expiration times are wrong because they were calculated without extensions.  need to update time from google patents
+    // - search for and add patents newer than this list. about 100/year are filed between tree fruit and berries
     // - some of the name_common fields are probably useful to massage into AKA: [] arrays
     url: "https://docs.google.com/spreadsheets/d/10PfUp8GbpK_hXfcWWlODTqS_T3nF_isHs6viJZ_-7uI",
     accessed: "Jun 2022",
@@ -26,7 +27,6 @@
         {
             type: "Peach",
             name: "Crimson Lady",
-            name_common: "Crimson Lady",
             uspp_title: "Peach tree (Crimson Lady)",
             patent: "https://patents.google.com/patent/USPP7953 2011-01-28",
             uspp_filed: "1/28/91",
@@ -35,7 +35,6 @@
         {
             type: "Nectarine",
             name: "Ruby Diamond",
-            name_common: "Ruby Diamond",
             uspp_title: "Nectarine tree (Ruby Diamond)",
             patent: "https://patents.google.com/patent/USPP7918 2011-02-04",
             uspp_filed: "2/4/91",
@@ -44,7 +43,6 @@
         {
             type: "Nectarine",
             name: "Arctic Snow",
-            name_common: "Arctic Snow",
             uspp_title: 'Nectarine tree "Arctic Show"',
             patent: "https://patents.google.com/patent/USPP7920 2011-02-05",
             uspp_filed: "2/5/91",
@@ -53,7 +51,6 @@
         {
             type: "Almond",
             name: "Rosetta",
-            name_common: "Rosetta",
             uspp_title: "Rosetta almond tree",
             patent: "https://patents.google.com/patent/USPP8236 2011-02-27",
             uspp_filed: "2/27/91",
@@ -80,7 +77,6 @@
         {
             type: "Mandarin",
             name: "Winola",
-            name_common: "Winola",
             uspp_title: "Mandarin tree named 'Winola'",
             patent: "https://patents.google.com/patent/USPP8219 2011-03-08",
             uspp_filed: "3/8/91",
@@ -89,7 +85,6 @@
         {
             type: "Japanese Plum",
             name: "Compact Friar",
-            name_common: "Compact Friar",
             uspp_title: "Plum tree named 'Compact Friar'",
             patent: "https://patents.google.com/patent/USPP8103 2011-03-11",
             uspp_filed: "3/11/91",
@@ -98,7 +93,6 @@
         {
             type: "Apple",
             name: "Spencerville Red",
-            name_common: "Spencerville Red",
             uspp_title: "Apple tree named 'Spencerville Red'",
             patent: "https://patents.google.com/patent/USPP7923 2011-03-12",
             uspp_filed: "3/12/91",
@@ -107,7 +101,6 @@
         {
             type: "Asian Pear",
             name: "Yasato",
-            name_common: "Yasato",
             uspp_title: 'Japanese pear tree "Yasato"',
             patent: "https://patents.google.com/patent/USPP8115 2011-03-12",
             uspp_filed: "3/12/91",
@@ -116,7 +109,6 @@
         {
             type: "Nectarine",
             name: "Chiyoda Red",
-            name_common: "Chiyoda Red",
             uspp_title: "Nectarine tree 'Chiyodared'",
             patent: "https://patents.google.com/patent/USPP8116 2011-03-12",
             uspp_filed: "3/12/91",
@@ -125,7 +117,6 @@
         {
             type: "Peach",
             name: "Autumn Rose",
-            name_common: "Autumn Rose",
             uspp_title: "Autumn Rose peach tree",
             patent: "https://patents.google.com/patent/USPP7990 2011-04-01",
             uspp_filed: "4/1/91",
@@ -140,9 +131,8 @@
             uspp_issued: "12/22/92"
         },
         {
-            type: "Citrus",
+            type: "Sweet Orange",
             name: "Chislett Summer Navel",
-            name_common: "Chislett Summer Navel",
             uspp_title: "Chislett Summer Navel orange tree",
             patent: "https://patents.google.com/patent/USPP8212 2011-04-09",
             uspp_filed: "4/9/91",
@@ -159,7 +149,6 @@
         {
             type: "Nectarine",
             name: "Summer Blush",
-            name_common: "Summer Blush",
             uspp_title: "Nectarine tree (Summer Blush)",
             patent: "https://patents.google.com/patent/USPP8002 2011-04-15",
             uspp_filed: "4/15/91",
@@ -168,7 +157,6 @@
         {
             type: "Nectarine",
             name: "May Kist",
-            name_common: "May Kist",
             uspp_title: 'Nectarine tree "May Kist"',
             patent: "https://patents.google.com/patent/USPP7976 2011-04-22",
             uspp_filed: "4/22/91",
@@ -177,7 +165,6 @@
         {
             type: "Peach",
             name: "September Snow",
-            name_common: "September Snow",
             uspp_title: 'Peach tree "September Snow"',
             patent: "https://patents.google.com/patent/USPP8003 2011-04-29",
             uspp_filed: "4/29/91",
@@ -186,7 +173,6 @@
         {
             type: "Apple",
             name: "Dulcet",
-            name_common: "Dulcet",
             uspp_title: "Apple tree: Dulcet cultivar",
             patent: "https://patents.google.com/patent/USPP8187 2011-05-09",
             uspp_filed: "5/9/91",
@@ -195,7 +181,6 @@
         {
             type: "Peach",
             name: "Royal Lady",
-            name_common: "Royal Lady",
             uspp_title: "Royal Lady peach tree",
             patent: "https://patents.google.com/patent/USPP8211 2011-05-09",
             uspp_filed: "5/9/91",
@@ -204,7 +189,6 @@
         {
             type: "Peach",
             name: "Sugar May",
-            name_common: "Sugar May",
             uspp_title: 'Peach tree "Sugar May"',
             patent: "https://patents.google.com/patent/USPP8034 2011-05-13",
             uspp_filed: "5/13/91",
@@ -221,7 +205,6 @@
         {
             type: "Nectarine",
             name: "Gransun",
-            name_common: "Gransun",
             uspp_title: "Gransun nectarine tree",
             patent: "https://patents.google.com/patent/USPP8255 2011-06-03",
             uspp_filed: "6/3/91",
@@ -238,7 +221,6 @@
         {
             type: "Nectarine",
             name: "August Glo",
-            name_common: "August Glo",
             uspp_title: 'Nectarine tree "August Glo"',
             patent: "https://patents.google.com/patent/USPP8039 2011-06-04",
             uspp_filed: "6/4/91",
@@ -247,7 +229,6 @@
         {
             type: "Blackberry",
             name: "Illini Hardy",
-            name_common: "Illini Hardy",
             uspp_title: "Blackberry plant named Illini Hardy",
             patent: "https://patents.google.com/patent/USPP8333 2011-06-06",
             uspp_filed: "6/6/91",
@@ -256,7 +237,6 @@
         {
             type: "Plumcot",
             name: "Flavor King",
-            name_common: "Flavor King",
             uspp_title: 'Interspecific tree "Flavor King"',
             patent: "https://patents.google.com/patent/USPP8026 2011-06-10",
             uspp_filed: "6/10/91",
@@ -281,7 +261,6 @@
         {
             type: "Peach",
             name: "Summer Sweet",
-            name_common: "Summer Sweet",
             uspp_title: 'Peach tree "Summer Sweet"',
             patent: "https://patents.google.com/patent/USPP8070 2011-06-17",
             uspp_filed: "6/17/91",
@@ -290,7 +269,6 @@
         {
             type: "Nectarine",
             name: "Red Jewel",
-            name_common: "Red Jewel",
             uspp_title: "Nectarine tree (Red Jewel)",
             patent: "https://patents.google.com/patent/USPP8013 2011-06-24",
             uspp_filed: "6/24/91",
@@ -299,7 +277,6 @@
         {
             type: "Japanese Plum", // patent compares this to santa rosa
             name: "Showtime",
-            name_common: "Showtime",
             uspp_title: "'Showtime' plum tree",
             patent: "https://patents.google.com/patent/USPP8037 2011-06-24",
             uspp_filed: "6/24/91",
@@ -310,7 +287,6 @@
         {
             type: "Japanese Plum", // patent compares this to Red Beaut
             name: "Crimson Nugget",
-            name_common: "Crimson Nugget",
             uspp_title: "Crimson Nugget plum tree",
             patent: "https://patents.google.com/patent/USPP8038 2011-06-27",
             uspp_filed: "6/27/91",
@@ -379,7 +355,6 @@
         {
             type: "Peach",
             name: "Compact Flavorette",
-            name_common: "Compact Flavorette",
             uspp_title: 'Peach tree "Compact Flavorette"',
             patent: "https://patents.google.com/patent/USPP8071 2011-07-30",
             uspp_filed: "7/30/91",
@@ -388,7 +363,6 @@
         {
             type: "Peach",
             name: "Snow Giant",
-            name_common: "Snow Giant",
             uspp_title: 'Peach tree "Snow Giant"',
             patent: "https://patents.google.com/patent/USPP8085 2011-08-27",
             uspp_filed: "8/27/91",
@@ -397,7 +371,6 @@
         {
             type: "Citrus",
             name: "Sweet Martin",
-            name_common: "Sweet Martin",
             uspp_title: "Orange tree named 'Sweet Martin'",
             patent: "https://patents.google.com/patent/USPP8238 2011-09-09",
             uspp_filed: "9/9/91",
@@ -406,7 +379,6 @@
         {
             type: "Euro Plum", // patent says euro
             name: "Emperor",
-            name_common: "Emperor",
             uspp_title: "Plum tree called 'Emperor'",
             patent: "https://patents.google.com/patent/USPP8188 2011-09-12",
             uspp_filed: "9/12/91",
@@ -415,7 +387,6 @@
         {
             type: "Walnut",
             name: "Tulare",
-            name_common: "Tulare",
             uspp_title: "Tulare walnut tree",
             patent: "https://patents.google.com/patent/USPP8268 2011-09-12",
             uspp_filed: "9/12/91",
@@ -424,7 +395,6 @@
         {
             type: "Euro Pear",
             name: "Taylor's Gold",
-            name_common: "Taylor's Gold",
             uspp_title: "Peartree named 'Taylor's Gold'",
             patent: "https://patents.google.com/patent/USPP8308 2011-09-16",
             uspp_filed: "9/16/91",
@@ -433,7 +403,6 @@
         {
             type: "Strawberry",
             name: "Mara Des Bois",
-            name_common: "Mara Des Bois",
             uspp_title: 'Strawberry plant named "Mara Des Bois"',
             patent: "https://patents.google.com/patent/USPP8517 2011-09-16",
             uspp_filed: "9/16/91",
@@ -442,7 +411,6 @@
         {
             type: "Citrus",
             name: "Rishon",
-            name_common: "Rishon",
             uspp_title: "Citrus (Citrus L.) named 'Rishon'",
             patent: "https://patents.google.com/patent/USPP8377 2011-09-20",
             uspp_filed: "9/20/91",
@@ -451,7 +419,6 @@
         {
             type: "Mandarin",
             name: "Mor",
-            name_common: "Mor",
             uspp_title: "Mandarin tree names Mor",
             patent: "https://patents.google.com/patent/USPP8378 2011-09-20",
             uspp_filed: "9/20/91",
@@ -460,7 +427,6 @@
         {
             type: "Fig",
             name: "Janice",
-            name_common: "Janice",
             uspp_title: "Seedless fig tree 'Janice'",
             patent: "https://patents.google.com/patent/USPP8254 2011-09-27",
             uspp_filed: "9/27/91",
@@ -469,7 +435,6 @@
         {
             type: "Nectarine",
             name: "Arctic Queen",
-            name_common: "Arctic Queen",
             uspp_title: 'Nectarine tree "Artic Queen"', // note misspelled. normal spelling on DWN website
             patent: "https://patents.google.com/patent/USPP8094 2011-09-30",
             uspp_filed: "9/30/91",
@@ -478,7 +443,6 @@
         {
             type: "Apricot",
             name: "Suaprifive",
-            name_common: "Suaprifive",
             uspp_title: "Apricot cv. Suaprifive",
             patent: "https://patents.google.com/patent/USPP8184 2011-10-07",
             uspp_filed: "10/7/91",
@@ -504,7 +468,6 @@
         {
             type: "Fuzzy Kiwi", // deliciosa
             name: "Skeleton",
-            name_common: "Skeleton",
             uspp_title: "Skelton kiwifruit plant",
             patent: "https://patents.google.com/patent/USPP8344 2011-10-16",
             uspp_filed: "10/16/91",
@@ -513,7 +476,6 @@
         {
             type: "Grape",
             name: "Valplatinta",
-            name_common: "Valplatinta",
             uspp_title: "Grapvine, named 'Valplatinta'",
             patent: "https://patents.google.com/patent/USPP8434 2011-11-01",
             uspp_filed: "11/1/91",
@@ -522,7 +484,6 @@
         {
             type: "Apple",
             name: "Akita Gold",
-            name_common: "Akita Gold",
             uspp_title: 'Apple tree "Akita Gold"',
             patent: "https://patents.google.com/patent/USPP8354 2011-11-25",
             uspp_filed: "11/25/91",
@@ -539,7 +500,6 @@
         {
             type: "Peach",
             name: "Hesse",
-            name_common: "Hesse",
             uspp_title: "'Hesse' clingstone peach tree",
             patent: "https://patents.google.com/patent/USPP8332 2011-12-18",
             uspp_filed: "12/18/91",
@@ -548,7 +508,6 @@
         {
             type: "Grape",
             name: "Sugratwelve",
-            name_common: "Sugratwelve",
             uspp_title: "Grapevine cv. Sugratwelve",
             patent: "https://patents.google.com/patent/USPP8298 2011-12-20",
             uspp_filed: "12/20/91",
@@ -557,7 +516,6 @@
         {
             type: "Fuzzy Kiwi", // chinensis
             name: "K1 89",
-            name_common: "K1 89",
             uspp_title: "Kiwi plant named K1 89",
             patent: "https://patents.google.com/patent/USPP8497 2011-12-20",
             uspp_filed: "12/20/91",
@@ -566,7 +524,6 @@
         {
             type: "Peach",
             name: "Snowbrite",
-            name_common: "Snowbrite",
             uspp_title: 'Peach tree "Snowbrite"',
             patent: "https://patents.google.com/patent/USPP8195 2011-12-23",
             uspp_filed: "12/23/91",
@@ -593,7 +550,6 @@
         {
             type: "Sweet Cherry",
             name: "Redlac",
-            name_common: "Redlac",
             uspp_title: "Sweet cherry tree named 'Redlac'",
             patent: "https://patents.google.com/patent/USPP8721 2012-01-08",
             uspp_filed: "1/8/92",
@@ -634,7 +590,6 @@
         {
             type: "Nectarine",
             name: "Western Red",
-            name_common: "Western Red",
             uspp_title: "Nectarine tree (Western Red)",
             patent: "https://patents.google.com/patent/USPP8196 2012-02-10",
             uspp_filed: "2/10/92",
@@ -643,7 +598,6 @@
         {
             type: "Nectarine",
             name: "Big Juan",
-            name_common: "Big Juan",
             uspp_title: "Nectarine tree (Big Juan)",
             patent: "https://patents.google.com/patent/USPP8197 2012-02-10",
             uspp_filed: "2/10/92",
@@ -652,7 +606,6 @@
         {
             type: "Apple",
             name: "Sommerfeld",
-            name_common: "Sommerfeld",
             uspp_title: "Sommerfeld apple tree",
             patent: "https://patents.google.com/patent/USPP8234 2012-02-10",
             uspp_filed: "2/10/92",
@@ -661,7 +614,6 @@
         {
             type: "Almond",
             name: "Morley",
-            name_common: "Morley",
             uspp_title: "Almond tree (Morley)",
             patent: "https://patents.google.com/patent/USPP8269 2012-02-24",
             uspp_filed: "2/24/92",
@@ -670,7 +622,6 @@
         {
             type: "Almond",
             name: "Savana",
-            name_common: "Savana",
             uspp_title: "Almond tree (Savana)",
             patent: "https://patents.google.com/patent/USPP8270 2012-02-24",
             uspp_filed: "2/24/92",
@@ -704,7 +655,6 @@
         {
             type: "Citrus",
             name: "Tsunokaori",
-            name_common: "Tsunokaori",
             uspp_title: 'Citrus tree "Tsunokaori"',
             patent: "https://patents.google.com/patent/USPP8559 2012-02-25",
             uspp_filed: "2/25/92",
@@ -713,7 +663,6 @@
         {
             type: "Japanese Plum",
             name: "Suplumtwenty",
-            name_common: "Suplumtwenty",
             uspp_title: "Hybrid plum tree cv. Suplumtwenty",
             patent: "https://patents.google.com/patent/USPP8363 2012-02-27",
             uspp_filed: "2/27/92",
@@ -731,7 +680,6 @@
         {
             type: "Nectarine",
             name: "Royal Glo",
-            name_common: "Royal Glo",
             uspp_title: 'Nectarine tree "Royal Glo"',
             patent: "https://patents.google.com/patent/USPP8281 2012-05-06",
             uspp_filed: "5/6/92",
@@ -853,7 +801,6 @@
         {
             type: "Strawberry",
             name: "Sweet Charlie",
-            name_common: "Sweet Charlie",
             uspp_title: "Strawberry plant called 'Sweet Charlie'",
             patent: "https://patents.google.com/patent/USPP8729 2012-08-28",
             uspp_filed: "8/28/92",
@@ -878,7 +825,6 @@
         {
             type: "Blackberry",
             name: "Arapaho",
-            name_common: "Arapaho",
             uspp_title: "Blackberry -- Arapaho cultivar",
             patent: "https://patents.google.com/patent/USPP8510 2012-09-25",
             uspp_filed: "9/25/92",
@@ -936,7 +882,6 @@
         {
             type: "Peach",
             name: "Rizzi",
-            name_common: "Rizzi",
             uspp_title: "Clingstone peach tree 'Rizzi'",
             patent: "https://patents.google.com/patent/USPP8394 2012-10-26",
             uspp_filed: "10/26/92",
@@ -953,7 +898,6 @@
         {
             type: "Japanese Plum",
             name: "Summer Treat",
-            name_common: "Summer Treat",
             uspp_title: "Plum tree named 'Summer Treat'",
             patent: "https://patents.google.com/patent/USPP8693 2012-11-05",
             uspp_filed: "11/5/92",
@@ -962,7 +906,6 @@
         {
             type: "Asian Pear",
             name: "Gold Nijisseiki",
-            name_common: "Gold Nijisseiki",
             uspp_title: "Japanese pear tree Gold Nijisseiki",
             patent: "https://patents.google.com/patent/USPP8529 2012-11-16",
             uspp_filed: "11/16/92",
@@ -995,7 +938,6 @@
         {
             type: "Feijoa",
             name: "Opal Star",
-            name_common: "Opal Star",
             uspp_title: "Feijoa variety named Opal Star",
             patent: "https://patents.google.com/patent/USPP8825 2012-11-30",
             uspp_filed: "11/30/92",
@@ -1004,7 +946,6 @@
         {
             type: "Peach",
             name: "Stanislaus",
-            name_common: "Stanislaus",
             uspp_title: 'Peach tree "Stanislaus"',
             patent: "https://patents.google.com/patent/USPP8376 2012-12-21",
             uspp_filed: "12/21/92",
@@ -1031,7 +972,6 @@
         {
             type: "Apricot",
             name: "Jordanne",
-            name_common: "Jordanne",
             uspp_title: 'Apricot tree "Jordanne"',
             patent: "https://patents.google.com/patent/USPP8392 2012-12-28",
             uspp_filed: "12/28/92",
@@ -1056,7 +996,6 @@
         {
             type: "Plumcot",
             name: "Flavorella",
-            name_common: "Flavorella",
             uspp_title: 'Plum cot tree "Flavorella"',
             patent: "https://patents.google.com/patent/USPP8470 2012-12-28",
             uspp_filed: "12/28/92",
@@ -1065,7 +1004,6 @@
         {
             type: "Japanese Plum",
             name: "Bradgreen",
-            name_common: "Bradgreen",
             uspp_title: "Plum tree (Bradgreen)",
             patent: "https://patents.google.com/patent/USPP8498 2012-12-28",
             uspp_filed: "12/28/92",
@@ -1074,7 +1012,6 @@
         {
             type: "Peach",
             name: "Snow King",
-            name_common: "Snow King",
             uspp_title: 'Peach tree "Snow King"',
             patent: "https://patents.google.com/patent/USPP8415 2012-12-31",
             uspp_filed: "12/31/92",
@@ -1091,7 +1028,6 @@
         {
             type: "Nectarine",
             name: "Arctic Pride",
-            name_common: "Arctic Pride",
             uspp_title: 'Nectarine tree "Arctic Pride"',
             patent: "https://patents.google.com/patent/USPP8450 2013-01-11",
             uspp_filed: "1/11/93",
@@ -1108,7 +1044,6 @@
         {
             type: "Nectarine",
             name: "Flame Glo",
-            name_common: "Flame Glo",
             uspp_title: "Nectarine tree 'Flame Glo'",
             patent: "https://patents.google.com/patent/USPP8441 2013-01-15",
             uspp_filed: "1/15/93",
@@ -1117,7 +1052,6 @@
         {
             type: "Peach",
             name: "Sugar Giant",
-            name_common: "Sugar Giant",
             uspp_title: 'Peach tree "Sugar Giant"',
             patent: "https://patents.google.com/patent/USPP8442 2013-01-25",
             uspp_filed: "1/25/93",
@@ -1126,7 +1060,6 @@
         {
             type: "Japanese Plum",
             name: "Betty Anne",
-            name_common: "Betty Anne",
             uspp_title: 'Plum tree "Betty Anne"',
             patent: "https://patents.google.com/patent/USPP8471 2013-01-25",
             uspp_filed: "1/25/93",
@@ -1159,7 +1092,6 @@
         {
             type: "Japanese Plum",
             name: "Sweet Queen",
-            name_common: "Sweet Queen",
             uspp_title: "Sween Queen plum tree",
             patent: "https://patents.google.com/patent/USPP8557 2013-03-05",
             uspp_filed: "3/5/93",
@@ -1176,7 +1108,6 @@
         {
             type: "Plumcot",
             name: "Flavorich",
-            name_common: "Flavorich",
             uspp_title: 'Interspecific tree "Flavorich"',
             patent: "https://patents.google.com/patent/USPP8546 2013-03-22",
             uspp_filed: "3/22/93",
@@ -1241,7 +1172,6 @@
         {
             type: "Japanese Plum",
             name: "Earliqueen",
-            name_common: "Earliqueen",
             uspp_title: 'Plum tree "Earliqueen"',
             patent: "https://patents.google.com/patent/USPP8583 2013-04-12",
             uspp_filed: "4/12/93",
@@ -1358,7 +1288,6 @@
         {
             type: "Japanese Plum",
             name: "Early Rosa",
-            name_common: "Early Rosa",
             uspp_title: "Early Rosa plum tree",
             patent: "https://patents.google.com/patent/USPP8955 2013-11-02",
             uspp_filed: "11/2/93",
@@ -1367,7 +1296,6 @@
         {
             type: "Japanese Plum", // patent: "Date of bloom: Bloom is early in relation to other Japanese plum cultivars (Prunus salicina)"
             name: "Melrose",
-            name_common: "Melrose",
             uspp_title: "Melrose plum tree",
             patent: "https://patents.google.com/patent/USPP8864 2013-11-04",
             uspp_filed: "11/4/93",
@@ -1376,7 +1304,6 @@
         {
             type: "Euro Plum",
             name: "Castleton",
-            name_common: "Castleton",
             uspp_title: "Plum cultivar 'Castleton'",
             patent: "https://patents.google.com/patent/USPP9638 2013-11-04",
             uspp_filed: "11/4/93",
@@ -1435,7 +1362,6 @@
         {
             type: "Japanese Plum",
             name: "Primetime",
-            name_common: "Primetime",
             uspp_title: "Primetime plum tree",
             patent: "https://patents.google.com/patent/USPP9022 2013-12-29",
             uspp_filed: "12/29/93",
@@ -1461,7 +1387,6 @@
         {
             type: "Euro Pear",
             name: "Concorde",
-            name_common: "Concorde",
             uspp_title: "Pear tree-Concorde variety",
             patent: "https://patents.google.com/patent/USPP9192 2014-01-10",
             uspp_filed: "1/10/94",
@@ -1478,7 +1403,6 @@
         {
             type: "Nectarine",
             name: "Diamond Ray",
-            name_common: "Diamond Ray",
             uspp_title: "Nectarine tree (Diamond Ray)",
             patent: "https://patents.google.com/patent/USPP8948 2014-01-19",
             uspp_filed: "1/19/94",
@@ -1504,7 +1428,6 @@
         {
             type: "Plumcot",
             name: "Flavorglo",
-            name_common: "Flavorglo",
             uspp_title: 'Plum Cot tree "Flavorglo"',
             patent: "https://patents.google.com/patent/USPP8922 2014-01-31",
             uspp_filed: "1/31/94",
@@ -1521,7 +1444,6 @@
         {
             type: "Peach",
             name: "Earlirich",
-            name_common: "Earlirich",
             uspp_title: 'Peach tree "Earlirich"',
             patent: "https://patents.google.com/patent/USPP9002 2014-02-07",
             uspp_filed: "2/7/94",
@@ -1539,7 +1461,6 @@
         {
             type: "Asian Pear",
             name: "Hougetsu",
-            name_common: "Hougetsu",
             uspp_title: "Japanese pear tree 'Hougetsu'",
             patent: "https://patents.google.com/patent/USPP9179 2014-03-16",
             uspp_filed: "3/16/94",
@@ -1548,7 +1469,6 @@
         {
             type: "Citrus",
             name: "Ariake",
-            name_common: "Ariake",
             uspp_title: "Citrus tree 'Ariake'",
             patent: "https://patents.google.com/patent/USPP9235 2014-03-16",
             uspp_filed: "3/16/94",
@@ -1589,7 +1509,6 @@
         {
             type: "Almond",
             name: "Kahl",
-            name_common: "Kahl",
             uspp_title: "Almond tree (Kahl)",
             patent: "https://patents.google.com/patent/USPP9282 2014-05-04",
             uspp_filed: "5/4/94",
@@ -1620,9 +1539,8 @@
             uspp_issued: "8/1/95"
         },
         {
-            type: "Citrus",
+            type: "Sweet Orange",
             name: "Green Diamond",
-            name_common: "Green Diamond",
             uspp_title: "'Green Diamond' Navel",
             patent: "https://patents.google.com/patent/USPP9241 2014-06-14",
             uspp_filed: "6/14/94",
@@ -1729,7 +1647,6 @@
         {
             type: "Ornamental? Cherry",
             name: "Hakko",
-            name_common: "Hakko",
             uspp_title: "'Hakko' cherry tree",
             patent: "https://patents.google.com/patent/USPP9436 2014-11-04",
             uspp_filed: "11/4/94",
@@ -1739,7 +1656,6 @@
         {
             type: "Japanese Plum",
             name: "Emerald Beaut",
-            name_common: "Emerald Beaut",
             uspp_title: "Plum tree 'Emerald Beaut'",
             patent: "https://patents.google.com/patent/USPP9162 2014-11-14",
             uspp_filed: "11/14/94",
@@ -1748,7 +1664,6 @@
         {
             type: "Plumcot",
             name: "Dapple Dandy",
-            name_common: "Dapple Dandy",
             uspp_title: "Interspecific tree named 'Dapple Dandy'",
             patent: "https://patents.google.com/patent/USPP9254 2014-11-28",
             uspp_filed: "11/28/94",
@@ -1782,7 +1697,6 @@
         {
             type: "Nectarine",
             name: "Liz's Late",
-            name_common: "Liz's Late",
             uspp_title: "Nectarine tree 'Liz's Late'",
             patent: "https://patents.google.com/patent/USPP9437 2014-12-12",
             uspp_filed: "12/12/94",
@@ -1807,7 +1721,6 @@
         {
             type: "Sweet Cherry",
             name: "Red Crystal",
-            name_common: "Red Crystal",
             uspp_title: "Cherry tree: 'Red Crystal'",
             patent: "https://patents.google.com/patent/USPP9787 2014-12-19",
             uspp_filed: "12/19/94",
@@ -1816,7 +1729,6 @@
         {
             type: "Nectarine",
             name: "Honey Kist",
-            name_common: "Honey Kist",
             uspp_title: 'Nectarine tree "Honey Kist"',
             patent: "https://patents.google.com/patent/USPP9333 2014-12-22",
             uspp_filed: "12/22/94",
@@ -1825,7 +1737,6 @@
         {
             type: "Nectarine",
             name: "Arctic Star",
-            name_common: "Arctic Star",
             uspp_title: 'Nectarine tree "Arctic Star"',
             patent: "https://patents.google.com/patent/USPP9332 2014-12-27",
             uspp_filed: "12/27/94",
@@ -1834,7 +1745,6 @@
         {
             type: "Japanese Plum",
             name: "Blue Gusto", // todo zaiger
-            name_common: "Blue Gusto",
             uspp_title: "Plum tree 'Blue Gusto'",
             patent: "https://patents.google.com/patent/USPP9331 2014-12-30",
             uspp_filed: "12/30/94",
@@ -1885,7 +1795,6 @@
         {
             type: "Peach",
             name: "Pretty Lady",
-            name_common: "Pretty Lady",
             uspp_title: "Pretty Lady peach tree",
             patent: "https://patents.google.com/patent/USPP9594 2015-01-25",
             uspp_filed: "1/25/95",
@@ -1894,7 +1803,6 @@
         {
             type: "Nectarine",
             name: "Fire Pearl",
-            name_common: "Fire Pearl",
             uspp_title: "Nectarine tree 'Fire Pearl'",
             patent: "https://patents.google.com/patent/USPP9358 2015-02-06",
             uspp_filed: "2/6/95",
@@ -1903,7 +1811,6 @@
         {
             type: "Nectarine",
             name: "Bright Pearl",
-            name_common: "Bright Pearl",
             uspp_title: "Nectarine tree 'Bright Pearl'",
             patent: "https://patents.google.com/patent/USPP9359 2015-02-06",
             uspp_filed: "2/6/95",
@@ -1912,7 +1819,6 @@
         {
             type: "Nectarine",
             name: "June Pearl",
-            name_common: "June Pearl",
             uspp_title: "Nectarine tree 'June Pearl'",
             patent: "https://patents.google.com/patent/USPP9360 2015-02-06",
             uspp_filed: "2/6/95",
@@ -1921,7 +1827,6 @@
         {
             type: "Sweet Cherry",
             name: "Early Red",
-            name_common: "Early Red",
             uspp_title: "Cherry tree 'Early Red'",
             patent: "https://patents.google.com/patent/USPP9368 2015-02-06",
             uspp_filed: "2/6/95",
@@ -1938,7 +1843,6 @@
         {
             type: "Citrus",
             name: "Amakusa",
-            name_common: "Amakusa",
             uspp_title: "Citrus tree 'Amakusa'",
             patent: "https://patents.google.com/patent/USPP9550 2015-03-15",
             uspp_filed: "3/15/95",
@@ -1947,7 +1851,6 @@
         {
             type: "Peach",
             name: "Snow Fire",
-            name_common: "Snow Fire",
             uspp_title: "Peach tree 'Snow Fire'",
             patent: "https://patents.google.com/patent/USPP9470 2015-03-17",
             uspp_filed: "3/17/95",
@@ -1956,7 +1859,6 @@
         {
             type: "Nectarine",
             name: "Diamond Bright",
-            name_common: "Diamond Bright",
             uspp_title: "Nectarine tree 'Diamond Bright'",
             patent: "https://patents.google.com/patent/USPP9495 2015-03-22",
             uspp_filed: "3/22/95",
@@ -1973,7 +1875,6 @@
         {
             type: "Avocado",
             name: "Fruta De Oro Seedless",
-            name_common: "Fruta De Oro Seedless",
             uspp_title: "'Fruta De Oro Seedless' avocado tree",
             patent: "https://patents.google.com/patent/USPP9530 2015-03-23",
             uspp_filed: "3/23/95",
@@ -1982,7 +1883,6 @@
         {
             type: "Nectarine",
             name: "Arctic Sweet",
-            name_common: "Arctic Sweet",
             uspp_title: "Nectarine tree 'Arctic Sweet'",
             patent: "https://patents.google.com/patent/USPP9542 2015-03-23",
             uspp_filed: "3/23/95",
@@ -1991,7 +1891,6 @@
         {
             type: "Japanese Plum",
             name: "September King",
-            name_common: "September King",
             uspp_title: "'September King' plum tree",
             patent: "https://patents.google.com/patent/USPP9513 2015-03-24",
             uspp_filed: "3/24/95",
@@ -2064,7 +1963,6 @@
         {
             type: "Avocado",
             name: "Sir-Prize",
-            name_common: "Sir-Prize",
             uspp_title: "Avocado tree called 'Sir-Prize'",
             patent: "https://patents.google.com/patent/USPP9709 2015-06-07",
             uspp_filed: "6/7/95",
@@ -2072,8 +1970,7 @@
         },
         {
             type: "Avocado",
-            name: "Lamb/Hass",
-            name_common: "Lamb Hass",
+            name: "Lamb Hass", // I took out the slash in the name. sorry!
             uspp_title: "Avocado tree called Lamb/Hass",
             patent: "https://patents.google.com/patent/USPP9753 2015-06-07",
             uspp_filed: "6/7/95",
@@ -2108,7 +2005,6 @@
         {
             type: "Peach",
             name: "Zee Diamond",
-            name_common: "Zee Diamond",
             uspp_title: "Peach tree 'Zee Diamond'",
             patent: "https://patents.google.com/patent/USPP9673 2015-07-10",
             uspp_filed: "7/10/95",
@@ -2117,7 +2013,6 @@
         {
             type: "Apricot",
             name: "Robada",
-            name_common: "Robada",
             uspp_title: "Apricot cv. Robada",
             patent: "https://patents.google.com/patent/USPP9890 2015-07-14",
             uspp_filed: "7/14/95",
@@ -2134,7 +2029,6 @@
         {
             type: "Sweet Cherry",
             name: "Large Red",
-            name_common: "Large Red",
             uspp_title: "Cherry tree 'Large Red'",
             patent: "https://patents.google.com/patent/USPP9658 2015-08-08",
             uspp_filed: "8/8/95",
@@ -2159,7 +2053,6 @@
         {
             type: "Sweet Cherry",
             name: "Giant Red",
-            name_common: "Giant Red",
             uspp_title: "Cherry tree 'Giant Red'",
             patent: "https://patents.google.com/patent/USPP9659 2015-08-17",
             uspp_filed: "8/17/95",
@@ -2300,7 +2193,6 @@
         {
             type: "Euro Pear",
             name: "Harrow Sweet",
-            name_common: "Harrow Sweet",
             uspp_title: "'Harrow Sweet' pear",
             patent: "https://patents.google.com/patent/USPP9863 2015-10-12",
             uspp_filed: "10/12/95",
@@ -2309,7 +2201,6 @@
         {
             type: "Sweet Cherry",
             name: "Scarlet",
-            name_common: "Scarlet",
             uspp_title: "Cherry tree 'Scarlet'",
             patent: "https://patents.google.com/patent/USPP9723 2015-10-17",
             uspp_filed: "10/17/95",
@@ -2326,7 +2217,6 @@
         {
             type: "Sweet Cherry",
             name: "Earlisweet", // todo - not in the zaiger list
-            name_common: "Earlisweet",
             uspp_title: "Cherry tree 'Earlisweet'",
             patent: "https://patents.google.com/patent/USPP9783 2015-10-31",
             uspp_filed: "10/31/95",
@@ -2335,7 +2225,6 @@
         {
             type: "Blackberry",
             name: "Kiowa",
-            name_common: "Kiowa",
             uspp_title: "Blackberry-- Kiowa cultivar",
             patent: "https://patents.google.com/patent/USPP9861 2015-11-06",
             uspp_filed: "11/6/95",
@@ -2352,7 +2241,6 @@
         {
             type: "Peach",
             name: "Spring Snow",
-            name_common: "Spring Snow",
             uspp_title: "Peach tree 'Spring Snow'",
             patent: "https://patents.google.com/patent/USPP9883 2015-12-06",
             uspp_filed: "12/6/95",
@@ -2394,7 +2282,8 @@
         },
         {
             type: "Peach",
-            name: "Siesta Gem",
+            name: "Fiesta Gem",
+            AKA: ["Siesta Gem"], // patent name
             uspp_title: "Peach tree 'Siesta Gem'",
             patent: "https://patents.google.com/patent/USPP9800 2015-12-22",
             uspp_filed: "12/22/95",
@@ -2405,14 +2294,13 @@
             name: "Co-op 32",
             name_common: "Pristine",
             uspp_title: "Apple tree 'Co-op 32'",
-            patent: "https://patents.google.com/patent/USPP9881 2015-12-22",
+            patent: "https://patents.google.com/patent/USPP9881 2014-08-19",
             uspp_filed: "12/22/95",
             uspp_issued: "5/6/97"
         },
         {
             type: "Japanese Plum", // patent compares it to santa rosa
             name: "Matinee",
-            name_common: "Matinee",
             uspp_title: "Matinee plum tree",
             patent: "https://patents.google.com/patent/USPP9836 2016-01-03",
             uspp_filed: "1/3/96",
@@ -2463,7 +2351,6 @@
         {
             type: "Apple",
             name: "Gale Gala",
-            name_common: "Gale Gala",
             uspp_title: "Apple tree 'Gale Gala'",
             patent: "https://patents.google.com/patent/USPP10114 2016-01-16",
             uspp_filed: "1/16/96",
@@ -2523,7 +2410,6 @@
         {
             type: "Japanese Plum", // patent header text "prunus salicina"
             name: "7-B",
-            name_common: "7-B",
             uspp_title: "7-B plum tree",
             patent: "https://patents.google.com/patent/USPP10116 2016-01-24",
             uspp_filed: "1/24/96",
@@ -2547,8 +2433,8 @@
         },
         {
             type: "Apricot",
-            name: "Autumn Glow",
-            name_common: "Autumn Glo",
+            name: "Autumn Glo",
+            AKA: ["Autumn Glow"], // patent name
             uspp_title: 'Apricot tree "Autumn Glow"',
             patent: "https://patents.google.com/patent/USPP9864 2016-02-05",
             uspp_filed: "2/5/96",
@@ -2566,7 +2452,6 @@
         {
             type: "Currant",
             name: "Ben Alder",
-            name_common: "Ben Alder",
             uspp_title: "Black Currant plant named 'Ben Alder'",
             patent: "https://patents.google.com/patent/USPP9889 2016-02-12",
             uspp_filed: "2/12/96",
@@ -2575,7 +2460,6 @@
         {
             type: "Blueberry",
             name: "Ozarkblue",
-            name_common: "Ozarkblue",
             uspp_title: "Blueberry--'Ozarkblue'",
             patent: "https://patents.google.com/patent/USPP10035 2016-02-26",
             uspp_filed: "2/26/96",
@@ -2592,7 +2476,6 @@
         {
             type: "Nectarine",
             name: "Arctic Jay",
-            name_common: "Arctic Jay",
             uspp_title: 'Nectarine tree "Arctic Jay"',
             patent: "https://patents.google.com/patent/USPP9908 2016-03-11",
             uspp_filed: "3/11/96",
@@ -2643,7 +2526,6 @@
         {
             type: "Plumcot",
             name: "Flavor Heart",
-            name_common: "Flavor Heart",
             uspp_title: 'Interspecific tree "Flavor Heart"',
             patent: "https://patents.google.com/patent/USPP10608 2016-04-08",
             uspp_filed: "4/8/96",
@@ -2661,7 +2543,6 @@
         {
             type: "Raspberry",
             name: "Caroline",
-            name_common: "Caroline",
             uspp_title: "Raspberry plant named 'Caroline'",
             patent: "https://patents.google.com/patent/USPP10412 2016-04-10",
             uspp_filed: "4/10/96",
@@ -2670,7 +2551,6 @@
         {
             type: "Raspberry",
             name: "Lauren",
-            name_common: "Lauren",
             uspp_title: "Raspberry plant named 'Lauren'",
             patent: "https://patents.google.com/patent/USPP10610 2016-04-10",
             uspp_filed: "4/10/96",
@@ -2679,7 +2559,6 @@
         {
             type: "Sweet Cherry",
             name: "Early King",
-            name_common: "Early King",
             uspp_title: "'Early King' cherry tree",
             patent: "https://patents.google.com/patent/USPP10326 2016-04-17",
             uspp_filed: "4/17/96",
@@ -2720,7 +2599,6 @@
         {
             type: "Nectarine",
             name: "Ruby Pearl",
-            name_common: "Ruby Pearl",
             uspp_title: 'Nectarine tree "Ruby Pearl"',
             patent: "https://patents.google.com/patent/USPP9959 2016-04-29",
             uspp_filed: "4/29/96",
@@ -2729,7 +2607,6 @@
         {
             type: "Nectarine",
             name: "Grand Pearl",
-            name_common: "Grand Pearl",
             uspp_title: "Nectarine tree 'Grand Pearl'",
             patent: "https://patents.google.com/patent/USPP9960 2016-05-06",
             uspp_filed: "5/6/96",
@@ -2738,7 +2615,6 @@
         {
             type: "Nectarine",
             name: "Fire Sweet",
-            name_common: "Fire Sweet",
             uspp_title: "Nectarine tree 'Fire Sweet'",
             patent: "https://patents.google.com/patent/USPP9961 2016-05-09",
             uspp_filed: "5/9/96",
@@ -2747,7 +2623,6 @@
         {
             type: "Currant",
             name: "Ben Connan",
-            name_common: "Ben Connan",
             uspp_title: "Black currant plant named 'Ben Connan'",
             patent: "https://patents.google.com/patent/USPP9975 2016-05-22",
             uspp_filed: "5/22/96",
@@ -2765,7 +2640,6 @@
         {
             type: "Nectarine",
             name: "Spring Sweet",
-            name_common: "Spring Sweet",
             uspp_title: "Nectarine tree 'Spring Sweet'",
             patent: "https://patents.google.com/patent/USPP9962 2016-05-28",
             uspp_filed: "5/28/96",
@@ -2774,7 +2648,6 @@
         {
             type: "Nectarine",
             name: "Ruby Sweet",
-            name_common: "Ruby Sweet",
             uspp_title: 'Nectarine tree "Ruby Sweet"',
             patent: "https://patents.google.com/patent/USPP9963 2016-05-28",
             uspp_filed: "5/28/96",
@@ -2817,7 +2690,6 @@
         {
             type: "Apricot",
             name: "Suaprisix",
-            name_common: "Suaprisix",
             uspp_title: "Apricot tree cv. 'Suaprisix'",
             patent: "https://patents.google.com/patent/USPP10233 2016-08-08",
             uspp_filed: "8/8/96",
@@ -2867,7 +2739,6 @@
         {
             type: "Peach",
             name: "Snow Beauty",
-            name_common: "Snow Beauty",
             uspp_title: "Peach tree 'Snow Beauty'",
             patent: "https://patents.google.com/patent/USPP10175 2016-08-30",
             uspp_filed: "8/30/96",
@@ -2901,7 +2772,6 @@
         {
             type: "Nectarine",
             name: "Arctic Blaze",
-            name_common: "Arctic Blaze",
             uspp_title: "Nectarine tree 'Arctic Blaze'",
             patent: "https://patents.google.com/patent/USPP10174 2016-09-20",
             uspp_filed: "9/20/96",
@@ -3023,7 +2893,6 @@
         {
             type: "Peach",
             name: "Kaweah",
-            name_common: "Kaweah",
             uspp_title: "Peach tree 'Kaweah'",
             patent: "https://patents.google.com/patent/USPP10177 2016-11-07",
             uspp_filed: "11/7/96",
@@ -3080,16 +2949,14 @@
         {
             type: "Japanese Plum",
             name: "Joanna Red",
-            name_common: "Joanna Red",
             uspp_title: 'Plum tree "Joanna Red"',
-            patent: "https://patents.google.com/patent/USPP10385 2016-12-03",
+            patent: "https://patents.google.com/patent/USPP10385 2016-12-23",
             uspp_filed: "12/3/96",
             uspp_issued: "5/12/98"
         },
         {
             type: "Nectarine",
             name: "July Pearl",
-            name_common: "July Pearl",
             uspp_title: "Nectarine tree 'July Pearl'",
             patent: "https://patents.google.com/patent/USPP10293 2016-12-16",
             uspp_filed: "12/16/96",
@@ -3098,7 +2965,6 @@
         {
             type: "Peach",
             name: "Brittney Lane",
-            name_common: "Brittney Lane",
             uspp_title: 'Peach tree "Brittney Lane"',
             patent: "https://patents.google.com/patent/USPP10286 2016-12-17",
             uspp_filed: "12/17/96",
@@ -3132,7 +2998,6 @@
         {
             type: "Nectarine",
             name: "Kay Glo",
-            name_common: "Kay Glo",
             uspp_title: "Nectarine tree 'Kay Glo'",
             patent: "https://patents.google.com/patent/USPP10241 2016-12-24",
             uspp_filed: "12/24/96",
@@ -3140,8 +3005,7 @@
         },
         {
             type: "Nectarine",
-            name: "honey blaze",
-            name_common: "Honey Blaze",
+            name: "Honey Blaze",
             uspp_title: 'Nectarine tree "honey blaze"',
             patent: "https://patents.google.com/patent/USPP10250 2016-12-27",
             uspp_filed: "12/27/96",
@@ -3150,7 +3014,6 @@
         {
             type: "Plumcot",
             name: "Flavorosa",
-            name_common: "Flavorosa",
             uspp_title: 'Interspecific tree "Flavorosa"',
             patent: "https://patents.google.com/patent/USPP10285 2017-01-13",
             uspp_filed: "1/13/97",
@@ -3235,7 +3098,6 @@
         {
             type: "Apriplum",
             name: "Honey Rich",
-            name_common: "Honey Rich",
             uspp_title: 'Interspecific tree "Honey Rich"',
             patent: "https://patents.google.com/patent/USPP10292 2017-02-04",
             uspp_filed: "2/4/97",
@@ -3244,7 +3106,6 @@
         {
             type: "Plumcot",
             name: "Geo Pride",
-            name_common: "Geo Pride",
             uspp_title: 'Interspecific tree "Geo Pride"',
             patent: "https://patents.google.com/patent/USPP10386 2017-02-13",
             uspp_filed: "2/13/97",
@@ -3285,7 +3146,6 @@
         {
             type: "Sweet Cherry",
             name: "Royalton",
-            name_common: "Royalton",
             uspp_title: "Sweet cherry cultivar named 'Royalton'",
             patent: "https://patents.google.com/patent/USPP11107 2017-04-01",
             uspp_filed: "4/1/97",
@@ -3302,7 +3162,6 @@
         {
             type: "Sweet Cherry",
             name: "Hartland",
-            name_common: "Hartland",
             uspp_title: "Sweet cherry cultivar named 'Hartland'",
             patent: "https://patents.google.com/patent/USPP11034 2017-04-10",
             uspp_filed: "4/10/97",
@@ -3311,7 +3170,6 @@
         {
             type: "Raspberry",
             name: "Kiwigold",
-            name_common: "KiwiGold",
             uspp_title: "Yellow raspberry plant named 'Kiwigold'",
             patent: "https://patents.google.com/patent/USPP11313 2017-04-10",
             uspp_filed: "4/10/97",
@@ -3320,7 +3178,6 @@
         {
             type: "Nectarine",
             name: "Arctic Belle",
-            name_common: "Arctic Belle",
             uspp_title: "Nectarine tree 'Arctic Belle'",
             patent: "https://patents.google.com/patent/USPP10479 2017-04-21",
             uspp_filed: "4/21/97",
@@ -3385,7 +3242,6 @@
         {
             type: "Peach",
             name: "Tuolumne",
-            name_common: "Tuolumne",
             uspp_title: "Peach tree 'Tuolumne'",
             patent: "https://patents.google.com/patent/USPP10609 2017-06-05",
             uspp_filed: "6/5/97",
@@ -3394,7 +3250,6 @@
         {
             type: "Grape",
             name: "Sugrafourteen",
-            name_common: "Sugrafourteen",
             uspp_title: "Grapevine cv. Sugrafourteen",
             patent: "https://patents.google.com/patent/USPP11245 2017-06-05",
             uspp_filed: "6/5/97",
@@ -3419,7 +3274,6 @@
         {
             type: "Sweet Cherry",
             name: "Somerset",
-            name_common: "Somerset",
             uspp_title: "Sweet cherry cultivar named 'Somerset'",
             patent: "https://patents.google.com/patent/USPP11118 2017-06-13",
             uspp_filed: "6/13/97",
@@ -3452,16 +3306,14 @@
         {
             type: "Apple",
             name: "Ambrosia",
-            name_common: "Ambrosia",
             uspp_title: "Apple tree named 'Ambrosia'",
             patent: "https://patents.google.com/patent/USPP10789 2017-06-19",
             uspp_filed: "6/19/97",
             uspp_issued: "2/16/99"
         },
         {
-            type: "Citrus",
+            type: "Sweet Orange",
             name: "Wiffen Summer Navel",
-            name_common: "Wiffen Summer Navel",
             uspp_title: "Navel orange tree named 'Wiffen Summer Navel'",
             patent: "https://patents.google.com/patent/USPP11246 2017-06-23",
             uspp_filed: "6/23/97",
@@ -3758,7 +3610,7 @@
             type: "Nectarine",
             name: "Western Pride",
             uspp_title: "Nectarine tree named 'Western Pride'",
-            patent: "https://patents.google.com/patent/USPP10889 2017-11-20",
+            patent: "https://patents.google.com/patent/USPP10889 2017-09-26",
             uspp_filed: "11/20/97",
             uspp_issued: "5/11/99"
         },
@@ -3842,7 +3694,7 @@
         },
         {
             type: "Apple",
-            name: "Huaguari",
+            name: "Huaguan",
             uspp_title: "Apple tree names 'Huaguan'",
             patent: "https://patents.google.com/patent/USPP11077 2017-12-02",
             uspp_filed: "12/2/97",
@@ -3851,7 +3703,6 @@
         {
             type: "Japanese Plum", // patent doesn't directly admit it's a japanese-type plum but it seems clear to me
             name: "Yellow #503",
-            name_common: "Yellow #503",
             uspp_title: "Plum tree named 'Yellow #503'",
             patent: "https://patents.google.com/patent/USPP11061 2017-12-04",
             uspp_filed: "12/4/97",
@@ -3868,7 +3719,6 @@
         {
             type: "Almond",
             name: "Avalon",
-            name_common: "Avalon",
             uspp_title: "Almond tree named 'Avalon'",
             patent: "https://patents.google.com/patent/USPP11096 2017-12-17",
             uspp_filed: "12/17/97",
@@ -3885,7 +3735,6 @@
         {
             type: "Fuzzy Kiwi", // deliciosa
             name: "Tomua",
-            name_common: "Tomua",
             uspp_title: "Kiwi plant named 'Tomua'",
             patent: "https://patents.google.com/patent/USPP11065 2017-12-23",
             uspp_filed: "12/23/97",
@@ -3912,7 +3761,6 @@
         {
             type: "Peach",
             name: "Ivory Princess",
-            name_common: "Ivory Princess",
             uspp_title: "Peach tree 'Ivory Princess'",
             patent: "https://patents.google.com/patent/USPP11205 2018-01-08",
             uspp_filed: "1/8/98",
@@ -4087,7 +3935,6 @@
         {
             type: "Asian Pear",
             name: "Kotobuki Shinsui",
-            name_common: "Kotobuki Shinsui",
             uspp_title: "Japanese pear tree named 'Kotobuki Shinsui'",
             patent: "https://patents.google.com/patent/USPP11545 2018-03-05",
             uspp_filed: "3/5/98",
@@ -4104,7 +3951,6 @@
         {
             type: "Currant",
             name: "Titania",
-            name_common: "Titania",
             uspp_title: "Blackcurrant plant named 'Titania'",
             patent: "https://patents.google.com/patent/USPP11439 2018-03-23",
             uspp_filed: "3/23/98",
@@ -4121,7 +3967,6 @@
         {
             type: "Peach",
             name: "Snow Gem",
-            name_common: "Snow Gem",
             uspp_title: "Peach tree 'Snow Gem'",
             patent: "https://patents.google.com/patent/USPP11435 2018-04-01",
             uspp_filed: "4/1/98",
@@ -4130,7 +3975,6 @@
         {
             type: "Japanese Plum", // patent says "Prunus salicina"
             name: "Sir George",
-            name_common: "Sir George",
             uspp_title: "Plum tree named 'Sir George'",
             patent: "https://patents.google.com/patent/USPP11149 2018-04-22",
             uspp_filed: "4/22/98",
@@ -4148,7 +3992,6 @@
         {
             type: "Apricot",
             name: "Bonny",
-            name_common: "Bonny",
             uspp_title: "Apricot tree named 'Bonny'",
             patent: "https://patents.google.com/patent/USPP11307 2018-04-27",
             uspp_filed: "4/27/98",
@@ -4157,7 +4000,6 @@
         {
             type: "Almond",
             name: "Durango",
-            name_common: "Durango",
             uspp_title: "Almond tree named 'Durango'",
             patent: "https://patents.google.com/patent/USPP11891 2018-04-29",
             uspp_filed: "4/29/98",
@@ -4198,7 +4040,6 @@
         {
             type: "Currant",
             name: "Ben Tirran",
-            name_common: "Ben Tirran",
             uspp_title: "Black currant plant named 'Ben Tirran'",
             patent: "https://patents.google.com/patent/USPP11330 2018-06-22",
             uspp_filed: "6/22/98",
@@ -4232,7 +4073,6 @@
         {
             type: "Sweet Cherry",
             name: "Skeena",
-            name_common: "Skeena",
             uspp_title: "Cherry tree named 'Skeena'",
             patent: "https://patents.google.com/patent/USPP11392 2018-06-25",
             uspp_filed: "6/25/98",
@@ -4241,7 +4081,6 @@
         {
             type: "Peach",
             name: "Late Ross",
-            name_common: "Late Ross",
             uspp_title: "Clingstone peach tree named 'Late Ross '",
             patent: "https://patents.google.com/patent/USPP11208 2018-06-26",
             uspp_filed: "6/26/98",
@@ -4250,7 +4089,6 @@
         {
             type: "Asian Pear",
             name: "Osa Gold",
-            name_common: "Osa Gold",
             uspp_title: "Japanese pear tree named 'Osa Gold'",
             patent: "https://patents.google.com/patent/USPP11656 2018-07-13",
             uspp_filed: "7/13/98",
@@ -4307,7 +4145,6 @@
         {
             type: "Peach",
             name: "Kingsburg Cling",
-            name_common: "Kingsburg Cling",
             uspp_title: "Peach tree named 'Kingsburg Cling'",
             patent: "https://patents.google.com/patent/USPP11739 2018-09-09",
             uspp_filed: "9/9/98",
@@ -4324,7 +4161,6 @@
         {
             type: "Raspberry",
             name: "Encore",
-            name_common: "Encore",
             uspp_title: "Red raspberry plant named 'Encore'",
             patent: "https://patents.google.com/patent/USPP11746 2018-10-06",
             uspp_filed: "10/6/98",
@@ -4333,7 +4169,6 @@
         {
             type: "Raspberry",
             name: "Prelude",
-            name_common: "Prelude",
             uspp_title: "Red raspberry plant named 'Prelude'",
             patent: "https://patents.google.com/patent/USPP11747 2018-10-06",
             uspp_filed: "10/6/98",
@@ -4382,7 +4217,7 @@
         },
         {
             type: "Peach",
-            name: "PF 12-B",
+            name: "PF 12B",
             name_common: "Flamin Fury PF 12-B",
             uspp_title: 'Peach tree named "P. F. 12-B"',
             patent: "https://patents.google.com/patent/USPP12351 2018-10-22",
@@ -4408,7 +4243,6 @@
         {
             type: "Grape",
             name: "Sugrafifteen",
-            name_common: "Sugrafifteen",
             uspp_title: "Grape plant named 'Sugrafifteen'",
             patent: "https://patents.google.com/patent/USPP11727 2018-11-20",
             uspp_filed: "11/20/98",
@@ -4476,8 +4310,7 @@
         },
         {
             type: "Peach",
-            name: "Snowfall",
-            name_common: "Snow Fall",
+            name: "Snow Fall",
             uspp_title: "Peach tree named 'Snowfall'",
             patent: "https://patents.google.com/patent/USPP11568 2018-12-15",
             uspp_filed: "12/15/98",
@@ -4628,8 +4461,8 @@
         },
         {
             type: "Plumcot",
-            name: "Flavorfall",
-            name_common: "Flavorfall",
+            name: "Flavor Fall",
+            AKA: ["Flavorfall"],
             uspp_title: "Interspecific tree named 'Flavorfall'",
             patent: "https://patents.google.com/patent/USPP11990 2019-02-08",
             uspp_filed: "2/8/99",
@@ -5117,8 +4950,8 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Regal Lee",
-            name_common: "Royal Lee",
+            name: "Royal Lee",
+            AKA: ["Regal Lee"], // patent name
             uspp_title: 'Cherry tree named "Regal Lee"',
             patent: "https://patents.google.com/patent/USPP12417 2020-04-03",
             uspp_filed: "4/3/00",
@@ -5159,7 +4992,6 @@
         {
             type: "Almond",
             name: "Bluegum",
-            name_common: "Bluegum",
             uspp_title: 'Almond tree named "Bluegum"',
             patent: "https://patents.google.com/patent/USPP12737 2020-05-18",
             uspp_filed: "5/18/00",
@@ -5168,7 +5000,6 @@
         {
             type: "Japanese Plum", // patent says "Prunus salicina"
             name: "Sunlite Nugget",
-            name_common: "Sunlite Nugget",
             uspp_title: 'Plum tree named "Sunlite Nugget"',
             patent: "https://patents.google.com/patent/USPP13376 2020-05-20",
             uspp_filed: "5/20/00",
@@ -5225,16 +5056,14 @@
         {
             type: "Peach",
             name: "UFO",
-            name_common: "UFO",
             uspp_title: 'Peach tree named "UFO"',
-            patent: "https://patents.google.com/patent/USPP13352 2020-07-18",
+            patent: "https://patents.google.com/patent/USPP13352 2020-07-19",
             uspp_filed: "7/18/00",
             uspp_issued: "12/10/02"
         },
         {
             type: "Apple",
             name: "Stella Minnesota",
-            name_common: "Stella Minnesota",
             uspp_title: 'Apple tree called "Stella Minnesota"',
             patent: "https://patents.google.com/patent/USPP13930 2020-08-03",
             uspp_filed: "8/3/00",
@@ -5325,7 +5154,7 @@
             name: "Glenred",
             name_common: "Sequoia brand",
             uspp_title: 'Cherry tree named "Glenred"',
-            patent: "https://patents.google.com/patent/USPP12859 2020-11-06",
+            patent: "https://patents.google.com/patent/USPP12859 2021-01-19",
             uspp_filed: "11/6/00",
             uspp_issued: "8/13/02"
         },
@@ -5340,7 +5169,6 @@
         {
             type: "Citrus",
             name: "Dity",
-            name_common: "Dity",
             uspp_title: 'Citrus tree named "Dity"',
             patent: "https://patents.google.com/patent/USPP13457 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5349,7 +5177,6 @@
         {
             type: "Citrus",
             name: "Moria",
-            name_common: "Moria",
             uspp_title: 'Citrus tree named "Moria"',
             patent: "https://patents.google.com/patent/USPP13460 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5358,7 +5185,6 @@
         {
             type: "Citrus",
             name: "Nora",
-            name_common: "Nora",
             uspp_title: 'Citrus tree named "Nora"',
             patent: "https://patents.google.com/patent/USPP13461 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5367,7 +5193,6 @@
         {
             type: "Citrus",
             name: "KEDEM",
-            name_common: "Kedem",
             uspp_title: 'Citrus tree named "KEDEM"',
             patent: "https://patents.google.com/patent/USPP13612 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5376,7 +5201,6 @@
         {
             type: "Citrus",
             name: "Orri",
-            name_common: "Orri",
             uspp_title: 'Citrus tree named "Orri"',
             patent: "https://patents.google.com/patent/USPP13616 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5385,7 +5209,6 @@
         {
             type: "Citrus",
             name: "Vered",
-            name_common: "Vered",
             uspp_title: 'Citrus tree named "Vered"',
             patent: "https://patents.google.com/patent/USPP13617 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5394,7 +5217,6 @@
         {
             type: "Citrus",
             name: "Nectar",
-            name_common: "Nectar",
             uspp_title: 'Citrus tree named "Nectar"',
             patent: "https://patents.google.com/patent/USPP13624 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5403,7 +5225,6 @@
         {
             type: "Citrus",
             name: "Yanov",
-            name_common: "Yanov",
             uspp_title: 'Citrus tree named "Yanov"',
             patent: "https://patents.google.com/patent/USPP13627 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5412,7 +5233,6 @@
         {
             type: "Citrus",
             name: "Shani",
-            name_common: "Shani",
             uspp_title: 'Citrus tree named "Shani"',
             patent: "https://patents.google.com/patent/USPP13634 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5421,7 +5241,6 @@
         {
             type: "Citrus",
             name: "Merav",
-            name_common: "Merav",
             uspp_title: 'Citrus tree named "Merav"',
             patent: "https://patents.google.com/patent/USPP13661 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5430,7 +5249,6 @@
         {
             type: "Citrus",
             name: "Tami",
-            name_common: "Tami",
             uspp_title: 'Citrus tree named "Tami"',
             patent: "https://patents.google.com/patent/USPP13709 2020-11-20",
             uspp_filed: "11/20/00",
@@ -5447,7 +5265,6 @@
         {
             type: "Peach",
             name: "Snow Princess",
-            name_common: "Snow Princess",
             uspp_title: 'Peach tree named "Snow Princess"',
             patent: "https://patents.google.com/patent/USPP12570 2020-11-27",
             uspp_filed: "11/27/00",
@@ -5462,7 +5279,7 @@
         },
         {
             type: "Apple",
-            name: "Rankin Red",
+            name: "Rankin Red Fuji",
             uspp_title: 'Apple tree named "Rankin Red"',
             patent: "https://patents.google.com/patent/USPP12551 2020-12-04",
             uspp_filed: "12/4/00",
@@ -5471,7 +5288,6 @@
         {
             type: "Japanese Plum",
             name: "Aphrodite",
-            name_common: "Aphrodite",
             uspp_title: 'Japanese plum tree named "Aphrodite"',
             patent: "https://patents.google.com/patent/USPP13121 2020-12-04",
             uspp_filed: "12/4/00",
@@ -5487,8 +5303,7 @@
         },
         {
             type: "Peach",
-            name: "Ice Princess",
-            name_common: "Ice Princess",
+            name: "ICE PRINCESS",
             uspp_title: 'Peach tree named "ICE PRINCESS"',
             patent: "https://patents.google.com/patent/USPP12974 2020-12-08",
             uspp_filed: "12/8/00",
@@ -5496,7 +5311,8 @@
         },
         {
             type: "Peach",
-            name: "Mellow Yellow, Candy Red",
+            name: "Candy Red",
+            name_common: "Mellow Yellow",
             uspp_title: 'Peach tree named "Candy Red"',
             patent: "https://patents.google.com/patent/USPP13040 2020-12-11",
             uspp_filed: "12/11/00",
@@ -5505,7 +5321,6 @@
         {
             type: "Peach",
             name: "Burpeacheight",
-            name_common: "Burpeacheight",
             uspp_title: 'Peach tree named "Burpeacheight"',
             patent: "https://patents.google.com/patent/USPP12834 2020-12-12",
             uspp_filed: "12/12/00",
@@ -5514,7 +5329,6 @@
         {
             type: "Sweet Cherry",
             name: "Royal Dawn", // todo - not in the zaiger list
-            name_common: "Royal Dawn",
             uspp_title: 'Cherry tree named "Royal Dawn"',
             patent: "https://patents.google.com/patent/USPP13131 2021-01-12",
             uspp_filed: "1/12/01",
@@ -5530,7 +5344,6 @@
         {
             type: "Apriplum",
             name: "Tasty Rich",
-            name_common: "Tasty Rich",
             uspp_title: 'Interspecific tree named "Tasty Rich"',
             patent: "https://patents.google.com/patent/USPP12774 2021-01-24",
             uspp_filed: "1/24/01",
@@ -5539,7 +5352,6 @@
         {
             type: "Grape",
             name: "Sugratwentythree",
-            name_common: "Sugratwentythree",
             uspp_title: 'Grapevine cv. "Sugratwentythree"',
             patent: "https://patents.google.com/patent/USPP13164 2021-01-25",
             uspp_filed: "1/25/01",
@@ -5548,7 +5360,6 @@
         {
             type: "Grape",
             name: "Sugratwentytwo",
-            name_common: "Sugratwentytwo",
             uspp_title: 'Grapevine cv. "Sugratwentytwo"',
             patent: "https://patents.google.com/patent/USPP13198 2021-01-25",
             uspp_filed: "1/25/01",
@@ -5557,7 +5368,6 @@
         {
             type: "Grape",
             name: "Sugraseventeen",
-            name_common: "Sugraseventeen",
             uspp_title: 'Grapevine cv. "Sugraseventeen"',
             patent: "https://patents.google.com/patent/USPP13199 2021-01-25",
             uspp_filed: "1/25/01",
@@ -5566,7 +5376,6 @@
         {
             type: "Grape",
             name: "Sugratwentyone",
-            name_common: "Sugratwentyone",
             uspp_title: 'Grapevine cv. "Sugratwentyone"',
             patent: "https://patents.google.com/patent/USPP13444 2021-01-25",
             uspp_filed: "1/25/01",
@@ -5634,7 +5443,7 @@
             type: "Peach",
             name: "Spring Treat",
             uspp_title: 'Peach tree named "Spring Treat"',
-            patent: "https://patents.google.com/patent/USPP12419 2021-01-30",
+            patent: "https://patents.google.com/patent/USPP12419 2021-02-16",
             uspp_filed: "1/30/01",
             uspp_issued: "2/26/02"
         },
@@ -5757,7 +5566,7 @@
             type: "Peach",
             name: "August Princess",
             uspp_title: 'Peach tree named "August Princess"',
-            patent: "https://patents.google.com/patent/USPP128962021-03-27",
+            patent: "https://patents.google.com/patent/USPP12896 2021-03-27",
             uspp_filed: "3/22/01",
             uspp_issued: "8/27/02"
         },
@@ -5827,7 +5636,7 @@
             name: "Black Kat",
             name_common: "Black Kat",
             uspp_title: 'Interspecific tree named "Black Kat"',
-            patent: "https://patents.google.com/patent/USPP13134 2021-04-10",
+            patent: "https://patents.google.com/patent/USPP13134 2021-07-06",
             uspp_filed: "4/10/01",
             uspp_issued: "10/29/02"
         },
@@ -5885,7 +5694,7 @@
             type: "Nectarine",
             name: "Honey Fire",
             uspp_title: 'Nectarine tree named: "Honey Fire"',
-            patent: "https://patents.google.com/patent/USPP12418 2021-04-24",
+            patent: "https://patents.google.com/patent/USPP12418 2021-05-02",
             uspp_filed: "4/24/01",
             uspp_issued: "2/26/02"
         },
@@ -5894,7 +5703,7 @@
             name: "Crimson Glo",
             name_common: "Crimson Glo",
             uspp_title: 'Plum tree named "Crimson Glo"',
-            patent: "https://patents.google.com/patent/USPP12856 2021-04-30",
+            patent: "https://patents.google.com/patent/USPP12856 2021-05-10",
             uspp_filed: "4/30/01",
             uspp_issued: "8/13/02"
         },
@@ -5971,7 +5780,6 @@
         {
             type: "Euro Plum",
             name: "Kenmore", // NY9
-            name_common: "Kenmore",
             uspp_title: 'Plum tree named "Kenmore Plum"',
             patent: "https://patents.google.com/patent/USPP14020 2021-06-30",
             uspp_filed: "6/26/01",
@@ -5980,7 +5788,6 @@
         {
             type: "Peach",
             name: "Lilleland",
-            name_common: "Lilleland",
             uspp_title: 'Clingstone peach tree named "Lilleland"',
             patent: "https://patents.google.com/patent/USPP13028 2021-06-27",
             uspp_filed: "6/27/01",
@@ -5997,7 +5804,6 @@
         {
             type: "Euro Plum",
             name: "Jayfree",
-            name_common: "Jayfree",
             uspp_title: 'Plum tree named "Jayfree Plum"',
             patent: "https://patents.google.com/patent/USPP13881 2021-06-27",
             uspp_filed: "6/27/01",
@@ -6006,7 +5812,6 @@
         {
             type: "Peach",
             name: "Goodwin",
-            name_common: "Goodwin",
             uspp_title: 'Clingstone peach tree named "Goodwin"',
             patent: "https://patents.google.com/patent/USPP13911 2021-06-27",
             uspp_filed: "6/27/01",
@@ -6140,7 +5945,6 @@
         {
             type: "Euro Plum",
             name: "HoneySweet",
-            name_common: "HoneySweet",
             uspp_title: 'Plum Tree named "HoneySweet"',
             patent: "https://patents.google.com/patent/USPP15154 2021-08-31",
             uspp_filed: "8/31/01",
@@ -6253,7 +6057,6 @@
         {
             type: "Peach",
             name: "Crimson Rocket",
-            name_common: "Crimson Rocket",
             uspp_title: 'Peach tree named "Crimson Rocket"',
             patent: "https://patents.google.com/patent/USPP15216 2021-10-30",
             uspp_filed: "10/30/01",
@@ -6264,7 +6067,7 @@
             name: "FA 42",
             name_common: "Autumnstar",
             uspp_title: 'Peach tree named "FA 42"',
-            patent: "https://patents.google.com/patent/USPP14439 2021-11-02",
+            patent: "https://patents.google.com/patent/USPP14439 2022-04-03",
             uspp_filed: "11/2/01",
             uspp_issued: "12/30/03"
         },
@@ -6287,7 +6090,6 @@
         {
             type: "Peach",
             name: "Burpeachnine",
-            name_common: "Burpeachnine",
             uspp_title: 'Peach tree named "Burpeachnine"',
             patent: "https://patents.google.com/patent/USPP13494 2021-12-11",
             uspp_filed: "12/11/01",
@@ -6303,7 +6105,7 @@
         },
         {
             type: "Japanese Plum",
-            name: "Yummygiant",
+            name: "YUMMYGIANT",
             name_common: "Candy Giant",
             uspp_title: 'Plum tree named "YUMMYGIANT"',
             patent: "https://patents.google.com/patent/USPP13458 2021-12-13",
@@ -6313,7 +6115,6 @@
         {
             type: "Peach",
             name: "Sugar Princess",
-            name_common: "Sugar Princess",
             uspp_title: 'Peach tree named "Sugar Princess"',
             patent: "https://patents.google.com/patent/USPP13473 2021-12-13",
             uspp_filed: "12/13/01",
@@ -6330,7 +6131,6 @@
         {
             type: "Nectarine",
             name: "September Bright",
-            name_common: "September Bright",
             uspp_title: 'Nectarine tree named "September Bright"',
             patent: "https://patents.google.com/patent/USPP13475 2021-12-13",
             uspp_filed: "12/13/01",
@@ -6338,7 +6138,7 @@
         },
         {
             type: "Japanese Plum",
-            name: "Yummyrosa",
+            name: "YUMMYROSA",
             name_common: "Candy Rosa",
             uspp_title: 'Plum tree named "YUMMYROSA"',
             patent: "https://patents.google.com/patent/USPP13476 2021-12-13",
@@ -6357,7 +6157,6 @@
         {
             type: "Nectarine",
             name: "Late Pearl",
-            name_common: "Late Pearl",
             uspp_title: 'Nectarine tree named "Late Pearl"',
             patent: "https://patents.google.com/patent/USPP13479 2021-12-13",
             uspp_filed: "12/13/01",
@@ -6366,7 +6165,6 @@
         {
             type: "Nectarine",
             name: "Sweet Pearl",
-            name_common: "Sweet Pearl",
             uspp_title: 'Nectarine tree named "Sweet Pearl"',
             patent: "https://patents.google.com/patent/USPP13495 2021-12-13",
             uspp_filed: "12/13/01",
@@ -6375,7 +6173,6 @@
         {
             type: "Peach",
             name: "Ivory Queen",
-            name_common: "Ivory Queen",
             uspp_title: 'Peach tree named "Ivory Queen"',
             patent: "https://patents.google.com/patent/USPP13496 2021-12-13",
             uspp_filed: "12/13/01",
@@ -6401,7 +6198,6 @@
         {
             type: "Nectarine",
             name: "Burnectfive",
-            name_common: "Burnectfive",
             uspp_title: 'Nectarine tree named "Burnectfive"',
             patent: "https://patents.google.com/patent/USPP13443 2021-12-19",
             uspp_filed: "12/19/01",
@@ -6462,7 +6258,6 @@
         {
             type: "Peach",
             name: "Burpeachten",
-            name_common: "Burpeachten",
             uspp_title: 'Peach tree named "Burpeachten"',
             patent: "https://patents.google.com/patent/USPP13507 2021-12-28",
             uspp_filed: "12/28/01",
@@ -6470,8 +6265,7 @@
         },
         {
             type: "Nectarine",
-            name: "Spicezee",
-            name_common: "Spice Zee",
+            name: "Spice Zee",
             uspp_title: 'Interspecific tree named "Spicezee"',
             patent: "https://patents.google.com/patent/USPP13503 2022-01-07",
             uspp_filed: "1/7/02",
@@ -6481,7 +6275,7 @@
             type: "Blueberry",
             name: "Southern Belle",
             uspp_title: 'Blueberry plant called "Southern Belle"',
-            patent: "https://patents.google.com/patent/USPP13931 2022-01-07",
+            patent: "https://patents.google.com/patent/USPP13931 2022-01-11",
             uspp_filed: "1/7/02",
             uspp_issued: "7/1/03"
         },
@@ -6514,7 +6308,6 @@
         {
             type: "Clementine",
             name: "Clemenpons",
-            name_common: "Clemenpons",
             uspp_title: "Clementine tree named 'Clemenpons'",
             patent: "https://patents.google.com/patent/US20050022275 application abandoned",
             uspp_filed: "1/15/02"
@@ -6530,7 +6323,6 @@
         {
             type: "Plumcot",
             name: "Flavor Jewel",
-            name_common: "Flavor Jewel",
             uspp_title: 'Interspecific tree named "Flavor Jewel"',
             patent: "https://patents.google.com/patent/USPP13502 2022-01-15",
             uspp_filed: "1/15/02",
@@ -6539,7 +6331,6 @@
         {
             type: "Plumcot",
             name: "Early Dapple",
-            name_common: "Early Dapple",
             uspp_title: 'Interspecific tree named: "Early Dapple"',
             patent: "https://patents.google.com/patent/USPP13530 2022-01-15",
             uspp_filed: "1/15/02",
@@ -6547,7 +6338,8 @@
         },
         {
             type: "Peach",
-            name: "PF 35-007",
+            name: "PF Fat Lady",
+            AKA: ["PF 35-007"], // patent name
             name_common: "Flamin Fury PF Fat Lady",
             uspp_title: 'Peach tree named "P.F. 35-007"',
             patent: "https://patents.google.com/patent/USPP14368 2022-01-22",
@@ -6566,7 +6358,6 @@
         {
             type: "Peach", // this is a canning peach based on the "summary of..." paragraph in the patent
             name: "Yuba Gold",
-            name_common: "Yuba Gold",
             uspp_title: 'Interspecific tree named "Yuba Gold"',
             patent: "https://patents.google.com/patent/USPP13526 2022-01-25",
             uspp_filed: "1/25/02",
@@ -6575,7 +6366,6 @@
         {
             type: "Peach",
             name: "Sierra Snow",
-            name_common: "Sierra Snow",
             uspp_title: 'Peach tree named "Sierra Snow"',
             patent: "https://patents.google.com/patent/USPP13527 2022-01-25",
             uspp_filed: "1/25/02",
@@ -6584,7 +6374,6 @@
         {
             type: "Peach",
             name: "Burpeachtwelve",
-            name_common: "Burpeachtwelve",
             uspp_title: 'Peach tree named "Burpeachtwelve"',
             patent: "https://patents.google.com/patent/USPP13529 2022-01-25",
             uspp_filed: "1/25/02",
@@ -6593,7 +6382,6 @@
         {
             type: "Peach",
             name: "Burpeachthirteen",
-            name_common: "Burpeachthirteen",
             uspp_title: 'Peach tree named "Burpeachthirteen"',
             patent: "https://patents.google.com/patent/USPP13583 2022-01-28",
             uspp_filed: "1/28/02",
@@ -6602,7 +6390,6 @@
         {
             type: "Nectarine",
             name: "Burnecteight",
-            name_common: "Burnecteight",
             uspp_title: 'Nectarine tree named "Burnecteight"',
             patent: "https://patents.google.com/patent/USPP13590 2022-01-28",
             uspp_filed: "1/28/02",
@@ -6611,7 +6398,6 @@
         {
             type: "Plumcot",
             name: "Royal Treat",
-            name_common: "Royal Treat",
             uspp_title: 'Interspecific tree named "Royal Treat"',
             patent: "https://patents.google.com/patent/USPP13505 2022-02-07",
             uspp_filed: "2/7/02",
@@ -6621,7 +6407,7 @@
             type: "Strawberry",
             name: "Brunswick",
             uspp_title: "Strawberry variety named 'Brunswick'",
-            patent: "https://patents.google.com/patent/USPP16859 2022-02-11",
+            patent: "https://patents.google.com/patent/USPP16859 2022-04-17",
             uspp_filed: "2/11/02"
         },
         // 1st entry for "cabot" strawberry - application was abandoned - later it had a 2nd application and was patented as USPP16971
@@ -6636,7 +6422,7 @@
             type: "Japanese Plum", // "salicina" in the patent text
             name: "Big Red", // todo zaiger
             uspp_title: 'Plum tree named "Big Red"',
-            patent: "https://patents.google.com/patent/USPP14465 2022-02-11",
+            patent: "https://patents.google.com/patent/USPP14465 2022-04-04",
             uspp_filed: "2/11/02",
             uspp_issued: "1/13/04"
         },
@@ -6644,7 +6430,7 @@
             type: "Apple",
             name: "Irene",
             uspp_title: 'Apple tree named "Irene"',
-            patent: "https://patents.google.com/patent/USPP14299 2022-02-13",
+            patent: "https://patents.google.com/patent/USPP14299 2022-02-18",
             uspp_filed: "2/13/02",
             uspp_issued: "11/11/03"
         },
@@ -6660,14 +6446,13 @@
             type: "Strawberry",
             name: "Driscoll Camarillo",
             uspp_title: 'Strawberry plant named "Driscoll Camarillo"',
-            patent: "https://patents.google.com/patent/USPP14771 2022-02-15",
+            patent: "https://patents.google.com/patent/USPP14771 2022-02-23",
             uspp_filed: "2/15/02",
             uspp_issued: "5/11/04"
         },
         {
             type: "Hardy Kiwi", // arguta
             name: "Hortgem Toru",
-            name_common: "Hortgem Toru",
             uspp_title: 'Kiwi plant named "Hortgem Toru"',
             patent: "https://patents.google.com/patent/USPP14212 2022-02-19",
             uspp_filed: "2/19/02",
@@ -6684,7 +6469,6 @@
         {
             type: "Apricot",
             name: "Brittany Gold",
-            name_common: "Brittany Gold",
             uspp_title: 'Apricot tree named "Brittany Gold"',
             patent: "https://patents.google.com/patent/USPP13504 2022-02-25",
             uspp_filed: "2/25/02",
@@ -6693,7 +6477,6 @@
         {
             type: "Hardy Kiwi", // arguta
             name: "Hortgem Rua",
-            name_common: "Hortgem Rua",
             uspp_title: 'Kiwi plant named "Hortgem Rua"',
             patent: "https://patents.google.com/patent/USPP14625 2022-02-25",
             uspp_filed: "2/25/02",
@@ -6729,14 +6512,13 @@
             name: "PF 28-007",
             name_common: "Flamin Fury PF 28-007",
             uspp_title: "P.F. 28-007 peach tree origin of variety",
-            patent: "https://patents.google.com/patent/USPP14778 2022-03-05",
+            patent: "https://patents.google.com/patent/USPP14778 2022-03-14",
             uspp_filed: "3/5/02",
             uspp_issued: "5/11/04"
         },
         {
             type: "Avocado",
             name: "Harvest",
-            name_common: "Harvest",
             uspp_title: 'Avocado tree named "Harvest"',
             patent: "https://patents.google.com/patent/USPP14238 2022-03-14",
             uspp_filed: "3/14/02",
@@ -6770,7 +6552,6 @@
         {
             type: "Apple",
             name: "Lynn",
-            name_common: "Lynn",
             uspp_title: 'Apple tree named "Lynn"',
             patent: "https://patents.google.com/patent/USPP14314 2022-04-08",
             uspp_filed: "4/8/02",
@@ -6779,7 +6560,6 @@
         {
             type: "Hardy Kiwi", // arguta
             name: "Hortgem Wha",
-            name_common: "Hortgem Wha",
             uspp_title: 'Kiwi plant named "Hortgem Wha"',
             patent: "https://patents.google.com/patent/USPP14320 2022-04-08",
             uspp_filed: "4/8/02",
@@ -6788,7 +6568,6 @@
         {
             type: "Plumcot",
             name: "Sierra Rose",
-            name_common: "Sierra Rose",
             uspp_title: 'Interspecific tree name "Sierra Rose"',
             patent: "https://patents.google.com/patent/USPP13687 2022-04-11",
             uspp_filed: "4/11/02",
@@ -6803,13 +6582,6 @@
         },
         {
             type: "Strawberry",
-            name: "Placartfre",
-            uspp_title: "Strawberry plant named 'Placartfre'",
-            patent: "https://patents.google.com/patent/USPP16558 2022-04-24",
-            uspp_filed: "4/24/02"
-        },
-        {
-            type: "Strawberry",
             name: "Plahuelfre",
             uspp_title: 'Strawberry plant named "Plahuelfre"',
             patent: "https://patents.google.com/patent/USPP15153 2022-04-24",
@@ -6818,7 +6590,8 @@
         },
         {
             type: "Strawberry",
-            name: "Sabrosa",
+            name: "Sabrosa", // grant name
+            AKA: ["Placartfre"], // application name
             uspp_title: "Strawberry plant named 'Sabrosa'",
             patent: "https://patents.google.com/patent/USPP16558 2022-04-24",
             uspp_filed: "4/24/02",
@@ -6942,7 +6715,6 @@
         {
             type: "Euro Pear",
             name: "Cambridge",
-            name_common: "Cambridge",
             uspp_title: 'Pear tree named "Cambridge"',
             patent: "https://patents.google.com/patent/US20030009795 application abandoned",
             uspp_filed: "9/11/02"
@@ -7049,7 +6821,7 @@
             name: "Nicoter",
             name_common: "Kanzi",
             uspp_title: "Apple tree named 'Nicoter'",
-            patent: "https://patents.google.com/patent/USPP17201 2022-11-12",
+            patent: "https://patents.google.com/patent/USPP17201 2023-05-15",
             uspp_filed: "11/12/02",
             uspp_issued: "11/14/06"
         },
@@ -7088,7 +6860,6 @@
         {
             type: "Nectarine",
             name: "Giant Pearl",
-            name_common: "Giant Pearl",
             uspp_title: 'Nectarine tree named "Giant Pearl"',
             patent: "https://patents.google.com/patent/USPP14240 2022-11-19",
             uspp_filed: "11/19/02",
@@ -7097,7 +6868,6 @@
         {
             type: "Nectarine",
             name: "Diamond Pearl",
-            name_common: "Diamond Pearl",
             uspp_title: 'Nectarine tree named "Diamond Pearl"',
             patent: "https://patents.google.com/patent/USPP14242 2022-11-19",
             uspp_filed: "11/19/02",
@@ -7106,7 +6876,6 @@
         {
             type: "Nectarine",
             name: "Early Pearl",
-            name_common: "Early Pearl",
             uspp_title: 'Nectarine tree named "Early Pearl"',
             patent: "https://patents.google.com/patent/USPP14248 2022-11-19",
             uspp_filed: "11/19/02",
@@ -7115,7 +6884,6 @@
         {
             type: "Nectarine",
             name: "Candy Pearl",
-            name_common: "Candy Pearl",
             uspp_title: 'Nectarine tree named "Candy Pearl"',
             patent: "https://patents.google.com/patent/USPP14249 2022-11-19",
             uspp_filed: "11/19/02",
@@ -7130,15 +6898,15 @@
             uspp_issued: "9/23/03"
         },
         {
-            type: "Plumcot",
-            name: "Plumsweettwo",
+            type: "Japanese Plum",
+            name: "PLUMSWEETTWO",
             uspp_title: 'Plum tree named "PLUMSWEETTWO"',
             patent: "https://patents.google.com/patent/USPP14196 2022-11-21",
             uspp_filed: "11/21/02",
             uspp_issued: "9/30/03"
         },
         {
-            type: "Plumcot",
+            type: "Japanese Plum",
             name: "Plumsweetone",
             uspp_title: 'Plum tree named "Plumsweetone"',
             patent: "https://patents.google.com/patent/USPP14219 2022-11-21",
@@ -7174,27 +6942,24 @@
         {
             type: "Peach",
             name: "Spring Candy",
-            name_common: "Spring Candy",
             uspp_title: 'Peach tree named "Spring Candy"',
-            patent: "https://patents.google.com/patent/USPP14677 2022-11-21",
+            patent: "https://patents.google.com/patent/USPP14677 2023-04-14",
             uspp_filed: "11/21/02",
             uspp_issued: "4/6/04"
         },
         {
             type: "Peach",
             name: "Bright Princess",
-            name_common: "Bright Princess",
             uspp_title: 'Peach tree named "Bright Princess"',
-            patent: "https://patents.google.com/patent/USPP14695 2022-11-21",
+            patent: "https://patents.google.com/patent/USPP14695 2023-04-21",
             uspp_filed: "11/21/02",
             uspp_issued: "4/13/04"
         },
         {
             type: "Nectarine",
             name: "Bright Sweet",
-            name_common: "Bright Sweet",
             uspp_title: 'Nectarine tree named "Bright Sweet"',
-            patent: "https://patents.google.com/patent/USPP14547 2022-11-25",
+            patent: "https://patents.google.com/patent/USPP14547 2023-02-28",
             uspp_filed: "11/25/02",
             uspp_issued: "2/17/04"
         },
@@ -7202,34 +6967,31 @@
             type: "Nectarine",
             name: "Royal Bright",
             uspp_title: 'Nectarine tree named "Royal Bright"',
-            patent: "https://patents.google.com/patent/USPP14594 2022-11-25",
+            patent: "https://patents.google.com/patent/USPP14594 2023-03-21",
             uspp_filed: "11/25/02",
             uspp_issued: "3/9/04"
         },
         {
             type: "Nectarine",
             name: "Western Sweet",
-            name_common: "Western Sweet",
             uspp_title: 'Nectarine tree named "Western Sweet"',
-            patent: "https://patents.google.com/patent/USPP15055 2022-11-25",
+            patent: "https://patents.google.com/patent/USPP15055 2023-08-15",
             uspp_filed: "11/25/02",
             uspp_issued: "8/3/04"
         },
         {
             type: "Nectarine",
             name: "August Bright",
-            name_common: "August Bright",
             uspp_title: 'Nectarine tree named "August Bright"',
-            patent: "https://patents.google.com/patent/USPP15143 2022-11-25",
+            patent: "https://patents.google.com/patent/USPP15143 2023-03-21",
             uspp_filed: "11/25/02",
             uspp_issued: "9/14/04"
         },
         {
             type: "Sweet Cherry",
             name: "Royal Kay", // todo - not in the zaiger list
-            name_common: "Royal Kay",
             uspp_title: "Cherry tree named 'Royal Kay'",
-            patent: "https://patents.google.com/patent/USPP15399 2022-11-25",
+            patent: "https://patents.google.com/patent/USPP15399 2023-02-26",
             uspp_filed: "11/25/02",
             uspp_issued: "12/7/04"
         },
@@ -7269,7 +7031,7 @@
             type: "Raspberry",
             name: "Driscoll Maravilla",
             uspp_title: 'Raspberry plant named "Driscoll Maravilla"',
-            patent: "https://patents.google.com/patent/USPP14804 2022-11-27",
+            patent: "https://patents.google.com/patent/USPP14804 2022-12-03",
             uspp_filed: "11/27/02",
             uspp_issued: "5/18/04"
         },
@@ -7277,7 +7039,7 @@
             type: "Raspberry",
             name: "Driscoll Francesca",
             uspp_title: 'Raspberry plant named "Driscoll Francesca"',
-            patent: "https://patents.google.com/patent/USPP14860 2022-11-27",
+            patent: "https://patents.google.com/patent/USPP14860 2022-11-30",
             uspp_filed: "11/27/02",
             uspp_issued: "6/1/04"
         },
@@ -7285,7 +7047,7 @@
             type: "Raspberry",
             name: "Driscoll Cardinal",
             uspp_title: 'Raspberry plant named "Driscoll Cardinal"',
-            patent: "https://patents.google.com/patent/USPP14903 2022-11-27",
+            patent: "https://patents.google.com/patent/USPP14903 2023-01-03",
             uspp_filed: "11/27/02",
             uspp_issued: "6/15/04"
         },
@@ -7293,7 +7055,7 @@
             type: "Raspberry",
             name: "Driscoll Dulcita",
             uspp_title: 'Raspberry plant named "Driscoll Dulcita"',
-            patent: "https://patents.google.com/patent/USPP14904 2022-11-27",
+            patent: "https://patents.google.com/patent/USPP14904 2023-01-03",
             uspp_filed: "11/27/02",
             uspp_issued: "6/15/04"
         },
@@ -7301,7 +7063,7 @@
             type: "Blackberry",
             name: "Driscoll Carmel",
             uspp_title: 'Blackberry plant named "Driscoll Carmel"',
-            patent: "https://patents.google.com/patent/USPP15058 2022-11-27",
+            patent: "https://patents.google.com/patent/USPP15058 2023-02-09",
             uspp_filed: "11/27/02",
             uspp_issued: "8/3/04"
         },
@@ -7309,7 +7071,7 @@
             type: "Peach",
             name: "UFBeauty",
             uspp_title: 'Peach tree named "UFBeauty"',
-            patent: "https://patents.google.com/patent/USPP14784 2022-11-29",
+            patent: "https://patents.google.com/patent/USPP14784 2023-03-18",
             uspp_filed: "11/29/02",
             uspp_issued: "5/18/04"
         },
@@ -7317,7 +7079,7 @@
             type: "Peach",
             name: "UFBlaze",
             uspp_title: 'Peach tree named "UFBlaze"',
-            patent: "https://patents.google.com/patent/USPP14898 2022-11-29",
+            patent: "https://patents.google.com/patent/USPP14898 2023-04-15",
             uspp_filed: "11/29/02",
             uspp_issued: "6/15/04"
         },
@@ -7359,7 +7121,6 @@
         {
             type: "Plumcot", // compared to "santa rosa" (japanese plum) in the "summary of..." paragraph, so it's probably more or less a plum, but zaiger always upgrades these to "plumcot"
             name: "Flavor Wynne", // todo zaiger
-            name_common: "Flavor Wynne",
             uspp_title: "Interspecific tree named: Flavor Wynne",
             patent: "https://patents.google.com/patent/USPP15762 2024-03-16",
             uspp_filed: "12/10/02",
@@ -7368,7 +7129,6 @@
         {
             type: "Nectarine",
             name: "Burnectten",
-            name_common: "Burnectten",
             uspp_title: 'Nectarine tree named "Burnectten"',
             patent: "https://patents.google.com/patent/USPP14442 2022-12-13",
             uspp_filed: "12/13/02",
@@ -7377,18 +7137,16 @@
         {
             type: "Plumcot",
             name: "Spring Flavor",
-            name_common: "Spring Flavor",
             uspp_title: 'Interspecific tree named "Spring Flavor"',
-            patent: "https://patents.google.com/patent/USPP14571 2022-12-16",
+            patent: "https://patents.google.com/patent/USPP14571 2023-01-06",
             uspp_filed: "12/16/02",
             uspp_issued: "3/2/04"
         },
         {
             type: "Plumcot", // patent's "summary of..." paragraph compares it to other plumcots and some internet searches turn up references to zaiger marketing material listing it a a plumcot
             name: "Marcia's Flavor", // todo zaiger
-            name_common: "Marcia's Flavor",
             uspp_title: "Interspecific tree named: Marcia's Flavor",
-            patent: "https://patents.google.com/patent/USPP15088 2022-12-23",
+            patent: "https://patents.google.com/patent/USPP15088 2023-02-03",
             uspp_filed: "12/23/02",
             uspp_issued: "8/17/04"
         },
@@ -7396,7 +7154,7 @@
             type: "Blueberry",
             name: "Florida Rose",
             uspp_title: 'Blueberry plant called "Florida Rose"',
-            patent: "https://patents.google.com/patent/USPP14485 2022-12-24",
+            patent: "https://patents.google.com/patent/USPP14485 2023-01-26",
             uspp_filed: "12/24/02",
             uspp_issued: "1/27/04"
         },
@@ -7412,7 +7170,7 @@
             type: "Peach",
             name: "Gulfcrest",
             uspp_title: 'Peach tree named "Gulfcrest"',
-            patent: "https://patents.google.com/patent/USPP14685 2022-12-26",
+            patent: "https://patents.google.com/patent/USPP14685 2023-03-10",
             uspp_filed: "12/26/02",
             uspp_issued: "4/13/04"
         },
@@ -7430,16 +7188,15 @@
             name: "Burnecttwelve",
             name_common: "Sweet Flare 21",
             uspp_title: 'Nectarine tree named "Burnecttwelve"',
-            patent: "https://patents.google.com/patent/USPP14412 2022-12-30",
+            patent: "https://patents.google.com/patent/USPP14412 2023-01-07",
             uspp_filed: "12/30/02",
             uspp_issued: "12/23/03"
         },
         {
             type: "Nectarine",
             name: "Burnectsix",
-            name_common: "Burnectsix",
             uspp_title: 'Nectarine tree, "Burnectsix"',
-            patent: "https://patents.google.com/patent/USPP14518 2023-01-03",
+            patent: "https://patents.google.com/patent/USPP14518 2023-03-01",
             uspp_filed: "1/3/03",
             uspp_issued: "2/10/04"
         },
@@ -7454,7 +7211,6 @@
         {
             type: "Peach",
             name: "Burpeachsixteen",
-            name_common: "Burpeachsixteen",
             uspp_title: 'Peach tree named "Burpeachsixteen"',
             patent: "https://patents.google.com/patent/USPP14364 2023-01-13",
             uspp_filed: "1/13/03",
@@ -7463,18 +7219,16 @@
         {
             type: "Nectarine",
             name: "Burnectnine",
-            name_common: "Burnectnine",
             uspp_title: 'Nectarine tree named "Burnectnine"',
-            patent: "https://patents.google.com/patent/USPP14516 2023-01-17",
+            patent: "https://patents.google.com/patent/USPP14516 2023-03-15",
             uspp_filed: "1/17/03",
             uspp_issued: "2/10/04"
         },
         {
             type: "Nectarine",
             name: "Burnectthirteen",
-            name_common: "Burnectthirteen",
             uspp_title: 'Nectarine tree named "Burnectthirteen"',
-            patent: "https://patents.google.com/patent/USPP14517 2023-01-22",
+            patent: "https://patents.google.com/patent/USPP14517 2023-03-20",
             uspp_filed: "1/22/03",
             uspp_issued: "2/10/04"
         },
@@ -7505,7 +7259,6 @@
         {
             type: "Peach",
             name: "Burpeachseventeen",
-            name_common: "Burpeachseventeen",
             uspp_title: 'Peach tree named "Burpeachseventeen"',
             patent: "https://patents.google.com/patent/USPP14478 2023-01-27",
             uspp_filed: "1/27/03",
@@ -7522,9 +7275,8 @@
         {
             type: "Peach",
             name: "Snow Angel",
-            name_common: "Snow Angel",
             uspp_title: "Peach tree named 'SNOW ANGEL'",
-            patent: "https://patents.google.com/patent/USPP18750 2023-02-03",
+            patent: "https://patents.google.com/patent/USPP18750 2025-04-22",
             uspp_filed: "2/3/03",
             uspp_issued: "4/22/08"
         },
@@ -7539,7 +7291,6 @@
         {
             type: "Apple",
             name: "Rebella",
-            name_common: "Rebella",
             uspp_title: 'Apple tree named "Rebella"',
             patent: "https://patents.google.com/patent/USPP15134 2023-02-21",
             uspp_filed: "2/21/03",
@@ -7548,7 +7299,6 @@
         {
             type: "Almond",
             name: "Kochi",
-            name_common: "Kochi",
             uspp_title: 'Almond tree named "Kochi"',
             patent: "https://patents.google.com/patent/USPP15049 2023-02-28",
             uspp_filed: "2/28/03",
@@ -7557,7 +7307,6 @@
         {
             type: "Blackberry",
             name: "Ouachita",
-            name_common: "Ouachita",
             uspp_title: "Blackberry plant named 'Ouachita'",
             patent: "https://patents.google.com/patent/USPP17162 2023-03-03",
             uspp_filed: "3/3/03",
@@ -7641,7 +7390,6 @@
         {
             type: "Plumcot",
             name: "Splash",
-            name_common: "Splash",
             uspp_title: 'Interspecific tree named: "Splash"',
             patent: "https://patents.google.com/patent/USPP14583 2023-04-25",
             uspp_filed: "4/25/03",
@@ -7649,17 +7397,16 @@
         },
         {
             type: "Plumcot",
-            name: "Emerald Gem",
-            name_common: "Emerald Drop",
+            name: "Emerald Drop",
+            // AKA: ["Emerald Gem", "7HC165"],
             uspp_title: 'Interspecific tree named "Emerald Gem"',
-            patent: "https://patents.google.com/patent/USPP14599 2023-05-09",
+            patent: "https://patents.google.com/patent/USPP14599 2023-06-16",
             uspp_filed: "5/9/03",
             uspp_issued: "3/16/04"
         },
         {
             type: "Citrus",
             name: "Mosquito",
-            name_common: "Mosquito",
             uspp_title: 'Citrus plant named "Mosquito"',
             patent: "https://patents.google.com/patent/USPP14887 2023-05-13",
             uspp_filed: "5/13/03",
@@ -7704,16 +7451,15 @@
             name: "Glenoia",
             name_common: "Sequoia brand",
             uspp_title: 'Cherry tree named "Glenoia"',
-            patent: "https://patents.google.com/patent/USPP15157 2023-06-25",
+            patent: "https://patents.google.com/patent/USPP15157 2023-07-21",
             uspp_filed: "6/25/03",
             uspp_issued: "9/21/04"
         },
         {
             type: "Sweet Cherry",
             name: "Glenare",
-            name_common: "Glenare",
             uspp_title: 'Cherry tree named "Glenare"',
-            patent: "https://patents.google.com/patent/USPP15180 2023-06-25",
+            patent: "https://patents.google.com/patent/USPP15180 2023-07-28",
             uspp_filed: "6/25/03",
             uspp_issued: "9/28/04"
         },
@@ -7722,7 +7468,7 @@
             name: "Glenrock",
             name_common: "Sequoia brand",
             uspp_title: "Cherry tree named 'Glenrock'",
-            patent: "https://patents.google.com/patent/USPP15512 2023-06-25",
+            patent: "https://patents.google.com/patent/USPP15512 2023-09-25",
             uspp_filed: "6/25/03",
             uspp_issued: "2/1/05"
         },
@@ -7730,7 +7476,7 @@
             type: "Pineapple",
             name: "Honey Gold",
             uspp_title: 'Pineapple plant named "Honey Gold"',
-            patent: "https://patents.google.com/patent/USPP16328 2023-07-07",
+            patent: "https://patents.google.com/patent/USPP16328 2024-03-31",
             uspp_filed: "7/7/03"
         },
         {
@@ -7745,7 +7491,7 @@
             type: "Strawberry",
             name: "Carmine",
             uspp_title: "Carmine strawberry plant",
-            patent: "https://patents.google.com/patent/USPP18261 2023-07-07",
+            patent: "https://patents.google.com/patent/USPP18261 2023-11-28",
             uspp_filed: "7/7/03",
             uspp_issued: "12/4/07"
         },
@@ -7753,7 +7499,7 @@
             type: "Raspberry",
             name: "PS-1764",
             uspp_title: "Raspberry plant named 'PS-1764'",
-            patent: "https://patents.google.com/patent/USPP15439 2023-07-09",
+            patent: "https://patents.google.com/patent/USPP15439 2023-09-02",
             uspp_filed: "7/9/03"
         },
         {
@@ -7767,7 +7513,6 @@
         {
             type: "Grape",
             name: "Sugratwentysix",
-            name_common: "Sugratwentysix",
             uspp_title: 'Grapevine plant named "Sugratwentysix"',
             patent: "https://patents.google.com/patent/USPP15110 2023-07-10",
             uspp_filed: "7/10/03",
@@ -7776,7 +7521,6 @@
         {
             type: "Grape",
             name: "Sugratwentyeight",
-            name_common: "Sugratwentyeight",
             uspp_title: 'Grapevine plant named "Sugratwentyeight"',
             patent: "https://patents.google.com/patent/USPP15229 2023-07-10",
             uspp_filed: "7/10/03",
@@ -7785,7 +7529,6 @@
         {
             type: "Grape",
             name: "Sugratwentyseven",
-            name_common: "Sugratwentyseven",
             uspp_title: "Grapevine named 'Sugratwentyseven'",
             patent: "https://patents.google.com/patent/USPP15468 2023-07-10",
             uspp_filed: "7/10/03",
@@ -7794,7 +7537,6 @@
         {
             type: "Grape",
             name: "Sugratwentyfour",
-            name_common: "Sugratwentyfour",
             uspp_title: "Grapevine named 'Sugratwentyfour'",
             patent: "https://patents.google.com/patent/USPP16177 2023-07-10",
             uspp_filed: "7/10/03",
@@ -7804,7 +7546,7 @@
             type: "Peach",
             name: "UFSun",
             uspp_title: 'Peach tree named "UFSun"',
-            patent: "https://patents.google.com/patent/USPP14764 2023-07-15",
+            patent: "https://patents.google.com/patent/USPP14764 2023-07-27",
             uspp_filed: "7/15/03",
             uspp_issued: "5/4/04"
         },
@@ -7850,7 +7592,6 @@
         {
             type: "Sweet Cherry",
             name: "PC8011-3",
-            name_common: "PC8011-3",
             uspp_title: "Cherry tree 'PC8011-3'",
             patent: "https://patents.google.com/patent/USPP15868 2023-08-14",
             uspp_filed: "8/14/03",
@@ -7883,7 +7624,6 @@
         {
             type: "Raspberry",
             name: "Jaclyn",
-            name_common: "Jaclyn",
             uspp_title: "Raspberry plant named 'Jaclyn'",
             patent: "https://patents.google.com/patent/USPP15647 2023-08-20",
             uspp_filed: "8/20/03",
@@ -7916,9 +7656,8 @@
         {
             type: "Apple",
             name: "MC38",
-            name_common: "MC38",
             uspp_title: "Apple tree named 'MC38'",
-            patent: "https://patents.google.com/patent/USPP16654 2023-09-09",
+            patent: "https://patents.google.com/patent/USPP16654 2022-02-21",
             uspp_filed: "9/9/03",
             uspp_issued: "6/13/06"
         },
@@ -7928,20 +7667,6 @@
             uspp_title: "Musa plant named 'Little Prince'",
             patent: "https://patents.google.com/patent/USPP15255 2023-09-23",
             uspp_filed: "9/23/03"
-        },
-        {
-            type: "Strawberry",
-            name: "Linda",
-            uspp_title: "Strawberry plant named 'Linda'",
-            patent: "https://patents.google.com/patent/USPP16898 2023-10-02",
-            uspp_filed: "10/2/03"
-        },
-        {
-            type: "Peach",
-            name: "Plajanomel",
-            uspp_title: "Peach tree plant named 'Plajanomel'",
-            patent: "https://patents.google.com/patent/USPP17182 2023-10-02",
-            uspp_filed: "10/2/03"
         },
         {
             type: "Strawberry",
@@ -7969,7 +7694,7 @@
         },
         {
             type: "Strawberry",
-            name: "Macarena",
+            name: "Macarena", // application name "linda" I think but I can't find it anymore
             uspp_title: "Strawberry plant named 'Macarena'",
             patent: "https://patents.google.com/patent/USPP16898 2023-10-02",
             uspp_filed: "10/2/03",
@@ -7977,7 +7702,8 @@
         },
         {
             type: "Peach",
-            name: "Plawhite 5",
+            name: "Plawhite 5", // grant name
+            AKA: ["Plajanomel"], // application name
             uspp_title: "Peach tree plant named 'Plawhite 5'",
             patent: "https://patents.google.com/patent/USPP17182 2023-10-02",
             uspp_filed: "10/2/03",
@@ -8071,7 +7797,7 @@
             name: "PF 22-007",
             name_common: "Flamin Fury PF 22-007",
             uspp_title: "Peach tree named 'P.F. 22-007'",
-            patent: "https://patents.google.com/patent/USPP16663 2023-11-07",
+            patent: "https://patents.google.com/patent/USPP16663 2023-11-17",
             uspp_filed: "11/7/03",
             uspp_issued: "6/20/06"
         },
@@ -8080,7 +7806,7 @@
             name: "PF 19-007",
             name_common: "Flamin Fury 19-007",
             uspp_title: "Peach tree named 'P.F. 19-007'",
-            patent: "https://patents.google.com/patent/USPP17578 2023-11-07",
+            patent: "https://patents.google.com/patent/USPP17578 2024-09-08",
             uspp_filed: "11/7/03",
             uspp_issued: "4/10/07"
         },
@@ -8094,10 +7820,10 @@
         },
         {
             type: "Nectarine",
-            name: "PF 11",
+            name: "PF 11 Nectarine",
             name_common: "Flamin Fury PF 11",
             uspp_title: "Nectarine tree named 'P.F. 11 Nectarine'",
-            patent: "https://patents.google.com/patent/USPP15661 2023-11-14",
+            patent: "https://patents.google.com/patent/USPP15661 2023-11-25",
             uspp_filed: "11/14/03",
             uspp_issued: "3/15/05"
         },
@@ -8122,7 +7848,7 @@
             name: "Burpeachnineteen",
             name_common: "Spring Flame 22",
             uspp_title: 'Peach tree, "Burpeachnineteen"',
-            patent: "https://patents.google.com/patent/USPP15263 2023-12-11",
+            patent: "https://patents.google.com/patent/USPP15263 2023-12-12",
             uspp_filed: "12/11/03",
             uspp_issued: "10/26/04"
         },
@@ -8165,7 +7891,7 @@
             type: "Nectarine",
             name: "Rose Bright",
             uspp_title: "Nectarine tree named 'Rose Bright'",
-            patent: "https://patents.google.com/patent/USPP15845 2023-12-18",
+            patent: "https://patents.google.com/patent/USPP15845 2024-04-01",
             uspp_filed: "12/18/03",
             uspp_issued: "7/12/05"
         },
@@ -8173,7 +7899,7 @@
             type: "Nectarine",
             name: "Spring Pearl",
             uspp_title: "Nectarine tree named 'Spring Pearl'",
-            patent: "https://patents.google.com/patent/USPP16034 2023-12-18",
+            patent: "https://patents.google.com/patent/USPP16034 2024-03-18",
             uspp_filed: "12/18/03",
             uspp_issued: "10/11/05"
         },
@@ -8190,7 +7916,7 @@
             type: "Nectarine",
             name: "Burnectsixteen",
             uspp_title: "Nectarine tree, 'Burnectsixteen'",
-            patent: "https://patents.google.com/patent/USPP15825 2023-12-23",
+            patent: "https://patents.google.com/patent/USPP15825 2024-02-03",
             uspp_filed: "12/23/03",
             uspp_issued: "7/5/05"
         },
@@ -8198,7 +7924,7 @@
             type: "Almond",
             name: "Wassum",
             uspp_title: "Almond tree named 'Wassum'",
-            patent: "https://patents.google.com/patent/USPP16977 2023-12-23",
+            patent: "https://patents.google.com/patent/USPP16977 2024-03-06",
             uspp_filed: "12/23/03",
             uspp_issued: "8/8/06"
         },
@@ -8238,7 +7964,7 @@
             type: "Apriplum",
             name: "Sweetcot",
             uspp_title: "Interspecific tree 'Sweetcot'",
-            patent: "https://patents.google.com/patent/USPP15652 2023-12-29",
+            patent: "https://patents.google.com/patent/USPP15652 2024-03-12",
             uspp_filed: "12/29/03",
             uspp_issued: "3/15/05"
         },
@@ -8247,7 +7973,7 @@
             name: "Yummygem",
             name_common: "Candy Gem",
             uspp_title: "Plum tree named 'Yummy®gem'",
-            patent: "https://patents.google.com/patent/USPP15809 2023-12-29",
+            patent: "https://patents.google.com/patent/USPP15809 2024-04-15",
             uspp_filed: "12/29/03",
             uspp_issued: "6/28/05"
         },
@@ -8255,7 +7981,7 @@
             type: "Nectarine",
             name: "Viking Pearl",
             uspp_title: "Nectarine tree named 'Viking Pearl'",
-            patent: "https://patents.google.com/patent/USPP16539 2023-12-29",
+            patent: "https://patents.google.com/patent/USPP16539 2024-10-02",
             uspp_filed: "12/29/03",
             uspp_issued: "5/16/06"
         },
@@ -8274,13 +8000,6 @@
             patent: "https://patents.google.com/patent/USPP15580 2024-03-21",
             uspp_filed: "12/30/03",
             uspp_issued: "2/22/05"
-        },
-        {
-            type: "Strawberry",
-            name: "Evangeline",
-            uspp_title: "Strawberry variety named 'Evangeline'",
-            patent: "https://patents.google.com/patent/US20050034201 application abandoned",
-            uspp_filed: "1/12/04"
         },
         {
             type: "Strawberry",
@@ -8309,14 +8028,6 @@
             uspp_issued: "1/31/06"
         },
         {
-            type: "Strawberry",
-            name: "Brunswick",
-            uspp_title: "Strawberry variety named 'Brunswick'",
-            patent: "https://patents.google.com/patent/USPP16859 2024-02-02",
-            uspp_filed: "2/2/04",
-            uspp_issued: "7/25/06"
-        },
-        {
             type: "Grape",
             name: "Frontenac gris",
             uspp_title: "Grape plant named 'Frontenac gris'",
@@ -8342,7 +8053,7 @@
             type: "Peach",
             name: "Super Lady",
             uspp_title: "Peach tree plant named 'Super Lady'",
-            patent: "https://patents.google.com/patent/USPP15578 2024-03-29",
+            patent: "https://patents.google.com/patent/USPP15578 2024-06-29",
             uspp_filed: "3/29/04",
             uspp_issued: "2/22/05"
         },
@@ -8351,7 +8062,7 @@
             name: "APF-8",
             name_common: "Prime-Jan",
             uspp_title: "Blackberry—APF-8 cultivar",
-            patent: "https://patents.google.com/patent/USPP15788 2024-03-30",
+            patent: "https://patents.google.com/patent/USPP15788 2024-05-01",
             uspp_filed: "3/30/04",
             uspp_issued: "6/7/05"
         },
@@ -8360,7 +8071,7 @@
             name: "APF-12",
             name_common: "Prime-Jim",
             uspp_title: "Blackberry—APF-12 cultivar",
-            patent: "https://patents.google.com/patent/USPP16989 2024-03-30",
+            patent: "https://patents.google.com/patent/USPP16989 2024-06-15",
             uspp_filed: "3/30/04",
             uspp_issued: "8/15/06"
         },
@@ -8368,7 +8079,7 @@
             type: "Peach",
             name: "Sweet Henry",
             uspp_title: "Peach tree 'Sweet Henry'",
-            patent: "https://patents.google.com/patent/USPP16068 2024-04-02",
+            patent: "https://patents.google.com/patent/USPP16068 2024-08-20",
             uspp_filed: "4/2/04",
             uspp_issued: "10/25/05"
         },
@@ -8376,7 +8087,7 @@
             type: "Apple",
             name: "Walden",
             uspp_title: "Apple tree named 'Walden'",
-            patent: "https://patents.google.com/patent/USPP15946 2024-04-06",
+            patent: "https://patents.google.com/patent/USPP15946 2024-05-03",
             uspp_filed: "4/6/04",
             uspp_issued: "9/6/05"
         },
@@ -8414,10 +8125,10 @@
         },
         {
             type: "Peach",
-            name: "PF 24-C cold hardy",
+            name: "PF 24C Cold Hardy",
             name_common: "Flamin Fury PF 24-C cold hardy",
             uspp_title: "Peach tree named 'P.F. 24-C cold hardy'",
-            patent: "https://patents.google.com/patent/USPP15659 2024-04-27",
+            patent: "https://patents.google.com/patent/USPP15659 2024-05-08",
             uspp_filed: "4/27/04",
             uspp_issued: "3/15/05"
         },
@@ -8426,23 +8137,22 @@
             name: "PF 36-007",
             name_common: "Flamin Fury PF 36-007",
             uspp_title: "Peach tree named 'P.F. 36- 007'",
-            patent: "https://patents.google.com/patent/USPP15660 2024-04-27",
+            patent: "https://patents.google.com/patent/USPP15660 2024-05-08",
             uspp_filed: "4/27/04",
             uspp_issued: "3/15/05"
         },
         {
             type: "Strawberry",
-            name: "Orlans",
+            name: "Orleans",
             uspp_title: "Strawberry plant named 'Orleans'",
-            patent: "https://patents.google.com/patent/USPP17670 2024-05-06",
+            patent: "https://patents.google.com/patent/USPP17670 2024-09-19",
             uspp_filed: "5/6/04"
         },
         {
             type: "Peach",
             name: "Sauzee Queen",
-            name_common: "Sauzee Queen",
             uspp_title: "Peach tree",
-            patent: "https://patents.google.com/patent/USPP16179 2024-05-12",
+            patent: "https://patents.google.com/patent/USPP16179 2024-11-14",
             uspp_filed: "5/12/04",
             uspp_issued: "1/3/06"
         },
@@ -8450,7 +8160,7 @@
             type: "Apricot",
             name: "F160 cv",
             uspp_title: "Apricot tree, 'F160 cv'",
-            patent: "https://patents.google.com/patent/USPP15851 2024-05-14",
+            patent: "https://patents.google.com/patent/USPP15851 2024-07-02",
             uspp_filed: "5/14/04",
             uspp_issued: "7/12/05"
         },
@@ -8458,7 +8168,7 @@
             type: "Apricot",
             name: "F168 cv",
             uspp_title: "Apricot tree, 'F168 cv'",
-            patent: "https://patents.google.com/patent/USPP16071 2024-05-14",
+            patent: "https://patents.google.com/patent/USPP16071 2024-08-08",
             uspp_filed: "5/14/04",
             uspp_issued: "10/25/05"
         },
@@ -8466,7 +8176,7 @@
             type: "Apricot",
             name: "F194 cv",
             uspp_title: "Apricot tree, 'F194 cv'",
-            patent: "https://patents.google.com/patent/USPP16119 2024-05-14",
+            patent: "https://patents.google.com/patent/USPP16119 2024-08-29",
             uspp_filed: "5/14/04",
             uspp_issued: "11/15/05"
         },
@@ -8474,7 +8184,7 @@
             type: "Apricot",
             name: "H 1995 cv",
             uspp_title: "Apricot tree 'H 1995 cv'",
-            patent: "https://patents.google.com/patent/USPP16160 2024-05-14",
+            patent: "https://patents.google.com/patent/USPP16160 2024-07-31",
             uspp_filed: "5/14/04",
             uspp_issued: "12/13/05"
         },
@@ -8482,7 +8192,7 @@
             type: "Strawberry",
             name: "QHI Sugarbaby",
             uspp_title: "Strawberry plant named 'QHI Sugarbaby'",
-            patent: "https://patents.google.com/patent/USPP16766 2024-05-21",
+            patent: "https://patents.google.com/patent/USPP16766 2024-09-21",
             uspp_filed: "5/21/04",
             uspp_issued: "7/4/06"
         },
@@ -8490,7 +8200,7 @@
             type: "Apple",
             name: "Ruby Pink",
             uspp_title: "Apple tree named 'Ruby Pink'",
-            patent: "https://patents.google.com/patent/USPP16725 2024-05-26",
+            patent: "https://patents.google.com/patent/USPP16725 2024-10-18",
             uspp_filed: "5/26/04",
             uspp_issued: "6/27/06"
         },
@@ -8498,7 +8208,7 @@
             type: "Grape",
             name: "G1-6819",
             uspp_title: "Grape plant named 'G1-6819'",
-            patent: "https://patents.google.com/patent/USPP16399 2024-05-28",
+            patent: "https://patents.google.com/patent/USPP16399 2024-10-31",
             uspp_filed: "5/28/04",
             uspp_issued: "4/4/06"
         },
@@ -8506,7 +8216,7 @@
             type: "Raspberry",
             name: "Moutere",
             uspp_title: "Raspberry plant named 'Moutere'",
-            patent: "https://patents.google.com/patent/USPP17744 2024-06-01",
+            patent: "https://patents.google.com/patent/USPP17744 2025-01-22",
             uspp_filed: "6/1/04",
             uspp_issued: "5/22/07"
         },
@@ -8515,7 +8225,7 @@
             name: "UEB 3264/2",
             name_common: "Opal",
             uspp_title: "Apple tree named 'UEB 3264/2'",
-            patent: "https://patents.google.com/patent/USPP15963 2024-06-07",
+            patent: "https://patents.google.com/patent/USPP15963 2024-06-11",
             uspp_filed: "6/7/04",
             uspp_issued: "9/13/05"
         },
@@ -8524,14 +8234,13 @@
             name: "UEB 3375/2",
             name_common: "Luna",
             uspp_title: "Apple tree named 'UEB 3375/2'",
-            patent: "https://patents.google.com/patent/USPP16084 2024-06-07",
+            patent: "https://patents.google.com/patent/USPP16084 2024-07-30",
             uspp_filed: "6/7/04",
             uspp_issued: "11/1/05"
         },
         {
             type: "Persimmon",
             name: "Doc's Delight",
-            name_common: "Doc's Delight",
             uspp_title: "Persimmon tree denominated Doc's Delight",
             patent: "https://patents.google.com/patent/USPP16822 2024-06-07",
             uspp_filed: "6/7/04",
@@ -8607,7 +8316,7 @@
             type: "Blueberry",
             name: "Springwide",
             uspp_title: "Blueberry plant called 'Springwide'",
-            patent: "https://patents.google.com/patent/USPP16333 2024-06-21",
+            patent: "https://patents.google.com/patent/USPP16333 2024-12-10",
             uspp_filed: "6/21/04",
             uspp_issued: "3/14/06"
         },
@@ -8615,7 +8324,7 @@
             type: "Blueberry",
             name: "Springhigh",
             uspp_title: "Blueberry plant called 'Springhigh'",
-            patent: "https://patents.google.com/patent/USPP16404 2024-06-21",
+            patent: "https://patents.google.com/patent/USPP16404 2024-12-31",
             uspp_filed: "6/21/04",
             uspp_issued: "4/4/06"
         },
@@ -8623,7 +8332,7 @@
             type: "Blueberry",
             name: "Abundance",
             uspp_title: "Blueberry plant called 'Abundance'",
-            patent: "https://patents.google.com/patent/USPP16476 2024-06-21",
+            patent: "https://patents.google.com/patent/USPP16476 2025-01-21",
             uspp_filed: "6/21/04",
             uspp_issued: "4/25/06"
         },
@@ -8631,7 +8340,7 @@
             type: "Strawberry",
             name: "L'Amour",
             uspp_title: "Strawberry plant named 'L'Amour'",
-            patent: "https://patents.google.com/patent/USPP16480 2024-06-21",
+            patent: "https://patents.google.com/patent/USPP16480 2024-10-30",
             uspp_filed: "6/21/04",
             uspp_issued: "4/25/06"
         },
@@ -8639,14 +8348,13 @@
             type: "Strawberry",
             name: "Clancy",
             uspp_title: "Strawberry plant named 'Clancy'",
-            patent: "https://patents.google.com/patent/USPP16571 2024-06-21",
+            patent: "https://patents.google.com/patent/USPP16571 2024-11-11",
             uspp_filed: "6/21/04",
             uspp_issued: "5/23/06"
         },
         {
             type: "Euro Pear",
             name: "Nellie",
-            name_common: "Nellie",
             uspp_title: "Pear tree named 'Nellie'",
             patent: "https://patents.google.com/patent/US20060021099 application abandoned",
             uspp_filed: "6/26/04"
@@ -8678,7 +8386,6 @@
         {
             type: "Avocado",
             name: "Carla",
-            name_common: "Carla",
             uspp_title: "Avocado tree named 'Carla'",
             patent: "https://patents.google.com/patent/USPP16594 2024-11-17",
             uspp_filed: "7/12/04",
@@ -8705,9 +8412,8 @@
         {
             type: "Almond",
             name: "Folsom",
-            name_common: "Folsom",
             uspp_title: "Almond tree named 'Folsom'",
-            patent: "https://patents.google.com/patent/USPP19555 2024-08-16",
+            patent: "https://patents.google.com/patent/USPP19555 2025-06-10",
             uspp_filed: "8/16/04",
             uspp_issued: "12/9/08"
         },
@@ -8715,7 +8421,7 @@
             type: "Strawberry",
             name: "Driscoll Sanibel",
             uspp_title: "Strawberry plant named 'Driscoll Sanibel'",
-            patent: "https://patents.google.com/patent/USPP16298 2024-08-19",
+            patent: "https://patents.google.com/patent/USPP16298 2024-11-27",
             uspp_filed: "8/19/04",
             uspp_issued: "2/28/06"
         },
@@ -8723,7 +8429,7 @@
             type: "Strawberry",
             name: "Driscoll Destin",
             uspp_title: "Strawberry plant named 'Driscoll Destin'",
-            patent: "https://patents.google.com/patent/USPP16299 2024-08-19",
+            patent: "https://patents.google.com/patent/USPP16299 2024-11-27",
             uspp_filed: "8/19/04",
             uspp_issued: "2/28/06"
         },
@@ -8731,7 +8437,7 @@
             type: "Strawberry",
             name: "Driscoll Atlantis",
             uspp_title: "Strawberry plant named 'Driscoll Atlantis'",
-            patent: "https://patents.google.com/patent/USPP16475 2024-08-19",
+            patent: "https://patents.google.com/patent/USPP16475 2025-01-22",
             uspp_filed: "8/19/04",
             uspp_issued: "4/25/06"
         },
@@ -8754,7 +8460,6 @@
         {
             type: "Apple",
             name: "Dalitron",
-            name_common: "Dalitron",
             uspp_title: "Apple tree named 'Dalitron'",
             patent: "https://patents.google.com/patent/USPP16753 2024-11-13",
             uspp_filed: "9/13/04",
@@ -8787,8 +8492,8 @@
             type: "Walnut",
             name: "Gillet",
             uspp_title: "WALNUT TREE NAMED 'GILLET'",
-            patent: "https://patents.google.com/patent/USPP16495 2024-10-24",
-            uspp_filed: "9/17/04"
+            patent: "https://patents.google.com/patent/USPP17135 2025-01-12",
+            uspp_filed: "8/6/04"
         },
         {
             type: "Walnut",
@@ -8862,7 +8567,6 @@
         {
             type: "Asian Pear",
             name: "85.10-23",
-            name_common: "85. 10-23",
             uspp_title: "Asian pear tree, 85.10-23",
             patent: "https://patents.google.com/patent/USPP17706 2024-10-20",
             uspp_filed: "10/20/04",
@@ -8897,9 +8601,8 @@
         {
             type: "Plumcot",
             name: "Flavor Royale",
-            name_common: "Flavor Royale",
             uspp_title: "Interspecific tree",
-            patent: "https://patents.google.com/patent/USPP16413 2024-11-02",
+            patent: "https://patents.google.com/patent/USPP16413 2025-04-10",
             uspp_filed: "11/2/04",
             uspp_issued: "4/4/06"
         },
@@ -8914,7 +8617,7 @@
         },
         {
             type: "Peach",
-            name: "PF 11 Peach",
+            name: "PF 11",
             name_common: "Flamin Fury PF 11 Peach",
             uspp_title: "Peach tree named 'P.F. 11 Peach'",
             patent: "https://patents.google.com/patent/USPP17054 2024-11-04",
@@ -8933,9 +8636,8 @@
         {
             type: "Plumcot",
             name: "Dapple Supreme",
-            name_common: "Dapple Supreme",
             uspp_title: "Interspecific tree",
-            patent: "https://patents.google.com/patent/USPP16412 2024-11-08",
+            patent: "https://patents.google.com/patent/USPP16412 2025-04-19",
             uspp_filed: "11/8/04",
             uspp_issued: "4/4/06"
         },
@@ -8943,7 +8645,7 @@
             type: "Nectarine",
             name: "Sauzee King",
             uspp_title: "Nectarine tree named: 'Sauzee King'",
-            patent: "https://patents.google.com/patent/USPP16258 2024-11-17",
+            patent: "https://patents.google.com/patent/USPP16258 2025-03-10",
             uspp_filed: "11/17/04",
             uspp_issued: "2/14/06"
         },
@@ -8958,9 +8660,8 @@
         {
             type: "Plumcot",
             name: "Flavor Finale",
-            name_common: "Flavor Finale",
             uspp_title: "Interspecific tree named 'Flavor Finale'",
-            patent: "https://patents.google.com/patent/USPP16590 2024-11-23",
+            patent: "https://patents.google.com/patent/USPP16590 2025-04-14",
             uspp_filed: "11/23/04",
             uspp_issued: "5/30/06"
         },
@@ -8981,9 +8682,8 @@
         {
             type: "Plumcot",
             name: "Flavor Rouge",
-            name_common: "Flavor Rouge",
             uspp_title: "Interspecific tree named: 'Flavor Rouge'",
-            patent: "https://patents.google.com/patent/USPP16491 2024-12-06",
+            patent: "https://patents.google.com/patent/USPP16491 2025-06-14",
             uspp_filed: "12/6/04",
             uspp_issued: "5/2/06"
         },
@@ -8991,7 +8691,7 @@
             type: "Strawberry",
             name: "DPI Rubygem",
             uspp_title: "Strawberry plant named 'DPI Rubygem'",
-            patent: "https://patents.google.com/patent/USPP17464 2024-12-09",
+            patent: "https://patents.google.com/patent/USPP17464 2025-04-07",
             uspp_filed: "12/9/04",
             uspp_issued: "3/6/07"
         },
@@ -8999,7 +8699,7 @@
             type: "Apple",
             name: "Banning Red Fuji",
             uspp_title: "Apple tree named 'Banning Red Fuji'",
-            patent: "https://patents.google.com/patent/USPP16624 2024-12-10",
+            patent: "https://patents.google.com/patent/USPP16624 2025-01-30",
             uspp_filed: "12/10/04",
             uspp_issued: "6/6/06"
         },
@@ -9008,16 +8708,15 @@
             name: "Burpeachtwentyone",
             name_common: "Summer Flame 26",
             uspp_title: "Peach tree 'Burpeachtwentyone'",
-            patent: "https://patents.google.com/patent/USPP17016 2024-12-14",
+            patent: "https://patents.google.com/patent/USPP17016 2025-03-18",
             uspp_filed: "12/14/04",
             uspp_issued: "8/22/06"
         },
         {
             type: "Apriplum",
             name: "Wescot",
-            name_common: "Wescot",
             uspp_title: "Interspecific tree named: 'Wescot'",
-            patent: "https://patents.google.com/patent/USPP16597 2024-12-15",
+            patent: "https://patents.google.com/patent/USPP16597 2025-04-07",
             uspp_filed: "12/15/04",
             uspp_issued: "5/30/06"
         },
@@ -9025,7 +8724,7 @@
             type: "Nectarine",
             name: "Polar Light",
             uspp_title: "Nectarine tree named: 'Polar Light'",
-            patent: "https://patents.google.com/patent/USPP16858 2024-12-15",
+            patent: "https://patents.google.com/patent/USPP16858 2025-06-02",
             uspp_filed: "12/15/04",
             uspp_issued: "7/25/06"
         },
@@ -9033,7 +8732,7 @@
             type: "Peach",
             name: "S 6359",
             uspp_title: "Peach tree named 'S 6359'",
-            patent: "https://patents.google.com/patent/USPP17456 2024-12-15",
+            patent: "https://patents.google.com/patent/USPP17456 2024-12-19",
             uspp_filed: "12/15/04",
             uspp_issued: "2/27/07"
         },
@@ -9041,16 +8740,15 @@
             type: "Peach",
             name: "S 5848",
             uspp_title: "Peach tree names 'S 5848'",
-            patent: "https://patents.google.com/patent/USPP17457 2024-12-15",
+            patent: "https://patents.google.com/patent/USPP17457 2024-12-22",
             uspp_filed: "12/15/04",
             uspp_issued: "2/27/07"
         },
         {
             type: "Nectarine",
             name: "Burnectwenty",
-            name_common: "Burnectwenty",
             uspp_title: "Nectarine tree, 'Burnectwenty'",
-            patent: "https://patents.google.com/patent/USPP17018 2024-12-16",
+            patent: "https://patents.google.com/patent/USPP17018 2025-03-20",
             uspp_filed: "12/16/04",
             uspp_issued: "8/22/06"
         },
@@ -9059,7 +8757,7 @@
             name: "Burnectnineteen",
             name_common: "Spring Flare 20",
             uspp_title: "Nectarine tree, 'Burnectnineteen'",
-            patent: "https://patents.google.com/patent/USPP17140 2024-12-16",
+            patent: "https://patents.google.com/patent/USPP17140 2025-05-08",
             uspp_filed: "12/16/04",
             uspp_issued: "10/10/06"
         },
@@ -9068,16 +8766,15 @@
             name: "Burnecteighteen",
             name_common: "Sweet Flare 28",
             uspp_title: "Nectarine tree, 'Burnecteighteen'",
-            patent: "https://patents.google.com/patent/USPP17141 2024-12-16",
+            patent: "https://patents.google.com/patent/USPP17141 2025-05-08",
             uspp_filed: "12/16/04",
             uspp_issued: "10/10/06"
         },
         {
             type: "Nectarine",
             name: "Burnectwentyone",
-            name_common: "Burnectwentyone",
             uspp_title: "Nectarine tree, 'Brunectwentyone'",
-            patent: "https://patents.google.com/patent/USPP17233 2024-12-17",
+            patent: "https://patents.google.com/patent/USPP17233 2025-06-27",
             uspp_filed: "12/17/04",
             uspp_issued: "11/28/06"
         },
@@ -9092,9 +8789,8 @@
         {
             type: "Apriplum",
             name: "Autumn Sprite",
-            name_common: "Autumn Sprite",
             uspp_title: "Interspecific tree named 'Autumn Sprite'",
-            patent: "https://patents.google.com/patent/USPP16599 2025-01-03",
+            patent: "https://patents.google.com/patent/USPP16599 2025-04-15",
             uspp_filed: "1/3/05",
             uspp_issued: "5/30/06"
         },
@@ -9117,54 +8813,48 @@
         {
             type: "Plumcot",
             name: "Plumsweet V",
-            name_common: "Plumsweet V",
             uspp_title: "Interspecific tree named 'Plumsweet V'",
-            patent: "https://patents.google.com/patent/USPP16369 2025-01-06",
+            patent: "https://patents.google.com/patent/USPP16369 2025-03-26",
             uspp_filed: "1/6/05",
             uspp_issued: "3/21/06"
         },
         {
             type: "Plumcot",
             name: "Plumsweet IV",
-            name_common: "Plumsweet IV",
             uspp_title: "Interspecific tree named 'Plumsweet IV'",
-            patent: "https://patents.google.com/patent/USPP16461 2025-01-06",
+            patent: "https://patents.google.com/patent/USPP16461 2025-04-23",
             uspp_filed: "1/6/05",
             uspp_issued: "4/18/06"
         },
         {
             type: "Peach",
             name: "Candy Princess",
-            name_common: "Candy Princess",
             uspp_title: "Peach tree named 'Candy Princess'",
-            patent: "https://patents.google.com/patent/USPP16462 2025-01-06",
+            patent: "https://patents.google.com/patent/USPP16462 2025-04-23",
             uspp_filed: "1/6/05",
             uspp_issued: "4/18/06"
         },
         {
             type: "Nectarine",
             name: "Western Bright",
-            name_common: "Western Bright",
             uspp_title: "Nectarine tree named 'Western Bright'",
-            patent: "https://patents.google.com/patent/USPP16467 2025-01-06",
+            patent: "https://patents.google.com/patent/USPP16467 2025-04-23",
             uspp_filed: "1/6/05",
             uspp_issued: "4/18/06"
         },
         {
             type: "Nectarine",
             name: "Grand Bright",
-            name_common: "Grand Bright",
             uspp_title: "Nectarine tree named 'Grand Bright'",
-            patent: "https://patents.google.com/patent/USPP16494 2025-01-06",
+            patent: "https://patents.google.com/patent/USPP16494 2025-05-07",
             uspp_filed: "1/6/05",
             uspp_issued: "5/2/06"
         },
         {
             type: "Nectarine",
             name: "Sugarine I",
-            name_common: "Sugarine 1",
             uspp_title: "Nectarine tree named 'Sugarine I'",
-            patent: "https://patents.google.com/patent/USPP16585 2025-01-06",
+            patent: "https://patents.google.com/patent/USPP16585 2025-06-04",
             uspp_filed: "1/6/05",
             uspp_issued: "5/30/06"
         },
@@ -9190,7 +8880,7 @@
             name: "Limoneira Seedless",
             name_common: "Limoneira",
             uspp_title: "Limoneira seedless",
-            patent: "https://patents.google.com/patent/USPP17510 2025-01-26",
+            patent: "https://patents.google.com/patent/USPP17510 2025-03-07",
             uspp_filed: "1/26/05",
             uspp_issued: "3/20/07"
         },
@@ -9198,7 +8888,7 @@
             type: "Grape",
             name: "DM 8313-1",
             uspp_title: "Grapevine 'DM 8313-1'",
-            patent: "https://patents.google.com/patent/USPP17773 2025-01-31",
+            patent: "https://patents.google.com/patent/USPP17773 2025-06-27",
             uspp_filed: "1/31/05",
             uspp_issued: "5/29/07"
         },
@@ -9267,7 +8957,7 @@
             type: "Strawberry",
             name: "MNUS 138",
             uspp_title: "Strawberry plant named 'MNUS 138'",
-            patent: "https://patents.google.com/patent/USPP17404 2025-04-06",
+            patent: "https://patents.google.com/patent/USPP17404 2025-09-24",
             uspp_filed: "4/6/05",
             uspp_issued: "2/13/07"
         },
@@ -9275,7 +8965,7 @@
             type: "Apple",
             name: "ROHO 3615",
             uspp_title: "Apple tree named 'ROHO 3615'",
-            patent: "https://patents.google.com/patent/USPP17672 2025-04-06",
+            patent: "https://patents.google.com/patent/USPP17672 2025-07-16",
             uspp_filed: "4/6/05",
             uspp_issued: "5/1/07"
         },
@@ -9283,7 +8973,7 @@
             type: "Strawberry",
             name: "BG-959",
             uspp_title: "Strawberry plant named 'BG-959'",
-            patent: "https://patents.google.com/patent/USPP17864 2025-04-06",
+            patent: "https://patents.google.com/patent/USPP17864 2025-10-18",
             uspp_filed: "4/6/05",
             uspp_issued: "7/17/07"
         },
@@ -9363,16 +9053,15 @@
             type: "Raspberry",
             name: "Explorer",
             uspp_title: "Black raspberry plant named 'Explorer'",
-            patent: "https://patents.google.com/patent/USPP17727 2025-04-27",
+            patent: "https://patents.google.com/patent/USPP17727 2025-06-02",
             uspp_filed: "4/27/05",
             uspp_issued: "5/15/07"
         },
         {
             type: "Fuzzy Kiwi", // chinensis
             name: "Hort51-1785",
-            name_common: "Hort51-1785",
             uspp_title: "Kiwi plant named 'Hort51-1785'",
-            patent: "https://patents.google.com/patent/USPP17774 2025-05-05",
+            patent: "https://patents.google.com/patent/USPP17774 2025-05-20",
             uspp_filed: "5/5/05",
             uspp_issued: "5/29/07"
         },
@@ -9380,7 +9069,7 @@
             type: "Peach",
             name: "White County",
             uspp_title: "Peach tree—named 'White County' cultivar",
-            patent: "https://patents.google.com/patent/USPP17742 2025-05-25",
+            patent: "https://patents.google.com/patent/USPP17742 2025-06-04",
             uspp_filed: "5/25/05",
             uspp_issued: "5/15/07"
         },
@@ -9388,7 +9077,7 @@
             type: "Peach",
             name: "White Rock",
             uspp_title: "Peach tree—named 'White Rock' cultivar",
-            patent: "https://patents.google.com/patent/USPP17911 2025-05-25",
+            patent: "https://patents.google.com/patent/USPP17911 2025-07-07",
             uspp_filed: "5/25/05",
             uspp_issued: "8/7/07"
         },
@@ -9396,7 +9085,7 @@
             type: "Strawberry",
             name: "Winter Dawn",
             uspp_title: "'Winter Dawn' strawberry plant",
-            patent: "https://patents.google.com/patent/USPP21558 2025-06-13",
+            patent: "https://patents.google.com/patent/USPP21558 2029-10-07", // todo - I think this is the longest extension I've ever seen. it can't be right, can it? application 2005, expires 2029 (24 years)
             uspp_filed: "6/13/05",
             uspp_issued: "12/7/10"
         },
@@ -9412,7 +9101,6 @@
         {
             type: "Apple",
             name: "SJ303",
-            name_common: "SJ303",
             uspp_title: "Apple tree named 'SJ303'",
             patent: "https://patents.google.com/patent/USPP17549 2025-06-21",
             uspp_filed: "6/21/05",
@@ -9475,7 +9163,6 @@
         {
             type: "Avocado",
             name: "Neal",
-            name_common: "Neal",
             uspp_title: "Neal avocado",
             patent: "https://patents.google.com/patent/US20070044184 application abandoned",
             uspp_filed: "8/17/05"
@@ -9483,7 +9170,6 @@
         {
             type: "Avocado",
             name: "Wheeling",
-            name_common: "Wheeling",
             uspp_title: "Avocado tree named 'Wheeling'",
             patent: "https://patents.google.com/patent/USPP18459 2025-08-17",
             uspp_filed: "8/17/05",
@@ -9500,7 +9186,6 @@
         {
             type: "Mandarin",
             name: "Tango",
-            name_common: "Tango",
             uspp_title: "Mandarin tree named 'Tango'",
             patent: "https://patents.google.com/patent/USPP17863 2025-09-06",
             uspp_filed: "9/6/05",
@@ -9605,7 +9290,7 @@
             type: "Blueberry",
             name: "Snowchaser",
             uspp_title: "'Snowchaser'southern highbush blueberry",
-            patent: "https://patents.google.com/patent/USPP19503 2025-11-30",
+            patent: "https://patents.google.com/patent/USPP19503 2027-05-19",
             uspp_filed: "11/30/05",
             uspp_issued: "11/25/08"
         },
@@ -9613,7 +9298,7 @@
             type: "Blueberry",
             name: "Sweetcrisp",
             uspp_title: "'Sweetcrisp' southern highbush blueberry plant",
-            patent: "https://patents.google.com/patent/USPP20027 2025-11-30",
+            patent: "https://patents.google.com/patent/USPP20027 2026-05-26",
             uspp_filed: "11/30/05",
             uspp_issued: "5/26/09"
         },
@@ -9621,7 +9306,7 @@
             type: "Blueberry",
             name: "Primadonna",
             uspp_title: "Southern Highbush Blueberry plant named 'Primadonna'",
-            patent: "https://patents.google.com/patent/USPP20181 2025-11-30",
+            patent: "https://patents.google.com/patent/USPP20181 2027-11-01",
             uspp_filed: "11/30/05",
             uspp_issued: "7/21/09"
         },
@@ -9630,7 +9315,7 @@
             name: "Burpeachtwentytwo",
             name_common: "Spring Flame 18",
             uspp_title: "Peach tree named 'Burpeachtwentytwo'",
-            patent: "https://patents.google.com/patent/USPP17258 2025-12-01",
+            patent: "https://patents.google.com/patent/USPP17258 2025-12-09",
             uspp_filed: "12/1/05",
             uspp_issued: "12/5/06"
         },
@@ -9645,9 +9330,8 @@
         {
             type: "Plumcot",
             name: "Candy Stripe",
-            name_common: "Candy Stripe",
             uspp_title: "Interspecific tree named 'Candy Stripe'",
-            patent: "https://patents.google.com/patent/USPP17828 2025-12-06",
+            patent: "https://patents.google.com/patent/USPP17828 2025-12-30",
             uspp_filed: "12/6/05",
             uspp_issued: "6/26/07"
         },
@@ -9663,7 +9347,7 @@
             type: "Peach",
             name: "Super Zee",
             uspp_title: "Peach tree 'Super Zee'",
-            patent: "https://patents.google.com/patent/USPP17874 2025-12-13",
+            patent: "https://patents.google.com/patent/USPP17874 2025-12-26",
             uspp_filed: "12/13/05",
             uspp_issued: "7/17/07"
         },
@@ -9678,8 +9362,7 @@
         },
         {
             type: "Apricot", // zaiger calls this a "color cot"
-            name: "Belle Cerise",
-            name_common: "Belle Cerise",
+            name: "Bella Cerise",
             uspp_title: "Interspecific tree named 'Bella Cerise'",
             patent: "https://patents.google.com/patent/USPP18815 2026-09-19",
             uspp_filed: "12/16/05",
@@ -9689,16 +9372,15 @@
             type: "Grape",
             name: "Chisago",
             uspp_title: "Grapevine-''Chisago''",
-            patent: "https://patents.google.com/patent/USPP19246 2025-12-16",
+            patent: "https://patents.google.com/patent/USPP19246 2026-08-17",
             uspp_filed: "12/16/05",
             uspp_issued: "9/16/08"
         },
         {
             type: "Nectarine",
             name: "Burnectwentythree",
-            name_common: "Burnectwentythree",
             uspp_title: "Nectarine tree 'Burnectwentythree'",
-            patent: "https://patents.google.com/patent/USPP17890 2025-12-19",
+            patent: "https://patents.google.com/patent/USPP17890 2026-01-04",
             uspp_filed: "12/19/05",
             uspp_issued: "7/31/07"
         },
@@ -9706,7 +9388,7 @@
             type: "Apricot",
             name: "GA 10F",
             uspp_title: "Apricot tree named 'GA 10F'",
-            patent: "https://patents.google.com/patent/USPP18370 2025-12-19",
+            patent: "https://patents.google.com/patent/USPP18370 2026-01-05",
             uspp_filed: "12/19/05",
             uspp_issued: "12/25/07"
         },
@@ -9715,7 +9397,7 @@
             name: "Joan J",
             name_common: "Joan J Primocane",
             uspp_title: "Raspberry plant named 'Joan J'",
-            patent: "https://patents.google.com/patent/USPP18954 2025-12-19",
+            patent: "https://patents.google.com/patent/USPP18954 2026-07-14",
             uspp_filed: "12/19/05",
             uspp_issued: "6/17/08"
         },
@@ -9723,7 +9405,7 @@
             type: "Blueberry",
             name: "Robeson",
             uspp_title: "Blueberry named 'Robeson'",
-            patent: "https://patents.google.com/patent/USPP19756 2025-12-19",
+            patent: "https://patents.google.com/patent/USPP19756 2027-02-01",
             uspp_filed: "12/19/05",
             uspp_issued: "2/24/09"
         },
@@ -9731,7 +9413,7 @@
             type: "Blueberry",
             name: "Beaufort",
             uspp_title: "Blueberry named 'Beaufort'",
-            patent: "https://patents.google.com/patent/USPP19764 2025-12-19",
+            patent: "https://patents.google.com/patent/USPP19764 2027-02-05",
             uspp_filed: "12/19/05",
             uspp_issued: "2/24/09"
         },
@@ -9739,7 +9421,7 @@
             type: "Blueberry",
             name: "Carteret",
             uspp_title: "Blueberry plant named 'Carteret'",
-            patent: "https://patents.google.com/patent/USPP19903 2025-12-19",
+            patent: "https://patents.google.com/patent/USPP19903 2026-09-26",
             uspp_filed: "12/19/05",
             uspp_issued: "4/14/09"
         },
@@ -9754,7 +9436,6 @@
         {
             type: "Nectarine",
             name: "Red Bright",
-            name_common: "Red Bright",
             uspp_title: "Nectarine tree named 'Red Bright'",
             patent: "https://patents.google.com/patent/USPP17086 2025-12-20",
             uspp_filed: "12/20/05",
@@ -9762,28 +9443,25 @@
         },
         {
             type: "Nectarine",
-            name: "Late Bright",
-            name_common: "Late Bright",
+            name: "LATE BRIGHT",
             uspp_title: "Nectarine tree named 'LATE BRIGHT'",
-            patent: "https://patents.google.com/patent/USPP17167 2025-12-20",
+            patent: "https://patents.google.com/patent/USPP17167 2025-12-22",
             uspp_filed: "12/20/05",
             uspp_issued: "10/24/06"
         },
         {
             type: "Nectarine",
-            name: "Pacific Sweet",
-            name_common: "Pacific Sweet",
+            name: "PACIFIC SWEET",
             uspp_title: "Nectarine tree named 'PACIFIC SWEET'",
-            patent: "https://patents.google.com/patent/USPP17206 2025-12-20",
+            patent: "https://patents.google.com/patent/USPP17206 2026-01-12",
             uspp_filed: "12/20/05",
             uspp_issued: "11/14/06"
         },
         {
             type: "Nectarine",
-            name: "May Pearl",
-            name_common: "May Pearl",
+            name: "MAY PEARL",
             uspp_title: "Nectarine tree named 'MAY PEARL'",
-            patent: "https://patents.google.com/patent/USPP17254 2025-12-20",
+            patent: "https://patents.google.com/patent/USPP17254 2026-02-02",
             uspp_filed: "12/20/05",
             uspp_issued: "12/5/06"
         },
@@ -9791,16 +9469,15 @@
             type: "Peach",
             name: "SNOW DUCHESS",
             uspp_title: "Peach tree named 'SNOW DUCHESS'",
-            patent: "https://patents.google.com/patent/USPP17281 2025-12-20",
+            patent: "https://patents.google.com/patent/USPP17281 2026-02-16",
             uspp_filed: "12/20/05",
             uspp_issued: "12/19/06"
         },
         {
             type: "Peach",
-            name: "Ivory Duchess",
-            name_common: "Ivory Duchess",
+            name: "IVORY DUCHESS",
             uspp_title: "Peach tree named 'IVORY DUCHESS'",
-            patent: "https://patents.google.com/patent/USPP17282 2025-12-20",
+            patent: "https://patents.google.com/patent/USPP17282 2026-02-16",
             uspp_filed: "12/20/05",
             uspp_issued: "12/19/06"
         },
@@ -9808,14 +9485,13 @@
             type: "Nectarine",
             name: "SUGAR PEARL",
             uspp_title: "Nectarine tree named 'SUGAR PEARL'",
-            patent: "https://patents.google.com/patent/USPP17442 2025-12-20",
+            patent: "https://patents.google.com/patent/USPP17442 2026-04-27",
             uspp_filed: "12/20/05",
             uspp_issued: "2/27/07"
         },
         {
             type: "Peach",
             name: "Spring Princess",
-            name_common: "Spring Princess",
             uspp_title: "Peach tree named 'Spring Princess'",
             patent: "https://patents.google.com/patent/USPP17750 2025-12-20",
             uspp_filed: "12/20/05",
@@ -9824,7 +9500,6 @@
         {
             type: "Peach",
             name: "Diamond Candy",
-            name_common: "Diamond Candy",
             uspp_title: "Peach tree named 'Diamond Candy'",
             patent: "https://patents.google.com/patent/USPP17758 2025-12-20",
             uspp_filed: "12/20/05",
@@ -9833,7 +9508,6 @@
         {
             type: "Peach",
             name: "Crimson Princess",
-            name_common: "Crimson Princess",
             uspp_title: "Peach tree named 'CRIMSON PRINCESS'",
             patent: "https://patents.google.com/patent/USPP17776 2025-12-20",
             uspp_filed: "12/20/05",
@@ -9842,7 +9516,6 @@
         {
             type: "Nectarine",
             name: "May Pearl II",
-            name_common: "May Pearl II",
             uspp_title: "Nectarine tree named 'MAY PEARL II'",
             patent: "https://patents.google.com/patent/USPP17825 2025-12-20",
             uspp_filed: "12/20/05",
@@ -9852,25 +9525,23 @@
             type: "Peach",
             name: "SUGARPEACH II",
             uspp_title: "Peach tree named 'SUGARPEACH II'",
-            patent: "https://patents.google.com/patent/USPP18027 2025-12-20",
+            patent: "https://patents.google.com/patent/USPP18027 2026-02-01",
             uspp_filed: "12/20/05",
             uspp_issued: "9/11/07"
         },
         {
             type: "Apriplum",
             name: "Cot-N-Candy",
-            name_common: "Cot-N-Candy",
             uspp_title: "Interspecific tree named 'Cot-N-Candy'",
-            patent: "https://patents.google.com/patent/USPP17827 2025-12-22",
+            patent: "https://patents.google.com/patent/USPP17827 2026-01-18",
             uspp_filed: "12/22/05",
             uspp_issued: "6/26/07"
         },
         {
             type: "Apricot", // zaiger calls this a "color cot"
             name: "Bella Gold",
-            name_common: "Bella Gold",
             uspp_title: "Interspecific tree named 'Bella Gold'",
-            patent: "https://patents.google.com/patent/USPP17826 2025-12-29",
+            patent: "https://patents.google.com/patent/USPP17826 2026-01-25",
             uspp_filed: "12/29/05",
             uspp_issued: "6/26/07"
         },
@@ -9878,7 +9549,7 @@
             type: "Nectarine",
             name: "Honey Lite",
             uspp_title: "Nectarine tree named: 'Honey Lite'",
-            patent: "https://patents.google.com/patent/USPP18400 2025-12-29",
+            patent: "https://patents.google.com/patent/USPP18400 2026-04-09",
             uspp_filed: "12/29/05",
             uspp_issued: "1/8/08"
         },
@@ -9936,7 +9607,6 @@
         {
             type: "Grape",
             name: "Sugrathirtytwo",
-            name_common: "Sugrathirtytwo",
             uspp_title: "Grapevine plant named 'Sugrathirtytwo'",
             patent: "https://patents.google.com/patent/USPP19024 2026-01-10",
             uspp_filed: "1/10/06",
@@ -9953,7 +9623,6 @@
         {
             type: "Grape",
             name: "Sugrathirtyone",
-            name_common: "Sugrathirtyone",
             uspp_title: "Grapevine plant named 'Sugrathirtyone'",
             patent: "https://patents.google.com/patent/USPP19065 2026-01-10",
             uspp_filed: "1/10/06",
@@ -9961,7 +9630,7 @@
         },
         {
             type: "Peach",
-            name: "NJ351",
+            name: "NJ 351",
             uspp_title: "Peach tree named 'NJ351'",
             patent: "https://patents.google.com/patent/USPP18224 2026-01-17",
             uspp_filed: "1/17/06",
@@ -9978,7 +9647,6 @@
         {
             type: "Mandarin",
             name: "Late Seedless Mandarin",
-            name_common: "Late Seedless Mandarin",
             uspp_title: "Mandarin tree named 'Late Seedless Mandarin'",
             patent: "https://patents.google.com/patent/USPP18520 2026-01-18",
             uspp_filed: "1/18/06",
@@ -10075,7 +9743,7 @@
         },
         {
             type: "Peach",
-            name: "NJ350",
+            name: "NJ 350",
             uspp_title: "Peach tree named 'NJ350'",
             patent: "https://patents.google.com/patent/USPP19382 2026-03-09",
             uspp_filed: "3/9/06",
@@ -10100,7 +9768,6 @@
         {
             type: "Nectarine",
             name: "Honey May",
-            name_common: "Honey May",
             uspp_title: "Nectarine plant named 'Honey May'",
             patent: "https://patents.google.com/patent/USPP19363 2026-03-14",
             uspp_filed: "3/14/06",
@@ -10118,7 +9785,6 @@
         {
             type: "Euro Pear",
             name: "Carolina Gold",
-            name_common: "Carolina Gold",
             uspp_title: "Pear tree, 'Carolina Gold'",
             patent: "https://patents.google.com/patent/USPP18515 2026-03-21",
             uspp_filed: "3/21/06",
@@ -10127,7 +9793,6 @@
         {
             type: "Euro Pear",
             name: "Lowry Red",
-            name_common: "Lowry Red",
             uspp_title: "Pear tree named 'Lowry Red'",
             patent: "https://patents.google.com/patent/USPP19552 2026-03-21",
             uspp_filed: "3/21/06",
@@ -10135,7 +9800,7 @@
         },
         {
             type: "Peach",
-            name: "NJ352",
+            name: "NJ 352",
             uspp_title: "Peach tree named 'NJ352'",
             patent: "https://patents.google.com/patent/USPP18091 2026-03-29",
             uspp_filed: "3/29/06",
@@ -10143,7 +9808,7 @@
         },
         {
             type: "Peach",
-            name: "NJ353",
+            name: "NJ 353",
             uspp_title: "Peach tree named 'NJ353'",
             patent: "https://patents.google.com/patent/USPP18134 2026-03-29",
             uspp_filed: "3/29/06",
@@ -10160,7 +9825,6 @@
         {
             type: "Pluot",
             name: "Dapple Jack",
-            name_common: "Dapple Jack",
             uspp_title: "Interspecific tree named 'Dapple Jack'",
             patent: "https://patents.google.com/patent/USPP18178 2026-04-03",
             uspp_filed: "4/3/06",
@@ -10213,7 +9877,7 @@
             name: "Asio 5",
             name_common: "EliSan",
             uspp_title: "Asian pear tree named 'Asio 5'",
-            patent: "https://patents.google.com/patent/USPP18976 2026-05-16",
+            patent: "https://patents.google.com/patent/USPP18976 2026-08-11",
             uspp_filed: "5/16/06",
             uspp_issued: "6/24/08"
         },
@@ -10222,7 +9886,7 @@
             name: "PremA280",
             name_common: "Sweetie",
             uspp_title: "Apple tree named 'PremA280'",
-            patent: "https://patents.google.com/patent/USPP19762 2026-05-16",
+            patent: "https://patents.google.com/patent/USPP19762 2026-07-23",
             uspp_filed: "5/16/06",
             uspp_issued: "2/24/09"
         },
@@ -10230,7 +9894,7 @@
             type: "Nectarine",
             name: "NECTACHIEF",
             uspp_title: "Nectarine tree named 'NECTACHIEF'",
-            patent: "https://patents.google.com/patent/USPP19330 2026-05-17",
+            patent: "https://patents.google.com/patent/USPP19330 2026-10-31",
             uspp_filed: "5/17/06",
             uspp_issued: "10/14/08"
         },
@@ -10238,7 +9902,7 @@
             type: "Nectarine",
             name: "Nectadelicious",
             uspp_title: "Nectarine tree named 'Nectadelicious'",
-            patent: "https://patents.google.com/patent/USPP20329 2026-05-17",
+            patent: "https://patents.google.com/patent/USPP20329 2026-09-03",
             uspp_filed: "5/17/06",
             uspp_issued: "9/22/09"
         },
@@ -10246,7 +9910,7 @@
             type: "Peach",
             name: "JULIENICE",
             uspp_title: "Peach tree name 'JULIENICE'",
-            patent: "https://patents.google.com/patent/USPP20472 2026-05-17",
+            patent: "https://patents.google.com/patent/USPP20472 2026-12-12",
             uspp_filed: "5/17/06",
             uspp_issued: "11/10/09"
         },
@@ -10254,7 +9918,7 @@
             type: "Peach",
             name: "FLATPRINCESSE",
             uspp_title: "Peach tree named 'FLATPRINCESSE'",
-            patent: "https://patents.google.com/patent/USPP20478 2026-05-17",
+            patent: "https://patents.google.com/patent/USPP20478 2026-12-02",
             uspp_filed: "5/17/06",
             uspp_issued: "11/17/09"
         },
@@ -10262,7 +9926,7 @@
             type: "Peach",
             name: "Juliepretty",
             uspp_title: "Peach tree named 'Juliepretty'",
-            patent: "https://patents.google.com/patent/USPP20611 2026-05-17",
+            patent: "https://patents.google.com/patent/USPP20611 2026-12-10",
             uspp_filed: "5/17/06",
             uspp_issued: "12/29/09"
         },
@@ -10270,7 +9934,7 @@
             type: "Peach",
             name: "FLATQUEEN",
             uspp_title: "Peach tree named 'FLATQUEEN'",
-            patent: "https://patents.google.com/patent/USPP20750 2026-05-17",
+            patent: "https://patents.google.com/patent/USPP20750 2027-01-28",
             uspp_filed: "5/17/06",
             uspp_issued: "2/16/10"
         },
@@ -10278,7 +9942,7 @@
             type: "Peach",
             name: "Flatpretty",
             uspp_title: "Flat peach tree named 'Flatpretty'",
-            patent: "https://patents.google.com/patent/USPP21389 2026-05-17",
+            patent: "https://patents.google.com/patent/USPP21389 2029-08-19",
             uspp_filed: "5/17/06",
             uspp_issued: "10/19/10"
         },
@@ -10303,7 +9967,7 @@
             type: "Peach",
             name: "JR 7827",
             uspp_title: "Peach tree named 'JR 7827'",
-            patent: "https://patents.google.com/patent/USPP18832 2026-06-02",
+            patent: "https://patents.google.com/patent/USPP18832 2026-06-08",
             uspp_filed: "6/2/06",
             uspp_issued: "5/27/08"
         },
@@ -10327,7 +9991,6 @@
         {
             type: "Pluot",
             name: "Flavor Crisp",
-            name_common: "Flavor Crisp",
             uspp_title: "Interspecific tree",
             patent: "https://patents.google.com/patent/USPP18780 2026-06-27",
             uspp_filed: "6/27/06",
@@ -10351,7 +10014,6 @@
         {
             type: "Sweet Cherry",
             name: "Kootenay",
-            name_common: "Kootenay",
             uspp_title: "Cherry tree 'Kootenay'",
             patent: "https://patents.google.com/patent/USPP18849 2026-10-10",
             uspp_filed: "7/19/06",
@@ -10360,7 +10022,6 @@
         {
             type: "Apple",
             name: "Lady Laura",
-            name_common: "Lady Laura",
             uspp_title: "Apple tree named 'Lady Laura'",
             patent: "https://patents.google.com/patent/USPP19826 2026-07-25",
             uspp_filed: "7/25/06",
@@ -10369,7 +10030,6 @@
         {
             type: "Quince",
             name: "Eline",
-            name_common: "Eline",
             uspp_title: "Quince plant named 'Eline'",
             patent: "https://patents.google.com/patent/USPP19562 2026-07-27",
             uspp_filed: "7/27/06",
@@ -10378,7 +10038,6 @@
         {
             type: "Citrus",
             name: "M7",
-            name_common: "M7",
             uspp_title: "Orange tree named 'M7'",
             patent: "https://patents.google.com/patent/USPP18774 2026-08-01",
             uspp_filed: "8/1/06",
@@ -10387,7 +10046,6 @@
         {
             type: "Apple",
             name: "El Niño",
-            name_common: "El Niño",
             uspp_title: "Apple tree named 'El Niño'",
             patent: "https://patents.google.com/patent/USPP18512 2026-08-07",
             uspp_filed: "8/7/06",
@@ -10404,7 +10062,6 @@
         {
             type: "Currant",
             name: "Blackadder",
-            name_common: "Blackadder",
             uspp_title: "Blackcurrant plant named 'Blackadder'",
             patent: "https://patents.google.com/patent/USPP18790 2026-08-25",
             uspp_filed: "8/25/06",
@@ -10421,7 +10078,6 @@
         {
             type: "Apple",
             name: "Sirius",
-            name_common: "Sirius",
             uspp_title: "Apple tree named 'Sirius'",
             patent: "https://patents.google.com/patent/USPP18541 2026-09-15",
             uspp_filed: "9/15/06",
@@ -10430,7 +10086,6 @@
         {
             type: "Apple",
             name: "Orion",
-            name_common: "Orion",
             uspp_title: "Apple tree named 'Orion'",
             patent: "https://patents.google.com/patent/USPP19276 2026-09-15",
             uspp_filed: "9/15/06",
@@ -10439,7 +10094,6 @@
         {
             type: "Plumcot",
             name: "Crimson Royale",
-            name_common: "Crimson Royale",
             uspp_title: "Interspecific Prunus tree named 'Crimson Royale'",
             patent: "https://patents.google.com/patent/USPP18559 2026-09-25",
             uspp_filed: "9/25/06",
@@ -10455,7 +10109,6 @@
         {
             type: "Apple",
             name: "Zari",
-            name_common: "Zari",
             uspp_title: "Apple tree named 'ZARI'",
             patent: "https://patents.google.com/patent/USPP19473 2026-09-29",
             uspp_filed: "9/29/06",
@@ -10571,7 +10224,6 @@
         {
             type: "Sweet Cherry",
             name: "MG 200",
-            name_common: "MG 200",
             uspp_title: "Cherry tree named 'MG 200'",
             patent: "https://patents.google.com/patent/USPP18825 2026-11-16",
             uspp_filed: "11/13/06",
@@ -10605,7 +10257,6 @@
         {
             type: "Plumcot",
             name: "Plumred I",
-            name_common: "Plumred I",
             uspp_title: "Interspecific tree named 'PLUMRED I'",
             patent: "https://patents.google.com/patent/USPP18665 2026-12-07",
             uspp_filed: "12/7/06",
@@ -10614,7 +10265,6 @@
         {
             type: "Plumcot",
             name: "Plumsweet IX",
-            name_common: "Plumsweet IX",
             uspp_title: "Interspecific tree named 'PLUMSWEET IX'",
             patent: "https://patents.google.com/patent/USPP18666 2026-12-07",
             uspp_filed: "12/7/06",
@@ -10623,7 +10273,6 @@
         {
             type: "Plumcot",
             name: "Plumsweet VII",
-            name_common: "Plumsweet VII",
             uspp_title: "Interspecific tree named 'Plumsweet VII'",
             patent: "https://patents.google.com/patent/USPP18667 2026-12-07",
             uspp_filed: "12/7/06",
@@ -10632,7 +10281,6 @@
         {
             type: "Plumcot",
             name: "Blackred III",
-            name_common: "Blackred III",
             uspp_title: "Interspecific tree named 'BLACKRED III'",
             patent: "https://patents.google.com/patent/USPP18668 2026-12-07",
             uspp_filed: "12/7/06",
@@ -10641,7 +10289,6 @@
         {
             type: "Plumcot",
             name: "Yellowsweet X",
-            name_common: "Yellowsweet X",
             uspp_title: "Interspecific tree named 'YELLOWSWEET X'",
             patent: "https://patents.google.com/patent/USPP18669 2026-12-07",
             uspp_filed: "12/7/06",
@@ -10650,7 +10297,6 @@
         {
             type: "Plumcot",
             name: "Plumsweet VIII",
-            name_common: "Plumsweet VIII",
             uspp_title: "Interspecific tree named 'PLUMSWEET VIII'",
             patent: "https://patents.google.com/patent/USPP18670 2026-12-07",
             uspp_filed: "12/7/06",
@@ -10659,7 +10305,6 @@
         {
             type: "Plumcot",
             name: "Plumsweet VI",
-            name_common: "Plumsweet VI",
             uspp_title: "Interspecific tree named 'Plumsweet VI'",
             patent: "https://patents.google.com/patent/USPP18687 2026-12-07",
             uspp_filed: "12/7/06",
@@ -10684,7 +10329,6 @@
         {
             type: "Nectarine",
             name: "Snow Pearl",
-            name_common: "Snow Pearl",
             uspp_title: "Nectarine tree named 'Snow Pearl'",
             patent: "https://patents.google.com/patent/USPP18696 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10701,7 +10345,6 @@
         {
             type: "Nectarine",
             name: "July Bright",
-            name_common: "July Bright",
             uspp_title: "Nectarine tree named 'July Bright'",
             patent: "https://patents.google.com/patent/USPP18703 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10718,7 +10361,6 @@
         {
             type: "Nectarine",
             name: "June Bright",
-            name_common: "June Bright",
             uspp_title: "Nectarine tree named 'June Bright'",
             patent: "https://patents.google.com/patent/USPP18708 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10727,7 +10369,6 @@
         {
             type: "Nectarine",
             name: "Majestic Sweet",
-            name_common: "Majestic Sweet",
             uspp_title: "Nectarine tree named 'Majestic Sweet'",
             patent: "https://patents.google.com/patent/USPP18714 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10744,7 +10385,6 @@
         {
             type: "Nectarine",
             name: "Autumn Bright",
-            name_common: "Autumn Bright",
             uspp_title: "Nectarine tree named 'AUTUMN BRIGHT'",
             patent: "https://patents.google.com/patent/USPP18751 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10753,7 +10393,6 @@
         {
             type: "Nectarine",
             name: "June Sweet",
-            name_common: "June Sweet",
             uspp_title: "Nectarine tree named 'June Sweet'",
             patent: "https://patents.google.com/patent/USPP18752 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10770,7 +10409,6 @@
         {
             type: "Peach",
             name: "Western Princess",
-            name_common: "Western Princess",
             uspp_title: "Peach tree named 'Western Princess'",
             patent: "https://patents.google.com/patent/USPP18755 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10779,7 +10417,6 @@
         {
             type: "Peach",
             name: "May Princess",
-            name_common: "May Princess",
             uspp_title: "Peach tree named 'MAY PRINCESS'",
             patent: "https://patents.google.com/patent/USPP18771 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10796,7 +10433,6 @@
         {
             type: "Nectarine",
             name: "Majestic Pearl",
-            name_common: "Majestic Pearl",
             uspp_title: "Nectarine tree named 'Majestic Pearl'",
             patent: "https://patents.google.com/patent/USPP18778 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10805,7 +10441,6 @@
         {
             type: "Peach",
             name: "Rose Princess",
-            name_common: "Rose Princess",
             uspp_title: "Peach tree named 'Rose Princess'",
             patent: "https://patents.google.com/patent/USPP18791 2026-12-13",
             uspp_filed: "12/13/06",
@@ -10822,7 +10457,6 @@
         {
             type: "Lemon",
             name: "Eureka Seedless",
-            name_common: "Eureka Seedless",
             uspp_title: 'Lemon tree named "Eureka Seedless"',
             patent: "https://patents.google.com/patent/US20080148438 application abandoned",
             uspp_filed: "12/18/06"
@@ -10838,7 +10472,6 @@
         {
             type: "Fig",
             name: "Sequoia",
-            name_common: "Sequoia",
             uspp_title: "Fig Tree Named 'Sequoia'",
             patent: "https://patents.google.com/patent/USPP20038 2026-12-20",
             uspp_filed: "12/20/06",
@@ -10855,7 +10488,6 @@
         {
             type: "Sweet Cherry",
             name: "Rosie Rainier",
-            name_common: "Rosie Rainier",
             uspp_title: "Cherry tree named 'Rosie Rainer'",
             patent: "https://patents.google.com/patent/USPP19307 2027-04-16",
             uspp_filed: "12/26/06",
@@ -10864,7 +10496,6 @@
         {
             type: "Grape",
             name: "Sugrathirtythree",
-            name_common: "Sugrathirtythree",
             uspp_title: "Grapevine plant named 'Sugrathirtythree'",
             patent: "https://patents.google.com/patent/USPP19008 2027-01-09",
             uspp_filed: "1/9/07",
@@ -10897,7 +10528,6 @@
         {
             type: "Sweet Cherry",
             name: "Royal Lynn",
-            name_common: "Royal Lynn",
             uspp_title: "Cherry tree named 'Royal Lynn'",
             patent: "https://patents.google.com/patent/USPP19589 2027-07-14",
             uspp_filed: "1/22/07",
@@ -10906,7 +10536,6 @@
         {
             type: "Apriplum",
             name: "Late Brittney",
-            name_common: "Late Brittney",
             uspp_title: "Interspecific tree 'Late Brittney'",
             patent: "https://patents.google.com/patent/USPP18921 2027-01-30",
             uspp_filed: "1/30/07",
@@ -10940,7 +10569,6 @@
         {
             type: "Citrus",
             name: "Alvarina",
-            name_common: "Alvarina",
             uspp_title: "Orange tree named 'Alvarina'",
             patent: "https://patents.google.com/patent/USPP19575 2027-02-14",
             uspp_filed: "2/14/07",
@@ -10949,7 +10577,6 @@
         {
             type: "Almond",
             name: "Sweetheart",
-            name_common: "Sweetheart",
             uspp_title: "Almond variety named 'Sweetheart'",
             patent: "https://patents.google.com/patent/USPP19436 2027-02-15",
             uspp_filed: "2/15/07",
@@ -11035,7 +10662,6 @@
         {
             type: "Mandarin",
             name: "Merbeingold 2336",
-            name_common: "Merbeingold 2336",
             uspp_title: "Mandarin plant named Merbeingold 2336",
             patent: "https://patents.google.com/patent/USPP23068 2027-03-27",
             uspp_filed: "3/27/07"
@@ -11043,7 +10669,6 @@
         {
             type: "Mandarin",
             name: "Merbeingold 2350",
-            name_common: "Merbeingold 2350",
             uspp_title: "Mandarin plant named Merbeingold 2350",
             patent: "https://patents.google.com/patent/USPP23092 2027-03-27",
             uspp_filed: "3/27/07"
@@ -11237,7 +10862,6 @@
             type: "Japanese Plum",
             display_type: "Cherry Plum",
             name: "Nadia",
-            name_common: "Nadia",
             uspp_title: "Plum×cherry interspecific hybrid tree named 'Nadia'",
             patent: "https://patents.google.com/patent/USPP19842 2027-08-07",
             uspp_filed: "8/7/07",
@@ -11246,7 +10870,6 @@
         {
             type: "Euro Pear",
             name: "Todd",
-            name_common: "Todd",
             uspp_title: "Pear tree named 'Todd'",
             patent: "https://patents.google.com/patent/USPP19849 2027-08-22",
             uspp_filed: "8/22/07",
@@ -11303,7 +10926,6 @@
         {
             type: "Euro Pear",
             name: "Rode Doyenne Van Doorn",
-            name_common: "Rode Doyenne Van Doorn",
             uspp_title: "Pear variety named 'Rode Doyenne Van Doorn'",
             patent: "https://patents.google.com/patent/US20080010711 application abandoned",
             uspp_filed: "9/13/07"
@@ -11399,7 +11021,6 @@
         {
             type: "Mandarin",
             name: "African Sunset",
-            name_common: "African Sunset",
             uspp_title: "Mandarin named 'African Sunset'",
             patent: "https://patents.google.com/patent/USPP20327 2027-11-20",
             uspp_filed: "11/20/07",
@@ -11408,7 +11029,6 @@
         {
             type: "Mandarin",
             name: "Valley Gold",
-            name_common: "Valley Gold",
             uspp_title: "Mandarin tree named 'Valley Gold'",
             patent: "https://patents.google.com/patent/USPP20688 2027-11-20",
             uspp_filed: "11/20/07",
@@ -11417,7 +11037,6 @@
         {
             type: "Plumcot",
             name: "Yellowsweet II",
-            name_common: "Yellowsweet II",
             uspp_title: "Interspecific tree named 'Yellowsweet II'",
             patent: "https://patents.google.com/patent/USPP19518 2027-11-26",
             uspp_filed: "11/26/07",
@@ -11426,7 +11045,6 @@
         {
             type: "Apriplum",
             name: "Apriplum III",
-            name_common: "Apriplum III",
             uspp_title: "Interspecific tree named 'Apriplum III'",
             patent: "https://patents.google.com/patent/USPP19519 2027-11-26",
             uspp_filed: "11/26/07",
@@ -11435,7 +11053,6 @@
         {
             type: "Japanese Plum",
             name: "Black Majesty",
-            name_common: "Black Majesty",
             uspp_title: "Plum tree named 'Black Majesty'",
             patent: "https://patents.google.com/patent/USPP19527 2027-11-26",
             uspp_filed: "11/26/07",
@@ -11444,7 +11061,6 @@
         {
             type: "Plumcot",
             name: "Plumsweet X",
-            name_common: "Plumsweet X",
             uspp_title: "Interspecific tree named 'Plumsweet X'",
             patent: "https://patents.google.com/patent/USPP19528 2027-11-26",
             uspp_filed: "11/26/07",
@@ -11453,7 +11069,7 @@
         {
             type: "Peach",
             name: "Princess Time",
-            name_common: "Princess Time, Spring Time",
+            name_common: "Spring Time",
             uspp_title: "Peach tree named 'Princess Time'",
             patent: "https://patents.google.com/patent/USPP19545 2027-11-26",
             uspp_filed: "11/26/07",
@@ -11462,7 +11078,6 @@
         {
             type: "Plumcot",
             name: "Plumsweet XII",
-            name_common: "Plumsweet XII",
             uspp_title: "Interspecific tree named 'PLUMSWEET XII'",
             patent: "https://patents.google.com/patent/USPP20106 2027-11-26",
             uspp_filed: "11/26/07",
@@ -11471,7 +11086,6 @@
         {
             type: "Fuzzy Kiwi", // deliciosa
             name: "Tsechelidis",
-            name_common: "Tsechelidis",
             uspp_title: "Kiwi plant named 'Tsechelidis'",
             patent: "https://patents.google.com/patent/USPP21030 2027-12-22",
             uspp_filed: "11/28/07",
@@ -11488,7 +11102,6 @@
         {
             type: "Sweet Cherry",
             name: "Maddison",
-            name_common: "Maddison",
             uspp_title: "Cherry tree named 'Maddison'",
             patent: "https://patents.google.com/patent/USPP20752 2027-12-15",
             uspp_filed: "12/7/07",
@@ -11505,7 +11118,6 @@
         {
             type: "Plumcot",
             name: "Honey Punch",
-            name_common: "Honey Punch",
             uspp_title: "Interspecific Prunus tree named 'Honey Punch'",
             patent: "https://patents.google.com/patent/USPP19596 2027-12-14",
             uspp_filed: "12/14/07",
@@ -11537,7 +11149,6 @@
         {
             type: "Fuzzy Kiwi", // deliciosa
             name: "Skeleton A16",
-            name_common: "Skeleton A16",
             uspp_title: "Kiwi plant named 'Skelton A16'",
             patent: "https://patents.google.com/patent/USPP20250 2027-12-21",
             uspp_filed: "12/21/07",
@@ -11553,7 +11164,6 @@
         {
             type: "Fuzzy Kiwi", // chinensis
             name: "Skeleton A19",
-            name_common: "Skeleton A19",
             uspp_title: "Kiwi plant named 'Skelton A19'",
             patent: "https://patents.google.com/patent/USPP20671 2027-12-24",
             uspp_filed: "12/21/07",
@@ -11905,7 +11515,7 @@
             type: "Strawberry",
             name: "TAMIR",
             uspp_title: "Strawberry plant named 'TAMIR'",
-            patent: "https://patents.google.com/patent/USPP20647 2028-04-08",
+            patent: "https://patents.google.com/patent/USPP20647 2028-04-25",
             uspp_filed: "4/8/08",
             uspp_issued: "1/19/10"
         },
@@ -11913,7 +11523,7 @@
             type: "Apple",
             name: "PMLAS98",
             uspp_title: "Apple tree named 'PLMAS98'",
-            patent: "https://patents.google.com/patent/USPP21412 2028-04-08",
+            patent: "https://patents.google.com/patent/USPP21412 2028-04-19",
             uspp_filed: "4/8/08",
             uspp_issued: "10/26/10"
         },
@@ -12785,7 +12395,7 @@
             uspp_filed: "5/18/09"
         },
         {
-            type: "Citrus",
+            type: "Sweet Orange",
             name: "Morgan Sunrise Navel",
             name_common: "Morgan Sunrise Navel",
             uspp_title: "Citrus tree named 'Morgan Sunrise Navel'",
@@ -14170,21 +13780,21 @@
         },
         {
             type: "Peach",
-            name: "NJ354",
+            name: "NJ 354",
             uspp_title: "Peach Tree Named 'NJ354'",
             patent: "https://patents.google.com/patent/USPP23669 2031-09-27",
             uspp_filed: "9/16/11"
         },
         {
             type: "Peach",
-            name: "NJ355",
+            name: "NJ 355",
             uspp_title: "Peach Tree Named 'NJ355'",
             patent: "https://patents.google.com/patent/USPP23883 2031-09-22",
             uspp_filed: "9/16/11"
         },
         {
             type: "Peach",
-            name: "NJ356",
+            name: "NJ 356",
             uspp_title: "Peach Tree Named 'NJ356'",
             patent: "https://patents.google.com/patent/USPP23884 2031-09-27",
             uspp_filed: "9/16/11"
@@ -17438,7 +17048,7 @@
             type: "Raspberry",
             name: "OVATION",
             uspp_title: "Raspberry plant named 'OVATION''",
-            patent: "http://www.google.com/patents?q=US14/121208 2034-08-12",
+            patent: "https://patents.google.com/patent/USPP27585 2035-02-07",
             uspp_filed: "8/12/14"
         },
         {
@@ -19928,21 +19538,21 @@
         },
         {
             type: "Peach",
-            name: "NJ359",
+            name: "NJ 359",
             uspp_title: "Peach tree named 'NJ359'",
             patent: "https://patents.google.com/patent/USPP29961 2037-04-03",
             uspp_filed: "1/26/17"
         },
         {
             type: "Peach",
-            name: "NJ358",
+            name: "NJ 358",
             uspp_title: "Peach tree named 'NJ358'",
             patent: "https://patents.google.com/patent/USPP29962 2037-04-03",
             uspp_filed: "1/26/17"
         },
         {
             type: "Peach",
-            name: "NJ357",
+            name: "NJ 357",
             uspp_title: "Peach tree named 'NJ357'",
             patent: "https://patents.google.com/patent/USPP29989 2037-04-03",
             uspp_filed: "1/26/17"

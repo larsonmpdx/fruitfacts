@@ -24,7 +24,7 @@
         },
         // 1995 or later
         {
-            patent: "https://patents.google.com/patent/USPP10385 expired ",
+            patent: "https://patents.google.com/patent/USPP10385 expired 2016-12-23",
             name: "Joanna Red",
             type: "Japanese Plum",
             // no harvest time given
@@ -32,7 +32,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP10277 expired ",
+            patent: "https://patents.google.com/patent/USPP10277 expired 2016-03-29",
             name: "Teak Gold",
             type: "Japanese Plum",
             // no harvest time given
@@ -40,7 +40,7 @@
             released: "Yates"
         },
         {
-            patent: "https://patents.google.com/patent/USPP10116 expired ",
+            patent: "https://patents.google.com/patent/USPP10116 expired 2016-01-24",
             name: "7-B",
             type: "Japanese Plum",
             harvest_time: "May 20",
@@ -48,7 +48,7 @@
             released: "Gerawan"
         },
         {
-            patent: "https://patents.google.com/patent/USPP9858 expired ",
+            patent: "https://patents.google.com/patent/USPP9858 expired 2016-01-16",
             name: "Hiromi Red",
             type: "Japanese Plum",
             // no harvest time given
@@ -56,14 +56,14 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP9568 expired ",
+            patent: "https://patents.google.com/patent/USPP9568 expired 2015-06-01",
             name: "Murietta",
             type: "Japanese Plum",
             // no harvest time, no description
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP9513 expired ",
+            patent: "https://patents.google.com/patent/USPP9513 expired 2015-03-24",
             name: "September King",
             type: "Japanese Plum",
             harvest_time: "Sep 15",
@@ -71,7 +71,7 @@
             released: "Chamberlin"
         },
         {
-            patent: "https://patents.google.com/patent/USPP9331 expired ",
+            patent: "https://patents.google.com/patent/USPP9331 expired 2014-12-30",
             name: "Blue Gusto",
             type: "Japanese Plum",
             harvest_time: "Late",
@@ -87,7 +87,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP9162 expired ",
+            patent: "https://patents.google.com/patent/USPP9162 expired 2014-11-14",
             name: "Emerald Beaut",
             type: "Japanese Plum",
             harvest_time: "Aug 2",
@@ -166,7 +166,7 @@
         // 1994
 
         {
-            patent: "https://patents.google.com/patent/USPP9022 expired ",
+            patent: "https://patents.google.com/patent/USPP9022 expired 2013-12-29",
             name: "Primetime",
             type: "Japanese Plum",
             harvest_time: "July 7",
@@ -174,7 +174,7 @@
             released: "Wuhl"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8969 expired ",
+            patent: "https://patents.google.com/patent/USPP8969 expired 2014-02-22",
             name: "Bradprune",
             type: "Japanese Plum",
             harvest_time: "Aug 4",
@@ -182,7 +182,7 @@
             released: "Bradford Farms"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8955 expired ",
+            patent: "https://patents.google.com/patent/USPP8955 expired 2013-11-02",
             name: "Early Rosa",
             type: "Japanese Plum",
             harvest_time: "June 14",
@@ -190,7 +190,7 @@
             released: "Wilson"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8922 expired ",
+            patent: "https://patents.google.com/patent/USPP8922 expired 2014-01-31",
             name: "Flavorglo",
             type: "Plumcot",
             harvest_time: "May 22",
@@ -198,7 +198,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8913 expired ",
+            patent: "https://patents.google.com/patent/USPP8913 expired 2014-01-19",
             name: "Atlas", // patent name - can't be trademarked
             type: "Prunus Rootstock",
             harvest_time: "Aug 22", // I don't think this harvest date is interesting, but it's in the table
@@ -206,7 +206,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8912 expired ",
+            patent: "https://patents.google.com/patent/USPP8912 expired 2013-08-02",
             name: "Viking", // patent name - can't be trademarked
             type: "Prunus Rootstock",
             harvest_time: "Aug 20", // I don't think this harvest date is interesting, but it's in the table
@@ -214,7 +214,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8864 expired ",
+            patent: "https://patents.google.com/patent/USPP8864 expired 2013-11-04",
             name: "Melrose",
             type: "Japanese Plum",
             harvest_time: "June 1",
@@ -223,7 +223,7 @@
         },
         // page 2
         {
-            patent: "https://patents.google.com/patent/USPP8693 expired ",
+            patent: "https://patents.google.com/patent/USPP8693 expired 2012-11-05",
             name: "Summer Treat",
             type: "Japanese Plum",
             harvest_time: "July 14",
@@ -231,7 +231,7 @@
             released: "Nilsson"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8583 expired ",
+            patent: "https://patents.google.com/patent/USPP8583 expired 2013-04-12",
             name: "Earliqueen",
             type: "Japanese Plum",
             harvest_time: "May 25",
@@ -239,7 +239,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8557 expired ",
+            patent: "https://patents.google.com/patent/USPP8557 expired 2013-03-05",
             name: "Sweet Queen",
             type: "Japanese Plum",
             harvest_time: "July 1",
@@ -247,7 +247,7 @@
             released: "Vart"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8546 expired ",
+            patent: "https://patents.google.com/patent/USPP8546 expired 2013-03-22",
             name: "Flavorich",
             type: "Plumcot",
             harvest_time: "Sep 15",
@@ -274,7 +274,7 @@
 
         // 1993
         {
-            patent: "https://patents.google.com/patent/USPP8498 expired ",
+            patent: "https://patents.google.com/patent/USPP8498 expired 2012-12-28",
             name: "Bradgreen",
             AKA: ["Greensweet"],
             type: "Japanese Plum",
@@ -283,7 +283,7 @@
             released: "Bradford Farms"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8471 expired ",
+            patent: "https://patents.google.com/patent/USPP8471 expired 2013-01-25",
             name: "Betty Anne",
             type: "Japanese Plum",
             harvest_time: "Aug 24",
@@ -291,7 +291,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8470 expired ",
+            patent: "https://patents.google.com/patent/USPP8470 expired 2012-12-28",
             name: "Flavorella",
             type: "Plumcot",
             harvest_time: "June 5",
@@ -299,7 +299,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8393 expired ",
+            patent: "https://patents.google.com/patent/USPP8393 expired 2012-12-28",
             name: "Tri-Lite",
             type: "Peach",
             harvest_time: "June 20",
@@ -307,7 +307,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8363 expired ",
+            patent: "https://patents.google.com/patent/USPP8363 expired 2012-02-27",
             name: "Suplumtwenty",
             type: "Japanese Plum",
             harvest_time: "June 14",
@@ -315,7 +315,7 @@
             released: "SunWorld"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8189 expired ",
+            patent: "https://patents.google.com/patent/USPP8189 expired 2012-02-03",
             name: "Autumn Beaut",
             type: "Japanese Plum",
             harvest_time: "Sep 10",
@@ -323,7 +323,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8103 expired ",
+            patent: "https://patents.google.com/patent/USPP8103 expired 2011-03-11",
             name: "Compact Friar",
             type: "Japanese Plum",
             harvest_time: "July 20",
@@ -348,7 +348,7 @@
         // 1992
 
         {
-            patent: "https://patents.google.com/patent/USPP8069 expired ",
+            patent: "https://patents.google.com/patent/USPP8069 expired 2011-04-08",
             name: "Green Jade",
             type: "Japanese Plum",
             harvest_time: "May 25",
@@ -356,7 +356,7 @@
             released: "Taylor"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8068 expired ",
+            patent: "https://patents.google.com/patent/USPP8068 expired 2010-12-24",
             name: "Prima Black Plum 8-15",
             type: "Japanese Plum",
             harvest_time: "Aug 7",
@@ -364,7 +364,7 @@
             released: "Gerawan"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8067 expired ",
+            patent: "https://patents.google.com/patent/USPP8067 expired 2010-12-24",
             name: "Prima Black Plum 5-25",
             type: "Japanese Plum",
             harvest_time: "June 1",
@@ -372,7 +372,7 @@
             released: "Gerawan"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8057 expired ",
+            patent: "https://patents.google.com/patent/USPP8057 expired 2010-12-24",
             name: "Prima Red Plum 9-1",
             type: "Japanese Plum",
             harvest_time: "Sep 10",
@@ -380,7 +380,7 @@
             released: "Gerawan"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8038 expired ",
+            patent: "https://patents.google.com/patent/USPP8038 expired 2011-06-27",
             name: "Crimson Nugget",
             type: "Japanese Plum",
             harvest_time: "May 18",
@@ -388,7 +388,7 @@
             released: "Matoba"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8037 expired ",
+            patent: "https://patents.google.com/patent/USPP8037 expired 2011-06-24",
             name: "Showtime",
             type: "Japanese Plum",
             harvest_time: "June 18",
@@ -396,7 +396,7 @@
             released: "Wuhl"
         },
         {
-            patent: "https://patents.google.com/patent/USPP8026 expired ",
+            patent: "https://patents.google.com/patent/USPP8026 expired 2011-06-10",
             name: "Flavor King",
             type: "Plumcot",
             harvest_time: "Aug 5",
@@ -404,7 +404,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7975 expired ",
+            patent: "https://patents.google.com/patent/USPP7975 expired 2011-04-15",
             name: "Red Noble",
             type: "Japanese Plum",
             harvest_time: "May 26",
@@ -412,7 +412,7 @@
             released: "Bradford Farms"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7896 expired ",
+            patent: "https://patents.google.com/patent/USPP7896 expired 2010-12-31",
             name: "Black Jack",
             type: "Japanese Plum",
             harvest_time: "June 18",
@@ -420,7 +420,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7858 expired ",
+            patent: "https://patents.google.com/patent/USPP7858 expired 2010-02-23",
             name: "Akihime",
             type: "Japanese Plum",
             harvest_time: "July 15",
@@ -428,7 +428,7 @@
             released: "Kojima-Japan"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7843 expired ",
+            patent: "https://patents.google.com/patent/USPP7843 expired 2010-11-21",
             name: "Autumn Pride",
             type: "Japanese Plum",
             harvest_time: "Sep 27",
@@ -436,7 +436,7 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7827 expired ",
+            patent: "https://patents.google.com/patent/USPP7827 expired 2010-05-21",
             name: "October Sun",
             type: "Japanese Plum",
             harvest_time: "Sep 20",
@@ -444,7 +444,7 @@
             released: "Chamberlin"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7765 expired ",
+            patent: "https://patents.google.com/patent/USPP7765 expired 2010-06-04",
             name: "Red Nugget",
             type: "Japanese Plum",
             harvest_time: "May 10",
@@ -480,15 +480,16 @@
 
         //1991
         {
-            patent: "https://patents.google.com/patent/USPP7574 expired ",
+            patent: "https://patents.google.com/patent/USPP7574 expired 2008-07-02",
             name: "Black Premium",
+            AKA: ["Suplumsixteen"], // patent name
             type: "Japanese Plum",
             harvest_time: "June 20",
             description: "rb/y, Queen Rosa x Eldorado",
             released: "SunWorld"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7504 expired ",
+            patent: "https://patents.google.com/patent/USPP7504 expired 2009-12-28",
             name: "Black Noble",
             type: "Japanese Plum",
             harvest_time: "June 8",
@@ -496,7 +497,7 @@
             released: "Bradford Farms"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7503 expired ",
+            patent: "https://patents.google.com/patent/USPP7503 expired 2009-12-26",
             name: "Purple Majesty",
             type: "Japanese Plum",
             harvest_time: "June 19",
@@ -504,7 +505,7 @@
             released: "Bradford Farms"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7474 expired ",
+            patent: "https://patents.google.com/patent/USPP7474 expired 2009-10-02",
             name: "Golden Globe",
             type: "Japanese Plum",
             harvest_time: "Aug 31",
@@ -512,15 +513,16 @@
             released: "Zaiger"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7443 expired ",
+            patent: "https://patents.google.com/patent/USPP7443 expired 2008-02-12",
             name: "Red Giant",
+            AKA: ["Suplumeighteen"],
             type: "Japanese Plum",
             harvest_time: "May 28",
             description: "pr/r, Queen Rosa op",
             released: "SunWorld"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7431 expired ",
+            patent: "https://patents.google.com/patent/USPP7431 expired 2009-12-28",
             name: "Royal Velvet",
             type: "Plumcot",
             harvest_time: "May 24",
@@ -528,7 +530,7 @@
             released: "Bradford Farms"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7420 expired ",
+            patent: "https://patents.google.com/patent/USPP7420 expired 2009-10-27",
             name: "Flavor Queen",
             type: "Plumcot",
             harvest_time: "July 20",
@@ -537,15 +539,16 @@
         },
         //1990
         {
-            patent: "https://patents.google.com/patent/USPP7355 expired ",
+            patent: "https://patents.google.com/patent/USPP7355 expired 2007-12-10",
             name: "Tokay Red",
+            AKA: ["Suplumseventeen"],
             type: "Japanese Plum",
             harvest_time: "June 11",
             description: "b/y, Queen Rosa op",
             released: "SunWorld"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7348 expired ",
+            patent: "https://patents.google.com/patent/USPP7348 expired 2010-02-21",
             name: "Bill Hengst October Gem",
             type: "Japanese Plum",
             harvest_time: "Oct 1",
@@ -553,7 +556,7 @@
             released: "Hengst"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7335 expired ",
+            patent: "https://patents.google.com/patent/USPP7335 expired 2009-09-11",
             name: "First Beaut",
             type: "Japanese Plum",
             harvest_time: "May 15",
@@ -561,7 +564,7 @@
             released: "Neufeld"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7192 expired ",
+            patent: "https://patents.google.com/patent/USPP7192 expired 2009-02-17",
             name: "Royal Star",
             type: "Japanese Plum",
             harvest_time: "Aug 15",
@@ -569,7 +572,7 @@
             released: "Kitahara"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7159 expired ",
+            patent: "https://patents.google.com/patent/USPP7159 expired 2008-11-07",
             name: "Gar-Belmont",
             type: "Japanese Plum",
             harvest_time: "June 1",
@@ -577,7 +580,7 @@
             released: "Garabedian"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7148 expired ",
+            patent: "https://patents.google.com/patent/USPP7148 expired 2008-11-07",
             name: "Jake's Best",
             type: "Japanese Plum",
             harvest_time: "May 27",
@@ -585,7 +588,7 @@
             released: "Garabedian"
         },
         {
-            patent: "https://patents.google.com/patent/USPP7119 expired ",
+            patent: "https://patents.google.com/patent/USPP7119 expired 2008-05-19",
             name: "Gypsy Red",
             type: "Japanese Plum",
             harvest_time: "Aug 5",
