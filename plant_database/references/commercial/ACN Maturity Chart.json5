@@ -334,7 +334,7 @@
         {
             type: "Apple",
             name: "DAS-10 Honeycrisp",
-            AKA: ["Premier® Honeycrisp"],
+            AKA: ["DAS-10", "Premier® Honeycrisp"],
             harvest_time: "August 12 to August 28",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/402/premier-honeycrisp",
             patent: "https://patents.google.com/patent/USPP24833 expires 2033-03-12"
@@ -412,10 +412,10 @@
         },
         {
             type: "Apple",
-            name: "B.Thome McIntosh",
+            name: "B. Thome McIntosh",
             AKA: ["Rubymac® McIntosh"],
             harvest_time: "September 2 to September 16",
-            patent: "https://patents.google.com/patent/USPP19891",
+            patent: "https://patents.google.com/patent/USPP19891 2026-10-19",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/21/rubymac"
         },
         {
@@ -447,7 +447,7 @@
             AKA: ["Royal Red® Honeycrisp"],
             harvest_time: "September 10 to September 29",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/449/royal-red-honeycrisp",
-            patent: "https://patents.google.com/patent/USPP22244"
+            patent: "https://patents.google.com/patent/USPP22244 2030-07-06"
         },
         {
             type: "Apple",
@@ -522,7 +522,7 @@
         {
             type: "Apple",
             name: "UEB 406/1",
-            AKA: ["Bonita™"],
+            // AKA: ["Bonita™"],
             patent: "https://patents.google.com/patent/USPP29959 2037-03-30",
             harvest_time: "September 21 to October 8",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/453/bonita"
@@ -535,7 +535,7 @@
         {
             type: "Apple",
             name: "Golden Parsi Golden Delicious",
-            AKA: ["Da Rosa® Golden Delicious"],
+            AKA: ["Golden Parsi", "Da Rosa® Golden Delicious"],
             harvest_time: "September 23 to October 11",
             description: "https://www.acnursery.com/fruit-trees/apple-trees/444/da-rosa",
             patent: "https://patents.google.com/patent/USPP22859 expires 2030-04-13"
@@ -586,7 +586,7 @@
         },
         {
             type: "Apple",
-            name: "Smerelda", // patent name
+            name: "Smeralda", // patent name. misspelled "smerelda" in the ACN chart
             harvest_time: "October 1 to October 16",
             patent: "https://patents.google.com/patent/USPP24137 expires 2032-01-25"
         },

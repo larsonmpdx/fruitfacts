@@ -120,6 +120,10 @@
             {
                 name: "Saskatoon",
                 latin_name: "Amelanchier alnifolia"
+            },
+            {
+                name: "Cranberry",
+                latin_name: "Vaccinium spp."
             }
         ]
     },
@@ -192,6 +196,10 @@
             {
                 name: "Mandarin",
                 latin_name: "Citrus reticulata"
+            },
+            {
+                name: "Satsuma",
+                latin_name: "Citrus unshiu"
             }
         ]
     },
@@ -234,6 +242,30 @@
             {
                 name: "Olive",
                 latin_name: "Olea europaea"
+            },
+            {
+                name: "Mango",
+                latin_name: "Mangifera indica"
+            },
+            {
+                name: "Avocado",
+                latin_name: "Persea americana"
+            },
+            {
+                name: "Banana",
+                latin_name: "Musa spp."
+            },
+            {
+                name: "Pineapple Guava",
+                latin_name: "Feijoa sellowiana"
+            },
+            {
+                name: "Papaya",
+                latin_name: "Carica papaya"
+            },
+            {
+                name: "Pineapple",
+                latin_name: "Ananas comosus"
             }
         ]
     },
@@ -243,6 +275,14 @@
             {
                 name: "Prunus Rootstock",
                 latin_name: "Prunus spp. or hybrid"
+            },
+            {
+                name: "Apple Rootstock",
+                latin_name: "Malus spp."
+            },
+            {
+                name: "Other Rootstocks",
+                latin_name: "various"
             }
         ]
     },

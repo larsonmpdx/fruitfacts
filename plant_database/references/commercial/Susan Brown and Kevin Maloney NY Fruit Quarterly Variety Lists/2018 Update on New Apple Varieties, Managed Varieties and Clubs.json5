@@ -51,7 +51,7 @@
         {
             type: "Apple",
             name: "UEB 406/1",
-            AKA: ["Bonita™"],
+            AKA: ["UEBI 406/1" /* patent name - extra I */, "Bonita™"],
             // todo: "scab-resistant"
             description: "from the Czech Republic"
         },
@@ -141,7 +141,7 @@
         {
             type: "Apple",
             name: "DAS-10 Honeycrisp", // patent name
-            AKA: ["Premier® Honeycrisp"],
+            AKA: ["DAS-10", "Premier® Honeycrisp"],
             // todo: ripens three weeks before Honeycrisp
             patent: "https://patents.google.com/patent/USPP24833 expires 2033-03-12",
             description: "Honeycrisp sport"
@@ -199,7 +199,7 @@
         },
         {
             type: "Apple",
-            name: "DS-41",
+            name: "DS 41",
             AKA: ["Pazazz (tm)"],
             patent: "https://patents.google.com/patent/USPP24698 expires 2032-10-04"
         },

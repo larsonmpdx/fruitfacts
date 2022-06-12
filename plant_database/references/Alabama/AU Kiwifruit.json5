@@ -1,0 +1,27 @@
+{
+    title: "AU Kiwifruit",
+    author: "",
+    url: "https://cws.auburn.edu/shared/files?id=159&filename=Gold-Green-Kiwi-Fruit-Cultivars-IAC-Flyer.pdf",
+    accessed: "Jun 2022",
+    type: "public breeding program list",
+    needs_help: true,
+    locations: [
+        {
+            name: "todo",
+            latitude: 29.6465645490967,
+            longitude: -82.34424313539307
+        }
+    ],
+    plants: [
+        // todo
+        // AU Golden Dragon
+        // AU Golden Sunshine
+        // AU Gulf Coast Gold
+        // AU Fitzgerald
+
+        // see https://ocm.auburn.edu/newsroom/news_articles/2017/12/auburn-horticulture-alum-gets-kiwifruit-orchard-off-the-ground-in-reeltown.php
+        // male:
+        // AU Golden Tiger
+        // AU Arthur
+    ]
+}

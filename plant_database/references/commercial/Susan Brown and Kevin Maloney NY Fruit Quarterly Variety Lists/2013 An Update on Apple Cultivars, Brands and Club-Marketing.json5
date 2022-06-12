@@ -63,14 +63,14 @@
         },
         {
             type: "Apple",
-            name: "DS-22",
+            name: "DS 22",
             released: "Doug Sheflebine in WI",
             patent: "https://patents.google.com/patent/USPP23933 2032-04-26"
         },
         // not in the article, found these additional DS apples in a patent search:
-        //   DS-3: https://patents.google.com/patent/USPP23649 2031-12-14
-        //   DS-41: https://patents.google.com/patent/USPP24698 2032-10-04
-        //   DS-102: https://patents.google.com/patent/USPP33271 2040-07-21
+        //   DS 3: https://patents.google.com/patent/USPP23649 2031-12-14
+        //   DS 41: https://patents.google.com/patent/USPP24698 2032-10-04
+        //   DS 102: https://patents.google.com/patent/USPP33271 2040-07-21
         {
             type: "Apple",
             name: "Scilate", // "Envy™"
@@ -137,8 +137,8 @@
         },
         {
             type: "Apple",
-            name: "Chrisolyn",
-            AKA: ["Cambell Jonathan"],
+            name: "Campbell Jonathan",
+            AKA: ["Chrisolyn (tm) Jonathan"],
             description: "Jonathan sport",
             patent: "https://patents.google.com/patent/USPP21300 2029-04-28"
         },
@@ -414,9 +414,9 @@
         },
         {
             type: "Apple",
-            name: "MonaLisa",
-            // todo: This Gala type apple has high resistance to apple scab and to Glomerella leaf spot and spider mites
-            description: "Brazil",
+            name: "Monalisa",
+            // todo: "This Gala type apple has high resistance to apple scab and to Glomerella leaf spot and spider mites"
+            description: "Brazil https://www.cabdirect.org/cabdirect/abstract/20209907463",
             patent: "https://patents.google.com/patent/USPP23003 2031-03-13"
         },
         {

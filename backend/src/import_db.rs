@@ -1080,7 +1080,7 @@ pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::Pat
 
             let contents = fs::read_to_string(path_.clone()).unwrap();
 
-            let plants: Vec<BasePlantJson> = json5::from_str(&contents).unwrap();
+            let plants: Vec<BasePlantJson> = json5::from_str(&contents).unwrap_or_else(|_| panic!("Error parsing as a json array of base plant entries: {}", path_.display()));
 
             let filename = rem_last_n(
                 path_.as_path().file_name().unwrap().to_str().unwrap(),

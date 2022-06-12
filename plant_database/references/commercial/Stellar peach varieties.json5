@@ -73,7 +73,7 @@
         },
         {
             name: "FA 1566",
-            AKA: ["Sweetstar (tm)"], // note that a french peach variety with a us patent under the name "Sweetstar" predates this trademark (huh...) (USPP21145)
+            AKA: ["Sweetstar (tm) (stellar)"], // note that a french peach variety with a us patent under the name "Sweetstar" predates this trademark (huh...) (USPP21145)
             type: "Peach",
             harvest_time_relative: "Redhaven+18",
             patent: "https://patents.google.com/patent/USPP25130 expires 2033-04-27"

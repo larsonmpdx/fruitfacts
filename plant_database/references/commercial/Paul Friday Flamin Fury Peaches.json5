@@ -226,7 +226,7 @@
         },
         {
             type: "Peach",
-            name: "Lucky 12",
+            name: "PF Lucky 12",
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP17938 expires 2026-04-11",
             // harvest time is from the patent

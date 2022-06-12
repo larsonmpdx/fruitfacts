@@ -64,6 +64,7 @@
             name: "HW624",
             harvest_time_relative: "Bartlett +7 to +14",
             // unreleased: "Protection under the Plant Breeders Rights Act was granted in 2012, and this selection will be introduced in the near future"
+            patent: "https://patents.google.com/patent/USPP28336 expires 2036-01-08",
             released: "Harrow*"
         },
         // HW624 also has field resistance to pear psylla
@@ -72,7 +73,6 @@
             name: "HW623",
             harvest_time_relative: "Bartlett +3 weeks", // "~3 weeks after Bartlet"
             // unreleased: "Protection under the Plant Breeders Rights Act was granted in 2010, and this selection will be introduced in the near future"
-            patent: "https://patents.google.com/patent/USPP28336 expires 2036-01-08",
             released: "Harrow*"
         },
         {
