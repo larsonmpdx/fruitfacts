@@ -19409,7 +19409,7 @@
         },
         {
             type: "Blueberry",
-            name: "RYOKU NH-11",
+            name: "RYOKU NH-13",
             uspp_title: "Vaccinium plant named 'RYOKU NH-13'",
             patent: "https://patents.google.com/patent/USPP30914 2037-12-21",
             uspp_filed: "12/21/17"
@@ -19878,6 +19878,594 @@
             uspp_title: "Grape plant named 'Enchantment'",
             patent: "https://patents.google.com/patent/USPP30513 2037-07-07",
             uspp_filed: "7/7/17"
+        },
+
+        // blueberries added June 2022
+        {
+            type: "Blueberry",
+            name: "NS 14-3",
+            patent: "https://patents.google.com/patent/USPP30626 2038-02-22"
+        },
+        {
+            type: "Blueberry",
+            name: "RYOKU NH-11",
+            patent: "https://patents.google.com/patent/USPP30754 2037-12-21"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 14-4",
+            patent: "https://patents.google.com/patent/USPP30755 2037-11-09"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 14-5",
+            patent: "https://patents.google.com/patent/USPP30846 2038-02-27"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 13-6",
+            patent: "https://patents.google.com/patent/USPP30934 2038-02-21"
+        },
+        {
+            type: "Blueberry",
+            name: "Ridley 1607",
+            patent: "https://patents.google.com/patent/USPP31035 2038-07-10"
+        },
+        {
+            type: "Blueberry",
+            name: "Ridley 0808",
+            patent: "https://patents.google.com/patent/USPP31074 2038-07-10"
+        },
+        {
+            type: "Blueberry",
+            name: "BB05-35FL-10",
+            patent: "https://patents.google.com/patent/USPP31231 2038-11-15"
+        },
+        {
+            type: "Blueberry",
+            name: "BB06-426MI-84",
+            patent: "https://patents.google.com/patent/USPP31257 2038-11-27"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-1321",
+            patent: "https://patents.google.com/patent/USPP31316 2039-01-17"
+        },
+        {
+            type: "Blueberry",
+            name: "Plablue 1545",
+            patent: "https://patents.google.com/patent/USPP31345 2039-03-13"
+        },
+        {
+            type: "Blueberry",
+            name: "Plablue 1502",
+            patent: "https://patents.google.com/patent/USPP31346 2039-03-13"
+        },
+        {
+            type: "Blueberry",
+            name: "Plablue 1549",
+            patent: "https://patents.google.com/patent/USPP31378 2039-03-13"
+        },
+        {
+            type: "Blueberry",
+            name: "Plablue 1542",
+            patent: "https://patents.google.com/patent/USPP31403 2039-03-13"
+        },
+        {
+            type: "Blueberry",
+            name: "Plablue 15122",
+            patent: "https://patents.google.com/patent/USPP31522 2039-03-13"
+        },
+        {
+            type: "Blueberry",
+            name: "Plablue 1525",
+            patent: "https://patents.google.com/patent/USPP31523 2039-03-13"
+        },
+        {
+            type: "Blueberry",
+            name: "BB06-343MI-16",
+            patent: "https://patents.google.com/patent/USPP31524 2038-11-27"
+        },
+        {
+            type: "Blueberry",
+            name: "BB06-126VC-4",
+            patent: "https://patents.google.com/patent/USPP31648 2038-11-13"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueEighteen",
+            patent: "https://patents.google.com/patent/USPP31649 2038-09-12"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueSeventeen",
+            patent: "https://patents.google.com/patent/USPP31650 2038-09-13"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-1876",
+            patent: "https://patents.google.com/patent/USPP31684 2039-01-16"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueSixteen",
+            patent: "https://patents.google.com/patent/USPP31685 2038-09-13"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueNineteen",
+            patent: "https://patents.google.com/patent/USPP31698 2038-10-16"
+        },
+        {
+            type: "Blueberry",
+            name: "Hoogi045",
+            patent: "https://patents.google.com/patent/USPP31768 2039-03-21"
+        },
+        {
+            type: "Blueberry",
+            name: "FC13-083",
+            patent: "https://patents.google.com/patent/USPP31793 2039-01-30"
+        },
+        {
+            type: "Blueberry",
+            name: "FC13-122",
+            patent: "https://patents.google.com/patent/USPP31822 2039-01-10"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-1125",
+            patent: "https://patents.google.com/patent/USPP31863 2039-01-16"
+        },
+        {
+            type: "Blueberry",
+            name: "ZZ04120",
+            patent: "https://patents.google.com/patent/USPP31894 2039-08-08"
+        },
+        {
+            type: "Blueberry",
+            name: "Optimus",
+            patent: "https://patents.google.com/patent/USPP32028 2039-01-29"
+        },
+        {
+            type: "Blueberry",
+            name: "Katahdin",
+            patent: "https://patents.google.com/patent/USPP32110 2039-05-14"
+        },
+        {
+            type: "Blueberry",
+            name: "Magnus",
+            patent: "https://patents.google.com/patent/USPP32181 2039-01-15"
+        },
+        {
+            type: "Blueberry",
+            name: "WAYNE",
+            patent: "https://patents.google.com/patent/USPP32182 2039-01-29"
+        },
+        {
+            type: "Blueberry",
+            name: "FC12-029",
+            patent: "https://patents.google.com/patent/USPP32183 2039-09-26"
+        },
+        {
+            type: "Blueberry",
+            name: "ZF06-089",
+            patent: "https://patents.google.com/patent/USPP32184 2039-09-26"
+        },
+        {
+            type: "Blueberry",
+            name: "FC12-187",
+            patent: "https://patents.google.com/patent/USPP32185 2039-09-26"
+        },
+        {
+            type: "Blueberry",
+            name: "FCM14-052",
+            patent: "https://patents.google.com/patent/USPP32186 2039-04-04"
+        },
+        {
+            type: "Blueberry",
+            name: "MG11654-24-001",
+            patent: "https://patents.google.com/patent/USPP32187 2039-05-20"
+        },
+        {
+            type: "Blueberry",
+            name: "MG11543-23-004",
+            patent: "https://patents.google.com/patent/USPP32216 2039-05-20"
+        },
+        {
+            type: "Blueberry",
+            name: "MG07876-15-003",
+            patent: "https://patents.google.com/patent/USPP32217 2039-05-20"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-931",
+            patent: "https://patents.google.com/patent/USPP32218 2039-11-07"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-1008",
+            patent: "https://patents.google.com/patent/USPP32219 2039-11-07"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueTwentyOne",
+            patent: "https://patents.google.com/patent/USPP32267 2039-12-10"
+        },
+        {
+            type: "Blueberry",
+            name: "ZF08-029",
+            patent: "https://patents.google.com/patent/USPP32348 2039-04-21"
+        },
+        {
+            type: "Blueberry",
+            name: "MG09768-05-002",
+            patent: "https://patents.google.com/patent/USPP32349 2039-05-20"
+        },
+        {
+            type: "Blueberry",
+            name: "ZZ04062",
+            patent: "https://patents.google.com/patent/USPP32416 2039-08-08"
+        },
+        {
+            type: "Blueberry",
+            name: "BB05-259MI-15",
+            patent: "https://patents.google.com/patent/USPP32574 2039-12-30"
+        },
+        {
+            type: "Blueberry",
+            name: "BB05-268MI-152",
+            patent: "https://patents.google.com/patent/USPP32575 2039-12-30"
+        },
+        {
+            type: "Blueberry",
+            name: "ZZ04115",
+            patent: "https://patents.google.com/patent/USPP32701 2039-08-08"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-1334",
+            patent: "https://patents.google.com/patent/USPP32718 2039-11-07"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueTwenty",
+            patent: "https://patents.google.com/patent/USPP32744 2039-03-05"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 13-5",
+            patent: "https://patents.google.com/patent/USPP32745 2039-10-29"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 14-1",
+            patent: "https://patents.google.com/patent/USPP32781 2039-11-12"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 14-7",
+            patent: "https://patents.google.com/patent/USPP32823 2039-11-12"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueTwentyThree",
+            patent: "https://patents.google.com/patent/USPP32876 2040-02-03"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 16-2",
+            patent: "https://patents.google.com/patent/USPP32897 2039-10-29"
+        },
+        {
+            type: "Blueberry",
+            name: "FLR12-11",
+            patent: "https://patents.google.com/patent/USPP33013 2040-07-08"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueTwentyTwo",
+            patent: "https://patents.google.com/patent/USPP33066 2040-01-25"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 13-4",
+            patent: "https://patents.google.com/patent/USPP33087 2039-10-17"
+        },
+        {
+            type: "Blueberry",
+            name: "BB07-249GA-3",
+            patent: "https://patents.google.com/patent/USPP33110 2040-01-04"
+        },
+        {
+            type: "Blueberry",
+            name: "BB15-214PO-3",
+            patent: "https://patents.google.com/patent/USPP33111 2040-08-13"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 16-15",
+            patent: "https://patents.google.com/patent/USPP33112 2040-08-12"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 16-8",
+            patent: "https://patents.google.com/patent/USPP33137 2040-08-12"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 15-13",
+            patent: "https://patents.google.com/patent/USPP33138 2040-08-11"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 15-5",
+            patent: "https://patents.google.com/patent/USPP33154 2040-11-02"
+        },
+        {
+            type: "Blueberry",
+            name: "FLR12-89",
+            patent: "https://patents.google.com/patent/USPP33200 2040-07-08"
+        },
+        {
+            type: "Blueberry",
+            name: "FLR14-372",
+            patent: "https://patents.google.com/patent/USPP33225 2040-07-08"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 15-22",
+            patent: "https://patents.google.com/patent/USPP33384 2040-08-12"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 16-18",
+            patent: "https://patents.google.com/patent/USPP33494 2040-11-30"
+        },
+        {
+            type: "Blueberry",
+            name: "NS 16-7",
+            patent: "https://patents.google.com/patent/USPP33635 2041-06-02"
+        },
+        {
+            type: "Blueberry",
+            name: "Ridley1702",
+            patent: "https://patents.google.com/patent/USPP33717 2041-02-18"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueTwentyFive",
+            patent: "https://patents.google.com/patent/USPP33718 2041-02-18"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-1797",
+            patent: "https://patents.google.com/patent/USPP33754 2041-03-30"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-1493",
+            patent: "https://patents.google.com/patent/USPP33755 2041-02-12"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-1872",
+            patent: "https://patents.google.com/patent/USPP33782 2041-03-30"
+        },
+        {
+            type: "Blueberry",
+            name: "Colossus",
+            patent: "https://patents.google.com/patent/USPP33802 2040-07-22"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-920",
+            patent: "https://patents.google.com/patent/USPP33868 2041-04-13"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-889",
+            patent: "https://patents.google.com/patent/USPP33869 2041-04-13"
+        },
+        {
+            type: "Blueberry",
+            name: "FC12-205",
+            patent: "https://patents.google.com/patent/USPP33870 2041-02-03"
+        },
+        {
+            type: "Blueberry",
+            name: "FC14-062",
+            patent: "https://patents.google.com/patent/USPP33871 2041-02-03"
+        },
+        {
+            type: "Blueberry",
+            name: "Sentinel",
+            patent: "https://patents.google.com/patent/USPP33896 2040-10-06"
+        },
+        {
+            type: "Blueberry",
+            name: "FC11-118",
+            patent: "https://patents.google.com/patent/USPP33897 2041-02-03"
+        },
+        {
+            type: "Blueberry",
+            name: "FV1908",
+            patent: "https://patents.google.com/patent/USPP33949 2041-06-24"
+        },
+        {
+            type: "Blueberry",
+            name: "FV1906",
+            patent: "https://patents.google.com/patent/USPP33960 2041-06-24"
+        },
+        {
+            type: "Blueberry",
+            name: "FV1904",
+            patent: "https://patents.google.com/patent/USPP33961 2041-06-24"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueTwentyFour",
+            patent: "https://patents.google.com/patent/USPP34067 2041-02-18"
+        },
+        {
+            type: "Blueberry",
+            name: "FV1907",
+            patent: "https://patents.google.com/patent/USPP34084 2041-06-24"
+        },
+        {
+            type: "Blueberry",
+            name: "FV1901",
+            patent: "https://patents.google.com/patent/USPP34085 2041-06-24"
+        },
+        {
+            type: "Blueberry",
+            name: "CAU-01",
+            patent: "https://patents.google.com/patent/USPP34132 2040-07-29"
+        },
+        {
+            type: "Blueberry",
+            name: "TO-3097",
+            patent: "https://patents.google.com/patent/USPP34162 2041-09-15"
+        },
+        {
+            type: "Blueberry",
+            name: "DrisBlueTwentySix",
+            patent: "https://patents.google.com/patent/USPP34179 2041-03-17"
+        },
+        {
+            type: "Blueberry",
+            name: "TH-1996",
+            patent: "https://patents.google.com/patent/USPP34180 2041-09-15"
+        },
+
+        // olives added June 2022
+        {
+            type: "Olive",
+            name: "Don Carlo",
+            patent: "https://patents.google.com/patent/USPP13077"
+        },
+        {
+            type: "Olive",
+            name: "Arbosana Olint",
+            patent: "https://patents.google.com/patent/USPP18598"
+        },
+        {
+            type: "Olive",
+            name: "KORONEIKI selection OLINT",
+            patent: "https://patents.google.com/patent/USPP18599"
+        },
+        {
+            type: "Olive",
+            name: "Arbequina OLINT",
+            patent: "https://patents.google.com/patent/USPP18600"
+        },
+        {
+            type: "Olive",
+            name: "Chiquitita",
+            patent: "https://patents.google.com/patent/USPP19511"
+        },
+        {
+            type: "Olive",
+            name: "Giulia",
+            patent: "https://patents.google.com/patent/USPP20213"
+        },
+        {
+            type: "Olive",
+            name: "Vas-One",
+            patent: "https://patents.google.com/patent/USPP21431"
+        },
+        {
+            type: "Olive",
+            name: "KADESHON",
+            patent: "https://patents.google.com/patent/USPP22277"
+        },
+        {
+            type: "Olive",
+            name: "ASKAL",
+            patent: "https://patents.google.com/patent/USPP22293"
+        },
+        {
+            type: "Olive",
+            name: "MASEPO",
+            patent: "https://patents.google.com/patent/USPP22319"
+        },
+        {
+            type: "Olive",
+            name: "SEPOKA",
+            patent: "https://patents.google.com/patent/USPP22320"
+        },
+        {
+            type: "Olive",
+            name: "HIDshurtleff",
+            patent: "https://patents.google.com/patent/USPP23040"
+        },
+        {
+            type: "Olive",
+            name: "BITSYOAC",
+            patent: "https://patents.google.com/patent/USPP24607"
+        },
+        {
+            type: "Olive",
+            name: "Lecciana",
+            patent: "https://patents.google.com/patent/USPP30208"
+        },
+        {
+            type: "Olive",
+            name: "I-15",
+            patent: "https://patents.google.com/patent/USPP32302"
+        },
+
+        // mangoes added June 2022
+        {
+            type: "Mango",
+            name: "Tropica",
+            patent: "https://patents.google.com/patent/USPP30757"
+        },
+        {
+            type: "Mango",
+            name: "NMBP-4069",
+            patent: "https://patents.google.com/patent/USPP30813"
+        },
+        {
+            type: "Mango",
+            name: "NMBP-1243",
+            patent: "https://patents.google.com/patent/USPP30814"
+        },
+        {
+            type: "Mango",
+            name: "NMBP 1201",
+            patent: "https://patents.google.com/patent/USPP30977"
+        },
+        {
+            type: "Mango",
+            name: "Magriver",
+            patent: "https://patents.google.com/patent/USPP32719"
+        },
+        {
+            type: "Mango",
+            name: "Orange Star",
+            patent: "https://patents.google.com/patent/USPP32768"
+        },
+
+        // bananas added June 2022
+        {
+            type: "Banana",
+            name: "MeKong Giant",
+            patent: "https://patents.google.com/patent/USPP24315"
+        },
+        {
+            type: "Banana",
+            name: "Poquito",
+            patent: "https://patents.google.com/patent/USPP26424"
+        },
+        {
+            type: "Banana",
+            name: "FLF-1",
+            patent: "https://patents.google.com/patent/USPP32532"
+        },
+        {
+            type: "Banana",
+            name: "ADI 9107",
+            patent: "https://patents.google.com/patent/USPP32754"
         }
     ]
 }
