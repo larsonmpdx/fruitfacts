@@ -1,0 +1,1590 @@
+{
+    title: "DWN Commercial Harvest Times",
+    url: "https://www.davewilson.com/img/content/fruit-nut-maturity-chart-2022.pdf",
+    published: "32nd edition, 2022",
+    accessed: "June 2022",
+    type: "nursery catalog",
+    harvest_time_devalue_factor: 1.6, // this is mostly good, but I knocked it down a bit based on the cherry harvest times being a few days out-of-order compared to every other reference I have
+    // for example lapins sweetheart and regina are all at the same time - maybe they're compressed in fresno, but in most places they're spread over more than a week
+    // also santina is charted with bing when it should be around -7/-8
+    needs_help: true,
+    locations: [
+        {
+            name: "The Fresno Area",
+            latitude: 36.74007170204407, // this point is a random field outside Fresno
+            longitude: -119.92394375268859
+        }
+    ],
+    plants: [
+        // japanese plum
+        {
+            type: "Japanese Plum",
+            name: "Earliqueen",
+            harvest_time: "May 20 to June 5"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Rubirosa",
+            harvest_time: "June 1 to June 15"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Black Splendor",
+            harvest_time: "June 5 to June 20"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Santa Rosa",
+            harvest_time: "June 10 to June 25"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Hiromi Red",
+            harvest_time: "June 25 to July 10"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Crimson Glo",
+            harvest_time: "July 1 to July 15"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Owen T",
+            harvest_time: "July 3 to July 18"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Catalina",
+            harvest_time: "July 3 to July 18"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Laroda",
+            harvest_time: "July 8 to July 13"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Simka",
+            harvest_time: "July 20 to August 5"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Royal Diamond",
+            harvest_time: "July 31 to August 5"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Joanna Red",
+            harvest_time: "August 1 to August 15"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Emerald Beaut",
+            harvest_time: "August 10 to August 25"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Betty Anne",
+            harvest_time: "August 15 to August 31"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Angeleno",
+            harvest_time: "September 1 to September 15"
+        },
+
+        // euro plum
+        {
+            type: "Euro Plum",
+            name: "Tulare Giant",
+            harvest_time: "July 28 to August 12"
+        },
+        {
+            type: "Euro Plum",
+            name: "Muir Beauty",
+            harvest_time: "August 1 to August 14"
+        },
+        {
+            type: "Euro Plum",
+            name: "Sutter",
+            harvest_time: "August 5 to August 20"
+        },
+        {
+            type: "Euro Plum",
+            name: "French Improved",
+            harvest_time: "August 15 to August 31"
+        },
+
+        // almond
+        {
+            type: "Almond",
+            name: "Nonpareil",
+            harvest_time: "August 28 to September 13"
+        },
+        {
+            type: "Almond",
+            name: "Independence®",
+            harvest_time: "August 28 to September 13"
+        },
+        {
+            type: "Almond",
+            name: "Folsom",
+            harvest_time: "August 28 to September 13"
+        },
+        {
+            type: "Almond",
+            name: "Price",
+            harvest_time: "September 5 to September 20"
+        },
+        {
+            type: "Almond",
+            name: "Sonora",
+            harvest_time: "September 5 to September 20"
+        },
+        {
+            type: "Almond",
+            name: "Livingston",
+            harvest_time: "September 7 to September 22"
+        },
+        {
+            type: "Almond",
+            name: "Wood Colony",
+            harvest_time: "September 9 to September 24"
+        },
+        {
+            type: "Almond",
+            name: "Liberty®",
+            harvest_time: "September 13 to September 28"
+        },
+        {
+            type: "Almond",
+            name: "Winters",
+            harvest_time: "September 13 to September 28"
+        },
+        {
+            type: "Almond",
+            name: "Aldrich",
+            harvest_time: "September 13 to September 28"
+        },
+        {
+            type: "Almond",
+            name: "Ne Plus",
+            harvest_time: "September 13 to September 28"
+        },
+        {
+            type: "Almond",
+            name: "Peerless",
+            harvest_time: "September 14 to September 29"
+        },
+        {
+            type: "Almond",
+            name: "Carmel",
+            harvest_time: "September 15 to September 30"
+        },
+        {
+            type: "Almond",
+            name: "Butte",
+            harvest_time: "September 18 to October 2"
+        },
+        {
+            type: "Almond",
+            name: "Padre",
+            harvest_time: "September 21 to October 6"
+        },
+        {
+            type: "Almond",
+            name: "Mission",
+            harvest_time: "September 27 to October 12"
+        },
+        {
+            type: "Almond",
+            name: "Ruby",
+            harvest_time: "September 29 to October 14"
+        },
+        {
+            type: "Almond",
+            name: "Monterey",
+            harvest_time: "October 2 to October 16"
+        },
+        {
+            type: "Almond",
+            name: "Fritz",
+            harvest_time: "October 8 to October 23"
+        },
+
+        // yellow peaches
+        {
+            type: "Peach",
+            name: "Mazee",
+            description: "yellow peach",
+            harvest_time: "May 1 to May 15"
+        },
+        {
+            type: "Peach",
+            name: "Super Zee",
+            description: "yellow peach",
+            harvest_time: "May 1 to May 15"
+        },
+        {
+            type: "Peach",
+            name: "Earlitreat",
+            description: "yellow peach",
+            harvest_time: "May 3 to May 18"
+        },
+        {
+            type: "Peach",
+            name: "Krista",
+            description: "yellow peach",
+            harvest_time: "May 12 to May 27"
+        },
+        {
+            type: "Peach",
+            name: "Sugar Time",
+            description: "yellow peach",
+            harvest_time: "May 20 to June 5"
+        },
+        {
+            type: "Peach",
+            name: "Rich Magic",
+            description: "yellow peach",
+            harvest_time: "June 3 to June 18"
+        },
+        {
+            type: "Peach",
+            name: "Brittney Lane",
+            description: "yellow peach",
+            harvest_time: "June 5 to June 20"
+        },
+        {
+            type: "Peach",
+            name: "June Honey",
+            description: "yellow peach",
+            harvest_time: "June 5 to June 20"
+        },
+        {
+            type: "Peach",
+            name: "Zee Pride",
+            description: "yellow peach",
+            harvest_time: "June 8 to June 23"
+        },
+        {
+            type: "Peach",
+            name: "Fiesta Gem",
+            description: "yellow peach",
+            harvest_time: "June 10 to June 25"
+        },
+        {
+            type: "Peach",
+            name: "Earlirich",
+            description: "yellow peach",
+            harvest_time: "June 12 to June 27"
+        },
+        {
+            type: "Peach",
+            name: "Rich Pride",
+            description: "yellow peach",
+            harvest_time: "June 20 to July 5"
+        },
+        {
+            type: "Peach",
+            name: "Rich Lady",
+            description: "yellow peach",
+            harvest_time: "June 20 to July 5"
+        },
+        {
+            type: "Peach",
+            name: "Vista",
+            description: "yellow peach",
+            harvest_time: "June 20 to July 5"
+        },
+        {
+            type: "Peach",
+            name: "Sierra Rich",
+            description: "yellow peach",
+            harvest_time: "June 25 to July 10"
+        },
+        {
+            type: "Peach",
+            name: "Summer Glory",
+            description: "yellow peach",
+            harvest_time: "July 1 to July 15"
+        },
+        {
+            type: "Peach",
+            name: "Zee Rich",
+            description: "yellow peach",
+            harvest_time: "July 5 to July 20"
+        },
+        {
+            type: "Peach",
+            name: "Elegant Lady",
+            description: "yellow peach",
+            harvest_time: "July 10 to July 25"
+        },
+        {
+            type: "Peach",
+            name: "Gloria™",
+            description: "yellow peach",
+            harvest_time: "July 13 to July 28"
+        },
+        {
+            type: "Peach",
+            name: "Sweet Dream",
+            description: "yellow peach",
+            harvest_time: "July 15 to July 31"
+        },
+        {
+            type: "Peach",
+            name: "Zee Lady",
+            description: "yellow peach",
+            harvest_time: "July 15 to July 31"
+        },
+        {
+            type: "Peach",
+            name: "Lady Erin",
+            description: "yellow peach",
+            harvest_time: "July 19 to August 4"
+        },
+        {
+            type: "Peach",
+            name: "Angelus",
+            description: "yellow peach",
+            harvest_time: "July 23 to August 8"
+        },
+        {
+            type: "Peach",
+            name: "Kaweah",
+            description: "yellow peach",
+            harvest_time: "July 28 to August 13"
+        },
+        {
+            type: "Peach",
+            name: "O'Henry",
+            description: "yellow peach",
+            harvest_time: "August 1 to August 15"
+        },
+        {
+            type: "Peach",
+            name: "Summer Amelia",
+            description: "yellow peach",
+            harvest_time: "August 4 to August 19"
+        },
+        {
+            type: "Peach",
+            name: "Tra-Zee",
+            description: "yellow peach",
+            harvest_time: "August 10 to August 25"
+        },
+        {
+            type: "Peach",
+            name: "Summer Perfection",
+            description: "yellow peach",
+            harvest_time: "August 15 to August 31"
+        },
+        {
+            type: "Peach",
+            name: "Fairtime",
+            description: "yellow peach",
+            harvest_time: "September 1 to September 15"
+        },
+        {
+            type: "Peach",
+            name: "Sweet Sept.",
+            description: "yellow peach",
+            harvest_time: "September 15 to September 30"
+        },
+
+        // sweet cherries
+        {
+            type: "Sweet Cherry",
+            name: "Royal Tioga",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Lynn",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Fran",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Hazel",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Lee",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Chelan™",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Minnie Royal",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Rosie Rainier",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Brooks",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Coral Champagne",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Tulare",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Sonia",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Tieton™",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Satin™",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Santina™",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Rainier",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Bing",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Benton™",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Rainier",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Edie",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Helen",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Regina™",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Lapins",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sweetheart",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Skeena™",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sonata™",
+            harvest_time: ""
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Stardust™",
+            harvest_time: ""
+        },
+
+        // white nectarine
+        {
+            type: "Nectarine",
+            name: "Polar Light",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Polar Kist",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Polar Majic",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Star",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Polar Zee",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            name: "Arctic Sweet",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Polar Gem",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Rose",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Jay",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Belle",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Spicezee",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Queen",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Polar Snow",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Zee",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Pride",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Snow",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Arctic Mist",
+            description: "white nectarine",
+            harvest_time: ""
+        },
+
+        // apple
+        {
+            type: "Apple",
+            type: "Red Gravenstein",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Gravenstein",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Honeycrisp", // chart incorrectly puts a "TM" on this
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Blondee™",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Gala",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Buckeye Gala®",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Jonathan",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Crimson Gala",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Red Delicious",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Jonagold",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Fuji",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Red Fuji",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Granny Smith",
+            harvest_time: ""
+        },
+        {
+            type: "Apple",
+            name: "Pink Lady",
+            harvest_time: ""
+        },
+
+        // white peach
+        {
+            type: "Peach",
+            name: "Sauzee Spring",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Angel",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Lady Rose",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Rich Snow",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sauzee Queen",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Spring Snow",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sitka",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Fox",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Aspen White",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Galaxy",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sierra Snow",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Beauty",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Klondike White",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sugar Lady",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Summer Sweet",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sugar Giant",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Glacier",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Mia Snow",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sauzee Giant",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow King",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Giant",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Yukon King™",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sauzee Lady",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Gem",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "September Snow",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sauzee Jewell",
+            description: "White Peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Snow Fall",
+            description: "White Peach",
+            harvest_time: ""
+        },
+
+        // yellow nectarine
+        {
+            type: "Nectarine",
+            name: "Spring Blaze",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey May",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Spring Fire",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Zee Fire",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Royal Ruby",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Red Ryan",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Spring",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Haven",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Lite",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Fire",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Blaze",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Kist",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honeylicious",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "August Moon",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Royale",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Fantasia",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Magic Fire",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Gem",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Honey Diva",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+        {
+            type: "Nectarine",
+            name: "Autumn Blaze",
+            description: "yellow nectarine",
+            harvest_time: ""
+        },
+
+        // "color cot" (I chart these as apricots)
+        {
+            type: "Apricot",
+            name: "Bella Rose",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Bella Sun",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Bella Gold",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Bella Cerise",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Bella Jewel",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Bella Jean",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Bella Kat",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Bella Royale",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Bella Zee",
+            harvest_time: ""
+        },
+
+        // cling peach
+        {
+            type: "Peach",
+            name: "Taz",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "American",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Calaveras",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Loadel",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Stanislaus",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Carson",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Kader",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Bowen",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Goodwin",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Klamath",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Andross",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Schuler",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Vilmos",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Klamt",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Tuolumne",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Ross",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Rizzi",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Davis",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Late Ross",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Monaco",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Lilleland",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Halford",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Starn",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Hesse",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Sullivan #4",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+        {
+            type: "Peach",
+            name: "Corona",
+            description: "cling (canning) peach",
+            harvest_time: ""
+        },
+
+        // walnut
+        {
+            type: "Walnut",
+            name: "Payne",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Chico",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Gillet",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Ivanhoe",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Serr",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Vina",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Durham",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Solano",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Howard",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Tulare",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Sexton",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Forde",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Chandler",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Livermore Red",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Hartley",
+            harvest_time: ""
+        },
+        {
+            type: "Walnut",
+            name: "Cisco",
+            harvest_time: ""
+        },
+
+        // plumcot
+        {
+            type: "Plumcot",
+            name: "Flavorella",
+            harvest_time: ""
+        },
+
+        // pluot
+        {
+            type: "Plumcot",
+            name: "Spring Flavor",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavorosa",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Crimson Punch",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Sangria Red",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Fusion",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Supreme",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Joy",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Festival Red",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Ebony Rose",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Dapple Supreme",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Crimson Rose",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Coparose",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Dapple Jack",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Emerald Gem",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Queen",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Ruby Kat",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Dapple Dandy",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Crimson Royale",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor King",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Honey Punch",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Grenade",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavorite",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavor Blast",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Black Kat",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Sunset Delight",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Flavorfall",
+            harvest_time: ""
+        },
+        {
+            type: "Plumcot",
+            name: "Fall Fiesta",
+            harvest_time: ""
+        },
+
+        // apricot
+        {
+            type: "Apricot",
+            name: "Apache",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Poppy",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Castlebrite",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Earlicot",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Lorna",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Ambercot",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Robada",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Katy",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Tri Gems",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Goldstrike",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Goldbar",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Bonny",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Patterson",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Blenheim",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Brittany Gold",
+            harvest_time: ""
+        },
+        {
+            type: "Apricot",
+            name: "Summer Cot",
+            harvest_time: ""
+        },
+
+        // aprium
+        {
+            type: "Apriplum",
+            name: "Kylese-Cot",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Tasty Rich",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Trinidad",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Wescot",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Country Cot",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Honey Rich",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Betty-Cot",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Macy-Cot",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Leah-Cot",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Coral Cot",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Escort",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Weston",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Hermosa",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Huntington",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Autumn Sprite",
+            harvest_time: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Late Brittney",
+            harvest_time: ""
+        }
+    ]
+}

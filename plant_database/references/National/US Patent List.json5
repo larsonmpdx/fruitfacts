@@ -16364,6 +16364,7 @@
         {
             type: "Apple",
             name: "Howell TC3",
+            AKA: ["Lucy Glo™"],
             uspp_title: "Apple Tree Named Howell TC3",
             patent: "https://patents.google.com/patent/USPP28546 2035-12-25",
             uspp_filed: "12/31/14"
@@ -17160,7 +17161,7 @@
             uspp_filed: "10/31/14"
         },
         {
-            type: "Plumcot", // my guess from the patent text
+            type: "Plumcot", // compared to "fall fiesta" (plumcot) in the patent
             name: "Autumn Fritz", // grant name
             // AKA: ["Autumn Red"], // application name
             uspp_title: "Interspecific Tree Named 'Autumn Red'",
@@ -20466,6 +20467,360 @@
             type: "Banana",
             name: "ADI 9107",
             patent: "https://patents.google.com/patent/USPP32754"
+        },
+
+        // apples added June 2022
+        {
+            type: "Apple",
+            name: "MAIA-Z",
+            patent: "https://patents.google.com/patent/USPP30059"
+        },
+        {
+            type: "Apple",
+            name: "SPA766",
+            patent: "https://patents.google.com/patent/USPP30060"
+        },
+        {
+            type: "Apple",
+            name: "MAIA-T",
+            patent: "https://patents.google.com/patent/USPP30088"
+        },
+        {
+            type: "Apple",
+            name: "MAIA-L",
+            patent: "https://patents.google.com/patent/USPP30472"
+        },
+        {
+            type: "Apple",
+            name: "ZOUK 31",
+            patent: "https://patents.google.com/patent/USPP30490"
+        },
+        {
+            type: "Apple",
+            name: "Red BG",
+            patent: "https://patents.google.com/patent/USPP30510"
+        },
+        {
+            type: "Apple",
+            name: "ZOUK G1",
+            patent: "https://patents.google.com/patent/USPP30576"
+        },
+        {
+            type: "Apple",
+            name: "E756-36",
+            patent: "https://patents.google.com/patent/USPP30627"
+        },
+        {
+            type: "Apple",
+            name: "ZOUK 16",
+            patent: "https://patents.google.com/patent/USPP30659"
+        },
+        {
+            type: "Apple",
+            name: "ZOUK 32",
+            patent: "https://patents.google.com/patent/USPP30703"
+        },
+        {
+            type: "Apple",
+            name: "NY 56",
+            patent: "https://patents.google.com/patent/USPP30758"
+        },
+        {
+            type: "Apple",
+            name: "GS-66",
+            patent: "https://patents.google.com/patent/USPP30862"
+        },
+        {
+            type: "Apple",
+            name: "Fengapi",
+            patent: "https://patents.google.com/patent/USPP30863"
+        },
+        {
+            type: "Apple",
+            name: "Cherry Parfait #19",
+            patent: "https://patents.google.com/patent/USPP30925"
+        },
+        {
+            type: "Apple",
+            name: "Honeysuckle Rose #1-6",
+            patent: "https://patents.google.com/patent/USPP30978"
+        },
+        {
+            type: "Apple",
+            name: "NY 109",
+            patent: "https://patents.google.com/patent/USPP31145"
+        },
+        {
+            type: "Apple",
+            name: "Inobi",
+            patent: "https://patents.google.com/patent/USPP31287"
+        },
+        {
+            type: "Apple",
+            name: "Regal D5-100",
+            patent: "https://patents.google.com/patent/USPP31503"
+        },
+        {
+            type: "Apple",
+            name: "Howell TC7",
+            patent: "https://patents.google.com/patent/USPP31606"
+        },
+        {
+            type: "Apple",
+            name: "Bay 4029",
+            patent: "https://patents.google.com/patent/USPP31933"
+        },
+        {
+            type: "Apple",
+            name: "TAKANO 7GO",
+            patent: "https://patents.google.com/patent/USPP32159"
+        },
+        {
+            type: "Apple",
+            name: "FR1063",
+            patent: "https://patents.google.com/patent/USPP32220"
+        },
+        {
+            type: "Apple",
+            name: "Y103",
+            patent: "https://patents.google.com/patent/USPP32234"
+        },
+        {
+            type: "Apple",
+            name: "CIVM49",
+            patent: "https://patents.google.com/patent/USPP32391"
+        },
+        {
+            type: "Apple",
+            name: "IPADOR",
+            patent: "https://patents.google.com/patent/USPP32392"
+        },
+        {
+            type: "Apple",
+            name: "CIVPEAK",
+            patent: "https://patents.google.com/patent/USPP32417"
+        },
+        {
+            type: "Apple",
+            name: "RDS",
+            patent: "https://patents.google.com/patent/USPP32618"
+        },
+        {
+            type: "Apple",
+            name: "NY 73",
+            patent: "https://patents.google.com/patent/USPP32702"
+        },
+        {
+            type: "Apple",
+            name: "HOT84A1",
+            patent: "https://patents.google.com/patent/USPP32720"
+        },
+        {
+            type: "Apple",
+            name: "Bella Rosa",
+            patent: "https://patents.google.com/patent/USPP32850"
+        },
+        {
+            type: "Apple",
+            name: "Regal D17-121",
+            patent: "https://patents.google.com/patent/USPP32877"
+        },
+        {
+            type: "Apple",
+            name: "BABYLOVE",
+            patent: "https://patents.google.com/patent/USPP32964"
+        },
+        {
+            type: "Apple",
+            name: "SO 7",
+            patent: "https://patents.google.com/patent/USPP33113"
+        },
+        {
+            type: "Apple",
+            name: "Eastman",
+            patent: "https://patents.google.com/patent/USPP33495"
+        },
+        {
+            type: "Apple",
+            name: "R202",
+            patent: "https://patents.google.com/patent/USPP33508"
+        },
+        {
+            type: "Apple",
+            name: "PremA003",
+            patent: "https://patents.google.com/patent/USPP33545"
+        },
+        {
+            type: "Apple",
+            name: "NJ 150",
+            patent: "https://patents.google.com/patent/USPP33546"
+        },
+        {
+            type: "Apple",
+            name: "PremA093",
+            patent: "https://patents.google.com/patent/USPP33654"
+        },
+        {
+            type: "Apple",
+            name: "REGALNAT",
+            patent: "https://patents.google.com/patent/USPP33734"
+        },
+        {
+            type: "Apple",
+            name: "MN80",
+            patent: "https://patents.google.com/patent/USPP33756"
+        },
+        {
+            type: "Apple",
+            name: "MC-51",
+            patent: "https://patents.google.com/patent/USPP33757"
+        },
+        {
+            type: "Apple",
+            name: "Isadora",
+            patent: "https://patents.google.com/patent/USPP33835"
+        },
+        {
+            type: "Apple",
+            name: "8S5505",
+            patent: "https://patents.google.com/patent/USPP33836"
+        },
+        {
+            type: "Apple",
+            name: "R203",
+            patent: "https://patents.google.com/patent/USPP33940"
+        },
+        {
+            type: "Apple",
+            name: "Pinot Prince",
+            patent: "https://patents.google.com/patent/USPP33962"
+        },
+        {
+            type: "Apple",
+            name: "Takano 6",
+            patent: "https://patents.google.com/patent/USPP33995"
+        },
+        {
+            type: "Apple",
+            name: "Wurtwinning",
+            patent: "https://patents.google.com/patent/USPP34086"
+        },
+        {
+            type: "Apple",
+            name: "SunSpark",
+            patent: "https://patents.google.com/patent/USPP34206"
+        },
+
+        // pears added June 2022
+        {
+            type: "Euro Pear",
+            name: "Olsen Bosc",
+            patent: "https://patents.google.com/patent/USPP31444"
+        },
+
+        // stone fruit added June 2022
+        {
+            type: "Prunus Rootstock",
+            name: "AP3",
+            patent: "https://patents.google.com/patent/USPP26299 2033-03-20",
+            description: 'from the patent: "Excellent compatibility with plum, apricot, and peach varieties"'
+        },
+        {
+            type: "Prunus Rootstock",
+            name: "Lillian CVI",
+            patent: "https://patents.google.com/patent/USPP27105",
+            description: "almond rootstock"
+        },
+        {
+            type: "Plumcot", // compared to "fall fiesta" (plumcot) in the patent
+            name: "Autumn Charm",
+            patent: "https://patents.google.com/patent/USPP27825"
+        },
+        {
+            type: "Apricot", // zaiger calls this a "color cot"
+            name: "Bella Jean",
+            patent: "https://patents.google.com/patent/USPP27826"
+        },
+        {
+            type: "Apriplum", // compared to "autumn sprite" (apriplum) in the patent. skin "Pubescence.—Moderate, short in length."
+            name: "Seacliff",
+            patent: "https://patents.google.com/patent/USPP27868"
+        },
+        {
+            type: "Apriplum", // "aprium" on a DWN chart
+            name: "Hermosa",
+            patent: "https://patents.google.com/patent/USPP28137"
+        },
+        {
+            type: "Peach", // yellow peach on a DWN chart
+            name: "Rich Magic",
+            patent: "https://patents.google.com/patent/USPP28151"
+        },
+        {
+            type: "Plumcot", // patent compares it to "black kat" (plumcot)
+            name: "Sunset Plapple",
+            patent: "https://patents.google.com/patent/USPP29881"
+        },
+        {
+            type: "Plumcot", // patent compares it to "dapple jack" (plumcot)
+            name: "Sherri's Flavor",
+            patent: "https://patents.google.com/patent/USPP29882"
+        },
+        {
+            type: "Plumcot", // patent compares it to "flavor supreme" (plumcot)
+            name: "Sweet Kashel",
+            patent: "https://patents.google.com/patent/USPP30 010",
+            // harvest time from the patent - that makes this one of the earliest pluots, and if DWN ends up selling it retail it'll be one to try
+            harvest_time_relative: "Flavor Supreme-12"
+        },
+        {
+            type: "Plumcot", // patent compares it to "dapple supreme" (plumcot)
+            name: "Ebony Punch",
+            patent: "https://patents.google.com/patent/USPP31823"
+        },
+        {
+            type: "Prunus Rootstock",
+            name: "Warootone",
+            patent: "https://patents.google.com/patent/USPP32029",
+            description: 'from the patent: "peach, nectarine, plum, almond, and apricot"'
+        },
+        {
+            type: "Plumcot", // patent compares it to "flavor jewel" (plumcot)
+            name: "Flavorzee-290",
+            patent: "https://patents.google.com/patent/USPP32703"
+        },
+        {
+            type: "Plumcot", // patent compares it to "Royal Treat" (plumcot)
+            name: "Flavorzee-517",
+            patent: "https://patents.google.com/patent/USPP32851"
+        },
+        {
+            type: "Plumcot", // DWN lists this as a plumcot
+            name: "Sangria Red",
+            patent: "https://patents.google.com/patent/USPP32878",
+            // harvest time from the patent
+            harvest_time_relative: "Dapple Supreme-20"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Suplumfiftyeight",
+            patent: "https://patents.google.com/patent/USPP33247 2040-07-29"
+        },
+        {
+            type: "Plumcot", // patent compares it to "flavorosa" (plumcot) and "sangria red" (not -2) is a plumcot
+            name: "Sangria Red-2",
+            patent: "https://patents.google.com/patent/USPP33444 2040-09-04"
+        },
+        {
+            type: "Prunus Rootstock",
+            name: "Dhprs2",
+            patent: "https://patents.google.com/patent/USPP34068 2040-09-18",
+            description: "PPV resistant (from the patent)"
+        },
+        {
+            type: "Plumcot", // patent compares it to "festival red" (plumcot)
+            name: "FLAVOR JOY",
+            patent: "https://patents.google.com/patent/USPP34087 2041-12-06"
         }
     ]
 }
