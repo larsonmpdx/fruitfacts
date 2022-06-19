@@ -12,6 +12,7 @@ echo "restarting frontend"
 systemctl restart frontend_fruitfacts.service
 
 cd ../backend/
+sudo -u www-data rm ./Cargo.lock
 sudo -u www-data cargo build --release
 
 echo "restarting backend"

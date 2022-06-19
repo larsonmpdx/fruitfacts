@@ -5,11 +5,15 @@
 * `cargo test` and `cargo test -- --include-ignored` (include long tests)
 * `rustup update stable`
 * `cargo fetch` install packages
-* `cargo outdated -d1` (direct only) or `cargo outdated` (all) after installing `cargo install --locked cargo-outdated` (same command to update)
+
+# rust linting
 * `cargo fmt` after installing `rustup component add rustfmt`
 * `cargo fix`
 * `cargo clippy` after installing `rustup component add clippy`
   * `cargo clippy --fix`
+* `cargo outdated -d1` find outdated packages (-d1: direct only) or `cargo outdated` (all) after installing `cargo install --locked cargo-outdated` (same command to update)
+* `cargo +nightly udeps` to find unused dependencies after installing (and `rustup toolchain install nightly`) see https://crates.io/crates/cargo-udeps
+* `cargo tree --duplicates` find dependencies with multiple required versions
 
 # oauth account stuff
 * google https://console.cloud.google.com/apis/dashboard?pli=1 click credentials, click the edit pen, add an "authorized redirect URI" like http://domain.com/api/authRedirect

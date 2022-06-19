@@ -67,7 +67,7 @@
             locations: ["SW"]
         },
         {
-            names: ["Buckeye Gala", "Gale Gala", "Olsentwo Gala" /*"Pacific Gala"*/],
+            names: ["Simmons Gala" /*"Buckeye® Gala"*/, "Gale Gala", "Olsentwo Gala" /*"Pacific Gala"*/],
             type: "Apple",
             category: "varieties popular with commercial growers: Gala strains",
             locations: ["SW"]

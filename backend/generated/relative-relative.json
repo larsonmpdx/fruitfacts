@@ -12,12 +12,12 @@
   {
     "type": "Apricot",
     "name": "Blenheim",
-    "day": 12
+    "day": 15
   },
   {
     "type": "Japanese Plum",
     "name": "Santa Rosa",
-    "day": 31
+    "day": 28
   },
   {
     "type": "Peach",
@@ -50,24 +50,24 @@
     "day": 67
   },
   {
-    "type": "Almond",
-    "name": "Nonpareil",
-    "day": 70
-  },
-  {
     "type": "Euro Plum",
     "name": "Italian",
     "day": 70
   },
   {
+    "type": "Almond",
+    "name": "Nonpareil",
+    "day": 75
+  },
+  {
     "type": "Apple",
     "name": "Red Delicious",
-    "day": 82
+    "day": 79
   },
   {
     "type": "Pomegranate",
     "name": "Wonderful",
-    "day": 103
+    "day": 102
   },
   {
     "type": "Hardy Kiwi",

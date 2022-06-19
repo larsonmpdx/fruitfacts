@@ -384,7 +384,7 @@
         {
             type: "Apple",
             name: "Waliser Gala",
-            AKA: ["Crimson® Gala (Waliser)"],
+            AKA: ["Crimson® Gala"],
             harvest_time: "September 2 to September 16",
             patent: "https://patents.google.com/patent/USPP8673 expired 2012-01-03"
         },

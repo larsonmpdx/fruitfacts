@@ -34,7 +34,7 @@
         {
             type: "Almond",
             name: "Alm-21",
-            AKA: ["Independence (r)"],
+            AKA: ["Independence®"],
             description: "zaiger. commercial https://www.davewilson.com/growers/products/nut-trees/almond/independence_alm-21_cv/",
             patent: "https://patents.google.com/patent/USPP20295 expires 2028-05-27",
             harvest_time: "August 28 to September 13"
@@ -171,7 +171,7 @@
         {
             type: "Apriplum",
             name: "Autumn Sprite",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/autumn_sprite/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/autumn_sprite/",
             patent: "https://patents.google.com/patent/USPP16599 expires 2025-04-15",
             chill: "800 hours",
             harvest_time: "August 1 to August 15"
@@ -179,7 +179,7 @@
         {
             type: "Apriplum",
             name: "Betty Cot",
-            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/Apriplum-interspecific/betty_cot/",
+            description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/aprium-interspecific/betty_cot/",
             patent: "https://patents.google.com/patent/USPP22648 expires 2030-11-27",
             chill: "750 hours",
             harvest_time: "May 27 to June 12"
@@ -187,7 +187,7 @@
         {
             type: "Apriplum",
             name: "Cot-N-Candy",
-            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/Apriplum-interspecific/cot-n-candy/",
+            description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/aprium-interspecific/cot-n-candy/",
             patent: "https://patents.google.com/patent/USPP17827 expires 2026-01-18",
             chill: "400 or fewer hours",
             harvest_time: "June 15 to June 28"
@@ -1248,7 +1248,7 @@
         {
             type: "Peach",
             name: "Autumn Snow",
-            AKA: ["Yukon King (tm)"],
+            AKA: ["Yukon King™"],
             description: "zaiger. White. commercial",
             patent: "https://patents.google.com/patent/USPP9872 expired 2016-02-09",
             chill: "750-850 hours",
@@ -1919,7 +1919,7 @@
         },
         {
             type: "Plumcot",
-            name: "Flavor Fall",
+            name: "Flavorfall",
             description: "zaiger. commercial https://www.davewilson.com/growers/products/fruit-trees/pluot-interspecific/flavorfall/",
             patent: "https://patents.google.com/patent/USPP11990 expired 2019-02-08",
             chill: "800 hours",

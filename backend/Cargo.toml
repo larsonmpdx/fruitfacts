@@ -10,7 +10,7 @@ doctest = false
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-web = "4.0.1"
+actix-web = "4.1.0"
 actix-cors = "0.6.1"
 libsqlite3-sys = { version = "0.22.0", features = ["bundled"] }
 diesel = { version = "1.4.8", features = ["sqlite", "r2d2"] }
@@ -30,14 +30,14 @@ itertools = "0.10.1"
 dotenv-build = "0.1.1"
 git2 = "0.14.3"
 pathdiff = "0.2.0"
-anyhow = "1.0.55"
+anyhow = "1.0.58"
 oauth2 = "4.1.0"
 rand = "0.8.4"
 expiring_map = { git = "https://github.com/larsonmpdx/expiring_map/", branch = "remove_item" }
 once_cell = "1.9.0"
 base64 = "0.13.0"
-reqwest = "0.11.7"
-indexmap = "1.8.2"
+reqwest = "0.11.11"
+indexmap = "1.9.0"
 env_logger = "0.9.0"
 urlencoding = "2.1.0"
 

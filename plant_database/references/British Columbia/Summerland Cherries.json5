@@ -151,7 +151,7 @@
             harvest_time_relative: "Bing-8"
         },
         {
-            name: "Skeena",
+            name: "Skeena", // no trademark claimed on svc website
             AKA: ["13S-43-48"],
             type: "Sweet Cherry",
             released: "Summerland 1997*",

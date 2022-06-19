@@ -541,7 +541,7 @@
         {
             type: "Apple",
             name: "Waliser Gala",
-            name_common: "Crimson Gala",
+            AKA: ["Crimson® Gala"],
             uspp_title: "Apple tree Waliser Gala",
             patent: "https://patents.google.com/patent/USPP8673 2012-01-03",
             uspp_filed: "1/3/92",
@@ -2747,7 +2747,7 @@
         {
             type: "Apple",
             name: "Simmons Gala",
-            name_common: "Buckeye Gala",
+            AKA: ["Buckeye® Gala"],
             uspp_title: "Apple tree named 'Simmons Gala'",
             patent: "https://patents.google.com/patent/USPP10840 2016-09-05",
             uspp_filed: "9/5/96",
@@ -4445,7 +4445,7 @@
         },
         {
             type: "Plumcot",
-            name: "Flavor Fall",
+            name: "Flavorfall",
             uspp_title: "Interspecific tree named 'Flavorfall'",
             patent: "https://patents.google.com/patent/USPP11990 2019-02-08",
             uspp_filed: "2/8/99",
@@ -15611,7 +15611,7 @@
             uspp_filed: "4/22/13"
         },
         {
-            type: "Plumcot", // compared to "flavor fall" (plumcot) in the "summary of..." patent paragraph
+            type: "Plumcot", // compared to "flavorfall" (plumcot) in the "summary of..." patent paragraph
             name: "Autumn Zee", // todo zaiger
             uspp_title: "Interspecific tree named 'Autumn Zee'",
             patent: "https://patents.google.com/patent/USPP25090 2033-04-19",
@@ -20819,7 +20819,7 @@
         },
         {
             type: "Plumcot", // patent compares it to "festival red" (plumcot)
-            name: "FLAVOR JOY",
+            name: "Flavor Joy",
             patent: "https://patents.google.com/patent/USPP34087 2041-12-06"
         }
     ]

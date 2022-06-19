@@ -170,7 +170,7 @@
         {
             type: "Peach",
             name: "Autumn Snow",
-            AKA: ["Yukon King (tm)"],
+            AKA: ["Yukon King™"],
             harvest_time_relative: "Redhaven+43",
             description: "white flesh",
             disease_resistance: { BLS: "high susceptibility" }
