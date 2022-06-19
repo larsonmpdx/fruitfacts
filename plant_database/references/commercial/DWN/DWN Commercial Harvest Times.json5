@@ -60,7 +60,7 @@
         {
             type: "Japanese Plum",
             name: "Laroda",
-            harvest_time: "July 8 to July 13"
+            harvest_time: "July 8 to July 23"
         },
         {
             type: "Japanese Plum",
@@ -70,7 +70,7 @@
         {
             type: "Japanese Plum",
             name: "Royal Diamond",
-            harvest_time: "July 31 to August 5"
+            harvest_time: "July 31 to August 14"
         },
         {
             type: "Japanese Plum",
@@ -495,7 +495,7 @@
         {
             type: "Sweet Cherry",
             name: "Royal Edie",
-            harvest_time: "May 28 to June 24"
+            harvest_time: "May 28 to June 13"
         },
         {
             type: "Sweet Cherry",
@@ -683,7 +683,7 @@
         {
             type: "Apple",
             name: "Red Delicious",
-            harvest_time: "August 2 to September 7"
+            harvest_time: "August 22 to September 7"
         },
         {
             type: "Apple",
@@ -783,7 +783,7 @@
             type: "Peach",
             name: "Snow Beauty",
             description: "White Peach",
-            harvest_time: "June 17 to August 2"
+            harvest_time: "June 17 to July 2"
         },
         {
             type: "Peach",
@@ -1153,7 +1153,7 @@
             type: "Peach",
             name: "Davis",
             description: "cling (canning) peach",
-            harvest_time: "Auust 17 to September 2"
+            harvest_time: "August 17 to September 2"
         },
         {
             type: "Peach",
@@ -1171,13 +1171,13 @@
             type: "Peach",
             name: "Lilleland",
             description: "cling (canning) peach",
-            harvest_time: "August 22 to September 12"
+            harvest_time: "August 22 to September 7"
         },
         {
             type: "Peach",
             name: "Halford",
             description: "cling (canning) peach",
-            harvest_time: "August 22 to September 12"
+            harvest_time: "August 22 to September 7"
         },
         {
             type: "Peach",
@@ -1195,7 +1195,7 @@
             type: "Peach",
             name: "Sullivan #4",
             description: "cling (canning) peach",
-            harvest_time: "August 30 to September 8"
+            harvest_time: "August 30 to September 13"
         },
         {
             type: "Peach",
