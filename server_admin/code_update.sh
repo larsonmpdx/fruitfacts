@@ -13,6 +13,7 @@ systemctl restart frontend_fruitfacts.service
 
 cd ../backend/
 sudo -u www-data rm ./Cargo.lock
+touch build.rs # make sure this runs each time so our env vars are updated
 sudo -u www-data cargo build --release
 
 echo "restarting backend"
