@@ -48,5 +48,15 @@
         contributor: "Michael",
         fact: "lime sulfur shouldn't be sprayed on apricot trees",
         reference: "https://flathead.msuextension.org/documents/ag/yard-garden/Spray%20schedule%20for%20peaches%20and%20apricots%20-%20WSU.pdf"
+    },
+    {
+        contributor: "Michael",
+        fact: "grape roots can grow to 25 feet deep or more, depending on the soil type",
+        reference: "https://extensionpublications.unl.edu/assets/html/g2279/build/g2279.htm"
+    },
+    {
+        contributor: "Michael",
+        fact: "under US law, trademarks can't be applied to plant variety names (that is, the name by which a variety is known to the U.S. consumer)",
+        reference: "https://tmep.uspto.gov/RDMS/TMEP/current#/current/TMEP-1200d1e2820.html"
     }
 ]

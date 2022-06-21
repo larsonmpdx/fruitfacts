@@ -139,7 +139,7 @@
         {
             type: "Apple",
             name: "UEB 3264/2",
-            AKA: ["Opal"],
+            AKA: ["Opal (r)"],
             // todo: "..scab resistant apple is also tolerant to mildew in Europe"
             patent: "https://patents.google.com/patent/USPP15963 2024-06-11",
             description: "Czech Republic. 'Golden Delicious' x 'Topaz'"

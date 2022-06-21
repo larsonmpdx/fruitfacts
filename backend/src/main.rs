@@ -72,18 +72,22 @@ async fn main() -> std::io::Result<()> {
             .wrap(cors)
             // set up DB pool to be used with web::Data<Pool> extractor
             .app_data(actix_web::web::Data::new(pool.clone()))
-            .service(queries::get_recent_patents)
             .service(queries::get_collections)
             .service(queries::get_recent_changes)
             .service(queries::get_fact)
-            .service(queries::get_plant)
             .service(queries::auth::get_auth_urls)
             .service(queries::auth::receive_oauth_redirect)
             .service(queries::auth::create_account)
             .service(queries::auth::get_full_user)
             .service(queries::auth::check_login)
             .service(queries::auth::logout)
+
+            // these can all be combind into one search query
+            .service(queries::get_plant)
+            .service(queries::get_recent_patents)
             .service(queries::search::variety_search)
+
+            // combine later?
             .service(queries::map::locations_search)
     })
     .bind(("0.0.0.0", env!("BACKEND_PORT").parse::<u16>().unwrap()))? // 0.0.0.0 is actix-speak for "all local IPs"

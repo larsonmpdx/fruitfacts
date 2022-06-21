@@ -8,6 +8,25 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use regex::Regex;
 use serde::Deserialize;
 
+
+// todo: define query parameters and start adding them in alongside search
+// searchtype: collection items, base plants, user items, "search all"
+// patents: true/false
+// page: 0, or "mid" for the patent midpoint page if unknown (so our first patent page link can work)
+// per_page: N
+// type: apple, peach, etc.
+// relative harvest minimum, maximum days
+// sort: type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
+// collection: collection ID (for collection items search only)
+// max distance to point or zip code (collection items search)
+// notoriety (for base plants search)
+
+// returns:
+// -count
+// -current page
+// -items (collection items, base plants, user items, etc. under their own things)
+// -collection info if we were restricted to one collection
+
 pub fn variety_search_db(
     db_conn: &SqliteConnection,
     input: &str,

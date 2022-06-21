@@ -39,7 +39,7 @@
         {
             type: "Apple",
             name: "Huaguan",
-            AKA: ["Autumn Glory"],
+            AKA: ["Autumn Glory (r)"],
             description: "exclusive to Domex Superfresh Growers® in Washington State",
             patent: "https://patents.google.com/patent/USPP11077 expired 2017-12-02"
         },
@@ -157,13 +157,13 @@
             type: "Apple",
             name: "Scifresh",
             // todo: susceptible to scab, powdery mildew and very susceptible to canker (Neonectria)
-            AKA: ["Jazz"],
+            AKA: ["Jazz (tm)"],
             patent: "https://patents.google.com/patent/USPP13888 expired 2021-06-20"
         },
         {
             type: "Apple",
             name: "Regal 13-82",
-            AJA: ["Juici"], // see also https://www.goodfruit.com/new-apple-varieties-from-a-to-z/
+            AKA: ["Juici (tm)"], // see also https://www.goodfruit.com/new-apple-varieties-from-a-to-z/
             description: "hybrid of Honeycrisp x Braeburn. Oneonta Starr ranch growers of Wenatchee, WA has the North American rights for growing, packing and marketing",
             patent: "https://patents.google.com/patent/USPP25189 expires 2033-06-19"
         },
