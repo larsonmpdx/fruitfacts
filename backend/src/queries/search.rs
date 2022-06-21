@@ -6,26 +6,41 @@ use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use regex::Regex;
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
+#[derive(Deserialize)]
+struct SearchQuery {
+    searchtype: Option<String>, // collection items, base plants, todo: user items, "search all"
+    search: Option<String>, // search string like "PF 11"
+    patents: Option<bool>,
+    #[serde(rename = "type")]
+    type_: Option<String>, // apple, peach, etc.
+    page: Option<String>, // 0-N or "mid" for the patent midpoint page if unknown (so our first patent page link can work)
+    per_page: Option<i32>,
+    sort: Option<String>, // type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
+    collection: Option<String>, // collection path, or collection ID (number) - collection items search only
+    relative_harvest: Option<String>, // minimum, maximum days
+    notoriety: Option<String>, // base plants search only
+    distance: Option<String>, // max distance, goes with "from" (todo)
+    from: Option<String>, // goes with distance, a zip code or point or something (todo)
+}
 
-// todo: define query parameters and start adding them in alongside search
-// searchtype: collection items, base plants, user items, "search all"
-// patents: true/false
-// page: 0, or "mid" for the patent midpoint page if unknown (so our first patent page link can work)
-// per_page: N
-// type: apple, peach, etc.
-// relative harvest minimum, maximum days
-// sort: type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
-// collection: collection ID (for collection items search only)
-// max distance to point or zip code (collection items search)
-// notoriety (for base plants search)
+#[derive(Default, Queryable, Serialize)]
+pub struct SearchReturn {
+    #[serde(rename = "type")]
+    type_: Option<String>, // base plants or collection
+    count: Option<i32>, // total count of search results (if paginated)
+    page: Option<i32>,
+    patent_midpoint_page: Option<i32>, // special case: if we did a patent search, which page has the transition from past to future expirations?
+    pub base_plants: Option<Vec<BasePlant>>,
 
-// returns:
-// -count
-// -current page
-// -items (collection items, base plants, user items, etc. under their own things)
-// -collection info if we were restricted to one collection
+    // only if constrained to one collection:
+    pub collection_items: Option<Vec<CollectionItem>>,
+    pub collection: Option<Collection>,
+    pub locations: Vec<Location>,
+}
+
+// todo: I want to bring all of the search & filter queries into one API
 
 pub fn variety_search_db(
     db_conn: &SqliteConnection,
