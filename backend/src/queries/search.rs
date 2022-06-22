@@ -10,7 +10,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize)]
 struct SearchQuery {
-    searchtype: Option<String>, // collection items, base plants, todo: user items, "search all"
+    searchtype: Option<String>, // base plants or collection items. todo: user items, "search all"
     search: Option<String>, // search string like "PF 11"
     patents: Option<bool>,
     #[serde(rename = "type")]
@@ -18,12 +18,33 @@ struct SearchQuery {
     page: Option<String>, // 0-N or "mid" for the patent midpoint page if unknown (so our first patent page link can work)
     per_page: Option<i32>,
     sort: Option<String>, // type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
-    collection: Option<String>, // collection path, or collection ID (number) - collection items search only
     relative_harvest: Option<String>, // minimum, maximum days
-    notoriety: Option<String>, // base plants search only
-    distance: Option<String>, // max distance, goes with "from" (todo)
-    from: Option<String>, // goes with distance, a zip code or point or something (todo)
+
+    // collection items search only
+    collection: Option<String>, // collection path, or collection ID (number)
+
+    // base plants search only:
+    notoriety: Option<String>,
+
+    // todo:
+    distance: Option<String>, // max distance, goes with "from"
+    from: Option<String>, // goes with distance, a zip code or point or something
 }
+
+// base plants search:
+// 1. do name search if specified
+// 2. do regular filter search: patents yes/no, type, relative harvest, notoriety, sort
+// 3. intersection of these (either in database or out of database)
+// 4. figure out pagination (total size, and pick a page to return)
+
+// collection items search:
+// 1. do name search if specified? or I could omit name filter on this for now
+// 2. regular filter search: same as above? notoriety maybe doesn't make sense. big add is filter by collection yes/no
+// 3. intersection?
+// 4. figure out pagination (total size, and pick a page to return)
+// 5. look up and return collection+location info, if specified
+
+// how much overlap can be found between these two paths? and eventually user items search
 
 #[derive(Default, Queryable, Serialize)]
 pub struct SearchReturn {
