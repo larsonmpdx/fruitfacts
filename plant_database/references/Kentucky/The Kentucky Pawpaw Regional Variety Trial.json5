@@ -1,0 +1,22 @@
+{
+    title: "The Kentucky Pawpaw Regional Variety Trial",
+    author: "",
+    url: "https://www.kysu.edu/wp-content/uploads/2017/09/Pomper-et-al-April-2008.pdf",
+    published: "",
+    accessed: "June 2022",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "University of Kentucky",
+            latitude: 38.02880058194933,
+            longitude: -84.5094817806642
+        }
+    ],
+    plants: [
+        // todo
+
+        // todo, also look to see if other pubs are worth bringing in:
+        // https://www.kysu.edu/academics/college-acs/school-of-ace/pawpaw/list-of-pawpaw-publications-available-through-kentucky-state-university-via-download-or-snail-mail.php
+    ]
+}

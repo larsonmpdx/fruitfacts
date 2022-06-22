@@ -10,14 +10,15 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize)]
 struct SearchQuery {
-    searchtype: Option<String>, // base plants or collection items. todo: user items, "search all"
+    searchType: Option<String>, // base plants or collection items. todo: user items, "search all"
     search: Option<String>, // search string like "PF 11"
+    name: Option<String>, // exact plant name (allows getting a single base plant). probably doesn't make sense when used with search
     patents: Option<bool>,
     #[serde(rename = "type")]
     type_: Option<String>, // apple, peach, etc.
     page: Option<String>, // 0-N or "mid" for the patent midpoint page if unknown (so our first patent page link can work)
     per_page: Option<i32>,
-    sort: Option<String>, // type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
+    sort: Option<String>, // search by search quality, type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
     relative_harvest: Option<String>, // minimum, maximum days
 
     // collection items search only
@@ -45,6 +46,15 @@ struct SearchQuery {
 // 5. look up and return collection+location info, if specified
 
 // how much overlap can be found between these two paths? and eventually user items search
+
+// queries to bring under this:
+// - plain variety search (against base plants) - base plants searchType, and search. limit to first N or whatever
+// - fancy search and filter for an "advanced search" page, with pagination - same as above but no limit and paginate, sort by whatever, etc.
+// - get a single variety (get a single base plant) - base plants searchType, name and type
+// - get patents - base plants searchType, patents:true, probably sort by expiration
+// - get paginated plants (browse plants) - base plants searchType, type=plant type, page set, etc.
+// do this 2nd, it's the only non-base-plants one:
+// - get a single collection - collection items searchType, and collection ID or path. would allow filtering or sorting from the collection page
 
 #[derive(Default, Queryable, Serialize)]
 pub struct SearchReturn {
