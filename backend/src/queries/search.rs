@@ -75,14 +75,14 @@ pub struct SearchReturn {
 // todo: I want to bring all of the search & filter queries into one API
 
 pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<SearchReturn> {
-    if (query.search_type.is_none()) {
+    if query.search_type.is_none() {
         return Err(anyhow!("search_type not set"));
     }
 
     match query.search_type.as_ref().unwrap().as_str() {
         "base" => {
             let search_results;
-            if (query.search.is_none()) {
+            if query.search.is_none() {
                 search_results = None;
             } else {
                 let input = query.search.as_ref().unwrap();
@@ -196,7 +196,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
                         Some(results)
                     }
-                    Err(error) => None,
+                    Err(_error) => None,
                 }
             }
 
