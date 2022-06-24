@@ -4217,7 +4217,9 @@
             uspp_title: "Peach tree named 'Croft'",
             patent: "https://patents.google.com/patent/USPP11769 2018-11-02",
             uspp_filed: "11/2/98",
-            uspp_issued: "2/6/01"
+            uspp_issued: "2/6/01",
+            // harvest time from the patent - also mentions "with early redhaven, harbelle, sentry"
+            harvest_time_relative: "Redhaven-12"
         },
         {
             type: "Strawberry",
