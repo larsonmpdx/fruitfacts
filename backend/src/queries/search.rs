@@ -84,8 +84,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             let search_results;
             if (query.search.is_none()) {
                 search_results = None;
-            }
-            else {
+            } else {
                 let input = query.search.as_ref().unwrap();
                 // remove extra characters. leave spaces so we can treat separate words as separate
                 // dashes get interpreted by fts. same with +*:^ AND OR NOT
@@ -230,9 +229,7 @@ async fn variety_search(
 ) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    let results = web::block(move || search_db(&conn, &query))
-        .await
-        .unwrap(); // todo - blockingerror unwrap?
+    let results = web::block(move || search_db(&conn, &query)).await.unwrap(); // todo - blockingerror unwrap?
 
     let results = match results {
         Ok(results) => results,
