@@ -60,16 +60,16 @@ pub struct SearchQuery {
 
 #[derive(Default, Queryable, Serialize)]
 pub struct SearchReturn {
-    search_type: Option<String>, // base plants or collection
-    count: Option<i32>,          // total count of search results (if paginated)
-    page: Option<i32>,
-    patent_midpoint_page: Option<i32>, // special case: if we did a patent search, which page has the transition from past to future expirations?
+    pub search_type: Option<String>, // base plants or collection
+    pub count: Option<i32>,          // total count of search results (if paginated)
+    pub page: Option<i32>,
+    pub patent_midpoint_page: Option<i32>, // special case: if we did a patent search, which page has the transition from past to future expirations?
     pub base_plants: Option<Vec<BasePlant>>,
 
     // only if constrained to one collection:
     pub collection_items: Option<Vec<CollectionItem>>,
     pub collection: Option<Collection>,
-    pub locations: Vec<Location>,
+    pub locations: Option<Vec<Location>>,
 }
 
 // todo: I want to bring all of the search & filter queries into one API
@@ -81,10 +81,9 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
     match query.search_type.as_ref().unwrap().as_str() {
         "base" => {
-            let search_results;
-            if query.search.is_none() {
-                search_results = None;
-            } else {
+            let mut base_query = base_plants::table.into_boxed();
+
+            if query.search.is_some() {
                 let input = query.search.as_ref().unwrap();
                 // remove extra characters. leave spaces so we can treat separate words as separate
                 // dashes get interpreted by fts. same with +*:^ AND OR NOT
@@ -155,52 +154,49 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 println!("{:?}", values);
 
                 // todo: order or limit by notoriety
-                search_results = match values {
+                match values {
                     Ok(values) => {
                         let ids_nullable: Vec<_> = values.iter().map(|x| x.rowid).collect();
 
                         // step through IDs and get the original row
-                        // this lets us preserve FTS ranking
+                        // todo - make FTS ranking available somehow as a sort option
+                        // we might need to use this results vector later or something
                         let mut results: Vec<BasePlant> = Default::default();
-
-                        match restrict_to_type {
-                            None => {
-                                for id in &ids_nullable {
-                                    let result = base_plants::dsl::base_plants
-                                        .filter(base_plants::id.eq(id))
-                                        .first::<BasePlant>(db_conn)
-                                        .unwrap();
-
-                                    results.push(result);
-                                }
-                            }
-
-                            Some(type_) => {
-                                for id in &ids_nullable {
-                                    let result = base_plants::dsl::base_plants
-                                        .filter(base_plants::id.eq(id))
-                                        .filter(base_plants::type_.eq(&type_))
-                                        .first::<BasePlant>(db_conn); // this row may or may not match our type filter
-
-                                    if let Ok(result) = result {
-                                        results.push(result);
-                                        if results.len() as i64 >= N_MAX {
-                                            break; // we limit here because our fts search was allowed to be for more results before we did our type filter
-                                        }
-                                    }
-                                }
-                            }
-                        };
-
                         println!("{:?}", results);
 
-                        Some(results)
+                        // todo - we may want to limit how many IDs we look for when trying to get full rows starting with fts results
+                        let mut first_id = true;
+                        for id in ids_nullable.clone() {
+                            if (first_id) {
+                                base_query = base_query.filter(base_plants::id.eq(id));
+                                first_id = false;
+                            } else {
+                                base_query = base_query.or_filter(base_plants::id.eq(id));
+                            }
+                        }
+
+                        if let Some(type_) = restrict_to_type {
+                            base_query = base_query.filter(base_plants::type_.eq(type_.clone()));
+                        };
                     }
-                    Err(_error) => None,
+                    Err(_error) => {
+                        return Err(anyhow!("some kind of search problem (todo)"));
+                    }
                 }
             }
 
-            Err(anyhow!(""))
+            // todo - other filter and sort operations
+
+            let base_plants: Result<Vec<BasePlant>, diesel::result::Error> =
+                base_query.load(db_conn);
+
+            match base_plants {
+                Ok(base_plants) => Ok(SearchReturn {
+                    base_plants: Some(base_plants),
+                    ..Default::default()
+                }),
+                Err(error) => Err(error.into()),
+            }
         }
         "coll" => Err(anyhow!("")),
         _ => Err(anyhow!("")),
