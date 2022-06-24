@@ -11,7 +11,7 @@ use serde::{Deserialize, Serialize};
 #[derive(Deserialize)]
 struct SearchQuery {
     searchType: Option<String>, // base plants or collection items. todo: user items, "search all"
-    search: Option<String>, // search string like "PF 11"
+    search: Option<String>,     // search string like "PF 11"
     name: Option<String>, // exact plant name (allows getting a single base plant). probably doesn't make sense when used with search
     patents: Option<bool>,
     #[serde(rename = "type")]
@@ -29,7 +29,7 @@ struct SearchQuery {
 
     // todo:
     distance: Option<String>, // max distance, goes with "from"
-    from: Option<String>, // goes with distance, a zip code or point or something
+    from: Option<String>,     // goes with distance, a zip code or point or something
 }
 
 // base plants search:
