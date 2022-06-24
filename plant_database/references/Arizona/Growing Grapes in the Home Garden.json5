@@ -1,0 +1,19 @@
+{
+    title: "Growing Grapes in the Home Garden",
+    author: "Tom DeGomez",
+    url: "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1657-2015.pdf",
+    published: "March 2015",
+    accessed: "June 2022",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "todo - two locations - high and low altitude",
+            latitude: 35.532778,
+            longitude: -93.403333
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}
