@@ -7,6 +7,7 @@ use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
+use serde_with::skip_serializing_none;
 
 use anyhow::{anyhow, Result};
 
@@ -19,7 +20,6 @@ pub struct SearchQuery {
     patents: Option<bool>,
     #[serde(rename = "type")]
     type_: Option<String>, // apple, peach, etc.
-    limit: Option<i32>,
     page: Option<String>, // 0-N or "mid" for the patent midpoint page if unknown (so our first patent page link can work)
     #[serde(rename = "perPage")]
     per_page: Option<i32>,
@@ -65,6 +65,7 @@ pub struct SearchQuery {
 // do this 2nd, it's the only non-base-plants one:
 // - get a single collection - collection items searchType, and collection ID or path. would allow filtering or sorting from the collection page
 
+#[skip_serializing_none]
 #[derive(Default, Queryable, Serialize)]
 pub struct SearchReturn {
     #[serde(rename = "searchType")]
@@ -228,16 +229,41 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
             // todo page
             // todo per_page
+            let mut find_patent_midpoint;
+
+            if let Some(page) = &query.page {
+
+                if let Some(per_page) = &query.per_page {
+
+                    if page == "mid" {
+                        // special case - todo - might also need to check that we're sorting by expiration
+                        // todo - handle "mid" for the patent special case where we ask for the middle page
+                        // get all results (no limit/offset) and then find our own midpoint?
+                        find_patent_midpoint = true;
+                    } else {
+                        let page_i32 = page.parse::<i32>();
+                        if page_i32.is_err() {
+                            return Err(anyhow!("\"page\" wasn't \"mid\" or an integer"));
+                        }
+                    
+                        base_query = base_query.offset((page_i32.unwrap() * per_page).into());
+                    }
+                } else {
+                    return Err(anyhow!("got \"page\" without \"per_page\""));
+                }
+            }
+
             // todo relative_harvest
             // todo collection (path or ID)
             // todo notoriety_min (base plants only)
-            // todo distance, from (collection items only)
+            // todo distance, from (collection items only) - there may be value to a search filter for "mentioned within x miles of zip code"
 
             // todo total count (if using a limit or page)
             // todo midpoint if getting patents, and sorted by expiration date
 
-            if let Some(limit) = &query.limit {
-                base_query = base_query.limit(*limit as i64);
+            // per_page can be used as a limit if page isn't specified
+            if let Some(per_page) = &query.per_page {
+                base_query = base_query.limit(*per_page as i64);
             }
 
             let base_plants: Result<Vec<BasePlant>, diesel::result::Error> =

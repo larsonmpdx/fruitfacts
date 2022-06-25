@@ -21,7 +21,7 @@ export default function Home() {
         const response = await fetch(
           `${
             process.env.NEXT_PUBLIC_BACKEND_BASE
-          }/api/search?searchType=base&limit=10&orderBy=notoriety&search=${encodeURIComponent(
+          }/api/search?searchType=base&perPage=10&orderBy=notoriety&search=${encodeURIComponent(
             searchText
           )}`
         )
