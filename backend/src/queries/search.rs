@@ -141,7 +141,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
                 println!("input {input} cleaned: {cleaned} ORed: {statement_string}");
 
-                let mut search_query = fts_base_plants::table
+                let search_query = fts_base_plants::table
                     .select((fts_base_plants::rowid, fts_base_plants::rank))
                     .filter(fts_base_plants::whole_row.eq(statement_string))
                     .order(fts_base_plants::rank.asc())
@@ -215,7 +215,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
                 match sort.as_str() {
                     "notoriety" => {
-                        if (order_asc) {
+                        if order_asc {
                             base_query = base_query.order(base_plants::notoriety_score.asc());
                         } else {
                             base_query = base_query.order(base_plants::notoriety_score.desc());
