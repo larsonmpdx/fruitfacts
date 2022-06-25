@@ -27,7 +27,7 @@ pub struct SearchQuery {
     collection: Option<String>, // collection path, or collection ID (number)
 
     // base plants search only:
-    notoriety: Option<String>,
+    notoriety_min: Option<String>,
 
     // todo:
     distance: Option<String>, // max distance, goes with "from"
@@ -186,6 +186,32 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             }
 
             // todo - other filter and sort operations
+
+            if let Some(name) = &query.name {
+                base_query = base_query.filter(base_plants::name.eq(name));
+            }
+
+            // patents: Option<bool>
+            if let Some(patents) = &query.patents {
+                if (*patents) {
+                    base_query = base_query.filter(base_plants::uspp_expiration.is_not_null())
+                } else {
+                    // finding items without patents is probably not useful but whatever
+                    base_query = base_query.filter(base_plants::uspp_expiration.is_null())
+                }
+            }
+
+            if let Some(type_) = &query.type_ {
+                base_query = base_query.filter(base_plants::type_.eq(type_));
+            }
+
+            // todo sort
+            // todo page
+            // todo per_page
+            // todo relative_harvest
+            // todo collection (path or ID)
+            // todo notoriety_min (base plants only)
+            // todo distance, from (collection items only)
 
             let base_plants: Result<Vec<BasePlant>, diesel::result::Error> =
                 base_query.load(db_conn);
