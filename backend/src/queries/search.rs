@@ -158,7 +158,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 match values {
                     Ok(values) => {
                         if let Some(type_) = restrict_to_type {
-                            base_query = base_query.filter(base_plants::type_.eq(type_.clone()));
+                            base_query = base_query.filter(base_plants::type_.eq(type_));
                         };
 
                         let ids_only: Vec<i32> =
