@@ -12,21 +12,28 @@ use anyhow::{anyhow, Result};
 
 #[derive(Deserialize)]
 pub struct SearchQuery {
+    #[serde(rename = "searchType")]
     search_type: Option<String>, // base plants or collection items. todo: user items, "search all"
-    search: Option<String>,      // search string like "PF 11"
+    search: Option<String>, // search string like "PF 11"
     name: Option<String>, // exact plant name (allows getting a single base plant). probably doesn't make sense when used with search
     patents: Option<bool>,
     #[serde(rename = "type")]
     type_: Option<String>, // apple, peach, etc.
+    limit: Option<i32>,
     page: Option<String>, // 0-N or "mid" for the patent midpoint page if unknown (so our first patent page link can work)
+    #[serde(rename = "perPage")]
     per_page: Option<i32>,
-    sort: Option<String>, // search by search quality, type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
+    #[serde(rename = "orderBy")]
+    order_by: Option<String>, // sort options: notoriety, search quality, type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
+    order: Option<String>, // "asc" or "desc". desc if omitted
+    #[serde(rename = "relativeHarvest")]
     relative_harvest: Option<String>, // minimum, maximum days
 
     // collection items search only
     collection: Option<String>, // collection path, or collection ID (number)
 
     // base plants search only:
+    #[serde(rename = "notorietyMin")]
     notoriety_min: Option<String>,
 
     // todo:
@@ -60,13 +67,17 @@ pub struct SearchQuery {
 
 #[derive(Default, Queryable, Serialize)]
 pub struct SearchReturn {
+    #[serde(rename = "searchType")]
     pub search_type: Option<String>, // base plants or collection
-    pub count: Option<i32>,          // total count of search results (if paginated)
+    pub count: Option<i32>, // total count of search results (if paginated)
     pub page: Option<i32>,
+    #[serde(rename = "patentMidpointPage")]
     pub patent_midpoint_page: Option<i32>, // special case: if we did a patent search, which page has the transition from past to future expirations?
+    #[serde(rename = "basePlants")]
     pub base_plants: Option<Vec<BasePlant>>,
 
     // only if constrained to one collection:
+    #[serde(rename = "collectionItems")]
     pub collection_items: Option<Vec<CollectionItem>>,
     pub collection: Option<Collection>,
     pub locations: Option<Vec<Location>>,
@@ -130,54 +141,30 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
                 println!("input {input} cleaned: {cleaned} ORed: {statement_string}");
 
-                const N_MAX: i64 = 10;
-
-                let mut query = fts_base_plants::table
+                let mut search_query = fts_base_plants::table
                     .select((fts_base_plants::rowid, fts_base_plants::rank))
                     .filter(fts_base_plants::whole_row.eq(statement_string))
                     .order(fts_base_plants::rank.asc())
                     .into_boxed();
 
-                match restrict_to_type {
-                    None => {
-                        query = query.limit(N_MAX);
-                    }
-                    _ => {
-                        query = query.limit(N_MAX * 10); // we gather more if we're going to later restrict by type
-                    }
-                }
+                // todo - if we have restrict_to_type set, apply that (?) - or do we want to pull that logic out the the front end?
 
-                let values = query.load::<FtsBasePlants>(db_conn);
-                // todo - maybe limit 100 or something? we want to get a bunch though in case we're limiting to only one variety later
-                // todo - report total search results if limiting to N
+                // no limit within search - we may sort later, by something else
 
-                println!("{:?}", values);
+                let values = search_query.load::<FtsBasePlants>(db_conn);
+                // println!("{:?}", values);
 
                 // todo: order or limit by notoriety
                 match values {
                     Ok(values) => {
-                        let ids_nullable: Vec<_> = values.iter().map(|x| x.rowid).collect();
-
-                        // step through IDs and get the original row
-                        // todo - make FTS ranking available somehow as a sort option
-                        // we might need to use this results vector later or something
-                        let results: Vec<BasePlant> = Default::default();
-                        println!("{:?}", results);
-
-                        // todo - we may want to limit how many IDs we look for when trying to get full rows starting with fts results
-                        let mut first_id = true;
-                        for id in ids_nullable.clone() {
-                            if first_id {
-                                base_query = base_query.filter(base_plants::id.eq(id));
-                                first_id = false;
-                            } else {
-                                base_query = base_query.or_filter(base_plants::id.eq(id));
-                            }
-                        }
-
                         if let Some(type_) = restrict_to_type {
                             base_query = base_query.filter(base_plants::type_.eq(type_.clone()));
                         };
+
+                        let ids_only: Vec<i32> =
+                            values.into_iter().map(|entry| entry.rowid).collect();
+
+                        base_query = base_query.filter(base_plants::id.eq_any(ids_only));
                     }
                     Err(_error) => {
                         return Err(anyhow!("some kind of search problem (todo)"));
@@ -206,12 +193,52 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             }
 
             // todo sort
+            // sort options:
+            // - notoriety
+            // - type_then_name
+            // - name_then_type
+            // - expiration
+            // - harvest_time
+            // - search_quality (needs special handling to preserve the "rank" result from the fts search, todo)
+
+            if let Some(sort) = &query.order_by {
+                let order_asc;
+                if let Some(order) = &query.order {
+                    match order.as_str() {
+                        "asc" => order_asc = true,
+                        "desc" => order_asc = false,
+                        _ => return Err(anyhow!("unknown order \"{order}\"")),
+                    }
+                } else {
+                    order_asc = false; // default descending, highest notoriety first. todo: probably different defaults for each sort type? like letter A first
+                }
+
+                match sort.as_str() {
+                    "notoriety" => {
+                        if (order_asc) {
+                            base_query = base_query.order(base_plants::notoriety_score.asc());
+                        } else {
+                            base_query = base_query.order(base_plants::notoriety_score.desc());
+                        }
+                    }
+                    // todo - other sort types
+                    _ => return Err(anyhow!("unknown sort type \"{sort}\"")),
+                }
+            }
+
             // todo page
             // todo per_page
             // todo relative_harvest
             // todo collection (path or ID)
             // todo notoriety_min (base plants only)
             // todo distance, from (collection items only)
+
+            // todo total count (if using a limit or page)
+            // todo midpoint if getting patents, and sorted by expiration date
+
+            if let Some(limit) = &query.limit {
+                base_query = base_query.limit(*limit as i64);
+            }
 
             let base_plants: Result<Vec<BasePlant>, diesel::result::Error> =
                 base_query.load(db_conn);

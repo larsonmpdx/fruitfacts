@@ -19,7 +19,7 @@ export default function Home() {
           return callback([]);
         }
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search/${encodeURIComponent(searchText)}`
+          `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=base&orderBy=notoriety&search=${encodeURIComponent(searchText)}`
         )
           .then((response) => {
             if (response.status !== 200) {
