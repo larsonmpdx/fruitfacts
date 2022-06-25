@@ -161,13 +161,13 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         // step through IDs and get the original row
                         // todo - make FTS ranking available somehow as a sort option
                         // we might need to use this results vector later or something
-                        let mut results: Vec<BasePlant> = Default::default();
+                        let results: Vec<BasePlant> = Default::default();
                         println!("{:?}", results);
 
                         // todo - we may want to limit how many IDs we look for when trying to get full rows starting with fts results
                         let mut first_id = true;
                         for id in ids_nullable.clone() {
-                            if (first_id) {
+                            if first_id {
                                 base_query = base_query.filter(base_plants::id.eq(id));
                                 first_id = false;
                             } else {
@@ -193,7 +193,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
             // patents: Option<bool>
             if let Some(patents) = &query.patents {
-                if (*patents) {
+                if *patents {
                     base_query = base_query.filter(base_plants::uspp_expiration.is_not_null())
                 } else {
                     // finding items without patents is probably not useful but whatever
