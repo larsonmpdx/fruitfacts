@@ -1,6 +1,6 @@
 my process for making these fruit SVGs:
 
-- find a source image that will translate nicely to vector graphics. most of the resulting quality of the vector output is from the source itself.  it should have high resolution, nice contrast for the details wanted, simplicity, etc.
+- find a source image that will translate nicely to vector graphics. most of the resulting quality of the vector output is from the source itself. it should have high resolution, nice contrast for the details wanted, simplicity, etc.
 - open the source image in paint dot net (bitmap editor) and trim it down to the thing you want on a white background with fill or paintbrush or whatever
   - remember to change the pen mode to "overwrite"
 - save as png

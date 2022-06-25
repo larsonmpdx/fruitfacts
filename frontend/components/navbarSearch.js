@@ -19,7 +19,11 @@ export default function Home() {
           return callback([]);
         }
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=base&orderBy=notoriety&search=${encodeURIComponent(searchText)}`
+          `${
+            process.env.NEXT_PUBLIC_BACKEND_BASE
+          }/api/search?searchType=base&limit=10&orderBy=notoriety&search=${encodeURIComponent(
+            searchText
+          )}`
         )
           .then((response) => {
             if (response.status !== 200) {
@@ -50,17 +54,19 @@ export default function Home() {
 
         let newOptions = [];
 
-        results.forEach((result) => {
-          let entry = { link: `/plant/${result.type}/${result.name}` };
-          if (result.marketing_name) {
-            entry.label = result.name + ' (' + result.marketing_name + ') ' + result.type;
-          } else {
-            entry.label = result.name + ' ' + result.type;
-          }
-          newOptions.push(entry);
-        });
+        if (Array.isArray(results.basePlants)) {
+          results.basePlants.forEach((result) => {
+            let entry = { link: `/plant/${result.type}/${result.name}` };
+            if (result.marketing_name) {
+              entry.label = result.name + ' (' + result.marketing_name + ') ' + result.type;
+            } else {
+              entry.label = result.name + ' ' + result.type;
+            }
+            newOptions.push(entry);
+          });
 
-        setOptions(newOptions);
+          setOptions(newOptions);
+        }
       }
     });
 
