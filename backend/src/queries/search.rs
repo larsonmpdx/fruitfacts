@@ -93,7 +93,12 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
     match query.search_type.as_ref().unwrap().as_str() {
         "base" => {
+            // we make three queries because boxed diesel queries can't be copied, so we need to make running copies
+            // so we can later use them for counts
+            // see https://github.com/diesel-rs/diesel/issues/2277
             let mut base_query = base_plants::table.into_boxed();
+            let mut base_query2 = base_plants::table.into_boxed(); // for patent count
+            let mut base_query3 = base_plants::table.into_boxed(); // for overall count
 
             if query.search.is_some() {
                 let input = query.search.as_ref().unwrap();
@@ -159,13 +164,17 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 match values {
                     Ok(values) => {
                         if let Some(type_) = restrict_to_type {
-                            base_query = base_query.filter(base_plants::type_.eq(type_));
+                            base_query = base_query.filter(base_plants::type_.eq(type_.clone()));
+                            base_query2 = base_query2.filter(base_plants::type_.eq(type_.clone()));
+                            base_query3 = base_query3.filter(base_plants::type_.eq(type_));
                         };
 
                         let ids_only: Vec<i32> =
                             values.into_iter().map(|entry| entry.rowid).collect();
 
-                        base_query = base_query.filter(base_plants::id.eq_any(ids_only));
+                        base_query = base_query.filter(base_plants::id.eq_any(ids_only.clone()));
+                        base_query2 = base_query2.filter(base_plants::id.eq_any(ids_only.clone()));
+                        base_query3 = base_query3.filter(base_plants::id.eq_any(ids_only));
                     }
                     Err(_error) => {
                         return Err(anyhow!("some kind of search problem (todo)"));
@@ -177,20 +186,28 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
             if let Some(name) = &query.name {
                 base_query = base_query.filter(base_plants::name.eq(name));
+                base_query2 = base_query2.filter(base_plants::name.eq(name));
+                base_query3 = base_query3.filter(base_plants::name.eq(name));
             }
 
             // patents: Option<bool>
             if let Some(patents) = &query.patents {
                 if *patents {
-                    base_query = base_query.filter(base_plants::uspp_expiration.is_not_null())
+                    base_query = base_query.filter(base_plants::uspp_expiration.is_not_null());
+                    base_query2 = base_query2.filter(base_plants::uspp_expiration.is_not_null());
+                    base_query3 = base_query3.filter(base_plants::uspp_expiration.is_not_null());
                 } else {
                     // finding items without patents is probably not useful but whatever
-                    base_query = base_query.filter(base_plants::uspp_expiration.is_null())
+                    base_query = base_query.filter(base_plants::uspp_expiration.is_null());
+                    base_query2 = base_query2.filter(base_plants::uspp_expiration.is_null());
+                    base_query3 = base_query3.filter(base_plants::uspp_expiration.is_null());
                 }
             }
 
             if let Some(type_) = &query.type_ {
                 base_query = base_query.filter(base_plants::type_.eq(type_));
+                base_query2 = base_query2.filter(base_plants::type_.eq(type_));
+                base_query3 = base_query3.filter(base_plants::type_.eq(type_));
             }
 
             // todo sort
@@ -218,8 +235,12 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                     "notoriety" => {
                         if order_asc {
                             base_query = base_query.order(base_plants::notoriety_score.asc());
+                            base_query2 = base_query2.order(base_plants::notoriety_score.asc());
+                            base_query3 = base_query3.order(base_plants::notoriety_score.asc());
                         } else {
                             base_query = base_query.order(base_plants::notoriety_score.desc());
+                            base_query2 = base_query2.order(base_plants::notoriety_score.desc());
+                            base_query3 = base_query3.order(base_plants::notoriety_score.desc());
                         }
                     }
                     // todo - other sort types
@@ -227,25 +248,28 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 }
             }
 
-            // todo page
-            // todo per_page
-            let mut find_patent_midpoint;
-
             if let Some(page) = &query.page {
-
                 if let Some(per_page) = &query.per_page {
-
                     if page == "mid" {
                         // special case - todo - might also need to check that we're sorting by expiration
                         // todo - handle "mid" for the patent special case where we ask for the middle page
                         // get all results (no limit/offset) and then find our own midpoint?
-                        find_patent_midpoint = true;
+
+                        // 1: get a count of items that expired before today's date
+                        // 2: figure out how which page the last item was on
+                        // 3: use that to set the page
+
+                        let now = chrono::Utc::now().timestamp(); // todo - make this a parameter
+                        base_query2 = base_query2.filter(base_plants::uspp_expiration.lt(now));
+                        let prior_patent_count = base_query2.count().first::<i64>(db_conn);
+
+                        // todo - etc.
                     } else {
                         let page_i32 = page.parse::<i32>();
                         if page_i32.is_err() {
                             return Err(anyhow!("\"page\" wasn't \"mid\" or an integer"));
                         }
-                    
+
                         base_query = base_query.offset((page_i32.unwrap() * per_page).into());
                     }
                 } else {
@@ -258,7 +282,10 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             // todo notoriety_min (base plants only)
             // todo distance, from (collection items only) - there may be value to a search filter for "mentioned within x miles of zip code"
 
-            // todo total count (if using a limit or page)
+            // todo total count (if using a limit or page) - base_query3
+            let total_cout = base_query3.count().first::<i64>(db_conn);
+            // todo - etc. - and we can have a path to omit this and get it from the items count if we have no limit, I guess
+
             // todo midpoint if getting patents, and sorted by expiration date
 
             // per_page can be used as a limit if page isn't specified
