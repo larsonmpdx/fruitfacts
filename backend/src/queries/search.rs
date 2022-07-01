@@ -8,6 +8,7 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
 use serde_with::skip_serializing_none;
+use std::fmt::Write as _; // for write!() macro
 
 use anyhow::{anyhow, Result};
 
@@ -142,7 +143,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 // if we have multiple words, try adding one last search term which is all of them concatenated
                 // this helps us with "pf 1" for example
                 if split_for_count.len() >= 2 {
-                    statement_string.push_str(&format!(" OR \"{}\"", statement.join("")));
+                    let _ = write!(statement_string, " OR \"{}\"", statement.join(""));
                 }
 
                 println!("input {input} cleaned: {cleaned} ORed: {statement_string}");

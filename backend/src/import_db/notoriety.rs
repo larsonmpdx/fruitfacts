@@ -1,7 +1,7 @@
 // calculate a notoriety score for each base plant entry, and also each reference
 // this helps sort search results and filter browsing to only relevant varieties
 // the database has many old varieties that have fallen out of circulation, these should be filtered out most of the time but still accessible if needed
-use std::fmt::Write as _;
+use std::fmt::Write as _; // for write!() macro
 
 #[derive(Default)]
 pub struct CollectionNotoriety {

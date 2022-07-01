@@ -148,7 +148,7 @@ pub struct UserOauthEntry {
     pub oauth_info: Option<String>,
 }
 
-#[derive(Clone, Queryable, Insertable, Associations)]
+#[derive(Clone, Queryable, Associations)]
 #[table_name = "user_sessions"]
 #[belongs_to(User)]
 pub struct UserSession {
