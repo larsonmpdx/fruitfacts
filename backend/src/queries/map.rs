@@ -117,10 +117,5 @@ fn locations_search_db(
 
     db_query = db_query.limit(limit as i64);
 
-    let locations = db_query.load::<Location>(db_conn);
-
-    match locations {
-        Ok(location) => Ok(location),
-        Err(error) => Err(error),
-    }
+    db_query.load::<Location>(db_conn)
 }

@@ -261,7 +261,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
                         let now = chrono::Utc::now().timestamp(); // todo - make this a parameter
                         count_query = count_query.filter(base_plants::uspp_expiration.lt(now));
-                        let prior_patent_count = count_query.count().first::<i64>(db_conn);
+                        let _prior_patent_count = count_query.count().first::<i64>(db_conn);
 
                         // todo - etc.
                     } else {
