@@ -58,5 +58,11 @@
         contributor: "Michael",
         fact: "under US law, trademarks can't be applied to plant variety names (that is, the name by which a variety is known to the U.S. consumer)",
         reference: "https://tmep.uspto.gov/RDMS/TMEP/current#/current/TMEP-1200d1e2820.html"
+    },
+    {
+        contributor: "Michael",
+        fact: "Apple roots have been found to be 10-100x less dense than weed roots, so apple trees compete poorly with weeds for water and nutrients. Maintaining a weed-free area near the tree greatly helps most fruit trees",
+        // WSU talk - root density study results at the linked time
+        reference: "https://youtu.be/F4Q4iUwtPC8?t=158"
     }
 ]

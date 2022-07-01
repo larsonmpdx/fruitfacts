@@ -184,7 +184,8 @@
         },
         {
             type: "Fig",
-            name: "Osborne Prolific",
+            name: "Osbourne Prolific", // this name is somewhat more popular on google (2022)
+            AKA: ["Osborne Prolific"],
             released: "LE Cooke*"
         },
         {
