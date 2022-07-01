@@ -1,6 +1,7 @@
 // calculate a notoriety score for each base plant entry, and also each reference
 // this helps sort search results and filter browsing to only relevant varieties
 // the database has many old varieties that have fallen out of circulation, these should be filtered out most of the time but still accessible if needed
+use std::fmt::Write as _;
 
 #[derive(Default)]
 pub struct CollectionNotoriety {
@@ -149,7 +150,11 @@ pub fn base_plant_notoriety_calc(input: &BasePlantNotorietyInput) -> BasePlantNo
         age_explanation = "no release year";
     }
     output.score *= age_multiplier;
-    output.explanation += &format!(" *{} ({})", age_multiplier, age_explanation);
+    let _ = write!(
+        output.explanation,
+        " *{} ({})",
+        age_multiplier, age_explanation
+    );
 
     let references_multiplier = match input.number_of_references {
         6..=i32::MAX => 1.3,
@@ -160,7 +165,8 @@ pub fn base_plant_notoriety_calc(input: &BasePlantNotorietyInput) -> BasePlantNo
         i32::MIN..=1 => 0.8,
     };
     output.score *= references_multiplier;
-    output.explanation += &format!(
+    let _ = write!(
+        output.explanation,
         " *{} ({} references)",
         references_multiplier, input.number_of_references
     );
@@ -169,7 +175,7 @@ pub fn base_plant_notoriety_calc(input: &BasePlantNotorietyInput) -> BasePlantNo
     if input.uspp_number.is_some() {
         let patent_multiplier = 1.2;
         output.score *= patent_multiplier;
-        output.explanation += &format!(" *{} (uspp)", patent_multiplier);
+        let _ = write!(output.explanation, " *{} (uspp)", patent_multiplier);
     } else {
         output.explanation += " *1.0 (no uspp number)";
     }
