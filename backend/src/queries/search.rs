@@ -74,7 +74,7 @@ pub struct SearchReturn {
     #[serde(rename = "searchType")]
     pub search_type: Option<String>, // base plants or collection
     pub count: Option<i64>, // total count of search results (if paginated)
-    pub page: Option<i32>,
+    pub page: Option<i64>, // we pass this out in case of a patent midpoint page and for completeness
     #[serde(rename = "patentMidpointPage")]
     pub patent_midpoint_page: Option<i64>, // special case: if we did a patent search, which page has the transition from past to future expirations?
     #[serde(rename = "basePlants")]
@@ -309,10 +309,13 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 }
             }
 
+            // if we're sorting by patent expiration, figure out the patent midpoint page (will only exist if we have a per_page)
+            // so we can show a link to it, or provide it directly if requested as "page=mid"
+
             let mut patent_midpoint_page = None;
-            if let Some(page) = &query.page {
-                if let Some(per_page) = &query.per_page {
-                    if page == "mid" {
+            if let Some(sort) = &query.order_by {
+                if (sort == "patent_expiration") {
+                    if let Some(per_page) = &query.per_page {
                         // special case - might also need to check that we're sorting by expiration
 
                         let now = chrono::Utc::now().timestamp(); // todo - make this a parameter
@@ -327,15 +330,31 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         // if prior patents count is 50 and we have 50 per page, we want to show page 2 (1-referenced)
                         // if it's 51, show page 2
                         // if 49, show page 1
-
                         patent_midpoint_page = Some(1 + prior_patent_count / *per_page as i64);
-                    } else {
-                        let page_i32 = page.parse::<i32>();
-                        if page_i32.is_err() {
-                            return Err(anyhow!("\"page\" wasn't \"mid\" or an integer"));
+                    }
+                }
+            }
+
+            let mut page_output = None;
+            if let Some(page) = &query.page {
+                if let Some(per_page) = &query.per_page {
+                    if page == "mid" {
+                        if (patent_midpoint_page.is_none()) {
+                            return Err(anyhow!("requested patent midpoint page but we didn't find one (maybe not sorting by patent_expiration?)"));
                         }
 
-                        base_query = base_query.offset((page_i32.unwrap() * per_page).into());
+                        page_output = patent_midpoint_page;
+                        base_query = base_query
+                            .offset((patent_midpoint_page.unwrap() * *per_page as i64).into());
+                    } else {
+                        let page_i32_result = page.parse::<i32>();
+                        if page_i32_result.is_err() {
+                            return Err(anyhow!("\"page\" wasn't \"mid\" or an integer"));
+                        }
+                        let page_i32 = page_i32_result.unwrap();
+                        page_output = Some(page_i32.into());
+
+                        base_query = base_query.offset((page_i32 * per_page).into());
                     }
                 } else {
                     return Err(anyhow!("got \"page\" without \"per_page\""));
@@ -371,6 +390,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 Ok(base_plants) => Ok(SearchReturn {
                     base_plants: Some(base_plants),
                     count: Some(count),
+                    page: page_output,
                     patent_midpoint_page,
                     ..Default::default()
                 }),
