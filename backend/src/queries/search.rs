@@ -314,7 +314,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
             let mut patent_midpoint_page = None;
             if let Some(sort) = &query.order_by {
-                if (sort == "patent_expiration") {
+                if sort == "patent_expiration" {
                     if let Some(per_page) = &query.per_page {
                         // special case - might also need to check that we're sorting by expiration
 
@@ -339,7 +339,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             if let Some(page) = &query.page {
                 if let Some(per_page) = &query.per_page {
                     if page == "mid" {
-                        if (patent_midpoint_page.is_none()) {
+                        if patent_midpoint_page.is_none() {
                             return Err(anyhow!("requested patent midpoint page but we didn't find one (maybe not sorting by patent_expiration?)"));
                         }
 
