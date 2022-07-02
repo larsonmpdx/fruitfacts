@@ -345,7 +345,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
                         page_output = patent_midpoint_page;
                         base_query = base_query
-                            .offset((patent_midpoint_page.unwrap() * *per_page as i64).into());
+                            .offset(patent_midpoint_page.unwrap() * *per_page as i64);
                     } else {
                         let page_i32_result = page.parse::<i32>();
                         if page_i32_result.is_err() {
