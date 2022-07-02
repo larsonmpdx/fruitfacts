@@ -183,8 +183,6 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 }
             }
 
-            // todo - other filter and sort operations
-
             if let Some(name) = &query.name {
                 base_query = base_query.filter(base_plants::name.eq(name));
                 count_query = count_query.filter(base_plants::name.eq(name));
@@ -211,15 +209,6 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 base_query3 = base_query3.filter(base_plants::type_.eq(type_));
             }
 
-            // todo sort
-            // sort options:
-            // - notoriety
-            // - type_then_name
-            // - name_then_type
-            // - expiration
-            // - harvest_time
-            // - search_quality (needs special handling to preserve the "rank" result from the fts search, todo)
-
             if let Some(sort) = &query.order_by {
                 let order_asc;
                 if let Some(order) = &query.order {
@@ -244,7 +233,73 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                             base_query3 = base_query3.order(base_plants::notoriety_score.desc());
                         }
                     }
-                    // todo - other sort types
+                    "type_then_name" => {
+                        if order_asc {
+                            base_query = base_query.order(base_plants::type_.asc());
+                            count_query = count_query.order(base_plants::type_.asc());
+                            base_query3 = base_query3.order(base_plants::type_.asc());
+
+                            base_query = base_query.then_order_by(base_plants::name.asc());
+                            count_query = count_query.then_order_by(base_plants::name.asc());
+                            base_query3 = base_query3.then_order_by(base_plants::name.asc());
+                        } else {
+                            base_query = base_query.order(base_plants::type_.desc());
+                            count_query = count_query.order(base_plants::type_.desc());
+                            base_query3 = base_query3.order(base_plants::type_.desc());
+
+                            // note - we keep ascending order on the 2nd order by thing. that makes more sense to me
+                            base_query = base_query.then_order_by(base_plants::name.asc());
+                            count_query = count_query.then_order_by(base_plants::name.asc());
+                            base_query3 = base_query3.then_order_by(base_plants::name.asc());
+                        }
+                    }
+                    "name_then_type" => {
+                        if order_asc {
+                            base_query = base_query.order(base_plants::name.asc());
+                            count_query = count_query.order(base_plants::name.asc());
+                            base_query3 = base_query3.order(base_plants::name.asc());
+
+                            base_query = base_query.then_order_by(base_plants::type_.asc());
+                            count_query = count_query.then_order_by(base_plants::type_.asc());
+                            base_query3 = base_query3.then_order_by(base_plants::type_.asc());
+                        } else {
+                            base_query = base_query.order(base_plants::name.desc());
+                            count_query = count_query.order(base_plants::name.desc());
+                            base_query3 = base_query3.order(base_plants::name.desc());
+
+                            // note - we keep ascending order on the 2nd order by thing. that makes more sense to me
+                            base_query = base_query.then_order_by(base_plants::type_.asc());
+                            count_query = count_query.then_order_by(base_plants::type_.asc());
+                            base_query3 = base_query3.then_order_by(base_plants::type_.asc());
+                        }
+                    }
+                    "patent_expiration" => {
+                        if order_asc {
+                            base_query = base_query.order(base_plants::uspp_expiration.asc());
+                            count_query = count_query.order(base_plants::uspp_expiration.asc());
+                            base_query3 = base_query3.order(base_plants::uspp_expiration.asc());
+                        } else {
+                            base_query = base_query.order(base_plants::uspp_expiration.desc());
+                            count_query = count_query.order(base_plants::uspp_expiration.desc());
+                            base_query3 = base_query3.order(base_plants::uspp_expiration.desc());
+                        }
+                    }
+                    "harvest_time" => {
+                        if order_asc {
+                            base_query = base_query.order(base_plants::harvest_relative.asc());
+                            count_query = count_query.order(base_plants::harvest_relative.asc());
+                            base_query3 = base_query3.order(base_plants::harvest_relative.asc());
+                        } else {
+                            base_query = base_query.order(base_plants::harvest_relative.desc());
+                            count_query = count_query.order(base_plants::harvest_relative.desc());
+                            base_query3 = base_query3.order(base_plants::harvest_relative.desc());
+                        }
+                    }
+                    "search_quality" => {
+                        // todo - this needs some fancy handling to carry through sort order in the query
+                        // or otherwise sort the results after they're returned
+                        return Err(anyhow!("search_quality sort type not implemented (todo)"));
+                    }
                     _ => return Err(anyhow!("unknown sort type \"{sort}\"")),
                 }
             }
