@@ -27,8 +27,10 @@ pub struct SearchQuery {
     #[serde(rename = "orderBy")]
     order_by: Option<String>, // sort options: notoriety, search quality, type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
     order: Option<String>, // "asc" or "desc". desc if omitted
-    #[serde(rename = "relativeHarvest")]
-    relative_harvest: Option<String>, // minimum, maximum days
+    #[serde(rename = "relativeHarvestMin")]
+    relative_harvest_min: Option<String>,
+    #[serde(rename = "relativeHarvestMax")]
+    relative_harvest_max: Option<String>,
 
     // collection items search only
     collection: Option<String>, // collection path, or collection ID (number)
@@ -74,7 +76,7 @@ pub struct SearchReturn {
     pub count: Option<i64>, // total count of search results (if paginated)
     pub page: Option<i32>,
     #[serde(rename = "patentMidpointPage")]
-    pub patent_midpoint_page: Option<i32>, // special case: if we did a patent search, which page has the transition from past to future expirations?
+    pub patent_midpoint_page: Option<i64>, // special case: if we did a patent search, which page has the transition from past to future expirations?
     #[serde(rename = "basePlants")]
     pub base_plants: Option<Vec<BasePlant>>,
 
@@ -102,6 +104,9 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             let mut base_query3 = base_plants::table.into_boxed(); // for overall count
 
             if query.search.is_some() {
+                // todo - support searching with just one or two letters (fts uses "trigraphs" and won't search for these)
+                // just do a begins-with search on name or AKA columns
+
                 let input = query.search.as_ref().unwrap();
                 // remove extra characters. leave spaces so we can treat separate words as separate
                 // dashes get interpreted by fts. same with +*:^ AND OR NOT
@@ -304,22 +309,26 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 }
             }
 
+            let mut patent_midpoint_page = None;
             if let Some(page) = &query.page {
                 if let Some(per_page) = &query.per_page {
                     if page == "mid" {
-                        // special case - todo - might also need to check that we're sorting by expiration
-                        // todo - handle "mid" for the patent special case where we ask for the middle page
-                        // get all results (no limit/offset) and then find our own midpoint?
-
-                        // 1: get a count of items that expired before today's date
-                        // 2: figure out how which page the last item was on
-                        // 3: use that to set the page
+                        // special case - might also need to check that we're sorting by expiration
 
                         let now = chrono::Utc::now().timestamp(); // todo - make this a parameter
                         count_query = count_query.filter(base_plants::uspp_expiration.lt(now));
-                        let _prior_patent_count = count_query.count().first::<i64>(db_conn);
+                        let prior_patent_count_result = count_query.count().first::<i64>(db_conn);
 
-                        // todo - etc.
+                        if let Err(error) = prior_patent_count_result {
+                            return Err(error.into());
+                        }
+                        let prior_patent_count = prior_patent_count_result.unwrap();
+
+                        // if prior patents count is 50 and we have 50 per page, we want to show page 2 (1-referenced)
+                        // if it's 51, show page 2
+                        // if 49, show page 1
+
+                        patent_midpoint_page = Some(1 + prior_patent_count / *per_page as i64);
                     } else {
                         let page_i32 = page.parse::<i32>();
                         if page_i32.is_err() {
@@ -362,6 +371,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 Ok(base_plants) => Ok(SearchReturn {
                     base_plants: Some(base_plants),
                     count: Some(count),
+                    patent_midpoint_page,
                     ..Default::default()
                 }),
                 Err(error) => Err(error.into()),
