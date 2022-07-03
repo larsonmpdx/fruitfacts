@@ -32,8 +32,9 @@ pub struct SearchQuery {
     #[serde(rename = "relativeHarvestMax")]
     relative_harvest_max: Option<String>,
 
-    // collection items search only
-    collection: Option<String>, // collection path, or collection ID (number)
+    // collection items search only (id or path, or I guess both)
+    collection_id: Option<String>,
+    collection_path: Option<String>,
 
     // base plants search only:
     #[serde(rename = "notorietyMin")]
@@ -318,7 +319,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                     if let Some(per_page) = &query.per_page {
                         // special case - might also need to check that we're sorting by expiration
 
-                        let now = chrono::Utc::now().timestamp(); // todo - make this a parameter
+                        let now = chrono::Utc::now().timestamp(); // todo - make this a parameter?
                         count_query = count_query.filter(base_plants::uspp_expiration.lt(now));
                         let prior_patent_count_result = count_query.count().first::<i64>(db_conn);
 
@@ -344,8 +345,8 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         }
 
                         page_output = patent_midpoint_page;
-                        base_query = base_query
-                            .offset(patent_midpoint_page.unwrap() * *per_page as i64);
+                        base_query =
+                            base_query.offset(patent_midpoint_page.unwrap() * *per_page as i64);
                     } else {
                         let page_i32_result = page.parse::<i32>();
                         if page_i32_result.is_err() {
@@ -361,18 +362,34 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 }
             }
 
-            // todo relative_harvest
-            // todo collection (path or ID)
+            // todo relative_harvest (min and max)
+            if let Some(relative_harvest_min) = &query.relative_harvest_min {
+                // todo
+            }
+            if let Some(relative_harvest_max) = &query.relative_harvest_max {
+                // todo
+            }
+
+            // todo collection (path or ID) - collection items only
+            if let Some(collection_id) = &query.collection_id {
+                // todo - limit to this collection ID (different search type though)
+            }
+            if let Some(collection_path) = &query.collection_path {
+                // todo
+            }
+
             // todo notoriety_min (base plants only)
+            if let Some(notoriety_min) = &query.notoriety_min {
+                // todo
+            }
+
             // todo distance, from (collection items only) - there may be value to a search filter for "mentioned within x miles of zip code"
 
-            // todo total count (if using a limit or page) - base_query3
-            let count_result = base_query3.count().first::<i64>(db_conn);
-
-            if let Err(error) = count_result {
+            let overall_count_result = base_query3.count().first::<i64>(db_conn);
+            if let Err(error) = overall_count_result {
                 return Err(error.into());
             }
-            let count = count_result.unwrap();
+            let overall_count = overall_count_result.unwrap();
 
             // todo - etc. - and we can have a path to omit this and get it from the items count if we have no limit, I guess
 
@@ -389,7 +406,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             match base_plants {
                 Ok(base_plants) => Ok(SearchReturn {
                     base_plants: Some(base_plants),
-                    count: Some(count),
+                    count: Some(overall_count),
                     page: page_output,
                     patent_midpoint_page,
                     ..Default::default()
