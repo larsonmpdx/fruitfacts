@@ -1,8 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
-import Button from '../../components/buttonLink';
-import { formatPatentDate } from '../../components/functions';
+import ItemList from '../../components/itemList';
 
 export async function getServerSideProps(context) {
   let errorMessage = null;
@@ -12,8 +10,10 @@ export async function getServerSideProps(context) {
     pageNum = 0;
   }
 
-  const patent_info = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/patents?perPage=50&page=${pageNum}`
+  const data = await fetch(
+    `${
+      process.env.NEXT_PUBLIC_BACKEND_BASE
+    }/api/search?searchType=base&perPage=50&patents=true&orderBy=patent_expiration&page=${pageNum}`
   )
     .then((response) => {
       if (response.status !== 200) {
@@ -30,7 +30,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      patent_info,
+      data,
       pageNum,
       errorMessage
     }
@@ -38,7 +38,7 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home({
-  patent_info,
+  data,
   pageNum,
   errorMessage,
   setErrorMessage,
@@ -56,57 +56,7 @@ export default function Home({
       <Head>
         <title>{`Patents page ${pageNum}`}</title>
       </Head>
-      <article className="prose m-5">
-        <h2>Patents Page {pageNum}</h2>
-
-        <Button
-          href={`/patents/${parseInt(patent_info.last_page_past)}`}
-          enabled={pageNum > patent_info.last_page_past}
-          label="first"
-        />
-        <Button
-          href={`/patents/${parseInt(pageNum) - 1}`}
-          enabled={pageNum > patent_info.last_page_past}
-          label="previous"
-        />
-        <Button href="/patents/0" enabled={true} label="current" />
-        <Button
-          href={`/patents/${parseInt(pageNum) + 1}`}
-          enabled={pageNum < patent_info.last_page_future}
-          label="next"
-        />
-        <Button
-          href={`/patents/${parseInt(patent_info.last_page_future)}`}
-          enabled={pageNum < patent_info.last_page_future}
-          label="last"
-        />
-
-        <ul className="list-none">
-          {patent_info.patents && (
-            <>
-              {patent_info.patents.map((item, index) => (
-                <>
-                  <li key={index}>
-                    <img
-                      className="my-0 mx-2 inline h-6 w-6 object-contain"
-                      src={'/fruit_icons/' + item.type + '.svg'}
-                    />
-                    <Link
-                      href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(
-                        item.name
-                      )}`}
-                    >
-                      {item.name + ' ' + item.type}
-                    </Link>
-                    {item.marketing_name && <> (marketed under the {item.marketing_name} brand)</>}{' '}
-                    {formatPatentDate(item.uspp_expiration, item.uspp_expiration_estimated)}
-                  </li>
-                </>
-              ))}
-            </>
-          )}
-        </ul>
-      </article>
+      <ItemList data={data}></ItemList>
     </>
   );
 }

@@ -28,9 +28,9 @@ pub struct SearchQuery {
     order_by: Option<String>, // sort options: notoriety, search quality, type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
     order: Option<String>, // "asc" or "desc". desc if omitted
     #[serde(rename = "relativeHarvestMin")]
-    relative_harvest_min: Option<String>,
+    relative_harvest_min: Option<i32>,
     #[serde(rename = "relativeHarvestMax")]
-    relative_harvest_max: Option<String>,
+    relative_harvest_max: Option<i32>,
 
     // collection items search only (id or path, or I guess both)
     collection_id: Option<String>,
@@ -38,7 +38,7 @@ pub struct SearchQuery {
 
     // base plants search only:
     #[serde(rename = "notorietyMin")]
-    notoriety_min: Option<String>,
+    notoriety_min: Option<f32>,
 
     // todo:
     distance: Option<String>, // max distance, goes with "from"
@@ -362,25 +362,17 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 }
             }
 
-            // todo relative_harvest (min and max)
+            // relative_harvest (min and max)
             if let Some(relative_harvest_min) = &query.relative_harvest_min {
-                // todo
+                base_query = base_query.filter(base_plants::harvest_relative.ge(relative_harvest_min));
             }
             if let Some(relative_harvest_max) = &query.relative_harvest_max {
-                // todo
+                base_query = base_query.filter(base_plants::harvest_relative.le(relative_harvest_max));
             }
 
-            // todo collection (path or ID) - collection items only
-            if let Some(collection_id) = &query.collection_id {
-                // todo - limit to this collection ID (different search type though)
-            }
-            if let Some(collection_path) = &query.collection_path {
-                // todo
-            }
-
-            // todo notoriety_min (base plants only)
+            // notoriety_min (base plants only)
             if let Some(notoriety_min) = &query.notoriety_min {
-                // todo
+                base_query = base_query.filter(base_plants::notoriety_score.ge(notoriety_min));
             }
 
             // todo distance, from (collection items only) - there may be value to a search filter for "mentioned within x miles of zip code"
@@ -414,8 +406,21 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 Err(error) => Err(error.into()),
             }
         }
-        "coll" => Err(anyhow!("")),
-        _ => Err(anyhow!("")),
+        "coll" => {
+            /*
+            // todo - for collection items search only
+            // todo collection (path or ID) - collection items only
+            if let Some(collection_id) = &query.collection_id {
+                // todo - limit to this collection ID (different search type though)
+            }
+            if let Some(collection_path) = &query.collection_path {
+                // todo
+            }
+            */
+            Err(anyhow!("collection search not implemented"))
+        }
+            ,
+        _ => Err(anyhow!("unknown search type")),
     }
 }
 
