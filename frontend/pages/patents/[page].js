@@ -11,9 +11,7 @@ export async function getServerSideProps(context) {
   }
 
   const data = await fetch(
-    `${
-      process.env.NEXT_PUBLIC_BACKEND_BASE
-    }/api/search?searchType=base&perPage=50&patents=true&orderBy=patent_expiration&page=${pageNum}`
+    `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=base&perPage=50&patents=true&orderBy=patent_expiration&page=${pageNum}`
   )
     .then((response) => {
       if (response.status !== 200) {
