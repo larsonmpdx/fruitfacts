@@ -7,7 +7,7 @@ import React from 'react';
 let links = [
   { name: 'locations', href: '/dirs/' },
   { name: 'plants', href: '/plants' },
-  { name: 'US patents', href: '/patents/0' }
+  { name: 'US patents', href: '/patents/1' }
 ];
 
 export default function Home({ user, setUser, contributingLinks }) {

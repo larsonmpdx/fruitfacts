@@ -621,14 +621,19 @@ async fn get_plant(
 
 #[derive(Serialize)]
 struct RecentChanges {
+    #[serde(rename = "buildInfo")]
     build_info: BuildInfo,
+    #[serde(rename = "recentChanges")]
     recent_changes: RecentChangesDB,
 }
 
 #[derive(Serialize)]
 struct BuildInfo {
+    #[serde(rename = "gitHash")]
     git_hash: String,
+    #[serde(rename = "gitUnixTime")]
     git_unix_time: String,
+    #[serde(rename = "gitCommitCount")]
     git_commit_count: String,
 }
 
@@ -641,13 +646,17 @@ pub struct CollectionChanges {
 
     pub title: Option<String>,
 
+    #[serde(rename = "gitEditTime")]
     pub git_edit_time: Option<i64>,
 }
 
 #[derive(Default, Serialize)]
 pub struct RecentChangesDB {
+    #[serde(rename = "collectionChanges")]
     pub collection_changes: Vec<CollectionChanges>,
+    #[serde(rename = "basePlantsCount")]
     pub base_plants_count: i64,
+    #[serde(rename = "referencesCount")]
     pub references_count: i64,
 }
 

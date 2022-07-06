@@ -12,37 +12,37 @@ use std::fmt::Write as _; // for write!() macro
 
 use anyhow::{anyhow, Result};
 
-#[derive(Deserialize)]
+#[derive(Default, Deserialize, Serialize, Clone)]
 pub struct SearchQuery {
     #[serde(rename = "searchType")]
-    search_type: Option<String>, // base plants or collection items. todo: user items, "search all"
-    search: Option<String>, // search string like "PF 11"
-    name: Option<String>, // exact plant name (allows getting a single base plant). probably doesn't make sense when used with search
-    patents: Option<bool>,
+    pub search_type: Option<String>, // base plants or collection items. todo: user items, "search all"
+    pub search: Option<String>, // search string like "PF 11"
+    pub name: Option<String>, // exact plant name (allows getting a single base plant). probably doesn't make sense when used with search
+    pub patents: Option<bool>,
     #[serde(rename = "type")]
-    type_: Option<String>, // apple, peach, etc.
-    page: Option<String>, // 0-N or "mid" for the patent midpoint page if unknown (so our first patent page link can work)
+    pub type_: Option<String>, // apple, peach, etc.
+    pub page: Option<String>, // 1-referenced (default 1) 1-N or "mid" for the patent midpoint page if unknown (so our first patent page link can work)
     #[serde(rename = "perPage")]
-    per_page: Option<i32>,
+    pub per_page: Option<i32>,
     #[serde(rename = "orderBy")]
-    order_by: Option<String>, // sort options: notoriety, search quality, type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
-    order: Option<String>, // "asc" or "desc". desc if omitted
+    pub order_by: Option<String>, // sort options: notoriety, search quality, type then name, name then type, patent expiration (special case, also compute the middle patent page), harvest time
+    pub order: Option<String>, // "asc" or "desc". desc if omitted
     #[serde(rename = "relativeHarvestMin")]
-    relative_harvest_min: Option<i32>,
+    pub relative_harvest_min: Option<i32>,
     #[serde(rename = "relativeHarvestMax")]
-    relative_harvest_max: Option<i32>,
+    pub relative_harvest_max: Option<i32>,
 
     // collection items search only (id or path, or I guess both)
-    collection_id: Option<String>,
-    collection_path: Option<String>,
+    pub collection_id: Option<String>,
+    pub collection_path: Option<String>,
 
     // base plants search only:
     #[serde(rename = "notorietyMin")]
-    notoriety_min: Option<f32>,
+    pub notoriety_min: Option<f32>,
 
     // todo:
-    distance: Option<String>, // max distance, goes with "from"
-    from: Option<String>,     // goes with distance, a zip code or point or something
+    pub distance: Option<String>, // max distance, goes with "from"
+    pub from: Option<String>,     // goes with distance, a zip code or point or something
 }
 
 // base plants search:
@@ -72,10 +72,12 @@ pub struct SearchQuery {
 #[skip_serializing_none]
 #[derive(Default, Queryable, Serialize)]
 pub struct SearchReturn {
-    #[serde(rename = "searchType")]
-    pub search_type: Option<String>, // base plants or collection
+    pub query: SearchQuery,
+
     pub count: Option<i64>, // total count of search results (if paginated)
-    pub page: Option<i64>, // we pass this out in case of a patent midpoint page and for completeness
+    pub page: Option<i64>, // 1-referenced. we pass this out in case of a patent midpoint page and for completeness
+    #[serde(rename = "lastPage")]
+    pub last_page: Option<i64>, // 1-referenced
     #[serde(rename = "patentMidpointPage")]
     pub patent_midpoint_page: Option<i64>, // special case: if we did a patent search, which page has the transition from past to future expirations?
     #[serde(rename = "basePlants")]
@@ -224,7 +226,16 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         _ => return Err(anyhow!("unknown order \"{order}\"")),
                     }
                 } else {
-                    order_asc = false; // default descending, highest notoriety first. todo: probably different defaults for each sort type? like letter A first
+                    // default sort order is different for each type
+                    order_asc = match sort.as_str() {
+                        "notoriety" => false, // highest notiriety first
+                        "type_then_name" => false,
+                        "name_then_type" => false,
+                        "patent_expiration" => true, // oldest patents first
+                        "harvest_time" => false,
+                        "search_quality" => false, // highest search quality first
+                        _ => false,
+                    };
                 }
 
                 match sort.as_str() {
@@ -345,8 +356,8 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         }
 
                         page_output = patent_midpoint_page;
-                        base_query =
-                            base_query.offset(patent_midpoint_page.unwrap() * *per_page as i64);
+                        base_query = base_query
+                            .offset((patent_midpoint_page.unwrap() - 1) * *per_page as i64);
                     } else {
                         let page_i32_result = page.parse::<i32>();
                         if page_i32_result.is_err() {
@@ -355,7 +366,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         let page_i32 = page_i32_result.unwrap();
                         page_output = Some(page_i32.into());
 
-                        base_query = base_query.offset((page_i32 * per_page).into());
+                        base_query = base_query.offset(((page_i32 - 1) * per_page).into());
                     }
                 } else {
                     return Err(anyhow!("got \"page\" without \"per_page\""));
@@ -364,10 +375,12 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
             // relative_harvest (min and max)
             if let Some(relative_harvest_min) = &query.relative_harvest_min {
-                base_query = base_query.filter(base_plants::harvest_relative.ge(relative_harvest_min));
+                base_query =
+                    base_query.filter(base_plants::harvest_relative.ge(relative_harvest_min));
             }
             if let Some(relative_harvest_max) = &query.relative_harvest_max {
-                base_query = base_query.filter(base_plants::harvest_relative.le(relative_harvest_max));
+                base_query =
+                    base_query.filter(base_plants::harvest_relative.le(relative_harvest_max));
             }
 
             // notoriety_min (base plants only)
@@ -383,6 +396,12 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             }
             let overall_count = overall_count_result.unwrap();
 
+            let last_page: i64 = if let Some(per_page) = &query.per_page {
+                (overall_count + (*per_page as i64 - 1)) / *per_page as i64 // round up
+            } else {
+                1
+            };
+
             // todo - etc. - and we can have a path to omit this and get it from the items count if we have no limit, I guess
 
             // todo midpoint if getting patents, and sorted by expiration date
@@ -397,9 +416,11 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
             match base_plants {
                 Ok(base_plants) => Ok(SearchReturn {
+                    query: query.clone(),
                     base_plants: Some(base_plants),
                     count: Some(overall_count),
                     page: page_output,
+                    last_page: Some(last_page),
                     patent_midpoint_page,
                     ..Default::default()
                 }),
@@ -419,7 +440,6 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             */
             Err(anyhow!("collection search not implemented"))
         }
-            ,
         _ => Err(anyhow!("unknown search type")),
     }
 }

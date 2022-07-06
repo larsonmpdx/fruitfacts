@@ -77,18 +77,18 @@ export default function Home({
           )}
         </div>
         <div>
-          {recentChangesData.recent_changes && (
+          {recentChangesData.recentChanges && (
             <>
               <h3>Recent Changes</h3>
               <ul className="list-disc">
-                {recentChangesData.recent_changes.collection_changes.map((update, index) => (
+                {recentChangesData.recentChanges.collectionChanges.map((update, index) => (
                   <li key={index}>
                     <Link
                       href={`/collections/${encodeURIComponent(update.path + update.filename)}`}
                     >
                       {update.filename}
                     </Link>
-                    <div className="m-1 inline">{timeAgo(update.git_edit_time * 1000)}</div>
+                    <div className="m-1 inline">{timeAgo(update.gitEditTime * 1000)}</div>
                   </li>
                 ))}
               </ul>
@@ -96,25 +96,23 @@ export default function Home({
           )}
         </div>
         <div>
-          {(recentChangesData.recent_changes || recentChangesData.build_info) && (
-            <h3>Build Info</h3>
-          )}
+          {(recentChangesData.recentChanges || recentChangesData.buildInfo) && <h3>Build Info</h3>}
           <>
-            {recentChangesData.recent_changes && (
+            {recentChangesData.recentChanges && (
               <div className="inline">
-                {recentChangesData.recent_changes.base_plants_count} plants in{' '}
-                {recentChangesData.recent_changes.references_count} references.
+                {recentChangesData.recentChanges.basePlantsCount} plants in{' '}
+                {recentChangesData.recentChanges.referencesCount} references.
               </div>
             )}
-            {recentChangesData.build_info && (
+            {recentChangesData.buildInfo && (
               <div className="m-1 inline">
-                updated {timeAgo(recentChangesData.build_info.git_unix_time * 1000)}
+                updated {timeAgo(recentChangesData.buildInfo.gitUnixTime * 1000)}
                 {', '}
-                build count {recentChangesData.build_info.git_commit_count},{' '}
+                build count {recentChangesData.buildInfo.gitCommitCount},{' '}
                 <a
-                  href={` ${`${process.env.NEXT_PUBLIC_GITHUB_HOMEPAGE}/tree/${recentChangesData.build_info.git_hash}`}`}
+                  href={` ${`${process.env.NEXT_PUBLIC_GITHUB_HOMEPAGE}/tree/${recentChangesData.buildInfo.gitHash}`}`}
                 >
-                  git hash {recentChangesData.build_info.git_hash.substring(0, 7)}
+                  git hash {recentChangesData.buildInfo.gitHash.substring(0, 7)}
                 </a>
               </div>
             )}
