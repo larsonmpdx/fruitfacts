@@ -33,7 +33,9 @@ pub struct SearchQuery {
     pub relative_harvest_max: Option<i32>,
 
     // collection items search only (id or path, or I guess both)
+    #[serde(rename = "collectionID")]
     pub collection_id: Option<String>,
+    #[serde(rename = "collectionPath")]
     pub collection_path: Option<String>,
 
     // base plants search only:

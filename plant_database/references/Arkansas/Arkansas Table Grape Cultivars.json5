@@ -16,6 +16,7 @@
         {
             type: "Grape",
             name: "Faith",
+            AKA: ["Ark. 2412", "A2412"],
             color: "blue",
             seedless: true,
             harvest_time: "late July to early August",
@@ -26,6 +27,7 @@
         {
             type: "Grape",
             name: "Gratitude",
+            AKA: ["Ark. 2505", "A2505"],
             color: "green",
             seedless: true,
             description: "exceptional crisp texture https://uark.flintbox.com/technologies/aa7b9d9c-5835-4c81-a2c9-8a9067e330ac",
@@ -36,6 +38,7 @@
         {
             type: "Grape",
             name: "Hope",
+            AKA: ["Ark. 2053", "A2053"],
             color: "green",
             seedless: true,
             harvest_time: "August 20th",
@@ -46,6 +49,7 @@
         {
             type: "Grape",
             name: "Joy",
+            AKA: ["Ark. 2494", "A2494"],
             color: "blue",
             seedless: true,
             harvest_time: "August 11th",
@@ -104,6 +108,7 @@
         {
             type: "Grape",
             name: "Sunbelt",
+            AKA: ["Ark. 1335", "A1335"],
             color: "blue",
             seedless: false,
             description: "a juice grape that is very similar to ‘Concord' but displays even ripening under hot conditions. low to moderate yield. good cold hardiness. moderate to high resistance to common fungal diseases",
@@ -113,6 +118,7 @@
         {
             type: "Grape",
             name: "Compassion",
+            AKA: ["Ark. 2932", "A2932"],
             color: "green",
             seedless: true,
             description: "https://journals.ashs.org/hortsci/downloadpdf/journals/hortsci/53/3/article-p401.xml https://uark.flintbox.com/technologies/75239314-1151-4124-8251-16a70cc192b4",

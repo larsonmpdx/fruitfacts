@@ -2,71 +2,223 @@
     title: "Table Grape Cultivar Performance in Oregon's Willamette Valley",
     author: "Vance, Amanda J., Strik, Bernadine C., Clark, John R.",
     url: "https://ir.library.oregonstate.edu/concern/articles/0r967909t",
+    // see also this article for background on the study:
+    //  https://www.columbian.com/news/2017/mar/18/study-evaluates-table-grape-options/
     published: "2017",
-    accessed: "Oct 2021",
+    accessed: "July 2022",
     type: "extension test",
-    needs_help: true,
     locations: [
         {
-            name: "Corvallis, OR", // todo - change to farm and nwrec
-            latitude: 44.54820212695868,
-            longitude: -123.21537145957399
+            // NWREC; Aurora, OR, lat. 45°28′N, long. 122°76′ W
+            // this is 45.47 N, 123.27 W
+            // actually it's 45.28, -122.75 (the paper looks to have used a decimal value but mistakenly applied degrees-minutes notation D°M′)
+            name: "NWREC Aurora, OR",
+            latitude: 45.2814320834149,
+            longitude: -122.75001806394319,
+            short_name: "NWREC"
+        },
+        {
+            // Lewis Brown Farm (LB; Corvallis, OR, lat. 44°55’N, long. 123°22’W)
+            // this is 44.91667° N, 123.3667° W
+            // actually it's 44.55, -123.22, again a notation error in the paper to use D°M’
+            name: "OSU Lewis Brown Farm Corvallis, OR",
+            latitude: 44.5482594720644,
+            longitude: -123.21545729049211,
+            short_name: "LB"
         }
     ],
     plants: [
-        // NWREC; Aurora, OR, lat. 45°28′ N, long. 122°76′ W
-        // Lewis Brown Farm (LB; Corvallis, OR, lat. 44°55’N, long. 123°22’W)
-        // harvest dates and GDD
+        // table 3 on page 244 has harvest dates and GDD
+        // table 4 on page 245 has lb/plant (and a few other things not imported)
+        // table 5 on page 246 has subjective fruit quality ratings (not imported)
+        // GDD definition from the paper (bottom of page 242): Growing degree days using base 50°F (10°C) and maximum temperature of 86°F (30°C)
+        {
+            type: "Grape",
+            name: "Interlaken Seedless",
+            // dates (LB, NWREC): 27 Aug 25 Aug
+            harvest_time: "Aug 25",
+            description: "shows promise for production in this region. 8.3 and 6.6 lb/plant. GDD at harvest: (LB, NWREC): 2242 2381",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Interlaken Seedless",
+            harvest_time: "Aug 27",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Jupiter",
+            // dates (LB, NWREC): 27 Aug 25 Aug
+            harvest_time: "Aug 25",
+            not_recommended_reason: "susceptibility to common diseases, lower yield",
+            description: "12.6 and 8.6 lb/plant. GDD at harvest: (LB, NWREC): 2242 2381. 'Jupiter' is a flavorful grape with good berry size, but its poor cluster fill led to unattractive clusters with many shot berries",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Jupiter",
+            harvest_time: "Aug 27",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Faith",
+            // dates (LB, NWREC): 4 Sep 31 Aug
+            harvest_time: "Aug 31",
+            description: "shows promise for production in this region. 21.8 and 17.3 lb/plant. GDD at harvest: (LB, NWREC): 2368 2495",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Faith",
+            harvest_time: "Sep 4",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Passion",
+            // dates (LB, NWREC): 2 Sep 4 Sep
+            harvest_time: "Sep 4",
+            description: "shows promise for production in this region. 10.6 and 8.8 lb/plant. GDD at harvest: (LB, NWREC): 2332 2552",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Passion",
+            harvest_time: "Sep 2",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Canadice",
+            // dates (LB, NWREC): 13 Sep 30 Aug
+            harvest_time: "Aug 30",
+            description: "shows promise for production in this region. 24.5 and 10.1 lb/plant. GDD at harvest: (LB, NWREC): 2509 2484",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Canadice",
+            harvest_time: "Sep 13",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Reliance",
+            // dates (LB, NWREC): 7 Sep 5 Sep
+            harvest_time: "Sep 5",
+            description: "13.5 and 16.7 lb/plant. GDD at harvest: (LB, NWREC): 2426 2588",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Reliance",
+            harvest_time: "Sep 7",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Joy",
+            // dates (LB, NWREC): 9 Sep 5 Sep
+            harvest_time: "Sep 5",
+            description: "shows promise for production in this region. 24.4 and 14.1 lb/plant. GDD at harvest: (LB, NWREC): 2441 2588",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Joy",
+            harvest_time: "Sep 9",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Lakemont",
+            // dates (NWREC only): 4 Sep
+            harvest_time: "Sep 4",
+            not_recommended_reason: "susceptibility to common diseases, lower yield",
+            description: "6.5 lb/plant. GDD at harvest: (NWREC only): 2573",
+            locations: ["NWREC"]
+        },
+        // no LB entry for Lakemont
+        {
+            type: "Grape",
+            name: "Gratitude",
+            // dates (LB, NWREC): 15 Sep 14 Sep
+            harvest_time: "Sep 14",
+            description: "9.1 and 11.5 lb/plant. GDD at harvest: (LB, NWREC): 2544 2718. Gratitude was a good cultivar with crisp texture and mild flavor, but the brown spotting on berry skins would make this cultivar less desirable to consumers",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Gratitude",
+            harvest_time: "Sep 15",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Sweet Magic",
+            // dates (LB, NWREC): 20 Sep 11 Sep
+            harvest_time: "Sep 11",
+            not_recommended_reason: "uneven ripening",
+            description: "24.8 and 13.0 lb/plant. GDD at harvest: (LB, NWREC): 2647 2691",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Sweet Magic",
+            harvest_time: "Sep 20",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Neptune",
+            // dates (LB, NWREC): 20 Sep 17 Sep
+            harvest_time: "Sep 17",
+            description: "shows promise for production in this region. 20.5 and 19.6lb/plant. GDD at harvest: (LB, NWREC): 2607 2756",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Neptune",
+            harvest_time: "Sep 20",
+            locations: ["LB"]
+        },
+        {
+            type: "Grape",
+            name: "Hope",
+            // date (NWREC only): 17 Sep
+            harvest_time: "Sep 17",
+            description: "14.6lb/plant. GDD at harvest: (NWREC only): 2757. 'Hope' had good yield and disease resistance but ripened very late in the season and had an inferior quality compared to 'Neptune', another green-fruited late-season cultivar. 'Neptune' is thus a better lateseason option for growers in this region",
+            // I put both locations in to simplify the page. I dunno
+            locations: ["NWREC"]
+        },
+        // no LB entry for Hope
+        {
+            type: "Grape",
+            name: "Remaily Seedless",
+            // dates (LB, NWREC): 20 Sep 16 Sep
+            harvest_time: "Sep 16",
+            not_recommended_reason: "susceptibility to common diseases, lower yield",
+            description: "10.0 and 4.8 lb/plant. GDD at harvest: (LB, NWREC): 2647 2770",
+            locations: ["NWREC"]
+        },
+        {
+            type: "Grape",
+            name: "Remaily Seedless",
+            harvest_time: "Sep 20",
+            locations: ["LB"]
+        }
+
         /*
-Cultivar LB NWREC LB NWREC
-Interlaken Seedless 27 Aug 25 Aug 2242 2381
-Jupiter 27 Aug 25 Aug 2242 2381
-Faith 4 Sep 31 Aug 2368 2495
-Passion 2 Sep 4 Sep 2332 2552
+        // recommended: (I put a note in the description for these)
+        Overall, three of the new cultivars (Passion, Faith, and Joy) show promise for production in this region,
+        along with the best performing established cultivars Canadice, Neptune, and Interlaken.
 
-Canadice 13 Sep 30 Aug 2509 2484
-
-Reliance 7 Sep 5 Sep 2426 2588
-
-Joy 9 Sep 5 Sep 2441 2588
-
-Lakemont
-4 Sep n/a 2573
-
-Gratitude 15 Sep 14 Sep 2544 2718
-
-Sweet Magic 20 Sep 11 Sep 2647 2691
-
-Neptune 20 Sep 17 Sep 2607 2756
-
-Hope n/a 17 Sep n/a 2757
-
-Remaily Seedless 20 Sep 16 Sep 2647 2770
-
-
-// recommended:
-Overall, three of the new cultivars (Passion, Faith, and Joy) show promise for production in this region,
-along with the best performing established cultivars xCanadice, Neptune, and xInterlaken.
-
-// not recommended:
-'Sweet Magic', 'Remaily Seedless',
-'Lakemont', and 'Jupiter' stand out as the
-poorest performing cultivars due to susceptibility to common diseases, lower yield
-('Lakemont', 'Remaily Seedless', and 'Jupiter'), and uneven ripening ('Sweet Magic').
-
-'Jupiter' is a flavorful grape with good berry
-size, but its poor cluster fill led to unattractive clusters with many shot berries
-
-'Gratitude'
-was a good cultivar with crisp texture and
-mild flavor, but the brown spotting on berry
-skins would make this cultivar less desirable
-to consumers.
-
-'Hope' had good yield and disease resistance but ripened very late in the
-season and had an inferior quality compared
-to 'Neptune', another green-fruited late-season cultivar. 'Neptune' is thus a better lateseason option for growers in this region.
-
-*/
+        // not recommended: (added not_recommended_reason)
+        'Sweet Magic', 'Remaily Seedless', 'Lakemont', and 'Jupiter' stand out as the
+        poorest performing cultivars due to susceptibility to common diseases, lower yield
+        ('Lakemont', 'Remaily Seedless', and 'Jupiter'), and uneven ripening ('Sweet Magic').
+        */
     ]
 }
