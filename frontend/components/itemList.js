@@ -1,39 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import Button from './buttonLink';
 import { formatPatentDate } from './functions';
 
 export default function Home({ name, data }) {
   return (
     <>
       <article className="prose m-5">
-        {data?.page && (
-        <>
-        <h2>
-          {name} Page {data.page}
-        </h2>
-
-        <Button href={`/patents/1`} enabled={data.page > 1} label="first" />
-        <Button
-          href={`/patents/${parseInt(data.page) - 1}`}
-          enabled={data.page > 1}
-          label="previous"
-        />
-        {data.patentMidpointPage && (
-          <Button href={`/patents/${data.patentMidpointPage}`} enabled={true} label="current" />
-        )}
-        <Button
-          href={`/patents/${parseInt(data.page) + 1}`}
-          enabled={data.page < parseInt(data.lastPage)}
-          label="next"
-        />
-        <Button
-          href={`/patents/${parseInt(data.lastPage)}`}
-          enabled={data.page < parseInt(data.lastPage)}
-          label="last"
-        />
-        </>
-        )}
         <ul className="list-none">
           {data?.basePlants && (
             <>

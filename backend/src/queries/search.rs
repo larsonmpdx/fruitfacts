@@ -371,7 +371,13 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         base_query = base_query.offset(((page_i32 - 1) * per_page).into());
                     }
                 } else {
-                    return Err(anyhow!("got \"page\" without \"per_page\""));
+                    // special case: allow page=1 without per_page
+                    if page == "1" {
+                        page_output = Some(1);
+                        // no offset - nothing added to the query
+                    } else {
+                        return Err(anyhow!("got \"page\" != \"1\" without \"per_page\""));
+                    }
                 }
             }
 
