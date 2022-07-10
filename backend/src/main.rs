@@ -83,7 +83,6 @@ async fn main() -> std::io::Result<()> {
             .service(queries::auth::logout)
             // these can all be combind into one search query
             .service(queries::get_plant)
-            .service(queries::get_recent_patents)
             .service(queries::search::variety_search)
             // combine later?
             .service(queries::map::locations_search)
