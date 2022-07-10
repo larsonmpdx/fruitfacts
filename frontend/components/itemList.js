@@ -7,6 +7,8 @@ export default function Home({ name, data }) {
   return (
     <>
       <article className="prose m-5">
+        {data?.page && (
+        <>
         <h2>
           {name} Page {data.page}
         </h2>
@@ -30,9 +32,10 @@ export default function Home({ name, data }) {
           enabled={data.page < parseInt(data.lastPage)}
           label="last"
         />
-
+        </>
+        )}
         <ul className="list-none">
-          {data.basePlants && (
+          {data?.basePlants && (
             <>
               {data.basePlants.map((item, index) => (
                 <>
