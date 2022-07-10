@@ -7,7 +7,10 @@ import React from 'react';
 let links = [
   { name: 'locations', href: '/dirs/' },
   { name: 'plants', href: '/plants' },
-  { name: 'US patents', href: '/patents/1' }
+  {
+    name: 'US patents',
+    href: '/search?searchType=base&patents=true&page=1&perPage=50&orderBy=patent_expiration'
+  }
 ];
 
 export default function Home({ user, setUser, contributingLinks }) {

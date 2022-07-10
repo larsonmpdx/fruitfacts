@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import ItemList from '../../components/itemList';
+import ItemList from '../components/itemList';
 import { useRouter } from 'next/router';
-import Button from '../../components/button';
+import Button from '../components/button';
 import * as qs from 'qs';
 
 const nullIfEmptyQuote = (value) => {
@@ -29,7 +29,7 @@ export default function Home({ pageNum, errorMessage, setErrorMessage, setContri
   let querySearchType = query.searchType || 'base';
   let querySearch = query.search || undefined;
   let queryName = query.name || undefined;
-  let queryPatents = query.patents || 'true';
+  let queryPatents = query.patents == 'true' || true;
   let queryType = query.type || undefined; // apple, pear, etc.
   let queryPage = query.page || '1';
   let queryPerPage = query.perPage || '50';
@@ -43,9 +43,8 @@ export default function Home({ pageNum, errorMessage, setErrorMessage, setContri
 
   let queryNotorietyMin = query.notorietyMin || undefined;
 
-  // todo
-  let queryDistance = query.distance || undefined;
-  let queryFrom = query.from || undefined;
+  let queryDistance = query.distance || undefined; // todo
+  let queryFrom = query.from || undefined; // todo
 
   const [queryObject, setQueryObject] = React.useState({
     searchType: querySearchType,
@@ -113,11 +112,18 @@ export default function Home({ pageNum, errorMessage, setErrorMessage, setContri
 
   const handlePerPageChange = (event) => {
     const perPage = nullIfEmptyQuote(event.target.value);
-    // special case: if we switch to no "per page" (unlimited) then switch to page 1
-    if (!perPage) {
-      setQueryObject({ ...queryObject, perPage: null, page: '1' });
+    // only set if if our new perPage is different than previous. also switch to page 1 if we had a change
+    if (perPage != queryObject) {
+      setQueryObject({ ...queryObject, perPage, page: '1' });
+    }
+  };
+
+  const handlePatentsChange = (event) => {
+    const checked = event.target.checked;
+    if (checked) {
+      setQueryObject({ ...queryObject, patents: true });
     } else {
-      setQueryObject({ ...queryObject, perPage });
+      setQueryObject({ ...queryObject, patents: null });
     }
   };
 
@@ -151,6 +157,15 @@ export default function Home({ pageNum, errorMessage, setErrorMessage, setContri
         <option value="200">200 per page</option>
         <option value="">unlimited</option>
       </select>
+
+      <label>
+        <input
+          type="checkbox"
+          checked={queryObject.patents == true}
+          onClick={handlePatentsChange}
+        />
+        patented only
+      </label>
 
       {data?.page && (
         <>
