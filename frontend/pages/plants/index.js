@@ -1,14 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { getTypes } from '../../components/getTypes';
 
 export async function getStaticProps() {
-  const json5 = require('json5');
-  const fs = require('fs');
-  const path = require('path');
-
-  let typesFile = fs.readFileSync(path.join(process.cwd(), '../plant_database/types.json5'));
-  const types = json5.parse(typesFile);
+  const types = getTypes();
 
   return {
     props: {

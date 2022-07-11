@@ -1,9 +1,22 @@
+import * as qs from 'qs';
 import React from 'react';
 import Head from 'next/head';
-import ItemList from '../components/itemList';
 import { useRouter } from 'next/router';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import ItemList from '../components/itemList';
 import Button from '../components/button';
-import * as qs from 'qs';
+import { getTypesForAutocomplete } from '../components/getTypes';
+
+export async function getStaticProps() {
+  const types = getTypesForAutocomplete();
+
+  return {
+    props: {
+      types
+    }
+  };
+}
 
 const nullIfEmptyQuote = (value) => {
   if (value == '') {
@@ -12,7 +25,13 @@ const nullIfEmptyQuote = (value) => {
   return value;
 };
 
-export default function Home({ pageNum, errorMessage, setErrorMessage, setContributingLinks }) {
+export default function Home({
+  types,
+  pageNum,
+  errorMessage,
+  setErrorMessage,
+  setContributingLinks
+}) {
   React.useEffect(() => {
     setContributingLinks([
       { link: `/frontend/pages/patents/[page].js`, description: `patents/[page].js` }
@@ -127,6 +146,11 @@ export default function Home({ pageNum, errorMessage, setErrorMessage, setContri
     }
   };
 
+  const handleTypeChange = (type) => {
+    console.log(type);
+    setQueryObject({ ...queryObject, type });
+  };
+
   return (
     <>
       <Head>
@@ -166,6 +190,18 @@ export default function Home({ pageNum, errorMessage, setErrorMessage, setContri
         />
         patented only
       </label>
+
+      <Autocomplete
+        disablePortal
+        id="combo-box-demo"
+        options={types}
+        getOptionLabel={(option) => option.name}
+        sx={{ width: 300 }}
+        renderInput={(params) => <TextField {...params} label="Fruit Type" />}
+        onChange={(event, option) => {
+          handleTypeChange(option?.name);
+        }}
+      />
 
       {data?.page && (
         <>
