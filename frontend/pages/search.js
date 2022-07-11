@@ -6,14 +6,47 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import ItemList from '../components/itemList';
 import Button from '../components/button';
-import { getTypesForAutocomplete } from '../components/getTypes';
 
+// todo - get types somehow. we aren't allowed to get them from getStaticProps() because we're using getSSP() - sad!
+//import { getTypesForAutocomplete } from '../components/getTypes';
+/*
 export async function getStaticProps() {
   const types = getTypesForAutocomplete();
 
   return {
     props: {
       types
+    }
+  };
+}
+*/
+export async function getServerSideProps(context) {
+  let queryCleaned = Object.fromEntries(
+    Object.entries(context.query).filter(([_, v]) => v != null)
+  );
+  const queryString = qs.stringify(queryCleaned);
+
+  const fetchData = async () => {
+    return await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?` + queryString)
+      .then((response) => {
+        if (response.status !== 200) {
+          setErrorMessage("can't reach the backend");
+          return;
+        }
+        return response.json();
+      })
+      .catch((error) => {
+        setErrorMessage(`can't reach backend: ${error.message}`);
+        console.log(error);
+        return;
+      });
+  };
+
+  const data = await fetchData();
+
+  return {
+    props: {
+      data
     }
   };
 }
@@ -26,12 +59,14 @@ const nullIfEmptyQuote = (value) => {
 };
 
 export default function Home({
+  data,
   types,
   pageNum,
   errorMessage,
   setErrorMessage,
   setContributingLinks
 }) {
+  types = [];
   React.useEffect(() => {
     setContributingLinks([
       { link: `/frontend/pages/patents/[page].js`, description: `patents/[page].js` }
@@ -90,32 +125,13 @@ export default function Home({
   // rewrite frontend query string on change
 
   // set frontend query string for history/bookmarking
-  const [data, setData] = React.useState({});
+  //const [data, setData] = React.useState({});
   React.useEffect(() => {
     // without null and undefined
     let queryCleaned = Object.fromEntries(
       Object.entries(queryObject).filter(([_, v]) => v != null)
     );
     const queryString = qs.stringify(queryCleaned);
-
-    const fetchData = async () => {
-      const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?` + queryString)
-        .then((response) => {
-          if (response.status !== 200) {
-            setErrorMessage("can't reach the backend");
-            return;
-          }
-          return response.json();
-        })
-        .catch((error) => {
-          setErrorMessage(`can't reach backend: ${error.message}`);
-          console.log(error);
-          return;
-        });
-
-      setData(data);
-    };
-    fetchData();
 
     router.query = queryString; // set frontend query string
     router.push(router);
@@ -205,9 +221,7 @@ export default function Home({
 
       {data?.page && (
         <>
-          <h2>
-            {name} Page {data.page}
-          </h2>
+          <h2>Page {data.page}</h2>
           <Button
             onClick={() => {
               handleChangePageButton(1);
