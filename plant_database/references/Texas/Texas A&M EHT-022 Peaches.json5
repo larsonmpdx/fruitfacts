@@ -14,7 +14,7 @@
     ],
     plants: [
         {
-            name: "Flavorich",
+            name: "Rich May", // AKA "Flavorich"
             type: "Peach",
             chill: "700 hours",
             description: "Cling",

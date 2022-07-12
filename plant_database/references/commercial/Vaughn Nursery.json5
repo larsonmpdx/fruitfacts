@@ -279,7 +279,7 @@
         },
         {
             type: "Peach",
-            name: "Flavorich",
+            name: "Rich May", // AKA "Flavorich"
             chill_hours: "700",
             description: "Y Cling",
             harvest_time_relative: "Elberta-64"

@@ -21,7 +21,7 @@
             harvest_time: "June 14"
         },
         {
-            name: "Flavorich",
+            name: "Rich May", // AKA "Flavorich"
             type: "Peach",
             description: "clingstone",
             harvest_time: "June 20"
