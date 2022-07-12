@@ -5,21 +5,9 @@ import { useRouter } from 'next/router';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import ItemList from '../components/itemList';
-import Button from '../components/button';
+import Button from '../components/buttonLink';
+import { getTypesForAutocomplete } from '../components/getTypes';
 
-// todo - get types somehow. we aren't allowed to get them from getStaticProps() because we're using getSSP() - sad!
-//import { getTypesForAutocomplete } from '../components/getTypes';
-/*
-export async function getStaticProps() {
-  const types = getTypesForAutocomplete();
-
-  return {
-    props: {
-      types
-    }
-  };
-}
-*/
 export async function getServerSideProps(context) {
   let queryCleaned = Object.fromEntries(
     Object.entries(context.query).filter(([_, v]) => v != null)
@@ -44,9 +32,12 @@ export async function getServerSideProps(context) {
 
   const data = await fetchData();
 
+  const types = getTypesForAutocomplete(); // todo - move this to getStaticProps() when that's allowed to coexist with getServerSideProps(), see https://github.com/vercel/next.js/discussions/11424
+
   return {
     props: {
-      data
+      data,
+      types
     }
   };
 }
@@ -66,7 +57,6 @@ export default function Home({
   setErrorMessage,
   setContributingLinks
 }) {
-  types = [];
   React.useEffect(() => {
     setContributingLinks([
       { link: `/frontend/pages/patents/[page].js`, description: `patents/[page].js` }
@@ -137,8 +127,8 @@ export default function Home({
     router.push(router);
   }, [queryObject]);
 
-  const handleChangePageButton = (newPage) => {
-    setQueryObject({ ...queryObject, page: newPage });
+  const getLinkForPage = (page) => {
+    return 'search?' + qs.stringify({ ...queryObject, page }); // todo - is there a cute way to get this page's location and not hard code it?
   };
 
   const handleOrderByChange = (event) => {
@@ -176,7 +166,7 @@ export default function Home({
         id="orderBy"
         value={queryObject.orderBy}
         onChange={handleOrderByChange}
-        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       >
         <option value="name_then_type">name then type</option>
         <option value="type_then_name">type then name</option>
@@ -189,11 +179,9 @@ export default function Home({
         id="perPage"
         value={queryObject.perPage}
         onChange={handlePerPageChange}
-        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       >
-        <option selected value="50">
-          50 per page
-        </option>
+        <option value="50">50 per page</option>
         <option value="200">200 per page</option>
         <option value="">unlimited</option>
       </select>
@@ -201,7 +189,7 @@ export default function Home({
       <label>
         <input
           type="checkbox"
-          checked={queryObject.patents == true}
+          defaultChecked={queryObject.patents == true}
           onClick={handlePatentsChange}
         />
         patented only
@@ -222,40 +210,22 @@ export default function Home({
       {data?.page && (
         <>
           <h2>Page {data.page}</h2>
+          <Button href={getLinkForPage(1)} enabled={data.page > 1} label="first" />
           <Button
-            onClick={() => {
-              handleChangePageButton(1);
-            }}
-            enabled={data.page > 1}
-            label="first"
-          />
-          <Button
-            onClick={() => {
-              handleChangePageButton(parseInt(data.page) - 1);
-            }}
+            href={getLinkForPage(parseInt(data.page) - 1)}
             enabled={data.page > 1}
             label="previous"
           />
           {data.patentMidpointPage && (
-            <Button
-              onClick={() => {
-                handleChangePageButton(data.patentMidpointPage);
-              }}
-              enabled={true}
-              label="current"
-            />
+            <Button href={getLinkForPage(data.patentMidpointPage)} enabled={true} label="current" />
           )}
           <Button
-            onClick={() => {
-              handleChangePageButton(parseInt(data.page) + 1);
-            }}
+            href={getLinkForPage(parseInt(data.page) + 1)}
             enabled={data.page < parseInt(data.lastPage)}
             label="next"
           />
           <Button
-            onClick={() => {
-              handleChangePageButton(parseInt(data.lastPage));
-            }}
+            href={getLinkForPage(parseInt(data.lastPage))}
             enabled={data.page < parseInt(data.lastPage)}
             label="last"
           />
