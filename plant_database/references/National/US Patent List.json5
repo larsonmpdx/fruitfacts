@@ -17594,8 +17594,8 @@
         },
         {
             type: "Peach",
-            name: "white zest one",
-            uspp_title: "Peach tree white zest one",
+            name: "White Zest One",
+            uspp_title: "Peach tree White Zest One",
             patent: "https://patents.google.com/patent/US20160205836 application abandoned",
             uspp_filed: "1/13/15"
         },
@@ -18036,8 +18036,8 @@
         },
         {
             type: "Strawberry",
-            name: "stephanie",
-            uspp_title: "Strawberry plant named 'stephanie'",
+            name: "Stephanie",
+            uspp_title: "Strawberry plant named 'Stephanie'",
             patent: "https://patents.google.com/patent/US20160324047 application abandoned",
             uspp_filed: "4/29/15"
         },
@@ -19605,8 +19605,8 @@
         },
         {
             type: "Strawberry",
-            name: "sharktooth",
-            uspp_title: "Strawberry plant called 'sharktooth'",
+            name: "Sharktooth",
+            uspp_title: "Strawberry plant called 'Sharktooth'",
             patent: "https://patents.google.com/patent/US20180255674 application abandoned",
             uspp_filed: "3/6/17"
         },

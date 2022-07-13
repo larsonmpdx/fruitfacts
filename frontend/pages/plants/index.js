@@ -39,13 +39,19 @@ export default function Home({ types, setErrorMessage, setContributingLinks }) {
                   <div key={index} className="grid grid-flow-row-dense grid-cols-4">
                     {group.types.map((type, index) => (
                       <div key={index} className="flex flex-col items-center">
-                        <Link href={`/plants/${type.name}`}>
+                        <Link
+                          href={`search?searchType=base&patents=false&type=${type.name}&page=1&perPage=50&orderBy=name_then_type&order=asc`}
+                        >
                           <img
                             className="my-0 mx-2 inline h-24 w-24 object-contain"
                             src={'/fruit_icons/' + type.name + '.svg'}
                           />
                         </Link>
-                        <Link href={`/plants/${type.name}`}>{type.name}</Link>
+                        <Link
+                          href={`search?searchType=base&patents=false&type=${type.name}&page=1&perPage=50&orderBy=name_then_type&order=asc`}
+                        >
+                          {type.name}
+                        </Link>
                       </div>
                     ))}
                   </div>

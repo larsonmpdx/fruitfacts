@@ -2,6 +2,7 @@ import * as qs from 'qs';
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { DebounceInput } from 'react-debounce-input';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import ItemList from '../components/itemList';
@@ -14,19 +15,20 @@ export async function getServerSideProps(context) {
   );
   const queryString = qs.stringify(queryCleaned);
 
+  let errorMessage = null;
   const fetchData = async () => {
     return await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?` + queryString)
       .then((response) => {
         if (response.status !== 200) {
-          setErrorMessage("can't reach the backend");
-          return;
+          errorMessage = `ackend API error ${response.status}`;
+          return null;
         }
         return response.json();
       })
       .catch((error) => {
-        setErrorMessage(`can't reach backend: ${error.message}`);
+        errorMessage = `can't reach backend: ${error.message}`;
         console.log(error);
-        return;
+        return null;
       });
   };
 
@@ -37,7 +39,8 @@ export async function getServerSideProps(context) {
   return {
     props: {
       data,
-      types
+      types,
+      errorMessage
     }
   };
 }
@@ -49,36 +52,29 @@ const nullIfEmptyQuote = (value) => {
   return value;
 };
 
-export default function Home({
-  data,
-  types,
-  pageNum,
-  errorMessage,
-  setErrorMessage,
-  setContributingLinks
-}) {
+export default function Home({ data, types, errorMessage, setErrorMessage, setContributingLinks }) {
   React.useEffect(() => {
     setContributingLinks([
-      { link: `/frontend/pages/patents/[page].js`, description: `patents/[page].js` }
+      { link: `/frontend/pages/search.js`, description: `frontend: search.js` },
+      { link: `/backend/src/queries/search.rs`, description: `backend: search.rs` }
     ]);
   }, []);
   setErrorMessage(errorMessage);
 
   const router = useRouter();
 
-  console.dir(router.asPath);
   const query = qs.parse(router.asPath.split(/\?/)[1]);
 
   // get defaults from query - see struct in search.rs
   let querySearchType = query.searchType || 'base';
   let querySearch = query.search || undefined;
   let queryName = query.name || undefined;
-  let queryPatents = query.patents == 'true' || true;
+  let queryPatents = query.patents == 'true' || false;
   let queryType = query.type || undefined; // apple, pear, etc.
   let queryPage = query.page || '1';
   let queryPerPage = query.perPage || '50';
-  let queryOrderBy = query.orderBy || 'patent_expiration';
-  let queryOrder = query.order || undefined;
+  let queryOrderBy = query.orderBy || 'name_then_type';
+  let queryOrder = query.order || 'asc';
   let queryRelativeHarvestMin = query.relativeHarvestMin || undefined;
   let queryRelativeHarvestMax = query.relativeHarvestMax || undefined;
 
@@ -132,7 +128,11 @@ export default function Home({
   };
 
   const handleOrderByChange = (event) => {
-    setQueryObject({ ...queryObject, orderBy: nullIfEmptyQuote(event.target.value) });
+    setQueryObject({ ...queryObject, orderBy: nullIfEmptyQuote(event.target.value), page: '1' });
+  };
+
+  const handleOrderChange = (event) => {
+    setQueryObject({ ...queryObject, order: nullIfEmptyQuote(event.target.value), page: '1' });
   };
 
   const handlePerPageChange = (event) => {
@@ -146,21 +146,24 @@ export default function Home({
   const handlePatentsChange = (event) => {
     const checked = event.target.checked;
     if (checked) {
-      setQueryObject({ ...queryObject, patents: true });
+      setQueryObject({ ...queryObject, patents: true, page: '1' });
     } else {
-      setQueryObject({ ...queryObject, patents: null });
+      setQueryObject({ ...queryObject, patents: null, page: '1' });
     }
   };
 
   const handleTypeChange = (type) => {
-    console.log(type);
-    setQueryObject({ ...queryObject, type });
+    setQueryObject({ ...queryObject, type, page: '1' });
+  };
+
+  const handleSearchChange = (text) => {
+    setQueryObject({ ...queryObject, search: nullIfEmptyQuote(text), page: '1' });
   };
 
   return (
     <>
       <Head>
-        <title>{`Patents page ${pageNum}`}</title>
+        <title>{`Search Results`}</title>
       </Head>
       <select
         id="orderBy"
@@ -173,6 +176,16 @@ export default function Home({
         <option value="patent_expiration">patent expiration</option>
         <option value="harvest_time">harvest time</option>
         <option value="search_quality">search quality</option>
+      </select>
+
+      <select
+        id="order"
+        value={queryObject.order}
+        onChange={handleOrderChange}
+        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+      >
+        <option value="asc">ascending</option>
+        <option value="desc">descending</option>
       </select>
 
       <select
@@ -207,9 +220,16 @@ export default function Home({
         }}
       />
 
+      <DebounceInput
+        minLength={2}
+        debounceTimeout={300}
+        onChange={(event) => handleSearchChange(event.target.value)}
+        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+      />
+
       {data?.page && (
         <>
-          <h2>Page {data.page}</h2>
+          <h2>{`${data.count} items - page ${data.page}/${data.lastPage ? data.lastPage : ''}`}</h2>
           <Button href={getLinkForPage(1)} enabled={data.page > 1} label="first" />
           <Button
             href={getLinkForPage(parseInt(data.page) - 1)}

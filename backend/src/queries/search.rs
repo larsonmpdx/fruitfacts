@@ -105,8 +105,8 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             // so we can later use them for counts
             // see https://github.com/diesel-rs/diesel/issues/2277
             let mut base_query = base_plants::table.into_boxed();
-            let mut count_query = base_plants::table.into_boxed(); // for patent count
-            let mut base_query3 = base_plants::table.into_boxed(); // for overall count
+            let mut pat_mid_q = base_plants::table.into_boxed(); // for patent count
+            let mut total_count_q = base_plants::table.into_boxed(); // for overall count
 
             if query.search.is_some() {
                 // todo - support searching with just one or two letters (fts uses "trigraphs" and won't search for these)
@@ -176,16 +176,16 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                     Ok(values) => {
                         if let Some(type_) = restrict_to_type {
                             base_query = base_query.filter(base_plants::type_.eq(type_.clone()));
-                            count_query = count_query.filter(base_plants::type_.eq(type_.clone()));
-                            base_query3 = base_query3.filter(base_plants::type_.eq(type_));
+                            pat_mid_q = pat_mid_q.filter(base_plants::type_.eq(type_.clone()));
+                            total_count_q = total_count_q.filter(base_plants::type_.eq(type_));
                         };
 
                         let ids_only: Vec<i32> =
                             values.into_iter().map(|entry| entry.rowid).collect();
 
                         base_query = base_query.filter(base_plants::id.eq_any(ids_only.clone()));
-                        count_query = count_query.filter(base_plants::id.eq_any(ids_only.clone()));
-                        base_query3 = base_query3.filter(base_plants::id.eq_any(ids_only));
+                        pat_mid_q = pat_mid_q.filter(base_plants::id.eq_any(ids_only.clone()));
+                        total_count_q = total_count_q.filter(base_plants::id.eq_any(ids_only));
                     }
                     Err(_error) => {
                         return Err(anyhow!("some kind of search problem (todo)"));
@@ -195,28 +195,28 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
             if let Some(name) = &query.name {
                 base_query = base_query.filter(base_plants::name.eq(name));
-                count_query = count_query.filter(base_plants::name.eq(name));
-                base_query3 = base_query3.filter(base_plants::name.eq(name));
+                pat_mid_q = pat_mid_q.filter(base_plants::name.eq(name));
+                total_count_q = total_count_q.filter(base_plants::name.eq(name));
             }
 
             // patents: Option<bool>
             if let Some(patents) = &query.patents {
                 if *patents {
                     base_query = base_query.filter(base_plants::uspp_expiration.is_not_null());
-                    count_query = count_query.filter(base_plants::uspp_expiration.is_not_null());
-                    base_query3 = base_query3.filter(base_plants::uspp_expiration.is_not_null());
+                    pat_mid_q = pat_mid_q.filter(base_plants::uspp_expiration.is_not_null());
+                    total_count_q = total_count_q.filter(base_plants::uspp_expiration.is_not_null());
                 } else {
                     // finding items without patents is probably not useful but whatever
                     base_query = base_query.filter(base_plants::uspp_expiration.is_null());
-                    count_query = count_query.filter(base_plants::uspp_expiration.is_null());
-                    base_query3 = base_query3.filter(base_plants::uspp_expiration.is_null());
+                    pat_mid_q = pat_mid_q.filter(base_plants::uspp_expiration.is_null());
+                    total_count_q = total_count_q.filter(base_plants::uspp_expiration.is_null());
                 }
             }
 
             if let Some(type_) = &query.type_ {
                 base_query = base_query.filter(base_plants::type_.eq(type_));
-                count_query = count_query.filter(base_plants::type_.eq(type_));
-                base_query3 = base_query3.filter(base_plants::type_.eq(type_));
+                pat_mid_q = pat_mid_q.filter(base_plants::type_.eq(type_));
+                total_count_q = total_count_q.filter(base_plants::type_.eq(type_));
             }
 
             if let Some(sort) = &query.order_by {
@@ -244,74 +244,72 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                     "notoriety" => {
                         if order_asc {
                             base_query = base_query.order(base_plants::notoriety_score.asc());
-                            count_query = count_query.order(base_plants::notoriety_score.asc());
-                            base_query3 = base_query3.order(base_plants::notoriety_score.asc());
+                            pat_mid_q = pat_mid_q.order(base_plants::notoriety_score.asc());
+                            total_count_q = total_count_q.order(base_plants::notoriety_score.asc());
                         } else {
                             base_query = base_query.order(base_plants::notoriety_score.desc());
-                            count_query = count_query.order(base_plants::notoriety_score.desc());
-                            base_query3 = base_query3.order(base_plants::notoriety_score.desc());
+                            pat_mid_q = pat_mid_q.order(base_plants::notoriety_score.desc());
+                            total_count_q = total_count_q.order(base_plants::notoriety_score.desc());
                         }
                     }
                     "type_then_name" => {
                         if order_asc {
                             base_query = base_query.order(base_plants::type_.asc());
-                            count_query = count_query.order(base_plants::type_.asc());
-                            base_query3 = base_query3.order(base_plants::type_.asc());
+                            pat_mid_q = pat_mid_q.order(base_plants::type_.asc());
+                            total_count_q = total_count_q.order(base_plants::type_.asc());
 
                             base_query = base_query.then_order_by(base_plants::name.asc());
-                            count_query = count_query.then_order_by(base_plants::name.asc());
-                            base_query3 = base_query3.then_order_by(base_plants::name.asc());
+                            pat_mid_q = pat_mid_q.then_order_by(base_plants::name.asc());
+                            total_count_q = total_count_q.then_order_by(base_plants::name.asc());
                         } else {
                             base_query = base_query.order(base_plants::type_.desc());
-                            count_query = count_query.order(base_plants::type_.desc());
-                            base_query3 = base_query3.order(base_plants::type_.desc());
+                            pat_mid_q = pat_mid_q.order(base_plants::type_.desc());
+                            total_count_q = total_count_q.order(base_plants::type_.desc());
 
-                            // note - we keep ascending order on the 2nd order by thing. that makes more sense to me
-                            base_query = base_query.then_order_by(base_plants::name.asc());
-                            count_query = count_query.then_order_by(base_plants::name.asc());
-                            base_query3 = base_query3.then_order_by(base_plants::name.asc());
+                            base_query = base_query.then_order_by(base_plants::name.desc());
+                            pat_mid_q = pat_mid_q.then_order_by(base_plants::name.desc());
+                            total_count_q = total_count_q.then_order_by(base_plants::name.desc());
                         }
                     }
                     "name_then_type" => {
                         if order_asc {
                             base_query = base_query.order(base_plants::name.asc());
-                            count_query = count_query.order(base_plants::name.asc());
-                            base_query3 = base_query3.order(base_plants::name.asc());
+                            pat_mid_q = pat_mid_q.order(base_plants::name.asc());
+                            total_count_q = total_count_q.order(base_plants::name.asc());
 
                             base_query = base_query.then_order_by(base_plants::type_.asc());
-                            count_query = count_query.then_order_by(base_plants::type_.asc());
-                            base_query3 = base_query3.then_order_by(base_plants::type_.asc());
+                            pat_mid_q = pat_mid_q.then_order_by(base_plants::type_.asc());
+                            total_count_q = total_count_q.then_order_by(base_plants::type_.asc());
                         } else {
                             base_query = base_query.order(base_plants::name.desc());
-                            count_query = count_query.order(base_plants::name.desc());
-                            base_query3 = base_query3.order(base_plants::name.desc());
+                            pat_mid_q = pat_mid_q.order(base_plants::name.desc());
+                            total_count_q = total_count_q.order(base_plants::name.desc());
 
-                            // note - we keep ascending order on the 2nd order by thing. that makes more sense to me
-                            base_query = base_query.then_order_by(base_plants::type_.asc());
-                            count_query = count_query.then_order_by(base_plants::type_.asc());
-                            base_query3 = base_query3.then_order_by(base_plants::type_.asc());
+                            base_query = base_query.then_order_by(base_plants::type_.desc());
+                            pat_mid_q = pat_mid_q.then_order_by(base_plants::type_.desc());
+                            total_count_q = total_count_q.then_order_by(base_plants::type_.desc());
                         }
                     }
                     "patent_expiration" => {
                         if order_asc {
                             base_query = base_query.order(base_plants::uspp_expiration.asc());
-                            count_query = count_query.order(base_plants::uspp_expiration.asc());
-                            base_query3 = base_query3.order(base_plants::uspp_expiration.asc());
+                            pat_mid_q = pat_mid_q.order(base_plants::uspp_expiration.asc());
+                            total_count_q = total_count_q.order(base_plants::uspp_expiration.asc());
                         } else {
                             base_query = base_query.order(base_plants::uspp_expiration.desc());
-                            count_query = count_query.order(base_plants::uspp_expiration.desc());
-                            base_query3 = base_query3.order(base_plants::uspp_expiration.desc());
+                            pat_mid_q = pat_mid_q.order(base_plants::uspp_expiration.desc());
+                            total_count_q = total_count_q.order(base_plants::uspp_expiration.desc());
                         }
                     }
                     "harvest_time" => {
                         if order_asc {
                             base_query = base_query.order(base_plants::harvest_relative.asc());
-                            count_query = count_query.order(base_plants::harvest_relative.asc());
-                            base_query3 = base_query3.order(base_plants::harvest_relative.asc());
+                            pat_mid_q = pat_mid_q.order(base_plants::harvest_relative.asc());
+                            total_count_q = total_count_q.order(base_plants::harvest_relative.asc());
                         } else {
                             base_query = base_query.order(base_plants::harvest_relative.desc());
-                            count_query = count_query.order(base_plants::harvest_relative.desc());
-                            base_query3 = base_query3.order(base_plants::harvest_relative.desc());
+                            pat_mid_q = pat_mid_q.order(base_plants::harvest_relative.desc());
+                            total_count_q = total_count_q.order(base_plants::harvest_relative.desc());
                         }
                     }
                     "search_quality" => {
@@ -333,8 +331,8 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         // special case - might also need to check that we're sorting by expiration
 
                         let now = chrono::Utc::now().timestamp(); // todo - make this a parameter?
-                        count_query = count_query.filter(base_plants::uspp_expiration.lt(now));
-                        let prior_patent_count_result = count_query.count().first::<i64>(db_conn);
+                        pat_mid_q = pat_mid_q.filter(base_plants::uspp_expiration.lt(now));
+                        let prior_patent_count_result = pat_mid_q.count().first::<i64>(db_conn);
 
                         if let Err(error) = prior_patent_count_result {
                             return Err(error.into());
@@ -398,7 +396,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
             // todo distance, from (collection items only) - there may be value to a search filter for "mentioned within x miles of zip code"
 
-            let overall_count_result = base_query3.count().first::<i64>(db_conn);
+            let overall_count_result = total_count_q.count().first::<i64>(db_conn);
             if let Err(error) = overall_count_result {
                 return Err(error.into());
             }
