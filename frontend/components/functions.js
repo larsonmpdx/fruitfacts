@@ -1,3 +1,16 @@
+// output like -2, -1, +0, +1, etc.
+export function formatHarvestTime(days) {
+  if (days == null) {
+    return '(no harvest time)';
+  }
+
+  if (days >= 0) {
+    return `+${days}`;
+  } else {
+    return `${days}`;
+  }
+}
+
 // date: unix seconds
 // date_estimated: true if defined, this means it was estimated from a table of patent issue years
 export function formatPatentDate(date, date_estimated) {

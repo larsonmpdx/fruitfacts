@@ -20,7 +20,7 @@ export async function getServerSideProps(context) {
     return await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?` + queryString)
       .then((response) => {
         if (response.status !== 200) {
-          errorMessage = `ackend API error ${response.status}`;
+          errorMessage = `backend API error ${response.status}`;
           return null;
         }
         return response.json();
@@ -69,7 +69,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
   let querySearchType = query.searchType || 'base';
   let querySearch = query.search || undefined;
   let queryName = query.name || undefined;
-  let queryPatents = query.patents == 'true' || false;
+  let queryPatents = query.patents == 'true' ? true : null;
   let queryType = query.type || undefined; // apple, pear, etc.
   let queryPage = query.page || '1';
   let queryPerPage = query.perPage || '50';
@@ -105,6 +105,8 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
     from: queryFrom
   });
 
+  const [typeObject, setTypeObject] = React.useState('');
+
   // create backend query string from the above query params (exclude undefined stuff)
   // store it so we can de-duplicate backend queries
   // update backend stuff on query string change
@@ -121,10 +123,23 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
 
     router.query = queryString; // set frontend query string
     router.push(router);
+
+    // update autocomplete if needed - it expects a reference to the array element since we're using an array of objects instead of strings
+    console.log(queryObject.type);
+    console.dir(types);
+    const foundType = types.find((type) => {
+      return type.name === queryObject.type;
+    });
+    console.dir(foundType);
+
+    setTypeObject(foundType); // todo - find the object with .name = this in our types array
   }, [queryObject]);
 
   const getLinkForPage = (page) => {
-    return 'search?' + qs.stringify({ ...queryObject, page }); // todo - is there a cute way to get this page's location and not hard code it?
+    let queryCleaned = Object.fromEntries(
+      Object.entries(queryObject).filter(([_, v]) => v != null)
+    );
+    return 'search?' + qs.stringify({ ...queryCleaned, page }); // todo - is there a cute way to get this page's location and not hard code it?
   };
 
   const handleOrderByChange = (event) => {
@@ -209,6 +224,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
       </label>
 
       <Autocomplete
+        value={typeObject}
         disablePortal
         id="combo-box-demo"
         options={types}

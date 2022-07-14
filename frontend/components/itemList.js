@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { formatPatentDate } from './functions';
+import { formatHarvestTime, formatPatentDate } from './functions';
 
 export default function Home({ name, data }) {
   return (
@@ -24,8 +24,12 @@ export default function Home({ name, data }) {
                       {item.name + ' ' + item.type}
                     </Link>
                     {item.marketing_name && <> (marketed under the {item.marketing_name} brand)</>}{' '}
-                    {data.query.patents && (
+                    {data.query.orderBy == 'harvest_time' && (
+                      <>{formatHarvestTime(item.harvest_relative)}</>
+                    )}
+                    {(data.query.patents || data.query.orderBy == 'patent_expiration') && (
                       <>
+                        {' '}
                         ({formatPatentDate(item.uspp_expiration, item.uspp_expiration_estimated)})
                       </>
                     )}

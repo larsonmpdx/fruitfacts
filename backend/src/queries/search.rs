@@ -204,7 +204,8 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 if *patents {
                     base_query = base_query.filter(base_plants::uspp_expiration.is_not_null());
                     pat_mid_q = pat_mid_q.filter(base_plants::uspp_expiration.is_not_null());
-                    total_count_q = total_count_q.filter(base_plants::uspp_expiration.is_not_null());
+                    total_count_q =
+                        total_count_q.filter(base_plants::uspp_expiration.is_not_null());
                 } else {
                     // finding items without patents is probably not useful but whatever
                     base_query = base_query.filter(base_plants::uspp_expiration.is_null());
@@ -249,7 +250,8 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         } else {
                             base_query = base_query.order(base_plants::notoriety_score.desc());
                             pat_mid_q = pat_mid_q.order(base_plants::notoriety_score.desc());
-                            total_count_q = total_count_q.order(base_plants::notoriety_score.desc());
+                            total_count_q =
+                                total_count_q.order(base_plants::notoriety_score.desc());
                         }
                     }
                     "type_then_name" => {
@@ -291,6 +293,11 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         }
                     }
                     "patent_expiration" => {
+                        base_query = base_query.filter(base_plants::uspp_expiration.is_not_null());
+                        pat_mid_q = pat_mid_q.filter(base_plants::uspp_expiration.is_not_null());
+                        total_count_q =
+                            total_count_q.filter(base_plants::uspp_expiration.is_not_null());
+
                         if order_asc {
                             base_query = base_query.order(base_plants::uspp_expiration.asc());
                             pat_mid_q = pat_mid_q.order(base_plants::uspp_expiration.asc());
@@ -298,18 +305,26 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         } else {
                             base_query = base_query.order(base_plants::uspp_expiration.desc());
                             pat_mid_q = pat_mid_q.order(base_plants::uspp_expiration.desc());
-                            total_count_q = total_count_q.order(base_plants::uspp_expiration.desc());
+                            total_count_q =
+                                total_count_q.order(base_plants::uspp_expiration.desc());
                         }
                     }
                     "harvest_time" => {
+                        base_query = base_query.filter(base_plants::harvest_relative.is_not_null());
+                        pat_mid_q = pat_mid_q.filter(base_plants::harvest_relative.is_not_null());
+                        total_count_q =
+                            total_count_q.filter(base_plants::harvest_relative.is_not_null());
+
                         if order_asc {
                             base_query = base_query.order(base_plants::harvest_relative.asc());
                             pat_mid_q = pat_mid_q.order(base_plants::harvest_relative.asc());
-                            total_count_q = total_count_q.order(base_plants::harvest_relative.asc());
+                            total_count_q =
+                                total_count_q.order(base_plants::harvest_relative.asc());
                         } else {
                             base_query = base_query.order(base_plants::harvest_relative.desc());
                             pat_mid_q = pat_mid_q.order(base_plants::harvest_relative.desc());
-                            total_count_q = total_count_q.order(base_plants::harvest_relative.desc());
+                            total_count_q =
+                                total_count_q.order(base_plants::harvest_relative.desc());
                         }
                     }
                     "search_quality" => {
