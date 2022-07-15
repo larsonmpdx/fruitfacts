@@ -44,7 +44,7 @@ pub struct SearchQuery {
 
     // todo:
     pub distance: Option<String>, // max distance, goes with "from"
-    pub from: Option<String>,     // goes with distance, a zip code or point or something
+    pub from: Option<String>, // goes with distance, either lat/lon like "45.687631,-122.824202" or zip code like "zip:97231"
 }
 
 // base plants search:
@@ -410,6 +410,21 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             }
 
             // todo distance, from (collection items only) - there may be value to a search filter for "mentioned within x miles of zip code"
+            if (query.distance.is_some() && query.from.is_none())
+                || (query.distance.is_none() && query.from.is_some())
+            {
+                return Err(anyhow!("got only one of \"distance\" and \"from\""));
+            }
+
+            if let Some(distance) = &query.distance {
+                if let Some(from) = &query.from {
+                    if let Some(location) = crate::gazetteer_load::from_to_location(from) {
+                        // todo
+                    } else {
+                        return Err(anyhow!("couldn't parse \"from\": {from}"));
+                    }
+                }
+            }
 
             let overall_count_result = total_count_q.count().first::<i64>(db_conn);
             if let Err(error) = overall_count_result {
