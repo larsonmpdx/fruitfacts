@@ -18,6 +18,9 @@ fn gazetteer_load() -> HashMap<u32, MapCoordinates> {
     let mut output = Default::default();
 
     // todo - load from a text file or panic
+    let gazetteer_file = include_str!("gazetteer_load/2021_Gaz_zcta_national.txt");
+
+    // todo - parse
     
     // todo - check quantity loaded and panic if not enough
 
