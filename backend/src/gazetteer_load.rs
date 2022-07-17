@@ -53,10 +53,7 @@ fn gazetteer_load() -> HashMap<u32, MapCoordinates> {
 }
 
 pub fn get_zip_coordinates(zip: u32) -> Option<MapCoordinates> {
-    match TYPE_TO_CANDLE.get(&zip) {
-        Some(coordinates) => Some(coordinates.clone()),
-        None => None,
-    }
+    TYPE_TO_CANDLE.get(&zip).cloned()
 }
 
 // from the search query string, either lat/lon like "45.687631,-122.824202" or zip code like "zip:97231"
@@ -88,7 +85,7 @@ pub fn from_to_location(input: &str) -> Result<MapCoordinates> {
 
             let lat = lat_result.unwrap();
             let lon = lon_result.unwrap();
-            return Ok(MapCoordinates { lat, lon });
+            Ok(MapCoordinates { lat, lon })
         }
     }
 }
