@@ -10,9 +10,7 @@ import Button from '../components/buttonLink';
 import { getTypesForAutocomplete } from '../components/getTypes';
 
 export async function getServerSideProps(context) {
-  let queryCleaned = Object.fromEntries(
-    Object.entries(context.query).filter(([_, v]) => v != null)
-  );
+  let queryCleaned = Object.fromEntries(Object.entries(context.query).filter(([, v]) => v != null));
   const queryString = qs.stringify(queryCleaned);
 
   let errorMessage = null;
@@ -116,9 +114,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
   //const [data, setData] = React.useState({});
   React.useEffect(() => {
     // without null and undefined
-    let queryCleaned = Object.fromEntries(
-      Object.entries(queryObject).filter(([_, v]) => v != null)
-    );
+    let queryCleaned = Object.fromEntries(Object.entries(queryObject).filter(([, v]) => v != null));
     const queryString = qs.stringify(queryCleaned);
 
     router.query = queryString; // set frontend query string
@@ -136,9 +132,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
   }, [queryObject]);
 
   const getLinkForPage = (page) => {
-    let queryCleaned = Object.fromEntries(
-      Object.entries(queryObject).filter(([_, v]) => v != null)
-    );
+    let queryCleaned = Object.fromEntries(Object.entries(queryObject).filter(([, v]) => v != null));
     return 'search?' + qs.stringify({ ...queryCleaned, page }); // todo - is there a cute way to get this page's location and not hard code it?
   };
 

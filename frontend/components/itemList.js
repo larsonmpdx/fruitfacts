@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { formatHarvestTime, formatPatentDate } from './functions';
 
-export default function Home({ name, data }) {
+export default function Home({ data }) {
   return (
     <>
       <article className="prose m-5">
