@@ -418,10 +418,10 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
             if let Some(distance) = &query.distance {
                 if let Some(from) = &query.from {
-                    if let Some(location) = crate::gazetteer_load::from_to_location(from) {
+                    if let Ok(location) = crate::gazetteer_load::from_to_location(from) {
                         // todo
                     } else {
-                        return Err(anyhow!("couldn't parse \"from\": {from}"));
+                        return Err(anyhow!("couldn't parse \"from\": {from}")); // todo - error string
                     }
                 }
             }
