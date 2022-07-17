@@ -4,29 +4,32 @@
 use lazy_static::lazy_static;
 use std::collections::HashMap;
 
-pub struct ZipCoordinates {
+#[derive(Debug, PartialEq)]
+pub struct MapCoordinates {
     pub lat: f64,
     pub lon: f64,
 }
 
 lazy_static! {
-    static ref TYPE_TO_CANDLE: HashMap<u32, ZipCoordinates> = gazetteer_load();
+    static ref TYPE_TO_CANDLE: HashMap<u32, MapCoordinates> = gazetteer_load();
 }
 
-fn gazetteer_load() -> HashMap<u32, ZipCoordinates> {
+fn gazetteer_load() -> HashMap<u32, MapCoordinates> {
     let mut output = Default::default();
 
     // todo - load from a text file or panic
+    
+    // todo - check quantity loaded and panic if not enough
 
     output
 }
 
-pub fn get_zip_coordinates(zip: u32) -> Option<ZipCoordinates> {
+pub fn get_zip_coordinates(zip: u32) -> Option<MapCoordinates> {
     None
 }
 
 // from the search query string, either lat/lon like "45.687631,-122.824202" or zip code like "zip:97231"
-pub fn from_to_location(input: &str) -> Option<ZipCoordinates> {
+pub fn from_to_location(input: &str) -> Option<MapCoordinates> {
     // todo
     None
 }

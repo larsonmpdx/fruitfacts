@@ -211,7 +211,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
       >
         <option value="50">50 per page</option>
         <option value="200">200 per page</option>
-        <option value="">unlimited</option>
+        <option value="all">unlimited</option>
       </select>
 
       <label>

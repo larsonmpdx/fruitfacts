@@ -8,7 +8,7 @@ extern crate diesel;
 extern crate diesel_migrations;
 embed_migrations!();
 
-mod gazetteer_load;
+pub mod gazetteer_load;
 pub mod git_info;
 pub mod import_db;
 pub mod queries;
@@ -16,3 +16,6 @@ mod schema_fts;
 mod schema_generated;
 mod schema_types;
 pub mod session;
+
+#[cfg(test)]
+mod test;
