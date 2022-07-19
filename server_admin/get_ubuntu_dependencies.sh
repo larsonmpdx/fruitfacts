@@ -8,6 +8,8 @@ sudo apt upgrade -y
 # some of these might be able to be trimmed now that we're using llvm
 sudo apt install -y build-essential pkg-config libssl-dev software-properties-common
 
+sudo apt install -y unzip # for the gazetteer file
+
 # install llvm so we can link with lld
 # it takes less memory so builds can then be done right on the 1GB server
 # https://apt.llvm.org/
