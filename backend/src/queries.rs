@@ -143,6 +143,7 @@ struct Path {
 
 // /collections/path/ - get subdirectories starting at this path, and collection names at this path
 // /collections/path/collection - get a single collection
+// todo - move this under the search API
 #[get("/api/collections/{path:.*}")] // the ":.*" part is a regex to get the entire tail of the path
 async fn get_collections(
     path: web::Path<Path>,

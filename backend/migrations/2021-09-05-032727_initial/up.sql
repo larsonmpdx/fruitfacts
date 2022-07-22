@@ -143,7 +143,7 @@ CREATE TABLE collection_items (
   
   collection_id INTEGER NOT NULL,
   location_id INTEGER, -- this can be unset for cases where there's a random list of varieties not attached to a location
-  location_number INTEGER NOT NULL, -- 1,2,3,4. if set to zero then it's one of the non-location varieties. lets us simplify the frontend and filter for "location 1" without enumerating them first
+  location_number INTEGER NOT NULL, -- 1,2,3,4. if set to zero then it's one of the non-location varieties. lets us simplify the front end and filter for "location 1" without enumerating them first
 
   path_and_filename TEXT, -- for website display/navigation instead of looking it up
   marketing_name TEXT, -- copied back from base plants for quicker display

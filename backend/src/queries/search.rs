@@ -419,7 +419,29 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             if let Some(_distance) = &query.distance {
                 if let Some(from) = &query.from {
                     if let Ok(_location) = crate::gazetteer_load::from_to_location(from) {
-                        // todo
+                        // todo - load all collection items that match, then filter for those within x miles
+                        //    - but that won't be any different than a base items search?
+                        // or - load all within x miles, then filter for matches?
+                        // 1. mentioned in any reference within x miles
+                        //    - possibly with a restriction to a type of reference or a minimum quality level
+                        // 2. some sum of the references within x miles, and if it's above some total
+
+                        // goal - do I want to return base plants, or some de-duped collection items thing?
+                        // collection items would have the advantage of allowing a search for user items, I guess? todo later
+
+                        // todo (when I have internet) - is there a "unique" filter to get sqlite to de-dupe for us?
+
+
+
+
+                        // 1. find locations within x miles (same as the map search)
+                        //    - factor out the existing map search stuff to be reused here
+                        //    - this is in map.rs
+                        // 2. load collection items matching those location IDs
+                        //    - make this a free function too
+                        // 3. de-dupe and then load base plants for each of those type/name pairs
+                        //    - can be built into the above function I think? unless I want to use the above for single location IDs
+                        //    - current "get single collection" function is at queries.rs:146
                     } else {
                         return Err(anyhow!("couldn't parse \"from\": {from}")); // todo - error string
                     }
