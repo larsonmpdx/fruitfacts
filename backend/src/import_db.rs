@@ -681,6 +681,8 @@ pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
     println!("calculating notoriety");
     calculate_notoriety(db_conn);
     calculate_and_write_relative_day_offsets(db_conn);
+    println!("adding base plant ID to collection items");
+    add_base_id_to_collection_items(db_conn);
     write_needs_help_file(db_conn);
     println!("rebuilding fts tables");
     rebuild_fts(db_conn);
@@ -2648,6 +2650,25 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
     }
 }
 
+// put the base plants ID into each collection item that matches - simplifies later queries
+fn add_base_id_to_collection_items(db_conn: &SqliteConnection) {
+    let all_base_plants = base_plants::dsl::base_plants
+        .select((
+            base_plants::name_fts,
+            base_plants::type_,
+            base_plants::aka_fts,
+        ))
+        .load::<BasePlantsItemForDedupe>(db_conn)
+        .unwrap();
+
+    for plant in &all_base_plants {
+        // todo
+
+
+        
+    }
+}
+
 fn check_database(db_conn: &SqliteConnection) {
     // find all types and make sure each is in the types table
     let types_from_plants = base_plants::dsl::base_plants
@@ -2713,7 +2734,7 @@ fn calculate_notoriety(db_conn: &SqliteConnection) {
 
 pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {
     base_plants::dsl::base_plants
-        .select(diesel::dsl::count(base_plants::name))
+        .select(diesel::dsl::count(base_plants::id))
         .first(db_conn)
         .unwrap()
 }

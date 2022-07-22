@@ -151,6 +151,10 @@ CREATE TABLE collection_items (
   name TEXT NOT NULL,
   type TEXT NOT NULL,
 
+  -- a shortcut to the base item's ID so we can simplify our searches
+  -- this should be updated whenever the database is rebuilt or the name+type pair changes
+  base_plant_id INTEGER,
+
   category TEXT, -- like "low chill"
   category_description TEXT,
 

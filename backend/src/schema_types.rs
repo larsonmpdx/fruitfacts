@@ -73,6 +73,8 @@ pub struct CollectionItem {
     #[serde(rename = "type")]
     pub type_: String,
 
+    pub base_plant_id: Option<i32>,
+
     pub category: Option<String>,
     pub category_descripton: Option<String>,
 

@@ -41,6 +41,7 @@ table! {
         name -> Text,
         #[sql_name = "type"]
         type_ -> Text,
+        base_plant_id -> Nullable<Integer>,
         category -> Nullable<Text>,
         category_description -> Nullable<Text>,
         disease_resistance -> Nullable<Text>,

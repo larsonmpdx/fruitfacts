@@ -7,6 +7,7 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use serde::Deserialize;
 
 // clamp latitude between -180 and +180
+// this is a common function, see google results for an explanation
 pub fn latitude_normalize(latitude: f64) -> f64 {
     let remainder = (latitude + 180.0) % 360.0;
 
@@ -18,12 +19,12 @@ pub fn latitude_normalize(latitude: f64) -> f64 {
 }
 
 #[derive(Deserialize)]
-struct GetLocationsQuery {
-    min_lat: Option<f64>,
-    max_lat: Option<f64>,
-    min_lon: Option<f64>,
-    max_lon: Option<f64>,
-    limit: Option<i32>,
+pub struct GetLocationsQuery {
+    pub min_lat: Option<f64>,
+    pub max_lat: Option<f64>,
+    pub min_lon: Option<f64>,
+    pub max_lon: Option<f64>,
+    pub limit: Option<i32>,
 }
 
 // search for locations within a bounding box
@@ -53,7 +54,7 @@ async fn locations_search(
 // we should be using spatialite but rust-diesel has no way to load modules currently
 // so, we use a dumb bounding box instead
 
-fn locations_search_db(
+pub fn locations_search_db(
     db_conn: &SqliteConnection,
     query: &GetLocationsQuery,
 ) -> Result<Vec<Location>, diesel::result::Error> {

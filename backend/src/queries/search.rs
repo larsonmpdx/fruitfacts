@@ -92,6 +92,22 @@ pub struct SearchReturn {
     pub locations: Option<Vec<Location>>,
 }
 
+pub struct DistanceDegrees {
+    pub lat: f64,
+    pub lon: f64,
+}
+
+// given a string like "100mi", calculate a simple distance east/west and north/south
+// for that point to create an X mile square on the map (which won't actually be square)
+// this is a placeholder until we get a real distance calc from something like spatialite
+pub fn distance_to_degrees(distance: &str) -> Option<DistanceDegrees> {
+    // todo - google a formula for this. I think north/south will be fixed
+    // and east/west will obviously depend on how far from the equator you are
+
+    // todo
+    return Some(DistanceDegrees { lat: 5.0, lon: 5.0 });
+}
+
 // todo: I want to bring all of the search & filter queries into one API
 
 pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<SearchReturn> {
@@ -164,7 +180,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                     .order(fts_base_plants::rank.asc())
                     .into_boxed();
 
-                // todo - if we have restrict_to_type set, apply that (?) - or do we want to pull that logic out the the front end?
+                // todo - if we have restrict_to_type set, apply that (?) - or do we want to pull that logic out from the front end?
 
                 // no limit within search - we may sort later, by something else
 
@@ -416,9 +432,9 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 return Err(anyhow!("got only one of \"distance\" and \"from\""));
             }
 
-            if let Some(_distance) = &query.distance {
+            if let Some(distance) = &query.distance {
                 if let Some(from) = &query.from {
-                    if let Ok(_location) = crate::gazetteer_load::from_to_location(from) {
+                    if let Ok(location) = crate::gazetteer_load::from_to_location(from) {
                         // todo - load all collection items that match, then filter for those within x miles
                         //    - but that won't be any different than a base items search?
                         // or - load all within x miles, then filter for matches?
@@ -431,17 +447,36 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
                         // todo (when I have internet) - is there a "unique" filter to get sqlite to de-dupe for us?
 
+                        let distance_parsed = distance_to_degrees(distance);
 
-
+                        if distance_parsed.is_none() {
+                            return Err(anyhow!("couldn't parse \"distance\": {distance}"));
+                        }
+                        let distance = distance_parsed.unwrap();
 
                         // 1. find locations within x miles (same as the map search)
-                        //    - factor out the existing map search stuff to be reused here
-                        //    - this is in map.rs
+                        // todo - make the distance calc right, it's stubbed right now
+                        let locations = super::map::locations_search_db(
+                            db_conn,
+                            &super::map::GetLocationsQuery {
+                                min_lat: Some(location.lat - distance.lat),
+                                max_lat: Some(location.lat + distance.lat),
+                                min_lon: Some(location.lon - distance.lon),
+                                max_lon: Some(location.lon + distance.lon),
+                                limit: None,
+                            },
+                        );
+
                         // 2. load collection items matching those location IDs
                         //    - make this a free function too
+
+
+
+
                         // 3. de-dupe and then load base plants for each of those type/name pairs
                         //    - can be built into the above function I think? unless I want to use the above for single location IDs
                         //    - current "get single collection" function is at queries.rs:146
+                        
                     } else {
                         return Err(anyhow!("couldn't parse \"from\": {from}")); // todo - error string
                     }
