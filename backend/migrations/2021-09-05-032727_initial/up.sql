@@ -137,7 +137,10 @@ CREATE TABLE locations (
   collection_path TEXT,
   collection_filename TEXT,
   collection_title TEXT,
-  ignore_for_nearby_searches INTEGER NOT NULL
+  ignore_for_nearby_searches INTEGER NOT NULL,
+
+  -- user location specific
+  description TEXT
 );
 
 CREATE TABLE collection_items (
@@ -146,6 +149,7 @@ CREATE TABLE collection_items (
   collection_id INTEGER NOT NULL,
   location_id INTEGER, -- this can be unset for cases where there's a random list of varieties not attached to a location
   location_number INTEGER NOT NULL, -- 1,2,3,4. if set to zero then it's one of the non-location varieties. lets us simplify the front end and filter for "location 1" without enumerating them first
+  user_id INTEGER, -- unset if these are from built-in collections
 
   path_and_filename TEXT, -- for website display/navigation instead of looking it up
   marketing_name TEXT, -- copied back from base plants for quicker display
@@ -192,45 +196,4 @@ CREATE TABLE facts (
   contributor TEXT NOT NULL,
   fact TEXT NOT NULL,
   reference TEXT NOT NULL
-);
-
-CREATE TABLE user_collections (
-  id INTEGER PRIMARY KEY NOT NULL,
-  user_id INTEGER NOT NULL,
-
-  title TEXT,
-  description TEXT,
-
-  location_name TEXT,
-  latitude DOUBLE,
-  longitude DOUBLE
-);
-
-CREATE TABLE user_collection_items (
-  id INTEGER PRIMARY KEY NOT NULL,
-  user_id INTEGER NOT NULL,
-  user_collection_id INTEGER NOT NULL,
-
-  marketing_name TEXT, -- copied from base plants for quicker display
-
-  -- name+type don't have to exist in base plants so this could be a wholly user-created plant
-  name TEXT NOT NULL,
-  type TEXT NOT NULL,
-
-  category TEXT, -- for user-created groups of plants
-
-  description TEXT,
-
-  harvest_start INTEGER, --ordinal (day of the year)
-  harvest_end INTEGER,
-
-  -- pretty much only for figs with breba+main crop
-  harvest_start_2 INTEGER,
-  harvest_end_2 INTEGER,
-
-  harvest_relative INTEGER,
-  harvest_relative_to TEXT, -- "Redhaven" for peaches for example
-  harvest_relative_to_type TEXT, -- "Peach" for nectarines. should be same type for everything else
-
-  UNIQUE(user_collection_id, name, type) --combo of these columns must be unique
 );

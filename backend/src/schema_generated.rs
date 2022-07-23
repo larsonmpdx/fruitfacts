@@ -36,6 +36,7 @@ table! {
         collection_id -> Integer,
         location_id -> Nullable<Integer>,
         location_number -> Integer,
+        user_id -> Nullable<Integer>,
         path_and_filename -> Nullable<Text>,
         marketing_name -> Nullable<Text>,
         name -> Text,
@@ -106,6 +107,7 @@ table! {
         collection_filename -> Nullable<Text>,
         collection_title -> Nullable<Text>,
         ignore_for_nearby_searches -> Integer,
+        description -> Nullable<Text>,
     }
 }
 
@@ -115,39 +117,6 @@ table! {
         group_name -> Text,
         name -> Text,
         latin_name -> Nullable<Text>,
-    }
-}
-
-table! {
-    user_collection_items (id) {
-        id -> Integer,
-        user_id -> Integer,
-        user_collection_id -> Integer,
-        marketing_name -> Nullable<Text>,
-        name -> Text,
-        #[sql_name = "type"]
-        type_ -> Text,
-        category -> Nullable<Text>,
-        description -> Nullable<Text>,
-        harvest_start -> Nullable<Integer>,
-        harvest_end -> Nullable<Integer>,
-        harvest_start_2 -> Nullable<Integer>,
-        harvest_end_2 -> Nullable<Integer>,
-        harvest_relative -> Nullable<Integer>,
-        harvest_relative_to -> Nullable<Text>,
-        harvest_relative_to_type -> Nullable<Text>,
-    }
-}
-
-table! {
-    user_collections (id) {
-        id -> Integer,
-        user_id -> Integer,
-        title -> Nullable<Text>,
-        description -> Nullable<Text>,
-        location_name -> Nullable<Text>,
-        latitude -> Nullable<Double>,
-        longitude -> Nullable<Double>,
     }
 }
 
@@ -186,8 +155,6 @@ allow_tables_to_appear_in_same_query!(
     facts,
     locations,
     plant_types,
-    user_collection_items,
-    user_collections,
     user_oauth_entries,
     user_sessions,
     users,

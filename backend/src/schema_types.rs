@@ -1,6 +1,5 @@
 use super::schema_generated::{
-    collection_items, collections, locations, user_collection_items, user_collections,
-    user_oauth_entries, user_sessions,
+    collection_items, collections, locations, user_oauth_entries, user_sessions,
 };
 use serde::Serialize;
 use serde_with::skip_serializing_none;
@@ -65,6 +64,7 @@ pub struct CollectionItem {
     pub collection_id: i32,
     pub location_id: Option<i32>,
     pub location_number: i32,
+    pub user_id: Option<i32>,
 
     pub path_and_filename: Option<String>,
     pub marketing_name: Option<String>,
@@ -140,6 +140,8 @@ pub struct Location {
     pub collection_filename: Option<String>,
     pub collection_title: Option<String>,
     pub ignore_for_nearby_searches: i32,
+
+    pub description: Option<String>,
 }
 
 #[derive(Queryable, Associations, Serialize)]
@@ -191,47 +193,4 @@ pub struct Fact {
     pub contributor: String,
     pub fact: String,
     pub reference: String,
-}
-
-#[skip_serializing_none]
-#[derive(Identifiable, Serialize, Queryable, Associations, Debug)]
-#[belongs_to(UserCollection)]
-pub struct UserCollectionItem {
-    pub id: i32,
-    pub user_id: i32,
-    pub user_collection_id: i32,
-
-    pub marketing_name: Option<String>,
-
-    pub name: String,
-    #[serde(rename = "type")]
-    pub type_: String,
-
-    pub category: Option<String>,
-
-    pub description: Option<String>,
-
-    pub harvest_start: Option<i32>,
-    pub harvest_end: Option<i32>,
-
-    pub harvest_start_2: Option<i32>,
-    pub harvest_end_2: Option<i32>,
-
-    pub harvest_relative: Option<String>,
-    pub harvest_relative_to: Option<String>,
-    pub harvest_relative_to_type: Option<String>,
-}
-
-#[skip_serializing_none]
-#[derive(Identifiable, Serialize, Queryable)]
-pub struct UserCollection {
-    pub id: i32,
-    pub user_id: i32,
-
-    pub title: Option<String>,
-    pub description: Option<String>,
-
-    pub location_name: Option<String>,
-    pub latitude: Option<f64>,
-    pub longitude: Option<f64>,
 }

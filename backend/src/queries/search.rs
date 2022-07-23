@@ -92,6 +92,7 @@ pub struct SearchReturn {
     pub locations: Option<Vec<Location>>,
 }
 
+#[derive(Debug, PartialEq)]
 pub struct DistanceDegrees {
     pub lat: f64,
     pub lon: f64,
