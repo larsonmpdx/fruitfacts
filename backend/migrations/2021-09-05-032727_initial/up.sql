@@ -109,6 +109,7 @@ CREATE TABLE collections (
   notoriety_score REAL NOT NULL,
   notoriety_score_explanation TEXT NOT NULL,
   harvest_time_devalue_factor REAL,
+  ignore_for_nearby_searches INTEGER NOT NULL, -- bool, is this collection maybe a dictionary that has an arbitrary location set (like the US patent collection being set to washington, DC)? if so we don't want to find it in nearby locations
 
   title TEXT,
   author TEXT,
@@ -135,7 +136,8 @@ CREATE TABLE locations (
   notoriety_score REAL NOT NULL,
   collection_path TEXT,
   collection_filename TEXT,
-  collection_title TEXT
+  collection_title TEXT,
+  ignore_for_nearby_searches INTEGER NOT NULL
 );
 
 CREATE TABLE collection_items (

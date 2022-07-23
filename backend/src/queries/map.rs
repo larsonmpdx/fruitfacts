@@ -25,6 +25,7 @@ pub struct GetLocationsQuery {
     pub min_lon: Option<f64>,
     pub max_lon: Option<f64>,
     pub limit: Option<i32>,
+    pub filter_out_ignored_for_nearby_searches: Option<bool>,
 }
 
 // search for locations within a bounding box
@@ -96,6 +97,12 @@ pub fn locations_search_db(
         // these shouldn't wrap or be out of order. at least with the front end map library we're using
         db_query = db_query.filter(locations::latitude.gt(min_lat));
         db_query = db_query.filter(locations::latitude.lt(max_lat));
+    }
+
+    if let Some(value) = query.filter_out_ignored_for_nearby_searches {
+        if value == true {
+            db_query = db_query.filter(locations::ignore_for_nearby_searches.eq(0));
+        }
     }
 
     db_query = db_query.order(locations::notoriety_score.desc());

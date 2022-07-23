@@ -5,6 +5,7 @@
     published: "2020",
     accessed: "Dec 2021",
     type: "dictionary",
+    ignore_for_nearby_searches: true,
     locations: [
         {
             name: "Various",

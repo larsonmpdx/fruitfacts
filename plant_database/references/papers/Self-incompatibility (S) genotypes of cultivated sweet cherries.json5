@@ -5,7 +5,8 @@
     published: "2020",
     accessed: "March 2022",
     type: "dictionary",
-    ignore_unless_in_others: true, // *don't* create entries based on this file unless they were also created by a regular file, because many of these entries are obscure
+    ignore_unless_in_others: true, // *don't* create base plant entries based on this file unless they were also created by a non-ignored file, because many of these entries are obscure
+    ignore_for_nearby_searches: true,
     locations: [
         {
             name: "no location",

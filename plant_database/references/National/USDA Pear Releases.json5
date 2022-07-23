@@ -5,6 +5,7 @@
     published: "",
     accessed: "Oct 2021",
     type: "public breeding program list",
+    ignore_for_nearby_searches: true,
     locations: [
         {
             name: "USDA Washington, DC",

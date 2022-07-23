@@ -7,6 +7,7 @@
     accessed: "Feb 2022",
     type: "dictionary",
     needs_help: true,
+    ignore_for_nearby_searches: true, // not sure - these might be valid for a california search
     locations: [
         {
             name: "todo",

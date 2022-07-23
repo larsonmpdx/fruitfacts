@@ -6,6 +6,7 @@
     accessed: "Feb 2022",
     type: "dictionary",
     needs_help: true,
+    ignore_for_nearby_searches: true,
     locations: [
         {
             name: "Fresno, CA area", // location for bloom times in the chart

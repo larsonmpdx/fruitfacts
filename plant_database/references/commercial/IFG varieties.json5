@@ -4,6 +4,7 @@
     url: "https://www.ifg.world/index.php",
     accessed: "Jun 2022",
     type: "IP company list",
+    ignore_for_nearby_searches: true,
     locations: [
         {
             name: "USPTO Washington, DC", // actually global

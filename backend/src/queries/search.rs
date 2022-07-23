@@ -108,6 +108,34 @@ pub fn distance_to_degrees(distance: &str) -> Option<DistanceDegrees> {
     return Some(DistanceDegrees { lat: 5.0, lon: 5.0 });
 }
 
+// given a set of location IDs, get all base plant IDs across all of them (de-duped)
+// in order to use as a search filter (to only find plants mentioned within X miles of some spot)
+fn get_base_plant_ids_from_locations(
+    db_conn: &SqliteConnection,
+    location_ids: Vec<i32>,
+) -> Result<Vec<i32>, diesel::result::Error> {
+    let base_ids = collection_items::dsl::collection_items
+        .filter(collection_items::location_id.eq_any(location_ids))
+        .select(collection_items::base_plant_id)
+        .distinct()
+        .load::<Option<i32>>(db_conn);
+
+    if base_ids.is_err() {
+        return Err(base_ids.unwrap_err());
+    }
+    let base_ids = base_ids.unwrap();
+
+    // todo - google if this can be done with a map, if there's a way to skip an entry in case it's None
+    let mut base_ids_no_none: Vec<i32> = Default::default();
+    for entry in base_ids {
+        if entry.is_some() {
+            base_ids_no_none.push(entry.unwrap());
+        }
+    }
+
+    return Ok(base_ids_no_none);
+}
+
 // todo: I want to bring all of the search & filter queries into one API
 
 pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<SearchReturn> {
@@ -352,6 +380,113 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                 }
             }
 
+            // relative_harvest (min and max)
+            if let Some(relative_harvest_min) = &query.relative_harvest_min {
+                base_query =
+                    base_query.filter(base_plants::harvest_relative.ge(relative_harvest_min));
+                pat_mid_q =
+                    pat_mid_q.filter(base_plants::harvest_relative.ge(relative_harvest_min));
+                total_count_q =
+                    total_count_q.filter(base_plants::harvest_relative.ge(relative_harvest_min));
+            }
+            if let Some(relative_harvest_max) = &query.relative_harvest_max {
+                base_query =
+                    base_query.filter(base_plants::harvest_relative.le(relative_harvest_max));
+                pat_mid_q =
+                    pat_mid_q.filter(base_plants::harvest_relative.le(relative_harvest_max));
+                total_count_q =
+                    total_count_q.filter(base_plants::harvest_relative.le(relative_harvest_max));
+            }
+
+            // notoriety_min (base plants only)
+            if let Some(notoriety_min) = &query.notoriety_min {
+                base_query = base_query.filter(base_plants::notoriety_score.ge(notoriety_min));
+                pat_mid_q = pat_mid_q.filter(base_plants::notoriety_score.ge(notoriety_min));
+                total_count_q =
+                    total_count_q.filter(base_plants::notoriety_score.ge(notoriety_min));
+            }
+
+            // todo distance, from (collection items only) - there may be value to a search filter for "mentioned within x miles of zip code"
+            if (query.distance.is_some() && query.from.is_none())
+                || (query.distance.is_none() && query.from.is_some())
+            {
+                return Err(anyhow!("got only one of \"distance\" and \"from\""));
+            }
+
+            if let Some(distance) = &query.distance {
+                if let Some(from) = &query.from {
+                    if let Ok(location) = crate::gazetteer_load::from_to_location(from) {
+                        // todo - load all collection items that match, then filter for those within x miles
+                        //    - but that won't be any different than a base items search?
+                        // or - load all within x miles, then filter for matches?
+                        // 1. mentioned in any reference within x miles
+                        //    - possibly with a restriction to a type of reference or a minimum quality level
+                        // 2. some sum of the references within x miles, and if it's above some total
+
+                        // goal - do I want to return base plants, or some de-duped collection items thing?
+                        // collection items would have the advantage of allowing a search for user items, I guess? todo later
+
+                        // todo (when I have internet) - is there a "unique" filter to get sqlite to de-dupe for us?
+
+                        let distance_parsed = distance_to_degrees(distance);
+
+                        if distance_parsed.is_none() {
+                            return Err(anyhow!("couldn't parse \"distance\": {distance}"));
+                        }
+                        let distance = distance_parsed.unwrap();
+
+                        // 1. find locations within x miles (same as the map search)
+                        // todo - make the distance calc right, it's stubbed right now
+                        let locations = super::map::locations_search_db(
+                            db_conn,
+                            &super::map::GetLocationsQuery {
+                                min_lat: Some(location.lat - distance.lat),
+                                max_lat: Some(location.lat + distance.lat),
+                                min_lon: Some(location.lon - distance.lon),
+                                max_lon: Some(location.lon + distance.lon),
+                                limit: None,
+                                filter_out_ignored_for_nearby_searches: Some(true),
+                            },
+                        );
+
+                        if locations.is_err() {
+                            return Err(anyhow!("error getting locations during search"));
+                        }
+
+                        let locations = locations.unwrap();
+
+                        // then get an array of location IDs
+                        let location_ids: Vec<i32> =
+                            locations.into_iter().map(|entry| entry.id).collect();
+
+                        // 2. load collection items matching those location IDs
+                        //    - make this a free function too
+                        // 3. de-dupe and then load base plants for each of those type/name pairs
+
+                        let base_plant_ids =
+                            get_base_plant_ids_from_locations(db_conn, location_ids);
+
+                        if base_plant_ids.is_err() {
+                            return Err(anyhow!("error getting base plants during search"));
+                        }
+
+                        let base_plant_ids = base_plant_ids.unwrap();
+
+                        // todo - does .filter() replace the previous filter (from text search)?
+                        base_query =
+                            base_query.filter(base_plants::id.eq_any(base_plant_ids.clone()));
+                        pat_mid_q =
+                            pat_mid_q.filter(base_plants::id.eq_any(base_plant_ids.clone()));
+                        total_count_q =
+                            total_count_q.filter(base_plants::id.eq_any(base_plant_ids));
+                    } else {
+                        return Err(anyhow!("couldn't parse \"from\": {from}"));
+                    }
+                }
+            }
+
+            // stop using filters at this point - now we figure out the page and total count etc.
+
             // if we're sorting by patent expiration, figure out the patent midpoint page (will only exist if we have a per_page)
             // so we can show a link to it, or provide it directly if requested as "page=mid"
 
@@ -406,79 +541,6 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
                         // no offset - nothing added to the query
                     } else {
                         return Err(anyhow!("got \"page\" != \"1\" without \"per_page\""));
-                    }
-                }
-            }
-
-            // relative_harvest (min and max)
-            if let Some(relative_harvest_min) = &query.relative_harvest_min {
-                base_query =
-                    base_query.filter(base_plants::harvest_relative.ge(relative_harvest_min));
-            }
-            if let Some(relative_harvest_max) = &query.relative_harvest_max {
-                base_query =
-                    base_query.filter(base_plants::harvest_relative.le(relative_harvest_max));
-            }
-
-            // notoriety_min (base plants only)
-            if let Some(notoriety_min) = &query.notoriety_min {
-                base_query = base_query.filter(base_plants::notoriety_score.ge(notoriety_min));
-            }
-
-            // todo distance, from (collection items only) - there may be value to a search filter for "mentioned within x miles of zip code"
-            if (query.distance.is_some() && query.from.is_none())
-                || (query.distance.is_none() && query.from.is_some())
-            {
-                return Err(anyhow!("got only one of \"distance\" and \"from\""));
-            }
-
-            if let Some(distance) = &query.distance {
-                if let Some(from) = &query.from {
-                    if let Ok(location) = crate::gazetteer_load::from_to_location(from) {
-                        // todo - load all collection items that match, then filter for those within x miles
-                        //    - but that won't be any different than a base items search?
-                        // or - load all within x miles, then filter for matches?
-                        // 1. mentioned in any reference within x miles
-                        //    - possibly with a restriction to a type of reference or a minimum quality level
-                        // 2. some sum of the references within x miles, and if it's above some total
-
-                        // goal - do I want to return base plants, or some de-duped collection items thing?
-                        // collection items would have the advantage of allowing a search for user items, I guess? todo later
-
-                        // todo (when I have internet) - is there a "unique" filter to get sqlite to de-dupe for us?
-
-                        let distance_parsed = distance_to_degrees(distance);
-
-                        if distance_parsed.is_none() {
-                            return Err(anyhow!("couldn't parse \"distance\": {distance}"));
-                        }
-                        let distance = distance_parsed.unwrap();
-
-                        // 1. find locations within x miles (same as the map search)
-                        // todo - make the distance calc right, it's stubbed right now
-                        let locations = super::map::locations_search_db(
-                            db_conn,
-                            &super::map::GetLocationsQuery {
-                                min_lat: Some(location.lat - distance.lat),
-                                max_lat: Some(location.lat + distance.lat),
-                                min_lon: Some(location.lon - distance.lon),
-                                max_lon: Some(location.lon + distance.lon),
-                                limit: None,
-                            },
-                        );
-
-                        // 2. load collection items matching those location IDs
-                        //    - make this a free function too
-
-
-
-
-                        // 3. de-dupe and then load base plants for each of those type/name pairs
-                        //    - can be built into the above function I think? unless I want to use the above for single location IDs
-                        //    - current "get single collection" function is at queries.rs:146
-                        
-                    } else {
-                        return Err(anyhow!("couldn't parse \"from\": {from}")); // todo - error string
                     }
                 }
             }

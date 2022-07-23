@@ -72,6 +72,7 @@ table! {
         notoriety_score -> Float,
         notoriety_score_explanation -> Text,
         harvest_time_devalue_factor -> Nullable<Float>,
+        ignore_for_nearby_searches -> Integer,
         title -> Nullable<Text>,
         author -> Nullable<Text>,
         description -> Nullable<Text>,
@@ -104,6 +105,7 @@ table! {
         collection_path -> Nullable<Text>,
         collection_filename -> Nullable<Text>,
         collection_title -> Nullable<Text>,
+        ignore_for_nearby_searches -> Integer,
     }
 }
 

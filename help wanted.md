@@ -16,3 +16,4 @@ please contact me if you want to help and I can give more details and make sure 
 * chart customization (colors, sorting, etc.)
 * scion trade support (trade calculations, search, notifications etc.)
 * unix housekeeping: break backend and frontend into separate users and tighten up folder permissions, consider chroot type stuff
+* USDA zone ratings: many references have these and I don't import them. they could be handled with a voting/averaging system similar to the relative harvest days, being aggregated across references.  search could use it as a filter (min/max zone)

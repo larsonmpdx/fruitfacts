@@ -111,6 +111,7 @@ pub struct Collection {
     pub notoriety_score: f32,
     pub notoriety_score_explanation: String,
     pub harvest_time_devalue_factor: Option<f32>,
+    pub ignore_for_nearby_searches: i32,
 
     pub title: Option<String>,
     pub author: Option<String>,
@@ -138,6 +139,7 @@ pub struct Location {
     pub collection_path: Option<String>,
     pub collection_filename: Option<String>,
     pub collection_title: Option<String>,
+    pub ignore_for_nearby_searches: i32,
 }
 
 #[derive(Queryable, Associations, Serialize)]

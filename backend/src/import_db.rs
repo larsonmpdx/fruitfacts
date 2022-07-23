@@ -71,6 +71,7 @@ struct CollectionJson {
     type_: String,
     harvest_time_devalue_factor: Option<f32>, // an option to reduce the weight of harvest times because of an editorial decision that they're low quality
     ignore_unless_in_others: Option<bool>, // option to skip creating entries based on this file unless they're also in another file
+    ignore_for_nearby_searches: Option<bool>, // if this has an arbitrary location like Washington, DC for the us patent list, ignore it so it doesn't appear "nearby" to users
 
     locations: Vec<CollectionLocationJson>,
     categories: Option<Vec<CollectionCategoryJson>>,
@@ -1708,6 +1709,13 @@ fn load_references(
                 false
             };
 
+            let ignore_for_nearby_searches =
+                if let Some(value) = collection.ignore_for_nearby_searches {
+                    value
+                } else {
+                    false
+                };
+
             //    println!("inserting");
             let rows_inserted = diesel::insert_into(collections::dsl::collections)
                 .values((
@@ -1728,6 +1736,7 @@ fn load_references(
                     collections::notoriety_score_explanation.eq(notoriety_info.explanation),
                     collections::harvest_time_devalue_factor
                         .eq(collection.harvest_time_devalue_factor),
+                    collections::ignore_for_nearby_searches.eq(ignore_for_nearby_searches as i32),
                 ))
                 .execute(db_conn);
             assert_eq!(Ok(1), rows_inserted);
@@ -1746,6 +1755,7 @@ fn load_references(
                         locations::collection_path.eq(&path),
                         locations::collection_filename.eq(&filename),
                         locations::collection_title.eq(&collection.title),
+                        locations::ignore_for_nearby_searches.eq(ignore_for_nearby_searches as i32),
                     ))
                     .execute(db_conn);
                 assert_eq!(Ok(1), rows_inserted);
@@ -2652,20 +2662,19 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
 
 // put the base plants ID into each collection item that matches - simplifies later queries
 fn add_base_id_to_collection_items(db_conn: &SqliteConnection) {
-    let all_base_plants = base_plants::dsl::base_plants
-        .select((
-            base_plants::name_fts,
-            base_plants::type_,
-            base_plants::aka_fts,
-        ))
-        .load::<BasePlantsItemForDedupe>(db_conn)
+    let base_plants = base_plants::dsl::base_plants
+        .load::<BasePlant>(db_conn)
         .unwrap();
 
-    for plant in &all_base_plants {
-        // todo
-
-
-        
+    for plant in &base_plants {
+        let _updated_row_count = diesel::update(
+            collection_items::dsl::collection_items
+                .filter(collection_items::type_.eq(&plant.type_))
+                .filter(collection_items::name.eq(&plant.name)),
+        )
+        .set((collection_items::base_plant_id.eq(plant.id),))
+        .execute(db_conn)
+        .expect("updating collection items with base plant id");
     }
 }
 

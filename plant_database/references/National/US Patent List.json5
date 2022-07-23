@@ -16,6 +16,7 @@
     url: "https://docs.google.com/spreadsheets/d/10PfUp8GbpK_hXfcWWlODTqS_T3nF_isHs6viJZ_-7uI",
     accessed: "Jun 2022",
     type: "dictionary",
+    ignore_for_nearby_searches: true,
     locations: [
         {
             name: "USPTO Washington, DC",
