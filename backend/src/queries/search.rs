@@ -100,7 +100,7 @@ pub struct DistanceDegrees {
 // given a string like "100mi", calculate a simple distance east/west and north/south
 // for that point to create an X mile square on the map (which won't actually be square)
 // this is a placeholder until we get a real distance calc from something like spatialite
-pub fn distance_to_degrees(distance: &str) -> Option<DistanceDegrees> {
+pub fn distance_to_degrees(_distance: &str) -> Option<DistanceDegrees> {
     // todo - google a formula for this. I think north/south will be fixed
     // and east/west will obviously depend on how far from the equator you are
 
