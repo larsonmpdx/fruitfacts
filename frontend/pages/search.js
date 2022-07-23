@@ -169,6 +169,10 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
     setQueryObject({ ...queryObject, search: nullIfEmptyQuote(text), page: '1' });
   };
 
+  const handleZipChange = (text) => {
+    setQueryObject({ ...queryObject, distance: '100mi', from: 'zip:' + text, page: '1' });
+  };
+
   return (
     <>
       <Head>
@@ -234,6 +238,13 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
         minLength={2}
         debounceTimeout={300}
         onChange={(event) => handleSearchChange(event.target.value)}
+        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+      />
+
+      <DebounceInput
+        minLength={2}
+        debounceTimeout={300}
+        onChange={(event) => handleZipChange(event.target.value)}
         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       />
 
