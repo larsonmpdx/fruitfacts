@@ -105,7 +105,7 @@ pub fn distance_to_degrees(_distance: &str) -> Option<DistanceDegrees> {
     // and east/west will obviously depend on how far from the equator you are
 
     // todo
-    return Some(DistanceDegrees { lat: 5.0, lon: 5.0 });
+    Some(DistanceDegrees { lat: 5.0, lon: 5.0 })
 }
 
 // given a set of location IDs, get all base plant IDs across all of them (de-duped)
@@ -120,20 +120,20 @@ fn get_base_plant_ids_from_locations(
         .distinct()
         .load::<Option<i32>>(db_conn);
 
-    if base_ids.is_err() {
-        return Err(base_ids.unwrap_err());
+    if let Err(base_ids) = base_ids {
+        return Err(base_ids);
     }
     let base_ids = base_ids.unwrap();
 
     // todo - google if this can be done with a map, if there's a way to skip an entry in case it's None
     let mut base_ids_no_none: Vec<i32> = Default::default();
     for entry in base_ids {
-        if entry.is_some() {
-            base_ids_no_none.push(entry.unwrap());
+        if let Some(entry) = entry {
+            base_ids_no_none.push(entry);
         }
     }
 
-    return Ok(base_ids_no_none);
+    Ok(base_ids_no_none)
 }
 
 // todo: I want to bring all of the search & filter queries into one API

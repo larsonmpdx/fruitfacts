@@ -100,7 +100,7 @@ pub fn locations_search_db(
     }
 
     if let Some(value) = query.filter_out_ignored_for_nearby_searches {
-        if value == true {
+        if value {
             db_query = db_query.filter(locations::ignore_for_nearby_searches.eq(0));
         }
     }
