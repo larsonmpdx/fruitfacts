@@ -125,13 +125,7 @@ fn get_base_plant_ids_from_locations(
     }
     let base_ids = base_ids.unwrap();
 
-    // todo - google if this can be done with a map, if there's a way to skip an entry in case it's None
-    let mut base_ids_no_none: Vec<i32> = Default::default();
-    for entry in base_ids {
-        if let Some(entry) = entry {
-            base_ids_no_none.push(entry);
-        }
-    }
+    let base_ids_no_none: Vec<i32> = base_ids.into_iter().flatten().collect(); // flatten() here removes the None entries
 
     Ok(base_ids_no_none)
 }
