@@ -33,7 +33,7 @@ table! {
 table! {
     collection_items (id) {
         id -> Integer,
-        collection_id -> Integer,
+        collection_id -> Nullable<Integer>,
         location_id -> Nullable<Integer>,
         location_number -> Integer,
         user_id -> Nullable<Integer>,
@@ -98,7 +98,8 @@ table! {
     locations (id) {
         id -> Integer,
         location_number -> Integer,
-        collection_id -> Integer,
+        collection_id -> Nullable<Integer>,
+        user_id -> Nullable<Integer>,
         location_name -> Nullable<Text>,
         latitude -> Nullable<Double>,
         longitude -> Nullable<Double>,

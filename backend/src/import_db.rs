@@ -656,8 +656,12 @@ pub fn reset_database(db_conn: &SqliteConnection) {
     // skip dropping: users
     let _ = diesel::delete(plant_types::dsl::plant_types).execute(db_conn);
     let _ = diesel::delete(collections::dsl::collections).execute(db_conn);
-    let _ = diesel::delete(locations::dsl::locations).execute(db_conn);
-    let _ = diesel::delete(collection_items::dsl::collection_items).execute(db_conn);
+    let _ = diesel::delete(locations::dsl::locations.filter(locations::user_id.is_null()))
+        .execute(db_conn);
+    let _ = diesel::delete(
+        collection_items::dsl::collection_items.filter(collection_items::user_id.is_null()),
+    )
+    .execute(db_conn);
     let _ = diesel::delete(facts::dsl::facts).execute(db_conn);
 
     super::embedded_migrations::run(db_conn).unwrap();
@@ -2024,6 +2028,7 @@ fn relative_to_absolute_harvest_times(db_conn: &SqliteConnection) {
     // but also giving an absolute time for redhaven in the same pub
 
     let all_plants = collection_items::dsl::collection_items
+        .filter(collection_items::user_id.is_null())
         .select((
             collection_items::id,
             collection_items::location_id,
@@ -2131,6 +2136,7 @@ fn calculate_years_from_patent(db_conn: &SqliteConnection) {
 fn add_marketing_names(db_conn: &SqliteConnection) {
     // for each collection item, look up the base plant and copy in the marketing name if set
     let all_collection_items = collection_items::dsl::collection_items
+        .filter(collection_items::user_id.is_null())
         .load::<CollectionItem>(db_conn)
         .unwrap();
 
@@ -2181,6 +2187,7 @@ fn set_relative_vs_existing(
 
 fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
     let all_plants = collection_items::dsl::collection_items
+        .filter(collection_items::user_id.is_null())
         .load::<CollectionItem>(db_conn)
         .unwrap();
 
@@ -2243,6 +2250,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
         println!("relative harvest inference round {round}");
 
         let all_plants = collection_items::dsl::collection_items
+            .filter(collection_items::user_id.is_null())
             .filter(collection_items::calc_harvest_relative.is_null())
             .load::<CollectionItem>(db_conn)
             .unwrap();
@@ -2260,6 +2268,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                     // first look for the candle itself, prefer that
                     // I don't think I can remove this with an order-by-round thing, unless I make standard candles 0.0 and parsed directly 0.1 or something
                     let standard_candle = collection_items::dsl::collection_items
+                        .filter(collection_items::user_id.is_null())
                         .filter(collection_items::location_id.eq(plant.location_id))
                         .filter(collection_items::harvest_start.is_not_null())
                         .filter(collection_items::name.eq(&candle.name))
@@ -2282,6 +2291,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
 
                     // if we don't have a standard candle then just pick any same-location plant
                     let alternative_relative_plant = collection_items::dsl::collection_items
+                        .filter(collection_items::user_id.is_null())
                         .filter(collection_items::location_id.eq(plant.location_id))
                         .filter(collection_items::calc_harvest_relative_to.eq(&candle.name))
                         .filter(collection_items::calc_harvest_relative_to_type.eq(&candle.type_))
@@ -2311,6 +2321,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
         // we need a 2nd loop so we can pick up plants that have already been tagged as standard candles above
         // I think this should only be run in round 1 as it won't pick up anything additional later, it relies on harvest_relative fields only
         let all_plants2 = collection_items::dsl::collection_items
+            .filter(collection_items::user_id.is_null())
             .filter(collection_items::calc_harvest_relative.is_null())
             .load::<CollectionItem>(db_conn)
             .unwrap();
@@ -2325,6 +2336,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                 {
                     // todo - make sure this also works for the euro burlat cherries, etc.
                     let alt_references = collection_items::dsl::collection_items
+                        .filter(collection_items::user_id.is_null())
                         .filter(collection_items::location_id.eq(plant.location_id))
                         .filter(collection_items::harvest_relative.is_not_null())
                         .filter(collection_items::calc_harvest_relative.is_not_null())
@@ -2368,6 +2380,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
         // see if the base plant value can be used to fill in their calced fields
         // this would rely on the base plant calc from the previous round
         let un_calced_plants = collection_items::dsl::collection_items
+            .filter(collection_items::user_id.is_null())
             .filter(collection_items::calc_harvest_relative.is_null())
             .filter(collection_items::harvest_relative.is_not_null())
             .load::<CollectionItem>(db_conn)
@@ -2461,6 +2474,7 @@ fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
                 // and note the round as round + offset to devalue it vs. simpler forms
                 let _updated_row_count = diesel::update(
                     collection_items::dsl::collection_items
+                        .filter(collection_items::user_id.is_null())
                         .filter(collection_items::type_.eq(base_plant.type_))
                         .filter(collection_items::name.eq(base_plant.name))
                         .filter(collection_items::calc_harvest_relative.is_null()),
@@ -2505,6 +2519,7 @@ fn calculate_relative_harvest_from_references(
 ) -> Option<RelativeHarvest> {
     // get all collection items matching this type+name
     let all_references = collection_items::dsl::collection_items
+        .filter(collection_items::user_id.is_null())
         .filter(collection_items::type_.eq(&base_plant.type_))
         .filter(collection_items::name.eq(&base_plant.name))
         .load::<CollectionItem>(db_conn)
@@ -2531,7 +2546,7 @@ fn calculate_relative_harvest_from_references(
                 num_references_used += 1;
 
                 let notoriety_and_devalue_score =
-                    get_notoriety_and_devalue_scores(reference.collection_id, db_conn);
+                    get_notoriety_and_devalue_scores(reference.collection_id.unwrap(), db_conn);
                 let devalue_score = match notoriety_and_devalue_score.harvest_time_devalue_factor {
                     Some(score) => score,
                     _ => 0.0,
@@ -2551,7 +2566,7 @@ fn calculate_relative_harvest_from_references(
                 divisor += overall_score;
 
                 harvest_relative_explanation += &format!(
-                    " [{}] {} ({:.2}*{:.2})",
+                    " [{:?}] {} ({:.2}*{:.2})",
                     reference.collection_id,
                     reference.calc_harvest_relative.unwrap(),
                     notoriety_and_devalue_score.notoriety_score,
@@ -2669,6 +2684,7 @@ fn add_base_id_to_collection_items(db_conn: &SqliteConnection) {
     for plant in &base_plants {
         let _updated_row_count = diesel::update(
             collection_items::dsl::collection_items
+                .filter(collection_items::user_id.is_null())
                 .filter(collection_items::type_.eq(&plant.type_))
                 .filter(collection_items::name.eq(&plant.name)),
         )
@@ -2804,6 +2820,7 @@ pub fn calculate_and_write_relative_day_offsets(db_conn: &SqliteConnection) {
     // (this is based on a plant entry having both a relative-to-candle entry and an absolute date of its own, and taking the difference)
     // (in most locations these will all be the same date because of the way the relative days were derived in the first place)
     let location_ids = collection_items::dsl::collection_items
+        .filter(collection_items::user_id.is_null())
         .filter(collection_items::location_id.is_not_null())
         .select(collection_items::location_id)
         .distinct()

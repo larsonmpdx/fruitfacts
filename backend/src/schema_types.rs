@@ -61,7 +61,7 @@ pub struct BasePlant {
 pub struct CollectionItem {
     pub id: i32,
 
-    pub collection_id: i32,
+    pub collection_id: Option<i32>,
     pub location_id: Option<i32>,
     pub location_number: i32,
     pub user_id: Option<i32>,
@@ -129,7 +129,8 @@ pub struct Collection {
 pub struct Location {
     pub id: i32,
     pub location_number: i32, // which location within the collection is this? 0 is no location, 1 is the first location
-    pub collection_id: i32,
+    pub collection_id: Option<i32>,
+    pub user_id: Option<i32>,
 
     pub location_name: Option<String>,
     pub latitude: Option<f64>,
