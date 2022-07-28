@@ -327,7 +327,7 @@ fn receive_oauth_redirect_blocking(
     })
 }
 
-fn get_session_value(
+pub fn get_session_value(
     req: HttpRequest,
     set_session: bool,
 ) -> (Option<String>, Option<Cookie<'static>>) {
@@ -556,7 +556,7 @@ async fn logout(
 ) -> Result<HttpResponse, actix_web::Error> {
     let (session_value, _outgoing_cookie) = get_session_value(req, false);
     if session_value.is_none() {
-        eprintln!("/logout called without a session");
+        eprintln!("post /api/logout called without a session");
         return Ok(HttpResponse::InternalServerError().finish());
     }
 

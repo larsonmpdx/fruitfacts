@@ -1,7 +1,7 @@
 use super::schema_generated::{
     collection_items, collections, locations, user_oauth_entries, user_sessions,
 };
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 use serde_with::skip_serializing_none;
 
 // diesel requires us to maintain two copies of everything:
@@ -124,7 +124,7 @@ pub struct Collection {
 }
 
 #[skip_serializing_none]
-#[derive(Debug, Identifiable, Serialize, Queryable, Associations)]
+#[derive(Debug, Identifiable, Serialize, Deserialize, Queryable, Associations)]
 #[belongs_to(Collection)]
 pub struct Location {
     pub id: i32,

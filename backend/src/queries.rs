@@ -2,6 +2,7 @@
 mod test;
 
 pub mod auth;
+pub mod list;
 pub mod map;
 pub mod search;
 use super::schema_generated::*;

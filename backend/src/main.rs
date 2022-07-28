@@ -88,6 +88,7 @@ async fn main() -> std::io::Result<()> {
             // these can all be combind into one search query
             .service(queries::get_plant)
             .service(queries::search::variety_search)
+            .service(queries::list::create_list)
             // combine later?
             .service(queries::map::locations_search)
     })
