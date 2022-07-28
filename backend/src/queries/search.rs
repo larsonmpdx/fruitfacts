@@ -98,15 +98,37 @@ pub struct DistanceDegrees {
     pub lon: f64,
 }
 
-// given a string like "100mi", calculate a simple distance east/west and north/south
+// given a string like "100", calculate a simple distance east/west and north/south
 // for that point to create an X mile square on the map (which won't actually be square)
-// this is a placeholder until we get a real distance calc from something like spatialite
-pub fn distance_to_degrees(_distance: &str) -> Option<DistanceDegrees> {
+// the bounding box will be narrower near the poles (in terms of degrees) for a given distance
+// this function is basically naive and should be replaced by something from spatialite or whatever
+pub fn distance_km_to_degrees(distance: &str, start_latitude: f64) -> Option<DistanceDegrees> {
     // todo - google a formula for this. I think north/south will be fixed
     // and east/west will obviously depend on how far from the equator you are
 
-    // todo
-    Some(DistanceDegrees { lat: 5.0, lon: 5.0 })
+    const EARTH_CIRCUMFERENCE_KM: u32 = 40075;
+
+    let parsed = distance.parse::<f64>();
+    if parsed.is_err() {
+        return None;
+    }
+    let parsed = parsed.unwrap();
+
+    // latitude is pretty constant in terms of km->degrees: have km, want degrees
+    // km / 40075 km/circumference * 360*/circumference
+    // longitude gets more narrow at the poles
+    let lat: f64 = parsed * 360.0 / EARTH_CIRCUMFERENCE_KM as f64;
+
+    let lon = if start_latitude.abs() >= 90.0 {
+        0.0 // prevent divide by zero or other weirdness
+    } else {
+        // for 0 degrees starting latitude: lat * (90 - 0) / 90 = lat * 1
+        // for 45 degrees: lat * (90 - 45) / 90 = lat * 45/90 = lat * 1/2 (half size at 45 degrees N/S)
+        // for 80 degrees: lat * (90 - 80) / 90 = lat * 10/90 = lat * 1/9 (smaller near the poles)
+        lat * (90.0 - start_latitude.abs()) / 90.0
+    };
+
+    Some(DistanceDegrees { lat, lon })
 }
 
 // given a set of location IDs, get all base plant IDs across all of them (de-duped)
@@ -423,7 +445,7 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 
                         // todo (when I have internet) - is there a "unique" filter to get sqlite to de-dupe for us?
 
-                        let distance_parsed = distance_to_degrees(distance);
+                        let distance_parsed = distance_km_to_degrees(distance, location.lat);
 
                         if distance_parsed.is_none() {
                             return Err(anyhow!("couldn't parse \"distance\": {distance}"));

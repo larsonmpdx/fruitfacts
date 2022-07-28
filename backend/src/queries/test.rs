@@ -1,5 +1,5 @@
+use super::search::{distance_km_to_degrees, DistanceDegrees};
 use crate::queries::map::latitude_normalize;
-use super::search::{distance_to_degrees, DistanceDegrees};
 
 #[test]
 fn test_latitude_normalize() {
@@ -17,9 +17,29 @@ fn test_latitude_normalize() {
     assert_eq!(latitude_normalize(-175.0567314859299), -175.0567314859299);
 }
 
-
 #[test]
-fn test_distance_to_degrees() {
+fn test_distance_km_to_degrees() {
     // todo, once the formula is put in and we handle mi and km
-    assert_eq!(distance_to_degrees("25mi"), Some(DistanceDegrees { lat: 5.0, lon: 5.0 }))
+    assert_eq!(distance_km_to_degrees("can't parse", 0.0), None);
+    assert_eq!(
+        distance_km_to_degrees("25", 0.0),
+        Some(DistanceDegrees {
+            lat: 0.22457891453524642,
+            lon: 0.22457891453524642
+        })
+    );
+    assert_eq!(
+        distance_km_to_degrees("25", 45.0),
+        Some(DistanceDegrees {
+            lat: 0.22457891453524642,
+            lon: 0.11228945726762321
+        })
+    );
+    assert_eq!(
+        distance_km_to_degrees("250.0", 90.0),
+        Some(DistanceDegrees {
+            lat: 2.245789145352464,
+            lon: 0.0
+        })
+    );
 }

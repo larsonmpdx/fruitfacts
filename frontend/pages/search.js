@@ -170,7 +170,16 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
   };
 
   const handleZipChange = (text) => {
-    setQueryObject({ ...queryObject, distance: '100mi', from: 'zip:' + text, page: '1' });
+    if (!nullIfEmptyQuote(text)) {
+      setQueryObject({ ...queryObject, distance: null, from: null });
+    } else {
+      setQueryObject({
+        ...queryObject,
+        distance: '300' /* this is in km - distance chosen to be "nearby" */,
+        from: 'zip:' + text,
+        page: '1'
+      });
+    }
   };
 
   return (
