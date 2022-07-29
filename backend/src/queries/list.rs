@@ -39,12 +39,12 @@ async fn create_list(
     body: web::Bytes,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
+    let db_conn = pool.get().expect("couldn't get db connection from pool");
+
     let (session_value, _outgoing_cookie) = crate::queries::auth::get_session_value(req, false);
     if session_value.is_none() {
         return Ok(HttpResponse::InternalServerError().finish());
     }
-
-    let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     let session = session::get_session(&db_conn, session_value.unwrap());
     if session.is_err() {

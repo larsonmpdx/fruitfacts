@@ -1,7 +1,9 @@
+use crate::session;
+
 use super::super::schema_fts::*;
 use super::super::schema_generated::*;
 use super::super::schema_types::*;
-use actix_web::{get, web, HttpResponse};
+use actix_web::{get, web, HttpRequest, HttpResponse};
 use diesel::prelude::*;
 use diesel::r2d2::{self, ConnectionManager};
 type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
@@ -37,6 +39,13 @@ pub struct SearchQuery {
     pub collection_id: Option<String>,
     #[serde(rename = "collectionPath")]
     pub collection_path: Option<String>,
+
+    // location items search only
+    #[serde(rename = "locationID")]
+    pub location_id: Option<String>,
+
+    // for listing a user's locations
+    pub user_id: Option<i32>,
 
     // base plants search only:
     #[serde(rename = "notorietyMin")]
@@ -85,11 +94,11 @@ pub struct SearchReturn {
     #[serde(rename = "basePlants")]
     pub base_plants: Option<Vec<BasePlant>>,
 
-    // only if constrained to one collection:
-    #[serde(rename = "collectionItems")]
-    pub collection_items: Option<Vec<CollectionItem>>,
+    // only if constrained to one collection or location:
     pub collection: Option<Collection>,
     pub locations: Option<Vec<Location>>,
+    #[serde(rename = "collectionItems")]
+    pub collection_items: Option<Vec<CollectionItem>>,
 }
 
 #[derive(Debug, PartialEq)]
@@ -155,7 +164,11 @@ fn get_base_plant_ids_from_locations(
 
 // todo: I want to bring all of the search & filter queries into one API
 
-pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<SearchReturn> {
+pub fn search_db(
+    session: &Option<UserSession>,
+    query: &SearchQuery,
+    db_conn: &SqliteConnection,
+) -> Result<SearchReturn> {
     if query.search_type.is_none() {
         return Err(anyhow!("search_type not set"));
     }
@@ -612,6 +625,31 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
             */
             Err(anyhow!("collection search not implemented"))
         }
+        "loc" => {
+            // list items in a single location (users define single locations instead of collections)
+            // check that this is either our location (matches session's user id) or public
+            Err(anyhow!("location search not implemented"))
+        }
+        "user_loc" => {
+            // list locations by user ID - similar to listing a collection (all locations with a collection ID)
+
+            if query.user_id.is_none() {
+                return Err(anyhow!("user_loc search without user_id specified"));
+            }
+
+            // given a user ID, we can either get it with a matching session user ID, or fall back to getting only public=true
+            if let Some(session) = session {
+                if Some(session.user_id) == query.user_id {
+                    // getting our own sessions - no need for public=true
+                    // todo
+                }
+            }
+
+            // getting another user's locations - set public=true
+            // todo
+
+            Err(anyhow!("user items search not implemented"))
+        }
         _ => Err(anyhow!("unknown search type")),
     }
 }
@@ -633,12 +671,28 @@ pub fn search_db(db_conn: &SqliteConnection, query: &SearchQuery) -> Result<Sear
 // todo - this kind of type search plus a full text search on the collections json files
 #[get("/api/search")]
 async fn variety_search(
+    req: HttpRequest,
     query: web::Query<SearchQuery>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let conn = pool.get().expect("couldn't get db connection from pool");
 
-    let results = web::block(move || search_db(&conn, &query)).await.unwrap(); // todo - blockingerror unwrap?
+    let session: Option<UserSession>;
+    let (session_value, _outgoing_cookie) = crate::queries::auth::get_session_value(req, false);
+    if session_value.is_some() {
+        let get_session_result = session::get_session(&conn, session_value.unwrap());
+        if let Ok(get_session_result) = get_session_result {
+            session = Some(get_session_result);
+        } else {
+            session = None;
+        }
+    } else {
+        session = None;
+    }
+
+    let results = web::block(move || search_db(&session, &query, &conn))
+        .await
+        .unwrap(); // todo - blockingerror unwrap?
 
     let results = match results {
         Ok(results) => results,
