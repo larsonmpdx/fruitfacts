@@ -1,0 +1,20 @@
+{
+    title: "Foundation Plant Services Cultivar Lists",
+    url: "https://ngr.ucdavis.edu/treelisting.cfm?treegroup=peach",
+    published: "",
+    author: "",
+    description: "",
+    type: "dictionary",
+    accessed: "July 2022",
+    needs_help: true, // for each tree type, import names and relative harvest weeks
+    locations: [
+        {
+            name: "National Germplasm Repository on the UC Davis campus", // todo - not sure, look up FPS info page
+            latitude: 38.52192669379002,
+            longitude: -121.76188238894662
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

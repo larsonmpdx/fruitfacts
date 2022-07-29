@@ -2,6 +2,7 @@
 
 use actix_web::HttpRequest;
 use actix_web::{post, web, HttpResponse};
+use serde::Deserialize;
 
 use crate::session;
 
@@ -17,10 +18,25 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
 // see search.rs for get lists
 
+// this is to separate out the id and delete fields so we can get create/update/delete with one function
+#[derive(Debug, Deserialize)]
+pub struct ControlData {
+    pub user_id: Option<i32>,
+    pub id: Option<i32>,
+    pub delete: Option<bool>,
+}
+
+// insert/update/delete a list based on the control data given
+// * user ID: checked against the session's user ID
+//   - delete a record: must have ID and delete=true
+//   - update a record: id: ID present and delete is missing or false, and record correctly decodes
+//   - insert a record: if no id and no delete field, and record correctly decodes
+// todo: this is a candidate for a generic function for a few kinds of database types
+// just check that user_id matches what we're inserting/updating/deleting and do it
 #[post("/api/list")]
 async fn create_list(
     req: HttpRequest,
-    list: web::Json<Location>,
+    body: web::Bytes,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     let (session_value, _outgoing_cookie) = crate::queries::auth::get_session_value(req, false);
@@ -36,12 +52,46 @@ async fn create_list(
     }
     let session = session.unwrap();
 
-    // todo - create list with this user ID. check user ID against session's user ID
+    // parse our input looking for "id: [id]" and also our struct without ID
+    // if an ID was specified, this is an update. with no ID it's an insert
+    let control_data = serde_json::from_str::<ControlData>(std::str::from_utf8(&body).unwrap())?;
+    let location_no_id = serde_json::from_str::<LocationNoID>(std::str::from_utf8(&body).unwrap());
+
+    if control_data.user_id.is_none() || (control_data.user_id != Some(session.user_id)) {
+        return Ok(HttpResponse::InternalServerError().finish());
+    }
+
+    // todo - use sqlite upsert once available in diesel 2.0
+    // see https://stackoverflow.com/questions/68614536/how-do-i-upsert-in-sqlite-using-diesel
+
+    let rows_changed;
+    if let Some(id) = control_data.id {
+        if control_data.delete == Some(true) {
+            // given an ID and delete=true: delete
+            rows_changed = diesel::delete(locations::dsl::locations.filter(locations::id.eq(id)))
+                .execute(&db_conn);
+        } else {
+            // ID provided but not deleting, try an update
+            rows_changed = diesel::update(locations::dsl::locations.filter(locations::id.eq(id)))
+                .set(&location_no_id?)
+                .execute(&db_conn);
+        }
+    } else {
+        // no ID provided, regular insert
+        rows_changed = diesel::insert_into(locations::dsl::locations)
+            .values(&location_no_id?)
+            .execute(&db_conn);
+    }
+
+    if rows_changed == Ok(1) {
+        return Ok(HttpResponse::Ok().finish());
+    } else {
+        return Ok(HttpResponse::InternalServerError().finish());
+    }
+
     // todo - add "is public" to lists
     // todo - think about naming list vs. location
     // todo - get user's lists. either our own user ID, or if they're public I guess?
-
-    Ok(HttpResponse::Ok().json(""))
 }
 
 // create list:

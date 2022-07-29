@@ -124,11 +124,34 @@ pub struct Collection {
 }
 
 #[skip_serializing_none]
-#[derive(Debug, Identifiable, Serialize, Deserialize, Queryable, Associations)]
+#[derive(Debug, Identifiable, Serialize, Deserialize, Queryable, Associations, Insertable)]
 #[belongs_to(Collection)]
 pub struct Location {
     pub id: i32,
     pub location_number: i32, // which location within the collection is this? 0 is no location, 1 is the first location
+    pub collection_id: Option<i32>,
+    pub user_id: Option<i32>,
+
+    pub location_name: Option<String>,
+    pub latitude: Option<f64>,
+    pub longitude: Option<f64>,
+
+    pub notoriety_score: f32,
+    pub collection_path: Option<String>,
+    pub collection_filename: Option<String>,
+    pub collection_title: Option<String>,
+    pub ignore_for_nearby_searches: i32,
+
+    pub description: Option<String>,
+}
+
+// we need a 2nd copy of the above struct, identical but lacking the id field, for inserts using auto-increment id
+// see https://github.com/diesel-rs/diesel/issues/1440
+#[derive(Debug, Deserialize, Insertable, AsChangeset)]
+#[table_name = "locations"]
+pub struct LocationNoID {
+    //pub id: i32,
+    pub location_number: i32,
     pub collection_id: Option<i32>,
     pub user_id: Option<i32>,
 
