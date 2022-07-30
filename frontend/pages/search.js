@@ -60,7 +60,6 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
   setErrorMessage(errorMessage);
 
   const router = useRouter();
-
   const query = qs.parse(router.asPath.split(/\?/)[1]);
 
   // get defaults from query - see struct in search.rs

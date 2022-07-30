@@ -632,6 +632,7 @@ pub fn search_db(
         }
         "user_loc" => {
             // list locations by user ID - similar to listing a collection (all locations with a collection ID)
+            // todo - for each location, show a count of items in that location
 
             if query.user_id.is_none() {
                 return Err(anyhow!("user_loc search without user_id specified"));
