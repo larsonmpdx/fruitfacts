@@ -64,6 +64,7 @@ async fn create_list(
 
     if control_data.collection_id.is_some() {
         // don't allow editing the built-in locations through this api which use collection ID instead of user ID
+        // so - just reject any that have collection_id set
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
