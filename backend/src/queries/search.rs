@@ -665,14 +665,14 @@ pub fn search_db(
                 .filter(locations::public.eq(1))
                 .load::<Location>(db_conn);
 
-            return match locations {
+            match locations {
                 Ok(locations) => Ok(SearchReturn {
                     query: query.clone(),
                     locations: Some(locations),
                     ..Default::default()
                 }),
                 Err(error) => Err(error.into()),
-            };
+            }
         }
         _ => Err(anyhow!("unknown search type")),
     }

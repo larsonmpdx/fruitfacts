@@ -97,9 +97,9 @@ async fn create_list(
     }
 
     if rows_changed == Ok(1) {
-        return Ok(HttpResponse::Ok().finish());
+        Ok(HttpResponse::Ok().finish())
     } else {
-        return Ok(HttpResponse::InternalServerError().finish());
+        Ok(HttpResponse::InternalServerError().finish())
     }
 
     // todo - add "is public" to lists
