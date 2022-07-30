@@ -127,7 +127,10 @@ CREATE TABLE locations (
   id INTEGER PRIMARY KEY NOT NULL,
   location_number INTEGER NOT NULL, -- 0 if it's a user collection
   collection_id INTEGER, -- unset for user collections
+
+  -- for user locations
   user_id INTEGER, -- unset if these are from built-in collections
+  public INTEGER, -- bool, only checked for user locations
 
   location_name TEXT,
   latitude DOUBLE, -- todo these can probably be "not null"
@@ -150,7 +153,10 @@ CREATE TABLE collection_items (
   collection_id INTEGER, -- can be unset for user location entries
   location_id INTEGER, -- this can be unset for cases where there's a random list of varieties not attached to a location
   location_number INTEGER NOT NULL, -- 1,2,3,4. if set to zero then it's one of the non-location varieties. lets us simplify the front end and filter for "location 1" without enumerating them first
+  
+  -- for user items
   user_id INTEGER, -- unset if these are from built-in collections
+  public INTEGER, -- bool, needs to be copied and updated from the user location setting
 
   path_and_filename TEXT, -- for website display/navigation instead of looking it up
   marketing_name TEXT, -- copied back from base plants for quicker display

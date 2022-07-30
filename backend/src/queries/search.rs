@@ -636,19 +636,43 @@ pub fn search_db(
             if query.user_id.is_none() {
                 return Err(anyhow!("user_loc search without user_id specified"));
             }
+            let query_user_id = query.user_id.unwrap();
 
             // given a user ID, we can either get it with a matching session user ID, or fall back to getting only public=true
             if let Some(session) = session {
-                if Some(session.user_id) == query.user_id {
+                if session.user_id == query_user_id {
                     // getting our own sessions - no need for public=true
-                    // todo
+
+                    let locations = locations::dsl::locations
+                        .filter(locations::user_id.eq(query_user_id))
+                        .load::<Location>(db_conn);
+
+                    return match locations {
+                        Ok(locations) => Ok(SearchReturn {
+                            query: query.clone(),
+                            locations: Some(locations),
+                            ..Default::default()
+                        }),
+                        Err(error) => Err(error.into()),
+                    };
                 }
             }
 
-            // getting another user's locations - set public=true
-            // todo
+            // drop here either from no session or from session not matching
+            // getting another user's locations - set public=true, but otherwise we can ask for any user ID
+            let locations = locations::dsl::locations
+                .filter(locations::user_id.eq(query_user_id))
+                .filter(locations::public.eq(1))
+                .load::<Location>(db_conn);
 
-            Err(anyhow!("user items search not implemented"))
+            return match locations {
+                Ok(locations) => Ok(SearchReturn {
+                    query: query.clone(),
+                    locations: Some(locations),
+                    ..Default::default()
+                }),
+                Err(error) => Err(error.into()),
+            };
         }
         _ => Err(anyhow!("unknown search type")),
     }

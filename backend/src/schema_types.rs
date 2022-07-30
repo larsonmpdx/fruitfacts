@@ -65,6 +65,7 @@ pub struct CollectionItem {
     pub location_id: Option<i32>,
     pub location_number: i32,
     pub user_id: Option<i32>,
+    pub public: Option<i32>,
 
     pub path_and_filename: Option<String>,
     pub marketing_name: Option<String>,
@@ -131,6 +132,7 @@ pub struct Location {
     pub location_number: i32, // which location within the collection is this? 0 is no location, 1 is the first location
     pub collection_id: Option<i32>,
     pub user_id: Option<i32>,
+    pub public: Option<i32>,
 
     pub location_name: Option<String>,
     pub latitude: Option<f64>,
@@ -154,6 +156,7 @@ pub struct LocationNoID {
     pub location_number: i32,
     pub collection_id: Option<i32>,
     pub user_id: Option<i32>,
+    pub public: Option<i32>,
 
     pub location_name: Option<String>,
     pub latitude: Option<f64>,

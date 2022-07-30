@@ -23,6 +23,7 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 pub struct ControlData {
     pub user_id: Option<i32>,
     pub id: Option<i32>,
+    pub collection_id: Option<i32>, // to check if this is set and reject the update
     pub delete: Option<bool>,
 }
 
@@ -61,6 +62,11 @@ async fn create_list(
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
+    if control_data.collection_id.is_some() {
+        // don't allow editing the built-in locations through this api which use collection ID instead of user ID
+        return Ok(HttpResponse::InternalServerError().finish());
+    }
+
     // todo - use sqlite upsert once available in diesel 2.0
     // see https://stackoverflow.com/questions/68614536/how-do-i-upsert-in-sqlite-using-diesel
 
@@ -70,11 +76,17 @@ async fn create_list(
             // given an ID and delete=true: delete
             rows_changed = diesel::delete(locations::dsl::locations.filter(locations::id.eq(id)))
                 .execute(&db_conn);
+
+            // todo - delete list items too
+            // maybe with a transaction?
         } else {
             // ID provided but not deleting, try an update
             rows_changed = diesel::update(locations::dsl::locations.filter(locations::id.eq(id)))
                 .set(&location_no_id?)
                 .execute(&db_conn);
+
+            // todo - handle public field, if it changes we need to update the public field on our list items too
+            // maybe with a transaction?
         }
     } else {
         // no ID provided, regular insert
