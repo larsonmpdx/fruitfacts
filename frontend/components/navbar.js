@@ -40,7 +40,7 @@ export default function Home({ user, setUser, contributingLinks }) {
           ))}
           <>
             {user?.name && (
-              <Link key="my lists" href={`/lists?user_id=${user.id}`}>
+              <Link key="my lists" href={`/lists/lists?user_id=${user.id}`}>
                 <a className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block">
                   my lists
                 </a>

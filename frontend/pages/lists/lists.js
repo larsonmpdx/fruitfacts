@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Home({ user, setContributingLinks, setErrorMessage }) {
   React.useEffect(() => {
     setContributingLinks([
-      { link: `/frontend/pages/list.js`, description: `list.js` },
+      { link: `/frontend/pages/lists/list.js`, description: `list.js` },
       { link: `/backend/src/queries/list.rs`, description: `backend C/U/D lists` },
       { link: `/backend/src/queries/search.rs`, description: `backend read lists` }
     ]);
@@ -55,7 +55,7 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
     <>
       <p>user lists</p>
       {user?.id && user?.id == query.user_id && (
-        <Link href={`/todo`}>
+        <Link href={`/lists/addList`}>
           <a className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block">
             add list
           </a>
