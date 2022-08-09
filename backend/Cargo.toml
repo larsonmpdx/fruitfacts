@@ -12,9 +12,14 @@ doctest = false
 [dependencies]
 actix-web = "4.1.0"
 actix-cors = "0.6.1"
-libsqlite3-sys = { version = "0.22.0", features = ["bundled"] }
+
 diesel = { version = "1.4.8", features = ["sqlite", "r2d2"] }
 diesel_migrations = "1.4"
+
+# this has to be within the allowed versions for diesel-rs - note we're on the 1.4.x branch (latest stable)
+# see https://github.com/diesel-rs/diesel/blob/1.4.x/diesel/Cargo.toml#L19
+libsqlite3-sys = { version = "0.22.0", features = ["bundled"] }
+
 serde = {version = "1.0", features = ["derive"] }
 serde_with = "2.0"
 serde_json = "1.0"
@@ -28,7 +33,7 @@ walkdir = "2"
 lazy_static = "1.4.0"
 itertools = "0.10.1"
 dotenv-build = "0.1.1"
-git2 = "0.14.3"
+git2 = "0.15.0"
 pathdiff = "0.2.0"
 anyhow = "1.0.58"
 oauth2 = "4.1.0"
