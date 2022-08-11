@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../components/button';
 
-export default function Home({ user, setContributingLinks, setErrorMessage }) {
+export default function Home({ setContributingLinks }) {
   React.useEffect(() => {
     setContributingLinks([
       { link: `/frontend/pages/lists/addList.js`, description: `list.js` },
