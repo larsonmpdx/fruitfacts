@@ -2,7 +2,7 @@
 * copy the .env.example file and fill in secrets as needed
 * `cargo build`
 * `cargo run`
-* `cargo test` and `cargo test -- --include-ignored` (include long tests)
+* `cargo test` and `cargo test -- --include-ignored` (include long tests: the json database loading one)
 * `rustup update stable`
 * `cargo fetch` install packages
 

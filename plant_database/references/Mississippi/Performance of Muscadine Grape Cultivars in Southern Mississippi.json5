@@ -1,0 +1,61 @@
+{
+    title: "Performance of Muscadine Grape Cultivars in Southern Mississippi",
+    author: "Stephen J. Stringer, Donna A. Marshall, Blair J. Sampson, and James M. Spiers",
+    url: "https://journals.ashs.org/horttech/downloadpdf/journals/horttech/18/4/article-p726.xml",
+    published: "2008",
+    accessed: "Aug 2022",
+    type: "extension test",
+    needs_help: true, // create variety entries from the table with common uses parsed out. maybe include some info from the results charts
+    locations: [
+        {
+            name: "Mississippi State University MAFES McNeil Unit", // https://www.mafes.msstate.edu/branches/coastal.asp?location=mcneil
+            latitude: 30.6554673115986,
+            longitude: -89.63295435581934
+        }
+    ],
+    plants: [
+
+// H = home or dooryard, C = commercial, W = wine, Ju = juice, Jl = jelly, J = juice or jelly, F = fresh market, P = U-pick.
+// Bold letters = cultivars among the most popular for a given usage
+
+/*
+Alachua FCH Perfect Black
+Albermarle J1JuFH Pistillate Black
+Black Beauty FCH Pistillate Black
+Burgaw FW Perfect Black
+Carlos WJuFCH Perfect Bronze
+Cowart WFCH Perfect Black
+Darlene PFCH Pistillate Bronze
+Dixie WJFPH Perfect Bronze
+Dixieland FCH Perfect Bronze
+Doreen WJH Perfect Bronze
+Dulcet J1FH Pistillate Black
+Fry PFH Pistillate Bronze
+Higgins FWH Pistillate Bronze
+Hunt J1JuFH Pistillate Black
+Ison FCH Perfect Black
+Janebell FW Perfect Bronze
+Janet PF Perfect Bronze
+Magnolia J1JuWFH Perfect Bronze
+Nesbit FH Perfect Black
+Noble JuW Perfect Black
+Polyanna JCH Perfect Black
+Redgate FH Perfect Red
+Regale WJ Perfect Black
+Roanoke H Perfect Bronze
+Scuppernong JWF Pistillate Bronze
+Southland FJCH Perfect Black
+Southern Home H Perfect Black
+Sterling JW Perfect Bronze
+Summit PFJ Pistillate Bronze
+Sweet Jenny FCH Pistillate Bronze
+Tara FHC Perfect Bronze
+Tarheel JW Perfect Black
+Triumph FH Perfect Bronze
+Watergate WFJ Pistillate Bronze
+Welder WJu Perfect Bronze
+*/
+
+// todo
+    ]
+}
