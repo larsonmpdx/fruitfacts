@@ -9,7 +9,9 @@ export default function Home({ setContributingLinks }) {
     ]);
   }, []);
 
-  const submit = () => {
+  const [name, setName] = React.useState('');
+
+  const handleSubmit = () => {
     return; // todo
   };
 
@@ -24,16 +26,21 @@ export default function Home({ setContributingLinks }) {
 
   return (
     <>
-      <p>user lists</p>
+      <p>create list</p>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
+        </label>
+      </form>
       <Button
-                enabled={true}
-                onClick={async () => {
-                  await submit();
-                }}
-                className="focus:shadow-outline h-12 w-full rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
-                label="submit"
-              />
-
+        enabled={true}
+        onClick={async () => {
+          await handleSubmit();
+        }}
+        className="focus:shadow-outline h-12 w-full rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
+        label="submit"
+      />
     </>
   );
 }
