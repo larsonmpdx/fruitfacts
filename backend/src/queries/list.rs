@@ -24,6 +24,7 @@ pub struct ControlData {
     pub user_id: Option<i32>,
     pub id: Option<i32>,
     pub collection_id: Option<i32>, // to check if this is set and reject the update
+    pub location_string: Option<String>, // allows sending a location as either "zip:12345" or "45,-128" (lat/lon)
     pub delete: Option<bool>,
 }
 
@@ -71,6 +72,21 @@ async fn create_list(
     // todo - use sqlite upsert once available in diesel 2.0
     // see https://stackoverflow.com/questions/68614536/how-do-i-upsert-in-sqlite-using-diesel
 
+    // overwrite the lat/lon fields with our incoming text version
+    
+    let mut location_with_latlon = Default::default();
+    if control_data.delete == None || control_data.delete == Some(false) {
+        location_with_latlon = location_no_id?;
+
+        // todo - write lat/lon fields from location string zip/lat,lon if set
+
+        // give an error if we have any text for the location string but it doesn't decode
+
+        // if we have no location string text, fine, don't overwrite lat/lon
+
+        // this allows the client to request a zip code location without knowing how to convert it or calling some api to convert it
+    }
+
     let rows_changed;
     if let Some(id) = control_data.id {
         if control_data.delete == Some(true) {
@@ -83,7 +99,7 @@ async fn create_list(
         } else {
             // ID provided but not deleting, try an update
             rows_changed = diesel::update(locations::dsl::locations.filter(locations::id.eq(id)))
-                .set(&location_no_id?)
+                .set(&location_with_latlon)
                 .execute(&db_conn);
 
             // todo - handle public field, if it changes we need to update the public field on our list items too
@@ -92,7 +108,7 @@ async fn create_list(
     } else {
         // no ID provided, regular insert
         rows_changed = diesel::insert_into(locations::dsl::locations)
-            .values(&location_no_id?)
+            .values(&location_with_latlon)
             .execute(&db_conn);
     }
 

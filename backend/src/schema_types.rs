@@ -149,7 +149,7 @@ pub struct Location {
 
 // we need a 2nd copy of the above struct, identical but lacking the id field, for inserts using auto-increment id
 // see https://github.com/diesel-rs/diesel/issues/1440
-#[derive(Debug, Deserialize, Insertable, AsChangeset)]
+#[derive(Default, Debug, Deserialize, Insertable, AsChangeset)]
 #[table_name = "locations"]
 pub struct LocationNoID {
     //pub id: i32,
