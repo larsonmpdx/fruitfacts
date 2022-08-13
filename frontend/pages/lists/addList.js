@@ -9,7 +9,26 @@ export default function Home({ setContributingLinks }) {
     ]);
   }, []);
 
+  const [zipEnabled, setZipEnabled] = React.useState('');
   const [name, setName] = React.useState('');
+  const [zip, setZip] = React.useState('');
+  const [latLon, setLatLon] = React.useState('');
+
+  const handleEnterAsZip = () => {
+    setZipEnabled(true);
+    return; // todo
+  };
+
+  const handleRequestLocation = () => {
+    setZipEnabled(false);
+    navigator.geolocation.getCurrentPosition(function (position) {
+      console.log('Latitude is :', position.coords.latitude);
+      console.log('Longitude is :', position.coords.longitude);
+      setLatLon(`${position.coords.latitude},${position.coords.longitude}`)
+    });
+
+    return; // todo
+  };
 
   const handleSubmit = () => {
     return; // todo
@@ -32,7 +51,35 @@ export default function Home({ setContributingLinks }) {
           Name:
           <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
         </label>
+        {zipEnabled ? (
+          <label>
+            zip code:
+            <input type="text" value={zip} onChange={(event) => setZip(event.target.value)} />
+          </label>
+        ) : (
+          <label>
+            lat,lon:
+            <input type="text" value={latLon} onChange={(event) => setLatLon(event.target.value)} />
+          </label>
+        )}
       </form>
+      <Button
+        enabled={true}
+        onClick={async () => {
+          await handleEnterAsZip();
+        }}
+        className="focus:shadow-outline h-12 w-full rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
+        label="use a zip code for location"
+      />
+      <Button
+        enabled={true}
+        onClick={async () => {
+          await handleRequestLocation();
+        }}
+        className="focus:shadow-outline h-12 w-full rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
+        label="get location from my browser"
+      />
+
       <Button
         enabled={true}
         onClick={async () => {
