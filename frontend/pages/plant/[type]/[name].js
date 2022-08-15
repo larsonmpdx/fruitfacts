@@ -42,7 +42,7 @@ export default function Home({
 }) {
   React.useEffect(() => {
     setContributingLinks([
-      { link: `/frontend/pages/plant/[type]/[name].js`, description: `plant/type/[name].js` }
+      { link: `/frontend/pages/plant/[type]/[name].js`, description: `plant/[type]/[name].js` }
     ]);
   }, []);
 
