@@ -28,4 +28,7 @@ my process for making these fruit SVGs:
 - see book: http://dallery.gallery/wp-content/uploads/2022/07/The-DALL%C2%B7E-2-prompt-book.pdf
 - `quince fruit, no leaves, vector graphics, white background`
   - this gave nice images but cropped. download and zoom out using paint.net or something, leaving the exterior transparent. upload and generate. remove at least one pixel from the original image. give it the same prompt as before
-- `olive branch with olives, vector graphics, white background` gave a nice result
+- others that gave nice results:
+- `olive branch with olives, vector graphics, white background`
+- `serviceberry cluster with leaves, vector graphics, white background`
+
