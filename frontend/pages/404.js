@@ -63,7 +63,7 @@ export default function Custom404({ icons, setErrorMessage, setContributingLinks
           )}
           {icon && (
             <Link
-              href={`search?searchType=base&patents=false&type=${icon.substr(
+              href={`search?searchType=base&type=${icon.substr(
                 0,
                 icon.indexOf('.')
               )}&page=1&perPage=50&orderBy=name_then_type&order=asc`}
