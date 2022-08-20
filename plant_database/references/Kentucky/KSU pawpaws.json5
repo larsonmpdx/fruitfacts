@@ -5,9 +5,10 @@
     published: "",
     accessed: "Dec 2021",
     type: "public breeding program list",
+    needs_help: true, // location - KSU or UK?
     locations: [
         {
-            name: "University of Kentucky",
+            name: "University of Kentucky", // todo - KSU or UK?
             latitude: 38.02880058194933,
             longitude: -84.5094817806642
         }
