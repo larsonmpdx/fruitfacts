@@ -1361,10 +1361,10 @@ fn get_collection_name(collection_id: Option<i32>, db_conn: &SqliteConnection) -
             if let Some(title) = collection.title {
                 title
             } else {
-                return format!("collection {}", collection_id);
+                format!("collection {}", collection_id)
             }
         } else {
-            return format!("collection {} not found", collection_id);
+            format!("collection {} not found", collection_id)
         }
     } else {
         "no collection".to_string()

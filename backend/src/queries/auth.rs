@@ -459,12 +459,12 @@ pub fn create_account_blocking(
         match get_full_user_db(db_conn, new_user.id) {
             Ok(fulluser) => Ok(fulluser),
             Err(_e) => {
-                return Err(anyhow!("error getting account after creation")); // todo maybe convert the error?
+                Err(anyhow!("error getting account after creation")) // todo maybe convert the error?
             }
         }
     } else {
         // no offer in the cache
-        return Err(anyhow!("no account offer in cache"));
+        Err(anyhow!("no account offer in cache"))
     }
 }
 
@@ -487,13 +487,13 @@ async fn create_account(
         .await
         .unwrap(); // todo - blockingerror unwrap?
 
-    return match results {
+    match results {
         Ok(results) => Ok(HttpResponse::Ok().json(results)),
         Err(e) => {
             eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(""));
+            Err(actix_web::error::ErrorInternalServerError(""))
         }
-    };
+    }
 }
 
 #[get("/api/getFullUser")]
