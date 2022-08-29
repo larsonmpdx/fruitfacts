@@ -1,0 +1,62 @@
+{
+    title: "Broadacres Nursery",
+    author: "",
+    url: "https://www.facebook.com/Broadacres-Nursery-U-Pick-Grapes-221486714572780/",
+    published: "",
+    accessed: "Aug 2022",
+    type: "U-pick variety list",
+    needs_help: true,
+    locations: [
+        {
+            name: "Aurora, Oregon",
+            latitude: 45.18655874570508, // there's another address for their grafting operation - not sure if facebook has anonymized something or what - 45.18454556298863, -122.87204325358553
+            longitude: -122.85654021563408
+        }
+    ],
+    plants: [
+        // see table grape recommendations from this article:
+        // https://www.registerguard.com/story/lifestyle/home-garden/2018/09/06/table-grape-flavor-pops/10831351007/
+
+        // todo - the rest - initial list is from the register guard article
+        {
+            type: "Grape",
+            name: "Einset",
+            description: "Crisp red grapes with slight strawberry flavor. Ripens early season"
+        },
+        {
+            type: "Grape",
+            name: "Thomcord",
+            description: "Blue grape with perfect clusters and mild Concord flavor. Cross between ‘Thomas’ seedless and Concord grapes. Ripens mid-season."
+        },
+        {
+            type: "Grape",
+            name: "Canadice",
+            description: "Starts green, quickly turns pink. Long hang time. Popular for sweetness. Ripens early season"
+        },
+        {
+            type: "Grape",
+            name: "Centennial Seedless",
+            description: "Large clusters; meaty texture works well for raisins. High yield; ripens mid-season"
+        },
+        {
+            type: "Grape",
+            name: "Diamond Muscat",
+            description: "Northern European grape people either love or hate for its zingy taste. Ripens late season"
+        },
+        {
+            type: "Grape",
+            name: "Himrod",
+            description: "Old, slip-skin variety of grape. Green seedless from New York; fairly resistant to mildew and other diseases. Ripens early season."
+        },
+        {
+            type: "Grape",
+            name: "Monastery Muscat",
+            description: "Peculiar oblong grape from Trappist monks at their Amity monastery. Ripens early season."
+        },
+        {
+            type: "Grape",
+            name: "47616",
+            description: "Unnamed grape still known by its breeding number from Cornell University in New York"
+        }
+    ]
+}

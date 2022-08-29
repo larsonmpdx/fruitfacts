@@ -814,8 +814,13 @@
         },
         { patent: "https://patents.google.com/patent/USPP7402 2009-12-18", type: "Nectarine", name: "Earliglo" },
         { patent: "https://patents.google.com/patent/USPP7421 2009-12-26", type: "Nectarine", name: "Rose Diamond" },
-        { patent: "https://patents.google.com/patent/USPP7432 2010-01-08", type: "Peach", name: "Rich May",
-        released: "Zaiger", AKA: ["Flavorich"] },
+        {
+            patent: "https://patents.google.com/patent/USPP7432 2010-01-08",
+            type: "Peach",
+            name: "Rich May",
+            released: "Zaiger",
+            AKA: ["Flavorich"]
+        },
         { patent: "https://patents.google.com/patent/USPP7475 2010-01-29", type: "Nectarine", name: "Zee Grand" },
         { patent: "https://patents.google.com/patent/USPP7505 2009-12-26", type: "Nectarine", name: "Late Red Jim II" },
         // 628-629 page break

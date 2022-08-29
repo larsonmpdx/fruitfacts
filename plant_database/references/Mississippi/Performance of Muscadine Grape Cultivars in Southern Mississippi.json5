@@ -14,11 +14,9 @@
         }
     ],
     plants: [
-
-// H = home or dooryard, C = commercial, W = wine, Ju = juice, Jl = jelly, J = juice or jelly, F = fresh market, P = U-pick.
-// Bold letters = cultivars among the most popular for a given usage
-
-/*
+        // H = home or dooryard, C = commercial, W = wine, Ju = juice, Jl = jelly, J = juice or jelly, F = fresh market, P = U-pick.
+        // Bold letters = cultivars among the most popular for a given usage
+        /*
 Alachua FCH Perfect Black
 Albermarle J1JuFH Pistillate Black
 Black Beauty FCH Pistillate Black
@@ -55,7 +53,6 @@ Triumph FH Perfect Bronze
 Watergate WFJ Pistillate Bronze
 Welder WJu Perfect Bronze
 */
-
-// todo
+        // todo
     ]
 }
