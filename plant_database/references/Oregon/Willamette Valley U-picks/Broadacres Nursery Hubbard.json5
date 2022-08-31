@@ -55,8 +55,31 @@
         },
         {
             type: "Grape",
-            name: "47616",
+            name: "NY 47616",
             description: "Unnamed grape still known by its breeding number from Cornell University in New York"
+        },
+
+        // additional varieties from this article: https://www.oregonwinepress.com/article?articleId=1488
+        {
+            type: "Grape",
+            // I think this was misspelled in the article as "Albazor"
+            name: "Alborz"
+        },
+        {
+            type: "Grape",
+            name: "Black Emerald"
+        },
+        {
+            type: "Grape",
+            name: "Challenger"
+        },
+        {
+            type: "Grape",
+            name: "Fiesta"
+        },
+        {
+            type: "Grape",
+            name: "Summer Royal"
         }
     ]
 }
