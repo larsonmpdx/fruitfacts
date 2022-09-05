@@ -37,6 +37,11 @@
 * `diesel migration run` - or omit this and just run all tests, there are embedded migrations
 * `diesel migration redo` (checks up+down)
 
+# diesel 2.0 upgrade - todo
+* https://github.com/actix/examples/tree/master/databases/diesel
+* I'm waiting for this example to be updated, the changes required were too confusing:
+  * https://github.com/actix/examples/blob/master/databases/diesel/Cargo.toml#L8
+
 # external issues I'm tracking
 * support loading sqlite modules in diesel in order to use spatialite
   * https://github.com/diesel-rs/diesel/issues/1867
