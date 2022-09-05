@@ -42,7 +42,7 @@ async fn main() -> std::io::Result<()> {
 
     // run this so we load the gazetteer database with lazy_static before we get a query
     let coords = harvest_chart_server::gazetteer_load::from_to_location("zip:97231");
-    println!("loaded a sample zip coordinate: {coords:?}");
+    println!("loaded a sample zip coordinate in order to trigger lazy_static: {coords:?}");
 
     let connspec = "database.sqlite3";
     let manager = ConnectionManager::<SqliteConnection>::new(connspec);
