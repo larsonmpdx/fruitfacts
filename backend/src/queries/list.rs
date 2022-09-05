@@ -24,7 +24,6 @@ pub struct ControlData {
     pub user_id: Option<i32>,
     pub id: Option<i32>,
     pub collection_id: Option<i32>, // to check if this is set and reject the update
-    pub location_string: Option<String>, // allows sending a location as either "zip:12345" or "45,-128" (lat/lon)
     pub delete: Option<bool>,
 }
 
@@ -57,7 +56,7 @@ async fn create_list(
     // parse our input looking for "id: [id]" and also our struct without ID
     // if an ID was specified, this is an update. with no ID it's an insert
     let control_data = serde_json::from_str::<ControlData>(std::str::from_utf8(&body).unwrap())?;
-    let location_no_id = serde_json::from_str::<LocationNoID>(std::str::from_utf8(&body).unwrap());
+    let location_no_id = serde_json::from_str::<LocationNoID>(std::str::from_utf8(&body).unwrap())?;
 
     if control_data.user_id.is_none() || (control_data.user_id != Some(session.user_id)) {
         return Ok(HttpResponse::InternalServerError().finish());
@@ -73,19 +72,6 @@ async fn create_list(
     // see https://stackoverflow.com/questions/68614536/how-do-i-upsert-in-sqlite-using-diesel
 
     // overwrite the lat/lon fields with our incoming text version
-    
-    let mut location_with_latlon = Default::default();
-    if control_data.delete == None || control_data.delete == Some(false) {
-        location_with_latlon = location_no_id?;
-
-        // todo - write lat/lon fields from location string zip/lat,lon if set
-
-        // give an error if we have any text for the location string but it doesn't decode
-
-        // if we have no location string text, fine, don't overwrite lat/lon
-
-        // this allows the client to request a zip code location without knowing how to convert it or calling some api to convert it
-    }
 
     let rows_changed;
     if let Some(id) = control_data.id {
@@ -99,7 +85,7 @@ async fn create_list(
         } else {
             // ID provided but not deleting, try an update
             rows_changed = diesel::update(locations::dsl::locations.filter(locations::id.eq(id)))
-                .set(&location_with_latlon)
+                .set(&location_no_id)
                 .execute(&db_conn);
 
             // todo - handle public field, if it changes we need to update the public field on our list items too
@@ -108,7 +94,7 @@ async fn create_list(
     } else {
         // no ID provided, regular insert
         rows_changed = diesel::insert_into(locations::dsl::locations)
-            .values(&location_with_latlon)
+            .values(&location_no_id)
             .execute(&db_conn);
     }
 
