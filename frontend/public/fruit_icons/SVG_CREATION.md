@@ -22,6 +22,7 @@ my process for making these fruit SVGs:
   - the resulting image should be small and have a transparent background (no background)
 
 # DALL-E 2 prompts for source images
+
 - sign up at https://labs.openai.com/
 - see book: http://dallery.gallery/wp-content/uploads/2022/07/The-DALL%C2%B7E-2-prompt-book.pdf
 - `quince fruit, no leaves, vector graphics, white background`
@@ -29,4 +30,3 @@ my process for making these fruit SVGs:
 - others that gave nice results:
 - `olive branch with olives, vector graphics, white background`
 - `serviceberry cluster with leaves, vector graphics, white background`
-

@@ -24,7 +24,7 @@ export default function Home({ setContributingLinks }) {
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log('Latitude is :', position.coords.latitude);
       console.log('Longitude is :', position.coords.longitude);
-      setLatLon(`${position.coords.latitude},${position.coords.longitude}`)
+      setLatLon(`${position.coords.latitude},${position.coords.longitude}`);
     });
 
     return; // todo
