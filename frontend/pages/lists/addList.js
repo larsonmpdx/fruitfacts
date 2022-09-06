@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../components/button';
 
-export default function Home({ setErrorMessage, setContributingLinks }) {
+export default function Home({ user, setErrorMessage, setContributingLinks }) {
   React.useEffect(() => {
     setContributingLinks([
       { link: `/frontend/pages/lists/addList.js`, description: `list.js` },
@@ -33,7 +33,10 @@ export default function Home({ setErrorMessage, setContributingLinks }) {
         location_name: name,
         latitude: lat,
         longitude: lon,
-        user_id: "todo",
+        user_id: user.id,
+        location_number: 0, // special case for user collections
+        notoriety_score: 0.0, // unused here but set NOT NULL
+        ignore_for_nearby_searches: 0, // unused here but set NOT NULL
       })
     })
     .then((response) => {
