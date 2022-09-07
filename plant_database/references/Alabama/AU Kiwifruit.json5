@@ -13,14 +13,34 @@
         }
     ],
     plants: [
-        // todo
-        // AU Golden Dragon
-        // AU Golden Sunshine
-        // AU Gulf Coast Gold
-        // AU Fitzgerald
+        // todo - descriptions and links for each
         // see https://ocm.auburn.edu/newsroom/news_articles/2017/12/auburn-horticulture-alum-gets-kiwifruit-orchard-off-the-ground-in-reeltown.php
+        {
+            type: "Fuzzy Kiwi", // or is it golden? gosh I dunno how to categorize kiwi
+            name: "AU Golden Dragon"
+        },
+        {
+            type: "Fuzzy Kiwi",
+            name: "AU Golden Sunshine"
+        },
+        {
+            type: "Fuzzy Kiwi",
+            name: "AU Gulf Coast Gold"
+        },
+        {
+            type: "Fuzzy Kiwi",
+            name: "AU Fitzgerald"
+        },
         // male:
-        // AU Golden Tiger
-        // AU Arthur
+        {
+            type: "Fuzzy Kiwi",
+            name: "AU Golden Tiger",
+            description: "male"
+        },
+        {
+            type: "Fuzzy Kiwi",
+            name: "AU Arthur",
+            description: "male"
+        }
     ]
 }

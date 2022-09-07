@@ -1,0 +1,472 @@
+{
+    title: "BC Tree Fruit Production Guide",
+    author: "",
+    url: "https://www.bctfpg.ca/horticulture/varieties-and-pollination/", // and other pages
+    published: "",
+    accessed: "June 2022",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "Summerland RDC, British Columbia",
+            latitude: 49.56620016490658,
+            longitude: -119.63687182593357
+        }
+    ],
+    plants: [
+        // todo
+        // apples https://www.bctfpg.ca/horticulture/varieties-and-pollination/apple-varieties/
+        // SUNRISE
+        // Early season, mid August to early September in BC
+        // GINGER GOLD
+        // Canadian Plant Breeders Right 0389
+        // Early Season, Mid August to early September in BC
+        // GALA
+        // Early Season, Late August to mid September in BC.
+        // MCINTOSH
+        // Early September in BC, with or just after Gala.
+        // HONEYCRISP
+        // Canadian Plant Breeders’ Right 1007
+        // Early Season, slightly after McIntosh in BC.
+        // EARLY FUJI
+        // Mid September in BC.
+        // GOLDEN DELICIOUS
+        // Mid to late September in BC.
+        // AMBROSIA
+        // Canadian Plant Breeders’ Right 0388
+        // Late September to Early October in BC.
+        // 8S6923 / AURORA GOLDEN GALA™
+        // Canadian Plant Breeders’ Right 1652
+        // Late September to early October in BC.
+        // SPA493 / SALISH™
+        // Canadian Plant Breeders’ Right 3391
+        // Late September to early October in Summerland. Harvest and storage criteria are being established by PARC.
+        // SPARTAN
+        // Mid Season, mid to late September to early October in BC.
+        // SPA440 / NICOLA™
+        // Canadian Plant Breeders’ Right 3390
+        // Mid-Late season, Early – Mid October.
+        // FUJI
+        // Late Season, mid to late October in BC. With Braeburn.
+        // GRANNYSMITH
+        // Late Season, mid to late October in BC. with Braeburn, often picked earlier. “The time to pick is when the price is right”.
+        // CRIPPS PINK PINK LADY®
+        // Very late season, late October to early November; after Fuji.
+        // CHELANTM
+        // -10-12
+        // 10.7
+        // Firm / Med
+        // Moderate
+        // Moderate to High
+        // More mod. branch angles than Bing
+        // No
+        // Good on Mazzard, Incompatibility on Maheleb.
+        //
+        // CASHMERE
+        // -9
+        // Med.-Lrg
+        // Mod.
+        // Susceptible
+        // High
+        // Spreading
+        // Yes
+        // Compatibility on Rootstock other than Mazzard is unknown.
+        //
+        // SANTINA
+        // -6-8	9.5	69	36%	Moderate	Spreading to Weeping	Yes	Med. size fruit, responds well to GA, good choice for early market.
+        //
+        //
+        // TIETONTM
+        // -5-7
+        // 12.0
+        // Very Firm
+        // Susceptible
+        // Low to Moderate
+        // Vigourous, similar branch angles to Bing
+        // No
+        // Tends to nose crack, Good on Gisela 5, unproductive on other rootstocks.
+        //
+        // SUMPACA
+        // (CELESTE™)
+        // -6
+        // 10.7
+        // 18%
+        // Low
+        // Yes
+        // stem short and fruit is Van like but not as blocky, lack of storage life.
+        //
+        // SUMNUE
+        // (CRISTALINATM)
+        // -5-7
+        // 10.0
+        // 68
+        // 29%
+        // High
+        // Spreading
+        // No
+        // Glossy and attractive in a pack.
+        //
+        // SUMELE (SATINTM)
+        // -2
+        // 10.8
+        // 77
+        // 27%
+        // High
+        // Mod. Vigour, Spreading
+        // No
+        // Attractive pack, more info on fruit quality and market response needed.
+        //
+        // SPC136
+        // (SUITE NOTETM)
+        // 0	12.6	Firm	33%	Moderate	Moderate	No 	Large, attractive fruit. Productivity is moderate, perhaps better on a precocious rootstock?
+        //
+        // VAN
+        // 0
+        // 9.9
+        // Mod.
+        // 45%
+        // High
+        // No
+        // Fruit can be large, but become small on overloaded trees.
+        //
+        // BING
+        // 0
+        // 9.6
+        // Mod.
+        // 40%
+        // Low
+        // No
+        // Not commercial quality, very susceptible to rain splitting, yields not high.
+        //
+        // BENTON
+        // +1
+        // Firm
+        // Less suscept. than Bing
+        // Low
+        // Vigorous
+        // Yes
+        // Susceptible to powdery mildew.
+        //
+        // SONNET
+        // +2
+        // 12.4
+        // 67
+        // 17%
+        // Very Low
+        // Mod. Vigour
+        // No
+        // Large fruit, distinctive bright red blush, responds well to GA.
+        //
+        // SUMSTE (SAMBATM)
+        // +2
+        // 11.4
+        // 74
+        // 15%
+        // Moderate to High
+        // Upright and Spurry
+        // No
+        // Fruit are large with dark red, glossy skin.
+        //
+        // SANDRA ROSE
+        // +3-4
+        // 11.6
+        // 70
+        // 17%
+        // Moderate to High
+        // Spreading
+        // Yes
+        // Responds well to G.A. as firmness without is a concern, very good taste, and attractive in a pack.
+        //
+        // SUMLETA
+        // (SONATATM)
+        // +7
+        // 12.7
+        // 77
+        // 42%
+        // High
+        // Upright and Spreading
+        // Yes
+        // Fruit has a significant nose dimple, making it suseptible to splitting.
+        //
+        // SYLVIA
+        // +7
+        // 10.7
+        // 45%
+        // Moderate to High
+        // Semi-Compact
+        // No
+        // Very thick stem holds up well in cold storage, tolerant to rain splitting and very tolerant to sun scalding.
+        //
+        // KORDIA (ATTICA)
+        // +9
+        // 11.4
+        // Very Firm
+        // 11%
+        // Moderate
+        // Moderate
+        // No
+        // Origin Czeck Republic, late bloom, sensitive to frost, heart shaped.
+        // * A durometer measurement of 73 was determined to be "Just Right" in relation between firmness and perception.
+        //
+        // Dark Sweet Cherry Varieties	Maturity
+        // (days +/- Van)	Ave. Fruit Weight (g)	*Firmness (Durometer)	Natural Cracking	Productivity	Habit	Fertility	Notes
+        //
+        // SELAH
+        // +10
+        // 11-13
+        // Firm
+        // Like Bing
+        // Moderate to High
+        // Vigorous, similar branch angle to Bing
+        // Yes
+        // Selection from Prosser, WA. Susceptible to powdery mildew.
+        //
+        // LAPINS
+        // +11
+        // 10.6
+        // 76
+        // 22%
+        // High
+        // Vigourous, very upright
+        // Yes
+        // Standard for mid-late season varieties, overcropping may be a problem in some years, upright habit can be a challenge.
+        //
+        // SKEENA
+        // +11
+        // 11.4
+        // 80
+        // 26%
+        // Moderate to High
+        // Upright and Spreading
+        // Yes
+        // When compared to Lapins, Skeena fruit are slightly larger, firmer, with thicker stem and easier tree to manage.
+        //
+        // REGINATM
+        // +15
+        // 10.7
+        // Very Firm
+        // Tolerant
+        // Low
+        // No
+        // New variety from Germany. Moderate resistance to P. mildew
+        //
+        // SWEETHEART
+        // +21
+        // 9.9
+        // 21%
+        // Very High
+        // Spreading
+        // Yes
+        // Very precocious with heavy crops, overcropping may be an issue.  Cherry is light red colour and susceptible to mildew
+        //
+        // SYMPHONY
+        // +20
+        // 10.6
+        // 75
+        // 15%
+        // Moderate to High
+        // Upright
+        // Yes
+        // Tendency to fall from stem before or during harvest, recommended for stemless market only.
+        //
+        // 13S2009
+        // (STACCATOTM)
+        // +26
+        // 10.9
+        // 78
+        // 21%
+        // High
+        // Upright and Spreading
+        // Yes
+        // Good tolerance to rain induced cracking, flower hardiness similar to, or better than Bing.  Highly susceptible to mildew and can have mixed maturity problems.
+        //
+        // 13S2101 (SOVEREIGNTM)
+        // +28
+        // 10.7
+        // 80
+        // 16%
+        // Moderate
+        // Mod. Vigour, Flat Branches
+        // Yes
+        // Fruit mod. large, very firm, bright red skin.
+        //
+        // SPC103 (SENTENNIALTM)
+        // +30
+        // 10.3
+        // 82
+        // 17%
+        // High
+        // Mod. Vigour Flat  Branches
+        // Yes
+        // Fruit is very firm, crunchy and moderately sweet, exceptional habit.
+        // Blush Type Cherry Varieties
+        // EARLY ROBIN
+        //
+        //
+        // -5-8	Moderate to large	 	 	 	 	No	Strong, sweet flavour but lacks slight tart balance of Rainier
+        // RAINIER
+        // 4
+        // Large
+        // Firm
+        // Susceptible
+        // Moderate to High
+        // Vigorous, hardy and bears early
+        // No
+        // Multi-pick yellow cherry with red blush; susceptible to p. mildew
+        //
+        // 13N0739
+        // (SCARLETTATM)
+        // +7-9
+        // 12.2
+        // 78
+        // 34%
+        // Moderate to High
+        // Upright, Spreading
+        // Yes
+        // Large fruit, mod. tolerance to cracking, skin can be slightly mottled.
+        //
+        // 13N0770 (STARDUSTTM)
+        // +12-15
+        // 11.5
+        // 76
+        // 29%
+        // High
+        // Upright, spreading, vigorous
+        // Yes
+        // Mild flavour, considered moderately sweet.
+        //
+        //
+        //
+        // SPC243
+        // +22
+        // 10.4
+        // 77
+        // 16%
+        // High
+        // Vigorous and upright
+        // Yes
+        // Test only, fruit are firm, juicy, sweet, with good flavour. Percent and intensity of blush may be a concern.
+
+
+        // nectarines
+        // crimson gold
+        // early sungrand
+        // firebrite
+        // redgold
+
+        // from the table: (osoyoos/oliver area) - also mentioned in the text but not in the table is "earliscarlet"
+        // Firebrite
+        // August 1-15
+
+        // PF#11
+        // August 1-15
+
+        // Harblaze
+        // August 3-15
+
+        // Harflame
+        // August 3-15
+
+        // Sweet Scarlet
+        // August 5-15
+
+        // Independence
+        // August 8-20
+
+        // Early Sungrand
+        // August 15-25
+
+        // Sunglo
+        // August 15-25
+
+        // Flavortop
+        // August 20-31
+
+        // Redgold
+        // August 20-31
+
+        // Supreme Red
+        // August 25-September 5
+
+        // Fantasia
+        // August 28-September 10
+
+
+        // peaches
+        // yes	Redhaven	+0	Medium	Good	Med-Large	High	Standard peach planting, semi-clingstone.
+        // yes	Blazing Star	+5	High	Good	Med-Large	 	Great colour, between Redhaven and Glohaven.
+        // yes	Glohaven	+10	High	Excellent	Med-Large	Good	Nice colour, (slight purple), store well, low-fuz.
+        // yes	Flamecrest	+20	High	Excellent	Med-Large	Good	Great colour, after halfway through Glohaven, low fuz.
+        // yes	Elegant Lady	+20	High	Excellent	Large	Good	Gorgeous colour, 80-90% red, big size, good shipping, end of Glohaven, firm. Unavailable from nurseries.
+        // yes	PF 23	+25	High	 	Medium	High	Problem that people let them get over-ripe before picking), Don't plant past Oliver due to loss of colour and maturity issues.
+        // yes	Angelus	+30	Medium	Excellent	Large	Low	Great size, light production (Tip bearer; needs to be pruned lighter), good shipper. Mildew problems.
+        // yes	O'Henry	+40	Medium	Excellent	Med-Large	High	Good size, store well, late peach, colour can sometimes be a problem, fruits on tips of the branches, self-fertile, limited market (peach market drops off after Sept. long weekend).
+        // maybe	PF 17	+2	High	 	 	High	Split stones can be a problem.
+        // maybe	Roza	+10	Medium	 	 	Medium	75% red, large, sweet peach. Freestone.
+        // maybe	PF 15A	+10	High	Good	 	 	 
+        // maybe	Suncrest	+10	Variable	Poor/Soft	 	 	Soft, split stones can be a problem, hard to pick proper maturity. Freestone.
+        // Yes	All Star	+12	High	Good	Med-Large	 	Like Glohaven for colour.
+        // No	Glowing Star	+20	High	 	Med-Large	 	Can rip where picked because fruit may grow around branch.
+        // maybe	PF 25	+26	Good	 	 	High	Will produce in marginal areas.
+        // maybe	Autumn Star	+45	 	 	Large	 	Probably too late a maturity time.
+        // no	Early Redhaven	-15	Medium	Poor/Soft	Small	Good	Small Size, split-stone/misshapen fruit a problem, semi-clingstone. Keep soil moisture low at pit hardening to min. split pit.
+        // no	Harrowdiamond	-12	Low	Poor/Soft	Medium	Good	Need to pick fast or else goes soft, don't store well, market resistance, mildew problems, semi-clingstone.
+        // no	PF 1	-10	High	Poor/Soft	Small	Low	Soft, low storage life, low production, semi-clingstone.
+        // no	Redstar	+0	High	Poor/Soft	Medium	High	Good colour, can be soft, split stones can be a problem, semi-clingstone.
+        // maybe	Rising Star	-5	 	 	Small	Good	Requires heavy thinning to get fruit size. Semi-freestone.
+        // no	Fairhaven	+2	Low	Poor/Soft	Med-Large	Good	Bruise easily, market resistance.
+        // no	Red Globe	+3	High	 	Large	 	Split stones can be a problem. Freestone.
+        // no	Harbrite	+5	Low	Good-Poor	Med-Small	Good	Heavy fuzz, no colour.
+        // no	PF 12	+10	High	Poor/Soft	Small	Low	Soft, low storage life, low production.
+        // no	Starfire	+10	Medium	Poor/Soft	 	High	Need multiple picks. Freestone.
+        // no	Red Lady	+10	High	Excellent	Small	 	hard to tell maturity for picking.
+        // no	Coralstar	+12	Medium	Poor/Soft	Med-Large	 	Split stones can be a problem.
+        // no	Cresthaven	+20	Low	Good	Med-Large	Good	Late, Not enough colour.
+
+        // peaches in the chart but not in the text:
+        // early redhaven July 15 (redhaven is August 1)
+        // risingstar July 25
+
+        // pears
+        // BARTLETT
+        // ANJOU
+        // BOSC
+        // CONCORDE
+        // CANADIAN PLANT BREEDERS RIGHTS APPLICATION # 94 276
+        // AC™ HARROW SWEET
+        // Other varieties generating some interest are Comice, Conference and Aurora.
+
+        // STARKRIMSON Also known as Kalle and  Red Clapp’s Favorite
+        // RED SENSATION BARTLETT
+        // REIMER RED
+        // CASCADE
+        
+        // asian pears
+        // The varieties that are proving to be the best for the Cashmere area (quite similar to the Okanagan) in Washington State are Hosui, Kosui, Shinseiki, Chojuro, 20th Century, and A-Ri-Rang.
+
+
+        // apricots
+        // Tomcot
+        // Goldbar
+        // Goldstrike
+        // Rival
+        // There is some interest in Hargrand, a large, juicy good flavored variety suitable for the fresh market from Ontario. Also Harglow, Harlayne and Harogem.
+        // 2E-15-5 is a medium size orange apricot that is quite firm, handles well and has very good flavor. It must be picked when full colour has developed. Matures just before Tilton. There is some interest in this PARC-Summerland selection.
+
+        // PERFECTION
+        // PUI SHA SIN
+
+        // older varieties
+        // Varieties such as Wenatchee/Moorpark, Tilton, Skaha, and Goldrich are not recommended for commercial plantings under current marketing trends.
+
+        // euro plums
+        // EARLY STRAINS (GREATA or DEMARIS)
+        // late: not named. Late strains of Italian prunes should be removed if they mature after September 15
+
+        // japanese plums
+        // SANTA ROSA and SHIRO
+        // other varieties
+        // Black Amber, June Blood, Earliblue Fiebing, Ember, Ozark Gold, Ozark Premier, Friar and Starking Delicious.
+
+    ]
+}
