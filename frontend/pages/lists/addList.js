@@ -25,6 +25,7 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
   };
 
   const handleSubmit = async () => {
+    /* // todo
     const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list`,
     {
       method: 'POST',
@@ -51,6 +52,7 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
       console.log(error);
       return [];
     });
+    */
   };
 
   // todo:
