@@ -1,18 +1,85 @@
 {
     title: "AU Chestnuts",
     author: "",
-    url: "todo",
-    accessed: "Jun 2022",
+    url: "https://aurora.auburn.edu/bitstream/handle/11200/4136/2011_April.pdf",
+    accessed: "September 2022",
     type: "public breeding program list",
-    needs_help: true,
     locations: [
         {
-            name: "todo",
-            latitude: 29.6465645490967,
-            longitude: -82.34424313539307
+            name: "Camp Hill, AL", // the original three varieties were tested at United States Department of Agriculture Hillculture Farm. newer ones were tested here. see https://aaes.auburn.edu/regional-centers/
+            latitude: 32.82968087226203,
+            longitude: -85.6504926042269
         }
     ],
+    // "the deer package"
     plants: [
-        // todo - see "AU BUCK II" and "AU Gobbler" for example in the patent list
+        {
+            type: "Chestnut",
+            name: "AU Buck I",
+            description: "Chinese. produces large crops of medium- to large-sized nuts",
+            patent: "https://patents.google.com/patent/USPP20588 expires 2028-01-30"
+        },
+        {
+            type: "Chestnut",
+            name: "AU Buck II",
+            description: "Chinese. produces large crops of medium- to large-sized nuts",
+            patent: "https://patents.google.com/patent/USPP20337 expires 2028-01-30"
+        },
+        {
+            type: "Chestnut",
+            name: "AU Buck III",
+            description: "Chinese. produces large crops of medium- to large-sized nuts",
+            patent: "https://patents.google.com/patent/USPP20381 expires 2028-01-30"
+        },
+        {
+            type: "Chestnut",
+            name: "AU Buck IV",
+            description: "Chinese. produces large crops of medium- to large-sized nuts",
+            patent: "https://patents.google.com/patent/USPP20624 expires 2028-01-30"
+        },
+        // "the turkey package"
+        {
+            type: "Chestnut",
+            name: "Gobbler I",
+            description: "Chinese. bears smaller chestnuts that are ideal for wild turkey",
+            patent: "https://patents.google.com/patent/USPP20338 expires 2028-01-30"
+        },
+        {
+            type: "Chestnut",
+            name: "Gobbler II",
+            description: "Chinese. bears smaller chestnuts that are ideal for wild turkey",
+            patent: "https://patents.google.com/patent/USPP20553 expires 2028-01-30"
+        },
+        {
+            type: "Chestnut",
+            name: "AU Premier",
+            description: "Chinese. dwarf. bears smaller chestnuts that are ideal for wild turkey",
+            patent: "https://patents.google.com/patent/USPP20587 expires 2028-01-30"
+        },
+        {
+            type: "Chestnut",
+            name: "AU Encore",
+            description: "Chinese. dwarf. bears smaller chestnuts that are ideal for wild turkey",
+            patent: "https://patents.google.com/patent/USPP20336 expires 2028-01-30"
+        },
+        // "from that generation in the early 1980s. In 1990, the best seedlings from those three varieties were chosen, and scientists established the third generation via the mass pollination method. The newly patented “wildlife” cultivars, then, all are offspring of either Cropper, Leader or Homestead"
+        {
+            type: "Chestnut",
+            name: "AU Cropper",
+            harvest_time: "September 16 to September 27", // I picked this from the 1971 column in the table on page 6
+            description: "Chinese. part of the 1980s generation of AU chestnuts. https://aurora.auburn.edu/bitstream/handle/11200/2035/1244CIRC.pdf"
+        },
+        {
+            type: "Chestnut",
+            name: "AU Leader",
+            harvest_time: "September 17 to September 27", // I picked this from the 1971 column in the table on page 6
+            description: "Chinese. part of the 1980s generation of AU chestnuts. https://aurora.auburn.edu/bitstream/handle/11200/2035/1244CIRC.pdf"
+        },
+        {
+            type: "Chestnut",
+            name: "AU Homestead",
+            harvest_time: "SSeptember 17 to October 4", // I picked this from the 1971 column in the table on page 6
+            description: "Chinese. part of the 1980s generation of AU chestnuts. https://aurora.auburn.edu/bitstream/handle/11200/2035/1244CIRC.pdf"
+        }
     ]
 }
