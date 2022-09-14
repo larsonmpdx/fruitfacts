@@ -40,13 +40,13 @@
         // "the turkey package"
         {
             type: "Chestnut",
-            name: "Gobbler I",
+            name: "AU Gobbler I",
             description: "Chinese. bears smaller chestnuts that are ideal for wild turkey",
             patent: "https://patents.google.com/patent/USPP20338 expires 2028-01-30"
         },
         {
             type: "Chestnut",
-            name: "Gobbler II",
+            name: "AU Gobbler II",
             description: "Chinese. bears smaller chestnuts that are ideal for wild turkey",
             patent: "https://patents.google.com/patent/USPP20553 expires 2028-01-30"
         },
