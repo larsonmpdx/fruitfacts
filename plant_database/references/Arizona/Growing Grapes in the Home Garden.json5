@@ -5,15 +5,126 @@
     published: "March 2015",
     accessed: "June 2022",
     type: "extension test",
-    needs_help: true,
     locations: [
         {
-            name: "todo - two locations - high and low altitude",
-            latitude: 35.532778,
-            longitude: -93.403333
+            short_name: "below 4500ft",
+            name: "below 4500: european grapes",
+            latitude: 34.73603630273194, // random vineyard around 3300ft near cottonwood AZ
+            longitude: -112.06195695139239
+        },
+        {
+            short_name: "above 4500ft",
+            name: "above 4500: american and hybrid grapes",
+            latitude: 34.78264225140077, // random vineyard around 4700ft near chino valley AZ
+            longitude: -112.4470985305451
         }
     ],
     plants: [
-        // todo
+        // euro below 4500 feet
+        {
+            type: "Grape",
+            name: "Thompson Seedless",
+            description: "early season. seedless, light green, neutral in flavor; firm and tender.  cluster and berry thin",
+            locations: ["below 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Ruby Seedless",
+            description: "large seedless red berries with large clusters. productive. cluster thin",
+            locations: ["below 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Exotic",
+            description: "Berries are large and blue with a flesh that is crisp and sweet. seeded",
+            harvest_time_relative: "Cardinal +7 to +10 days",
+            locations: ["below 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Perlette",
+            description: "",
+            locations: ["below 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Beauty Seedless",
+            description: "blue-black, firm and sweet. early and heavy producer. cluster thin for maximum flavor",
+            locations: ["below 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Flame Seedless",
+            description: "seedless, red, round berries. good for fresh eating. Berry thin to improve size",
+            locations: ["below 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Black Monukka",
+            description: 'listed under "other adapted varieties"',
+            locations: ["below 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Pierce",
+            description: 'listed under "other adapted varieties"',
+            locations: ["below 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Golden Muscat",
+            description: 'listed under "other adapted varieties"',
+            locations: ["below 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Muscat Hamburg",
+            description: 'listed under "other adapted varieties"',
+            locations: ["below 4500ft"]
+        },
+        // american above 4500 feet
+        {
+            type: "Grape",
+            name: "Concord",
+            description: "One of the best known and widely planted American grape cultivars. Berries are blue-black with a heavy bloom (waxy coat on the berry). Despite a thick and tough skin, it's excellent for eating, juice, jellies and wine. Some find Concord less desirable than other varieties for eating fresh",
+            locations: ["above 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Campbell's Early",
+            description: "Similar to Concord but 10 to 14 days earlier; does not produce as heavily as Concord. Berries are light red with thick skins",
+            harvest_time_relative: "Concord -10 to -14 days",
+            locations: ["above 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Catawba",
+            description: "Very hardy to low winter temperatures and very productive. Berries are purplish-red with lilac-like bloom. Skin is thick and tough. High sugar content",
+            locations: ["above 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Niagara",
+            description: "Vigorous growing vines produce amber-colored berries with thick skins. Berries are sweet and juicy, with a typical Concord flavor. Excellent for home gardens. Good for processing",
+            locations: ["above 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Himrod Seedless",
+            description: "Golden fruit with large loose clusters. Ripens a month earlier than Concord. Excellent for table use",
+            locations: ["above 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Seneca",
+            description: "Vigorous vines produce white seeded berries. Excellent producer for table use",
+            locations: ["above 4500ft"]
+        },
+        {
+            type: "Grape",
+            name: "Reliance",
+            description: "Mid-season, red grape with excellent quality. Very productive, seedless, and very hardy. Berry thin for larger berries",
+            locations: ["above 4500ft"]
+        }
     ]
 }

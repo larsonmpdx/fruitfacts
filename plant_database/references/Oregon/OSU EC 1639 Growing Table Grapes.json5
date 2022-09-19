@@ -457,7 +457,7 @@
         },
         {
             type: "Grape",
-            name: "Campbell Early",
+            name: "Campbell's Early",
             color: "Blue",
             harvest_time_unparsed: "Mid-season",
             harvest_time_relative: "Concord -2 to -3 weeks",

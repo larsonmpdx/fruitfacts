@@ -7,13 +7,12 @@
     needs_help: true,
     locations: [
         {
-            name: "todo",
+            name: "todo", // todo - location, then for each item: descriptions and links
             latitude: 29.6465645490967,
             longitude: -82.34424313539307
         }
     ],
     plants: [
-        // todo - descriptions and links for each
         // see https://ocm.auburn.edu/newsroom/news_articles/2017/12/auburn-horticulture-alum-gets-kiwifruit-orchard-off-the-ground-in-reeltown.php
         {
             type: "Fuzzy Kiwi", // or is it golden? gosh I dunno how to categorize kiwi

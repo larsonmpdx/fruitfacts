@@ -17,7 +17,7 @@
         // todo - stuff other than grapes
         {
             type: "Grape",
-            name: "Campbells Early",
+            name: "Campbell's Early",
             harvest_time: "early", // "Early-ripening"
             description: "Early-ripening, seeded, Concord-type grape, also known as “Island Belle.” This Vitis labrusca originated in Arkansas in 1892 and is a large, purple, slipskin grape. Highly productive grapevine. Grows well in west-central Arkansas. Used for jelly, juice and wine production."
         },
