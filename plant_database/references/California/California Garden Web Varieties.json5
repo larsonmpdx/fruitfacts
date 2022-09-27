@@ -79,7 +79,8 @@
         },
         {
             type: "Grape",
-            name: "Corot noir",
+            name: "NY 70.0809.10",
+            AKA: ["Corot noir (tm)"],
             description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=161&ds=351"
         },
         {
@@ -140,7 +141,8 @@
         },
         {
             type: "Grape",
-            name: "GR 7",
+            name: "Geneva Red",
+            AKA: ["NY 34791", "GR7"],
             description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=259&ds=351"
         },
         {
@@ -210,12 +212,12 @@
         },
         {
             type: "Grape",
-            name: "Pinot blanc",
+            name: "Pinot Blanc",
             description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=26&ds=351"
         },
         {
             type: "Grape",
-            name: "Pinot gris",
+            name: "Pinot Gris",
             description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=27&ds=351"
         },
         {
@@ -225,7 +227,7 @@
         },
         {
             type: "Grape",
-            name: "Pinot noir",
+            name: "Pinot Noir",
             description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=25&ds=351"
         },
         {
@@ -235,7 +237,7 @@
         },
         {
             type: "Grape",
-            name: "Redglobe",
+            name: "Red Globe",
             description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=282&ds=351"
         },
         {

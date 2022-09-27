@@ -151,7 +151,8 @@
         },
         {
             type: "Grape",
-            name: "Green Emerald"
+            // listed as "Green Emerald" - not sure if it's the same green emerald, but that variety was a ripoff of a sheegene variety "great green
+            name: "Great Green"
         },
         {
             type: "Grape",
@@ -184,10 +185,6 @@
         {
             type: "Grape",
             name: "Sweet Seduction"
-        },
-        {
-            type: "Grape",
-            name: "Reliance"
         },
         {
             type: "Grape",
