@@ -15,6 +15,13 @@
 * `cargo +nightly udeps` to find unused dependencies, after installing (`rustup toolchain install nightly` then `cargo install cargo-udeps --locked`) see https://crates.io/crates/cargo-udeps
 * `cargo tree --duplicates` find dependencies with multiple required versions
 
+# after a rust version release
+* `rustup update stable`
+* `rustup toolchain install nightly`
+* `cargo install --locked cargo-outdated`
+* `cargo install cargo-udeps --locked`
+* `cargo test -- --include-ignored`
+
 # oauth account stuff
 * google https://console.cloud.google.com/apis/dashboard?pli=1 click credentials, click the edit pen, add an "authorized redirect URI" like http://domain.com/api/authRedirect
 
@@ -28,7 +35,7 @@
 * there's no way to specify a dependency version with a regular `cargo install` command, and diesel seems to randomly pick an old bundled sqlite version, so to get diesel_cli with a new bundled sqlite (needed for fts trigram) we need to git clone it and edit cargo.toml. sad!
   * see https://github.com/rust-lang/cargo/issues/3266
   * check out diesel github 1.x version
-  * set rust version (not sure why this is necessary) `rustup override set 1.63.0`
+  * set rust version (not sure why this is necessary) `rustup override set 1.64.0`
   * edit cargo.toml in diesel_cli folder to increase minimum sqlite version like `>=0.22.2`
   * delete examples from top-level diesel cargo.toml (dependency problems in git checkout version)
   * in diesel_cli folder: `cargo install diesel_cli --no-default-features --features "sqlite-bundled" --path .`

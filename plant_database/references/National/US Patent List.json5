@@ -14664,7 +14664,7 @@
             name: "Great Green", // based on the outcome of the lawsuit, these are the same variety, and "Great Green" is the original name
             AKA: ["Green Emerald", "JPD-001"], // application name and patent name
             uspp_title: 'Grape vine plant denominated "GREEN EMERALD"',
-            patent: "https://patents.google.com/patent/USPP24316 2032-10-16", // see note, probably invalid
+            patent: "https://patents.google.com/patent/USPP24316 2032-10-16", // see note, probably invalid.  patented as sheegene-17 USPP28270
             uspp_filed: "8/20/12",
             description: "this patent was probably invalidated as it related to a stolen variety which was shared more than one year prior to the patent application, although I'm not sure as you never know how long lawsuits can drag out https://www.thepacker.com/markets/fruit/judge-rules-against-jp-dulcich-sons-grape-case"
         },

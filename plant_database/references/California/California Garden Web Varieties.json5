@@ -1,0 +1,364 @@
+{
+    title: "California Garden Web Varieties",
+    author: "UC Division of Agriculture and Natural Resources",
+    url: "https://cagardenweb.ucanr.edu/Growing_Grapes_in_the_California_Garden/",
+    published: "2022",
+    description: "",
+    type: "dictionary",
+    accessed: "Sept 2022",
+    needs_help: true,
+    locations: [
+        {
+            name: "todo - some representative spot in CA",
+            latitude: 36.70703471289025,
+            longitude: -119.70001665393585
+        }
+    ],
+    plants: [
+        // table grape varieties
+        // https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?ds=351&reportnumber=516&catcol=2603&categorysearch=Grape%20Varieties
+        {
+            type: "Grape",
+            name: "Autumn Royal",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=222&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Barbera",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=6&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Beauty Seedless",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=223&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Black Emerald",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=224&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Black Monukka",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=126&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Burger",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=5&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Cabernet franc",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=7&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Cabernet Sauvignon",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=8&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Carignane",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=9&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Chardonnay",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=10&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Chenin Blanc",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=11&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Colombard",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=12&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Corot noir",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=161&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Crimson Seedless",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=225&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Diamond Muscat",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=151&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "DOVine",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=127&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Durif",
+            AKA: ["Petite Sirah"],
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=13&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Fantasy Seedless",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=226&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Fay Rouge",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=272&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Fiesta",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=128&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Flame Seedless",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=227&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Frontenac gris",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=256&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Gamay noir",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=14&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Gewurztraminer",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=15&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "GR 7",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=259&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Grenache",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=16&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "La Crescent",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=257&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Malbec",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=18&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Malvasia bianca",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=17&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Marquette",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=258&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Melon",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=19&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Merlot",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=20&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Mourvedre",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=21&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Muscat blanc",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=22&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Muscat of Alexandria",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=23&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Nebbiolo",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=24&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Noiret",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=160&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Perlette",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=228&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Pinot blanc",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=26&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Pinot gris",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=27&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Pinot Meunier",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=28&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Pinot noir",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=25&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Princess",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=229&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Redglobe",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=282&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Riesling",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=29&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Roger's Red",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=269&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Roussanne",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=30&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Rubired",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=31&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Ruby Cabernet",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=32&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Ruby Seedless",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=230&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Sangiovese",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=33&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Sauvignon blanc",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=34&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Selma Pete",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=152&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Semillon",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=35&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Sugraone",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=232&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Sultana",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=125&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Summer Muscat",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=150&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Summer Royal",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=231&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Sweet Scarlet",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=233&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Syrah",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=36&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Tempranillo",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=37&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Thompson Seedless",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=132&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Triplett blanc",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=56&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Valdiguie",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=38&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Valvin Muscat",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=162&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Viognier",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=39&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Zante Currant",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=131&ds=351"
+        },
+        {
+            type: "Grape",
+            name: "Zinfandel",
+            description: "https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=40&ds=351"
+        }
+        // raisin grape varieties
+        // https://ucanr.edu/sites/gardenweb/Growing_Grapes_in_the_California_Garden/index.cfm?uid=124&ds=351
+    ]
+}

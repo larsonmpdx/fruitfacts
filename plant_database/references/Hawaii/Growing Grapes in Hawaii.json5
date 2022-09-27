@@ -1,0 +1,19 @@
+{
+    title: "Growing Grapes in Hawai'i",
+    author: "Ken Love and Robert E. Paull",
+    url: "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/F_N-26.pdf",
+    published: "February 2014",
+    accessed: "September 2022",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "todo - a location in hawaii",
+            latitude: 44.07985210283775,
+            longitude: -111.45484249940903
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

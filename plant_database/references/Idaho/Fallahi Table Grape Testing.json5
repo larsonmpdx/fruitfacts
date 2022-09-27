@@ -6,6 +6,7 @@
     published: "Jan 2016",
     accessed: "Aug 2022",
     type: "extension test",
+    needs_help: true, // add varieties
     locations: [
         {
             name: "todo",

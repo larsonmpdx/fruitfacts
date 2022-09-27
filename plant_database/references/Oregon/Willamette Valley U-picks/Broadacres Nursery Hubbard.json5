@@ -80,6 +80,134 @@
         {
             type: "Grape",
             name: "Summer Royal"
+        },
+        {
+            type: "Grape",
+            name: "Marquis"
+        },
+        {
+            type: "Grape",
+            name: "Glenora"
+        },
+        {
+            type: "Grape",
+            name: "Interlaken"
+        },
+        {
+            type: "Grape",
+            name: "Foch"
+        },
+        {
+            type: "Grape",
+            name: "Vee Pie"
+        },
+        {
+            type: "Grape",
+            name: "Venus"
+        },
+        {
+            type: "Grape",
+            name: "Vanessa"
+        },
+        {
+            type: "Grape",
+            name: "Suffolk Red"
+        },
+        {
+            type: "Grape",
+            name: "Saturn"
+        },
+        {
+            type: "Grape",
+            name: "Bronx Seedless"
+        },
+        {
+            type: "Grape",
+            name: "Thornton"
+        },
+        {
+            type: "Grape",
+            name: "Spartan"
+        },
+        {
+            type: "Grape",
+            name: "Concord Seedless"
+        },
+        {
+            type: "Grape",
+            name: "Jupiter"
+        },
+        {
+            type: "Grape",
+            name: "Reliance"
+        },
+        {
+            type: "Grape",
+            name: "Dr Good"
+        },
+        {
+            type: "Grape",
+            name: "Rombough"
+        },
+        {
+            type: "Grape",
+            name: "Green Emerald"
+        },
+        {
+            type: "Grape",
+            name: "Princess"
+        },
+        {
+            type: "Grape",
+            name: "Gratitude"
+        },
+        {
+            type: "Grape",
+            name: "Joy"
+        },
+        {
+            type: "Grape",
+            name: "Crimson"
+        },
+        {
+            type: "Grape",
+            name: "Hope"
+        },
+        {
+            type: "Grape",
+            name: "Faith"
+        },
+        {
+            type: "Grape",
+            name: "Neptune"
+        },
+        {
+            type: "Grape",
+            name: "Sweet Seduction"
+        },
+        {
+            type: "Grape",
+            name: "Reliance"
+        },
+        {
+            type: "Grape",
+            name: "Mars"
+        },
+        {
+            type: "Grape",
+            name: "DOVine"
+        },
+        {
+            type: "Grape",
+            name: "Delight"
+        },
+        {
+            type: "Grape",
+            name: "Beauty"
+        },
+        {
+            type: "Grape",
+            name: "Flame"
         }
     ]
 }
