@@ -134,7 +134,7 @@ struct GoogleAuthQuery {
 
 // todo: cache
 pub fn get_existing_oauth_entry_db(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     unique_id: String,
 ) -> Result<UserOauthEntry, diesel::result::Error> {
     user_oauth_entries::dsl::user_oauth_entries
@@ -145,7 +145,7 @@ pub fn get_existing_oauth_entry_db(
 
 // todo: cache
 pub fn get_existing_user_db(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     user_id: i32,
 ) -> Result<User, diesel::result::Error> {
     users::dsl::users
@@ -162,7 +162,7 @@ pub struct FullUser {
 }
 
 pub fn get_full_user_db(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     user_id: i32,
 ) -> Result<FullUser, diesel::result::Error> {
     let user = users::dsl::users
@@ -227,7 +227,7 @@ pub struct ReceiveRedirectReturn {
 fn receive_oauth_redirect_blocking(
     query: web::Query<GoogleAuthQuery>,
     session_value: String,
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
 ) -> Result<ReceiveRedirectReturn> {
     println!("{:?}", query);
 
@@ -372,14 +372,14 @@ async fn receive_oauth_redirect(
     pool: web::Data<DbPool>,
 ) -> actix_web::Result<impl actix_web::Responder> {
     let (session_value, _outgoing_cookie) = get_session_value(req, false);
-    let db_conn = pool.get().expect("couldn't get db connection from pool");
 
     if session_value.is_none() {
         return Err(actix_web::error::ErrorInternalServerError(""));
     }
 
     let results = web::block(move || {
-        receive_oauth_redirect_blocking(query, session_value.unwrap(), &db_conn)
+        let mut conn = pool.get().expect("couldn't get db connection from pool");
+        receive_oauth_redirect_blocking(query, session_value.unwrap(), &mut conn)
     })
     .await
     .unwrap();
@@ -407,7 +407,7 @@ async fn receive_oauth_redirect(
 
 pub fn create_account_blocking(
     session_value: String,
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
 ) -> Result<FullUser> {
     if let Some(offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get_mut(&session_value) {
         if offer.used {
@@ -481,11 +481,12 @@ async fn create_account(
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    let db_conn = pool.get().expect("couldn't get db connection from pool");
-
-    let results = web::block(move || create_account_blocking(session_value.unwrap(), &db_conn))
-        .await
-        .unwrap(); // todo - blockingerror unwrap?
+    let results = web::block(move || {
+        let mut conn = pool.get().expect("couldn't get db connection from pool");
+        create_account_blocking(session_value.unwrap(), &mut conn)
+    })
+    .await
+    .unwrap(); // todo - blockingerror unwrap?
 
     match results {
         Ok(results) => Ok(HttpResponse::Ok().json(results)),
@@ -506,15 +507,15 @@ async fn get_full_user(
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    let db_conn = pool.get().expect("couldn't get db connection from pool");
+    let mut db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    let session = session::get_session(&db_conn, session_value.unwrap());
+    let session = session::get_session(&mut db_conn, session_value.unwrap());
     if session.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
     let session = session.unwrap();
 
-    let info = get_full_user_db(&db_conn, session.user_id);
+    let info = get_full_user_db(&mut db_conn, session.user_id);
     if info.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
@@ -532,15 +533,15 @@ async fn check_login(
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    let db_conn = pool.get().expect("couldn't get db connection from pool");
+    let mut db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    let session = session::get_session(&db_conn, session_value.unwrap());
+    let session = session::get_session(&mut db_conn, session_value.unwrap());
     if session.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
     let session = session.unwrap();
 
-    let user = get_existing_user_db(&db_conn, session.user_id);
+    let user = get_existing_user_db(&mut db_conn, session.user_id);
     if user.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
@@ -560,9 +561,9 @@ async fn logout(
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    let db_conn = pool.get().expect("couldn't get db connection from pool");
+    let mut db_conn = pool.get().expect("couldn't get db connection from pool");
 
-    session::remove_session(&db_conn, session_value.unwrap());
+    session::remove_session(&mut db_conn, session_value.unwrap());
     let outgoing_cookie = Cookie::build("session", "")
         .domain(env!("COOKIE_DOMAIN"))
         .path("/")

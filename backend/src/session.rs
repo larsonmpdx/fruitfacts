@@ -59,7 +59,7 @@ pub fn get_oauth_info(session_value: &str) -> Result<(PkceCodeVerifier, String)>
 static SESSION_CACHE: Lazy<Mutex<ExpiringMap<String, UserSession>>> =
     Lazy::new(|| Mutex::new(ExpiringMap::new(Duration::from_secs(7 * 24 * 60 * 60))));
 
-pub fn get_session(db_conn: &SqliteConnection, session_value: String) -> Result<UserSession> {
+pub fn get_session(db_conn: &mut SqliteConnection, session_value: String) -> Result<UserSession> {
     // first look in our cache
     if let Some(cache_return) = SESSION_CACHE.lock().unwrap().get(&session_value) {
         return Ok(cache_return.clone());
@@ -80,7 +80,7 @@ pub fn get_session(db_conn: &SqliteConnection, session_value: String) -> Result<
     }
 }
 
-pub fn store_session(db_conn: &SqliteConnection, session: UserSessionToInsert) {
+pub fn store_session(db_conn: &mut SqliteConnection, session: UserSessionToInsert) {
     // store in cache and also in our database
     SESSION_CACHE.lock().unwrap().insert(
         session.session_value.clone(),
@@ -108,7 +108,7 @@ pub fn store_session(db_conn: &SqliteConnection, session: UserSessionToInsert) {
     // todo: every so often, delete old sessions from the database (sqlite doesn't have TTL like redis does)
 }
 
-pub fn remove_session(db_conn: &SqliteConnection, session_value: String) {
+pub fn remove_session(db_conn: &mut SqliteConnection, session_value: String) {
     let _deleted = diesel::delete(
         user_sessions::dsl::user_sessions
             .filter(user_sessions::session_value.eq(session_value.clone())),

@@ -21,6 +21,7 @@ use super::schema_generated::facts;
 use super::schema_generated::locations;
 use super::schema_generated::plant_types;
 use super::schema_types::*;
+use crate::diesel_migrations::MigrationHarness;
 use chrono::prelude::*;
 use diesel::prelude::*;
 use diesel::sqlite::SqliteConnection;
@@ -651,7 +652,7 @@ pub fn establish_connection() -> SqliteConnection {
         .unwrap_or_else(|_| panic!("Error connecting to {}", database_url))
 }
 
-pub fn reset_database(db_conn: &SqliteConnection) {
+pub fn reset_database(db_conn: &mut SqliteConnection) {
     let _ = diesel::delete(base_plants::dsl::base_plants).execute(db_conn);
     // skip dropping: users
     let _ = diesel::delete(plant_types::dsl::plant_types).execute(db_conn);
@@ -664,10 +665,10 @@ pub fn reset_database(db_conn: &SqliteConnection) {
     .execute(db_conn);
     let _ = diesel::delete(facts::dsl::facts).execute(db_conn);
 
-    super::embedded_migrations::run(db_conn).unwrap();
+    db_conn.run_pending_migrations(crate::MIGRATIONS).unwrap();
 }
 
-pub fn load_all(db_conn: &SqliteConnection) -> LoadAllReturn {
+pub fn load_all(db_conn: &mut SqliteConnection) -> LoadAllReturn {
     let database_dir = get_database_dir().unwrap();
 
     let facts_found = load_facts(db_conn, database_dir.clone());
@@ -931,7 +932,7 @@ fn new_or_old<T: std::cmp::PartialEq + std::fmt::Debug>(
 
 // we allow references to set some top-level fields, as long as they're either previously unset or an exact match
 fn apply_top_level_fields(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     plant: &BasePlantJson,
     plant_type: String,
     current_collection_id: Option<i32>,
@@ -1072,7 +1073,7 @@ fn apply_top_level_fields(
 }
 
 // todo: remove the notion of a set of base plants files, we can cover all of them through collections instead
-pub fn load_base_plants(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
+pub fn load_base_plants(db_conn: &mut SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     let mut plants_found = 0;
 
     let file_paths = fs::read_dir(database_dir.join("plants")).unwrap();
@@ -1143,7 +1144,7 @@ struct TypeJson {
     latin_name: Option<String>,
 }
 
-fn load_types(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
+fn load_types(db_conn: &mut SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     let mut types_found = 0;
 
     let types_path = database_dir.join("types.json5");
@@ -1222,7 +1223,7 @@ struct AddCollectionPlantType<'a> {
     plant_name: &'a str,
     plant: &'a CollectionPlantJson,
     category_description: &'a Option<String>,
-    db_conn: &'a SqliteConnection,
+    db_conn: &'a mut SqliteConnection,
 }
 
 fn add_collection_plant(input: AddCollectionPlantType) -> isize {
@@ -1352,7 +1353,7 @@ fn add_collection_plant(input: AddCollectionPlantType) -> isize {
 }
 
 // get collection name from collection ID. used for the notoriety text description
-fn get_collection_name(collection_id: Option<i32>, db_conn: &SqliteConnection) -> String {
+fn get_collection_name(collection_id: Option<i32>, db_conn: &mut SqliteConnection) -> String {
     if let Some(collection_id) = collection_id {
         if let Ok(collection) = collections::dsl::collections
             .filter(collections::id.eq(collection_id))
@@ -1412,7 +1413,7 @@ struct LocationNumbers {
 fn get_location_numbers(
     collection_id: i32,
     location_name: Option<String>,
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
 ) -> LocationNumbers {
     // either look up this location ID by (collection ID + name) or look it up with only collection ID and expect only one result
     let locations = locations::dsl::locations
@@ -1440,7 +1441,7 @@ fn get_location_numbers(
 fn update_or_add_base_plant(
     plant_name: &str,
     plant: &CollectionPlantJson,
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     current_collection_id: i32,
     current_collection_score: f32,
     ignore_unless_in_others: Option<bool>,
@@ -1549,7 +1550,7 @@ fn add_collection_plant_by_location(
     plant: &CollectionPlantJson,
     category_description: &Option<String>,
     collection_locations: &[CollectionLocationJson],
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
 ) -> isize {
     // see if plant.locations exists
 
@@ -1655,7 +1656,7 @@ pub struct LoadReferencesReturn {
 }
 
 fn load_references(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     database_dir: std::path::PathBuf,
 ) -> LoadReferencesReturn {
     let mut collection_id = 0;
@@ -1978,7 +1979,7 @@ struct FactJson {
     reference: String,
 }
 
-pub fn load_facts(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) -> isize {
+pub fn load_facts(db_conn: &mut SqliteConnection, database_dir: std::path::PathBuf) -> isize {
     let mut facts_found = 0;
 
     let contents = fs::read_to_string(database_dir.join("facts.json5")).unwrap();
@@ -2000,7 +2001,7 @@ pub fn load_facts(db_conn: &SqliteConnection, database_dir: std::path::PathBuf) 
     facts_found
 }
 
-fn remove_ignored_base_plants(db_conn: &SqliteConnection) {
+fn remove_ignored_base_plants(db_conn: &mut SqliteConnection) {
     let _ = diesel::delete(
         base_plants::dsl::base_plants.filter(base_plants::ignore_unless_in_others.eq(1)),
     )
@@ -2022,7 +2023,7 @@ pub struct CollectionItemRelative {
     pub harvest_start: Option<i32>,
 }
 
-fn relative_to_absolute_harvest_times(db_conn: &SqliteConnection) {
+fn relative_to_absolute_harvest_times(db_conn: &mut SqliteConnection) {
     // look for all plants with only a relative harvest time and try to fill in their absolute times
     // example is an extension publication listing peaches as redhaven+5 or whatever,
     // but also giving an absolute time for redhaven in the same pub
@@ -2092,7 +2093,7 @@ fn relative_to_absolute_harvest_times(db_conn: &SqliteConnection) {
     }
 }
 
-fn calculate_years_from_patent(db_conn: &SqliteConnection) {
+fn calculate_years_from_patent(db_conn: &mut SqliteConnection) {
     // todo - for each base plant, if the release year isn't filled in, guess at it from the patent number if available
 
     // put in a note in a new column about how the release year was guessed at
@@ -2133,7 +2134,7 @@ fn calculate_years_from_patent(db_conn: &SqliteConnection) {
     }
 }
 
-fn add_marketing_names(db_conn: &SqliteConnection) {
+fn add_marketing_names(db_conn: &mut SqliteConnection) {
     // for each collection item, look up the base plant and copy in the marketing name if set
     let all_collection_items = collection_items::dsl::collection_items
         .filter(collection_items::user_id.is_null())
@@ -2158,7 +2159,7 @@ fn add_marketing_names(db_conn: &SqliteConnection) {
 }
 
 fn set_relative_vs_existing(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     plant: &CollectionItem,
     base_plant: &CollectionItem,
     round: f64,
@@ -2185,7 +2186,7 @@ fn set_relative_vs_existing(
     assert_eq!(Ok(1), updated_row_count);
 }
 
-fn calculate_relative_harvest_times(db_conn: &SqliteConnection) {
+fn calculate_relative_harvest_times(db_conn: &mut SqliteConnection) {
     let all_plants = collection_items::dsl::collection_items
         .filter(collection_items::user_id.is_null())
         .load::<CollectionItem>(db_conn)
@@ -2515,7 +2516,7 @@ struct RelativeHarvest {
 fn calculate_relative_harvest_from_references(
     base_plant: &BasePlant,
     current_round: i32,
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
 ) -> Option<RelativeHarvest> {
     // get all collection items matching this type+name
     let all_references = collection_items::dsl::collection_items
@@ -2605,7 +2606,7 @@ pub struct NotorietyAndDevalueScores {
 
 fn get_notoriety_and_devalue_scores(
     collection_id: i32,
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
 ) -> NotorietyAndDevalueScores {
     collections::dsl::collections
         .select((
@@ -2628,7 +2629,7 @@ pub struct BasePlantsItemForDedupe {
 
 // for all base plants, ensure none of the names match an "AKA" name which would be a duplicate
 // a more stringent check could look at the full text search versions of the names (lower case without special characters)
-fn check_aka_duplicates(db_conn: &SqliteConnection) {
+fn check_aka_duplicates(db_conn: &mut SqliteConnection) {
     let all_plant_types = plant_types::dsl::plant_types
         .load::<PlantType>(db_conn)
         .unwrap();
@@ -2676,7 +2677,7 @@ fn check_aka_duplicates(db_conn: &SqliteConnection) {
 }
 
 // put the base plants ID into each collection item that matches - simplifies later queries
-fn add_base_id_to_collection_items(db_conn: &SqliteConnection) {
+fn add_base_id_to_collection_items(db_conn: &mut SqliteConnection) {
     let base_plants = base_plants::dsl::base_plants
         .load::<BasePlant>(db_conn)
         .unwrap();
@@ -2694,7 +2695,7 @@ fn add_base_id_to_collection_items(db_conn: &SqliteConnection) {
     }
 }
 
-fn check_database(db_conn: &SqliteConnection) {
+fn check_database(db_conn: &mut SqliteConnection) {
     // find all types and make sure each is in the types table
     let types_from_plants = base_plants::dsl::base_plants
         .select(base_plants::type_)
@@ -2716,7 +2717,7 @@ fn check_database(db_conn: &SqliteConnection) {
     check_aka_duplicates(db_conn);
 }
 
-fn rebuild_fts(db_conn: &SqliteConnection) {
+fn rebuild_fts(db_conn: &mut SqliteConnection) {
     let _result1 =
         diesel::sql_query("INSERT INTO fts_base_plants(fts_base_plants) VALUES('rebuild')")
             .execute(db_conn);
@@ -2726,7 +2727,7 @@ fn rebuild_fts(db_conn: &SqliteConnection) {
             .execute(db_conn);
 }
 
-fn calculate_notoriety(db_conn: &SqliteConnection) {
+fn calculate_notoriety(db_conn: &mut SqliteConnection) {
     let all_base_plants = base_plants::dsl::base_plants
         .load::<BasePlant>(db_conn)
         .unwrap();
@@ -2757,14 +2758,14 @@ fn calculate_notoriety(db_conn: &SqliteConnection) {
     }
 }
 
-pub fn count_base_plants(db_conn: &SqliteConnection) -> i64 {
+pub fn count_base_plants(db_conn: &mut SqliteConnection) -> i64 {
     base_plants::dsl::base_plants
         .select(diesel::dsl::count(base_plants::id))
         .first(db_conn)
         .unwrap()
 }
 
-pub fn calculate_and_write_relative_day_offsets(db_conn: &SqliteConnection) {
+pub fn calculate_and_write_relative_day_offsets(db_conn: &mut SqliteConnection) {
     // looks at the database and tries to figure out the relative days between all of the standard candles,
     // using locations that have multiple candles to do the math
     // it starts with the location with the most candles and adds more candle->candle times as it steps through other locations
@@ -3083,7 +3084,7 @@ pub fn calculate_and_write_relative_day_offsets(db_conn: &SqliteConnection) {
 
 // write a github markdown file listing all collections with the "needs_help" tag
 // so contributors can see this on github without needing an api call or whatever
-pub fn write_needs_help_file(db_conn: &SqliteConnection) {
+pub fn write_needs_help_file(db_conn: &mut SqliteConnection) {
     let all_collections = collections::dsl::collections
         .filter(collections::needs_help.eq(1))
         .load::<Collection>(db_conn)

@@ -6,7 +6,7 @@ extern crate diesel;
 
 #[macro_use]
 extern crate diesel_migrations;
-embed_migrations!();
+pub const MIGRATIONS: diesel_migrations::EmbeddedMigrations = embed_migrations!();
 
 pub mod gazetteer_load;
 pub mod git_info;

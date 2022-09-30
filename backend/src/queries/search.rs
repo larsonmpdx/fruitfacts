@@ -143,7 +143,7 @@ pub fn distance_km_to_degrees(distance: &str, start_latitude: f64) -> Option<Dis
 // given a set of location IDs, get all base plant IDs across all of them (de-duped)
 // in order to use as a search filter (to only find plants mentioned within X miles of some spot)
 fn get_base_plant_ids_from_locations(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     location_ids: Vec<i32>,
 ) -> Result<Vec<i32>, diesel::result::Error> {
     let base_ids = collection_items::dsl::collection_items
@@ -167,7 +167,7 @@ fn get_base_plant_ids_from_locations(
 pub fn search_db(
     session: &Option<UserSession>,
     query: &SearchQuery,
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
 ) -> Result<SearchReturn> {
     if query.search_type.is_none() {
         return Err(anyhow!("search_type not set"));
@@ -700,12 +700,12 @@ async fn variety_search(
     query: web::Query<SearchQuery>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let conn = pool.get().expect("couldn't get db connection from pool");
+    let mut conn = pool.get().expect("couldn't get db connection from pool");
 
     let session: Option<UserSession>;
     let (session_value, _outgoing_cookie) = crate::queries::auth::get_session_value(req, false);
     if session_value.is_some() {
-        let get_session_result = session::get_session(&conn, session_value.unwrap());
+        let get_session_result = session::get_session(&mut conn, session_value.unwrap());
         if let Ok(get_session_result) = get_session_result {
             session = Some(get_session_result);
         } else {
@@ -715,7 +715,7 @@ async fn variety_search(
         session = None;
     }
 
-    let results = web::block(move || search_db(&session, &query, &conn))
+    let results = web::block(move || search_db(&session, &query, &mut conn))
         .await
         .unwrap(); // todo - blockingerror unwrap?
 

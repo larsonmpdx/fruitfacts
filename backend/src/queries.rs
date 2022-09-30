@@ -33,7 +33,7 @@ pub struct CollectionsReturn {
 }
 
 pub fn get_collections_db(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     path: &str,
 ) -> Result<CollectionsReturn, diesel::result::Error> {
     let db_return = collections::dsl::collections
@@ -83,7 +83,7 @@ pub struct CollectionReturn {
 }
 
 pub fn get_collection_db(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     path: &str,
 ) -> Result<CollectionReturn, diesel::result::Error> {
     println!("{}", path);
@@ -150,13 +150,14 @@ async fn get_collections(
     path: web::Path<Path>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let conn = pool.get().expect("couldn't get db connection from pool");
-
     if path.path.is_empty() || path.path.ends_with('/') {
         // get all subdirectories and all collections at this path
-        let collections = web::block(move || get_collections_db(&conn, &path.path))
-            .await
-            .unwrap(); // todo - blockingerror unwrap?
+        let collections = web::block(move || {
+            let mut conn = pool.get().expect("couldn't get db connection from pool");
+            get_collections_db(&mut conn, &path.path)
+        })
+        .await
+        .unwrap(); // todo - blockingerror unwrap?
 
         let collections = match collections {
             Ok(collections) => collections,
@@ -170,9 +171,12 @@ async fn get_collections(
     } else {
         // doesn't end in '/': get an individual collection
 
-        let collection = web::block(move || get_collection_db(&conn, &path.path))
-            .await
-            .unwrap(); // todo - blockingerror unwrap?
+        let collection = web::block(move || {
+            let mut conn = pool.get().expect("couldn't get db connection from pool");
+            get_collection_db(&mut conn, &path.path)
+        })
+        .await
+        .unwrap(); // todo - blockingerror unwrap?
 
         let collection = match collection {
             Ok(collection) => collection,
@@ -195,7 +199,7 @@ pub struct PlantsReturn {
 }
 
 pub fn get_plants_db(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     type_: &str,
     page: Option<i32>,
 ) -> Result<PlantsReturn, diesel::result::Error> {
@@ -247,7 +251,7 @@ pub struct PlantReturn {
 }
 
 pub fn get_plant_db(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     type_: &str,
     name: &str,
 ) -> Result<PlantReturn, diesel::result::Error> {
@@ -302,12 +306,14 @@ async fn get_plant(
     query: web::Query<GetPlantQuery>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let conn = pool.get().expect("couldn't get db connection from pool");
     println!("/plant/ {} page {:?}", path.type_, query.page);
     if path.plant.is_empty() {
-        let plants = web::block(move || get_plants_db(&conn, &path.type_, query.page))
-            .await
-            .unwrap(); // todo - blockingerror unwrap?
+        let plants = web::block(move || {
+            let mut conn = pool.get().expect("couldn't get db connection from pool");
+            get_plants_db(&mut conn, &path.type_, query.page)
+        })
+        .await
+        .unwrap(); // todo - blockingerror unwrap?
 
         let plants = match plants {
             Ok(plants) => plants,
@@ -321,9 +327,12 @@ async fn get_plant(
     } else {
         // one plant
 
-        let plant = web::block(move || get_plant_db(&conn, &path.type_, &path.plant))
-            .await
-            .unwrap(); // todo - blockingerror unwrap?
+        let plant = web::block(move || {
+            let mut conn = pool.get().expect("couldn't get db connection from pool");
+            get_plant_db(&mut conn, &path.type_, &path.plant)
+        })
+        .await
+        .unwrap(); // todo - blockingerror unwrap?
 
         let plant = match plant {
             Ok(plant) => plant,
@@ -378,7 +387,7 @@ pub struct RecentChangesDB {
     pub references_count: i64,
 }
 
-pub fn get_recent_changes_db(db_conn: &SqliteConnection) -> Result<RecentChangesDB> {
+pub fn get_recent_changes_db(db_conn: &mut SqliteConnection) -> Result<RecentChangesDB> {
     let mut output: RecentChangesDB = Default::default();
 
     let db_return = collections::dsl::collections
@@ -417,11 +426,12 @@ pub fn get_recent_changes_db(db_conn: &SqliteConnection) -> Result<RecentChanges
 
 #[get("/api/recent_changes")]
 async fn get_recent_changes(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
-    let conn = pool.get().expect("couldn't get db connection from pool");
-
-    let changes_db = web::block(move || get_recent_changes_db(&conn))
-        .await
-        .unwrap(); // todo - blockingerror unwrap?
+    let changes_db = web::block(move || {
+        let mut conn = pool.get().expect("couldn't get db connection from pool");
+        get_recent_changes_db(&mut conn)
+    })
+    .await
+    .unwrap(); // todo - blockingerror unwrap?
 
     let changes_db = match changes_db {
         Ok(changes_db) => changes_db,
@@ -441,20 +451,25 @@ async fn get_recent_changes(pool: web::Data<DbPool>) -> Result<HttpResponse, act
     }))
 }
 
-no_arg_sql_function!(random, ());
+sql_function! {
+    fn random();
+}
 
-pub fn get_fact_db(db_conn: &SqliteConnection) -> Result<Fact, diesel::result::Error> {
+pub fn get_fact_db(db_conn: &mut SqliteConnection) -> Result<Fact, diesel::result::Error> {
     facts::dsl::facts
-        .order(random)
+        .order(random())
         .limit(1)
         .first::<Fact>(db_conn)
 }
 
 #[get("/api/fact")]
 async fn get_fact(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Error> {
-    let conn = pool.get().expect("couldn't get db connection from pool");
-
-    let fact = web::block(move || get_fact_db(&conn)).await.unwrap(); // todo - blockingerror unwrap?
+    let fact = web::block(move || {
+        let mut conn = pool.get().expect("couldn't get db connection from pool");
+        get_fact_db(&mut conn)
+    })
+    .await
+    .unwrap(); // todo - blockingerror unwrap?
 
     let fact = match fact {
         Ok(fact) => fact,

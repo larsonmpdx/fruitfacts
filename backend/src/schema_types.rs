@@ -57,7 +57,7 @@ pub struct BasePlant {
 
 #[skip_serializing_none]
 #[derive(Identifiable, Serialize, Queryable, Associations, Debug)]
-#[belongs_to(Collection)]
+#[diesel(belongs_to(Collection))]
 pub struct CollectionItem {
     pub id: i32,
 
@@ -126,7 +126,7 @@ pub struct Collection {
 
 #[skip_serializing_none]
 #[derive(Debug, Identifiable, Serialize, Deserialize, Queryable, Associations, Insertable)]
-#[belongs_to(Collection)]
+#[diesel(belongs_to(Collection))]
 pub struct Location {
     pub id: i32,
     pub location_number: i32, // which location within the collection is this? 0 is no location, 1 is the first location
@@ -172,7 +172,7 @@ pub struct LocationNoID {
 }
 
 #[derive(Queryable, Associations, Serialize)]
-#[belongs_to(User)]
+#[diesel(belongs_to(User))]
 #[table_name = "user_oauth_entries"]
 pub struct UserOauthEntry {
     pub id: i32,
@@ -182,8 +182,8 @@ pub struct UserOauthEntry {
 }
 
 #[derive(Clone, Queryable, Associations)]
+#[diesel(belongs_to(User))]
 #[table_name = "user_sessions"]
-#[belongs_to(User)]
 pub struct UserSession {
     pub id: i32,
     pub user_id: i32,
