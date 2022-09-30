@@ -100,7 +100,7 @@ export default function Home({
           <>
             {recentChangesData.recentChanges && (
               <div className="inline">
-                {recentChangesData.recentChanges.basePlantsCount} plants in{' '}
+                {recentChangesData.recentChanges.basePlantsCount} varieties in{' '}
                 {recentChangesData.recentChanges.referencesCount} references.
               </div>
             )}
