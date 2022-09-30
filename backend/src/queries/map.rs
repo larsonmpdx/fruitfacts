@@ -35,11 +35,12 @@ async fn locations_search(
     query: web::Query<GetLocationsQuery>,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let conn = pool.get().expect("couldn't get db connection from pool");
-
-    let results = web::block(move || locations_search_db(&conn, &query))
-        .await
-        .unwrap(); // todo - blockingerror unwrap?
+    let results = web::block(move || {
+        let mut conn = pool.get().expect("couldn't get db connection from pool");
+        locations_search_db(&mut conn, &query)
+    })
+    .await
+    .unwrap(); // todo - blockingerror unwrap?
 
     let results = match results {
         Ok(results) => results,
@@ -56,7 +57,7 @@ async fn locations_search(
 // so, we use a dumb bounding box instead
 
 pub fn locations_search_db(
-    db_conn: &SqliteConnection,
+    db_conn: &mut SqliteConnection,
     query: &GetLocationsQuery,
 ) -> Result<Vec<Location>, diesel::result::Error> {
     // see https://stackoverflow.com/questions/15584000/how-to-search-predefined-locations-latitude-longitude-within-a-rectangular

@@ -578,16 +578,16 @@ fn test_base_plant_notoriety_calc() {
 #[test]
 #[ignore] // long runtime
 fn test_database_loading() {
-    let db_conn = super::establish_connection();
-    super::reset_database(&db_conn);
+    let mut db_conn = super::establish_connection();
+    super::reset_database(&mut db_conn);
 
-    // speed up testing with synch = off (10% speedup) and a transaction (about 4x speedup)
+    // speed up testing with sync = off (10% speedup) and a transaction (about 4x speedup)
     db_conn.batch_execute("PRAGMA synchronous = OFF").unwrap();
 
     let mut items_loaded = Default::default();
     db_conn
-        .immediate_transaction::<_, diesel::result::Error, _>(|| {
-            items_loaded = super::load_all(&db_conn);
+        .immediate_transaction::<_, diesel::result::Error, _>(|db_conn| {
+            items_loaded = super::load_all(db_conn);
             Ok(())
         })
         .unwrap();

@@ -40,14 +40,14 @@ async fn create_list(
     body: web::Bytes,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
-    let db_conn = pool.get().expect("couldn't get db connection from pool");
+    let mut db_conn = pool.get().expect("couldn't get db connection from pool");
 
     let (session_value, _outgoing_cookie) = crate::queries::auth::get_session_value(req, false);
     if session_value.is_none() {
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    let session = session::get_session(&db_conn, session_value.unwrap());
+    let session = session::get_session(&mut db_conn, session_value.unwrap());
     if session.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
@@ -78,7 +78,7 @@ async fn create_list(
         if control_data.delete == Some(true) {
             // given an ID and delete=true: delete
             rows_changed = diesel::delete(locations::dsl::locations.filter(locations::id.eq(id)))
-                .execute(&db_conn);
+                .execute(&mut db_conn);
 
             // todo - delete list items too
             // maybe with a transaction?
@@ -86,7 +86,7 @@ async fn create_list(
             // ID provided but not deleting, try an update
             rows_changed = diesel::update(locations::dsl::locations.filter(locations::id.eq(id)))
                 .set(&location_no_id)
-                .execute(&db_conn);
+                .execute(&mut db_conn);
 
             // todo - handle public field, if it changes we need to update the public field on our list items too
             // maybe with a transaction?
@@ -95,7 +95,7 @@ async fn create_list(
         // no ID provided, regular insert
         rows_changed = diesel::insert_into(locations::dsl::locations)
             .values(&location_no_id)
-            .execute(&db_conn);
+            .execute(&mut db_conn);
     }
 
     if rows_changed == Ok(1) {
