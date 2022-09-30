@@ -586,7 +586,7 @@ fn test_database_loading() {
 
     let mut items_loaded = Default::default();
     db_conn
-        .immediate_transaction::<_, diesel::result::Error, _>(|mut db_conn| {
+        .immediate_transaction::<_, diesel::result::Error, _>(|db_conn| {
             items_loaded = super::load_all(db_conn);
             Ok(())
         })
