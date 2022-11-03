@@ -31,7 +31,7 @@ fn main() {
     // also gather build-time data and put it into some extra env vars
     {
         let output = Command::new("git")
-            .args(&["rev-parse", "HEAD"])
+            .args(["rev-parse", "HEAD"])
             .output()
             .unwrap();
         println!(
@@ -41,7 +41,7 @@ fn main() {
     }
     {
         let output = Command::new("git")
-            .args(&["show", "-s", "--format=%ct"])
+            .args(["show", "-s", "--format=%ct"])
             .output()
             .unwrap();
         println!(
@@ -51,7 +51,7 @@ fn main() {
     }
     {
         let output = Command::new("git")
-            .args(&["rev-list", "--count", "main"])
+            .args(["rev-list", "--count", "main"])
             .output()
             .unwrap();
         println!(
