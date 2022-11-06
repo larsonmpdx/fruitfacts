@@ -20,6 +20,7 @@ async fn main() -> std::io::Result<()> {
                 .short('r')
                 .long("reload_db")
                 .required(false)
+                .action(clap::ArgAction::SetTrue)
                 .help("reload db"),
         )
         .get_matches();
