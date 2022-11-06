@@ -20,13 +20,12 @@ async fn main() -> std::io::Result<()> {
                 .short('r')
                 .long("reload_db")
                 .required(false)
-                .takes_value(false)
                 .help("reload db"),
         )
         .get_matches();
 
     let mut db_conn = import_db::establish_connection();
-    if matches.is_present("reload_db") {
+    if matches.get_flag("reload_db") {
         import_db::reset_database(&mut db_conn);
         let items_loaded = import_db::load_all(&mut db_conn);
 
