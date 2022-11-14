@@ -614,12 +614,12 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
         Some(matches) => {
             if matches.len() >= 4 {
                 output.uspp_expiration = Some(
-                    NaiveDate::from_ymd(
+                    NaiveDate::from_ymd_opt(
                         matches[1].parse::<i32>().unwrap(),
                         matches[2].parse::<u32>().unwrap(),
                         matches[3].parse::<u32>().unwrap(),
-                    )
-                    .and_hms(12, 0, 0),
+                    ).unwrap()
+                    .and_hms_opt(12, 0, 0).unwrap(),
                 );
             }
         }
@@ -627,8 +627,8 @@ fn string_to_patent_info(input: &str) -> PatentInfo {
             if let Some(matches) = plain_year_date_regex.captures(input) {
                 if matches.len() >= 2 {
                     output.uspp_expiration = Some(
-                        NaiveDate::from_ymd(matches[1].parse::<i32>().unwrap(), 1, 1)
-                            .and_hms(12, 0, 0),
+                        NaiveDate::from_ymd_opt(matches[1].parse::<i32>().unwrap(), 1, 1).unwrap()
+                            .and_hms_opt(12, 0, 0).unwrap(),
                     );
                 }
             }

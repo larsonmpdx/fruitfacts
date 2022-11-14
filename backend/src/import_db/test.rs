@@ -522,7 +522,7 @@ fn test_patent_parsing() {
         string_to_patent_info("https://patents.google.com/patent/USPP9881 expired 2014"),
         PatentInfo {
             uspp_number: Some("9881".to_string()),
-            uspp_expiration: Some(NaiveDate::from_ymd(2014, 1, 1).and_hms(12, 0, 0))
+            uspp_expiration: Some(NaiveDate::from_ymd_opt(2014, 1, 1).unwrap().and_hms_opt(12, 0, 0).unwrap())
         }
     );
 
@@ -530,7 +530,7 @@ fn test_patent_parsing() {
         string_to_patent_info("https://patents.google.com/patent/USPP30925 expires 2038-03-07"),
         PatentInfo {
             uspp_number: Some("30925".to_string()),
-            uspp_expiration: Some(NaiveDate::from_ymd(2038, 3, 7).and_hms(12, 0, 0))
+            uspp_expiration: Some(NaiveDate::from_ymd_opt(2038, 3, 7).unwrap().and_hms_opt(12, 0, 0).unwrap())
         }
     );
 
@@ -539,7 +539,7 @@ fn test_patent_parsing() {
         string_to_patent_info("https://patents.google.com/patent/USPP30925 2038-03-07"),
         PatentInfo {
             uspp_number: Some("30925".to_string()),
-            uspp_expiration: Some(NaiveDate::from_ymd(2038, 3, 7).and_hms(12, 0, 0))
+            uspp_expiration: Some(NaiveDate::from_ymd_opt(2038, 3, 7).unwrap().and_hms_opt(12, 0, 0).unwrap())
         }
     );
 }

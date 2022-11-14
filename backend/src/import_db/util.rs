@@ -9,12 +9,12 @@ use chrono::prelude::*;
 pub fn uspp_number_to_expiration(uspp_number_input: i32) -> i64 {
     const YEARS_AFTER_ISSUE: i32 = 17;
 
-    NaiveDate::from_ymd(
+    NaiveDate::from_ymd_opt(
         uspp_number_to_release_year(uspp_number_input) + YEARS_AFTER_ISSUE,
         1,
         1,
-    )
-    .and_hms(12, 0, 0)
+    ).unwrap()
+    .and_hms_opt(12, 0, 0).unwrap()
     .timestamp()
 }
 
