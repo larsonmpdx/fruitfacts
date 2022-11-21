@@ -1,0 +1,19 @@
+{
+    title: "WSU Wine Grape Cultivar Trials 2000-2008 Final Report",
+    author: "Gary Moulton, Carol Miles, Jacqueline King, and Charla Echlin",
+    url: "https://s3.wp.wsu.edu/uploads/sites/2109/2014/11/Winegrape-CvTrials2000-20081.pdf", // see https://extension.wsu.edu/maritimefruit/grape-research/ if the link breaks
+    published: "2008", // not sure of this, couldn't find a date anywhere so I used the last year of the trial
+    accessed: "Nov 2022",
+    type: "extension test",
+    needs_help: true, // todo varieties
+    locations: [
+        {
+            name: "Mt. Vernon, WA",
+            latitude: 48.439906165067555,
+            longitude: -122.38861565365134
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

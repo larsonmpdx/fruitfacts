@@ -1,0 +1,19 @@
+{
+    title: "WSU EM 068E Growing Winegapes in Maritime Western Washington",
+    author: "Michelle Moyer, Thomas Henick-Kling",
+    url: "http://cru.cahe.wsu.edu/CEPublications/EM068E/EM068E.pdf", // see https://extension.wsu.edu/maritimefruit/grape-research/ if the link break
+    published: "2014",
+    accessed: "Nov 2022",
+    type: "state extension guide",
+    needs_help: true, // todo varieties
+    locations: [
+        {
+            name: "Mt. Vernon, WA",
+            latitude: 48.439906165067555,
+            longitude: -122.38861565365134
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}
