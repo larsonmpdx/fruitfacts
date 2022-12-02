@@ -17,14 +17,14 @@ diesel_migrations = "=2.0.0"
 # see https://github.com/diesel-rs/diesel/blob/1.4.x/diesel/Cargo.toml#L19
 libsqlite3-sys = { version = "=0.25.2", features = ["bundled"] }
 
-actix-web = "=4.2.1"
 actix-cors = "=0.6.4"
+actix-web = "=4.2.1"
 anyhow = "=1.0.66"
 base64 = "=0.13.1"
 chrono = "=0.4.23"
-clap = {version = "=4.0.26", features = ["cargo"] }
+clap = {version = "=4.0.29", features = ["cargo"] }
 dotenv-build = "=0.1.1"
-env_logger = "=0.9.3"
+env_logger = "=0.10.0"
 expiring_map = { git = "https://github.com/larsonmpdx/expiring_map/", branch = "remove_item" }
 git2 = "=0.15.0"
 indexmap = "=1.9.2"
@@ -38,10 +38,10 @@ pathdiff = "=0.2.1"
 rand = "=0.8.5"
 regex = "=1.7.0"
 reqwest = "=0.11.13"
-serde = {version = "=1.0.147", features = ["derive"] }
+serde = {version = "=1.0.148", features = ["derive"] }
+serde_derive = "=1.0.148"
+serde_json = "=1.0.89"
 serde_with = "=2.1.0"
-serde_json = "=1.0.88"
-serde_derive = "=1.0.147"
 urlencoding = "=2.1.2"
 walkdir = "=2.3.2"
 
