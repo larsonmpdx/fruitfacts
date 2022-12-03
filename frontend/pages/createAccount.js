@@ -50,7 +50,7 @@ export default function Home({ setErrorMessage }) {
                 onClick={async () => {
                   await createAccount();
                 }}
-                className="focus:shadow-outline h-12 w-full rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
+                className="focus:shadow-outline h-12 w-80 rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
                 label="create account"
               />
             </div>
@@ -70,7 +70,7 @@ export default function Home({ setErrorMessage }) {
             enabled={true}
             href="/"
             label={`Back to ${process.env.NEXT_PUBLIC_SITE_NAME}`}
-            className="focus:shadow-outline h-12 w-full rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
+            className="focus:shadow-outline h-12 w-80 rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
           />
         </div>
       </div>

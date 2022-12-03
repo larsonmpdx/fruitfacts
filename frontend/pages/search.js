@@ -190,7 +190,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
         id="orderBy"
         value={queryObject.orderBy}
         onChange={handleOrderByChange}
-        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       >
         <option value="name_then_type">name then type</option>
         <option value="type_then_name">type then name</option>
@@ -203,7 +203,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
         id="order"
         value={queryObject.order}
         onChange={handleOrderChange}
-        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       >
         <option value="asc">ascending</option>
         <option value="desc">descending</option>
@@ -213,7 +213,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
         id="perPage"
         value={queryObject.perPage}
         onChange={handlePerPageChange}
-        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       >
         <option value="50">50 per page</option>
         <option value="200">200 per page</option>
@@ -241,21 +241,24 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
           handleTypeChange(option?.name);
         }}
       />
-
-      <DebounceInput
-        minLength={2}
-        debounceTimeout={300}
-        onChange={(event) => handleSearchChange(event.target.value)}
-        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-      />
-
-      <DebounceInput
-        minLength={2}
-        debounceTimeout={300}
-        onChange={(event) => handleZipChange(event.target.value)}
-        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-      />
-
+      <label>
+        search string
+        <DebounceInput
+          minLength={2}
+          debounceTimeout={300}
+          onChange={(event) => handleSearchChange(event.target.value)}
+          className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        />
+      </label>
+      <label>
+        zip code
+        <DebounceInput
+          minLength={2}
+          debounceTimeout={300}
+          onChange={(event) => handleZipChange(event.target.value)}
+          className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        />
+      </label>
       {data?.page && (
         <>
           <h2>{`${data.count} items - page ${data.page}/${data.lastPage ? data.lastPage : ''}`}</h2>

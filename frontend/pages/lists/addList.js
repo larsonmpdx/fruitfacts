@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../components/button';
-// todo - user, setErrorMessage, 
+// todo - user, setErrorMessage,
 export default function Home({ setContributingLinks }) {
   React.useEffect(() => {
     setContributingLinks([
@@ -12,6 +12,7 @@ export default function Home({ setContributingLinks }) {
   const [name, setName] = React.useState('');
   const [lat, setLat] = React.useState('');
   const [lon, setLon] = React.useState('');
+  const [makePublic, setMakePublic] = React.useState(false);
 
   const handleRequestLocation = () => {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -22,6 +23,10 @@ export default function Home({ setContributingLinks }) {
     });
 
     return; // todo
+  };
+
+  const handleMakePublic = (event) => {
+    setMakePublic(event.target.checked);
   };
 
   const handleSubmit = async () => {
@@ -67,35 +72,51 @@ export default function Home({ setContributingLinks }) {
   return (
     <>
       <p>create list</p>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
-        </label>
-          <label>
-            lat:
-            <input type="text" value={lat} onChange={(event) => setLat(event.target.value)} />
-          </label>
-          <label>
-          lon:
-          <input type="text" value={lon} onChange={(event) => setLon(event.target.value)} />
-        </label>
-      </form>
+      <label>
+        Name:
+        <input
+          type="text"
+          value={name}
+          className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          onChange={(event) => setName(event.target.value)}
+        />
+      </label>
       <Button
         enabled={true}
         onClick={async () => {
           await handleRequestLocation();
         }}
-        className="focus:shadow-outline h-12 w-full rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
+        className="focus:shadow-outline h-12 w-80 rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
         label="get location from my browser"
       />
-
+      <label>
+        lat:
+        <input
+          type="text"
+          value={lat}
+          className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          onChange={(event) => setLat(event.target.value)}
+        />
+      </label>
+      <label>
+        lon:
+        <input
+          type="text"
+          value={lon}
+          className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          onChange={(event) => setLon(event.target.value)}
+        />
+      </label>
+      <label>
+        <input type="checkbox" defaultChecked={makePublic} onClick={handleMakePublic} />
+        make public?
+      </label>
       <Button
         enabled={true}
         onClick={async () => {
           await handleSubmit();
         }}
-        className="focus:shadow-outline h-12 w-full rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
+        className="focus:shadow-outline h-12 w-80 rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
         label="submit"
       />
     </>
