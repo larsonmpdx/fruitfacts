@@ -45,7 +45,10 @@ export default function Home({ user, setUser }) {
     <>
       {user?.name ? (
         <p>
-          logged in as <Link href="/user/">{user.name}</Link>
+          logged in as{' '}
+          <Link href="/user/" legacyBehavior>
+            {user.name}
+          </Link>
           <button
             className="mt-4 ml-1 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
             onClick={logOut}

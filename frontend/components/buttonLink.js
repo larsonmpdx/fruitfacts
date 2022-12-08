@@ -9,11 +9,9 @@ export default function Button({ href, enabled, label, ...rest }) {
     <>
       {enabled ? (
         <Link href={`${href}`}>
-          <a>
-            <button {...rest} className={`${styles.btn} ${styles['btn-blue']}`}>
-              {label}
-            </button>
-          </a>
+          <button {...rest} className={`${styles.btn} ${styles['btn-blue']}`}>
+            {label}
+          </button>
         </Link>
       ) : (
         <button {...rest} className={`${styles.btn} ${styles['btn-disabled']} disabled`}>

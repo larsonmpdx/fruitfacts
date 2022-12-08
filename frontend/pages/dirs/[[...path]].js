@@ -174,7 +174,9 @@ export default function Home({
           <ul className="list-disc">
             {data.directories.map((directory, index) => (
               <li key={index}>
-                <Link href={`/dirs/${directory}#dirs`}>{directory}</Link>
+                <Link href={`/dirs/${directory}#dirs`} legacyBehavior>
+                  {directory}
+                </Link>
               </li>
             ))}
           </ul>
@@ -190,6 +192,7 @@ export default function Home({
                     href={`/collections/${collection.path}${encodeURIComponent(
                       collection.filename
                     )}`}
+                    legacyBehavior
                   >
                     {collection.title}
                   </Link>

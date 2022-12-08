@@ -62,8 +62,9 @@ function GetLeaves({ cluster, supercluster }) {
               href={`/collections/${leaf.properties.collection_path}${encodeURIComponent(
                 leaf.properties.collection_filename
               )}?loc=${leaf.properties.location_number}`}
+              className="text-xs font-semibold leading-none tracking-tight"
             >
-              <a className="text-xs font-semibold leading-none tracking-tight">{`${leaf.properties.collection_title}`}</a>
+              {`${leaf.properties.collection_title}`}
             </Link>
           </li>
         ))}
@@ -244,8 +245,9 @@ export default function Home({
                 href={`/collections/${cluster.properties.collection_path}${encodeURIComponent(
                   cluster.properties.collection_filename
                 )}?loc=${cluster.properties.location_number}`}
+                className="space-y-0 text-xs font-semibold leading-none tracking-tight"
               >
-                <a className="space-y-0 text-xs font-semibold leading-none tracking-tight">{`${cluster.properties.location_name}: ${cluster.properties.collection_title}`}</a>
+                {`${cluster.properties.location_name}: ${cluster.properties.collection_title}`}
               </Link>
             </Popup>
           </Marker>

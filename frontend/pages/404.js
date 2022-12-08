@@ -68,9 +68,7 @@ export default function Custom404({ icons, setErrorMessage, setContributingLinks
                 icon.indexOf('.')
               )}&page=1&perPage=50&orderBy=name_then_type&order=asc`}
             >
-              <a>
-                <img className="h-48 w-48 object-contain" src={'/fruit_icons/' + icon} />
-              </a>
+              <img className="h-48 w-48 object-contain" src={'/fruit_icons/' + icon} />
             </Link>
           )}
         </div>

@@ -22,8 +22,8 @@ export default function Home({ user, setUser, contributingLinks }) {
   return (
     <nav className="flex flex-wrap items-center justify-between bg-teal-500 p-6">
       <div className="mr-6 flex flex-shrink-0 items-center text-white">
-        <Link href="/">
-          <a className="text-xl font-semibold tracking-tight">fruitfacts</a>
+        <Link href="/" className="text-xl font-semibold tracking-tight">
+          fruitfacts
         </Link>
       </div>
       <div className="mr-6 flex flex-shrink-0 items-center text-white">
@@ -32,18 +32,22 @@ export default function Home({ user, setUser, contributingLinks }) {
       <div className="block w-full flex-grow lg:flex lg:w-auto lg:items-center">
         <div className="text-sm lg:flex-grow">
           {links.map((link) => (
-            <Link key={link.name} href={link.href}>
-              <a className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block">
-                {link.name}
-              </a>
+            <Link
+              key={link.name}
+              href={link.href}
+              className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+            >
+              {link.name}
             </Link>
           ))}
           <>
             {user?.name && (
-              <Link key="my lists" href={`/lists/lists?user_id=${user.id}`}>
-                <a className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block">
-                  my lists
-                </a>
+              <Link
+                key="my lists"
+                href={`/lists/lists?user_id=${user.id}`}
+                className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+              >
+                my lists
               </Link>
             )}
           </>

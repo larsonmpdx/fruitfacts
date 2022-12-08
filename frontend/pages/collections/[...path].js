@@ -111,7 +111,10 @@ export default function Home({
                 <>
                   {data.locations.map((location) => (
                     <li key={location.id}>
-                      <Link href={`/collections/${path.join('/')}?loc=${location.location_number}`}>
+                      <Link
+                        href={`/collections/${path.join('/')}?loc=${location.location_number}`}
+                        legacyBehavior
+                      >
                         {location.location_name}
                       </Link>
                     </li>
@@ -149,6 +152,7 @@ export default function Home({
                     href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(
                       item.name
                     )}`}
+                    legacyBehavior
                   >
                     {item.name + ' ' + item.type}
                   </Link>

@@ -55,19 +55,22 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
     <>
       <p>user lists</p>
       {user?.id && user?.id == query.user_id && (
-        <Link href={`/lists/addList`}>
-          <a className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block">
-            add list
-          </a>
+        <Link
+          href={`/lists/addList`}
+          className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+        >
+          add list
         </Link>
       )}
       {searchReturn?.locations?.length ? (
         <>
           {searchReturn.locations.map((location) => (
-            <Link key={location.name} href={`/todo`}>
-              <a className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block">
-                {location.name}
-              </a>
+            <Link
+              key={location.name}
+              href={`/todo`}
+              className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+            >
+              {location.name}
             </Link>
           ))}
         </>

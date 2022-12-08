@@ -112,7 +112,10 @@ export default function Home({
               {plant.collection.map((entry) => (
                 <>
                   <li>
-                    <Link href={`/collections/${encodeURIComponent(entry.path_and_filename)}`}>
+                    <Link
+                      href={`/collections/${encodeURIComponent(entry.path_and_filename)}`}
+                      legacyBehavior
+                    >
                       {entry.path_and_filename}
                     </Link>
                     {entry.description && <p>{entry.description}</p>}

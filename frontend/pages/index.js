@@ -85,6 +85,7 @@ export default function Home({
                   <li key={index}>
                     <Link
                       href={`/collections/${encodeURIComponent(update.path + update.filename)}`}
+                      legacyBehavior
                     >
                       {update.filename}
                     </Link>

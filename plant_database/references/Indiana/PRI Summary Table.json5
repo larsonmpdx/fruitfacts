@@ -1,7 +1,7 @@
 // this table has all of the co-op selections and harvest times, I didn't want to try to integrate it into the other file
 // which is only the named releases
 {
-    title: "PRI Disease Resistant Apple Breeding Program",
+    title: "PRI Disease Resistant Apple Breeding Program (all)",
     author: "unknown",
     url: "https://www.hort.purdue.edu/newcrop/pri/cultivars.html",
     published: "unknown",

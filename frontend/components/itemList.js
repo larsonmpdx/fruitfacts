@@ -20,6 +20,7 @@ export default function Home({ data }) {
                       href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(
                         item.name
                       )}`}
+                      legacyBehavior
                     >
                       {item.name + ' ' + item.type}
                     </Link>
