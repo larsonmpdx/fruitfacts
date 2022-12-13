@@ -1,0 +1,6 @@
+[core]
+    analytics = false
+    remote = michael-gdrive
+['remote "michael-gdrive"']
+    url = gdrive://1vQfTrckC6kxbIQAJCUvOs1G0BJBKU01m
+    gdrive_service_account_json_file_path = ../michael-gdrive-credentials.json

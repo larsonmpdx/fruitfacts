@@ -25,3 +25,8 @@
 * a map interface to see what nearby u-picks or public gardens are growing so users can find proven varieties to fill in harvest windows
 * the web UI should be simple enough to be used by typical retiree gardeners
 * all of a user's data should be able to be imported/exported in a simple text format
+
+## dvc
+* used to store thumbnail images and original pdf versions of articles instead of committing them to git: https://dvc.org/
+* gitignored file michael-gdrive-credentials.json is a google service credential json file. download it from the google cloud gui under "enabled apis and services" and make sure that account has access to the google drive folder
+* see https://dvc.org/doc/user-guide/how-to/setup-google-drive-remote
