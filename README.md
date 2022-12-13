@@ -30,3 +30,16 @@
 * used to store thumbnail images and original pdf versions of articles instead of committing them to git: https://dvc.org/
 * gitignored file michael-gdrive-credentials.json is a google service credential json file. download it from the google cloud gui under "enabled apis and services" and make sure that account has access to the google drive folder
 * see https://dvc.org/doc/user-guide/how-to/setup-google-drive-remote
+* workflow:
+  * `dvc add -R plant_database\dvc\`
+  * `dvc commit`
+  * `dvc push`
+  * (and also git commit the new .dvc files)
+
+### dvc windows install
+* choco install is broken for some reason. same with the .exe. only pip is working
+* choco issue: I forget
+* .exe issue: https://github.com/iterative/dvc/issues/7949 (Fixed but not available in the .exe installer as of dec 12 2022)
+  * pip install dvc
+  * pip install dvc[gdrive]
+  * pip install pydrive2
