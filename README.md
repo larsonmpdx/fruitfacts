@@ -31,7 +31,7 @@
 * gitignored file michael-gdrive-credentials.json is a google service credential json file. download it from the google cloud gui under "enabled apis and services" and make sure that account has access to the google drive folder
 * see https://dvc.org/doc/user-guide/how-to/setup-google-drive-remote
 * workflow:
-  * `dvc add -R plant_database\dvc\`
+  * `dvc add --glob -R plant_database\**\*.pdf`
   * `dvc commit`
   * `dvc push`
   * (and also git commit the new .dvc files)
