@@ -4,6 +4,7 @@
 * `cargo run`
 * `cargo test` and `cargo test -- --include-ignored` (include long tests: the json database loading one)
 * `cargo fetch` install packages
+* `cargo run --bin pdf_to_thumbnail` create thumbnails for each reference pdf
 
 # rust linting
 * `cargo fmt` after installing `rustup component add rustfmt`

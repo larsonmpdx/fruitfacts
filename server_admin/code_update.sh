@@ -15,7 +15,7 @@ sudo -u www-data npm run build
 cd ../backend/
 sudo -u www-data rm -f ./Cargo.lock
 touch build.rs # make sure this runs each time so our env vars are updated
-sudo -u www-data cargo build --release
+sudo -u www-data cargo build --release --no-default-features # --no-default-features: skip our support binaries
 
 echo "starting backend+frontend"
 service backend_fruitfacts start

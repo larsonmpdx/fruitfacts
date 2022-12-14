@@ -38,12 +38,20 @@ pathdiff = "=0.2.1"
 rand = "=0.8.5"
 regex = "=1.7.0"
 reqwest = "=0.11.13"
-serde = {version = "=1.0.149", features = ["derive"] }
-serde_derive = "=1.0.149"
+serde = {version = "=1.0.150", features = ["derive"] }
+serde_derive = "=1.0.150"
 serde_json = "=1.0.89"
 serde_with = "=2.1.0"
 urlencoding = "=2.1.2"
 walkdir = "=2.3.2"
+
+# features only used by support binaries (I don't want to download and build these when doing a release)
+pdfium-render = { version = "=0.7.25", optional = true }
+image = { version = "=0.24.5", optional = true }
+
+[features]
+default = ["binaries"]
+binaries = ["dep:pdfium-render", "dep:image"]
 
 [build-dependencies]
 dotenv-build = "=0.1.1"
