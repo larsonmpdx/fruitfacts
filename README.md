@@ -38,7 +38,7 @@
 
 ### dvc windows install
 * choco install is broken for some reason. same with the .exe. only pip is working
-* choco issue: I forget
+* choco issue: extracting the .tar.gz during install only gives a .tar, not the folder which is needed for the next steps (installer from dec 12 2022 on windows 11)
 * .exe issue: https://github.com/iterative/dvc/issues/7949 (Fixed but not available in the .exe installer as of dec 12 2022)
   * pip install dvc
   * pip install dvc[gdrive]
