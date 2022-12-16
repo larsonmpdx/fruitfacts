@@ -9,7 +9,7 @@ use pdfium_render::prelude::*;
 fn pdf_first_page_to_jpeg(input_path: &Path, output_path: &Path) -> Result<(), PdfiumError> {
     // adapted from an example in the pdfium_render docs
 
-    if(output_path.exists()) {
+    if output_path.exists() {
         println!("jpg already exists");
         return Ok(());
     }
