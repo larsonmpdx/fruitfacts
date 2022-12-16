@@ -1,3 +1,5 @@
+// walk though all reference PDFs and create first page thumbnails of them
+
 #[cfg(feature = "binaries")]
 use pdfium_render::prelude::*;
 
@@ -41,6 +43,8 @@ fn export_pdf_to_jpegs(path: &str, password: Option<&str>) -> Result<(), PdfiumE
 #[cfg(feature = "binaries")]
 fn main() {
     // todo
+    // find all *.pdf recursively in plant_database/
+    // for any without an existing thumbnail, create one with the same path but changed extension
 }
 
 #[cfg(not(feature = "binaries"))]
