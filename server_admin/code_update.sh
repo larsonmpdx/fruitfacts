@@ -4,6 +4,11 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # rebuild and restart the frontend and backend after a code update
 
+echo "dvc pull"
+cd ..
+dvc pull
+cd -
+
 echo "stopping backend+frontend"
 service backend_fruitfacts stop
 service frontend_fruitfacts stop
