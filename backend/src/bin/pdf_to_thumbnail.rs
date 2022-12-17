@@ -80,10 +80,8 @@ fn main() {
 
             if output_path.exists() && !matches.get_flag("redo_all") {
                 println!("jpg already exists");
-            } else {
-                if let Err(error) = pdf_first_page_to_jpeg(input_path, &output_path) {
-                    println!("pdfium error: {error:?}");
-                }
+            } else if let Err(error) = pdf_first_page_to_jpeg(input_path, &output_path) {
+                println!("pdfium error: {error:?}");
             }
         }
     }
