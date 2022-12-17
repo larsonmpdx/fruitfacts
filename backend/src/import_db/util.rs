@@ -13,8 +13,10 @@ pub fn uspp_number_to_expiration(uspp_number_input: i32) -> i64 {
         uspp_number_to_release_year(uspp_number_input) + YEARS_AFTER_ISSUE,
         1,
         1,
-    ).unwrap()
-    .and_hms_opt(12, 0, 0).unwrap()
+    )
+    .unwrap()
+    .and_hms_opt(12, 0, 0)
+    .unwrap()
     .timestamp()
 }
 
