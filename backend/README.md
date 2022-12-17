@@ -5,6 +5,7 @@
 * `cargo test` and `cargo test -- --include-ignored` (include long tests: the json database loading one)
 * `cargo fetch` install packages
 * `cargo run --bin pdf_to_thumbnail` create thumbnails for each reference pdf. needs pdfium downloaded and installed, see instructions at https://crates.io/crates/pdfium-render
+  * redo all thumbnails: `cargo run --bin pdf_to_thumbnail -- --redo_all`
   * tldr: on windows, into `/backend/`, place the dll from `pdfium-win-x64.tgz` from https://github.com/bblanchon/pdfium-binaries/releases
 
 # rust linting
