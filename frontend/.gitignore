@@ -16,6 +16,9 @@ package-lock.json
 # production
 /build
 
+# files copied from the plant database for static file serving
+/public/data/
+
 # misc
 .DS_Store
 
