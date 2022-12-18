@@ -28,10 +28,10 @@
 
 ## dvc
 * used to store thumbnail images and original pdf versions of articles instead of committing them to git: https://dvc.org/
-* gitignored file michael-gdrive-credentials.json is a google service credential json file. download it from the google cloud gui under "enabled apis and services" and make sure that account has access to the google drive folder
-* see https://dvc.org/doc/user-guide/how-to/setup-google-drive-remote
+* gitignored file michael-gdrive-credentials.json is a google service account credential json file. download it from the google cloud gui when making the service account and make sure that account has access to the google drive folder
+* see https://dvc.org/doc/user-guide/how-to/setup-google-drive-remote#using-service-accounts
 * workflow:
-  * `dvc_add.bat` (does `dvc add --glob -R plant_database\**\*.pdf`)
+  * `dvc_add.bat` (does `dvc add --glob -R plant_database\**\*.pdf` etc.)
   * `dvc commit`
   * `dvc push`
   * (and also git commit the new .dvc files)
