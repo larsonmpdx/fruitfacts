@@ -19,7 +19,7 @@ libsqlite3-sys = { version = "=0.25.2", features = ["bundled"] }
 
 actix-cors = "=0.6.4"
 actix-web = "=4.2.1"
-anyhow = "=1.0.67"
+anyhow = "=1.0.68"
 base64 = "=0.20.0"
 chrono = "=0.4.23"
 clap = {version = "=4.0.29", features = ["cargo"] }
@@ -40,13 +40,13 @@ regex = "=1.7.0"
 reqwest = "=0.11.13"
 serde = {version = "=1.0.151", features = ["derive"] }
 serde_derive = "=1.0.151"
-serde_json = "=1.0.90"
+serde_json = "=1.0.91"
 serde_with = "=2.1.0"
 urlencoding = "=2.1.2"
 walkdir = "=2.3.2"
 
 # dependencies only used by support binaries (I don't want to download and build these when doing a server release)
-pdfium-render = { version = "=0.7.25", optional = true }
+pdfium-render = { version = "=0.7.26", optional = true }
 image = { version = "=0.24.5", optional = true }
 
 [features]

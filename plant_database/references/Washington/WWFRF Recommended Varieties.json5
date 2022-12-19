@@ -4,6 +4,7 @@
     url: "https://nwfruit.org/recommended-fruit-trees/",
     published: "2012", // first year it's available at that url on wayback
     accessed: "Oct 2021",
+    thumbnail: "website",
     type: "public garden guide",
     locations: [
         {
