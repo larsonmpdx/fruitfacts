@@ -36,6 +36,7 @@ export function formatPatentDate(date, date_estimated) {
 }
 
 // gets a thumbnail path in /public/ if it exists or returns the placeholder image location
+// server-side only
 export function getThumbnailLocation(filename) {
   const path = require('path');
   const fs = require('fs');
