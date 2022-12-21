@@ -91,5 +91,4 @@ fn main() {
 fn main() {
     // empty for when the feature isn't selected
     println!("feature \"binaries\" not selected, this tool was not built");
-    
 }

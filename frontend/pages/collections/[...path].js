@@ -10,6 +10,8 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Chart from '../../components/chart';
+import { getThumbnailLocation } from '../../components/functions';
+import Image from 'next/image';
 
 export async function getServerSideProps(context) {
   let errorMessage = null;
@@ -46,11 +48,14 @@ export async function getServerSideProps(context) {
     return location.location_number == location_number;
   }) || { location_name: `unknown location #${location_number}` };
 
+  const thumbnail = getThumbnailLocation(`${path.join('/')}.jpg`);
+
   return {
     props: {
       data,
       location,
       path,
+      thumbnail,
       errorMessage
     }
   };
@@ -63,6 +68,7 @@ export default function Home({
   data,
   location,
   path,
+  thumbnail,
   errorMessage,
   setErrorMessage,
   setContributingLinks
@@ -91,6 +97,7 @@ export default function Home({
         <Head>
           <title>{`Collection: ${path.join('/')}`}</title>
         </Head>
+        <Image src={thumbnail} alt="preview image for this reference" width={200} height={200} />
         {data.collection && (
           <>
             {data.collection.needs_help == 1 && (

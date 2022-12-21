@@ -12,7 +12,7 @@
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
-    "@mui/material": "5.11.0",
+    "@mui/material": "5.11.1",
     "leaflet": "1.9.3",
     "lodash": "4.17.21",
     "next": "13.0.7",
