@@ -3,17 +3,31 @@
 use std::fs;
 use std::path::Path;
 extern crate clap;
+use anyhow::{anyhow, Result};
 use clap::{crate_version, Arg, Command as ClapApp};
+use std::io::Write;
 
 #[cfg(feature = "binaries")]
-use pdfium_render::prelude::*;
+fn web_address_to_png(web_address: &str, screenshot_path: &Path) -> Result<()> {
+    let output = std::process::Command::new("node ../../web_screenshot/index.js")
+        .arg(web_address)
+        .arg(screenshot_path)
+        .output()
+        .expect("failed to run node screenshot process");
 
-#[cfg(feature = "binaries")]
-fn web_address_to_png(web_address: &str, screenshot_path: &Path) -> Result<(), PdfiumError> {
+    std::io::stdout().write_all(&output.stdout).unwrap();
+    std::io::stderr().write_all(&output.stderr).unwrap();
 
-    // todo - call out to web_screenshot/index.js
-
+    if output.status.code() != Some(0) {
+        return Err(anyhow!("screenshot process failed"));
+    }
     Ok(())
+}
+
+#[derive(serde::Deserialize)]
+struct CollectionJson {
+    thumbnail: Option<String>,
+    url: Option<String>,
 }
 
 #[cfg(feature = "binaries")]
@@ -45,21 +59,43 @@ fn main() {
         if fs::metadata(input_path).unwrap().is_file() // filenames can't be >260 chars here without help - probably fixed in rust 1.58 - https://github.com/rust-lang/rust/issues/67403
         && input_path.extension().unwrap().to_str().unwrap() == "json5"
         {
-            // todo - check if this reference has "thumbnail: website" (skip if it doesn't, maybe it has a pdf screenshot instead)
+            let contents = fs::read_to_string(input_path).unwrap();
+
+            let collection: CollectionJson = json5::from_str(&contents).unwrap_or_else(|error| {
+                panic!(
+                    "couldn't parse json in file {} {}",
+                    input_path.display(),
+                    error
+                );
+            });
+
+            if collection.thumbnail != Some("website".to_string()) {
+                continue; // if not marked, skip, maybe it has a pdf screenshot instead
+            }
 
             // todo - fetch web address from the "url" field (and use only the first part before spaces)
 
-            const web_address: &str = "todo";
+            let web_address: String = collection
+                .url
+                .unwrap()
+                .split_whitespace()
+                .next()
+                .unwrap()
+                .to_string();
 
-            println!("loading reference: {}", input_path.display());
+            println!(
+                "reference: {}\n\turl: {}",
+                input_path.display(),
+                web_address
+            );
 
             let mut screenshot_path = input_path.to_path_buf();
             screenshot_path.set_extension("png");
 
             if screenshot_path.exists() && !matches.get_flag("redo_all") {
                 println!("png already exists");
-            } else if let Err(error) = web_address_to_png(web_address, &screenshot_path) {
-                println!("pdfium error: {error:?}");
+            } else if let Err(error) = web_address_to_png(&web_address, &screenshot_path) {
+                println!("error: {error:?}");
             }
         }
     }
