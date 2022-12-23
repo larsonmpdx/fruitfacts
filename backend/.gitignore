@@ -19,7 +19,4 @@ database.sqlite3-journal
 # for pdfium dlls, usually named pdfium.dll
 *.dll
 
-# screenshots
-*.png
-
 /.env
