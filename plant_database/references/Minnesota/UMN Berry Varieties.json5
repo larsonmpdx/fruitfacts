@@ -1,10 +1,13 @@
 {
     title: "UMN Berry Varieties",
     author: "unknown",
-    url: "https://mnhardy.umn.edu/varieties/fruit/berries",
+    url: "https://web.archive.org/web/20220217184522/https://mnhardy.umn.edu/varieties/fruit/berries",
+    // new version of this URL has one page for blueberries, currants, raspberries, strawberries
+    thumbnail: "website",
     published: "unknown",
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true, // maybe split into pages now that the source material is multiple pages
     locations: [
         {
             name: "Minneapolis, MN",
@@ -92,6 +95,7 @@
             released: "UMN 1933*",
             description: "Plants have large clusters of red, medium-size fruits, excellent for use in jellies, salads, and desserts"
         },
+        // todo cascade currant
         {
             name: "Latham",
             type: "Raspberry",

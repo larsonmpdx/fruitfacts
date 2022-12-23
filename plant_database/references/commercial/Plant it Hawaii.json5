@@ -1,0 +1,26 @@
+{
+    title: "Plant it Hawaii", // hawaii fruit tree wholesaler
+    url: "https://www.plantithawaii.com/",
+    thumbnail: "website",
+    published: "unknown",
+    accessed: "Dec 2022",
+    type: "nursery catalog",
+    locations: [
+        {
+            name: "Kurtistown, HI",
+            latitude: 19.598014498674345,
+            longitude: -155.07207090464257
+        }
+    ],
+    plants: [
+        // todo
+
+        // Avocado
+
+        // Citrus
+
+        // Exotics
+
+        // Mangos
+    ]
+}

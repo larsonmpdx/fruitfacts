@@ -2,6 +2,7 @@
     title: "Rutgers New Jersey Agricultural Experiment Station Stone Fruit Varieties",
     author: "unknown",
     url: "https://agproducts.rutgers.edu/fruit-trees/varieties.html and https://njaes.rutgers.edu/fs1300/ and https://njaes.rutgers.edu/peach/postharvest/pdfs/New-Peach-Varieties-and-Post-Harvest-Fruit-Quality.pdf",
+    thumbnail: "website",
     accessed: "Oct 2021",
     type: "public breeding program list",
     needs_help: true, // patents for the newer varieties, and a patent search. tighten up names (njn100 or "njn 100" with a space?)

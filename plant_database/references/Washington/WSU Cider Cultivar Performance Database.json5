@@ -2,6 +2,7 @@
     title: "WSU Cider Cultivar Performance Database",
     author: "WSU Cider",
     url: "https://cider.wsu.edu/ciderweb/",
+    thumbnail: "website",
     published: "unknown",
     accessed: "Oct 2021",
     type: "extension test",

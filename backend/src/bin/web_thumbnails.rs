@@ -9,8 +9,8 @@ use std::io::Write;
 
 #[cfg(feature = "binaries")]
 fn web_address_to_jpg(web_address: &str, script_path: &str, screenshot_path: &Path) -> Result<()> {
-   println!("called as {script_path} {}", screenshot_path.display()); // todo remove
-   
+    println!("called as {script_path} {}", screenshot_path.display()); // todo remove
+
     let output = std::process::Command::new("node")
         .arg(script_path)
         .arg(web_address)
@@ -52,7 +52,8 @@ fn main() {
 
     let database_dir = harvest_chart_server::import_db::get_database_dir().unwrap();
 
-    let binding = fs::canonicalize(database_dir.join("../backend/web_screenshot/index.js")).unwrap();
+    let binding =
+        fs::canonicalize(database_dir.join("../backend/web_screenshot/index.js")).unwrap();
     let script_path = binding.as_path().to_str().unwrap();
 
     for entry in walkdir::WalkDir::new(database_dir.join("references"))
@@ -89,19 +90,22 @@ fn main() {
                 .unwrap()
                 .to_string();
 
-            println!(
-                "reference: {}\n\turl: {}",
-                input_path.display(),
-                web_address
-            );
-
             let mut screenshot_path = fs::canonicalize(database_dir.join(input_path)).unwrap();
             screenshot_path.set_extension("jpg");
 
             if screenshot_path.exists() && !matches.get_flag("redo_all") {
-                println!("jpg already exists");
-            } else if let Err(error) = web_address_to_jpg(&web_address, script_path, &screenshot_path) {
-                println!("error: {error:?}");
+                // println!("jpg already exists");
+            } else {
+                println!(
+                    "loading reference: {}\n\turl: {}",
+                    input_path.display(),
+                    web_address
+                );
+
+                if let Err(error) = web_address_to_jpg(&web_address, script_path, &screenshot_path)
+                {
+                    println!("error: {error:?}");
+                }
             }
         }
     }

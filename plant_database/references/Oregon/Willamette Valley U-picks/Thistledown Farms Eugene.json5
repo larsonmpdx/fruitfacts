@@ -2,6 +2,7 @@
     title: "Thistledown Farms",
     author: "",
     url: "https://thistledownfarm.net/our-crops",
+    thumbnail: "website",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list", // todo - this is actually a farm stand, I don't think they do u-pick peaches

@@ -2,6 +2,7 @@
     title: "Sauvie Island Farms Peaches",
     author: "",
     url: "http://www.sauvieislandfarms.com/#/crop_calendar", // todo - crops other than peaches
+    thumbnail: "website",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",

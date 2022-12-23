@@ -2,6 +2,7 @@
     title: "Clemson Peach Releases",
     author: "Ksenija Gasic",
     url: "https://www.youtube.com/watch?v=NzbVXNLelmU",
+    thumbnail: "youtube", // todo - new thumbnail type
     published: "",
     accessed: "Oct 2021",
     type: "public breeding program list",

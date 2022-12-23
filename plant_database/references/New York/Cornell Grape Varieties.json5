@@ -1,7 +1,8 @@
 {
     title: "Cornell Grape Varieties",
     author: "unknown",
-    url: "http://www.hort.cornell.edu/brown/pdfs/newfruitimpact.pdf http://www.hort.cornell.edu/reisch/grapegenetics/grapeinfo.html",
+    url: "http://www.hort.cornell.edu/reisch/grapegenetics/grapeinfo.html http://www.hort.cornell.edu/brown/pdfs/newfruitimpact.pdf",
+    thumbnail: "website",
     accessed: "Oct 2021",
     type: "public breeding program list",
     locations: [

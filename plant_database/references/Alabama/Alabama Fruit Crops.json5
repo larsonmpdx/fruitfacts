@@ -5,6 +5,7 @@
     title: "Alabama Fruit Crops",
     author: "",
     url: "https://ssl.acesag.auburn.edu/department/peaches/index.html",
+    thumbnail: "website",
     accessed: "Feb 2022",
     type: "state extension guide",
     needs_help: true,

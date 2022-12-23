@@ -4,6 +4,7 @@
     title: "PRI Disease Resistant Apple Breeding Program (all)",
     author: "unknown",
     url: "https://www.hort.purdue.edu/newcrop/pri/cultivars.html",
+    thumbnail: "website",
     published: "unknown",
     accessed: "Feb 2022",
     type: "dictionary", // downgrade the category vs. the main list

@@ -1,0 +1,19 @@
+{
+    title: "Non-Invasive Fruit Trees for Gardens in Hawai'i",
+    author: "Patti Clifford, Kent Kobayashi",
+    url: "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/F_N-17.pdf",
+    published: "Nov 2010",
+    accessed: "Dec 2022",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "todo - a location in hawaii",
+            latitude: 44.07985210283775,
+            longitude: -111.45484249940903
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

@@ -2,6 +2,7 @@
     title: "Rick Johnson Farm", // "Farm" or "Farms"? I dunno
     author: "",
     url: "https://www.facebook.com/Rick-Johnson-Farm-226568897377674/",
+    thumbnail: "website",
     published: "",
     accessed: "Oct 2021",
     type: "U-pick variety list",

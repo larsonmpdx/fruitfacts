@@ -2,10 +2,11 @@
     title: "UMN Jim Luby Variety Picks (youtube)",
     author: "",
     url: "https://www.youtube.com/watch?v=zRmLU1yufX4",
+    thumbnail: "youtube", // todo - new thumbnail type
     published: "Aug 2021",
     accessed: "Oct 2021",
     type: "extension test",
-    needs_help: true,
+    needs_help: true, // youtube screenshot automation
     locations: [
         {
             name: "UMN North Central Research and Outreach Center",

@@ -74,14 +74,16 @@ fn main() {
         if fs::metadata(input_path).unwrap().is_file() // filenames can't be >260 chars here without help - probably fixed in rust 1.58 - https://github.com/rust-lang/rust/issues/67403
         && input_path.extension().unwrap().to_str().unwrap() == "pdf"
         {
-            println!("loading reference: {}", input_path.display());
             let mut output_path = input_path.to_path_buf();
             output_path.set_extension("jpg");
 
             if output_path.exists() && !matches.get_flag("redo_all") {
-                println!("jpg already exists");
-            } else if let Err(error) = pdf_first_page_to_jpeg(input_path, &output_path) {
-                println!("pdfium error: {error:?}");
+                // println!("jpg already exists");
+            } else {
+                println!("loading reference: {}", input_path.display());
+                if let Err(error) = pdf_first_page_to_jpeg(input_path, &output_path) {
+                    println!("pdfium error: {error:?}");
+                }
             }
         }
     }

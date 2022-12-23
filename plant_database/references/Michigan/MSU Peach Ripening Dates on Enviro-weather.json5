@@ -2,6 +2,7 @@
     title: "MSU Enviro-weather Peach Ripening Dates",
     author: "MSU Extension",
     url: "https://www.canr.msu.edu/news/peach_harvest_dates_available_on_msu_enviro_weather",
+    thumbnail: "website",
     published: "2021",
     accessed: "Oct 2021",
     type: "extension test",

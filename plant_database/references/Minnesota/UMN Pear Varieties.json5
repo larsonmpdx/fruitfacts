@@ -1,9 +1,10 @@
 {
     title: "UMN Pear Varieties",
     author: "unknown",
-    url: "https://mnhardy.umn.edu/varieties/fruit/pears",
+    url: "https://mnhardy.umn.edu/pears",
+    thumbnail: "website",
     published: "unknown",
-    accessed: "Oct 2021",
+    accessed: "Dec 2022",
     type: "public breeding program list",
     locations: [
         {

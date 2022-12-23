@@ -2,6 +2,7 @@
     title: "Murphy Orchards",
     author: "",
     url: "https://murphyorchard.com/",
+    thumbnail: "website",
     accessed: "June 2022",
     type: "U-pick variety list",
     locations: [

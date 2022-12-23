@@ -1,10 +1,13 @@
 {
     title: "UMN Stone Fruit Varieties",
     author: "unknown",
-    url: "https://mnhardy.umn.edu/varieties/fruit/stone-fruit",
+    url: "https://web.archive.org/web/20220520205409/https://mnhardy.umn.edu/varieties/fruit/stone-fruit",
+    // todo this page was broken up into apricot, cherry, plum pages
+    thumbnail: "website",
     published: "unknown",
     accessed: "Oct 2021",
     type: "public breeding program list",
+    needs_help: true, // source URL was broken into apricot, cherry, plum - todo
     locations: [
         {
             name: "Minneapolis, MN",
