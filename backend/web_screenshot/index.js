@@ -21,7 +21,7 @@ if (args.length < 2) {
   process.exit(1)
 }
 const web_address = args[0]
-const screenshot_path = args[1]
+const output_path = args[1]
 
 puppeteer
   .launch({
@@ -32,13 +32,14 @@ puppeteer
   .then(async browser => {
     const page = await browser.newPage()
     page.setViewport({ width: 800, height: 1200 })
+    page.setDefaultNavigationTimeout(60 * 1000); // ms. longer timeout for wayback machine stuff
     await page.goto(web_address)
 
     await page.waitForTimeout(5 * 1000)
     await page.screenshot({
       type: 'jpeg',
       quality: 75,
-      path: screenshot_path,
+      path: output_path,
       fullPage: false
     })
 

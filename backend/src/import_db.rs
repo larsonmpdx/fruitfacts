@@ -717,15 +717,15 @@ pub fn get_database_dir() -> Option<std::path::PathBuf> {
             path = path.join("..");
         }
         path = path.join("plant_database");
-        println!("dir: {}", path.display());
         match fs::metadata(path.clone()) {
             Ok(md) => {
                 if md.is_dir() {
+                    println!("found database dir: {}", path.display());
                     return Some(path);
                 }
             }
             Err(_) => {
-                println!("not a dir")
+                // println!("not a dir")
             }
         }
         i += 1;

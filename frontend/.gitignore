@@ -14,8 +14,9 @@ package-lock.json
 # production
 /build
 
-# files copied from the plant database for static file serving
-/public/data/
+# screenshot files which are saved using dvc
+/public/data/**/*.jpg
+/public/data/**/*.png
 
 # misc
 .DS_Store

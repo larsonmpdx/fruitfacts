@@ -1,4 +1,5 @@
-// walk though all reference PDFs and create first page thumbnails of them
+// find all *.pdf recursively in /plant_database/
+// for any without an existing thumbnail in /frontend/public/data/, create one
 use std::fs;
 use std::path::Path;
 extern crate clap;
@@ -9,11 +10,15 @@ use pdfium_render::prelude::*;
 
 #[cfg(feature = "binaries")]
 fn pdf_first_page_to_jpeg(input_path: &Path, output_path: &Path) -> Result<(), PdfiumError> {
+    println!(
+        "generating pdf thumbnail for {} at {}",
+        input_path.display(),
+        output_path.display()
+    );
     // adapted from an example in the pdfium_render docs: https://github.com/ajrcarey/pdfium-render
 
     // Bind to a Pdfium library in the same directory as our Rust executable;
     // failing that, fall back to using a Pdfium library provided by the operating system
-
     let pdfium = Pdfium::new(
         Pdfium::bind_to_library(Pdfium::pdfium_platform_library_name_at_path("./"))
             .or_else(|_| Pdfium::bind_to_system_library())?,
@@ -47,8 +52,12 @@ fn pdf_first_page_to_jpeg(input_path: &Path, output_path: &Path) -> Result<(), P
 
 #[cfg(feature = "binaries")]
 fn main() {
-    // find all *.pdf recursively in plant_database/
-    // for any without an existing thumbnail, create one with the same path but changed extension
+    println!("generating thumbnails for pdf references");
+
+    let mut found: i32 = 0;
+    let mut skipped: i32 = 0;
+    let mut errored: i32 = 0;
+    let mut done: i32 = 0;
 
     let matches = ClapApp::new("")
         .version(crate_version!())
@@ -74,19 +83,36 @@ fn main() {
         if fs::metadata(input_path).unwrap().is_file() // filenames can't be >260 chars here without help - probably fixed in rust 1.58 - https://github.com/rust-lang/rust/issues/67403
         && input_path.extension().unwrap().to_str().unwrap() == "pdf"
         {
-            let mut output_path = input_path.to_path_buf();
+            found = found + 1;
+            let references_absolute_path =
+                fs::canonicalize(&database_dir.join("references")).unwrap();
+            let reference_absoluate_path = fs::canonicalize(&input_path).unwrap();
+            let reference_relative_path =
+                pathdiff::diff_paths(reference_absoluate_path, references_absolute_path).unwrap();
+
+            let mut output_path = database_dir
+                .join("../frontend/public/data/")
+                .join(reference_relative_path);
             output_path.set_extension("jpg");
+
+            let mut dir_to_create = output_path.clone();
+            let _ = dir_to_create.pop();
+            let _ = fs::create_dir_all(dir_to_create);
 
             if output_path.exists() && !matches.get_flag("redo_all") {
                 // println!("jpg already exists");
+                skipped = skipped + 1;
             } else {
-                println!("loading reference: {}", input_path.display());
                 if let Err(error) = pdf_first_page_to_jpeg(input_path, &output_path) {
-                    println!("pdfium error: {error:?}");
+                    println!("error: {error:?}");
+                    errored = errored + 1;
+                } else {
+                    done = done + 1
                 }
             }
         }
     }
+    println!("found {found}, processed {done} (skipped {skipped} errored {errored})")
 }
 
 #[cfg(not(feature = "binaries"))]

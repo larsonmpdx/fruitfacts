@@ -1,5 +1,7 @@
 // walk through all .json5 references to find any marked "thumbnail: website"
+// for any without an existing thumbnail,
 // call out to /backend/web_screenshot/index.js to generate puppeteer screenshots for their reference urls
+
 use std::fs;
 use std::path::Path;
 extern crate clap;
@@ -8,13 +10,16 @@ use clap::{crate_version, Arg, Command as ClapApp};
 use std::io::Write;
 
 #[cfg(feature = "binaries")]
-fn web_address_to_jpg(web_address: &str, script_path: &str, screenshot_path: &Path) -> Result<()> {
-    println!("called as {script_path} {}", screenshot_path.display()); // todo remove
+fn web_address_to_jpg(web_address: &str, script_path: &str, output_path: &Path) -> Result<()> {
+    println!(
+        "generating thumbnail for {web_address} at {}",
+        output_path.display()
+    ); // todo remove
 
     let output = std::process::Command::new("node")
         .arg(script_path)
         .arg(web_address)
-        .arg(screenshot_path)
+        .arg(output_path)
         .output()
         .expect("failed to run node screenshot process");
 
@@ -35,8 +40,12 @@ struct CollectionJson {
 
 #[cfg(feature = "binaries")]
 fn main() {
-    // find all *.json5 recursively in plant_database/ and see which ones are marked "thumbnail: website"
-    // for any without an existing thumbnail, create one with the same path but changed extension
+    println!("generating thumbnails for website references");
+
+    let mut found: i32 = 0;
+    let mut skipped: i32 = 0;
+    let mut errored: i32 = 0;
+    let mut done: i32 = 0;
 
     let matches = ClapApp::new("")
         .version(crate_version!())
@@ -90,25 +99,36 @@ fn main() {
                 .unwrap()
                 .to_string();
 
-            let mut screenshot_path = fs::canonicalize(database_dir.join(input_path)).unwrap();
-            screenshot_path.set_extension("jpg");
+            found = found + 1;
+            let references_absolute_path =
+                fs::canonicalize(&database_dir.join("references")).unwrap();
+            let reference_absoluate_path = fs::canonicalize(&input_path).unwrap();
+            let reference_relative_path =
+                pathdiff::diff_paths(reference_absoluate_path, references_absolute_path).unwrap();
 
-            if screenshot_path.exists() && !matches.get_flag("redo_all") {
+            let mut output_path = database_dir
+                .join("../frontend/public/data/")
+                .join(reference_relative_path);
+            output_path.set_extension("jpg");
+
+            let mut dir_to_create = output_path.clone();
+            let _ = dir_to_create.pop();
+            let _ = fs::create_dir_all(dir_to_create);
+
+            if output_path.exists() && !matches.get_flag("redo_all") {
                 // println!("jpg already exists");
+                skipped = skipped + 1;
             } else {
-                println!(
-                    "loading reference: {}\n\turl: {}",
-                    input_path.display(),
-                    web_address
-                );
-
-                if let Err(error) = web_address_to_jpg(&web_address, script_path, &screenshot_path)
-                {
+                if let Err(error) = web_address_to_jpg(&web_address, script_path, &output_path) {
                     println!("error: {error:?}");
+                    errored = errored + 1;
+                } else {
+                    done = done + 1;
                 }
             }
         }
     }
+    println!("found {found}, processed {done} (skipped {skipped} errored {errored})")
 }
 
 #[cfg(not(feature = "binaries"))]
