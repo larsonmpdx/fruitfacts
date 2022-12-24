@@ -83,10 +83,10 @@ fn main() {
         if fs::metadata(input_path).unwrap().is_file() // filenames can't be >260 chars here without help - probably fixed in rust 1.58 - https://github.com/rust-lang/rust/issues/67403
         && input_path.extension().unwrap().to_str().unwrap() == "pdf"
         {
-            found = found + 1;
+            found += 1;
             let references_absolute_path =
-                fs::canonicalize(&database_dir.join("references")).unwrap();
-            let reference_absoluate_path = fs::canonicalize(&input_path).unwrap();
+                fs::canonicalize(database_dir.join("references")).unwrap();
+            let reference_absoluate_path = fs::canonicalize(input_path).unwrap();
             let reference_relative_path =
                 pathdiff::diff_paths(reference_absoluate_path, references_absolute_path).unwrap();
 
@@ -101,14 +101,12 @@ fn main() {
 
             if output_path.exists() && !matches.get_flag("redo_all") {
                 // println!("jpg already exists");
-                skipped = skipped + 1;
+                skipped += 1;
+            } else if let Err(error) = pdf_first_page_to_jpeg(input_path, &output_path) {
+                println!("error: {error:?}");
+                errored += 1;
             } else {
-                if let Err(error) = pdf_first_page_to_jpeg(input_path, &output_path) {
-                    println!("error: {error:?}");
-                    errored = errored + 1;
-                } else {
-                    done = done + 1
-                }
+                done += 1
             }
         }
     }

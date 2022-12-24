@@ -22,7 +22,7 @@ fn main() {
         entry_path.to_str().unwrap().ends_with(".jpg.dvc"))
         {
             let public_absolute_path = fs::canonicalize(&public_dir).unwrap();
-            let entry_absolute_path = fs::canonicalize(&entry_path).unwrap();
+            let entry_absolute_path = fs::canonicalize(entry_path).unwrap();
             let entry_relative_path =
                 pathdiff::diff_paths(entry_absolute_path, public_absolute_path).unwrap();
 
@@ -44,7 +44,7 @@ fn main() {
                     entry_path.display(),
                     reference_path.display()
                 );
-                found = found + 1;
+                found += 1;
 
                 // todo - actually do the delete. maybe a confirmation prompt?
             }
