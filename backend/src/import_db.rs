@@ -994,7 +994,7 @@ fn apply_top_level_fields(
 
     let mut uspp_expiration_i64 = None;
     if let Some(uspp_expiration) = patent_info.uspp_expiration {
-        uspp_expiration_i64 = Some(uspp_expiration.timestamp() as i64);
+        uspp_expiration_i64 = Some(uspp_expiration.timestamp());
     }
 
     let uspp_number = new_or_old(
@@ -1687,8 +1687,8 @@ fn load_references(
             println!("loading reference: {}", path_.display());
 
             // get a path for this relative to our git base directory so we can match it against the git mtime list
-            let absolute_path_git = fs::canonicalize(&database_dir.join("..")).unwrap();
-            let absolute_path_file = fs::canonicalize(&path_).unwrap();
+            let absolute_path_git = fs::canonicalize(database_dir.join("..")).unwrap();
+            let absolute_path_file = fs::canonicalize(path_).unwrap();
             let file_git_path =
                 pathdiff::diff_paths(absolute_path_file, absolute_path_git).unwrap();
 
