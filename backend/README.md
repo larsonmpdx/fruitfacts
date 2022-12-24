@@ -10,6 +10,7 @@
   * redo all thumbnails: `cargo run --bin pdf_to_thumbnail -- --redo_all`
   * tldr: on windows, into `/backend/`, place the dll from `pdfium-win-x64.tgz` from https://github.com/bblanchon/pdfium-binaries/releases
 * `cargo run --bin web_thumbnails` create thumbnails for references tagged with "thumbnail: website"
+* `cargo run --bin delete_extra_thumbnails` looks in /frontend/public/data/ for any thumbnail files without a corresponding *.json5 file in /references/ and deletes them. useful if things are renamed
 
 # rust linting
 * `cargo fmt` after installing `rustup component add rustfmt`
