@@ -29,9 +29,9 @@ fn main() {
             let reference_path = database_dir.join("references").join(entry_relative_path);
             let mut reference_path_string: String = reference_path.to_str().unwrap().to_owned();
 
-            if (reference_path_string.ends_with(".jpg")) {
+            if reference_path_string.ends_with(".jpg") {
                 reference_path_string.truncate(reference_path_string.len() - 4);
-            } else if (reference_path_string.ends_with(".jpg.dvc")) {
+            } else if reference_path_string.ends_with(".jpg.dvc") {
                 reference_path_string.truncate(reference_path_string.len() - 8);
             } else {
                 panic!("path with non matching extension");
