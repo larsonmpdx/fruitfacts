@@ -40,7 +40,7 @@ export function formatPatentDate(date, date_estimated) {
 export function getThumbnailLocation(filename) {
   const path = require('path');
   const fs = require('fs');
-  
+
   const relativePath = `/data/${filename}`;
   if (fs.existsSync(path.join(process.cwd(), `./public${relativePath}`))) {
     return relativePath;

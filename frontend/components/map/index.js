@@ -7,7 +7,7 @@ import L from 'leaflet';
 import useSupercluster from 'use-supercluster';
 import 'leaflet/dist/leaflet.css';
 import Button from '../button';
-
+import { name_to_path } from '../util';
 import { locations_to_geoJSON } from './util';
 
 function GetLocations({ map, setClick, setExtents, setZoom, setCenter }) {
@@ -59,7 +59,7 @@ function GetLeaves({ cluster, supercluster }) {
             key={`point-${leaf.properties.collection_path}${leaf.properties.collection_title}/${leaf.properties.location_number}`}
           >
             <Link
-              href={`/collections/${leaf.properties.collection_path}${encodeURIComponent(
+              href={`/collections/${leaf.properties.collection_path}${name_to_path(
                 leaf.properties.collection_filename
               )}?loc=${leaf.properties.location_number}`}
               className="text-xs font-semibold leading-none tracking-tight"
@@ -242,7 +242,7 @@ export default function Home({
           >
             <Popup autoPan={false} minWidth={250}>
               <Link
-                href={`/collections/${cluster.properties.collection_path}${encodeURIComponent(
+                href={`/collections/${cluster.properties.collection_path}${name_to_path(
                   cluster.properties.collection_filename
                 )}?loc=${cluster.properties.location_number}`}
                 className="space-y-0 text-xs font-semibold leading-none tracking-tight"

@@ -2,12 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { formatPatentDate } from '../../../components/functions';
+import { name_to_path, path_to_name } from '../../../components/util';
 
 export async function getServerSideProps(context) {
   let errorMessage = null;
-  const { type, name } = context.query;
+  let { type, name } = context.query;
+  type = path_to_name(type);
+  name = path_to_name(name);
   const plant = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/plants/${type}/${encodeURIComponent(name)}`
+    `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/plants/${name_to_path(type + '/' + name)}`
   )
     .then((response) => {
       if (response.status !== 200) {
@@ -113,7 +116,7 @@ export default function Home({
                 <>
                   <li>
                     <Link
-                      href={`/collections/${encodeURIComponent(entry.path_and_filename)}`}
+                      href={`/collections/${name_to_path(entry.path_and_filename)}`}
                       legacyBehavior
                     >
                       {entry.path_and_filename}
@@ -136,7 +139,7 @@ export default function Home({
                     <li>
                       {`${entry.harvest_text} `}
                       <Link
-                        href={`/collections/${encodeURIComponent(entry.path_and_filename)}`}
+                        href={`/collections/${name_to_path(entry.path_and_filename)}`}
                         title={entry.path_and_filename}
                       >
                         [ref]

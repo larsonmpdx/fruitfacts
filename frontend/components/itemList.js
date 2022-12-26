@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { formatHarvestTime, formatPatentDate } from './functions';
+import { name_to_path } from './util';
 
 export default function Home({ data }) {
   return (
@@ -17,9 +18,7 @@ export default function Home({ data }) {
                       src={'/fruit_icons/' + item.type + '.svg'}
                     />
                     <Link
-                      href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(
-                        item.name
-                      )}`}
+                      href={`/plant/${name_to_path(item.type + '/' + item.name)})}`}
                       legacyBehavior
                     >
                       {item.name + ' ' + item.type}

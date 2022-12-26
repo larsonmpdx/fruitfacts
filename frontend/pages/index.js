@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { format as timeAgo } from 'timeago.js';
+import { name_to_path } from '../components/util';
 
 // todo:
 // - flatten and sort by common name (see types.name_alphabetical)
@@ -84,7 +85,7 @@ export default function Home({
                 {recentChangesData.recentChanges.collectionChanges.map((update, index) => (
                   <li key={index}>
                     <Link
-                      href={`/collections/${encodeURIComponent(update.path + update.filename)}`}
+                      href={`/collections/${name_to_path(update.path + update.filename)}`}
                       legacyBehavior
                     >
                       {update.filename}

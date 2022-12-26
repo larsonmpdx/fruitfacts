@@ -11,19 +11,19 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Chart from '../../components/chart';
 import { getThumbnailLocation } from '../../components/functions';
+import { name_to_path, path_to_name } from '../../components/util';
 import Image from 'next/image';
 
 export async function getServerSideProps(context) {
   let errorMessage = null;
-  const { path, loc } = context.query;
+  let { path, loc } = context.query;
+  path = path_to_name(path.join('/'));
   let location_number = parseInt(loc);
   if (isNaN(location_number)) {
     location_number = 1;
   }
 
-  const data = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${path.join('/')}`
-  ) // no trailing slash - individual collection
+  const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${path}`) // no trailing slash - individual collection
     .then((response) => {
       if (response.status !== 200) {
         errorMessage = "can't reach backend";
@@ -48,7 +48,7 @@ export async function getServerSideProps(context) {
     return location.location_number == location_number;
   }) || { location_name: `unknown location #${location_number}` };
 
-  const thumbnail = getThumbnailLocation(`${path.join('/')}.jpg`);
+  const thumbnail = getThumbnailLocation(`${path}.jpg`);
 
   return {
     props: {
@@ -73,9 +73,7 @@ export default function Home({
   setErrorMessage,
   setContributingLinks
 }) {
-  let data_link = `plant_database/references/${path
-    .map((x) => encodeURIComponent(x))
-    .join('/')}.json5`;
+  let data_link = `plant_database/references/${name_to_path(path)}.json5`;
   React.useEffect(() => {
     setContributingLinks([
       {
@@ -95,7 +93,7 @@ export default function Home({
     <>
       <article className="prose m-5 max-w-none">
         <Head>
-          <title>{`Collection: ${path.join('/')}`}</title>
+          <title>{`Collection: ${path}`}</title>
         </Head>
         <Image src={thumbnail} alt="preview image for this reference" width={200} height={200} />
         {data.collection && (
@@ -119,7 +117,7 @@ export default function Home({
                   {data.locations.map((location) => (
                     <li key={location.id}>
                       <Link
-                        href={`/collections/${path.join('/')}?loc=${location.location_number}`}
+                        href={`/collections/${name_to_path(path)}?loc=${location.location_number}`}
                         legacyBehavior
                       >
                         {location.location_name}
@@ -155,12 +153,7 @@ export default function Home({
                     className="my-0 mx-2 inline h-6 w-6 object-contain"
                     src={'/fruit_icons/' + item.type + '.svg'}
                   />
-                  <Link
-                    href={`/plant/${encodeURIComponent(item.type)}/${encodeURIComponent(
-                      item.name
-                    )}`}
-                    legacyBehavior
-                  >
+                  <Link href={`/plant/${name_to_path(item.type + '/' + item.name)}`} legacyBehavior>
                     {item.name + ' ' + item.type}
                   </Link>
                   {item.marketing_name && <> (marketed under the {item.marketing_name} brand)</>}

@@ -12,6 +12,7 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import throttle from 'lodash/throttle';
 import { useRouter } from 'next/router';
+import { name_to_path, path_to_name } from '../../components/util';
 
 // see https://nextjs.org/docs/advanced-features/dynamic-import
 const Map = dynamic(() => import('../../components/map'), { ssr: false });
@@ -22,7 +23,7 @@ export async function getServerSideProps(context) {
   let initialLocation = {};
   let errorMessage = null;
   if (path) {
-    const pathCombined = path.join('/');
+    const pathCombined = path_to_name(path.join('/'));
 
     // remove the part after the '@' and break it down
     // will look like "...@45.1234,-123.1234,4z"
@@ -50,7 +51,9 @@ export async function getServerSideProps(context) {
   } else {
     pathUsed = ''; // this combind with the [[...path]].js filename gets us the base path "/dirs" or "/dirs/"
   }
-  const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathUsed}`)
+  const data = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${name_to_path(pathUsed)}`
+  )
     .then((response) => {
       if (response.status !== 200) {
         errorMessage = "can't reach backend";
@@ -174,7 +177,7 @@ export default function Home({
           <ul className="list-disc">
             {data.directories.map((directory, index) => (
               <li key={index}>
-                <Link href={`/dirs/${directory}#dirs`} legacyBehavior>
+                <Link href={`/dirs/${name_to_path(directory)}#dirs`} legacyBehavior>
                   {directory}
                 </Link>
               </li>
@@ -189,9 +192,7 @@ export default function Home({
               {data.collections.map((collection) => (
                 <li key={collection.id}>
                   <Link
-                    href={`/collections/${collection.path}${encodeURIComponent(
-                      collection.filename
-                    )}`}
+                    href={`/collections/${collection.path}${name_to_path(collection.filename)}`}
                     legacyBehavior
                   >
                     {collection.title}

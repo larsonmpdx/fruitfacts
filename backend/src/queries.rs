@@ -5,6 +5,7 @@ pub mod auth;
 pub mod list;
 pub mod map;
 pub mod search;
+pub mod util;
 use super::schema_generated::*;
 use super::schema_types::*;
 use actix_web::{get, web, HttpResponse};
@@ -36,6 +37,8 @@ pub fn get_collections_db(
     db_conn: &mut SqliteConnection,
     path: &str,
 ) -> Result<CollectionsReturn, diesel::result::Error> {
+    let path_decoded = util::path_to_name(path);
+
     let db_return = collections::dsl::collections
         .select((
             collections::id,
@@ -43,7 +46,7 @@ pub fn get_collections_db(
             collections::filename,
             collections::title,
         ))
-        .filter(collections::path.like(path.to_owned() + r#"%"#))
+        .filter(collections::path.like(path_decoded.to_owned() + r#"%"#))
         .order(collections::path.asc())
         .load::<CollectionsForPaths>(db_conn);
 
@@ -52,11 +55,12 @@ pub fn get_collections_db(
             let mut output: CollectionsReturn = Default::default();
             let mut directories: HashSet<String> = Default::default();
             for collection in collections {
-                if collection.path == path {
+                if collection.path == path_decoded {
                     output.collections.push(collection);
                 } else {
                     // remove multi-level subdirectories (more than one '/' after our search directory)
-                    let trimmed = crate::import_db::rem_first_n(&collection.path, path.len());
+                    let trimmed =
+                        crate::import_db::rem_first_n(&collection.path, path_decoded.len());
                     if trimmed.matches('/').count() == 1 {
                         directories.insert(collection.path); // this is a hashset so we'll get paths de-duplicated here
                     } else {
@@ -205,13 +209,15 @@ pub fn get_plants_db(
 ) -> Result<PlantsReturn, diesel::result::Error> {
     const PER_PAGE: i32 = 50;
 
+    let type_decoded: String = util::path_to_name(type_);
+
     let mut query_for_items = base_plants::table
-        .filter(base_plants::type_.eq(type_))
+        .filter(base_plants::type_.eq(type_decoded.clone()))
         .limit(PER_PAGE.into())
         .into_boxed();
 
     let query_for_count = base_plants::table
-        .filter(base_plants::type_.eq(type_))
+        .filter(base_plants::type_.eq(type_decoded.clone()))
         .into_boxed();
 
     if let Some(page) = page {
@@ -223,7 +229,7 @@ pub fn get_plants_db(
     let plants: Result<Vec<BasePlant>, diesel::result::Error> = query_for_items.load(db_conn);
     let count = query_for_count.count().first::<i64>(db_conn).unwrap();
 
-    println!("get plants: {} page {:?}", type_, page);
+    println!("get plants: {} page {:?}", type_decoded, page);
 
     match plants {
         Ok(plants) => {
@@ -255,19 +261,22 @@ pub fn get_plant_db(
     type_: &str,
     name: &str,
 ) -> Result<PlantReturn, diesel::result::Error> {
+    let type_decoded: String = util::path_to_name(type_);
+    let name_decoded: String = util::path_to_name(name);
+
     let plant: Result<BasePlant, diesel::result::Error> = base_plants::dsl::base_plants
-        .filter(base_plants::type_.eq(type_))
-        .filter(base_plants::name.eq(name))
+        .filter(base_plants::type_.eq(type_decoded.clone()))
+        .filter(base_plants::name.eq(name_decoded.clone()))
         .first(db_conn);
 
-    println!("get plant: {} {}", type_, name);
+    println!("get plant: {} {}", type_decoded, name_decoded);
 
     match plant {
         Ok(plant) => {
             let collection_plants: Result<Vec<CollectionItem>, diesel::result::Error> =
                 collection_items::dsl::collection_items
-                    .filter(collection_items::type_.eq(type_))
-                    .filter(collection_items::name.eq(name))
+                    .filter(collection_items::type_.eq(type_decoded))
+                    .filter(collection_items::name.eq(name_decoded))
                     .load(db_conn);
 
             // todo: limit number to maybe 10, ordered by significance, and return the total number if we were limited so we can show "see all"
