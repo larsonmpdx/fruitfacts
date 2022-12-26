@@ -18,7 +18,7 @@ export default function Home({ data }) {
                       src={'/fruit_icons/' + item.type + '.svg'}
                     />
                     <Link
-                      href={`/plant/${name_to_path(item.type + '/' + item.name)})}`}
+                      href={`/plant/${name_to_path(item.type + '/' + item.name)}`}
                       legacyBehavior
                     >
                       {item.name + ' ' + item.type}
