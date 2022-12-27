@@ -7,6 +7,7 @@ pub const TYPES: &[&str] = &[
     "Euro Pear",
     "Euro Plum",
     "Japanese Plum",
+    "Canada Plum",
     "Sour Cherry",
     "Sweet Cherry",
     "Nectarine",

@@ -31,6 +31,11 @@
                 latin_name: "Prunus salicina"
             },
             {
+                name: "Canada Plum",
+                name_alphabetical: "Plum, Canada",
+                latin_name: "Prunus nigra"
+            },
+            {
                 name: "Sour Cherry",
                 name_alphabetical: "Cherry, Sour",
                 latin_name: "Prunus cerasus"

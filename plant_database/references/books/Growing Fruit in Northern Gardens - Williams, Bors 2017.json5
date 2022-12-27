@@ -87,7 +87,7 @@
         {
             type: "Apple",
             name: "Haralson",
-            released: "UMN 1923",
+            released: "UMN 1922", // this book lists 1923. UMN website has 1922
             harvest_time: "October"
         },
         {
@@ -107,10 +107,149 @@
             name: "TreasuRed",
             released: "USask 2014",
             harvest_time: "October"
-        }
-        // todo pears
+        },
+        // pears page 139
+        // these are actually manchurian/euro crosses
+        {
+            type: "Euro Pear",
+            name: "Andrew",
+            released: "USask 1960",
+            harvest_time: "early September"
+        },
+        {
+            type: "Euro Pear",
+            name: "David",
+            released: "USask 1960",
+            harvest_time: "late September"
+        },
+        {
+            type: "Euro Pear",
+            name: "John",
+            released: "USask 1960",
+            harvest_time: "late September"
+        },
+        {
+            type: "Euro Pear",
+            name: "Thomas",
+            released: "USask 1960",
+            harvest_time: "late September - early October"
+        },
+        {
+            type: "Euro Pear",
+            name: "Peter",
+            harvest_time: "late September"
+        },
+        {
+            type: "Euro Pear",
+            name: "Philip",
+            harvest_time: "late September"
+        },
+        {
+            type: "Euro Pear",
+            name: "Simon",
+            harvest_time: "late September"
+        },
+        {
+            type: "Euro Pear",
+            name: "Early Gold",
+            released: "Wilbert Ronald, Jeffries Nursery, Portage La Prairie, Manitoba 1994",
+            harvest_time_relative: "Ure -10"
+        },
+        {
+            type: "Euro Pear",
+            name: "Golden Spice",
+            released: "UMN 1949",
+            // "In Colorado it ripens in late August"
+            harvest_time: "late August"
+        },
+        {
+            type: "Euro Pear",
+            name: "Ure",
+            released: "Morden Research Station, 1978",
+            harvest_time: "mid September"
+        },
         // todo plums
-
+        {
+            type: "Japanese Plum",
+            name: "Brookgold",
+            released: "Brooks, Alberta 1979",
+            harvest_time: "mid August"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Brookred",
+            released: "Brooks, Alberta, 1962",
+            harvest_time: "late August"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Fofonoff",
+            AKA: ["Homesteader"],
+            released: "Wasal Fofonoff, Buchanan, Saskatchewan 1973",
+            harvest_time: "mid August"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ivanovka",
+            released: "Morden Research Station, Manitoba 1939",
+            harvest_time: "early September"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Patterson Pride",
+            released: "USask 1960",
+            harvest_time: "September"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Pembina",
+            released: "Professor Neils Hansen, Brookings, South Dakota 1917",
+            harvest_time: "late August to early September"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Prairie",
+            released: "USask 1960",
+            harvest_time: "late August to early September"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ptitsin", // Ptitsin #3,5,7,9,10,12 "may still be found"
+            released: "Morden Research Station, Manitoba 1939",
+            harvest_time: "August"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Superb",
+            AKA: ["Perfection"],
+            released: "USask 1960",
+            harvest_time: "late August to early September"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Supreme",
+            released: "USask 1960",
+            harvest_time: "late August"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Toka",
+            released: "N. E. Hansen, Brookings, South Dakota 1911",
+            harvest_time: "late August to early September"
+        },
+        // canada plums (prunus nigra)
+        {
+            type: "Canada Plum",
+            name: "Bounty",
+            released: "Morden Research Station 1936",
+            harvest_time: "mid August"
+        },
+        {
+            type: "Canada Plum",
+            name: "Norther",
+            released: "Morden Research Station 1943",
+            harvest_time: "early August"
+        }
         // todo - things other than tree fruits
     ]
 }
