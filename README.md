@@ -43,3 +43,6 @@
   * pip install dvc
   * pip install dvc[gdrive]
   * pip install pydrive2
+
+# dvc issues
+* dec 2022: can't use a simple glob which catches things that are in .dvcignore (I couldn't figure out ignore patterns within globs on windows): https://github.com/iterative/dvc/issues/7633

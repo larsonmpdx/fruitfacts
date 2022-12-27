@@ -1,0 +1,22 @@
+{
+    title: "Growing Fruit in Northern Gardens",
+    author: "Williams, Bors",
+    url: "https://books.google.com/books?id=z9skDwAAQBAJ",
+    published: "2017",
+    accessed: "Dec 2022",
+    type: "localized book",
+    needs_help: true,
+    locations: [
+        {
+            name: "todo - a representative northern location in Canada",
+            latitude: 35.426614591406256,
+            longitude: -82.55837138746178
+        }
+    ],
+    plants: [
+        // todo
+        // apples
+        // pears
+        // plums
+    ]
+}

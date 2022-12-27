@@ -1,0 +1,20 @@
+{
+    title: "Fruit Breeding",
+    author: "M.L. Badenes, D.H. Byrne",
+    url: "https://www.amazon.com/Fruit-Breeding-Handbook-Plant/dp/1441907629",
+    published: "2012",
+    accessed: "Dec 2022",
+    type: "localized book",
+    needs_help: true,
+    locations: [
+        {
+            name: "todo - worldwide survey",
+            latitude: 35.426614591406256,
+            longitude: -82.55837138746178
+        }
+    ],
+    plants: [
+        // todo
+        // todo - pears list and havest dates, page 379
+    ]
+}
