@@ -1,0 +1,20 @@
+{
+    title: "USask Releases",
+    author: "",
+    url: "https://conferences.usask.ca/horticulture100years/releases.php",
+    published: "",
+    thumbnail: "website",
+    accessed: "Oct 2021",
+    type: "public breeding program list",
+    needs_help: true, // todo varieties
+    locations: [
+        {
+            name: "University of Saskatchewan",
+            latitude: 52.1328167945073,
+            longitude: -106.63127677691207
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

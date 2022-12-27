@@ -5,18 +5,112 @@
     published: "2017",
     accessed: "Dec 2022",
     type: "localized book",
-    needs_help: true,
+    needs_help: true, // finish variety list
     locations: [
         {
-            name: "todo - a representative northern location in Canada",
+            name: "todo - a representative northern location in Canada, probably in Saskatchewan",
             latitude: 35.426614591406256,
             longitude: -82.55837138746178
         }
     ],
     plants: [
         // todo
-        // apples
-        // pears
-        // plums
+        // apples (page 136)
+        {
+            type: "Crabapple",
+            name: "Dolgo",
+            released: "South Dakota 1917"
+        },
+        {
+            type: "Crabapple",
+            name: "Kerr",
+            released: "Morden Research Station Manitoba 1952"
+        },
+        {
+            type: "Crabapple",
+            name: "Rescue",
+            released: "Scott, Saskatchewan 1933"
+        },
+        // summer apples (late august to very early september)
+        {
+            type: "Apple",
+            name: "Heyer 12",
+            released: "A. Heyer, Neville Saskatchewan 1936",
+            harvest_time: "Late August"
+        },
+        {
+            type: "Apple",
+            name: "Norland",
+            released: "Morden Research Station Manitoba 1979",
+            harvest_time: "Late August"
+        },
+        {
+            type: "Apple",
+            name: "Prairie Sun",
+            released: "USask 1997",
+            harvest_time: "Late August"
+        },
+        // todo cider apples
+        // early fall apples (september in saskatchewan)
+        {
+            type: "Apple",
+            name: "Fall Red",
+            released: "Morden Research Station Manitoba 1986",
+            harvest_time: "September"
+        },
+        {
+            type: "Apple",
+            name: "Goodland",
+            released: "Morden Research Station Manitoba 1955",
+            harvest_time: "September"
+        },
+        {
+            type: "Apple",
+            name: "Norkent",
+            released: "Morden Research Station Manitoba 1974",
+            harvest_time: "September"
+        },
+        {
+            type: "Apple",
+            name: "September Ruby",
+            released: "Beaverlodge Experimental Station, Alberta 1986",
+            harvest_time: "September"
+        },
+        // fall apples (october in saskatchewan)
+        {
+            type: "Apple",
+            name: "MN 447",
+            AKA: ["Frostbite™"],
+            released: "UMN 2008",
+            harvest_time: "October"
+        },
+        {
+            type: "Apple",
+            name: "Haralson",
+            released: "UMN 1923",
+            harvest_time: "October"
+        },
+        {
+            type: "Apple",
+            name: "Honeycrisp",
+            released: "UMN 1991",
+            harvest_time: "October"
+        },
+        {
+            type: "Apple",
+            name: "Prairie Sensation",
+            released: "USask 2006",
+            harvest_time: "October"
+        },
+        {
+            type: "Apple",
+            name: "TreasuRed",
+            released: "USask 2014",
+            harvest_time: "October"
+        }
+        // todo pears
+        // todo plums
+
+        // todo - things other than tree fruits
     ]
 }
