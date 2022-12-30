@@ -8,13 +8,46 @@
     needs_help: true,
     locations: [
         {
-            name: "todo - worldwide survey",
+            name: "todo (worldwide survey)",
             latitude: 35.426614591406256,
             longitude: -82.55837138746178
         }
     ],
     plants: [
-        // todo
+        // todo small fruit (beginning of the book)
+        // apples page 329 Susan Brown - no variety tables
+        // euro pears page 369 Luca Dondini and Silviero Sansavini
+        // todo page 373 Table 11.1 Pear production from 1999 to 2006 in Europe (15 countries) and separately, for Spain, Italy (Source: Eurofel), and USA
+        // todo 374 Table 11.2 Main cultivars released in Europe in the last 20 years
+        // todo 377 Table 11.3 Traditional and commercial pear cultivars grown in Europe
         // todo - pears list and havest dates, page 379
+        // todo - early/mid/late/winter paragraphs have variety names
+        // 382 Table 11.4 Main traits of several new pear cultivars, from the main breeding programs
+        // 394 Table 11.7 Distribution of European pear cultivars according to their S-alleles (Goldway et al. 2009)
+        // apricot 415 Tatyana Zhebentyayeva, Craig Ledbetter, Lorenzo Burgos, and Gerardo Llácer
+        //  some varieties in the text - not sure if I want to import all of them
+        // cherry 459 Frank Kappel, Andrew Granger, Károly Hrotkó, and Mirko Schuster
+        // 465 Table 13.4 Cherry cultivars released since the since the mid-1990s
+        // peach 505 David H. Byrne, Maria Bassols Raseira, Daniele Bassi, Maria Claudia Piagnani, Ksenija Gasic, Gregory L. Reighard, María Angeles Moreno, and Salvador Peréz
+        // plum 571 Bruce L. Topp, Dougal M. Russell, Michael Neumüller, Marco A. Dalbó, and Weisheng Liu
+        // 591 Table 15.4 Important plum cultivars in California, arranged in order of production in 2008 (CTFA 2009 )
+        // citrus 623 Patrick Ollitrault and Luis Navarro
+        // persimmon 663 Masahiko Yamada, Edgardo Giordani, and Keizo Yonemori
+        // 682 Table 17.4 Fruit characteristics of persimmon cultivars grown commercially or released in Japan
+        // 683 Table 17.5 Tree characteristics of persimmon cultivars grown commercially or released in Japan
+
+        // almond 697 Rafel Socias i Company, José Manuel Alonso, Ossama Kodad, and Thomas M. Gradziel
+        // 710 Table 18.4 Characteristics of important new almond cultivars
+        // chestnut 729 Santiago Pereira-Lorenzo, Antonio Ballester, Elena Corredoira, Ana M. Vieitez, Sandra Agnanostakis, Rita Costa, Giancarlo Bounous, Roberto Botta, Gabriele L. Beccaro, Thomas L. Kubisiak, Marco Conedera, Patrik Krebs, Toshiya Yamamoto, Yutaka Sawamura, Norio Takada, José Gomes-Laranjo, and Ana M. Ramos-Cabrer
+        // 740 Table 19.4 Recommended French cultivars for new orchards (modifi ed from Breisch 1995 )
+        // 740 Table 19.5 Main quality characteristics of the most important Spanish chestnut cultivars of C. sativa (modifi ed from Pereira-Lorenzo et al. 2006a, 2007 )
+        // 741 Table 19.6 Most important Portuguese cultivars of C. sativa (modifi ed from Costa et al. 2008 )
+        // 742 Table 19.7 Main Italian C. sativa cultivars
+        // 743 Table 19.8 Japanese cultivars
+        // pecan 771 Tommy E. Thompson and Patrick J. Conner
+        // 776 Table 20.1 Estimated hectares and percent of each cultivar in the USA (Thompson 1990 )
+        // 792 Table 20.7 Cultivars developed cooperatively by the US Department of Agriculture, Agricultural Research Service and cooperators
+        // pistachio 803 Dan E. Parfi tt, Salih Kafkas, Ignasi Batlle, Francisco J. Vargas, and Craig E. Kallsen
+        // walnut 827 Gale McGranahan and Charles Leslie
     ]
 }

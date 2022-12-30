@@ -1,0 +1,19 @@
+{
+    title: "Saskatchewan Popular Fruit Varieties",
+    author: "Bob Bors (U of S), Rick Sawatzky (U of S)",
+    url: "https://research-groups.usask.ca/fruit/documents/other-crops-/Popular-fruit-Varieties-2019-Handout.pdf",
+    published: "",
+    accessed: "Dec 2022",
+    type: "extension test",
+    needs_help: true, // todo varieties
+    locations: [
+        {
+            name: "todo - saskatoon",
+            latitude: 52.1328167945073,
+            longitude: -106.63127677691207
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

@@ -3,7 +3,7 @@ dvc add --glob -R plant_database\**\*.pdf || goto :error
 dvc add --glob -R frontend\public\data\**\*.jpg || goto :error
 dvc diff || goto :error
 
-echo next steps are "dvc commit" then "dvc push" and adding also .dvc files to git
+echo next steps are "dvc commit" then "dvc push" and also adding .dvc files to git
 
 goto :EOF
 
