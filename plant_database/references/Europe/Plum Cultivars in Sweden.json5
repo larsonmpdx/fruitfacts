@@ -1,0 +1,19 @@
+{
+    title: "Plum Cultivars in Sweden: History and Conservation for Future Use",
+    author: "Inger Hjalmarsson",
+    url: "https://sciendo.com/article/10.2478/prolas-2019-0033",
+    published: "2019",
+    accessed: "Dec 2022",
+    type: "journal article",
+    needs_help: true, // add plants
+    locations: [
+        {
+            name: "Sweden",
+            latitude: 55.42278992991239,
+            longitude: 11.35045922429619
+        }
+    ],
+    plants: [
+        // todo - I found this when searching for "opal" plum and it gives release date and institution etc., plus others
+    ]
+}

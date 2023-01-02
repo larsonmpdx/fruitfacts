@@ -15,5 +15,121 @@
     ],
     plants: [
         // todo
+        {
+            type: "Honeyberry",
+            name: "Boreal Blizzard",
+            harvest_time: "mid July"
+        },
+        {
+            type: "Honeyberry",
+            name: "Boreal Beauty",
+            // "first week of August"
+            harvest_time: "August 1-7"
+        },
+        {
+            type: "Honeyberry",
+            name: "Boreal Beast",
+            harvest_time: "late July"
+        },
+        {
+            type: "Honeyberry",
+            name: "Aurora",
+            harvest_time: "early July"
+        },
+        {
+            type: "Honeyberry",
+            name: "Honey Bee",
+            // no harvest time given other than "june - july" for all honeyberries
+            harvest_time: "June-July"
+        },
+        {
+            type: "Honeyberry",
+            name: "Indigo Gem",
+            AKA: ["9-15"],
+            // no harvest time given other than "june - july" for all honeyberries
+            harvest_time: "June-July"
+        },
+        {
+            type: "Honeyberry",
+            name: "Tundra",
+            AKA: ["9-84"],
+            // no harvest time given other than "june - july" for all honeyberries
+            harvest_time: "June-July"
+        },
+        {
+            type: "Honeyberry",
+            name: "Borealis",
+            AKA: ["9-94"],
+            // no harvest time given other than "june - july" for all honeyberries
+            harvest_time: "June-July"
+        },
+        {
+            type: "Honeyberry",
+            name: "Indigo Treat",
+            AKA: ["9-91"],
+            // no harvest time given other than "june - july" for all honeyberries
+            harvest_time: "June-July"
+        },
+        {
+            type: "Honeyberry",
+            name: "Indigo Yum",
+            AKA: ["9-92"],
+            // no harvest time given other than "june - july" for all honeyberries
+            harvest_time: "June-July"
+        },
+        {
+            type: "Strawberry",
+            name: "Annapolis",
+            harvest_time: "early July",
+            description: "june bearer (early)"
+        },
+        {
+            type: "Strawberry",
+            name: "Cavendish",
+            harvest_time: "early July",
+            description: "june bearer (mid)"
+        },
+        {
+            type: "Strawberry",
+            name: "Kent",
+            harvest_time: "early July",
+            description: "june bearer (mid)"
+        },
+        {
+            type: "Strawberry",
+            name: "Bounty",
+            harvest_time: "early July",
+            description: "june bearer (late)"
+        },
+        {
+            type: "Strawberry",
+            name: "Tristar",
+            harvest_time: "early July",
+            description: "day neutral"
+        },
+        {
+            type: "Strawberry",
+            name: "Seascape",
+            harvest_time: "early July",
+            description: "day neutral"
+        },
+        {
+            type: "Strawberry",
+            name: "Fern",
+            harvest_time: "early July",
+            description: "day neutral"
+        },
+        {
+            type: "Strawberry",
+            name: "Ogallalla",
+            harvest_time: "early July",
+            description: "everbearing"
+        },
+        {
+            type: "Strawberry",
+            name: "Fort Laramie",
+            harvest_time: "early July",
+            description: "everbearing"
+        }
     ]
 }

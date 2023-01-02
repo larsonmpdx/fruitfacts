@@ -129,6 +129,11 @@
             {
                 name: "Cranberry",
                 latin_name: "Vaccinium spp."
+            },
+            {
+                name: "Honeyberry",
+                AKA: ["Haskap"],
+                latin_name: "Lonicera caerulea"
             }
         ]
     },
