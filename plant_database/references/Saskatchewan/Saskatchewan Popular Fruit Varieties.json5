@@ -130,6 +130,138 @@
             name: "Fort Laramie",
             harvest_time: "early July",
             description: "everbearing"
+        },
+        {
+            type: "Saskatoon",
+            name: "Northline",
+            harvest_time: "mid July to late July",
+            description: "early mid season"
+        },
+        {
+            type: "Saskatoon",
+            name: "Smoky",
+            harvest_time: "mid July to late July",
+            description: "early mid season"
+        },
+        {
+            type: "Saskatoon",
+            name: "Honeywood",
+            harvest_time: "mid July to late July",
+            description: "mid season"
+        },
+        {
+            type: "Saskatoon",
+            name: "Parkhill",
+            harvest_time: "mid July to late July",
+            description: "most disease resistant. mid season"
+        },
+        {
+            type: "Saskatoon",
+            name: "Thiessen",
+            harvest_time: "mid July to late July",
+            description: "mid late season"
+        },
+        {
+            type: "Saskatoon",
+            name: "Martin",
+            harvest_time: "mid July to late July",
+            description: "mid late season"
+        },
+        {
+            type: "Saskatoon",
+            name: "Nelson",
+            harvest_time: "mid July to late July",
+            description: "mid late season"
+        },
+        {
+            type: "Raspberry",
+            name: "Boyne",
+            harvest_time: "Sept", // "sept to frost"
+            description: "industry standard across Canada. early"
+        },
+        {
+            type: "Raspberry",
+            name: "Festival",
+            harvest_time: "Sept", // "sept to frost"
+            description: "mid season"
+        },
+        {
+            type: "Raspberry",
+            name: "Steadfast",
+            harvest_time: "Sept", // "sept to frost"
+            description: "doesn't sucker much. mid season"
+        },
+        {
+            type: "Raspberry",
+            name: "Red Mammoth",
+            harvest_time: "Sept", // "sept to frost"
+            description: "USask release. late season"
+        },
+        {
+            type: "Raspberry",
+            name: "K81-6",
+            harvest_time: "Sept", // "sept to frost"
+            description: "zone 3+ only. late season"
+        },
+        {
+            type: "Raspberry",
+            name: "Royalty",
+            harvest_time: "Sept", // "sept to frost"
+            description: "purple. zone 3"
+        },
+        {
+            type: "Raspberry",
+            name: "Honeyqueen",
+            harvest_time: "Sept", // "sept to frost"
+            description: "yellow. home gardens only"
+        },
+        {
+            type: "Raspberry",
+            name: "Autumn Bliss",
+            harvest_time: "Sept", // "sept to frost"
+            description: "primocane. too late in season, except Maple Creek"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Carmine Jewel",
+            harvest_time: "late July",
+            description: "dwarf"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Juliet",
+            AKA: ["7-21-31.0"],
+            harvest_time: "August",
+            description: "dwarf"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Valentine",
+            AKA: ["7-19-27.6"],
+            harvest_time: "August",
+            description: "dwarf"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Romeo",
+            AKA: ["7-7-5.8"],
+            harvest_time: "August",
+            description: "dwarf. areas warmer than Saskatoon"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Cupid",
+            AKA: ["7-32-19.1"],
+            harvest_time: "August",
+            description: "dwarf. probably not for commercial growing"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Crimson Passion",
+            AKA: ["7-21-16.3"],
+            harvest_time: "August",
+            description: "dwarf. probably not for commercial growing"
         }
+        // todo remainder
     ]
 }
