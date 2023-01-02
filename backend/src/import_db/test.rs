@@ -286,6 +286,15 @@ fn test_day_range() {
     );
 
     assert_eq!(
+        string_to_day_range("late Aug to Oct", TEST_WINDOW_SIZE).unwrap(),
+        DayRangeOutput {
+            parse_type: DateParseType::TwoDates,
+            start: Some(238),
+            end: Some(289)
+        }
+    );
+
+    assert_eq!(
         string_to_day_range("Sep 20-30", TEST_WINDOW_SIZE).unwrap(),
         DayRangeOutput {
             parse_type: DateParseType::TwoDates,

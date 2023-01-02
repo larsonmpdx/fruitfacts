@@ -2,10 +2,11 @@
     title: "Saskatchewan Popular Fruit Varieties",
     author: "Bob Bors (U of S), Rick Sawatzky (U of S)",
     url: "https://research-groups.usask.ca/fruit/documents/other-crops-/Popular-fruit-Varieties-2019-Handout.pdf",
-    published: "",
+    published: "2018", // "updated in 2018" in the doc
     accessed: "Dec 2022",
     type: "extension test",
     needs_help: true, // todo varieties
+    harvest_time_devalue_factor: 3, // many of these have only a category harves time like "apples are late aug to oct" rather than individual harvest times
     locations: [
         {
             name: "todo - saskatoon",
@@ -176,49 +177,49 @@
         {
             type: "Raspberry",
             name: "Boyne",
-            harvest_time: "Sept", // "sept to frost"
+            harvest_time: "Sep", // "sept to frost"
             description: "industry standard across Canada. early"
         },
         {
             type: "Raspberry",
             name: "Festival",
-            harvest_time: "Sept", // "sept to frost"
+            harvest_time: "Sep", // "sept to frost"
             description: "mid season"
         },
         {
             type: "Raspberry",
             name: "Steadfast",
-            harvest_time: "Sept", // "sept to frost"
+            harvest_time: "Sep", // "sept to frost"
             description: "doesn't sucker much. mid season"
         },
         {
             type: "Raspberry",
             name: "Red Mammoth",
-            harvest_time: "Sept", // "sept to frost"
+            harvest_time: "Sep", // "sept to frost"
             description: "USask release. late season"
         },
         {
             type: "Raspberry",
             name: "K81-6",
-            harvest_time: "Sept", // "sept to frost"
+            harvest_time: "Sep", // "sept to frost"
             description: "zone 3+ only. late season"
         },
         {
             type: "Raspberry",
             name: "Royalty",
-            harvest_time: "Sept", // "sept to frost"
+            harvest_time: "Sep", // "sept to frost"
             description: "purple. zone 3"
         },
         {
             type: "Raspberry",
             name: "Honeyqueen",
-            harvest_time: "Sept", // "sept to frost"
+            harvest_time: "Sep", // "sept to frost"
             description: "yellow. home gardens only"
         },
         {
             type: "Raspberry",
             name: "Autumn Bliss",
-            harvest_time: "Sept", // "sept to frost"
+            harvest_time: "Sep", // "sept to frost"
             description: "primocane. too late in season, except Maple Creek"
         },
         {
@@ -261,7 +262,268 @@
             AKA: ["7-21-16.3"],
             harvest_time: "August",
             description: "dwarf. probably not for commercial growing"
-        }
+        },
         // todo remainder
+        {
+            type: "Currant",
+            // "ben series" - I grabbed all of the ben currant names from other lists. I dunno
+            names: ["Ben Sarek", "Ben Alder", "Ben Connan", "Ben Tirran", "Ben Como", "Ben Chaska"],
+            description: '"Ben" series european black currants',
+            harvest_time: "August"
+        },
+        {
+            type: "Currant",
+            names: ["Black Giant", "Black Albol"],
+            description: "Buffalo currants",
+            harvest_time: "August"
+        },
+        {
+            type: "Currant",
+            names: ["Red Lake", "Honey Red"],
+            description: "Red currants",
+            harvest_time: "August"
+        },
+        {
+            type: "Gooseberry",
+            names: ["Pixwell", "Hinnonmaeki Red", "Welcome", "Jahn's Prairie"],
+            harvest_time: "August"
+        },
+        {
+            type: "Choke Cherry",
+            name: "Garrington",
+            harvest_time: "mid to late Aug"
+        },
+        {
+            type: "Choke Cherry",
+            name: "Pickup's Pride",
+            description: "Large fruit, good flavor for a choke cherry",
+            harvest_time: "mid to late Aug"
+        },
+        {
+            type: "Choke Cherry",
+            name: "Shubert",
+            harvest_time: "mid to late Aug"
+        },
+        {
+            type: "Japanese Plum", // P. nigra x salicina
+            name: "Patterson Pride",
+            harvest_time: "mid Aug",
+            description: "top flavor. P. nigra x salicina. needs a wild plum pollinizer"
+        },
+        {
+            type: "Japanese Plum", // P. nigra x salicina
+            name: "Prairie",
+            harvest_time: "mid Aug",
+            description: "P. nigra x salicina. needs a wild plum pollinizer"
+        },
+        {
+            type: "Japanese Plum", // P. nigra x salicina
+            name: "Pembina",
+            harvest_time: "mid Aug",
+            description: "P. nigra x salicina. needs a wild plum pollinizer"
+        },
+        {
+            type: "Japanese Plum", // P. nigra x salicina
+            name: "Superb",
+            AKA: ["Perfection (Superb)"],
+            harvest_time: "mid Aug",
+            description: "P. nigra x salicina. needs a wild plum pollinizer"
+        },
+        {
+            type: "Japanese Plum", // P. nigra x salicina
+            name: "Brookred",
+            harvest_time: "mid Aug",
+            description: "P. nigra x salicina. needs a wild plum pollinizer"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Brookgold",
+            harvest_time: "mid Aug",
+            description: "super productive, dependable. can be own-rooted"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ivanovka",
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ptitsin #3",
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ptitsin #5",
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Fofonoff",
+            AKA: ["Homesteader"],
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Japanese Plum", // actually cherry plum
+            names: ["Dura", "Manor", "Sapa", "New Oka", "Kappa", "Zeta"],
+            description: "cherry plum. red flesh",
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Japanese Plum", // actually cherry plum
+            names: ["Opata", "Beta"],
+            description: "cherry plum. green flesh",
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Apple",
+            name: "Adanac",
+            description: "early",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Norland",
+            description: "early. more hardy and dependable",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Fall Red",
+            description: "Midseason",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "September Ruby",
+            description: "Midseason",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Norkent",
+            description: "Midseason. durable",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Goodland",
+            description: "Midseason. not as hardy but sweet",
+            harvest_time: "late Aug to Oct",
+        },
+        {
+            type: "Apple",
+            name: "Battleford",
+            description: "Midseason",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Carlos Queen",
+            description: "Midseason",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Westland",
+            description: "Midseason",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "MN 447",
+            description: "Late season",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Haralson",
+            description: "Late season",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Haralred", // paper lists this as an "AKA" for haralson, but another reference has it as a distinct strain
+            description: "Late season",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Crabapple",
+            name: "Rescue",
+            description: "early",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Crabapple",
+            name: "Dolgo",
+            description: "mid season",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Crabapple",
+            name: "Kerr",
+            description: "harvested after frost. intense flavour, add to cider",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Prairie Sun",
+            description: "USask variety. early, good for drying",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            name: "Autumn Delight",
+            description: "USask variety. very tasty and firm. fresh eating or cider",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            names: ["Prairie Sensation", "Misty Rose"],
+            description: "USask variety. very tasty and firm",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            names: ["Minn447", "Brightness", "Kerr", "Prolific"],
+            description: "older cider variety, good juice yield, good sugar/acid ratio",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Apple",
+            names: ["Granny Annie", /* "Autumn Delight", - included above */ "Patience", "Prairie Rose"],
+            description: "newer USask cider variety, good juice yield, good sugar/acid ratio",
+            harvest_time: "late Aug to Oct"
+        },
+        {
+            type: "Grape",
+            // "The U of SK is breeding grapes but more time is needed to develop hardy varieties"
+            names: ["Valiant", "Beta"],
+            harvest_time: "early September"
+        },
+        {
+            type: "Euro Pear",
+            name: "John",
+            harvest_time: "September",
+            description: "quite good and good size if heavily pruned and thinned"
+        },
+        {
+            type: "Euro Pear",
+            name: "Thomas",
+            harvest_time: "September",
+            description: "best quality, low availability, Hardier"
+        },
+        {
+            type: "Euro Pear",
+            name: "Ure",
+            harvest_time: "September",
+            description: "only zone 3"
+        },
+        {
+            type: "Sea Buckthorn",
+            name: "Harvest Moon",
+            // todo: other PFRA releases, see https://www.agroforestrysolution.com/pages/other-publications-technical-and-project-reports
+            description: "Prairie Farm Rehabilitation Administration 2005 release",
+            harvest_time: "September"
+        }
     ]
 }
