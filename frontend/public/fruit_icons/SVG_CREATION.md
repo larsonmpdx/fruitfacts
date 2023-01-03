@@ -18,6 +18,7 @@ my process for making these fruit SVGs:
   - resize canvas: ctrl-shft-d (document properties) -> click "resize to content" button
   - save as plain svg
   - upload to an svg minifier (svgomg gui) and save the output
+    - "prefer viewbox to width/height" lets us manually set the width/height later to normalize everything
   - manually edit in the svg's "width" and "height" attributes like the other SVGs. the viewbox will still keep the right aspect ratio
   - the resulting image should be small and have a transparent background (no background)
 
