@@ -408,7 +408,7 @@
             type: "Apple",
             name: "Goodland",
             description: "Midseason. not as hardy but sweet",
-            harvest_time: "late Aug to Oct",
+            harvest_time: "late Aug to Oct"
         },
         {
             type: "Apple",
