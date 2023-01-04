@@ -1,0 +1,455 @@
+{
+    title: "MSU Harvest Windows for Plums/Prunes in Michigan",
+    author: "Bill Shane",
+    url: "https://williamshane.weebly.com/uploads/2/7/0/7/27077603/plum_harvest_windows_michigan.pdf",
+    published: "",
+    accessed: "Jan 2023",
+    type: "state extension guide",
+    locations: [
+        {
+            name: "Michigan State University",
+            latitude: 42.719844733495485,
+            longitude: -84.47474227805654
+        }
+    ],
+    plants: [
+        // page 1
+        {
+            type: "Euro Plum",
+            name: "Oullins Gage",
+            harvest_time_relative: "Stanley -25",
+            description: "gage-type. yellow skin, yellow flesh. self-fertile. productive, moderately aromatic, blooms later than most Gage plums, brown rot prone, good tasting, multiple harvests"
+        },
+        {
+            type: "Euro Plum",
+            name: "NY 101", // Rosy Gage (tm)
+            harvest_time_relative: "Stanley -22",
+            description: "gage-type. skin: green yellow with some pink blush. self unfruitful, pollenize with Vanette, Reine Claude Conducta, Oullins, Polly and Demontfort. prone to black knot and brown rot, very productive"
+        },
+        {
+            type: "Euro Plum",
+            name: "Reine Claude Conducta",
+            harvest_time_relative: "Stanley -12",
+            description: "gage-type. pink/purple skin. amber flesh. pollenize with Stanley. crisp, very sweet, high quality"
+        },
+        {
+            type: "Euro Plum",
+            name: "Green Gage (Reine Claude)",
+            harvest_time_relative: "Stanley -5",
+            description: "gage-type. green skin. partially self fertile, pollenize with Oullins Gage. aromatic, very flavorful, 500 hr chill"
+        },
+        {
+            type: "Euro Plum",
+            name: "American Mirabelle ",
+            harvest_time_relative: "Stanley -10",
+            description: "Mirabelle-type. skin: golden with pink blush. pollenize with French Damson, Castleton. jam, wine/brandy"
+        },
+        {
+            type: "Euro Plum",
+            name: "Herrenhausen",
+            // no harvest time given
+            description: "Mirabelle-type. skin: maroon/purple. flesh: green amber. self-incompatible, pollenize with French Damson, Castleton"
+        },
+        {
+            type: "Euro Plum",
+            name: "NY 858",
+            AKA: ["Geneva Mirabelle™"],
+            harvest_time_relative: "Stanley -5",
+            description: "Mirabelle-type. pollenize with French Damson, Castleton. cornell test selection"
+        },
+        {
+            type: "Euro Plum",
+            name: "Mirabelle de Metz",
+            // no harvest time given
+            description: "Mirabelle-type. for brandy"
+        },
+        // page 2
+        {
+            type: "Euro Plum",
+            name: "NY 5041", // I can't find anything anywhere about this selection. I dunno
+            // no harvest time given
+            description: "Damson-type. small productive, processing"
+        },
+        {
+            type: "Euro Plum",
+            name: "French Damson",
+            // no harvest time given
+            description: "Damson-type. dark purple skin. processing, strong flavor, astringent"
+        },
+        {
+            type: "Euro Plum",
+            name: "Shropshire",
+            // no harvest time given
+            description: "Damson-type. purple skin"
+        },
+        {
+            type: "Euro Plum",
+            name: "Blue Damson",
+            // no harvest time given
+            description: "Damson-type. self-fertile. 800 hr chill, old variety"
+        },
+        // table 4
+        {
+            type: "Japanese Plum",
+            name: "Ohishi Washi",
+            // no harvest time given
+            description: "skin: red blush on golden. flesh: light yellow. bland, soft, requires peach site"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Early Golden",
+            harvest_time_relative: "Euro Plum: Stanley -50",
+            description: "yellow-skinned. yellow flesh. pollenize with Burbank, Ozark Premier, Shiro, Vanier, Vampire. round, freestone, hardy, productive, softens quickly, bland, biannual if overcropped"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Obilnaja", // in the text as "Obilinaya" - I put this in as an AKA elsewhere
+            harvest_time_relative: "Euro Plum: Stanley -47",
+            description: "skin:  purple red skin. red flesh, gold around pit. good fruit size for season, hardy, productive"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Shiro",
+            harvest_time_relative: "Euro Plum: Stanley -37",
+            description: "skin: green yellow, pink blush. flesh: yellow. pollenize with Burbank, Methley, Vanier. 500 hr chill, mild, moderately sweet, medium quality, relatively hardy, prone to bruising"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Yellow Egg",
+            harvest_time_relative: "Euro Plum: Stanley +0",
+            description: "yellow skin, yellow flesh"
+        },
+        // page 3
+        {
+            type: "Japanese Plum",
+            name: "Early Magic",
+            harvest_time_relative: "Euro Plum: Stanley -46",
+            description: "skin: Red / blue. flesh: amber-yellow. pollenize with: Early Golden, Ozark Premier & Fortune. tree may be winter tender like other Santa Rosas, multiple picks, medium fruit size, firm, juicy, sweet"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ozark Premier",
+            harvest_time_relative: "Euro Plum: Stanley -20",
+            description: "skin: Purple / blue. flesh: yellow. pollenize with: Vanier. round fruit large, aromatic & good flavor if thinned, ripens unevenly"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Burbank",
+            harvest_time_relative: "Euro Plum: Stanley -17",
+            description: "skin: Orange red. flesh: yellow. self-incompatible, pollenize with: Vanier. good flavor, hardy, productive, good pollen source, aromatic, medium size, clingstone, juicy, ripens unevenly, multiple pick"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Red Giant",
+            // no harvest time given
+            description: "skin: red with waxy bloom. flesh: yellow. large, firm, juicy, small pit, very sweet with some acid, upright tree"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Vanier",
+            harvest_time_relative: "Euro Plum: Stanley -17",
+            description: "skin: bright red on golden back. flesh: yellow. pollenize with: Burbank, Ozark Premier, Vampire. mod productive, firm, good quality, quality improves in storage, vigorous tree, multi-pick, some drop"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Vampire",
+            AKA: ["V82053"], // todo - research this release and fill in others. named like it's vineland (?)
+            harvest_time_unparsed: "late mid",
+            description: "skin: Red / green. flesh: red. pollenize with: Shiro, Ozark Premier, Burbank, Vanier. juicy, medium large, good cold tolerance for red fleshed type"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Redheart",
+            harvest_time_relative: "Euro Plum: Stanley -14",
+            description: "skin: Dark purple red. flesh: dark red. pollenize with: Elephant Heart, Burbank. 500 hr chill, large, firm, sweet, juicy, small pit"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ruby Sweet",
+            // no harvest time given
+            description: "skin: Red. flesh: dark red. good quality, from Byron, GA, good bacterial spot resistance, semi-freestone"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Luisa",
+            harvest_time_relative: "Euro Plum: Stanley -14",
+            description: "skin: Red / yellow. flesh: yellow. very large, multi-pick, pointed, irregular shape"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Rubyqueen",
+            harvest_time_relative: "Euro Plum: Stanley -14",
+            description: "skin: dark red / black. flesh: dark red. medium large, firm flesh, excellent flavor, maybe cold-tender tree, limited experience"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Fortune",
+            harvest_time_relative: "Euro Plum: Stanley -10",
+            description: "skin: red on yellow back. flesh: yellow. pollenize with: Burbank, Friar. large fruit, small pit, semi-cling, vigorous tree, 500 chill hr, stores well, good bact spot resistance, some years poor set, put on peach sites"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Satsuma",
+            harvest_time_relative: "Euro Plum: Stanley -5",
+            description: "skin: mottled red on green. flesh: dark red. pollenize with: Santa Rosa. 300 hr chill, dense flesh, mild, sweet"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Improved Duarte",
+            harvest_time_relative: "Euro Plum: Stanley -5",
+            description: "skin: dark red. flesh: dark red. large, heart-shaped, multi-pick, very good quality"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Simka",
+            harvest_time_relative: "Euro Plum: Stanley +0",
+            description: "skin: purple. flesh: yellow. self-fruitful. variable yield, large, heart shaped, good flavor, firm, some drop, upright growth, freestone when mature"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Caroline Harris",
+            harvest_time_relative: "Euro Plum: Stanley +0",
+            description: "skin: maroon purple. flesh: red. large fruit, excellent quality, tree short lived, small pit, juicy"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Elephant Heart",
+            harvest_time_relative: "Euro Plum: Stanley +5",
+            description: "skin: dark red purple. flesh: red. pollenize with: Beauty, Santa Rosa. 500 hr chill, sweet, firm"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Alderman",
+            harvest_time_relative: "Euro Plum: Stanley +20",
+            description: "skin: Orange red. flesh: orange yellow. pollenize with: self-fruitful but does better with Toka and South Dakota. medium size, attractive, firm skin, waxy, medium to large, appears to be winter hardy"
+        },
+        // page 4
+        {
+            type: "Japanese Plum",
+            name: "",
+            harvest_time_relative: "Euro Plum: Stanley -",
+            description: "blue/purple-skinned. "
+        },
+        {
+            type: "Japanese Plum",
+            name: "",
+            harvest_time_relative: "Euro Plum: Stanley -",
+            description: "blue/purple-skinned. "
+        },
+        {
+            type: "Japanese Plum",
+            name: "",
+            harvest_time_relative: "Euro Plum: Stanley -",
+            description: "blue/purple-skinned. "
+        },
+        // page 4 euro plums
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        // page 5
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        // page 6
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "",
+            harvest_time_relative: "Stanley -",
+            description: ""
+        }
+        // page 7 - todo - look for any not mentioned previously
+        // page 8 - todo - same
+    ]
+}

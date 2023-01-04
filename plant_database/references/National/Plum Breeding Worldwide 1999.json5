@@ -595,10 +595,172 @@
             harvest_time: "Aug 5",
             description: "pr/r, Elephant heart op",
             released: "Taylor"
-        }
+        },
 
         // todo: go through the text, there are additional variety names in there and program lists
 
-        // todo: euro plum release table
+        // euro plum release table page 12
+        {
+            name: "Bluebyrd",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley-10",
+            description: " p/y, NY H 4 op",
+            released: "USDA-WV"
+        },
+        // todo - rest
+        {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
+                {
+            name: "",
+            type: "Euro Plum",
+            harvest_time_relative: "Stanley",
+            description: "",
+            released: ""
+        },
     ]
 }

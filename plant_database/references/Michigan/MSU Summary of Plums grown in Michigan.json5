@@ -1,0 +1,18 @@
+{
+    title: "MSU Harvest Windows for Plums/Prunes in Michigan",
+    author: "Bill Shane",
+    url: "https://williamshane.weebly.com/uploads/2/7/0/7/27077603/summary_of_plum_variety_grown_in_michigan_-_full_table.pdf",
+    published: "2013",
+    accessed: "Jan 2023",
+    type: "state extension guide",
+    locations: [
+        {
+            name: "Michigan State University",
+            latitude: 42.719844733495485,
+            longitude: -84.47474227805654
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}
