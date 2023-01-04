@@ -177,7 +177,7 @@
         },
         {
             type: "Japanese Plum",
-            name: "Rubyqueen",
+            name: "Ruby Queen",
             harvest_time_relative: "Euro Plum: Stanley -14",
             description: "skin: dark red / black. flesh: dark red. medium large, firm flesh, excellent flavor, maybe cold-tender tree, limited experience"
         },
@@ -226,228 +226,223 @@
         // page 4
         {
             type: "Japanese Plum",
-            name: "",
-            harvest_time_relative: "Euro Plum: Stanley -",
-            description: "blue/purple-skinned. "
+            name: "Methley",
+            harvest_time_relative: "Euro Plum: Stanley -43",
+            description: "purple skin. red flesh. bitter skin"
         },
         {
             type: "Japanese Plum",
-            name: "",
-            harvest_time_relative: "Euro Plum: Stanley -",
-            description: "blue/purple-skinned. "
+            name: "Lydecker", // AKA Black Ice (tm)
+            // no harvest time given
+            description: "dark purple skin. pollenize with Toka, La Crescent. hardy, hybrid, medium size, early evaluation"
         },
         {
             type: "Japanese Plum",
-            name: "",
-            harvest_time_relative: "Euro Plum: Stanley -",
-            description: "blue/purple-skinned. "
+            name: "Angeleno",
+            harvest_time_relative: "Euro Plum: Stanley +19",
+            description: "skin: dark purple. flesh: amber yellow. moderately vigorous tree, open structure, medium to large roundish fruit, firm, smooth textured, juicy, sweet, excellent taste, small pit, semi to freestone"
         },
-        // page 4 euro plums
+        // page 4 euro plums (table 7)
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
-        },
-        {
-            type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Ruth Gerstatter",
+            harvest_time_relative: "Stanley -55"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Ersinger",
+            harvest_time_relative: "Stanley -40",
+            description: "blue skin. medium firm, productive, retains good flavor"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Earliblue",
+            // no harvest time given
+            description: "blue skin. amber flesh. resembles Stanley but rounder and softer, has good flavor, late blooming, moderate crops"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "V63015", // todo - has this been named since this guide was published?
+            harvest_time_relative: "Stanley -40",
+            description: "blue sin. amber flesh. not released as variety, some limited production in Michigan, medium size & medium hardiness"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "California Blue",
+            harvest_time_relative: "Stanley -34",
+            description: "blue skin. large fruit, drop tendency, irregular shape, somewhat tart, okay flavor, nearly freestone, ripens with Shiro"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "DeMonfort",
+            // no harvest time given
+            description: "skin: reddishmaroon with irreg line marking. flesh: green yellow. medium sized, very productive, very sweet, juicy, rich-flavored, small pit, multiple pick"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
-        },
-        // page 5
-        {
-            type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Vibrant",
+            AKA: ["V70034"], // todo release org (?)
+            harvest_time_relative: "Stanley -35",
+            description: "blue skin. amber flesh. pollenize with Valerie, Vanette, Stanley, Valor, Victory, Italian, Vision. productive, decent size and quality for early plum, decent to good firmness, sweet, medium acid, semi-freestone"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Valerie",
+            AKA: ["V70031"], // todo release org (?)
+            harvest_time_relative: "Stanley -28",
+            description: "violet blue skin. amber flesh. pollenize with Vanette, Valor, Vibrant, Violette, Stanley, Victory, Italian, Vision. firm enough to ship, med to large"
+        },
+        // page 5 (table 7 continued)
+        // Vanette: was already present in a previous table
+        {
+            type: "Euro Plum",
+            name: "Voyageur",
+            harvest_time_relative: "Stanley -25",
+            description: "self-compatible. waxy, consistent bearer, drop tendency, softens somewhat quickly, good eating"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            // no harvest time given
+            // todo - release info? no mention of this plum anywhere else
+            name: "NY 81PF"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Castleton",
+            harvest_time_relative: "Stanley -12",
+            description: "dark purple skin. self-fertile. productive, uniform size, excellent flavor, medium vigor, colors before mature, may require thinning"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Jayfree", // AKA NY6
+            harvest_time_relative: "Stanley -12",
+            description: "rel large, prductive, mild, medium fresh quality"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "NY7", // todo - release info? no mention of this plum anywhere else
+            harvest_time_relative: "Stanley -8"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Violette",
+            AKA: ["V72511"],
+            harvest_time_relative: "Stanley -8",
+            description: "dark blue skin. yellow green flesh. pollenize with Valerie, Vanette, Stanley, Valor, Victory, Italian, Vision. large oblong fruit, semi-freestone"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Early Italian",
+            AKA: ["Early Fellenberg"],
+            harvest_time_relative: "Stanley -7",
+            description: "pollenize with Voyageur. excellent quality, firm enough to ship, medium productive"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Seneca",
+            harvest_time_relative: "Stanley -7",
+            description: "maroon / purple skin. large, excellent flavor"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Veeblue",
+            harvest_time_relative: "Stanley -7"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Bluebyrd",
+            harvest_time_relative: "Stanley -5",
+            description: "dark blue skin. amber flesh. pollenize with Stanley, President and BlueFre. thick skin, productive, needs thinning, not quite Stanley size"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Stanley",
+            // Stanley+0
+            description: "dark blue skin. yellow green flesh. self fertile, Vibrant, Violette. 800 chill, sweet / tart when ripe, softens quickly, productive, hardy, med to large, distinct neck, tends to overproduce"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Polly",
+            harvest_time_relative: "Stanley +0",
+            description: "purple red skin. orange-green flesh. self-fruitful. large fruit, kidney-shaped, mild flavor, medium quality, medium firm"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Cacak's Best",
+            harvest_time_relative: "Stanley +0",
+            description: "blue skin. pale yellow flesh. medium large, need to hang for complete ripeness"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Brooks",
+            harvest_time_relative: "Stanley +0",
+            description: "favorite in Oregon"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Valor",
+            harvest_time_relative: "Stanley +1",
+            description: "violet blue skin. pollenize with Valerie, Vanette, Vibrant, Violette, Stanley, Italian. semi-freestone, medium to large, good flavor, more productive than Italian"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Kenmore", // AKA "NY9®"
+            harvest_time_relative: "Stanley +2",
+            description: "dark blue skin. amber flesh. vigorous tree, upright habit, productive, good fruit size if crop load not too high, mild, sweet, good firmness, good dual purpose plum"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Bluefre",
+            AKA: ["Shropshire"],
+            harvest_time_relative: "Stanley +2",
+            description: "self fruitful. prolific, small to medium fruit, distinct flavor"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Longjohn",
+            harvest_time_relative: "Stanley +3",
+            description: "dark blue skin. orange flesh. very large, high quality, productive, oblong fruit"
         },
         // page 6
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Victory",
+            harvest_time_relative: "Stanley +4",
+            description: "dark blue skin. green yellow flesh. pollinize with Valerie, Vanette, Vibrant, Violette, Stanley, Valor, Italian, Vision. heart shaped, productive, semi-freestone, firm, good quality"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Italian", // AKA Fellenberg
+            harvest_time_relative: "Stanley +7",
+            description: "purple skin. self fertile, pollinize with Valerie, Vanette, Vibrant, Violette. less productive, medium to large, 800 hr chill, sweet, late bloom, good keeping, dual purpose, ships well"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Verity",
+            harvest_time_relative: "Stanley +9"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "NY 202", // todo - release info? no mention of this plum anywhere else
+            harvest_time_relative: "Stanley +9"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Vison",
+            harvest_time_relative: "Stanley +13",
+            description: "dark blue skin. pollenize with Vibrant, Violette, Stanley, Valor, Victory. large, medium tart, very sweet, productive, excellent quality, good shelf life"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "Empress",
+            harvest_time_relative: "Stanley +13",
+            description: "skin: dark blue. flesh: greenish yellow. pollenize with Stanley, Victory, President. large, elliptical, symmetric, very good quality, firm, semi-cling, good shipping"
         },
         {
             type: "Euro Plum",
-            name: "",
-            harvest_time_relative: "Stanley -",
-            description: ""
+            name: "President",
+            harvest_time_relative: "Stanley +21",
+            description: "skin: purple with heavy wax. flesh: orange. pollenize with Empress, Italian, Vision. large, elliptical, semi-cling"
         }
         // page 7 - todo - look for any not mentioned previously
         // page 8 - todo - same
