@@ -40,7 +40,7 @@
         },
         {
             type: "Euro Plum",
-            name: "American Mirabelle ",
+            name: "American Mirabelle",
             harvest_time_relative: "Stanley -10",
             description: "Mirabelle-type. skin: golden with pink blush. pollenize with French Damson, Castleton. jam, wine/brandy"
         },
@@ -76,12 +76,7 @@
             // no harvest time given
             description: "Damson-type. dark purple skin. processing, strong flavor, astringent"
         },
-        {
-            type: "Euro Plum",
-            name: "Shropshire",
-            // no harvest time given
-            description: "Damson-type. purple skin"
-        },
+        // Shropshire is included in a following table
         {
             type: "Euro Plum",
             name: "Blue Damson",
@@ -159,7 +154,7 @@
         },
         {
             type: "Japanese Plum",
-            name: "Redheart",
+            name: "Red Heart",
             harvest_time_relative: "Euro Plum: Stanley -14",
             description: "skin: Dark purple red. flesh: dark red. pollenize with: Elephant Heart, Burbank. 500 hr chill, large, firm, sweet, juicy, small pit"
         },
@@ -395,7 +390,7 @@
             name: "Bluefre",
             AKA: ["Shropshire"],
             harvest_time_relative: "Stanley +2",
-            description: "self fruitful. prolific, small to medium fruit, distinct flavor"
+            description: "purple skin. self fruitful. prolific, small to medium fruit, distinct flavor"
         },
         {
             type: "Euro Plum",
