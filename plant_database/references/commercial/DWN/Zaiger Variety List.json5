@@ -2116,6 +2116,16 @@
             chill: "800 hours",
             harvest_time: "September 3 to September 18"
         },
+        {
+            type: "Plumcot", // patent compares it to "festival red" (plumcot)
+            name: "Flavor Joy",
+            // todo look for a harvest time
+            patent: "https://patents.google.com/patent/USPP34087 2041-12-06"
+        }
+        // todo flavor may:
+        // https://patents.google.com/patent/USPP34426
+        // todo flavor kist:
+        // https://patents.google.com/patent/USPP34290
         // not in the original list
         {
             type: "Apricot",

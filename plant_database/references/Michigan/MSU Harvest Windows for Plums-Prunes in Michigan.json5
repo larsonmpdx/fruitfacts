@@ -34,7 +34,8 @@
         },
         {
             type: "Euro Plum",
-            name: "Green Gage (Reine Claude)",
+            name: "Bavay's Green Gage", // I'm normalizing this to the name from an OSU reference. it's just "green gage" in this pub
+            AKA: ["Reine Claude"],
             harvest_time_relative: "Stanley -5",
             description: "gage-type. green skin. partially self fertile, pollenize with Oullins Gage. aromatic, very flavorful, 500 hr chill"
         },
