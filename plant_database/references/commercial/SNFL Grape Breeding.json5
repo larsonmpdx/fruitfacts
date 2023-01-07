@@ -5,6 +5,7 @@
     accessed: "Jun 2022",
     type: "private breeding program list",
     needs_help: true,
+    thumbnail: "website",
     locations: [
         {
             name: "SNFL Fresno, CA",

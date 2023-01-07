@@ -7,6 +7,7 @@
     type: "release article or journal overview", // todo - maybe another category
     needs_help: true,
     description: "",
+    thumbnail: "website",
     locations: [
         {
             name: "",

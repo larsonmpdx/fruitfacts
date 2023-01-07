@@ -4,6 +4,7 @@
     published: "unknown",
     accessed: "Oct 2021",
     type: "private breeding program list",
+    thumbnail: "website",
     needs_help: true, // todo "released by" on each. also, not all are modesto
     harvest_time_devalue_factor: 3, // todo - there are mixed locations here so some things are totally out of order. once we figure out locations this factor can be removed
     locations: [

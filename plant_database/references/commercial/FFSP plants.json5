@@ -4,6 +4,7 @@
     url: "http://www.ffsp.net/varieties/",
     accessed: "Oct 2021",
     type: "IP company list",
+    thumbnail: "website",
     locations: [
         {
             name: "Florida (various locations)",

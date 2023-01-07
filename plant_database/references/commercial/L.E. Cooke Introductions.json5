@@ -7,6 +7,7 @@
     type: "nursery catalog",
     description: "",
     needs_help: true,
+    thumbnail: "website",
     locations: [
         {
             name: "",

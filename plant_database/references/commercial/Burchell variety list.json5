@@ -6,6 +6,7 @@
     desription: "see also https://burchellnursery.com/pdf/bni_peach_ripening_page1.pdf https://burchellnursery.com/pdf/bni_peach_ripening_page2.pdf https://burchellnursery.com/pdf/bni_flame_series_peach_ripening.pdf https://burchellnursery.com/pdf/bni_nectarines_ripening.pdf https://burchellnursery.com/pdf/bni_flare_series_nectarine_ripening.pdf",
     type: "nursery catalog",
     needs_help: true,
+    thumbnail: "website",
     locations: [
         {
             name: "Modesto, CA",

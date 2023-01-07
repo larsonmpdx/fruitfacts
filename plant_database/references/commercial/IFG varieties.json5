@@ -5,6 +5,7 @@
     accessed: "Jun 2022",
     type: "IP company list",
     ignore_for_nearby_searches: true,
+    thumbnail: "website",
     locations: [
         {
             name: "USPTO Washington, DC", // actually global
