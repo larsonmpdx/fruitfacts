@@ -597,6 +597,7 @@
         {
             type: "Nectarine",
             name: "Spice Zee",
+            AKA: ["Nectaplum"],
             description: "white nectarine",
             harvest_time: "July 20 to August 5"
         },
