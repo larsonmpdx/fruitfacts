@@ -1,0 +1,353 @@
+{
+    title: "Holly Acres Nursery",
+    url: "https://www.hollyacresnursery.com/",
+    published: "unknown",
+    accessed: "Jan 2023",
+    desription: "",
+    type: "nursery catalog",
+    needs_help: true, // finish varieties
+    thumbnail: "website",
+    locations: [
+        {
+            name: "Elizabeth, CO",
+            latitude: 39.36215672400144,
+            longitude: -104.5631118109413
+        }
+    ],
+    plants: [
+        // https://www.hollyacresnursery.com/apple-trees
+        {
+            type: "Apple",
+            name: "Braeburn"
+        },
+        {
+            type: "Apple",
+            name: "Chehalis"
+        },
+        {
+            type: "Apple",
+            name: "Cortland"
+        },
+        {
+            type: "Apple",
+            name: "Empire"
+        },
+        {
+            type: "Apple",
+            name: "Fireside"
+        },
+        {
+            type: "Apple",
+            name: "Freedom"
+        },
+        {
+            type: "Apple",
+            name: "Fuji"
+        },
+        {
+            type: "Apple",
+            name: "Gala"
+        },
+        {
+            type: "Apple",
+            name: "Granny Smith"
+        },
+        {
+            type: "Apple",
+            name: "Gravenstein"
+        },
+        {
+            type: "Apple",
+            name: "Haralson"
+        },
+        {
+            type: "Apple",
+            name: "Honeycrisp"
+        },
+        {
+            type: "Apple",
+            name: "Honeygold"
+        },
+        {
+            type: "Apple",
+            name: "Jonathon"
+        },
+        {
+            type: "Apple",
+            name: "Liberty"
+        },
+        {
+            type: "Apple",
+            name: "Lodi"
+        },
+        {
+            type: "Apple",
+            name: "Melrose"
+        },
+        {
+            type: "Apple",
+            name: "Macintosh"
+        },
+        {
+            type: "Apple",
+            name: "Norland"
+        },
+        {
+            type: "Apple",
+            name: "Red Delicious"
+        },
+        {
+            type: "Apple",
+            name: "Red Rome"
+        },
+        {
+            type: "Apple",
+            name: "Snowsweet"
+        },
+        {
+            type: "Apple",
+            name: "Spitzenburg"
+        },
+        {
+            type: "Apple",
+            name: "Statefair"
+        },
+        {
+            type: "Apple",
+            name: "Sweet Sixteen"
+        },
+        {
+            type: "Apple",
+            name: "Wealthy"
+        },
+        {
+            type: "Apple",
+            name: "Winesap"
+        },
+        {
+            type: "Apple",
+            name: "Winter Banana"
+        },
+        {
+            type: "Apple",
+            name: "Yellow Delicious"
+        },
+        {
+            type: "Apple",
+            name: "Yellow Transparent"
+        },
+        {
+            type: "Apple",
+            name: "Zestar"
+        },
+        // https://www.hollyacresnursery.com/pear-trees
+        {
+            type: "Euro Pear",
+            name: "Anjou"
+        },
+        {
+            type: "Euro Pear",
+            name: "Bartlett"
+        },
+        {
+            type: "Euro Pear",
+            name: "Bosc"
+        },
+        {
+            type: "Euro Pear",
+            name: "Flemish Beauty"
+        },
+        {
+            type: "Euro Pear",
+            name: "Lucious"
+        },
+        {
+            type: "Asian Pear",
+            name: "Hosui"
+        },
+        {
+            type: "Euro Pear",
+            name: "Parker"
+        },
+        {
+            type: "Euro Pear",
+            name: "Seckle"
+        },
+        {
+            type: "Euro Pear",
+            name: "Summercrisp"
+        },
+        {
+            type: "Asian Pear",
+            name: "Sueri"
+        },
+        {
+            name: "Nijisseiki",
+            AKA: ["20th Century"],
+            name: "Twentieth Century"
+        },
+        {
+            type: "Euro Pear",
+            name: "Surecrop"
+        },
+        {
+            type: "Euro Pear",
+            name: "Ubileen"
+        },
+        // https://www.hollyacresnursery.com/plum-trees
+        {
+            type: "Species Plum",
+            name: "American Plum"
+        },
+        {
+            type: "Euro Plum",
+            name: "Green Gage"
+        },
+        {
+            type: "Euro Plum",
+            name: "Italian"
+        },
+        {
+            type: "Euro Plum",
+            name: "Mount Royal"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Satsuma"
+        },
+        {
+            type: "Euro Plum",
+            name: "Stanley"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Toka"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Superior"
+        },
+        // https://www.hollyacresnursery.com/cherry-trees
+        {
+            type: "Sweet Cherry",
+            name: "Bing"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Black Tartarian"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Early Richmond"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Lambert"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Lapins"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Montmorency"
+        },
+        {
+            type: "Sweet Cherry",
+            // listed as "Palisade Rainier"
+            name: "Rainier"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Ann"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Stella"
+        },
+        {
+            type: "Sour Cherry",
+            name: "North Star"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Meteor",
+            harvest_time_relative: "Montmorency +1 week"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Van"
+        },
+        // https://www.hollyacresnursery.com/peach-trees
+        {
+            type: "Peach",
+            name: "Elberta"
+        },
+        {
+            type: "Peach",
+            name: "Hale Haven"
+        },
+        {
+            type: "Peach",
+            name: "Harken"
+        },
+        {
+            type: "Peach",
+            name: "Palisade Cresthaven"
+        },
+        {
+            type: "Peach",
+            name: "Suncrest"
+        },
+        {
+            type: "Peach",
+            name: "Golden Jubilee"
+        },
+        {
+            type: "Peach",
+            name: "Palisade Red Haven"
+        },
+        {
+            type: "Peach",
+            name: "Polly"
+        },
+        {
+            type: "Peach",
+            name: "Reliance"
+        },
+        {
+            type: "Peach",
+            name: "White Lady"
+        },
+        // https://www.hollyacresnursery.com/apricots-and-nectarines
+        {
+            type: "Apricot",
+            name: "Chinese",
+            AKA: ["Mormon"]
+        },
+        {
+            type: "Apricot",
+            name: "Goldcot"
+        },
+        {
+            type: "Apricot",
+            name: "Harcot"
+        },
+        {
+            type: "Apricot",
+            name: "Moorpark"
+        },
+        {
+            type: "Apricot",
+            name: "Moongold"
+        },
+        {
+            type: "Plumcot",
+            name: "Plumcot"
+        },
+        {
+            type: "Apricot",
+            name: "Tilton"
+        }
+    ]
+}
