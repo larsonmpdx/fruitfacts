@@ -7,6 +7,7 @@
     type: "nursery catalog",
     needs_help: true, // finish varieties
     thumbnail: "website",
+    harvest_time_devalue_factor: 3, // I saw a few blatant errors (such as lapins referred to as an "early" cherry)
     locations: [
         {
             name: "Elizabeth, CO",
