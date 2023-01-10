@@ -102,7 +102,8 @@
         },
         {
             type: "Apple",
-            name: "Snowsweet"
+            // "SnowSweet®"
+            name: "Wildung"
         },
         {
             type: "Apple",
@@ -110,7 +111,7 @@
         },
         {
             type: "Apple",
-            name: "Statefair"
+            name: "State Fair"
         },
         {
             type: "Apple",
@@ -138,12 +139,14 @@
         },
         {
             type: "Apple",
-            name: "Zestar"
+            // AKA: ["Zestar! (r)"]
+            name: "Minnewashta"
         },
         // https://www.hollyacresnursery.com/pear-trees
         {
             type: "Euro Pear",
-            name: "Anjou"
+            // given as "Anjou"
+            name: "D'Anjou"
         },
         {
             type: "Euro Pear",
@@ -182,9 +185,9 @@
             name: "Sueri"
         },
         {
-            name: "Nijisseiki",
-            AKA: ["20th Century"],
-            name: "Twentieth Century"
+            type: "Asian Pear",
+            // AKA: ["20th Century"]
+            name: "Nijisseiki"
         },
         {
             type: "Euro Pear",
@@ -285,7 +288,7 @@
         },
         {
             type: "Peach",
-            name: "Hale Haven"
+            name: "Halehaven"
         },
         {
             type: "Peach",

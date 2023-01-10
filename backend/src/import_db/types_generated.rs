@@ -15,6 +15,7 @@ pub const TYPES: &[&str] = &[
     "Fig",
     "Apriplum",
     "Plumcot",
+    "Species Plum",
     "Blueberry",
     "Hardy Kiwi",
     "Fuzzy Kiwi",
