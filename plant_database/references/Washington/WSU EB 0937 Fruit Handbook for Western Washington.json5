@@ -431,7 +431,7 @@
         },
         {
             name: "Obilnaja",
-            AKA: ["Obilinaja", "Obilinaya"], // I assume these are all different translations or misspellings
+            AKA: ["Obilinaja", "Obilinaya", "Oblinaja"], // I assume these are all different translations or misspellings
             type: "Japanese Plum",
             harvest_time: "mid to late August"
         },

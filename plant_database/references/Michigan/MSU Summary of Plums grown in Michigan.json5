@@ -1,10 +1,10 @@
 {
-    title: "MSU Harvest Windows for Plums/Prunes in Michigan",
+    title: "MSU Summary of Plums Grown in Michigan",
     author: "Bill Shane",
     url: "https://williamshane.weebly.com/uploads/2/7/0/7/27077603/summary_of_plum_variety_grown_in_michigan_-_full_table.pdf",
     published: "2013",
     accessed: "Jan 2023",
-    type: "state extension guide",
+    type: "dictionary", // I'm not sure about a few of these varieties, they may just be in trials or listed from nursery catalogs, so I'm ranking this one lower
     locations: [
         {
             name: "Michigan State University",
@@ -13,6 +13,439 @@
         }
     ],
     plants: [
-        // todo
+        // todo - comments for preferences etc.
+        {
+            type: "Japanese Plum",
+            name: "Early Golden",
+            description: "2 acres"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Santa Rosa",
+            description: "2 acres. marginally hardy"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Early Magic",
+            description: "Santa Rosa type"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Methley",
+            description: "2 acres"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Shiro",
+            description: "11 acres"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ozark Premier",
+            description: "3 acres"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Burbank",
+            description: "2 acres"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Red Giant",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Red Heart",
+            description: "2 acres"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Byrongold",
+            description: "new (in 2013)"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Vanier",
+            description: "tender, drop tendency"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ruby Sweet",
+            description: "new (in 2013), popular in SW US"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Simka",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Fortune",
+            description: ">1 acre"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Alderman",
+            description: "new (in 2013), hardy"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Angelena",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Satsuma",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Tulare Giant",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Starking Delicious",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Lavina",
+            description: "new (in 2013)"
+        },
+
+        // page 2
+
+        {
+            type: "Japanese Plum",
+            name: "Oishi-Wase",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Crimson",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Crimson Beauty",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Shirley",
+            description: "older blue plum"
+        },
+        // elephant heart is listed twice
+        {
+            type: "Japanese Plum",
+            name: "Vampire",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Owen T",
+            description: "winter tender"
+        },
+        {
+            type: "Japanese Plum",
+            name: "John W",
+            description: "winter tender"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Elephant Heart",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Obilnaja",
+            description: ""
+        },
+        // superior is in the table twice
+        // byrongold is in the table twice
+        {
+            type: "Japanese Plum",
+            name: "Superior",
+            description: "japanese-american hybrid"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Black Ruby",
+            description: ""
+        },
+        // ruby sweet is listed twice
+        {
+            type: "Japanese Plum",
+            name: "Ruby Queen",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Friar",
+            description: ""
+        },
+        // hybrid section
+        {
+            type: "Japanese Plum",
+            name: "Lydecker", // AKA Black Ice (tm)
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Pipestone",
+            description: ""
+        },
+        {
+            type: "Japanese Plum",
+            name: "Toka", // "trademark Bubblegum" which I think is irrelevant, it was a 1911 release with a recent trademark from someone else
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Black Damson",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Damson",
+            description: "56 acres. for processing"
+        },
+        {
+            type: "Plumcot",
+            name: "Spring Satin",
+            description: ""
+        },
+        {
+            type: "Apriplum",
+            name: "Honey Rich",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "NY 1456",
+            description: "soon to be named"
+        },
+
+        {
+            type: "Euro Plum",
+            name: "V63015",
+            description: "Not available, early season"
+        },
+        {
+            type: "Euro Plum",
+            AKA: ["V70034"],
+            name: "Vibrant",
+            description: ">1 acres"
+        },
+        {
+            type: "Euro Plum",
+            name: "Mount Royal",
+            description: ""
+        },
+        // page 3
+        {
+            type: "Euro Plum",
+            name: "Opal",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Blufre",
+            description: ">1 acres"
+        },
+        {
+            type: "Euro Plum",
+            name: "Valerie",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Vanette",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "NY 70032",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "DeMonfort",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Voyageur",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Castleton",
+            description: "51 acres"
+        },
+        {
+            type: "Euro Plum",
+            name: "Jayfree", // NY6
+            description: "12 acres"
+        },
+        {
+            type: "Euro Plum",
+            name: "JG 501",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "NY 58.900.7",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Kenmore", // NY 9
+            description: "18 acres"
+        },
+        {
+            type: "Euro Plum",
+            name: "Longjohn",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Violette",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "NY 9041", // "Blues Jam™"
+            description: "from Cornell, processing"
+        },
+        {
+            type: "Euro Plum",
+            name: "NY 111", // "Jam Session™"
+            description: "from Cornell, processing"
+        },
+        {
+            type: "Euro Plum",
+            name: "Mirabellier",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "V 72.521",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Polly",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Ariel",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Valor",
+            description: ">1 acres"
+        },
+        {
+            type: "Euro Plum",
+            name: "Vision",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "President",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Empress",
+            description: ">1 acres. hardy, large"
+        },
+        {
+            type: "Euro Plum",
+            name: "Early Italian",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Italian",
+            description: "7 acres"
+        },
+        {
+            type: "Euro Plum",
+            name: "Stanley",
+            description: "115 acres. mainly processing"
+        },
+        {
+            type: "Euro Plum",
+            name: "Autumn Sweet",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Bluebyrd",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Starking Delicious",
+            description: ""
+        },
+        // page 4
+        {
+            type: "Euro Plum",
+            name: "Cacak's Best",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Victory",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Muir Beauty",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Sutter",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Seneca",
+            description: "older"
+        },
+        {
+            type: "Euro Plum",
+            name: "Oullins Golden Gage",
+            description: ""
+        },
+        // green gage duplicated in the chart
+        {
+            type: "Euro Plum",
+            name: "NY 101", // Rosy Gage (tm)
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Green Gage",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Yellow Egg",
+            description: ""
+        },
+        {
+            type: "Euro Plum",
+            name: "Reine Claude Conducta",
+            description: ""
+        }
     ]
 }
