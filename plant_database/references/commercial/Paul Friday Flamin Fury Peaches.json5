@@ -121,8 +121,8 @@
         },
         {
             type: "Japanese Plum",
-            name: "Bubblegum (r)",
-            released: "Paul Friday*",
+            name: "Toka",
+            AKA: ["Bubblegum (r)"],
             harvest_time_relative: "Peach: Redhaven+20"
         },
         {

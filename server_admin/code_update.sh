@@ -9,6 +9,11 @@ cd ..
 dvc pull
 cd -
 
+echo "setting maintenance html"
+maintenance_page=/usr/share/nginx/html/maintenance.html
+rm -f $maintenance_page
+cp ./letsencrypt/nginx_base_files/maintenance.html $maintenance_page
+
 echo "stopping backend+frontend"
 service backend_fruitfacts stop
 service frontend_fruitfacts stop
@@ -25,3 +30,6 @@ sudo -u www-data cargo build --release --no-default-features # --no-default-feat
 echo "starting backend+frontend"
 service backend_fruitfacts start
 service frontend_fruitfacts start
+
+echo "unsetting maintenance html"
+rm -f $maintenance_page
