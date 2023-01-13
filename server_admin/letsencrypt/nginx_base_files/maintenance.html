@@ -1,17 +1,74 @@
 <!doctype html>
 <title>Fruitfacts Maintenance</title>
 <style>
-  body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
+  body {
+    text-align: center;
+    padding: 150px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  body {
+    font: 20px Helvetica, sans-serif;
+    color: #333;
+  }
+
+  article {
+    display: block;
+    text-align: left;
+    width: 650px;
+    margin: 0 auto;
+  }
+
+  a {
+    color: #dc8100;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #333;
+    text-decoration: none;
+  }
 </style>
 
+<body onload="runCount()">
+
+</body>
+
 <article>
-    <h1><b>Fact:</b> this site is undergoing maintenance</h1>
-    <div>
-        <p>usually this is a database update that takes ~10 minutes</p>
-    </div>
+  <h1><b>Fact:</b> this site is undergoing maintenance</h1>
+  <div>
+    <p>usually this is a database update that takes ~10 minutes</p>
+    <p class="container_inner" id="display_div_id">
+  </div>
+  </p>
+  </div>
 </article>
+
+<script>
+  const start_time = "%UNIX_TIME_S%000"; // this gets set by the script that starts maintenance
+
+  function msToTime(duration) {
+    const hours = Math.floor(duration / (1000 * 60 * 60)),
+      minutes = Math.floor((duration / (1000 * 60)) % 60),
+      seconds = Math.floor((duration / 1000) % 60);
+
+    let beginning = '';
+    if (hours > 0) {
+      beginning = String(hours) + ':';
+    }
+
+    return beginning + String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+  }
+
+  function runCount() {
+    setInterval(function () {
+      const time = msToTime(Date.now() - start_time);
+      if(!isNaN(time)) {
+        document.getElementById('display_div_id').innerHTML = `time since maintenance started: ${time}`;
+      }
+    }, 1000);
+  }
+</script>

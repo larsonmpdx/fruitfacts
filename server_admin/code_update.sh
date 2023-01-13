@@ -14,6 +14,17 @@ maintenance_page=/usr/share/nginx/html/maintenance.html
 rm -f $maintenance_page
 cp ./letsencrypt/nginx_base_files/maintenance.html $maintenance_page
 
+# replace templated elements that look like %NAME% in this file
+# initially done so we can see elapsed time from when maintenance started
+d=$(date +%s)
+replacers=("UNIX_TIME_S=$d") # can add more elements to this
+for i in "${categories[@]}"; do
+    setting="$(echo "$line" | cut -d '=' -f 1)"
+    value="$(echo "$line" | cut -d '=' -f 2-)"
+
+    sed -i -e "s;%${setting}%;${value};g" "$maintenance_page"
+done
+
 echo "stopping backend+frontend"
 service backend_fruitfacts stop
 service frontend_fruitfacts stop
@@ -24,7 +35,7 @@ sudo -u www-data npm run build
 
 cd ../backend/
 sudo -u www-data rm -f ./Cargo.lock
-touch build.rs # make sure this runs each time so our env vars are updated
+touch build.rs                                               # make sure this runs each time so our env vars are updated
 sudo -u www-data cargo build --release --no-default-features # --no-default-features: skip our support binaries
 
 echo "starting backend+frontend"
