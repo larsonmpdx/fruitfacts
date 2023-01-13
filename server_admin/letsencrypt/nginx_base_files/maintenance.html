@@ -65,8 +65,9 @@
 
   function runCount() {
     setInterval(function () {
-      const time = msToTime(Date.now() - start_time);
-      if(!isNaN(time)) {
+      const now = Date.now();
+      if(!isNaN(start_time) && now > start_time) {
+        const time = msToTime(now - start_time);
         document.getElementById('display_div_id').innerHTML = `time since maintenance started: ${time}`;
       }
     }, 1000);

@@ -16,11 +16,13 @@ cp ./letsencrypt/nginx_base_files/maintenance.html $maintenance_page
 
 # replace templated elements that look like %NAME% in this file
 # initially done so we can see elapsed time from when maintenance started
+echo "editing $maintenance_page"
 d=$(date +%s)
 replacers=("UNIX_TIME_S=$d") # can add more elements to this
-for i in "${categories[@]}"; do
-    setting="$(echo "$line" | cut -d '=' -f 1)"
-    value="$(echo "$line" | cut -d '=' -f 2-)"
+for i in "${replacers[@]}"; do
+    echo "replacing $i"
+    setting="$(echo "$i" | cut -d '=' -f 1)"
+    value="$(echo "$i" | cut -d '=' -f 2-)"
 
     sed -i -e "s;%${setting}%;${value};g" "$maintenance_page"
 done
