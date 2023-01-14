@@ -13,7 +13,7 @@ dvc pull
 echo "setting maintenance html"
 maintenance_page=/usr/share/nginx/html/maintenance.html
 rm -f $maintenance_page
-cp ./letsencrypt/nginx_base_files/maintenance.html $maintenance_page
+cp ./server_admin/letsencrypt/nginx_base_files/maintenance.html $maintenance_page
 
 # replace templated elements that look like %NAME% in this file
 # initially done so we can see elapsed time from when maintenance started
