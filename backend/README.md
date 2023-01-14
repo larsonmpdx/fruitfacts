@@ -62,3 +62,5 @@
 * rust cargo: use lld on windows for faster builds. will eventually be default and I can remove the /.cargo/config.toml entry
   * in my testing this doesn't improve full build time at all
   * https://github.com/rust-lang/rust/issues/71520
+* rust cargo: why are things rebuilt on the server? spurious rebuilds are a very common problem
+  * https://github.com/rust-lang/cargo/issues/2904

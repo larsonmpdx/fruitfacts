@@ -6,6 +6,7 @@ use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
 use serde::Deserialize;
 use serde::Serialize;
 use std::io::Read;
+use base64::Engine as _; // check out this classy github issue! https://github.com/marshallpierce/rust-base64/issues/213
 
 use expiring_map::ExpiringMap;
 use once_cell::sync::Lazy; // 1.3.1
@@ -345,7 +346,7 @@ pub fn get_session_value(
     } else if set_session {
         println!("no session value found, setting");
         // set a random session
-        session_value = Some(base64::encode(rand::thread_rng().gen::<[u8; 32]>()));
+        session_value = Some(base64::engine::general_purpose::STANDARD_NO_PAD.encode(rand::thread_rng().gen::<[u8; 32]>()));
 
         outgoing_cookie = Some(
             Cookie::build("session", session_value.as_ref().unwrap().clone())

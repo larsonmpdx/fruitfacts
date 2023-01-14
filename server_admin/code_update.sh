@@ -37,8 +37,11 @@ sudo -u www-data npm run build
 
 cd ../backend/
 sudo -u www-data rm -f ./Cargo.lock
-touch build.rs                                               # make sure this runs each time so our env vars are updated
-sudo -u www-data cargo build --release --no-default-features # --no-default-features: skip our support binaries
+sudo -u www-data touch build.rs                              # make sure this runs each time so our env vars are updated
+sudo -u www-data cargo run --release --no-default-features -- --reload_db
+
+# view live tailed logs:
+# journalctl -xefu backend_fruitfacts
 
 echo "starting backend+frontend"
 service backend_fruitfacts start

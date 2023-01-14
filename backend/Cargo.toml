@@ -22,7 +22,7 @@ actix-web = "=4.2.1"
 anyhow = "=1.0.68"
 base64 = "=0.21.0"
 chrono = "=0.4.23"
-clap = {version = "=4.0.32", features = ["cargo"] }
+clap = {version = "=4.1.0", features = ["cargo"] }
 dotenv-build = "=0.1.1"
 env_logger = "=0.10.0"
 expiring_map = { git = "https://github.com/larsonmpdx/expiring_map/", branch = "remove_item" }

@@ -7,6 +7,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 cd ../backend/
 echo "stopping backend"
 systemctl stop backend_fruitfacts.service || true
-sudo -u www-data cargo run --release -- --reload_db
+sudo -u www-data cargo run --release --no-default-features -- --reload_db
 echo "starting backend"
 systemctl start backend_fruitfacts.service
