@@ -9,7 +9,7 @@ Type=simple
 User=www-data
 Group=www-data
 Restart=on-failure
-RestartSec=10
+RestartSec=20
 WorkingDirectory=/var/www/fruitfacts/backend/
 ExecStart=start_server.sh
 

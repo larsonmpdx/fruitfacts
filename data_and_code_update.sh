@@ -37,7 +37,7 @@ sudo -u www-data npm install --force # "--force" is only for one broken package,
 sudo -u www-data npm run build
 
 cd ../backend/
-sudo -u www-data rm -f ./Cargo.lock
+# sudo -u www-data rm -f ./Cargo.lock
 sudo -u www-data touch build.rs     # make sure this runs each time so our env vars are updated
 
 sudo -u www-data touch RELOAD_DB # tell the service to reload the database on start. see start_server.sh
