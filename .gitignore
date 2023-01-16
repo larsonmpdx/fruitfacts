@@ -2,3 +2,4 @@
 plant_database/**/*.jpg
 plant_database/**/*.png
 michael-gdrive-credentials.json
+RELOAD_DB

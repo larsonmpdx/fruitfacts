@@ -11,7 +11,7 @@ echo "dvc pull"
 dvc pull
 
 echo "setting maintenance html"
-maintenance_page=/usr/share/nginx/html/maintenance.html
+maintenance_page=/usr/share/nginx/html/maintenance.html # also in start_server.sh
 rm -f $maintenance_page
 cp ./server_admin/letsencrypt/nginx_base_files/maintenance.html $maintenance_page
 
@@ -38,16 +38,13 @@ sudo -u www-data npm run build
 
 cd ../backend/
 sudo -u www-data rm -f ./Cargo.lock
-sudo -u www-data touch build.rs                              # make sure this runs each time so our env vars are updated
+sudo -u www-data touch build.rs     # make sure this runs each time so our env vars are updated
 
-sudo -u www-data cargo run --release --no-default-features -- --reload_db
-
-# view live tailed logs:
-# journalctl -xefu backend_fruitfacts
+sudo -u www-data touch RELOAD_DB # tell the service to reload the database on start. see start_server.sh
 
 echo "starting backend+frontend"
 service backend_fruitfacts start
 service frontend_fruitfacts start
 
-echo "unsetting maintenance html"
-rm -f $maintenance_page
+# view live backend logs so we can see if the service starts or fails to start
+journalctl -xefu backend_fruitfacts

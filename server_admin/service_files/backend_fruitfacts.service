@@ -11,7 +11,7 @@ Group=www-data
 Restart=on-failure
 RestartSec=10
 WorkingDirectory=/var/www/fruitfacts/backend/
-ExecStart=cargo run --release
+ExecStart=start_server.sh
 
 [Install]
 WantedBy=multi-user.target
