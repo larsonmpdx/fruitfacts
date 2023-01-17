@@ -11,7 +11,7 @@ Group=www-data
 Restart=on-failure
 RestartSec=20
 WorkingDirectory=/var/www/fruitfacts/backend/
-ExecStart=/var/www/fruitfacts/backend/start_server.sh
+ExecStart=/var/www/fruitfacts/backend/harvest-chart-server
 
 [Install]
 WantedBy=multi-user.target

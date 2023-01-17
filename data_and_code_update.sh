@@ -40,11 +40,15 @@ cd ../backend/
 # sudo -u www-data rm -f ./Cargo.lock
 sudo -u www-data touch build.rs     # make sure this runs each time so our env vars are updated
 
-sudo -u www-data touch RELOAD_DB # tell the service to reload the database on start. see start_server.sh
+cargo run --release --no-default-features -- --reload_db
+cp -f ./target/release/harvest-chart-server ./
 
 echo "starting backend+frontend"
 service backend_fruitfacts start
 service frontend_fruitfacts start
+
+echo "unsetting maintenance html"
+rm -f $maintenance_page
 
 # view live backend logs so we can see if the service starts or fails to start
 journalctl -xefu backend_fruitfacts
