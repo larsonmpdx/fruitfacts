@@ -29,8 +29,8 @@ for i in "${replacers[@]}"; do
 done
 
 echo "stopping backend+frontend"
-service backend_fruitfacts stop
-service frontend_fruitfacts stop
+service backend_fruitfacts stop || true
+service frontend_fruitfacts stop || true
 
 cd ./frontend/
 sudo -u www-data npm install --force # "--force" is only for one broken package, see frontend README, remove it asap
