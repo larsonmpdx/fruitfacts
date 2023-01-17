@@ -38,10 +38,10 @@ sudo -u www-data npm run build
 
 cd ../backend/
 # sudo -u www-data rm -f ./Cargo.lock
-sudo -u www-data touch build.rs     # make sure this runs each time so our env vars are updated
+touch build.rs     # make sure this runs each time so our env vars are updated
 
 cargo run --release --no-default-features -- --reload_db
-cp -f ./target/release/harvest-chart-server ./
+sudo -u www-data cp -f ./target/release/harvest-chart-server ./
 
 echo "starting backend+frontend"
 service backend_fruitfacts start
