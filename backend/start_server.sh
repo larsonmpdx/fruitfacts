@@ -16,7 +16,9 @@ else
     cargo build --release --no-default-features
 fi
 
+cp -f ./target/release/harvest-chart-server ./
+
 echo "unsetting maintenance html"
 rm -f $maintenance_page
 
-cargo run --release
+./harvest-chart-server

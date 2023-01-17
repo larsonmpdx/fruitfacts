@@ -8,3 +8,5 @@ cd ..
 sudo chown -R www-data:www-data .
 cd -
 
+# for the maintenance html page
+chown -R /usr/share/nginx/html/ www-data
