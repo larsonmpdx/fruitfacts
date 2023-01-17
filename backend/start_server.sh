@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # I can't figure out why, but a "cargo build" run as the www-user doesn't save the built files
 # in a way that the service (running as www-user) can use them, and the service always rebuilds
 # so instead, we ask the service to check for a db reload and rebuild when it starts
