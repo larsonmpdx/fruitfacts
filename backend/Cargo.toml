@@ -26,7 +26,7 @@ clap = {version = "=4.1.1", features = ["cargo"] }
 dotenv-build = "=0.1.1"
 env_logger = "=0.10.0"
 expiring_map = { git = "https://github.com/larsonmpdx/expiring_map/", branch = "remove_item" }
-git2 = "=0.16.0"
+git2 = "=0.16.1"
 indexmap = "=1.9.2"
 itertools = "=0.10.5"
 json5 = "=0.4.1"
