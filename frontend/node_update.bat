@@ -1,6 +1,6 @@
 rem updates node and globally-installed tools
 
-rem get admin
+rem get admin for "nvm use..."
 Net session >nul 2>&1 || (
     PowerShell start -verb runas '%~0'
     pause
