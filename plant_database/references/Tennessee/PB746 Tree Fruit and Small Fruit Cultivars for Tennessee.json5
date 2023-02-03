@@ -1,0 +1,19 @@
+{
+    title: "PB746 Tree Fruit and Small Fruit Cultivars for Tennessee",
+    author: "David W. Lockwood",
+    url: "https://knox.tennessee.edu/wp-content/uploads/sites/202/2020/11/Tree-Fruit-and-Small-Fruit-Cultivars-for-Tennessee.pdf",
+    published: "",
+    accessed: "Feb 2022",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "University of Tennessee Extension",
+            latitude: 35.94755309612873, // campus office location
+            longitude: -83.9423571281274
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

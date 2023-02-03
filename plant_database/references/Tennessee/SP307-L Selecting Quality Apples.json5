@@ -1,0 +1,19 @@
+{
+    title: "SP307-L Selecting Quality Apples",
+    author: "Tammy Algood, David Lockwood",
+    url: "https://extension.tennessee.edu/publications/Documents/SP307-L.pdf",
+    published: "",
+    accessed: "Feb 2022",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "University of Tennessee Extension",
+            latitude: 35.94755309612873, // campus office location
+            longitude: -83.9423571281274
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}
