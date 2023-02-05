@@ -6,6 +6,7 @@
     accessed: "Feb 2022",
     type: "extension test",
     needs_help: true,
+    harvest_time_devalue_factor: 1.3, // mostly good but some are a little rough
     locations: [
         {
             name: "University of Tennessee Extension",
@@ -15,5 +16,769 @@
     ],
     plants: [
         // todo
+{
+    type: "Peach",
+    name: "Earlired",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven -20",
+    description: "yellow. clingstone. tendency for split pits, retains firmness on trees, sets fruit under adverse conditions"
+},
+{
+    type: "Peach",
+    name: "Candor",
+    chill_hours: "900",
+    harvest_time_relative: "Redhaven -20",
+    description: "yellow. clingstone. tendency for split pits, blossoms tender to cold, produces excessive buttons some years"
+},
+{
+    type: "Peach",
+    name: "Derby",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven -19",
+    description: "yellow. clingstone"
+},
+{
+    type: "Peach",
+    name: "Surecrop",
+    chill_hours: "950",
+    harvest_time_relative: "Redhaven -17",
+    description: "yellow. clingstone. blossoms are cold-hardy, trees consistently produce good crops, bacterial spot resistance, average resistance to brown rot, fruit is medium to large",
+    {
+        BLS: "some resistance",
+        brown_rot: "average"
+    }
+},
+{
+    type: "Peach",
+    name: "Sentry",
+    // chill hours not given
+    harvest_time_relative: "Redhaven -14",
+    description: "yellow"
+},
+{
+    type: "Peach",
+    name: "Summerprince",
+    chill_hours: "",
+    harvest_time_relative: "Redhaven -14",
+    description: "yellow"
+},
+{
+    type: "Peach",
+    name: "Garnet Beauty",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven -10",
+    description: "yellow. semi-free sizes well, slightly susceptible to bacterial leaf spot",
+    {
+        BLS: "slightly susceptible"
+    }
+},
+{
+    type: "Peach",
+    name: "Sureprince",
+    chill_hours: "900",
+    harvest_time_relative: "Redhaven -5",
+    description: "yellow. semi-freestone"
+},
+{
+    type: "Peach",
+    name: "Redhaven",
+    chill_hours: "950",
+    harvest_time: "mid July", // Approximate ripening time for Redhaven is mid-July in Tennessee
+    description: "yellow. freestone. non-browning flesh, resistant to bacterial leaf spot, consistently productive, flesh may cling unless fully ripe",
+    {
+        BLS: "resistant"
+    }
+},
+{
+    type: "Peach",
+    name: "Norman",
+    chill_hours: "900",
+    harvest_time_relative: "Redhaven +0"
+},
+{
+    type: "Peach",
+    name: "Late Sunhaven",
+    chill_hours: "900",
+    harvest_time_relative: "Redhaven +3",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Carogem",
+    chill_hours: "900",
+    harvest_time_relative: "Redhaven +3"
+},
+{
+    type: "Peach",
+    name: "Harken",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +3",
+    description: "yellow. freestone. tree is very cold-hardy and resistant to bacterial leaf spot, fruit is nonbrowning, hangs well and is above average for all uses",
+    {
+        BLS: "resistant"
+    }
+},
+{
+    type: "Peach",
+    name: "Challenger",
+    chill_hours: "950",
+    harvest_time_relative: "Redhaven +3",
+    description: "yellow"
+},
+{
+    type: "Peach",
+    name: "Newhaven",
+    chill_hours: "950",
+    harvest_time_relative: "Redhaven +3",
+    description: "yellow"
+},
+{
+    type: "Peach",
+    name: "Ranger",
+    chill_hours: "900",
+    harvest_time_relative: "Redhaven +4",
+    description: "yellow"
+},
+{
+    type: "Peach",
+    name: "Reliance",
+    chill_hours: "1000",
+    harvest_time_relative: "Redhaven +6",
+    description: "yellow. freestone. very bud-hardy but not wood-hardy, very late to bloom; needs heavy, early thinning to attain good size; fruit is soft, dropswhen ripe, poor quality"
+},
+{
+    type: "Peach",
+    name: "Nectar",
+    chill_hours: "1050",
+    harvest_time_relative: "Redhaven +6",
+    description: "white. freestone. fruit is very high quality with outstanding sweetness and aroma; too soft for shipping; not resistant to brown rot or browning",
+    {
+        brown_rot: "not resistant"
+    }
+},
+{
+    type: "Peach",
+    name: "Winblo",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +13",
+    description: "yellow. freestone. trees have moderate resistance to bacterial leaf spot; fruit is very high quality and moderately resistant to flesh browning",
+    {
+        BLS: "moderate resistance"
+    }
+},
+{
+    type: "Peach",
+    name: "Intrepid",
+    chill_hours: "1000",
+    harvest_time_relative: "Redhaven +11",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Fireprince",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +11",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Carogem",
+    chill_hours: "900",
+    harvest_time_relative: "Redhaven +11",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Blazeprince",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven ",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Jayhaven",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven ",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Sunhigh",
+    chill_hours: "800",
+    harvest_time_relative: "Redhaven +14",
+    description: "yellow. freestone. fruit is firm, sizes well, high quality; very susceptible to bacterial spot",
+    {
+        BLS: "very susceptible"
+    },
+},
+{
+    type: "Peach",
+    name: "Halehaven",
+    chill_hours: "900",
+    harvest_time_relative: "Redhaven +14",
+    description: "yellow. freestone. fruit too small in some seasons, does not ship well, susceptible to brown rot, ripens uniformly, browns moderately when used for freezing",
+    {
+        brown_rot: "susceptible"
+    }
+},
+{
+    type: "Peach",
+    name: "Glohaven",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +14",
+    description: "yellow. freestone. trees are highly productive, fruit requires thinning; fruit is large, uniform, good quality and resistant to browning"
+},
+{
+    type: "Peach",
+    name: "La Premier",
+    chill_hours: "1050",
+    harvest_time_relative: "Redhaven +16", // chart has "16?" for harvest time
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Loring",
+    chill_hours: "750",
+    harvest_time_relative: "Redhaven +16",
+    description: "yellow. freestone. fruit is firm, good size; tree is resistant to bacterial spot; buds are not frost- or cold-hardy",
+    {
+        BLS: "resistant"
+    }
+},
+{
+    type: "Peach",
+    name: "Bounty",
+    chill_hours: "800",
+    harvest_time_relative: "Redhaven +16",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Harmony",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +17",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Contender",
+    chill_hours: "1050",
+    harvest_time_relative: "Redhaven +19",
+    description: "yellow. freestone. blooms late, consistent cropper, needs early, heavy thinning; high quality fruit"
+},
+{
+    type: "Peach",
+    name: "Ruston Red",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +23",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Cresthaven",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +25",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Georgia Belle",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +25",
+    description: "white. freestone. tree is hardy, crops under adverse conditions; fruit ripens uniformly, bruises easily"
+},
+{
+    type: "Peach",
+    name: "Biscoe",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +25",
+    description: "yellow. freestone. tree is highly resistant to bacterial spot, very budhardy, aggressive thinning needed most years; fruit keeps well, not resistant to browning",
+    {
+        BLS: "highly resistant"
+    }
+},
+{
+    type: "Peach",
+    name: "Indian Red",
+    chill_hours: "900",
+    harvest_time_relative: "Redhaven +26",
+    description: "white. clingstone"
+},
+{
+    type: "Peach",
+    name: "Elberta",
+    chill_hours: "950",
+    harvest_time_relative: "Redhaven +28",
+    description: "yellow. freestone. fruit is large, resistant to brown rot, may drop heavily when approaching maturity, not resistant to flesh browning",
+    {
+        brown_rot: "resistant"
+    }
+},
+{
+    type: "Peach",
+    name: "Jerseyqueen",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +28",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Jefferson",
+    // chill: "?" in the chart
+    harvest_time_relative: "Redhaven +31",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "China Pearl",
+    chill_hours: "1100",
+    harvest_time_relative: "Redhaven +34",
+    description: "white. freestone"
+},
+{
+    type: "Peach",
+    name: "Rio-Oso-Gem",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +34",
+    description: "yellow. freestone. trees are not cold-hardy, have a weal structure, susceptible to bacterial spot; fruit ripens uniformly",
+    {
+        BLS: "susceptible"
+    }
+},
+{
+    type: "Peach",
+    name: "Monroe",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +34",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Tyler",
+    chill_hours: "950",
+    harvest_time_relative: "Redhaven +34",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Legend",
+    chill_hours: "950",
+    harvest_time_relative: "Redhaven +42",
+    description: "yellow. freestone"
+},
+{
+    type: "Peach",
+    name: "Parade",
+    chill_hours: "850",
+    harvest_time_relative: "Redhaven +46",
+    description: "yellow. freestone"
+},
+
+
+// apples
+
+Lodi
+Yellowish-Green. Ripens early, fruit is tart, softens quickly when ripe, good for cooking; tree is highly susceptible to fireblight and cedar apple rust
+"highly susceptible to fireblight and cedar apple rust"
+
+Ginger Gold
+Yellow. Golden Delicious type that ripens in late July to early August in Tennessee, flavor is sweet and tangy, flesh is firm and crisp; tree is hardy, vigorous and fireblight susceptible
+"late July to early August"
+
+Mollie's Delicious
+Red blush over a pale yellow background. Tree is vigorous and productive, susceptible to fireblight, and excellent pollinator; fruit is good quality and large, requires multiple pickings as fruit ripening is not uniform
+"susceptible to fireblight"
+
+Gala
+Red-orange blush with pale yellow undercolor. Ripens in early to mid-August in Tennessee; fruit is excellent quality, firm, crisp and stores well, more highly colored strains of Gala are available; tree is productive, susceptible to fireblight
+"early to mid-August"
+
+
+Honeycrisp
+Red striping over greenish-yellow ground color. Flesh is juicy and crisp, flavor is sub-acid and wellbalanced, fruit stores well; tree is moderately vigorous; performs best in cooler regions of the state
+
+Empire
+Red striped. McIntosh X Red Delicious cross that retains the flavor of McIntosh, but is more highly colored and does not soften as quickly, fruit is medium size; blooms early so frost is more of a concern; tree is upright, spreading, fireblight susceptible
+"fireblight susceptible"
+
+Jonathan
+Red striped. Good dessert and cooking apple, fruit is medium size; good pollinator; tree is very susceptible to fireblight, cedar apple rust and powdery mildew
+"very susceptible to fireblight, cedar apple rust and powdery mildew"
+
+Red Delicious
+AKA Delicious
+Red. Many strains of Red Delicious are available - some of which are spur types; fruit is sweet, highly colored
+
+Golden Delicious
+AKA Yellow Delicious
+Yellow. Multi-use sweet fruit is good for fresh eating and processing; tree is susceptible to fireblight and cedar apple rust; good pollinator; will alternate bear if not thinned aggressively
+"susceptible to fireblight and cedar apple rust"
+
+Jonagold
+Red stripes over yellow ground color. Jonathan X Golden Delicious cross; fruit is large, high quality, softens quickly; tree is vigorous, susceptible to fireblight; will not cross pollinate other cultivars
+"susceptible to fireblight"
+
+Mutsu
+AKA Crispin
+Light green to pale yellow. Fruit is large, firm, juicy, stores well; tree is vigorous, susceptible to fireblight and blister spot; will not pollinate other cultivars
+"susceptible to fireblight and blister spot"
+
+Cameo
+Red striped. Flavor is sweet-tart; flesh is crunchy, creamy-white, non-browning; fruit is firm, stores well; tree is moderately vigorous
+
+Winesap
+Dark red stripes over a red background. Excellent dessert and processing quality, tart flavor, flesh is firm, crisp; should not be used as a pollinator for other cultivars
+
+Turley
+Red. Type of Winesap; fruit is tart, high quality; tree is moderately susceptible to fireblight
+"moderately susceptible to fireblight"
+
+Melrose
+Red striped. Jonathan X Red Delicious cross; fruit is high quality; tree is vigorous, an annual producer, resistant to fireblight
+"resistant to fireblight"
+
+Rome
+Red striped to red blush. Good processing quality, fruit keeps well; blooms late, ripens late, annual producer, susceptible to fireblight. Hardy
+"susceptible to fireblight"
+
+Cumberland
+Red over pale green ground color. Fruit is high quality, flavor is moderately sweet; flesh is slightly coarse, juicy, crisp, ripens just after Rome; trees are moderately vigorous, spreading and hardy
+
+Arkansas Black
+Dark red (purple). Fruit ripens late, stores very well, mildly tart, firm; flesh is cream-colored; spur-type trees are grower friendly; good pollinator for other cultivars
+
+Fuji
+Red stripes over yellowish-green ground color. Fruit is excellent quality, but may be poor in color and shape, crisp, juicy, slightly subacid to sweet, stores well; tree is vigorous, productive; crop is difficult to chemically thin
+
+Braeburn
+Orange-red. Fruit is high quality; flesh is crisp and tangy; tree is low in vigor, tends to bloom early, susceptible to scab, fireblight and mildew
+"susceptible to scab, fireblight and mildew"
+
+Granny Smith
+Green. Fruit ripens late, stores well, may develop an orange blush on the side exposed to the sun if allowed to hang; trees are willowy, difficult to train, susceptible to scab, fireblight, cedar apple rust and powdery mildew
+"susceptible to scab, fireblight, cedar apple rust and powdery mildew"
+
+Pink Lady
+Yellow with pink stripes. Flesh is fine-grained, white and crisp, flavor is sweet-tart; fruit stores well; tree is very fireblight susceptible
+"very fireblight susceptible"
+
+// disease-resistant apples
+
+Redfree
+Red. Tree is immune to scab, moderately resistant to fireblight, cedar apple rust and powdery mildew; fruit is crisp, juicy, waxy, russet-free; ripening is about six weeks before Delicious
+"immune to scab, moderately resistant to fireblight, cedar apple rust and powdery mildew"
+
+Liberty
+Red striped. Tree is highly resistant to scab, fireblight, cedar apple rust and powdery mildew; fruit is crisp, juicy, sub-acid;
+ripens about two weeks before Delicious; stores well;
+
+Freedom
+Red. Tree is highly resistant to scab, moderately resistant to cedar apple rust and powdery mildew; fruit is crisp, juicy, good for fresh and processing; ripens with Delicious
+"ripens with Delicious"
+"highly resistant to scab, fireblight, cedar apple rust and powdery mildew"
+
+Enterprise
+Red stripes over green ground color. Tree is scab immune; fruit is spicy and sub-acid, hangs well, stores well
+"scab immune"
+
+Goldrush
+Yellow. Tree is highly resistant to scab and powdery mildew, moderately resistant to fireblight; fruit is sweet, crisp, good for fresh and processing; ripens late, keeps very well
+"highly resistant to scab and powdery mildew, moderately resistant to fireblight"
+
+// apple rootstocks
+
+Malling 27 (M27)
+80 to 85%
+(Dwarfing)
+“Superdwarf”; considered to be too dwarfing for commercial uses except with most vigorous cultivars; needs support and irrigation
+
+Malling 9
+(M9, EMLA 9)
+65 to 70% (Dwarfing)
+Induces early bearing, heavy production, large fruit size; resistant to collar rot, very susceptible to fireblight, susceptible to wooly apple aphid; needs support and irrigation
+
+Budagovski 9 (Bud 9)
+65 to 70% (Dwarfing)
+Similar to M9 except Bud 9 is less fireblight susceptible
+
+CG-16 60%
+(Dwarfing)
+Resistant to fireblight and phytophthora; very precocious and productive; does not root-sucker; susceptible to wooly apple aphids; needs support and irrigation
+
+Malling 26 (M26, EMLA 26)
+55 to 60% (Dwarfing)
+Very susceptible to fireblight; susceptible to wooly apple aphid and collar rot; induces early bearing; needs support; irrigation highly recommended
+
+EMLA 7
+40 to 45% (Semi-dwarfing)
+Moderately resistant to collar rot; not as susceptible to fireblight as most dwarfing rootstocks; not as precocious as dwarfing rootstocks; trees need to be supported; burr knotting and root suckers can be a problem
+
+CG-30
+40 too 45%
+More precocious and productive than EMLA 7 but less prone to burr knots and root suckers; not resistant to wooly apple aphid
+
+EMLA 106
+30%
+Precocious, not prone to root suckering; resistant to wooly apple aphid; self-supporting; collar rot is a serious problem if planted in soils having poor drainage characteristics
+
+EMLA 111
+20%
+Performs well on drought-prone soils and heavier soils; well-anchored, resistant to wooly apple aphid; prone to burr knotting; not as precocious as
+
+Seedling (standard)
+Full-size 100%
+Slow to come into bearing; no resistance to wooly apple aphids
+
+// plums
+// Major problems encountered will be crop loss due to spring frosts and black knot control
+Bruce
+Red. Oriental type; ripens early; fruit is good size, firm, high quality; a second cultivar for cross pollination is needed
+
+Methley
+Purple skin with red flesh. Fruit is high quality, juicy, sweet; buds are hardy; blossoms are self-fertile
+
+Ozark Premier
+Red skin with yellow flesh. Oriental type; fruit is large; flesh may cling to pit; blossoms are self fertile
+
+Stanley
+Purple skin with greenish flesh. Fruit is freestone, high quality, sweet; blossoms are self fertile; blooms later than most other plum cultivars
+
+// euro pears
+Ayers
+uses: fresh or canning. Ripens early; fruits are juicy, sweet
+fireblight resistance: Moderate
+
+
+Moonglow
+uses: fresh or canning. Ripens early; fruits are soft, juicy, have few grit cells; trees are upright, heavily spurred
+fireblight resistance: Moderate
+
+
+Orient
+uses: Canning or cooking. Fruits are firm, juicy, gritty and nearly round; trees are large, vigorous and productive
+fireblight resistance: Low
+
+
+Starking Delicious
+uses: fresh, cooking and canning. Fruits are large, golden; flesh is creamy white; good pollinizer
+fireblight resistance: Moderate
+
+Seckel
+uses: fresh, pickling, spicing, canning. Commonly called “Sugar Pear”; fruits are small, yellowish-brown with pale russet; flesh is finegrained, smooth, very sweet, very juicy and high quality; tree is productive, slow growing and naturally semi-dwarf 
+fireblight resistance: Moderate
+
+Keiffer
+uses: canning and cooking, preserves. Fruits are large, yellow, juicy, gritty; tree is a consistent producer
+fireblight resistance: Moderate
+
+
+// asian pears
+
+Shinseiki
+Medium to large yellow fruit with very little russet; flesh is crisp, juicy, creamy white, sweet and mild; fruit hangs on tree well, stores well; tree is medium to large at maturity and spreading
+
+Hosui
+Fruit is medium-large, covered with an orangish-brown russet, stores well; flesh is juicy, sweet, fine grained, crisp and off-white in color; tree is vigorous and spreading
+
+Chojuro
+Fruit is medium to large, flattened, brown-russeted with thick skin; flesh is crisp, slightly aromatic; fruit stores well; tree is medium size and early bearing (may tend to overbear and need thinning)
+
+// sour cherries
+
+Early Richmond
+uses: cooking. Fruit is tart, acid; tree is very hardy
+
+North Star
+Dwarf. uses: cooking
+
+Montmorency
+uses: cooking, freezing. Fruit is tart, large; (most common tart cherry produced in the United States)
+
+// american bunch grapes
+
+Delaware
+blue. early Aug. uses: wine, table small fruit, vines hardy and slow growing
+"early Aug"
+
+Steuben
+blue. mid Aug. uses: wine, table, juice. large fruit, compact clusters; vines hardy, vigorous, productive
+"mid Aug"
+
+Concord
+blue. late Aug. uses: wine, table, juice, jelly. fruit ripens unevenly in cluster; vines productive, hardy
+"late Aug"
+
+Sunbelt
+blue. late Aug. uses: wine, table, juice, jelly. fruit ripens more uniformly than Concord, substitute for Concord in warmer areas
+"late Aug"
+
+Catawba
+red. early Sept. uses: wine, table, juice. medium size clusters and berries; vines are vigorous, moderately hardy
+"early Sept"
+
+Niagara
+white. early Sept. uses: wine, table, juice. large clusters, large berries; vines productive, vigorous, very susceptible to black rot
+"early Sept"
+"very susceptible to black rot"
+
+Cynthiana
+AKA Norton
+blue. late Sept. uses: wine. small to medium clusters, small berries; vineis hardy, moderately disease-resistant
+"late Sept"
+
+// hybrid grapes
+Seyval
+white. early Aug. uses: wine. vine has medium vigo, subject to overbearing; highly fruitful on secondary buds
+"early Aug"
+
+Cayuga White
+white. mid Aug. uses: wine. large clusters; vines are vigorous and moderately hardy
+"mid Aug"
+
+Noiret
+blue. mid Aug. uses: wine. new introduction from Cornell; replacement for Chambourcin in areas where it is difficult to ripen
+"mid Aug"
+
+Corot Noir
+blue. mid Aug. uses: wine. new introduction from Cornell; replacement for Chambourcin in areas where it is difficult to ripen
+"mid Aug"
+
+Chambourcin
+blue. late Aug. uses: wine. vine is medium in vigor, moderately hardy; use short cane pruning
+"late Aug"
+
+Chardonel
+white. late Aug. uses: wine. Seyval X Chardonnay; more hardy and productive than Chardonnay; suggest using grafted vines
+"late Aug"
+
+Traminette
+white. late Aug. uses: wine. Gewurztraminer cross; makes a spicy wine; suggest using grafted vines
+"late Aug"
+
+Villard Blanc
+white. mid Sept. uses: wine. vine produces large, loose clusters; use spur pruning
+"mid Sept"
+
+Vidal
+white. mid Sept. uses: wine. vine is productive, hardy
+"mid Sept"
+
+Vignoles
+white. mid Sept. uses: wine. compact clusters, berries tend to crack in wet seasons; vines hardy, low to moderately productive
+"mid Sept"
+
+// seedless grapes
+Mars
+blue. early Aug. table, juice berries are medium size, sweet, slipskin; vines are vigorous and may overbear in early years
+"early Aug"
+
+Reliance
+pink. early Aug. uses: table, raisins. berries are small, high quality, slipskin with thin skin; fruit color may vary in some years; vines are vigorous, winter hardy
+"early Aug"
+
+Saturn
+red. mid Aug. uses: table. berries are large, oblong shaped; flesh is non-slipskin; cluster are medium size; vines are medium in vigor and fruitfulness
+"mid Aug"
+
+Marquis
+white. mid Aug. uses: table, juice. berries are high quality, slipskin; vine is productive
+"mid Aug"
+
+Neptune
+white. mid Aug. uses: table. berry are medium size, non-slipskin, high in sugar content; vines are low to medium in vigor
+"mid Aug"
+
+Jupiter
+blue. mid Aug. uses: table. berries have a mild, muscat flavor, non-slipskin; clusters are large
+"mid Aug"
+
+// muscadine
+// (not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in
+// the northern half or the state
+
+Hunt
+female. black. medium to large fruit, ripens early; vines moderately vigorous
+"early"
+
+Scuppernong
+female. bronze. medium size fruit, ripens mid-season, skin is medium thick; vines moderately vigorous
+"mid-season"
+
+Carlos
+perfect flowers. bronze. medium size fruit, ripens mid-season; vinesvigorous, heavy producer
+"mid-season"
+
+Pride
+female. black. large fruit, skin medium thick, ripens mid-season; vines are vigorous
+
+Nesbitt
+perfect flowers (?) black (?)
+
+Golden Isle
+perfect flowers. bronze. medium size clusters, large berries, thin skin, produces high quality white wine
+
+Triumph
+perfect flowers. bronze. dry scar on fruit, ripens late; excellent pollinator
+"ripens late"
+
+Magnolia
+perfect flowers. bronze. large berries, ripens late; vines vigorous
+"ripens late"
+
+Cowart
+perfect flowers. black. large fruit that ripens uniformly; vines vigorous, productive
+
+// euro grapes
+// V. vinifera cultivars should be grafted onto C-3309 or 101-14 rootstocks to provide resistance to root phylloxera
+
+Chardonnay
+white. vigorous vine, hardy, but begins growth early in spring; cool season cultivar. should be grafted for phylloxera protection
+
+Merlot
+black. berries medium size, round; vine is high-yielding, begins growth early in spring. should be grafted for phylloxera protection
+
+Cabernet franc
+purplish-black. similar to Cab. Sauvignon, more winter hardy, but begins growth and ripens fruit earlier. should be grafted for phylloxera protection
+
+Cabernet sauvignon
+purplish black. vigorous, upright vine, ripens late. should be grafted for phylloxera protection
+"ripens late"
+
+// blackberries
+
+Choctaw
+thorned, erect; plant is productive, vigorous, produces many suckers; fruit is high quality, has small seeds, ripens about 10 days earlier than Shawnee, susceptible to double blossom
+
+Shawnee
+thorned, erect; plant is vigorous, productive, very susceptible to double blossom; fruit is shiny, black, attractive, firm
+
+Kiowa
+thorned, erect; very large fruit, long harvest season; susceptible to double blossom
+
+Natchez
+trial recommendation. thornless, erect to semi-erect; fruit size is large, flavor is good, yields are high
+
+Apache
+thornless, erect, high yielding; fruit is large, high quality, sweet, has some tendency to have white druplets on berries
+
+Ouachita
+thornless, very erect; fruit is smaller than Apache (equivalent to Navaho), good flavor, high yields
+
+Navaho
+thornless, erect; fruit is medium size, firm, sweet
+
+Triple Crown
+thornless, semi-erect, productive; sweet/tart flavor
+
+Chester
+thornless, semi-erect; plant is vigorous, very productive; fruit quality is less than Triple Crown, ripens later than Triple Crown
+
+Prime Jim
+trial recommendation. primocane fruiting, thorned, erect; good flavor, moderate yields; suggest growing for primocane crop only as floricanes are susceptible to double blossom
+
+Prime Jan
+trial recommendation. primocane fruiting, thorned, erect; good flavor, moderate yields; suggest growing for primocane crop only as floricanes are susceptible to double blossom
+
+
     ]
 }
