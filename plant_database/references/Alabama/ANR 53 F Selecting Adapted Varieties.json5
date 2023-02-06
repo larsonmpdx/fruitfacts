@@ -1,0 +1,19 @@
+{
+    title: "ANR 53 F Selecting Adapted Varieties",
+    author: "Arlie Powell, David Himelrick, William Dozier, David Williams",
+    url: "https://ssl.acesag.auburn.edu/pubs/docs/A/ANR-0053-F/ANR-0053-F-archive.pdf",
+    accessed: "Feb 2023",
+    published: "April 1999",
+    type: "extension test",
+    needs_help: true, // location, and varieties
+    locations: [
+        {
+            name: "Camp Hill, AL", // todo a better location for Auburn University
+            latitude: 32.82968087226203,
+            longitude: -85.6504926042269
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

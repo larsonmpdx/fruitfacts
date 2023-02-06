@@ -256,7 +256,7 @@
             released: "Cornell 1961*"
         },
         {
-            name: "Noiret",
+            name: "Noiret", // todo I think cornell claims a trademark on this
             AKA: ["NY 73.0136.17"],
             type: "Grape",
             description: "NY65.0467.08 x Steuben https://ecommons.cornell.edu/handle/1813/33325",

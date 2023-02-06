@@ -5,7 +5,7 @@
     published: "",
     accessed: "Feb 2022",
     type: "extension test",
-    needs_help: true,
+    needs_help: true, // todo - apple rootstocks
     harvest_time_devalue_factor: 1.3, // mostly good but some are a little rough
     locations: [
         {
@@ -15,7 +15,6 @@
         }
     ],
     plants: [
-        // todo
         {
             type: "Peach",
             name: "Earlired",
@@ -590,9 +589,10 @@
                 powdery_mildew: "highly resistant",
                 fire_blight: "moderately resistant"
             }
-        }
+        },
 
         // apple rootstocks
+        // todo
         /*
 Malling 27 (M27)
 80 to 85%
@@ -635,256 +635,395 @@ Performs well on drought-prone soils and heavier soils; well-anchored, resistant
 Seedling (standard)
 Full-size 100%
 Slow to come into bearing; no resistance to wooly apple aphids
-
-// plums
-// Major problems encountered will be crop loss due to spring frosts and black knot control
-Bruce
-Red. Oriental type; ripens early; fruit is good size, firm, high quality; a second cultivar for cross pollination is needed
-
-Methley
-Purple skin with red flesh. Fruit is high quality, juicy, sweet; buds are hardy; blossoms are self-fertile
-
-Ozark Premier
-Red skin with yellow flesh. Oriental type; fruit is large; flesh may cling to pit; blossoms are self fertile
-
-Stanley
-Purple skin with greenish flesh. Fruit is freestone, high quality, sweet; blossoms are self fertile; blooms later than most other plum cultivars
-
-// euro pears
-Ayers
-uses: fresh or canning. Ripens early; fruits are juicy, sweet
-fireblight resistance: Moderate
-
-
-Moonglow
-uses: fresh or canning. Ripens early; fruits are soft, juicy, have few grit cells; trees are upright, heavily spurred
-fireblight resistance: Moderate
-
-
-Orient
-uses: Canning or cooking. Fruits are firm, juicy, gritty and nearly round; trees are large, vigorous and productive
-fireblight resistance: Low
-
-
-Starking Delicious
-uses: fresh, cooking and canning. Fruits are large, golden; flesh is creamy white; good pollinizer
-fireblight resistance: Moderate
-
-Seckel
-uses: fresh, pickling, spicing, canning. Commonly called “Sugar Pear”; fruits are small, yellowish-brown with pale russet; flesh is finegrained, smooth, very sweet, very juicy and high quality; tree is productive, slow growing and naturally semi-dwarf 
-fireblight resistance: Moderate
-
-Keiffer
-uses: canning and cooking, preserves. Fruits are large, yellow, juicy, gritty; tree is a consistent producer
-fireblight resistance: Moderate
-
-
-// asian pears
-
-Shinseiki
-Medium to large yellow fruit with very little russet; flesh is crisp, juicy, creamy white, sweet and mild; fruit hangs on tree well, stores well; tree is medium to large at maturity and spreading
-
-Hosui
-Fruit is medium-large, covered with an orangish-brown russet, stores well; flesh is juicy, sweet, fine grained, crisp and off-white in color; tree is vigorous and spreading
-
-Chojuro
-Fruit is medium to large, flattened, brown-russeted with thick skin; flesh is crisp, slightly aromatic; fruit stores well; tree is medium size and early bearing (may tend to overbear and need thinning)
-
-// sour cherries
-
-Early Richmond
-uses: cooking. Fruit is tart, acid; tree is very hardy
-
-North Star
-Dwarf. uses: cooking
-
-Montmorency
-uses: cooking, freezing. Fruit is tart, large; (most common tart cherry produced in the United States)
-
-// american bunch grapes
-
-Delaware
-blue. early Aug. uses: wine, table small fruit, vines hardy and slow growing
-"early Aug"
-
-Steuben
-blue. mid Aug. uses: wine, table, juice. large fruit, compact clusters; vines hardy, vigorous, productive
-"mid Aug"
-
-Concord
-blue. late Aug. uses: wine, table, juice, jelly. fruit ripens unevenly in cluster; vines productive, hardy
-"late Aug"
-
-Sunbelt
-blue. late Aug. uses: wine, table, juice, jelly. fruit ripens more uniformly than Concord, substitute for Concord in warmer areas
-"late Aug"
-
-Catawba
-red. early Sept. uses: wine, table, juice. medium size clusters and berries; vines are vigorous, moderately hardy
-"early Sept"
-
-Niagara
-white. early Sept. uses: wine, table, juice. large clusters, large berries; vines productive, vigorous, very susceptible to black rot
-"early Sept"
-"very susceptible to black rot"
-
-Cynthiana
-AKA Norton
-blue. late Sept. uses: wine. small to medium clusters, small berries; vineis hardy, moderately disease-resistant
-"late Sept"
-
-// hybrid grapes
-Seyval
-white. early Aug. uses: wine. vine has medium vigo, subject to overbearing; highly fruitful on secondary buds
-"early Aug"
-
-Cayuga White
-white. mid Aug. uses: wine. large clusters; vines are vigorous and moderately hardy
-"mid Aug"
-
-Noiret
-blue. mid Aug. uses: wine. new introduction from Cornell; replacement for Chambourcin in areas where it is difficult to ripen
-"mid Aug"
-
-Corot Noir
-blue. mid Aug. uses: wine. new introduction from Cornell; replacement for Chambourcin in areas where it is difficult to ripen
-"mid Aug"
-
-Chambourcin
-blue. late Aug. uses: wine. vine is medium in vigor, moderately hardy; use short cane pruning
-"late Aug"
-
-Chardonel
-white. late Aug. uses: wine. Seyval X Chardonnay; more hardy and productive than Chardonnay; suggest using grafted vines
-"late Aug"
-
-Traminette
-white. late Aug. uses: wine. Gewurztraminer cross; makes a spicy wine; suggest using grafted vines
-"late Aug"
-
-Villard Blanc
-white. mid Sept. uses: wine. vine produces large, loose clusters; use spur pruning
-"mid Sept"
-
-Vidal
-white. mid Sept. uses: wine. vine is productive, hardy
-"mid Sept"
-
-Vignoles
-white. mid Sept. uses: wine. compact clusters, berries tend to crack in wet seasons; vines hardy, low to moderately productive
-"mid Sept"
-
-// seedless grapes
-Mars
-blue. early Aug. table, juice berries are medium size, sweet, slipskin; vines are vigorous and may overbear in early years
-"early Aug"
-
-Reliance
-pink. early Aug. uses: table, raisins. berries are small, high quality, slipskin with thin skin; fruit color may vary in some years; vines are vigorous, winter hardy
-"early Aug"
-
-Saturn
-red. mid Aug. uses: table. berries are large, oblong shaped; flesh is non-slipskin; cluster are medium size; vines are medium in vigor and fruitfulness
-"mid Aug"
-
-Marquis
-white. mid Aug. uses: table, juice. berries are high quality, slipskin; vine is productive
-"mid Aug"
-
-Neptune
-white. mid Aug. uses: table. berry are medium size, non-slipskin, high in sugar content; vines are low to medium in vigor
-"mid Aug"
-
-Jupiter
-blue. mid Aug. uses: table. berries have a mild, muscat flavor, non-slipskin; clusters are large
-"mid Aug"
-
-// muscadine
-// (not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in
-// the northern half or the state
-
-Hunt
-female. black. medium to large fruit, ripens early; vines moderately vigorous
-"early"
-
-Scuppernong
-female. bronze. medium size fruit, ripens mid-season, skin is medium thick; vines moderately vigorous
-"mid-season"
-
-Carlos
-perfect flowers. bronze. medium size fruit, ripens mid-season; vinesvigorous, heavy producer
-"mid-season"
-
-Pride
-female. black. large fruit, skin medium thick, ripens mid-season; vines are vigorous
-
-Nesbitt
-perfect flowers (?) black (?)
-
-Golden Isle
-perfect flowers. bronze. medium size clusters, large berries, thin skin, produces high quality white wine
-
-Triumph
-perfect flowers. bronze. dry scar on fruit, ripens late; excellent pollinator
-"ripens late"
-
-Magnolia
-perfect flowers. bronze. large berries, ripens late; vines vigorous
-"ripens late"
-
-Cowart
-perfect flowers. black. large fruit that ripens uniformly; vines vigorous, productive
-
-// euro grapes
-// V. vinifera cultivars should be grafted onto C-3309 or 101-14 rootstocks to provide resistance to root phylloxera
-
-Chardonnay
-white. vigorous vine, hardy, but begins growth early in spring; cool season cultivar. should be grafted for phylloxera protection
-
-Merlot
-black. berries medium size, round; vine is high-yielding, begins growth early in spring. should be grafted for phylloxera protection
-
-Cabernet franc
-purplish-black. similar to Cab. Sauvignon, more winter hardy, but begins growth and ripens fruit earlier. should be grafted for phylloxera protection
-
-Cabernet sauvignon
-purplish black. vigorous, upright vine, ripens late. should be grafted for phylloxera protection
-"ripens late"
-
-// blackberries
-
-Choctaw
-thorned, erect; plant is productive, vigorous, produces many suckers; fruit is high quality, has small seeds, ripens about 10 days earlier than Shawnee, susceptible to double blossom
-
-Shawnee
-thorned, erect; plant is vigorous, productive, very susceptible to double blossom; fruit is shiny, black, attractive, firm
-
-Kiowa
-thorned, erect; very large fruit, long harvest season; susceptible to double blossom
-
-Natchez
-trial recommendation. thornless, erect to semi-erect; fruit size is large, flavor is good, yields are high
-
-Apache
-thornless, erect, high yielding; fruit is large, high quality, sweet, has some tendency to have white druplets on berries
-
-Ouachita
-thornless, very erect; fruit is smaller than Apache (equivalent to Navaho), good flavor, high yields
-
-Navaho
-thornless, erect; fruit is medium size, firm, sweet
-
-Triple Crown
-thornless, semi-erect, productive; sweet/tart flavor
-
-Chester
-thornless, semi-erect; plant is vigorous, very productive; fruit quality is less than Triple Crown, ripens later than Triple Crown
-
-Prime Jim
-trial recommendation. primocane fruiting, thorned, erect; good flavor, moderate yields; suggest growing for primocane crop only as floricanes are susceptible to double blossom
-
-Prime Jan
-trial recommendation. primocane fruiting, thorned, erect; good flavor, moderate yields; suggest growing for primocane crop only as floricanes are susceptible to double blossom
 */
+        // plums
+        // Major problems encountered will be crop loss due to spring frosts and black knot control
+        {
+            type: "Japanese Plum",
+            name: "Bruce",
+            description: "Red. Oriental type; ripens early; fruit is good size, firm, high quality; a second cultivar for cross pollination is needed"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Methley",
+            description: "Purple skin with red flesh. Fruit is high quality, juicy, sweet; buds are hardy; blossoms are self-fertile"
+        },
+        {
+            type: "Japanese Plum",
+            name: "Ozark Premier",
+            description: "Red skin with yellow flesh. Oriental type; fruit is large; flesh may cling to pit; blossoms are self fertile"
+        },
+        {
+            type: "Euro Plum",
+            name: "Stanley",
+            description: "Purple skin with greenish flesh. Fruit is freestone, high quality, sweet; blossoms are self fertile; blooms later than most other plum cultivars"
+        },
+
+        // euro pears
+        {
+            type: "Euro Pear",
+            name: "Ayers",
+            description: "uses: fresh or canning. Ripens early; fruits are juicy, sweet",
+            disease_resistance: {
+                fire_blight: "Moderate resistance"
+            }
+        },
+        {
+            type: "Euro Pear",
+            name: "Moonglow",
+            description: "uses: fresh or canning. Ripens early; fruits are soft, juicy, have few grit cells; trees are upright, heavily spurred",
+            disease_resistance: {
+                fire_blight: "Moderate resistance"
+            }
+        },
+        {
+            type: "Euro Pear",
+            name: "Orient",
+            description: "uses: Canning or cooking. Fruits are firm, juicy, gritty and nearly round; trees are large, vigorous and productive",
+            disease_resistance: {
+                fire_blight: "Low resistance"
+            }
+        },
+        {
+            type: "Euro Pear",
+            name: "Starking Delicious",
+            description: "uses: fresh, cooking and canning. Fruits are large, golden; flesh is creamy white; good pollinizer",
+            disease_resistance: {
+                fire_blight: "Moderate resistance"
+            }
+        },
+        {
+            type: "Euro Pear",
+            name: "Seckel",
+            description: "uses: fresh, pickling, spicing, canning. Commonly called “Sugar Pear”; fruits are small, yellowish-brown with pale russet; flesh is finegrained, smooth, very sweet, very juicy and high quality; tree is productive, slow growing and naturally semi-dwarf ",
+            disease_resistance: {
+                fire_blight: "Moderate resistance"
+            }
+        },
+        {
+            type: "Euro Pear",
+            name: "Keiffer",
+            description: "uses: canning and cooking, preserves. Fruits are large, yellow, juicy, gritty; tree is a consistent producer",
+            disease_resistance: {
+                fire_blight: "Moderate resistance"
+            }
+        },
+        // asian pears
+        {
+            type: "Asian Pear",
+            name: "Shinseiki",
+            description: "Medium to large yellow fruit with very little russet; flesh is crisp, juicy, creamy white, sweet and mild; fruit hangs on tree well, stores well; tree is medium to large at maturity and spreading"
+        },
+        {
+            type: "Asian Pear",
+            name: "Hosui",
+            description: "Fruit is medium-large, covered with an orangish-brown russet, stores well; flesh is juicy, sweet, fine grained, crisp and off-white in color; tree is vigorous and spreading"
+        },
+        {
+            type: "Asian Pear",
+            name: "Chojuro",
+            description: "Fruit is medium to large, flattened, brown-russeted with thick skin; flesh is crisp, slightly aromatic; fruit stores well; tree is medium size and early bearing (may tend to overbear and need thinning)"
+        },
+        // sour cherries
+
+        {
+            type: "Sour Cherry",
+            name: "Early Richmond",
+            description: "uses: cooking. Fruit is tart, acid; tree is very hardy"
+        },
+        {
+            type: "Sour Cherry",
+            name: "North Star",
+            description: "Dwarf. uses: cooking"
+        },
+        {
+            type: "Sour Cherry",
+            name: "Montmorency",
+            description: "uses: cooking, freezing. Fruit is tart, large; (most common tart cherry produced in the United States)"
+        },
+        // american bunch grapes
+        {
+            type: "Grape",
+            name: "Delaware",
+            description: "american bunch grape. blue. early Aug. uses: wine, table small fruit, vines hardy and slow growing",
+            harvest_time: "early Aug"
+        },
+        {
+            type: "Grape",
+            name: "Steuben",
+            description: "american bunch grape. blue. mid Aug. uses: wine, table, juice. large fruit, compact clusters; vines hardy, vigorous, productive",
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Grape",
+            name: "Concord",
+            description: "american bunch grape. blue. late Aug. uses: wine, table, juice, jelly. fruit ripens unevenly in cluster; vines productive, hardy",
+            harvest_time: "late Aug"
+        },
+        {
+            type: "Grape",
+            name: "Sunbelt",
+            description: "american bunch grape. blue. late Aug. uses: wine, table, juice, jelly. fruit ripens more uniformly than Concord, substitute for Concord in warmer areas",
+            harvest_time: "late Aug"
+        },
+        {
+            type: "Grape",
+            name: "Catawba",
+            description: "american bunch grape. red. early Sept. uses: wine, table, juice. medium size clusters and berries; vines are vigorous, moderately hardy",
+            harvest_time: "early Sep"
+        },
+        {
+            type: "Grape",
+            name: "Niagara",
+            description: "american bunch grape. white. early Sept. uses: wine, table, juice. large clusters, large berries; vines productive, vigorous, very susceptible to black rot",
+            harvest_time: "early Sep",
+            disease_resistance: {
+                black_rot: "very susceptible"
+            }
+        },
+        {
+            type: "Grape",
+            name: "Cynthiana",
+            AKA: ["Norton"],
+            description: "american bunch grape. blue. late Sept. uses: wine. small to medium clusters, small berries; vineis hardy, moderately disease-resistant",
+            harvest_time: "late Sep"
+        },
+        // hybrid grapes
+        {
+            type: "Grape",
+            name: "Seyval",
+            description: "hybrid grape. white. early Aug. uses: wine. vine has medium vigo, subject to overbearing; highly fruitful on secondary buds",
+            harvest_time: "early Aug"
+        },
+        {
+            type: "Grape",
+            name: "Cayuga White",
+            description: "hybrid grape. white. mid Aug. uses: wine. large clusters; vines are vigorous and moderately hardy",
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Grape",
+            name: "Noiret",
+            description: "hybrid grape. blue. mid Aug. uses: wine. new introduction from Cornell; replacement for Chambourcin in areas where it is difficult to ripen",
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Grape",
+            name: "NY 70.0809.10", // AKA: "Corot noir (tm)"
+            description: "hybrid grape. blue. mid Aug. uses: wine. new introduction from Cornell; replacement for Chambourcin in areas where it is difficult to ripen",
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Grape",
+            name: "Chambourcin",
+            description: "hybrid grape. blue. late Aug. uses: wine. vine is medium in vigor, moderately hardy; use short cane pruning",
+            harvest_time: "late Aug"
+        },
+        {
+            type: "Grape",
+            name: "Chardonel",
+            description: "hybrid grape. white. late Aug. uses: wine. Seyval X Chardonnay; more hardy and productive than Chardonnay; suggest using grafted vines",
+            harvest_time: "late Aug"
+        },
+        {
+            type: "Grape",
+            name: "Traminette",
+            description: "hybrid grape. white. late Aug. uses: wine. Gewurztraminer cross; makes a spicy wine; suggest using grafted vines",
+            harvest_time: "late Aug"
+        },
+        {
+            type: "Grape",
+            name: "Villard Blanc",
+            description: "hybrid grape. white. mid Sept. uses: wine. vine produces large, loose clusters; use spur pruning",
+            harvest_time: "mid Sep"
+        },
+        {
+            type: "Grape",
+            name: "Vidal",
+            description: "hybrid grape. white. mid Sept. uses: wine. vine is productive, hardy",
+            harvest_time: "mid Sep"
+        },
+        {
+            type: "Grape",
+            name: "Vignoles",
+            description: "hybrid grape. white. mid Sept. uses: wine. compact clusters, berries tend to crack in wet seasons; vines hardy, low to moderately productive",
+            harvest_time: "mid Sep"
+        },
+        // seedless grapes
+        {
+            type: "Grape",
+            name: "Mars",
+            description: "seedless. blue. early Aug. table, juice berries are medium size, sweet, slipskin; vines are vigorous and may overbear in early years",
+            seedless: true,
+            harvest_time: "early Aug"
+        },
+        {
+            type: "Grape",
+            name: "Reliance",
+            description: "seedless. pink. early Aug. uses: table, raisins. berries are small, high quality, slipskin with thin skin; fruit color may vary in some years; vines are vigorous, winter hardy",
+            seedless: true,
+            harvest_time: "early Aug"
+        },
+        {
+            type: "Grape",
+            name: "Saturn",
+            description: "seedless. red. mid Aug. uses: table. berries are large, oblong shaped; flesh is non-slipskin; cluster are medium size; vines are medium in vigor and fruitfulness",
+            seedless: true,
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Grape",
+            name: "Marquis",
+            description: "seedless. white. mid Aug. uses: table, juice. berries are high quality, slipskin; vine is productive",
+            seedless: true,
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Grape",
+            name: "Neptune",
+            description: "seedless. white. mid Aug. uses: table. berry are medium size, non-slipskin, high in sugar content; vines are low to medium in vigor",
+            seedless: true,
+            harvest_time: "mid Aug"
+        },
+        {
+            type: "Grape",
+            name: "Jupiter",
+            description: "seedless. blue. mid Aug. uses: table. berries have a mild, muscat flavor, non-slipskin; clusters are large",
+            seedless: true,
+            harvest_time: "mid Aug"
+        },
+
+        // muscadine
+        // "not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state"
+        {
+            type: "Muscadine",
+            name: "Hunt",
+            description: "female. black. medium to large fruit, ripens early; vines moderately vigorous. not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state",
+            harvest_time_unparsed: "early"
+        },
+        {
+            type: "Muscadine",
+            name: "Scuppernong",
+            description: "female. bronze. medium size fruit, ripens mid-season, skin is medium thick; vines moderately vigorous. not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state",
+            harvest_time_unparsed: "mid-season"
+        },
+        {
+            type: "Muscadine",
+            name: "Carlos",
+            description: "perfect flowers. bronze. medium size fruit, ripens mid-season; vinesvigorous, heavy producer. not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state",
+            harvest_time_unparsed: "mid-season"
+        },
+        {
+            type: "Muscadine",
+            name: "Pride",
+            description: "female. black. large fruit, skin medium thick, ripens mid-season; vines are vigorous. not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state"
+        },
+        {
+            type: "Muscadine",
+            name: "Nesbitt",
+            description: "perfect flowers (?) black (?). not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state"
+        },
+        {
+            type: "Muscadine",
+            name: "Golden Isle",
+            description: "perfect flowers. bronze. medium size clusters, large berries, thin skin, produces high quality white wine. not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state"
+        },
+        {
+            type: "Muscadine",
+            name: "Triumph",
+            description: "perfect flowers. bronze. dry scar on fruit, ripens late; excellent pollinator. not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state",
+            harvest_time_unparsed: "ripens late"
+        },
+        {
+            type: "Muscadine",
+            name: "Magnolia",
+            description: "perfect flowers. bronze. large berries, ripens late; vines vigorous. not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state",
+            harvest_time_unparsed: "ripens late"
+        },
+        {
+            type: "Muscadine",
+            name: "Cowart",
+            description: "perfect flowers. black. large fruit that ripens uniformly; vines vigorous, productive. not sufficiently winter hardy to warrant recommendation for planting in higher elevations and in the northern half or the state"
+        },
+        // euro grapes
+        // V. vinifera cultivars should be grafted onto C-3309 or 101-14 rootstocks to provide resistance to root phylloxera
+        {
+            type: "Grape",
+            name: "Chardonnay",
+            description: "euro grape. white. vigorous vine, hardy, but begins growth early in spring; cool season cultivar. should be grafted for phylloxera protection"
+        },
+        {
+            type: "Grape",
+            name: "Merlot",
+            description: "euro grape. black. berries medium size, round; vine is high-yielding, begins growth early in spring. should be grafted for phylloxera protection"
+        },
+        {
+            type: "Grape",
+            name: "Cabernet franc",
+            description: "euro grape. purplish-black. similar to Cab. Sauvignon, more winter hardy, but begins growth and ripens fruit earlier. should be grafted for phylloxera protection"
+        },
+        {
+            type: "Grape",
+            name: "Cabernet Sauvignon",
+            description: "euro grape. purplish black. vigorous, upright vine, ripens late. should be grafted for phylloxera protection",
+            harvest_time_unparsed: "ripens late"
+        },
+        // blackberries
+        {
+            type: "Blackberry",
+            name: "Choctaw",
+            description: "thorned, erect; plant is productive, vigorous, produces many suckers; fruit is high quality, has small seeds, ripens about 10 days earlier than Shawnee, susceptible to double blossom",
+            harvest_time_relative: "Shawnee-10"
+        },
+        {
+            type: "Blackberry",
+            name: "Shawnee",
+            description: "thorned, erect; plant is vigorous, productive, very susceptible to double blossom; fruit is shiny, black, attractive, firm"
+        },
+        {
+            type: "Blackberry",
+            name: "Kiowa",
+            description: "thorned, erect; very large fruit, long harvest season; susceptible to double blossom"
+        },
+        {
+            type: "Blackberry",
+            name: "Natchez",
+            description: "trial recommendation. thornless, erect to semi-erect; fruit size is large, flavor is good, yields are high"
+        },
+        {
+            type: "Blackberry",
+            name: "Apache",
+            description: "thornless, erect, high yielding; fruit is large, high quality, sweet, has some tendency to have white druplets on berries"
+        },
+        {
+            type: "Blackberry",
+            name: "Ouachita",
+            description: "thornless, very erect; fruit is smaller than Apache (equivalent to Navaho), good flavor, high yields"
+        },
+        {
+            type: "Blackberry",
+            name: "Navaho",
+            description: "thornless, erect; fruit is medium size, firm, sweet"
+        },
+        {
+            type: "Blackberry",
+            name: "Triple Crown",
+            description: "thornless, semi-erect, productive; sweet/tart flavor"
+        },
+        {
+            type: "Blackberry",
+            name: "Chester",
+            description: "thornless, semi-erect; plant is vigorous, very productive; fruit quality is less than Triple Crown, ripens later than Triple Crown"
+        },
+        {
+            type: "Blackberry",
+            name: "Prime Jim",
+            description: "trial recommendation. primocane fruiting, thorned, erect; good flavor, moderate yields; suggest growing for primocane crop only as floricanes are susceptible to double blossom"
+        },
+        {
+            type: "Blackberry",
+            name: "Prime Jan",
+            description: "trial recommendation. primocane fruiting, thorned, erect; good flavor, moderate yields; suggest growing for primocane crop only as floricanes are susceptible to double blossom"
+        }
     ]
 }
