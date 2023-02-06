@@ -16,477 +16,584 @@
     ],
     plants: [
         // todo
-{
-    type: "Peach",
-    name: "Earlired",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven -20",
-    description: "yellow. clingstone. tendency for split pits, retains firmness on trees, sets fruit under adverse conditions"
-},
-{
-    type: "Peach",
-    name: "Candor",
-    chill_hours: "900",
-    harvest_time_relative: "Redhaven -20",
-    description: "yellow. clingstone. tendency for split pits, blossoms tender to cold, produces excessive buttons some years"
-},
-{
-    type: "Peach",
-    name: "Derby",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven -19",
-    description: "yellow. clingstone"
-},
-{
-    type: "Peach",
-    name: "Surecrop",
-    chill_hours: "950",
-    harvest_time_relative: "Redhaven -17",
-    description: "yellow. clingstone. blossoms are cold-hardy, trees consistently produce good crops, bacterial spot resistance, average resistance to brown rot, fruit is medium to large",
-    {
-        BLS: "some resistance",
-        brown_rot: "average"
-    }
-},
-{
-    type: "Peach",
-    name: "Sentry",
-    // chill hours not given
-    harvest_time_relative: "Redhaven -14",
-    description: "yellow"
-},
-{
-    type: "Peach",
-    name: "Summerprince",
-    chill_hours: "",
-    harvest_time_relative: "Redhaven -14",
-    description: "yellow"
-},
-{
-    type: "Peach",
-    name: "Garnet Beauty",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven -10",
-    description: "yellow. semi-free sizes well, slightly susceptible to bacterial leaf spot",
-    {
-        BLS: "slightly susceptible"
-    }
-},
-{
-    type: "Peach",
-    name: "Sureprince",
-    chill_hours: "900",
-    harvest_time_relative: "Redhaven -5",
-    description: "yellow. semi-freestone"
-},
-{
-    type: "Peach",
-    name: "Redhaven",
-    chill_hours: "950",
-    harvest_time: "mid July", // Approximate ripening time for Redhaven is mid-July in Tennessee
-    description: "yellow. freestone. non-browning flesh, resistant to bacterial leaf spot, consistently productive, flesh may cling unless fully ripe",
-    {
-        BLS: "resistant"
-    }
-},
-{
-    type: "Peach",
-    name: "Norman",
-    chill_hours: "900",
-    harvest_time_relative: "Redhaven +0"
-},
-{
-    type: "Peach",
-    name: "Late Sunhaven",
-    chill_hours: "900",
-    harvest_time_relative: "Redhaven +3",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Carogem",
-    chill_hours: "900",
-    harvest_time_relative: "Redhaven +3"
-},
-{
-    type: "Peach",
-    name: "Harken",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +3",
-    description: "yellow. freestone. tree is very cold-hardy and resistant to bacterial leaf spot, fruit is nonbrowning, hangs well and is above average for all uses",
-    {
-        BLS: "resistant"
-    }
-},
-{
-    type: "Peach",
-    name: "Challenger",
-    chill_hours: "950",
-    harvest_time_relative: "Redhaven +3",
-    description: "yellow"
-},
-{
-    type: "Peach",
-    name: "Newhaven",
-    chill_hours: "950",
-    harvest_time_relative: "Redhaven +3",
-    description: "yellow"
-},
-{
-    type: "Peach",
-    name: "Ranger",
-    chill_hours: "900",
-    harvest_time_relative: "Redhaven +4",
-    description: "yellow"
-},
-{
-    type: "Peach",
-    name: "Reliance",
-    chill_hours: "1000",
-    harvest_time_relative: "Redhaven +6",
-    description: "yellow. freestone. very bud-hardy but not wood-hardy, very late to bloom; needs heavy, early thinning to attain good size; fruit is soft, dropswhen ripe, poor quality"
-},
-{
-    type: "Peach",
-    name: "Nectar",
-    chill_hours: "1050",
-    harvest_time_relative: "Redhaven +6",
-    description: "white. freestone. fruit is very high quality with outstanding sweetness and aroma; too soft for shipping; not resistant to brown rot or browning",
-    {
-        brown_rot: "not resistant"
-    }
-},
-{
-    type: "Peach",
-    name: "Winblo",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +13",
-    description: "yellow. freestone. trees have moderate resistance to bacterial leaf spot; fruit is very high quality and moderately resistant to flesh browning",
-    {
-        BLS: "moderate resistance"
-    }
-},
-{
-    type: "Peach",
-    name: "Intrepid",
-    chill_hours: "1000",
-    harvest_time_relative: "Redhaven +11",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Fireprince",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +11",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Carogem",
-    chill_hours: "900",
-    harvest_time_relative: "Redhaven +11",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Blazeprince",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven ",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Jayhaven",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven ",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Sunhigh",
-    chill_hours: "800",
-    harvest_time_relative: "Redhaven +14",
-    description: "yellow. freestone. fruit is firm, sizes well, high quality; very susceptible to bacterial spot",
-    {
-        BLS: "very susceptible"
-    },
-},
-{
-    type: "Peach",
-    name: "Halehaven",
-    chill_hours: "900",
-    harvest_time_relative: "Redhaven +14",
-    description: "yellow. freestone. fruit too small in some seasons, does not ship well, susceptible to brown rot, ripens uniformly, browns moderately when used for freezing",
-    {
-        brown_rot: "susceptible"
-    }
-},
-{
-    type: "Peach",
-    name: "Glohaven",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +14",
-    description: "yellow. freestone. trees are highly productive, fruit requires thinning; fruit is large, uniform, good quality and resistant to browning"
-},
-{
-    type: "Peach",
-    name: "La Premier",
-    chill_hours: "1050",
-    harvest_time_relative: "Redhaven +16", // chart has "16?" for harvest time
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Loring",
-    chill_hours: "750",
-    harvest_time_relative: "Redhaven +16",
-    description: "yellow. freestone. fruit is firm, good size; tree is resistant to bacterial spot; buds are not frost- or cold-hardy",
-    {
-        BLS: "resistant"
-    }
-},
-{
-    type: "Peach",
-    name: "Bounty",
-    chill_hours: "800",
-    harvest_time_relative: "Redhaven +16",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Harmony",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +17",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Contender",
-    chill_hours: "1050",
-    harvest_time_relative: "Redhaven +19",
-    description: "yellow. freestone. blooms late, consistent cropper, needs early, heavy thinning; high quality fruit"
-},
-{
-    type: "Peach",
-    name: "Ruston Red",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +23",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Cresthaven",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +25",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Georgia Belle",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +25",
-    description: "white. freestone. tree is hardy, crops under adverse conditions; fruit ripens uniformly, bruises easily"
-},
-{
-    type: "Peach",
-    name: "Biscoe",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +25",
-    description: "yellow. freestone. tree is highly resistant to bacterial spot, very budhardy, aggressive thinning needed most years; fruit keeps well, not resistant to browning",
-    {
-        BLS: "highly resistant"
-    }
-},
-{
-    type: "Peach",
-    name: "Indian Red",
-    chill_hours: "900",
-    harvest_time_relative: "Redhaven +26",
-    description: "white. clingstone"
-},
-{
-    type: "Peach",
-    name: "Elberta",
-    chill_hours: "950",
-    harvest_time_relative: "Redhaven +28",
-    description: "yellow. freestone. fruit is large, resistant to brown rot, may drop heavily when approaching maturity, not resistant to flesh browning",
-    {
-        brown_rot: "resistant"
-    }
-},
-{
-    type: "Peach",
-    name: "Jerseyqueen",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +28",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Jefferson",
-    // chill: "?" in the chart
-    harvest_time_relative: "Redhaven +31",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "China Pearl",
-    chill_hours: "1100",
-    harvest_time_relative: "Redhaven +34",
-    description: "white. freestone"
-},
-{
-    type: "Peach",
-    name: "Rio-Oso-Gem",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +34",
-    description: "yellow. freestone. trees are not cold-hardy, have a weal structure, susceptible to bacterial spot; fruit ripens uniformly",
-    {
-        BLS: "susceptible"
-    }
-},
-{
-    type: "Peach",
-    name: "Monroe",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +34",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Tyler",
-    chill_hours: "950",
-    harvest_time_relative: "Redhaven +34",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Legend",
-    chill_hours: "950",
-    harvest_time_relative: "Redhaven +42",
-    description: "yellow. freestone"
-},
-{
-    type: "Peach",
-    name: "Parade",
-    chill_hours: "850",
-    harvest_time_relative: "Redhaven +46",
-    description: "yellow. freestone"
-},
+        {
+            type: "Peach",
+            name: "Earlired",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven -20",
+            description: "yellow. clingstone. tendency for split pits, retains firmness on trees, sets fruit under adverse conditions"
+        },
+        {
+            type: "Peach",
+            name: "Candor",
+            chill_hours: "900",
+            harvest_time_relative: "Redhaven -20",
+            description: "yellow. clingstone. tendency for split pits, blossoms tender to cold, produces excessive buttons some years"
+        },
+        {
+            type: "Peach",
+            name: "Derby",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven -19",
+            description: "yellow. clingstone"
+        },
+        {
+            type: "Peach",
+            name: "Surecrop",
+            chill_hours: "950",
+            harvest_time_relative: "Redhaven -17",
+            description: "yellow. clingstone. blossoms are cold-hardy, trees consistently produce good crops, bacterial spot resistance, average resistance to brown rot, fruit is medium to large",
+            disease_resistance: {
+                BLS: "some resistance",
+                brown_rot: "average"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Sentry",
+            // chill hours not given
+            harvest_time_relative: "Redhaven -14",
+            description: "yellow"
+        },
+        {
+            type: "Peach",
+            name: "Summerprince",
+            chill_hours: "",
+            harvest_time_relative: "Redhaven -14",
+            description: "yellow"
+        },
+        {
+            type: "Peach",
+            name: "Garnet Beauty",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven -10",
+            description: "yellow. semi-free sizes well, slightly susceptible to bacterial leaf spot",
+            disease_resistance: {
+                BLS: "slightly susceptible"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Sureprince",
+            chill_hours: "900",
+            harvest_time_relative: "Redhaven -5",
+            description: "yellow. semi-freestone"
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            chill_hours: "950",
+            harvest_time: "mid July", // Approximate ripening time for Redhaven is mid-July in Tennessee
+            description: "yellow. freestone. non-browning flesh, resistant to bacterial leaf spot, consistently productive, flesh may cling unless fully ripe",
+            disease_resistance: {
+                BLS: "resistant"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Norman",
+            chill_hours: "900",
+            harvest_time_relative: "Redhaven +0"
+        },
+        {
+            type: "Peach",
+            name: "Late Sunhaven",
+            chill_hours: "900",
+            harvest_time_relative: "Redhaven +3",
+            description: "yellow. freestone"
+        },
+        // carogem is in the table twice, at +3 and later at +11. I picked +11 which lines up closer to other references
+        {
+            type: "Peach",
+            name: "Harken",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +3",
+            description: "yellow. freestone. tree is very cold-hardy and resistant to bacterial leaf spot, fruit is nonbrowning, hangs well and is above average for all uses",
+            disease_resistance: {
+                BLS: "resistant"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Challenger",
+            chill_hours: "950",
+            harvest_time_relative: "Redhaven +3",
+            description: "yellow"
+        },
+        {
+            type: "Peach",
+            name: "Newhaven",
+            chill_hours: "950",
+            harvest_time_relative: "Redhaven +3",
+            description: "yellow"
+        },
+        {
+            type: "Peach",
+            name: "Ranger",
+            chill_hours: "900",
+            harvest_time_relative: "Redhaven +4",
+            description: "yellow"
+        },
+        {
+            type: "Peach",
+            name: "Reliance",
+            chill_hours: "1000",
+            harvest_time_relative: "Redhaven +6",
+            description: "yellow. freestone. very bud-hardy but not wood-hardy, very late to bloom; needs heavy, early thinning to attain good size; fruit is soft, dropswhen ripe, poor quality"
+        },
+        {
+            type: "Peach",
+            name: "Nectar",
+            chill_hours: "1050",
+            harvest_time_relative: "Redhaven +6",
+            description: "white. freestone. fruit is very high quality with outstanding sweetness and aroma; too soft for shipping; not resistant to brown rot or browning",
+            disease_resistance: {
+                brown_rot: "not resistant"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Winblo",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +13",
+            description: "yellow. freestone. trees have moderate resistance to bacterial leaf spot; fruit is very high quality and moderately resistant to flesh browning",
+            disease_resistance: {
+                BLS: "moderate resistance"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Intrepid",
+            chill_hours: "1000",
+            harvest_time_relative: "Redhaven +11",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Fireprince",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +11",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Carogem",
+            chill_hours: "900",
+            harvest_time_relative: "Redhaven +11",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Blazeprince",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven ",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Jayhaven",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven ",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Sunhigh",
+            chill_hours: "800",
+            harvest_time_relative: "Redhaven +14",
+            description: "yellow. freestone. fruit is firm, sizes well, high quality; very susceptible to bacterial spot",
+            disease_resistance: {
+                BLS: "very susceptible"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Halehaven",
+            chill_hours: "900",
+            harvest_time_relative: "Redhaven +14",
+            description: "yellow. freestone. fruit too small in some seasons, does not ship well, susceptible to brown rot, ripens uniformly, browns moderately when used for freezing",
+            disease_resistance: {
+                brown_rot: "susceptible"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Glohaven",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +14",
+            description: "yellow. freestone. trees are highly productive, fruit requires thinning; fruit is large, uniform, good quality and resistant to browning"
+        },
+        {
+            type: "Peach",
+            name: "La Premier",
+            chill_hours: "1050",
+            harvest_time_relative: "Redhaven +16", // chart has "16?" for harvest time
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Loring",
+            chill_hours: "750",
+            harvest_time_relative: "Redhaven +16",
+            description: "yellow. freestone. fruit is firm, good size; tree is resistant to bacterial spot; buds are not frost- or cold-hardy",
+            disease_resistance: {
+                BLS: "resistant"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Bounty",
+            chill_hours: "800",
+            harvest_time_relative: "Redhaven +16",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Harmony",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +17",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Contender",
+            chill_hours: "1050",
+            harvest_time_relative: "Redhaven +19",
+            description: "yellow. freestone. blooms late, consistent cropper, needs early, heavy thinning; high quality fruit"
+        },
+        {
+            type: "Peach",
+            name: "Ruston Red",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +23",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Cresthaven",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +25",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Georgia Belle",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +25",
+            description: "white. freestone. tree is hardy, crops under adverse conditions; fruit ripens uniformly, bruises easily"
+        },
+        {
+            type: "Peach",
+            name: "Biscoe",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +25",
+            description: "yellow. freestone. tree is highly resistant to bacterial spot, very budhardy, aggressive thinning needed most years; fruit keeps well, not resistant to browning",
+            disease_resistance: {
+                BLS: "highly resistant"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Indian Red",
+            chill_hours: "900",
+            harvest_time_relative: "Redhaven +26",
+            description: "white. clingstone"
+        },
+        {
+            type: "Peach",
+            name: "Elberta",
+            chill_hours: "950",
+            harvest_time_relative: "Redhaven +28",
+            description: "yellow. freestone. fruit is large, resistant to brown rot, may drop heavily when approaching maturity, not resistant to flesh browning",
+            disease_resistance: {
+                brown_rot: "resistant"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Jerseyqueen",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +28",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Jefferson",
+            // chill: "?" in the chart
+            harvest_time_relative: "Redhaven +31",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "China Pearl",
+            chill_hours: "1100",
+            harvest_time_relative: "Redhaven +34",
+            description: "white. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Rio Oso Gem",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +34",
+            description: "yellow. freestone. trees are not cold-hardy, have a weal structure, susceptible to bacterial spot; fruit ripens uniformly",
+            disease_resistance: {
+                BLS: "susceptible"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Monroe",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +34",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Tyler",
+            chill_hours: "950",
+            harvest_time_relative: "Redhaven +34",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Legend",
+            chill_hours: "950",
+            harvest_time_relative: "Redhaven +42",
+            description: "yellow. freestone"
+        },
+        {
+            type: "Peach",
+            name: "Parade",
+            chill_hours: "850",
+            harvest_time_relative: "Redhaven +46",
+            description: "yellow. freestone"
+        },
+        // apples
+        {
+            type: "Apple",
+            name: "Lodi",
+            description: "Yellowish-Green. Ripens early, fruit is tart, softens quickly when ripe, good for cooking; tree is highly susceptible to fireblight and cedar apple rust",
+            disease_resistance: {
+                fire_blight: "highly susceptible",
+                CAR: "highly susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Mountain Cove", // "Ginger Gold®"
+            description: "Yellow. Golden Delicious type that ripens in late July to early August in Tennessee, flavor is sweet and tangy, flesh is firm and crisp; tree is hardy, vigorous and fireblight susceptible",
+            harvest_time: "late July to early August",
+            disease_resistance: {
+                fire_blight: "susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Mollie's Delicious",
+            description: "Red blush over a pale yellow background. Tree is vigorous and productive, susceptible to fireblight, and excellent pollinator; fruit is good quality and large, requires multiple pickings as fruit ripening is not uniform",
+            disease_resistance: {
+                fire_blight: "susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Gala",
+            description: "Red-orange blush with pale yellow undercolor. Ripens in early to mid-August in Tennessee; fruit is excellent quality, firm, crisp and stores well, more highly colored strains of Gala are available; tree is productive, susceptible to fireblight",
+            harvest_time: "early August to mid August"
+        },
+        {
+            type: "Apple",
+            name: "Honeycrisp",
+            description: "Red striping over greenish-yellow ground color. Flesh is juicy and crisp, flavor is sub-acid and wellbalanced, fruit stores well; tree is moderately vigorous; performs best in cooler regions of the state"
+        },
+        {
+            type: "Apple",
+            name: "Empire",
+            description: "Red striped. McIntosh X Red Delicious cross that retains the flavor of McIntosh, but is more highly colored and does not soften as quickly, fruit is medium size; blooms early so frost is more of a concern; tree is upright, spreading, fireblight susceptible",
+            disease_resistance: {
+                fire_blight: "susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Jonathan",
+            description: "Red striped. Good dessert and cooking apple, fruit is medium size; good pollinator; tree is very susceptible to fireblight, cedar apple rust and powdery mildew",
+            disease_resistance: {
+                fire_blight: "very susceptible",
+                CAR: "very susceptible",
+                powdery_mildew: "very susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Red Delicious",
+            AKA: ["Delicious"],
+            description: "Red. Many strains of Red Delicious are available - some of which are spur types; fruit is sweet, highly colored"
+        },
+        {
+            type: "Apple",
+            name: "Golden Delicious",
+            AKA: ["Yellow Delicious"],
+            description: "Yellow. Multi-use sweet fruit is good for fresh eating and processing; tree is susceptible to fireblight and cedar apple rust; good pollinator; will alternate bear if not thinned aggressively",
+            disease_resistance: {
+                fire_blight: "susceptible",
+                CAR: "susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Jonagold",
+            description: "Red stripes over yellow ground color. Jonathan X Golden Delicious cross; fruit is large, high quality, softens quickly; tree is vigorous, susceptible to fireblight; will not cross pollinate other cultivars",
+            disease_resistance: {
+                fire_blight: "susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Mutsu",
+            AKA: ["Crispin"],
+            description: "Light green to pale yellow. Fruit is large, firm, juicy, stores well; tree is vigorous, susceptible to fireblight and blister spot; will not pollinate other cultivars",
+            disease_resistance: {
+                fire_blight: "susceptible",
+                blister_spot: "susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Caudle", // AKA "Cameo (tm)"
+            description: "Red striped. Flavor is sweet-tart; flesh is crunchy, creamy-white, non-browning; fruit is firm, stores well; tree is moderately vigorous"
+        },
+        {
+            type: "Apple",
+            name: "Winesap",
+            description: "Dark red stripes over a red background. Excellent dessert and processing quality, tart flavor, flesh is firm, crisp; should not be used as a pollinator for other cultivars"
+        },
+        {
+            type: "Apple",
+            name: "Turley",
+            description: "Red. Type of Winesap; fruit is tart, high quality; tree is moderately susceptible to fireblight",
+            disease_resistance: {
+                fire_blight: "moderately susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Melrose",
+            description: "Red striped. Jonathan X Red Delicious cross; fruit is high quality; tree is vigorous, an annual producer, resistant to fireblight",
+            disease_resistance: {
+                fire_blight: "resistant"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Rome",
+            description: "Red striped to red blush. Good processing quality, fruit keeps well; blooms late, ripens late, annual producer, susceptible to fireblight. Hardy",
+            disease_resistance: {
+                fire_blight: "susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Cumberland",
+            description: "Red over pale green ground color. Fruit is high quality, flavor is moderately sweet; flesh is slightly coarse, juicy, crisp, ripens just after Rome; trees are moderately vigorous, spreading and hardy"
+        },
+        {
+            type: "Apple",
+            name: "Arkansas Black",
+            description: "Dark red (purple). Fruit ripens late, stores very well, mildly tart, firm; flesh is cream-colored; spur-type trees are grower friendly; good pollinator for other cultivars"
+        },
+        {
+            type: "Apple",
+            name: "Fuji",
+            description: "Red stripes over yellowish-green ground color. Fruit is excellent quality, but may be poor in color and shape, crisp, juicy, slightly subacid to sweet, stores well; tree is vigorous, productive; crop is difficult to chemically thin"
+        },
+        {
+            type: "Apple",
+            name: "Braeburn",
+            description: "Orange-red. Fruit is high quality; flesh is crisp and tangy; tree is low in vigor, tends to bloom early, susceptible to scab, fireblight and mildew",
+            disease_resistance: {
+                scab: "susceptible",
+                fire_blight: "susceptible",
+                // I'm assuming this is powdery mildew, the guide only specifies "mildew":
+                powdery_mildew: "susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Granny Smith",
+            description: "Green. Fruit ripens late, stores well, may develop an orange blush on the side exposed to the sun if allowed to hang; trees are willowy, difficult to train, susceptible to scab, fireblight, cedar apple rust and powdery mildew",
+            disease_resistance: {
+                scab: "susceptible",
+                fire_blight: "susceptible",
+                CAR: "susceptible",
+                powdery_mildew: "susceptible"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Cripps Pink", // AKA "Pink Lady®"
+            description: "Yellow with pink stripes. Flesh is fine-grained, white and crisp, flavor is sweet-tart; fruit stores well; tree is very fireblight susceptible",
+            disease_resistance: {
+                fire_blight: "very susceptible"
+            }
+        },
+        // disease-resistant apples
+        {
+            type: "Apple",
+            name: "Redfree",
+            description: "Red. Tree is immune to scab, moderately resistant to fireblight, cedar apple rust and powdery mildew; fruit is crisp, juicy, waxy, russet-free; ripening is about six weeks before Delicious",
+            disease_resistance: {
+                scab: "immune",
+                fire_blight: "moderately resistant",
+                CAR: "moderately resistant",
+                powdery_mildew: "moderately resistant"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Liberty",
+            description: "Red striped. Tree is highly resistant to scab, fireblight, cedar apple rust and powdery mildew; fruit is crisp, juicy, sub-acid; ripens about two weeks before Delicious; stores well",
+            harvest_time_relative: "Red Delicious -2 weeks",
+            disease_resistance: {
+                scab: "highly resistant",
+                fire_blight: "highly resistant",
+                CAR: "highly resistant",
+                powdery_mildew: "highly resistant"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Freedom",
+            description: "Red. Tree is highly resistant to scab, moderately resistant to cedar apple rust and powdery mildew; fruit is crisp, juicy, good for fresh and processing; ripens with Delicious",
+            harvest_time_relative: "Red Delicious +0",
+            disease_resistance: {
+                scab: "highly resistant",
+                fire_blight: "highly resistant",
+                CAR: "highly resistant",
+                powdery_mildew: "highly resistant"
+            }
+        },
+        {
+            type: "Apple",
+            name: "Enterprise",
+            description: "Red stripes over green ground color. Tree is scab immune; fruit is spicy and sub-acid, hangs well, stores well",
+            disease_resistance: {
+                scab: "immune"
+            }
+        },
+        {
+            type: "Apple",
+            name: "GoldRush",
+            description: "Yellow. Tree is highly resistant to scab and powdery mildew, moderately resistant to fireblight; fruit is sweet, crisp, good for fresh and processing; ripens late, keeps very well",
+            disease_resistance: {
+                scab: "highly resistant",
+                powdery_mildew: "highly resistant",
+                fire_blight: "moderately resistant"
+            }
+        }
 
-
-// apples
-
-Lodi
-Yellowish-Green. Ripens early, fruit is tart, softens quickly when ripe, good for cooking; tree is highly susceptible to fireblight and cedar apple rust
-"highly susceptible to fireblight and cedar apple rust"
-
-Ginger Gold
-Yellow. Golden Delicious type that ripens in late July to early August in Tennessee, flavor is sweet and tangy, flesh is firm and crisp; tree is hardy, vigorous and fireblight susceptible
-"late July to early August"
-
-Mollie's Delicious
-Red blush over a pale yellow background. Tree is vigorous and productive, susceptible to fireblight, and excellent pollinator; fruit is good quality and large, requires multiple pickings as fruit ripening is not uniform
-"susceptible to fireblight"
-
-Gala
-Red-orange blush with pale yellow undercolor. Ripens in early to mid-August in Tennessee; fruit is excellent quality, firm, crisp and stores well, more highly colored strains of Gala are available; tree is productive, susceptible to fireblight
-"early to mid-August"
-
-
-Honeycrisp
-Red striping over greenish-yellow ground color. Flesh is juicy and crisp, flavor is sub-acid and wellbalanced, fruit stores well; tree is moderately vigorous; performs best in cooler regions of the state
-
-Empire
-Red striped. McIntosh X Red Delicious cross that retains the flavor of McIntosh, but is more highly colored and does not soften as quickly, fruit is medium size; blooms early so frost is more of a concern; tree is upright, spreading, fireblight susceptible
-"fireblight susceptible"
-
-Jonathan
-Red striped. Good dessert and cooking apple, fruit is medium size; good pollinator; tree is very susceptible to fireblight, cedar apple rust and powdery mildew
-"very susceptible to fireblight, cedar apple rust and powdery mildew"
-
-Red Delicious
-AKA Delicious
-Red. Many strains of Red Delicious are available - some of which are spur types; fruit is sweet, highly colored
-
-Golden Delicious
-AKA Yellow Delicious
-Yellow. Multi-use sweet fruit is good for fresh eating and processing; tree is susceptible to fireblight and cedar apple rust; good pollinator; will alternate bear if not thinned aggressively
-"susceptible to fireblight and cedar apple rust"
-
-Jonagold
-Red stripes over yellow ground color. Jonathan X Golden Delicious cross; fruit is large, high quality, softens quickly; tree is vigorous, susceptible to fireblight; will not cross pollinate other cultivars
-"susceptible to fireblight"
-
-Mutsu
-AKA Crispin
-Light green to pale yellow. Fruit is large, firm, juicy, stores well; tree is vigorous, susceptible to fireblight and blister spot; will not pollinate other cultivars
-"susceptible to fireblight and blister spot"
-
-Cameo
-Red striped. Flavor is sweet-tart; flesh is crunchy, creamy-white, non-browning; fruit is firm, stores well; tree is moderately vigorous
-
-Winesap
-Dark red stripes over a red background. Excellent dessert and processing quality, tart flavor, flesh is firm, crisp; should not be used as a pollinator for other cultivars
-
-Turley
-Red. Type of Winesap; fruit is tart, high quality; tree is moderately susceptible to fireblight
-"moderately susceptible to fireblight"
-
-Melrose
-Red striped. Jonathan X Red Delicious cross; fruit is high quality; tree is vigorous, an annual producer, resistant to fireblight
-"resistant to fireblight"
-
-Rome
-Red striped to red blush. Good processing quality, fruit keeps well; blooms late, ripens late, annual producer, susceptible to fireblight. Hardy
-"susceptible to fireblight"
-
-Cumberland
-Red over pale green ground color. Fruit is high quality, flavor is moderately sweet; flesh is slightly coarse, juicy, crisp, ripens just after Rome; trees are moderately vigorous, spreading and hardy
-
-Arkansas Black
-Dark red (purple). Fruit ripens late, stores very well, mildly tart, firm; flesh is cream-colored; spur-type trees are grower friendly; good pollinator for other cultivars
-
-Fuji
-Red stripes over yellowish-green ground color. Fruit is excellent quality, but may be poor in color and shape, crisp, juicy, slightly subacid to sweet, stores well; tree is vigorous, productive; crop is difficult to chemically thin
-
-Braeburn
-Orange-red. Fruit is high quality; flesh is crisp and tangy; tree is low in vigor, tends to bloom early, susceptible to scab, fireblight and mildew
-"susceptible to scab, fireblight and mildew"
-
-Granny Smith
-Green. Fruit ripens late, stores well, may develop an orange blush on the side exposed to the sun if allowed to hang; trees are willowy, difficult to train, susceptible to scab, fireblight, cedar apple rust and powdery mildew
-"susceptible to scab, fireblight, cedar apple rust and powdery mildew"
-
-Pink Lady
-Yellow with pink stripes. Flesh is fine-grained, white and crisp, flavor is sweet-tart; fruit stores well; tree is very fireblight susceptible
-"very fireblight susceptible"
-
-// disease-resistant apples
-
-Redfree
-Red. Tree is immune to scab, moderately resistant to fireblight, cedar apple rust and powdery mildew; fruit is crisp, juicy, waxy, russet-free; ripening is about six weeks before Delicious
-"immune to scab, moderately resistant to fireblight, cedar apple rust and powdery mildew"
-
-Liberty
-Red striped. Tree is highly resistant to scab, fireblight, cedar apple rust and powdery mildew; fruit is crisp, juicy, sub-acid;
-ripens about two weeks before Delicious; stores well;
-
-Freedom
-Red. Tree is highly resistant to scab, moderately resistant to cedar apple rust and powdery mildew; fruit is crisp, juicy, good for fresh and processing; ripens with Delicious
-"ripens with Delicious"
-"highly resistant to scab, fireblight, cedar apple rust and powdery mildew"
-
-Enterprise
-Red stripes over green ground color. Tree is scab immune; fruit is spicy and sub-acid, hangs well, stores well
-"scab immune"
-
-Goldrush
-Yellow. Tree is highly resistant to scab and powdery mildew, moderately resistant to fireblight; fruit is sweet, crisp, good for fresh and processing; ripens late, keeps very well
-"highly resistant to scab and powdery mildew, moderately resistant to fireblight"
-
-// apple rootstocks
-
+        // apple rootstocks
+        /*
 Malling 27 (M27)
 80 to 85%
 (Dwarfing)
@@ -778,7 +885,6 @@ trial recommendation. primocane fruiting, thorned, erect; good flavor, moderate 
 
 Prime Jan
 trial recommendation. primocane fruiting, thorned, erect; good flavor, moderate yields; suggest growing for primocane crop only as floricanes are susceptible to double blossom
-
-
+*/
     ]
 }

@@ -76,7 +76,8 @@
         },
         {
             type: "Apple",
-            name: "Yellow Delicious"
+            // "Yellow Delicious"
+            name: "Golden Delicious"
         },
         {
             type: "Apple",

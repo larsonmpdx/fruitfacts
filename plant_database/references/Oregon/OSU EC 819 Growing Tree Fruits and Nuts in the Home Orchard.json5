@@ -91,7 +91,7 @@
             description: "Small, red, flavorful"
         },
         {
-            name: "Delicious",
+            name: "Red Delicious",
             type: "Apple",
             locations: ["I", "II"],
             harvest_time: "Sep 25-Oct 5",

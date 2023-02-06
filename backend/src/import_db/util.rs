@@ -100,7 +100,7 @@ lazy_static! {
             "Apple",
             CandleTarget {
                 type_: "Apple".to_string(),
-                name: "Red Delicious".to_string(), // todo - this is just "delicious" in many references and should probably be switched to "red delicious" to get picked up by this
+                name: "Red Delicious".to_string(), // note this is just "Delicious" in many references and I've picked the more common name
             },
         ),
         (
