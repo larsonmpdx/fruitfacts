@@ -5,7 +5,7 @@
     accessed: "Feb 2023",
     published: "April 1998",
     type: "extension test",
-    needs_help: true, // location, and varieties
+    needs_help: true, // location, and decode the copy-pasted strings in descriptions
     locations: [
         {
             name: "Camp Hill, AL", // todo a better location for Auburn University
@@ -15,5 +15,134 @@
     ],
     plants: [
         // todo
+
+        {
+            type: "Nectarine",
+            name: "Mayfire",
+            harvest_time_relative: "Elberta -63",
+            description: "P to F* 650 S,C C C"
+        },
+        {
+            type: "Nectarine",
+            name: "Sundollar",
+            harvest_time_relative: "-60",
+            description: "P to F* 400 S C C"
+        },
+        {
+            type: "Nectarine",
+            name: "Sunlite",
+            harvest_time_relative: "-55",
+            description: "P to F* 450 S Local C"
+        },
+        {
+            type: "Nectarine",
+            name: "Sunsplash",
+            harvest_time_relative: "-54",
+            description: "P to F* 450 S C? C"
+        },
+        {
+            type: "Nectarine",
+            name: "Sungem",
+            harvest_time_relative: "-54",
+            description: "P to F* 425 S Local C"
+        },
+        {
+            type: "Nectarine",
+            name: "Armking",
+            harvest_time_relative: "-49",
+            description: "F 550 S,C C C"
+        },
+        {
+            type: "Nectarine",
+            name: "Crimson Gold",
+            harvest_time_relative: "-42",
+            description: "E* 450 A C SF"
+        },
+        {
+            type: "Nectarine",
+            name: "Carolina Red",
+            // todo check patent
+            harvest_time_relative: "-39",
+            description: "F to G* 750 A C SF"
+        },
+        {
+            type: "Nectarine",
+            name: "Juneglo",
+            harvest_time_relative: "-38",
+            description: "F to G* 700 S,C C SF"
+        },
+        {
+            type: "Nectarine",
+            name: "Juneprincess",
+            harvest_time_relative: "-35",
+            description: "F to G* 850 A C?/Local SF"
+        },
+        {
+            type: "Nectarine",
+            name: "Sunfre",
+            harvest_time_relative: "-35",
+            description: "P to F* 525 S C SF"
+        },
+        {
+            type: "Nectarine",
+            name: "Karla Rose",
+            harvest_time_relative: "-34",
+            description: "P to F 650 S,C Local SF"
+        },
+        {
+            type: "Nectarine",
+            name: "Durbin",
+            harvest_time_relative: "-30",
+            description: "F 800 S,C C SF"
+        },
+        {
+            type: "Nectarine",
+            name: "Earliscarlet",
+            harvest_time_relative: "-28",
+            description: "F* 850 A C SF"
+        },
+        {
+            type: "Nectarine",
+            name: "Summer Beaut",
+            // todo check patent
+            harvest_time_relative: "-27",
+            description: "E* 800 A C F"
+        },
+        {
+            type: "Nectarine",
+            name: "Hardired",
+            harvest_time_relative: "-24",
+            description: "E to O* 850* A C F"
+        },
+        {
+            type: "Nectarine",
+            name: "Rose Princess",
+            harvest_time_relative: "-21",
+            description: "F* 850 A Local F"
+        },
+        {
+            type: "Nectarine",
+            name: "Sunglo",
+            harvest_time_relative: "-19",
+            description: "E* 850* A C F"
+        },
+        {
+            type: "Nectarine",
+            name: "Flavortop",
+            harvest_time_relative: "-14",
+            description: "P to F 850 S,C C F"
+        },
+        {
+            type: "Nectarine",
+            name: "Fantasia",
+            harvest_time_relative: "-7",
+            description: "F to G* 600 S,C C F"
+        },
+        {
+            type: "Nectarine",
+            name: "Red Gold",
+            harvest_time_relative: "-5",
+            description: "E 850 A C F"
+        }
     ]
 }
