@@ -31,7 +31,7 @@
         },
         {
             type: "Peach",
-            name: "PF1",
+            name: "PF 1",
             harvest_time_relative: "Elberta -56",
             chill_hours: "800",
             description: "Cling S to M ? * * S,C,N"
@@ -241,7 +241,7 @@
         },
         {
             type: "Peach",
-            name: "Texroyal",
+            name: "TexRoyal",
             harvest_time_relative: "Elberta -34",
             chill_hours: "600",
             description: "trial recommendation. Free M F to G? *? * S"
@@ -368,7 +368,7 @@
         },
         {
             type: "Peach",
-            name: "PF12A",
+            name: "PF 12A",
             harvest_time_relative: "Elberta -23",
             chill_hours: "800",
             description: "Semi-Free M to L ? * * S,C,N"
@@ -438,7 +438,7 @@
         },
         {
             type: "Peach",
-            name: "CVN-z",
+            name: "CVN-z", // I don't know what CVN refers to. nothing on google
             harvest_time_relative: "Elberta -20",
             chill_hours: "750",
             description: "trial recommendation. Free M to L? F to G? *? * S,C"
@@ -522,7 +522,7 @@
         },
         {
             type: "Peach",
-            name: "PF15A",
+            name: "PF 15A",
             harvest_time_relative: "Elberta -15",
             chill_hours: "800",
             description: "Free L ? * * S,C,N"
@@ -586,7 +586,7 @@
         },
         {
             type: "Peach",
-            name: "PF17",
+            name: "PF 17",
             harvest_time_relative: "Elberta -12",
             chill_hours: "800",
             description: "Free L ? * * S,C,N"
@@ -628,7 +628,7 @@
         },
         {
             type: "Peach",
-            name: "Red Kist",
+            name: "Redkist",
             harvest_time_relative: "Elberta -7",
             chill_hours: "850",
             description: "Free M to L G to E * * S,C,N"
@@ -656,7 +656,7 @@
         },
         {
             type: "Peach",
-            name: "Earlirio",
+            name: "EarliRio",
             harvest_time_relative: "Elberta -4",
             chill_hours: "850",
             description: "Free L F to G * * S,C,N"
@@ -684,7 +684,7 @@
         },
         {
             type: "Peach",
-            name: "PF23",
+            name: "PF 23",
             harvest_time_relative: "Elberta -3",
             chill_hours: "700",
             description: "Free L ? * * S,C,N"
@@ -776,7 +776,7 @@
         },
         {
             type: "Peach",
-            name: "Autumnglo",
+            name: "Autumn Glo",
             harvest_time_relative: "Elberta +6",
             chill_hours: "850",
             description: "Free L E * * S,C,N"
@@ -819,7 +819,7 @@
         // table 1 page 7
         {
             type: "Peach",
-            name: "CVN-4",
+            name: "CVN-4", // I don't know what CVN refers to. nothing on google
             harvest_time_relative: "Elberta +6",
             chill_hours: "850",
             description: "trial recommendation. Free M to L? F to G? *? * S,C,N"
@@ -875,7 +875,7 @@
         },
         {
             type: "Peach",
-            name: "CVN-7",
+            name: "CVN-7", // I don't know what CVN refers to. nothing on google
             harvest_time_relative: "Elberta +12",
             chill_hours: "850",
             description: "trial recommendation. Free L? F to G? *? * S,C,N"
@@ -924,8 +924,8 @@
         },
         {
             type: "Peach",
-            name: "CVN-3",
-            AKA: ["Big Red"],
+            name: "Big Red",
+            AKA: ["CVN-3"], // I don't know what CVN-3 refers to. there are others. nothing on google
             harvest_time_relative: "Elberta +22",
             chill_hours: "750",
             description: "trial recommendation. Free L? F to G? *? * S,C"
@@ -1087,7 +1087,7 @@
         },
         {
             type: "Peach",
-            name: "Texroyal",
+            name: "TexRoyal",
             harvest_time_relative: "Elberta -34",
             chill_hours: "600",
             description: "Free M F to G? *? *"
