@@ -5,7 +5,7 @@
     accessed: "Feb 2023",
     published: "May 1998",
     type: "extension test",
-    needs_help: true, // location, and varieties
+    needs_help: true, // todo location, and decode copy-pasted strings in description fields
     locations: [
         {
             name: "Camp Hill, AL", // todo a better location for Auburn University
@@ -14,983 +14,1239 @@
         }
     ],
     plants: [
-        // todo
-
         // table 1 page 4
-
-/*
-{
-    type: "Peach",
-    name: "Goldcrest
-harvest_time_relative: "Elberta -60",
-chill_hours: "650",
-description: "
-trial recommendation. Semi-Free S F * * S"
-},{
-    type: "Peach",
-    name: "Camden
-harvest_time_relative: "Elberta -58
-chill_hours: "750",
-description: "
-Cling S to M F * * S,C"
-},{
-    type: "Peach",
-    name: "PF1
-harvest_time_relative: "Elberta -56
-chill_hours: "800",
-description: "
-Cling S to M ? * * S,C,N"
-},{
-    type: "Peach",
-    name: "Regal
-harvest_time_relative: "Elberta -56
-chill_hours: "700",
-description: "
-trial recommendation. Semi-Free S to M F to G? *? * S,C"
-},{
-    type: "Peach",
-    name: "Springold
-harvest_time_relative: "Elberta -55
-chill_hours: "850",
-description: "
-Cling S to M F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Empress
-harvest_time_relative: "Elberta -52
-chill_hours: "650",
-description: "
-trial recommendation. Cling S to M F * * S,C"
-},{
-    type: "Peach",
-    name: "Suzi-Q
-harvest_time_relative: "Elberta -52
-chill_hours: "650",
-description: "
-Semi-Cling S to M F to G * * S"
-},{
-    type: "Peach",
-    name: "Bicentennial
-harvest_time_relative: "Elberta -51
-chill_hours: "700",
-description: "
-Cling S to M F to G - * S,C"
-},{
-    type: "Peach",
-    name: "Correll
-harvest_time_relative: "Elberta -51
-chill_hours: "850",
-description: "
-Cling S to M G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Springcrest
-harvest_time_relative: "Elberta -51
-chill_hours: "650",
-description: "
-Cling S to M F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Derby
-harvest_time_relative: "Elberta -48
-chill_hours: "850",
-description: "
-trial recommendation. Semi-Cling M G? * * S,C,N"
-},{
-    type: "Peach",
-    name: "Goldprince
-harvest_time_relative: "Elberta -47
-chill_hours: "650",
-description: "
-trial recommendation. Cling M F * * S"
-},{
-    type: "Peach",
-    name: "June Gold
-harvest_time_relative: "Elberta -47
-chill_hours: "650",
-description: "
-Cling L F * * S,C"
-},{
-    type: "Peach",
-    name: "Tiz-A-Jewel
-harvest_time_relative: "Elberta -46
-chill_hours: "850",
-description: "
-trial recommendation. Cling M F to G * * SC,N"
-},{
-    type: "Peach",
-    name: "Harrow Diamond
-harvest_time_relative: "Elberta -45
-chill_hours: "850",
-description: "
-Semi-Cling S to M F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Texstar
-harvest_time_relative: "Elberta -45
-chill_hours: "500",
-description: "
-Semi-Free M G * * S"
-},{
-    type: "Peach",
-    name: "Surecrop
-harvest_time_relative: "Elberta -44
-chill_hours: "1000",
-description: "
-Semi-Free S to M G * * C,N"
-},{
-    type: "Peach",
-    name: "Earliglo
-harvest_time_relative: "Elberta -44
-chill_hours: "900",
-description: "
-trial recommendation. Semi-Free M G * * C,N"
-},{
-    type: "Peach",
-    name: "Golden Monarch
-harvest_time_relative: "Elberta -42
-chill_hours: "850",
-description: "
-Semi-Free S to M G to E - * S,C,N"
-},{
-    type: "Peach",
-    name: "Magnolia
-harvest_time_relative: "Elberta -42
-chill_hours: "650",
-description: "
-trial recommendation. Cling M F * * S,C"
-},{
-    type: "Peach",
-    name: "Sentry
-harvest_time_relative: "Elberta -42
-chill_hours: "850",
-description: "
-trial recommendation. Semi-Free M to L P to F * * S,C,N"
-},{
-    type: "Peach",
-    name: "Shepard's Beauty
-harvest_time_relative: "Elberta -42
-chill_hours: "650",
-description: "
-trial recommendation. Cling M F * * S,C"
-},{
-    type: "Peach",
-    name: "Summerprince
-harvest_time_relative: "Elberta -42
-chill_hours: "850",
-description: "
-Semi-Free M to L F * * S,C,N"
-},{
-    type: "Peach",
-    name: "Sweethaven
-harvest_time_relative: "Elberta -42
-chill_hours: "850",
-description: "
-Semi-Free M E - * S,C,N"
-},{
-    type: "Peach",
-    name: "Dixired
-harvest_time_relative: "Elberta -41
-chill_hours: "950",
-description: "
-Semi-Free M to L F to G * * C,N"
-},{
-    type: "Peach",
-    name: "Valley Fire
-harvest_time_relative: "Elberta -41
-chill_hours: "850",
-description: "
-trial recommendation. Semi-Free M F to G? *? * S,C,N"
-},{
-    type: "Peach",
-    name: "Delta
-harvest_time_relative: "Elberta -40
-chill_hours: "550",
-description: "
-trial recommendation. Cling M ? *? *? S"
-},{
-    type: "Peach",
-    name: "Maygold
-harvest_time_relative: "Elberta -39
-chill_hours: "650",
-description: "
-Cling M F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Jerseydawn
-harvest_time_relative: "Elberta -38
-chill_hours: "850",
-description: "
-Semi-Free M to L F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Garnet Beauty
-harvest_time_relative: "Elberta -38
-chill_hours: "850",
-description: "
-Semi-Free M G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Juneprince
-harvest_time_relative: "Elberta -35
-chill_hours: "650",
-description: "
-trial recommendation. Semi-Free M F * * S"
-},{
-    type: "Peach",
-    name: "Brighton
-trial recommendation? (marked '6' but I think should be 't')
-harvest_time_relative: "Elberta -34
-chill_hours: "750",
-description: "
-Semi-Free M F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Texroyal
-harvest_time_relative: "Elberta -34
-chill_hours: "600",
-description: "
-trial recommendation. Free M F to G? *? * S"
-},{
-    type: "Peach",
-    name: "Early Redhaven
-harvest_time_relative: "Elberta -34
-chill_hours: "950",
-description: "
-Semi-Free M to L F to G * * C,N"
-},{
-    type: "Peach",
-    name: "GaLa
-harvest_time_relative: "Elberta -33
-chill_hours: "700",
-description: "
-trial recommendation. Semi-Free M F to G? *? * S,C"
-},{
-    type: "Peach",
-    name: "Flavorcrest
-harvest_time_relative: "Elberta -33
-chill_hours: "750",
-description: "
-trial recommendation. Semi-Free M F? *? * S,C"
-},{
-    type: "Peach",
-    name: "Regina
-harvest_time_relative: "Elberta -32
-chill_hours: "850",
-description: "
-trial recommendation. Semi-Free M F to G? * * S,C,N"
-},
-
-*/
-
+        {
+            type: "Peach",
+            name: "Goldcrest",
+            harvest_time_relative: "Elberta -60",
+            chill_hours: "650",
+            description: "trial recommendation. Semi-Free S F * * S"
+        },
+        {
+            type: "Peach",
+            name: "Camden",
+            harvest_time_relative: "Elberta -58",
+            chill_hours: "750",
+            description: "Cling S to M F * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "PF1",
+            harvest_time_relative: "Elberta -56",
+            chill_hours: "800",
+            description: "Cling S to M ? * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Regal",
+            harvest_time_relative: "Elberta -56",
+            chill_hours: "700",
+            description: "trial recommendation. Semi-Free S to M F to G? *? * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Springold",
+            harvest_time_relative: "Elberta -55",
+            chill_hours: "850",
+            description: "Cling S to M F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Empress",
+            harvest_time_relative: "Elberta -52",
+            chill_hours: "650",
+            description: "trial recommendation. Cling S to M F * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Suzi-Q",
+            harvest_time_relative: "Elberta -52",
+            chill_hours: "650",
+            description: "Semi-Cling S to M F to G * * S"
+        },
+        {
+            type: "Peach",
+            name: "Bicentennial",
+            harvest_time_relative: "Elberta -51",
+            chill_hours: "700",
+            description: "Cling S to M F to G - * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Correll",
+            harvest_time_relative: "Elberta -51",
+            chill_hours: "850",
+            description: "Cling S to M G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Springcrest",
+            harvest_time_relative: "Elberta -51",
+            chill_hours: "650",
+            description: "Cling S to M F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Derby",
+            harvest_time_relative: "Elberta -48",
+            chill_hours: "850",
+            description: "trial recommendation. Semi-Cling M G? * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Goldprince",
+            harvest_time_relative: "Elberta -47",
+            chill_hours: "650",
+            description: "trial recommendation. Cling M F * * S"
+        },
+        {
+            type: "Peach",
+            name: "June Gold",
+            harvest_time_relative: "Elberta -47",
+            chill_hours: "650",
+            description: "Cling L F * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Tiz-A-Jewel",
+            harvest_time_relative: "Elberta -46",
+            chill_hours: "850",
+            description: "trial recommendation. Cling M F to G * * SC,N"
+        },
+        {
+            type: "Peach",
+            name: "Harrow Diamond",
+            harvest_time_relative: "Elberta -45",
+            chill_hours: "850",
+            description: "Semi-Cling S to M F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Texstar",
+            harvest_time_relative: "Elberta -45",
+            chill_hours: "500",
+            description: "Semi-Free M G * * S"
+        },
+        {
+            type: "Peach",
+            name: "Surecrop",
+            harvest_time_relative: "Elberta -44",
+            chill_hours: "1000",
+            description: "Semi-Free S to M G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Earliglo",
+            harvest_time_relative: "Elberta -44",
+            chill_hours: "900",
+            description: "trial recommendation. Semi-Free M G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Golden Monarch",
+            harvest_time_relative: "Elberta -42",
+            chill_hours: "850",
+            description: "Semi-Free S to M G to E - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Magnolia",
+            harvest_time_relative: "Elberta -42",
+            chill_hours: "650",
+            description: "trial recommendation. Cling M F * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Sentry",
+            harvest_time_relative: "Elberta -42",
+            chill_hours: "850",
+            description: "trial recommendation. Semi-Free M to L P to F * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Shepard's Beauty",
+            harvest_time_relative: "Elberta -42",
+            chill_hours: "650",
+            description: "trial recommendation. Cling M F * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Summerprince",
+            harvest_time_relative: "Elberta -42",
+            chill_hours: "850",
+            description: "Semi-Free M to L F * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Sweethaven",
+            harvest_time_relative: "Elberta -42",
+            chill_hours: "850",
+            description: "Semi-Free M E - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Dixired",
+            harvest_time_relative: "Elberta -41",
+            chill_hours: "950",
+            description: "Semi-Free M to L F to G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Valley Fire",
+            harvest_time_relative: "Elberta -41",
+            chill_hours: "850",
+            description: "trial recommendation. Semi-Free M F to G? *? * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Delta",
+            harvest_time_relative: "Elberta -40",
+            chill_hours: "550",
+            description: "trial recommendation. Cling M ? *? *? S"
+        },
+        {
+            type: "Peach",
+            name: "Maygold",
+            harvest_time_relative: "Elberta -39",
+            chill_hours: "650",
+            description: "Cling M F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Jerseydawn",
+            harvest_time_relative: "Elberta -38",
+            chill_hours: "850",
+            description: "Semi-Free M to L F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Garnet Beauty",
+            harvest_time_relative: "Elberta -38",
+            chill_hours: "850",
+            description: "Semi-Free M G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Juneprince",
+            harvest_time_relative: "Elberta -35",
+            chill_hours: "650",
+            description: "trial recommendation. Semi-Free M F * * S"
+        },
+        {
+            type: "Peach",
+            name: "Brighton",
+            harvest_time_relative: "Elberta -34",
+            chill_hours: "750",
+            description: "trial recommendation (? - maybe typo) Semi-Free M F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Texroyal",
+            harvest_time_relative: "Elberta -34",
+            chill_hours: "600",
+            description: "trial recommendation. Free M F to G? *? * S"
+        },
+        {
+            type: "Peach",
+            name: "Early Redhaven",
+            harvest_time_relative: "Elberta -34",
+            chill_hours: "950",
+            description: "Semi-Free M to L F to G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "GaLa",
+            harvest_time_relative: "Elberta -33",
+            chill_hours: "700",
+            description: "trial recommendation. Semi-Free M F to G? *? * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Flavorcrest",
+            harvest_time_relative: "Elberta -33",
+            chill_hours: "750",
+            description: "trial recommendation. Semi-Free M F? *? * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Regina",
+            harvest_time_relative: "Elberta -32",
+            chill_hours: "850",
+            description: "trial recommendation. Semi-Free M F to G? * * S,C,N"
+        },
         // table 1 page 5
-
-/*
-
-{
-    type: "Peach",
-    name: "Sentinel
-harvest_time_relative: "Elberta -32
-chill_hours: "850",
-description: "
-Semi-Free M G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Pekin
-harvest_time_relative: "Elberta -31
-chill_hours: "950",
-description: "
-Semi-Free S to M G to E * - C,N"
-},{
-    type: "Peach",
-    name: "Harson
-harvest_time_relative: "Elberta -30
-chill_hours: "850",
-description: "
-Semi-Free M to L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Jerseyland
-harvest_time_relative: "Elberta -30
-chill_hours: "850",
-description: "
-Semi-Free M to L E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Redhaven
-harvest_time_relative: "Elberta -28
-chill_hours: "950",
-description: "
-Semi-Free M G * * C,N"
-},{
-    type: "Peach",
-    name: "Sugar Sweet
-harvest_time_relative: "Elberta -28
-chill_hours: "850",
-description: "
-trial recommendation. Semi-Free S to M F to G *? * S,C,N"
-},{
-    type: "Peach",
-    name: "Harbrite
-harvest_time_relative: "Elberta -26
-chill_hours: "850",
-description: "
-Free M to L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Norman
-harvest_time_relative: "Elberta -26
-chill_hours: "850",
-description: "
-trial recommendation. Free M to L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Harken
-harvest_time_relative: "Elberta -25
-chill_hours: "850",
-description: "
-trial recommendation. Free M to L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "La Gold
-harvest_time_relative: "Elberta -25
-chill_hours: "700",
-description: "
-Free M F - * S,C"
-},{
-    type: "Peach",
-    name: "Newhaven
-harvest_time_relative: "Elberta -25
-chill_hours: "850",
-description: "
-trial recommendation. Free L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Clayton
-harvest_time_relative: "Elberta -24
-chill_hours: "850",
-description: "
-Free M G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Troy
-harvest_time_relative: "Elberta -24
-chill_hours: "850",
-description: "
-trial recommendation. Free M to L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "PF12A
-harvest_time_relative: "Elberta -23
-chill_hours: "800",
-description: "
-Semi-Free M to L ? * * S,C,N"
-},{
-    type: "Peach",
-    name: "Delp Early Hale
-harvest_time_relative: "Elberta -22
-chill_hours: "850",
-description: "
-Free M to L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Harvester
-harvest_time_relative: "Elberta -22
-chill_hours: "750",
-description: "
-Free M to L G * * S,C"
-},{
-    type: "Peach",
-    name: "Jim Dandee
-harvest_time_relative: "Elberta -22
-chill_hours: "850",
-description: "
-trial recommendation. Free M to L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Topaz
-harvest_time_relative: "Elberta -22
-chill_hours: "850",
-description: "
-Free L F * * S"
-},{
-    type: "Peach",
-    name: "Sunland
-harvest_time_relative: "Elberta -21
-chill_hours: "750",
-description: "
-Free L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Velvet
-harvest_time_relative: "Elberta -21
-chill_hours: "750",
-description: "
-Free M to L G * * S,C"
-},{
-    type: "Peach",
-    name: "Bellaire
-harvest_time_relative: "Elberta -20
-chill_hours: "900",
-description: "
-Free M to L G to E * * C,N"
-},{
-    type: "Peach",
-    name: "Cary Mac
-harvest_time_relative: "Elberta -20
-chill_hours: "750",
-description: "
-Free L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Cullinan
-harvest_time_relative: "Elberta -20
-chill_hours: "750",
-description: "
-trial recommendation. Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "CVN-z
-harvest_time_relative: "Elberta -20
-chill_hours: "750",
-description: "
-trial recommendation. Free M to L? F to G? *? * S,C"
-},{
-    type: "Peach",
-    name: "Envoy
-harvest_time_relative: "Elberta -20
-chill_hours: "950",
-description: "
-Free M to L F to G * * C,N"
-},{
-    type: "Peach",
-    name: "La Feliciana
-harvest_time_relative: "Elberta -20
-chill_hours: "550",
-description: "
-trial recommendation. Free M to L F - * S"
-},{
-    type: "Peach",
-    name: "Reliance
-harvest_time_relative: "Elberta -20
-chill_hours: "950",
-description: "
-Free S to M E to O - * C,N"
-},{
-    type: "Peach",
-    name: "Veeglo
-harvest_time_relative: "Elberta -19
-chill_hours: "850",
-description: "
-Free L F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Jayhaven
-harvest_time_relative: "Elberta -18
-chill_hours: "900",
-description: "
-Free M to L E * * C,N"
-},{
-    type: "Peach",
-    name: "Vivid
-harvest_time_relative: "Elberta -18
-chill_hours: "850",
-description: "
-Free M to L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Carogem
-harvest_time_relative: "Elberta -17
-chill_hours: "900",
-description: "
-Free L G * * C,N"
-},{
-    type: "Peach",
-    name: "Fireprince
-harvest_time_relative: "Elberta -17
-chill_hours: "850",
-description: "
-trial recommendation. Free M to L F to G? * * S,C,N"
-},{
-    type: "Peach",
-    name: "Hawthorne
-harvest_time_relative: "Elberta -17
-chill_hours: "600",
-description: "
-trial recommendation. Free M to L F *? * S"
-},{
-    type: "Peach",
-    name: "Majestic
-harvest_time_relative: "Elberta -17
-chill_hours: "800",
-description: "
-Free L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Harrow Beauty
-harvest_time_relative: "Elberta -15
-chill_hours: "850",
-description: "
-Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "PF15A
-harvest_time_relative: "Elberta -15
-chill_hours: "800",
-description: "
-Free L ? * * S,C,N"
-},{
-    type: "Peach",
-    name: "Zachary Taylor
-harvest_time_relative: "Elberta -15
-chill_hours: "850",
-description: "
-trial recommendation. Free L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Glohaven
-harvest_time_relative: "Elberta -14
-chill_hours: "850",
-description: "
-Free L F to G * * C,N"
-},{
-    type: "Peach",
-    name: "Stagg
-harvest_time_relative: "Elberta -14
-chill_hours: "850",
-description: "
-Free L F to G * * S,C,N"
-},
-
-*/
-
+        {
+            type: "Peach",
+            name: "Sentinel",
+            harvest_time_relative: "Elberta -32",
+            chill_hours: "850",
+            description: "Semi-Free M G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Pekin",
+            harvest_time_relative: "Elberta -31",
+            chill_hours: "950",
+            description: "Semi-Free S to M G to E * - C,N"
+        },
+        {
+            type: "Peach",
+            name: "Harson",
+            harvest_time_relative: "Elberta -30",
+            chill_hours: "850",
+            description: "Semi-Free M to L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Jerseyland",
+            harvest_time_relative: "Elberta -30",
+            chill_hours: "850",
+            description: "Semi-Free M to L E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            harvest_time_relative: "Elberta -28",
+            chill_hours: "950",
+            description: "Semi-Free M G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Sugar Sweet",
+            harvest_time_relative: "Elberta -28",
+            chill_hours: "850",
+            description: "trial recommendation. Semi-Free S to M F to G *? * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Harbrite",
+            harvest_time_relative: "Elberta -26",
+            chill_hours: "850",
+            description: "Free M to L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Norman",
+            harvest_time_relative: "Elberta -26",
+            chill_hours: "850",
+            description: "trial recommendation. Free M to L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Harken",
+            harvest_time_relative: "Elberta -25",
+            chill_hours: "850",
+            description: "trial recommendation. Free M to L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "La Gold",
+            harvest_time_relative: "Elberta -25",
+            chill_hours: "700",
+            description: "Free M F - * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Newhaven",
+            harvest_time_relative: "Elberta -25",
+            chill_hours: "850",
+            description: "trial recommendation. Free L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Clayton",
+            harvest_time_relative: "Elberta -24",
+            chill_hours: "850",
+            description: "Free M G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Troy",
+            harvest_time_relative: "Elberta -24",
+            chill_hours: "850",
+            description: "trial recommendation. Free M to L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "PF12A",
+            harvest_time_relative: "Elberta -23",
+            chill_hours: "800",
+            description: "Semi-Free M to L ? * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Delp Early Hale",
+            harvest_time_relative: "Elberta -22",
+            chill_hours: "850",
+            description: "Free M to L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Harvester",
+            harvest_time_relative: "Elberta -22",
+            chill_hours: "750",
+            description: "Free M to L G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Jim Dandee",
+            harvest_time_relative: "Elberta -22",
+            chill_hours: "850",
+            description: "trial recommendation. Free M to L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Topaz",
+            harvest_time_relative: "Elberta -22",
+            chill_hours: "850",
+            description: "Free L F * * S"
+        },
+        {
+            type: "Peach",
+            name: "Sunland",
+            harvest_time_relative: "Elberta -21",
+            chill_hours: "750",
+            description: "Free L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Velvet",
+            harvest_time_relative: "Elberta -21",
+            chill_hours: "750",
+            description: "Free M to L G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Bellaire",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "900",
+            description: "Free M to L G to E * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Cary Mac",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "750",
+            description: "Free L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Cullinan",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "750",
+            description: "trial recommendation. Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "CVN-z",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "750",
+            description: "trial recommendation. Free M to L? F to G? *? * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Envoy",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "950",
+            description: "Free M to L F to G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "La Feliciana",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "550",
+            description: "trial recommendation. Free M to L F - * S"
+        },
+        {
+            type: "Peach",
+            name: "Reliance",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "950",
+            description: "Free S to M E to O - * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Veeglo",
+            harvest_time_relative: "Elberta -19",
+            chill_hours: "850",
+            description: "Free L F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Jayhaven",
+            harvest_time_relative: "Elberta -18",
+            chill_hours: "900",
+            description: "Free M to L E * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Vivid",
+            harvest_time_relative: "Elberta -18",
+            chill_hours: "850",
+            description: "Free M to L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Carogem",
+            harvest_time_relative: "Elberta -17",
+            chill_hours: "900",
+            description: "Free L G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Fireprince",
+            harvest_time_relative: "Elberta -17",
+            chill_hours: "850",
+            description: "trial recommendation. Free M to L F to G? * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Hawthorne",
+            harvest_time_relative: "Elberta -17",
+            chill_hours: "600",
+            description: "trial recommendation. Free M to L F *? * S"
+        },
+        {
+            type: "Peach",
+            name: "Majestic",
+            harvest_time_relative: "Elberta -17",
+            chill_hours: "800",
+            description: "Free L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Harrow Beauty",
+            harvest_time_relative: "Elberta -15",
+            chill_hours: "850",
+            description: "Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "PF15A",
+            harvest_time_relative: "Elberta -15",
+            chill_hours: "800",
+            description: "Free L ? * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Zachary Taylor",
+            harvest_time_relative: "Elberta -15",
+            chill_hours: "850",
+            description: "trial recommendation. Free L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Glohaven",
+            harvest_time_relative: "Elberta -14",
+            chill_hours: "850",
+            description: "Free L F to G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Stagg",
+            harvest_time_relative: "Elberta -14",
+            chill_hours: "850",
+            description: "Free L F to G * * S,C,N"
+        },
         // table 1 page 6
-
-/*
-
-{
-    type: "Peach",
-    name: "Ellerbe
-harvest_time_relative: "Elberta -13
-chill_hours: "850",
-description: "
-trial recommendation. Free M to L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Winblo
-harvest_time_relative: "Elberta -13
-chill_hours: "800",
-description: "
-Free L G * * C,N"
-},{
-    type: "Peach",
-    name: "Bounty
-harvest_time_relative: "Elberta -12
-chill_hours: "800",
-description: "
-trial recommendation. Free M to L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "La Premier
-harvest_time_relative: "Elberta -12
-chill_hours: "1050",
-description: "
-Free M to L G * * C,N"
-},{
-    type: "Peach",
-    name: "Loring
-harvest_time_relative: "Elberta -12
-chill_hours: "750",
-description: "
-Free Very L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "PF17
-harvest_time_relative: "Elberta -12
-chill_hours: "800",
-description: "
-Free L ? * * S,C,N"
-},{
-    type: "Peach",
-    name: "Canadian Harmony
-harvest_time_relative: "Elberta -10
-chill_hours: "850",
-description: "
-Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Summergold
-harvest_time_relative: "Elberta -10
-chill_hours: "750",
-description: "
-Free M to L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Suncrest
-harvest_time_relative: "Elberta -10
-chill_hours: "650",
-description: "
-trial recommendation. Free M to L F to G? * * S"
-},{
-    type: "Peach",
-    name: "Contender
-harvest_time_relative: "Elberta -9
-chill_hours: "1050",
-description: "
-Free M to L E * * C,N"
-},{
-    type: "Peach",
-    name: "Madison
-harvest_time_relative: "Elberta -7
-chill_hours: "850",
-description: "
-Free M to L G to E - * S,C,N"
-},{
-    type: "Peach",
-    name: "Red Kist
-harvest_time_relative: "Elberta -7
-chill_hours: "850",
-description: "
-Free M to L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Yakima Hale
-harvest_time_relative: "Elberta -7
-chill_hours: "850",
-description: "
-Free L F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Denman
-harvest_time_relative: "Elberta -6
-chill_hours: "850",
-description: "
-Free L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Alred Elberta
-harvest_time_relative: "Elberta -4
-chill_hours: "750",
-description: "
-Free M to L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Earlirio
-harvest_time_relative: "Elberta -4
-chill_hours: "850",
-description: "
-Free L F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Biscoe
-harvest_time_relative: "Elberta -3
-chill_hours: "900",
-description: "
-Free L E * * C,N"
-},{
-    type: "Peach",
-    name: "Cresthaven
-harvest_time_relative: "Elberta -3
-chill_hours: "850",
-description: "
-Free M to L E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Dixiland
-harvest_time_relative: "Elberta -3
-chill_hours: "750",
-description: "
-Free L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "PF23
-harvest_time_relative: "Elberta -3
-chill_hours: "700",
-description: "
-Free L ? * * S,C,N"
-},{
-    type: "Peach",
-    name: "Lizzie Lou
-harvest_time_relative: "Elberta -3
-chill_hours: "750",
-description: "trial recommendation. Free M to L? F to G? *? * S,C"
-},{
-    type: "Peach",
-    name: "Ruston Red
-harvest_time_relative: "Elberta -3
-chill_hours: "850",
-description: "
-Free L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Sunprince
-harvest_time_relative: "Elberta -3
-chill_hours: "800",
-description: "
-Free L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Indian Red
-harvest_time_relative: "Elberta -2
-chill_hours: "850",
-description: "
-Cling M to L E - * S,C,N"
-},{
-    type: "Peach",
-    name: "Redskin
-harvest_time_relative: "Elberta -2
-chill_hours: "750",
-description: "
-Free L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Harcrest
-harvest_time_relative: "Elberta +0
-chill_hours: "850",
-description: "
-Free L G * * S,C,N"
-},
-// remainder in table 1 are days AFTER elberta
-{
-    type: "Peach",
-    name: "Glory
-harvest_time_relative: "Elberta +2
-chill_hours: "850",
-description: "
-trial recommendation. Free M to L? F to G? *? * S,C,N"
-},{
-    type: "Peach",
-    name: "Clyde Wilson
-harvest_time_relative: "Elberta +2
-chill_hours: "850",
-description: "
-trial recommendation. Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Havis
-harvest_time_relative: "Elberta +3
-chill_hours: "850",
-description: "
-trial recommendation. Free L F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Jefferson
-harvest_time_relative: "Elberta +3
-chill_hours: "850",
-description: "
-Free L F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Jerseyglo
-harvest_time_relative: "Elberta +4
-chill_hours: "850",
-description: "
-trial recommendation. Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Emery
-harvest_time_relative: "Elberta +5
-chill_hours: "900",
-description: "
-Free L G to E * * C,N"
-},{
-    type: "Peach",
-    name: "Autumnglo
-harvest_time_relative: "Elberta +6
-chill_hours: "850",
-description: "
-Free L E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Bobeva
-harvest_time_relative: "Elberta +6
-chill_hours: "1050",
-description: "
-Free L G to E * * C,N"
-},{
-    type: "Peach",
-    name: "Marglow
-harvest_time_relative: "Elberta +6
-chill_hours: "850",
-description: "
-Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Marland
-harvest_time_relative: "Elberta +6
-chill_hours: "850",
-description: "
-Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Monroe
-harvest_time_relative: "Elberta +6
-chill_hours: "850",
-description: "
-Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Tyler
-harvest_time_relative: "Elberta +6
-chill_hours: "950",
-description: "
-Free L G to E * * C,N"
-},{
-    type: "Peach",
-    name: "*/
-
+        {
+            type: "Peach",
+            name: "Ellerbe",
+            harvest_time_relative: "Elberta -13",
+            chill_hours: "850",
+            description: "trial recommendation. Free M to L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Winblo",
+            harvest_time_relative: "Elberta -13",
+            chill_hours: "800",
+            description: "Free L G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Bounty",
+            harvest_time_relative: "Elberta -12",
+            chill_hours: "800",
+            description: "trial recommendation. Free M to L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "La Premier",
+            harvest_time_relative: "Elberta -12",
+            chill_hours: "1050",
+            description: "Free M to L G * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Loring",
+            harvest_time_relative: "Elberta -12",
+            chill_hours: "750",
+            description: "Free Very L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "PF17",
+            harvest_time_relative: "Elberta -12",
+            chill_hours: "800",
+            description: "Free L ? * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Canadian Harmony",
+            harvest_time_relative: "Elberta -10",
+            chill_hours: "850",
+            description: "Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Summergold",
+            harvest_time_relative: "Elberta -10",
+            chill_hours: "750",
+            description: "Free M to L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Suncrest",
+            harvest_time_relative: "Elberta -10",
+            chill_hours: "650",
+            description: "trial recommendation. Free M to L F to G? * * S"
+        },
+        {
+            type: "Peach",
+            name: "Contender",
+            harvest_time_relative: "Elberta -9",
+            chill_hours: "1050",
+            description: "Free M to L E * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Madison",
+            harvest_time_relative: "Elberta -7",
+            chill_hours: "850",
+            description: "Free M to L G to E - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Red Kist",
+            harvest_time_relative: "Elberta -7",
+            chill_hours: "850",
+            description: "Free M to L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Yakima Hale",
+            harvest_time_relative: "Elberta -7",
+            chill_hours: "850",
+            description: "Free L F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Denman",
+            harvest_time_relative: "Elberta -6",
+            chill_hours: "850",
+            description: "Free L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Alred Elberta",
+            harvest_time_relative: "Elberta -4",
+            chill_hours: "750",
+            description: "Free M to L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Earlirio",
+            harvest_time_relative: "Elberta -4",
+            chill_hours: "850",
+            description: "Free L F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Biscoe",
+            harvest_time_relative: "Elberta -3",
+            chill_hours: "900",
+            description: "Free L E * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Cresthaven",
+            harvest_time_relative: "Elberta -3",
+            chill_hours: "850",
+            description: "Free M to L E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Dixiland",
+            harvest_time_relative: "Elberta -3",
+            chill_hours: "750",
+            description: "Free L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "PF23",
+            harvest_time_relative: "Elberta -3",
+            chill_hours: "700",
+            description: "Free L ? * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Lizzie Lou",
+            harvest_time_relative: "Elberta -3",
+            chill_hours: "750",
+            description: "trial recommendation. Free M to L? F to G? *? * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Ruston Red",
+            harvest_time_relative: "Elberta -3",
+            chill_hours: "850",
+            description: "Free L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Sunprince",
+            harvest_time_relative: "Elberta -3",
+            chill_hours: "800",
+            description: "Free L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Indian Red",
+            harvest_time_relative: "Elberta -2",
+            chill_hours: "850",
+            description: "Cling M to L E - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Redskin",
+            harvest_time_relative: "Elberta -2",
+            chill_hours: "750",
+            description: "Free L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Harcrest",
+            harvest_time_relative: "Elberta +0",
+            chill_hours: "850",
+            description: "Free L G * * S,C,N"
+        },
+        // remainder in table 1 are days AFTER elberta
+        {
+            type: "Peach",
+            name: "Glory",
+            harvest_time_relative: "Elberta +2",
+            chill_hours: "850",
+            description: "trial recommendation. Free M to L? F to G? *? * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Clyde Wilson",
+            harvest_time_relative: "Elberta +2",
+            chill_hours: "850",
+            description: "trial recommendation. Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Havis",
+            harvest_time_relative: "Elberta +3",
+            chill_hours: "850",
+            description: "trial recommendation. Free L F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Jefferson",
+            harvest_time_relative: "Elberta +3",
+            chill_hours: "850",
+            description: "Free L F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Jerseyglo",
+            harvest_time_relative: "Elberta +4",
+            chill_hours: "850",
+            description: "trial recommendation. Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Emery",
+            harvest_time_relative: "Elberta +5",
+            chill_hours: "900",
+            description: "Free L G to E * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Autumnglo",
+            harvest_time_relative: "Elberta +6",
+            chill_hours: "850",
+            description: "Free L E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Bobeva",
+            harvest_time_relative: "Elberta +6",
+            chill_hours: "1050",
+            description: "Free L G to E * * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Marglow",
+            harvest_time_relative: "Elberta +6",
+            chill_hours: "850",
+            description: "Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Marland",
+            harvest_time_relative: "Elberta +6",
+            chill_hours: "850",
+            description: "Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Monroe",
+            harvest_time_relative: "Elberta +6",
+            chill_hours: "850",
+            description: "Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Tyler",
+            harvest_time_relative: "Elberta +6",
+            chill_hours: "950",
+            description: "Free L G to E * * C,N"
+        },
         // table 1 page 7
-
-/*
-
-
-CVN-4
-harvest_time_relative: "Elberta +6
-chill_hours: "850",
-description: "
-trial recommendation. Free M to L? F to G? *? * S,C,N"
-},{
-    type: "Peach",
-    name: "Encore
-harvest_time_relative: "Elberta +7
-chill_hours: "850",
-description: "
-Free L E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Gemmer's Late Elberta
-harvest_time_relative: "Elberta +7
-chill_hours: "750",
-description: "
-Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Finale
-harvest_time_relative: "Elberta +8
-chill_hours: "750",
-description: "
-Free L E * * S,C"
-},{
-    type: "Peach",
-    name: "Sweet Sue
-harvest_time_relative: "Elberta +8
-chill_hours: "850",
-description: "
-Free L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "O'Henry
-harvest_time_relative: "Elberta +10
-chill_hours: "750",
-description: "
-Free L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Flameprince
-harvest_time_relative: "Elberta +10
-chill_hours: "850",
-description: "
-trial recommendation. Free L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "Marqueen
-harvest_time_relative: "Elberta +11
-chill_hours: "750",
-description: "
-Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "CVN-7
-harvest_time_relative: "Elberta +12
-chill_hours: "850",
-description: "
-trial recommendation. Free L? F to G? *? * S,C,N"
-},{
-    type: "Peach",
-    name: "Rubidoux
-harvest_time_relative: "Elberta +13
-chill_hours: "800",
-description: "
-Free L G to E * * S,C,N"
-},{
-    type: "Peach",
-    name: "Legend
-harvest_time_relative: "Elberta +14
-chill_hours: "850",
-description: "
-trial recommendation. Free L? G *? * S,C,N"
-},{
-    type: "Peach",
-    name: "La Jewel
-harvest_time_relative: "Elberta +15
-chill_hours: "850",
-description: "
-trial recommendation. Free L F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Ouachita Gold
-harvest_time_relative: "Elberta +17
-chill_hours: "800",
-description: "
-trial recommendation. Free L F to G * * S,C,N"
-},{
-    type: "Peach",
-    name: "NJ193
-harvest_time_relative: "Elberta +20
-chill_hours: "750",
-description: "
-Free M to L E - * S,C,N"
-},{
-    type: "Peach",
-    name: "Cal Red
-harvest_time_relative: "Elberta +22
-chill_hours: "750",
-description: "
-trial recommendation. Free L F to G * * S,C"
-},{
-    type: "Peach",
-    name: "CVN-3
-AKA Big Red
-harvest_time_relative: "Elberta +22
-chill_hours: "750",
-description: "
-trial recommendation. Free L? F to G? *? * S,C"
-},{
-    type: "Peach",
-    name: "Marsun
-harvest_time_relative: "Elberta +24
-chill_hours: "850",
-description: "
-Free L G * * S,C,N"
-},{
-    type: "Peach",
-    name: "Fairtime
-harvest_time_relative: "Elberta +30
-chill_hours: "750",
-description: "
-Free L F * * S,C"
-},{
-    type: "Peach",
-    name: "
-Parade
-harvest_time_relative: "Elberta +30
-chill_hours: "850",
-description: "Free L F * * S,C
-
-*/
-
+        {
+            type: "Peach",
+            name: "CVN-4",
+            harvest_time_relative: "Elberta +6",
+            chill_hours: "850",
+            description: "trial recommendation. Free M to L? F to G? *? * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Encore",
+            harvest_time_relative: "Elberta +7",
+            chill_hours: "850",
+            description: "Free L E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Gemmer's Late Elberta",
+            harvest_time_relative: "Elberta +7",
+            chill_hours: "750",
+            description: "Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Finale",
+            harvest_time_relative: "Elberta +8",
+            chill_hours: "750",
+            description: "Free L E * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Sweet Sue",
+            harvest_time_relative: "Elberta +8",
+            chill_hours: "850",
+            description: "Free L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "O'Henry",
+            harvest_time_relative: "Elberta +10",
+            chill_hours: "750",
+            description: "Free L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Flameprince",
+            harvest_time_relative: "Elberta +10",
+            chill_hours: "850",
+            description: "trial recommendation. Free L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Marqueen",
+            harvest_time_relative: "Elberta +11",
+            chill_hours: "750",
+            description: "Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "CVN-7",
+            harvest_time_relative: "Elberta +12",
+            chill_hours: "850",
+            description: "trial recommendation. Free L? F to G? *? * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Rubidoux",
+            harvest_time_relative: "Elberta +13",
+            chill_hours: "800",
+            description: "Free L G to E * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Legend",
+            harvest_time_relative: "Elberta +14",
+            chill_hours: "850",
+            description: "trial recommendation. Free L? G *? * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "La Jewel",
+            harvest_time_relative: "Elberta +15",
+            chill_hours: "850",
+            description: "trial recommendation. Free L F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Ouachita Gold",
+            harvest_time_relative: "Elberta +17",
+            chill_hours: "800",
+            description: "trial recommendation. Free L F to G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "NJ193",
+            harvest_time_relative: "Elberta +20",
+            chill_hours: "750",
+            description: "Free M to L E - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Cal Red",
+            harvest_time_relative: "Elberta +22",
+            chill_hours: "750",
+            description: "trial recommendation. Free L F to G * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "CVN-3",
+            AKA: ["Big Red"],
+            harvest_time_relative: "Elberta +22",
+            chill_hours: "750",
+            description: "trial recommendation. Free L? F to G? *? * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Marsun",
+            harvest_time_relative: "Elberta +24",
+            chill_hours: "850",
+            description: "Free L G * * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Fairtime",
+            harvest_time_relative: "Elberta +30",
+            chill_hours: "750",
+            description: "Free L F * * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Parade",
+            harvest_time_relative: "Elberta +30",
+            chill_hours: "850",
+            description: "Free L F * * S,C"
+        },
         // table 3
-        // todo
-
-
-        // start with these to be able to reuse more of the bulk operations
-        
-
+        {
+            type: "Peach",
+            name: "Flordaglobe",
+            harvest_time_relative: "Elberta -61",
+            chill_hours: "550",
+            description: "trial recommendation. Cling S to M F to G * *"
+        },
+        /*
+        // also in table 1
+        {
+            type: "Peach",
+            name: "Goldcrest",
+            harvest_time_relative: "Elberta -60",
+            chill_hours: "650",
+            description: "trial recommendation. Semi-Free M F * *"
+        },
+        {
+            type: "Peach",
+            name: "Empress",
+            harvest_time_relative: "Elberta -52",
+            chill_hours: "650",
+            description: "trial recommendation. Cling S to M F * *"
+        },
+        {
+            type: "Peach",
+            name: "Suzi-Q",
+            harvest_time_relative: "Elberta -52",
+            chill_hours: "650",
+            description: "Semi-Cling S to M F to G * *"
+        },
+        */
+        {
+            type: "Peach",
+            name: "Flordaking",
+            harvest_time_relative: "Elberta -51",
+            chill_hours: "400",
+            description: "Cling M to L P to F * *"
+        },
+        /*
+        // also in table 1
+        {
+            type: "Peach",
+            name: "Springcrest",
+            harvest_time_relative: "Elberta -51",
+            chill_hours: "650",
+            description: "Cling S to M F to G * *"
+        },
+        {
+            type: "Peach",
+            name: "June Gold",
+            harvest_time_relative: "Elberta -47",
+            chill_hours: "650",
+            description: "Cling L F * *"
+        },
+        */
+        {
+            type: "Peach",
+            name: "Cherry Gold",
+            harvest_time_relative: "Elberta -47",
+            chill_hours: "650",
+            description: "trial recommendation. Cling S to M P to F * *"
+        },
+        /*
+        // also in table 1
+        {
+            type: "Peach",
+            name: "Goldprince",
+            harvest_time_relative: "Elberta -47",
+            chill_hours: "650",
+            description: "trial recommendation. Cling S to M F * *"
+        },
+        {
+            type: "Peach",
+            name: "Texstar",
+            harvest_time_relative: "Elberta -45",
+            chill_hours: "500",
+            description: "Semi-Free M G * *"
+        },
+        {
+            type: "Peach",
+            name: "Magnolia",
+            harvest_time_relative: "Elberta -42",
+            chill_hours: "650",
+            description: "trial recommendation. Cling M F * *"
+        },
+        {
+            type: "Peach",
+            name: "Shepard's Beauty",
+            harvest_time_relative: "Elberta -42",
+            chill_hours: "650",
+            description: "trial recommendation. Cling M F * *"
+        },
+        */
+        {
+            type: "Peach",
+            name: "Flordacrest",
+            harvest_time_relative: "Elberta -41",
+            chill_hours: "425",
+            description: "trial recommendation. Semi-Free S to M F? *? *?"
+        },
+        /*
+        // also in table 1
+        {
+            type: "Peach",
+            name: "Delta",
+            harvest_time_relative: "Elberta -40",
+            chill_hours: "550",
+            description: "Cling M ? *? *?"
+        },
+        */
+        {
+            type: "Peach",
+            name: "La Pecher",
+            harvest_time_relative: "Elberta -39",
+            chill_hours: "450",
+            description: "trial recommendation. Semi-Free M F -? *"
+        },
+        /*
+        // also in table 1
+        {
+            type: "Peach",
+            name: "Maygold",
+            harvest_time_relative: "Elberta -39",
+            chill_hours: "450",
+            description: "Cling M F to G * *"
+        },
+        {
+            type: "Peach",
+            name: "Juneprince",
+            harvest_time_relative: "Elberta -35",
+            chill_hours: "650",
+            description: "trial recommendation. Semi-Free M F * *"
+        },
+        {
+            type: "Peach",
+            name: "Texroyal",
+            harvest_time_relative: "Elberta -34",
+            chill_hours: "600",
+            description: "Free M F to G? *? *"
+        },
+        */
+        {
+            type: "Peach",
+            name: "Flordagold",
+            harvest_time_relative: "Elberta -34",
+            chill_hours: "350",
+            description: "trial recommendation. Cling M P to F * *"
+        },
+        {
+            type: "Peach",
+            name: "Rio Grande",
+            harvest_time_relative: "Elberta -25",
+            chill_hours: "450",
+            description: "Free L G - *"
+        },
+        {
+            type: "Peach",
+            name: "Sun Grande",
+            harvest_time_relative: "Elberta -25",
+            chill_hours: "450",
+            description: "Free L G - *"
+        },
+        /*
+        // also in table 1
+        {
+            type: "Peach",
+            name: "La Feliciana",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "550",
+            description: "trial recommendation. Free M to L F - *"
+        },
+        */
+        {
+            type: "Peach",
+            name: "La Festival",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "450",
+            description: "trial recommendation. Free M to L F -? *"
+        },
+        /*
+        // also in table 1
+        {
+            type: "Peach",
+            name: "Hawthorne",
+            harvest_time_relative: "Elberta -17",
+            chill_hours: "600",
+            description: "trial recommendation. Free M to L F *? *"
+        },
+        {
+            type: "Peach",
+            name: "Suncrest",
+            harvest_time_relative: "Elberta -10",
+            chill_hours: "650",
+            description: "trial recommendation. Free M to L F to G? * *"
+        },
+        */
         // table 4
-        // todo
-
-
-
-
+        {
+            type: "Peach",
+            name: "Starlite",
+            harvest_time_relative: "Elberta -55",
+            chill_hours: "650",
+            description: "best in season. Semi-Cling M F - * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Scarlet Pearl",
+            harvest_time_relative: "Elberta -47",
+            chill_hours: "750",
+            description: "best in season. Semi-Free M G? *? * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Southern Pearl",
+            harvest_time_relative: "Elberta -38",
+            chill_hours: "650",
+            description: "Free M to L F? - * S,C"
+        },
+        {
+            type: "Peach",
+            name: "La White",
+            harvest_time_relative: "Elberta -27",
+            chill_hours: "650",
+            description: "best in season. Free M to L G - * S"
+        },
+        {
+            type: "Peach",
+            name: "Nectar",
+            harvest_time_relative: "Elberta -22",
+            chill_hours: "1050",
+            description: "Free M to L G - * C,N"
+        },
+        {
+            type: "Peach",
+            name: "Wildrose",
+            harvest_time_relative: "Elberta -21",
+            chill_hours: "750",
+            description: "Free M G to E - * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Eden",
+            harvest_time_relative: "Elberta -20",
+            chill_hours: "850",
+            description: "Free M to L G - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Carolina Belle",
+            harvest_time_relative: "Elberta -18",
+            chill_hours: "750",
+            description: "Free M to L G? - * S,C"
+        },
+        {
+            type: "Peach",
+            name: "Belle of Georgia",
+            harvest_time_relative: "Elberta -3",
+            chill_hours: "850",
+            description: "best in season. Free M to L G to E - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Summer Pearl",
+            harvest_time_relative: "Elberta -3",
+            chill_hours: "850",
+            description: "best in season. Free L G to E - * S,C,N"
+        },
+        // remainder are after elberta
+        {
+            type: "Peach",
+            name: "White Hale",
+            harvest_time_relative: "Elberta +4",
+            chill_hours: "750",
+            description: "Free L G to E - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "Honey Dew Hale",
+            harvest_time_relative: "Elberta +6",
+            chill_hours: "850",
+            description: "Free L F to G - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "White Rose",
+            harvest_time_relative: "Elberta +7",
+            chill_hours: "850",
+            description: "Free L F to G - * S,C,N"
+        },
+        {
+            type: "Peach",
+            name: "White Star",
+            harvest_time_relative: "Elberta +7",
+            chill_hours: "850",
+            description: "Free L G - * S,C,N"
+        }
     ]
 }
