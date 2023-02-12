@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../components/button';
 // todo - user, setErrorMessage,
-export default function Home({ setContributingLinks }) {
+export default function Home({ user, setErrorMessage, setContributingLinks }) {
   React.useEffect(() => {
     setContributingLinks([
       { link: `/frontend/pages/lists/addList.js`, description: `list.js` },
@@ -30,8 +30,7 @@ export default function Home({ setContributingLinks }) {
   };
 
   const handleSubmit = async () => {
-    /* // todo
-    const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list`,
+    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list`,
     {
       method: 'POST',
       credentials: 'include',
@@ -48,16 +47,14 @@ export default function Home({ setContributingLinks }) {
     .then((response) => {
       if (response.status !== 200) {
         setErrorMessage("can't reach the backend");
-        return [];
+      } else {
+        // todo - redirect to edit list
       }
-      return response.json();
     })
     .catch((error) => {
       setErrorMessage(`can't reach backend: ${error.message}`);
       console.log(error);
-      return [];
     });
-    */
   };
 
   // todo:

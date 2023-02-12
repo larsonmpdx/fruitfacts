@@ -65,13 +65,14 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
       {searchReturn?.locations?.length ? (
         <>
           {searchReturn.locations.map((location) => (
+            <li key={location.location_name}>
             <Link
-              key={location.name}
               href={`/todo`}
               className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
             >
-              {location.name}
+              {location.location_name}
             </Link>
+            </li>
           ))}
         </>
       ) : (

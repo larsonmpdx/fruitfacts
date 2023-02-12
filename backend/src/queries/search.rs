@@ -36,13 +36,13 @@ pub struct SearchQuery {
 
     // collection items search only (id or path, or I guess both)
     #[serde(rename = "collectionID")]
-    pub collection_id: Option<String>,
+    pub collection_id: Option<i32>,
     #[serde(rename = "collectionPath")]
     pub collection_path: Option<String>,
 
     // location items search only
     #[serde(rename = "locationID")]
-    pub location_id: Option<String>,
+    pub location_id: Option<i32>,
 
     // for listing a user's locations
     pub user_id: Option<i32>,
@@ -628,7 +628,48 @@ pub fn search_db(
         "loc" => {
             // list items in a single location (users define single locations instead of collections)
             // check that this is either our location (matches session's user id) or public
-            Err(anyhow!("location search not implemented"))
+
+            if query.user_id.is_none() {
+                return Err(anyhow!("loc search without user_id specified"));
+            }
+            let query_user_id = query.user_id.unwrap();
+
+            if query.location_id.is_none() {
+                return Err(anyhow!("loc search without location_id specified"));
+            }
+            let query_location_id = query.location_id.unwrap();
+
+            // given a user ID, we can either get it with a matching session user ID, or fall back to getting only public=true
+            if let Some(session) = session {
+                if session.user_id == query_user_id {
+                    let location = locations::dsl::locations
+                        .filter(locations::id.eq(query_location_id))
+                        .filter(locations::user_id.eq(query_user_id))
+                        .first::<Location>(db_conn);
+
+                    return match location {
+                        Ok(location) => {
+                            let items = collection_items::dsl::collection_items
+                                .filter(collection_items::location_id.eq(location.id))
+                                .load::<CollectionItem>(db_conn);
+
+                            return match items {
+                                Ok(items) => Ok(SearchReturn {
+                                    query: query.clone(),
+                                    collection_items: Some(items),
+                                    ..Default::default()
+                                }),
+                                Err(error) => Err(error.into()),
+                            };
+                        }
+                        Err(error) => Err(error.into()),
+                    };
+                }
+            }
+
+            Err(anyhow!(
+                "getting other users's location not implemented - todo"
+            ))
         }
         "user_loc" => {
             // list locations by user ID - similar to listing a collection (all locations with a collection ID)

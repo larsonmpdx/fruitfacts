@@ -96,6 +96,7 @@ async fn create_list(
         rows_changed = diesel::insert_into(locations::dsl::locations)
             .values(&location_no_id)
             .execute(&mut db_conn);
+        println!("tried adding user list");
     }
 
     if rows_changed == Ok(1) {
