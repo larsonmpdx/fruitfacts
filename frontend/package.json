@@ -25,7 +25,7 @@
     "react-debounce-input": "3.3.0",
     "react-dom": "18.2.0",
     "react-leaflet": "4.2.0",
-    "react-zoom-pan-pinch": "2.6.0",
+    "react-zoom-pan-pinch": "2.6.1",
     "timeago.js": "4.0.2",
     "use-supercluster": "0.4.0"
   },
