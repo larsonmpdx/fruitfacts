@@ -195,62 +195,6 @@ async fn get_collections(
 }
 
 #[derive(Default, Serialize)]
-pub struct PlantsReturn {
-    pub plants: Vec<BasePlant>,
-    pub per_page: i32,
-    pub count: i64,
-    pub last_page: i64,
-}
-
-pub fn get_plants_db(
-    db_conn: &mut SqliteConnection,
-    type_: &str,
-    page: Option<i32>,
-) -> Result<PlantsReturn, diesel::result::Error> {
-    const PER_PAGE: i32 = 50;
-
-    let type_decoded: String = util::path_to_name(type_);
-
-    let mut query_for_items = base_plants::table
-        .filter(base_plants::type_.eq(type_decoded.clone()))
-        .limit(PER_PAGE.into())
-        .into_boxed();
-
-    let query_for_count = base_plants::table
-        .filter(base_plants::type_.eq(type_decoded.clone()))
-        .into_boxed();
-
-    if let Some(page) = page {
-        query_for_items = query_for_items.offset((page * PER_PAGE).into());
-    }
-
-    // todo - apply other things: order by, asc/desc, etc.
-
-    let plants: Result<Vec<BasePlant>, diesel::result::Error> = query_for_items.load(db_conn);
-    let count = query_for_count.count().first::<i64>(db_conn).unwrap();
-
-    println!("get plants: {} page {:?}", type_decoded, page);
-
-    match plants {
-        Ok(plants) => {
-            let mut last_page =
-                (count / i64::from(PER_PAGE)) + i64::from((count % i64::from(PER_PAGE)) != 0) - 1; // -1: pages are 0-referenced
-            if last_page < 0 {
-                last_page = 0;
-            }
-
-            Ok(PlantsReturn {
-                plants,
-                per_page: PER_PAGE,
-                count,
-                last_page,
-            })
-        }
-        Err(error) => Err(error),
-    }
-}
-
-#[derive(Default, Serialize)]
 pub struct PlantReturn {
     base: Option<BasePlant>,
     collection: Vec<CollectionItem>,
@@ -307,8 +251,7 @@ struct GetPlantQuery {
     page: Option<i32>,
 }
 
-// /plants/type/ - all plants of this type. paginated?
-// /plants/type/plant name - this specific plant
+// /plants/type/plant name - get a single plant (get all plants for a type is within the search api)
 #[get("/api/plants/{type_}/{plant:.*}")] // the ":.*" part is a regex to get the entire tail of the path
 async fn get_plant(
     path: web::Path<GetPlantPath>,
@@ -316,43 +259,22 @@ async fn get_plant(
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
     println!("/plant/ {} page {:?}", path.type_, query.page);
-    if path.plant.is_empty() {
-        let plants = web::block(move || {
-            let mut conn = pool.get().expect("couldn't get db connection from pool");
-            get_plants_db(&mut conn, &path.type_, query.page)
-        })
-        .await
-        .unwrap(); // todo - blockingerror unwrap?
+    let plant = web::block(move || {
+        let mut conn = pool.get().expect("couldn't get db connection from pool");
+        get_plant_db(&mut conn, &path.type_, &path.plant)
+    })
+    .await
+    .unwrap(); // todo - blockingerror unwrap?
 
-        let plants = match plants {
-            Ok(plants) => plants,
-            Err(e) => {
-                eprintln!("{}", e);
-                return Err(actix_web::error::ErrorInternalServerError(""));
-            }
-        };
+    let plant = match plant {
+        Ok(plant) => plant,
+        Err(e) => {
+            eprintln!("{}", e);
+            return Err(actix_web::error::ErrorInternalServerError(""));
+        }
+    };
 
-        Ok(HttpResponse::Ok().json(plants))
-    } else {
-        // one plant
-
-        let plant = web::block(move || {
-            let mut conn = pool.get().expect("couldn't get db connection from pool");
-            get_plant_db(&mut conn, &path.type_, &path.plant)
-        })
-        .await
-        .unwrap(); // todo - blockingerror unwrap?
-
-        let plant = match plant {
-            Ok(plant) => plant,
-            Err(e) => {
-                eprintln!("{}", e);
-                return Err(actix_web::error::ErrorInternalServerError(""));
-            }
-        };
-
-        Ok(HttpResponse::Ok().json(plant))
-    }
+    Ok(HttpResponse::Ok().json(plant))
 }
 
 #[derive(Serialize)]

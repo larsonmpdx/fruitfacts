@@ -73,7 +73,7 @@ export default function Home({
   setErrorMessage,
   setContributingLinks
 }) {
-  let data_link = `plant_database/references/${name_to_path(path)}.json5`;
+  let data_link = `plant_database/references/${path}.json5`;
   React.useEffect(() => {
     setContributingLinks([
       {
