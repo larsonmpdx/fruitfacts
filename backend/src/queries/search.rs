@@ -221,10 +221,10 @@ pub fn get_location_id(location: &Option<String>, db_conn: &mut SqliteConnection
 
     match db_user {
         Ok(db_user) => {
-            return Ok(db_user.id);
+            Ok(db_user.id)
         }
         Err(_error) => {
-            return Err(anyhow!("couldn't find user"));
+            Err(anyhow!("couldn't find user"))
         }
     }
 }
