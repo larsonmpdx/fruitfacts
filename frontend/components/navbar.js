@@ -44,7 +44,7 @@ export default function Home({ user, setUser, contributingLinks }) {
             {user?.name && (
               <Link
                 key="my lists"
-                href={`/lists/lists?user_id=${user.id}`}
+                href={`/lists/lists?user=id:${user.id}`}
                 className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
               >
                 my lists

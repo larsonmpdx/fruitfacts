@@ -21,7 +21,7 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
     // todo - this is too many lines for what it does. simplify (and other occurrences)
     const fetchData = async () => {
       const data = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=user_loc&user_id=${query.user_id}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=user_loc&user=id:${query.user_id}`,
         {
           // todo - probably should use user name
           credentials: 'include'

@@ -41,11 +41,11 @@ pub struct SearchQuery {
     pub collection_path: Option<String>,
 
     // location items search only
-    #[serde(rename = "locationID")]
-    pub location_id: Option<i32>,
+    #[serde(rename = "location")]
+    pub location: Option<String>, // id if formatted like "id:123", name otherwise
 
     // for listing a user's locations
-    pub user_id: Option<i32>,
+    pub user: Option<String>, // id if formatted like "id:123", name otherwise
 
     // base plants search only:
     #[serde(rename = "notorietyMin")]
@@ -160,6 +160,73 @@ fn get_base_plant_ids_from_locations(
     let base_ids_no_none: Vec<i32> = base_ids.into_iter().flatten().collect(); // flatten() here removes the None entries
 
     Ok(base_ids_no_none)
+}
+
+// given a string which is either "id:123" or not (specifying a user name)
+// return either "123" or look up the user name and return the ID from the lookup
+// todo prevent creating a user with name starting with "id:"
+pub fn get_user_id(user: &Option<String>, db_conn: &mut SqliteConnection) -> Result<i32> {
+    if (user.is_none()) {
+        return Err(anyhow!("user not specified"));
+    }
+    let user = user.clone().unwrap();
+    let id_start = "id:";
+    if (user.starts_with(id_start)) {
+        let trimmed = crate::import_db::rem_first_n(&user, id_start.len()).parse::<i32>();
+
+        if (trimmed.is_err()) {
+            return Err(anyhow!("user id didn't parse as i32"));
+        }
+
+        return Ok(trimmed.unwrap());
+    }
+
+    let db_user = users::dsl::users
+        .filter(users::name.eq(user))
+        .order(users::id.desc())
+        .first::<User>(db_conn);
+
+    match db_user {
+        Ok(db_user) => {
+            return Ok(db_user.id);
+        }
+        Err(_error) => {
+            return Err(anyhow!("couldn't find user"));
+        }
+    }
+}
+
+// same as above but for locations
+// todo prevent creating a location with name starting with "id:"
+pub fn get_location_id(location: &Option<String>, db_conn: &mut SqliteConnection) -> Result<i32> {
+    if (location.is_none()) {
+        return Err(anyhow!("location not specified"));
+    }
+    let location = location.clone().unwrap();
+    let id_start = "id:";
+    if (location.starts_with(id_start)) {
+        let trimmed = crate::import_db::rem_first_n(&location, id_start.len()).parse::<i32>();
+
+        if (trimmed.is_err()) {
+            return Err(anyhow!("location id didn't parse as i32"));
+        }
+
+        return Ok(trimmed.unwrap());
+    }
+
+    let db_user = locations::dsl::locations
+        .filter(locations::location_name.eq(location))
+        .order(locations::id.desc())
+        .first::<Location>(db_conn);
+
+    match db_user {
+        Ok(db_user) => {
+            return Ok(db_user.id);
+        }
+        Err(_error) => {
+            return Err(anyhow!("couldn't find user"));
+        }
+    }
 }
 
 // todo: I want to bring all of the search & filter queries into one API
@@ -629,15 +696,17 @@ pub fn search_db(
             // list items in a single location (users define single locations instead of collections)
             // check that this is either our location (matches session's user id) or public
 
-            if query.user_id.is_none() {
-                return Err(anyhow!("loc search without user_id specified"));
-            }
-            let query_user_id = query.user_id.unwrap();
+            // todo: allow using user_name and location_name as an alternate lookup, and maybe apply user_name/user_id to other places user_id is used
 
-            if query.location_id.is_none() {
-                return Err(anyhow!("loc search without location_id specified"));
+            if query.user.is_none() {
+                return Err(anyhow!("loc search without user specified"));
             }
-            let query_location_id = query.location_id.unwrap();
+            let query_user_id = get_user_id(&query.user, db_conn).unwrap();
+
+            if query.location.is_none() {
+                return Err(anyhow!("loc search without location specified"));
+            }
+            let query_location_id = get_location_id(&query.location, db_conn).unwrap();
 
             // given a user ID, we can either get it with a matching session user ID, or fall back to getting only public=true
             if let Some(session) = session {
@@ -675,10 +744,10 @@ pub fn search_db(
             // list locations by user ID - similar to listing a collection (all locations with a collection ID)
             // todo - for each location, show a count of items in that location
 
-            if query.user_id.is_none() {
+            if query.user.is_none() {
                 return Err(anyhow!("user_loc search without user_id specified"));
             }
-            let query_user_id = query.user_id.unwrap();
+            let query_user_id = get_user_id(&query.user, db_conn).unwrap();
 
             // given a user ID, we can either get it with a matching session user ID, or fall back to getting only public=true
             if let Some(session) = session {

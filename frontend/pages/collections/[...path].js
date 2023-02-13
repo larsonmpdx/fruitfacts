@@ -17,13 +17,23 @@ import Image from 'next/image';
 export async function getServerSideProps(context) {
   let errorMessage = null;
   let { path, loc } = context.query;
-  path = path_to_name(path.join('/'));
+  const pathJoined = path_to_name(path.join('/'));
   let location_number = parseInt(loc);
   if (isNaN(location_number)) {
     location_number = 1;
   }
 
-  const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${path}`) // no trailing slash - individual collection
+  let apiURL;
+  if(path[0] == 'user') {
+    // incoming path will be like "user/[user name or ID]/[list name or ID]"
+    // IDs are formatted like "id:123"
+    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=user_loc&user=${path[1]}&location=${path[2]}` + queryString
+  } else {
+    // incoming path will be like "Oregon/u-pick A"
+    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathJoined}` // no trailing slash - individual collection
+  }
+
+  const data = await fetch(apiURL)
     .then((response) => {
       if (response.status !== 200) {
         errorMessage = "can't reach backend";
@@ -48,13 +58,13 @@ export async function getServerSideProps(context) {
     return location.location_number == location_number;
   }) || { location_name: `unknown location #${location_number}` };
 
-  const thumbnail = getThumbnailLocation(`${path}.jpg`);
+  const thumbnail = getThumbnailLocation(`${pathJoined}.jpg`);
 
   return {
     props: {
       data,
       location,
-      path,
+      pathJoined,
       thumbnail,
       errorMessage
     }
@@ -67,13 +77,13 @@ export async function getServerSideProps(context) {
 export default function Home({
   data,
   location,
-  path,
+  pathJoined,
   thumbnail,
   errorMessage,
   setErrorMessage,
   setContributingLinks
 }) {
-  let data_link = `plant_database/references/${path}.json5`;
+  let data_link = `plant_database/references/${pathJoined}.json5`;
   React.useEffect(() => {
     setContributingLinks([
       {
@@ -93,7 +103,7 @@ export default function Home({
     <>
       <article className="prose m-5 max-w-none">
         <Head>
-          <title>{`Collection: ${path}`}</title>
+          <title>{`Collection: ${pathJoined}`}</title>
         </Head>
         <Image src={thumbnail} alt="preview image for this reference" width={200} height={200} />
         {data.collection && (
@@ -117,7 +127,7 @@ export default function Home({
                   {data.locations.map((location) => (
                     <li key={location.id}>
                       <Link
-                        href={`/collections/${name_to_path(path)}?loc=${location.location_number}`}
+                        href={`/collections/${name_to_path(pathJoined)}?loc=${location.location_number}`}
                         legacyBehavior
                       >
                         {location.location_name}
