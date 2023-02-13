@@ -166,15 +166,15 @@ fn get_base_plant_ids_from_locations(
 // return either "123" or look up the user name and return the ID from the lookup
 // todo prevent creating a user with name starting with "id:"
 pub fn get_user_id(user: &Option<String>, db_conn: &mut SqliteConnection) -> Result<i32> {
-    if (user.is_none()) {
+    if user.is_none() {
         return Err(anyhow!("user not specified"));
     }
     let user = user.clone().unwrap();
     let id_start = "id:";
-    if (user.starts_with(id_start)) {
+    if user.starts_with(id_start) {
         let trimmed = crate::import_db::rem_first_n(&user, id_start.len()).parse::<i32>();
 
-        if (trimmed.is_err()) {
+        if trimmed.is_err() {
             return Err(anyhow!("user id didn't parse as i32"));
         }
 
@@ -199,15 +199,15 @@ pub fn get_user_id(user: &Option<String>, db_conn: &mut SqliteConnection) -> Res
 // same as above but for locations
 // todo prevent creating a location with name starting with "id:"
 pub fn get_location_id(location: &Option<String>, db_conn: &mut SqliteConnection) -> Result<i32> {
-    if (location.is_none()) {
+    if location.is_none() {
         return Err(anyhow!("location not specified"));
     }
     let location = location.clone().unwrap();
     let id_start = "id:";
-    if (location.starts_with(id_start)) {
+    if location.starts_with(id_start) {
         let trimmed = crate::import_db::rem_first_n(&location, id_start.len()).parse::<i32>();
 
-        if (trimmed.is_err()) {
+        if trimmed.is_err() {
             return Err(anyhow!("location id didn't parse as i32"));
         }
 
