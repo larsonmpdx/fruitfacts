@@ -188,10 +188,10 @@ pub fn get_user_id(user: &Option<String>, db_conn: &mut SqliteConnection) -> Res
 
     match db_user {
         Ok(db_user) => {
-            return Ok(db_user.id);
+            Ok(db_user.id)
         }
         Err(_error) => {
-            return Err(anyhow!("couldn't find user"));
+            Err(anyhow!("couldn't find user"))
         }
     }
 }
