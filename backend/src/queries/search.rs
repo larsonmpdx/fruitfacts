@@ -183,13 +183,13 @@ pub fn get_user_id(user: &Option<String>, db_conn: &mut SqliteConnection) -> Res
     }
 
     let db_user = users::dsl::users
-        .filter(users::name.eq(user))
+        .filter(users::name.eq(user.clone()))
         .order(users::id.desc())
         .first::<User>(db_conn);
 
     match db_user {
         Ok(db_user) => Ok(db_user.id),
-        Err(_error) => Err(anyhow!("couldn't find user")),
+        Err(_error) => Err(anyhow!("couldn't find user {user}")),
     }
 }
 
@@ -212,13 +212,13 @@ pub fn get_location_id(location: &Option<String>, db_conn: &mut SqliteConnection
     }
 
     let db_user = locations::dsl::locations
-        .filter(locations::location_name.eq(location))
+        .filter(locations::location_name.eq(location.clone()))
         .order(locations::id.desc())
         .first::<Location>(db_conn);
 
     match db_user {
         Ok(db_user) => Ok(db_user.id),
-        Err(_error) => Err(anyhow!("couldn't find user")),
+        Err(_error) => Err(anyhow!("couldn't find location {location}")),
     }
 }
 
@@ -694,12 +694,12 @@ pub fn search_db(
             if query.user.is_none() {
                 return Err(anyhow!("loc search without user specified"));
             }
-            let query_user_id = get_user_id(&query.user, db_conn).unwrap();
+            let query_user_id = get_user_id(&query.user, db_conn)?;
 
             if query.location.is_none() {
                 return Err(anyhow!("loc search without location specified"));
             }
-            let query_location_id = get_location_id(&query.location, db_conn).unwrap();
+            let query_location_id = get_location_id(&query.location, db_conn)?;
 
             // given a user ID, we can either get it with a matching session user ID, or fall back to getting only public=true
             if let Some(session) = session {
@@ -740,7 +740,7 @@ pub fn search_db(
             if query.user.is_none() {
                 return Err(anyhow!("user_loc search without user_id specified"));
             }
-            let query_user_id = get_user_id(&query.user, db_conn).unwrap();
+            let query_user_id = get_user_id(&query.user, db_conn)?;
 
             // given a user ID, we can either get it with a matching session user ID, or fall back to getting only public=true
             if let Some(session) = session {
@@ -826,7 +826,7 @@ async fn variety_search(
         Ok(results) => results,
         Err(e) => {
             eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(""));
+            return Err(actix_web::error::ErrorInternalServerError(format!("{}", e)));
         }
     };
 

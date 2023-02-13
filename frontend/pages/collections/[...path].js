@@ -27,13 +27,15 @@ export async function getServerSideProps(context) {
   if(path[0] == 'user') {
     // incoming path will be like "user/[user name or ID]/[list name or ID]"
     // IDs are formatted like "id:123"
-    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=user_loc&user=${path[1]}&location=${path[2]}`
+    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=loc&user=${path[1]}&location=${path[2]}`
   } else {
     // incoming path will be like "Oregon/u-pick A"
     apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathJoined}` // no trailing slash - individual collection
   }
 
-  const data = await fetch(apiURL)
+  const data = await fetch(apiURL, {
+    credentials: 'include'
+  })
     .then((response) => {
       if (response.status !== 200) {
         errorMessage = "can't reach backend";
