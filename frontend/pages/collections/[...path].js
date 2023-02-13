@@ -27,7 +27,7 @@ export async function getServerSideProps(context) {
   if(path[0] == 'user') {
     // incoming path will be like "user/[user name or ID]/[list name or ID]"
     // IDs are formatted like "id:123"
-    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=user_loc&user=${path[1]}&location=${path[2]}` + queryString
+    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=user_loc&user=${path[1]}&location=${path[2]}`
   } else {
     // incoming path will be like "Oregon/u-pick A"
     apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathJoined}` // no trailing slash - individual collection
@@ -50,9 +50,9 @@ export async function getServerSideProps(context) {
   console.log(JSON.stringify(data.locations, null, 2));
 
   // cut down data to only this location or location #1 if not specified
-  data.items = data.items.filter((item) => {
+  data.items = data.items ? data.items.filter((item) => {
     return item.location_number == location_number;
-  });
+  }) : [];
 
   const location = data.locations.find((location) => {
     return location.location_number == location_number;

@@ -149,6 +149,7 @@ pub struct Location {
 
 // we need a 2nd copy of the above struct, identical but lacking the id field, for inserts using auto-increment id
 // see https://github.com/diesel-rs/diesel/issues/1440
+#[skip_serializing_none]
 #[derive(Default, Debug, Deserialize, Insertable, AsChangeset)]
 #[diesel(table_name = locations)]
 pub struct LocationNoID {
@@ -171,6 +172,7 @@ pub struct LocationNoID {
     pub description: Option<String>,
 }
 
+#[skip_serializing_none]
 #[derive(Queryable, Associations, Serialize)]
 #[diesel(belongs_to(User))]
 #[diesel(table_name = user_oauth_entries)]
@@ -199,6 +201,7 @@ pub struct UserSessionToInsert {
     pub created: i64,
 }
 
+#[skip_serializing_none]
 #[derive(Queryable, Serialize, Default)]
 pub struct User {
     pub id: i32,
@@ -214,6 +217,7 @@ pub struct FtsBasePlants {
     pub rank: f32,
 }
 
+#[skip_serializing_none]
 #[derive(Debug, Queryable, Serialize)]
 pub struct Fact {
     pub id: i32,

@@ -79,6 +79,7 @@ struct CollectionJson {
     plants: Vec<CollectionPlantJson>,
 }
 
+#[skip_serializing_none]
 #[derive(Debug, Serialize, Deserialize)]
 struct CollectionLocationJson {
     short_name: Option<String>,
@@ -87,12 +88,14 @@ struct CollectionLocationJson {
     longitude: f64,
 }
 
+#[skip_serializing_none]
 #[derive(Serialize, Deserialize)]
 struct CollectionCategoryJson {
     name: String,
     description: Option<String>,
 }
 
+#[skip_serializing_none]
 #[derive(Debug, Serialize, Deserialize)]
 struct CollectionPlantJson {
     // only for lists of names like we see in some guides for "here's a list of scab-resistant apples"
@@ -1136,12 +1139,14 @@ pub fn load_base_plants(db_conn: &mut SqliteConnection, database_dir: std::path:
     plants_found
 }
 
+#[skip_serializing_none]
 #[derive(Serialize, Deserialize)]
 struct TypeGroupsJson {
     group_name: String,
     types: Vec<TypeJson>,
 }
 
+#[skip_serializing_none]
 #[derive(Serialize, Deserialize)]
 struct TypeJson {
     name: String,

@@ -15,8 +15,10 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 use anyhow::Result;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
+use serde_with::skip_serializing_none;
 use std::collections::HashSet;
 
+#[skip_serializing_none]
 #[derive(Queryable, Debug, Serialize)]
 pub struct CollectionsForPaths {
     pub id: i32,
@@ -27,6 +29,7 @@ pub struct CollectionsForPaths {
     pub title: Option<String>,
 }
 
+#[skip_serializing_none]
 #[derive(Default, Serialize)]
 pub struct CollectionsReturn {
     directories: Vec<String>,
@@ -79,6 +82,7 @@ pub fn get_collections_db(
     }
 }
 
+#[skip_serializing_none]
 #[derive(Default, Serialize)]
 pub struct CollectionReturn {
     collection: Option<Collection>,
@@ -194,6 +198,7 @@ async fn get_collections(
     }
 }
 
+#[skip_serializing_none]
 #[derive(Default, Serialize)]
 pub struct PlantReturn {
     base: Option<BasePlant>,
@@ -277,6 +282,7 @@ async fn get_plant(
     Ok(HttpResponse::Ok().json(plant))
 }
 
+#[skip_serializing_none]
 #[derive(Serialize)]
 struct RecentChanges {
     #[serde(rename = "buildInfo")]
@@ -285,6 +291,7 @@ struct RecentChanges {
     recent_changes: RecentChangesDB,
 }
 
+#[skip_serializing_none]
 #[derive(Serialize)]
 struct BuildInfo {
     #[serde(rename = "gitHash")]

@@ -67,7 +67,7 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
           {searchReturn.locations.map((location) => (
             <li key={location.location_name}>
             <Link
-              href={`/todo`}
+              href={`/collections/user/${query.user}/${location.location_name}`}
               className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
             >
               {location.location_name}

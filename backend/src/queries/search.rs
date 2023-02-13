@@ -14,6 +14,7 @@ use std::fmt::Write as _; // for write!() macro
 
 use anyhow::{anyhow, Result};
 
+#[skip_serializing_none]
 #[derive(Default, Deserialize, Serialize, Clone)]
 pub struct SearchQuery {
     #[serde(rename = "searchType")]
@@ -187,12 +188,8 @@ pub fn get_user_id(user: &Option<String>, db_conn: &mut SqliteConnection) -> Res
         .first::<User>(db_conn);
 
     match db_user {
-        Ok(db_user) => {
-            Ok(db_user.id)
-        }
-        Err(_error) => {
-            Err(anyhow!("couldn't find user"))
-        }
+        Ok(db_user) => Ok(db_user.id),
+        Err(_error) => Err(anyhow!("couldn't find user")),
     }
 }
 
@@ -220,12 +217,8 @@ pub fn get_location_id(location: &Option<String>, db_conn: &mut SqliteConnection
         .first::<Location>(db_conn);
 
     match db_user {
-        Ok(db_user) => {
-            Ok(db_user.id)
-        }
-        Err(_error) => {
-            Err(anyhow!("couldn't find user"))
-        }
+        Ok(db_user) => Ok(db_user.id),
+        Err(_error) => Err(anyhow!("couldn't find user")),
     }
 }
 

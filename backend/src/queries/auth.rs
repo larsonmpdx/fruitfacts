@@ -4,8 +4,8 @@ use actix_web::{get, post, web, HttpResponse};
 use anyhow::{anyhow, Result};
 use base64::Engine as _; // base64: check out this classy github issue! https://github.com/marshallpierce/rust-base64/issues/213
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
-use serde::Deserialize;
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
+use serde_with::skip_serializing_none;
 use std::io::Read;
 
 use expiring_map::ExpiringMap;
@@ -70,6 +70,7 @@ fn get_google_client() -> GoogleClientType {
     )
 }
 
+#[skip_serializing_none]
 #[derive(Debug, Serialize)]
 struct AuthURLs {
     google: Option<String>,
@@ -155,6 +156,7 @@ pub fn get_existing_user_db(
         .first::<User>(db_conn)
 }
 
+#[skip_serializing_none]
 #[derive(Default, Serialize)]
 pub struct FullUser {
     user: User,
@@ -210,6 +212,7 @@ pub fn insert_account_offer(session_value: String, account_offer: AccountOffer) 
         .insert(session_value, account_offer);
 }
 
+#[skip_serializing_none]
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct GoogleAccountInfo {
     id: String,           // won't change, primary key
@@ -218,6 +221,7 @@ struct GoogleAccountInfo {
     picture: String,      // we don't use this
 }
 
+#[skip_serializing_none]
 #[derive(Default, Serialize)]
 pub struct ReceiveRedirectReturn {
     user: Option<User>, // give this back if we already have a matching user
