@@ -13,6 +13,7 @@ import Chart from '../../components/chart';
 import { getThumbnailLocation } from '../../components/functions';
 import { name_to_path, path_to_name } from '../../components/util';
 import Image from 'next/image';
+import { getCookie } from 'cookies-next';
 
 export async function getServerSideProps(context) {
   let errorMessage = null;
@@ -33,12 +34,17 @@ export async function getServerSideProps(context) {
     apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathJoined}` // no trailing slash - individual collection
   }
 
+  // todo - switch to the built-in next component when this issue is fixed:
+  // https://github.com/vercel/next.js/issues/45371
+  const session = getCookie('session', { req: context.req, res: context.res });
   const data = await fetch(apiURL, {
-    credentials: 'include'
+    headers: {
+      cookie: `session=${session}`
+    }
   })
     .then((response) => {
       if (response.status !== 200) {
-        errorMessage = "can't reach backend";
+        errorMessage = `can't reach backend: ${response.status}`;
         return { items: [], locations: [] };
       }
       return response.json();
