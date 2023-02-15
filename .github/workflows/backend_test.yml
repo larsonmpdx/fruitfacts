@@ -17,6 +17,9 @@ jobs:
     - name: copy env
       run: cp ./.env.example ./.env
       working-directory: ./backend
+    - name: copy demo file
+      run: cp ./src/gazetteer_load/test_data_file.txt.demo ./src/gazetteer_load/2021_Gaz_zcta_national.txt
+      working-directory: ./backend
     - name: Build
       run: cargo build --verbose
       working-directory: ./backend
