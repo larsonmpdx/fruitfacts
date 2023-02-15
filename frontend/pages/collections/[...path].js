@@ -62,9 +62,14 @@ export async function getServerSideProps(context) {
     return item.location_number == location_number;
   }) : [];
 
-  const location = data.locations.find((location) => {
+  let location;
+  if(data?.locations?.length) {
+    location = data.locations.find((location) => {
     return location.location_number == location_number;
   }) || { location_name: `unknown location #${location_number}` };
+  } else {
+    location = 0;
+  }
 
   const thumbnail = getThumbnailLocation(`${pathJoined}.jpg`);
 
@@ -130,7 +135,7 @@ export default function Home({
             </p>
             <h1>Locations</h1>
             <ul className="list-disc">
-              {data.locations.length > 1 ? (
+              {data?.locations?.length > 1 ? (
                 <>
                   {data.locations.map((location) => (
                     <li key={location.id}>
@@ -151,7 +156,7 @@ export default function Home({
                 </>
               )}
             </ul>
-            {data.locations.length > 1 ? (
+            {data?.locations?.length > 1 ? (
               <h1>{`Chart (${location.location_name})`}</h1>
             ) : (
               <h1>Chart</h1>
@@ -159,16 +164,19 @@ export default function Home({
             <div className="border-2 border-solid">
               <Chart items={data.items} />
             </div>
-            {data.locations.length > 1 ? (
+          </>
+        )}
+                    {data?.locations?.length > 1 ? (
               <h1>{`Plants (${location.location_name})`}</h1>
             ) : (
               <h1>Plants</h1>
             )}
             <ul className="list-none">
-              {data.items.map((item) => (
+            {data?.items?.length > 1 ? (
+              data.items.map((item) => (
                 <li key={item.id}>
                   <img
-                    className="my-0 mx-2 inline h-6 w-6 object-contain"
+                    className=""
                     src={'/fruit_icons/' + item.type + '.svg'}
                   />
                   <Link href={`/plant/${name_to_path(item.type + '/' + item.name)}`} legacyBehavior>
@@ -176,10 +184,11 @@ export default function Home({
                   </Link>
                   {item.marketing_name && <> (marketed under the {item.marketing_name} brand)</>}
                 </li>
-              ))}
+              ))
+            ) : (
+              <li>no plants</li>
+            )}
             </ul>
-          </>
-        )}
       </article>
     </>
   );

@@ -14,8 +14,9 @@
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
-    "@mui/material": "5.11.8",
-    "cookies-next": "^2.1.1",
+    "@heroicons/react": "^2.0.15",
+    "@mui/material": "5.11.9",
+    "cookies-next": "2.1.1",
     "leaflet": "1.9.3",
     "lodash": "4.17.21",
     "next": "13.1.6",
