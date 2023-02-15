@@ -9,6 +9,10 @@ on:
 env:
   CARGO_TERM_COLOR: always
 
+defaults:
+  run:
+    working-directory: ./backend
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,13 +20,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: copy env
       run: cp ./.env.example ./.env
-      working-directory: ./backend
     - name: copy demo file
       run: cp ./src/gazetteer_load/test_data_file.txt.demo ./src/gazetteer_load/2021_Gaz_zcta_national.txt
-      working-directory: ./backend
     - name: Build
-      run: cargo build --verbose
-      working-directory: ./backend
+      run: cargo build # can add "--verbose" flag
     - name: Run tests
-      run: cargo test --verbose
-      working-directory: ./backend
+      run: cargo test -- --include-ignored # can add "--verbose" flag
