@@ -6,11 +6,12 @@ on:
   pull_request:
     branches: [ main ]
 
+defaults:
+  run:
+    working-directory: ./backend
+
 jobs:
   build:
-    defaults:
-      run:
-        working-directory: ./frontend
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
