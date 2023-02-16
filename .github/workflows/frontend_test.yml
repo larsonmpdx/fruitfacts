@@ -18,7 +18,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16.x' # match version in get_ubuntu_dependencies.sh
+        node-version: '18.x' # match version in get_ubuntu_dependencies.sh
     - run: npm install # not "npm ci" because I'm not using a lockfile
     - run: npm run build
     - run: npm test

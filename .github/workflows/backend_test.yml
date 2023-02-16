@@ -20,9 +20,9 @@ jobs:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0 # in order to get enough git history to extract our git commit number etc. done in tests
-    - name: copy env
+    - name: copy env for tests
       run: cp ./.env.example ./.env
-    - name: copy demo file
+    - name: copy demo file for tests
       run: cp ./src/gazetteer_load/test_data_file.txt.demo ./src/gazetteer_load/2021_Gaz_zcta_national.txt
     - name: Build
       run: cargo build # can add "--verbose" flag
