@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # in order to get enough git history to extract our git commit number etc. done in tests
     - name: copy env
       run: cp ./.env.example ./.env
     - name: copy demo file

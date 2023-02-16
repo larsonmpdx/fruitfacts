@@ -70,5 +70,10 @@
         contributor: "Michael",
         fact: "Grapes can support about 1kg (2.2lb) of fruit per 16-18 leaves (1kg might be 2-4 clusters for common table grapes). if a vine sets too much fruit vs. its leaf area the excess can be thinned",
         reference: "https://grapes.extension.org/crop-thinning-cluster-thinning-or-cluster-removal/"
+    },
+    {
+        contributor: "Michael",
+        fact: "WA-38 apples can be stored for at least ten months in controlled atmosphere (CA) storage",
+        reference: "http://treefruit.wsu.edu/article/2019-storage-recommendations-for-wa-38-cosmic-crisp/"
     }
 ]
