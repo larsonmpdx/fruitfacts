@@ -18,7 +18,10 @@ export async function getServerSideProps(context) {
     return await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?` + queryString)
       .then((response) => {
         if (response.status !== 200) {
-          errorMessage = `backend API error ${response.status}`;
+          response.text().then((text) => {
+            errorMessage = `backend API error: ${text}`;
+            console.log(text);
+          });
           return null;
         }
         return response.json();

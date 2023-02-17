@@ -68,7 +68,8 @@ CREATE TABLE users (
   id INTEGER PRIMARY KEY NOT NULL,
 
   -- profile info
-  name TEXT NOT NULL,
+  name TEXT NOT NULL, -- user chooses this, used for display in user lists
+  email TEXT NOT NULL, -- hidden. should match the email in one (or more) oauth providers
   location_name TEXT,
   latitude DOUBLE,
   longitude DOUBLE,

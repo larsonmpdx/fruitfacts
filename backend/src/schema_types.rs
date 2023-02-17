@@ -206,6 +206,7 @@ pub struct UserSessionToInsert {
 pub struct User {
     pub id: i32,
     pub name: String,
+    pub email: String,
     pub location_name: Option<String>,
     pub latitude: Option<f64>,
     pub longitude: Option<f64>,

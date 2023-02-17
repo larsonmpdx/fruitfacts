@@ -14,7 +14,10 @@ export async function getServerSideProps() {
   const fact = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/fact`)
     .then((response) => {
       if (response.status !== 200) {
-        errorMessage = "can't reach backend";
+        response.text().then((text) => {
+          errorMessage = `can't reach backend: ${text}`;
+          console.log(text);
+        });
         return {};
       }
       return response.json();
@@ -30,7 +33,10 @@ export async function getServerSideProps() {
   )
     .then((response) => {
       if (response.status !== 200) {
-        errorMessage = "can't reach backend";
+        response.text().then((text) => {
+          errorMessage = `can't reach backend: ${text}`;
+          console.log(text);
+        });
         return {};
       }
       return response.json();

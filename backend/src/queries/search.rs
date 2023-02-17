@@ -826,7 +826,7 @@ async fn variety_search(
         Ok(results) => results,
         Err(e) => {
             eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(format!("{}", e)));
+            return Err(actix_web::error::ErrorInternalServerError(e));
         }
     };
 

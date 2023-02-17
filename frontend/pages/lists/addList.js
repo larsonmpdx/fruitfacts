@@ -46,7 +46,9 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
     })
     .then((response) => {
       if (response.status !== 200) {
-        setErrorMessage("can't reach the backend");
+        response.text().then((text) => {
+          setErrorMessage(`backend API error: ${text}`);
+        });
       } else {
         // todo - redirect to edit list
       }

@@ -396,7 +396,7 @@ async fn receive_oauth_redirect(
         Ok(results) => results,
         Err(e) => {
             eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(""));
+            return Err(actix_web::error::ErrorInternalServerError(e));
         }
     };
 
@@ -413,8 +413,15 @@ async fn receive_oauth_redirect(
     }
 }
 
+#[skip_serializing_none]
+#[derive(Default, Deserialize, Serialize, Clone)]
+pub struct UserCreateQuery {
+    pub name: Option<String>,
+}
+
 pub fn create_account_blocking(
     session_value: String,
+    query: &UserCreateQuery,
     db_conn: &mut SqliteConnection,
 ) -> Result<FullUser> {
     if let Some(offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get_mut(&session_value) {
@@ -422,13 +429,20 @@ pub fn create_account_blocking(
             return Err(anyhow!("account offer already used"));
         }
         offer.used = true;
-        // if found, create an account in the database
+        // an offer was found, create an account in the database
+
+        if(query.name.is_none()) {
+            return Err(anyhow!("account name missing"));
+        }
+
+        // todo: another api to check name availability on the fly. for now, just error
 
         let google_account = offer.google_account_info.as_ref().unwrap();
-        let name = google_account.email.clone(); // todo - allow a customized username
-                                                 // todo
+        let name = query.name.clone().unwrap();
+        let email = google_account.email.clone();
         let rows_inserted = diesel::insert_into(users::dsl::users)
-            .values((users::name.eq(name.clone()),))
+            .values((users::name.eq(name.clone()),
+        users::email.eq(email.clone())))
             .execute(db_conn);
 
         if rows_inserted != Ok(1) {
@@ -436,7 +450,6 @@ pub fn create_account_blocking(
         }
 
         // get the id of the newly-created user (sqlite can't return this from the creation query)
-        // todo
         let new_user = users::dsl::users
             .filter(users::name.eq(name))
             .order(users::id.desc())
@@ -479,6 +492,7 @@ pub fn create_account_blocking(
 #[get("/api/createAccount")]
 async fn create_account(
     req: HttpRequest,
+    query: web::Query<UserCreateQuery>,
     pool: web::Data<DbPool>,
 ) -> actix_web::Result<impl actix_web::Responder> {
     // todo - user gets to fill in other fields like nickname or whatever, maybe in the query string
@@ -489,18 +503,18 @@ async fn create_account(
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    let results = web::block(move || {
+    let result = web::block(move || {
         let mut conn = pool.get().expect("couldn't get db connection from pool");
-        create_account_blocking(session_value.unwrap(), &mut conn)
+        create_account_blocking(session_value.unwrap(), &query, &mut conn)
     })
     .await
     .unwrap(); // todo - blockingerror unwrap?
 
-    match results {
+    match result {
         Ok(results) => Ok(HttpResponse::Ok().json(results)),
         Err(e) => {
             eprintln!("{}", e);
-            Err(actix_web::error::ErrorInternalServerError(""))
+            Err(actix_web::error::ErrorInternalServerError(e))
         }
     }
 }

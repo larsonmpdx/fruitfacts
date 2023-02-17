@@ -46,7 +46,7 @@ async fn locations_search(
         Ok(results) => results,
         Err(e) => {
             eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(""));
+            return Err(actix_web::error::ErrorInternalServerError(e));
         }
     };
 

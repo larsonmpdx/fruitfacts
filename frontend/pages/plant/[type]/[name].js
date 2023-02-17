@@ -14,7 +14,10 @@ export async function getServerSideProps(context) {
   )
     .then((response) => {
       if (response.status !== 200) {
-        errorMessage = "can't reach backend";
+        response.text().then((text) => {
+          errorMessage = `backend API error: ${text}`;
+          console.log(text);
+        });
         return {};
       }
       return response.json();

@@ -171,7 +171,7 @@ async fn get_collections(
             Ok(collections) => collections,
             Err(e) => {
                 eprintln!("{}", e);
-                return Err(actix_web::error::ErrorInternalServerError(""));
+                return Err(actix_web::error::ErrorInternalServerError(e));
             }
         };
 
@@ -190,7 +190,7 @@ async fn get_collections(
             Ok(collection) => collection,
             Err(e) => {
                 eprintln!("{}", e);
-                return Err(actix_web::error::ErrorInternalServerError(""));
+                return Err(actix_web::error::ErrorInternalServerError(e));
             }
         };
 
@@ -275,7 +275,7 @@ async fn get_plant(
         Ok(plant) => plant,
         Err(e) => {
             eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(""));
+            return Err(actix_web::error::ErrorInternalServerError(e));
         }
     };
 
@@ -375,7 +375,7 @@ async fn get_recent_changes(pool: web::Data<DbPool>) -> Result<HttpResponse, act
         Ok(changes_db) => changes_db,
         Err(e) => {
             eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(""));
+            return Err(actix_web::error::ErrorInternalServerError(e));
         }
     };
 
@@ -413,7 +413,7 @@ async fn get_fact(pool: web::Data<DbPool>) -> Result<HttpResponse, actix_web::Er
         Ok(fact) => fact,
         Err(e) => {
             eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(""));
+            return Err(actix_web::error::ErrorInternalServerError(e));
         }
     };
 

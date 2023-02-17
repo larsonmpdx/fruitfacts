@@ -20,8 +20,10 @@ export default function Home({ setErrorMessage }) {
     })
       .then((response) => {
         if (response.status !== 200) {
-          setErrorMessage('failed creating user');
-          return { failed: response.status };
+          return response.text().then((text) => {
+            setErrorMessage(`failed creating user: ${text}`);
+            return { failed: text };
+          });
         }
         return response.json();
       })
