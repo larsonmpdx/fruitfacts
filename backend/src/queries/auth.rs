@@ -431,7 +431,7 @@ pub fn create_account_blocking(
         offer.used = true;
         // an offer was found, create an account in the database
 
-        if(query.name.is_none()) {
+        if (query.name.is_none()) {
             return Err(anyhow!("account name missing"));
         }
 
@@ -441,8 +441,7 @@ pub fn create_account_blocking(
         let name = query.name.clone().unwrap();
         let email = google_account.email.clone();
         let rows_inserted = diesel::insert_into(users::dsl::users)
-            .values((users::name.eq(name.clone()),
-        users::email.eq(email.clone())))
+            .values((users::name.eq(name.clone()), users::email.eq(email.clone())))
             .execute(db_conn);
 
         if rows_inserted != Ok(1) {
