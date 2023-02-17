@@ -25,13 +25,13 @@ export async function getServerSideProps(context) {
   }
 
   let apiURL;
-  if(path[0] == 'user') {
+  if (path[0] == 'user') {
     // incoming path will be like "user/[user name or ID]/[list name or ID]"
     // IDs are formatted like "id:123"
-    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=loc&user=${path[1]}&location=${path[2]}`
+    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=loc&user=${path[1]}&location=${path[2]}`;
   } else {
     // incoming path will be like "Oregon/u-pick A"
-    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathJoined}` // no trailing slash - individual collection
+    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathJoined}`; // no trailing slash - individual collection
   }
 
   // todo - switch to the built-in next component when this issue is fixed:
@@ -61,15 +61,17 @@ export async function getServerSideProps(context) {
   console.log(JSON.stringify(data.locations, null, 2));
 
   // cut down data to only this location or location #1 if not specified
-  data.items = data.items ? data.items.filter((item) => {
-    return item.location_number == location_number;
-  }) : [];
+  data.items = data.items
+    ? data.items.filter((item) => {
+        return item.location_number == location_number;
+      })
+    : [];
 
   let location;
-  if(data?.locations?.length) {
+  if (data?.locations?.length) {
     location = data.locations.find((location) => {
-    return location.location_number == location_number;
-  }) || { location_name: `unknown location #${location_number}` };
+      return location.location_number == location_number;
+    }) || { location_name: `unknown location #${location_number}` };
   } else {
     location = 0;
   }
@@ -143,7 +145,9 @@ export default function Home({
                   {data.locations.map((location) => (
                     <li key={location.id}>
                       <Link
-                        href={`/collections/${name_to_path(pathJoined)}?loc=${location.location_number}`}
+                        href={`/collections/${name_to_path(pathJoined)}?loc=${
+                          location.location_number
+                        }`}
                         legacyBehavior
                       >
                         {location.location_name}
@@ -169,29 +173,26 @@ export default function Home({
             </div>
           </>
         )}
-                    {data?.locations?.length > 1 ? (
-              <h1>{`Plants (${location.location_name})`}</h1>
-            ) : (
-              <h1>Plants</h1>
-            )}
-            <ul className="list-none">
-            {data?.items?.length > 1 ? (
-              data.items.map((item) => (
-                <li key={item.id}>
-                  <img
-                    className=""
-                    src={'/fruit_icons/' + item.type + '.svg'}
-                  />
-                  <Link href={`/plant/${name_to_path(item.type + '/' + item.name)}`} legacyBehavior>
-                    {item.name + ' ' + item.type}
-                  </Link>
-                  {item.marketing_name && <> (marketed under the {item.marketing_name} brand)</>}
-                </li>
-              ))
-            ) : (
-              <li>no plants</li>
-            )}
-            </ul>
+        {data?.locations?.length > 1 ? (
+          <h1>{`Plants (${location.location_name})`}</h1>
+        ) : (
+          <h1>Plants</h1>
+        )}
+        <ul className="list-none">
+          {data?.items?.length > 1 ? (
+            data.items.map((item) => (
+              <li key={item.id}>
+                <img className="" src={'/fruit_icons/' + item.type + '.svg'} />
+                <Link href={`/plant/${name_to_path(item.type + '/' + item.name)}`} legacyBehavior>
+                  {item.name + ' ' + item.type}
+                </Link>
+                {item.marketing_name && <> (marketed under the {item.marketing_name} brand)</>}
+              </li>
+            ))
+          ) : (
+            <li>no plants</li>
+          )}
+        </ul>
       </article>
     </>
   );

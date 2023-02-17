@@ -30,8 +30,7 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
   };
 
   const handleSubmit = async () => {
-    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list`,
-    {
+    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list`, {
       method: 'POST',
       credentials: 'include',
       body: JSON.stringify({
@@ -41,22 +40,22 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
         user_id: user.id,
         location_number: 0, // special case for user collections
         notoriety_score: 0.0, // unused here but set NOT NULL
-        ignore_for_nearby_searches: 0, // unused here but set NOT NULL
+        ignore_for_nearby_searches: 0 // unused here but set NOT NULL
       })
     })
-    .then((response) => {
-      if (response.status !== 200) {
-        response.text().then((text) => {
-          setErrorMessage(`backend API error: ${text}`);
-        });
-      } else {
-        // todo - redirect to edit list
-      }
-    })
-    .catch((error) => {
-      setErrorMessage(`can't reach backend: ${error.message}`);
-      console.log(error);
-    });
+      .then((response) => {
+        if (response.status !== 200) {
+          response.text().then((text) => {
+            setErrorMessage(`backend API error: ${text}`);
+          });
+        } else {
+          // todo - redirect to edit list
+        }
+      })
+      .catch((error) => {
+        setErrorMessage(`can't reach backend: ${error.message}`);
+        console.log(error);
+      });
   };
 
   // todo:

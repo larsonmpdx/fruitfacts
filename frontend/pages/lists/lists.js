@@ -2,7 +2,7 @@ import React from 'react';
 import * as qs from 'qs';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { XCircleIcon } from '@heroicons/react/20/solid'
+import { XCircleIcon } from '@heroicons/react/20/solid';
 
 export default function Home({ user, setContributingLinks, setErrorMessage }) {
   React.useEffect(() => {
@@ -58,7 +58,7 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
       {user?.id && `id:${user?.id}` == query.user && (
         <Link
           href={`/lists/addList`}
-          className="mt-4 mr-4 lg:mt-0 hover:bg-indigo-800 hover:text-white"
+          className="mt-4 mr-4 hover:bg-indigo-800 hover:text-white lg:mt-0"
         >
           add list
         </Link>
@@ -67,13 +67,13 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
         <>
           {searchReturn.locations.map((location) => (
             <li key={location.location_name}>
-            <XCircleIcon className="my-0 mx-2 inline h-6 w-6 object-contain"/>
-            <Link
-              href={`/collections/user/${query.user}/${location.location_name}`}
-              className="mt-4 mr-4 lg:mt-0 hover:bg-indigo-800 hover:text-white"
-            >
-              {location.location_name}
-            </Link>
+              <XCircleIcon className="my-0 mx-2 inline h-6 w-6 object-contain" />
+              <Link
+                href={`/collections/user/${query.user}/${location.location_name}`}
+                className="mt-4 mr-4 hover:bg-indigo-800 hover:text-white lg:mt-0"
+              >
+                {location.location_name}
+              </Link>
             </li>
           ))}
         </>
