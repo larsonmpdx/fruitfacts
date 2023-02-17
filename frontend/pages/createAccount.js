@@ -9,15 +9,27 @@ export default function Home({ setErrorMessage }) {
   const [user, setUser] = React.useState();
   const [clicked, setClicked] = React.useState();
 
+  const [name, setName] = React.useState('');
+  const [createEnabled, setCreateEnabled] = React.useState(false);
+
+  const handleSetName = (name) => {
+    setName(name);
+
+    setCreateEnabled(name.length > 0);
+  };
+
   const createAccount = async () => {
     if (clicked) {
       return;
     }
     setClicked(true);
 
-    const user = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/createAccount`, {
-      credentials: 'include'
-    })
+    const user = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/createAccount?name=${name}`,
+      {
+        credentials: 'include'
+      }
+    )
       .then((response) => {
         if (response.status !== 200) {
           return response.text().then((text) => {
@@ -46,9 +58,18 @@ export default function Home({ setErrorMessage }) {
                 found. create one?
               </p>
             </div>
+            <label>
+              Choose an account name (this name will be visible to other users):
+              <input
+                type="text"
+                value={name}
+                className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                onChange={(event) => handleSetName(event.target.value)}
+              />
+            </label>
             <div className="rounded-lg border bg-indigo-800 p-10 font-bold text-white shadow-lg">
               <Button
-                enabled={!clicked}
+                enabled={!clicked && createEnabled}
                 onClick={async () => {
                   await createAccount();
                 }}

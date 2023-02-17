@@ -431,7 +431,7 @@ pub fn create_account_blocking(
         offer.used = true;
         // an offer was found, create an account in the database
 
-        if (query.name.is_none()) {
+        if query.name.is_none() {
             return Err(anyhow!("account name missing"));
         }
 
