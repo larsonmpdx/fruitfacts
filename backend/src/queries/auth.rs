@@ -417,28 +417,46 @@ async fn receive_oauth_redirect(
 #[derive(Default, Deserialize, Serialize, Clone)]
 pub struct UserCreateQuery {
     pub name: Option<String>,
+    pub check_only: Option<bool>, // if true, we're only looking for name conflicts in order to show a quick "available" note when registering
 }
 
 pub fn create_account_blocking(
     session_value: String,
     query: &UserCreateQuery,
     db_conn: &mut SqliteConnection,
-) -> Result<FullUser> {
+) -> Result<Option<FullUser>> {
     if let Some(offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get_mut(&session_value) {
         if offer.used {
             return Err(anyhow!("account offer already used"));
         }
-        offer.used = true;
-        // an offer was found, create an account in the database
 
         if query.name.is_none() {
             return Err(anyhow!("account name missing"));
         }
+        let name = query.name.clone().unwrap();
 
-        // todo: another api to check name availability on the fly. for now, just error
+        // todo lint username: prevent all-whitespace or all-punctuation. trim leading and trailing whitespace. etc.
+
+        // todo - this would need to skip the offer check (and require a valid session I guess)
+        // in order to allow using it to check names while changing usernames
+        if let Some(check_only) = query.check_only {
+            if check_only {
+                let existing_user = users::dsl::users
+                .filter(users::name.eq(name.clone()))
+                .order(users::id.desc())
+                .first::<User>(db_conn);
+        
+                return match existing_user {
+                    Ok(_) => Err(anyhow!("username taken")),
+                    Err(_error) => Ok(None),
+                };
+            }
+        }
+
+        // we're good to create the account, mark the offer used
+        offer.used = true;
 
         let google_account = offer.google_account_info.as_ref().unwrap();
-        let name = query.name.clone().unwrap();
         let email = google_account.email.clone();
         let rows_inserted = diesel::insert_into(users::dsl::users)
             .values((users::name.eq(name.clone()), users::email.eq(email.clone())))
@@ -477,7 +495,7 @@ pub fn create_account_blocking(
         );
         // return the user
         match get_full_user_db(db_conn, new_user.id) {
-            Ok(fulluser) => Ok(fulluser),
+            Ok(fulluser) => Ok(Some(fulluser)),
             Err(_e) => {
                 Err(anyhow!("error getting account after creation")) // todo maybe convert the error?
             }

@@ -12,9 +12,9 @@
     "update": "ncu -u"
   },
   "dependencies": {
-    "@emotion/react": "11.10.5",
-    "@emotion/styled": "11.10.5",
-    "@heroicons/react": "^2.0.15",
+    "@emotion/react": "11.10.6",
+    "@emotion/styled": "11.10.6",
+    "@heroicons/react": "^2.0.16",
     "@mui/material": "5.11.9",
     "cookies-next": "2.1.1",
     "leaflet": "1.9.3",
@@ -48,6 +48,6 @@
     "postcss": "8.4.21",
     "prettier": "2.8.4",
     "prettier-plugin-tailwindcss": "0.2.3",
-    "tailwindcss": "3.2.6"
+    "tailwindcss": "3.2.7"
   }
 }
