@@ -435,17 +435,19 @@ pub fn create_account_blocking(
         }
         let name = query.name.clone().unwrap();
 
-        // todo lint username: prevent all-whitespace or all-punctuation. trim leading and trailing whitespace. etc.
+        // todo lint username: min length, prevent all-whitespace or all-punctuation. trim leading and trailing whitespace. etc.
+        // todo - store a lower cased and de-punctuated version and de-dupe that too
+        // todo - rate limit username availability check
 
         // todo - this would need to skip the offer check (and require a valid session I guess)
         // in order to allow using it to check names while changing usernames
         if let Some(check_only) = query.check_only {
             if check_only {
                 let existing_user = users::dsl::users
-                .filter(users::name.eq(name.clone()))
-                .order(users::id.desc())
-                .first::<User>(db_conn);
-        
+                    .filter(users::name.eq(name.clone()))
+                    .order(users::id.desc())
+                    .first::<User>(db_conn);
+
                 return match existing_user {
                     Ok(_) => Err(anyhow!("username taken")),
                     Err(_error) => Ok(None),
