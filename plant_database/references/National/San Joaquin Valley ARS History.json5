@@ -1,0 +1,57 @@
+{
+    title: "San Joaquin Valley ARS History",
+    author: "Dr. Craig Ledbetter",
+    url: "https://www.ars.usda.gov/ARSUserFiles/20340500/History.pdf",
+    published: "Sept 1974",
+    accessed: "Feb 2023",
+    type: "extension test",
+    needs_help: true, // varieties
+    locations: [
+        {
+            name: "Parlier, CA",
+            latitude: 36.59630562043707,
+            longitude: -119.51257793860933
+        }
+    ],
+    plants: [
+        // todo
+        // page 2
+        //  In 1946, those hybridization efforts came to fruition, and 
+        // a first table grape cultivar was named and released (‘Cardinal’) from the grape breeding efforts at the 
+        // Peach Avenue Station
+
+        // page 3
+        //  Besides ‘Cardinal,’ Snyder and Harmon were also responsible for the development of table 
+        // grape cultivars ‘Calmeria’ (1950) and ‘Blackrose’ (1951). These cultivars provided consumers at that time 
+        // with table grapes that ripened earlier (‘Cardinal’) or later (‘Calmeria’), or had better color and flesh 
+        // crispness (‘Blackrose’) than the existing cultivars of the time
+
+        // page 5 Weinberger and Loomis releases
+        //Apricot
+        //  Castleton  1963  1st adapted apricot with pit burn resistance
+        //  Castlebrite  1977  early maturity, high box packout
+        // Nectarine
+        //  Independence  1965  early maturity, attractiveness, high productivity
+        //  Sunfre  1981  adapted for low chill environment
+        // Peach
+        // Desertgold  1969  adapted for low chill desert areas
+        // Fairtime  1968  late maturity (early October) with heavy yields
+        // Nemaguard  1960  world’s most widely planted peach rootstock
+        // Springcrest  1969  very early maturity
+        // Plum
+        //  Friar  1968  high quality, large size, resistance to cracking
+        //  Blackamber  1980  large size, high box packout, extend Friar season
+        // page 6
+        // 1973 introduced the raisin ‘Fiesta.’ ‘Flame Seedless’
+        // page 6 1980s
+        // ‘Mayfire’  nectarine, ‘Spring Baby’ peach) and both table grapes and raisins coming from seedless X seedless
+        // culture (‘Scarlet Royal,’ ‘Sweet Scarlet,’ and ‘Princess’ table grapes, ‘DOVine,’ and ‘Sunpreme’ raisin
+        // grapes)
+
+        // todo - almond breeding
+        // https://fruitsandnuts.ucdavis.edu/fruitnut/variety-development/usda-almond-breeding-program
+        // 'Yorizane' - released 2020 (included in the 2014 Regional Variety Trial as Y116-161-99)
+        // 'Titan' - released 1971
+        // 'Vesta' - released 1968
+    ]
+}

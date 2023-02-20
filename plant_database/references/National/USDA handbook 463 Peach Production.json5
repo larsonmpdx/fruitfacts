@@ -1,0 +1,27 @@
+{
+    title: "USDA handbook 463 Peach Production",
+    author: "H. W. FOGLE, H. L. KEIL, W. L. SMITH, S. M. MIRCETICH, L. C. COCHRAN, H. BAKER",
+    url: "https://naldc.nal.usda.gov/download/CAT87208735/PDF",
+    published: "Sept 1974",
+    accessed: "Feb 2023",
+    type: "extension test",
+    ignore_for_nearby_searches: true,
+    needs_help: true, // varieties from tables 1&2, and a lat/lon for beltsville
+    locations: [
+        {
+            // todo
+            name: "Beltsville, MD",
+            latitude: 38.888076929585985,
+            longitude: -77.01301046627138
+        }
+    ],
+    plants: [
+        // todo
+       // page 13: TABLE 1. —Characteristics ofsome established peach cultivars,
+       // listed in approximate order of ripening, as grown at Beltsville, MD
+
+        // todo
+        // page 21: TABLE 2. — Tentative evaluations ofpromising cultivars introduced since 1960,
+        // listed in approximate order of ripening
+    ]
+}

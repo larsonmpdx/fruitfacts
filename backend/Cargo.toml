@@ -46,7 +46,7 @@ urlencoding = "=2.1.2"
 walkdir = "=2.3.2"
 
 # dependencies only used by support binaries (I don't want to download and build these when doing a server release)
-pdfium-render = { version = "=0.7.29", optional = true }
+pdfium-render = { version = "=0.7.30", optional = true }
 image = { version = "=0.24.5", optional = true }
 
 [features]
