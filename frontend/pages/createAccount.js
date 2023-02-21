@@ -2,8 +2,8 @@
 // it will check the login info against the database. if no account is found it redirects here
 // so the user is prompted to create an account (or not)
 import React from 'react';
-import ButtonLink from '../components/buttonLink';
 import Button from '../components/button';
+import ButtonLink from '../components/buttonLink';
 import { DebounceInput } from 'react-debounce-input';
 
 export default function Home({ setErrorMessage }) {
