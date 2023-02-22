@@ -57,7 +57,7 @@ export default function Home({ user, setUser }) {
           </button>
         </p>
       ) : (
-        <Link href="/login">log in</Link>
+        <Link href="/login">{'log in (or create account)'}</Link>
       )}
     </>
   );

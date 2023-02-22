@@ -55,6 +55,7 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(move || {
         let cors = Cors::default()
             .supports_credentials()
+            .allowed_methods(vec!["GET", "POST", "DELETE"])
             .allowed_origin_fn(|origin, _req_head| {
                 let matched = origin
                     .as_bytes()

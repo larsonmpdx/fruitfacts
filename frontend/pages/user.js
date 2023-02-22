@@ -2,16 +2,36 @@ import React from 'react';
 import Button from '../components/button';
 import ConfirmModal from '../components/confirmModal';
 
-export default function Home({ setContributingLinks, setErrorMessage }) {
+export default function Home({ setContributingLinks, setErrorMessage, setUser }) {
   React.useEffect(() => {
-    setContributingLinks([{ link: `/frontend/pages/user.js`, description: `user.js` }]);
+    setContributingLinks([
+      { link: `/frontend/pages/user.js`, description: `user.js` },
+      { link: `/backend/src/queries/auth.rs`, description: `backend: get/delete user` }
+    ]);
   }, []);
 
   const [fullUser, setFullUser] = React.useState(null);
   const [deleteModalVisible, setDeleteModalVisible] = React.useState(false);
 
   const deleteUser = async () => {
-    // todo
+    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/user`, {
+      method: 'DELETE',
+      credentials: 'include'
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          setUser(null);
+          setFullUser('user deleted');
+        } else {
+          setErrorMessage("couldn't delete user");
+        }
+      })
+      .catch((error) => {
+        setErrorMessage(`couldn't delete user: ${error.message}`);
+        console.log(error);
+      });
+
+    setDeleteModalVisible(false);
   };
 
   React.useEffect(() => {
@@ -54,7 +74,9 @@ export default function Home({ setContributingLinks, setErrorMessage }) {
       <div className="w-3/5">
         <div className="rounded-lg border bg-indigo-800 p-10 font-bold text-white shadow-lg">
           {fullUser && (
-            <pre className="whitespace-pre-wrap break-all">{JSON.stringify(fullUser, null, 2)}</pre>
+            <pre className="whitespace-pre-wrap break-all">
+              {'stored user data:\n' + JSON.stringify(fullUser, null, 2)}
+            </pre>
           )}
         </div>
         <Button

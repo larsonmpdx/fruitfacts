@@ -75,10 +75,7 @@ export default function Home({ setErrorMessage }) {
         {!user && (
           <>
             <div className="rounded-lg border bg-indigo-800 p-10 font-bold text-white shadow-lg">
-              <p>
-                external login was successful but no {process.env.NEXT_PUBLIC_SITE_NAME} account was
-                found. create one?
-              </p>
+              <p>no {process.env.NEXT_PUBLIC_SITE_NAME} account found. create one?</p>
             </div>
             <div className="rounded-lg border bg-indigo-800 p-10 font-bold text-white shadow-lg">
               <div className="flow-root">
