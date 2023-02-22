@@ -17,7 +17,7 @@ export default function Home({ setContributingLinks, setErrorMessage }) {
   React.useEffect(() => {
     // todo - this is too many lines for what it does. simplify (and other occurrences)
     const fetchData = async () => {
-      const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/getFullUser`, {
+      const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/user`, {
         credentials: 'include'
       })
         .then((response) => {

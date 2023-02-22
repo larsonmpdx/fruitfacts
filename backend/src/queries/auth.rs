@@ -1,6 +1,6 @@
 use actix_web::cookie::Cookie;
 use actix_web::HttpRequest;
-use actix_web::{get, post, web, HttpResponse};
+use actix_web::{delete, get, post, web, HttpResponse};
 use anyhow::{anyhow, Result};
 use base64::Engine as _; // base64: check out this classy github issue! https://github.com/marshallpierce/rust-base64/issues/213
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
@@ -135,7 +135,7 @@ struct GoogleAuthQuery {
 }
 
 // todo: cache
-pub fn get_existing_oauth_entry_db(
+pub fn get_oauth_entry_db(
     db_conn: &mut SqliteConnection,
     unique_id: String,
 ) -> Result<UserOauthEntry, diesel::result::Error> {
@@ -146,7 +146,7 @@ pub fn get_existing_oauth_entry_db(
 }
 
 // todo: cache
-pub fn get_existing_user_db(
+pub fn get_user_db(
     db_conn: &mut SqliteConnection,
     user_id: i32,
 ) -> Result<User, diesel::result::Error> {
@@ -164,7 +164,7 @@ pub struct FullUser {
     // sessions: Vec<UserSession>, // not sure I want to share this out to expose all session keys based on one session
 }
 
-pub fn get_full_user_db(
+pub fn get_user_and_oauth_db(
     db_conn: &mut SqliteConnection,
     user_id: i32,
 ) -> Result<FullUser, diesel::result::Error> {
@@ -229,7 +229,7 @@ pub struct ReceiveRedirectReturn {
     account_offer: bool,
 }
 
-fn receive_oauth_redirect_blocking(
+fn receive_oauth_redirect_db(
     query: web::Query<GoogleAuthQuery>,
     session_value: String,
     db_conn: &mut SqliteConnection,
@@ -295,10 +295,8 @@ fn receive_oauth_redirect_blocking(
     // todo -
     // - if we already have a user, associate this session to that user (database)
     // if account_info.id is in user_oauth_entries
-    if let Ok(oauth_entry) =
-        get_existing_oauth_entry_db(db_conn, format!("google:{}", account_info.id))
-    {
-        if let Ok(user) = get_existing_user_db(db_conn, oauth_entry.user_id) {
+    if let Ok(oauth_entry) = get_oauth_entry_db(db_conn, format!("google:{}", account_info.id)) {
+        if let Ok(user) = get_user_db(db_conn, oauth_entry.user_id) {
             session::store_session(
                 db_conn,
                 UserSessionToInsert {
@@ -387,7 +385,7 @@ async fn receive_oauth_redirect(
 
     let results = web::block(move || {
         let mut conn = pool.get().expect("couldn't get db connection from pool");
-        receive_oauth_redirect_blocking(query, session_value.unwrap(), &mut conn)
+        receive_oauth_redirect_db(query, session_value.unwrap(), &mut conn)
     })
     .await
     .unwrap();
@@ -420,7 +418,7 @@ pub struct UserCreateQuery {
     pub check_only: Option<bool>, // if true, we're only looking for name conflicts in order to show a quick "available" note when registering
 }
 
-pub fn create_account_blocking(
+pub fn create_account_db(
     session_value: String,
     query: &UserCreateQuery,
     db_conn: &mut SqliteConnection,
@@ -496,7 +494,7 @@ pub fn create_account_blocking(
             },
         );
         // return the user
-        match get_full_user_db(db_conn, new_user.id) {
+        match get_user_and_oauth_db(db_conn, new_user.id) {
             Ok(fulluser) => Ok(Some(fulluser)),
             Err(_e) => {
                 Err(anyhow!("error getting account after creation")) // todo maybe convert the error?
@@ -524,7 +522,7 @@ async fn create_account(
 
     let result = web::block(move || {
         let mut conn = pool.get().expect("couldn't get db connection from pool");
-        create_account_blocking(session_value.unwrap(), &query, &mut conn)
+        create_account_db(session_value.unwrap(), &query, &mut conn)
     })
     .await
     .unwrap(); // todo - blockingerror unwrap?
@@ -538,8 +536,8 @@ async fn create_account(
     }
 }
 
-#[get("/api/getFullUser")]
-async fn get_full_user(
+#[get("/api/user")]
+async fn get_user(
     req: HttpRequest,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
@@ -556,7 +554,7 @@ async fn get_full_user(
     }
     let session = session.unwrap();
 
-    let info = get_full_user_db(&mut db_conn, session.user_id);
+    let info = get_user_and_oauth_db(&mut db_conn, session.user_id);
     if info.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
@@ -582,13 +580,26 @@ async fn check_login(
     }
     let session = session.unwrap();
 
-    let user = get_existing_user_db(&mut db_conn, session.user_id);
+    let user = get_user_db(&mut db_conn, session.user_id);
     if user.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
 
     // return account if this session is logged in. some error otherwise
     Ok(HttpResponse::Ok().json(user.unwrap()))
+}
+
+fn get_logout_cookie() -> Cookie<'static> {
+    return Cookie::build("session", "")
+        .domain(env!("COOKIE_DOMAIN"))
+        .path("/")
+        //  .same_site(actix_web::cookie::SameSite::Strict)
+        //  .secure(true)
+        .expires(actix_web::cookie::Expiration::from(
+            actix_web::cookie::time::OffsetDateTime::now_utc(),
+        )) // time in the past clears a cookie
+        .http_only(true)
+        .finish();
 }
 
 #[post("/api/logout")]
@@ -605,21 +616,58 @@ async fn logout(
     let mut db_conn = pool.get().expect("couldn't get db connection from pool");
 
     session::remove_session(&mut db_conn, session_value.unwrap());
-    let outgoing_cookie = Cookie::build("session", "")
-        .domain(env!("COOKIE_DOMAIN"))
-        .path("/")
-        //  .same_site(actix_web::cookie::SameSite::Strict)
-        //  .secure(true)
-        .expires(actix_web::cookie::Expiration::from(
-            actix_web::cookie::time::OffsetDateTime::now_utc(),
-        )) // time in the past clears a cookie
-        .http_only(true)
-        .finish();
-
-    // todo: actix delete cookie
+    let outgoing_cookie = get_logout_cookie();
     Ok(HttpResponse::Ok().cookie(outgoing_cookie).json(""))
 }
 
-// todo: delete user api
-//     - also delete oauth entries
-//     - also delete existing sessions and cached sessions
+#[delete("/api/user")]
+async fn delete_user(
+    req: HttpRequest,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    let (session_value, _outgoing_cookie) = get_session_value(req, false);
+    if session_value.is_none() {
+        return Ok(HttpResponse::InternalServerError().finish());
+    }
+
+    let mut db_conn = pool.get().expect("couldn't get db connection from pool");
+
+    let session = session::get_session(&mut db_conn, session_value.clone().unwrap());
+    if session.is_err() {
+        return Ok(HttpResponse::NotFound().finish());
+    }
+    let session = session.unwrap();
+
+    let db_result = db_conn.exclusive_transaction::<_, diesel::result::Error, _>(|db_conn| {
+        // todo - a transaction to cover user+oauth+list deletion
+        // add a transaction to the create function also
+        if let Err(_) =
+            diesel::delete(users::dsl::users.filter(users::id.eq(session.user_id))).execute(db_conn)
+        {
+            return Ok(HttpResponse::NotFound().finish());
+        }
+
+        let _ = diesel::delete(
+            user_oauth_entries::dsl::user_oauth_entries
+                .filter(user_oauth_entries::user_id.eq(session.user_id)),
+        )
+        .execute(db_conn);
+
+        // user lists
+        let _ = diesel::delete(
+            locations::dsl::locations.filter(locations::user_id.eq(session.user_id)),
+        )
+        .execute(db_conn);
+
+        session::remove_session(db_conn, session_value.unwrap()); // todo - delete cached sessions, if implemented
+
+        return Ok(HttpResponse::Ok().finish());
+    });
+
+    if let Err(e) = db_result {
+        return Err(actix_web::error::ErrorInternalServerError(e));
+    }
+
+    let outgoing_cookie = get_logout_cookie();
+    return Ok(HttpResponse::Ok().cookie(outgoing_cookie).finish());
+}
