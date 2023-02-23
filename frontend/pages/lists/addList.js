@@ -37,7 +37,7 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
         location_name: name,
         latitude: lat,
         longitude: lon,
-        user_id: user.id,
+        user: 'id:' + user.id,
         location_number: 0, // special case for user collections
         notoriety_score: 0.0, // unused here but set NOT NULL
         ignore_for_nearby_searches: 0 // unused here but set NOT NULL

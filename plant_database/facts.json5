@@ -75,5 +75,11 @@
         contributor: "Michael",
         fact: "WA-38 apples can be stored for at least ten months in controlled atmosphere (CA) storage",
         reference: "http://treefruit.wsu.edu/article/2019-storage-recommendations-for-wa-38-cosmic-crisp/"
+    },
+    {
+        contributor: "Michael",
+        fact: "Thinning peaches early (soon after bloom) inceases fruit size and gives an ealier ripening crop",
+        // 1974: USDA "Peach Production" page 56 has charts
+        reference: "https://naldc.nal.usda.gov/download/CAT87208735/PDF"
     }
 ]
