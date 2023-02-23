@@ -65,7 +65,7 @@ async fn create_list(
     }
     let control_data_user_id = control_data_user_id.unwrap();
 
-    if (control_data_user_id != session.user_id) {
+    if control_data_user_id != session.user_id {
         return Ok(HttpResponse::InternalServerError().body("user ID mismatch"));
     }
 
