@@ -81,5 +81,11 @@
         fact: "Thinning peaches early (soon after bloom) inceases fruit size and gives an ealier ripening crop",
         // 1974: USDA "Peach Production" page 56 has charts
         reference: "https://naldc.nal.usda.gov/download/CAT87208735/PDF"
+    },
+    {
+        contributor: "Michael",
+        fact: 'some newer blackberry varieties are "primocane" fruiting, meaning they fruit on current-season growth instead of, or in addition to, previous-season growth ("floricanes")',
+        // youtube: "primer on primocanes"
+        reference: "https://www.youtube.com/watch?v=qH5uRXYR6EY"
     }
 ]
