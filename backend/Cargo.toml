@@ -18,11 +18,11 @@ diesel_migrations = "=2.0.0"
 libsqlite3-sys = { version = "=0.25.2", features = ["bundled"] }
 
 actix-cors = "=0.6.4"
-actix-web = "=4.3.0"
+actix-web = "=4.3.1"
 anyhow = "=1.0.69"
 base64 = "=0.21.0"
 chrono = "=0.4.23"
-clap = {version = "=4.1.6", features = ["cargo"] }
+clap = {version = "=4.1.8", features = ["cargo"] }
 dotenv-build = "=0.1.1"
 env_logger = "=0.10.0"
 expiring_map = { git = "https://github.com/larsonmpdx/expiring_map/", branch = "remove_item" }
@@ -46,7 +46,7 @@ urlencoding = "=2.1.2"
 walkdir = "=2.3.2"
 
 # dependencies only used by support binaries (I don't want to download and build these when doing a server release)
-pdfium-render = { version = "=0.7.30", optional = true }
+pdfium-render = { version = "=0.7.31", optional = true }
 image = { version = "=0.24.5", optional = true }
 
 [features]
