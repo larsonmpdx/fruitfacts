@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { XCircleIcon } from '@heroicons/react/20/solid';
 import ConfirmModal from '../../components/confirmModal';
+import { name_to_path } from '../../components/util';
 
 export default function Home({ user, setContributingLinks, setErrorMessage }) {
   React.useEffect(() => {
@@ -18,7 +19,6 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
   const query = qs.parse(router.asPath.split(/\?/)[1]);
 
   const [searchReturn, setSearchReturn] = React.useState(null);
-
   const [toDelete, setToDelete] = React.useState({});
   const [deleteModalVisible, setDeleteModalVisible] = React.useState(false);
 
@@ -117,7 +117,7 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
                 <XCircleIcon className="my-0 mx-2 inline h-6 w-6 object-contain" />
               </button>
               <Link
-                href={`/collections/user/${query.user}/${location.location_name}`}
+                href={`/collections/user/${query.user}/${name_to_path(location.location_name)}`}
                 className="mt-4 mr-4 hover:bg-indigo-800 hover:text-white lg:mt-0"
               >
                 {location.location_name}
