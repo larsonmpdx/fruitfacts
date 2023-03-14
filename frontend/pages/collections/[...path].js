@@ -44,21 +44,20 @@ export async function getServerSideProps(context) {
   })
     .then((response) => {
       if (response.status !== 200) {
-        response.text().then((text) => {
+        return response.text().then((text) => {
           errorMessage = `backend API error: ${text}`;
-          console.log(text);
+          console.log(response.status + ": " + text);
+          return { items: [], locations: [] };
         });
-        return { items: [], locations: [] };
+      } else {
+        return response.json();
       }
-      return response.json();
     })
     .catch((error) => {
       errorMessage = `can't reach backend: ${error.message}`;
       console.log(error);
       return { items: [], locations: [] };
     });
-
-  console.log(JSON.stringify(data.locations, null, 2));
 
   // cut down data to only this location or location #1 if not specified
   data.items = data.items

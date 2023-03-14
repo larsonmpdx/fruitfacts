@@ -56,11 +56,11 @@ export async function getServerSideProps(context) {
   )
     .then((response) => {
       if (response.status !== 200) {
-        response.text().then((text) => {
+        return response.text().then((text) => {
           errorMessage = `backend API error: ${text}`;
           console.log(text);
+          return [];
         });
-        return [];
       }
       return response.json();
     })
@@ -123,11 +123,11 @@ export default function Home({
         )
           .then((response) => {
             if (response.status !== 200) {
-              response.text().then((text) => {
+              return response.text().then((text) => {
                 errorMessage = `backend API error: ${text}`;
                 console.log(text);
+                return;
               });
-              return;
             }
             return response.json();
           })

@@ -21,7 +21,7 @@ actix-cors = "=0.6.4"
 actix-web = "=4.3.1"
 anyhow = "=1.0.69"
 base64 = "=0.21.0"
-chrono = "=0.4.23"
+chrono = "=0.4.24"
 clap = {version = "=4.1.8", features = ["cargo"] }
 dotenv-build = "=0.1.1"
 env_logger = "=0.10.0"
@@ -38,10 +38,10 @@ pathdiff = "=0.2.1"
 rand = "=0.8.5"
 regex = "=1.7.1"
 reqwest = "=0.11.14"
-serde = {version = "=1.0.154", features = ["derive"] }
-serde_derive = "=1.0.154"
+serde = {version = "=1.0.155", features = ["derive"] }
+serde_derive = "=1.0.155"
 serde_json = "=1.0.94"
-serde_with = "=2.3.0"
+serde_with = "=2.3.1"
 urlencoding = "=2.1.2"
 walkdir = "=2.3.2"
 

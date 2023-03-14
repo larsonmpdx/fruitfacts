@@ -14,11 +14,11 @@ export async function getServerSideProps() {
   const fact = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/fact`)
     .then((response) => {
       if (response.status !== 200) {
-        response.text().then((text) => {
+        return response.text().then((text) => {
           errorMessage = `can't reach backend: ${text}`;
           console.log(text);
+          return {};
         });
-        return {};
       }
       return response.json();
     })
