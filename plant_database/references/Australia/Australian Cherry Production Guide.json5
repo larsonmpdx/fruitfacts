@@ -1,0 +1,28 @@
+{
+    title: "Australian Cherry Production Guide",
+    author: "Paul James",
+    url: "https://www.cherrygrowers.org.au/assets/australian_cherry_production_guide.pdf",
+    published: "July 2011",
+    accessed: "March 2023",
+    type: "localized book",
+    locations: [
+        {
+            name: "Lenswood, South Australia",
+            latitude: -34.92297939724984, // this is a random cherry block near the address for the author
+            longitude:  138.82417546248033
+        },
+    ],
+    plants: [
+        // page 43: major varieties
+        // todo
+        // page 44: variety descriptions and trends
+        // page 65: compatibility chart - I ended up here after googling for a decent reference containing Cristobalina
+        // todo
+        {
+            type: "Sweet Cherry",
+            name: "Cristobalina",
+            s_allele: "S3S6", // s3s6 in this chart but one of them should be marked with ', this variety has a unique self compatibility gene
+            description: "Self-fertile"
+        }
+    ]
+}
