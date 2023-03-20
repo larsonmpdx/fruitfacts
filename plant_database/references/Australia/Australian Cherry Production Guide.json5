@@ -97,7 +97,7 @@
             type: "Sweet Cherry",
             name: "Stella",
             description: "major Australian variety (as of 2011). Self-fertile. see description in pdf",
-            s_allele: "S3S4'",
+            s_allele: "S3S4'"
         },
         {
             type: "Sweet Cherry",
@@ -195,7 +195,7 @@
             name: "Sir Don",
             description: "Self-fertile. see description in pdf",
             s_allele: "S4'S13",
-            released: "Australia National Cherry Breeding Program",
+            released: "Australia National Cherry Breeding Program"
         },
         {
             type: "Sweet Cherry",
@@ -459,7 +459,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Staccato",
+            name: "13S2009", // "Staccato"
             s_allele: "S3S4'",
             description: "Self-fertile"
         },
@@ -474,7 +474,7 @@
         // sweetheart aleady in the table above
         {
             type: "Sweet Cherry",
-            name: "Benton",
+            name: "PC7146-8", // "Benton™"
             // s allele not given in the table, but it's called self fertile
             description: "Self-fertile"
         }
