@@ -17,132 +17,133 @@
         {
             type: "Sweet Cherry",
             name: "Bing",
-            description: "major Australian variety. see description in pdf",
+            description: "major Australian variety (as of 2011). see description in pdf",
             s_allele: "S3S4"
         },
         {
             type: "Sweet Cherry",
             name: "Brooks",
-            description: "major Australian variety. see description in pdf",
+            description: "major Australian variety (as of 2011). see description in pdf",
             s_allele: "S1S9"
         },
         {
             type: "Sweet Cherry",
             name: "Burlat",
-            description: "major Australian variety"
+            description: "major Australian variety (as of 2011)"
         },
         {
             type: "Sweet Cherry",
             name: "Earlise",
-            description: "major Australian variety. see description in pdf",
+            description: "major Australian variety (as of 2011). see description in pdf",
             s_allele: "S1S9"
         },
         {
             type: "Sweet Cherry",
             name: "Earlisweet",
-            description: "major Australian variety"
+            description: "major Australian variety (as of 2011). see description in pdf"
         },
         {
             type: "Sweet Cherry",
             name: "Empress",
-            description: "major Australian variety. see description in pdf",
+            description: "major Australian variety (as of 2011). see description in pdf",
             s_allele: "S1S6"
         },
         {
             type: "Sweet Cherry",
             name: "Garnet", // given as "garnet series" in the pdf but I can only find plain "garnet" in other references
-            description: "major Australian variety"
+            description: "major Australian variety (as of 2011)"
         },
         {
             type: "Sweet Cherry",
             name: "Kordia",
-            description: "major Australian variety. see description in pdf",
+            description: "major Australian variety (as of 2011). see description in pdf",
             s_allele: "S3S6"
         },
         {
             type: "Sweet Cherry",
             name: "Lapins",
             s_allele: "S1S4'",
-            description: "major Australian variety. Self-fertile. see description in pdf"
+            description: "major Australian variety (as of 2011). Self-fertile. see description in pdf"
         },
         {
             type: "Sweet Cherry",
             name: "Merchant",
-            description: "UK variety. major Australian variety. see description in pdf",
+            description: "UK variety. major Australian variety (as of 2011). see description in pdf",
             s_allele: "S4S9"
         },
         {
             type: "Sweet Cherry",
             name: "Rainier",
-            description: "major Australian variety. see description in pdf",
+            description: "major Australian variety (as of 2011). see description in pdf",
             s_allele: "S1S4"
         },
         {
             type: "Sweet Cherry",
-            name: "Regina",
-            description: "major Australian variety. see description in pdf",
+            name: "Jork 57/201", // "Regina"
+            description: "major Australian variety (as of 2011). see description in pdf",
             s_allele: "S1S3"
         },
         {
             type: "Sweet Cherry",
             name: "Ron's Seedling",
-            description: "major Australian variety"
+            description: "NSW variety. major Australian variety (as of 2011). see description in pdf"
         },
         {
             type: "Sweet Cherry",
             name: "Simone",
-            description: "major Australian variety"
+            description: "major Australian variety (as of 2011). see description in pdf"
         },
         {
             type: "Sweet Cherry",
             name: "Stella",
-            description: "major Australian variety. Self-fertile. see description in pdf",
+            description: "major Australian variety (as of 2011). Self-fertile. see description in pdf",
             s_allele: "S3S4'",
         },
         {
             type: "Sweet Cherry",
             name: "Supreme",
-            description: "major Australian variety"
+            description: "major Australian variety (as of 2011). see description in pdf"
         },
         {
             type: "Sweet Cherry",
             name: "Sunburst",
-            description: "major Australian variety. Self-fertile. see description in pdf",
+            description: "major Australian variety (as of 2011). Self-fertile. see description in pdf",
             s_allele: "S3S4'"
         },
         {
             type: "Sweet Cherry",
             name: "Summit",
             s_allele: "S1S2",
-            description: "major Australian variety. see description in pdf"
+            description: "major Australian variety (as of 2011). see description in pdf"
         },
         {
             type: "Sweet Cherry",
             name: "Sweetheart",
             s_allele: "S3S4'",
-            description: "major Australian variety. Self-fertile. see description in pdf"
+            description: "major Australian variety (as of 2011). Self-fertile. see description in pdf"
         },
         {
             type: "Sweet Cherry",
             name: "Sweet Georgia",
-            description: "major Australian variety"
+            harvest_time_relative: "Lapins -10 to -14", // "10–14 days later than Lapins"
+            description: "major Australian variety (as of 2011). Tasmanian selection of Lapins (whole tree mutation). see description in pdf"
         },
         {
             type: "Sweet Cherry",
             name: "Sylvia",
-            description: "major Australian variety. see description in pdf",
+            description: "major Australian variety (as of 2011). see description in pdf",
             s_allele: "S1S4"
         },
         {
             type: "Sweet Cherry",
             name: "Van",
-            description: "major Australian variety. see description in pdf",
+            description: "major Australian variety (as of 2011). see description in pdf",
             s_allele: "S1S3"
         },
         // page 44: variety descriptions and trends
         {
             type: "Sweet Cherry",
-            name: "Chelan",
+            name: "PC7146-23", // "Chelan"
             description: "see description in pdf",
             s_allele: "S3S9"
         },
@@ -153,11 +154,7 @@
         },
         // empress already in the table above
         // merchant already in the table above
-        {
-            type: "Sweet Cherry",
-            name: "Supreme",
-            description: "see description in pdf"
-        },
+        // supreme already in the table above
         {
             type: "Sweet Cherry",
             name: "Vista",
@@ -168,37 +165,20 @@
         // Newer early season varieties
         // brooks already in the table above
         // earlise already in the table above
-        {
-            type: "Sweet Cherry",
-            name: "Earlisweet",
-            description: "see description in pdf"
-        },
+        // earlisweet already in the table above
 
         // mid-late regions
         // van already in the table above
         // bing already in the table above
-        {
-            type: "Sweet Cherry",
-            name: "Ron's Seedling",
-            description: "NSW variety. see description in pdf"
-        },
+        // ron's seedling already in the table above
         // summit already in the table above
         // sunburst already in the table above
         // stella already in the table above
         // sylvia already in the table above
         // rainier already in the table above
-        {
-            type: "Sweet Cherry",
-            name: "Simone",
-            description: "see description in pdf"
-        },
+        // simone already in the table above
         // lapins already in the table above
-        {
-            type: "Sweet Cherry",
-            name: "Sweet Georgia",
-            harvest_time_relative: "Lapins -10 to -14", // "10–14 days later than Lapins"
-            description: "Tasmanian selection of Lapins (whole tree mutation). see description in pdf"
-        },
+        // sweet georgia already in the table above
         // kordia already in the table above
         // regina already in the table above
         // sweetheart already in the table above
@@ -277,12 +257,12 @@
         // regina already in the table above
         {
             type: "Sweet Cherry",
-            name: "Cristalina",
+            name: "Sumnue", // "Cristalina"
             s_allele: "S1S3"
         },
         {
             type: "Sweet Cherry",
-            name: "Samba",
+            name: "Sumste", // "Samba"
             s_allele: "S1S3"
         },
         // bing already in the table above
@@ -298,7 +278,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Napoleon",
+            name: "Royal Ann", // "Napoleon"
             s_allele: "S3S4"
         },
         {
@@ -407,7 +387,7 @@
         // chelan already in the table above
         {
             type: "Sweet Cherry",
-            name: "Tieton",
+            name: "PC7144-6", //"Tieton"
             s_allele: "S3S9"
         },
         {
@@ -440,7 +420,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Early Star",
+            name: "Panaro 2", // "Early Star"
             s_allele: "S4'S9",
             description: "Self-fertile"
         },
@@ -473,7 +453,7 @@
         },
         {
             type: "Sweet Cherry",
-            name: "Sonata",
+            name: "Sumleta", // "Sonata™"
             s_allele: "S3S4'",
             description: "Self-fertile"
         },
