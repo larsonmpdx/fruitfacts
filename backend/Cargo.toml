@@ -22,7 +22,7 @@ actix-web = "=4.3.1"
 anyhow = "=1.0.70"
 base64 = "=0.21.0"
 chrono = "=0.4.24"
-clap = {version = "=4.1.11", features = ["cargo"] }
+clap = {version = "=4.1.13", features = ["cargo"] }
 dotenv-build = "=0.1.1"
 env_logger = "=0.10.0"
 expiring_map = { git = "https://github.com/larsonmpdx/expiring_map/", branch = "remove_item" }
@@ -36,10 +36,10 @@ oauth2 = "=4.3.0"
 once_cell = "=1.17.1"
 pathdiff = "=0.2.1"
 rand = "=0.8.5"
-regex = "=1.7.1"
-reqwest = "=0.11.14"
-serde = {version = "=1.0.157", features = ["derive"] }
-serde_derive = "=1.0.157"
+regex = "=1.7.2"
+reqwest = "=0.11.15"
+serde = {version = "=1.0.158", features = ["derive"] }
+serde_derive = "=1.0.158"
 serde_json = "=1.0.94"
 serde_with = "=2.3.1"
 urlencoding = "=2.1.2"

@@ -15,7 +15,7 @@
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
     "@heroicons/react": "2.0.16",
-    "@mui/material": "5.11.13",
+    "@mui/material": "5.11.14",
     "cookies-next": "2.1.1",
     "leaflet": "1.9.3",
     "lodash": "4.17.21",
@@ -27,7 +27,7 @@
     "react-debounce-input": "3.3.0",
     "react-dom": "18.2.0",
     "react-leaflet": "4.2.1",
-    "react-zoom-pan-pinch": "3.0.2",
+    "react-zoom-pan-pinch": "3.0.5",
     "timeago.js": "4.0.2",
     "use-supercluster": "0.4.0"
   },
@@ -42,11 +42,11 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
-    "eslint-config-prettier": "8.7.0",
-    "fs-extra": "11.1.0",
+    "eslint-config-prettier": "8.8.0",
+    "fs-extra": "11.1.1",
     "jest": "29.5.0",
     "postcss": "8.4.21",
-    "prettier": "2.8.4",
+    "prettier": "2.8.6",
     "prettier-plugin-tailwindcss": "0.2.5",
     "tailwindcss": "3.2.7"
   }
