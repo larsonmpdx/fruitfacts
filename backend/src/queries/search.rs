@@ -86,6 +86,9 @@ pub struct SearchQuery {
 pub struct SearchReturn {
     pub query: SearchQuery,
 
+    // if we're looking up a single user location
+    pub user_name: Option<String>,
+
     pub count: Option<i64>, // total count of search results (if paginated)
     pub page: Option<i64>, // 1-referenced. we pass this out in case of a patent midpoint page and for completeness
     #[serde(rename = "lastPage")]
@@ -190,6 +193,34 @@ pub fn get_user_id(user: &Option<String>, db_conn: &mut SqliteConnection) -> Res
     match db_user {
         Ok(db_user) => Ok(db_user.id),
         Err(_error) => Err(anyhow!("couldn't find user {user}")),
+    }
+}
+
+// same as above but return the user name instead of the ID
+pub fn get_user_name(user: &Option<String>, db_conn: &mut SqliteConnection) -> Result<String> {
+    if user.is_none() {
+        return Err(anyhow!("user not specified"));
+    }
+    let user = user.clone().unwrap();
+    let id_start = "id:";
+    if user.starts_with(id_start) {
+        let trimmed = crate::import_db::rem_first_n(&user, id_start.len()).parse::<i32>();
+
+        if trimmed.is_err() {
+            return Err(anyhow!("user id didn't parse as i32"));
+        }
+
+        let db_user = users::dsl::users
+            .filter(users::id.eq(trimmed.unwrap()))
+            .order(users::id.desc())
+            .first::<User>(db_conn);
+
+        match db_user {
+            Ok(db_user) => Ok(db_user.name),
+            Err(_error) => Err(anyhow!("couldn't find user {user}")),
+        }
+    } else {
+        Ok(user)
     }
 }
 
@@ -695,6 +726,7 @@ pub fn search_db(
                 return Err(anyhow!("loc search without user specified"));
             }
             let query_user_id = get_user_id(&query.user, db_conn)?;
+            let user_name = get_user_name(&query.user, db_conn)?;
 
             if query.location.is_none() {
                 return Err(anyhow!("loc search without location specified"));
@@ -717,8 +749,10 @@ pub fn search_db(
 
                             return match items {
                                 Ok(items) => Ok(SearchReturn {
+                                    user_name: Some(user_name),
                                     query: query.clone(),
                                     collection_items: Some(items),
+                                    locations: Some(vec![location]),
                                     ..Default::default()
                                 }),
                                 Err(error) => Err(error.into()),

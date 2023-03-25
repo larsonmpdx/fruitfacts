@@ -25,9 +25,11 @@ export async function getServerSideProps(context) {
   }
 
   let apiURL;
+  let userList = false;
   if (path[0] == 'user') {
     // incoming path will be like "user/[user name or ID]/[list name or ID]"
     // IDs are formatted like "id:123"
+    userList = true;
     apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=loc&user=${path[1]}&location=${path[2]}`;
   } else {
     // incoming path will be like "Oregon/u-pick A"
@@ -42,13 +44,12 @@ export async function getServerSideProps(context) {
       cookie: `session=${session}`
     }
   })
-    .then((response) => {
+    .then(async (response) => {
       if (response.status !== 200) {
-        return response.text().then((text) => {
-          errorMessage = `backend API error: ${text}`;
-          console.log(response.status + ': ' + text);
-          return { items: [], locations: [] };
-        });
+        const text = await response.text();
+        errorMessage = `backend API error: ${text}`;
+        console.log(response.status + ': ' + text);
+        return { items: [], locations: [] };
       } else {
         return response.json();
       }
@@ -81,6 +82,7 @@ export async function getServerSideProps(context) {
     props: {
       data,
       location,
+      userList,
       pathJoined,
       thumbnail,
       errorMessage
@@ -94,6 +96,7 @@ export async function getServerSideProps(context) {
 export default function Home({
   data,
   location,
+  userList,
   pathJoined,
   thumbnail,
   errorMessage,
@@ -122,7 +125,14 @@ export default function Home({
         <Head>
           <title>{`Collection: ${pathJoined}`}</title>
         </Head>
-        <Image src={thumbnail} alt="preview image for this reference" width={200} height={200} />
+        {userList && (
+          <h1>
+            {data.user_name}'s location "{data.locations[0].location_name}"
+          </h1>
+        )}
+        {!userList && (
+          <Image src={thumbnail} alt="preview image for this reference" width={200} height={200} />
+        )}
         {data.collection && (
           <>
             {data.collection.needs_help == 1 && (
