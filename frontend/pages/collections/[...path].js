@@ -46,7 +46,7 @@ export async function getServerSideProps(context) {
       if (response.status !== 200) {
         return response.text().then((text) => {
           errorMessage = `backend API error: ${text}`;
-          console.log(response.status + ": " + text);
+          console.log(response.status + ': ' + text);
           return { items: [], locations: [] };
         });
       } else {
