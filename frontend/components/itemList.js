@@ -13,12 +13,16 @@ export default function Home({ data }) {
               {data.basePlants.map((item, index) => (
                 <>
                   <li key={index}>
-                    {data.query?.addToList && <Link
-                      href={`/lists/addPlant?type=${name_to_path(item.type)}&name=${name_to_path(item.name)}&addToList=${data.query.addToList}`}
-                      legacyBehavior
-                    >
-                      add
-                    </Link>}
+                    {data.query?.addToList && (
+                      <Link
+                        href={`/lists/addPlant?type=${name_to_path(item.type)}&name=${name_to_path(
+                          item.name
+                        )}&addToList=${data.query.addToList}`}
+                        legacyBehavior
+                      >
+                        add
+                      </Link>
+                    )}
                     <img
                       className="my-0 mx-2 inline h-6 w-6 object-contain"
                       src={'/fruit_icons/' + item.type + '.svg'}
