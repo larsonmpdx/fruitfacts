@@ -23,6 +23,7 @@ type DbPool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 pub struct ControlData {
     pub user: Option<String>, // id if formatted like "id:123", name otherwise. becomse location.user_id
     pub location: Option<String>, // id if formatted like "id:123", name otherwise. becomes location.id
+    pub collection_item_id: Option<i32>, // for collection item edit/delete
     pub collection_id: Option<i32>, // to check if this is set and reject the update
     pub delete: Option<bool>,
 }
@@ -86,7 +87,7 @@ async fn create_list(
             crate::queries::search::get_location_id(&control_data.location, &mut db_conn);
 
         if control_data_location_id.is_err() {
-            return Ok(HttpResponse::InternalServerError().body("user ID problem"));
+            return Ok(HttpResponse::InternalServerError().body("location ID problem"));
         }
         let control_data_location_id = control_data_location_id.unwrap();
 
@@ -102,11 +103,11 @@ async fn create_list(
             // todo - delete list items too
             // maybe with a transaction?
         } else {
+            // ID provided but not deleting, try an update
             let mut location_no_id =
                 serde_json::from_str::<LocationNoID>(std::str::from_utf8(&body).unwrap())?;
             location_no_id.user_id = Some(control_data_user_id);
 
-            // ID provided but not deleting, try an update
             rows_changed = diesel::update(
                 locations::dsl::locations
                     .filter(locations::id.eq(control_data_location_id))
@@ -168,3 +169,128 @@ async fn create_list(
 // edit list entry (based on plant entry ID): all of the same values as "add"
 
 // delete list entry (based on plant entry ID)
+
+// add a plant to a list
+#[post("/api/list/entry")]
+async fn add_plant_to_list(
+    req: HttpRequest,
+    body: web::Bytes,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    let mut db_conn = pool.get().expect("couldn't get db connection from pool");
+
+    let (session_value, _outgoing_cookie) = crate::queries::auth::get_session_value(req, false);
+    if session_value.is_none() {
+        return Ok(HttpResponse::InternalServerError().finish());
+    }
+
+    let session = session::get_session(&mut db_conn, session_value.unwrap());
+    if session.is_err() {
+        return Ok(HttpResponse::NotFound().finish());
+    }
+    let session = session.unwrap();
+
+    // parse our input looking for "id: [id]" and also our struct without ID
+    // if an ID was specified, this is an update. with no ID it's an insert
+    let control_data = serde_json::from_str::<ControlData>(std::str::from_utf8(&body).unwrap())?;
+
+    let control_data_user_id =
+        crate::queries::search::get_user_id(&control_data.user, &mut db_conn);
+
+    if control_data_user_id.is_err() {
+        return Ok(HttpResponse::InternalServerError().body("user ID problem"));
+    }
+    let control_data_user_id = control_data_user_id.unwrap();
+
+    if control_data_user_id != session.user_id {
+        return Ok(HttpResponse::InternalServerError().body("user ID mismatch"));
+    }
+
+    if control_data.collection_id.is_some() {
+        // don't allow editing the built-in locations through this api which use collection ID instead of user ID
+        // so - just reject any that have collection_id set
+        return Ok(HttpResponse::InternalServerError().body("can't edit built-ins"));
+    }
+
+    // step 1 - look up the location, it must exist and match this user. its public/not public setting will be used for the list item
+    if control_data.location.is_none() {
+        return Ok(HttpResponse::InternalServerError().body("location required"));
+    }
+    
+    let control_data_location_id =
+        crate::queries::search::get_location_id(&control_data.location, &mut db_conn);
+
+    if control_data_location_id.is_err() {
+        return Ok(HttpResponse::InternalServerError().body("location ID problem"));
+    }
+    let control_data_location_id = control_data_location_id.unwrap();
+
+    let db_location = locations::dsl::locations
+        .filter(locations::id.eq(control_data_location_id))
+        .filter(locations::user_id.eq(session.user_id))
+        .order(locations::id.desc())
+        .first::<Location>(&mut db_conn);
+
+    if db_location.is_err() {
+        return Ok(HttpResponse::InternalServerError().body("location not found"));
+    }
+
+    let db_location = db_location.unwrap();
+
+
+
+
+
+
+
+
+
+
+
+
+    let rows_changed;
+    if let Some(control_data_collection_item_id) = control_data.collection_item_id {
+
+
+        if control_data.delete == Some(true) {
+            // given an ID and delete=true: delete
+            rows_changed = diesel::delete(
+                collection_items::dsl::collection_items
+                    .filter(collection_items::id.eq(control_data_collection_item_id))
+                    .filter(collection_items::user_id.eq(session.user_id)),
+            )
+            .execute(&mut db_conn);
+        } else {
+            // ID provided but not deleting, try an update
+            let mut collection_item_no_id =
+                serde_json::from_str::<CollectionItemNoID>(std::str::from_utf8(&body).unwrap())?;
+                collection_item_no_id.user_id = Some(control_data_user_id);
+                collection_item_no_id.public = db_location.public;
+
+            rows_changed = diesel::update(
+                collection_items::dsl::collection_items
+                    .filter(collection_items::id.eq(control_data_collection_item_id))
+                    .filter(collection_items::user_id.eq(session.user_id)),
+            )
+            .set(&collection_item_no_id)
+            .execute(&mut db_conn);
+        }
+    } else {
+        // no ID provided, regular insert
+        let mut collection_item_no_id =
+            serde_json::from_str::<CollectionItemNoID>(std::str::from_utf8(&body).unwrap())?;
+            collection_item_no_id.user_id = Some(control_data_user_id);
+            collection_item_no_id.public = db_location.public;
+
+        rows_changed = diesel::insert_into(collection_items::dsl::collection_items)
+            .values(&collection_item_no_id)
+            .execute(&mut db_conn);
+        println!("tried adding user list");
+    }
+
+    if rows_changed == Ok(1) {
+        Ok(HttpResponse::Ok().finish())
+    } else {
+        Ok(HttpResponse::InternalServerError().finish())
+    }
+}

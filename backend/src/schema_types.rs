@@ -77,7 +77,53 @@ pub struct CollectionItem {
     pub base_plant_id: Option<i32>,
 
     pub category: Option<String>,
-    pub category_descripton: Option<String>,
+    pub category_description: Option<String>,
+
+    pub disease_resistance: Option<String>,
+    pub chill: Option<String>,
+    pub s_allele: Option<String>,
+
+    pub description: Option<String>,
+    pub harvest_text: Option<String>,
+    pub harvest_relative: Option<String>,
+    pub harvest_start: Option<i32>,
+    pub harvest_end: Option<i32>,
+
+    pub harvest_start_2: Option<i32>,
+    pub harvest_end_2: Option<i32>,
+
+    pub calc_harvest_relative: Option<i32>,
+    pub calc_harvest_relative_to: Option<String>,
+    pub calc_harvest_relative_to_type: Option<String>,
+    pub calc_harvest_relative_round: Option<f64>,
+    pub calc_harvest_relative_explanation: Option<String>,
+}
+
+// we need a 2nd copy of the above struct, identical but lacking the id field, for inserts using auto-increment id
+// see https://github.com/diesel-rs/diesel/issues/1440
+#[skip_serializing_none]
+#[derive(Default, Debug, Deserialize, Insertable, AsChangeset)]
+#[diesel(table_name = collection_items)]
+pub struct CollectionItemNoID {
+    //pub id: i32,
+
+    pub collection_id: Option<i32>,
+    pub location_id: Option<i32>,
+    pub location_number: i32,
+    pub user_id: Option<i32>,
+    pub public: Option<i32>,
+
+    pub path_and_filename: Option<String>,
+    pub marketing_name: Option<String>,
+
+    pub name: String,
+    #[serde(rename = "type")]
+    pub type_: String,
+
+    pub base_plant_id: Option<i32>,
+
+    pub category: Option<String>,
+    pub category_description: Option<String>,
 
     pub disease_resistance: Option<String>,
     pub chill: Option<String>,

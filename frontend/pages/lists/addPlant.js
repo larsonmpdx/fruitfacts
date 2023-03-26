@@ -1,33 +1,17 @@
 import React from 'react';
 import Button from '../../components/button';
-// todo - user
 export default function Home({ user, setErrorMessage, setContributingLinks }) {
   React.useEffect(() => {
     setContributingLinks([
-      { link: `/frontend/pages/lists/addList.js`, description: `list.js` },
+      { link: `/frontend/pages/lists/addPlant.js`, description: `list.js` },
       { link: `/backend/src/queries/list.rs`, description: `backend C/U/D lists` }
     ]);
   }, []);
 
   const [name, setName] = React.useState('');
-  const [lat, setLat] = React.useState('');
-  const [lon, setLon] = React.useState('');
-  const [makePublic, setMakePublic] = React.useState(false);
 
-  const handleRequestLocation = () => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      console.log('Latitude is :', position.coords.latitude);
-      console.log('Longitude is :', position.coords.longitude);
-      setLat(position.coords.latitude);
-      setLon(position.coords.longitude);
-    });
-
-    return; // todo
-  };
-
-  const handleMakePublic = (event) => {
-    setMakePublic(event.target.checked);
-  };
+  const router = useRouter();
+  const query = qs.parse(router.asPath.split(/\?/)[1]);
 
   const handleSubmit = async () => {
     await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list`, {
@@ -58,18 +42,9 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
       });
   };
 
-  // todo:
-  // support both new list creation and editing
-  // submit box only goes active when fields are ready. maybe with hints?
-  // list name (text box)
-  // location (get user location, or pick on a map, or (todo) zip code)
-
-  // todo - notoriety score is currently not null, switch that to optional
-  // initial design - name only
-
   return (
     <>
-      <p>create list</p>
+      <p>add </p>
       <label>
         Name:
         <input

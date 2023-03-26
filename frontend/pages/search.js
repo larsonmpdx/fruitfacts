@@ -69,6 +69,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
   let querySearchType = query.searchType || 'base';
   let querySearch = query.search || undefined;
   let queryName = query.name || undefined;
+  let queryAddToList = query.addToList || undefined;
   let queryPatents = query.patents == 'true' ? true : null;
   let queryType = query.type || undefined; // apple, pear, etc.
   let queryPage = query.page || '1';
@@ -90,6 +91,7 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
     searchType: querySearchType,
     search: querySearch,
     name: queryName,
+    addToList: queryAddToList,
     patents: queryPatents,
     type: queryType,
     page: queryPage,

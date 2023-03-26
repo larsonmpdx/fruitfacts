@@ -30,7 +30,7 @@ export async function getServerSideProps(context) {
     // incoming path will be like "user/[user name or ID]/[list name or ID]"
     // IDs are formatted like "id:123"
     userList = true;
-    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=loc&user=${path[1]}&location=${path[2]}`;
+    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=loc&user=${path[1]}&location=${path_to_name(path[2])}`;
   } else {
     // incoming path will be like "Oregon/u-pick A"
     apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathJoined}`; // no trailing slash - individual collection
@@ -127,7 +127,7 @@ export default function Home({
         </Head>
         {userList && (
           <h1>
-            {data.user_name}'s location "{data.locations[0].location_name}"
+            {data.user_name}'s location "{data.locations[0]?.location_name}"
           </h1>
         )}
         {!userList && (
@@ -187,6 +187,12 @@ export default function Home({
         ) : (
           <h1>Plants</h1>
         )}
+        {userList && (                        <Link
+                          href={`/search?searchType=base&addToList=${data.locations[0]?.id}`}
+                          legacyBehavior
+                        >
+                          <p>add</p>
+                        </Link>)}
         <ul className="list-none">
           {data?.items?.length > 1 ? (
             data.items.map((item) => (

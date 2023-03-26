@@ -35,6 +35,10 @@ pub struct SearchQuery {
     #[serde(rename = "relativeHarvestMax")]
     pub relative_harvest_max: Option<i32>,
 
+    // to use search results as a list of plants to add to a user location
+    #[serde(rename = "addToList")]
+    pub add_to_list: Option<i32>,
+
     // collection items search only (id or path, or I guess both)
     #[serde(rename = "collectionID")]
     pub collection_id: Option<i32>,
@@ -242,13 +246,13 @@ pub fn get_location_id(location: &Option<String>, db_conn: &mut SqliteConnection
         return Ok(trimmed.unwrap());
     }
 
-    let db_user = locations::dsl::locations
+    let db_location = locations::dsl::locations
         .filter(locations::location_name.eq(location.clone()))
         .order(locations::id.desc())
         .first::<Location>(db_conn);
 
-    match db_user {
-        Ok(db_user) => Ok(db_user.id),
+    match db_location {
+        Ok(db_location) => Ok(db_location.id),
         Err(_error) => Err(anyhow!("couldn't find location {location}")),
     }
 }
