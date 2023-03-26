@@ -128,7 +128,7 @@ async fn create_list(
         rows_changed = diesel::insert_into(locations::dsl::locations)
             .values(&location_no_id)
             .execute(&mut db_conn);
-        println!("tried adding user list");
+        println!("tried adding user list"); // todo remove
     }
 
     if rows_changed == Ok(1) {
@@ -141,34 +141,6 @@ async fn create_list(
     // todo - think about naming list vs. location
     // todo - get user's lists. either our own user ID, or if they're public I guess?
 }
-
-// create list:
-// login token gets us user ID
-// list name
-// location (todo)
-// returns: list ID or something
-
-// read list:
-// returns header plus all list entries
-
-// update list:
-// rename, change location
-
-// delete list: based on list ID
-
-// get suggested harvest time based on list (using list location and possibly exiting list entries)
-
-// add plant entry to list
-// name, type
-// harvest time
-// harvest duration
-// harvest time reason
-
-// read: not needed, part of the full list read
-
-// edit list entry (based on plant entry ID): all of the same values as "add"
-
-// delete list entry (based on plant entry ID)
 
 // add a plant to a list
 #[post("/api/list/entry")]
@@ -237,21 +209,10 @@ async fn add_plant_to_list(
 
     let db_location = db_location.unwrap();
 
-
-
-
-
-
-
-
-
-
-
+    // have a location, now we can use it for the "public" field
 
     let rows_changed;
     if let Some(control_data_collection_item_id) = control_data.collection_item_id {
-
-
         if control_data.delete == Some(true) {
             // given an ID and delete=true: delete
             rows_changed = diesel::delete(
@@ -264,7 +225,11 @@ async fn add_plant_to_list(
             // ID provided but not deleting, try an update
             let mut collection_item_no_id =
                 serde_json::from_str::<CollectionItemNoID>(std::str::from_utf8(&body).unwrap())?;
+
+                // force these fields to be the values we've already sanitized
                 collection_item_no_id.user_id = Some(control_data_user_id);
+                collection_item_no_id.location_id = Some(control_data_location_id);
+                collection_item_no_id.collection_id = None;
                 collection_item_no_id.public = db_location.public;
 
             rows_changed = diesel::update(
@@ -279,13 +244,17 @@ async fn add_plant_to_list(
         // no ID provided, regular insert
         let mut collection_item_no_id =
             serde_json::from_str::<CollectionItemNoID>(std::str::from_utf8(&body).unwrap())?;
+
+            // force these fields to be the values we've already sanitized
             collection_item_no_id.user_id = Some(control_data_user_id);
+            collection_item_no_id.location_id = Some(control_data_location_id);
+            collection_item_no_id.collection_id = None;
             collection_item_no_id.public = db_location.public;
 
         rows_changed = diesel::insert_into(collection_items::dsl::collection_items)
             .values(&collection_item_no_id)
             .execute(&mut db_conn);
-        println!("tried adding user list");
+        println!("tried adding user collection item"); // todo remove
     }
 
     if rows_changed == Ok(1) {
@@ -294,3 +263,34 @@ async fn add_plant_to_list(
         Ok(HttpResponse::InternalServerError().finish())
     }
 }
+
+
+// todo notes - some or all of this is done
+
+// create list:
+// login token gets us user ID
+// list name
+// location (todo)
+// returns: list ID or something
+
+// read list:
+// returns header plus all list entries
+
+// update list:
+// rename, change location
+
+// delete list: based on list ID
+
+// get suggested harvest time based on list (using list location and possibly exiting list entries)
+
+// add plant entry to list
+// name, type
+// harvest time
+// harvest duration
+// harvest time reason
+
+// read: not needed, part of the full list read
+
+// edit list entry (based on plant entry ID): all of the same values as "add"
+
+// delete list entry (based on plant entry ID)
