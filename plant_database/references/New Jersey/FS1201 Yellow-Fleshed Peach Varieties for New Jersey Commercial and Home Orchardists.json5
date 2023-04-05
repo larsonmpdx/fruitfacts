@@ -5,7 +5,7 @@
     published: "March 2013",
     accessed: "Mar 2022",
     type: "extension test",
-    needs_help: true,
+    needs_help: true, // todo - I didn't import all the text for descriptions but it might be small enough to make sense
     locations: [
         {
             name: "Cream Ridge, NJ",
@@ -14,6 +14,535 @@
         }
     ],
     plants: [
-        // todo - looking to add sweet breeze and harrow beauty
+        {
+            type: "Peach",
+            name: "Rich May",
+            harvest_time_relative: "Redhaven -34 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Queencrest",
+            harvest_time_relative: "Redhaven -30 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Burchell D2.102", // "Spring Flame™" - "trademarked name used for a couple of different selections" - I can't match this to anything on the burchell website, or their patent descriptions. the others are all named like "spring flame 21"
+            harvest_time_relative: "Redhaven -23 days",
+            disease_resistance: {
+                BLS: "high susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "NJ 350", //"Desiree"
+            harvest_time_relative: "Redhaven -28 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Sunbrite",
+            harvest_time_relative: "Redhaven -25 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 5B", // "Flamin' Fury® PF 5B"
+            harvest_time_relative: "Redhaven -25 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 5D Big", // "Flamin' Fury® PF 5D Big"
+            // listed in the pdf as "5big" but it must be "5dbig"
+            harvest_time_relative: "Redhaven -24 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Carored",
+            harvest_time_relative: "Redhaven -23 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Spring Prince",
+            harvest_time_relative: "Redhaven -23 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "FA 102", // "Early Star®"
+            harvest_time_relative: "Redhaven -20 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Harrow Dawn",
+            harvest_time_relative: "Redhaven -18 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Ruby Prince",
+            harvest_time_relative: "Redhaven -15 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Sentry",
+            harvest_time_relative: "Redhaven -14 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        // todo - incorporate "suggestions for home orchardists" somehow
+
+        /*
+Flaming Fury® PF #5B
+Harrow Dawn
+GaLa
+Redhaven
+Coralstar
+Harrow Beauty
+Loring
+Redkist
+Madison
+FlamePrince - todo, not in the rest of the text other than in the chart at the end (the rest are in the main text)
+todo - I think there are a couple others noted in the text for home orchardists that aren't in this list
+*/
+        {
+            type: "Peach",
+            name: "GW115", // "Glenglo™"
+            harvest_time_relative: "Redhaven -13 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 7", // "Flamin' Fury® PF 7"
+            harvest_time_relative: "Redhaven -12 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Summer Serenade",
+            harvest_time_relative: "Redhaven -11 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Vulcan",
+            harvest_time_relative: "Redhaven -10 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 8 Ball", // "Flamin' Fury® PF 8 Ball"
+            harvest_time_relative: "Redhaven -11 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "GaLa",
+            harvest_time_relative: "Redhaven -8 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Flavorcrest",
+            harvest_time_relative: "Redhaven -6 days",
+            disease_resistance: {
+                BLS: "high susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Country Sweet",
+            harvest_time_relative: "Redhaven -5 days",
+            disease_resistance: {
+                BLS: "high susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Vinegold",
+            harvest_time_relative: "Redhaven -4 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 11", // "Flamin' Fury® PF 11"
+            harvest_time_relative: "Redhaven -3 days", // "July 21-25, a few days before" so I picked -3 by comparing to Blaze Prince
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Blaze Prince",
+            harvest_time_relative: "Redhaven -2 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Redhaven",
+            harvest_time: "July 23-26",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Early Loring",
+            harvest_time_relative: "Redhaven +1 day",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "FA 52", // "Redstar®"
+            harvest_time_relative: "Redhaven +1 day",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 15A", // "Flamin' Fury® PF 15A"
+            harvest_time_relative: "Redhaven +1 day",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "John Boy",
+            harvest_time_relative: "Redhaven +3 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "FA 12", // "Blazingstar®"
+            harvest_time_relative: "Redhaven +4 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 9A-007", // "Flamin' Fury® PF 9A-007"
+            harvest_time_relative: "Redhaven +4", // "August 2 a few days after Redhaven" - I chose +4 by comparing to the others in the list
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF Lucky 13", // "Flamin' Fury® PF Lucky 13"
+            harvest_time_relative: "Redhaven +5 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "FA 11", // "Starfire®"
+            harvest_time_relative: "Redhaven +5 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Salem",
+            harvest_time_relative: "Redhaven +6 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Harrow Fair",
+            harvest_time_relative: "Redhaven +9 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "FA 59", // "Coralstar®"
+            harvest_time_relative: "Redhaven +9 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "KV00398", // "FlavrBurst™"
+            harvest_time_relative: "Redhaven +10 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 17", // "Flamin' Fury® PF 17"
+            harvest_time_relative: "Redhaven +12 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Scarlet Prince",
+            harvest_time_relative: "Redhaven +12 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Bounty",
+            harvest_time_relative: "Redhaven +12 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "July Prince",
+            harvest_time_relative: "Redhaven +13 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Loring",
+            harvest_time_relative: "Redhaven +13 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 19-007", // "Flamin' Fury® PF 19-007"
+            harvest_time_relative: "Redhaven +15 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 22-007", // "Flamin' Fury® PF 22-007"
+            harvest_time_relative: "Redhaven +17 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 23", // "Flamin' Fury® PF 23"
+            harvest_time_relative: "Redhaven +18 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Contender",
+            harvest_time_relative: "Redhaven +18 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "FA 80", // "Allstar®"
+            harvest_time_relative: "Redhaven +19 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 24-007", // "Flamin' Fury® PF 24-007"
+            harvest_time_relative: "Redhaven +19 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Redkist",
+            harvest_time_relative: "Redhaven +21 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "FA 17", // "Glowingstar®"
+            harvest_time_relative: "Redhaven +21 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Sweet Breeze", // "EW 170"
+            harvest_time_relative: "Redhaven +22 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF 24C Cold Hardy", // "Flamin' Fury® PF 24C Cold Hardy"
+            harvest_time_relative: "Redhaven +22 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "NJ 351", // "Gloria™"
+            harvest_time_relative: "Redhaven +25 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Madison",
+            harvest_time_relative: "Redhaven +25 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "PF Lucky 24B", // "Flamin' Fury® PF Lucky 24B"
+            harvest_time_relative: "Redhaven +26 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Early August Prince",
+            harvest_time_relative: "Redhaven +29 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "NJ 352", // "Messina™"
+            harvest_time_relative: "Redhaven +30 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "KV981175", // "SummerFest™"
+            harvest_time_relative: "Redhaven +28 days",
+            disease_resistance: {
+                BLS: "low susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Flamin' Fury® PF#25",
+            harvest_time_relative: "Redhaven +28 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Cresthaven",
+            harvest_time_relative: "Redhaven +29 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Jerseyqueen",
+            harvest_time_relative: "Redhaven +31 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Flamin' Fury® PF#27A",
+            harvest_time_relative: "Redhaven +31 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Jerseyglo",
+            harvest_time_relative: "Redhaven +32 days",
+            disease_resistance: {
+                BLS: "medium susceptibility"
+            }
+        },
+        {
+            type: "Peach",
+            name: "Fayette",
+            harvest_time_relative: "Redhaven +33 days",
+            disease_resistance: {
+                BLS: "high susceptibility"
+            }
+        }
+
+        // todo - the charts on the last couple pages might have some more info not in the text
     ]
 }

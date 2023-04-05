@@ -298,7 +298,7 @@
         {
             type: "Peach",
             name: "PF 23",
-            name_common: "Flamin Fury PF 23",
+            name_common: "Flamin' Fury PF 23",
             uspp_title: "P.F. 23 peach tree",
             patent: "https://patents.google.com/patent/USPP8164 2011-07-05",
             uspp_filed: "7/5/91",
@@ -307,7 +307,7 @@
         {
             type: "Peach",
             name: "PF 17",
-            name_common: "Flamin Fury PF 17",
+            name_common: "Flamin' Fury PF 17",
             uspp_title: "P.F. 17 peach tree",
             patent: "https://patents.google.com/patent/USPP8169 2011-07-05",
             uspp_filed: "7/5/91",
@@ -1207,7 +1207,7 @@
         {
             type: "Peach",
             name: "PF 12A",
-            name_common: "Flamin Fury 12A",
+            name_common: "Flamin' Fury 12A",
             uspp_title: "P.F. 12A peach tree",
             patent: "https://patents.google.com/patent/USPP8950 2013-07-26",
             uspp_filed: "7/26/93",
@@ -1322,7 +1322,7 @@
         {
             type: "Peach",
             name: "PF 15A",
-            name_common: "Flamin Fury PF 15A",
+            name_common: "Flamin' Fury PF 15A",
             uspp_title: "P.F. 15A peach tree",
             patent: "https://patents.google.com/patent/USPP8978 2013-11-29",
             uspp_filed: "11/29/93",
@@ -1574,7 +1574,7 @@
         {
             type: "Peach",
             name: "PF 1",
-            name_common: "Flamin Fury PF 1",
+            name_common: "Flamin' Fury PF 1",
             uspp_title: "'P. F. 1'peach tree",
             patent: "https://patents.google.com/patent/USPP9129 2014-06-24",
             uspp_filed: "6/24/94",
@@ -2258,7 +2258,7 @@
         {
             type: "Peach",
             name: "PF 27A",
-            name_common: "Flamin Fury PF 27A",
+            name_common: "Flamin' Fury PF 27A",
             uspp_title: "Peach tree 'P.F. 27A'",
             patent: "https://patents.google.com/patent/USPP9939 2015-12-18",
             uspp_filed: "12/18/95",
@@ -2360,7 +2360,7 @@
         {
             type: "Peach",
             name: "PF 5B",
-            name_common: "Flamin Fury PF 5B, 4th of July",
+            name_common: "Flamin' Fury PF 5B, 4th of July",
             uspp_title: "Peach tree 'P.F. 5B'",
             patent: "https://patents.google.com/patent/USPP9850 2016-01-16",
             uspp_filed: "1/16/96",
@@ -2385,7 +2385,7 @@
         {
             type: "Peach",
             name: "PF 24-007",
-            name_common: "Flamin Fury PF 24-007, Flamin Fury Jumbo",
+            name_common: "Flamin' Fury PF 24-007, Flamin' Fury Jumbo",
             uspp_title: "Peach tree 'P.F. 24-007'",
             patent: "https://patents.google.com/patent/USPP9895 2016-01-16",
             uspp_filed: "1/16/96",
@@ -2974,7 +2974,7 @@
         {
             type: "Peach",
             name: "PF 7",
-            name_common: "Flamin Fury PF 7",
+            name_common: "Flamin' Fury PF 7",
             uspp_title: "'P.F. 7' peach tree",
             patent: "https://patents.google.com/patent/USPP10490 2016-12-19",
             uspp_filed: "12/19/96",
@@ -4188,7 +4188,7 @@
         {
             type: "Peach",
             name: "PF 20-007",
-            name_common: "Flamin Fury PF 20-007",
+            name_common: "Flamin' Fury PF 20-007",
             uspp_title: 'Peach tree named "P.F. 20-007"',
             patent: "https://patents.google.com/patent/USPP12331 2018-10-22",
             uspp_filed: "10/22/98",
@@ -4205,7 +4205,7 @@
         {
             type: "Peach",
             name: "PF 12B",
-            name_common: "Flamin Fury PF 12-B",
+            name_common: "Flamin' Fury PF 12-B",
             uspp_title: 'Peach tree named "P. F. 12-B"',
             patent: "https://patents.google.com/patent/USPP12351 2018-10-22",
             uspp_filed: "10/22/98",
@@ -6326,7 +6326,7 @@
             type: "Peach",
             name: "PF Fat Lady",
             AKA: ["PF 35-007"], // patent name
-            name_common: "Flamin Fury PF Fat Lady",
+            name_common: "Flamin' Fury PF Fat Lady",
             uspp_title: 'Peach tree named "P.F. 35-007"',
             patent: "https://patents.google.com/patent/USPP14368 2022-01-22",
             uspp_filed: "1/22/02",
@@ -6335,7 +6335,7 @@
         {
             type: "Peach",
             name: "PF 14 New Jersey",
-            name_common: "Flamin Fury PF 14 New Jersey",
+            name_common: "Flamin' Fury PF 14 New Jersey",
             uspp_title: 'Peach tree named "P.F. 14 New Jersey"',
             patent: "https://patents.google.com/patent/USPP14369 2022-01-22",
             uspp_filed: "1/22/02",
@@ -6478,7 +6478,7 @@
         {
             type: "Peach",
             name: "PF Lucky 24B",
-            name_common: "Flamin Fury PF Lucky 24B",
+            name_common: "Flamin' Fury PF Lucky 24B",
             uspp_title: 'Peach tree named "P.F. Lucky 24B"',
             patent: "https://patents.google.com/patent/USPP14367 2022-03-05",
             uspp_filed: "3/5/02",
@@ -6487,7 +6487,7 @@
         {
             type: "Peach",
             name: "PF Lucky 13",
-            name_common: "Flamin Fury PF Lucky 13",
+            name_common: "Flamin' Fury PF Lucky 13",
             uspp_title: 'Peach tree named "P.F. Lucky 13"',
             patent: "https://patents.google.com/patent/USPP14384 2022-03-05",
             uspp_filed: "3/5/02",
@@ -6496,7 +6496,7 @@
         {
             type: "Peach",
             name: "PF 28-007",
-            name_common: "Flamin Fury PF 28-007",
+            name_common: "Flamin' Fury PF 28-007",
             uspp_title: "P.F. 28-007 peach tree origin of variety",
             patent: "https://patents.google.com/patent/USPP14778 2022-03-14",
             uspp_filed: "3/5/02",
@@ -7730,7 +7730,8 @@
         },
         {
             type: "Peach",
-            name: "Weiser",
+            name: "Sweet Breeze", // I pieced together this name from a couple sources. hard to google now
+            AKA: ["EW 170", /* this name from FS1201 NJ peaches doc */ "Weiser" /* patent name */],
             uspp_title: "Peach tree named Weiser",
             patent: "https://patents.google.com/patent/USPP15295 2023-10-29",
             uspp_filed: "10/29/03",
@@ -7763,7 +7764,7 @@
         {
             type: "Peach",
             name: "PF Lucky 21",
-            name_common: "Flamin Fury PF Lucky 21",
+            name_common: "Flamin' Fury PF Lucky 21",
             uspp_title: "Peach tree named 'P.F. Lucky 21'",
             patent: "https://patents.google.com/patent/USPP15497 2023-11-07",
             uspp_filed: "11/7/03",
@@ -7772,7 +7773,7 @@
         {
             type: "Peach",
             name: "PF 9A-007",
-            name_common: "Flamin Fury PF 9A-007",
+            name_common: "Flamin' Fury PF 9A-007",
             uspp_title: "Peach tree named 'P.F. 9A-007'",
             patent: "https://patents.google.com/patent/USPP15498 2023-11-07",
             uspp_filed: "11/7/03",
@@ -7781,7 +7782,7 @@
         {
             type: "Peach",
             name: "PF 22-007",
-            name_common: "Flamin Fury PF 22-007",
+            name_common: "Flamin' Fury PF 22-007",
             uspp_title: "Peach tree named 'P.F. 22-007'",
             patent: "https://patents.google.com/patent/USPP16663 2023-11-17",
             uspp_filed: "11/7/03",
@@ -7790,7 +7791,7 @@
         {
             type: "Peach",
             name: "PF 19-007",
-            name_common: "Flamin Fury 19-007",
+            name_common: "Flamin' Fury 19-007",
             uspp_title: "Peach tree named 'P.F. 19-007'",
             patent: "https://patents.google.com/patent/USPP17578 2024-09-08",
             uspp_filed: "11/7/03",
@@ -7807,7 +7808,7 @@
         {
             type: "Nectarine",
             name: "PF 11 Nectarine",
-            name_common: "Flamin Fury PF 11",
+            name_common: "Flamin' Fury PF 11",
             uspp_title: "Nectarine tree named 'P.F. 11 Nectarine'",
             patent: "https://patents.google.com/patent/USPP15661 2023-11-25",
             uspp_filed: "11/14/03",
@@ -8112,7 +8113,7 @@
         {
             type: "Peach",
             name: "PF 24C Cold Hardy",
-            name_common: "Flamin Fury PF 24-C cold hardy",
+            name_common: "Flamin' Fury PF 24-C cold hardy",
             uspp_title: "Peach tree named 'P.F. 24-C cold hardy'",
             patent: "https://patents.google.com/patent/USPP15659 2024-05-08",
             uspp_filed: "4/27/04",
@@ -8121,7 +8122,7 @@
         {
             type: "Peach",
             name: "PF 36-007",
-            name_common: "Flamin Fury PF 36-007",
+            name_common: "Flamin' Fury PF 36-007",
             uspp_title: "Peach tree named 'P.F. 36- 007'",
             patent: "https://patents.google.com/patent/USPP15660 2024-05-08",
             uspp_filed: "4/27/04",
@@ -8595,7 +8596,7 @@
         {
             type: "Peach",
             name: "PF 7A Freestone",
-            name_common: "Flamin Fury 7A Freestone",
+            name_common: "Flamin' Fury 7A Freestone",
             uspp_title: "Peach tree named 'P.F. 7A Freestone'",
             patent: "https://patents.google.com/patent/USPP17045 2024-11-04",
             uspp_filed: "11/4/04",
@@ -8604,7 +8605,7 @@
         {
             type: "Peach",
             name: "PF 11",
-            name_common: "Flamin Fury PF 11 Peach",
+            name_common: "Flamin' Fury PF 11 Peach",
             uspp_title: "Peach tree named 'P.F. 11 Peach'",
             patent: "https://patents.google.com/patent/USPP17054 2024-11-04",
             uspp_filed: "11/4/04",
@@ -8613,7 +8614,7 @@
         {
             type: "Peach",
             name: "PF 5D Big",
-            name_common: "Flamin Fury 5D Big",
+            name_common: "Flamin' Fury 5D Big",
             uspp_title: "Peach tree named 'P.F. 5D Big'",
             patent: "https://patents.google.com/patent/USPP17543 2024-11-04",
             uspp_filed: "11/4/04",
@@ -9650,7 +9651,7 @@
         {
             type: "Peach",
             name: "PF 8 Ball",
-            name_common: "Flamin Fury PF 8 Ball",
+            name_common: "Flamin' Fury PF 8 Ball",
             uspp_title: "Peach tree named 'P.F. 8 Ball'",
             patent: "https://patents.google.com/patent/USPP18534 2026-08-04",
             uspp_filed: "2/1/06",
@@ -9819,7 +9820,7 @@
         {
             type: "Peach",
             name: "PF Lucky 12",
-            name_common: "Flamin Fury PF Lucky 12",
+            name_common: "Flamin' Fury PF Lucky 12",
             uspp_title: "Peach tree named 'P.F. Lucky 12'",
             patent: "https://patents.google.com/patent/USPP17938 2026-04-11",
             uspp_filed: "4/11/06",
@@ -10774,7 +10775,7 @@
         {
             type: "Peach",
             name: "PF Early 8 Ball",
-            name_common: "Flamin Fury PF Early 8 Ball",
+            name_common: "Flamin' Fury PF Early 8 Ball",
             uspp_title: "Peach tree named 'P.F. Early 8 Ball'",
             patent: "https://patents.google.com/patent/USPP19243 2027-05-31",
             uspp_filed: "5/31/07",
