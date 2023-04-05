@@ -1,0 +1,19 @@
+{
+    title: "FS1204 Nectarine Varieties for New Jersey Commercial and Home Orchardists",
+    author: "Jerry Frecon, Daniel Ward",
+    url: "https://njaes.rutgers.edu/fs1204/",
+    published: "March 2013",
+    accessed: "Mar 2022",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "Cream Ridge, NJ",
+            latitude: 40.13233771380199,
+            longitude: -74.52852612532256
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}
