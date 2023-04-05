@@ -6325,7 +6325,6 @@
         {
             type: "Peach",
             name: "PF Fat Lady",
-            AKA: ["PF 35-007"], // patent name
             name_common: "Flamin' Fury PF Fat Lady",
             uspp_title: 'Peach tree named "P.F. 35-007"',
             patent: "https://patents.google.com/patent/USPP14368 2022-01-22",

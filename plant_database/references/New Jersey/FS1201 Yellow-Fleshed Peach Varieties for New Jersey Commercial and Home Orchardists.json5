@@ -81,7 +81,7 @@
         },
         {
             type: "Peach",
-            name: "Spring Prince",
+            name: "Springprince",
             harvest_time_relative: "Redhaven -23 days",
             disease_resistance: {
                 BLS: "medium susceptibility"
@@ -216,7 +216,7 @@ todo - I think there are a couple others noted in the text for home orchardists 
         },
         {
             type: "Peach",
-            name: "Blaze Prince",
+            name: "Blazeprince",
             harvest_time_relative: "Redhaven -2 days",
             disease_resistance: {
                 BLS: "low susceptibility"
@@ -256,7 +256,7 @@ todo - I think there are a couple others noted in the text for home orchardists 
         },
         {
             type: "Peach",
-            name: "John Boy",
+            name: "Clendening", // "John Boy®"
             harvest_time_relative: "Redhaven +3 days",
             disease_resistance: {
                 BLS: "medium susceptibility"
@@ -336,7 +336,7 @@ todo - I think there are a couple others noted in the text for home orchardists 
         },
         {
             type: "Peach",
-            name: "Scarlet Prince",
+            name: "Scarletprince",
             harvest_time_relative: "Redhaven +12 days",
             disease_resistance: {
                 BLS: "low susceptibility"
@@ -352,7 +352,7 @@ todo - I think there are a couple others noted in the text for home orchardists 
         },
         {
             type: "Peach",
-            name: "July Prince",
+            name: "Julyprince",
             harvest_time_relative: "Redhaven +13 days",
             disease_resistance: {
                 BLS: "medium susceptibility"
@@ -472,7 +472,7 @@ todo - I think there are a couple others noted in the text for home orchardists 
         },
         {
             type: "Peach",
-            name: "Early August Prince",
+            name: "Early Augustprince",
             harvest_time_relative: "Redhaven +29 days",
             disease_resistance: {
                 BLS: "medium susceptibility"
@@ -496,7 +496,7 @@ todo - I think there are a couple others noted in the text for home orchardists 
         },
         {
             type: "Peach",
-            name: "Flamin' Fury® PF#25",
+            name: "PF 25", // "Flamin' Fury® PF 25"
             harvest_time_relative: "Redhaven +28 days",
             disease_resistance: {
                 BLS: "medium susceptibility"
@@ -520,7 +520,7 @@ todo - I think there are a couple others noted in the text for home orchardists 
         },
         {
             type: "Peach",
-            name: "Flamin' Fury® PF#27A",
+            name: "PF 27A", // "Flamin' Fury® PF 27A"
             harvest_time_relative: "Redhaven +31 days",
             disease_resistance: {
                 BLS: "medium susceptibility"
