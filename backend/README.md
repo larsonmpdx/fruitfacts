@@ -17,7 +17,7 @@
 * `cargo fix`
 * `cargo clippy` after installing `rustup component add clippy`
   * `cargo clippy --fix`
-* `cargo outdated -d1` find outdated packages (-d1: direct only) or `cargo outdated` (all) after installing `cargo install --locked cargo-outdated` (same command to update)
+* `cargo upgrade --pinned` update cargo.toml outdated packages
 * `cargo +nightly udeps` to find unused dependencies, after installing (`rustup toolchain install nightly` then `cargo install cargo-udeps --locked`) see https://crates.io/crates/cargo-udeps
 * `cargo tree --duplicates` find dependencies with multiple required versions
 
