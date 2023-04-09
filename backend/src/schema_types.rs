@@ -106,7 +106,6 @@ pub struct CollectionItem {
 #[diesel(table_name = collection_items)]
 pub struct CollectionItemNoID {
     //pub id: i32,
-
     pub collection_id: Option<i32>,
     pub location_id: Option<i32>,
     pub location_number: i32,

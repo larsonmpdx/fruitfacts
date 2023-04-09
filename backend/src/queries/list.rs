@@ -188,7 +188,7 @@ async fn add_plant_to_list(
     if control_data.location.is_none() {
         return Ok(HttpResponse::InternalServerError().body("location required"));
     }
-    
+
     let control_data_location_id =
         crate::queries::search::get_location_id(&control_data.location, &mut db_conn);
 
@@ -226,11 +226,11 @@ async fn add_plant_to_list(
             let mut collection_item_no_id =
                 serde_json::from_str::<CollectionItemNoID>(std::str::from_utf8(&body).unwrap())?;
 
-                // force these fields to be the values we've already sanitized
-                collection_item_no_id.user_id = Some(control_data_user_id);
-                collection_item_no_id.location_id = Some(control_data_location_id);
-                collection_item_no_id.collection_id = None;
-                collection_item_no_id.public = db_location.public;
+            // force these fields to be the values we've already sanitized
+            collection_item_no_id.user_id = Some(control_data_user_id);
+            collection_item_no_id.location_id = Some(control_data_location_id);
+            collection_item_no_id.collection_id = None;
+            collection_item_no_id.public = db_location.public;
 
             rows_changed = diesel::update(
                 collection_items::dsl::collection_items
@@ -245,11 +245,11 @@ async fn add_plant_to_list(
         let mut collection_item_no_id =
             serde_json::from_str::<CollectionItemNoID>(std::str::from_utf8(&body).unwrap())?;
 
-            // force these fields to be the values we've already sanitized
-            collection_item_no_id.user_id = Some(control_data_user_id);
-            collection_item_no_id.location_id = Some(control_data_location_id);
-            collection_item_no_id.collection_id = None;
-            collection_item_no_id.public = db_location.public;
+        // force these fields to be the values we've already sanitized
+        collection_item_no_id.user_id = Some(control_data_user_id);
+        collection_item_no_id.location_id = Some(control_data_location_id);
+        collection_item_no_id.collection_id = None;
+        collection_item_no_id.public = db_location.public;
 
         rows_changed = diesel::insert_into(collection_items::dsl::collection_items)
             .values(&collection_item_no_id)
@@ -263,7 +263,6 @@ async fn add_plant_to_list(
         Ok(HttpResponse::InternalServerError().finish())
     }
 }
-
 
 // todo notes - some or all of this is done
 
