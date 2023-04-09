@@ -26,13 +26,15 @@ export async function getServerSideProps(context) {
 
   let apiURL;
   let userList = false;
+  let userFromPath;
   if (path[0] == 'user') {
     // incoming path will be like "user/[user name or ID]/[list name or ID]"
     // IDs are formatted like "id:123"
     userList = true;
-    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?searchType=loc&user=${
-      path[1]
-    }&location=${path_to_name(path[2])}`;
+    userFromPath = path[1];
+    apiURL = `${
+      process.env.NEXT_PUBLIC_BACKEND_BASE
+    }/api/search?searchType=loc&user=${userFromPath}&location=${path_to_name(path[2])}`;
   } else {
     // incoming path will be like "Oregon/u-pick A"
     apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathJoined}`; // no trailing slash - individual collection
@@ -85,6 +87,7 @@ export async function getServerSideProps(context) {
       data,
       location,
       userList,
+      userFromPath,
       pathJoined,
       thumbnail,
       errorMessage
@@ -99,6 +102,7 @@ export default function Home({
   data,
   location,
   userList,
+  userFromPath,
   pathJoined,
   thumbnail,
   errorMessage,
@@ -190,7 +194,10 @@ export default function Home({
           <h1>Plants</h1>
         )}
         {userList && (
-          <Link href={`/search?searchType=base&addToList=${data.locations[0]?.id}`} legacyBehavior>
+          <Link
+            href={`/search?searchType=base&user=${userFromPath}&addToList=${data.locations[0]?.location_name}`}
+            legacyBehavior
+          >
             <p>add</p>
           </Link>
         )}

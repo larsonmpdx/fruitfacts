@@ -37,7 +37,7 @@ pub struct SearchQuery {
 
     // to use search results as a list of plants to add to a user location
     #[serde(rename = "addToList")]
-    pub add_to_list: Option<i32>,
+    pub add_to_list: Option<String>,
 
     // collection items search only (id or path, or I guess both)
     #[serde(rename = "collectionID")]
@@ -49,7 +49,7 @@ pub struct SearchQuery {
     #[serde(rename = "location")]
     pub location: Option<String>, // id if formatted like "id:123", name otherwise
 
-    // for listing a user's locations
+    // for listing a user's locations, also for adding to a user's list
     pub user: Option<String>, // id if formatted like "id:123", name otherwise
 
     // base plants search only:

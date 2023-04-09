@@ -62,7 +62,7 @@ export default function Home({
         {plant.base && (
           <h2>
             <img
-              className="my-0 mx-2 inline h-24 w-24 object-contain"
+              className="mx-2 my-0 inline h-24 w-24 object-contain"
               src={'/fruit_icons/' + plant.base.type + '.svg'}
             />
             {plant.base.name} {plant.base.type}

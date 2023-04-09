@@ -98,7 +98,7 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
       {user?.id && `id:${user?.id}` == query.user && (
         <Link
           href={`/lists/addList`}
-          className="mt-4 mr-4 hover:bg-indigo-800 hover:text-white lg:mt-0"
+          className="mr-4 mt-4 hover:bg-indigo-800 hover:text-white lg:mt-0"
         >
           add list
         </Link>
@@ -108,17 +108,17 @@ export default function Home({ user, setContributingLinks, setErrorMessage }) {
           {searchReturn.locations.map((location) => (
             <li key={location.location_name}>
               <button
-                className="mt-4 ml-1 mr-4 block text-teal-200 hover:text-teal-800 lg:mt-0 lg:inline-block"
+                className="ml-1 mr-4 mt-4 block text-teal-200 hover:text-teal-800 lg:mt-0 lg:inline-block"
                 onClick={() => {
                   setToDelete(location);
                   setDeleteModalVisible(true);
                 }}
               >
-                <XCircleIcon className="my-0 mx-2 inline h-6 w-6 object-contain" />
+                <XCircleIcon className="mx-2 my-0 inline h-6 w-6 object-contain" />
               </button>
               <Link
                 href={`/collections/user/${query.user}/${name_to_path(location.location_name)}`}
-                className="mt-4 mr-4 hover:bg-indigo-800 hover:text-white lg:mt-0"
+                className="mr-4 mt-4 hover:bg-indigo-800 hover:text-white lg:mt-0"
               >
                 {location.location_name}
               </Link>

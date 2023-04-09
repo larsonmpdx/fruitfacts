@@ -35,7 +35,7 @@ export default function Home({ user, setUser, contributingLinks }) {
             <Link
               key={link.name}
               href={link.href}
-              className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+              className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
             >
               {link.name}
             </Link>
@@ -45,7 +45,7 @@ export default function Home({ user, setUser, contributingLinks }) {
               <Link
                 key="my lists"
                 href={`/lists/lists?user=id:${user.id}`}
-                className="mt-4 mr-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+                className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
               >
                 my lists
               </Link>

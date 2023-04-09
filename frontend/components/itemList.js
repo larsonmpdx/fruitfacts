@@ -17,14 +17,14 @@ export default function Home({ data }) {
                       <Link
                         href={`/lists/addPlant?type=${name_to_path(item.type)}&name=${name_to_path(
                           item.name
-                        )}&addToList=${data.query.addToList}`}
+                        )}&addToList=${data.query.addToList}&user=${data.query.user}`}
                         legacyBehavior
                       >
                         add
                       </Link>
                     )}
                     <img
-                      className="my-0 mx-2 inline h-6 w-6 object-contain"
+                      className="mx-2 my-0 inline h-6 w-6 object-contain"
                       src={'/fruit_icons/' + item.type + '.svg'}
                     />
                     <Link
