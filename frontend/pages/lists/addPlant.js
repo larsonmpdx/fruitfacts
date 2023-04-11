@@ -1,5 +1,8 @@
 import React from 'react';
+import { useRouter } from 'next/router';
+import * as qs from 'qs';
 import Button from '../../components/button';
+
 export default function Home({ user, setErrorMessage, setContributingLinks }) {
   React.useEffect(() => {
     setContributingLinks([
@@ -14,7 +17,7 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
   const query = qs.parse(router.asPath.split(/\?/)[1]);
 
   const handleSubmit = async () => {
-    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list/entry`, {
       method: 'POST',
       credentials: 'include',
       body: JSON.stringify({
