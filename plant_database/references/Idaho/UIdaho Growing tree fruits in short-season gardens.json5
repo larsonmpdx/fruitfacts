@@ -1,7 +1,7 @@
 {
     title: "Growing tree fruits in short-season gardens",
     author: "Stephen L. Love, Esmaeil Fallahi, Kathy Noble",
-    url: "https://drive.google.com/file/d/1H4geAZ6L355gAxWApVLmWVCmFW-VfqDu/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1H4geAZ6L355gAxWApVLmWVCmFW-VfqDu/view?usp=sharing", // I have this on my personal google drive because it's no longer on the university website
     published: "Apr 2009",
     accessed: "Oct 2021",
     type: "state extension guide",
@@ -41,8 +41,8 @@
             type: "Apple",
             name: "Honeycrisp",
             description: "Color: Red striped, Uses and quality: All-around; stores well",
-            harvest_time_unparsed: "late fall"
             // in the guide as "late fall"
+            harvest_time_unparsed: "late fall"
         },
         {
             type: "Apple",
