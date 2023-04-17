@@ -23,11 +23,11 @@ actix-web = "=4.3.1"
 anyhow = "=1.0.70"
 base64 = "=0.21.0"
 chrono = "=0.4.24"
-clap = { version = "=4.2.1", features = ["cargo"] }
+clap = { version = "=4.2.2", features = ["cargo"] }
 dotenv-build = "=0.1.1"
 env_logger = "=0.10.0"
 expiring_map = { git = "https://github.com/larsonmpdx/expiring_map/", branch = "remove_item" }
-git2 = "=0.17.0"
+git2 = "=0.17.1"
 indexmap = "=1.9.3"
 itertools = "=0.10.5"
 json5 = "=0.4.1"
@@ -47,7 +47,7 @@ urlencoding = "=2.1.2"
 walkdir = "=2.3.3"
 
 # dependencies only used by support binaries (I don't want to download and build these when doing a server release)
-pdfium-render = { version = "=0.8.0", optional = true }
+pdfium-render = { version = "=0.8.1", optional = true }
 image = { version = "=0.24.6", optional = true }
 
 [features]
