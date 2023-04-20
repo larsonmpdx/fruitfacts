@@ -6,7 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 # https://forge.rust-lang.org/infra/other-installation-methods.html#standalone-installers
 rm -rf ./rust*/
 rm -f ./*.tar.gz
-wget https://static.rust-lang.org/dist/rust-1.68.2-x86_64-unknown-linux-gnu.tar.gz
+wget https://static.rust-lang.org/dist/rust-1.69.0-x86_64-unknown-linux-gnu.tar.gz
 tar -xf ./rust*.tar.gz
 cd ./rust*/
 sudo ./install.sh

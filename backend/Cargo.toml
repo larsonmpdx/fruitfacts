@@ -10,20 +10,20 @@ doctest = false
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-diesel = { version = "=2.0.3", features = ["sqlite", "r2d2"] }
+diesel = { version = "=2.0.4", features = ["sqlite", "r2d2"] }
 diesel_migrations = "=2.0.0"
 
 # this has to be within the allowed versions for diesel-rs - note we're on the 2.0.x branch (latest stable)
 # see https://github.com/diesel-rs/diesel/blob/2.0.x/diesel/Cargo.toml#L19
 # see versions here https://crates.io/crates/libsqlite3-sys/versions
-libsqlite3-sys = { version = "=0.25.2", features = ["bundled"] }
+libsqlite3-sys = { version = "=0.26.0", features = ["bundled"] }
 
 actix-cors = "=0.6.4"
 actix-web = "=4.3.1"
 anyhow = "=1.0.70"
 base64 = "=0.21.0"
 chrono = "=0.4.24"
-clap = { version = "=4.2.2", features = ["cargo"] }
+clap = { version = "=4.2.4", features = ["cargo"] }
 dotenv-build = "=0.1.1"
 env_logger = "=0.10.0"
 expiring_map = { git = "https://github.com/larsonmpdx/expiring_map/", branch = "remove_item" }

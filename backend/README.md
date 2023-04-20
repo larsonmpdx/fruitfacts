@@ -4,6 +4,7 @@
 * `cargo run`
 * `cargo test` and `cargo test -- --include-ignored` (include long tests: the json database loading one)
 * `cargo fetch` install packages
+* `cargo clean` remove build files which eventually consume many gigabytes
 
 # support tools
 * `cargo run --bin pdf_to_thumbnail` create thumbnails for each reference pdf. needs pdfium downloaded and installed, see instructions at https://crates.io/crates/pdfium-render
@@ -41,7 +42,7 @@
 * there's no way to specify a dependency version with a regular `cargo install` command, and diesel seems to randomly pick an old bundled sqlite version, so to get diesel_cli with a new bundled sqlite (needed for fts trigram) we need to git clone it and edit cargo.toml. sad!
   * see https://github.com/rust-lang/cargo/issues/3266
   * check out diesel github 1.x version
-  * set rust version (not sure why this is necessary) `rustup override set 1.68.2`
+  * set rust version (not sure why this is necessary) `rustup override set 1.69.0`
   * edit cargo.toml in diesel_cli folder to increase minimum sqlite version like `>=0.22.2`
   * delete examples from top-level diesel cargo.toml (dependency problems in git checkout version)
   * in diesel_cli folder: `cargo install diesel_cli --no-default-features --features "sqlite-bundled" --path .`
