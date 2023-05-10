@@ -26,7 +26,6 @@
 * see `rust_update.bat`:
   * `rustup update stable`
   * `rustup toolchain install nightly`
-  * `cargo install --locked cargo-outdated`
   * `cargo install cargo-udeps --locked`
   * `cargo test -- --include-ignored`
 
