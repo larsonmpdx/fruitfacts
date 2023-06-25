@@ -26,6 +26,14 @@
     ],
     plants: [
         {
+            type: "Sweet Cherry",
+            name: "Garden Bing Cherry", // referenced from USPP7320 craig's crimson
+            patent: "https://patents.google.com/patent/USPP3810",
+            uspp_filed: "1/9/75",
+            // patent "c f zaiger"
+            released: "Zaiger"
+        },
+        {
             type: "Peach",
             name: "Crimson Lady",
             uspp_title: "Peach tree (Crimson Lady)",

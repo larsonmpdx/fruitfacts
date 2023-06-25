@@ -382,7 +382,8 @@
             description: "zaiger. retail https://www.davewilson.com/nurseries/products/fruit-trees/cherry/craig_s_crimson/",
             patent: "https://patents.google.com/patent/USPP7320 expired 2009-08-28",
             chill: "500-600 hours",
-            harvest_time: "May 12 to June 2"
+            harvest_time: "May 12 to June 2",
+            s_allele: "likely has S4' (self fertile + one parent is OP stella)"
         },
         {
             type: "Sweet Cherry",
