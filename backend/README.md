@@ -15,9 +15,9 @@
 
 # rust linting
 * `cargo fmt` after installing `rustup component add rustfmt`
-* `cargo fix`
+* `cargo fix --allow-dirty`
 * `cargo clippy` after installing `rustup component add clippy`
-  * `cargo clippy --fix`
+  * `cargo clippy --fix --allow-dirty`
 * `cargo upgrade --pinned` update cargo.toml outdated packages
 * `cargo +nightly udeps` to find unused dependencies, after installing (`rustup toolchain install nightly` then `cargo install cargo-udeps --locked`) see https://crates.io/crates/cargo-udeps
 * `cargo tree --duplicates` find dependencies with multiple required versions
@@ -41,7 +41,7 @@
 * there's no way to specify a dependency version with a regular `cargo install` command, and diesel seems to randomly pick an old bundled sqlite version, so to get diesel_cli with a new bundled sqlite (needed for fts trigram) we need to git clone it and edit cargo.toml. sad!
   * see https://github.com/rust-lang/cargo/issues/3266
   * check out diesel github 1.x version
-  * set rust version (not sure why this is necessary) `rustup override set 1.71.1`
+  * set rust version (not sure why this is necessary) `rustup override set 1.72.0`
   * edit cargo.toml in diesel_cli folder to increase minimum sqlite version like `>=0.22.2`
   * delete examples from top-level diesel cargo.toml (dependency problems in git checkout version)
   * in diesel_cli folder: `cargo install diesel_cli --no-default-features --features "sqlite-bundled" --path .`
