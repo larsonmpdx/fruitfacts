@@ -56,8 +56,11 @@ export async function getServerSideProps(context) {
   )
     .then((response) => {
       if (response.status !== 200) {
-        errorMessage = "can't reach backend";
-        return [];
+        return response.text().then((text) => {
+          errorMessage = `backend API error: ${text}`;
+          console.log(text);
+          return [];
+        });
       }
       return response.json();
     })
@@ -120,8 +123,11 @@ export default function Home({
         )
           .then((response) => {
             if (response.status !== 200) {
-              setErrorMessage("can't reach backend");
-              return;
+              return response.text().then((text) => {
+                errorMessage = `backend API error: ${text}`;
+                console.log(text);
+                return;
+              });
             }
             return response.json();
           })

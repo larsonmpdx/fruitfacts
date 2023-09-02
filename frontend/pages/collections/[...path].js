@@ -13,23 +13,50 @@ import Chart from '../../components/chart';
 import { getThumbnailLocation } from '../../components/functions';
 import { name_to_path, path_to_name } from '../../components/util';
 import Image from 'next/image';
+import { getCookie } from 'cookies-next';
 
 export async function getServerSideProps(context) {
   let errorMessage = null;
   let { path, loc } = context.query;
-  path = path_to_name(path.join('/'));
+  const pathJoined = path_to_name(path.join('/'));
   let location_number = parseInt(loc);
   if (isNaN(location_number)) {
     location_number = 1;
   }
 
-  const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${path}`) // no trailing slash - individual collection
-    .then((response) => {
+  let apiURL;
+  let userList = false;
+  let userFromPath;
+  if (path[0] == 'user') {
+    // incoming path will be like "user/[user name or ID]/[list name or ID]"
+    // IDs are formatted like "id:123"
+    userList = true;
+    userFromPath = path[1];
+    apiURL = `${
+      process.env.NEXT_PUBLIC_BACKEND_BASE
+    }/api/search?searchType=loc&user=${userFromPath}&location=${path_to_name(path[2])}`;
+  } else {
+    // incoming path will be like "Oregon/u-pick A"
+    apiURL = `${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/collections/${pathJoined}`; // no trailing slash - individual collection
+  }
+
+  // todo - switch to the built-in next component when this issue is fixed:
+  // https://github.com/vercel/next.js/issues/45371
+  const session = getCookie('session', { req: context.req, res: context.res });
+  const data = await fetch(apiURL, {
+    headers: {
+      cookie: `session=${session}`
+    }
+  })
+    .then(async (response) => {
       if (response.status !== 200) {
-        errorMessage = "can't reach backend";
+        const text = await response.text();
+        errorMessage = `backend API error: ${text}`;
+        console.log(response.status + ': ' + text);
         return { items: [], locations: [] };
+      } else {
+        return response.json();
       }
-      return response.json();
     })
     .catch((error) => {
       errorMessage = `can't reach backend: ${error.message}`;
@@ -37,24 +64,31 @@ export async function getServerSideProps(context) {
       return { items: [], locations: [] };
     });
 
-  console.log(JSON.stringify(data.locations, null, 2));
-
   // cut down data to only this location or location #1 if not specified
-  data.items = data.items.filter((item) => {
-    return item.location_number == location_number;
-  });
+  data.items = data.items
+    ? data.items.filter((item) => {
+        return item.location_number == location_number;
+      })
+    : [];
 
-  const location = data.locations.find((location) => {
-    return location.location_number == location_number;
-  }) || { location_name: `unknown location #${location_number}` };
+  let location;
+  if (data?.locations?.length) {
+    location = data.locations.find((location) => {
+      return location.location_number == location_number;
+    }) || { location_name: `unknown location #${location_number}` };
+  } else {
+    location = 0;
+  }
 
-  const thumbnail = getThumbnailLocation(`${path}.jpg`);
+  const thumbnail = getThumbnailLocation(`${pathJoined}.jpg`);
 
   return {
     props: {
       data,
       location,
-      path,
+      userList,
+      userFromPath,
+      pathJoined,
       thumbnail,
       errorMessage
     }
@@ -67,13 +101,15 @@ export async function getServerSideProps(context) {
 export default function Home({
   data,
   location,
-  path,
+  userList,
+  userFromPath,
+  pathJoined,
   thumbnail,
   errorMessage,
   setErrorMessage,
   setContributingLinks
 }) {
-  let data_link = `plant_database/references/${name_to_path(path)}.json5`;
+  let data_link = `plant_database/references/${pathJoined}.json5`;
   React.useEffect(() => {
     setContributingLinks([
       {
@@ -93,9 +129,16 @@ export default function Home({
     <>
       <article className="prose m-5 max-w-none">
         <Head>
-          <title>{`Collection: ${path}`}</title>
+          <title>{`Collection: ${pathJoined}`}</title>
         </Head>
-        <Image src={thumbnail} alt="preview image for this reference" width={200} height={200} />
+        {userList && (
+          <h1>
+            {data.user_name}'s location "{data.locations[0]?.location_name}"
+          </h1>
+        )}
+        {!userList && (
+          <Image src={thumbnail} alt="preview image for this reference" width={200} height={200} />
+        )}
         {data.collection && (
           <>
             {data.collection.needs_help == 1 && (
@@ -112,12 +155,14 @@ export default function Home({
             </p>
             <h1>Locations</h1>
             <ul className="list-disc">
-              {data.locations.length > 1 ? (
+              {data?.locations?.length > 1 ? (
                 <>
                   {data.locations.map((location) => (
                     <li key={location.id}>
                       <Link
-                        href={`/collections/${name_to_path(path)}?loc=${location.location_number}`}
+                        href={`/collections/${name_to_path(pathJoined)}?loc=${
+                          location.location_number
+                        }`}
                         legacyBehavior
                       >
                         {location.location_name}
@@ -133,7 +178,7 @@ export default function Home({
                 </>
               )}
             </ul>
-            {data.locations.length > 1 ? (
+            {data?.locations?.length > 1 ? (
               <h1>{`Chart (${location.location_name})`}</h1>
             ) : (
               <h1>Chart</h1>
@@ -141,27 +186,36 @@ export default function Home({
             <div className="border-2 border-solid">
               <Chart items={data.items} />
             </div>
-            {data.locations.length > 1 ? (
-              <h1>{`Plants (${location.location_name})`}</h1>
-            ) : (
-              <h1>Plants</h1>
-            )}
-            <ul className="list-none">
-              {data.items.map((item) => (
-                <li key={item.id}>
-                  <img
-                    className="my-0 mx-2 inline h-6 w-6 object-contain"
-                    src={'/fruit_icons/' + item.type + '.svg'}
-                  />
-                  <Link href={`/plant/${name_to_path(item.type + '/' + item.name)}`} legacyBehavior>
-                    {item.name + ' ' + item.type}
-                  </Link>
-                  {item.marketing_name && <> (marketed under the {item.marketing_name} brand)</>}
-                </li>
-              ))}
-            </ul>
           </>
         )}
+        {data?.locations?.length > 1 ? (
+          <h1>{`Plants (${location.location_name})`}</h1>
+        ) : (
+          <h1>Plants</h1>
+        )}
+        {userList && (
+          <Link
+            href={`/search?searchType=base&user=${userFromPath}&addToList=${data.locations[0]?.location_name}`}
+            legacyBehavior
+          >
+            <p>add</p>
+          </Link>
+        )}
+        <ul className="list-none">
+          {data?.items?.length > 1 ? (
+            data.items.map((item) => (
+              <li key={item.id}>
+                <img className="" src={'/fruit_icons/' + item.type + '.svg'} />
+                <Link href={`/plant/${name_to_path(item.type + '/' + item.name)}`} legacyBehavior>
+                  {item.name + ' ' + item.type}
+                </Link>
+                {item.marketing_name && <> (marketed under the {item.marketing_name} brand)</>}
+              </li>
+            ))
+          ) : (
+            <li>no plants</li>
+          )}
+        </ul>
       </article>
     </>
   );

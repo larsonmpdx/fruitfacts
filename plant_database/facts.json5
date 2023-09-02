@@ -70,5 +70,22 @@
         contributor: "Michael",
         fact: "Grapes can support about 1kg (2.2lb) of fruit per 16-18 leaves (1kg might be 2-4 clusters for common table grapes). if a vine sets too much fruit vs. its leaf area the excess can be thinned",
         reference: "https://grapes.extension.org/crop-thinning-cluster-thinning-or-cluster-removal/"
+    },
+    {
+        contributor: "Michael",
+        fact: "WA-38 apples can be stored for at least ten months in controlled atmosphere (CA) storage",
+        reference: "http://treefruit.wsu.edu/article/2019-storage-recommendations-for-wa-38-cosmic-crisp/"
+    },
+    {
+        contributor: "Michael",
+        fact: "Thinning peaches early (soon after bloom) inceases fruit size and gives an ealier ripening crop",
+        // 1974: USDA "Peach Production" page 56 has charts
+        reference: "https://naldc.nal.usda.gov/download/CAT87208735/PDF"
+    },
+    {
+        contributor: "Michael",
+        fact: 'some newer blackberry varieties are "primocane" fruiting, meaning they fruit on current-season growth instead of, or in addition to, previous-season growth ("floricanes")',
+        // youtube: "primer on primocanes"
+        reference: "https://www.youtube.com/watch?v=qH5uRXYR6EY"
     }
 ]

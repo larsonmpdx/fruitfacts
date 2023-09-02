@@ -55,6 +55,7 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(move || {
         let cors = Cors::default()
             .supports_credentials()
+            .allowed_methods(vec!["GET", "POST", "DELETE"])
             .allowed_origin_fn(|origin, _req_head| {
                 let matched = origin
                     .as_bytes()
@@ -82,10 +83,11 @@ async fn main() -> std::io::Result<()> {
             .service(queries::auth::get_auth_urls)
             .service(queries::auth::receive_oauth_redirect)
             .service(queries::auth::create_account)
-            .service(queries::auth::get_full_user)
+            .service(queries::auth::get_user)
+            .service(queries::auth::delete_user)
             .service(queries::auth::check_login)
             .service(queries::auth::logout)
-            // these can all be combind into one search query
+            // todo - some of these can all be combined under the big search query
             .service(queries::get_plant)
             .service(queries::search::variety_search)
             .service(queries::list::create_list)

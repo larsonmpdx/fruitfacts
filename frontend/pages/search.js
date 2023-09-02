@@ -11,6 +11,37 @@ import { getTypesForAutocomplete } from '../components/getTypes';
 
 export async function getServerSideProps(context) {
   let queryCleaned = Object.fromEntries(Object.entries(context.query).filter(([, v]) => v != null));
+
+  // if any required thing wasn't specified, redirect after setting defaults
+  let redirectNeeded = false;
+  if (
+    !queryCleaned.searchType ||
+    (queryCleaned.patents && queryCleaned.patents != 'true') ||
+    !queryCleaned.page ||
+    !queryCleaned.perPage ||
+    !queryCleaned.orderBy ||
+    !queryCleaned.order
+  ) {
+    redirectNeeded = true;
+  }
+
+  // set defaults in the query
+  queryCleaned.searchType = queryCleaned.searchType || 'base';
+  queryCleaned.patents = queryCleaned.patents == 'true' ? true : undefined;
+  queryCleaned.page = queryCleaned.page || '1';
+  queryCleaned.perPage = queryCleaned.perPage || '50';
+  queryCleaned.orderBy = queryCleaned.orderBy || 'name_then_type';
+  queryCleaned.order = queryCleaned.order || 'asc';
+
+  if (redirectNeeded) {
+    return {
+      redirect: {
+        destination: '/search?' + qs.stringify(queryCleaned),
+        permanent: false
+      }
+    };
+  }
+
   const queryString = qs.stringify(queryCleaned);
 
   let errorMessage = null;
@@ -18,8 +49,11 @@ export async function getServerSideProps(context) {
     return await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/search?` + queryString)
       .then((response) => {
         if (response.status !== 200) {
-          errorMessage = `backend API error ${response.status}`;
-          return null;
+          return response.text().then((text) => {
+            errorMessage = `backend API error: ${text}`;
+            console.log(text);
+            return null;
+          });
         }
         return response.json();
       })
@@ -37,6 +71,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       data,
+      queryString,
       types,
       errorMessage
     }
@@ -50,7 +85,14 @@ const nullIfEmptyQuote = (value) => {
   return value;
 };
 
-export default function Home({ data, types, errorMessage, setErrorMessage, setContributingLinks }) {
+export default function Home({
+  data,
+  types,
+  queryString,
+  errorMessage,
+  setErrorMessage,
+  setContributingLinks
+}) {
   React.useEffect(() => {
     setContributingLinks([
       { link: `/frontend/pages/search.js`, description: `frontend: search.js` },
@@ -62,44 +104,25 @@ export default function Home({ data, types, errorMessage, setErrorMessage, setCo
   const router = useRouter();
   const query = qs.parse(router.asPath.split(/\?/)[1]);
 
-  // get defaults from query - see struct in search.rs
-  let querySearchType = query.searchType || 'base';
-  let querySearch = query.search || undefined;
-  let queryName = query.name || undefined;
-  let queryPatents = query.patents == 'true' ? true : null;
-  let queryType = query.type || undefined; // apple, pear, etc.
-  let queryPage = query.page || '1';
-  let queryPerPage = query.perPage || '50';
-  let queryOrderBy = query.orderBy || 'name_then_type';
-  let queryOrder = query.order || 'asc';
-  let queryRelativeHarvestMin = query.relativeHarvestMin || undefined;
-  let queryRelativeHarvestMax = query.relativeHarvestMax || undefined;
-
-  let queryCollectionID = query.collectionID || undefined;
-  let queryCollectionPath = query.collectionPath || undefined;
-
-  let queryNotorietyMin = query.notorietyMin || undefined;
-
-  let queryDistance = query.distance || undefined; // todo
-  let queryFrom = query.from || undefined; // todo
-
   const [queryObject, setQueryObject] = React.useState({
-    searchType: querySearchType,
-    search: querySearch,
-    name: queryName,
-    patents: queryPatents,
-    type: queryType,
-    page: queryPage,
-    perPage: queryPerPage,
-    orderBy: queryOrderBy,
-    order: queryOrder, // asc/desc
-    relativeHarvestMin: queryRelativeHarvestMin,
-    relativeHarvestMax: queryRelativeHarvestMax,
-    collectionID: queryCollectionID,
-    collectionPath: queryCollectionPath,
-    notorietyMin: queryNotorietyMin,
-    distance: queryDistance,
-    from: queryFrom
+    searchType: query.searchType,
+    search: query.search,
+    name: query.name,
+    addToList: query.addToList,
+    user: query.user,
+    patents: query.patents,
+    type: query.type,
+    page: query.page,
+    perPage: query.perPage,
+    orderBy: query.orderBy,
+    order: query.order, // asc/desc
+    relativeHarvestMin: query.relativeHarvestMin,
+    relativeHarvestMax: query.relativeHarvestMax,
+    collectionID: query.collectionID,
+    collectionPath: query.collectionPath,
+    notorietyMin: query.notorietyMin,
+    distance: query.distance,
+    from: query.from
   });
 
   const [typeObject, setTypeObject] = React.useState('');

@@ -1,0 +1,19 @@
+{
+    title: "MSState P1758 Establishment and Maintenance of Blueberries",
+    author: "Eric T. Stafne, Rebecca Melanson, Blake Layton, Juan Silva, Elizabeth Canales",
+    url: "https://journals.ashs.org/horttech/downloadpdf/journals/horttech/18/4/article-p726.xml",
+    published: "2020",
+    accessed: "Aug 2023",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "Mississippi State University MAFES McNeil Unit", // todo - a better location, I guess for the university itself? this was copied from the other pub
+            latitude: 30.6554673115986,
+            longitude: -89.63295435581934
+        }
+    ],
+    plants: [
+        // todo - has a bunch of rabbiteye blueberries not yet in the database
+    ]
+}

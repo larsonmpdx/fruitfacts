@@ -14,6 +14,7 @@
 
 # external issues I'm tracking
 
+- `feb 2023`: getting cookies SSR is weird https://github.com/vercel/next.js/issues/45371
 - `Jul 2022`: next.js: can't use getStaticProps and getServerSideProps together, so for example I can't generate the list of plant types for the search page's dropdown and then also make the search page server-side generated https://github.com/vercel/next.js/discussions/11424
 - `Jan 2022`: next.js: not enough options for redirects so we can't have nested paths with some paths ending in '/' and some not
   - https://github.com/vercel/next.js/discussions/23988

@@ -2,15 +2,22 @@
 
 import styles from '../styles/Button.module.css';
 
-export default function Button({ enabled, label, ...rest }) {
+export default function Button({ enabled, label, color, ...rest }) {
+  if (!color) {
+    color = 'blue';
+  }
   return (
     <>
       {enabled ? (
-        <button {...rest} className={`${styles.btn} ${styles['btn-blue']}`}>
+        <button {...rest} className={`${styles.btn} ${styles['btn-' + color]}`}>
           {label}
         </button>
       ) : (
-        <button {...rest} disabled className={`${styles.btn} ${styles['btn-disabled']} disabled`}>
+        <button
+          {...rest}
+          disabled
+          className={`${styles.btn} ${styles['btn-' + color + '-disabled']} disabled`}
+        >
           {label}
         </button>
       )}

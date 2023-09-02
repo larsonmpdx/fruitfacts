@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../components/button';
-// todo - user, setErrorMessage,
-export default function Home({ setContributingLinks }) {
+// todo - user
+export default function Home({ user, setErrorMessage, setContributingLinks }) {
   React.useEffect(() => {
     setContributingLinks([
       { link: `/frontend/pages/lists/addList.js`, description: `list.js` },
@@ -30,34 +30,32 @@ export default function Home({ setContributingLinks }) {
   };
 
   const handleSubmit = async () => {
-    /* // todo
-    const data = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list`,
-    {
+    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list`, {
       method: 'POST',
       credentials: 'include',
       body: JSON.stringify({
         location_name: name,
         latitude: lat,
         longitude: lon,
-        user_id: user.id,
+        user: 'id:' + user.id,
         location_number: 0, // special case for user collections
         notoriety_score: 0.0, // unused here but set NOT NULL
-        ignore_for_nearby_searches: 0, // unused here but set NOT NULL
+        ignore_for_nearby_searches: 0 // unused here but set NOT NULL
       })
     })
-    .then((response) => {
-      if (response.status !== 200) {
-        setErrorMessage("can't reach the backend");
-        return [];
-      }
-      return response.json();
-    })
-    .catch((error) => {
-      setErrorMessage(`can't reach backend: ${error.message}`);
-      console.log(error);
-      return [];
-    });
-    */
+      .then((response) => {
+        if (response.status !== 200) {
+          response.text().then((text) => {
+            setErrorMessage(`backend API error: ${text}`);
+          });
+        } else {
+          // todo - redirect to edit list
+        }
+      })
+      .catch((error) => {
+        setErrorMessage(`can't reach backend: ${error.message}`);
+        console.log(error);
+      });
   };
 
   // todo:

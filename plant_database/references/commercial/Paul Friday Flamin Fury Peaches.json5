@@ -23,18 +23,21 @@
         {
             type: "Peach",
             name: "PF 1",
+            AKA: ["Flamin' Fury® PF 1"],
             released: "Paul Friday*",
             harvest_time_relative: "Redhaven-30"
         },
         {
             type: "Peach",
             name: "PF 5B",
+            AKA: ["Flamin' Fury® PF 5B"],
             released: "Paul Friday*",
             harvest_time_relative: "Redhaven-23"
         },
         {
             type: "Peach",
             name: "PF 5D Big",
+            AKA: ["Flamin' Fury® PF 5D Big"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP17543 expires 2024-11-04",
             harvest_time_relative: "Redhaven-25"
@@ -42,12 +45,14 @@
         {
             type: "Peach",
             name: "PF Early 8 Ball", // only in the chart in the brochure
+            AKA: ["Flamin' Fury® PF Early 8 Ball"],
             released: "Paul Friday*",
             harvest_time_relative: "Redhaven-17"
         },
         {
             type: "Peach",
             name: "PF 8 Ball White", // website text claims trademark but this is the patent name
+            AKA: ["Flamin' Fury® PF 8 Ball White"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP25616 expires 2033-04-08",
             harvest_time_relative: "Redhaven-10"
@@ -55,6 +60,7 @@
         {
             type: "Peach",
             name: "PF 8 Ball", // website text claims trademark but this is the patent name
+            AKA: ["Flamin' Fury® PF 8 Ball"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP18534 expires 2026-08-04",
             harvest_time_relative: "Redhaven-10"
@@ -62,6 +68,7 @@
         {
             type: "Peach",
             name: "PF Late 8 Ball", // website text claims trademark but this is the patent name
+            AKA: ["Flamin' Fury® PF Late 8 Ball"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP26058 expires 2032-12-24",
             harvest_time_relative: "Redhaven-5"
@@ -69,6 +76,7 @@
         {
             type: "Nectarine",
             name: "PF 11 Nectarine",
+            AKA: ["Flamin' Fury® PF 11 Nectarine"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP15661 expires 2023-11-25",
             harvest_time_relative: "Peach: Redhaven-5"
@@ -76,6 +84,7 @@
         {
             type: "Peach",
             name: "PF 11", // not in the website text, only brochure
+            AKA: ["Flamin' Fury® PF 11"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP17054 expires 2024-11-04",
             harvest_time_relative: "Redhaven-2"
@@ -83,6 +92,7 @@
         {
             type: "Peach",
             name: "PF 9A-007",
+            AKA: ["Flamin' Fury® PF 9A-007"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP15498 expires 2023-11-07",
             harvest_time_relative: "Redhaven-2"
@@ -90,12 +100,14 @@
         {
             type: "Peach",
             name: "PF 15A",
+            AKA: ["Flamin' Fury® PF 15A"],
             released: "Paul Friday*",
             harvest_time_relative: "Redhaven+3"
         },
         {
             type: "Peach",
             name: "PF Lucky 13",
+            AKA: ["Flamin' Fury® PF Lucky 13"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP14384 expires 2022-03-05",
             harvest_time_relative: "Redhaven+5"
@@ -103,12 +115,14 @@
         {
             type: "Peach",
             name: "PF 17",
+            AKA: ["Flamin' Fury® PF 17"],
             released: "Paul Friday*",
             harvest_time_relative: "Redhaven+17"
         },
         {
             type: "Peach",
             name: "PF 19-007",
+            AKA: ["Flamin' Fury® PF 19-007"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP17578 expires 2024-09-08",
             harvest_time_relative: "Redhaven+16"
@@ -116,6 +130,7 @@
         {
             type: "Peach",
             name: "PF 23",
+            AKA: ["Flamin' Fury® PF 23"],
             released: "Paul Friday*",
             harvest_time_relative: "Redhaven+18"
         },
@@ -134,6 +149,7 @@
         {
             type: "Peach",
             name: "PF 22-007",
+            AKA: ["Flamin' Fury® PF 22-007"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP16663 expires 2023-11-17",
             harvest_time_relative: "Redhaven+20"
@@ -141,6 +157,7 @@
         {
             type: "Peach",
             name: "PF 24-007",
+            AKA: ["Flamin' Fury® PF 24-007"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP9895 expired 2016-01-16",
             harvest_time_relative: "Redhaven+22"
@@ -148,6 +165,7 @@
         {
             type: "Peach",
             name: "PF Paramount 24", // website claims trademark but this is the patent name
+            AKA: ["Flamin' Fury® PF Paramount 24"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP25094 expires 2032-11-22",
             harvest_time_relative: "Redhaven+24"
@@ -155,6 +173,7 @@
         {
             type: "Peach",
             name: "PF 24C Cold Hardy",
+            AKA: ["Flamin' Fury® PF 24C Cold Hardy"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP15659 expires 2024-05-08",
             harvest_time_relative: "Redhaven+24"
@@ -162,6 +181,7 @@
         {
             type: "Peach",
             name: "PF 25",
+            AKA: ["Flamin' Fury® PF 25"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP9940 expired 2015-12-18",
             harvest_time_relative: "Redhaven+26"
@@ -169,6 +189,7 @@
         {
             type: "Peach",
             name: "PF 28-007",
+            AKA: ["Flamin' Fury® PF 28-007"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP14778 expires 2022-03-14",
             harvest_time_relative: "Redhaven+32"
@@ -176,7 +197,7 @@
         {
             type: "Peach",
             name: "PF Fat Lady",
-            AKA: ["PF 35-007"], // patent name
+            AKA: ["Flamin' Fury® PF 35-007", "PF 35-007" /* patent name */],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP14368 expires 2022-01-22",
             harvest_time_relative: "Redhaven+40"
@@ -184,6 +205,7 @@
         {
             type: "Peach",
             name: "PF Legendary", // website claims trademark but this is the patent name
+            AKA: ["Flamin' Fury® PF Legendary"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP25765 expires 2032-12-30",
             harvest_time_relative: "Redhaven+41"
@@ -191,6 +213,7 @@
         {
             type: "Peach",
             name: "PF Big George",
+            AKA: ["Flamin' Fury® PF Big George"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP19639 expires 2027-07-13",
             harvest_time_relative: "Redhaven+50"
@@ -198,12 +221,14 @@
         {
             type: "Nectarine",
             name: "PF Ka-Ching",
+            AKA: ["Flamin' Fury® PF Ka-Ching"],
             released: "Paul Friday*",
             harvest_time_relative: "Peach: Redhaven +50"
         },
         {
             type: "Peach",
             name: "PF Fashionably Late", // website claims trademark but this is the patent name
+            AKA: ["Flamin' Fury® PF Fashionably Late"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP26452 expires 2032-12-19",
             harvest_time_relative: "Redhaven+54"
@@ -213,6 +238,7 @@
         {
             type: "Peach",
             name: "PF 27A",
+            AKA: ["Flamin' Fury® PF 27A"],
             released: "Paul Friday*",
             // no harvest time given in the patent. from the name it could be about redhaven+27
             patent: "https://patents.google.com/patent/USPP9939 expired 2015-12-18"
@@ -220,6 +246,7 @@
         {
             type: "Peach",
             name: "PF 7",
+            AKA: ["Flamin' Fury® PF 7"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP10490 expired 2016-12-19",
             // harvest time is from the patent
@@ -228,6 +255,7 @@
         {
             type: "Peach",
             name: "PF Lucky 12",
+            AKA: ["Flamin' Fury® PF Lucky 12"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP17938 expires 2026-04-11",
             // harvest time is from the patent
@@ -236,7 +264,7 @@
         {
             type: "Peach",
             name: "PF 14 New Jersey",
-            AKA: ["PF 14 Jersey"],
+            AKA: ["Flamin' Fury® PF 14 Jersey"],
             released: "Paul Friday*",
             // in the patent, "mid season after redhaven" is all we get for harvest time
             patent: "https://patents.google.com/patent/USPP14369 expires 2022-01-22"
@@ -244,6 +272,7 @@
         {
             type: "Peach",
             name: "PF 36-007",
+            AKA: ["Flamin' Fury® PF 36-007"],
             released: "Paul Friday*",
             // no harvest time given in the patent. from the name it could be about redhaven+36
             patent: "https://patents.google.com/patent/USPP15660 expires 2024-05-08"
@@ -251,6 +280,7 @@
         {
             type: "Peach",
             name: "PF 12B",
+            AKA: ["Flamin' Fury® PF 12B"],
             released: "Paul Friday*",
             patent: "https://patents.google.com/patent/USPP12351 expired 2018-10-22",
             // harvest time is from the patent
@@ -259,6 +289,7 @@
         {
             type: "Peach",
             name: "PF 7A Freestone",
+            AKA: ["Flamin' Fury® PF 7A Freestone"],
             released: "Paul Friday*",
             // no harvest time given in the patent
             patent: "https://patents.google.com/patent/USPP17045 expires 2024-11-04"
@@ -266,13 +297,15 @@
         {
             type: "Peach",
             name: "PF Lucky 24B",
+            AKA: ["Flamin' Fury® PF Lucky 24B"],
             released: "Paul Friday*",
-            // harvest time in the patent: cresthavent minus a few days
+            // harvest time in the patent: cresthaven minus a few days
             patent: "https://patents.google.com/patent/USPP14367 expires 2022-03-05"
         },
         {
             type: "Peach",
             name: "PF Lucky 21",
+            AKA: ["Flamin' Fury® PF Lucky 21"],
             released: "Paul Friday*",
             // harvest time in the patent: "after redhaven"
             patent: "https://patents.google.com/patent/USPP15497 expires 2023-11-07"
@@ -280,6 +313,7 @@
         {
             type: "Peach",
             name: "PF 20-007",
+            AKA: ["Flamin' Fury® PF 20-007"],
             released: "Paul Friday*",
             // no harvest time given in the patent
             patent: "https://patents.google.com/patent/USPP12331 expired 2018-10-22"

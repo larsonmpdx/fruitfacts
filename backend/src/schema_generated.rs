@@ -145,6 +145,7 @@ table! {
     users (id) {
         id -> Integer,
         name -> Text,
+        email -> Text,
         location_name -> Nullable<Text>,
         latitude -> Nullable<Double>,
         longitude -> Nullable<Double>,

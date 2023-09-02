@@ -44,7 +44,7 @@ export default function Home({ types, setErrorMessage, setContributingLinks }) {
                           legacyBehavior
                         >
                           <img
-                            className="my-0 mx-2 inline h-24 w-24 object-contain"
+                            className="mx-2 my-0 inline h-24 w-24 object-contain"
                             src={'/fruit_icons/' + type.name + '.svg'}
                           />
                         </Link>

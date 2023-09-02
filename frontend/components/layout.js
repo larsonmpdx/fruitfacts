@@ -20,6 +20,7 @@ export default function Layout({ children }) {
         <main>
           {React.cloneElement(children, {
             user,
+            setUser,
             setErrorMessage, // share these to every other thing within <main>
             setContributingLinks
           })}

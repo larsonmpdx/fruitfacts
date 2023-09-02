@@ -4,17 +4,23 @@
 import Link from 'next/link';
 import styles from '../styles/Button.module.css';
 
-export default function Button({ href, enabled, label, ...rest }) {
+export default function Button({ href, enabled, label, color, ...rest }) {
+  if (!color) {
+    color = 'blue';
+  }
   return (
     <>
       {enabled ? (
         <Link href={`${href}`}>
-          <button {...rest} className={`${styles.btn} ${styles['btn-blue']}`}>
+          <button {...rest} className={`${styles.btn} ${styles['btn-' + color]}`}>
             {label}
           </button>
         </Link>
       ) : (
-        <button {...rest} className={`${styles.btn} ${styles['btn-disabled']} disabled`}>
+        <button
+          {...rest}
+          className={`${styles.btn} ${styles['btn-' + color + '-disabled']} disabled`}
+        >
           {label}
         </button>
       )}

@@ -1,3 +1,6 @@
+// this is the crate root, main.rs depends on it, so module declarations etc. go here
+#![forbid(non_ascii_idents)] // see others here: https://doc.rust-lang.org/rustc/lints/listing/allowed-by-default.html
+
 #[macro_use]
 extern crate more_asserts;
 

@@ -1,0 +1,484 @@
+{
+    title: "Australian Cherry Production Guide",
+    author: "Paul James",
+    url: "https://www.cherrygrowers.org.au/assets/australian_cherry_production_guide.pdf",
+    published: "July 2011",
+    accessed: "March 2023",
+    type: "localized book",
+    locations: [
+        {
+            name: "Lenswood, South Australia",
+            latitude: -34.92297939724984, // this is a random cherry block near the address for the author
+            longitude: 138.82417546248033
+        }
+    ],
+    plants: [
+        // page 43: major varieties
+        {
+            type: "Sweet Cherry",
+            name: "Bing",
+            description: "major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S3S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Brooks",
+            description: "major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S1S9"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Burlat",
+            description: "major Australian variety (as of 2011)"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Earlise",
+            description: "major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S1S9"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Earlisweet",
+            description: "major Australian variety (as of 2011). see description in pdf"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Empress",
+            description: "major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S1S6"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Garnet", // given as "garnet series" in the pdf but I can only find plain "garnet" in other references
+            description: "major Australian variety (as of 2011)"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Kordia",
+            description: "major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S3S6"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Lapins",
+            s_allele: "S1S4'",
+            description: "major Australian variety (as of 2011). Self-fertile. see description in pdf"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Merchant",
+            description: "UK variety. major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S4S9"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Rainier",
+            description: "major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S1S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Jork 57/201", // "Regina"
+            description: "major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S1S3"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Ron's Seedling",
+            description: "NSW variety. major Australian variety (as of 2011). see description in pdf"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Simone",
+            description: "major Australian variety (as of 2011). see description in pdf"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Stella",
+            description: "major Australian variety (as of 2011). Self-fertile. see description in pdf",
+            s_allele: "S3S4'"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Supreme",
+            description: "major Australian variety (as of 2011). see description in pdf"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sunburst",
+            description: "major Australian variety (as of 2011). Self-fertile. see description in pdf",
+            s_allele: "S3S4'"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Summit",
+            s_allele: "S1S2",
+            description: "major Australian variety (as of 2011). see description in pdf"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sweetheart",
+            s_allele: "S3S4'",
+            description: "major Australian variety (as of 2011). Self-fertile. see description in pdf"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sweet Georgia",
+            harvest_time_relative: "Lapins -10 to -14", // "10–14 days later than Lapins"
+            description: "major Australian variety (as of 2011). Tasmanian selection of Lapins (whole tree mutation). see description in pdf"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sylvia",
+            description: "major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S1S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Van",
+            description: "major Australian variety (as of 2011). see description in pdf",
+            s_allele: "S1S3"
+        },
+        // page 44: variety descriptions and trends
+        {
+            type: "Sweet Cherry",
+            name: "PC7146-23", // "Chelan"
+            description: "see description in pdf",
+            s_allele: "S3S9"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Early Burlat",
+            description: "see description in pdf"
+        },
+        // empress already in the table above
+        // merchant already in the table above
+        // supreme already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "Vista",
+            description: "see description in pdf",
+            s_allele: "S2S5"
+        },
+
+        // Newer early season varieties
+        // brooks already in the table above
+        // earlise already in the table above
+        // earlisweet already in the table above
+
+        // mid-late regions
+        // van already in the table above
+        // bing already in the table above
+        // ron's seedling already in the table above
+        // summit already in the table above
+        // sunburst already in the table above
+        // stella already in the table above
+        // sylvia already in the table above
+        // rainier already in the table above
+        // simone already in the table above
+        // lapins already in the table above
+        // sweet georgia already in the table above
+        // kordia already in the table above
+        // regina already in the table above
+        // sweetheart already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "",
+            description: "see description in pdf"
+        },
+
+        // Australian Bred Varieties
+        // bred by the National Cherry Breeding Program based in Lenswood, South Australia
+        {
+            type: "Sweet Cherry",
+            name: "Sir Don",
+            description: "Self-fertile. see description in pdf",
+            s_allele: "S4'S13",
+            released: "Australia National Cherry Breeding Program"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sir Tom",
+            s_allele: "S3S13",
+            description: "see description in pdf",
+            released: "Australia National Cherry Breeding Program"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Dame Roma",
+            description: "see description in pdf",
+            released: "Australia National Cherry Breeding Program"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sir Douglas",
+            description: "see description in pdf",
+            released: "Australia National Cherry Breeding Program"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Dame Nancy",
+            description: "see description in pdf",
+            released: "Australia National Cherry Breeding Program"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sir Hans",
+            description: "see description in pdf",
+            released: "Australia National Cherry Breeding Program"
+        },
+
+        // page 65: compatibility chart - I ended up here after googling for a decent reference containing Cristobalina
+
+        // todo - integrate this table into other entries
+        {
+            type: "Sweet Cherry",
+            name: "Bedford Prolific",
+            s_allele: "S1S2"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Early Rivers",
+            s_allele: "S1S2"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Knight's Early",
+            s_allele: "S1S2"
+        },
+        // summit already in the table above
+        // van already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "Venus",
+            s_allele: "S1S3"
+        },
+        // regina already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "Sumnue", // "Cristalina"
+            s_allele: "S1S3"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sumste", // "Samba"
+            s_allele: "S1S3"
+        },
+        // bing already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "Lambert",
+            s_allele: "S3S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Kristin",
+            s_allele: "S3S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Royal Ann", // "Napoleon"
+            s_allele: "S3S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Spur Lambert",
+            s_allele: "S3S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Star",
+            s_allele: "S3S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vernon",
+            s_allele: "S3S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Ulster",
+            s_allele: "S3S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sue",
+            s_allele: "S2S3"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vega",
+            s_allele: "S2S3"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Victor",
+            s_allele: "S2S3"
+        },
+        // kordia already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "Hartland",
+            s_allele: "S3S6"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Hedelfinger",
+            s_allele: "S3S5"
+        },
+        // vista already in the table above
+
+        // * Two different Early Lyons have been genotyped - todo - reconcile this with the entries in the S-type dictionary
+        {
+            type: "Sweet Cherry",
+            name: "Early Lyons (S1S4)",
+            s_allele: "S1S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Hudson",
+            s_allele: "S1S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Merton Late",
+            s_allele: "S1S4"
+        },
+        // rainier already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "Salmo",
+            s_allele: "S1S4"
+        },
+        // sylvia already in the table above
+
+        // * Two different Early Lyons have been genotyped - todo - reconcile this with the entries in the S-type dictionary
+        {
+            type: "Sweet Cherry",
+            name: "Early Lyons (S6S9)",
+            s_allele: "S6S9"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Noble",
+            s_allele: "S6S13"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sam",
+            s_allele: "S2S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Vic",
+            s_allele: "S2S4"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Seneca",
+            s_allele: "S1S5"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Valera",
+            s_allele: "S1S5"
+        },
+        // chelan already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "PC7144-6", //"Tieton"
+            s_allele: "S3S9"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Merton Glory",
+            s_allele: "S4S6"
+        },
+        // brooks already in the table above
+        // earlise already in the table above
+        // sir tom already in the table above
+        // empress already in the table above
+        // merchant already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "Nordwunder",
+            s_allele: "S3S12"
+        },
+        // self-fertile section
+        {
+            type: "Sweet Cherry",
+            name: "Celeste",
+            s_allele: "S1S4'",
+            description: "Self-fertile"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Cristobalina",
+            s_allele: "S3S6", // s3s6 in this chart but one of them should be marked with ', this variety has a unique self compatibility gene
+            description: "Self-fertile"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Panaro 2", // "Early Star"
+            s_allele: "S4'S9",
+            description: "Self-fertile"
+        },
+        // lapins already in the table above
+        {
+            type: "Sweet Cherry",
+            name: "Newstar",
+            s_allele: "S3S4'",
+            description: "Self-fertile"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sandra Rose",
+            s_allele: "S3S4'",
+            description: "Self-fertile"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Santina",
+            s_allele: "S1S4'",
+            description: "Self-fertile"
+        },
+        // sir don already in the table above
+        // second SC row
+        {
+            type: "Sweet Cherry",
+            name: "Skeena",
+            s_allele: "S1S4'",
+            description: "Self-fertile"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Sumleta", // "Sonata™"
+            s_allele: "S3S4'",
+            description: "Self-fertile"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "13S2009", // "Staccato"
+            s_allele: "S3S4'",
+            description: "Self-fertile"
+        },
+        {
+            type: "Sweet Cherry",
+            name: "Starkrimson",
+            s_allele: "S3S4'",
+            description: "Self-fertile"
+        },
+        // stella already in the table above
+        // sunburst already in the table above
+        // sweetheart aleady in the table above
+        {
+            type: "Sweet Cherry",
+            name: "PC7146-8", // "Benton™"
+            // s allele not given in the table, but it's called self fertile
+            description: "Self-fertile"
+        }
+
+        // todo - insert pollenizer text on page 66 into variety descriptions
+    ]
+}
