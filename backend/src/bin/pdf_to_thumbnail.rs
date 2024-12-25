@@ -1,5 +1,6 @@
 // find all *.pdf recursively in /plant_database/
 // for any without an existing thumbnail in /frontend/public/data/, create one
+use image::codecs::jpeg::JpegEncoder;
 use std::fs;
 use std::path::Path;
 extern crate clap;
@@ -35,13 +36,16 @@ fn pdf_first_page_to_jpeg(input_path: &Path, output_path: &Path) -> Result<(), P
             break;
         }
 
-        let mut output = fs::File::create(output_path).map_err(|_| PdfiumError::ImageError)?;
-
-        page.render_with_config(&render_config)?
-            .as_image() // Renders this page to an image::DynamicImage...
+        let rendered_page = page.render_with_config(&render_config)?;
+        let image_data = rendered_page.as_image();
+        let image = image_data
             .as_rgba8() // ... then converts it to an image::Image...
-            .ok_or(PdfiumError::ImageError)?
-            .write_to(&mut output, image::ImageOutputFormat::Jpeg(75)) // number is jpeg quality level
+            .ok_or(PdfiumError::ImageError)?;
+
+        let mut output = fs::File::create(output_path).map_err(|_| PdfiumError::ImageError)?;
+        let mut encoder = JpegEncoder::new_with_quality(&mut output, 75); // use an encoder in order to be able to set jpeg quality level
+        encoder
+            .encode_image(image)
             .map_err(|_| PdfiumError::ImageError)?;
 
         output.sync_all().map_err(|_| PdfiumError::ImageError)?;
