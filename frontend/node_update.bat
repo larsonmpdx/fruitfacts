@@ -12,9 +12,14 @@ if not '%errorlevel%' == '0' (
 :: "runas" start with forced C:\Windows\System32 workdir
 cd /d %1
 
-call nvm install lts || goto :error
-call nvm use lts || goto :error
-call npm i -g npm-check-updates || goto :error
+set "command=nvm install lts"
+call %command% || goto :error
+
+set "command=nvm use lts"
+call %command% || goto :error
+
+set "command=npm i -g npm-check-updates"
+call %command% || goto :error
 
 echo "store versions to a file"
 echo | set /p dummy_name="node: " >node_versions.txt || goto :error
@@ -26,5 +31,5 @@ echo "finished"
 goto :EOF
 
 :error
-echo Failed with error #%errorlevel%.
+echo %command% Failed with error #%errorlevel%
 exit /b %errorlevel%
