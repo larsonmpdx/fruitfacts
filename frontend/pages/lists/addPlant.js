@@ -12,22 +12,31 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
   }, []);
 
   const [name, setName] = React.useState('');
+  const [type, setType] = React.useState('');
 
   const router = useRouter();
   const query = qs.parse(router.asPath.split(/\?/)[1]);
 
+  // prefill name and type from the query string
+  React.useEffect(() => {
+    if (query.name) {
+      setName(query.name);
+    }
+    if (query.type) {
+      setType(query.type);
+    }
+  });
+
   const handleSubmit = async () => {
-    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list/entry`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE}/api/list/entry`, { // see CollectionItem/CollectionItemNoId in schema_types.rs
       method: 'POST',
       credentials: 'include',
       body: JSON.stringify({
-        location_name: name,
-        latitude: lat,
-        longitude: lon,
+        location_id: name, // todo - get this from the query string? or a dropdown?
+        name: name,
+        type: type,
         user: 'id:' + user.id,
         location_number: 0, // special case for user collections
-        notoriety_score: 0.0, // unused here but set NOT NULL
-        ignore_for_nearby_searches: 0 // unused here but set NOT NULL
       })
     })
       .then((response) => {
@@ -57,35 +66,14 @@ export default function Home({ user, setErrorMessage, setContributingLinks }) {
           onChange={(event) => setName(event.target.value)}
         />
       </label>
-      <Button
-        enabled={true}
-        onClick={async () => {
-          await handleRequestLocation();
-        }}
-        className="focus:shadow-outline h-12 w-80 rounded-lg bg-indigo-700 px-6 text-indigo-100 transition-colors duration-150 hover:bg-indigo-800"
-        label="get location from my browser"
-      />
       <label>
-        lat:
+        Type:
         <input
           type="text"
-          value={lat}
+          value={type}
           className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-          onChange={(event) => setLat(event.target.value)}
+          onChange={(event) => setType(event.target.value)}
         />
-      </label>
-      <label>
-        lon:
-        <input
-          type="text"
-          value={lon}
-          className="block w-80 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-          onChange={(event) => setLon(event.target.value)}
-        />
-      </label>
-      <label>
-        <input type="checkbox" defaultChecked={makePublic} onClick={handleMakePublic} />
-        make public?
       </label>
       <Button
         enabled={true}

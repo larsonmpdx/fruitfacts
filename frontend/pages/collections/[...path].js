@@ -133,7 +133,7 @@ export default function Home({
         </Head>
         {userList && (
           <h1>
-            {data.user_name}'s location "{data.locations[0]?.location_name}"
+            {data.user_name}&apos;s location &quot;{data.locations[0]?.location_name}&quot;
           </h1>
         )}
         {!userList && (

@@ -16,7 +16,7 @@ call %command% || goto :error
 set "command=npm run build"
 call %command% || goto :error
 
-echo "finished"
+echo finished
 goto :EOF
 
 :error

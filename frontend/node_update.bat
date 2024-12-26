@@ -27,7 +27,7 @@ call nvm current >>node_versions.txt || goto :error
 echo | set /p dummy_name="npm-check-updates: " >>node_versions.txt || goto :error
 call npm-check-updates --version >>node_versions.txt || goto :error
 
-echo "finished"
+echo finished
 goto :EOF
 
 :error

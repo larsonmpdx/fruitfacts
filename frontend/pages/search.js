@@ -88,7 +88,6 @@ const nullIfEmptyQuote = (value) => {
 export default function Home({
   data,
   types,
-  queryString,
   errorMessage,
   setErrorMessage,
   setContributingLinks
