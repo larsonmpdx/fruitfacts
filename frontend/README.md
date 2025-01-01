@@ -6,6 +6,8 @@
 - `npm run dev/build/start` next.js things
 - `ncu -u` update package.json versions (after installing `npm i -g npm-check-updates`)
 - `npm run lint` run next lint
+- `npm run dev`
+- `npm start`
 
 # local dev setup
 
