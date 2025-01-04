@@ -1,14 +1,29 @@
+set "command=del Cargo.lock"
 del Cargo.lock || goto :error
-cargo update || goto :error
-cargo upgrade --pinned || goto :error
-cargo fmt || goto :error
-cargo fix --allow-dirty || goto :error
-cargo clippy --fix --allow-dirty || goto :error
-cargo build || goto :error
-cargo test -- --include-ignored || goto :error
+
+set "command=cargo update"
+call %command% || goto :error
+
+set "command=cargo upgrade --pinned"
+call %command% || goto :error
+
+set "command=cargo fmt"
+call %command% || goto :error
+
+set "command=cargo fix --allow-dirty"
+call %command% || goto :error
+
+set "command=cargo clippy --fix --allow-dirty"
+call %command% || goto :error
+
+set "command=cargo build"
+call %command% || goto :error
+
+set "command=cargo test -- --include-ignored"
+call %command% || goto :error
 
 goto :EOF
 
 :error
-echo Failed with error #%errorlevel%.
+echo %command% Failed with error #%errorlevel%
 exit /b %errorlevel%
