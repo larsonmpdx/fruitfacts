@@ -1,4 +1,4 @@
-cargo 1.83.0 (5ffbef321 2024-10-29)
-clippy 0.1.83 (90b35a62 2024-11-26)
+cargo 1.84.0 (66221abde 2024-11-19)
+clippy 0.1.84 (9fc6b43126 2025-01-07)
 cargo-udeps 0.1.53
 cargo-edit-upgrade 0.13.0
