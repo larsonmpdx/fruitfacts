@@ -1,4 +1,4 @@
 cargo 1.84.0 (66221abde 2024-11-19)
 clippy 0.1.84 (9fc6b43126 2025-01-07)
-cargo-udeps 0.1.53
+cargo-udeps 0.1.54
 cargo-edit-upgrade 0.13.0

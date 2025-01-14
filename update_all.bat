@@ -14,6 +14,8 @@ call %command% || goto :error
 set "command=node_lint.bat"
 call %command% || goto :error
 
+cd ../
+
 echo finished
 goto :EOF
 
