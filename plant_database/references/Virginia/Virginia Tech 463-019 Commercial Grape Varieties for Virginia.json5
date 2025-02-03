@@ -1,0 +1,19 @@
+{
+    title: "Commercial Grape Varieties for Virginia",
+    author: "Tony K. Wolf, Imed E. Dami, Bruce W. Zoecklein, M. Kay Warren",
+    url: "https://www.pubs.ext.vt.edu/content/dam/pubs_ext_vt_edu/463/463-019/463-019_pdf.pdf",
+    published: "2009",
+    accessed: "April 2023",
+    type: "extension test",
+    needs_help: true,
+    locations: [
+        {
+            name: "Virginia Tech's College of Agriculture, Kentland-Whitethorn Farm near Blacksburg", // this guide isn't based on testing at this location but it's representative enough
+            latitude: 37.20248218528102,
+            longitude: -80.5631271567992
+        }
+    ],
+    plants: [
+        // todo
+    ]
+}

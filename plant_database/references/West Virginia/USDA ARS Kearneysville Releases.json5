@@ -20,12 +20,15 @@
         // pvp because it comes true from seed
         // pvp lasts 20 years (most) or 25 years (vines and trees) so this would expire ~2029 from an issue date in 2004
         // "Bell" pear - sold by ACN. new for 2021 I think, can't find any release info
-        // todo "summerfest" acn USPP21379
+
         // todo "nectafest" acn USPP25694
         // todo hardy kiwi "tango" https://patents.google.com/patent/USPP32617
         // todo honeysweet plum https://patents.google.com/patent/USPP15154
         // todo crimson rocket peach https://patents.google.com/patent/USPP15216
-        // todo peach KV00398 / FlavrBurst peach https://patents.google.com/patent/USPP21378
         // todo red leaf peach rootstock "JAM 23" https://patents.google.com/patent/USPP32854
+
+        // https://www.ars.usda.gov/news-events/news/research-news/2009/summerfest-and-flavrburst-join-ars-peach-variety-offerings/
+        // todo "SummerFest" acn KV981175 https://patents.google.com/patent/USPP21379
+        // todo peach KV00398 / FlavrBurst peach https://patents.google.com/patent/USPP21378
     ]
 }

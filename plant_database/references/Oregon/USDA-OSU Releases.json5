@@ -24,14 +24,14 @@
         {
             name: "Eclipse",
             type: "Blackberry",
-            description: "https://www.emcocal.com/eclipse-variety/ ",
+            description: "https://www.emcocal.com/eclipse-blackberry/ ",
             released: "USDA-OSU 2020*",
             patent: "https://patents.google.com/patent/USPP30448 expires 2037-06-20"
         },
         {
             name: "Galaxy",
             type: "Blackberry",
-            description: "https://www.emcocal.com/galaxy-variety/",
+            description: "https://www.emcocal.com/galaxy-blackberry/",
             released: "USDA-OSU 2020*",
             patent: "https://patents.google.com/patent/USPP30062 expires 2037-06-20"
         },

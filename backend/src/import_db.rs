@@ -79,6 +79,7 @@ struct CollectionJson {
     plants: Vec<CollectionPlantJson>,
 }
 
+#[skip_serializing_none]
 #[derive(Debug, Serialize, Deserialize)]
 struct CollectionLocationJson {
     short_name: Option<String>,
@@ -87,12 +88,14 @@ struct CollectionLocationJson {
     longitude: f64,
 }
 
+#[skip_serializing_none]
 #[derive(Serialize, Deserialize)]
 struct CollectionCategoryJson {
     name: String,
     description: Option<String>,
 }
 
+#[skip_serializing_none]
 #[derive(Debug, Serialize, Deserialize)]
 struct CollectionPlantJson {
     // only for lists of names like we see in some guides for "here's a list of scab-resistant apples"
@@ -1136,12 +1139,14 @@ pub fn load_base_plants(db_conn: &mut SqliteConnection, database_dir: std::path:
     plants_found
 }
 
+#[skip_serializing_none]
 #[derive(Serialize, Deserialize)]
 struct TypeGroupsJson {
     group_name: String,
     types: Vec<TypeJson>,
 }
 
+#[skip_serializing_none]
 #[derive(Serialize, Deserialize)]
 struct TypeJson {
     name: String,
@@ -2866,7 +2871,7 @@ pub fn calculate_and_write_relative_day_offsets(db_conn: &mut SqliteConnection) 
             }
         }
 
-        for mut average in this_location_averages.values_mut() {
+        for average in this_location_averages.values_mut() {
             average.average = average.sum as f64 / average.divisor as f64;
         }
 
@@ -2895,7 +2900,7 @@ pub fn calculate_and_write_relative_day_offsets(db_conn: &mut SqliteConnection) 
         for location in all_locations.iter_mut() {
             if !initial_values_set {
                 initial_values_set = true;
-                for (candle, mut average_day) in location.averages.iter_mut() {
+                for (candle, average_day) in location.averages.iter_mut() {
                     candles_output.insert(
                         candle.clone(),
                         AverageOffset {
@@ -3016,7 +3021,7 @@ pub fn calculate_and_write_relative_day_offsets(db_conn: &mut SqliteConnection) 
                     }
 
                     {
-                        let mut existing_entry_b = candles_output.get_mut(candle_b).unwrap();
+                        let existing_entry_b = candles_output.get_mut(candle_b).unwrap();
                         println!("changing {existing_entry_b}");
                         existing_entry_b.sum += new_day_to_average_with_b;
                         existing_entry_b.divisor += 0.5;

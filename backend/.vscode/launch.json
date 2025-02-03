@@ -13,7 +13,7 @@
             "windows": {
                 "program": "${workspaceFolder}/target/debug/harvest-chart-server.exe",
             },
-            "cwd": "${workspaceFolder}/harvest-chart-server/",
+            "cwd": "${workspaceFolder}",
             "stopOnEntry": false,
             "sourceLanguages": ["rust"]
         },
@@ -38,9 +38,9 @@
             "name": "debug with cppvsdbg",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}target/debug/harvest-chart-server",
+            "program": "${workspaceFolder}/target/debug/harvest-chart-server",
             "windows": {
-                "program": "${workspaceFolder}target/debug/harvest-chart-server.exe",
+                "program": "${workspaceFolder}/target/debug/harvest-chart-server.exe",
             },
             "args": [],
             "stopAtEntry": false,

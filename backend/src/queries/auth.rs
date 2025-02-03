@@ -1,12 +1,12 @@
 use actix_web::cookie::Cookie;
 use actix_web::HttpRequest;
-use actix_web::{get, post, web, HttpResponse};
+use actix_web::{delete, get, post, web, HttpResponse};
 use anyhow::{anyhow, Result};
+use base64::Engine as _; // base64: check out this classy github issue! https://github.com/marshallpierce/rust-base64/issues/213
 use oauth2::basic::{BasicErrorResponseType, BasicTokenType};
-use serde::Deserialize;
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
+use serde_with::skip_serializing_none;
 use std::io::Read;
-use base64::Engine as _; // check out this classy github issue! https://github.com/marshallpierce/rust-base64/issues/213
 
 use expiring_map::ExpiringMap;
 use once_cell::sync::Lazy; // 1.3.1
@@ -70,6 +70,7 @@ fn get_google_client() -> GoogleClientType {
     )
 }
 
+#[skip_serializing_none]
 #[derive(Debug, Serialize)]
 struct AuthURLs {
     google: Option<String>,
@@ -134,7 +135,7 @@ struct GoogleAuthQuery {
 }
 
 // todo: cache
-pub fn get_existing_oauth_entry_db(
+pub fn get_oauth_entry_db(
     db_conn: &mut SqliteConnection,
     unique_id: String,
 ) -> Result<UserOauthEntry, diesel::result::Error> {
@@ -145,7 +146,7 @@ pub fn get_existing_oauth_entry_db(
 }
 
 // todo: cache
-pub fn get_existing_user_db(
+pub fn get_user_db(
     db_conn: &mut SqliteConnection,
     user_id: i32,
 ) -> Result<User, diesel::result::Error> {
@@ -155,6 +156,7 @@ pub fn get_existing_user_db(
         .first::<User>(db_conn)
 }
 
+#[skip_serializing_none]
 #[derive(Default, Serialize)]
 pub struct FullUser {
     user: User,
@@ -162,7 +164,7 @@ pub struct FullUser {
     // sessions: Vec<UserSession>, // not sure I want to share this out to expose all session keys based on one session
 }
 
-pub fn get_full_user_db(
+pub fn get_user_and_oauth_db(
     db_conn: &mut SqliteConnection,
     user_id: i32,
 ) -> Result<FullUser, diesel::result::Error> {
@@ -210,6 +212,7 @@ pub fn insert_account_offer(session_value: String, account_offer: AccountOffer) 
         .insert(session_value, account_offer);
 }
 
+#[skip_serializing_none]
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct GoogleAccountInfo {
     id: String,           // won't change, primary key
@@ -218,6 +221,7 @@ struct GoogleAccountInfo {
     picture: String,      // we don't use this
 }
 
+#[skip_serializing_none]
 #[derive(Default, Serialize)]
 pub struct ReceiveRedirectReturn {
     user: Option<User>, // give this back if we already have a matching user
@@ -225,7 +229,7 @@ pub struct ReceiveRedirectReturn {
     account_offer: bool,
 }
 
-fn receive_oauth_redirect_blocking(
+fn receive_oauth_redirect_db(
     query: web::Query<GoogleAuthQuery>,
     session_value: String,
     db_conn: &mut SqliteConnection,
@@ -291,10 +295,8 @@ fn receive_oauth_redirect_blocking(
     // todo -
     // - if we already have a user, associate this session to that user (database)
     // if account_info.id is in user_oauth_entries
-    if let Ok(oauth_entry) =
-        get_existing_oauth_entry_db(db_conn, format!("google:{}", account_info.id))
-    {
-        if let Ok(user) = get_existing_user_db(db_conn, oauth_entry.user_id) {
+    if let Ok(oauth_entry) = get_oauth_entry_db(db_conn, format!("google:{}", account_info.id)) {
+        if let Ok(user) = get_user_db(db_conn, oauth_entry.user_id) {
             session::store_session(
                 db_conn,
                 UserSessionToInsert {
@@ -346,7 +348,10 @@ pub fn get_session_value(
     } else if set_session {
         println!("no session value found, setting");
         // set a random session
-        session_value = Some(base64::engine::general_purpose::STANDARD_NO_PAD.encode(rand::thread_rng().gen::<[u8; 32]>()));
+        session_value = Some(
+            base64::engine::general_purpose::STANDARD_NO_PAD
+                .encode(rand::thread_rng().gen::<[u8; 32]>()),
+        );
 
         outgoing_cookie = Some(
             Cookie::build("session", session_value.as_ref().unwrap().clone())
@@ -380,7 +385,7 @@ async fn receive_oauth_redirect(
 
     let results = web::block(move || {
         let mut conn = pool.get().expect("couldn't get db connection from pool");
-        receive_oauth_redirect_blocking(query, session_value.unwrap(), &mut conn)
+        receive_oauth_redirect_db(query, session_value.unwrap(), &mut conn)
     })
     .await
     .unwrap();
@@ -389,7 +394,7 @@ async fn receive_oauth_redirect(
         Ok(results) => results,
         Err(e) => {
             eprintln!("{}", e);
-            return Err(actix_web::error::ErrorInternalServerError(""));
+            return Err(actix_web::error::ErrorInternalServerError(e));
         }
     };
 
@@ -406,22 +411,55 @@ async fn receive_oauth_redirect(
     }
 }
 
-pub fn create_account_blocking(
+#[skip_serializing_none]
+#[derive(Default, Deserialize, Serialize, Clone)]
+pub struct UserCreateQuery {
+    pub name: Option<String>,
+    pub check_only: Option<bool>, // if true, we're only looking for name conflicts in order to show a quick "available" note when registering
+}
+
+pub fn create_account_db(
     session_value: String,
+    query: &UserCreateQuery,
     db_conn: &mut SqliteConnection,
-) -> Result<FullUser> {
+) -> Result<Option<FullUser>> {
     if let Some(offer) = ACCOUNT_OFFER_CACHE.lock().unwrap().get_mut(&session_value) {
         if offer.used {
             return Err(anyhow!("account offer already used"));
         }
+
+        if query.name.is_none() {
+            return Err(anyhow!("account name missing"));
+        }
+        let name = query.name.clone().unwrap();
+
+        // todo lint username: min length, prevent all-whitespace or all-punctuation. trim leading and trailing whitespace. etc.
+        // todo - store a lower cased and de-punctuated version and de-dupe that too
+        // todo - rate limit username availability check
+
+        // todo - this would need to skip the offer check (and require a valid session I guess)
+        // in order to allow using it to check names while changing usernames
+        if let Some(check_only) = query.check_only {
+            if check_only {
+                let existing_user = users::dsl::users
+                    .filter(users::name.eq(name.clone()))
+                    .order(users::id.desc())
+                    .first::<User>(db_conn);
+
+                return match existing_user {
+                    Ok(_) => Err(anyhow!("username taken")),
+                    Err(_error) => Ok(None),
+                };
+            }
+        }
+
+        // we're good to create the account, mark the offer used
         offer.used = true;
-        // if found, create an account in the database
 
         let google_account = offer.google_account_info.as_ref().unwrap();
-        let name = google_account.email.clone(); // todo - allow a customized username
-                                                 // todo
+        let email = google_account.email.clone();
         let rows_inserted = diesel::insert_into(users::dsl::users)
-            .values((users::name.eq(name.clone()),))
+            .values((users::name.eq(name.clone()), users::email.eq(email.clone())))
             .execute(db_conn);
 
         if rows_inserted != Ok(1) {
@@ -429,7 +467,6 @@ pub fn create_account_blocking(
         }
 
         // get the id of the newly-created user (sqlite can't return this from the creation query)
-        // todo
         let new_user = users::dsl::users
             .filter(users::name.eq(name))
             .order(users::id.desc())
@@ -457,8 +494,8 @@ pub fn create_account_blocking(
             },
         );
         // return the user
-        match get_full_user_db(db_conn, new_user.id) {
-            Ok(fulluser) => Ok(fulluser),
+        match get_user_and_oauth_db(db_conn, new_user.id) {
+            Ok(fulluser) => Ok(Some(fulluser)),
             Err(_e) => {
                 Err(anyhow!("error getting account after creation")) // todo maybe convert the error?
             }
@@ -472,6 +509,7 @@ pub fn create_account_blocking(
 #[get("/api/createAccount")]
 async fn create_account(
     req: HttpRequest,
+    query: web::Query<UserCreateQuery>,
     pool: web::Data<DbPool>,
 ) -> actix_web::Result<impl actix_web::Responder> {
     // todo - user gets to fill in other fields like nickname or whatever, maybe in the query string
@@ -482,24 +520,24 @@ async fn create_account(
         return Ok(HttpResponse::InternalServerError().finish());
     }
 
-    let results = web::block(move || {
+    let result = web::block(move || {
         let mut conn = pool.get().expect("couldn't get db connection from pool");
-        create_account_blocking(session_value.unwrap(), &mut conn)
+        create_account_db(session_value.unwrap(), &query, &mut conn)
     })
     .await
     .unwrap(); // todo - blockingerror unwrap?
 
-    match results {
+    match result {
         Ok(results) => Ok(HttpResponse::Ok().json(results)),
         Err(e) => {
             eprintln!("{}", e);
-            Err(actix_web::error::ErrorInternalServerError(""))
+            Err(actix_web::error::ErrorInternalServerError(e))
         }
     }
 }
 
-#[get("/api/getFullUser")]
-async fn get_full_user(
+#[get("/api/user")]
+async fn get_user(
     req: HttpRequest,
     pool: web::Data<DbPool>,
 ) -> Result<HttpResponse, actix_web::Error> {
@@ -516,7 +554,7 @@ async fn get_full_user(
     }
     let session = session.unwrap();
 
-    let info = get_full_user_db(&mut db_conn, session.user_id);
+    let info = get_user_and_oauth_db(&mut db_conn, session.user_id);
     if info.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
@@ -542,13 +580,26 @@ async fn check_login(
     }
     let session = session.unwrap();
 
-    let user = get_existing_user_db(&mut db_conn, session.user_id);
+    let user = get_user_db(&mut db_conn, session.user_id);
     if user.is_err() {
         return Ok(HttpResponse::NotFound().finish());
     }
 
     // return account if this session is logged in. some error otherwise
     Ok(HttpResponse::Ok().json(user.unwrap()))
+}
+
+fn get_logout_cookie() -> Cookie<'static> {
+    return Cookie::build("session", "")
+        .domain(env!("COOKIE_DOMAIN"))
+        .path("/")
+        //  .same_site(actix_web::cookie::SameSite::Strict)
+        //  .secure(true)
+        .expires(actix_web::cookie::Expiration::from(
+            actix_web::cookie::time::OffsetDateTime::now_utc(),
+        )) // time in the past clears a cookie
+        .http_only(true)
+        .finish();
 }
 
 #[post("/api/logout")]
@@ -565,21 +616,58 @@ async fn logout(
     let mut db_conn = pool.get().expect("couldn't get db connection from pool");
 
     session::remove_session(&mut db_conn, session_value.unwrap());
-    let outgoing_cookie = Cookie::build("session", "")
-        .domain(env!("COOKIE_DOMAIN"))
-        .path("/")
-        //  .same_site(actix_web::cookie::SameSite::Strict)
-        //  .secure(true)
-        .expires(actix_web::cookie::Expiration::from(
-            actix_web::cookie::time::OffsetDateTime::now_utc(),
-        )) // time in the past clears a cookie
-        .http_only(true)
-        .finish();
-
-    // todo: actix delete cookie
+    let outgoing_cookie = get_logout_cookie();
     Ok(HttpResponse::Ok().cookie(outgoing_cookie).json(""))
 }
 
-// todo: delete user api
-//     - also delete oauth entries
-//     - also delete existing sessions and cached sessions
+#[delete("/api/user")]
+async fn delete_user(
+    req: HttpRequest,
+    pool: web::Data<DbPool>,
+) -> Result<HttpResponse, actix_web::Error> {
+    let (session_value, _outgoing_cookie) = get_session_value(req, false);
+    if session_value.is_none() {
+        return Ok(HttpResponse::InternalServerError().finish());
+    }
+
+    let mut db_conn = pool.get().expect("couldn't get db connection from pool");
+
+    let session = session::get_session(&mut db_conn, session_value.clone().unwrap());
+    if session.is_err() {
+        return Ok(HttpResponse::NotFound().finish());
+    }
+    let session = session.unwrap();
+
+    let db_result = db_conn.exclusive_transaction::<_, diesel::result::Error, _>(|db_conn| {
+        // todo - a transaction to cover user+oauth+list deletion
+        // add a transaction to the create function also
+        if let Err(_) =
+            diesel::delete(users::dsl::users.filter(users::id.eq(session.user_id))).execute(db_conn)
+        {
+            return Ok(HttpResponse::NotFound().finish());
+        }
+
+        let _ = diesel::delete(
+            user_oauth_entries::dsl::user_oauth_entries
+                .filter(user_oauth_entries::user_id.eq(session.user_id)),
+        )
+        .execute(db_conn);
+
+        // user lists
+        let _ = diesel::delete(
+            locations::dsl::locations.filter(locations::user_id.eq(session.user_id)),
+        )
+        .execute(db_conn);
+
+        session::remove_session(db_conn, session_value.unwrap()); // todo - delete cached sessions, if implemented
+
+        return Ok(HttpResponse::Ok().finish());
+    });
+
+    if let Err(e) = db_result {
+        return Err(actix_web::error::ErrorInternalServerError(e));
+    }
+
+    let outgoing_cookie = get_logout_cookie();
+    return Ok(HttpResponse::Ok().cookie(outgoing_cookie).finish());
+}

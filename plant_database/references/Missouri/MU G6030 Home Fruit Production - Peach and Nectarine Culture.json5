@@ -16,7 +16,6 @@
     plants: [
         {
             name: "PF 1",
-            AKA: ["Flamin' Fury (r) PF 1"],
             type: "Peach",
             harvest_time_relative: "Redhaven -28",
             disease_resistance: {
@@ -71,7 +70,6 @@
         },
         {
             name: "PF 9A-007",
-            AKA: ["Flamin' Fury (r) PF 9A-007"],
             type: "Peach",
             harvest_time_relative: "Redhaven -7",
             disease_resistance: {
@@ -90,7 +88,6 @@
         },
         {
             name: "PF 11",
-            AKA: ["Flamin' Fury (r) PF 11"],
             type: "Peach",
             harvest_time_relative: "Redhaven +0",
             disease_resistance: {
@@ -190,7 +187,6 @@
         },
         {
             name: "PF 24-007",
-            AKA: ["Flamin' Fury (r) PF 24-007"],
             type: "Peach",
             harvest_time_relative: "Redhaven +20",
             disease_resistance: {

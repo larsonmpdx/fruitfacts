@@ -6,18 +6,19 @@ on:
   pull_request:
     branches: [ main ]
 
+defaults:
+  run:
+    working-directory: ./frontend
+
 jobs:
   build:
-    defaults:
-      run:
-        working-directory: ./frontend
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16.x' # match version in get_ubuntu_dependencies.sh
-    - run: npm ci
-    - run: npm run build --if-present
+        node-version: '18.x' # match version in get_ubuntu_dependencies.sh
+    - run: npm install # not "npm ci" because I'm not using a lockfile
+    - run: npm run build
     - run: npm test

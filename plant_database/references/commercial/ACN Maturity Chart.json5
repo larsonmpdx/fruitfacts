@@ -166,7 +166,8 @@
         },
         {
             type: "Peach",
-            name: "Flavrburst™",
+            name: "KV00398",
+            AKA: ["FlavrBurst™"],
             harvest_time: "August 20 to September 4"
         },
         {
@@ -258,7 +259,7 @@
         {
             type: "Peach",
             name: "KV981175",
-            AKA: ["Summerfest™"],
+            AKA: ["SummerFest™"],
             harvest_time: "September 1 to September 18",
             patent: "https://patents.google.com/patent/USPP21379 expires 2028-12-09"
         },
